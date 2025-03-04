@@ -1,0 +1,581 @@
+{
+  "DATA": [
+    {
+      "SR": 0,
+      "name": "Peter Gallagher",
+      "runs": 134,
+      "balls": 0,
+      "notOut": false,
+      "prompt": "Peter Gallagher played for Southport Community Div 2, scoring 134 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the CGC Community League - Division 2 grade, and the current match status is Match Completed . Mudgeeraba Community Div 2, (10/290) vs Southport Community Div 2 (6/334), the match result was Southport Community Div 2 won by 44 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
+      "playedFor": "Southport Community Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Southport Community Div 2"
+        },
+        "grade": {
+          "id": 31519,
+          "name": "CGC Community League - Division 2"
+        },
+        "competition": {
+          "id": 7597,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "SR": 0,
+      "name": "Don Gumm (c)",
+      "runs": 62,
+      "balls": 0,
+      "notOut": false,
+      "prompt": "Don Gumm (c) played for Southport Community Div 2, scoring 62 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the CGC Community League - Division 2 grade, and the current match status is Match Completed . Mudgeeraba Community Div 2, (10/290) vs Southport Community Div 2 (6/334), the match result was Southport Community Div 2 won by 44 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
+      "playedFor": "Southport Community Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Southport Community Div 2"
+        },
+        "grade": {
+          "id": 31519,
+          "name": "CGC Community League - Division 2"
+        },
+        "competition": {
+          "id": 7597,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "SR": 71.26,
+      "name": "Jason Choromanski",
+      "runs": 62,
+      "balls": 87,
+      "notOut": true,
+      "prompt": "Jason Choromanski played for Southport Premier Div 2, scoring 62 runs from 87 balls with a strike rate of 71.26. Game details: This was a One Day in the CGC Premier League - Division 2 grade, and the current match status is Match Completed . Palm Beach Premier Div 2, (1/147) vs Southport Premier Div 2 (8/145), the match result was Palm Beach Premier Div 2 won by 9 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
+      "playedFor": "Southport Premier Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Southport Premier Div 2"
+        },
+        "grade": {
+          "id": 28517,
+          "name": "CGC Premier League - Division 2"
+        },
+        "competition": {
+          "id": 7597,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "SR": 0,
+      "name": "Ben Macdonald",
+      "runs": 47,
+      "balls": 0,
+      "notOut": true,
+      "prompt": "Ben Macdonald played for Southport Community Div 2, scoring 47 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the CGC Community League - Division 2 grade, and the current match status is Match Completed . Mudgeeraba Community Div 2, (10/290) vs Southport Community Div 2 (6/334), the match result was Southport Community Div 2 won by 44 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
+      "playedFor": "Southport Community Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Southport Community Div 2"
+        },
+        "grade": {
+          "id": 31519,
+          "name": "CGC Community League - Division 2"
+        },
+        "competition": {
+          "id": 7597,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "SR": 0,
+      "name": "Craig Bennett",
+      "runs": 46,
+      "balls": 0,
+      "notOut": false,
+      "prompt": "Craig Bennett played for Southport Community Div 2, scoring 46 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the CGC Community League - Division 2 grade, and the current match status is Match Completed . Mudgeeraba Community Div 2, (10/290) vs Southport Community Div 2 (6/334), the match result was Southport Community Div 2 won by 44 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
+      "playedFor": "Southport Community Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Southport Community Div 2"
+        },
+        "grade": {
+          "id": 31519,
+          "name": "CGC Community League - Division 2"
+        },
+        "competition": {
+          "id": 7597,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    }
+  ],
+  "ASSET": {
+    "ASSETID": 15,
+    "ASSETTYPEID": 3,
+    "ASSETSLINKID": "9f978c971b18a4de55a996c2447d387f2f82aa0833f447cce59ad181218c8500",
+    "ASSETCATEGORYID": 2
+  },
+  "PROMPT": [],
+  "RENDER": {
+    "RenderID": 1401,
+    "SchedulerID": 137
+  },
+  "ACCOUNT": {
+    "accountId": 137
+  },
+  "TIMINGS": {
+    "FPS_MAIN": 360,
+    "FPS_INTRO": 90,
+    "FPS_OUTRO": 120
+  },
+  "VIDEOMETA": {
+    "Club": {
+      "Logo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
+      "Name": "Southport Labrador Cricket Club",
+      "Sport": "Cricket",
+      "Sponsors": {
+        "team": [
+          {
+            "id": 4410,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+              "width": 635,
+              "height": 420
+            },
+            "name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+            "level": "team_4410",
+            "sponsorId": 127,
+            "allocationName": "Southport Community Div 1"
+          },
+          {
+            "id": 4601,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+              "width": 635,
+              "height": 420
+            },
+            "name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+            "level": "team_4601",
+            "sponsorId": 127,
+            "allocationName": "Southport Open Div 3"
+          },
+          {
+            "id": 14636,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+              "width": 635,
+              "height": 420
+            },
+            "name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+            "level": "team_14636",
+            "sponsorId": 127,
+            "allocationName": "Southport U10"
+          },
+          {
+            "id": 14771,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+              "width": 635,
+              "height": 420
+            },
+            "name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+            "level": "team_14771",
+            "sponsorId": 127,
+            "allocationName": "Southport Open Div 3"
+          },
+          {
+            "id": 14793,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+              "width": 635,
+              "height": 420
+            },
+            "name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+            "level": "team_14793",
+            "sponsorId": 127,
+            "allocationName": "Southport Labrador"
+          },
+          {
+            "id": 4343,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_4343",
+            "sponsorId": 128,
+            "allocationName": "Southport T20"
+          },
+          {
+            "id": 4357,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_4357",
+            "sponsorId": 128,
+            "allocationName": "Southport Premier Div 1"
+          },
+          {
+            "id": 4370,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_4370",
+            "sponsorId": 128,
+            "allocationName": "Southport Premier Div 2"
+          },
+          {
+            "id": 4405,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_4405",
+            "sponsorId": 128,
+            "allocationName": "Bye"
+          },
+          {
+            "id": 4548,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_4548",
+            "sponsorId": 128,
+            "allocationName": "Southport U13 Div 1"
+          },
+          {
+            "id": 12581,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_12581",
+            "sponsorId": 128,
+            "allocationName": "Southport T20"
+          },
+          {
+            "id": 12592,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_12592",
+            "sponsorId": 128,
+            "allocationName": "Southport Premier Div 1"
+          },
+          {
+            "id": 12660,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_12660",
+            "sponsorId": 128,
+            "allocationName": "Southport Premier Div 2"
+          },
+          {
+            "id": 14685,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+              "width": 1114,
+              "height": 192
+            },
+            "name": "TECHNIKA ",
+            "level": "team_14685",
+            "sponsorId": 128,
+            "allocationName": "Southport U11"
+          },
+          {
+            "id": 14707,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Harvey_Norman_Commercial_logo_2022_7caa0de62f.jpg",
+              "width": 867,
+              "height": 531
+            },
+            "name": "HARVEY NORMAN COMMERCIAL QLD",
+            "level": "team_14707",
+            "sponsorId": 129,
+            "allocationName": "Southport U12"
+          },
+          {
+            "id": 4418,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/First_Choice_Removals_Logo_4c02c110d0.png",
+              "width": 477,
+              "height": 313
+            },
+            "name": "FIRST CHOICE REMOVALS",
+            "level": "team_4418",
+            "sponsorId": 130,
+            "allocationName": "Southport Community Div 2"
+          },
+          {
+            "id": 14577,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/PSC_G_Coast_57df5ee2f7.jpg",
+              "width": 1181,
+              "height": 248
+            },
+            "name": "PSC INSURANCE BROKERS ",
+            "level": "team_14577",
+            "sponsorId": 131,
+            "allocationName": "Southport Community Div 2"
+          },
+          {
+            "id": 4506,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Whack_sports_logo_RGB_tagline_50e1f3b5c0.png",
+              "width": 1671,
+              "height": 587
+            },
+            "name": "WHACK SPORTS",
+            "level": "team_4506",
+            "sponsorId": 132,
+            "allocationName": "Southport U11"
+          },
+          {
+            "id": 14565,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
+              "width": 701,
+              "height": 356
+            },
+            "name": "ZERO DRIVERS",
+            "level": "team_14565",
+            "sponsorId": 155,
+            "allocationName": "Southport Community Div 1"
+          },
+          {
+            "id": 14759,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
+              "width": 701,
+              "height": 356
+            },
+            "name": "ZERO DRIVERS",
+            "level": "team_14759",
+            "sponsorId": 155,
+            "allocationName": "Southport Open Div 2"
+          },
+          {
+            "id": 4460,
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Game_Over_FINAL_EXPANDED_LARGE_BORDER_5725fcf4f2.jpg",
+              "width": 3507,
+              "height": 2480
+            },
+            "name": "GAME OVER",
+            "level": "team_4460",
+            "sponsorId": 156,
+            "allocationName": "Southport U10"
+          }
+        ],
+        "default": {
+          "primary_sponsor": {
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+              "width": 635,
+              "height": 420
+            },
+            "name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+            "sponsorId": 127
+          },
+          "general_sponsors": [
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+                "width": 1114,
+                "height": 192
+              },
+              "name": "TECHNIKA ",
+              "position": 1,
+              "sponsorId": 128
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Harvey_Norman_Commercial_logo_2022_7caa0de62f.jpg",
+                "width": 867,
+                "height": 531
+              },
+              "name": "HARVEY NORMAN COMMERCIAL QLD",
+              "position": 2,
+              "sponsorId": 129
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/First_Choice_Removals_Logo_4c02c110d0.png",
+                "width": 477,
+                "height": 313
+              },
+              "name": "FIRST CHOICE REMOVALS",
+              "position": 3,
+              "sponsorId": 130
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/PSC_G_Coast_57df5ee2f7.jpg",
+                "width": 1181,
+                "height": 248
+              },
+              "name": "PSC INSURANCE BROKERS ",
+              "position": 4,
+              "sponsorId": 131
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Whack_sports_logo_RGB_tagline_50e1f3b5c0.png",
+                "width": 1671,
+                "height": 587
+              },
+              "name": "WHACK SPORTS",
+              "position": 5,
+              "sponsorId": 132
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
+                "width": 701,
+                "height": 356
+              },
+              "name": "ZERO DRIVERS",
+              "position": 6,
+              "sponsorId": 155
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Game_Over_FINAL_EXPANDED_LARGE_BORDER_5725fcf4f2.jpg",
+                "width": 3507,
+                "height": 2480
+              },
+              "name": "GAME OVER",
+              "position": 7,
+              "sponsorId": 156
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/TERRA_GLOBAL_f4e06c6dbf.jpg",
+                "width": 3334,
+                "height": 3334
+              },
+              "name": "TERRA GLOBAL",
+              "position": 8,
+              "sponsorId": 159
+            },
+            {
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LONDON_HOTEL_MOTEL_c6c0187b48.PNG",
+                "width": 1239,
+                "height": 620
+              },
+              "name": "THE LONDON HOTEL MOTEL ",
+              "position": 9,
+              "sponsorId": 158
+            }
+          ]
+        }
+      }
+    },
+    "THEME": {
+      "Theme": {
+        "dark": "#111",
+        "white": "#FFF",
+        "primary": "#0f150b",
+        "secondary": "#f8cb4c"
+      },
+      "Template": "Basic",
+      "TemplateVariation": {
+        "Background": "Gradient",
+        "borderRadius": "10px"
+      }
+    },
+    "Video": {
+      "Theme": {
+        "dark": "#111",
+        "white": "#FFF",
+        "primary": "#0f150b",
+        "secondary": "#f8cb4c"
+      },
+      "Title": "Top 5",
+      "FRAMES": [390],
+      "ASSETID": 15,
+      "Template": "Basic",
+      "HeroImage": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+        "ratio": "landscape",
+        "width": 1212,
+        "height": 853,
+        "AgeGroup": "Both",
+        "AssetType": "",
+        "markerPosition": ""
+      },
+      "TitleSplit": ["Batters"],
+      "VideoTitle": "Top 5 Run Scorers - undefined",
+      "ASSETTYPEID": 3,
+      "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+      "CompositionID": "Top5BattingList",
+      "includeSponsors": true,
+      "DiviedFixturesBy": {
+        "Ladder": 1,
+        "RosterPoster": 1,
+        "WeekendResults": 2,
+        "UpComingFixtures": 2,
+        "WeekendSingleGameResult": 1
+      },
+      "TemplateVariation": {
+        "Background": "Gradient",
+        "borderRadius": "10px"
+      }
+    },
+    "FixtureCategory": "Senior",
+    "grouping_category": "Senior"
+  }
+}

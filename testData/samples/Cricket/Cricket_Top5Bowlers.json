@@ -1,0 +1,230 @@
+{
+  "RENDER": {
+    "SchedulerID": 122,
+    "RenderID": 7076
+  },
+  "ACCOUNT": {
+    "accountId": 234
+  },
+  "ASSET": {
+    "ASSETID": 7,
+    "ASSETTYPEID": 3,
+    "ASSETCATEGORYID": 1,
+    "ASSETSLINKID": "28fb8430c6449428f3b982eb487578e963b23139667658f98a2bf5e1b27c8765"
+  },
+  "VIDEOMETA": {
+    "grouping_category": "sydney shires competition - Fifth Grade (The Tim Creer Cup)",
+    "Video": {
+      "Title": "Top 5",
+      "TitleSplit": ["Bowlers", ""],
+      "CompositionID": "Top5BowlingList",
+      "VideoTitle": "Top 5 Bowlers - undefined",
+      "HeroImage": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
+        "width": 3290,
+        "height": 3354,
+        "ratio": "portrait",
+        "AgeGroup": "Both",
+        "AssetType": "",
+        "markerPosition": ""
+      },
+      "Template": "Basic",
+      "TemplateVariation": {
+        "borderRadius": "10px",
+        "Background": "Graphics"
+      },
+      "Theme": {
+        "primary": "#002855",
+        "secondary": "#00AEEF",
+        "dark": "#111",
+        "white": "#FFF"
+      },
+      "includeSponsors": true,
+      "audio_option": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+      "DiviedFixturesBy": {
+        "UpComingFixtures": 2,
+        "WeekendResults": 2,
+        "WeekendSingleGameResult": 1,
+        "Ladder": 1,
+        "RosterPoster": 1
+      },
+      "ASSETID": 7,
+      "ASSETTYPEID": 3,
+      "FRAMES": [390]
+    },
+    "THEME": {
+      "Template": "Basic",
+      "TemplateVariation": {
+        "borderRadius": "10px",
+        "Background": "Graphics"
+      },
+      "Theme": {
+        "primary": "#002855",
+        "secondary": "#00AEEF",
+        "dark": "#111",
+        "white": "#FFF"
+      }
+    },
+    "Club": {
+      "Name": "Sydney Shires Competition",
+      "Sport": "Cricket",
+      "Logo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Shire_White_SQ_fb4aa1c1bf.png",
+        "width": 1843,
+        "height": 1843
+      },
+      "Sponsors": {
+        "default": {
+          "primary_sponsor": {
+            "sponsorId": 85,
+            "name": "McDonald's",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_869a3e63ef.png",
+              "width": 582,
+              "height": 582
+            }
+          }
+        }
+      }
+    },
+    "FixtureCategory": "sydney shires competition - Fifth Grade (The Tim Creer Cup)"
+  },
+  "TIMINGS": {
+    "FPS_INTRO": 90,
+    "FPS_OUTRO": 180,
+    "FPS_MAIN": 360
+  },
+  "DATA": [
+    {
+      "name": "Harinadh Sirigiri",
+      "wickets": 7,
+      "overs": "7",
+      "runs": 21,
+      "playedFor": "Balmain South Sydney 5th Grade Bowling",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_48887bdf17_05ce89e38a.jpg",
+        "width": 136,
+        "height": 158
+      },
+      "assignSponsors": {
+        "competition": {
+          "id": 12368,
+          "name": "Sydney Shires Competition"
+        },
+        "grade": {
+          "id": 37964,
+          "name": "Fifth Grade (The Tim Creer Cup)"
+        },
+        "Team": {
+          "name": "Balmain South Sydney 5th Grade Bowling"
+        }
+      },
+      "prompt": "Harinadh Sirigiri played for Balmain South Sydney 5th Grade Bowling, taking 7 wickets from 7 overs, conceding 21 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Lindfield 5th Grade, (8/137) vs Balmain South Sydney 5th Grade (10/124), the match result was Lindfield 5th Grade won by 13 runs."
+    },
+    {
+      "name": "Kulwant Dhillon",
+      "wickets": 4,
+      "overs": "8",
+      "runs": 10,
+      "playedFor": "Epping Bulls 5th Grade Bowling",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_11_a0aca7e2b6.png",
+        "width": 256,
+        "height": 256
+      },
+      "assignSponsors": {
+        "competition": {
+          "id": 12368,
+          "name": "Sydney Shires Competition"
+        },
+        "grade": {
+          "id": 37964,
+          "name": "Fifth Grade (The Tim Creer Cup)"
+        },
+        "Team": {
+          "name": "Epping Bulls 5th Grade Bowling"
+        }
+      },
+      "prompt": "Kulwant Dhillon played for Epping Bulls 5th Grade Bowling, taking 4 wickets from 8 overs, conceding 10 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Roseville 5th Grade, (8/120) vs Epping Bulls 5th Grade (10/93), the match result was Roseville 5th Grade won by 27 runs."
+    },
+    {
+      "name": "Isaac Williams",
+      "wickets": 3,
+      "overs": "5.1",
+      "runs": 12,
+      "playedFor": "Roseville 5th Grade Bowling",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_123acd5e8c_2db92a9e33.jpg",
+        "width": 693,
+        "height": 682
+      },
+      "assignSponsors": {
+        "competition": {
+          "id": 12368,
+          "name": "Sydney Shires Competition"
+        },
+        "grade": {
+          "id": 37964,
+          "name": "Fifth Grade (The Tim Creer Cup)"
+        },
+        "Team": {
+          "name": "Roseville 5th Grade Bowling"
+        }
+      },
+      "prompt": "Isaac Williams played for Roseville 5th Grade Bowling, taking 3 wickets from 5.1 overs, conceding 12 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Roseville 5th Grade, (8/120) vs Epping Bulls 5th Grade (10/93), the match result was Roseville 5th Grade won by 27 runs."
+    },
+    {
+      "name": "Alex Colreavy",
+      "wickets": 3,
+      "overs": "8",
+      "runs": 15,
+      "playedFor": "Burwood Briars 5th Grade Bowling",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_35_1992f316c9.png",
+        "width": 256,
+        "height": 256
+      },
+      "assignSponsors": {
+        "competition": {
+          "id": 12368,
+          "name": "Sydney Shires Competition"
+        },
+        "grade": {
+          "id": 37964,
+          "name": "Fifth Grade (The Tim Creer Cup)"
+        },
+        "Team": {
+          "name": "Burwood Briars 5th Grade Bowling"
+        }
+      },
+      "prompt": "Alex Colreavy played for Burwood Briars 5th Grade Bowling, taking 3 wickets from 8 overs, conceding 15 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Burwood Briars 5th Grade, (10/104) vs Warringah 5th Grade (8/105), the match result was Warringah 5th Grade won by 2 wickets."
+    },
+    {
+      "name": "Murray Moran",
+      "wickets": 3,
+      "overs": "6.4",
+      "runs": 16,
+      "playedFor": "Warringah 5th Grade Bowling",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_98f069a40c_a387589db3.jpg",
+        "width": 272,
+        "height": 274
+      },
+      "assignSponsors": {
+        "competition": {
+          "id": 12368,
+          "name": "Sydney Shires Competition"
+        },
+        "grade": {
+          "id": 37964,
+          "name": "Fifth Grade (The Tim Creer Cup)"
+        },
+        "Team": {
+          "name": "Warringah 5th Grade Bowling"
+        }
+      },
+      "prompt": "Murray Moran played for Warringah 5th Grade Bowling, taking 3 wickets from 6.4 overs, conceding 16 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Burwood Briars 5th Grade, (10/104) vs Warringah 5th Grade (8/105), the match result was Warringah 5th Grade won by 2 wickets."
+    }
+  ],
+  "PROMPT": []
+}

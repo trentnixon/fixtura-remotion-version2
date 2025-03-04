@@ -1,0 +1,1877 @@
+{
+  "RENDER": {
+    "SchedulerID": 7,
+    "RenderID": 6970
+  },
+  "ACCOUNT": {
+    "accountId": 119
+  },
+  "ASSET": {
+    "ASSETID": 29,
+    "ASSETTYPEID": 2,
+    "ASSETCATEGORYID": 2,
+    "ASSETSLINKID": "fef85e899e43d340abe62ec3690aad1c850dd97897fbe284843eb77cc4449390"
+  },
+  "VIDEOMETA": {
+    "grouping_category": "Senior",
+    "Video": {
+      "Title": "Weekend Result",
+      "TitleSplit": ["Weekend", "Result"],
+      "CompositionID": "WeekendSingleGameResult",
+      "VideoTitle": "Weekend Result Single Game - undefined",
+      "HeroImage": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/387488575_6536743446451915_3029261276535247093_n_267727ef3a_475e110276.jpg",
+        "width": 2048,
+        "height": 1366,
+        "ratio": "landscape",
+        "AgeGroup": "Seniors",
+        "AssetType": "ALL",
+        "markerPosition": ""
+      },
+      "Template": "Muted",
+      "TemplateVariation": {
+        "useForcedColor": "#C6C7C9",
+        "useMutedColor": "#081F3D"
+      },
+      "Theme": {
+        "primary": "#352466",
+        "secondary": "#ffa500",
+        "dark": "#111",
+        "white": "#FFF"
+      },
+      "includeSponsors": true,
+      "audio_option": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
+      "DiviedFixturesBy": {
+        "UpComingFixtures": 2,
+        "WeekendResults": 2,
+        "WeekendSingleGameResult": 1,
+        "Ladder": 1,
+        "RosterPoster": 1
+      },
+      "ASSETID": 29,
+      "ASSETTYPEID": 2,
+      "FRAMES": [195, 405, 615, 825, 1035, 1245]
+    },
+    "THEME": {
+      "Template": "Muted",
+      "TemplateVariation": {
+        "useForcedColor": "#C6C7C9",
+        "useMutedColor": "#081F3D"
+      },
+      "Theme": {
+        "primary": "#352466",
+        "secondary": "#ffa500",
+        "dark": "#111",
+        "white": "#FFF"
+      }
+    },
+    "Club": {
+      "Name": "Runaway Bay Cricket Club Inc",
+      "Sport": "Cricket",
+      "Logo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "Sponsors": {
+        "default": {
+          "primary_sponsor": {
+            "sponsorId": 74,
+            "name": "Virtual Manager",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/VIRTUAL_MGR_LOGO_HORTIZONTAL_0eefc7ebf7_5b0ee94f30.jpg",
+              "width": 1200,
+              "height": 350
+            }
+          },
+          "general_sponsors": [
+            {
+              "position": 1,
+              "sponsorId": 138,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+                "width": 490,
+                "height": 386
+              }
+            },
+            {
+              "position": 2,
+              "sponsorId": 139,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_d994b83b38.png",
+                "width": 500,
+                "height": 500
+              }
+            },
+            {
+              "position": 3,
+              "sponsorId": 140,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_2c026f7713.png",
+                "width": 352,
+                "height": 325
+              }
+            },
+            {
+              "position": 4,
+              "sponsorId": 141,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cobras_logo_White_trans_8235215ce0_911e86bd0f.png",
+                "width": 2796,
+                "height": 2842
+              }
+            },
+            {
+              "position": 5,
+              "sponsorId": 142,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_95b3967a3d.png",
+                "width": 2717,
+                "height": 2717
+              }
+            },
+            {
+              "position": 6,
+              "sponsorId": 143,
+              "name": "bg rat",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Big_Rat001_0d9e3b990b.png",
+                "width": 221,
+                "height": 140
+              }
+            },
+            {
+              "position": 7,
+              "sponsorId": 144,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_4ae024ea61.png",
+                "width": 1982,
+                "height": 1982
+              }
+            },
+            {
+              "position": 8,
+              "sponsorId": 145,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_46_260666c6a2_a7291b1f8e.jpg",
+                "width": 180,
+                "height": 180
+              }
+            },
+            {
+              "position": 9,
+              "sponsorId": 138,
+              "name": "test",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+                "width": 490,
+                "height": 386
+              }
+            },
+            {
+              "position": 10,
+              "sponsorId": 146,
+              "name": "testetest",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/434901405_2109664729400735_1483511238917312281_n_35d595311b.jpg",
+                "width": 500,
+                "height": 500
+              }
+            },
+            {
+              "position": 11,
+              "sponsorId": 146,
+              "name": "testetest",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/434901405_2109664729400735_1483511238917312281_n_35d595311b.jpg",
+                "width": 500,
+                "height": 500
+              }
+            },
+            {
+              "position": 12,
+              "sponsorId": 146,
+              "name": "testetest",
+              "logo": {
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/434901405_2109664729400735_1483511238917312281_n_35d595311b.jpg",
+                "width": 500,
+                "height": 500
+              }
+            }
+          ]
+        },
+        "team": [
+          {
+            "level": "team_14396",
+            "id": 14396,
+            "allocationName": "Runaway Bay Premier T20 🏏",
+            "sponsorId": 74,
+            "name": "Virtual Manager",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/VIRTUAL_MGR_LOGO_HORTIZONTAL_0eefc7ebf7_5b0ee94f30.jpg",
+              "width": 1200,
+              "height": 350
+            }
+          },
+          {
+            "level": "team_24269",
+            "id": 24269,
+            "allocationName": "Runaway Bay Community Div 2",
+            "sponsorId": 74,
+            "name": "Virtual Manager",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/VIRTUAL_MGR_LOGO_HORTIZONTAL_0eefc7ebf7_5b0ee94f30.jpg",
+              "width": 1200,
+              "height": 350
+            }
+          },
+          {
+            "level": "team_24319",
+            "id": 24319,
+            "allocationName": "Runaway Bay Navy Over 50",
+            "sponsorId": 74,
+            "name": "Virtual Manager",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/VIRTUAL_MGR_LOGO_HORTIZONTAL_0eefc7ebf7_5b0ee94f30.jpg",
+              "width": 1200,
+              "height": 350
+            }
+          },
+          {
+            "level": "team_14417",
+            "id": 14417,
+            "allocationName": "Runaway Bay Fifth Grade",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_14494",
+            "id": 14494,
+            "allocationName": "Runaway Bay Over 40's Div 3",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_14614",
+            "id": 14614,
+            "allocationName": "Runaway Bay Seagulls U13 Navy",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_23865",
+            "id": 23865,
+            "allocationName": "Runaway Bay Seagulls U10 Orange",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_23973",
+            "id": 23973,
+            "allocationName": "Runaway Bay Seagulls Opens Div 3",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_24313",
+            "id": 24313,
+            "allocationName": "Bye",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_24333",
+            "id": 24333,
+            "allocationName": "Runaway Bay Pink Women",
+            "sponsorId": 138,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55_ad70e02998.jpg",
+              "width": 490,
+              "height": 386
+            }
+          },
+          {
+            "level": "team_14429",
+            "id": 14429,
+            "allocationName": "Runaway Bay Orange Community Div 3",
+            "sponsorId": 139,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_d994b83b38.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          {
+            "level": "team_14499",
+            "id": 14499,
+            "allocationName": "Runaway Bay Over 50's",
+            "sponsorId": 139,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_d994b83b38.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          {
+            "level": "team_14624",
+            "id": 14624,
+            "allocationName": "Runaway Bay Seagulls U13 Orange",
+            "sponsorId": 139,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_d994b83b38.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          {
+            "level": "team_23864",
+            "id": 23864,
+            "allocationName": "Runaway Bay Seagulls U10 Navy",
+            "sponsorId": 139,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_d994b83b38.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          {
+            "level": "team_23982",
+            "id": 23982,
+            "allocationName": "Runaway Bay Seagulls Opens Div 4",
+            "sponsorId": 139,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_d994b83b38.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          {
+            "level": "team_14435",
+            "id": 14435,
+            "allocationName": "Runaway Bay Navy Sixth Grade",
+            "sponsorId": 140,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_2c026f7713.png",
+              "width": 352,
+              "height": 325
+            }
+          },
+          {
+            "level": "team_14511",
+            "id": 14511,
+            "allocationName": "Runaway Bay T20 🏏 (Lower Grades)",
+            "sponsorId": 140,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_2c026f7713.png",
+              "width": 352,
+              "height": 325
+            }
+          },
+          {
+            "level": "team_14644",
+            "id": 14644,
+            "allocationName": "Runaway Bay Seagulls Div 1",
+            "sponsorId": 140,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_2c026f7713.png",
+              "width": 352,
+              "height": 325
+            }
+          },
+          {
+            "level": "team_24283",
+            "id": 24283,
+            "allocationName": "Runaway Bay Navy Community Div 3",
+            "sponsorId": 140,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_2c026f7713.png",
+              "width": 352,
+              "height": 325
+            }
+          },
+          {
+            "level": "team_14446",
+            "id": 14446,
+            "allocationName": "Runaway Bay First Grade",
+            "sponsorId": 141,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cobras_logo_White_trans_8235215ce0_911e86bd0f.png",
+              "width": 2796,
+              "height": 2842
+            }
+          },
+          {
+            "level": "team_14513",
+            "id": 14513,
+            "allocationName": "Runaway Bay Women",
+            "sponsorId": 141,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cobras_logo_White_trans_8235215ce0_911e86bd0f.png",
+              "width": 2796,
+              "height": 2842
+            }
+          },
+          {
+            "level": "team_14655",
+            "id": 14655,
+            "allocationName": "Runaway Bay Seagulls Div 2",
+            "sponsorId": 141,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cobras_logo_White_trans_8235215ce0_911e86bd0f.png",
+              "width": 2796,
+              "height": 2842
+            }
+          },
+          {
+            "level": "team_14657",
+            "id": 14657,
+            "allocationName": "Runaway Bay Seagulls Div 3",
+            "sponsorId": 141,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cobras_logo_White_trans_8235215ce0_911e86bd0f.png",
+              "width": 2796,
+              "height": 2842
+            }
+          },
+          {
+            "level": "team_24284",
+            "id": 24284,
+            "allocationName": "Runaway Bay Orange Community Div 3",
+            "sponsorId": 141,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cobras_logo_White_trans_8235215ce0_911e86bd0f.png",
+              "width": 2796,
+              "height": 2842
+            }
+          },
+          {
+            "level": "team_14456",
+            "id": 14456,
+            "allocationName": "Runaway Bay Second Grade",
+            "sponsorId": 142,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_95b3967a3d.png",
+              "width": 2717,
+              "height": 2717
+            }
+          },
+          {
+            "level": "team_14548",
+            "id": 14548,
+            "allocationName": "Runaway Bay Seagulls U10 Navy",
+            "sponsorId": 142,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_95b3967a3d.png",
+              "width": 2717,
+              "height": 2717
+            }
+          },
+          {
+            "level": "team_22681",
+            "id": 22681,
+            "allocationName": "Runaway Bay T20",
+            "sponsorId": 142,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_95b3967a3d.png",
+              "width": 2717,
+              "height": 2717
+            }
+          },
+          {
+            "level": "team_23887",
+            "id": 23887,
+            "allocationName": "Runaway Bay Seagulls U11",
+            "sponsorId": 142,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_95b3967a3d.png",
+              "width": 2717,
+              "height": 2717
+            }
+          },
+          {
+            "level": "team_24292",
+            "id": 24292,
+            "allocationName": "Runaway Bay Over 40 Div 1",
+            "sponsorId": 142,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_95b3967a3d.png",
+              "width": 2717,
+              "height": 2717
+            }
+          },
+          {
+            "level": "team_14465",
+            "id": 14465,
+            "allocationName": "Runaway Bay Third Grade",
+            "sponsorId": 143,
+            "name": "bg rat",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Big_Rat001_0d9e3b990b.png",
+              "width": 221,
+              "height": 140
+            }
+          },
+          {
+            "level": "team_14549",
+            "id": 14549,
+            "allocationName": "Runaway Bay Seagulls U10 Orange",
+            "sponsorId": 143,
+            "name": "bg rat",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Big_Rat001_0d9e3b990b.png",
+              "width": 221,
+              "height": 140
+            }
+          },
+          {
+            "level": "team_22692",
+            "id": 22692,
+            "allocationName": "Runaway Bay Premier Div 1",
+            "sponsorId": 143,
+            "name": "bg rat",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Big_Rat001_0d9e3b990b.png",
+              "width": 221,
+              "height": 140
+            }
+          },
+          {
+            "level": "team_23909",
+            "id": 23909,
+            "allocationName": "Runaway Bay Seagulls U12 Navy",
+            "sponsorId": 143,
+            "name": "bg rat",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Big_Rat001_0d9e3b990b.png",
+              "width": 221,
+              "height": 140
+            }
+          },
+          {
+            "level": "team_24298",
+            "id": 24298,
+            "allocationName": "Runaway Bay Over 40's Div 2",
+            "sponsorId": 143,
+            "name": "bg rat",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Big_Rat001_0d9e3b990b.png",
+              "width": 221,
+              "height": 140
+            }
+          },
+          {
+            "level": "team_14472",
+            "id": 14472,
+            "allocationName": "Runaway Bay Third Grade (Colts)",
+            "sponsorId": 144,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_4ae024ea61.png",
+              "width": 1982,
+              "height": 1982
+            }
+          },
+          {
+            "level": "team_14568",
+            "id": 14568,
+            "allocationName": "Runaway Bay Seagulls U11",
+            "sponsorId": 144,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_4ae024ea61.png",
+              "width": 1982,
+              "height": 1982
+            }
+          },
+          {
+            "level": "team_22704",
+            "id": 22704,
+            "allocationName": "Runaway Bay Premier Div 2",
+            "sponsorId": 144,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_4ae024ea61.png",
+              "width": 1982,
+              "height": 1982
+            }
+          },
+          {
+            "level": "team_23919",
+            "id": 23919,
+            "allocationName": "Runaway Bay Seagulls U12 Orange",
+            "sponsorId": 144,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_4ae024ea61.png",
+              "width": 1982,
+              "height": 1982
+            }
+          },
+          {
+            "level": "team_24332",
+            "id": 24332,
+            "allocationName": "Runaway Bay Navy Women",
+            "sponsorId": 144,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_4ae024ea61.png",
+              "width": 1982,
+              "height": 1982
+            }
+          },
+          {
+            "level": "team_14477",
+            "id": 14477,
+            "allocationName": "Runaway Bay Over 40's Div 1",
+            "sponsorId": 145,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_46_260666c6a2_a7291b1f8e.jpg",
+              "width": 180,
+              "height": 180
+            }
+          },
+          {
+            "level": "team_14592",
+            "id": 14592,
+            "allocationName": "Runaway Bay Seagulls U12",
+            "sponsorId": 145,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_46_260666c6a2_a7291b1f8e.jpg",
+              "width": 180,
+              "height": 180
+            }
+          },
+          {
+            "level": "team_22718",
+            "id": 22718,
+            "allocationName": "Runaway Bay Premier Div 3",
+            "sponsorId": 145,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_46_260666c6a2_a7291b1f8e.jpg",
+              "width": 180,
+              "height": 180
+            }
+          },
+          {
+            "level": "team_23961",
+            "id": 23961,
+            "allocationName": "Runaway Bay Seagulls Opens Div 2",
+            "sponsorId": 145,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_46_260666c6a2_a7291b1f8e.jpg",
+              "width": 180,
+              "height": 180
+            }
+          },
+          {
+            "level": "team_24320",
+            "id": 24320,
+            "allocationName": "Runaway Bay Orange Over 50",
+            "sponsorId": 145,
+            "name": "test",
+            "logo": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_46_260666c6a2_a7291b1f8e.jpg",
+              "width": 180,
+              "height": 180
+            }
+          }
+        ]
+      }
+    },
+    "FixtureCategory": "Senior"
+  },
+  "TIMINGS": {
+    "FPS_INTRO": 90,
+    "FPS_SCORECARD": 210,
+    "FPS_OUTRO": 120,
+    "FPS_MAIN": 10000
+  },
+  "DATA": [
+    {
+      "gameID": "d113c4a1",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Runaway Bay Premier Div 1",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+          "width": 2602,
+          "height": 2788
+        },
+        "score": "6/148",
+        "overs": "(40)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Josh Cox",
+            "runs": 56,
+            "balls": 104,
+            "fours": 1,
+            "sixes": 0,
+            "SR": 53.84,
+            "team": "Runaway Bay Premier Div 1",
+            "notOut": false
+          },
+          {
+            "player": "Lucas Frazer",
+            "runs": 44,
+            "balls": 68,
+            "fours": 2,
+            "sixes": 2,
+            "SR": 64.7,
+            "team": "Runaway Bay Premier Div 1",
+            "notOut": false
+          },
+          {
+            "player": "Adnan Hussain",
+            "runs": 20,
+            "balls": 25,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 80,
+            "team": "Runaway Bay Premier Div 1",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Rhys Finn",
+            "overs": 8,
+            "maidens": 0,
+            "runs": 38,
+            "wickets": 2,
+            "economy": "4.75",
+            "team": "Mudgeeraba Premier Division 1"
+          },
+          {
+            "player": "Jordan Baker",
+            "overs": 8,
+            "maidens": 0,
+            "runs": 26,
+            "wickets": 1,
+            "economy": "3.25",
+            "team": "Mudgeeraba Premier Division 1"
+          },
+          {
+            "player": "Hayden Taylor",
+            "overs": 8,
+            "maidens": 0,
+            "runs": 31,
+            "wickets": 1,
+            "economy": "3.88",
+            "team": "Mudgeeraba Premier Division 1"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "awayTeam": {
+        "name": "Mudgeeraba Premier Division 1",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16_94f9e7463d.jpg",
+          "width": 4032,
+          "height": 3024
+        },
+        "score": "3/261",
+        "overs": "(40)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Kevin Chapman",
+            "runs": 108,
+            "balls": 112,
+            "fours": 8,
+            "sixes": 2,
+            "SR": 96.42,
+            "team": "Mudgeeraba Premier Division 1",
+            "notOut": true
+          },
+          {
+            "player": "Joshua Nelson",
+            "runs": 47,
+            "balls": 53,
+            "fours": 6,
+            "sixes": 0,
+            "SR": 88.67,
+            "team": "Mudgeeraba Premier Division 1",
+            "notOut": false
+          },
+          {
+            "player": "Jordan Baker",
+            "runs": 44,
+            "balls": 29,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 151.72,
+            "team": "Mudgeeraba Premier Division 1",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Ahmad Jawid",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 14,
+            "wickets": 1,
+            "economy": "3.50",
+            "team": "Runaway Bay Premier Div 1"
+          },
+          {
+            "player": "Morgan Carter",
+            "overs": 8,
+            "maidens": 1,
+            "runs": 46,
+            "wickets": 1,
+            "economy": "5.75",
+            "team": "Runaway Bay Premier Div 1"
+          },
+          {
+            "player": "Dhiraj Ahuja",
+            "overs": 5,
+            "maidens": 1,
+            "runs": 38,
+            "wickets": 1,
+            "economy": "7.60",
+            "team": "Runaway Bay Premier Div 1"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16_94f9e7463d.jpg",
+        "width": 4032,
+        "height": 3024
+      },
+      "date": "Saturday, 26 October 2024",
+      "type": "One Day",
+      "ground": "Runaway Bay Cricket Club / Sam Loxton Oval 1",
+      "round": "Round 4",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "CGC Premier League - Division 1",
+      "assignSponsors": {
+        "competition": {
+          "id": 11141,
+          "name": "Cricket Gold Coast Senior Competition"
+        },
+        "grade": {
+          "id": 32662,
+          "name": "CGC Premier League - Division 1"
+        },
+        "Teams": {
+          "home": {
+            "name": "Runaway Bay Premier Div 1"
+          },
+          "away": {
+            "name": "Mudgeeraba Premier Division 1"
+          }
+        }
+      },
+      "result": "Mudgeeraba Premier Division 1 won by 113 runs",
+      "prompt": "Match Summary: Runaway Bay Premier Div 1 vs. Mudgeeraba Premier Division 1:\n      - This CGC Premier League - Division 1 game is a One Day, played in Round: Round 4 at Runaway Bay Cricket Club / Sam Loxton Oval 1.\n      - Scores: Runaway Bay Premier Div 1 6/148 in (40) overs, Mudgeeraba Premier Division 1 3/261 in (40) overs\n      - Result: Mudgeeraba Premier Division 1 won by 113 runs\n      Player Performances:\n      - Runaway Bay Premier Div 1\n        - Batting: Josh Cox: 56 runs  from 104 balls, 1 fours, 0 sixes, SR: 53.84; Lucas Frazer: 44 runs  from 68 balls, 2 fours, 2 sixes, SR: 64.7; Adnan Hussain: 20 runs  from 25 balls, 0 fours, 0 sixes, SR: 80\n        - Bowling: Rhys Finn: 2 wickets from 8 overs, 38 runs, Econ: 4.75; Jordan Baker: 1 wickets from 8 overs, 26 runs, Econ: 3.25; Hayden Taylor: 1 wickets from 8 overs, 31 runs, Econ: 3.88\n        - FOW: Wicket 1: 11 (Rhys Howarth), Wicket 2: 27 (Ben Houghton), Wicket 3: 108 (Lucas Frazer), Wicket 4: 146 (Adnan Hussain), Wicket 5: 148 (Ahmad Jawid), Wicket 6: 148 (Josh Cox)\n        - Fielding: Joshua Nelson, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 2, Run outs assisted: 0, Total run outs: 2, Stumpings: 0\n      Focus on highlighted team performances."
+    },
+    {
+      "gameID": "92331e6e",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Mudgeeraba Premier Div 2",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16_94f9e7463d.jpg",
+          "width": 4032,
+          "height": 3024
+        },
+        "score": "5/116",
+        "overs": "(20)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Nicholas Mahoney",
+            "runs": 40,
+            "balls": 35,
+            "fours": 5,
+            "sixes": 1,
+            "SR": 114.28,
+            "team": "Mudgeeraba Premier Div 2",
+            "notOut": false
+          },
+          {
+            "player": "Marco Kroon",
+            "runs": 17,
+            "balls": 13,
+            "fours": 3,
+            "sixes": 0,
+            "SR": 130.76,
+            "team": "Mudgeeraba Premier Div 2",
+            "notOut": false
+          },
+          {
+            "player": "george wilcock",
+            "runs": 17,
+            "balls": 18,
+            "fours": 1,
+            "sixes": 1,
+            "SR": 94.44,
+            "team": "Mudgeeraba Premier Div 2",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "NAYEEF BISWAS",
+            "overs": 5,
+            "maidens": 1,
+            "runs": 16,
+            "wickets": 2,
+            "economy": "3.20",
+            "team": "Runaway Bay Premier Div 2"
+          },
+          {
+            "player": "James Munro",
+            "overs": 1,
+            "maidens": 0,
+            "runs": 1,
+            "wickets": 1,
+            "economy": "1.00",
+            "team": "Runaway Bay Premier Div 2"
+          },
+          {
+            "player": "Stephen Watson",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 24,
+            "wickets": 1,
+            "economy": "6.00",
+            "team": "Runaway Bay Premier Div 2"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "awayTeam": {
+        "name": "Runaway Bay Premier Div 2",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+          "width": 2602,
+          "height": 2788
+        },
+        "score": "10/115",
+        "overs": "(38.3)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Patrick Brown",
+            "runs": 32,
+            "balls": 66,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 48.48,
+            "team": "Runaway Bay Premier Div 2",
+            "notOut": false
+          },
+          {
+            "player": "Amir Malik",
+            "runs": 29,
+            "balls": 44,
+            "fours": 3,
+            "sixes": 0,
+            "SR": 65.9,
+            "team": "Runaway Bay Premier Div 2",
+            "notOut": false
+          },
+          {
+            "player": "Matt Baker",
+            "runs": 17,
+            "balls": 39,
+            "fours": 1,
+            "sixes": 0,
+            "SR": 43.58,
+            "team": "Runaway Bay Premier Div 2",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Marco Kroon",
+            "overs": 5,
+            "maidens": 0,
+            "runs": 10,
+            "wickets": 3,
+            "economy": "2.00",
+            "team": "Mudgeeraba Premier Div 2"
+          },
+          {
+            "player": "Luke Herrmann",
+            "overs": 8,
+            "maidens": 2,
+            "runs": 12,
+            "wickets": 2,
+            "economy": "1.50",
+            "team": "Mudgeeraba Premier Div 2"
+          },
+          {
+            "player": "Michael Blight",
+            "overs": 7.3,
+            "maidens": 0,
+            "runs": 23,
+            "wickets": 2,
+            "economy": "3.15",
+            "team": "Mudgeeraba Premier Div 2"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16_94f9e7463d.jpg",
+        "width": 4032,
+        "height": 3024
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "date": "Saturday, 26 October 2024",
+      "type": "One Day",
+      "ground": "Carrara Community Centre / Corbwood No 1 (Mudgeeraba CC)",
+      "round": "Round 4",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "CGC Premier League - Division 2",
+      "assignSponsors": {
+        "competition": {
+          "id": 11141,
+          "name": "Cricket Gold Coast Senior Competition"
+        },
+        "grade": {
+          "id": 32663,
+          "name": "CGC Premier League - Division 2"
+        },
+        "Teams": {
+          "home": {
+            "name": "Mudgeeraba Premier Div 2"
+          },
+          "away": {
+            "name": "Runaway Bay Premier Div 2"
+          }
+        }
+      },
+      "result": "Mudgeeraba Premier Div 2 won by 5 wickets",
+      "prompt": "Match Summary: Mudgeeraba Premier Div 2 vs. Runaway Bay Premier Div 2:\n      - This CGC Premier League - Division 2 game is a One Day, played in Round: Round 4 at Carrara Community Centre / Corbwood No 1 (Mudgeeraba CC).\n      - Scores: Mudgeeraba Premier Div 2 5/116 in (20) overs, Runaway Bay Premier Div 2 10/115 in (38.3) overs\n      - Result: Mudgeeraba Premier Div 2 won by 5 wickets\n      Player Performances:\n      - Mudgeeraba Premier Div 2\n        - Batting: \n        - Bowling: \n        - FOW: Wicket 1: 1 (Lucas Poeppmann), Wicket 2: 56 (george wilcock), Wicket 3: 61 (Nicholas Mahoney), Wicket 4: 84 (Marco Kroon), Wicket 5: 107 (Luke Trudgett)\n        - Fielding: \n      - Runaway Bay Premier Div 2\n        - Batting: Patrick Brown: 32 runs  from 66 balls, 2 fours, 0 sixes, SR: 48.48; Amir Malik: 29 runs  from 44 balls, 3 fours, 0 sixes, SR: 65.9; Matt Baker: 17 runs  from 39 balls, 1 fours, 0 sixes, SR: 43.58\n        - Bowling: Marco Kroon: 3 wickets from 5 overs, 10 runs, Econ: 2.00; Luke Herrmann: 2 wickets from 8 overs, 12 runs, Econ: 1.50; Michael Blight: 2 wickets from 7.3 overs, 23 runs, Econ: 3.15\n        - FOW: Wicket 1: 13 (Varun Sharma), Wicket 2: 46 (Amir Malik), Wicket 3: 49 (Mitchell Mcphee), Wicket 4: 78 (Matt Baker), Wicket 5: 90 (William Marron), Wicket 6: 98 (NAYEEF BISWAS), Wicket 7: 98 (Christopher Bartlett), Wicket 8: 100 (Cameron Davies), Wicket 9: 114 (Patrick Brown), Wicket 10: 115 (Stephen Watson)\n        - Fielding: Luke Herrmann, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Marco Kroon, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
+    },
+    {
+      "gameID": "80131e40",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Runaway Bay Premier Div 3",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+          "width": 2602,
+          "height": 2788
+        },
+        "score": "7/102",
+        "overs": "(40)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Stephen Wolf",
+            "runs": 36,
+            "balls": 57,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 63.15,
+            "team": "Runaway Bay Premier Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Sean Sandford",
+            "runs": 21,
+            "balls": 74,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 28.37,
+            "team": "Runaway Bay Premier Div 3",
+            "notOut": true
+          },
+          {
+            "player": "Nathan Rudd",
+            "runs": 11,
+            "balls": 26,
+            "fours": 1,
+            "sixes": 0,
+            "SR": 42.3,
+            "team": "Runaway Bay Premier Div 3",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Tom Kennedy",
+            "overs": 8,
+            "maidens": 1,
+            "runs": 16,
+            "wickets": 2,
+            "economy": "2.00",
+            "team": "Surfers Paradise Premier Div 3"
+          },
+          {
+            "player": "Asitha Koralage",
+            "overs": 8,
+            "maidens": 2,
+            "runs": 10,
+            "wickets": 1,
+            "economy": "1.25",
+            "team": "Surfers Paradise Premier Div 3"
+          },
+          {
+            "player": "Tharusha Amaratunga",
+            "overs": 4,
+            "maidens": 1,
+            "runs": 7,
+            "wickets": 1,
+            "economy": "1.75",
+            "team": "Surfers Paradise Premier Div 3"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "awayTeam": {
+        "name": "Surfers Paradise Premier Div 3",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_20_7dc1cd898f.png",
+          "width": 169,
+          "height": 163
+        },
+        "score": "1/103",
+        "overs": "(17.2)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Craig Collins",
+            "runs": 49,
+            "balls": 42,
+            "fours": 9,
+            "sixes": 0,
+            "SR": 116.66,
+            "team": "Surfers Paradise Premier Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Taylor Waugh",
+            "runs": 47,
+            "balls": 57,
+            "fours": 9,
+            "sixes": 0,
+            "SR": 82.45,
+            "team": "Surfers Paradise Premier Div 3",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Stephen Wolf",
+            "overs": 5.2,
+            "maidens": 0,
+            "runs": 33,
+            "wickets": 1,
+            "economy": "6.35",
+            "team": "Runaway Bay Premier Div 3"
+          },
+          {
+            "player": "Fill-in",
+            "overs": 2,
+            "maidens": 0,
+            "runs": 8,
+            "wickets": 0,
+            "economy": "4.00",
+            "team": "Runaway Bay Premier Div 3"
+          },
+          {
+            "player": "Nicholas McConnell",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 15,
+            "wickets": 0,
+            "economy": "5.00",
+            "team": "Runaway Bay Premier Div 3"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_20_7dc1cd898f.png",
+        "width": 169,
+        "height": 163
+      },
+      "date": "Saturday, 26 October 2024",
+      "type": "One Day",
+      "ground": "Runaway Bay Cricket Club / Sam Loxton Oval 2",
+      "round": "Round 4",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "CGC Premier League - Division 3",
+      "assignSponsors": {
+        "competition": {
+          "id": 11141,
+          "name": "Cricket Gold Coast Senior Competition"
+        },
+        "grade": {
+          "id": 32664,
+          "name": "CGC Premier League - Division 3"
+        },
+        "Teams": {
+          "home": {
+            "name": "Runaway Bay Premier Div 3"
+          },
+          "away": {
+            "name": "Surfers Paradise Premier Div 3"
+          }
+        }
+      },
+      "result": "Surfers Paradise Premier Div 3 won by 9 wickets",
+      "prompt": "Match Summary: Runaway Bay Premier Div 3 vs. Surfers Paradise Premier Div 3:\n      - This CGC Premier League - Division 3 game is a One Day, played in Round: Round 4 at Runaway Bay Cricket Club / Sam Loxton Oval 2.\n      - Scores: Runaway Bay Premier Div 3 7/102 in (40) overs, Surfers Paradise Premier Div 3 1/103 in (17.2) overs\n      - Result: Surfers Paradise Premier Div 3 won by 9 wickets\n      Player Performances:\n      - Runaway Bay Premier Div 3\n        - Batting: Stephen Wolf: 36 runs  from 57 balls, 5 fours, 0 sixes, SR: 63.15; Sean Sandford: 21 runs (Not out) from 74 balls, 0 fours, 0 sixes, SR: 28.37; Nathan Rudd: 11 runs  from 26 balls, 1 fours, 0 sixes, SR: 42.3\n        - Bowling: Tom Kennedy: 2 wickets from 8 overs, 16 runs, Econ: 2.00; Asitha Koralage: 1 wickets from 8 overs, 10 runs, Econ: 1.25; Tharusha Amaratunga: 1 wickets from 4 overs, 7 runs, Econ: 1.75\n        - FOW: Wicket 1: 1 (John Deitz), Wicket 2: 5 (Angus Richardson), Wicket 3: 43 (Jamie Lennix), Wicket 4: 61 (Stephen Wolf), Wicket 5: 80 (Nathan Rudd), Wicket 6: 89 (James Munro), Wicket 7: 90 (Player)\n        - Fielding: undefined, Caught as fielder: undefined, Caught as wicket keeper: undefined, Total catches: undefined, Run outs unassisted: undefined, Run outs assisted: undefined, Total run outs: undefined, Stumpings: undefined\n      Focus on highlighted team performances."
+    },
+    {
+      "gameID": "21e83ebd",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Burleigh Cricket Club 5th Grade",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_64688f0fa1.jpg",
+          "width": 500,
+          "height": 410
+        },
+        "score": "6/186",
+        "overs": "(33.5)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Jonathon Parker",
+            "runs": 80,
+            "balls": 70,
+            "fours": 10,
+            "sixes": 1,
+            "SR": 114.28,
+            "team": "Burleigh Cricket Club 5th Grade",
+            "notOut": true
+          },
+          {
+            "player": "Thomas Touzell",
+            "runs": 42,
+            "balls": 79,
+            "fours": 4,
+            "sixes": 0,
+            "SR": 53.16,
+            "team": "Burleigh Cricket Club 5th Grade",
+            "notOut": false
+          },
+          {
+            "player": "Josh Walsh",
+            "runs": 35,
+            "balls": 14,
+            "fours": 4,
+            "sixes": 2,
+            "SR": 250,
+            "team": "Burleigh Cricket Club 5th Grade",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Joshua Foenander",
+            "overs": 6,
+            "maidens": 1,
+            "runs": 23,
+            "wickets": 2,
+            "economy": "3.83",
+            "team": "Runaway Bay Community Div 2"
+          },
+          {
+            "player": "Nathan Foenander",
+            "overs": 4.4,
+            "maidens": 0,
+            "runs": 44,
+            "wickets": 2,
+            "economy": "10.00",
+            "team": "Runaway Bay Community Div 2"
+          },
+          {
+            "player": "Michael Schumacher",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 28,
+            "wickets": 1,
+            "economy": "4.67",
+            "team": "Runaway Bay Community Div 2"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "awayTeam": {
+        "name": "Runaway Bay Community Div 2",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+          "width": 2602,
+          "height": 2788
+        },
+        "score": "9/185",
+        "overs": "(31.5)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Colin Wakefield",
+            "runs": 51,
+            "balls": 52,
+            "fours": 6,
+            "sixes": 1,
+            "SR": 98.07,
+            "team": "Runaway Bay Community Div 2",
+            "notOut": false
+          },
+          {
+            "player": "Chris Nilon",
+            "runs": 30,
+            "balls": 16,
+            "fours": 4,
+            "sixes": 2,
+            "SR": 187.5,
+            "team": "Runaway Bay Community Div 2",
+            "notOut": false
+          },
+          {
+            "player": "Peter Crittenden",
+            "runs": 30,
+            "balls": 23,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 130.43,
+            "team": "Runaway Bay Community Div 2",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Josh Walsh",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 26,
+            "wickets": 4,
+            "economy": "4.33",
+            "team": "Burleigh Cricket Club 5th Grade"
+          },
+          {
+            "player": "Parker Cunneen",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 40,
+            "wickets": 4,
+            "economy": "6.67",
+            "team": "Burleigh Cricket Club 5th Grade"
+          },
+          {
+            "player": "Jax O’Dwyer",
+            "overs": 2.5,
+            "maidens": 0,
+            "runs": 20,
+            "wickets": 1,
+            "economy": "8.00",
+            "team": "Burleigh Cricket Club 5th Grade"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_64688f0fa1.jpg",
+        "width": 500,
+        "height": 410
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "date": "Saturday, 26 October 2024",
+      "type": "One Day",
+      "ground": "Elanora State High School / School oval",
+      "round": "Round 3",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "CGC Community League - Division 2",
+      "assignSponsors": {
+        "competition": {
+          "id": 11141,
+          "name": "Cricket Gold Coast Senior Competition"
+        },
+        "grade": {
+          "id": 37270,
+          "name": "CGC Community League - Division 2"
+        },
+        "Teams": {
+          "home": {
+            "name": "Burleigh Cricket Club 5th Grade"
+          },
+          "away": {
+            "name": "Runaway Bay Community Div 2"
+          }
+        }
+      },
+      "result": "Burleigh Cricket Club 5th Grade won by 4 wickets",
+      "prompt": "Match Summary: Burleigh Cricket Club 5th Grade vs. Runaway Bay Community Div 2:\n      - This CGC Community League - Division 2 game is a One Day, played in Round: Round 3 at Elanora State High School / School oval.\n      - Scores: Burleigh Cricket Club 5th Grade 6/186 in (33.5) overs, Runaway Bay Community Div 2 9/185 in (31.5) overs\n      - Result: Burleigh Cricket Club 5th Grade won by 4 wickets\n      Player Performances:\n      - Burleigh Cricket Club 5th Grade\n        - Batting: \n        - Bowling: \n        - FOW: Wicket 1: 27 (Bryce Daley), Wicket 2: 31 (Robert White), Wicket 3: 41 (Ethan Parker), Wicket 4: 114 (Thomas Touzell), Wicket 5: 129 (Mitch Turner), Wicket 6: 130 (Beau Selwood)\n        - Fielding: \n      - Runaway Bay Community Div 2\n        - Batting: Colin Wakefield: 51 runs  from 52 balls, 6 fours, 1 sixes, SR: 98.07; Chris Nilon: 30 runs  from 16 balls, 4 fours, 2 sixes, SR: 187.5; Peter Crittenden: 30 runs  from 23 balls, 5 fours, 0 sixes, SR: 130.43\n        - Bowling: Josh Walsh: 4 wickets from 6 overs, 26 runs, Econ: 4.33; Parker Cunneen: 4 wickets from 6 overs, 40 runs, Econ: 6.67; Jax O’Dwyer: 1 wickets from 2.5 overs, 20 runs, Econ: 8.00\n        - FOW: Wicket 1: 3 (Conan Dunning), Wicket 2: 45 (Joshua Foenander), Wicket 3: 90 (Colin Wakefield), Wicket 4: 113 (Gary McCoy), Wicket 5: 128 (Chris Nilon), Wicket 6: 154 (Andrew Foenander), Wicket 7: 178 (Nathan Foenander), Wicket 8: 179 (Peter Crittenden), Wicket 9: 185 (Jamie Hunt)\n        - Fielding: Josh Walsh, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
+    },
+    {
+      "gameID": "dd53e65a",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Runaway Bay Orange Community Div 3",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+          "width": 2602,
+          "height": 2788
+        },
+        "score": "2/167",
+        "overs": "(36)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Jim Phillips (c)",
+            "runs": 66,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 0,
+            "team": "Runaway Bay Orange Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Jamie Phillips",
+            "runs": 53,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 0,
+            "team": "Runaway Bay Orange Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Tony Rowe",
+            "runs": 28,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 0,
+            "team": "Runaway Bay Orange Community Div 3",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Fill-in",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 29,
+            "wickets": 1,
+            "economy": "4.83",
+            "team": "Bonogin Gold Community Div 3"
+          },
+          {
+            "player": "Mitchell Stringer",
+            "overs": 6,
+            "maidens": 1,
+            "runs": 32,
+            "wickets": 1,
+            "economy": "5.33",
+            "team": "Bonogin Gold Community Div 3"
+          },
+          {
+            "player": "Jesse Wilson",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 18,
+            "wickets": 0,
+            "economy": "3.00",
+            "team": "Bonogin Gold Community Div 3"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "awayTeam": {
+        "name": "Bonogin Gold Community Div 3",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_d0f080b408.jpg",
+          "width": 897,
+          "height": 989
+        },
+        "score": "10/156",
+        "overs": "(31.2)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Praneeth Varma Mantena",
+            "runs": 69,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 0,
+            "team": "Bonogin Gold Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Jesse Wilson",
+            "runs": 31,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 0,
+            "team": "Bonogin Gold Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "James Whyman",
+            "runs": 17,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 0,
+            "team": "Bonogin Gold Community Div 3",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Robert Laing",
+            "overs": 6,
+            "maidens": 2,
+            "runs": 9,
+            "wickets": 4,
+            "economy": "1.50",
+            "team": "Runaway Bay Orange Community Div 3"
+          },
+          {
+            "player": "Murray Whyte",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 31,
+            "wickets": 2,
+            "economy": "5.17",
+            "team": "Runaway Bay Orange Community Div 3"
+          },
+          {
+            "player": "Kaeleb Edwards",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 40,
+            "wickets": 2,
+            "economy": "6.67",
+            "team": "Runaway Bay Orange Community Div 3"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_d0f080b408.jpg",
+        "width": 897,
+        "height": 989
+      },
+      "date": "Saturday, 26 October 2024",
+      "type": "One Day",
+      "ground": "Runaway Bay Cricket Club / Sam Loxton Oval 3",
+      "round": "Round 3",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "CGC Community League - Division 3",
+      "assignSponsors": {
+        "competition": {
+          "id": 11141,
+          "name": "Cricket Gold Coast Senior Competition"
+        },
+        "grade": {
+          "id": 37271,
+          "name": "CGC Community League - Division 3"
+        },
+        "Teams": {
+          "home": {
+            "name": "Runaway Bay Orange Community Div 3"
+          },
+          "away": {
+            "name": "Bonogin Gold Community Div 3"
+          }
+        }
+      },
+      "result": "Runaway Bay Orange Community Div 3 won by 11 runs",
+      "prompt": "Match Summary: Runaway Bay Orange Community Div 3 vs. Bonogin Gold Community Div 3:\n      - This CGC Community League - Division 3 game is a One Day, played in Round: Round 3 at Runaway Bay Cricket Club / Sam Loxton Oval 3.\n      - Scores: Runaway Bay Orange Community Div 3 2/167 in (36) overs, Bonogin Gold Community Div 3 10/156 in (31.2) overs\n      - Result: Runaway Bay Orange Community Div 3 won by 11 runs\n      Player Performances:\n      - Runaway Bay Orange Community Div 3\n        - Batting: Jim Phillips (c): 66 runs  from 0 balls, 0 fours, 0 sixes, SR: 0; Jamie Phillips: 53 runs  from 0 balls, 0 fours, 0 sixes, SR: 0; Tony Rowe: 28 runs (Not out) from 0 balls, 0 fours, 0 sixes, SR: 0\n        - Bowling: Fill-in: 1 wickets from 6 overs, 29 runs, Econ: 4.83; Mitchell Stringer: 1 wickets from 6 overs, 32 runs, Econ: 5.33; Jesse Wilson: 0 wickets from 6 overs, 18 runs, Econ: 3.00\n        - FOW: \n        - Fielding: undefined, Caught as fielder: undefined, Caught as wicket keeper: undefined, Total catches: undefined, Run outs unassisted: undefined, Run outs assisted: undefined, Total run outs: undefined, Stumpings: undefined\n      Focus on highlighted team performances."
+    },
+    {
+      "gameID": "9d6b0ae1",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Mudgeeraba Community Div 3",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16_94f9e7463d.jpg",
+          "width": 4032,
+          "height": 3024
+        },
+        "score": "7/258",
+        "overs": "(36)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Andrew Rouse (c)",
+            "runs": 45,
+            "balls": 55,
+            "fours": 6,
+            "sixes": 0,
+            "SR": 81.81,
+            "team": "Mudgeeraba Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Ryan Blood",
+            "runs": 42,
+            "balls": 49,
+            "fours": 7,
+            "sixes": 0,
+            "SR": 85.71,
+            "team": "Mudgeeraba Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Githin Kurian",
+            "runs": 39,
+            "balls": 24,
+            "fours": 4,
+            "sixes": 2,
+            "SR": 162.5,
+            "team": "Mudgeeraba Community Div 3",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Chris Schultz (c)",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 44,
+            "wickets": 2,
+            "economy": "7.33",
+            "team": "Runaway Bay Navy Community Div 3"
+          },
+          {
+            "player": "Geoff Watson",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 50,
+            "wickets": 2,
+            "economy": "8.33",
+            "team": "Runaway Bay Navy Community Div 3"
+          },
+          {
+            "player": "Jake Schultz",
+            "overs": 6,
+            "maidens": 0,
+            "runs": 32,
+            "wickets": 1,
+            "economy": "5.33",
+            "team": "Runaway Bay Navy Community Div 3"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "awayTeam": {
+        "name": "Runaway Bay Navy Community Div 3",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+          "width": 2602,
+          "height": 2788
+        },
+        "score": "10/150",
+        "overs": "(34.2)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Arran Canning",
+            "runs": 37,
+            "balls": 56,
+            "fours": 3,
+            "sixes": 1,
+            "SR": 66.07,
+            "team": "Runaway Bay Navy Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "Chris Schultz (c)",
+            "runs": 25,
+            "balls": 20,
+            "fours": 3,
+            "sixes": 1,
+            "SR": 125,
+            "team": "Runaway Bay Navy Community Div 3",
+            "notOut": false
+          },
+          {
+            "player": "William Altass",
+            "runs": 22,
+            "balls": 33,
+            "fours": 3,
+            "sixes": 0,
+            "SR": 66.66,
+            "team": "Runaway Bay Navy Community Div 3",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Harrison Vitetzakis",
+            "overs": 6,
+            "maidens": 2,
+            "runs": 19,
+            "wickets": 4,
+            "economy": "3.17",
+            "team": "Mudgeeraba Community Div 3"
+          },
+          {
+            "player": "Ryan Blood",
+            "overs": 5,
+            "maidens": 0,
+            "runs": 19,
+            "wickets": 2,
+            "economy": "3.80",
+            "team": "Mudgeeraba Community Div 3"
+          },
+          {
+            "player": "George Chipizubov",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 11,
+            "wickets": 1,
+            "economy": "2.75",
+            "team": "Mudgeeraba Community Div 3"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16_94f9e7463d.jpg",
+        "width": 4032,
+        "height": 3024
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_17_d99c247481.png",
+        "width": 2602,
+        "height": 2788
+      },
+      "date": "Saturday, 26 October 2024",
+      "type": "One Day",
+      "ground": "Carrara Community Centre / Corbwood No 3",
+      "round": "Round 3",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "CGC Community League - Division 3",
+      "assignSponsors": {
+        "competition": {
+          "id": 11141,
+          "name": "Cricket Gold Coast Senior Competition"
+        },
+        "grade": {
+          "id": 37271,
+          "name": "CGC Community League - Division 3"
+        },
+        "Teams": {
+          "home": {
+            "name": "Mudgeeraba Community Div 3"
+          },
+          "away": {
+            "name": "Runaway Bay Navy Community Div 3"
+          }
+        }
+      },
+      "result": "Mudgeeraba Community Div 3 won by 108 runs",
+      "prompt": "Match Summary: Mudgeeraba Community Div 3 vs. Runaway Bay Navy Community Div 3:\n      - This CGC Community League - Division 3 game is a One Day, played in Round: Round 3 at Carrara Community Centre / Corbwood No 3.\n      - Scores: Mudgeeraba Community Div 3 7/258 in (36) overs, Runaway Bay Navy Community Div 3 10/150 in (34.2) overs\n      - Result: Mudgeeraba Community Div 3 won by 108 runs\n      Player Performances:\n      - Mudgeeraba Community Div 3\n        - Batting: \n        - Bowling: \n        - FOW: Wicket 1: 49 (Jamie Herrmann), Wicket 2: 82 (Dean Whitchurch), Wicket 3: 111 (Andrew Rouse), Wicket 4: 173 (Brett Riley), Wicket 5: 198 (Ryan Blood), Wicket 6: 211 (Nekta Vitetzakis), Wicket 7: 250 (Githin Kurian)\n        - Fielding: \n      - Runaway Bay Navy Community Div 3\n        - Batting: Arran Canning: 37 runs  from 56 balls, 3 fours, 1 sixes, SR: 66.07; Chris Schultz (c): 25 runs  from 20 balls, 3 fours, 1 sixes, SR: 125; William Altass: 22 runs  from 33 balls, 3 fours, 0 sixes, SR: 66.66\n        - Bowling: Harrison Vitetzakis: 4 wickets from 6 overs, 19 runs, Econ: 3.17; Ryan Blood: 2 wickets from 5 overs, 19 runs, Econ: 3.80; George Chipizubov: 1 wickets from 4 overs, 11 runs, Econ: 2.75\n        - FOW: Wicket 1: 0 (Geoff Watson), Wicket 2: 21 (Toby Hudson), Wicket 3: 64 (Chris Schultz), Wicket 4: 67 (William Altass), Wicket 5: 73 (James Keith), Wicket 6: 76 (Noah McQueen), Wicket 7: 76 (Flynn Richardson), Wicket 8: 112 (Hamish Canning), Wicket 9: 144 (Arran Canning), Wicket 10: 150 (Jake Schultz)\n        - Fielding: Andrew Rouse (c), Caught as fielder: 0, Caught as wicket keeper: 2, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Dean Whitchurch, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Gregory Blood, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Harrison Vitetzakis, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; George Chipizubov, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
+    }
+  ],
+  "PROMPT": []
+}

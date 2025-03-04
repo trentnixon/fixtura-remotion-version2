@@ -1,0 +1,1835 @@
+{
+	"DATA": [
+		{
+			"ID": 31518,
+			"bias": "Southport Community Div 1",
+			"name": "CGC Community League - Division 1",
+			"League": [
+				{
+					"L": "0",
+					"P": "3",
+					"Q": "3.206",
+					"W": "3",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Queens 4th Grade is currently positioned 1 in the CGC Community League - Division 1, with 3 wins and 0 losses, totaling 24.0 points.",
+					"position": "1",
+					"teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/cricket-gold-coast-senior-competition-summer-202425/teams/queens-4th-grade/29f3368d",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queens_Logo_no_outline_smaller_9616030c22.jpg",
+						"width": 400,
+						"height": 414
+					},
+					"teamName": "Queens 4th Grade"
+				},
+				{
+					"L": "0",
+					"P": "3",
+					"Q": "2.014",
+					"W": "3",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Palm Beach Community Div 1 is currently positioned 2 in the CGC Community League - Division 1, with 3 wins and 0 losses, totaling 24.0 points.",
+					"position": "2",
+					"teamHref": "/cricket-australia/org/palm-beach-currumbin-cricket-club-inc/af1d388c/cricket-gold-coast-senior-competition-summer-202425/teams/palm-beach-community-div-1/df9ab26b",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/IMG_5137_cca1036a68.jpeg",
+						"width": 485,
+						"height": 485
+					},
+					"teamName": "Palm Beach Community Div 1"
+				},
+				{
+					"L": "0",
+					"P": "3",
+					"Q": "1.222",
+					"W": "3",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Helensvale 4th Grade is currently positioned 3 in the CGC Community League - Division 1, with 3 wins and 0 losses, totaling 24.0 points.",
+					"position": "3",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202425/teams/helensvale-4th-grade/75a3fcff",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale 4th Grade"
+				},
+				{
+					"L": "1",
+					"P": "3",
+					"Q": "1.048",
+					"W": "2",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Community Div 1 is currently positioned 4 in the CGC Community League - Division 1, with 2 wins and 1 losses, totaling 16.0 points.",
+					"position": "4",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/cricket-gold-coast-senior-competition-summer-202425/teams/surfers-paradise-community-div-1/3723782c",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Community Div 1"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.872",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Bonogin Community Div 1 is currently positioned 5 in the CGC Community League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "5",
+					"teamHref": "/cricket-australia/org/bonogin-valley-bulls-cricket-club/0820bdb7/cricket-gold-coast-senior-competition-summer-202425/teams/bonogin-community-div-1/c4e19a97",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c6b3096fe9.jpg",
+						"width": 897,
+						"height": 989
+					},
+					"teamName": "Bonogin Community Div 1"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.646",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Southport Community Div 1 is currently positioned 6 in the CGC Community League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "6",
+					"teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/cricket-gold-coast-senior-competition-summer-202425/teams/southport-community-div-1/ebf36355",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+						"width": 1000,
+						"height": 1000
+					},
+					"teamName": "Southport Community Div 1"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.535",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Bond University 4th Grade is currently positioned 7 in the CGC Community League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "7",
+					"teamHref": "/cricket-australia/org/bond-university/69479308/cricket-gold-coast-senior-competition-summer-202425/teams/bond-university-4th-grade/a67ffd17",
+					"teamLogo": null,
+					"teamName": "Bond University 4th Grade"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.719",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Coomera Blue Community Div 1 is currently positioned 8 in the CGC Community League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "8",
+					"teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/cricket-gold-coast-senior-competition-summer-202425/teams/coomera-blue-community-div-1/ebe7b6f6",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7e633479f4.jpg",
+						"width": 512,
+						"height": 512
+					},
+					"teamName": "Coomera Blue Community Div 1"
+				},
+				{
+					"L": "3",
+					"P": "3",
+					"Q": "0.821",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Broadbeach Community Div 1 is currently positioned 9 in the CGC Community League - Division 1, with 0 wins and 3 losses, totaling 0 points.",
+					"position": "9",
+					"teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/cricket-gold-coast-senior-competition-summer-202425/teams/broadbeach-community-div-1/6ea90c65",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_79486d0d87.jpg",
+						"width": 777,
+						"height": 777
+					},
+					"teamName": "Broadbeach Community Div 1"
+				},
+				{
+					"L": "3",
+					"P": "3",
+					"Q": "0.676",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Mudgeeraba Community Div 1 is currently positioned 10 in the CGC Community League - Division 1, with 0 wins and 3 losses, totaling 0 points.",
+					"position": "10",
+					"teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/cricket-gold-coast-senior-competition-summer-202425/teams/mudgeeraba-community-div-1/10a5c0ab",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+						"width": 126,
+						"height": 100
+					},
+					"teamName": "Mudgeeraba Community Div 1"
+				}
+			],
+			"gender": "Mixed",
+			"prompt": "Southport Community Div 1 is currently positioned 6 in the CGC Community League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+			"gradeId": "8ff117a3",
+			"ageGroup": "Senior",
+			"gradeName": "CGC Community League - Division 1",
+			"competition": "Senior",
+			"gradeStrapiID": 31518,
+			"assignSponsors": {
+				"Team": {
+					"name": "Southport Community Div 1"
+				},
+				"grade": {
+					"id": 31518,
+					"name": "CGC Community League - Division 1"
+				},
+				"competition": {
+					"id": null,
+					"name": null
+				}
+			}
+		},
+		{
+			"ID": 31519,
+			"bias": "Southport Community Div 2",
+			"name": "CGC Community League - Division 2",
+			"League": [
+				{
+					"L": "0",
+					"P": "3",
+					"Q": "1.731",
+					"W": "3",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Southport Community Div 2 is currently positioned 1 in the CGC Community League - Division 2, with 3 wins and 0 losses, totaling 24.0 points.",
+					"position": "1",
+					"teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/cricket-gold-coast-senior-competition-summer-202425/teams/southport-community-div-2/02a93247",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+						"width": 1000,
+						"height": 1000
+					},
+					"teamName": "Southport Community Div 2"
+				},
+				{
+					"L": "1",
+					"P": "3",
+					"Q": "2.022",
+					"W": "2",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Runaway Bay Community Div 2 is currently positioned 2 in the CGC Community League - Division 2, with 2 wins and 1 losses, totaling 16.0 points.",
+					"position": "2",
+					"teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/cricket-gold-coast-senior-competition-summer-202425/teams/runaway-bay-community-div-2/53321815",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c.png",
+						"width": 500,
+						"height": 500
+					},
+					"teamName": "Runaway Bay Community Div 2"
+				},
+				{
+					"L": "1",
+					"P": "3",
+					"Q": "1.442",
+					"W": "2",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Mudgeeraba Community Div 2 is currently positioned 3 in the CGC Community League - Division 2, with 2 wins and 1 losses, totaling 16.0 points.",
+					"position": "3",
+					"teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/cricket-gold-coast-senior-competition-summer-202425/teams/mudgeeraba-community-div-2/571139b6",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+						"width": 126,
+						"height": 100
+					},
+					"teamName": "Mudgeeraba Community Div 2"
+				},
+				{
+					"L": "1",
+					"P": "3",
+					"Q": "1.169",
+					"W": "2",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Helensvale 5th Grade Green is currently positioned 4 in the CGC Community League - Division 2, with 2 wins and 1 losses, totaling 16.0 points.",
+					"position": "4",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202425/teams/helensvale-5th-grade-green/54bccc5f",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale 5th Grade Green"
+				},
+				{
+					"L": "1",
+					"P": "3",
+					"Q": "1.125",
+					"W": "2",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Alberton Community Div 2 is currently positioned 5 in the CGC Community League - Division 2, with 2 wins and 1 losses, totaling 16.0 points.",
+					"position": "5",
+					"teamHref": "/cricket-australia/org/alberton-ormeau-cricket-club/1b01c8ba/cricket-gold-coast-senior-competition-summer-202425/teams/alberton-community-div-2/c4a07b50",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ba8688f2cc.jpg",
+						"width": 1190,
+						"height": 1190
+					},
+					"teamName": "Alberton Community Div 2"
+				},
+				{
+					"L": "1",
+					"P": "2",
+					"Q": "1.398",
+					"W": "1",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Helensvale 5th Grade Gold is currently positioned 6 in the CGC Community League - Division 2, with 1 wins and 1 losses, totaling 8.0 points.",
+					"position": "6",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202425/teams/helensvale-5th-grade-gold/70231840",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale 5th Grade Gold"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.757",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Broadbeach Community Div 2 is currently positioned 7 in the CGC Community League - Division 2, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "7",
+					"teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/cricket-gold-coast-senior-competition-summer-202425/teams/broadbeach-community-div-2/cd9a11ec",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_79486d0d87.jpg",
+						"width": 777,
+						"height": 777
+					},
+					"teamName": "Broadbeach Community Div 2"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.973",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Bonogin Community Div 2 is currently positioned 8 in the CGC Community League - Division 2, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "8",
+					"teamHref": "/cricket-australia/org/bonogin-valley-bulls-cricket-club/0820bdb7/cricket-gold-coast-senior-competition-summer-202425/teams/bonogin-community-div-2/9b267635",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c6b3096fe9.jpg",
+						"width": 897,
+						"height": 989
+					},
+					"teamName": "Bonogin Community Div 2"
+				},
+				{
+					"L": "1",
+					"P": "2",
+					"Q": "0.756",
+					"W": "1",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Queens 5th Grade is currently positioned 9 in the CGC Community League - Division 2, with 1 wins and 1 losses, totaling 8.0 points.",
+					"position": "9",
+					"teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/cricket-gold-coast-senior-competition-summer-202425/teams/queens-5th-grade/94b8b14d",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queens_Logo_no_outline_smaller_9616030c22.jpg",
+						"width": 400,
+						"height": 414
+					},
+					"teamName": "Queens 5th Grade"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "1.015",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Community Div 2 is currently positioned 10 in the CGC Community League - Division 2, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "10",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/cricket-gold-coast-senior-competition-summer-202425/teams/surfers-paradise-community-div-2/82d8ad23",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Community Div 2"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.526",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Tamborine Community Div 2 is currently positioned 11 in the CGC Community League - Division 2, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "11",
+					"teamHref": "/cricket-australia/org/tamborine-mountain-cricket-club-inc/6ccf9729/cricket-gold-coast-senior-competition-summer-202425/teams/tamborine-community-div-2/0b86ded1",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e5983b9444.jpg",
+						"width": 368,
+						"height": 415
+					},
+					"teamName": "Tamborine Community Div 2"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.497",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Burleigh Cricket Club 5th Grade is currently positioned 12 in the CGC Community League - Division 2, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "12",
+					"teamHref": "/cricket-australia/org/burleigh-cricket-club/74d56a83/cricket-gold-coast-senior-competition-summer-202425/teams/burleigh-cricket-club-5th-grade/49c4e977",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg",
+						"width": 500,
+						"height": 410
+					},
+					"teamName": "Burleigh Cricket Club 5th Grade"
+				},
+				{
+					"L": "2",
+					"P": "2",
+					"Q": "0.394",
+					"W": "0",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Coomera Community Div 2 is currently positioned 13 in the CGC Community League - Division 2, with 0 wins and 2 losses, totaling 0 points.",
+					"position": "13",
+					"teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/cricket-gold-coast-senior-competition-summer-202425/teams/coomera-community-div-2/641174ea",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7e633479f4.jpg",
+						"width": 512,
+						"height": 512
+					},
+					"teamName": "Coomera Community Div 2"
+				}
+			],
+			"gender": "Mixed",
+			"prompt": "Southport Community Div 2 is currently positioned 1 in the CGC Community League - Division 2, with 3 wins and 0 losses, totaling 24.0 points.",
+			"gradeId": "f3c328d2",
+			"ageGroup": "Senior",
+			"gradeName": "CGC Community League - Division 2",
+			"competition": "Senior",
+			"gradeStrapiID": 31519,
+			"assignSponsors": {
+				"Team": {
+					"name": "Southport Community Div 2"
+				},
+				"grade": {
+					"id": 31519,
+					"name": "CGC Community League - Division 2"
+				},
+				"competition": {
+					"id": null,
+					"name": null
+				}
+			}
+		},
+		{
+			"ID": 27857,
+			"bias": "Southport Premier Div 1",
+			"name": "CGC Premier League - Division 1",
+			"League": [
+				{
+					"L": "0",
+					"P": "4",
+					"Q": "2.173",
+					"W": "4",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "32.0",
+					"TIE": "0",
+					"prompt": "Mudgeeraba Premier Division 1 is currently positioned 1 in the CGC Premier League - Division 1, with 4 wins and 0 losses, totaling 32.0 points.",
+					"position": "1",
+					"teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/cricket-gold-coast-senior-competition-summer-202425/teams/mudgeeraba-premier-division-1/58e015f2",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+						"width": 126,
+						"height": 100
+					},
+					"teamName": "Mudgeeraba Premier Division 1"
+				},
+				{
+					"L": "0",
+					"P": "4",
+					"Q": "1.779",
+					"W": "4",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "32.0",
+					"TIE": "0",
+					"prompt": "Queens 1st Grade is currently positioned 2 in the CGC Premier League - Division 1, with 4 wins and 0 losses, totaling 32.0 points.",
+					"position": "2",
+					"teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/cricket-gold-coast-senior-competition-summer-202425/teams/queens-1st-grade/719c4397",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queens_Logo_no_outline_smaller_9616030c22.jpg",
+						"width": 400,
+						"height": 414
+					},
+					"teamName": "Queens 1st Grade"
+				},
+				{
+					"L": "1",
+					"P": "4",
+					"Q": "1.692",
+					"W": "3",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Premier Div 1 is currently positioned 3 in the CGC Premier League - Division 1, with 3 wins and 1 losses, totaling 24.0 points.",
+					"position": "3",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/cricket-gold-coast-senior-competition-summer-202425/teams/surfers-paradise-premier-div-1/366ad760",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Premier Div 1"
+				},
+				{
+					"L": "1",
+					"P": "3",
+					"Q": "1.757",
+					"W": "2",
+					"BP": "0",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Helensvale 1st Grade is currently positioned 4 in the CGC Premier League - Division 1, with 2 wins and 1 losses, totaling 16.0 points.",
+					"position": "4",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202425/teams/helensvale-1st-grade/c5955460",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale 1st Grade"
+				},
+				{
+					"L": "2",
+					"P": "4",
+					"Q": "1.290",
+					"W": "2",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Palm Beach Premier Div 1 is currently positioned 5 in the CGC Premier League - Division 1, with 2 wins and 2 losses, totaling 16.0 points.",
+					"position": "5",
+					"teamHref": "/cricket-australia/org/palm-beach-currumbin-cricket-club-inc/af1d388c/cricket-gold-coast-senior-competition-summer-202425/teams/palm-beach-premier-div-1/8dc45f1d",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/IMG_5137_cca1036a68.jpeg",
+						"width": 485,
+						"height": 485
+					},
+					"teamName": "Palm Beach Premier Div 1"
+				},
+				{
+					"L": "2",
+					"P": "4",
+					"Q": "0.995",
+					"W": "2",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Coomera Premier Div 1 is currently positioned 6 in the CGC Premier League - Division 1, with 2 wins and 2 losses, totaling 16.0 points.",
+					"position": "6",
+					"teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/cricket-gold-coast-senior-competition-summer-202425/teams/coomera-premier-div-1/22113dd8",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7e633479f4.jpg",
+						"width": 512,
+						"height": 512
+					},
+					"teamName": "Coomera Premier Div 1"
+				},
+				{
+					"L": "3",
+					"P": "4",
+					"Q": "0.897",
+					"W": "1",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Alberton Premier Div 1 is currently positioned 7 in the CGC Premier League - Division 1, with 1 wins and 3 losses, totaling 8.0 points.",
+					"position": "7",
+					"teamHref": "/cricket-australia/org/alberton-ormeau-cricket-club/1b01c8ba/cricket-gold-coast-senior-competition-summer-202425/teams/alberton-premier-div-1/3e3d513f",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ba8688f2cc.jpg",
+						"width": 1190,
+						"height": 1190
+					},
+					"teamName": "Alberton Premier Div 1"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.531",
+					"W": "1",
+					"BP": "0",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Burleigh Premier Div 1 is currently positioned 8 in the CGC Premier League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "8",
+					"teamHref": "/cricket-australia/org/burleigh-cricket-club/74d56a83/cricket-gold-coast-senior-competition-summer-202425/teams/burleigh-premier-div-1/95df7a76",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg",
+						"width": 500,
+						"height": 410
+					},
+					"teamName": "Burleigh Premier Div 1"
+				},
+				{
+					"L": "2",
+					"P": "3",
+					"Q": "0.581",
+					"W": "1",
+					"BP": "0",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Broadbeach Premier Div 1 is currently positioned 9 in the CGC Premier League - Division 1, with 1 wins and 2 losses, totaling 8.0 points.",
+					"position": "9",
+					"teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/cricket-gold-coast-senior-competition-summer-202425/teams/broadbeach-premier-div-1/c9646ac4",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_79486d0d87.jpg",
+						"width": 777,
+						"height": 777
+					},
+					"teamName": "Broadbeach Premier Div 1"
+				},
+				{
+					"L": "3",
+					"P": "3",
+					"Q": "0.500",
+					"W": "0",
+					"BP": "0",
+					"BYE": "1",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Southport Premier Div 1 is currently positioned 10 in the CGC Premier League - Division 1, with 0 wins and 3 losses, totaling 0 points.",
+					"position": "10",
+					"teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/cricket-gold-coast-senior-competition-summer-202425/teams/southport-premier-div-1/c924d63a",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+						"width": 1000,
+						"height": 1000
+					},
+					"teamName": "Southport Premier Div 1"
+				},
+				{
+					"L": "4",
+					"P": "4",
+					"Q": "0.388",
+					"W": "0",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Runaway Bay Premier Div 1 is currently positioned 11 in the CGC Premier League - Division 1, with 0 wins and 4 losses, totaling 0 points.",
+					"position": "11",
+					"teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/cricket-gold-coast-senior-competition-summer-202425/teams/runaway-bay-premier-div-1/d1b89cbf",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c.png",
+						"width": 500,
+						"height": 500
+					},
+					"teamName": "Runaway Bay Premier Div 1"
+				}
+			],
+			"gender": "Mixed",
+			"prompt": "Southport Premier Div 1 is currently positioned 10 in the CGC Premier League - Division 1, with 0 wins and 3 losses, totaling 0 points.",
+			"gradeId": "ac62cd1a",
+			"ageGroup": "Senior",
+			"gradeName": "CGC Premier League - Division 1",
+			"competition": "Senior",
+			"gradeStrapiID": 27857,
+			"assignSponsors": {
+				"Team": {
+					"name": "Southport Premier Div 1"
+				},
+				"grade": {
+					"id": 27857,
+					"name": "CGC Premier League - Division 1"
+				},
+				"competition": {
+					"id": null,
+					"name": null
+				}
+			}
+		},
+		{
+			"ID": 28517,
+			"bias": "Southport Premier Div 2",
+			"name": "CGC Premier League - Division 2",
+			"League": [
+				{
+					"L": "0",
+					"P": "4",
+					"Q": "2.027",
+					"W": "4",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "32.0",
+					"TIE": "0",
+					"prompt": "Palm Beach Premier Div 2 is currently positioned 1 in the CGC Premier League - Division 2, with 4 wins and 0 losses, totaling 32.0 points.",
+					"position": "1",
+					"teamHref": "/cricket-australia/org/palm-beach-currumbin-cricket-club-inc/af1d388c/cricket-gold-coast-senior-competition-summer-202425/teams/palm-beach-premier-div-2/e3da33c1",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/IMG_5137_cca1036a68.jpeg",
+						"width": 485,
+						"height": 485
+					},
+					"teamName": "Palm Beach Premier Div 2"
+				},
+				{
+					"L": "0",
+					"P": "4",
+					"Q": "1.817",
+					"W": "4",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "32.0",
+					"TIE": "0",
+					"prompt": "Queens 2nd Grade is currently positioned 2 in the CGC Premier League - Division 2, with 4 wins and 0 losses, totaling 32.0 points.",
+					"position": "2",
+					"teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/cricket-gold-coast-senior-competition-summer-202425/teams/queens-2nd-grade/e0ee3803",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queens_Logo_no_outline_smaller_9616030c22.jpg",
+						"width": 400,
+						"height": 414
+					},
+					"teamName": "Queens 2nd Grade"
+				},
+				{
+					"L": "1",
+					"P": "4",
+					"Q": "1.564",
+					"W": "3",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Premier Div 2 is currently positioned 3 in the CGC Premier League - Division 2, with 3 wins and 1 losses, totaling 24.0 points.",
+					"position": "3",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/cricket-gold-coast-senior-competition-summer-202425/teams/surfers-paradise-premier-div-2/00aa047f",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Premier Div 2"
+				},
+				{
+					"L": "1",
+					"P": "4",
+					"Q": "1.405",
+					"W": "3",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "24.0",
+					"TIE": "0",
+					"prompt": "Helensvale 2nd Grade is currently positioned 4 in the CGC Premier League - Division 2, with 3 wins and 1 losses, totaling 24.0 points.",
+					"position": "4",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202425/teams/helensvale-2nd-grade/38b9dcd1",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale 2nd Grade"
+				},
+				{
+					"L": "1",
+					"P": "4",
+					"Q": "1.094",
+					"W": "2",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "20.0",
+					"TIE": "1",
+					"prompt": "Beaudesert Premier Div 2 is currently positioned 5 in the CGC Premier League - Division 2, with 2 wins and 1 losses, totaling 20.0 points.",
+					"position": "5",
+					"teamHref": "/cricket-australia/org/beaudesert-cricket-club/6d9c837b/cricket-gold-coast-senior-competition-summer-202425/teams/beaudesert-premier-div-2/bbb12dc6",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cbd1f9aef6.jpg",
+						"width": 942,
+						"height": 851
+					},
+					"teamName": "Beaudesert Premier Div 2"
+				},
+				{
+					"L": "2",
+					"P": "4",
+					"Q": "0.828",
+					"W": "2",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Mudgeeraba Premier Div 2 is currently positioned 6 in the CGC Premier League - Division 2, with 2 wins and 2 losses, totaling 16.0 points.",
+					"position": "6",
+					"teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/cricket-gold-coast-senior-competition-summer-202425/teams/mudgeeraba-premier-div-2/493e2490",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+						"width": 126,
+						"height": 100
+					},
+					"teamName": "Mudgeeraba Premier Div 2"
+				},
+				{
+					"L": "2",
+					"P": "4",
+					"Q": "1.250",
+					"W": "2",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "16.0",
+					"TIE": "0",
+					"prompt": "Broadbeach Premier Div 2 is currently positioned 7 in the CGC Premier League - Division 2, with 2 wins and 2 losses, totaling 16.0 points.",
+					"position": "7",
+					"teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/cricket-gold-coast-senior-competition-summer-202425/teams/broadbeach-premier-div-2/0049bc6f",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_79486d0d87.jpg",
+						"width": 777,
+						"height": 777
+					},
+					"teamName": "Broadbeach Premier Div 2"
+				},
+				{
+					"L": "3",
+					"P": "4",
+					"Q": "0.799",
+					"W": "1",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Southport Premier Div 2 is currently positioned 8 in the CGC Premier League - Division 2, with 1 wins and 3 losses, totaling 8.0 points.",
+					"position": "8",
+					"teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/cricket-gold-coast-senior-competition-summer-202425/teams/southport-premier-div-2/70625ea4",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+						"width": 1000,
+						"height": 1000
+					},
+					"teamName": "Southport Premier Div 2"
+				},
+				{
+					"L": "3",
+					"P": "4",
+					"Q": "0.623",
+					"W": "1",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Alberton Premier Div 2 is currently positioned 9 in the CGC Premier League - Division 2, with 1 wins and 3 losses, totaling 8.0 points.",
+					"position": "9",
+					"teamHref": "/cricket-australia/org/alberton-ormeau-cricket-club/1b01c8ba/cricket-gold-coast-senior-competition-summer-202425/teams/alberton-premier-div-2/98af279a",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ba8688f2cc.jpg",
+						"width": 1190,
+						"height": 1190
+					},
+					"teamName": "Alberton Premier Div 2"
+				},
+				{
+					"L": "3",
+					"P": "4",
+					"Q": "0.849",
+					"W": "1",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Runaway Bay Premier Div 2 is currently positioned 10 in the CGC Premier League - Division 2, with 1 wins and 3 losses, totaling 8.0 points.",
+					"position": "10",
+					"teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/cricket-gold-coast-senior-competition-summer-202425/teams/runaway-bay-premier-div-2/984ba76c",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c.png",
+						"width": 500,
+						"height": 500
+					},
+					"teamName": "Runaway Bay Premier Div 2"
+				},
+				{
+					"L": "3",
+					"P": "4",
+					"Q": "0.666",
+					"W": "0",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "4.0",
+					"TIE": "1",
+					"prompt": "Burleigh Premier Div 2 is currently positioned 11 in the CGC Premier League - Division 2, with 0 wins and 3 losses, totaling 4.0 points.",
+					"position": "11",
+					"teamHref": "/cricket-australia/org/burleigh-cricket-club/74d56a83/cricket-gold-coast-senior-competition-summer-202425/teams/burleigh-premier-div-2/1c850812",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg",
+						"width": 500,
+						"height": 410
+					},
+					"teamName": "Burleigh Premier Div 2"
+				},
+				{
+					"L": "4",
+					"P": "4",
+					"Q": "0.435",
+					"W": "0",
+					"BP": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Coomera Premier Div 2 is currently positioned 12 in the CGC Premier League - Division 2, with 0 wins and 4 losses, totaling 0 points.",
+					"position": "12",
+					"teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/cricket-gold-coast-senior-competition-summer-202425/teams/coomera-premier-div-2/2afc9b98",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7e633479f4.jpg",
+						"width": 512,
+						"height": 512
+					},
+					"teamName": "Coomera Premier Div 2"
+				}
+			],
+			"gender": "Mixed",
+			"prompt": "Southport Premier Div 2 is currently positioned 8 in the CGC Premier League - Division 2, with 1 wins and 3 losses, totaling 8.0 points.",
+			"gradeId": "6106db1a",
+			"ageGroup": "Senior",
+			"gradeName": "CGC Premier League - Division 2",
+			"competition": "Senior",
+			"gradeStrapiID": 28517,
+			"assignSponsors": {
+				"Team": {
+					"name": "Southport Premier Div 2"
+				},
+				"grade": {
+					"id": 28517,
+					"name": "CGC Premier League - Division 2"
+				},
+				"competition": {
+					"id": null,
+					"name": null
+				}
+			}
+		},
+		{
+			"ID": 32133,
+			"bias": "Southport Labrador",
+			"name": "Senior Women",
+			"League": [
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "22.704",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Tamborine Green Senior Women is currently positioned 1 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "1",
+					"teamHref": "/cricket-australia/org/tamborine-mountain-cricket-club-inc/6ccf9729/womens-social-competition-202425-summer-202425/teams/tamborine-green-senior-women/ff7cfc9a",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e5983b9444.jpg",
+						"width": 368,
+						"height": 415
+					},
+					"teamName": "Tamborine Green Senior Women"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "2.641",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Women Blue is currently positioned 2 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "2",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/womens-social-competition-202425-summer-202425/teams/surfers-paradise-women-blue/f0bd0161",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Women Blue"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "6.684",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Runaway Bay Pink Women is currently positioned 3 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "3",
+					"teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/womens-social-competition-202425-summer-202425/teams/runaway-bay-pink-women/648b3b77",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c.png",
+						"width": 500,
+						"height": 500
+					},
+					"teamName": "Runaway Bay Pink Women"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "4.003",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Helensvale Gold Women is currently positioned 4 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "4",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/womens-social-competition-202425-summer-202425/teams/helensvale-gold-women/be39ba9a",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale Gold Women"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "1.303",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Queens Womens Team is currently positioned 5 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "5",
+					"teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/womens-social-competition-202425-summer-202425/teams/queens-womens-team/5153d4f1",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queens_Logo_no_outline_smaller_9616030c22.jpg",
+						"width": 400,
+						"height": 414
+					},
+					"teamName": "Queens Womens Team"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "1.201",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Broadbeach Senior Women is currently positioned 6 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "6",
+					"teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/womens-social-competition-202425-summer-202425/teams/broadbeach-senior-women/7a477f10",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_79486d0d87.jpg",
+						"width": 777,
+						"height": 777
+					},
+					"teamName": "Broadbeach Senior Women"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "0.774",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Tamborine Blue Senior Women is currently positioned 7 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "7",
+					"teamHref": "/cricket-australia/org/tamborine-mountain-cricket-club-inc/6ccf9729/womens-social-competition-202425-summer-202425/teams/tamborine-blue-senior-women/42639376",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e5983b9444.jpg",
+						"width": 368,
+						"height": 415
+					},
+					"teamName": "Tamborine Blue Senior Women"
+				},
+				{
+					"L": "0",
+					"P": "1",
+					"Q": "1.301",
+					"W": "1",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "8.0",
+					"TIE": "0",
+					"prompt": "Runaway Bay Navy Women is currently positioned 8 in the Senior Women, with 1 wins and 0 losses, totaling 8.0 points.",
+					"PTS AVG": "8.00",
+					"position": "8",
+					"teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/womens-social-competition-202425-summer-202425/teams/runaway-bay-navy-women/5720bb0a",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c.png",
+						"width": 500,
+						"height": 500
+					},
+					"teamName": "Runaway Bay Navy Women"
+				},
+				{
+					"L": "0",
+					"P": "0",
+					"Q": "0",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Helensvale Aqua Women is currently positioned 9 in the Senior Women, with 0 wins and 0 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "9",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/womens-social-competition-202425-summer-202425/teams/helensvale-aqua-women/d6612038",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale Aqua Women"
+				},
+				{
+					"L": "0",
+					"P": "0",
+					"Q": "0",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Women White is currently positioned 10 in the Senior Women, with 0 wins and 0 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "10",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/womens-social-competition-202425-summer-202425/teams/surfers-paradise-women-white/fed6911e",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Women White"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.768",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Coomera Gold Senior Women is currently positioned 11 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "11",
+					"teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/womens-social-competition-202425-summer-202425/teams/coomera-gold-senior-women/ea54829b",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7e633479f4.jpg",
+						"width": 512,
+						"height": 512
+					},
+					"teamName": "Coomera Gold Senior Women"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "1.291",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Surfers Paradise Women Red is currently positioned 12 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "12",
+					"teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/womens-social-competition-202425-summer-202425/teams/surfers-paradise-women-red/182f3505",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1c7708902b.jpg",
+						"width": 169,
+						"height": 163
+					},
+					"teamName": "Surfers Paradise Women Red"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.832",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Helensvale Green Women is currently positioned 13 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "13",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/womens-social-competition-202425-summer-202425/teams/helensvale-green-women/40a5aca4",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale Green Women"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.767",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Helensvale Purple Women is currently positioned 14 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "14",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/womens-social-competition-202425-summer-202425/teams/helensvale-purple-women/a910d4a5",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale Purple Women"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.249",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Southport Labrador is currently positioned 15 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "15",
+					"teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/womens-social-competition-202425-summer-202425/teams/southport-labrador/3e1edaff",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+						"width": 1000,
+						"height": 1000
+					},
+					"teamName": "Southport Labrador"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.149",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Coomera Blue Senior Women is currently positioned 16 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "16",
+					"teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/womens-social-competition-202425-summer-202425/teams/coomera-blue-senior-women/b7cb1d43",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7e633479f4.jpg",
+						"width": 512,
+						"height": 512
+					},
+					"teamName": "Coomera Blue Senior Women"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.378",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Helensvale Pink Women is currently positioned 17 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "17",
+					"teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/womens-social-competition-202425-summer-202425/teams/helensvale-pink-women/fa61830b",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+						"width": 256,
+						"height": 164
+					},
+					"teamName": "Helensvale Pink Women"
+				},
+				{
+					"L": "1",
+					"P": "1",
+					"Q": "0.044",
+					"W": "0",
+					"BYE": "0",
+					"N/R": "0",
+					"PTS": "0",
+					"TIE": "0",
+					"prompt": "Mudgeeraba Women is currently positioned 18 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+					"PTS AVG": "0",
+					"position": "18",
+					"teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/womens-social-competition-202425-summer-202425/teams/mudgeeraba-women/5427725b",
+					"teamLogo": {
+						"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+						"width": 126,
+						"height": 100
+					},
+					"teamName": "Mudgeeraba Women"
+				}
+			],
+			"gender": "Women",
+			"prompt": "Southport Labrador is currently positioned 15 in the Senior Women, with 0 wins and 1 losses, totaling 0 points.",
+			"gradeId": "9b01fb49",
+			"ageGroup": "Senior",
+			"gradeName": "Senior Women",
+			"competition": "Senior",
+			"gradeStrapiID": 32133,
+			"assignSponsors": {
+				"Team": {
+					"name": "Southport Labrador"
+				},
+				"grade": {
+					"id": 32133,
+					"name": "Senior Women"
+				},
+				"competition": {
+					"id": null,
+					"name": null
+				}
+			}
+		}
+	],
+	"ASSET": {
+		"ASSETID": 18,
+		"ASSETTYPEID": 3,
+		"ASSETSLINKID": "0bd581d62b885788287f30af7e6f9f859fee412f5db343114bab7e56b720c189",
+		"ASSETCATEGORYID": 2
+	},
+	"PROMPT": [],
+	"RENDER": {
+		"RenderID": 1401,
+		"SchedulerID": 137
+	},
+	"ACCOUNT": {
+		"accountId": 137
+	},
+	"TIMINGS": {
+		"FPS_MAIN": 1500,
+		"FPS_INTRO": 90,
+		"FPS_OUTRO": 120,
+		"FPS_LADDER": 300
+	},
+	"VIDEOMETA": {
+		"Club": {
+			"Logo": {
+				"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+				"width": 1000,
+				"height": 1000
+			},
+			"Name": "Southport Labrador Cricket Club",
+			"Sport": "Cricket",
+			"Sponsors": {
+				"team": [
+					{
+						"id": 4410,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+							"width": 635,
+							"height": 420
+						},
+						"name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+						"level": "team_4410",
+						"sponsorId": 127,
+						"allocationName": "Southport Community Div 1"
+					},
+					{
+						"id": 4601,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+							"width": 635,
+							"height": 420
+						},
+						"name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+						"level": "team_4601",
+						"sponsorId": 127,
+						"allocationName": "Southport Open Div 3"
+					},
+					{
+						"id": 14636,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+							"width": 635,
+							"height": 420
+						},
+						"name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+						"level": "team_14636",
+						"sponsorId": 127,
+						"allocationName": "Southport U10"
+					},
+					{
+						"id": 14771,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+							"width": 635,
+							"height": 420
+						},
+						"name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+						"level": "team_14771",
+						"sponsorId": 127,
+						"allocationName": "Southport Open Div 3"
+					},
+					{
+						"id": 14793,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+							"width": 635,
+							"height": 420
+						},
+						"name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+						"level": "team_14793",
+						"sponsorId": 127,
+						"allocationName": "Southport Labrador"
+					},
+					{
+						"id": 4343,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_4343",
+						"sponsorId": 128,
+						"allocationName": "Southport T20"
+					},
+					{
+						"id": 4357,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_4357",
+						"sponsorId": 128,
+						"allocationName": "Southport Premier Div 1"
+					},
+					{
+						"id": 4370,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_4370",
+						"sponsorId": 128,
+						"allocationName": "Southport Premier Div 2"
+					},
+					{
+						"id": 4405,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_4405",
+						"sponsorId": 128,
+						"allocationName": "Bye"
+					},
+					{
+						"id": 4548,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_4548",
+						"sponsorId": 128,
+						"allocationName": "Southport U13 Div 1"
+					},
+					{
+						"id": 12581,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_12581",
+						"sponsorId": 128,
+						"allocationName": "Southport T20"
+					},
+					{
+						"id": 12592,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_12592",
+						"sponsorId": 128,
+						"allocationName": "Southport Premier Div 1"
+					},
+					{
+						"id": 12660,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_12660",
+						"sponsorId": 128,
+						"allocationName": "Southport Premier Div 2"
+					},
+					{
+						"id": 14685,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+							"width": 1114,
+							"height": 192
+						},
+						"name": "TECHNIKA ",
+						"level": "team_14685",
+						"sponsorId": 128,
+						"allocationName": "Southport U11"
+					},
+					{
+						"id": 14707,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Harvey_Norman_Commercial_logo_2022_7caa0de62f.jpg",
+							"width": 867,
+							"height": 531
+						},
+						"name": "HARVEY NORMAN COMMERCIAL QLD",
+						"level": "team_14707",
+						"sponsorId": 129,
+						"allocationName": "Southport U12"
+					},
+					{
+						"id": 4418,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/First_Choice_Removals_Logo_4c02c110d0.png",
+							"width": 477,
+							"height": 313
+						},
+						"name": "FIRST CHOICE REMOVALS",
+						"level": "team_4418",
+						"sponsorId": 130,
+						"allocationName": "Southport Community Div 2"
+					},
+					{
+						"id": 14577,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/PSC_G_Coast_57df5ee2f7.jpg",
+							"width": 1181,
+							"height": 248
+						},
+						"name": "PSC INSURANCE BROKERS ",
+						"level": "team_14577",
+						"sponsorId": 131,
+						"allocationName": "Southport Community Div 2"
+					},
+					{
+						"id": 4506,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Whack_sports_logo_RGB_tagline_50e1f3b5c0.png",
+							"width": 1671,
+							"height": 587
+						},
+						"name": "WHACK SPORTS",
+						"level": "team_4506",
+						"sponsorId": 132,
+						"allocationName": "Southport U11"
+					},
+					{
+						"id": 14565,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
+							"width": 701,
+							"height": 356
+						},
+						"name": "ZERO DRIVERS",
+						"level": "team_14565",
+						"sponsorId": 155,
+						"allocationName": "Southport Community Div 1"
+					},
+					{
+						"id": 14759,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
+							"width": 701,
+							"height": 356
+						},
+						"name": "ZERO DRIVERS",
+						"level": "team_14759",
+						"sponsorId": 155,
+						"allocationName": "Southport Open Div 2"
+					},
+					{
+						"id": 4460,
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Game_Over_FINAL_EXPANDED_LARGE_BORDER_5725fcf4f2.jpg",
+							"width": 3507,
+							"height": 2480
+						},
+						"name": "GAME OVER",
+						"level": "team_4460",
+						"sponsorId": 156,
+						"allocationName": "Southport U10"
+					}
+				],
+				"default": {
+					"primary_sponsor": {
+						"logo": {
+							"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
+							"width": 635,
+							"height": 420
+						},
+						"name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
+						"sponsorId": 127
+					},
+					"general_sponsors": [
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
+								"width": 1114,
+								"height": 192
+							},
+							"name": "TECHNIKA ",
+							"position": 1,
+							"sponsorId": 128
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Harvey_Norman_Commercial_logo_2022_7caa0de62f.jpg",
+								"width": 867,
+								"height": 531
+							},
+							"name": "HARVEY NORMAN COMMERCIAL QLD",
+							"position": 2,
+							"sponsorId": 129
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/First_Choice_Removals_Logo_4c02c110d0.png",
+								"width": 477,
+								"height": 313
+							},
+							"name": "FIRST CHOICE REMOVALS",
+							"position": 3,
+							"sponsorId": 130
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/PSC_G_Coast_57df5ee2f7.jpg",
+								"width": 1181,
+								"height": 248
+							},
+							"name": "PSC INSURANCE BROKERS ",
+							"position": 4,
+							"sponsorId": 131
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Whack_sports_logo_RGB_tagline_50e1f3b5c0.png",
+								"width": 1671,
+								"height": 587
+							},
+							"name": "WHACK SPORTS",
+							"position": 5,
+							"sponsorId": 132
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
+								"width": 701,
+								"height": 356
+							},
+							"name": "ZERO DRIVERS",
+							"position": 6,
+							"sponsorId": 155
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Game_Over_FINAL_EXPANDED_LARGE_BORDER_5725fcf4f2.jpg",
+								"width": 3507,
+								"height": 2480
+							},
+							"name": "GAME OVER",
+							"position": 7,
+							"sponsorId": 156
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/TERRA_GLOBAL_f4e06c6dbf.jpg",
+								"width": 3334,
+								"height": 3334
+							},
+							"name": "TERRA GLOBAL",
+							"position": 8,
+							"sponsorId": 159
+						},
+						{
+							"logo": {
+								"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LONDON_HOTEL_MOTEL_c6c0187b48.PNG",
+								"width": 1239,
+								"height": 620
+							},
+							"name": "THE LONDON HOTEL MOTEL ",
+							"position": 9,
+							"sponsorId": 158
+						}
+					]
+				}
+			}
+		},
+		"THEME": {
+			"Theme": {
+				"dark": "#111",
+				"white": "#FFF",
+				"primary": "#0f150b",
+				"secondary": "#f8cb4c"
+			},
+			"Template": "Basic",
+			"TemplateVariation": {
+				"Background": "Gradient",
+				"borderRadius": "10px"
+			}
+		},
+		"Video": {
+			"Theme": {
+				"dark": "#111",
+				"white": "#FFF",
+				"primary": "#0f150b",
+				"secondary": "#f8cb4c"
+			},
+			"Title": "Ladder",
+			"FRAMES": [355, 600, 900, 1200, 1500],
+			"ASSETID": 18,
+			"Template": "Basic",
+			"HeroImage": {
+				"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+				"ratio": "landscape",
+				"width": 1212,
+				"height": 853,
+				"AgeGroup": "Both",
+				"AssetType": "",
+				"markerPosition": ""
+			},
+			"TitleSplit": ["Ladder", ""],
+			"VideoTitle": "League Tables - undefined",
+			"ASSETTYPEID": 3,
+			"audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+			"CompositionID": "Ladder",
+			"includeSponsors": true,
+			"DiviedFixturesBy": {
+				"Ladder": 1,
+				"RosterPoster": 1,
+				"WeekendResults": 2,
+				"UpComingFixtures": 2,
+				"WeekendSingleGameResult": 1
+			},
+			"TemplateVariation": {
+				"Background": "Gradient",
+				"borderRadius": "10px"
+			}
+		},
+		"FixtureCategory": "Senior",
+		"grouping_category": "Senior"
+	}
+}
