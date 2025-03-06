@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
-import { useStylesContext } from "../../../../core/context/StyleContext";
+import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 interface BasicOutroProps {
   doesAccountHaveSponsors: boolean;
@@ -10,7 +10,27 @@ interface BasicOutroProps {
 export const BasicOutro: React.FC<BasicOutroProps> = ({
   doesAccountHaveSponsors,
 }) => {
-  const { THEME } = useStylesContext();
+  const theme = useThemeContext();
+
+  // Get font classes from theme
+  const fontClasses = theme.fontClasses || {};
+
+  // Combine Tailwind classes for heading
+  const headingClasses = [
+    fontClasses.heading?.size || "text-5xl",
+    fontClasses.heading?.weight || "font-bold",
+    fontClasses.heading?.spacing || "tracking-tight",
+    fontClasses.heading?.leading || "leading-tight",
+    "text-center",
+    "mb-8",
+  ].join(" ");
+
+  // Get colors from theme
+  const primaryColor = theme.colors.primary;
+  const secondaryColor = theme.colors.secondary;
+
+  // Get the heading font family from theme
+  const headingFontFamily = theme.headingFontFamily;
 
   // If no sponsors, show alternative outro
   if (!doesAccountHaveSponsors) {
@@ -19,61 +39,31 @@ export const BasicOutro: React.FC<BasicOutroProps> = ({
 
   return (
     <AbsoluteFill
+      className="flex flex-col justify-center items-center"
       style={{
-        backgroundColor: THEME.primary || "#111111",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: primaryColor,
       }}
     >
       <h2
+        className={headingClasses}
         style={{
-          color: THEME.white || "#ffffff",
-          fontSize: "3em",
-          marginBottom: "1em",
+          color: secondaryColor,
+          fontFamily: headingFontFamily,
         }}
       >
         Our Sponsors
       </h2>
 
       {/* Render sponsors - simplified for development */}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          maxWidth: "80%",
-        }}
-      >
+      <div className="flex flex-wrap justify-center max-w-4/5">
         {/* Sample sponsor for development */}
-        <div style={{ margin: "1em", background: "#ffffff", padding: "1em" }}>
-          <div
-            style={{
-              width: "150px",
-              height: "100px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#000000",
-              fontWeight: "bold",
-            }}
-          >
+        <div className="m-4 bg-white p-4">
+          <div className="w-[150px] h-[100px] flex items-center justify-center text-black font-bold">
             Sponsor 1
           </div>
         </div>
-        <div style={{ margin: "1em", background: "#ffffff", padding: "1em" }}>
-          <div
-            style={{
-              width: "150px",
-              height: "100px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#000000",
-              fontWeight: "bold",
-            }}
-          >
+        <div className="m-4 bg-white p-4">
+          <div className="w-[150px] h-[100px] flex items-center justify-center text-black font-bold">
             Sponsor 2
           </div>
         </div>
@@ -85,16 +75,32 @@ export const BasicOutro: React.FC<BasicOutroProps> = ({
 // Alternative outro for when there are no sponsors
 const AlternativeOutro: React.FC = () => {
   const { Club } = useVideoDataContext();
-  const { THEME } = useStylesContext();
+  const theme = useThemeContext();
+
+  // Get font classes from theme
+  const fontClasses = theme.fontClasses || {};
+
+  // Combine Tailwind classes for subheading
+  const subheadingClasses = [
+    fontClasses.subheading?.size || "text-3xl",
+    fontClasses.subheading?.weight || "font-semibold",
+    fontClasses.subheading?.spacing || "tracking-normal",
+    fontClasses.subheading?.leading || "leading-snug",
+    "text-center",
+  ].join(" ");
+
+  // Get colors from theme
+  const primaryColor = theme.colors.primary;
+  const secondaryColor = theme.colors.secondary;
+
+  // Get the subheading font family from theme
+  const subheadingFontFamily = theme.subheadingFontFamily;
 
   return (
     <AbsoluteFill
+      className="flex flex-col justify-center items-center"
       style={{
-        backgroundColor: THEME.primary || "#111111",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: primaryColor,
       }}
     >
       {/* Logo */}
@@ -102,19 +108,15 @@ const AlternativeOutro: React.FC = () => {
         <img
           src={Club.Logo.url}
           alt={Club.Name || "Club Logo"}
-          style={{
-            width: "30%",
-            maxHeight: "30%",
-            objectFit: "contain",
-            marginBottom: "1em",
-          }}
+          className="w-1/3 max-h-1/3 object-contain mb-4"
         />
       )}
 
       <h3
+        className={subheadingClasses}
         style={{
-          color: THEME.white || "#ffffff",
-          fontSize: "2em",
+          color: secondaryColor,
+          fontFamily: subheadingFontFamily,
         }}
       >
         Visit our website

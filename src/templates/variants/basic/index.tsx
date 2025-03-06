@@ -12,7 +12,7 @@ import { BasicBackground } from "./components/BasicBackground";
  */
 export const Basic: React.FC<{ DATA: any }> = ({ DATA }) => {
   console.log("Basic template variant");
-  console.log("DATA", DATA);
+
   return (
     <BaseTemplate
       DATA={DATA}

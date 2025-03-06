@@ -1,59 +1,43 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
-import { useStylesContext } from "../../../../core/context/StyleContext";
+import { useFontContext } from "../../../../core/context/FontContext";
+import {
+  BodySmall,
+  SubTitle,
+  MainTitle,
+} from "../../../../components/typography";
 
 export const BasicIntro: React.FC = () => {
   const { Club } = useVideoDataContext();
-  const { THEME } = useStylesContext();
+
+  const { fontsLoaded } = useFontContext();
 
   return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: THEME.primary || "#111111",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      {/* Logo */}
-      {Club?.Logo?.url && (
-        <img
-          src={Club.Logo.url}
-          alt={Club.Name || "Club Logo"}
-          style={{
-            width: "40%",
-            maxHeight: "40%",
-            objectFit: "contain",
-            marginBottom: "2em",
-          }}
-        />
-      )}
+    <AbsoluteFill className="flex flex-col justify-center items-center">
+      {!fontsLoaded ? (
+        <div className="text-white text-2xl">Loading fonts...</div>
+      ) : (
+        <div className="flex flex-col justify-center items-center h-full">
+          {/* Logo */}
+          {Club?.Logo?.url && (
+            <img
+              src={Club.Logo.url}
+              alt={Club.Name || "Club Logo"}
+              className="w-2/5 max-h-2/5 object-contain mb-8"
+            />
+          )}
 
-      {/* Club Name */}
-      <h1
-        style={{
-          color: THEME.secondary || "#ffffff",
-          fontSize: "5em",
-          textAlign: "center",
-          margin: 0,
-          padding: "0 1em",
-        }}
-      >
-        {Club?.Name || "Cricket Club"}
-      </h1>
-      <p
-        style={{
-          color: THEME.secondary || "#ffffff",
-          fontSize: "5em",
-          textAlign: "center",
-          margin: 0,
-          padding: "0 1em",
-        }}
-      >
-        SOME TExT
-      </p>
+          {/* Club Name */}
+          <MainTitle variant="gradient">
+            {Club?.Name || "Cricket Club"}
+          </MainTitle>
+          <SubTitle variant="gradient">{Club?.Name || "Cricket Club"}</SubTitle>
+          <BodySmall variant="safe-primary">
+            {Club?.Name || "Cricket Club"}
+          </BodySmall>
+        </div>
+      )}
     </AbsoluteFill>
   );
 };

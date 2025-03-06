@@ -95,21 +95,20 @@ const SPORT_MODULES: Record<string, any> = {
  */
 export const routeToComposition = (DATA: FixturaDataset) => {
   // Extract key information from DATA
-  let compositionId = DATA.VIDEOMETA.Video.CompositionID;
-  const templateId = DATA.VIDEOMETA.Video.Template?.toLowerCase() || "basic";
-  const templateVariation = DATA.VIDEOMETA.Video.TemplateVariation || {};
-  const sport = DATA.VIDEOMETA.Club?.Sport?.toLowerCase() || "cricket";
+  const { VIDEOMETA, DATA: CompositionData } = DATA;
+  let compositionId = VIDEOMETA.Video.CompositionID;
+  const templateId = VIDEOMETA.Video.Template?.toLowerCase() || "basic";
+  const templateVariation = VIDEOMETA.Video.TemplateVariation || {};
+  const sport = VIDEOMETA.Club?.Sport?.toLowerCase() || "cricket";
 
-  console.log("Routing Information:");
+  /*   console.log("Routing Information:");
   console.log("Sport:", sport);
   console.log("Template:", templateId);
   console.log("Template Variation:", templateVariation);
-  console.log("Original CompositionID:", compositionId);
+  console.log("Original CompositionID:", compositionId); */
 
   // Normalize the composition ID to handle compound formats
   compositionId = normalizeCompositionId(compositionId);
-
-  console.log("Normalized CompositionID:", compositionId);
 
   try {
     // Get the sport module
@@ -168,7 +167,10 @@ export const routeToComposition = (DATA: FixturaDataset) => {
 
     // Return the component with the data and template variation
     return (
-      <TemplateComponent DATA={DATA} templateVariation={templateVariation} />
+      <TemplateComponent
+        DATA={CompositionData}
+        templateVariation={templateVariation}
+      />
     );
   } catch (error) {
     console.error("Error in composition routing:", error);

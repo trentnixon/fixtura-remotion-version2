@@ -1,8 +1,8 @@
 import React, { createContext, useContext, ReactNode } from "react";
-import { useGlobalContext } from "./GlobalContext";
-import { useVideoDataContext } from "./VideoDataContext";
+import { useThemeContext } from "./ThemeContext";
 
 interface StyleContextProps {
+  // Legacy properties for backward compatibility
   THEME: any;
   fontConfig: any;
   fontSizing: any;
@@ -13,15 +13,23 @@ const StyleContext = createContext<StyleContextProps | null>(null);
 export const StyleProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const { settings } = useGlobalContext();
-  const { Video } = useVideoDataContext();
+  // Use the new ThemeContext
+  const theme = useThemeContext();
 
-  const THEME = Video.Theme || {};
+  // Create a backward-compatible THEME object
+  const THEME = {
+    // Include all color properties from the theme
+    ...theme.colors,
+    // Include font properties
+    fontFamily: theme.fontConfig,
+    headingFontFamily: theme.headingFontFamily,
+    subheadingFontFamily: theme.subheadingFontFamily,
+  };
 
   const contextValue: StyleContextProps = {
     THEME,
-    fontConfig: settings.fontConfig,
-    fontSizing: settings.fontSizing,
+    fontConfig: theme.fontConfig,
+    fontSizing: theme.typography?.Title?.sizes || {},
   };
 
   return (

@@ -57,6 +57,13 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
   console.log(
     `Actual CompositionID being used: ${processedData.VIDEOMETA?.Video?.CompositionID}`,
   );
+  // at some point lets sort this out to be dynamic
+  const VideoRatio = {
+    width: 1080,
+    height: 1350,
+    ratio: 1080 / 1350,
+    fps: 30,
+  };
 
   return (
     <Composition
@@ -64,9 +71,9 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
       id={remoteCompositionId}
       component={templateComponent}
       durationInFrames={durationInFrames}
-      fps={30}
-      width={1080}
-      height={1350}
+      fps={VideoRatio.fps}
+      width={VideoRatio.width}
+      height={VideoRatio.height}
       defaultProps={{
         DATA: processedData,
       }}

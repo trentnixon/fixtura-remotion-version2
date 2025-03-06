@@ -53,7 +53,7 @@ export const testDatasets: Record<string, any> = {
   NetballResults: NetballResults,
   NetballSingleGameResult: NetballSingleGameResult,
   NetballUpcoming: NetballUpcoming,
-} as DatasetRecord;
+};
 
 // Dataset categories using the same IDs
 export const datasetsByCategory: DatasetCategories = {
@@ -77,7 +77,14 @@ export const datasetsByCategory: DatasetCategories = {
     { id: "NetballLadder", name: "Ladder" },
     { id: "NetballResults", name: "Results" },
     { id: "NetballSingleGameResult", name: "Single Game Result" },
-    { id: "NetballTop5", name: "Top 5" },
     { id: "NetballUpcoming", name: "Upcoming Fixtures" },
+  ],
+  FontTesting: [
+    { id: "FontTestDefault", name: "Default Font" },
+    { id: "FontTestRoboto", name: "Roboto Font" },
+    { id: "FontTestHeebo", name: "Heebo Font" },
+    { id: "FontTestTungsten", name: "Tungsten Font" },
+    { id: "FontTestDruk", name: "Druk Font" },
+    { id: "FontTestMonumentExtended", name: "Monument Extended Font" },
   ],
 };

@@ -1,5 +1,4 @@
 import { Basic } from "./variants/basic";
-
 /**
  * Define template registry key type
  */
@@ -16,15 +15,6 @@ export const templateRegistry = {
       // Template-specific configuration
     },
   },
-  // Add QLDC template
-  /*  QLDC: {
-    component: QLDC,
-    variants: ["Graphics", "Solid", "Image", "Gradient", "Video"],
-    config: {
-      // QLDC-specific configuration
-    },
-  }, */
-  // We'll add other templates later
 };
 
 /**
