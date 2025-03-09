@@ -22,3 +22,6 @@ export { Label } from "./Label";
 // Legacy components
 export { MainTitle } from "./Title";
 export { SubTitle } from "./subtitle";
+
+// Special animation components
+export { AnimatedText } from "./AnimatedText";

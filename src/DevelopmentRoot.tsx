@@ -17,6 +17,7 @@ interface DatasetInfo {
 export const DevelopmentRoot: React.FC = () => {
   return (
     <>
+      {/* Template Registry */}
       {Object.entries(templateRegistry).map(([templateId, template]) => (
         <Folder key={templateId} name={templateId}>
           {template.variants?.map((variant) => (

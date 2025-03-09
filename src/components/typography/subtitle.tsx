@@ -4,6 +4,12 @@ import React from "react";
 import { useThemeContext } from "../../core/context/ThemeContext";
 import { getVariantStyles, applyContrastSafety } from "./config/variants";
 import { getTypographyStyles } from "./config/styles";
+import {
+  AnimationType,
+  AnimationConfig,
+  normalizeAnimation,
+  useAnimation,
+} from "./config/animations";
 
 // Keep the explicit prop definition for better IDE support
 export const SubTitle = ({
@@ -12,6 +18,9 @@ export const SubTitle = ({
   contrastSafe = true,
   className = "",
   style = {},
+  animation,
+  animationDelay,
+  animationDuration,
 }: {
   children: React.ReactNode;
   variant?:
@@ -28,6 +37,9 @@ export const SubTitle = ({
   contrastSafe?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  animation?: AnimationType | AnimationConfig;
+  animationDelay?: number;
+  animationDuration?: number;
 }) => {
   const theme = useThemeContext();
 
@@ -69,15 +81,39 @@ export const SubTitle = ({
     ...style,
   };
 
-  // Only add color if it's defined and not a gradient
+  // Only add color if it's defined
   if (variant !== "gradient" && textColor) {
     componentStyle.color = textColor;
   }
 
+  // Process animation configuration
+  const animationConfig = normalizeAnimation(
+    animation,
+    animationDelay,
+    animationDuration,
+  );
+
+  // For typewriter animation, pass the text length
+  if (animationConfig.type === "typewriter" && typeof children === "string") {
+    animationConfig.custom = {
+      ...animationConfig.custom,
+      textLength: children.length,
+    };
+  }
+
+  // Get animation styles
+  const animationStyles = useAnimation(animationConfig);
+
+  // Merge all styles
+  const finalStyle: React.CSSProperties = {
+    ...componentStyle,
+    ...animationStyles,
+  };
+
   return (
     <h2
       className={`${subtitleStyles.className} ${className}`}
-      style={componentStyle}
+      style={finalStyle}
     >
       {children}
     </h2>
