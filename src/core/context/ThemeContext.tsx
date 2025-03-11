@@ -6,7 +6,7 @@ import {
   createThemeColorUtils,
   ThemeColorUtils,
 } from "../utils/themeColorUtils";
-
+import { DesignPalette } from "../utils/designPalettes/types";
 // Define theme structure with TypeScript for better type safety and documentation
 export interface FontClass {
   family: string;
@@ -27,6 +27,27 @@ export interface ThemeFonts {
   [key: string]: ThemeFont;
 }
 
+// Define the ColorPalette interface
+export interface ColorPalette {
+  name: string;
+  background: string;
+  text: string;
+  container: string;
+  containerText: string;
+  accent: string;
+  highlight: string;
+}
+
+// Define the ThemePalettes interface
+export interface ThemePalettes {
+  primary: ColorPalette;
+  secondary: ColorPalette;
+  dark: ColorPalette;
+  light: ColorPalette;
+  accent: ColorPalette;
+  [key: string]: ColorPalette; // Allow for custom palettes
+}
+
 // Enhanced color interface that includes our utilities
 export interface ThemeColors {
   // Base colors (from user data)
@@ -35,6 +56,9 @@ export interface ThemeColors {
 
   // Enhanced color utilities - this contains all our color variations and options
   utils: ThemeColorUtils;
+
+  // Palettes system
+  //palettes: ThemePalettes;
 
   // Legacy/fallback properties for backward compatibility
   // These can be removed once all components are updated to use utils
@@ -153,7 +177,15 @@ export interface ThemeContextProps {
 
   // Template-specific properties
   gradientDegree?: string;
-  [key: string]: any; // Allow additional theme properties
+
+  // Helper function to get active palette
+  getActivePalette: (paletteName?: string) => DesignPalette;
+
+  // Selected palette - direct access to the active palette
+  selectedPalette: DesignPalette;
+
+  // Allow additional theme properties
+  [key: string]: any;
 }
 
 const ThemeContext = createContext<ThemeContextProps | null>(null);
@@ -178,7 +210,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     const secondaryColor =
       dataTheme.secondary || settings.secondary || "#ffffff";
 
-    // Generate enhanced color utilities
+    // Generate enhanced color utilities (now includes designPalettes)
     const colorUtils = createThemeColorUtils(primaryColor, secondaryColor);
 
     // Build the complete color object
@@ -189,6 +221,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
 
       // Enhanced color utilities
       utils: colorUtils,
+
+      // Palettes - now directly from colorUtils
+      //palettes: colorUtils.designPalettes,
     };
 
     // Create component styles if not already defined
@@ -210,13 +245,33 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
       },
     };
 
+    // Helper function to get active palette
+    const getActivePalette = (paletteName?: string): DesignPalette => {
+      if (!paletteName) {
+        // Get from template variation or default to primary
+        const variationPalette =
+          Video.TemplateVariation?.Palette?.toLowerCase();
+        paletteName = variationPalette || "primary";
+      }
+
+      return (
+        colorUtils.designPalettes[paletteName?.toLowerCase() || "primary"] ||
+        colorUtils.designPalettes.primary
+      );
+    };
+
+    // Get the currently selected palette
+    const selectedPalette = getActivePalette();
+
     // Return the complete theme
     return {
       ...baseTheme,
       colors,
       componentStyles,
+      getActivePalette,
+      selectedPalette,
     };
-  }, [settings, Video.Theme]);
+  }, [settings, Video.Theme, Video.TemplateVariation]);
 
   return (
     <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>

@@ -877,7 +877,8 @@
       },
       "Template": "CNSW",
       "TemplateVariation": {
-        "Background": "Gradient"
+        "Background": "Gradient",
+        "Palette": "Primary"
       }
     },
     "Video": {
@@ -914,7 +915,8 @@
         "WeekendSingleGameResult": 1
       },
       "TemplateVariation": {
-        "Background": "Gradient"
+        "Background": "Gradient",
+        "Palette": "Primary"
       }
     },
     "FixtureCategory": "Senior",

@@ -6,6 +6,7 @@
 export type AnimationType =
   | "none"
   | "fadeIn"
+  | "fadeOut"
   | "fadeInUp"
   | "fadeInDown"
   | "fadeInLeft"

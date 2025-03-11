@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "../Container";
 import { ContainerProps } from "../config";
+import { mergeWithPriority } from "../../../core/utils/classNames";
 
 /**
  * BasicContainer Component
@@ -10,16 +11,22 @@ import { ContainerProps } from "../config";
  *
  * @example
  * ```tsx
- * <BasicContainer
- *   width="300px"
- *   height="100px"
- *   backgroundColor="#f0f0f0"
- *   animation="fadeIn"
- * >
+ * <BasicContainer className="w-[300px] h-[100px] bg-slate-800 p-4 rounded-lg">
  *   <Typography>Basic Container Content</Typography>
  * </BasicContainer>
  * ```
  */
 export const BasicContainer: React.FC<ContainerProps> = (props) => {
-  return <Container variant="basic" {...props} />;
+  const { className = "", ...otherProps } = props;
+
+  // Apply default Tailwind classes if not provided
+  const defaultClasses = "";
+
+  return (
+    <Container
+      variant="basic"
+      className={mergeWithPriority(defaultClasses, className)}
+      {...otherProps}
+    />
+  );
 };

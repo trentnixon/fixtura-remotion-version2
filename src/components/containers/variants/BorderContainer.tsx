@@ -1,49 +1,39 @@
 import React from "react";
 import { Container } from "../Container";
-import { ContainerProps, DEFAULT_BORDER } from "../config";
+import { ContainerProps } from "../config";
+import { mergeWithPriority } from "../../../core/utils/classNames";
 
 /**
  * BorderContainer Component
  *
  * A container with customizable borders.
- * Options for border width, style, color, and radius.
+ * Supports different border styles, widths, and colors.
  *
  * @example
  * ```tsx
  * <BorderContainer
- *   width="300px"
- *   height="100px"
- *   backgroundColor="#f0f0f0"
+ *   className="w-[300px] h-[100px] bg-slate-800 p-4 rounded-lg"
  *   border={{
  *     width: "2px",
  *     style: "solid",
- *     color: "#ff0000",
- *     radius: "8px"
+ *     color: "#f59e0b"
  *   }}
- *   animation="fadeIn"
  * >
  *   <Typography>Border Container Content</Typography>
  * </BorderContainer>
  * ```
- *
- * @example Simple Border
- * ```tsx
- * <BorderContainer
- *   width="300px"
- *   height="100px"
- *   border="2px dashed #ff0000"
- *   animation="fadeIn"
- * >
- *   <Typography>Simple Border Container</Typography>
- * </BorderContainer>
- * ```
  */
 export const BorderContainer: React.FC<ContainerProps> = (props) => {
-  // Apply default border if not provided
-  const borderProps = {
-    ...props,
-    border: props.border || DEFAULT_BORDER,
-  };
+  const { className = "", ...otherProps } = props;
 
-  return <Container variant="border" {...borderProps} />;
+  // Apply default Tailwind classes if not provided
+  const defaultClasses = "";
+
+  return (
+    <Container
+      variant="border"
+      className={mergeWithPriority(defaultClasses, className)}
+      {...otherProps}
+    />
+  );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "../Container";
-import { ContainerProps, DEFAULT_GRADIENT } from "../config";
+import { ContainerProps } from "../config";
+import { mergeWithPriority } from "../../../core/utils/classNames";
 
 /**
  * GradientContainer Component
@@ -8,43 +9,31 @@ import { ContainerProps, DEFAULT_GRADIENT } from "../config";
  * A container with a gradient background.
  * Supports both linear and radial gradients.
  *
- * @example Linear Gradient
+ * @example
  * ```tsx
  * <GradientContainer
- *   width="300px"
- *   height="100px"
+ *   className="w-[300px] h-[100px] p-4 rounded-lg"
  *   backgroundGradient={{
  *     type: "linear",
- *     colors: ["#ff0000", "#0000ff"],
+ *     colors: ["#4F46E5", "#7C3AED"],
  *     direction: "to right"
  *   }}
- *   animation="fadeIn"
  * >
  *   <Typography>Gradient Container Content</Typography>
  * </GradientContainer>
  * ```
- *
- * @example Radial Gradient
- * ```tsx
- * <GradientContainer
- *   width="300px"
- *   height="100px"
- *   backgroundGradient={{
- *     type: "radial",
- *     colors: ["#ff0000", "#0000ff"],
- *   }}
- *   animation="fadeIn"
- * >
- *   <Typography>Radial Gradient Container</Typography>
- * </GradientContainer>
- * ```
  */
 export const GradientContainer: React.FC<ContainerProps> = (props) => {
-  // Apply default gradient if not provided
-  const gradientProps = {
-    ...props,
-    backgroundGradient: props.backgroundGradient || DEFAULT_GRADIENT,
-  };
+  const { className = "", ...otherProps } = props;
 
-  return <Container variant="gradient" {...gradientProps} />;
+  // Apply default Tailwind classes if not provided
+  const defaultClasses = "";
+
+  return (
+    <Container
+      variant="gradient"
+      className={mergeWithPriority(defaultClasses, className)}
+      {...otherProps}
+    />
+  );
 };

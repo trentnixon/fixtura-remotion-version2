@@ -162,3 +162,25 @@ export const fadeInRight = (
     transform: `translateX(${translateX}px)`,
   };
 };
+
+/**
+ * Fade out animation
+ */
+export const fadeOut = (
+  frame: number,
+  startFrame: number,
+  endFrame: number,
+  config: AnimationConfig,
+): React.CSSProperties => {
+  const easingFn = getEasingFunction(config.easing);
+
+  const opacity = interpolate(frame, [startFrame, endFrame], [1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: easingFn,
+  });
+
+  return {
+    opacity,
+  };
+};

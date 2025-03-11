@@ -32,7 +32,7 @@ export function getContrastColor(
   COLORS: ColorOptions = { white: "#ffffff", dark: "#111111" },
 ): string {
   const bgColorObj = tinycolor(hexColor);
-  console.log("bgColorObj.isDark() ", hexColor, bgColorObj.isDark());
+
   return bgColorObj.isDark() ? COLORS.white : COLORS.dark;
 }
 

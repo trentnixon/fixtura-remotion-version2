@@ -135,6 +135,87 @@ export interface ShadowConfig {
 }
 
 /**
+ * Text styling configuration
+ */
+export interface TextStyleConfig {
+  color?: string;
+  fontSize?: string | number;
+  fontWeight?: string | number;
+  fontFamily?: string;
+  lineHeight?: string | number;
+  letterSpacing?: string | number;
+  textAlign?: "left" | "center" | "right" | "justify";
+  textTransform?: "none" | "uppercase" | "lowercase" | "capitalize";
+  textShadow?: string;
+}
+
+/**
+ * Flex layout configuration
+ */
+export interface FlexLayoutConfig {
+  direction?: "row" | "column" | "row-reverse" | "column-reverse";
+  wrap?: "nowrap" | "wrap" | "wrap-reverse";
+  justifyContent?:
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-between"
+    | "space-around"
+    | "space-evenly";
+  alignItems?: "stretch" | "flex-start" | "flex-end" | "center" | "baseline";
+  alignContent?:
+    | "stretch"
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-between"
+    | "space-around";
+  gap?: string | number;
+}
+
+/**
+ * Grid layout configuration
+ */
+export interface GridLayoutConfig {
+  columns?: string;
+  rows?: string;
+  gap?: string | number;
+  columnGap?: string | number;
+  rowGap?: string | number;
+  autoFlow?: "row" | "column" | "row dense" | "column dense";
+  justifyItems?: "start" | "end" | "center" | "stretch";
+  alignItems?: "start" | "end" | "center" | "stretch";
+  justifyContent?:
+    | "start"
+    | "end"
+    | "center"
+    | "stretch"
+    | "space-around"
+    | "space-between"
+    | "space-evenly";
+  alignContent?:
+    | "start"
+    | "end"
+    | "center"
+    | "stretch"
+    | "space-around"
+    | "space-between"
+    | "space-evenly";
+}
+
+/**
+ * Positioning configuration
+ */
+export interface PositionConfig {
+  position?: "static" | "relative" | "absolute" | "fixed" | "sticky";
+  top?: string | number;
+  right?: string | number;
+  bottom?: string | number;
+  left?: string | number;
+  zIndex?: number;
+}
+
+/**
  * Base container props
  */
 export interface ContainerProps {
@@ -155,7 +236,15 @@ export interface ContainerProps {
 
   // Spacing
   padding?: string | number;
+  paddingTop?: string | number;
+  paddingRight?: string | number;
+  paddingBottom?: string | number;
+  paddingLeft?: string | number;
   margin?: string | number;
+  marginTop?: string | number;
+  marginRight?: string | number;
+  marginBottom?: string | number;
+  marginLeft?: string | number;
 
   // Appearance
   backgroundColor?: string;
@@ -164,6 +253,16 @@ export interface ContainerProps {
   borderRadius?: string | number;
   boxShadow?: ShadowConfig | string;
   opacity?: number;
+
+  // Text Styling
+  textStyle?: TextStyleConfig;
+
+  // Layout
+  display?: "flex" | "grid" | "block" | "inline" | "inline-block" | "none";
+  flexLayout?: FlexLayoutConfig;
+  gridLayout?: GridLayoutConfig;
+  position?: PositionConfig;
+  overflow?: "visible" | "hidden" | "scroll" | "auto";
 
   // Animation
   animation?: ContainerAnimationType | ContainerAnimationConfig;

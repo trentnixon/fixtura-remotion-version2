@@ -3,6 +3,10 @@ import {
   ContainerSize,
   ContainerAnimationType,
   ContainerSpringConfig,
+  TextStyleConfig,
+  FlexLayoutConfig,
+  GridLayoutConfig,
+  PositionConfig,
 } from "./types";
 
 /**
@@ -71,6 +75,18 @@ export const CONTAINER_ANIMATIONS: Record<string, ContainerAnimationType> = {
   // Spring animations
   SPRING_IN: "springIn",
   SPRING_OUT: "springOut",
+  SPRING_SCALE: "springScale",
+  SPRING_TRANSLATE_X: "springTranslateX",
+  SPRING_TRANSLATE_Y: "springTranslateY",
+  SPRING_ROTATE: "springRotate",
+  // 3D animations
+  FLIP_X: "flipX",
+  FLIP_Y: "flipY",
+  ROTATE_3D: "rotate3D",
+  SWING: "swing",
+  ZOOM_PERSPECTIVE: "zoomPerspective",
+  GLITCH: "glitch",
+  BLUR: "blur",
 };
 
 /**
@@ -151,4 +167,167 @@ export const DEFAULT_BORDER = {
   style: "solid" as const,
   color: "rgba(0, 0, 0, 0.1)",
   radius: DEFAULT_BORDER_RADIUS,
+};
+
+/**
+ * Default text styles
+ */
+export const DEFAULT_TEXT_STYLES: Record<string, TextStyleConfig> = {
+  DEFAULT: {
+    color: "#ffffff",
+    fontSize: "1rem",
+    fontWeight: 400,
+    lineHeight: 1.5,
+    textAlign: "left",
+  },
+  HEADING: {
+    color: "#ffffff",
+    fontSize: "1.5rem",
+    fontWeight: 700,
+    lineHeight: 1.2,
+    textAlign: "center",
+  },
+  SUBHEADING: {
+    color: "#ffffff",
+    fontSize: "1.25rem",
+    fontWeight: 600,
+    lineHeight: 1.3,
+    textAlign: "center",
+  },
+  BODY: {
+    color: "#ffffff",
+    fontSize: "1rem",
+    fontWeight: 400,
+    lineHeight: 1.5,
+    textAlign: "left",
+  },
+  CAPTION: {
+    color: "rgba(255, 255, 255, 0.8)",
+    fontSize: "0.875rem",
+    fontWeight: 400,
+    lineHeight: 1.4,
+    textAlign: "left",
+  },
+};
+
+/**
+ * Default flex layouts
+ */
+export const DEFAULT_FLEX_LAYOUTS: Record<string, FlexLayoutConfig> = {
+  DEFAULT: {
+    direction: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  ROW: {
+    direction: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: "1rem",
+  },
+  COLUMN: {
+    direction: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "1rem",
+  },
+  ROW_START: {
+    direction: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    gap: "1rem",
+  },
+  ROW_END: {
+    direction: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    gap: "1rem",
+  },
+  COLUMN_START: {
+    direction: "column",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    gap: "1rem",
+  },
+  COLUMN_END: {
+    direction: "column",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    gap: "1rem",
+  },
+};
+
+/**
+ * Default grid layouts
+ */
+export const DEFAULT_GRID_LAYOUTS: Record<string, GridLayoutConfig> = {
+  DEFAULT: {
+    columns: "1fr",
+    gap: "1rem",
+    justifyItems: "center",
+    alignItems: "center",
+  },
+  TWO_COLUMN: {
+    columns: "1fr 1fr",
+    gap: "1rem",
+    justifyItems: "center",
+    alignItems: "center",
+  },
+  THREE_COLUMN: {
+    columns: "1fr 1fr 1fr",
+    gap: "1rem",
+    justifyItems: "center",
+    alignItems: "center",
+  },
+  FOUR_COLUMN: {
+    columns: "1fr 1fr 1fr 1fr",
+    gap: "1rem",
+    justifyItems: "center",
+    alignItems: "center",
+  },
+  AUTO_FIT: {
+    columns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gap: "1rem",
+    justifyItems: "center",
+    alignItems: "center",
+  },
+};
+
+/**
+ * Default positions
+ */
+export const DEFAULT_POSITIONS: Record<string, PositionConfig> = {
+  DEFAULT: {
+    position: "relative",
+  },
+  ABSOLUTE_CENTER: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    zIndex: 1,
+  },
+  TOP_LEFT: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 1,
+  },
+  TOP_RIGHT: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    zIndex: 1,
+  },
+  BOTTOM_LEFT: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    zIndex: 1,
+  },
+  BOTTOM_RIGHT: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    zIndex: 1,
+  },
 };

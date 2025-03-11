@@ -63,6 +63,14 @@ export const useContainerAnimation = (
 
   const delay = config.delay || 0;
   const duration = config.duration || 30;
+
+  // If we have a relative frame from exit animation calculation, use it
+  // Otherwise use the current frame
+  const effectiveFrame =
+    config.custom?._relativeFrame !== undefined
+      ? config.custom._relativeFrame
+      : frame;
+
   const startFrame = delay;
   const endFrame = delay + duration;
 
@@ -70,91 +78,103 @@ export const useContainerAnimation = (
   switch (config.type) {
     // Fade animations
     case "fadeIn":
-      return fadeIn(frame, startFrame, endFrame, config);
+      return fadeIn(effectiveFrame, startFrame, endFrame, config);
     case "fadeOut":
-      return fadeOut(frame, startFrame, endFrame, config);
+      return fadeOut(effectiveFrame, startFrame, endFrame, config);
 
     // Slide animations
     case "slideInLeft":
-      return slideInLeft(frame, startFrame, endFrame, config);
+      return slideInLeft(effectiveFrame, startFrame, endFrame, config);
     case "slideInRight":
-      return slideInRight(frame, startFrame, endFrame, config);
+      return slideInRight(effectiveFrame, startFrame, endFrame, config);
     case "slideInTop":
-      return slideInTop(frame, startFrame, endFrame, config);
+      return slideInTop(effectiveFrame, startFrame, endFrame, config);
     case "slideInBottom":
-      return slideInBottom(frame, startFrame, endFrame, config);
+      return slideInBottom(effectiveFrame, startFrame, endFrame, config);
     case "slideOutLeft":
-      return slideOutLeft(frame, startFrame, endFrame, config);
+      return slideOutLeft(effectiveFrame, startFrame, endFrame, config);
     case "slideOutRight":
-      return slideOutRight(frame, startFrame, endFrame, config);
+      return slideOutRight(effectiveFrame, startFrame, endFrame, config);
     case "slideOutTop":
-      return slideOutTop(frame, startFrame, endFrame, config);
+      return slideOutTop(effectiveFrame, startFrame, endFrame, config);
     case "slideOutBottom":
-      return slideOutBottom(frame, startFrame, endFrame, config);
+      return slideOutBottom(effectiveFrame, startFrame, endFrame, config);
 
     // Scale animations
     case "scaleIn":
-      return scaleIn(frame, startFrame, endFrame, config);
+      return scaleIn(effectiveFrame, startFrame, endFrame, config);
     case "scaleOut":
-      return scaleOut(frame, startFrame, endFrame, config);
+      return scaleOut(effectiveFrame, startFrame, endFrame, config);
     case "scaleInX":
-      return scaleInX(frame, startFrame, endFrame, config);
+      return scaleInX(effectiveFrame, startFrame, endFrame, config);
     case "scaleInY":
-      return scaleInY(frame, startFrame, endFrame, config);
+      return scaleInY(effectiveFrame, startFrame, endFrame, config);
     case "scaleOutX":
-      return scaleOutX(frame, startFrame, endFrame, config);
+      return scaleOutX(effectiveFrame, startFrame, endFrame, config);
     case "scaleOutY":
-      return scaleOutY(frame, startFrame, endFrame, config);
+      return scaleOutY(effectiveFrame, startFrame, endFrame, config);
 
     // Special animations
     case "revealLeft":
-      return revealLeft(frame, startFrame, endFrame, config);
+      return revealLeft(effectiveFrame, startFrame, endFrame, config);
     case "revealRight":
-      return revealRight(frame, startFrame, endFrame, config);
+      return revealRight(effectiveFrame, startFrame, endFrame, config);
     case "revealTop":
-      return revealTop(frame, startFrame, endFrame, config);
+      return revealTop(effectiveFrame, startFrame, endFrame, config);
     case "revealBottom":
-      return revealBottom(frame, startFrame, endFrame, config);
+      return revealBottom(effectiveFrame, startFrame, endFrame, config);
     case "collapseLeft":
-      return collapseLeft(frame, startFrame, endFrame, config);
+      return collapseLeft(effectiveFrame, startFrame, endFrame, config);
     case "collapseRight":
-      return collapseRight(frame, startFrame, endFrame, config);
+      return collapseRight(effectiveFrame, startFrame, endFrame, config);
     case "collapseTop":
-      return collapseTop(frame, startFrame, endFrame, config);
+      return collapseTop(effectiveFrame, startFrame, endFrame, config);
     case "collapseBottom":
-      return collapseBottom(frame, startFrame, endFrame, config);
+      return collapseBottom(effectiveFrame, startFrame, endFrame, config);
 
     // Spring animations
     case "springIn":
-      return springIn(frame, startFrame, endFrame, config, fps);
+      return springIn(effectiveFrame, startFrame, endFrame, config, fps);
     case "springOut":
-      return springOut(frame, startFrame, endFrame, config, fps);
+      return springOut(effectiveFrame, startFrame, endFrame, config, fps);
     case "springScale":
-      return springScale(frame, startFrame, endFrame, config, fps);
+      return springScale(effectiveFrame, startFrame, endFrame, config, fps);
     case "springTranslateX":
-      return springTranslateX(frame, startFrame, endFrame, config, fps);
+      return springTranslateX(
+        effectiveFrame,
+        startFrame,
+        endFrame,
+        config,
+        fps,
+      );
     case "springTranslateY":
-      return springTranslateY(frame, startFrame, endFrame, config, fps);
+      return springTranslateY(
+        effectiveFrame,
+        startFrame,
+        endFrame,
+        config,
+        fps,
+      );
     case "springRotate":
-      return springRotate(frame, startFrame, endFrame, config, fps);
+      return springRotate(effectiveFrame, startFrame, endFrame, config, fps);
 
     // 3D animations
     case "flipX":
-      return flipX(frame, startFrame, endFrame, config);
+      return flipX(effectiveFrame, startFrame, endFrame, config);
     case "flipY":
-      return flipY(frame, startFrame, endFrame, config);
+      return flipY(effectiveFrame, startFrame, endFrame, config);
     case "rotate3D":
-      return rotate3D(frame, startFrame, endFrame, config);
+      return rotate3D(effectiveFrame, startFrame, endFrame, config);
     case "swing":
-      return swing(frame, startFrame, endFrame, config);
+      return swing(effectiveFrame, startFrame, endFrame, config);
     case "zoomPerspective":
-      return zoomPerspective(frame, startFrame, endFrame, config);
+      return zoomPerspective(effectiveFrame, startFrame, endFrame, config);
 
     // Video-focused animations
     case "glitch":
-      return glitch(frame, startFrame, endFrame, config);
+      return glitch(effectiveFrame, startFrame, endFrame, config);
     case "blur":
-      return blur(frame, startFrame, endFrame, config);
+      return blur(effectiveFrame, startFrame, endFrame, config);
 
     default:
       return defaultStyle;
@@ -177,25 +197,28 @@ export const useDualContainerAnimation = (
   }
 
   // If we're past the exit frame, use the exit animation
-  // but adjust the startFrame to be the exitFrame
   if (frame >= exitFrame) {
-    // Create a modified exit config with the startFrame set to exitFrame
+    // Create a modified exit config with the delay adjusted to start at exitFrame
     const adjustedExitConfig: ContainerAnimationConfig = {
       ...exitConfig,
-      delay: 0, // Reset any delay
+      delay: 0, // Reset any delay since we'll calculate it relative to exitFrame
     };
+
+    // Calculate the adjusted frame relative to the exit frame
+    // This makes the animation start from 0 at the exit frame
+    const relativeFrame = frame - exitFrame;
 
     // Apply the exit animation with the adjusted frame
-    const exitStyles = {
-      ...useContainerAnimation({
-        ...adjustedExitConfig,
-        // We need to pass the original frame to the animation function
-        // but make sure it knows to start at the exitFrame
-        delay: exitFrame,
-      }),
-    };
-
-    return exitStyles;
+    return useContainerAnimation({
+      ...adjustedExitConfig,
+      // We need to pass the original frame to the animation function
+      // but make sure it knows to start at the exitFrame
+      delay: 0, // We've already adjusted the frame, so no delay needed
+      custom: {
+        ...adjustedExitConfig.custom,
+        _relativeFrame: relativeFrame, // Store the relative frame for debugging
+      },
+    });
   }
 
   // Otherwise, use the entry animation

@@ -123,11 +123,6 @@ export const routeToComposition = (DATA: FixturaDataset) => {
       SPORT_COMPOSITION_TYPES[sport as keyof typeof SPORT_COMPOSITION_TYPES] ||
       {};
 
-    console.log(
-      "Available composition types for sport:",
-      Object.keys(compositionTypes),
-    );
-
     const compositionType =
       compositionTypes[compositionId as keyof typeof compositionTypes];
 

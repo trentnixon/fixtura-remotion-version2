@@ -32,45 +32,52 @@ export const getVariantStyles = (
   let textColor: string | null = null;
   let additionalStyles = {};
 
+  // Get the active palette
+  const activePaletteName = colors.activePalette || "primary";
+  const palette = utils.designPalettes[activePaletteName];
+
+  if (!palette) {
+    console.warn(
+      `Palette "${activePaletteName}" not found, using fallback styles`,
+    );
+    return { color: null, additionalStyles: {} };
+  }
+
   switch (variant) {
     case "primary":
-      textColor = utils.variations.primary.base;
+      textColor = palette.text.primary;
       break;
     case "secondary":
-      textColor = utils.variations.secondary.base;
+      textColor = palette.text.secondary;
       break;
     case "accent":
-      textColor = utils.variations.secondary.accent;
+      textColor = palette.text.accent;
       break;
     case "contrast":
-      textColor = utils.text.onPrimary;
+      textColor = palette.text.contrast;
       break;
     case "safe-primary":
       // Use contrast-safe color for primary
-      textColor = contrastSafe
-        ? utils.contrast.primary.safeColor
-        : utils.text.onPrimary;
+      textColor = palette.text.safePrimary;
       break;
     case "safe-secondary":
       // Use contrast-safe color for secondary
-      textColor = contrastSafe
-        ? utils.contrast.secondary.safeColor
-        : utils.text.onSecondary;
+      textColor = palette.text.safeSecondary;
       break;
     case "gradient":
       // Use gradient text
       additionalStyles = {
-        background: utils.gradients.primaryToSecondary.css,
+        background: palette.background.gradient.primaryToSecondary,
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         backgroundClip: "text",
       };
       break;
     case "muted":
-      textColor = utils.text.muted;
+      textColor = palette.text.muted;
       break;
     case "highlight":
-      textColor = utils.utility.success;
+      textColor = palette.text.highlight;
       break;
     // Sport-specific variants are handled in the component
     case "team-color":
@@ -110,11 +117,18 @@ export const applyContrastSafety = (
     return textColor;
   }
 
-  // Check if the current text color has good contrast against the background
-  const backgroundKey = "primary"; // Assuming primary is the background
-  const backgroundSafety = utils.contrast.background[backgroundKey];
+  // Get the active palette
+  const activePaletteName = utils.activePalette || "primary";
+  const palette = utils.designPalettes[activePaletteName];
 
-  if (!backgroundSafety.isAccessible) {
+  if (!palette) {
+    return textColor;
+  }
+
+  // Check if the current text color has good contrast against the background
+  const backgroundSafety = utils.contrast?.background?.primary;
+
+  if (backgroundSafety && !backgroundSafety.isAccessible) {
     // If contrast is poor, use the safe color
     return backgroundSafety.safeColor;
   }

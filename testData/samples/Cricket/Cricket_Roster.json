@@ -159,7 +159,8 @@
     "Template": "Basic",
     "TemplateVariation": {
       "Background": "Gradient",
-      "borderRadius": "10px"
+      "borderRadius": "10px",
+      "Palette": "Primary"
     }
   },
   "PROMPT": [],
@@ -334,7 +335,8 @@
       "includeSponsors": true,
       "TemplateVariation": {
         "Background": "Gradient",
-        "borderRadius": "10px"
+        "borderRadius": "10px",
+        "Palette": "Primary"
       }
     },
     "grouping_category": "Senior"

@@ -534,6 +534,7 @@
       "Template": "Basic",
       "TemplateVariation": {
         "Background": "Gradient",
+        "Palette": "Primary",
         "borderRadius": "10px"
       }
     },
@@ -572,7 +573,8 @@
       },
       "TemplateVariation": {
         "Background": "Gradient",
-        "borderRadius": "10px"
+        "borderRadius": "10px",
+        "Palette": "Primary"
       }
     },
     "FixtureCategory": "Senior",

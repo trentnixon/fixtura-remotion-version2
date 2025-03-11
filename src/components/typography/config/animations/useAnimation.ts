@@ -2,6 +2,7 @@ import { useCurrentFrame, useVideoConfig } from "remotion";
 import { AnimationConfig } from "./types";
 import {
   fadeIn,
+  fadeOut,
   fadeInUp,
   fadeInDown,
   fadeInLeft,
@@ -36,6 +37,9 @@ export const useAnimation = (config: AnimationConfig): React.CSSProperties => {
   switch (config.type) {
     case "fadeIn":
       return fadeIn(frame, startFrame, endFrame, config);
+
+    case "fadeOut":
+      return fadeOut(frame, startFrame, endFrame, config);
 
     case "fadeInUp":
       return fadeInUp(frame, startFrame, endFrame, config);

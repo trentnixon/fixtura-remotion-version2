@@ -13,7 +13,7 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const { DATA } = useGlobalContext();
-  console.log("[DATA.VIDEOMETA?.Video]", DATA.VIDEOMETA?.Video);
+
   const Video = DATA.VIDEOMETA?.Video || {};
   const Club = DATA.VIDEOMETA?.Club || {};
 

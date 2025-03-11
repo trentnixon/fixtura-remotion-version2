@@ -1788,7 +1788,8 @@
       "Template": "Basic",
       "TemplateVariation": {
         "Background": "Gradient",
-        "borderRadius": "10px"
+        "borderRadius": "10px",
+        "Palette": "secondary"
       }
     },
     "Video": {
@@ -1825,7 +1826,8 @@
         "WeekendSingleGameResult": 1
       },
       "TemplateVariation": {
-        "Background": "Gradient",
+        "Background": "Solid",
+        "Palette": "primary",
         "borderRadius": "10px"
       }
     },

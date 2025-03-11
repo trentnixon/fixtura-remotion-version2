@@ -24,6 +24,10 @@ export type {
   ContainerSize,
   ContainerAnimationType,
   ContainerAnimationConfig,
+  TextStyleConfig,
+  FlexLayoutConfig,
+  GridLayoutConfig,
+  PositionConfig,
 } from "./config/types";
 
 // Export container constants
@@ -35,4 +39,9 @@ export {
   DEFAULT_BOX_SHADOW,
   DEFAULT_BORDER_RADIUS,
   DEFAULT_GRADIENT,
+  DEFAULT_TEXT_STYLES,
+  DEFAULT_FLEX_LAYOUTS,
+  DEFAULT_GRID_LAYOUTS,
+  DEFAULT_POSITIONS,
+  CONTAINER_SPRING_CONFIGS,
 } from "./config/constants";

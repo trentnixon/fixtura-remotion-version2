@@ -31,7 +31,8 @@
       "Template": "Muted",
       "TemplateVariation": {
         "useForcedColor": "#C6C7C9",
-        "useMutedColor": "#081F3D"
+        "useMutedColor": "#081F3D",
+        "Palette": "Primary"
       },
       "Theme": {
         "primary": "#352466",
@@ -56,7 +57,8 @@
       "Template": "Muted",
       "TemplateVariation": {
         "useForcedColor": "#C6C7C9",
-        "useMutedColor": "#081F3D"
+        "useMutedColor": "#081F3D",
+        "Palette": "Primary"
       },
       "Theme": {
         "primary": "#352466",
