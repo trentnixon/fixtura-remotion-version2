@@ -16,14 +16,13 @@ export const SolidBackground: React.FC<Props> = ({
 
   // Use provided color, or palette background
   const backgroundColor = selectedPalette.background.main;
-
   console.log("[backgroundColor]", backgroundColor);
 
   return (
     <AbsoluteFill
-      className={`bg-background ${className}`}
+      className={`bg-background ${className} ${backgroundColor}`}
       style={{
-        backgroundColor,
+        background: backgroundColor,
         zIndex: -1,
         ...style,
       }}

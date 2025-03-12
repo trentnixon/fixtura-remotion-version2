@@ -27,16 +27,12 @@ export interface BackgroundOptions {
 export interface ContainerOptions {
   primary: string;
   secondary: string;
+  main: string;
   light: string;
   dark: string;
   accent: string;
   highlight: string;
   transparent: string;
-  onBackground: {
-    main: string;
-    light: string;
-    dark: string;
-  };
 }
 
 export interface TextOptions {
@@ -44,23 +40,17 @@ export interface TextOptions {
     main: string;
     light: string;
     dark: string;
+    muted: string;
+    accent: string;
   };
   onContainer: {
     primary: string;
     secondary: string;
     light: string;
     dark: string;
+    muted: string;
+    accent: string;
   };
-  title: string;
-  body: string;
-  muted: string;
-  primary: string;
-  secondary: string;
-  accent: string;
-  contrast: string;
-  safePrimary: string;
-  safeSecondary: string;
-  highlight: string;
 }
 
 export interface ShadowOptions {

@@ -39,8 +39,6 @@ export const generateAllPalettes = (
       textColors,
       shadows,
       gradients,
-      utility,
-      contrast,
     ),
     secondary: createSecondaryPalette(
       primary,

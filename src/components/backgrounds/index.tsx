@@ -64,18 +64,7 @@ export const SelectTemplateBackground = () => {
 
 // Gradient background
 const GradientBackground = () => {
-  const { selectedPalette } = useThemeContext();
-
-  return (
-    <GradientBg
-      gradientType="linear"
-      colors={[
-        selectedPalette.background.main,
-        selectedPalette.background.light,
-      ]}
-      direction="to right"
-    />
-  );
+  return <GradientBg />;
 };
 
 // Image background

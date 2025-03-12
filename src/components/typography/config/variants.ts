@@ -1,3 +1,5 @@
+import { useThemeContext } from "../../../core/context/ThemeContext";
+
 // Define all available typography variants in one place
 export type TypographyVariant =
   | "default"
@@ -31,39 +33,53 @@ export const getVariantStyles = (
 ): VariantStyle => {
   let textColor: string | null = null;
   let additionalStyles = {};
-
+  const { selectedPalette } = useThemeContext();
   // Get the active palette
-  const activePaletteName = colors.activePalette || "primary";
-  const palette = utils.designPalettes[activePaletteName];
+  const palette = selectedPalette || "primary";
 
-  if (!palette) {
-    console.warn(
-      `Palette "${activePaletteName}" not found, using fallback styles`,
-    );
-    return { color: null, additionalStyles: {} };
-  }
+  console.log("[palette]", palette);
 
   switch (variant) {
-    case "primary":
-      textColor = palette.text.primary;
+    case "main":
+      textColor = palette.text.onBackground.main;
       break;
-    case "secondary":
-      textColor = palette.text.secondary;
+    case "onBackgroundMain":
+      textColor = palette.text.onBackground.main;
       break;
-    case "accent":
-      textColor = palette.text.accent;
+    case "onBackgroundAccent":
+      textColor = palette.text.onBackground.accent;
       break;
-    case "contrast":
-      textColor = palette.text.contrast;
+    case "onBackgroundDark":
+      textColor = palette.text.onBackground.dark;
       break;
-    case "safe-primary":
-      // Use contrast-safe color for primary
-      textColor = palette.text.safePrimary;
+    case "onBackgroundLight":
+      textColor = palette.text.onBackground.light;
       break;
-    case "safe-secondary":
-      // Use contrast-safe color for secondary
-      textColor = palette.text.safeSecondary;
+    case "onBackgroundMuted":
+      textColor = palette.text.onBackground.muted;
       break;
+
+    case "onContainerMain":
+      textColor = palette.text.onContainer.primary;
+      break;
+    case "onContainerSecondary":
+      textColor = palette.text.onContainer.secondary;
+      break;
+
+    case "onContainerDark":
+      textColor = palette.text.onContainer.dark;
+      break;
+    case "onContainerLight":
+      textColor = palette.text.onContainer.light;
+      break;
+
+    case "onContainerAccent":
+      textColor = palette.text.onContainer.accent;
+      break;
+    case "onContainerMuted":
+      textColor = palette.text.onContainer.muted;
+      break;
+
     case "gradient":
       // Use gradient text
       additionalStyles = {
@@ -73,12 +89,7 @@ export const getVariantStyles = (
         backgroundClip: "text",
       };
       break;
-    case "muted":
-      textColor = palette.text.muted;
-      break;
-    case "highlight":
-      textColor = palette.text.highlight;
-      break;
+
     // Sport-specific variants are handled in the component
     case "team-color":
     case "opponent-color":
@@ -100,7 +111,7 @@ export const getVariantStyles = (
 export const applyContrastSafety = (
   textColor: string | null | undefined,
   variant: string, // Changed from TypographyVariant to string to accept any variant
-  utils: any,
+  selectedPalette: any,
   contrastSafe: boolean = true,
 ): string | null | undefined => {
   if (!textColor) return textColor;
@@ -117,20 +128,10 @@ export const applyContrastSafety = (
     return textColor;
   }
 
-  // Get the active palette
-  const activePaletteName = utils.activePalette || "primary";
-  const palette = utils.designPalettes[activePaletteName];
+  const palette = selectedPalette;
 
   if (!palette) {
     return textColor;
-  }
-
-  // Check if the current text color has good contrast against the background
-  const backgroundSafety = utils.contrast?.background?.primary;
-
-  if (backgroundSafety && !backgroundSafety.isAccessible) {
-    // If contrast is poor, use the safe color
-    return backgroundSafety.safeColor;
   }
 
   return textColor;

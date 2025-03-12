@@ -25,16 +25,21 @@ export type TypographyType =
 
 // Define color variants
 export type ColorVariant =
-  | "default"
-  | "primary"
-  | "secondary"
-  | "accent"
-  | "contrast"
-  | "gradient"
-  | "muted"
-  | "safe-primary"
-  | "safe-secondary"
-  | "highlight";
+  | "main"
+  | "onContainer"
+  | "onBackground"
+  | "onBackgroundMain"
+  | "onBackgroundAccent"
+  | "onBackgroundDark"
+  | "onBackgroundLight"
+  | "onBackgroundMuted"
+  | "onContainerMain"
+  | "onContainerSecondary"
+  | "onContainerDark"
+  | "onContainerLight"
+  | "onContainerAccent"
+  | "onContainerMuted"
+  | "onBackgroundMain";
 
 // Define animation modes
 export type AnimationMode = "none" | "word" | AnimationType | AnimationConfig;
@@ -112,20 +117,30 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   const currentFrame = useCurrentFrame();
 
   // Get theme context
-  const { colors, componentStyles } = useThemeContext();
-  const { utils } = colors;
+  const { colors, componentStyles, selectedPalette } = useThemeContext();
+  const { colorSystem } = colors;
 
   // Get style from componentStyles or fallback to bodyText
   const componentStyle = componentStyles[type] ||
     componentStyles.bodyText || { className: "", style: {} };
 
   // Get color variant styles
-  const variantStyles = getVariantStyles(variant, utils, colors, contrastSafe);
+  const variantStyles = getVariantStyles(
+    variant,
+    colorSystem,
+    colors,
+    contrastSafe,
+  );
 
   // Apply contrast safety if needed
   const textColor =
     contrastSafe && variantStyles.color
-      ? applyContrastSafety(variantStyles.color, variant, utils, contrastSafe)
+      ? applyContrastSafety(
+          variantStyles.color,
+          variant,
+          selectedPalette,
+          contrastSafe,
+        )
       : variantStyles.color;
 
   // Calculate entry animation progress

@@ -1,83 +1,66 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import {
-  GradientBackgroundProps,
-  DEFAULT_GRADIENT_BACKGROUND,
-} from "../config";
-import { useStylesContext } from "../../../core/context/StyleContext";
-import { useGlobalContext } from "../../../core/context/GlobalContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
+import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 
-interface Props extends Partial<GradientBackgroundProps> {
+interface Props {
   className?: string;
   style?: React.CSSProperties;
 }
 
+// Type for gradient objects that might have a css property
+type GradientWithCSS = { css: string };
+
+// Helper function to safely extract CSS from different gradient formats
+const extractCSS = (gradient: unknown): string | null => {
+  if (!gradient) return null;
+
+  if (typeof gradient === "string") return gradient;
+
+  if (typeof gradient === "object" && gradient !== null && "css" in gradient) {
+    return (gradient as GradientWithCSS).css;
+  }
+
+  return null;
+};
+
 export const GradientBackground: React.FC<Props> = ({
-  gradientType = "linear",
-  colors,
-  direction,
-  positions,
-  animation,
-  animationDuration,
-  animationDelay,
-  exitAnimation,
-  exitAnimationDuration,
-  exitFrame,
   className = "",
   style = {},
 }) => {
-  const { THEME } = useStylesContext();
-  const { settings } = useGlobalContext();
+  const { selectedPalette } = useThemeContext();
+  const { Video } = useVideoDataContext();
 
-  // Use provided colors or theme colors
-  const gradientColors = colors || [THEME.primary, THEME.secondary];
+  // Default fallback gradient
+  const DEFAULT_GRADIENT = "linear-gradient(to right, #333, #666)";
 
-  // Use provided direction or settings
-  const gradientDirection = direction || `${settings.gradientDegree}`;
+  // Get gradient configuration from video data
+  const gradientType =
+    Video.TemplateVariation?.Gradient?.type || "primaryToSecondary";
 
-  // Generate gradient based on type
-  let backgroundImage = "";
+  // Extract the CSS for the background
+  const backgroundCSS = React.useMemo(() => {
+    if (!selectedPalette?.background?.gradient) return DEFAULT_GRADIENT;
 
-  if (gradientType === "linear") {
-    if (positions && positions.length === gradientColors.length) {
-      // With color stops
-      const colorStops = gradientColors
-        .map((color, index) => `${color} ${positions[index]}`)
-        .join(", ");
-      backgroundImage = `linear-gradient(${gradientDirection}, ${colorStops})`;
-    } else {
-      // Without color stops
-      backgroundImage = `linear-gradient(${gradientDirection}, ${gradientColors.join(", ")})`;
-    }
-  } else if (gradientType === "radial") {
-    if (positions && positions.length === gradientColors.length) {
-      // With color stops
-      const colorStops = gradientColors
-        .map((color, index) => `${color} ${positions[index]}`)
-        .join(", ");
-      backgroundImage = `radial-gradient(circle, ${colorStops})`;
-    } else {
-      // Without color stops
-      backgroundImage = `radial-gradient(circle, ${gradientColors.join(", ")})`;
-    }
-  } else if (gradientType === "conic") {
-    if (positions && positions.length === gradientColors.length) {
-      // With color stops
-      const colorStops = gradientColors
-        .map((color, index) => `${color} ${positions[index]}`)
-        .join(", ");
-      backgroundImage = `conic-gradient(from ${gradientDirection}, ${colorStops})`;
-    } else {
-      // Without color stops
-      backgroundImage = `conic-gradient(from ${gradientDirection}, ${gradientColors.join(", ")})`;
-    }
-  }
+    const gradients = selectedPalette.background.gradient;
+
+    // Try primary requested gradient
+    const selectedGradient = gradients[gradientType as keyof typeof gradients];
+    const primaryCSS = extractCSS(selectedGradient);
+    if (primaryCSS) return primaryCSS;
+
+    // Try fallback to secondaryToPrimary
+    const fallbackCSS = extractCSS(gradients.secondaryToPrimary);
+    if (fallbackCSS) return fallbackCSS;
+
+    return DEFAULT_GRADIENT;
+  }, [selectedPalette, gradientType]);
 
   return (
     <AbsoluteFill
       className={`bg-gradient ${className}`}
       style={{
-        backgroundImage,
+        background: backgroundCSS,
         zIndex: -1,
         ...style,
       }}

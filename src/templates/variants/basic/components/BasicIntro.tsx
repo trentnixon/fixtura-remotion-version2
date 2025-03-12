@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+//import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { AnimatedImage } from "../../../../components/images";
 
 /**
@@ -12,14 +12,15 @@ import { AnimatedImage } from "../../../../components/images";
  * This template demonstrates how to style containers with various layout, text, and positioning options.
  */
 export const BasicIntro: React.FC = () => {
-  const { Video, DATA, Club } = useVideoDataContext();
+  const { Video, Club } = useVideoDataContext();
 
-  const { selectedPalette, componentStyles } = useThemeContext();
+  /*   const { selectedPalette, componentStyles } = useThemeContext();
 
   console.log("[selectedPalette]", selectedPalette);
   console.log("[DATA]", DATA);
   console.log("[Club]", Club);
-  console.log("[componentStyles]", componentStyles);
+  console.log("[componentStyles]", componentStyles); */
+
   return (
     <AbsoluteFill>
       <div className="flex flex-col justify-center items-center h-full w-full px-12 py-8 overflow-auto">
@@ -46,6 +47,7 @@ export const BasicIntro: React.FC = () => {
         </div>
         <AnimatedText
           type="title"
+          variant="onBackgroundMain"
           letterAnimation="none"
           animation="fadeInDown"
           animationDelay={0}
@@ -58,14 +60,13 @@ export const BasicIntro: React.FC = () => {
             custom: { distance: 200 },
           }}
           exitFrame={60}
-          variant="safe-primary"
         >
           {Video.Title}
         </AnimatedText>
 
         <AnimatedText
           type="subtitle"
-          variant="safe-primary"
+          variant="onBackgroundDark"
           letterAnimation="word"
           animation="fadeInUp"
           animationDelay={0}

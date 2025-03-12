@@ -1828,7 +1828,10 @@
       "TemplateVariation": {
         "Background": "Solid",
         "Palette": "primary",
-        "borderRadius": "10px"
+        "borderRadius": "10px",
+        "Gradient": {
+          "type": "primaryRadial"
+        }
       }
     },
     "FixtureCategory": "Senior",

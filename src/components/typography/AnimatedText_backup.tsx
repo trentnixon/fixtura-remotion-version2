@@ -72,7 +72,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   // Get the theme context
   const { colors } = theme;
-  const { utils } = colors;
+  const { colorSystem } = colors;
 
   // Determine default font size based on component type
   const defaultFontSize = (() => {
@@ -115,14 +115,24 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   );
 
   // Get variant-specific styles
-  const variantStyles = getVariantStyles(variant, utils, colors, contrastSafe);
+  const variantStyles = getVariantStyles(
+    variant,
+    colorSystem,
+    colors,
+    contrastSafe,
+  );
 
   // Determine the final text color
   let textColor = variantStyles.color;
 
   // Apply contrast safety if needed
   if (contrastSafe && textColor) {
-    textColor = applyContrastSafety(textColor, variant, utils, contrastSafe);
+    textColor = applyContrastSafety(
+      textColor,
+      variant,
+      colorSystem,
+      contrastSafe,
+    );
   }
 
   // Get container animation if specified

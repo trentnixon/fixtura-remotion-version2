@@ -1,6 +1,6 @@
 import React, { createContext, useContext, ReactNode, useMemo } from "react";
 import { useThemeContext } from "./ThemeContext";
-import { useVideoDataContext } from "./VideoDataContext";
+
 import { DesignPalette } from "../utils/designPalettes/types";
 
 interface StyleContextProps {
@@ -8,7 +8,7 @@ interface StyleContextProps {
   THEME: any;
   fontConfig: any;
   fontSizing: any;
-  PALETTES: Record<string, DesignPalette>;
+
   getActivePalette: (paletteName?: string) => DesignPalette;
   selectedPalette: DesignPalette;
 }
@@ -20,7 +20,6 @@ export const StyleProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   // Use the new ThemeContext
   const theme = useThemeContext();
-  const { Video } = useVideoDataContext();
 
   // Create a backward-compatible THEME object
   const THEME = useMemo(() => {
@@ -38,7 +37,7 @@ export const StyleProvider: React.FC<{ children: ReactNode }> = ({
     THEME,
     fontConfig: theme.fontConfig,
     fontSizing: theme.typography?.Title?.sizes || {},
-    PALETTES: theme.colors.utils.designPalettes,
+
     getActivePalette: theme.getActivePalette,
     selectedPalette: theme.selectedPalette,
   };
