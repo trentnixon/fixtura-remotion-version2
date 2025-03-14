@@ -1,5 +1,5 @@
 import { Easing } from "remotion";
-import { ContainerEasingType } from "./types";
+import { ContainerEasingType } from "./animationTypes";
 
 /**
  * Get the appropriate easing function based on the easing type

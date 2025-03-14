@@ -1830,7 +1830,8 @@
         "Palette": "primary",
         "borderRadius": "10px",
         "Gradient": {
-          "type": "primaryRadial"
+          "type": "primaryToSecondary",
+          "direction": "DIAGONAL"
         }
       }
     },

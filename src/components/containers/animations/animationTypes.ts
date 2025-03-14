@@ -1,23 +1,3 @@
-import React from "react";
-
-/**
- * Container variant types
- */
-export type ContainerVariant =
-  | "basic"
-  | "gradient"
-  | "border"
-  | "card"
-  | "fixture"
-  | "score"
-  | "player"
-  | "leaderboard";
-
-/**
- * Container size types
- */
-export type ContainerSize = "xs" | "sm" | "md" | "lg" | "xl" | "full" | "auto";
-
 /**
  * Container animation types
  */
@@ -66,6 +46,64 @@ export type ContainerAnimationType =
   | "zoomPerspective"
   | "glitch"
   | "blur";
+
+// Animation easing options
+export type AnimationEasing =
+  | "linear"
+  | "ease"
+  | "easeIn"
+  | "easeOut"
+  | "easeInOut"
+  | "cubic"
+  | "bounce"
+  | "elastic";
+
+// Container animation configuration
+export interface ContainerAnimationConfig {
+  type: ContainerAnimationType;
+  delay?: number;
+  duration?: number;
+  easing?: AnimationEasing;
+  custom?: Record<string, any>;
+}
+
+// Animation props
+export interface AnimationProps {
+  // Animation
+  animation?: ContainerAnimationType | ContainerAnimationConfig;
+  animationDelay?: number;
+  animationDuration?: number;
+  animationEasing?: AnimationEasing;
+  springConfig?: ContainerSpringConfig;
+
+  // Exit Animation
+  exitAnimation?: ContainerAnimationType | ContainerAnimationConfig;
+  exitAnimationDelay?: number;
+  exitAnimationDuration?: number;
+  exitAnimationEasing?: AnimationEasing;
+  exitSpringConfig?: ContainerSpringConfig;
+  exitFrame?: number;
+}
+
+import React from "react";
+
+/**
+ * Container variant types
+ */
+export type ContainerVariant =
+  | "basic"
+  | "gradient"
+  | "border"
+  | "card"
+  | "fixture"
+  | "score"
+  | "player"
+  | "leaderboard";
+
+/**
+ * Container size types
+ */
+export type ContainerSize = "xs" | "sm" | "md" | "lg" | "xl" | "full" | "auto";
 
 /**
  * Easing types for container animations

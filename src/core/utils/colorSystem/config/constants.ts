@@ -85,6 +85,7 @@ export const GRADIENT_DIRECTIONS = {
   VERTICAL_REVERSE: "to top",
   DIAGONAL: "to bottom right",
   DIAGONAL_REVERSE: "to top left",
+  CONIC: "to bottom",
 };
 
 // Shadow sizes

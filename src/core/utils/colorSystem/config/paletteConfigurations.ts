@@ -28,8 +28,44 @@ export const createPaletteConfigurations = (
       },
     },
     {
+      name: "primaryOnWhite",
+      colors: [primary, "white"],
+      options: {
+        includeGradients: true,
+        includeShadows: true,
+        advancedGradients: true,
+      },
+    },
+    {
+      name: "primaryOnBlack",
+      colors: [primary, "black"],
+      options: {
+        includeGradients: true,
+        includeShadows: true,
+        advancedGradients: true,
+      },
+    },
+    {
       name: "secondary",
       colors: [secondary, primary],
+      options: {
+        includeGradients: true,
+        includeShadows: true,
+        advancedGradients: true,
+      },
+    },
+    {
+      name: "secondaryOnWhite",
+      colors: [secondary, "white"],
+      options: {
+        includeGradients: true,
+        includeShadows: true,
+        advancedGradients: true,
+      },
+    },
+    {
+      name: "secondaryOnBlack",
+      colors: [secondary, "black"],
       options: {
         includeGradients: true,
         includeShadows: true,

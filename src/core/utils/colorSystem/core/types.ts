@@ -24,7 +24,9 @@ export interface GradientOptions {
   direction: string;
   type: "linear" | "radial";
   stops: string[];
-  css: string;
+  css: {
+    [key: string]: string;
+  };
 }
 
 // Gradient collection interface

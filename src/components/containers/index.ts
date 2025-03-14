@@ -1,47 +1,42 @@
-/**
- * Export all container components for easy imports
- */
+// Re-export container component
+export { AnimatedContainer } from "./AnimatedContainer";
 
-// Export base container
-export { Container } from "./Container";
-
-// Export container variants
-export { BasicContainer } from "./variants/BasicContainer";
-export { GradientContainer } from "./variants/GradientContainer";
-export { BorderContainer } from "./variants/BorderContainer";
-export { CardContainer } from "./variants/CardContainer";
-
-// Comment out exports for components that don't exist yet
-// export { FixtureContainer } from "./variants/FixtureContainer";
-// export { ScoreContainer } from "./variants/ScoreContainer";
-// export { PlayerContainer } from "./variants/PlayerContainer";
-// export { LeaderboardContainer } from "./variants/LeaderboardContainer";
-
-// Export container types
+// Re-export types with explicit naming to avoid conflicts
 export type {
-  ContainerProps,
-  ContainerVariant,
+  ContainerType,
   ContainerSize,
+  ContainerRounded,
+  ContainerShadow,
+  ContainerBackgroundColor,
+  ContainerProps,
+} from "./types";
+
+// Re-export animation types and utilities
+export type {
   ContainerAnimationType,
   ContainerAnimationConfig,
-  TextStyleConfig,
-  FlexLayoutConfig,
-  GridLayoutConfig,
-  PositionConfig,
-} from "./config/types";
-
-// Export container constants
+  AnimationEasing,
+  AnimationProps,
+  ContainerSpringConfig,
+} from "./animations";
 export {
-  CONTAINER_VARIANTS,
-  CONTAINER_SIZES,
-  CONTAINER_ANIMATIONS,
-  DEFAULT_BORDER,
-  DEFAULT_BOX_SHADOW,
-  DEFAULT_BORDER_RADIUS,
-  DEFAULT_GRADIENT,
-  DEFAULT_TEXT_STYLES,
-  DEFAULT_FLEX_LAYOUTS,
-  DEFAULT_GRID_LAYOUTS,
-  DEFAULT_POSITIONS,
-  CONTAINER_SPRING_CONFIGS,
-} from "./config/constants";
+  normalizeContainerAnimation,
+  calculateAnimationStyles,
+  useAnimation,
+  SPRING_CONFIGS,
+} from "./animations";
+
+// Re-export style utilities
+export {
+  getBackgroundColorStyle,
+  getTypeStyles,
+  getSizeStyles,
+  getRoundedStyles,
+  getShadowStyles,
+} from "./styles";
+
+// Re-export examples
+export * from "./examples";
+
+// Re-export modules
+export * from "./modules";

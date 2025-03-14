@@ -6,15 +6,13 @@ import {
   generateGradientOptions,
   createAdvancedGradient,
   GRADIENT_TYPES,
-  generateRadialGradient,
-  generateConicGradient,
   generateMeshGradient,
   generateHardStopGradient,
 } from "./gradientGenerator";
 import { generateTextColors } from "./textGenerator";
 import { generateShadows } from "./shadowGenerator";
-import { generateUtilityColors } from "./utilityGenerator";
-import { generateContrastSafety } from "./contrastGenerator";
+//import { generateUtilityColors } from "./utilityGenerator";
+//import { generateContrastSafety } from "./contrastGenerator";
 import { generateBackgroundColors } from "./backgroundGenerator";
 import { createStandardPaletteStructure } from "../config/standardPaletteStructure";
 import { GRADIENT_DIRECTIONS } from "../config/constants";
@@ -47,16 +45,12 @@ export const standardPaletteFactory = (
 
   // Generate color variations
   const mainVariations = createColorVariations(main);
-  const secondaryVariations = createColorVariations(secondary);
-
-  // Generate utility colors based on main color
-  const utilityColors = generateUtilityColors(main);
 
   // Generate text colors
   const textColors = generateTextColors(main, secondary);
 
   // Generate background colors
-  const backgroundColors = generateBackgroundColors(main, secondary);
+  //const backgroundColors = generateBackgroundColors(main, secondary);
 
   // Generate shadows if needed
   const shadows =
@@ -110,18 +104,39 @@ export const standardPaletteFactory = (
             type: "linear" as "linear" | "radial",
             direction: "",
             stops: [main, secondary],
-            css: generateMeshGradient([
-              {
-                colors: [main, `${main}00`],
-                direction: "217deg",
-                opacity: 0.8,
-              },
-              {
-                colors: [secondary, `${secondary}00`],
-                direction: "127deg",
-                opacity: 0.8,
-              },
-            ]),
+            css: {
+              DEFAULT: generateMeshGradient([
+                {
+                  colors: [main, `${main}00`],
+                  direction: "217deg",
+                  opacity: 0.8,
+                },
+                {
+                  colors: [secondary, `${secondary}00`],
+                  direction: "127deg",
+                  opacity: 0.8,
+                },
+              ]),
+              // Add all directions with the same mesh gradient
+              ...Object.keys(GRADIENT_DIRECTIONS).reduce(
+                (acc, key) => {
+                  acc[key] = generateMeshGradient([
+                    {
+                      colors: [main, `${main}00`],
+                      direction: "217deg",
+                      opacity: 0.8,
+                    },
+                    {
+                      colors: [secondary, `${secondary}00`],
+                      direction: "127deg",
+                      opacity: 0.8,
+                    },
+                  ]);
+                  return acc;
+                },
+                {} as Record<string, string>,
+              ),
+            },
           },
 
           // Hard-stop gradient
@@ -129,7 +144,21 @@ export const standardPaletteFactory = (
             type: "linear" as "linear" | "radial",
             direction: GRADIENT_DIRECTIONS.HORIZONTAL,
             stops: [main, secondary],
-            css: generateHardStopGradient([main, secondary], [50, 50]),
+            css: {
+              DEFAULT: generateHardStopGradient([main, secondary], [50, 50]),
+              // Add all directions with the same hard-stop gradient
+              ...Object.entries(GRADIENT_DIRECTIONS).reduce(
+                (acc, [key, direction]) => {
+                  acc[key] = generateHardStopGradient(
+                    [main, secondary],
+                    [50, 50],
+                    direction,
+                  );
+                  return acc;
+                },
+                {} as Record<string, string>,
+              ),
+            },
           },
         }
       : {
@@ -145,7 +174,7 @@ export const standardPaletteFactory = (
         };
 
   // Generate contrast safety information
-  const contrast = generateContrastSafety(main, secondary, backgroundColors);
+  //const contrast = generateContrastSafety(main, secondary, backgroundColors);
 
   // Create and return the standard palette structure
   return createStandardPaletteStructure(
@@ -161,10 +190,30 @@ export const standardPaletteFactory = (
       glow: "",
     },
     (gradients || {
-      primary: { direction: "", type: "linear", stops: [], css: "" },
-      secondary: { direction: "", type: "linear", stops: [], css: "" },
-      primaryToSecondary: { direction: "", type: "linear", stops: [], css: "" },
-      secondaryToPrimary: { direction: "", type: "linear", stops: [], css: "" },
+      primary: {
+        direction: "",
+        type: "linear",
+        stops: [],
+        css: { DEFAULT: "" },
+      },
+      secondary: {
+        direction: "",
+        type: "linear",
+        stops: [],
+        css: { DEFAULT: "" },
+      },
+      primaryToSecondary: {
+        direction: "",
+        type: "linear",
+        stops: [],
+        css: { DEFAULT: "" },
+      },
+      secondaryToPrimary: {
+        direction: "",
+        type: "linear",
+        stops: [],
+        css: { DEFAULT: "" },
+      },
     }) as any,
     options,
   );

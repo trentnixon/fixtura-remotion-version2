@@ -1,5 +1,5 @@
 import { interpolate } from "remotion";
-import { ContainerAnimationFunction, ContainerAnimationConfig } from "../types";
+import { ContainerAnimationFunction } from "../animationTypes";
 import { getContainerEasingFunction } from "../easingFunctions";
 import React from "react";
 

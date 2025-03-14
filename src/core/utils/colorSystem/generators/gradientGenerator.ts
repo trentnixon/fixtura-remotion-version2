@@ -32,6 +32,13 @@ export interface GradientConfig {
   textMode?: boolean;
 }
 
+// Extended GradientOptions interface with directional CSS
+export interface ExtendedGradientOptions extends GradientOptions {
+  css: {
+    [key: string]: string;
+  };
+}
+
 /**
  * Generate gradient background CSS
  * @param color1 First gradient color
@@ -48,6 +55,30 @@ export const generateGradientBackground = (
 };
 
 /**
+ * Generates all gradient directions for a pair of colors
+ * @param color1 First color
+ * @param color2 Second color
+ * @returns Object with all gradient directions
+ */
+export const generateAllDirectionalGradients = (
+  color1: string,
+  color2: string,
+): { [key: string]: string } => {
+  const directionalGradients: { [key: string]: string } = {};
+
+  // Generate gradients for all directions
+  Object.entries(GRADIENT_DIRECTIONS).forEach(([key, direction]) => {
+    directionalGradients[key] = generateGradientBackground(
+      color1,
+      color2,
+      direction,
+    );
+  });
+
+  return directionalGradients;
+};
+
+/**
  * Generates gradient options for a color or pair of colors
  * @param color1 First color
  * @param color2 Optional second color (if not provided, will use a lighter version of color1)
@@ -58,14 +89,20 @@ export const generateGradientOptions = (
   color1: string,
   color2?: string,
   direction: string = GRADIENT_DIRECTIONS.HORIZONTAL,
-): GradientOptions => {
+): ExtendedGradientOptions => {
   const secondColor = color2 || lightenColor(color1, 20);
+
+  // Generate all directional gradients
+  const directionalGradients = generateAllDirectionalGradients(
+    color1,
+    secondColor,
+  );
 
   return {
     direction,
     type: "linear",
     stops: [color1, secondColor],
-    css: generateGradientBackground(color1, secondColor, direction),
+    css: directionalGradients,
   };
 };
 
@@ -333,51 +370,219 @@ export const createAdvancedGradient = (
   colors: string[],
   type: GRADIENT_TYPES = GRADIENT_TYPES.LINEAR,
   config: GradientConfig = {},
-): GradientOptions & { css: string } => {
-  let css = "";
+): ExtendedGradientOptions => {
+  let css: { [key: string]: string } = {};
+  const mainDirection = config.position || GRADIENT_DIRECTIONS.HORIZONTAL;
 
+  // Generate the main CSS based on the type
+  let mainCss = "";
   switch (type) {
     case GRADIENT_TYPES.LINEAR:
-      css = generateMultiStopGradient(
-        colors,
-        config.position || GRADIENT_DIRECTIONS.HORIZONTAL,
-      );
+      // For linear gradients, generate all directions
+      Object.entries(GRADIENT_DIRECTIONS).forEach(([key, direction]) => {
+        css[key] = generateMultiStopGradient(colors, direction);
+      });
+      mainCss = generateMultiStopGradient(colors, mainDirection);
       break;
     case GRADIENT_TYPES.RADIAL:
-      css = generateRadialGradient(colors[0], colors[colors.length - 1], {
+      // For radial gradients, use the same configuration for all directions
+      // but change the position based on the direction name
+      Object.keys(GRADIENT_DIRECTIONS).forEach((key) => {
+        const shape = (config.shape as "circle" | "ellipse") || "circle";
+        let position = config.position || "center";
+
+        // Adjust position based on direction key if no position is specified
+        if (!config.position) {
+          switch (key) {
+            case "HORIZONTAL":
+              position = "right center";
+              break;
+            case "HORIZONTAL_REVERSE":
+              position = "left center";
+              break;
+            case "VERTICAL":
+              position = "center bottom";
+              break;
+            case "VERTICAL_REVERSE":
+              position = "center top";
+              break;
+            case "DIAGONAL":
+              position = "bottom right";
+              break;
+            case "DIAGONAL_REVERSE":
+              position = "top left";
+              break;
+            default:
+              position = "center";
+          }
+        }
+
+        css[key] = generateRadialGradient(
+          colors[0],
+          colors[colors.length - 1],
+          {
+            shape,
+            position,
+          },
+        );
+      });
+      mainCss = generateRadialGradient(colors[0], colors[colors.length - 1], {
         shape: config.shape as "circle" | "ellipse",
         position: config.position,
       });
       break;
     case GRADIENT_TYPES.CONIC:
-      css = generateConicGradient(colors, config.angle, config.position);
+      // For conic gradients, adjust the angle based on the direction
+      Object.keys(GRADIENT_DIRECTIONS).forEach((key) => {
+        let angle = config.angle || 0;
+
+        // Adjust angle based on direction key
+        switch (key) {
+          case "HORIZONTAL":
+            angle = 90;
+            break;
+          case "HORIZONTAL_REVERSE":
+            angle = 270;
+            break;
+          case "VERTICAL":
+            angle = 180;
+            break;
+          case "VERTICAL_REVERSE":
+            angle = 0;
+            break;
+          case "DIAGONAL":
+            angle = 135;
+            break;
+          case "DIAGONAL_REVERSE":
+            angle = 315;
+            break;
+          default:
+            angle = config.angle || 0;
+        }
+
+        css[key] = generateConicGradient(
+          colors,
+          angle,
+          config.position || "center",
+        );
+      });
+      mainCss = generateConicGradient(colors, config.angle, config.position);
       break;
     case GRADIENT_TYPES.REPEATING_LINEAR:
-      css = generateRepeatingLinearGradient(
+      // For repeating linear gradients, generate all directions
+      Object.entries(GRADIENT_DIRECTIONS).forEach(([key, direction]) => {
+        css[key] = generateRepeatingLinearGradient(
+          colors,
+          config.size,
+          direction,
+        );
+      });
+      mainCss = generateRepeatingLinearGradient(
         colors,
         config.size,
-        config.position || GRADIENT_DIRECTIONS.HORIZONTAL,
+        mainDirection,
       );
       break;
     case GRADIENT_TYPES.REPEATING_RADIAL:
-      css = generateRepeatingRadialGradient(colors, config.size, {
+      // Similar approach as with radial gradients
+      Object.keys(GRADIENT_DIRECTIONS).forEach((key) => {
+        const shape = (config.shape as "circle" | "ellipse") || "circle";
+        let position = config.position || "center";
+
+        // Adjust position based on direction key if no position is specified
+        if (!config.position) {
+          switch (key) {
+            case "HORIZONTAL":
+              position = "right center";
+              break;
+            case "HORIZONTAL_REVERSE":
+              position = "left center";
+              break;
+            case "VERTICAL":
+              position = "center bottom";
+              break;
+            case "VERTICAL_REVERSE":
+              position = "center top";
+              break;
+            case "DIAGONAL":
+              position = "bottom right";
+              break;
+            case "DIAGONAL_REVERSE":
+              position = "top left";
+              break;
+            default:
+              position = "center";
+          }
+        }
+
+        css[key] = generateRepeatingRadialGradient(colors, config.size, {
+          shape,
+          position,
+        });
+      });
+      mainCss = generateRepeatingRadialGradient(colors, config.size, {
         shape: config.shape as "circle" | "ellipse",
         position: config.position,
       });
       break;
     case GRADIENT_TYPES.REPEATING_CONIC:
-      // Simplified implementation
-      css = `repeating-conic-gradient(from ${config.angle || 0}deg at ${config.position || "center"}, ${colors.join(", ")})`;
+      // For repeating conic gradients, adjust the angle based on the direction
+      Object.keys(GRADIENT_DIRECTIONS).forEach((key) => {
+        let angle = config.angle || 0;
+
+        // Adjust angle based on direction key
+        switch (key) {
+          case "HORIZONTAL":
+            angle = 90;
+            break;
+          case "HORIZONTAL_REVERSE":
+            angle = 270;
+            break;
+          case "VERTICAL":
+            angle = 180;
+            break;
+          case "VERTICAL_REVERSE":
+            angle = 0;
+            break;
+          case "DIAGONAL":
+            angle = 135;
+            break;
+          case "DIAGONAL_REVERSE":
+            angle = 315;
+            break;
+          default:
+            angle = config.angle || 0;
+        }
+
+        css[key] =
+          `repeating-conic-gradient(from ${angle}deg at ${config.position || "center"}, ${colors.join(", ")})`;
+      });
+      mainCss = `repeating-conic-gradient(from ${config.angle || 0}deg at ${config.position || "center"}, ${colors.join(", ")})`;
       break;
     default:
-      css = generateMultiStopGradient(colors);
+      // Default to multi-stop linear gradient for all directions
+      Object.entries(GRADIENT_DIRECTIONS).forEach(([key, direction]) => {
+        css[key] = generateMultiStopGradient(colors, direction);
+      });
+      mainCss = generateMultiStopGradient(colors);
   }
+
+  // Add the main CSS as the default property
+  css.DEFAULT = mainCss;
 
   return {
     type: type as unknown as "linear" | "radial",
     stops: colors,
-    direction: config.position || GRADIENT_DIRECTIONS.HORIZONTAL,
+    direction: mainDirection,
     css,
-    ...(config.textMode && { textCss: generateGradientText(css) }),
+    ...(config.textMode && {
+      textCss: Object.entries(css).reduce(
+        (acc, [key, value]) => {
+          acc[key] = generateGradientText(value);
+          return acc;
+        },
+        {} as Record<string, Record<string, string>>,
+      ),
+    }),
   };
 };

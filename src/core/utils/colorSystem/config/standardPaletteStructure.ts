@@ -47,6 +47,7 @@ export const createStandardPaletteStructure = (
     return whiteContrast > blackContrast ? "#FFFFFF" : "#000000";
   };
 
+  console.log("[gradients]", gradients);
   // Return the standard palette structure
   return {
     name,
@@ -59,14 +60,28 @@ export const createStandardPaletteStructure = (
       gradient: gradients,
     },
     container: {
-      main: tinycolor(mainColor).lighten(10).toString(),
+      main: mainColor,
       light: tinycolor(mainColor).lighten(20).toString(),
       dark: tinycolor(mainColor).lighten(5).toString(),
       primary: colorVariations.light,
-      secondary: colorVariations.lighter,
-      accent: secondaryColor,
+      secondary: secondaryColor,
+      accent: colorVariations.accent,
+      muted: colorVariations.muted,
+      saturated: colorVariations.saturated,
       highlight: colorVariations.lighter,
-      transparent: tinycolor(mainColor).setAlpha(0.8).toRgbString(),
+      transparentMain: tinycolor(mainColor).setAlpha(0.4).toRgbString(),
+      transparentSecondary: tinycolor(secondaryColor)
+        .setAlpha(0.4)
+        .toRgbString(),
+      transparentAccent: tinycolor(secondaryColor).setAlpha(0.4).toRgbString(),
+      gradientPrimaryToSecondaryVertical:
+        gradients.primaryToSecondary.css.VERTICAL,
+      gradientSecondaryToPrimaryVertical:
+        gradients.secondaryToPrimary.css.VERTICAL,
+      gradientPrimaryToSecondaryHorizontal:
+        gradients.primaryToSecondary.css.HORIZONTAL,
+      gradientSecondaryToPrimaryHorizontal:
+        gradients.secondaryToPrimary.css.HORIZONTAL,
     },
     text: {
       onBackground: {
