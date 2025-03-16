@@ -53,10 +53,13 @@ export const BasicIntro: React.FC = () => {
 
         {/* Club or Association Name */}
         <SlideInLeft
-          backgroundColor="gradientPrimaryToSecondaryHorizontal"
+          backgroundColor="main"
           type="basic"
-          rounded="lg"
+          rounded="full"
           className="p-6 my-4 w-[80%]"
+          animation={{
+            easing: "bounce",
+          }}
           exitAnimation={IntroAnimationOutConfig as ContainerAnimationConfig}
           exitFrame={IntroExitFrame}
         >

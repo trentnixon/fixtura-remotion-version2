@@ -5,7 +5,18 @@ export interface GradientOptions {
   direction: string;
   type: "linear" | "radial";
   stops: string[];
-  css: string;
+  css: CSSGradientOptions;
+}
+
+export interface CSSGradientOptions {
+  CONIC: string;
+  DEFAULT: string;
+  DIAGONAL: string;
+  DIAGONAL_REVERSE: string;
+  HORIZONTAL: string;
+  HORIZONTAL_REVERSE: string;
+  VERTICAL: string;
+  VERTICAL_REVERSE: string;
 }
 
 export interface BackgroundOptions {
@@ -15,12 +26,18 @@ export interface BackgroundOptions {
   contrast: string;
   accent: string;
   gradient: {
-    primary: string;
-    secondary: string;
-    css: string;
-    primaryToSecondary: string;
-    secondaryToPrimary: string;
     radial: string;
+    conicGradient: GradientOptions;
+    hardStopGradient: GradientOptions;
+    meshGradient: GradientOptions;
+    primaryAdvanced: GradientOptions;
+    primaryRadial: GradientOptions;
+    secondaryAdvanced: GradientOptions;
+    secondaryRadial: GradientOptions;
+    secondaryToPrimary: GradientOptions;
+    secondary: GradientOptions;
+    primaryToSecondary: GradientOptions;
+    primary: GradientOptions;
   };
 }
 

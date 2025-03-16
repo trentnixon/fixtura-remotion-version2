@@ -10,7 +10,15 @@ export type TemplateId = keyof typeof templateRegistry;
 export const templateRegistry = {
   Basic: {
     component: Basic,
-    variants: ["Graphics", "Solid", "Image", "Gradient", "Video"],
+    variants: [
+      "Graphics",
+      "Solid",
+      "Image",
+      "Gradient",
+      "Video",
+      "Particle",
+      "Pattern",
+    ],
     config: {
       // Template-specific configuration
     },

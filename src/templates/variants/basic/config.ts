@@ -83,18 +83,37 @@ const solidVariant = {
   },
 };
 
+const particleVariant = {
+  Video: {
+    TemplateVariation: {
+      Background: "Particle",
+    },
+  },
+};
+
+const patternVariant = {
+  Video: {
+    TemplateVariation: {
+      Background: "Pattern",
+    },
+  },
+};
 // Export variant types
 export const basicVariantTypes = [
-  "Graphics",
   "Solid",
   "Image",
   "Gradient",
   "Video",
+  "Particle",
+  "Pattern",
+  "Graphics",
 ];
 
 // Merge common options with variant-specific options
 export const basicVariants = {
   Graphics: _.merge({}, _.cloneDeep(commonOptions), graphicsVariant),
+  Particle: _.merge({}, _.cloneDeep(commonOptions), particleVariant),
+  Pattern: _.merge({}, _.cloneDeep(commonOptions), patternVariant),
   Solid: _.merge({}, _.cloneDeep(commonOptions), solidVariant),
   Image: _.merge({}, _.cloneDeep(commonOptions), imageVariant),
   Video: _.merge({}, _.cloneDeep(commonOptions), videoVariant),

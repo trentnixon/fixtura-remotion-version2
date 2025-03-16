@@ -9,11 +9,22 @@ import { GradientBackground as GradientBg } from "./variants/GradientBackground"
 import { ImageBackground as ImageBg } from "./variants/ImageBackground";
 import { VideoBackground as VideoBg } from "./variants/VideoBackground";
 import { GraphicsBackground as GraphicsBg } from "./variants/GraphicsBackground";
-import { PatternBackground as PatternBg } from "./variants/PatternBackground";
+//import { PatternBackground as PatternBg } from "./variants/PatternBackground";
 import { ParticleBackground as ParticleBg } from "./variants/ParticleBackground";
-import { NoiseBackground as NoiseBg } from "./variants/NoiseBackground";
-import { LayeredBackground as LayeredBg } from "./variants/LayeredBackground";
+// Import NoiseBackground components
+import { NoiseBackground as NoiseBg } from "./variants/NoiseBackground/NoiseBackground";
+import {
+  NoiseVariant,
+  NOISE_VARIANTS,
+} from "./variants/NoiseBackground/config";
+import SubtleNoise from "./variants/NoiseBackground/variants/SubtleNoise";
+import GrainNoise from "./variants/NoiseBackground/variants/GrainNoise";
+import WaveNoise from "./variants/NoiseBackground/variants/WaveNoise";
+import FogNoise from "./variants/NoiseBackground/variants/FogNoise";
+import StaticNoise from "./variants/NoiseBackground/variants/StaticNoise";
+//import { LayeredBackground as LayeredBg } from "./variants/LayeredBackground";
 import { AnimatedBackground as AnimatedBg } from "./variants/AnimatedBackground";
+import { PatternBackground } from "./variants/Patterns";
 
 // Export all background variants
 export const BackgroundComponents = {
@@ -22,12 +33,22 @@ export const BackgroundComponents = {
   Image: ImageBg,
   Video: VideoBg,
   Graphics: GraphicsBg,
-  Pattern: PatternBg,
+  Pattern: PatternBackground,
   Particle: ParticleBg,
-  Noise: NoiseBg,
-  Layered: LayeredBg,
+  Noise: {
+    Default: NoiseBg,
+    Subtle: SubtleNoise,
+    Grain: GrainNoise,
+    Wave: WaveNoise,
+    Fog: FogNoise,
+    Static: StaticNoise,
+  },
+  // Layered: LayeredBg,
   Animated: AnimatedBg,
 };
+
+// Export noise variants for template configuration
+export const NoiseVariants = NOISE_VARIANTS;
 
 // Export types and constants
 export * from "./config";
@@ -46,15 +67,23 @@ export const SelectTemplateBackground = () => {
     case "Video":
       return <VideoBackground />;
     case "Graphics":
-      return <GraphicsBackground />;
+      return (
+        <NoiseBackground
+          variant={Video.TemplateVariation?.Noise.type || "subtle"}
+        />
+      );
     case "Pattern":
       return <PatternBackground />;
     case "Particle":
       return <ParticleBackground />;
     case "Noise":
-      return <NoiseBackground />;
-    case "Layered":
-      return <LayeredBackground />;
+      return (
+        <NoiseBackground
+          variant={Video.TemplateVariation?.Noise.type || "subtle"}
+        />
+      );
+    /*   case "Layered":
+      return <LayeredBackground />; */
     case "Animated":
       return <AnimatedBackground />;
     default:
@@ -96,7 +125,7 @@ const VideoBackground = () => {
 };
 
 // Graphics background
-const GraphicsBackground = () => {
+/* const GraphicsBackground = () => {
   const { selectedPalette } = useThemeContext();
 
   return (
@@ -107,20 +136,20 @@ const GraphicsBackground = () => {
       density="medium"
     />
   );
-};
+}; */
 
 // Pattern background
-const PatternBackground = () => {
+/* const PatternBackground = () => {
   const { selectedPalette } = useThemeContext();
 
   return (
-    <PatternBg
+    <PatternBackground
       pattern="dots"
       primaryColor={selectedPalette.background.main}
       secondaryColor={selectedPalette.background.accent}
     />
   );
-};
+}; */
 
 // Particle background
 const ParticleBackground = () => {
@@ -128,30 +157,51 @@ const ParticleBackground = () => {
 
   return (
     <ParticleBg
-      particleType="dots"
+      particleType="lines"
       particleColor={selectedPalette.background.accent}
       backgroundColor={selectedPalette.background.main}
-      particleCount={100}
+      particleCount={1000}
     />
   );
 };
 
 // Noise background
-const NoiseBackground = () => {
+const NoiseBackground = ({
+  variant = "default",
+}: {
+  variant?: NoiseVariant;
+}) => {
   const { selectedPalette } = useThemeContext();
+  const baseProps = {
+    baseColor: selectedPalette.background.main,
+    noiseColor: selectedPalette.background.accent,
+  };
 
-  return (
-    <NoiseBg
-      baseColor={selectedPalette.background.main}
-      noiseColor={selectedPalette.background.accent}
-      noiseOpacity={0.3}
-      noiseScale={0.5}
-    />
-  );
+  switch (variant) {
+    case "subtle":
+      return <SubtleNoise {...baseProps} />;
+    case "grain":
+      return <GrainNoise {...baseProps} />;
+    case "wave":
+      return <WaveNoise {...baseProps} />;
+    case "fog":
+      return <FogNoise {...baseProps} />;
+    case "static":
+      return <StaticNoise {...baseProps} />;
+    default:
+      return (
+        <NoiseBg
+          baseColor={selectedPalette.background.main}
+          noiseColor={selectedPalette.background.accent}
+          noiseOpacity={0.3}
+          noiseScale={0.5}
+        />
+      );
+  }
 };
 
 // Layered background
-const LayeredBackground = () => {
+/* const LayeredBackground = () => {
   const { selectedPalette } = useThemeContext();
 
   return (
@@ -176,7 +226,7 @@ const LayeredBackground = () => {
       ]}
     />
   );
-};
+}; */
 
 // Animated background
 const AnimatedBackground = () => {
