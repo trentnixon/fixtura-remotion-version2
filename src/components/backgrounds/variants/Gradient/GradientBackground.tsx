@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { useThemeContext } from "../../../core/context/ThemeContext";
-import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 
 interface Props {
   className?: string;

@@ -4,7 +4,7 @@ import {
   VideoBackgroundProps,
   BACKGROUND_POSITIONS,
   BACKGROUND_SIZES,
-} from "../config";
+} from "../../config";
 
 interface Props extends Partial<VideoBackgroundProps> {
   className?: string;

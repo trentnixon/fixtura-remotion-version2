@@ -37,7 +37,6 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
   // Get pattern type and animation settings from template variation or use defaults
   const patternConfig = Video.TemplateVariation?.Pattern || {};
   const pattern = patternConfig.type || PATTERN_TYPES.DOTS;
-  const patternAnimation = patternConfig.animation || animation;
 
   // Create unique ID for the pattern
   const patternId = `pattern-${pattern}-${Math.random().toString(36).substr(2, 9)}`;
@@ -50,18 +49,11 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
     rotation: patternConfig.rotation || rotation,
     opacity,
     patternId,
-    animation: patternAnimation,
+    animation: patternConfig.animation || animation,
     animationDuration: patternConfig.animationDuration || animationDuration,
     animationSpeed: patternConfig.animationSpeed || animationSpeed,
   };
 
-  /*   console.log("[PatternBackground] Rendering with:", {
-    pattern,
-    animation: patternAnimation,
-    primaryColor: selectedPalette.background.main,
-    secondaryColor: selectedPalette.background.accent,
-  });
- */
   // Select the pattern component based on pattern type
   const renderPattern = () => {
     switch (pattern) {
@@ -84,7 +76,7 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
 
   return (
     <AbsoluteFill
-      className={`pattern-background pattern-${pattern} animation-${patternAnimation} ${className}`}
+      className={`pattern-background pattern-${pattern} ${className}`}
       style={{
         ...style,
       }}

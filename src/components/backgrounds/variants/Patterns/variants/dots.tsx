@@ -9,7 +9,6 @@ export const DotsPattern: React.FC<PatternComponentProps> = ({
   scale = 1,
   rotation = 0,
   opacity = 0.7,
-  patternId,
   animation = "none",
   animationDuration = 600, // 20 seconds at 30fps
   animationSpeed = 1,

@@ -1826,8 +1826,16 @@
         "WeekendSingleGameResult": 1
       },
       "TemplateVariation": {
+        "Image": {
+          "type": "pan",
+          "direction": "down",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853
+        },
         "Background": "Solid",
-        "Palette": "primary",
+        "Palette": "primaryOnWhite",
         "borderRadius": "10px",
         "Gradient": {
           "type": "primaryToSecondary",
@@ -1837,8 +1845,20 @@
           "type": "grain"
         },
         "Pattern": {
-          "type": "dots",
-          "animation": "panDown"
+          "type": "lines",
+          "animation": "panDown",
+          "scale": 0.75,
+          "rotation": 0,
+          "opacity": 0.35,
+          "animationDuration": 300,
+          "animationSpeed": 0.8
+        },
+        "Particle": {
+          "type": "lines",
+          "particleCount": 300,
+          "speed": 0.9,
+          "direction": "up",
+          "animation": "fade"
         }
       }
     },

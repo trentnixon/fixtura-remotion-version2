@@ -4,13 +4,12 @@ import { useVideoDataContext } from "../../core/context/VideoDataContext";
 import { useThemeContext } from "../../core/context/ThemeContext";
 
 // Import all background variants
-import { SolidBackground as SolidBg } from "./variants/SolidBackground";
-import { GradientBackground as GradientBg } from "./variants/GradientBackground";
-import { ImageBackground as ImageBg } from "./variants/ImageBackground";
-import { VideoBackground as VideoBg } from "./variants/VideoBackground";
+import { SolidBackground as SolidBg } from "./variants/Solid/SolidBackground";
+import { GradientBackground as GradientBg } from "./variants/Gradient/GradientBackground";
+import { ImageBackground as ImageBg } from "./variants/Image";
+import { VideoBackground as VideoBg } from "./variants/Video/VideoBackground";
 import { GraphicsBackground as GraphicsBg } from "./variants/GraphicsBackground";
-//import { PatternBackground as PatternBg } from "./variants/PatternBackground";
-import { ParticleBackground as ParticleBg } from "./variants/ParticleBackground";
+
 // Import NoiseBackground components
 import { NoiseBackground as NoiseBg } from "./variants/NoiseBackground/NoiseBackground";
 import {
@@ -25,6 +24,7 @@ import StaticNoise from "./variants/NoiseBackground/variants/StaticNoise";
 //import { LayeredBackground as LayeredBg } from "./variants/LayeredBackground";
 import { AnimatedBackground as AnimatedBg } from "./variants/AnimatedBackground";
 import { PatternBackground } from "./variants/Patterns";
+import ParticleBackground from "./variants/Particles";
 
 // Export all background variants
 export const BackgroundComponents = {
@@ -34,7 +34,7 @@ export const BackgroundComponents = {
   Video: VideoBg,
   Graphics: GraphicsBg,
   Pattern: PatternBackground,
-  Particle: ParticleBg,
+  Particle: ParticleBackground,
   Noise: {
     Default: NoiseBg,
     Subtle: SubtleNoise,
@@ -43,7 +43,6 @@ export const BackgroundComponents = {
     Fog: FogNoise,
     Static: StaticNoise,
   },
-  // Layered: LayeredBg,
   Animated: AnimatedBg,
 };
 
@@ -98,15 +97,7 @@ const GradientBackground = () => {
 
 // Image background
 const ImageBackground = () => {
-  const { Video } = useVideoDataContext();
-
-  return (
-    <ImageBg
-      src={Video.TemplateVariation.useBackground}
-      position="center"
-      size="cover"
-    />
-  );
+  return <ImageBg />;
 };
 
 // Video background
@@ -124,47 +115,6 @@ const VideoBackground = () => {
   );
 };
 
-// Graphics background
-/* const GraphicsBackground = () => {
-  const { selectedPalette } = useThemeContext();
-
-  return (
-    <GraphicsBg
-      variant="abstract"
-      primaryColor={selectedPalette.background.main}
-      secondaryColor={selectedPalette.background.accent}
-      density="medium"
-    />
-  );
-}; */
-
-// Pattern background
-/* const PatternBackground = () => {
-  const { selectedPalette } = useThemeContext();
-
-  return (
-    <PatternBackground
-      pattern="dots"
-      primaryColor={selectedPalette.background.main}
-      secondaryColor={selectedPalette.background.accent}
-    />
-  );
-}; */
-
-// Particle background
-const ParticleBackground = () => {
-  const { selectedPalette } = useThemeContext();
-
-  return (
-    <ParticleBg
-      particleType="lines"
-      particleColor={selectedPalette.background.accent}
-      backgroundColor={selectedPalette.background.main}
-      particleCount={1000}
-    />
-  );
-};
-
 // Noise background
 const NoiseBackground = ({
   variant = "default",
@@ -176,7 +126,7 @@ const NoiseBackground = ({
     baseColor: selectedPalette.background.main,
     noiseColor: selectedPalette.background.accent,
   };
-
+  // Video.TemplateVariation?.Noise.type
   switch (variant) {
     case "subtle":
       return <SubtleNoise {...baseProps} />;
@@ -199,34 +149,6 @@ const NoiseBackground = ({
       );
   }
 };
-
-// Layered background
-/* const LayeredBackground = () => {
-  const { selectedPalette } = useThemeContext();
-
-  return (
-    <LayeredBg
-      layers={[
-        {
-          type: "gradient",
-          gradientType: "linear",
-          colors: [
-            selectedPalette.background.main,
-            selectedPalette.background.accent,
-          ],
-          opacity: 1,
-        },
-        {
-          type: "noise",
-          baseColor: "transparent",
-          noiseColor: selectedPalette.background.accent,
-          noiseOpacity: 0.2,
-          noiseScale: 0.8,
-        },
-      ]}
-    />
-  );
-}; */
 
 // Animated background
 const AnimatedBackground = () => {

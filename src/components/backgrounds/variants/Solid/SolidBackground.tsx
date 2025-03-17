@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { SolidBackgroundProps } from "../config";
-import { useThemeContext } from "../../../core/context/ThemeContext";
+import { SolidBackgroundProps } from "../../config";
+import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 interface Props extends Partial<SolidBackgroundProps> {
   className?: string;

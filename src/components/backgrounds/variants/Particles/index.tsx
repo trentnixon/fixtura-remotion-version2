@@ -1,0 +1,59 @@
+// src/components/backgrounds/variants/ParticleBackground/index.tsx
+import React from "react";
+import { ParticleBackgroundProps, ParticleType } from "./config";
+import { particleVariants } from "./variants";
+
+// Import individual particle variants
+import DotsParticles from "./variants/DotsRenderer";
+import LinesParticles from "./variants/LinesRenderer";
+import BubblesParticles from "./variants/BubblesRenderer";
+import SnowParticles from "./variants/SnowRenderer";
+import ConfettiParticles from "./variants/ConfettiRenderer";
+import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
+import { useStylesContext } from "../../../../core/context/StyleContext";
+
+/**
+ * ParticleBackground component that dynamically renders different particle effects
+ * based on the specified type.
+ */
+export const ParticleBackground: React.FC<ParticleBackgroundProps> = (
+  props,
+) => {
+  const { Video } = useVideoDataContext();
+  const { selectedPalette } = useStylesContext();
+
+  const particleConfig = Video.TemplateVariation?.Particle || {};
+
+  const particleProps = {
+    particleColor: selectedPalette.background.contrast,
+    background: selectedPalette.background.gradient.primaryRadial.css.DEFAULT,
+    particleType: particleConfig.type || "dots",
+    particleCount: particleConfig.particleCount || 300,
+    speed: particleConfig.speed || 1,
+    direction: particleConfig.direction || "random",
+    animation: particleConfig.animation || "fade",
+  };
+
+  // Get the appropriate particle variant component
+  const ParticleVariant =
+    particleVariants[particleConfig.type as ParticleType] ||
+    particleVariants.dots;
+
+  // Render the selected particle variant
+  return <ParticleVariant {...particleProps} />;
+};
+
+// Export individual variants for direct use
+export {
+  DotsParticles,
+  LinesParticles,
+  BubblesParticles,
+  SnowParticles,
+  ConfettiParticles,
+};
+
+// Export types and constants
+export * from "./config";
+
+// Default export
+export default ParticleBackground;
