@@ -1,5 +1,5 @@
 // src/components/backgrounds/variants/Image/ImageBackground.tsx
-import React, { useState, useEffect } from "react";
+import React, { useMemo } from "react";
 import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
@@ -8,37 +8,27 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
 import {
   ImageEffectType,
   ZoomEffect,
-  ZoomDirection,
-  PanEffect,
-  PanDirection,
+  Pan,
   KenBurnsEffect,
   BreathingEffect,
-  ColorOverlayEffect,
-  OverlayType,
   FocusBlurEffect,
-  BlurDirection,
 } from "./variants/index";
 
-// Interface for template variation config
-interface ImageVariationConfig {
-  type: string;
-  url: string;
-  ratio?: string;
-  width?: number;
-  height?: number;
-  direction?: string;
-  intensity?: number;
-  startTime?: number;
-  endTime?: number;
-  zoomIntensity?: number;
-  zoomDirection?: "in" | "out";
-  // Any other properties from your template variation
-}
+// Import overlay system
+import { OverlayRenderer } from "./overlays/OverlayRenderer";
+import { OverlayStyle, OverlayConfig } from "./overlays/";
 
-interface ImageBackgroundProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
+// Import theme integration
+import createThemeOverlayPresets from "./overlays/themeIntegration";
+
+// Import adapter for template variation
+import { adaptImageConfig } from "./TemplateVariationAdapter";
+import {
+  BackgroundOptions,
+  ContainerOptions,
+} from "../../../../core/utils/designPalettes";
+
+import { ImageBackgroundProps } from "./ImageBackground.types";
 
 export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   className = "",
@@ -48,100 +38,232 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const { Video } = useVideoDataContext();
   const { selectedPalette } = useThemeContext();
 
-  // Extract configuration from template variation if not provided directly
-  const effectConfig = Video?.TemplateVariation?.Image || {};
+  // Extract raw configuration from template variation
+  const rawConfig = Video?.TemplateVariation?.Image || {};
 
-  // Extract effect type, defaulting to none
+  // Adapt legacy configuration to enhanced format
+  const config = adaptImageConfig(rawConfig);
+
+  // Extract effect type and overlay style
   const effectType =
-    (effectConfig.type as ImageEffectType) || ImageEffectType.None;
+    (config.effectType as ImageEffectType) || ImageEffectType.None;
+  const overlayStyleName =
+    (config.overlayStyle as OverlayStyle) || OverlayStyle.None;
 
   // Extract image URL
-  const imageUrl = effectConfig.url || Video?.TemplateVariation?.useBackground;
+  const imageUrl = config.url || Video?.TemplateVariation?.useBackground;
 
   // If no image URL is available, return null
   if (!imageUrl) {
+    console.warn("No image URL provided for ImageBackground");
     return null;
   }
 
+  // Log configuration for debugging
+  /*  if (true) {
+    console.log("ImageBackground configuration:", {
+      effectType,
+      overlayStyle: overlayStyleName,
+      imageUrl,
+      config,
+      selectedPalette,
+
+    });
+  } */
+
   // Base props for all effects
-  const baseProps = {
+  const baseProps: any = {
     src: imageUrl,
     className,
     style,
-    startTime: effectConfig.startTime || 0,
-    endTime: effectConfig.endTime,
+    startTime: config.startTime || 0,
+    endTime: config.endTime,
+    width: config.width,
+    height: config.height,
   };
 
-  // Get theme colors for overlay effects
-  const overlayColor = selectedPalette?.background?.main || "rgba(0,0,0,0.5)";
-  const overlaySecondaryColor =
-    selectedPalette?.background?.accent || "rgba(0,0,0,0)";
+  // Determine overlay configuration
+  let overlayConfig: OverlayConfig = { style: OverlayStyle.None };
 
-  // Select and render the appropriate effect component
-  switch (effectType) {
-    case ImageEffectType.Zoom:
-      return (
-        <ZoomEffect
-          {...baseProps}
-          direction={effectConfig.zoomDirection || "in"}
-          intensity={effectConfig.zoomIntensity || 1.2}
-        />
-      );
+  // Otherwise, build from the provided configuration
+  if (overlayStyleName !== OverlayStyle.None) {
+    // Get colors from the theme if not specified
+    const getPaletteColor = (colorKey: string, fallback: string) => {
+      if (config[colorKey as keyof typeof config])
+        return config[colorKey as keyof typeof config];
 
-    case ImageEffectType.Pan:
-      return (
-        <PanEffect
-          {...baseProps}
-          direction={effectConfig.direction || "left"}
-          intensity={effectConfig.intensity || 15}
-        />
-      );
+      // Try to find the color in the palette
+      if (
+        selectedPalette?.background?.[
+          colorKey.replace("overlay", "") as keyof BackgroundOptions
+        ]
+      ) {
+        return selectedPalette.background[
+          colorKey.replace("overlay", "") as keyof BackgroundOptions
+        ];
+      }
 
-    case ImageEffectType.KenBurns:
-      return (
-        <KenBurnsEffect
-          {...baseProps}
-          zoomDirection={effectConfig.zoomDirection || "in"}
-          panDirection={effectConfig.direction || "left"}
-          zoomIntensity={effectConfig.zoomIntensity || 1.15}
-          panIntensity={effectConfig.intensity || 15}
-        />
-      );
+      // If not in background, try container
+      if (
+        selectedPalette?.container?.[
+          colorKey.replace("overlay", "") as keyof ContainerOptions
+        ]
+      ) {
+        return selectedPalette.container[
+          colorKey.replace("overlay", "") as keyof ContainerOptions
+        ];
+      }
 
-    case ImageEffectType.Breathing:
-      return (
-        <BreathingEffect
-          {...baseProps}
-          intensity={effectConfig.intensity || 1.05}
-        />
-      );
+      return fallback;
+    };
 
-    case ImageEffectType.ColorOverlay:
-      return (
-        <ColorOverlayEffect
-          {...baseProps}
-          overlayType={effectConfig.overlayType || OverlayType.Solid}
-          color={overlayColor}
-          secondaryColor={overlaySecondaryColor}
-          opacity={effectConfig.opacity || 0.3}
-          animateOpacity={effectConfig.animateOpacity || false}
-        />
-      );
+    // Default colors from the theme if not specified
+    const primaryColor = getPaletteColor(
+      "overlayColor",
+      selectedPalette?.background?.main || "rgba(0,0,0,0.5)",
+    );
+    const secondaryColor = getPaletteColor(
+      "overlaySecondaryColor",
+      selectedPalette?.background?.accent || "rgba(0,0,0,0)",
+    );
 
-    case ImageEffectType.FocusBlur:
-      return (
-        <FocusBlurEffect
-          {...baseProps}
-          direction={effectConfig.direction || "in"}
-          maxBlur={effectConfig.intensity || 8}
-        />
-      );
+    console.log("[overlayStyleName]", overlayStyleName);
+    // If we have a custom overlay, create it from the provided configuration
+    switch (overlayStyleName) {
+      case OverlayStyle.Solid:
+        overlayConfig = {
+          style: OverlayStyle.Solid,
+          color: primaryColor as string,
+          opacity: config.overlayOpacity || 0.3,
+          animateOpacity: config.animateOverlayOpacity || false,
+          blendMode: config.overlayBlendMode,
+        };
+        break;
 
-    case ImageEffectType.None:
-    default:
-      // Just show the static image with no effects
-      return (
-        <AbsoluteFill className={`static-bg-image ${className}`}>
+      case OverlayStyle.Gradient:
+        overlayConfig = {
+          style: OverlayStyle.Gradient,
+          primaryColor: primaryColor as string,
+          secondaryColor: secondaryColor as string,
+          gradientAngle: config.gradientAngle || "135deg",
+          gradientType: config.gradientType || "linear",
+          opacity: config.overlayOpacity || 0.3,
+          animateOpacity: config.animateOverlayOpacity || false,
+          blendMode: config.overlayBlendMode,
+        };
+        break;
+
+      case OverlayStyle.Vignette:
+        overlayConfig = {
+          style: OverlayStyle.Vignette,
+          color: primaryColor as string,
+          size: config.vignetteSize || 150,
+          shape: config.vignetteShape || "circle",
+          opacity: config.overlayOpacity || 0.9,
+          animateOpacity: config.animateOverlayOpacity || false,
+        };
+        break;
+
+      case OverlayStyle.Duotone:
+        overlayConfig = {
+          style: OverlayStyle.Duotone,
+          shadowColor: primaryColor as string,
+          highlightColor: secondaryColor as string,
+          intensity: config.duotoneIntensity || 0.8,
+          opacity: config.overlayOpacity || 0.85,
+          animateOpacity: config.animateOverlayOpacity || false,
+        };
+        break;
+
+      case OverlayStyle.Pattern:
+        overlayConfig = {
+          style: OverlayStyle.Pattern,
+          patternUrl:
+            config.patternUrl ||
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC",
+          backgroundColor: primaryColor as string,
+          patternScale: config.patternScale || 1,
+          patternOpacity: config.patternOpacity,
+          opacity: config.overlayOpacity || 0.3,
+          animateOpacity: config.animateOverlayOpacity || false,
+          blendMode: config.overlayBlendMode,
+        };
+        break;
+
+      case OverlayStyle.ColorFilter:
+        overlayConfig = {
+          style: OverlayStyle.ColorFilter,
+          hueRotate: config.hueRotate,
+          saturate: config.saturate,
+          brightness: config.brightness,
+          contrast: config.contrast,
+          sepia: config.sepia,
+          opacity: config.overlayOpacity || 1,
+          animateOpacity: config.animateOverlayOpacity || false,
+        };
+        break;
+
+      default:
+        overlayConfig = { style: OverlayStyle.None };
+    }
+  } else {
+    // Default to no overlay
+    overlayConfig = { style: OverlayStyle.None };
+  }
+
+  // Function to render the correct effect component based on effectType
+  const renderEffect = () => {
+    switch (effectType) {
+      case ImageEffectType.Zoom:
+        return (
+          <ZoomEffect
+            {...baseProps}
+            direction={config.zoomDirection || "in"}
+            intensity={config.zoomIntensity || 1.2}
+          />
+        );
+
+      case ImageEffectType.Pan:
+        return (
+          <Pan
+            {...baseProps}
+            direction={config.panDirection || "left"}
+            intensity={config.panIntensity || 15}
+          />
+        );
+
+      /*       case ImageEffectType.KenBurns:
+        return (
+          <KenBurnsEffect
+            {...baseProps}
+            zoomDirection={config.zoomDirection || "in"}
+            panDirection={config.panDirection || "left"}
+            zoomIntensity={config.zoomIntensity || 1.15}
+            panIntensity={config.panIntensity || 15}
+          />
+        ); */
+
+      case ImageEffectType.Breathing:
+        return (
+          <BreathingEffect
+            {...baseProps}
+            intensity={config.breathingIntensity || 1.05}
+          />
+        );
+
+      case ImageEffectType.FocusBlur:
+        return (
+          <FocusBlurEffect
+            {...baseProps}
+            direction={config.blurDirection || "in"}
+            maxBlur={config.blurIntensity || 8}
+          />
+        );
+
+      case ImageEffectType.None:
+      default:
+        // Just show the static image with no effects
+        return (
           <div
             style={{
               backgroundImage: `url(${imageUrl})`,
@@ -152,9 +274,19 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
               ...style,
             }}
           />
-        </AbsoluteFill>
-      );
-  }
+        );
+    }
+  };
+
+  // Return the complete component with effect and overlay
+  return (
+    <AbsoluteFill className={`image-background-container ${className}`}>
+      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+        {renderEffect()}
+        <OverlayRenderer config={overlayConfig as OverlayConfig} />
+      </div>
+    </AbsoluteFill>
+  );
 };
 
 export default ImageBackground;

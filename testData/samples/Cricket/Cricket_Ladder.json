@@ -1827,12 +1827,15 @@
       },
       "TemplateVariation": {
         "Image": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
+          "ratio": "portrait",
+          "width": 3290,
+          "height": 3354,
           "type": "pan",
-          "direction": "down",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
         },
         "Background": "Solid",
         "Palette": "primaryOnWhite",

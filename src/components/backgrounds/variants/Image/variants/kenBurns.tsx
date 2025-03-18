@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { AbsoluteFill } from "remotion";
-import { PanDirection } from "./pan";
+import { Pan as PanDirection } from "./pan";
 import { ZoomDirection } from "./zoom";
 
 interface KenBurnsEffectProps {

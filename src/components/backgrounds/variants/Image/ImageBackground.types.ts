@@ -58,3 +58,14 @@ export enum OverlayType {
   LeftToRight = "leftToRight",
   RightToLeft = "rightToLeft",
 }
+
+export interface PanEffectProps {
+  src: string;
+  style?: React.CSSProperties;
+  className?: string;
+}
+
+export interface ImageBackgroundProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
