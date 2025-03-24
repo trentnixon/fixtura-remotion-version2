@@ -252,12 +252,6 @@ export const useDualImageAnimation = (
   const exitDuration = exitConfig.duration || 30;
   const exitEndFrame = exitStartFrame + exitDuration;
 
-  // Debug information
-  console.log(
-    `Frame: ${frame}, Exit Start: ${exitStartFrame}, Exit End: ${exitEndFrame}`,
-  );
-  console.log(`Entry Type: ${entryConfig.type}, Exit Type: ${exitConfig.type}`);
-
   // For fade in/out animations, use the Remotion approach
   if (entryConfig.type === "fadeIn" && exitConfig.type === "fadeOut") {
     // Fade In animation from frame 0 to entryEndFrame

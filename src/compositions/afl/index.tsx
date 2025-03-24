@@ -3,15 +3,15 @@ import { AbsoluteFill } from "remotion";
 import { FixturaDataset } from "../../core/types/data/index";
 
 interface PlaceholderProps {
-  DATA: FixturaDataset;
+  data: FixturaDataset;
 }
 
 // A placeholder that can be used until real components are implemented
 export const PlaceholderComposition: React.FC<PlaceholderProps> = ({
-  DATA,
+  data,
 }) => {
-  const compositionId = DATA.VIDEOMETA.Video.CompositionID;
-  const template = DATA.VIDEOMETA.Video.Template || "Basic";
+  const compositionId = data.videoMeta.video.CompositionID;
+  const template = data.videoMeta.video.Template || "Basic";
 
   return (
     <AbsoluteFill
@@ -27,7 +27,7 @@ export const PlaceholderComposition: React.FC<PlaceholderProps> = ({
       }}
     >
       <h1 style={{ fontSize: "3em", marginBottom: 16 }}>
-        {DATA.VIDEOMETA.Video.Title || "AFL Composition"}
+        {data.videoMeta.video.Title || "AFL Composition"}
       </h1>
       <h2 style={{ fontSize: "2em", marginBottom: 24 }}>{template} Template</h2>
       <p style={{ fontSize: "1.5em" }}>

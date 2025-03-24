@@ -16,7 +16,6 @@ export const SolidBackground: React.FC<Props> = ({
 
   // Use provided color, or palette background
   const backgroundColor = selectedPalette.background.main;
-  console.log("[backgroundColor]", backgroundColor);
 
   return (
     <AbsoluteFill

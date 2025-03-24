@@ -2,14 +2,12 @@ import React from "react";
 import { Series, AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../core/context/VideoDataContext";
 import { useLayoutContext } from "../../core/context/LayoutContext";
-import { routeToComposition } from "../../core/utils/routing";
-
 interface BaseTemplateLayoutProps {
   introComponent?: React.FC;
   outroComponent?: React.FC<{ doesAccountHaveSponsors: boolean }>;
   backgroundComponent: React.FC;
   customAudioComponent: React.FC;
-  mainComponent?: React.FC;
+  mainComponentLayout?: React.FC;
 }
 
 /**
@@ -21,11 +19,12 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
   outroComponent: OutroComponent,
   backgroundComponent: BackgroundComponent,
   customAudioComponent: CustomAudioComponent,
+  mainComponentLayout: MainComponentLayout,
 }) => {
   // Access context data
-  const { DATA } = useVideoDataContext();
+  const { data } = useVideoDataContext();
   const { doesAccountHaveSponsors } = useLayoutContext();
-  const { TIMINGS } = DATA;
+  const { timings } = data;
 
   // No need for a loading screen as we're using delayRender/continueRender in FontContext
   // Remotion will automatically wait for fonts to load before rendering
@@ -35,19 +34,19 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
       <AbsoluteFill style={{ zIndex: 1000 }}>
         <Series>
           {/* Intro Sequence */}
-          <Series.Sequence durationInFrames={TIMINGS.FPS_INTRO}>
+          <Series.Sequence durationInFrames={timings.FPS_INTRO}>
             {IntroComponent && <IntroComponent />}
           </Series.Sequence>
 
           {/* Main Content - Use routing to determine which composition to render
               or use the provided mainComponent if available */}
-          <Series.Sequence durationInFrames={TIMINGS.FPS_MAIN}>
-            {routeToComposition(DATA)}
+          <Series.Sequence durationInFrames={timings.FPS_MAIN}>
+            {MainComponentLayout && <MainComponentLayout />}
           </Series.Sequence>
 
           {/* Outro Sequence */}
           <Series.Sequence
-            durationInFrames={doesAccountHaveSponsors ? TIMINGS.FPS_OUTRO : 30}
+            durationInFrames={doesAccountHaveSponsors ? timings.FPS_OUTRO : 30}
           >
             {OutroComponent && (
               <OutroComponent

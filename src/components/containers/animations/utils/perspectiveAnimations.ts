@@ -1,7 +1,8 @@
 import { interpolate } from "remotion";
-import { ContainerAnimationFunction, ContainerAnimationConfig } from "../types";
+
 import { getContainerEasingFunction } from "../easingFunctions";
 import React from "react";
+import { ContainerAnimationFunction } from "..";
 
 /**
  * FlipX animation - 3D flip around X axis

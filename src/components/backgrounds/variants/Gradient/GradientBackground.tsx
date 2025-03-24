@@ -29,16 +29,16 @@ export const GradientBackground: React.FC<Props> = ({
   style = {},
 }) => {
   const { selectedPalette } = useThemeContext();
-  const { Video } = useVideoDataContext();
+  const { video } = useVideoDataContext();
 
   // Default fallback gradient
   const DEFAULT_GRADIENT = "linear-gradient(to right, #333, #666)";
 
   // Get gradient configuration from video data
   const gradientType =
-    Video.TemplateVariation?.Gradient?.type || "primaryToSecondary";
+    video.templateVariation?.Gradient?.type || "primaryToSecondary";
   const gradientDirection =
-    Video.TemplateVariation?.Gradient?.direction || "to right";
+    video.templateVariation?.Gradient?.direction || "to right";
 
   // Extract the CSS for the background
   const backgroundCSS = React.useMemo(() => {
@@ -50,7 +50,8 @@ export const GradientBackground: React.FC<Props> = ({
     const selectedGradient = gradients[gradientType as keyof typeof gradients];
     const primaryCSS = extractCSS(selectedGradient);
 
-    if (primaryCSS) return primaryCSS[gradientDirection];
+    if (primaryCSS)
+      return primaryCSS[gradientDirection as keyof typeof primaryCSS];
 
     // Try fallback to secondaryToPrimary
     const fallbackCSS = extractCSS(gradients.secondaryToPrimary);

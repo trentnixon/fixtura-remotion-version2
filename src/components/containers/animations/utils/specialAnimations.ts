@@ -1,7 +1,8 @@
 import { interpolate } from "remotion";
-import { ContainerAnimationFunction } from "../types";
+
 import { getContainerEasingFunction } from "../easingFunctions";
 import React from "react";
+import { ContainerAnimationFunction } from "../animationTypes";
 
 /**
  * Reveal from left animation for containers

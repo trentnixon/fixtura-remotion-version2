@@ -44,8 +44,8 @@ export const mergeData = (
 
 export const calculateDuration = (data: any) => {
   return (
-    data.TIMINGS.FPS_INTRO +
-    data.TIMINGS.FPS_MAIN +
-    (data.VIDEOMETA.Video.includeSponsors ? 60 : 0)
+    data.timings.FPS_INTRO +
+    data.timings.FPS_MAIN +
+    (data.videoMeta.video.includeSponsors ? 60 : 0)
   );
 };

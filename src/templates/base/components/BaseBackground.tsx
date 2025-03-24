@@ -1,14 +1,14 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { useStylesContext } from "../../../core/context/StyleContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
 
 export const BaseBackground: React.FC = () => {
-  const { THEME } = useStylesContext();
+  const { theme } = useThemeContext();
 
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: THEME.primary || "#000000",
+        backgroundColor: theme.colors.primary || "#000000",
         zIndex: -1,
       }}
     />

@@ -22,24 +22,25 @@ import { OverlayStyle, OverlayConfig } from "./overlays/";
 import createThemeOverlayPresets from "./overlays/themeIntegration";
 
 // Import adapter for template variation
-import { adaptImageConfig } from "./TemplateVariationAdapter";
+
 import {
   BackgroundOptions,
   ContainerOptions,
 } from "../../../../core/utils/designPalettes";
 
 import { ImageBackgroundProps } from "./ImageBackground.types";
+import { adaptImageConfig } from "./TemplateVariationAdapter";
 
 export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   className = "",
   style = {},
 }) => {
   // Get video context for template variation
-  const { Video } = useVideoDataContext();
+  const { video } = useVideoDataContext();
   const { selectedPalette } = useThemeContext();
 
   // Extract raw configuration from template variation
-  const rawConfig = Video?.TemplateVariation?.Image || {};
+  const rawConfig = video?.templateVariation?.Image || {};
 
   // Adapt legacy configuration to enhanced format
   const config = adaptImageConfig(rawConfig);
@@ -51,25 +52,13 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
     (config.overlayStyle as OverlayStyle) || OverlayStyle.None;
 
   // Extract image URL
-  const imageUrl = config.url || Video?.TemplateVariation?.useBackground;
+  const imageUrl = config.url || video?.templateVariation?.Background?.url;
 
   // If no image URL is available, return null
   if (!imageUrl) {
     console.warn("No image URL provided for ImageBackground");
     return null;
   }
-
-  // Log configuration for debugging
-  /*  if (true) {
-    console.log("ImageBackground configuration:", {
-      effectType,
-      overlayStyle: overlayStyleName,
-      imageUrl,
-      config,
-      selectedPalette,
-
-    });
-  } */
 
   // Base props for all effects
   const baseProps: any = {
@@ -127,7 +116,6 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
       selectedPalette?.background?.accent || "rgba(0,0,0,0)",
     );
 
-    console.log("[overlayStyleName]", overlayStyleName);
     // If we have a custom overlay, create it from the provided configuration
     switch (overlayStyleName) {
       case OverlayStyle.Solid:

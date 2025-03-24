@@ -2,7 +2,7 @@ import React, { createContext, useContext, ReactNode } from "react";
 
 interface GlobalContextProps {
   settings: any;
-  DATA: any;
+  data: any;
 }
 
 const GlobalContext = createContext<GlobalContextProps | null>(null);
@@ -10,11 +10,11 @@ const GlobalContext = createContext<GlobalContextProps | null>(null);
 export const GlobalProvider: React.FC<{
   children: ReactNode;
   settings: any;
-  DATA: any;
-}> = ({ children, settings, DATA }) => {
+  data: any;
+}> = ({ children, settings, data }) => {
   const contextValue: GlobalContextProps = {
     settings,
-    DATA,
+    data,
   };
 
   return (

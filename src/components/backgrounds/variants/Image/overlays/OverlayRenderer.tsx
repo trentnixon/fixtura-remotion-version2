@@ -21,7 +21,6 @@ export const OverlayRenderer: React.FC<OverlayRendererProps> = ({ config }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  console.log("config", config);
   // Return null for "None" overlay
   if (config.style === OverlayStyle.None) {
     return null;

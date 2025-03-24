@@ -15,14 +15,47 @@ export interface Theme {
   secondary: string;
 }
 
-export interface TemplateVariation {
-  Background: string;
+export interface templateVariation {
+  Background?: string | null;
+  Palette?: string;
+  borderRadius?: string;
+  Gradient?: {
+    type: string;
+    direction: string;
+  };
+  Noise?: any;
+  Video?: {
+    url?: string;
+    fallbackUrl?: string;
+    position?: string;
+    size?: string;
+    loop?: boolean;
+    muted?: boolean;
+    overlay?: {
+      color: string;
+      opacity: number;
+    };
+    useOffthreadVideo?: boolean;
+    volume?: number;
+    playbackRate?: number;
+  };
+  Image?: {
+    url?: string;
+    ratio?: "landscape" | "portrait" | "square";
+    width?: number;
+    height?: number;
+    type?: string;
+    direction?: string;
+    overlayStyle?: string;
+    gradientType?: string;
+    overlayOpacity?: number;
+  };
 }
 
 export interface ThemeData {
   Theme: Theme;
   Template: string;
-  TemplateVariation: TemplateVariation;
+  templateVariation: templateVariation;
 }
 
 // Account structure
@@ -30,8 +63,8 @@ export interface Account {
   accountId: number;
 }
 
-// Timings for video rendering
-export interface Timings {
+// timings for video rendering
+export interface timings {
   FPS_MAIN: number;
   FPS_INTRO: number;
   FPS_OUTRO: number;

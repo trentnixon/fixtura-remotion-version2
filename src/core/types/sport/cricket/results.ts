@@ -1,6 +1,6 @@
 /*
 {
-	"DATA": [
+	"data": [
 		{
 			"date": "Sat, Jan 25",
 			"type": "Two Day+",
@@ -146,13 +146,13 @@
 	"ACCOUNT": {
 		"accountId": 144
 	},
-	"TIMINGS": {
+	"timings": {
 		"FPS_MAIN": 600,
 		"FPS_INTRO": 90,
 		"FPS_OUTRO": 180,
 		"FPS_SCORECARD": 300
 	},
-	"VIDEOMETA": {
+	"videoMeta": {
 		"Club": {
 			"Logo": {
 				"url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_47_fc0a3c8c18.jpg",
@@ -230,7 +230,7 @@
 				"secondary": "#fccb3d"
 			},
 			"Template": "CNSW",
-			"TemplateVariation": {
+			"templateVariation": {
 				"Background": "Gradient"
 			}
 		},
@@ -259,11 +259,11 @@
 				"UpComingFixtures": 2,
 				"WeekendSingleGameResult": 1
 			},
-			"TemplateVariation": {
+			"templateVariation": {
 				"Background": "Gradient"
 			}
 		},
-		"FixtureCategory": "central coast cricket association - senior competition - Senior Mens 1st Grade",
+		"fixtureCategory": "central coast cricket association - senior competition - Senior Mens 1st Grade",
 		"grouping_category": "central coast cricket association - senior competition - Senior Mens 1st Grade"
 	}
 }
@@ -275,11 +275,11 @@ import { UserTheme } from "../../data/userTheme";
 import { Video } from "../../data/videoData";
 
 export interface CricketResultsData {
-  DATA: CricketResult[];
-  THEME: UserTheme;
-  Video: Video;
-  FixtureCategory: string;
-  grouping_category: string;
+  data: CricketResult[];
+  theme: UserTheme;
+  video: Video;
+  fixtureCategory: string;
+  groupingCategory: string;
 }
 export interface CricketResult {
   date: string;

@@ -22,9 +22,6 @@ export const Pan = (props: any) => {
 
   // Determine if image is landscape or portrait (relative to its own dimensions)
   const isImageLandscape = imageAspectRatio > 1;
-  console.log(
-    `Image aspect ratio: ${imageAspectRatio.toFixed(2)}, Is landscape: ${isImageLandscape}`,
-  );
 
   // Calculate the proper dimensions for the image
   let scaledWidth, scaledHeight;
@@ -33,16 +30,10 @@ export const Pan = (props: any) => {
     // Image is wider than the video viewport (relative to aspect ratios)
     scaledHeight = videoHeight * 1.15; // Height is video height + 15%
     scaledWidth = scaledHeight * imageAspectRatio; // Width follows aspect ratio
-    console.log(
-      `Image wider than viewport: ${scaledWidth.toFixed(0)}x${scaledHeight.toFixed(0)}`,
-    );
   } else {
     // Image is taller than the video viewport (relative to aspect ratios)
     scaledWidth = videoWidth * 1.15; // Width is video width + 15%
     scaledHeight = scaledWidth / imageAspectRatio; // Height follows aspect ratio
-    console.log(
-      `Image taller than viewport: ${scaledWidth.toFixed(0)}x${scaledHeight.toFixed(0)}`,
-    );
   }
 
   // Use the full duration of the video for the animation
@@ -75,9 +66,6 @@ export const Pan = (props: any) => {
       },
     );
     transformStyle = `translateX(${translateX}%)`;
-    console.log(
-      `Panning horizontally with range: ±${translateXRange.toFixed(1)}%`,
-    );
   } else {
     // For portrait images, pan vertically (top to bottom)
     const translateY = interpolate(
@@ -91,9 +79,6 @@ export const Pan = (props: any) => {
       },
     );
     transformStyle = `translateY(${translateY}%)`;
-    console.log(
-      `Panning vertically with range: ±${translateYRange.toFixed(1)}%`,
-    );
   }
 
   return (

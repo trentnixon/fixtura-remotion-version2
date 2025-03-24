@@ -41,11 +41,13 @@ export interface FontConfig {
 export const fontPathMap: Record<string, string> = {
   // ===== Display Fonts =====
   // Used for headings, titles, and prominent text elements
-  Tungsten: "fonts/Tungsten/static/Tungsten-Regular.ttf",
-  "Tungsten-Bold": "fonts/Tungsten/static/Tungsten-Bold.ttf",
+  Tungsten: "fonts/Tungsten/Tungsten-Book.otf",
+  "Tungsten-Bold": "fonts/Tungsten/Tungsten-Semibold.otf", // Using Semibold as Bold
+  "Tungsten-Light": "fonts/Tungsten/Tungsten-Light.otf",
   Druk: "fonts/Druk/Druk_Medium.otf",
-  "Monument Extended":
-    "fonts/MonumentExtended/static/MonumentExtended-Regular.otf",
+  "Monument Extended": "fonts/MonumentExtended/MonumentExtended-Regular.otf",
+  "Monument Extended-Ultrabold":
+    "fonts/MonumentExtended/MonumentExtended-Ultrabold.otf",
 
   // ===== Text Fonts =====
   // Used for body text and general content
@@ -57,12 +59,23 @@ export const fontPathMap: Record<string, string> = {
   "Heebo-SemiBold": "fonts/Heebo/static/Heebo-SemiBold.ttf",
   "Heebo-Bold": "fonts/Heebo/static/Heebo-Bold.ttf",
   "Heebo-Black": "fonts/Heebo/static/Heebo-Black.ttf",
+  "Heebo-Thin": "fonts/Heebo/static/Heebo-Thin.ttf",
+  "Heebo-ExtraBold": "fonts/Heebo/static/Heebo-ExtraBold.ttf",
+  "Heebo-ExtraLight": "fonts/Heebo/static/Heebo-ExtraLight.ttf",
 
   // Roboto family
-  Roboto: "fonts/Roboto/static/Roboto-Regular.ttf",
-  "Roboto-Light": "fonts/Roboto/static/Roboto-Light.ttf",
-  "Roboto-Medium": "fonts/Roboto/static/Roboto-Medium.ttf",
-  "Roboto-Bold": "fonts/Roboto/static/Roboto-Bold.ttf",
+  Roboto: "fonts/Roboto/Roboto-Regular.ttf",
+  "Roboto-Light": "fonts/Roboto/Roboto-Light.ttf",
+  "Roboto-Medium": "fonts/Roboto/Roboto-Medium.ttf",
+  "Roboto-Bold": "fonts/Roboto/Roboto-Bold.ttf",
+  "Roboto-Black": "fonts/Roboto/Roboto-Black.ttf",
+  "Roboto-Thin": "fonts/Roboto/Roboto-Thin.ttf",
+  "Roboto-Italic": "fonts/Roboto/Roboto-Italic.ttf",
+  "Roboto-BoldItalic": "fonts/Roboto/Roboto-BoldItalic.ttf",
+  "Roboto-BlackItalic": "fonts/Roboto/Roboto-BlackItalic.ttf",
+  "Roboto-LightItalic": "fonts/Roboto/Roboto-LightItalic.ttf",
+  "Roboto-MediumItalic": "fonts/Roboto/Roboto-MediumItalic.ttf",
+  "Roboto-ThinItalic": "fonts/Roboto/Roboto-ThinItalic.ttf",
 
   // ===== Specialty Fonts =====
   // Used for specific design elements or accent text
@@ -73,6 +86,97 @@ export const fontPathMap: Record<string, string> = {
   Lemon: "fonts/Lemon/Lemon-Regular.ttf",
   Resolve: "fonts/Resolve/Resolve-Regular.otf",
   "Slightly Marker": "fonts/Slightly_Marker/SlightlyMarker.ttf",
+};
+
+// System fonts that don't need to be loaded
+const systemFonts = [
+  "Arial",
+  "Helvetica",
+  "Times New Roman",
+  "Times",
+  "Courier New",
+  "Courier",
+  "Verdana",
+  "Georgia",
+  "Palatino",
+  "Garamond",
+  "Bookman",
+  "Tahoma",
+  "Trebuchet MS",
+  "Arial Black",
+  "Impact",
+  "Comic Sans MS",
+];
+
+// Mapping of common misspellings or case variations
+const fontNameVariants: Record<string, string> = {
+  druk: "Druk",
+  DRUK: "Druk",
+  "Druk Medium": "Druk",
+  "druk medium": "Druk",
+  "DRUK MEDIUM": "Druk",
+  heebo: "Heebo",
+  HEEBO: "Heebo",
+  roboto: "Roboto",
+  ROBOTO: "Roboto",
+  tungsten: "Tungsten",
+  TUNGSTEN: "Tungsten",
+  "monument extended": "Monument Extended",
+  "MONUMENT EXTENDED": "Monument Extended",
+  monumentextended: "Monument Extended",
+  MonumentExtended: "Monument Extended",
+};
+
+// Reverse lookup map for debugging (font string value to fontPathMap key)
+const fontReverseMap: Record<string, string> = {};
+
+// Initialize the reverse map
+for (const [key, _] of Object.entries(fontPathMap)) {
+  fontReverseMap[key.toLowerCase()] = key;
+}
+
+/**
+ * Checks if a font is a system font
+ *
+ * @param fontName - The name of the font to check
+ * @returns True if it's a system font
+ */
+const isSystemFont = (fontName: string): boolean => {
+  if (!fontName) return false;
+
+  // Check if it contains any system font name
+  return systemFonts.some(
+    (systemFont) =>
+      fontName.toLowerCase().includes(systemFont.toLowerCase()) ||
+      fontName.includes(","), // Font stacks with commas are considered system fonts
+  );
+};
+
+/**
+ * Normalizes a font name by correcting case and common variations
+ *
+ * @param fontName - The input font name
+ * @returns The normalized font name
+ */
+const normalizeFontName = (fontName: string): string => {
+  if (!fontName) return fontName;
+
+  // Check direct mapping first
+  const normalized = fontNameVariants[fontName];
+  if (normalized) {
+    console.log(`Normalized font name: "${fontName}" -> "${normalized}"`);
+    return normalized;
+  }
+
+  // Check case-insensitive mapping
+  const lowerCaseName = fontName.toLowerCase();
+  const normalizedLower = fontNameVariants[lowerCaseName];
+  if (normalizedLower) {
+    console.log(`Normalized font name: "${fontName}" -> "${normalizedLower}"`);
+    return normalizedLower;
+  }
+
+  return fontName;
 };
 
 /**
@@ -88,20 +192,63 @@ export const createFontConfig = (
   weight?: string,
   style?: string,
 ): FontConfig | null => {
-  // Check if the font exists in our map
-  if (!fontPathMap[fontName]) {
+  // Skip system fonts
+  if (isSystemFont(fontName)) {
+    console.log(`Skipping system font: "${fontName}"`);
+    return null;
+  }
+
+  // Debug info
+  console.log(`Creating font config for: "${fontName}"`);
+
+  // Normalize the font name
+  const normalizedFontName = normalizeFontName(fontName);
+
+  // Handle different case sensitivity issues
+  let resolvedFontName = normalizedFontName;
+
+  // Check direct key match first
+  if (!fontPathMap[resolvedFontName]) {
+    // Try a case-insensitive match through our reverse lookup
+    const lowerCaseName = normalizedFontName.toLowerCase();
+    if (fontReverseMap[lowerCaseName]) {
+      resolvedFontName = fontReverseMap[lowerCaseName];
+      console.log(
+        `Case mismatch fixed: "${normalizedFontName}" -> "${resolvedFontName}"`,
+      );
+    }
+
     // Try to find a font with weight suffix (e.g., "Heebo-Bold")
-    if (weight && fontPathMap[`${fontName}-${weight}`]) {
-      fontName = `${fontName}-${weight}`;
+    else if (weight && fontPathMap[`${normalizedFontName}-${weight}`]) {
+      resolvedFontName = `${normalizedFontName}-${weight}`;
+      console.log(`Using weight variant: "${resolvedFontName}"`);
     } else {
-      console.error(`Font not found in fontPathMap: ${fontName}`);
-      return null;
+      // Check if available in wrong case with weight
+      if (weight) {
+        const lowerCaseNameWithWeight = `${lowerCaseName}-${weight.toLowerCase()}`;
+        for (const key of Object.keys(fontPathMap)) {
+          if (key.toLowerCase() === lowerCaseNameWithWeight) {
+            resolvedFontName = key;
+            console.log(
+              `Found weight variant with case correction: "${resolvedFontName}"`,
+            );
+            break;
+          }
+        }
+      }
+
+      // Still not found
+      if (!fontPathMap[resolvedFontName]) {
+        console.warn(`Font not found in fontPathMap: "${fontName}"`);
+        console.log(`Available fonts: ${Object.keys(fontPathMap).join(", ")}`);
+        return null;
+      }
     }
   }
 
   return {
-    family: fontName,
-    url: staticFile(fontPathMap[fontName]),
+    family: resolvedFontName,
+    url: staticFile(fontPathMap[resolvedFontName]),
     weight: weight || "400",
     style: style || "normal",
   };
@@ -134,6 +281,9 @@ export const loadFontFile = async (fontConfig: FontConfig): Promise<void> => {
   } catch (error) {
     console.error(`Error loading font ${fontConfig.family}:`, error);
     console.error(`Font URL was: ${fontConfig.url}`);
+
+    // Don't throw the error - we'll handle the failure gracefully
+    // by falling back to system fonts later in the rendering process
   }
 };
 
@@ -149,10 +299,17 @@ export const loadFontByName = async (
   weight?: string,
   style?: string,
 ): Promise<void> => {
+  // Skip system fonts
+  if (isSystemFont(fontName)) {
+    console.log(`Skipping system font: "${fontName}"`);
+    return;
+  }
+
   const fontConfig = createFontConfig(fontName, weight, style);
 
   if (!fontConfig) {
-    console.error(`Could not create font configuration for: ${fontName}`);
+    console.warn(`Could not create font configuration for: ${fontName}`);
+    console.log(`Falling back to system fonts`);
     return;
   }
 
@@ -172,6 +329,13 @@ export const loadFontByName = async (
  */
 export const loadFontsFromTheme = async (theme: any): Promise<void> => {
   console.log("Loading fonts from theme...");
+  console.log("Theme fonts config:", {
+    fonts: theme.fonts,
+    fontConfig: theme.fontConfig,
+    defaultCopyFontFamily: theme.defaultCopyFontFamily,
+    headingFontFamily: theme.headingFontFamily,
+    subheadingFontFamily: theme.subheadingFontFamily,
+  });
 
   const fontsToLoad = new Set<string>();
 
@@ -186,7 +350,9 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
 
     // Add additional fonts if specified
     if (theme.fonts.additional && Array.isArray(theme.fonts.additional)) {
-      theme.fonts.additional.forEach((font: string) => fontsToLoad.add(font));
+      theme.fonts.additional.forEach((font: string) => {
+        if (font) fontsToLoad.add(font);
+      });
     }
   }
 
@@ -196,23 +362,52 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
   if (theme.headingFontFamily) fontsToLoad.add(theme.headingFontFamily);
   if (theme.subheadingFontFamily) fontsToLoad.add(theme.subheadingFontFamily);
 
+  // Font class fonts
+  if (theme.fontClasses) {
+    Object.values(theme.fontClasses).forEach((fontClass: any) => {
+      if (fontClass && fontClass.family) {
+        fontsToLoad.add(fontClass.family);
+      }
+    });
+  }
+
+  // Filter out system fonts
+  const fontsToLoadFiltered = Array.from(fontsToLoad).filter(
+    (font) => !isSystemFont(font),
+  );
+
+  if (fontsToLoadFiltered.length === 0) {
+    console.log("No custom fonts to load - using system fonts only");
+    return;
+  }
+
   // Create a delay render handle to ensure fonts are loaded before rendering
   const handle = delayRender("Loading theme fonts");
 
   try {
     console.log(
-      `Loading ${fontsToLoad.size} fonts from theme: ${Array.from(fontsToLoad).join(", ")}`,
+      `Loading ${fontsToLoadFiltered.length} fonts from theme: ${fontsToLoadFiltered.join(", ")}`,
     );
 
     // Load each font
-    for (const fontName of fontsToLoad) {
-      await loadFontByName(fontName);
-    }
+    const loadPromises = fontsToLoadFiltered.map(async (fontName) => {
+      if (fontName) {
+        try {
+          await loadFontByName(fontName);
+        } catch (error) {
+          console.warn(`Failed to load font ${fontName}: ${error}`);
+          // Continue with other fonts
+        }
+      }
+    });
 
-    console.log("Successfully loaded all theme fonts");
+    // Wait for all fonts to load (or fail)
+    await Promise.allSettled(loadPromises);
+
+    console.log("Finished font loading process");
     continueRender(handle);
   } catch (error) {
-    console.error("Error loading theme fonts:", error);
+    console.error("Error in font loading process:", error);
     continueRender(handle);
   }
 };

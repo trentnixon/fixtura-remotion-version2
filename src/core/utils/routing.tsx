@@ -17,44 +17,6 @@ const COMMON_COMPOSITION_TYPES = {
   SingleGameResult: "singleGameResult",
 };
 
-// Placeholder component for missing compositions with simplified structure
-const PlaceholderComponent: React.FC<{
-  DATA: FixturaDataset;
-  compositionId: string;
-  templateId: string;
-  sport: string;
-}> = ({ DATA, compositionId, templateId, sport }) => {
-  const baseStyle = {
-    display: "flex",
-    flexDirection: "column" as const,
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100%",
-    color: "#ffffff",
-    backgroundColor: "rgba(0,0,0,0.5)",
-    padding: "20px",
-    textAlign: "center" as const,
-  };
-
-  return (
-    <div style={baseStyle}>
-      <h1 style={{ fontSize: "3em", marginBottom: "20px" }}>
-        {DATA.VIDEOMETA.Video.Title || "Composition"}
-      </h1>
-      <p style={{ fontSize: "1.5em", marginBottom: "10px" }}>
-        Missing Composition Implementation
-      </p>
-      <p style={{ fontSize: "1.2em", marginBottom: "5px" }}>Sport: {sport}</p>
-      <p style={{ fontSize: "1.2em", marginBottom: "5px" }}>
-        Template: {templateId}
-      </p>
-      <p style={{ fontSize: "1.2em", marginBottom: "5px" }}>
-        Composition: {compositionId}
-      </p>
-    </div>
-  );
-};
-
 // Sport-specific composition types
 const SPORT_COMPOSITION_TYPES = {
   cricket: {
@@ -93,19 +55,14 @@ const SPORT_MODULES: Record<string, any> = {
 /**
  * Routes to the appropriate composition based on template, sport, and composition ID
  */
-export const routeToComposition = (DATA: FixturaDataset) => {
-  // Extract key information from DATA
-  const { VIDEOMETA, DATA: CompositionData } = DATA;
-  let compositionId = VIDEOMETA.Video.CompositionID;
-  const templateId = VIDEOMETA.Video.Template?.toLowerCase() || "basic";
-  const templateVariation = VIDEOMETA.Video.TemplateVariation || {};
-  const sport = VIDEOMETA.Club?.Sport?.toLowerCase() || "cricket";
-
-  /*   console.log("Routing Information:");
-  console.log("Sport:", sport);
-  console.log("Template:", templateId);
-  console.log("Template Variation:", templateVariation);
-  console.log("Original CompositionID:", compositionId); */
+export const routeToComposition = (data: FixturaDataset) => {
+  // Extract key information from data
+  const { videoMeta, data: CompositionData } = data;
+  let compositionId = videoMeta.video.metadata.compositionId;
+  const templateId =
+    videoMeta.video.appearance.template?.toLowerCase() || "basic";
+  const templateVariation = videoMeta.video.templateVariation || {};
+  const sport = videoMeta.Club?.Sport?.toLowerCase() || "cricket";
 
   // Normalize the composition ID to handle compound formats
   compositionId = normalizeCompositionId(compositionId);
@@ -115,7 +72,7 @@ export const routeToComposition = (DATA: FixturaDataset) => {
     const sportModule = SPORT_MODULES[sport];
     if (!sportModule) {
       console.warn(`Unknown sport: ${sport}`);
-      return renderPlaceholder(DATA, compositionId, templateId, sport);
+      return renderPlaceholder(data, compositionId, templateId, sport);
     }
 
     // Get the composition type from the mapping for this sport
@@ -130,16 +87,16 @@ export const routeToComposition = (DATA: FixturaDataset) => {
       console.warn(
         `Unknown composition ID: ${compositionId} for sport: ${sport}`,
       );
-      return renderPlaceholder(DATA, compositionId, templateId, sport);
+      return renderPlaceholder(data, compositionId, templateId, sport);
     }
 
-    console.log(`Resolved composition type: ${compositionType}`);
+    //console.log(`Resolved composition type: ${compositionType}`);
 
     // Get the composition module
     const compositionModule = sportModule[compositionType];
     if (!compositionModule) {
       console.warn(`Missing composition module: ${sport}/${compositionType}`);
-      return renderPlaceholder(DATA, compositionId, templateId, sport);
+      return renderPlaceholder(data, compositionId, templateId, sport);
     }
 
     // Get the template-specific implementation
@@ -153,39 +110,81 @@ export const routeToComposition = (DATA: FixturaDataset) => {
       console.warn(
         `Missing template implementation: ${sport}/${compositionType}/${templateId}`,
       );
-      return renderPlaceholder(DATA, compositionId, templateId, sport);
+      return renderPlaceholder(data, compositionId, templateId, sport);
     }
 
-    console.log(
-      `Rendering component: ${sport}/${compositionType}/${templateId}`,
-    );
+    /*   console.log(
+          `Rendering component: ${sport}/${compositionType}/${templateId}`,
+        ); */
 
     // Return the component with the data and template variation
     return (
       <TemplateComponent
-        DATA={CompositionData}
+        data={CompositionData}
         templateVariation={templateVariation}
       />
     );
   } catch (error) {
     console.error("Error in composition routing:", error);
-    return renderPlaceholder(DATA, compositionId, templateId, sport);
+    return renderPlaceholder(data, compositionId, templateId, sport);
   }
 };
 
+////////////////////////////////////////////////////////////////////////////////
+// Utils
+////////////////////////////////////////////////////////////////////////////////
+
 // Helper function to create placeholder component
 function renderPlaceholder(
-  DATA: FixturaDataset,
+  data: FixturaDataset,
   compositionId: string,
   templateId: string,
   sport: string,
 ) {
   return (
     <PlaceholderComponent
-      DATA={DATA}
+      data={data}
       compositionId={compositionId}
       templateId={templateId}
       sport={sport}
     />
   );
 }
+
+// Placeholder component for missing compositions with simplified structure
+const PlaceholderComponent: React.FC<{
+  data: FixturaDataset;
+  compositionId: string;
+  templateId: string;
+  sport: string;
+}> = ({ data, compositionId, templateId, sport }) => {
+  const baseStyle = {
+    display: "flex",
+    flexDirection: "column" as const,
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    color: "#ffffff",
+    backgroundColor: "rgba(0,0,0,0.5)",
+    padding: "20px",
+    textAlign: "center" as const,
+  };
+
+  return (
+    <div style={baseStyle}>
+      <h1 style={{ fontSize: "3em", marginBottom: "20px" }}>
+        {data.videoMeta.video.metadata.title || "Composition"}
+      </h1>
+      <p style={{ fontSize: "1.5em", marginBottom: "10px" }}>
+        Missing Composition Implementation
+      </p>
+      <p style={{ fontSize: "1.2em", marginBottom: "5px" }}>Sport: {sport}</p>
+      <p style={{ fontSize: "1.2em", marginBottom: "5px" }}>
+        Template: {templateId}
+      </p>
+      <p style={{ fontSize: "1.2em", marginBottom: "5px" }}>
+        Composition: {compositionId}
+      </p>
+    </div>
+  );
+};

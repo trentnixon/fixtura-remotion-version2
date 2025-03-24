@@ -1,4 +1,4 @@
-// src/components/backgrounds/variants/Image/TemplateVariationAdapter.ts
+// src/components/backgrounds/variants/Image/templateVariationAdapter.ts
 import { ImageEffectType } from "./variants/index";
 import { OverlayStyle, BlendMode } from "./overlays/index";
 
@@ -151,7 +151,6 @@ function mapDirection(direction?: string, effectType?: ImageEffectType): any {
 export function adaptImageConfig(
   legacyConfig: LegacyImageConfig,
 ): EnhancedImageConfig {
-  console.log("[legacyConfig]", legacyConfig);
   // Determine effect type
   const effectType = mapEffectType(legacyConfig.type);
 
@@ -200,7 +199,7 @@ export function adaptImageConfig(
 /**
  * Updates the ImageBackground component configuration in a template variation
  */
-export function updateTemplateVariation(templateVariation: any): any {
+export function updatetemplateVariation(templateVariation: any): any {
   if (!templateVariation || !templateVariation.Image) {
     return templateVariation;
   }

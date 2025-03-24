@@ -14,13 +14,13 @@ import { BaseBackground } from "./components/BaseBackground";
 import { BaseTemplateLayout } from "./BaseTemplateLayout";
 
 interface BaseTemplateProps {
-  DATA: any;
+  data: any;
   settings: any;
   introComponent?: React.FC;
   outroComponent?: React.FC<{ doesAccountHaveSponsors: boolean }>;
   backgroundComponent?: React.FC;
   customAudioComponent?: React.FC;
-  mainComponent?: React.FC;
+  mainComponentLayout?: React.FC;
 }
 
 /**
@@ -28,16 +28,16 @@ interface BaseTemplateProps {
  * Provides the context providers and layout structure for all templates
  */
 export const BaseTemplate: React.FC<BaseTemplateProps> = ({
-  DATA,
+  data,
   settings,
   introComponent,
   outroComponent,
   backgroundComponent = BaseBackground,
   customAudioComponent = BaseAudioTrack,
-  mainComponent,
+  mainComponentLayout,
 }) => {
   return (
-    <GlobalProvider settings={settings} DATA={DATA}>
+    <GlobalProvider settings={settings} data={data}>
       <VideoDataProvider>
         <ThemeProvider>
           <StyleProvider>
@@ -48,7 +48,7 @@ export const BaseTemplate: React.FC<BaseTemplateProps> = ({
                   outroComponent={outroComponent}
                   backgroundComponent={backgroundComponent}
                   customAudioComponent={customAudioComponent}
-                  mainComponent={mainComponent}
+                  mainComponentLayout={mainComponentLayout}
                 />
               </LayoutProvider>
             </FontProvider>

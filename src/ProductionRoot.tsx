@@ -12,21 +12,17 @@ import { FixturaDataset } from "./core/types/data/index";
  */
 export const ProductionRoot: React.FC = () => {
   // Get input props passed to the render
-  const { DATA } = getInputProps() as { DATA: FixturaDataset };
+  const { data } = getInputProps() as { data: FixturaDataset };
 
   // If no data, use a fallback for testing
-  if (!DATA) {
+  if (!data) {
     throw new Error("No data provided for production render");
   }
 
   // Extract template information from the data
-  const templateId = DATA.VIDEOMETA.Video.Template || "Basic";
-  const compositionId = DATA.VIDEOMETA.Video.CompositionID || "Ladder";
-  const templateVariation = DATA.VIDEOMETA.Video.TemplateVariation || {};
-
-  console.log(`Production render for template: ${templateId}`);
-  console.log(`CompositionID: ${compositionId}`);
-  console.log(`Template Variation:`, templateVariation);
+  const templateId = data.videoMeta.video.appearance.template || "Basic";
+  const compositionId = data.videoMeta.video.metadata.compositionId || "Ladder";
+  const templateVariation = data.videoMeta.video.templateVariation || {};
 
   // Make sure the template exists, fallback to Basic if not found
   let actualTemplateId = templateId;
@@ -43,10 +39,13 @@ export const ProductionRoot: React.FC = () => {
 
   // Calculate duration from the data
   const durationInFrames =
-    DATA.TIMINGS.FPS_INTRO +
-    DATA.TIMINGS.FPS_MAIN +
-    (DATA.VIDEOMETA.Video.includeSponsors ? DATA.TIMINGS.FPS_OUTRO : 30);
+    data.timings.FPS_INTRO +
+    data.timings.FPS_MAIN +
+    (data.videoMeta.video.metadata.includeSponsors
+      ? data.timings.FPS_OUTRO
+      : 30);
 
+  console.log("[compositionId]", compositionId);
   return (
     <Composition
       id={compositionId}
@@ -56,7 +55,7 @@ export const ProductionRoot: React.FC = () => {
       width={1080}
       height={1350}
       defaultProps={{
-        DATA,
+        data,
         templateVariation,
       }}
     />

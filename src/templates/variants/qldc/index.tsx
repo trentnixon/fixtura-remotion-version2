@@ -4,21 +4,21 @@ import { FixturaDataset } from "../../../core/types/data/index";
 import { routeToComposition } from "../../../core/utils/routing";
 
 interface QLDCProps {
-  DATA: FixturaDataset;
+  data: FixturaDataset;
 }
 
 /**
  * QLDC Template
  * This template is used for Queensland Local District Cricket
  */
-export const QLDC: React.FC<QLDCProps> = ({ DATA }) => {
+export const QLDC: React.FC<QLDCProps> = ({ data }) => {
   // Apply any QLDC-specific styling or processing here
   const processedData = {
-    ...DATA,
-    VIDEOMETA: {
-      ...DATA.VIDEOMETA,
+    ...data,
+    videoMeta: {
+      ...data.videoMeta,
       Video: {
-        ...DATA.VIDEOMETA.Video,
+        ...data.videoMeta.video,
         // Ensure the template is set correctly
         Template: "QLDC",
       },

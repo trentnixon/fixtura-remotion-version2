@@ -749,7 +749,7 @@
     "FPS_OUTRO": 120,
     "FPS_MAIN": 10000
   },
-  "DATA": [
+  "data": [
     {
       "gameID": "d113c4a1",
       "status": "Final",

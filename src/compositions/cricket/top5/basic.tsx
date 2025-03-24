@@ -4,9 +4,9 @@ import { AbsoluteFill } from "remotion";
 import { FixturaDataset } from "../../../core/types/data/index";
 
 interface Top5Props {
-  DATA: FixturaDataset;
+  data: FixturaDataset;
 }
 
-export const Basic: React.FC<Top5Props> = ({ DATA }) => {
+export const Basic: React.FC<Top5Props> = ({ data }) => {
   return <AbsoluteFill>Basic Template - Cricket Top 5</AbsoluteFill>;
 };

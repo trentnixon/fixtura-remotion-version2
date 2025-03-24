@@ -226,7 +226,7 @@
     "FPS_OUTRO": 180,
     "FPS_MAIN": 540
   },
-  "DATA": [
+  "data": [
     {
       "gameID": "b7c3560d",
       "round": "Round 9",

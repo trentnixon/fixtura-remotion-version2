@@ -1,5 +1,5 @@
 {
-  "DATA": [
+  "data": [
     {
       "ID": 31518,
       "bias": "Southport Community Div 1",
@@ -1403,14 +1403,14 @@
   "ACCOUNT": {
     "accountId": 137
   },
-  "TIMINGS": {
+  "timings": {
     "FPS_MAIN": 1500,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 120,
     "FPS_LADDER": 300
   },
-  "VIDEOMETA": {
-    "Club": {
+  "videoMeta": {
+    "club": {
       "Logo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
         "width": 1000,
@@ -1778,54 +1778,76 @@
         }
       }
     },
-    "THEME": {
-      "Theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#0f150b",
-        "secondary": "#f8cb4c"
+
+    "video": {
+      "metadata": {
+        "title": "Ladder",
+        "titleSplit": ["Ladder", ""],
+        "videoTitle": "League Tables",
+        "compositionId": "Ladder",
+        "assetId": 18,
+        "assetTypeId": 3,
+        "frames": [355, 600, 900, 1200, 1500],
+        "includeSponsors": true
       },
-      "Template": "Basic",
-      "TemplateVariation": {
-        "Background": "Gradient",
-        "borderRadius": "10px",
-        "Palette": "secondary"
-      }
-    },
-    "Video": {
-      "Theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#043666",
-        "secondary": "#fccb3d"
+
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#043666",
+          "secondary": "#fccb3d"
+        },
+
+        "template": "Basic",
+        "templateOptions": {
+          "borderRadius": "10px",
+          "Background": "Solid",
+          "Palette": "primaryOnWhite"
+        }
       },
-      "Title": "Ladder",
-      "FRAMES": [355, 600, 900, 1200, 1500],
-      "ASSETID": 18,
-      "Template": "Basic",
-      "HeroImage": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-        "ratio": "landscape",
-        "width": 1212,
-        "height": 853,
-        "AgeGroup": "Both",
-        "AssetType": "",
-        "markerPosition": ""
+
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
+          "AgeGroup": "Both",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+        }
       },
-      "TitleSplit": ["Ladder", ""],
-      "VideoTitle": "League Tables - undefined",
-      "ASSETTYPEID": 3,
-      "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-      "CompositionID": "Ladder",
-      "includeSponsors": true,
-      "DiviedFixturesBy": {
-        "Ladder": 1,
-        "RosterPoster": 1,
-        "WeekendResults": 2,
-        "UpComingFixtures": 2,
-        "WeekendSingleGameResult": 1
+      "contentLayout": {
+        "diviedFixturesBy": {
+          "Ladder": 1,
+          "RosterPoster": 1,
+          "WeekendResults": 2,
+          "UpComingFixtures": 2,
+          "WeekendSingleGameResult": 1
+        }
       },
-      "TemplateVariation": {
+
+      "templateVariation": {
+        "Video": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
+          "fallbackUrl": "https://example.com/fallback-video.mp4",
+          "position": "center",
+          "size": "cover",
+          "loop": true,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": true,
+          "volume": 0.8,
+          "playbackRate": 1.0
+        },
         "Image": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
           "ratio": "portrait",
@@ -1837,6 +1859,7 @@
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
+
         "Background": "Solid",
         "Palette": "primaryOnWhite",
         "borderRadius": "10px",
@@ -1848,7 +1871,7 @@
           "type": "grain"
         },
         "Pattern": {
-          "type": "lines",
+          "type": "ldotsines",
           "animation": "panDown",
           "scale": 0.75,
           "rotation": 0,
@@ -1865,7 +1888,7 @@
         }
       }
     },
-    "FixtureCategory": "Senior",
-    "grouping_category": "Senior"
+    "fixtureCategory": "Senior",
+    "groupingCategory": "Senior"
   }
 }

@@ -11,10 +11,10 @@ export const basicTheme = {
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Heebo",
+      family: "Roboto",
     },
     copy: {
-      family: "Heebo",
+      family: "Roboto",
     },
   },
 
@@ -62,9 +62,9 @@ export const basicTheme = {
   // ===== LAYOUT CONFIGURATION =====
   layout: {
     heights: {
-      asset: 1350,
+      asset: 1040,
       header: 190,
-      footer: 110,
+      footer: 120,
     },
     spacing: {
       section: "space-y-8",

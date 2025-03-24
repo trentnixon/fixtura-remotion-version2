@@ -54,8 +54,8 @@ export * from "./config";
 
 // Background component
 export const SelectTemplateBackground = () => {
-  const { Video } = useVideoDataContext();
-  const background = Video.TemplateVariation?.Background;
+  const { video } = useVideoDataContext();
+  const background = video.templateVariation?.Background;
 
   // Render different backgrounds based on template variation
   switch (background) {
@@ -68,7 +68,7 @@ export const SelectTemplateBackground = () => {
     case "Graphics":
       return (
         <NoiseBackground
-          variant={Video.TemplateVariation?.Noise.type || "subtle"}
+          variant={video.templateVariation?.Noise?.type as NoiseVariant}
         />
       );
     case "Pattern":
@@ -78,7 +78,7 @@ export const SelectTemplateBackground = () => {
     case "Noise":
       return (
         <NoiseBackground
-          variant={Video.TemplateVariation?.Noise.type || "subtle"}
+          variant={video.templateVariation?.Noise?.type as NoiseVariant}
         />
       );
     /*   case "Layered":
@@ -102,11 +102,11 @@ const ImageBackground = () => {
 
 // Video background
 const VideoBackground = () => {
-  const { Video } = useVideoDataContext();
+  const { video } = useVideoDataContext();
 
   return (
     <VideoBg
-      src={Video.TemplateVariation.useBackground}
+      src={video.templateVariation?.Video?.url}
       position="center"
       size="cover"
       loop={true}
@@ -126,7 +126,7 @@ const NoiseBackground = ({
     baseColor: selectedPalette.background.main,
     noiseColor: selectedPalette.background.accent,
   };
-  // Video.TemplateVariation?.Noise.type
+  // video.templateVariation?.Noise.type
   switch (variant) {
     case "subtle":
       return <SubtleNoise {...baseProps} />;

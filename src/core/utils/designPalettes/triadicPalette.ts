@@ -1,6 +1,39 @@
 // designPalettes/triadicPalette.ts
-import { DesignPalette, ensureContrast } from "./types";
+import {
+  DesignPalette,
+  ensureContrast,
+  GradientOptions,
+  CSSGradientOptions,
+} from "./types";
 import tinycolor from "tinycolor2";
+
+// Create a CSS gradient options object
+const createCSSGradientOptions = (
+  color1: string,
+  color2: string,
+): CSSGradientOptions => ({
+  DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
+  DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
+  DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
+  HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
+  HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
+  VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
+  VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
+  CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
+});
+
+// Create a gradient options object
+const createGradientOptions = (
+  color1: string,
+  color2: string,
+  type: "linear" | "radial" = "linear",
+  direction: string = "to right",
+): GradientOptions => ({
+  direction,
+  type,
+  stops: [color1, color2],
+  css: createCSSGradientOptions(color1, color2),
+});
 
 export const createTriadicPalette = (
   primary: string,
@@ -23,33 +56,48 @@ export const createTriadicPalette = (
       contrast: ensureContrast(triadicColor1, "#FFFFFF"),
       accent: primary,
       gradient: {
-        primary: triadicColor1,
-        secondary: triadicColor2,
-        css: `linear-gradient(to right, ${triadicColor1}, ${triadicColor2})`,
-        primaryToSecondary: `linear-gradient(to right, ${triadicColor1}, ${triadicColor2})`,
-        secondaryToPrimary: `linear-gradient(to left, ${triadicColor1}, ${triadicColor2})`,
+        primary: createGradientOptions(triadicColor1, primary),
+        secondary: createGradientOptions(triadicColor2, primary),
+        primaryToSecondary: createGradientOptions(triadicColor1, triadicColor2),
+        secondaryToPrimary: createGradientOptions(triadicColor2, triadicColor1),
         radial: `radial-gradient(circle, ${triadicColor1}, ${triadicColor2})`,
+        conicGradient: createGradientOptions(
+          triadicColor1,
+          triadicColor2,
+          "linear",
+          "conic",
+        ),
+        hardStopGradient: createGradientOptions(triadicColor1, triadicColor2),
+        meshGradient: createGradientOptions(triadicColor1, triadicColor2),
+        primaryAdvanced: createGradientOptions(triadicColor1, primary),
+        primaryRadial: createGradientOptions(triadicColor1, primary, "radial"),
+        secondaryAdvanced: createGradientOptions(triadicColor2, primary),
+        secondaryRadial: createGradientOptions(
+          triadicColor2,
+          primary,
+          "radial",
+        ),
       },
     },
     container: {
       primary: lightTriadic,
       secondary: tinycolor(primary).spin(240).lighten(10).toHexString(),
+      main: lightTriadic,
       light: "#FFFFFF",
       dark: tinycolor(primary).spin(120).darken(15).toHexString(),
       transparent: tinycolor(primary).spin(120).setAlpha(0.8).toRgbString(),
       accent: primary,
       highlight: triadicColor2,
-      onBackground: {
-        main: tinycolor(triadicColor1).lighten(10).toString(),
-        light: tinycolor(triadicColor1).lighten(20).toString(),
-        dark: tinycolor(triadicColor1).darken(10).toString(),
-      },
     },
     text: {
       onBackground: {
         main: ensureContrast(triadicColor1, "#FFFFFF"),
         light: ensureContrast(lightTriadic, "#FFFFFF"),
         dark: ensureContrast(darkTriadic, "#FFFFFF"),
+        muted: tinycolor(ensureContrast(triadicColor1, "#FFFFFF"))
+          .setAlpha(0.7)
+          .toRgbString(),
+        accent: primary,
       },
       onContainer: {
         primary: ensureContrast(lightTriadic, "#FFFFFF"),
@@ -62,6 +110,10 @@ export const createTriadicPalette = (
           tinycolor(primary).spin(120).darken(15).toHexString(),
           "#FFFFFF",
         ),
+        muted: tinycolor(ensureContrast(lightTriadic, "#FFFFFF"))
+          .setAlpha(0.7)
+          .toRgbString(),
+        accent: primary,
       },
       title: ensureContrast(triadicColor1, "#FFFFFF"),
       body: ensureContrast(triadicColor1, "#FFFFFF"),

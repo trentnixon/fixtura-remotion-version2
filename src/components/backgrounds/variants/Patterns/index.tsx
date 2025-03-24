@@ -21,25 +21,26 @@ import { useStylesContext } from "../../../../core/context/StyleContext";
  * PatternBackground component that renders different pattern backgrounds
  */
 export const PatternBackground: React.FC<PatternBackgroundProps> = ({
-  scale = 0.75,
+  pattern,
+  scale = 1,
   rotation = 0,
-  opacity = 0.35,
-  animation = "none",
-  animationDuration = 300, // 20 seconds at 30fps
-  animationSpeed = 0.8,
+  opacity = 0.5,
+  animation,
+  animationDuration,
+  animationSpeed,
   className = "",
   style = {},
   ...props
 }) => {
-  const { Video } = useVideoDataContext();
+  const { video } = useVideoDataContext();
   const { selectedPalette } = useStylesContext();
 
   // Get pattern type and animation settings from template variation or use defaults
-  const patternConfig = Video.TemplateVariation?.Pattern || {};
-  const pattern = patternConfig.type || PATTERN_TYPES.DOTS;
+  const patternConfig = video.templateVariation?.Pattern || {};
+  const patternType = patternConfig.type || PATTERN_TYPES.DOTS;
 
   // Create unique ID for the pattern
-  const patternId = `pattern-${pattern}-${Math.random().toString(36).substr(2, 9)}`;
+  const patternId = `pattern-${patternType}-${Math.random().toString(36).substr(2, 9)}`;
 
   // Common pattern props
   const patternProps = {
@@ -56,7 +57,7 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
 
   // Select the pattern component based on pattern type
   const renderPattern = () => {
-    switch (pattern) {
+    switch (patternType) {
       case PATTERN_TYPES.DOTS:
         return <DotsPattern {...patternProps} />;
       case PATTERN_TYPES.LINES:
@@ -76,7 +77,7 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
 
   return (
     <AbsoluteFill
-      className={`pattern-background pattern-${pattern} ${className}`}
+      className={`pattern-background pattern-${patternType} ${className}`}
       style={{
         ...style,
       }}

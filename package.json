@@ -8,6 +8,7 @@
   "dependencies": {
     "@remotion/animation-utils": "^4.0.270",
     "@remotion/cli": "4.0.270",
+    "@remotion/eslint-config-flat": "^4.0.270",
     "@remotion/fonts": "^4.0.270",
     "@remotion/google-fonts": "^4.0.270",
     "@remotion/lottie": "^4.0.270",
@@ -20,6 +21,7 @@
     "@remotion/transitions": "4.0.270",
     "@remotion/zod-types": "4.0.270",
     "colorthief": "^2.6.0",
+    "eslint": "^9.19.0",
     "lodash": "^4.17.21",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -29,12 +31,10 @@
     "zod": "3.22.3"
   },
   "devDependencies": {
-    "@remotion/eslint-config-flat": "4.0.270",
     "@types/lodash": "^4.17.16",
     "@types/react": "19.0.0",
     "@types/tinycolor2": "^1.4.6",
     "@types/web": "0.0.166",
-    "eslint": "9.19.0",
     "prettier": "3.3.3",
     "typescript": "5.5.4"
   },
@@ -42,7 +42,7 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "tsc"
   },
   "sideEffects": [
     "*.css"

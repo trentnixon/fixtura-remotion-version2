@@ -74,7 +74,7 @@ export const BasicOutro: React.FC<BasicOutroProps> = ({
 
 // Alternative outro for when there are no sponsors
 const AlternativeOutro: React.FC = () => {
-  const { Club } = useVideoDataContext();
+  const { club } = useVideoDataContext();
   const theme = useThemeContext();
 
   // Get font classes from theme
@@ -104,10 +104,10 @@ const AlternativeOutro: React.FC = () => {
       }}
     >
       {/* Logo */}
-      {Club?.Logo?.url && (
+      {club?.Logo?.url && (
         <img
-          src={Club.Logo.url}
-          alt={Club.Name || "Club Logo"}
+          src={club.Logo.url}
+          alt={club.Name || "Club Logo"}
           className="w-1/3 max-h-1/3 object-contain mb-4"
         />
       )}

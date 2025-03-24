@@ -52,11 +52,6 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
   // This needs to be unique but the actual CompositionID in the data remains the proper one
   const remoteCompositionId = `${templateId}-${variant}-${dataset.id}`;
 
-  // Log the information for debugging
-  console.log(`Remotion registry ID: ${remoteCompositionId}`);
-  console.log(
-    `Actual CompositionID being used: ${processedData.VIDEOMETA?.Video?.CompositionID}`,
-  );
   // at some point lets sort this out to be dynamic
   const VideoRatio = {
     width: 1080,
@@ -64,7 +59,7 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
     ratio: 1080 / 1350,
     fps: 30,
   };
-
+  console.log("[remoteCompositionId]", remoteCompositionId);
   return (
     <Composition
       key={remoteCompositionId}
@@ -75,7 +70,7 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
       width={VideoRatio.width}
       height={VideoRatio.height}
       defaultProps={{
-        DATA: processedData,
+        data: processedData,
       }}
     />
   );

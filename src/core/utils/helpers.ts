@@ -8,8 +8,8 @@ import { FixturaDataset } from "../types/data/index";
  * @returns The duration in frames for the outro section
  */
 export const hasSponsors = (data: FixturaDataset): number => {
-  return showSponsors(data.VIDEOMETA.Club.Sponsors)
-    ? data.TIMINGS.FPS_OUTRO
+  return showSponsors(data.videoMeta.Club.Sponsors)
+    ? data.timings.FPS_OUTRO
     : 30;
 };
 
@@ -21,8 +21,8 @@ export const hasSponsors = (data: FixturaDataset): number => {
  */
 export const CompositionLength = (data: FixturaDataset): number => {
   return [
-    data.TIMINGS.FPS_INTRO,
+    data.timings.FPS_INTRO,
     hasSponsors(data),
-    data.TIMINGS.FPS_MAIN,
+    data.timings.FPS_MAIN,
   ].reduce((a, b) => a + b, 0);
 };

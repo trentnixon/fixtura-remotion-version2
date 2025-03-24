@@ -19,10 +19,10 @@ import { useStylesContext } from "../../../../core/context/StyleContext";
 export const ParticleBackground: React.FC<ParticleBackgroundProps> = (
   props,
 ) => {
-  const { Video } = useVideoDataContext();
+  const { video } = useVideoDataContext();
   const { selectedPalette } = useStylesContext();
 
-  const particleConfig = Video.TemplateVariation?.Particle || {};
+  const particleConfig = video.templateVariation?.Particle || {};
 
   const particleProps = {
     particleColor: selectedPalette.background.contrast,

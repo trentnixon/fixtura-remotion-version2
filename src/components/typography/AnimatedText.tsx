@@ -11,6 +11,7 @@ import {
   SpringConfig,
   SPRING_CONFIGS,
 } from "./config/animations";
+import { useFontContext } from "../../core/context/FontContext";
 
 // Define the possible typography types based on componentStyles keys
 export type TypographyType =
@@ -72,6 +73,9 @@ interface AnimatedTextProps {
   // Optional style overrides
   textAlign?: "left" | "center" | "right" | "justify";
   textTransform?: "none" | "uppercase" | "lowercase" | "capitalize";
+
+  // Font family override
+  fontFamily?: string;
 }
 
 /**
@@ -112,17 +116,70 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   // Style overrides
   textAlign,
   textTransform,
+  fontFamily,
 }) => {
   // Get the current frame from Remotion
   const currentFrame = useCurrentFrame();
 
-  // Get theme context
-  const { colors, componentStyles, selectedPalette } = useThemeContext();
+  // Get theme context and font context
+  const { colors, componentStyles, selectedPalette, fontClasses, fonts } =
+    useThemeContext();
+  const { availableFonts, loadFont } = useFontContext();
   const { colorSystem } = colors;
 
   // Get style from componentStyles or fallback to bodyText
   const componentStyle = componentStyles[type] ||
     componentStyles.bodyText || { className: "", style: {} };
+
+  // Get font family from various sources with cascading precedence
+  // 1. Direct prop override
+  // 2. Type-specific font class in theme
+  // 3. Default copy font from theme fonts
+  // 4. Fallback to system fonts
+  const typeFontFamily = (() => {
+    // Direct prop override has highest priority
+    if (fontFamily) return fontFamily;
+
+    // Next, check if we have a font class for this type
+    if (fontClasses && fontClasses[type] && fontClasses[type]?.family) {
+      return fontClasses[type]?.family;
+    }
+
+    // Map common types to theme font configurations
+    if (type === "title" || type === "heading") {
+      if (fonts?.title?.family) return fonts.title.family;
+      if (fontClasses?.heading?.family) return fontClasses.heading.family;
+      return fonts?.heading?.family;
+    }
+
+    if (type === "subtitle" || type === "subheading") {
+      if (fonts?.subheading?.family) return fonts.subheading.family;
+      if (fontClasses?.subheading?.family) return fontClasses.subheading.family;
+      return "Heebo"; // Default fallback
+    }
+
+    // Default to body/copy font
+    if (fonts?.copy?.family) return fonts.copy.family;
+    if (fontClasses?.body?.family) return fontClasses.body.family;
+
+    // Ultimate fallback
+    return "Arial, sans-serif";
+  })();
+
+  // Make sure we load the font on first render (as a safety measure)
+  React.useEffect(() => {
+    // Only try to load if it's not a system font
+    if (
+      typeFontFamily &&
+      !typeFontFamily.includes(",") &&
+      !typeFontFamily.includes("Arial") &&
+      !typeFontFamily.includes("sans-serif")
+    ) {
+      loadFont(typeFontFamily).catch((err) =>
+        console.warn(`Failed to load font ${typeFontFamily} on demand:`, err),
+      );
+    }
+  }, [typeFontFamily, loadFont]);
 
   // Get color variant styles
   const variantStyles = getVariantStyles(
@@ -203,6 +260,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   const overrideStyles: React.CSSProperties = {
     ...(textAlign && { textAlign }),
     ...(textTransform && { textTransform }),
+    ...(typeFontFamily && { fontFamily: typeFontFamily }),
   };
 
   // Convert children to string
@@ -215,6 +273,9 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
       : letterAnimation === "word"
         ? "word"
         : "letter";
+
+  // For debugging font resolution
+  //console.log(`AnimatedText [${type}] using font: "${typeFontFamily}"`);
 
   return (
     <div

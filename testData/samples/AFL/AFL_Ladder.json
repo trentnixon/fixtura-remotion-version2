@@ -226,7 +226,7 @@
     "FPS_MAIN": 900,
     "FPS_LADDER": 300
   },
-  "DATA": [
+  "data": [
     {
       "ID": 22825,
       "gradeStrapiID": 22825,

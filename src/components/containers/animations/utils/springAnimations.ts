@@ -1,6 +1,7 @@
-import { interpolate, spring, measureSpring } from "remotion";
-import { ContainerAnimationFunction } from "../types";
+import { interpolate, spring } from "remotion";
+
 import React from "react";
+import { ContainerAnimationFunction } from "../animationTypes";
 
 /**
  * Spring in animation for containers

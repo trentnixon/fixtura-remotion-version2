@@ -1,0 +1,29 @@
+# Cursor Rules
+
+## Project Conventions
+
+- Remotion V2 project using React and TypeScript
+- Development server: `npm run dev` launches Remotion Studio
+- Project seems to follow a template-based approach for video generation
+
+## Known Patterns
+
+- Not yet fully identified - will document as discovered
+
+## User Preferences
+
+- Memory Bank should be maintained for project documentation
+- Documentation should be comprehensive
+
+## Project Structure
+
+- Will document as we explore the codebase further
+
+## Workflow
+
+- Use Memory Bank to track progress and maintain context
+- Update documentation when significant changes or discoveries are made
+
+## Future Notes
+
+This file will be expanded as project patterns, user preferences, and critical paths are discovered during development.

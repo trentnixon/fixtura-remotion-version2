@@ -225,7 +225,7 @@
     "FPS_OUTRO": 180,
     "FPS_MAIN": 360
   },
-  "DATA": [
+  "data": [
     {
       "name": "Ellen Turner",
       "goals": 5,

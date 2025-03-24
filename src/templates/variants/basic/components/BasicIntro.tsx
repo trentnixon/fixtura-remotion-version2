@@ -1,11 +1,8 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { AnimatedImage } from "../../../../components/images";
-import { FadeIn, SlideInLeft } from "../../../../components/containers";
 import { ImageAnimationConfig } from "../../../../components/images/config";
-import { ContainerAnimationConfig } from "../../../../components/containers/animations";
 import { AnimationConfig } from "../../../../components/typography/config/animations";
 import {
   ClubNameAnimationInConfig,
@@ -14,6 +11,8 @@ import {
   IntroExitFrame,
   TitleAnimationInConfig,
 } from "./AnimationConfig";
+import { TwoColumnLayout } from "../../../../components/layout/titleScreen/index";
+import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 /**
  * BasicIntro Component
@@ -22,59 +21,55 @@ import {
  * This template demonstrates how to style containers with various layout, text, and positioning options.
  */
 export const BasicIntro: React.FC = () => {
-  const { Video, Club } = useVideoDataContext();
+  const { club, metadata } = useVideoDataContext();
 
+  const { fontClasses } = useThemeContext();
+  console.log("[fontClasses]", fontClasses);
   return (
-    <AbsoluteFill>
-      <div className="flex flex-col justify-center items-center h-full w-full px-12 py-8 overflow-auto">
-        <div className="w-full h-full flex justify-center items-center max-h-[500px] max-w-[500px]">
-          {/* Image Animation */}
+    <TwoColumnLayout
+      alignment="center"
+      Logo={
+        <div className="w-full h-full flex justify-center items-center max-h-[300px] max-w-[300px]">
           <AnimatedImage
-            src={Club.Logo.url}
-            alt={Club.Name}
-            width={Club.Logo.width}
-            height={Club.Logo.height}
+            src={club.Logo.url}
+            alt={club.Name}
+            width={club.Logo.width}
+            height={club.Logo.height}
+            fit="contain"
             animation={ImageAnimationInConfig as ImageAnimationConfig}
             exitAnimation={IntroAnimationOutConfig as ImageAnimationConfig}
             exitFrame={IntroExitFrame}
           />
         </div>
-        {/* Video Category  */}
+      }
+      Title={
         <AnimatedText
+          textAlign="left"
           type="title"
           variant="onBackgroundMain"
           letterAnimation="none"
           animation={TitleAnimationInConfig as AnimationConfig}
           exitAnimation={IntroAnimationOutConfig as AnimationConfig}
           exitFrame={IntroExitFrame}
+          fontFamily={fontClasses.title?.family}
         >
-          {Video.Title}
+          {metadata.title}
         </AnimatedText>
-
-        {/* Club or Association Name */}
-        <SlideInLeft
-          backgroundColor="main"
-          type="basic"
-          rounded="full"
-          className="p-6 my-4 w-[80%]"
-          animation={{
-            easing: "bounce",
-          }}
-          exitAnimation={IntroAnimationOutConfig as ContainerAnimationConfig}
+      }
+      Name={
+        <AnimatedText
+          fontFamily={fontClasses.subtitle?.family}
+          type="subtitle"
+          textAlign="left"
+          variant="onBackgroundDark"
+          letterAnimation="word"
+          animation={ClubNameAnimationInConfig as AnimationConfig}
+          exitAnimation={IntroAnimationOutConfig as AnimationConfig}
           exitFrame={IntroExitFrame}
         >
-          <AnimatedText
-            type="subtitle"
-            variant="onBackgroundDark"
-            letterAnimation="word"
-            animation={ClubNameAnimationInConfig as AnimationConfig}
-            exitAnimation={IntroAnimationOutConfig as AnimationConfig}
-            exitFrame={IntroExitFrame}
-          >
-            {Club.Name}
-          </AnimatedText>
-        </SlideInLeft>
-      </div>
-    </AbsoluteFill>
+          {club.Name}
+        </AnimatedText>
+      }
+    />
   );
 };

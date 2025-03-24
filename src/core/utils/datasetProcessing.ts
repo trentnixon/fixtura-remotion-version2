@@ -24,12 +24,13 @@ export function processDatasetForTemplate(
   const datasetClone: FixturaDataset = JSON.parse(JSON.stringify(dataset));
 
   // Extract existing data from the dataset
-  const existingVideo = datasetClone.VIDEOMETA?.Video || {};
-  const existingClub = datasetClone.VIDEOMETA?.Club || {};
+  const existingVideo = datasetClone.videoMeta?.video || {};
+  const existingClub =
+    datasetClone.videoMeta?.club || datasetClone.videoMeta?.Club || {};
 
   // Get the correct composition ID - either use existing one or derive it from the dataset ID
   const compositionId =
-    existingVideo.CompositionID ||
+    existingVideo.compositionId ||
     getCompositionIdFromDatasetId(dataset.id || "");
 
   // Create the full composition ID including template and variant - for internal reference only
@@ -39,32 +40,65 @@ export function processDatasetForTemplate(
   console.log(`Actual CompositionID being used: ${compositionId}`);
 
   // Extract existing theme data
-  const existingTheme = existingVideo.Theme || {};
+  const existingTheme = existingVideo.theme || {};
 
   // Extract existing template variation if any
-  const existingTemplateVariation = existingVideo.TemplateVariation || {};
+  const existingTemplateVariation = existingVideo.templateVariation || {};
 
   // Process the dataset with template information, preserving existing data
   return mergeData(datasetClone, {
-    VIDEOMETA: {
-      THEME: {
-        Theme: existingVideo.Theme || {},
-        Template: existingVideo.Template || templateId,
-        TemplateVariation: existingVideo.TemplateVariation || {
+    videoMeta: {
+      theme: {
+        theme: existingVideo.theme || {},
+        template: existingVideo.template || templateId,
+        templateVariation: existingVideo.templateVariation || {
           Background: variant,
         },
       },
-      FixtureCategory: datasetClone.VIDEOMETA?.FixtureCategory || "Default",
-      grouping_category: datasetClone.VIDEOMETA?.grouping_category || sportName,
+      // Support both naming conventions
+      fixtureCategory:
+        datasetClone.videoMeta?.fixtureCategory ||
+        datasetClone.videoMeta?.FixtureCategory ||
+        "Default",
+      FixtureCategory:
+        datasetClone.videoMeta?.fixtureCategory ||
+        datasetClone.videoMeta?.FixtureCategory ||
+        "Default",
+      groupingCategory:
+        datasetClone.videoMeta?.groupingCategory ||
+        datasetClone.videoMeta?.grouping_category ||
+        sportName,
+      grouping_category:
+        datasetClone.videoMeta?.groupingCategory ||
+        datasetClone.videoMeta?.grouping_category ||
+        sportName,
 
-      Video: {
+      video: {
         // Start with existing properties
         ...existingVideo,
         // Then override specific properties
         Template: templateId,
-        TemplateVariation: {
+        templateVariation: {
           ...existingTemplateVariation,
           Background: variant,
+          // Add new template variation structure
+          Video: existingTemplateVariation.Video || {
+            url: "",
+            position: "center",
+            size: "cover",
+            loop: true,
+            muted: true,
+            overlay: {
+              color: "rgba(0,0,0,0.5)",
+              opacity: 0.7,
+            },
+            useOffthreadVideo: true,
+          },
+          Image: existingTemplateVariation.Image || {
+            url: "",
+            ratio: "landscape",
+            type: "static",
+          },
         },
         Theme: {
           ...existingTheme,
@@ -79,6 +113,23 @@ export function processDatasetForTemplate(
           existingVideo.includeSponsors !== undefined
             ? existingVideo.includeSponsors
             : false,
+        media: existingVideo.media || {},
+        appearance: existingVideo.appearance || {},
+        contentLayout: existingVideo.contentLayout || {},
+      },
+      // Support both naming conventions
+      club: {
+        // Start with existing properties
+        ...existingClub,
+        // Then override specific properties
+        Name: existingClub.Name || sportName,
+        Sport: existingClub.Sport || sportName,
+        Logo: existingClub.Logo || {
+          url: "",
+          width: 100,
+          height: 100,
+        },
+        Sponsors: existingClub.Sponsors || [],
       },
       Club: {
         // Start with existing properties
@@ -105,13 +156,13 @@ export function processDatasetForTemplate(
  */
 export function calculateDuration(dataset: FixturaDataset): number {
   // Extract timing values from dataset with fallbacks
-  const timings = dataset.TIMINGS || {};
+  const timings = dataset.timings || {};
   const introFrames = timings.FPS_INTRO || 60;
   const mainFrames = timings.FPS_MAIN || 180;
   const outroFrames = timings.FPS_OUTRO || 60;
 
   // Check if sponsors should be included
-  const includeSponsors = dataset.VIDEOMETA?.Video?.includeSponsors || false;
+  const includeSponsors = dataset.videoMeta?.video?.includeSponsors || false;
 
   // Calculate total duration
   return introFrames + mainFrames + (includeSponsors ? outroFrames : 30);

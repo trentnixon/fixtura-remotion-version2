@@ -5,7 +5,7 @@ import { DesignPalette } from "../utils/designPalettes/types";
 
 interface StyleContextProps {
   // Legacy properties for backward compatibility
-  THEME: any;
+  theme: any;
   fontConfig: any;
   fontSizing: any;
 
@@ -19,27 +19,27 @@ export const StyleProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   // Use the new ThemeContext
-  const theme = useThemeContext();
+  const createdTheme = useThemeContext();
 
   // Create a backward-compatible THEME object
-  const THEME = useMemo(() => {
+  const theme = useMemo(() => {
     // Include all color properties from the theme
     return {
-      ...theme.colors,
+      ...createdTheme.colors,
       // Include font properties
-      fontFamily: theme.fontConfig,
-      headingFontFamily: theme.headingFontFamily,
-      subheadingFontFamily: theme.subheadingFontFamily,
+      fontFamily: createdTheme.fontConfig,
+      headingFontFamily: createdTheme.headingFontFamily,
+      subheadingFontFamily: createdTheme.subheadingFontFamily,
     };
-  }, [theme]);
+  }, [createdTheme]);
 
   const contextValue: StyleContextProps = {
-    THEME,
-    fontConfig: theme.fontConfig,
-    fontSizing: theme.typography?.Title?.sizes || {},
+    theme,
+    fontConfig: createdTheme.fontConfig,
+    fontSizing: createdTheme.typography?.Title?.sizes || {},
 
-    getActivePalette: theme.getActivePalette,
-    selectedPalette: theme.selectedPalette,
+    getActivePalette: createdTheme.getActivePalette,
+    selectedPalette: createdTheme.selectedPalette,
   };
 
   return (

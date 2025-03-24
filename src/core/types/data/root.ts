@@ -1,7 +1,7 @@
 // types/data/root.ts
 
 import { Asset } from "./assets";
-import { Render, Account, Timings } from "./common";
+import { Render, Account, timings } from "./common";
 import { VideoMeta } from "./videoData";
 import { MatchData } from "./match";
 
@@ -10,11 +10,11 @@ export interface FixturaDataset {
   // Add id property that's being used in the codebase
   id?: string;
 
-  DATA: MatchData[];
+  data: MatchData[];
   ASSET: Asset;
   PROMPT: any[];
   RENDER: Render;
   ACCOUNT: Account;
-  TIMINGS: Timings;
-  VIDEOMETA: VideoMeta;
+  timings: timings;
+  videoMeta: VideoMeta;
 }

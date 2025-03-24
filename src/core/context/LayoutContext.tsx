@@ -13,11 +13,11 @@ export const LayoutProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const { settings } = useGlobalContext();
-  const { Club } = useVideoDataContext();
+  const { club } = useVideoDataContext();
 
   const doesAccountHaveSponsors =
-    Club?.Sponsors?.default?.general_sponsors?.length > 0 ||
-    !!Club?.Sponsors?.default?.primary_sponsor;
+    club?.Sponsors?.default?.general_sponsors?.length > 0 ||
+    !!club?.Sponsors?.default?.primary_sponsor;
 
   const contextValue: LayoutContextProps = {
     doesAccountHaveSponsors,

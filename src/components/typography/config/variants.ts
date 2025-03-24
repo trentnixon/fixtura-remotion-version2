@@ -37,8 +37,6 @@ export const getVariantStyles = (
   // Get the active palette
   const palette = selectedPalette || "primary";
 
-  console.log("[palette]", palette);
-
   switch (variant) {
     case "main":
       textColor = palette.text.onBackground.main;

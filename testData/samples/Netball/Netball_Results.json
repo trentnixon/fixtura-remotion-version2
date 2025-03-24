@@ -250,7 +250,7 @@
     "FPS_OUTRO": 180,
     "FPS_MAIN": 600
   },
-  "DATA": [
+  "data": [
     {
       "id": 2840,
       "round": "Round 6",

@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { useGlobalContext } from "./GlobalContext";
+//import { useGlobalContext } from "./GlobalContext";
 import { useVideoDataContext } from "./VideoDataContext";
 import { useStylesContext } from "./StyleContext";
 import { useThemeContext } from "./ThemeContext";
@@ -31,10 +31,10 @@ const FontContext = createContext<FontContextProps | null>(null);
 export const FontProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const { settings } = useGlobalContext();
-  const { Video } = useVideoDataContext();
-  const { THEME } = useStylesContext();
-  const theme = useThemeContext();
+  //const { settings } = useGlobalContext();
+  const { video } = useVideoDataContext();
+  const { theme } = useStylesContext();
+  const createdTheme = useThemeContext();
 
   const [fontsLoaded, setFontsLoaded] = useState(false);
   const [fontLoadingHandle, setFontLoadingHandle] = useState<number | null>(
@@ -64,17 +64,17 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
 
       try {
         // Load fonts from theme
-        await loadFontsFromTheme(theme);
+        await loadFontsFromTheme(createdTheme);
 
         // If in font test mode, load additional fonts
-        if (Video.isFontTestMode) {
+        if (video.isFontTestMode) {
           console.log(
             "FontContext: Font test mode detected, loading additional fonts",
           );
 
           // Load specific test fonts if specified
-          if (Video.testFonts && Array.isArray(Video.testFonts)) {
-            for (const fontName of Video.testFonts) {
+          if (video.testFonts && Array.isArray(video.testFonts)) {
+            for (const fontName of video.testFonts) {
               await loadFontByName(fontName);
             }
           }
@@ -102,7 +102,7 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
         continueRender(fontLoadingHandle);
       }
     };
-  }, [theme, Video.isFontTestMode, Video.testFonts]);
+  }, [theme, video.isFontTestMode, video.testFonts]);
 
   const contextValue: FontContextProps = {
     fontsLoaded,

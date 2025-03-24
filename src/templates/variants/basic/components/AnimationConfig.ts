@@ -48,6 +48,23 @@ export const IntroAnimationOutConfig: ContainerAnimationConfig = {
 // Intro Exit Frame Export
 export const IntroExitFrame = 60;
 
+// ===== MAIN ANIMATIONS =====
+
+// Main Animation Export
+export const MainAnimationInConfig: ContainerAnimationConfig = {
+  type: "fadeIn",
+  duration: 15,
+  easing: "easeInOut",
+};
+
+export const MainTitleAnimationInConfig: TextAnimationConfig = {
+  type: "typewriter",
+  duration: 6,
+  easing: "linear",
+  delay: 10,
+  custom: { distance: 500 },
+};
+
 // ===== OUTRO ANIMATIONS =====
 
 // Outro Animation Export

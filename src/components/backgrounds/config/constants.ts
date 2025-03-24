@@ -4,7 +4,6 @@ import {
   GradientDirection,
   BackgroundPosition,
   BackgroundSize,
-  BackgroundProps,
   SolidBackgroundProps,
   GradientBackgroundProps,
 } from "./types";

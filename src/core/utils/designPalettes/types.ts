@@ -68,6 +68,16 @@ export interface TextOptions {
     muted: string;
     accent: string;
   };
+  title?: string;
+  body?: string;
+  muted?: string;
+  primary?: string;
+  secondary?: string;
+  accent?: string;
+  contrast?: string;
+  safePrimary?: string;
+  safeSecondary?: string;
+  highlight?: string;
 }
 
 export interface ShadowOptions {
