@@ -81,7 +81,7 @@ export function memoizeWithLimit<T extends (...args: any[]) => any>(
 export function memoizeColorFunction<
   T extends (...args: any[]) => string | string[],
 >(colorFn: T): T {
-  return memoize(colorFn) as T;
+  return memoize(colorFn) as unknown as T;
 }
 
 /**

@@ -1,4 +1,3 @@
-import React from "react";
 import { Sequence } from "remotion";
 import { AnimatedContainer } from "../";
 import { SPRING_CONFIGS } from "../animations";

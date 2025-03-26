@@ -18,7 +18,7 @@ export const BasicMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { heights } = layout;
   const { timings } = data;
-  console.log("[timings]", timings.FPS_MAIN);
+
   const exitFrame = timings.FPS_MAIN - 30;
   return (
     <TwoColumnHeaderTitle

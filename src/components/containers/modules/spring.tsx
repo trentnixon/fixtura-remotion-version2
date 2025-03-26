@@ -1,11 +1,7 @@
 import React, { ReactNode } from "react";
 import { AnimatedContainer } from "../AnimatedContainer";
 import { ContainerProps } from "../types";
-import {
-  SPRING_CONFIGS,
-  ContainerAnimationType,
-  ContainerAnimationConfig,
-} from "../animations";
+import { SPRING_CONFIGS, ContainerAnimationConfig } from "../animations";
 
 // Default animation configurations
 export const DEFAULT_SPRING_IN: ContainerAnimationConfig = {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AbsoluteFill, Video, OffthreadVideo } from "remotion";
 import { VideoBackgroundProps } from "../../config";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
@@ -25,6 +25,61 @@ interface Props extends Partial<VideoBackgroundProps> {
   templateVariation?: VideoTemplateVariation;
 }
 
+// Process and merge video configuration from props and template variation
+const processVideoConfig = ({
+  src,
+  fallbackSrc,
+  position,
+  size,
+  loop,
+  muted,
+  overlay,
+  templateVariation,
+}: {
+  src?: string;
+  fallbackSrc?: string;
+  position?: string;
+  size?: string;
+  loop?: boolean;
+  muted?: boolean;
+  overlay?: { color: string; opacity: number };
+  templateVariation?: VideoTemplateVariation;
+}) => {
+  // Use template variation values as fallbacks
+  const actualSrc =
+    src ||
+    templateVariation?.url ||
+    fallbackSrc ||
+    templateVariation?.fallbackUrl ||
+    "";
+  const actualPosition = position || templateVariation?.position || "center";
+  const actualSize = size || templateVariation?.size || "cover";
+  const actualLoop =
+    loop !== undefined
+      ? loop
+      : templateVariation?.loop !== undefined
+        ? templateVariation.loop
+        : true;
+  const actualMuted =
+    muted !== undefined
+      ? muted
+      : templateVariation?.muted !== undefined
+        ? templateVariation.muted
+        : true;
+  const actualOverlay = overlay || templateVariation?.overlay;
+  const useOffthreadVideo = templateVariation?.useOffthreadVideo || false;
+
+  return {
+    actualSrc,
+    actualPosition,
+    actualSize,
+    actualLoop,
+    actualMuted,
+    actualOverlay,
+    useOffthreadVideo,
+  };
+};
+
 export const VideoBackground: React.FC<Props> = ({
   src,
   fallbackSrc,
@@ -37,59 +92,37 @@ export const VideoBackground: React.FC<Props> = ({
   style = {},
   templateVariation,
 }) => {
-  // Extract values from template variation if provided
-  const videoUrl =
-    templateVariation?.url ||
-    src ||
-    "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4";
-  const videoFallbackUrl = templateVariation?.fallbackUrl || fallbackSrc;
-  const videoPosition = templateVariation?.position || position;
-  const videoSize = templateVariation?.size || size;
-  const videoLoop =
-    templateVariation?.loop !== undefined ? templateVariation.loop : loop;
-  const videoMuted =
-    templateVariation?.muted !== undefined ? templateVariation.muted : muted;
-  const videoOverlay = templateVariation?.overlay || overlay;
-  const useOffthreadVideo = templateVariation?.useOffthreadVideo || false;
-  const volume = templateVariation?.volume || 1;
-  const playbackRate = templateVariation?.playbackRate || 1;
-
-  const [videoError, setVideoError] = useState(false);
-
-  // Reset error state when video URL changes
-  useEffect(() => {
-    setVideoError(false);
-  }, [videoUrl]);
-
-  // Handle video error
-  const handleVideoError = (error: Error) => {
-    console.error("Video error:", error);
-    setVideoError(true);
-  };
-
-  // If no video source or error without fallback, return null
-  if ((!videoUrl || videoError) && !videoFallbackUrl) {
-    return null;
-  }
-
-  // Determine which source to use
-  const finalVideoSrc =
-    videoError && videoFallbackUrl ? videoFallbackUrl : videoUrl;
+  // Process configuration
+  const {
+    actualSrc,
+    actualPosition,
+    actualSize,
+    actualLoop,
+    actualMuted,
+    actualOverlay,
+    useOffthreadVideo,
+  } = processVideoConfig({
+    src,
+    fallbackSrc,
+    position,
+    size,
+    loop,
+    muted,
+    overlay,
+    templateVariation,
+  });
 
   // Combined style for the video
   const videoStyle: React.CSSProperties = {
     width: "100%",
     height: "100%",
     objectFit:
-      videoSize === "auto" || videoSize === "stretch"
+      actualSize === "auto" || actualSize === "stretch"
         ? ("fill" as const)
-        : (videoSize as "cover" | "contain" | "fill" | "none" | "scale-down"),
-    objectPosition: videoPosition,
+        : (actualSize as "cover" | "contain" | "fill" | "none" | "scale-down"),
+    objectPosition: actualPosition,
     ...style,
   };
-
-  // Get video context
-  const { video } = useVideoDataContext();
 
   // Choose between Video and OffthreadVideo components
   const VideoComponent = useOffthreadVideo ? OffthreadVideo : Video;
@@ -111,18 +144,17 @@ export const VideoBackground: React.FC<Props> = ({
         }}
       >
         <VideoComponent
-          src={finalVideoSrc}
+          src={actualSrc}
           style={videoStyle}
-          loop={videoLoop}
-          muted={videoMuted}
-          volume={videoMuted ? 0 : volume}
-          playbackRate={playbackRate}
-          onError={handleVideoError}
+          loop={actualLoop}
+          muted={actualMuted}
+          volume={actualMuted ? 0 : 1}
+          playbackRate={1}
         />
       </div>
 
       {/* Overlay if specified */}
-      {videoOverlay && (
+      {actualOverlay && (
         <div
           style={{
             position: "absolute",
@@ -130,8 +162,8 @@ export const VideoBackground: React.FC<Props> = ({
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: videoOverlay.color,
-            opacity: videoOverlay.opacity,
+            backgroundColor: actualOverlay.color,
+            opacity: actualOverlay.opacity,
             zIndex: -1,
           }}
         />

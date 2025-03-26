@@ -6,7 +6,7 @@ export const BaseAudioTrack: React.FC = () => {
   const { video } = useVideoDataContext();
 
   // Only render audio if a track is specified
-  if (!video.audio_option) return null;
+  if (!video.media?.audio?.url) return null;
 
-  return <Audio src={video.audio_option} volume={0.5} />;
+  return <Audio src={video.media.audio.url} volume={0.5} />;
 };

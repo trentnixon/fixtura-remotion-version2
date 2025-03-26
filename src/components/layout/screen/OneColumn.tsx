@@ -2,14 +2,12 @@
 import { AbsoluteFill } from "remotion";
 import { routeToComposition } from "../../../core/utils/routing";
 import { useThemeContext } from "../../../core/context/ThemeContext";
-import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 
 export const OneColumn: React.FC<{ Header: React.FC; Sponsor: React.FC }> = ({
   Header,
   Sponsor,
 }) => {
   const { layout } = useThemeContext();
-  const { data } = useVideoDataContext();
 
   const { heights } = layout;
 
@@ -19,8 +17,8 @@ export const OneColumn: React.FC<{ Header: React.FC; Sponsor: React.FC }> = ({
         <div style={{ height: `${heights.header}px` }}>
           <Header />
         </div>
-        <div className=" flex-grow" style={{ height: `${heights.asset}px` }}>
-          {routeToComposition(data)}
+        <div className="relative" style={{ height: `${heights.asset}px` }}>
+          {routeToComposition()}
         </div>
         <div style={{ height: `${heights.footer}px` }}>
           <Sponsor />

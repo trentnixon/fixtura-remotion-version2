@@ -64,7 +64,7 @@ export const GradientBackground: React.FC<Props> = ({
     <AbsoluteFill
       className={`bg-gradient ${className}`}
       style={{
-        background: backgroundCSS,
+        background: backgroundCSS as string,
         zIndex: -1,
         ...style,
       }}

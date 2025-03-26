@@ -13,7 +13,7 @@ import { generateTextColors } from "./textGenerator";
 import { generateShadows } from "./shadowGenerator";
 //import { generateUtilityColors } from "./utilityGenerator";
 //import { generateContrastSafety } from "./contrastGenerator";
-import { generateBackgroundColors } from "./backgroundGenerator";
+//import { generateBackgroundColors } from "./backgroundGenerator";
 import { createStandardPaletteStructure } from "../config/standardPaletteStructure";
 import { GRADIENT_DIRECTIONS } from "../config/constants";
 
@@ -40,7 +40,7 @@ export const standardPaletteFactory = (
   options: ExtendedPaletteOptions = {},
 ) => {
   // Extract colors
-  console.log("[colors]", colors);
+  //console.log("[colors]", colors);
   const [main, secondary] = colors;
 
   // Generate color variations

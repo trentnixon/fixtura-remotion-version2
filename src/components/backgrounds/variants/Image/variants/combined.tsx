@@ -55,11 +55,6 @@ export const aspectRatioFit = (
 export const getOptimalBackgroundSize = (
   imageRatio: number, // width / height
 ): "cover" | "contain" | "100% auto" | "auto 100%" => {
-  // Standard aspect ratios
-  const landscape = 16 / 9; // 1.78
-  const portrait = 9 / 16; // 0.56
-  const square = 1;
-
   // Determine optimal background sizing
   if (imageRatio > 1.3) {
     // Landscape

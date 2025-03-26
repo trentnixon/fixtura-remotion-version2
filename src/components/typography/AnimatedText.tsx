@@ -124,7 +124,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   // Get theme context and font context
   const { colors, componentStyles, selectedPalette, fontClasses, fonts } =
     useThemeContext();
-  const { availableFonts, loadFont } = useFontContext();
+  const { loadFont } = useFontContext();
   const { colorSystem } = colors;
 
   // Get style from componentStyles or fallback to bodyText

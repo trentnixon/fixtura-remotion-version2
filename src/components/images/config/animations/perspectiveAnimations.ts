@@ -102,8 +102,6 @@ export const swing: AnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getImageEasingFunction(config.easing);
-
   // Calculate progress (0 to 1)
   const progress = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",

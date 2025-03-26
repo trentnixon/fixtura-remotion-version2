@@ -22,8 +22,8 @@ export const ImageAnimationInConfig: ContainerAnimationConfig = {
 
 // Title Animation Export
 export const TitleAnimationInConfig: TextAnimationConfig = {
-  type: "scaleIn",
-  duration: 30,
+  type: "typewriter",
+  duration: 15,
   easing: "linear",
   delay: 10,
   custom: { distance: 500 },
@@ -32,9 +32,9 @@ export const TitleAnimationInConfig: TextAnimationConfig = {
 // Club Name Animation Export
 export const ClubNameAnimationInConfig: TextAnimationConfig = {
   type: "typewriter",
-  duration: 30,
+  duration: 15,
   easing: "linear",
-  delay: 20,
+  delay: 10,
   custom: { distance: 500 },
 };
 

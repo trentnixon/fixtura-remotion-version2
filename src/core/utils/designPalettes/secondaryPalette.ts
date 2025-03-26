@@ -1,6 +1,28 @@
 // designPalettes/secondaryPalette.ts
-import { DesignPalette, ensureContrast } from "./types";
+import { DesignPalette, ensureContrast, GradientOptions } from "./types";
 import tinycolor from "tinycolor2";
+
+// Helper function to create gradient options
+const createGradientOptions = (
+  color1: string,
+  color2: string,
+  type: "linear" | "radial" = "linear",
+  direction: string = "to right",
+): GradientOptions => ({
+  direction,
+  type,
+  stops: [color1, color2],
+  css: {
+    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
+    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
+    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
+    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
+    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
+    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
+    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
+    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
+  },
+});
 
 export const createSecondaryPalette = (
   primary: string,
@@ -23,27 +45,60 @@ export const createSecondaryPalette = (
       contrast: secondaryVariations.contrastText,
       accent: primary,
       gradient: {
-        primary: secondary,
-        secondary: secondaryVariations.light,
-        css: gradients.secondary.css,
-        primaryToSecondary: gradients.primaryToSecondary.css,
-        secondaryToPrimary: gradients.secondaryToPrimary.css,
+        primary: createGradientOptions(secondary, secondaryVariations.light),
+        secondary: createGradientOptions(
+          secondaryVariations.light,
+          secondaryVariations.dark,
+        ),
+        primaryToSecondary: createGradientOptions(secondary, primary),
+        secondaryToPrimary: createGradientOptions(
+          primary,
+          secondary,
+          "linear",
+          "to left",
+        ),
         radial: `radial-gradient(circle, ${secondary}, ${secondaryVariations.dark})`,
+        conicGradient: createGradientOptions(
+          secondary,
+          secondaryVariations.dark,
+        ),
+        hardStopGradient: createGradientOptions(
+          secondary,
+          secondaryVariations.dark,
+        ),
+        meshGradient: createGradientOptions(
+          secondary,
+          secondaryVariations.dark,
+        ),
+        primaryAdvanced: createGradientOptions(
+          secondary,
+          secondaryVariations.light,
+        ),
+        primaryRadial: createGradientOptions(
+          secondary,
+          secondaryVariations.light,
+          "radial",
+        ),
+        secondaryAdvanced: createGradientOptions(
+          secondaryVariations.light,
+          secondaryVariations.dark,
+        ),
+        secondaryRadial: createGradientOptions(
+          secondaryVariations.light,
+          secondaryVariations.dark,
+          "radial",
+        ),
       },
     },
     container: {
       primary: secondaryVariations.light,
       secondary: secondaryVariations.lighter,
+      main: secondaryVariations.light,
       light: "#FFFFFF",
       dark: secondaryVariations.darker,
       transparent: tinycolor(secondary).setAlpha(0.8).toRgbString(),
       accent: primary,
       highlight: secondaryVariations.lighter,
-      onBackground: {
-        main: tinycolor(secondary).lighten(10).toString(),
-        light: tinycolor(secondary).lighten(20).toString(),
-        dark: tinycolor(secondary).lighten(5).toString(),
-      },
     },
     text: {
       onBackground: {
@@ -53,6 +108,10 @@ export const createSecondaryPalette = (
           textColors.onSecondary,
         ),
         dark: ensureContrast(secondaryVariations.dark, textColors.onSecondary),
+        muted: tinycolor(ensureContrast(secondary, textColors.onSecondary))
+          .setAlpha(0.7)
+          .toRgbString(),
+        accent: primary,
       },
       onContainer: {
         primary: ensureContrast(
@@ -68,15 +127,15 @@ export const createSecondaryPalette = (
           secondaryVariations.darker,
           textColors.onSecondary,
         ),
+        muted: tinycolor(ensureContrast(secondary, textColors.onSecondary))
+          .setAlpha(0.7)
+          .toRgbString(),
+        accent: primary,
       },
       title: ensureContrast(secondary, textColors.title),
       body: ensureContrast(secondary, textColors.body),
-      muted: tinycolor(ensureContrast(secondary, textColors.onSecondary))
-        .setAlpha(0.7)
-        .toRgbString(),
       primary: colorVariations.primary.base,
       secondary: colorVariations.secondary.base,
-      accent: primary,
       contrast: textColors.onSecondary,
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,

@@ -129,9 +129,9 @@ export const rgbToLab = (rgb: RGB): Lab => {
 
   const l = 116 * fy - 16;
   const a = 500 * (fx - fy);
-  const b = 200 * (fy - fz);
+  const bValue = 200 * (fy - fz);
 
-  return { l, a, b };
+  return { l, a, b: bValue };
 };
 
 /**

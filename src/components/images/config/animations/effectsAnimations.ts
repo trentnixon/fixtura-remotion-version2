@@ -79,7 +79,7 @@ export const tint: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default tint color (blue)
-  const color = config.custom?.color || "rgba(0, 100, 255, 0.5)";
+  //const color = config.custom?.color || "rgba(0, 100, 255, 0.5)";
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -112,8 +112,8 @@ export const glitch: AnimationFunction = (
   const yOffset = Math.cos(frame * 0.3) * (intensity * 0.2);
 
   // Color channel splitting
-  const redOffset = Math.sin(frame * 0.4) * (intensity * 0.3);
-  const blueOffset = Math.cos(frame * 0.6) * (intensity * 0.3);
+  //const redOffset = Math.sin(frame * 0.4) * (intensity * 0.3);
+  //const blueOffset = Math.cos(frame * 0.6) * (intensity * 0.3);
 
   // Opacity that ramps up at the start
   const opacity = interpolate(frame, [startFrame, startFrame + 10], [0, 1], {

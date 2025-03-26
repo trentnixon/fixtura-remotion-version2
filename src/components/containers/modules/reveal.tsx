@@ -1,10 +1,7 @@
 import React, { ReactNode } from "react";
 import { AnimatedContainer } from "../AnimatedContainer";
 import { ContainerProps } from "../types";
-import {
-  ContainerAnimationType,
-  ContainerAnimationConfig,
-} from "../animations";
+import { ContainerAnimationConfig } from "../animations";
 
 // Default animation configurations
 export const DEFAULT_REVEAL_LEFT: ContainerAnimationConfig = {

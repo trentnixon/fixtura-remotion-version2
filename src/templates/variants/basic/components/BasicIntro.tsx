@@ -23,6 +23,8 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
 export const BasicIntro: React.FC = () => {
   const { club, metadata } = useVideoDataContext();
 
+  console.log("[metadata]", metadata);
+
   const { fontClasses } = useThemeContext();
   console.log("[fontClasses]", fontClasses);
   return (
@@ -46,8 +48,8 @@ export const BasicIntro: React.FC = () => {
         <AnimatedText
           textAlign="left"
           type="title"
-          variant="onBackgroundMain"
-          letterAnimation="none"
+          variant="onBackgroundDark"
+          letterAnimation="word"
           animation={TitleAnimationInConfig as AnimationConfig}
           exitAnimation={IntroAnimationOutConfig as AnimationConfig}
           exitFrame={IntroExitFrame}

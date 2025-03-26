@@ -59,32 +59,24 @@ export const testDatasets: Record<string, any> = {
 export const datasetsByCategory: DatasetCategories = {
   Cricket: [
     { id: "CricketLadder", name: "Ladder" },
-    { id: "CricketResults", name: "Results" },
+    /*   { id: "CricketResults", name: "Results" },
     { id: "CricketRoster", name: "Roster" },
     { id: "CricketSingleGameResult", name: "Single Game Result" },
     { id: "CricketTop5Batting", name: "Top 5 Batting" },
     { id: "CricketTop5Bowling", name: "Top 5 Bowling" },
-    { id: "CricketUpcoming", name: "Upcoming Fixtures" },
+    { id: "CricketUpcoming", name: "Upcoming Fixtures" }, */
   ],
-  AFL: [
+  /*  AFL: [
     { id: "AFLLadder", name: "Ladder" },
     { id: "AFLResults", name: "Results" },
     { id: "AFLSingleGameResult", name: "Single Game Result" },
     { id: "AFLTop5", name: "Top 5" },
     { id: "AFLUpcoming", name: "Upcoming Fixtures" },
-  ],
-  Netball: [
+  ], */
+  /*   Netball: [
     { id: "NetballLadder", name: "Ladder" },
     { id: "NetballResults", name: "Results" },
     { id: "NetballSingleGameResult", name: "Single Game Result" },
     { id: "NetballUpcoming", name: "Upcoming Fixtures" },
-  ],
-  FontTesting: [
-    { id: "FontTestDefault", name: "Default Font" },
-    { id: "FontTestRoboto", name: "Roboto Font" },
-    { id: "FontTestHeebo", name: "Heebo Font" },
-    { id: "FontTestTungsten", name: "Tungsten Font" },
-    { id: "FontTestDruk", name: "Druk Font" },
-    { id: "FontTestMonumentExtended", name: "Monument Extended Font" },
-  ],
+  ], */
 };

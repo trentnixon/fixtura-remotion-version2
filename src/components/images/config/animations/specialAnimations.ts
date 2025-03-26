@@ -66,23 +66,19 @@ export const pulse: AnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getImageEasingFunction(config.easing);
+  // Calculate progress (0 to 1)
+  const progress = interpolate(frame, [startFrame, endFrame], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
 
   // Calculate the total duration in frames
-  const totalDuration = endFrame - startFrame;
+  //const totalDuration = endFrame - startFrame;
 
-  // Determine how many pulses to perform (default: 2)
-  const pulseCount = config.custom?.pulseCount || 2;
-
-  // Calculate the duration of a single pulse cycle
-  const pulseDuration = totalDuration / pulseCount;
-
-  // Scale range (default: 1.0 to 1.1)
+  // Get custom parameters or use defaults
+  const pulseCount = config.custom?.pulseCount || 2; // How many pulse cycles to complete
   const minScale = config.custom?.minScale || 1.0;
   const maxScale = config.custom?.maxScale || 1.1;
-
-  // Calculate the current position within the animation (0 to 1)
-  const progress = (frame - startFrame) / totalDuration;
 
   // Calculate the current pulse cycle (0 to pulseCount)
   const currentCycle = progress * pulseCount;

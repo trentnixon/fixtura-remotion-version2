@@ -1395,7 +1395,6 @@
     "ASSETSLINKID": "0bd581d62b885788287f30af7e6f9f859fee412f5db343114bab7e56b720c189",
     "ASSETCATEGORYID": 2
   },
-  "PROMPT": [],
   "RENDER": {
     "RenderID": 1401,
     "SchedulerID": 137
@@ -1784,7 +1783,7 @@
         "title": "Ladder",
         "titleSplit": ["Ladder", ""],
         "videoTitle": "League Tables",
-        "compositionId": "Ladder",
+        "compositionId": "CricketLadder",
         "assetId": 18,
         "assetTypeId": 3,
         "frames": [355, 600, 900, 1200, 1500],
@@ -1795,11 +1794,12 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#043666",
-          "secondary": "#fccb3d"
+          "primary": "#009300",
+          "secondary": "#009300"
         },
 
         "template": "Basic",
+        "type": "Pattern",
         "templateOptions": {
           "borderRadius": "10px",
           "Background": "Solid",
@@ -1860,18 +1860,17 @@
           "overlayOpacity": 0.7
         },
 
-        "Background": "Solid",
         "Palette": "primaryOnWhite",
         "borderRadius": "10px",
         "Gradient": {
           "type": "primaryToSecondary",
-          "direction": "DIAGONAL"
+          "direction": "VERTICAL"
         },
         "Noise": {
           "type": "grain"
         },
         "Pattern": {
-          "type": "ldotsines",
+          "type": "dots",
           "animation": "panDown",
           "scale": 0.75,
           "rotation": 0,
@@ -1882,7 +1881,7 @@
         "Particle": {
           "type": "lines",
           "particleCount": 300,
-          "speed": 0.9,
+          "speed": 0.8,
           "direction": "up",
           "animation": "fade"
         }

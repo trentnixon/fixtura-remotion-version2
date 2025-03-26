@@ -55,7 +55,7 @@ export * from "./config";
 // Background component
 export const SelectTemplateBackground = () => {
   const { video } = useVideoDataContext();
-  const background = video.templateVariation?.Background;
+  const background = video.appearance?.type;
 
   // Render different backgrounds based on template variation
   switch (background) {

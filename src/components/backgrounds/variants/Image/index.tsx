@@ -1,25 +1,15 @@
 // src/components/backgrounds/variants/Image/ImageBackground.tsx
-import React, { useMemo } from "react";
+import React from "react";
 import { AbsoluteFill } from "remotion";
+
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 
-// Import all effect components and types
-import {
-  ImageEffectType,
-  ZoomEffect,
-  Pan,
-  KenBurnsEffect,
-  BreathingEffect,
-  FocusBlurEffect,
-} from "./variants/index";
+import { ZoomEffect } from "./variants/zoom";
 
 // Import overlay system
 import { OverlayRenderer } from "./overlays/OverlayRenderer";
-import { OverlayStyle, OverlayConfig } from "./overlays/";
-
-// Import theme integration
-import createThemeOverlayPresets from "./overlays/themeIntegration";
+import { OverlayConfig, OverlayStyle } from "./overlays/";
 
 // Import adapter for template variation
 
@@ -28,8 +18,9 @@ import {
   ContainerOptions,
 } from "../../../../core/utils/designPalettes";
 
-import { ImageBackgroundProps } from "./ImageBackground.types";
+import { ImageBackgroundProps, ImageEffectType } from "./ImageBackground.types";
 import { adaptImageConfig } from "./TemplateVariationAdapter";
+import { BreathingEffect, FocusBlurEffect, Pan } from "./variants";
 
 export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   className = "",
@@ -46,13 +37,15 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const config = adaptImageConfig(rawConfig);
 
   // Extract effect type and overlay style
-  const effectType =
-    (config.effectType as ImageEffectType) || ImageEffectType.None;
-  const overlayStyleName =
-    (config.overlayStyle as OverlayStyle) || OverlayStyle.None;
+  const effectType = config.effectType
+    ? (config.effectType as string as ImageEffectType)
+    : ImageEffectType.None;
+  const overlayStyleName = config.overlayStyle
+    ? (config.overlayStyle as string as OverlayStyle)
+    : OverlayStyle.None;
 
   // Extract image URL
-  const imageUrl = config.url || video?.templateVariation?.Background?.url;
+  const imageUrl = config.url || video?.templateVariation?.Image?.url;
 
   // If no image URL is available, return null
   if (!imageUrl) {
@@ -219,17 +212,6 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
             intensity={config.panIntensity || 15}
           />
         );
-
-      /*       case ImageEffectType.KenBurns:
-        return (
-          <KenBurnsEffect
-            {...baseProps}
-            zoomDirection={config.zoomDirection || "in"}
-            panDirection={config.panDirection || "left"}
-            zoomIntensity={config.zoomIntensity || 1.15}
-            panIntensity={config.panIntensity || 15}
-          />
-        ); */
 
       case ImageEffectType.Breathing:
         return (

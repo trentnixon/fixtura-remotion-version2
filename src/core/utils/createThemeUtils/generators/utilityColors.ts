@@ -37,7 +37,7 @@ export const generateUtilityColors = (primary: string) => {
  * Generates comprehensive color variations for a base color
  */
 export const generateColorVariations = (color: string): ColorVariations => {
-  const colorObj = tinycolor(color);
+  //const colorObj = tinycolor(color);
   const contrastText = getContrastColor(color);
 
   return {

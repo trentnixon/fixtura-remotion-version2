@@ -1,4 +1,4 @@
-import { TypographyElement } from "../../../core/context/ThemeContext";
+import { TypographyElement } from "../../../core/context/types/ThemeContextTypes";
 
 // Interface for the processed typography styles
 export interface ProcessedTypographyStyles {

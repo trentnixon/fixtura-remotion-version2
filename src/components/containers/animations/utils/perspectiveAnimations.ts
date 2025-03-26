@@ -157,8 +157,6 @@ export const swing: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
-
   // Calculate progress (0 to 1)
   const progress = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",

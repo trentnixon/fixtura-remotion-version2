@@ -48,7 +48,7 @@ export const meetsContrastStandard = (
  * @returns Contrast safety information
  */
 export const calculateContrastSafety = (color: string): ContrastSafety => {
-  const colorObj = tinycolor(color);
+  //const colorObj = tinycolor(color);
 
   // Calculate contrast with white and black
   const whiteContrast = tinycolor.readability(color, "#FFFFFF");

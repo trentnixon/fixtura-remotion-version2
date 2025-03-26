@@ -17,6 +17,8 @@ export const GlobalProvider: React.FC<{
     data,
   };
 
+  console.log("[GlobalContext]", data);
+
   return (
     <GlobalContext.Provider value={contextValue}>
       {children}

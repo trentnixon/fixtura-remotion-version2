@@ -1,6 +1,28 @@
 // designPalettes/accentPalette.ts
-import { DesignPalette, ensureContrast } from "./types";
+import { DesignPalette, ensureContrast, GradientOptions } from "./types";
 import tinycolor from "tinycolor2";
+
+// Helper function to create gradient options
+const createGradientOptions = (
+  color1: string,
+  color2: string,
+  type: "linear" | "radial" = "linear",
+  direction: string = "to right",
+): GradientOptions => ({
+  direction,
+  type,
+  stops: [color1, color2],
+  css: {
+    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
+    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
+    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
+    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
+    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
+    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
+    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
+    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
+  },
+});
 
 export const createAccentPalette = (
   primary: string,
@@ -22,17 +44,61 @@ export const createAccentPalette = (
       contrast: secondaryVariations.contrastText,
       accent: colorVariations.primary.base,
       gradient: {
-        primary: secondaryVariations.dark,
-        secondary: secondaryVariations.base,
-        css: `linear-gradient(to right, ${secondaryVariations.dark}, ${secondaryVariations.base})`,
-        primaryToSecondary: `linear-gradient(to right, ${secondaryVariations.dark}, ${secondaryVariations.base})`,
-        secondaryToPrimary: `linear-gradient(to left, ${secondaryVariations.dark}, ${secondaryVariations.base})`,
+        primary: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+        ),
+        secondary: createGradientOptions(
+          secondaryVariations.base,
+          secondaryVariations.light,
+        ),
+        primaryToSecondary: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+        ),
+        secondaryToPrimary: createGradientOptions(
+          secondaryVariations.base,
+          secondaryVariations.dark,
+          "linear",
+          "to left",
+        ),
         radial: `radial-gradient(circle, ${secondaryVariations.dark}, ${secondaryVariations.base})`,
+        conicGradient: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+        ),
+        hardStopGradient: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+        ),
+        meshGradient: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+        ),
+        primaryAdvanced: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+        ),
+        primaryRadial: createGradientOptions(
+          secondaryVariations.dark,
+          secondaryVariations.base,
+          "radial",
+        ),
+        secondaryAdvanced: createGradientOptions(
+          secondaryVariations.base,
+          secondaryVariations.light,
+        ),
+        secondaryRadial: createGradientOptions(
+          secondaryVariations.base,
+          secondaryVariations.light,
+          "radial",
+        ),
       },
     },
     container: {
       primary: secondaryVariations.base,
       secondary: secondaryVariations.light,
+      main: secondaryVariations.base,
       light: "#FFFFFF",
       dark: secondaryVariations.darker,
       accent: secondaryVariations.accent,
@@ -40,11 +106,6 @@ export const createAccentPalette = (
       transparent: tinycolor(secondaryVariations.dark)
         .setAlpha(0.8)
         .toRgbString(),
-      onBackground: {
-        main: tinycolor(secondaryVariations.dark).lighten(10).toString(),
-        light: tinycolor(secondaryVariations.dark).lighten(20).toString(),
-        dark: tinycolor(secondaryVariations.dark).lighten(5).toString(),
-      },
     },
     text: {
       onBackground: {
@@ -54,6 +115,12 @@ export const createAccentPalette = (
           secondaryVariations.darker,
           textColors.onSecondary,
         ),
+        muted: tinycolor(
+          ensureContrast(secondaryVariations.dark, textColors.onSecondary),
+        )
+          .setAlpha(0.7)
+          .toRgbString(),
+        accent: colorVariations.primary.base,
       },
       onContainer: {
         primary: ensureContrast(
@@ -69,14 +136,15 @@ export const createAccentPalette = (
           secondaryVariations.darker,
           textColors.onSecondary,
         ),
+        muted: tinycolor(
+          ensureContrast(secondaryVariations.dark, textColors.onSecondary),
+        )
+          .setAlpha(0.7)
+          .toRgbString(),
+        accent: colorVariations.primary.base,
       },
       title: ensureContrast(secondaryVariations.dark, textColors.onSecondary),
       body: ensureContrast(secondaryVariations.dark, textColors.onSecondary),
-      muted: tinycolor(
-        ensureContrast(secondaryVariations.dark, textColors.onSecondary),
-      )
-        .setAlpha(0.7)
-        .toRgbString(),
       primary: colorVariations.primary.base,
       secondary: colorVariations.secondary.base,
       accent: colorVariations.primary.accent,

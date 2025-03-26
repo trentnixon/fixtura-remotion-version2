@@ -8,17 +8,11 @@ import {
   calculateDuration,
 } from "../../utils/datasetProcessing";
 
-// Define DatasetInfo interface locally if not available from imports
-interface DatasetInfo {
-  id: string;
-  name: string;
-}
-
 interface CompositionEntryProps {
   templateId: string;
   variant: string;
   sportName: string;
-  dataset: DatasetInfo;
+  datasetID: string;
   templateComponent: React.ComponentType<any>;
 }
 
@@ -26,14 +20,15 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
   templateId,
   variant,
   sportName,
-  dataset,
+  datasetID,
   templateComponent,
 }) => {
   // Get the dataset with proper typing
-  const datasetData: FixturaDataset | undefined = testDatasets[dataset.id];
+  const datasetData: FixturaDataset | undefined = testDatasets[datasetID];
+  console.log("[Dynamically Selected datasetData]", datasetData);
 
   if (!datasetData) {
-    console.warn(`Dataset not found: ${dataset.id}`);
+    console.warn(`Dataset not found: ${datasetID}`);
     return null; // Skip if dataset doesn't exist
   }
 
@@ -45,12 +40,13 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
     sportName,
   );
 
+  console.log("[processedData]", processedData);
   // Calculate duration
   const durationInFrames = calculateDuration(processedData);
 
   // Create a unique composition ID for Remotion's registry
   // This needs to be unique but the actual CompositionID in the data remains the proper one
-  const remoteCompositionId = `${templateId}-${variant}-${dataset.id}`;
+  const remoteCompositionId = `${templateId}-${variant}-${datasetID}`;
 
   // at some point lets sort this out to be dynamic
   const VideoRatio = {

@@ -31,7 +31,7 @@ export const DevelopmentRoot: React.FC = () => {
                         templateId={templateId}
                         variant={variant}
                         sportName={sportName}
-                        dataset={dataset}
+                        datasetID={dataset.id}
                         templateComponent={template.component}
                       />
                     ))}

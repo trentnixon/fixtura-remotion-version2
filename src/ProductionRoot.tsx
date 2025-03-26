@@ -1,10 +1,6 @@
 import React from "react";
 import { Composition, getInputProps } from "remotion";
-import {
-  templateRegistry,
-  isValidTemplate,
-  TemplateId,
-} from "./templates/registry";
+import { templateRegistry, TemplateId } from "./templates/registry";
 import { FixturaDataset } from "./core/types/data/index";
 
 /**
@@ -20,22 +16,26 @@ export const ProductionRoot: React.FC = () => {
   }
 
   // Extract template information from the data
-  const templateId = data.videoMeta.video.appearance.template || "Basic";
-  const compositionId = data.videoMeta.video.metadata.compositionId || "Ladder";
-  const templateVariation = data.videoMeta.video.templateVariation || {};
+  const appearance = data.videoMeta.video.appearance;
+  const templateId = appearance.template || null;
+  const type = appearance.type || null;
+  const compositionId = data.videoMeta.video.metadata.compositionId || null;
 
-  // Make sure the template exists, fallback to Basic if not found
-  let actualTemplateId = templateId;
-  if (!isValidTemplate(templateId)) {
-    console.warn(
-      `Template '${templateId}' not found in registry, using Basic instead`,
-    );
-    actualTemplateId = "Basic";
+  if (!templateId) {
+    throw new Error("No template ID provided for production render");
+  }
+
+  if (!type) {
+    throw new Error("No type provided for production render");
+  }
+
+  if (!compositionId) {
+    throw new Error("No composition ID provided for production render");
   }
 
   // Get the template component
   const TemplateComponent =
-    templateRegistry[actualTemplateId as TemplateId].component;
+    templateRegistry[templateId as TemplateId].component;
 
   // Calculate duration from the data
   const durationInFrames =
@@ -46,9 +46,10 @@ export const ProductionRoot: React.FC = () => {
       : 30);
 
   console.log("[compositionId]", compositionId);
+  const remoteCompositionId = `${templateId}-${type}-${compositionId}`;
   return (
     <Composition
-      id={compositionId}
+      id={remoteCompositionId}
       component={TemplateComponent as any}
       durationInFrames={durationInFrames}
       fps={30}
@@ -56,7 +57,6 @@ export const ProductionRoot: React.FC = () => {
       height={1350}
       defaultProps={{
         data,
-        templateVariation,
       }}
     />
   );

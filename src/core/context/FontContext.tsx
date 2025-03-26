@@ -66,15 +66,21 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
         // Load fonts from theme
         await loadFontsFromTheme(createdTheme);
 
+        // Check if there are font testing metadata in the appearance or metadata
+        // Use type assertion since these are custom properties
+        const metadata = video.metadata as any;
+        const fontTestMode = metadata?.fontTestMode || false;
+        const fontTestList = metadata?.fontTestList || [];
+
         // If in font test mode, load additional fonts
-        if (video.isFontTestMode) {
+        if (fontTestMode) {
           console.log(
             "FontContext: Font test mode detected, loading additional fonts",
           );
 
           // Load specific test fonts if specified
-          if (video.testFonts && Array.isArray(video.testFonts)) {
-            for (const fontName of video.testFonts) {
+          if (Array.isArray(fontTestList) && fontTestList.length > 0) {
+            for (const fontName of fontTestList) {
               await loadFontByName(fontName);
             }
           }
@@ -87,10 +93,8 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
         // Even if there's an error, we should continue rendering
         setFontsLoaded(true);
       } finally {
-        // Continue rendering
-        if (fontLoadingHandle !== null) {
-          continueRender(handle);
-        }
+        // Continue rendering using the local handle variable
+        continueRender(handle);
       }
     };
 
@@ -102,7 +106,7 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
         continueRender(fontLoadingHandle);
       }
     };
-  }, [theme, video.isFontTestMode, video.testFonts]);
+  }, [theme, video.metadata]);
 
   const contextValue: FontContextProps = {
     fontsLoaded,

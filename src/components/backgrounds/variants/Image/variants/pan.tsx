@@ -10,7 +10,6 @@ export const Pan = (props: any) => {
   const { src, width, height } = props;
   const frame = useCurrentFrame();
   const {
-    fps,
     width: videoWidth,
     height: videoHeight,
     durationInFrames,

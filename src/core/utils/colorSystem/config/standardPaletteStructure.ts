@@ -47,7 +47,7 @@ export const createStandardPaletteStructure = (
     return whiteContrast > blackContrast ? "#FFFFFF" : "#000000";
   };
 
-  console.log("[gradients]", gradients);
+  //console.log("[gradients]", gradients);
   // Return the standard palette structure
   return {
     name,

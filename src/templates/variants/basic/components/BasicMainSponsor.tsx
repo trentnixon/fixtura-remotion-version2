@@ -12,7 +12,7 @@ export const BasicMainSponsor = () => {
   const { data } = useVideoDataContext();
   const { heights } = layout;
   const { timings } = data;
-  console.log("[timings]", timings.FPS_MAIN);
+
   const exitFrame = timings.FPS_MAIN - 30;
   return (
     <div

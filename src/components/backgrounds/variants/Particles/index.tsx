@@ -1,6 +1,11 @@
 // src/components/backgrounds/variants/ParticleBackground/index.tsx
 import React from "react";
-import { ParticleBackgroundProps, ParticleType } from "./config";
+import {
+  ParticleBackgroundProps,
+  ParticleType,
+  ParticleDirection,
+  ParticleAnimation,
+} from "./config";
 import { particleVariants } from "./variants";
 
 // Import individual particle variants
@@ -12,6 +17,15 @@ import ConfettiParticles from "./variants/ConfettiRenderer";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useStylesContext } from "../../../../core/context/StyleContext";
 
+// Define interface for template variation
+interface ParticleTemplateVariation {
+  type?: ParticleType;
+  particleCount?: number;
+  speed?: number;
+  direction?: ParticleDirection;
+  animation?: ParticleAnimation;
+}
+
 /**
  * ParticleBackground component that dynamically renders different particle effects
  * based on the specified type.
@@ -22,7 +36,8 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = (
   const { video } = useVideoDataContext();
   const { selectedPalette } = useStylesContext();
 
-  const particleConfig = video.templateVariation?.Particle || {};
+  const particleConfig = (video.templateVariation?.Particle ||
+    {}) as ParticleTemplateVariation;
 
   const particleProps = {
     particleColor: selectedPalette.background.contrast,

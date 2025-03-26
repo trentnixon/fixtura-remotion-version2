@@ -164,7 +164,7 @@ const normalizeFontName = (fontName: string): string => {
   // Check direct mapping first
   const normalized = fontNameVariants[fontName];
   if (normalized) {
-    console.log(`Normalized font name: "${fontName}" -> "${normalized}"`);
+    //console.log(`Normalized font name: "${fontName}" -> "${normalized}"`);
     return normalized;
   }
 
@@ -172,7 +172,7 @@ const normalizeFontName = (fontName: string): string => {
   const lowerCaseName = fontName.toLowerCase();
   const normalizedLower = fontNameVariants[lowerCaseName];
   if (normalizedLower) {
-    console.log(`Normalized font name: "${fontName}" -> "${normalizedLower}"`);
+    //console.log(`Normalized font name: "${fontName}" -> "${normalizedLower}"`);
     return normalizedLower;
   }
 
@@ -194,12 +194,12 @@ export const createFontConfig = (
 ): FontConfig | null => {
   // Skip system fonts
   if (isSystemFont(fontName)) {
-    console.log(`Skipping system font: "${fontName}"`);
+    //console.log(`Skipping system font: "${fontName}"`);
     return null;
   }
 
   // Debug info
-  console.log(`Creating font config for: "${fontName}"`);
+  //console.log(`Creating font config for: "${fontName}"`);
 
   // Normalize the font name
   const normalizedFontName = normalizeFontName(fontName);
@@ -213,15 +213,15 @@ export const createFontConfig = (
     const lowerCaseName = normalizedFontName.toLowerCase();
     if (fontReverseMap[lowerCaseName]) {
       resolvedFontName = fontReverseMap[lowerCaseName];
-      console.log(
-        `Case mismatch fixed: "${normalizedFontName}" -> "${resolvedFontName}"`,
-      );
+      //console.log(
+      //  `Case mismatch fixed: "${normalizedFontName}" -> "${resolvedFontName}"`,
+      //);
     }
 
     // Try to find a font with weight suffix (e.g., "Heebo-Bold")
     else if (weight && fontPathMap[`${normalizedFontName}-${weight}`]) {
       resolvedFontName = `${normalizedFontName}-${weight}`;
-      console.log(`Using weight variant: "${resolvedFontName}"`);
+      //console.log(`Using weight variant: "${resolvedFontName}"`);
     } else {
       // Check if available in wrong case with weight
       if (weight) {
@@ -229,9 +229,9 @@ export const createFontConfig = (
         for (const key of Object.keys(fontPathMap)) {
           if (key.toLowerCase() === lowerCaseNameWithWeight) {
             resolvedFontName = key;
-            console.log(
-              `Found weight variant with case correction: "${resolvedFontName}"`,
-            );
+            //console.log(
+            //  `Found weight variant with case correction: "${resolvedFontName}"`,
+            //);
             break;
           }
         }
@@ -239,8 +239,8 @@ export const createFontConfig = (
 
       // Still not found
       if (!fontPathMap[resolvedFontName]) {
-        console.warn(`Font not found in fontPathMap: "${fontName}"`);
-        console.log(`Available fonts: ${Object.keys(fontPathMap).join(", ")}`);
+        //console.warn(`Font not found in fontPathMap: "${fontName}"`);
+        //console.log(`Available fonts: ${Object.keys(fontPathMap).join(", ")}`);
         return null;
       }
     }
@@ -261,14 +261,14 @@ export const createFontConfig = (
  */
 export const loadFontFile = async (fontConfig: FontConfig): Promise<void> => {
   if (!fontConfig.url) {
-    console.log(`Skipping font with no URL: ${fontConfig.family}`);
+    //console.log(`Skipping font with no URL: ${fontConfig.family}`);
     return;
   }
 
   try {
-    console.log(
-      `Loading font: ${fontConfig.family} (${fontConfig.weight} ${fontConfig.style})`,
-    );
+    //console.log(
+    //  `Loading font: ${fontConfig.family} (${fontConfig.weight} ${fontConfig.style})`,
+    //);
 
     await loadFont({
       family: fontConfig.family,
@@ -277,11 +277,10 @@ export const loadFontFile = async (fontConfig: FontConfig): Promise<void> => {
       style: fontConfig.style || "normal",
     });
 
-    console.log(`Successfully loaded font: ${fontConfig.family}`);
+    //console.log(`Successfully loaded font: ${fontConfig.family}`);
   } catch (error) {
-    console.error(`Error loading font ${fontConfig.family}:`, error);
-    console.error(`Font URL was: ${fontConfig.url}`);
-
+    //console.error(`Error loading font ${fontConfig.family}:`, error);
+    //console.error(`Font URL was: ${fontConfig.url}`);
     // Don't throw the error - we'll handle the failure gracefully
     // by falling back to system fonts later in the rendering process
   }
@@ -301,15 +300,15 @@ export const loadFontByName = async (
 ): Promise<void> => {
   // Skip system fonts
   if (isSystemFont(fontName)) {
-    console.log(`Skipping system font: "${fontName}"`);
+    //console.log(`Skipping system font: "${fontName}"`);
     return;
   }
 
   const fontConfig = createFontConfig(fontName, weight, style);
 
   if (!fontConfig) {
-    console.warn(`Could not create font configuration for: ${fontName}`);
-    console.log(`Falling back to system fonts`);
+    //console.warn(`Could not create font configuration for: ${fontName}`);
+    //console.log(`Falling back to system fonts`);
     return;
   }
 
@@ -328,14 +327,14 @@ export const loadFontByName = async (
  * 4. Legacy properties: fontConfig, defaultCopyFontFamily, headingFontFamily, subheadingFontFamily
  */
 export const loadFontsFromTheme = async (theme: any): Promise<void> => {
-  console.log("Loading fonts from theme...");
-  console.log("Theme fonts config:", {
-    fonts: theme.fonts,
-    fontConfig: theme.fontConfig,
-    defaultCopyFontFamily: theme.defaultCopyFontFamily,
-    headingFontFamily: theme.headingFontFamily,
-    subheadingFontFamily: theme.subheadingFontFamily,
-  });
+  //console.log("Loading fonts from theme...");
+  //console.log("Theme fonts config:", {
+  //  fonts: theme.fonts,
+  //  fontConfig: theme.fontConfig,
+  //  defaultCopyFontFamily: theme.defaultCopyFontFamily,
+  //  headingFontFamily: theme.headingFontFamily,
+  //  subheadingFontFamily: theme.subheadingFontFamily,
+  //});
 
   const fontsToLoad = new Set<string>();
 
@@ -377,7 +376,7 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
   );
 
   if (fontsToLoadFiltered.length === 0) {
-    console.log("No custom fonts to load - using system fonts only");
+    //console.log("No custom fonts to load - using system fonts only");
     return;
   }
 
@@ -385,9 +384,9 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
   const handle = delayRender("Loading theme fonts");
 
   try {
-    console.log(
-      `Loading ${fontsToLoadFiltered.length} fonts from theme: ${fontsToLoadFiltered.join(", ")}`,
-    );
+    //console.log(
+    //  `Loading ${fontsToLoadFiltered.length} fonts from theme: ${fontsToLoadFiltered.join(", ")}`,
+    //);
 
     // Load each font
     const loadPromises = fontsToLoadFiltered.map(async (fontName) => {
@@ -404,7 +403,7 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
     // Wait for all fonts to load (or fail)
     await Promise.allSettled(loadPromises);
 
-    console.log("Finished font loading process");
+    //console.log("Finished font loading process");
     continueRender(handle);
   } catch (error) {
     console.error("Error in font loading process:", error);

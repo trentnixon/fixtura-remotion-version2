@@ -1,11 +1,7 @@
 import React, { ReactNode } from "react";
 import { AnimatedContainer } from "../AnimatedContainer";
 import { ContainerProps } from "../types";
-import {
-  ContainerAnimationType,
-  ContainerAnimationConfig,
-  SPRING_CONFIGS,
-} from "../animations";
+import { ContainerAnimationConfig, SPRING_CONFIGS } from "../animations";
 
 // Default animation configurations
 export const DEFAULT_SLIDE_IN_LEFT: ContainerAnimationConfig = {

@@ -13,21 +13,19 @@ export const GraphicsBackground: React.FC<Props> = ({
   primaryColor,
   secondaryColor,
   density = "medium",
-  animation,
-  animationDuration,
-  animationDelay,
-  exitAnimation,
-  exitAnimationDuration,
-  exitFrame,
-  customProps,
+
   className = "",
   style = {},
 }) => {
-  const { THEME } = useStylesContext();
+  const { selectedPalette } = useStylesContext();
 
   // Use provided colors or theme colors
-  const primary = primaryColor || THEME.primary;
-  const secondary = secondaryColor || THEME.secondary;
+  const primary =
+    primaryColor ||
+    selectedPalette.background.gradient.primaryRadial.css.DEFAULT;
+  const secondary =
+    secondaryColor ||
+    selectedPalette.background.gradient.secondaryRadial.css.DEFAULT;
 
   // For now, we'll implement a simple version
   // In a real implementation, you would have different SVG patterns or WebGL graphics

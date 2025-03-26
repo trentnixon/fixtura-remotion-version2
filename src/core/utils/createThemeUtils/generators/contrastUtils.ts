@@ -1,6 +1,5 @@
 import tinycolor from "tinycolor2";
 import { ContrastSafety } from "../core/types";
-import { setOpacity } from "../core/baseManipulation";
 
 /**
  * Get title color for gradient background

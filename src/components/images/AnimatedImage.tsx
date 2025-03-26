@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Img, staticFile, useCurrentFrame } from "remotion";
+import { Img, staticFile } from "remotion";
 import {
   ImageAnimationType,
   ImageAnimationConfig,
@@ -360,7 +360,7 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
   );
 
   // Get current frame to determine which animation to apply
-  const frame = useCurrentFrame();
+  //const frame = useCurrentFrame();
 
   // Handle image load event with useCallback
   const handleLoad = useCallback(

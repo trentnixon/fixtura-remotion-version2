@@ -10,8 +10,8 @@ interface PlaceholderProps {
 export const PlaceholderComposition: React.FC<PlaceholderProps> = ({
   data,
 }) => {
-  const compositionId = data.videoMeta.video.CompositionID;
-  const template = data.videoMeta.video.Template || "Basic";
+  const compositionId = data.videoMeta.video.metadata.compositionId;
+  const template = data.videoMeta.video.appearance.template || "Basic";
 
   return (
     <AbsoluteFill
@@ -27,7 +27,7 @@ export const PlaceholderComposition: React.FC<PlaceholderProps> = ({
       }}
     >
       <h1 style={{ fontSize: "3em", marginBottom: 16 }}>
-        {data.videoMeta.video.Title || "Netball Composition"}
+        {data.videoMeta.video.metadata.title || "Netball Composition"}
       </h1>
       <h2 style={{ fontSize: "2em", marginBottom: 24 }}>{template} Template</h2>
       <p style={{ fontSize: "1.5em" }}>

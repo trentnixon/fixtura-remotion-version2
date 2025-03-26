@@ -1,28 +1,51 @@
-// src/compositions/cricket/ladder/basic.tsx
 import React from "react";
 
-interface LadderProps {
-  data: any;
-}
+import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import {
+  TransitionDirection,
+  TransitionSeriesWrapper,
+  TransitionType,
+} from "../../../components/transitions";
+import { LadderData } from "./types";
+import LadderDisplay from "./components/LadderDisplay/display";
+import NoLadderData from "./components/NoLadderData/no-data";
 
-export const Basic: React.FC<LadderProps> = ({ data }) => {
-  const { VIDEO } = data;
+// Main component with TransitionSeries
+export const CricketLadderWithTransitions: React.FC = () => {
+  const { data } = useVideoDataContext();
+  const { data: CompositionData } = data;
+  const { timings } = data;
 
-  console.log("[VIDEO]", VIDEO);
+  const transitionConfig = {
+    type: "slide",
+    direction: "from-left",
+    durationInFrames: 15,
+  };
 
-  // This is where the Basic template implementation of a cricket ladder would go
+  // If no data is available, show a placeholder
+  if (!CompositionData || CompositionData.length === 0) {
+    return <NoLadderData />;
+  }
 
   return (
-    <>
-      <h1>Basic Template - Cricket Ladder</h1>
-      {/* Actual implementation details */}
-      {data.map((ladder: any) => {
-        return (
-          <div key={ladder.id}>
-            <h2>{ladder.name}</h2>
-          </div>
-        );
-      })}
-    </>
+    <TransitionSeriesWrapper
+      sequences={CompositionData.map((ladder: LadderData) => ({
+        content: <LadderDisplay ladder={ladder} />,
+        durationInFrames: timings?.FPS_LADDER || 300, // Default to 300 if not specified
+      }))}
+      transitionType={transitionConfig.type as TransitionType}
+      direction={transitionConfig.direction as TransitionDirection}
+      timing={{
+        type: "linear",
+        durationInFrames: transitionConfig.durationInFrames,
+      }}
+    />
   );
 };
+
+// Export as Basic for compatibility with original template
+export const Basic: React.FC = () => {
+  return <CricketLadderWithTransitions />;
+};
+
+export default Basic;

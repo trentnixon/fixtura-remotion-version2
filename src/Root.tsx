@@ -6,6 +6,7 @@ import { DevelopmentRoot } from "./DevelopmentRoot";
 
 export const RemotionRoot: React.FC = () => {
   // Choose the appropriate root based on environment
+  console.log("[isRemotionRender]", isRemotionRender());
   if (isRemotionRender()) {
     return <ProductionRoot />;
   }

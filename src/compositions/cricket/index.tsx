@@ -13,7 +13,7 @@ import { PlaceholderComposition } from "./placeholders";
 
 // Export implementations for all composition types
 // Each composition type should include all template variations
-export const ladder = {
+export const CricketLadder = {
   basic: ladderBasic,
 };
 

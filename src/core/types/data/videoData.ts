@@ -43,6 +43,7 @@ export interface VideoMetadata {
 export interface VideoAppearance {
   theme: VideoTheme;
   template: string;
+  type: string;
   templateOptions: {
     borderRadius: string;
     Background: string;

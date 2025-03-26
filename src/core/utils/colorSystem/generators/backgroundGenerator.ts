@@ -64,13 +64,13 @@ export const generateSurfaceColors = (
     // Different elevation levels
     elevated1: isDarkMode
       ? lightenColor(base, 5)
-      : tinycolor(base).setSaturation(3).setAlpha(0.98).toString(),
+      : tinycolor(base).saturate(3).setAlpha(0.98).toString(),
     elevated2: isDarkMode
       ? lightenColor(base, 8)
-      : tinycolor(base).setSaturation(4).setAlpha(0.96).toString(),
+      : tinycolor(base).saturate(4).setAlpha(0.96).toString(),
     elevated3: isDarkMode
       ? lightenColor(base, 12)
-      : tinycolor(base).setSaturation(5).setAlpha(0.94).toString(),
+      : tinycolor(base).saturate(5).setAlpha(0.94).toString(),
     // Tinted surface with the base color
     tinted: isDarkMode
       ? tinycolor.mix(base, baseColor, 10).toString()

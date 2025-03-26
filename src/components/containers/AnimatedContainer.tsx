@@ -8,11 +8,7 @@ import { ContainerProps } from "./types";
 import { AnimationProps } from "./animations";
 
 // Import functions
-import {
-  normalizeContainerAnimation,
-  useAnimation,
-  SPRING_CONFIGS,
-} from "./animations";
+import { normalizeContainerAnimation, useAnimation } from "./animations";
 import {
   getBackgroundColorStyle,
   getTypeStyles,

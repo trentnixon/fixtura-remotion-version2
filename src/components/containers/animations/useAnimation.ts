@@ -1,4 +1,4 @@
-import { useCurrentFrame, useVideoConfig } from "remotion";
+import { useCurrentFrame } from "remotion";
 import {
   ContainerAnimationConfig,
   ContainerAnimationType,
@@ -21,7 +21,6 @@ export const useAnimation = (
   startFrame: number = 0,
 ): React.CSSProperties => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
 
   // Default style (no animation)
   const defaultStyle: React.CSSProperties = {};
