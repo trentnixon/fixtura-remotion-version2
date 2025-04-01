@@ -22,6 +22,12 @@ export type TypographyType =
   | "score"
   | "teamName"
   | "label"
+  | "ladderGradeLabel"
+  | "ladderTeamName"
+  | "ladderTeamPoints"
+  | "metadataSmall"
+  | "metadataMedium"
+  | "metadataLarge"
   | string; // Allow for custom types
 
 // Define color variants

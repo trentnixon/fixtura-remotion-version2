@@ -14,7 +14,7 @@ export const basicTheme = {
       family: "Roboto",
     },
     copy: {
-      family: "Roboto",
+      family: "Heebo",
     },
   },
 
@@ -24,13 +24,13 @@ export const basicTheme = {
     // Title component styles
     title: {
       className:
-        "text-8xl font-black tracking-tight leading-tight text-center m-0 px-4",
+        "text-8xl font-black tracking-tight leading-none text-center m-0 px-4",
     },
 
     // Subtitle component styles
     subtitle: {
       className:
-        "text-5xl font-semibold tracking-normal leading-snug text-center m-0 px-4",
+        "text-5xl font-semibold tracking-normal leading-none text-center m-0 px-4",
     },
 
     // Body text component styles
@@ -56,6 +56,25 @@ export const basicTheme = {
     // Label component styles
     label: {
       className: "text-lg font-medium tracking-normal leading-snug",
+    },
+    // Ladder label component styles
+    ladderGradeLabel: {
+      className: "text-2xl font-medium tracking-normal leading-snug",
+    },
+    ladderTeamName: {
+      className: "text-3xl font-medium tracking-normal leading-snug",
+    },
+    ladderTeamPoints: {
+      className: "text-3xl font-medium tracking-normal leading-snug",
+    },
+    metadataSmall: {
+      className: "text-xl font-semibold  tracking-wider leading-snug",
+    },
+    metadataMedium: {
+      className: "text-2xl font-semibold  tracking-wider leading-snug",
+    },
+    metadataLarge: {
+      className: "text-2xl font-semibold  tracking-widest leading-snug",
     },
   },
 

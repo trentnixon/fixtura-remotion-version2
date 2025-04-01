@@ -28,10 +28,10 @@ interface SportCompositionTypes {
 const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
   cricket: {
     CricketLadder: "CricketLadder",
+    CricketUpcoming: "CricketUpcoming",
     Top5BattingList: "top5",
     Top5BowlingList: "top5",
     WeekendResults: "results",
-    UpcomingFixtures: "upcoming",
     RosterPoster: "roster",
   },
   afl: {

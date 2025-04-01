@@ -1,6 +1,6 @@
 // Import the basic component from the ladder module
 import { basic as ladderBasic } from "./ladder";
-
+import { basic as upcomingBasic } from "./upcoming";
 /* export * as ladder from './ladder';
 export * as top5 from './top5';
 export * as results from './results';
@@ -25,8 +25,8 @@ export const results = {
   basic: PlaceholderComposition,
 };
 
-export const upcoming = {
-  basic: PlaceholderComposition,
+export const CricketUpcoming = {
+  basic: upcomingBasic,
 };
 
 export const roster = {

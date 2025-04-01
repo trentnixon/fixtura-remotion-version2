@@ -2,7 +2,7 @@
   "data": [
     {
       "date": "Sat, Dec 14",
-      "time": "01:00 PM, Sat, 14 Dec 2401:00 PM, Sat, 21 Dec 24",
+      "time": "01:00 PM, Sat, 14 Dec 24",
       "type": "Two Day+",
       "round": null,
       "gameID": "c956ffb6",
@@ -78,7 +78,7 @@
     },
     {
       "date": "Sat, Dec 14",
-      "time": "01:00 PM, Sat, 14 Dec 2401:00 PM, Sat, 21 Dec 24",
+      "time": "01:00 PM, Sat, 14 Dec 24",
       "type": "Two Day+",
       "round": null,
       "gameID": "7e087fcc",
@@ -281,14 +281,14 @@
   "ACCOUNT": {
     "accountId": 107
   },
-  "TIMINGS": {
+  "timings": {
     "FPS_MAIN": 840,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 120,
     "FPS_SCORECARD": 210
   },
-  "VIDEOMETA": {
-    "Club": {
+  "videoMeta": {
+    "club": {
       "Logo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
         "width": 350,
@@ -868,55 +868,114 @@
         }
       }
     },
-    "THEME": {
-      "Theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#ec9e0d",
-        "secondary": "#131faa"
+
+    "video": {
+      "metadata": {
+        "title": "Upcoming Fixtures",
+        "titleSplit": ["Upcoming", ""],
+        "videoTitle": "Upcoming Fixtures",
+        "compositionId": "CricketUpcoming",
+        "assetId": 18,
+        "assetTypeId": 3,
+        "frames": [355, 600, 900, 1200, 1500],
+        "includeSponsors": true
       },
-      "Template": "CNSW",
-      "TemplateVariation": {
-        "Background": "Gradient",
-        "Palette": "Primary"
-      }
-    },
-    "Video": {
-      "Theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#ec9e0d",
-        "secondary": "#131faa"
+
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#352466",
+          "secondary": "#ffa500"
+        },
+
+        "template": "Basic",
+        "type": "Pattern",
+        "templateOptions": {
+          "borderRadius": "10px",
+          "Background": "Solid",
+          "Palette": "primary"
+        }
       },
-      "Title": "Fixtures",
-      "FRAMES": [195, 405, 615, 825],
-      "ASSETID": 2,
-      "Template": "CNSW",
-      "HeroImage": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/calander_30176d2917.PNG",
-        "ratio": "landscape",
-        "width": 1181,
-        "height": 662,
-        "AgeGroup": "Both",
-        "AssetType": "",
-        "markerPosition": ""
+
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
+          "AgeGroup": "Both",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+        }
       },
-      "TitleSplit": ["Fixtures", ""],
-      "VideoTitle": "Upcoming Fixtures - undefined",
-      "ASSETTYPEID": 1,
-      "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_8a6ba8ae9c.mp3",
-      "CompositionID": "UpComingFixtures",
-      "includeSponsors": true,
-      "DiviedFixturesBy": {
-        "Ladder": 1,
-        "RosterPoster": 1,
-        "WeekendResults": 2,
-        "UpComingFixtures": 2,
-        "WeekendSingleGameResult": 1
+      "contentLayout": {
+        "dividedFixturesBy": {
+          "Ladder": 1,
+          "RosterPoster": 1,
+          "WeekendResults": 2,
+          "UpComingFixtures": 3,
+          "WeekendSingleGameResult": 1
+        }
       },
-      "TemplateVariation": {
-        "Background": "Gradient",
-        "Palette": "Primary"
+
+      "templateVariation": {
+        "Video": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
+          "fallbackUrl": "https://example.com/fallback-video.mp4",
+          "position": "center",
+          "size": "cover",
+          "loop": true,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": true,
+          "volume": 0.8,
+          "playbackRate": 1.0
+        },
+        "Image": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
+          "ratio": "portrait",
+          "width": 3290,
+          "height": 3354,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
+        },
+
+        "Palette": "primaryOnWhite",
+        "borderRadius": "10px",
+        "Gradient": {
+          "type": "primaryToSecondary",
+          "direction": "VERTICAL"
+        },
+        "Noise": {
+          "type": "grain"
+        },
+        "Pattern": {
+          "type": "dots",
+          "animation": "panDown",
+          "scale": 0.75,
+          "rotation": 0,
+          "opacity": 0.35,
+          "animationDuration": 300,
+          "animationSpeed": 0.8
+        },
+        "Particle": {
+          "type": "lines",
+          "particleCount": 400,
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        }
       }
     },
     "FixtureCategory": "Senior",

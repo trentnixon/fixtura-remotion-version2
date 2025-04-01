@@ -2,20 +2,18 @@
 
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { TwoColumnHeaderTitle } from "../../../../components/layout/main/header";
-import {
-  IntroAnimationOutConfig,
-  MainAnimationInConfig,
-  MainTitleAnimationInConfig,
-} from "./AnimationConfig";
 import { AnimatedImage } from "../../../../components/images";
-import { ImageAnimationConfig } from "../../../../components/images/config";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-import { AnimationConfig } from "../../../../components/typography/config/animations";
+import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
 export const BasicMainHeader = () => {
   const { layout, fontClasses } = useThemeContext();
   const { club, metadata, data } = useVideoDataContext();
+  const { animations } = useAnimationContext();
+  const TextAnimations = animations.text.main;
+  const LogoAnimations = animations.image.main.title.logo;
+
   const { heights } = layout;
   const { timings } = data;
 
@@ -31,9 +29,10 @@ export const BasicMainHeader = () => {
               src={club.Logo.url}
               width={club.Logo.width}
               height={club.Logo.height}
-              fit="contain"
-              animation={MainAnimationInConfig as ImageAnimationConfig}
-              exitAnimation={IntroAnimationOutConfig as ImageAnimationConfig}
+              fit="cover"
+              className="rounded-full"
+              animation={LogoAnimations.introIn}
+              exitAnimation={LogoAnimations.introOut}
               exitFrame={exitFrame}
             />
           </div>
@@ -45,8 +44,8 @@ export const BasicMainHeader = () => {
           type="subtitle"
           variant="onBackgroundMain"
           letterAnimation="none"
-          animation={MainTitleAnimationInConfig as AnimationConfig}
-          exitAnimation={IntroAnimationOutConfig as AnimationConfig}
+          animation={TextAnimations.title}
+          exitAnimation={TextAnimations.copyOut}
           exitFrame={exitFrame}
           fontFamily={fontClasses.title?.family}
         >
@@ -60,8 +59,8 @@ export const BasicMainHeader = () => {
           textAlign="right"
           variant="onBackgroundDark"
           letterAnimation="word"
-          animation={MainTitleAnimationInConfig as AnimationConfig}
-          exitAnimation={IntroAnimationOutConfig as AnimationConfig}
+          animation={TextAnimations.title}
+          exitAnimation={TextAnimations.copyOut}
           exitFrame={exitFrame}
         >
           {club.Name}

@@ -50,6 +50,14 @@ export interface ContainerOptions {
   accent: string;
   highlight: string;
   transparent: string;
+  gradientPrimaryToSecondaryHorizontal: string;
+  gradientPrimaryToSecondaryVertical: string;
+  gradientSecondaryToPrimaryHorizontal: string;
+  gradientSecondaryToPrimaryVertical: string;
+  saturated: string;
+  transparentAccent: string;
+  transparentMain: string;
+  transparentSecondary: string;
 }
 
 export interface TextOptions {

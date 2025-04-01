@@ -2,17 +2,9 @@ import React from "react";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { AnimatedImage } from "../../../../components/images";
-import { ImageAnimationConfig } from "../../../../components/images/config";
-import { AnimationConfig } from "../../../../components/typography/config/animations";
-import {
-  ClubNameAnimationInConfig,
-  ImageAnimationInConfig,
-  IntroAnimationOutConfig,
-  IntroExitFrame,
-  TitleAnimationInConfig,
-} from "./AnimationConfig";
 import { TwoColumnLayout } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
 /**
  * BasicIntro Component
@@ -22,11 +14,11 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
  */
 export const BasicIntro: React.FC = () => {
   const { club, metadata } = useVideoDataContext();
-
-  console.log("[metadata]", metadata);
-
+  const { animations } = useAnimationContext();
+  const TextAnimations = animations.text.intro;
+  const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  console.log("[fontClasses]", fontClasses);
+
   return (
     <TwoColumnLayout
       alignment="center"
@@ -38,39 +30,43 @@ export const BasicIntro: React.FC = () => {
             width={club.Logo.width}
             height={club.Logo.height}
             fit="contain"
-            animation={ImageAnimationInConfig as ImageAnimationConfig}
-            exitAnimation={IntroAnimationOutConfig as ImageAnimationConfig}
-            exitFrame={IntroExitFrame}
+            animation={LogoAnimations.introIn}
+            exitAnimation={LogoAnimations.introOut}
+            exitFrame={LogoAnimations.introExitFrame}
           />
         </div>
       }
       Title={
-        <AnimatedText
-          textAlign="left"
-          type="title"
-          variant="onBackgroundDark"
-          letterAnimation="word"
-          animation={TitleAnimationInConfig as AnimationConfig}
-          exitAnimation={IntroAnimationOutConfig as AnimationConfig}
-          exitFrame={IntroExitFrame}
-          fontFamily={fontClasses.title?.family}
-        >
-          {metadata.title}
-        </AnimatedText>
+        <div className="overflow-hidden mb-4">
+          <AnimatedText
+            textAlign="left"
+            type="title"
+            variant="onBackgroundDark"
+            letterAnimation="word"
+            animation={TextAnimations.mainTitle}
+            exitAnimation={TextAnimations.introOut}
+            exitFrame={TextAnimations.introExitFrame}
+            fontFamily={fontClasses.title?.family}
+          >
+            {metadata.title}
+          </AnimatedText>
+        </div>
       }
       Name={
-        <AnimatedText
-          fontFamily={fontClasses.subtitle?.family}
-          type="subtitle"
-          textAlign="left"
-          variant="onBackgroundDark"
-          letterAnimation="word"
-          animation={ClubNameAnimationInConfig as AnimationConfig}
-          exitAnimation={IntroAnimationOutConfig as AnimationConfig}
-          exitFrame={IntroExitFrame}
-        >
-          {club.Name}
-        </AnimatedText>
+        <div className="overflow-hidden">
+          <AnimatedText
+            type="subtitle"
+            textAlign="left"
+            variant="onBackgroundDark"
+            letterAnimation="word"
+            animation={TextAnimations.clubName}
+            exitAnimation={TextAnimations.introOut}
+            exitFrame={TextAnimations.introExitFrame}
+            fontFamily={fontClasses.subtitle?.family}
+          >
+            {club.Name}
+          </AnimatedText>
+        </div>
       }
     />
   );

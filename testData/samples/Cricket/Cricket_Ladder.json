@@ -1794,8 +1794,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#009300",
-          "secondary": "#009300"
+          "primary": "#352466",
+          "secondary": "#ffa500"
         },
 
         "template": "Basic",
@@ -1803,7 +1803,7 @@
         "templateOptions": {
           "borderRadius": "10px",
           "Background": "Solid",
-          "Palette": "primaryOnWhite"
+          "Palette": "primary"
         }
       },
 
@@ -1880,10 +1880,10 @@
         },
         "Particle": {
           "type": "lines",
-          "particleCount": 300,
+          "particleCount": 400,
           "speed": 0.8,
           "direction": "up",
-          "animation": "fade"
+          "animation": "scale"
         }
       }
     },

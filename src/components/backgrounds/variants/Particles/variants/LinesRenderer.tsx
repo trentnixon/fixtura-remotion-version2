@@ -3,6 +3,7 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { ParticleBackgroundProps } from "../config";
 import { generateParticles, updateParticlePositions } from "../utils";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 const LinesParticles: React.FC<ParticleBackgroundProps> = ({
   particleColor = "#ffffff",
@@ -15,13 +16,14 @@ const LinesParticles: React.FC<ParticleBackgroundProps> = ({
   style = {},
 }) => {
   const frame = useCurrentFrame();
-
+  const { selectedPalette } = useThemeContext();
+  console.log("[LinesParticles theme]", selectedPalette.text.onContainer.light);
   // Generate particles
   const particles = React.useMemo(() => {
     return generateParticles({
       count: particleCount,
       size: particleSize,
-      color: particleColor,
+      color: selectedPalette.text.onContainer.light,
       speed,
       direction,
     });

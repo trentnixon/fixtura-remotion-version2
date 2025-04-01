@@ -34,12 +34,12 @@ export type DatasetRecord = Record<string, any>;
 export const testDatasets: Record<string, any> = {
   // Cricket
   CricketLadder: CricketLadder,
+  CricketUpcoming: CricketUpcoming,
   CricketResults: CricketResults,
   CricketRoster: CricketRoster,
   CricketSingleGameResult: CricketSingleGameResult,
   CricketTop5Batting: CricketTop5Batting,
   CricketTop5Bowling: CricketTop5Bowling,
-  CricketUpcoming: CricketUpcoming,
 
   // AFL
   AFLLadder: AFLLadder,
@@ -59,12 +59,13 @@ export const testDatasets: Record<string, any> = {
 export const datasetsByCategory: DatasetCategories = {
   Cricket: [
     { id: "CricketLadder", name: "Ladder" },
+    { id: "CricketUpcoming", name: "Upcoming Fixtures" },
     /*   { id: "CricketResults", name: "Results" },
     { id: "CricketRoster", name: "Roster" },
     { id: "CricketSingleGameResult", name: "Single Game Result" },
     { id: "CricketTop5Batting", name: "Top 5 Batting" },
     { id: "CricketTop5Bowling", name: "Top 5 Bowling" },
-    { id: "CricketUpcoming", name: "Upcoming Fixtures" }, */
+     */
   ],
   /*  AFL: [
     { id: "AFLLadder", name: "Ladder" },

@@ -38,6 +38,7 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
     data,
     video,
     metadata: video.metadata,
+
     media: video.media,
     appearance: video.appearance,
     contentLayout: video.contentLayout,

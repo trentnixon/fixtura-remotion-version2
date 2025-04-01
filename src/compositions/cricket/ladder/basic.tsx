@@ -7,8 +7,8 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { LadderData } from "./types";
-import LadderDisplay from "./components/LadderDisplay/display";
-import NoLadderData from "./components/NoLadderData/no-data";
+import LadderDisplay from "./controller/Display/display";
+import NoLadderData from "./modules/NoLadderData/no-data";
 
 // Main component with TransitionSeries
 export const CricketLadderWithTransitions: React.FC = () => {

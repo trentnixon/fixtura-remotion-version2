@@ -25,7 +25,7 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
 }) => {
   // Get the dataset with proper typing
   const datasetData: FixturaDataset | undefined = testDatasets[datasetID];
-  console.log("[Dynamically Selected datasetData]", datasetData);
+  //console.log("[Dynamically Selected datasetData]", datasetData);
 
   if (!datasetData) {
     console.warn(`Dataset not found: ${datasetID}`);

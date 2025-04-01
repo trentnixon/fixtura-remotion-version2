@@ -12,6 +12,7 @@ import { FontProvider } from "../../core/context/FontContext";
 import { BaseAudioTrack } from "./components/BaseAudioTrack";
 import { BaseBackground } from "./components/BaseBackground";
 import { BaseTemplateLayout } from "./BaseTemplateLayout";
+import { AnimationProvider } from "../../core/context/AnimationContext";
 
 interface BaseTemplateProps {
   data: any;
@@ -21,6 +22,7 @@ interface BaseTemplateProps {
   backgroundComponent?: React.FC;
   customAudioComponent?: React.FC;
   mainComponentLayout?: React.FC;
+  animations: any;
 }
 
 /**
@@ -32,6 +34,7 @@ export const BaseTemplate: React.FC<BaseTemplateProps> = ({
   settings,
   introComponent,
   outroComponent,
+  animations,
   backgroundComponent = BaseBackground,
   customAudioComponent = BaseAudioTrack,
   mainComponentLayout,
@@ -43,13 +46,15 @@ export const BaseTemplate: React.FC<BaseTemplateProps> = ({
           <StyleProvider>
             <FontProvider>
               <LayoutProvider>
-                <BaseTemplateLayout
-                  introComponent={introComponent}
-                  outroComponent={outroComponent}
-                  backgroundComponent={backgroundComponent}
-                  customAudioComponent={customAudioComponent}
-                  mainComponentLayout={mainComponentLayout}
-                />
+                <AnimationProvider animations={animations}>
+                  <BaseTemplateLayout
+                    introComponent={introComponent}
+                    outroComponent={outroComponent}
+                    backgroundComponent={backgroundComponent}
+                    customAudioComponent={customAudioComponent}
+                    mainComponentLayout={mainComponentLayout}
+                  />
+                </AnimationProvider>
               </LayoutProvider>
             </FontProvider>
           </StyleProvider>
