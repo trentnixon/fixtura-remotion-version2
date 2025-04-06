@@ -1,13 +1,45 @@
-import { useCurrentFrame } from "remotion";
-import {
-  ContainerAnimationConfig,
-  ContainerAnimationType,
-} from "./animationTypes";
-import {
-  calculateAnimationProgress,
-  createSpringAnimation,
-} from "./animationUtils";
+import { useCurrentFrame, useVideoConfig } from "remotion";
+import { ContainerAnimationConfig } from "./animationTypes";
 import React from "react";
+import {
+  fadeIn,
+  fadeOut,
+  slideInLeft,
+  slideInRight,
+  slideInTop,
+  slideInBottom,
+  slideOutLeft,
+  slideOutRight,
+  slideOutTop,
+  slideOutBottom,
+  scaleIn,
+  scaleOut,
+  scaleInX,
+  scaleInY,
+  scaleOutX,
+  scaleOutY,
+  revealLeft,
+  revealRight,
+  revealTop,
+  revealBottom,
+  collapseLeft,
+  collapseRight,
+  collapseTop,
+  collapseBottom,
+  springIn,
+  springOut,
+  springScale,
+  springTranslateX,
+  springTranslateY,
+  springRotate,
+  flipX,
+  flipY,
+  rotate3D,
+  swing,
+  zoomPerspective,
+  glitch,
+  blur,
+} from "./utils";
 
 /**
  * Hook to manage container animations using Remotion's patterns
@@ -21,6 +53,7 @@ export const useAnimation = (
   startFrame: number = 0,
 ): React.CSSProperties => {
   const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
 
   // Default style (no animation)
   const defaultStyle: React.CSSProperties = {};
@@ -30,167 +63,88 @@ export const useAnimation = (
     return defaultStyle;
   }
 
-  // Calculate animation progress
-  let progress: number;
+  // Calculate animation end frame
+  const endFrame = startFrame + (config.duration || 30);
 
-  // For spring animations, use Remotion's spring function
-  if (config.type.startsWith("spring")) {
-    progress = createSpringAnimation(
-      frame,
-      startFrame,
-      config.springConfig,
-      config.duration,
-    );
-  } else {
-    // For regular animations, use interpolate with easing
-    progress = calculateAnimationProgress(
-      frame,
-      startFrame,
-      config.duration || 30,
-      config.easing,
-    );
-  }
-
-  // Apply animation styles based on type and progress
-  return applyAnimationStyles(config.type, progress);
-};
-
-/**
- * Apply animation styles based on animation type and progress
- */
-const applyAnimationStyles = (
-  animationType: ContainerAnimationType,
-  progress: number,
-): React.CSSProperties => {
-  // Basic animation styles based on progress
-  const styles: React.CSSProperties = {};
-
-  // Apply different animations based on type
-  switch (animationType) {
+  // Get the appropriate animation function based on the animation type
+  // and call it with the current frame and configuration
+  switch (config.type) {
     case "fadeIn":
-      styles.opacity = progress;
-      break;
+      return fadeIn(frame, startFrame, endFrame, config, fps);
     case "fadeOut":
-      styles.opacity = 1 - progress;
-      break;
+      return fadeOut(frame, startFrame, endFrame, config, fps);
     case "slideInLeft":
-      styles.transform = `translateX(${(1 - progress) * -100}%)`;
-      break;
+      return slideInLeft(frame, startFrame, endFrame, config, fps);
     case "slideInRight":
-      styles.transform = `translateX(${(1 - progress) * 100}%)`;
-      break;
+      return slideInRight(frame, startFrame, endFrame, config, fps);
     case "slideInTop":
-      styles.transform = `translateY(${(1 - progress) * -100}%)`;
-      break;
+      return slideInTop(frame, startFrame, endFrame, config, fps);
     case "slideInBottom":
-      styles.transform = `translateY(${(1 - progress) * 100}%)`;
-      break;
+      return slideInBottom(frame, startFrame, endFrame, config, fps);
     case "slideOutLeft":
-      styles.transform = `translateX(${progress * -100}%)`;
-      break;
+      return slideOutLeft(frame, startFrame, endFrame, config, fps);
     case "slideOutRight":
-      styles.transform = `translateX(${progress * 100}%)`;
-      break;
+      return slideOutRight(frame, startFrame, endFrame, config, fps);
     case "slideOutTop":
-      styles.transform = `translateY(${progress * -100}%)`;
-      break;
+      return slideOutTop(frame, startFrame, endFrame, config, fps);
     case "slideOutBottom":
-      styles.transform = `translateY(${progress * 100}%)`;
-      break;
+      return slideOutBottom(frame, startFrame, endFrame, config, fps);
     case "scaleIn":
-      styles.transform = `scale(${0.5 + progress * 0.5})`;
-      break;
+      return scaleIn(frame, startFrame, endFrame, config, fps);
     case "scaleOut":
-      styles.transform = `scale(${1 - progress * 0.5})`;
-      break;
+      return scaleOut(frame, startFrame, endFrame, config, fps);
     case "scaleInX":
-      styles.transform = `scaleX(${progress})`;
-      break;
+      return scaleInX(frame, startFrame, endFrame, config, fps);
     case "scaleInY":
-      styles.transform = `scaleY(${progress})`;
-      break;
+      return scaleInY(frame, startFrame, endFrame, config, fps);
     case "scaleOutX":
-      styles.transform = `scaleX(${1 - progress})`;
-      break;
+      return scaleOutX(frame, startFrame, endFrame, config, fps);
     case "scaleOutY":
-      styles.transform = `scaleY(${1 - progress})`;
-      break;
+      return scaleOutY(frame, startFrame, endFrame, config, fps);
     case "revealLeft":
-      styles.clipPath = `inset(0 ${(1 - progress) * 100}% 0 0)`;
-      break;
+      return revealLeft(frame, startFrame, endFrame, config, fps);
     case "revealRight":
-      styles.clipPath = `inset(0 0 0 ${(1 - progress) * 100}%)`;
-      break;
+      return revealRight(frame, startFrame, endFrame, config, fps);
     case "revealTop":
-      styles.clipPath = `inset(${(1 - progress) * 100}% 0 0 0)`;
-      break;
+      return revealTop(frame, startFrame, endFrame, config, fps);
     case "revealBottom":
-      styles.clipPath = `inset(0 0 ${(1 - progress) * 100}% 0)`;
-      break;
+      return revealBottom(frame, startFrame, endFrame, config, fps);
     case "collapseLeft":
-      styles.clipPath = `inset(0 ${progress * 100}% 0 0)`;
-      break;
+      return collapseLeft(frame, startFrame, endFrame, config, fps);
     case "collapseRight":
-      styles.clipPath = `inset(0 0 0 ${progress * 100}%)`;
-      break;
+      return collapseRight(frame, startFrame, endFrame, config, fps);
     case "collapseTop":
-      styles.clipPath = `inset(${progress * 100}% 0 0 0)`;
-      break;
+      return collapseTop(frame, startFrame, endFrame, config, fps);
     case "collapseBottom":
-      styles.clipPath = `inset(0 0 ${progress * 100}% 0)`;
-      break;
+      return collapseBottom(frame, startFrame, endFrame, config, fps);
     case "springIn":
-      styles.transform = `scale(${Math.min(1, progress * 1.1 - Math.sin(progress * Math.PI) * 0.1)})`;
-      styles.opacity = Math.min(1, progress * 1.5);
-      break;
+      return springIn(frame, startFrame, endFrame, config, fps);
     case "springOut":
-      styles.transform = `scale(${Math.max(0, 1 - progress * 0.9 + Math.sin(progress * Math.PI) * 0.1)})`;
-      styles.opacity = Math.max(0, 1 - progress * 1.5);
-      break;
+      return springOut(frame, startFrame, endFrame, config, fps);
     case "springScale":
-      styles.transform = `scale(${1 + Math.sin(progress * Math.PI * 2) * 0.1})`;
-      break;
+      return springScale(frame, startFrame, endFrame, config, fps);
     case "springTranslateX":
-      styles.transform = `translateX(${Math.sin(progress * Math.PI * 2) * 10}px)`;
-      break;
+      return springTranslateX(frame, startFrame, endFrame, config, fps);
     case "springTranslateY":
-      styles.transform = `translateY(${Math.sin(progress * Math.PI * 2) * 10}px)`;
-      break;
+      return springTranslateY(frame, startFrame, endFrame, config, fps);
     case "springRotate":
-      styles.transform = `rotate(${Math.sin(progress * Math.PI * 2) * 5}deg)`;
-      break;
+      return springRotate(frame, startFrame, endFrame, config, fps);
     case "flipX":
-      styles.transform = `perspective(800px) rotateX(${(0.5 - progress) * 180}deg)`;
-      styles.backfaceVisibility = "hidden";
-      break;
+      return flipX(frame, startFrame, endFrame, config, fps);
     case "flipY":
-      styles.transform = `perspective(800px) rotateY(${(0.5 - progress) * 180}deg)`;
-      styles.backfaceVisibility = "hidden";
-      break;
+      return flipY(frame, startFrame, endFrame, config, fps);
     case "rotate3D":
-      styles.transform = `perspective(800px) rotate3d(1, 1, 0, ${progress * 360}deg)`;
-      break;
+      return rotate3D(frame, startFrame, endFrame, config, fps);
     case "swing":
-      styles.transform = `rotate(${Math.sin(progress * Math.PI * 2) * 10}deg)`;
-      styles.transformOrigin = "top center";
-      break;
+      return swing(frame, startFrame, endFrame, config, fps);
     case "zoomPerspective":
-      styles.transform = `perspective(800px) translateZ(${(1 - progress) * 200}px)`;
-      break;
+      return zoomPerspective(frame, startFrame, endFrame, config, fps);
     case "glitch":
-      if (progress < 0.33) {
-        styles.transform = `translate(${Math.random() * 5 - 2.5}px, ${Math.random() * 5 - 2.5}px)`;
-      } else if (progress < 0.66) {
-        styles.transform = `translate(${Math.random() * 3 - 1.5}px, ${Math.random() * 3 - 1.5}px)`;
-      }
-      break;
+      return glitch(frame, startFrame, endFrame, config, fps);
     case "blur":
-      styles.filter = `blur(${(1 - progress) * 10}px)`;
-      break;
+      return blur(frame, startFrame, endFrame, config, fps);
     default:
-      // For unsupported animations, default to no animation
-      break;
+      // For unsupported animations, return empty styles
+      return defaultStyle;
   }
-
-  return styles;
 };

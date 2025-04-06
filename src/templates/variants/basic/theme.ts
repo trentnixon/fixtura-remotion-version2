@@ -11,7 +11,7 @@ export const basicTheme = {
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Roboto",
+      family: "Heebo",
     },
     copy: {
       family: "Heebo",
@@ -66,6 +66,44 @@ export const basicTheme = {
     },
     ladderTeamPoints: {
       className: "text-3xl font-medium tracking-normal leading-snug",
+    },
+    Top5PlayerName: {
+      className: "text-5xl font-black  tracking-wide leading-snug",
+    },
+    Top5PlayerTeam: {
+      className:
+        "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
+    },
+    Top5PlayerScore: {
+      className: "text-7xl font-black  tracking-normal leading-tight mr-4",
+    },
+    Top5PlayerScoreSuffix: {
+      className: "text-2xl font-black  tracking-wide leading-none",
+    },
+    ResultScore: {
+      className: "text-7xl font-black  tracking-normal leading-tight ",
+    },
+    ResultScoreYetToBat: {
+      className: "text-3xl font-bold  tracking-wider py-6",
+    },
+    ResultTeamName: {
+      className: "text-2xl font-semibold  tracking-wider leading-snug",
+    },
+    ResultPlayerName: {
+      className: "text-2xl font-semibold  tracking-wider leading-snug",
+    },
+    ResultPlayerScore: {
+      className: "text-2xl font-semibold  tracking-wider leading-snug",
+    },
+    ResultSyntax: {
+      className:
+        "text-2xl font-semibold  tracking-wider leading-snug py-4 ml-4",
+    },
+    ResultFixtureResult: {
+      className: "text-4xl font-normal  tracking-wider leading-snug italic",
+    },
+    ResultMetaData: {
+      className: "text-xl font-semibold  tracking-wider leading-snug",
     },
     metadataSmall: {
       className: "text-xl font-semibold  tracking-wider leading-snug",

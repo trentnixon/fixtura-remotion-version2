@@ -67,7 +67,6 @@ export const getSponsorsForFixture = (
   sponsorList: any,
   fixture: any,
 ): any[] => {
-  console.log("sponsorList ", sponsorList, fixture);
   if (!sponsorList || !fixture) return [];
   const sponsors: any[] = [];
 

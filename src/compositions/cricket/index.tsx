@@ -1,8 +1,12 @@
 // Import the basic component from the ladder module
 import { basic as ladderBasic } from "./ladder";
 import { basic as upcomingBasic } from "./upcoming";
+import { basic as top5Basic } from "./top5";
+import { basic as resultsBasic } from "./results";
+// Import directly from BasicTemplate for resultSingle
+import { Basic as resultSingleBasic } from "./resultSingle/BasicTemplate";
 /* export * as ladder from './ladder';
-export * as top5 from './top5';
+
 export * as results from './results';
 export * as upcoming from './upcoming';
 export * as roster from './roster';
@@ -17,16 +21,20 @@ export const CricketLadder = {
   basic: ladderBasic,
 };
 
-export const top5 = {
-  basic: PlaceholderComposition,
+export const CricketTop5 = {
+  basic: top5Basic,
 };
 
-export const results = {
-  basic: PlaceholderComposition,
+export const CricketResults = {
+  basic: resultsBasic,
 };
 
 export const CricketUpcoming = {
   basic: upcomingBasic,
+};
+
+export const CricketResultSingle = {
+  basic: resultSingleBasic,
 };
 
 export const roster = {

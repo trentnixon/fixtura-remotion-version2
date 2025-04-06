@@ -19,9 +19,6 @@ export const templateRegistry = {
       "Particle",
       "Pattern",
     ],
-    config: {
-      // Template-specific configuration
-    },
   },
 };
 

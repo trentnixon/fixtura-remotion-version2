@@ -8,11 +8,14 @@ import {
 } from "../../../components/transitions";
 import GamesDisplay from "./controller/GamesDisplay/display";
 import NoGamesData from "./modules/NoGamesData/no-data";
+import { useAnimationContext } from "../../../core/context/AnimationContext";
 
 export const UpcomingGamesWithTransitions: React.FC = () => {
   const { data, contentLayout } = useVideoDataContext();
   const { data: CompositionData, options, video } = data;
   const { timings } = data;
+  const { animations } = useAnimationContext();
+  const transitionConfig = animations.transition.Main;
 
   // Extract metadata from video data
   const metadata = video?.metadata || {};
@@ -27,13 +30,6 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
   } else if (options && typeof options.gamesPerScreen === "number") {
     gamesPerScreen = options.gamesPerScreen;
   }
-
-  // Configure transitions
-  const transitionConfig = {
-    type: "slide",
-    direction: "from-left",
-    durationInFrames: 15,
-  };
 
   // Get frame duration from metadata if available
   const frameOptions = metadata.frames || [300];

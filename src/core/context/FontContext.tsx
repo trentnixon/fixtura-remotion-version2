@@ -56,7 +56,7 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
   // Load fonts when the component mounts
   useEffect(() => {
     const loadFonts = async () => {
-      console.log("FontContext: Starting font loading process");
+      //console.log("FontContext: Starting font loading process");
 
       // Create a delay render handle
       const handle = delayRender("Loading fonts");
@@ -74,10 +74,6 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
 
         // If in font test mode, load additional fonts
         if (fontTestMode) {
-          console.log(
-            "FontContext: Font test mode detected, loading additional fonts",
-          );
-
           // Load specific test fonts if specified
           if (Array.isArray(fontTestList) && fontTestList.length > 0) {
             for (const fontName of fontTestList) {
@@ -86,7 +82,7 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
           }
         }
 
-        console.log("FontContext: All fonts loaded successfully");
+        //console.log("FontContext: All fonts loaded successfully");
         setFontsLoaded(true);
       } catch (error) {
         console.error("FontContext: Error loading fonts:", error);

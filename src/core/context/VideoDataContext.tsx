@@ -27,12 +27,9 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const { data } = useGlobalContext();
-  console.log("[data]", data);
+
   const video = data.videoMeta?.video || {};
   const club = data.videoMeta?.club || {};
-
-  console.log("video", video);
-  console.log("club", club);
 
   const contextValue: VideoDataContextProps = {
     data,

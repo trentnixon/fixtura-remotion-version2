@@ -145,6 +145,7 @@ export const slideInBottom: ContainerAnimationFunction = (
   const easingFn = getContainerEasingFunction(config.easing);
 
   // Default distance is 100% of container height
+
   const distance = config.custom?.distance || "100%";
 
   // For numeric interpolation, we need to use numbers

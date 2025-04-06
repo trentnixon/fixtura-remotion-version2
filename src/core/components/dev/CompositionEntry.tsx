@@ -25,7 +25,6 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
 }) => {
   // Get the dataset with proper typing
   const datasetData: FixturaDataset | undefined = testDatasets[datasetID];
-  //console.log("[Dynamically Selected datasetData]", datasetData);
 
   if (!datasetData) {
     console.warn(`Dataset not found: ${datasetID}`);
@@ -40,7 +39,6 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
     sportName,
   );
 
-  console.log("[processedData]", processedData);
   // Calculate duration
   const durationInFrames = calculateDuration(processedData);
 
@@ -55,7 +53,7 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
     ratio: 1080 / 1350,
     fps: 30,
   };
-  console.log("[remoteCompositionId]", remoteCompositionId);
+  //console.log("[remoteCompositionId]", remoteCompositionId);
   return (
     <Composition
       key={remoteCompositionId}

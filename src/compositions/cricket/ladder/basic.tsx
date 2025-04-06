@@ -9,18 +9,15 @@ import {
 import { LadderData } from "./types";
 import LadderDisplay from "./controller/Display/display";
 import NoLadderData from "./modules/NoLadderData/no-data";
+import { useAnimationContext } from "../../../core/context/AnimationContext";
 
 // Main component with TransitionSeries
 export const CricketLadderWithTransitions: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: CompositionData } = data;
   const { timings } = data;
-
-  const transitionConfig = {
-    type: "slide",
-    direction: "from-left",
-    durationInFrames: 15,
-  };
+  const { animations } = useAnimationContext();
+  const transitionConfig = animations.transition.Main;
 
   // If no data is available, show a placeholder
   if (!CompositionData || CompositionData.length === 0) {

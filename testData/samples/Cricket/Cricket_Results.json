@@ -643,14 +643,14 @@
   "ACCOUNT": {
     "accountId": 144
   },
-  "TIMINGS": {
+  "timings": {
     "FPS_MAIN": 600,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 180,
     "FPS_SCORECARD": 300
   },
-  "VIDEOMETA": {
-    "Club": {
+  "videoMeta": {
+    "club": {
       "Logo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_47_fc0a3c8c18.jpg",
         "width": 128,
@@ -1042,47 +1042,118 @@
         }
       }
     },
-    "THEME": {
-      "Theme": {
+
+    "video": {
+      "theme": {
         "dark": "#111",
         "white": "#FFF",
         "primary": "#043666",
         "secondary": "#fccb3d"
       },
-      "Template": "CNSW",
-      "TemplateVariation": {
-        "Background": "Gradient",
-        "Palette": "Primary"
-      }
-    },
-    "Video": {
-      "Theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#043666",
-        "secondary": "#fccb3d"
+      "metadata": {
+        "title": "Results",
+        "titleSplit": ["Results"],
+        "videoTitle": "Results",
+        "compositionId": "CricketResults",
+        "assetId": 18,
+        "assetTypeId": 3,
+        "frames": [355, 600, 900, 1200, 1500],
+        "includeSponsors": true
       },
-      "Title": "Results",
-      "FRAMES": [240, 540],
-      "ASSETID": 4,
-      "Template": "CNSW",
-      "HeroImage": null,
-      "TitleSplit": ["Results"],
-      "VideoTitle": "Weekend Results - undefined",
-      "ASSETTYPEID": 2,
-      "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Free_The_People_Moonlight_Instrumental_1701394307461_mixdown_1b3d403309.mp3",
-      "CompositionID": "WeekendResults",
-      "includeSponsors": true,
-      "DiviedFixturesBy": {
-        "Ladder": 1,
-        "RosterPoster": 1,
-        "WeekendResults": 2,
-        "UpComingFixtures": 2,
-        "WeekendSingleGameResult": 1
+
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#352466",
+          "secondary": "#ffa500"
+        },
+
+        "template": "Basic",
+        "type": "Pattern",
+        "templateOptions": {
+          "borderRadius": "10px",
+          "Background": "Solid",
+          "Palette": "primary"
+        }
       },
-      "TemplateVariation": {
-        "Background": "Gradient",
-        "Palette": "Primary"
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
+          "AgeGroup": "Both",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+        }
+      },
+      "contentLayout": {
+        "dividedFixturesBy": {
+          "Ladder": 1,
+          "RosterPoster": 1,
+          "WeekendResults": 2,
+          "UpComingFixtures": 3,
+          "WeekendSingleGameResult": 1
+        }
+      },
+      "templateVariation": {
+        "Video": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
+          "fallbackUrl": "https://example.com/fallback-video.mp4",
+          "position": "center",
+          "size": "cover",
+          "loop": true,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": true,
+          "volume": 0.8,
+          "playbackRate": 1.0
+        },
+        "Image": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
+          "ratio": "portrait",
+          "width": 3290,
+          "height": 3354,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
+        },
+
+        "Palette": "primary",
+        "borderRadius": "10px",
+        "Gradient": {
+          "type": "primaryToSecondary",
+          "direction": "VERTICAL"
+        },
+        "Noise": {
+          "type": "grain"
+        },
+        "Pattern": {
+          "type": "dots",
+          "animation": "panDown",
+          "scale": 0.75,
+          "rotation": 0,
+          "opacity": 0.35,
+          "animationDuration": 300,
+          "animationSpeed": 0.8
+        },
+        "Particle": {
+          "type": "lines",
+          "particleCount": 400,
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        }
       }
     },
     "FixtureCategory": "central coast cricket association - senior competition - Senior Mens 1st Grade",

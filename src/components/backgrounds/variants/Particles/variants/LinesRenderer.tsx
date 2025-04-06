@@ -17,7 +17,7 @@ const LinesParticles: React.FC<ParticleBackgroundProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const { selectedPalette } = useThemeContext();
-  console.log("[LinesParticles theme]", selectedPalette.text.onContainer.light);
+
   // Generate particles
   const particles = React.useMemo(() => {
     return generateParticles({

@@ -20,8 +20,6 @@ export function processDatasetForTemplate(
   variant: string,
   sportName: string,
 ): FixturaDataset {
-  console.log("[Processing dataset]", dataset);
-
   // Clone the dataset to avoid modifying the original
   const datasetClone: FixturaDataset = JSON.parse(JSON.stringify(dataset));
 

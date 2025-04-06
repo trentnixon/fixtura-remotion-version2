@@ -38,7 +38,7 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
       alt={teamName}
       width={logo.width}
       height={logo.height}
-      className={`object-contain rounded-full`}
+      className={`object-contain`}
       fit={fit}
       animation={{ ...logoAnimation.logo.itemIn, delay: delay }}
     />

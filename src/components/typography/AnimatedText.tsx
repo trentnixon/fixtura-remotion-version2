@@ -280,9 +280,6 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         ? "word"
         : "letter";
 
-  // For debugging font resolution
-  //console.log(`AnimatedText [${type}] using font: "${typeFontFamily}"`);
-
   return (
     <div
       className={`${componentStyle.className} ${className}`.trim()}

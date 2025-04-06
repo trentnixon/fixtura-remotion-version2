@@ -1,9 +1,9 @@
 // BasicMainSponsor.tsx
 
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
-import { IntroAnimationOutConfig } from "./AnimationConfig";
+import { IntroAnimationOutConfig } from "./OLD_AnimationConfig";
 import { AnimationConfig } from "../../../../components/typography/config/animations";
-import { MainTitleAnimationInConfig } from "./AnimationConfig";
+import { MainTitleAnimationInConfig } from "./OLD_AnimationConfig";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 

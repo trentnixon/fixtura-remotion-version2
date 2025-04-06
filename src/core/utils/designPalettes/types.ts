@@ -58,6 +58,7 @@ export interface ContainerOptions {
   transparentAccent: string;
   transparentMain: string;
   transparentSecondary: string;
+  muted: string;
 }
 
 export interface TextOptions {

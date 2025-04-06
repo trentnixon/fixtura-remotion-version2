@@ -12,8 +12,6 @@ import { templateAnimations } from "./animations";
  * Basic template variant
  */
 export const Basic: React.FC<{ data: any }> = ({ data }) => {
-  console.log("Basic template variant");
-
   return (
     <BaseTemplate
       data={data}

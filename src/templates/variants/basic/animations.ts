@@ -127,11 +127,16 @@ export const templateAnimations = {
           easing: "easeInOut",
           duration: 15,
           custom: {
-            distance: 200,
+            distance: "105%",
           },
         },
         containerOut: {
-          type: "none",
+          type: "slideOutBottom",
+          easing: "easeInOut",
+          duration: 20,
+          custom: {
+            distance: "105%",
+          },
         },
       },
       itemContainerOuter: {
@@ -173,6 +178,13 @@ export const templateAnimations = {
           type: "none",
         },
       },
+    },
+  },
+  transition: {
+    Main: {
+      type: "slide",
+      direction: "from-bottom",
+      durationInFrames: 15,
     },
   },
 };

@@ -79,14 +79,14 @@ export function normalizeCompositionId(compositionId: string): string {
 
   // If it's already a simple ID like "Ladder", return it
   if (!compositionId.includes("-")) {
-    console.log(`Using simple composition ID: ${compositionId}`);
+    //console.log(`Using simple composition ID: ${compositionId}`);
     return compositionId;
   }
 
   // Otherwise extract the last part as the actual composition type
   const extractedId = extractCompositionType(compositionId);
-  console.log(
+  /*console.log(
     `Extracted composition ID from ${compositionId} -> ${extractedId}`,
-  );
+  ); */
   return extractedId;
 }

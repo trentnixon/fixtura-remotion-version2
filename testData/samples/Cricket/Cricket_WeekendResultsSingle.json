@@ -12,62 +12,122 @@
     "ASSETCATEGORYID": 2,
     "ASSETSLINKID": "fef85e899e43d340abe62ec3690aad1c850dd97897fbe284843eb77cc4449390"
   },
-  "VIDEOMETA": {
-    "grouping_category": "Senior",
-    "Video": {
-      "Title": "Weekend Result",
-      "TitleSplit": ["Weekend", "Result"],
-      "CompositionID": "WeekendSingleGameResult",
-      "VideoTitle": "Weekend Result Single Game - undefined",
-      "HeroImage": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/387488575_6536743446451915_3029261276535247093_n_267727ef3a_475e110276.jpg",
-        "width": 2048,
-        "height": 1366,
-        "ratio": "landscape",
-        "AgeGroup": "Seniors",
-        "AssetType": "ALL",
-        "markerPosition": ""
-      },
-      "Template": "Muted",
-      "TemplateVariation": {
-        "useForcedColor": "#C6C7C9",
-        "useMutedColor": "#081F3D",
-        "Palette": "Primary"
-      },
-      "Theme": {
-        "primary": "#352466",
-        "secondary": "#ffa500",
+  "videoMeta": {
+    "video": {
+      "theme": {
         "dark": "#111",
-        "white": "#FFF"
+        "white": "#FFF",
+        "primary": "#043666",
+        "secondary": "#fccb3d"
       },
-      "includeSponsors": true,
-      "audio_option": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-      "DiviedFixturesBy": {
-        "UpComingFixtures": 2,
-        "WeekendResults": 2,
-        "WeekendSingleGameResult": 1,
-        "Ladder": 1,
-        "RosterPoster": 1
+      "metadata": {
+        "title": "Weekend Result",
+        "titleSplit": ["Weekend", "Result"],
+        "videoTitle": "Weekend Result",
+        "compositionId": "CricketResultSingle",
+        "assetId": 29,
+        "assetTypeId": 2,
+        "frames": [355, 600, 900, 1200, 1500],
+        "includeSponsors": true
       },
-      "ASSETID": 29,
-      "ASSETTYPEID": 2,
-      "FRAMES": [195, 405, 615, 825, 1035, 1245]
-    },
-    "THEME": {
-      "Template": "Muted",
-      "TemplateVariation": {
-        "useForcedColor": "#C6C7C9",
-        "useMutedColor": "#081F3D",
-        "Palette": "Primary"
+
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#352466",
+          "secondary": "#ffa500"
+        },
+
+        "template": "Basic",
+        "type": "Pattern",
+        "templateOptions": {
+          "borderRadius": "10px",
+          "Background": "Solid",
+          "Palette": "primary"
+        }
       },
-      "Theme": {
-        "primary": "#352466",
-        "secondary": "#ffa500",
-        "dark": "#111",
-        "white": "#FFF"
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
+          "AgeGroup": "Both",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+        }
+      },
+      "contentLayout": {
+        "dividedFixturesBy": {
+          "Ladder": 1,
+          "RosterPoster": 1,
+          "WeekendResults": 2,
+          "UpComingFixtures": 3,
+          "WeekendSingleGameResult": 1
+        }
+      },
+      "templateVariation": {
+        "Video": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
+          "fallbackUrl": "https://example.com/fallback-video.mp4",
+          "position": "center",
+          "size": "cover",
+          "loop": true,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": true,
+          "volume": 0.8,
+          "playbackRate": 1.0
+        },
+        "Image": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
+          "ratio": "portrait",
+          "width": 3290,
+          "height": 3354,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
+        },
+
+        "Palette": "primary",
+        "borderRadius": "10px",
+        "Gradient": {
+          "type": "primaryToSecondary",
+          "direction": "VERTICAL"
+        },
+        "Noise": {
+          "type": "grain"
+        },
+        "Pattern": {
+          "type": "dots",
+          "animation": "panDown",
+          "scale": 0.75,
+          "rotation": 0,
+          "opacity": 0.35,
+          "animationDuration": 300,
+          "animationSpeed": 0.8
+        },
+        "Particle": {
+          "type": "lines",
+          "particleCount": 400,
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        }
       }
     },
-    "Club": {
+
+    "club": {
       "Name": "Runaway Bay Cricket Club Inc",
       "Sport": "Cricket",
       "Logo": {
@@ -741,9 +801,10 @@
         ]
       }
     },
-    "FixtureCategory": "Senior"
+    "FixtureCategory": "Senior",
+    "grouping_category": "Senior"
   },
-  "TIMINGS": {
+  "timings": {
     "FPS_INTRO": 90,
     "FPS_SCORECARD": 210,
     "FPS_OUTRO": 120,

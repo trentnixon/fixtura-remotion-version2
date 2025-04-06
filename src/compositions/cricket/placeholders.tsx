@@ -11,7 +11,6 @@ interface PlaceholderProps {
 export const PlaceholderComposition: React.FC<PlaceholderProps> = ({
   data,
 }) => {
-  console.log("[PlaceholderComposition data]", data);
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
 

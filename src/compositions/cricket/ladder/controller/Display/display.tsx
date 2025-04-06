@@ -1,7 +1,7 @@
 import React from "react";
 import { LadderData } from "../../types";
 import TableHeader from "../../modules/TableHeader/header";
-import TeamRow from "../TeamRows/row";
+import StandardRow from "../TeamRows/StandardRow";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
@@ -49,7 +49,7 @@ export const LadderDisplay: React.FC<LadderDisplayProps> = ({ ladder }) => {
 
           <div className="flex-1 overflow-hidden">
             {League.map((team, index) => (
-              <TeamRow
+              <StandardRow
                 key={team.position}
                 team={team}
                 index={index}

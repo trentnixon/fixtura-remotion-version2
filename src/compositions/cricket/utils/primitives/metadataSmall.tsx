@@ -20,7 +20,7 @@ export const MetadataSmall = ({
       type="metadataSmall"
       variant="onBackgroundMain"
       fontFamily={fontClasses.copy?.family}
-      className={`font-bold mr-2 ${className}`}
+      className={className}
       animation={animation as AnimationConfig}
     >
       {value}

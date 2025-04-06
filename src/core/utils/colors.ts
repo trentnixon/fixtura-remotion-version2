@@ -61,15 +61,9 @@ export function checkColorContrast(
 
   const contrast = tinycolor.readability(colorOne, colorTwo);
 
-  // console.log('Contrast Ratio between', color1, 'and', color2, ':', contrast);
-
   if (contrast < threshold) {
-    /* console.log(
-			'Contrast is below the threshold. Consider swapping one of the colors.'
-		); */
     return { isContrasting: false, contrast };
   }
-  /* console.log('Contrast is acceptable.'); */
   return { isContrasting: true, contrast };
 }
 

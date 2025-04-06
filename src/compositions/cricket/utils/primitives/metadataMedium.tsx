@@ -25,7 +25,7 @@ export const MetadataMedium = ({
       type="metadataMedium"
       variant={variant as ColorVariant}
       fontFamily={fontClasses.copy?.family}
-      className={`font-bold mr-2 ${className}`}
+      className={className}
       animation={animation as AnimationConfig}
     >
       {value}

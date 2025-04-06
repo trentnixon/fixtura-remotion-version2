@@ -3,12 +3,7 @@ import { TeamData } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import StandardLadderRow, {
-  BalancedLadderRow,
-  CardLadderRow,
-  CenteredLogoLadderRow,
-  ModernLadderRow,
-} from "../../layout/TableRowLayout";
+import StandardLadderRow from "../../layout/TableRowLayout";
 interface TeamRowProps {
   team: TeamData;
   index: number;
@@ -17,7 +12,7 @@ interface TeamRowProps {
   LadderRowHeight: number;
 }
 
-export const TeamRow: React.FC<TeamRowProps> = ({
+export const StandardRow: React.FC<TeamRowProps> = ({
   team,
   index,
   totalTeams,
@@ -59,7 +54,7 @@ export const TeamRow: React.FC<TeamRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <ModernLadderRow
+        <StandardLadderRow
           team={team}
           delay={delay}
           bgColorClass={bgColorClass}
@@ -70,4 +65,4 @@ export const TeamRow: React.FC<TeamRowProps> = ({
   );
 };
 
-export default TeamRow;
+export default StandardRow;

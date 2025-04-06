@@ -29,10 +29,11 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
   cricket: {
     CricketLadder: "CricketLadder",
     CricketUpcoming: "CricketUpcoming",
-    Top5BattingList: "top5",
-    Top5BowlingList: "top5",
-    WeekendResults: "results",
-    RosterPoster: "roster",
+    CricketTop5Batting: "CricketTop5",
+    CricketTop5Bowling: "CricketTop5",
+    CricketResultSingle: "CricketResultSingle",
+    CricketRosterPoster: "roster",
+    CricketResults: "CricketResults",
   },
   afl: {
     AFLLadder: "ladder",

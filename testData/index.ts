@@ -3,7 +3,7 @@
 import CricketLadder from "./samples/Cricket/Cricket_Ladder.json";
 import CricketResults from "./samples/Cricket/Cricket_Results.json";
 import CricketRoster from "./samples/Cricket/Cricket_Roster.json";
-import CricketSingleGameResult from "./samples/Cricket/Cricket_WeekendResultsSingle.json";
+import CricketResultSingle from "./samples/Cricket/Cricket_WeekendResultsSingle.json";
 import CricketTop5Batting from "./samples/Cricket/Cricket_Top5Batters.json";
 import CricketTop5Bowling from "./samples/Cricket/Cricket_Top5Bowlers.json";
 import CricketUpcoming from "./samples/Cricket/Cricket_upcoming.json";
@@ -37,7 +37,7 @@ export const testDatasets: Record<string, any> = {
   CricketUpcoming: CricketUpcoming,
   CricketResults: CricketResults,
   CricketRoster: CricketRoster,
-  CricketSingleGameResult: CricketSingleGameResult,
+  CricketResultSingle: CricketResultSingle,
   CricketTop5Batting: CricketTop5Batting,
   CricketTop5Bowling: CricketTop5Bowling,
 
@@ -60,12 +60,11 @@ export const datasetsByCategory: DatasetCategories = {
   Cricket: [
     { id: "CricketLadder", name: "Ladder" },
     { id: "CricketUpcoming", name: "Upcoming Fixtures" },
-    /*   { id: "CricketResults", name: "Results" },
-    { id: "CricketRoster", name: "Roster" },
-    { id: "CricketSingleGameResult", name: "Single Game Result" },
     { id: "CricketTop5Batting", name: "Top 5 Batting" },
     { id: "CricketTop5Bowling", name: "Top 5 Bowling" },
-     */
+    { id: "CricketResults", name: "Results" },
+    { id: "CricketRoster", name: "Roster" },
+    { id: "CricketResultSingle", name: "Single Game Result" },
   ],
   /*  AFL: [
     { id: "AFLLadder", name: "Ladder" },

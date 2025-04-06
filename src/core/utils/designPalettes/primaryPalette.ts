@@ -12,7 +12,6 @@ export const createPrimaryPalette = (
   gradients: any,
 ): DesignPalette => {
   const primaryVariations = colorVariations.primary;
-  console.log("[primaryVariations]", primaryVariations);
   return {
     name: "Primary",
     background: {
@@ -71,6 +70,16 @@ export const createPrimaryPalette = (
       accent: secondary,
       highlight: primaryVariations.lighter,
       transparent: tinycolor(primary).setAlpha(0.8).toRgbString(),
+      gradientPrimaryToSecondaryHorizontal: `linear-gradient(to right, ${primary}, ${secondary})`,
+      gradientPrimaryToSecondaryVertical: `linear-gradient(to bottom, ${primary}, ${secondary})`,
+      gradientSecondaryToPrimaryHorizontal: `linear-gradient(to right, ${secondary}, ${primary})`,
+      gradientSecondaryToPrimaryVertical: `linear-gradient(to bottom, ${secondary}, ${primary})`,
+      saturated: tinycolor(primary).saturate(20).toString(),
+      transparentAccent: tinycolor(secondary).setAlpha(0.7).toRgbString(),
+      transparentMain: tinycolor(primary).setAlpha(0.7).toRgbString(),
+      transparentSecondary: tinycolor(primaryVariations.lighter)
+        .setAlpha(0.7)
+        .toRgbString(),
     },
     text: {
       onBackground: {

@@ -23,13 +23,13 @@ export const BasicMainHeader = () => {
       height={heights.header}
       alignment="center"
       Logo={
-        <div className="w-full h-full flex justify-center items-center">
-          <div className="w-full h-full flex  items-center max-h-[150px] max-w-[150px]">
+        <div className="w-full h-full flex justify-center items-center ">
+          <div className="w-full h-full flex items-center rounded-full max-h-[150px] max-w-[200px]">
             <AnimatedImage
               src={club.Logo.url}
               width={club.Logo.width}
               height={club.Logo.height}
-              fit="cover"
+              fit="contain"
               className="rounded-full"
               animation={LogoAnimations.introIn}
               exitAnimation={LogoAnimations.introOut}
