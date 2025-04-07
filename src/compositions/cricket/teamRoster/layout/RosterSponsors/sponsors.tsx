@@ -1,6 +1,7 @@
 import React from "react";
 import { RosterDataItem } from "../../types"; // Adjust path as needed
-import { Img } from "remotion";
+import TeamLogo from "../../../utils/primitives/TeamLogo";
+import AgainstTeam from "../RosterHeader/AgainstTeam";
 
 interface RosterSponsorsProps {
   roster: RosterDataItem;
@@ -8,17 +9,19 @@ interface RosterSponsorsProps {
 
 const RosterSponsors: React.FC<RosterSponsorsProps> = ({ roster }) => {
   return (
-    <div>
+    <div className="flex flex-col gap-8 flex-1 justify-center items-center">
       {roster.sponsors.map(
         (sponsor, index) =>
           sponsor.isPrimary && (
-            <Img
+            <TeamLogo
+              logo={{ url: sponsor.Logo, width: 220, height: 220 }}
+              teamName={sponsor.Name}
               key={index}
-              src={sponsor.Logo}
-              style={{ height: 30, width: "auto", margin: "5px" }}
+              delay={0 + 5}
             />
           ),
       )}
+      <AgainstTeam roster={roster} />
     </div>
   );
 };

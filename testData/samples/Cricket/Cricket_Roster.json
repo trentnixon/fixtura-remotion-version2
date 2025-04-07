@@ -159,10 +159,10 @@
     "accountId": 137
   },
   "timings": {
-    "FPS_MAIN": 180,
+    "FPS_MAIN": 720,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 180,
-    "FPS_SCORECARD": 60
+    "FPS_SCORECARD": 180
   },
   "videoMeta": {
     "club": {

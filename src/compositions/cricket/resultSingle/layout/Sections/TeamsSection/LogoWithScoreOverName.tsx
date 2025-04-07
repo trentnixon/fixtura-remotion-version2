@@ -8,12 +8,6 @@ import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import TeamLogo from "../../../../utils/primitives/TeamLogo";
 import { ResultSyntax } from "../../../../utils/primitives/ResultSyntax";
 
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
-
 export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   homeTeam,
   awayTeam,
@@ -22,7 +16,7 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   height,
   delay,
 }) => {
-  const { selectedPalette, componentStyles } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 

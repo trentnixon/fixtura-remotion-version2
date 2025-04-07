@@ -105,6 +105,9 @@ export const basicTheme = {
     ResultMetaData: {
       className: "text-xl font-semibold  tracking-wider leading-snug",
     },
+    RosterPlayerName: {
+      className: "text-3xl font-normal  tracking-wider leading-snug",
+    },
     metadataSmall: {
       className: "text-xl font-semibold  tracking-wider leading-snug",
     },

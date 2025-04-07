@@ -1,11 +1,12 @@
 import React from "react";
 import { RosterDataItem } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import RosterHeader from "../../layout/RosterHeader/header";
-import RosterDetails from "../../layout/RosterDetails/details";
 import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 import RosterSponsors from "../../layout/RosterSponsors/sponsors";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
+import { AccountTeam } from "../../layout/RosterHeader/AccountTeam";
+import { DateAndGround } from "../../layout/Metadata/DateAndGround";
+import GradeAndRound from "../../layout/Metadata/GradeAndRound";
 
 interface RosterDisplayProps {
   roster: RosterDataItem;
@@ -15,12 +16,13 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const availableHeight = heights.asset;
-
+  const { selectedPalette } = useThemeContext();
+  const backgroundColor = selectedPalette.container.transparentMain;
   return (
     <div className="p-0 flex flex-col w-full h-full">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-8 p-4 bg-black/40 rounded-lg overflow-hidden"
+        className="flex-1 flex flex-col mx-16 rounded-lg overflow-hidden"
         backgroundColor="none"
         animation={{
           type: "revealBottom",
@@ -40,16 +42,20 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
           },
         }}
       >
-        <div className="flex flex-col h-full w-full">
+        <div
+          className="w-full flex flex-col justify-start rounded-xl"
+          style={{ height: `${availableHeight}px` }}
+        >
+          <GradeAndRound roster={roster} />
+          <AccountTeam roster={roster} />
           <div
-            className="w-full flex flex-col justify-between"
-            style={{ height: `${availableHeight}px` }}
+            className="flex flex-row gap-2 justify-between items-center "
+            style={{ backgroundColor: backgroundColor }}
           >
-            <RosterHeader roster={roster} />
-            <RosterDetails roster={roster} />
-            <RosterPlayerList roster={roster} />
             <RosterSponsors roster={roster} />
+            <RosterPlayerList roster={roster} />
           </div>
+          <DateAndGround roster={roster} />
         </div>
       </AnimatedContainer>
     </div>
