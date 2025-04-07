@@ -9,9 +9,10 @@ import {
   VideoTemplateVariation,
 } from "../types/data/videoData";
 import { Club } from "../types/data/sponsors";
+import { FixturaDataset } from "../types/data/index";
 
 interface VideoDataContextProps {
-  data: any;
+  data: FixturaDataset;
   video: Video;
   club: Club;
   metadata: VideoMetadata;

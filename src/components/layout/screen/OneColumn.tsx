@@ -1,6 +1,6 @@
 // src/components/layout/screen/OneColumn.tsx
 import { AbsoluteFill } from "remotion";
-import { routeToComposition } from "../../../core/utils/routing";
+import { RouteToComposition } from "../../../core/utils/routing";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 
 export const OneColumn: React.FC<{ Header: React.FC; Sponsor: React.FC }> = ({
@@ -18,7 +18,7 @@ export const OneColumn: React.FC<{ Header: React.FC; Sponsor: React.FC }> = ({
           <Header />
         </div>
         <div className="relative" style={{ height: `${heights.asset}px` }}>
-          {routeToComposition()}
+          {RouteToComposition()}
         </div>
         <div style={{ height: `${heights.footer}px` }}>
           <Sponsor />

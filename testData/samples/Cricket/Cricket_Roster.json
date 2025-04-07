@@ -149,20 +149,7 @@
     "ASSETTYPEID": 1,
     "ASSETCATEGORYID": 2
   },
-  "THEME": {
-    "Theme": {
-      "dark": "#111",
-      "white": "#FFF",
-      "primary": "#0f150b",
-      "secondary": "#f8cb4c"
-    },
-    "Template": "Basic",
-    "TemplateVariation": {
-      "Background": "Gradient",
-      "borderRadius": "10px",
-      "Palette": "Primary"
-    }
-  },
+
   "PROMPT": [],
   "RENDER": {
     "RenderID": 2279,
@@ -171,15 +158,19 @@
   "ACCOUNT": {
     "accountId": 137
   },
-  "TIMINGS": {
+  "timings": {
     "FPS_MAIN": 180,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 180,
     "FPS_SCORECARD": 60
   },
-  "VIDEOMETA": {
-    "Club": {
-      "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+  "videoMeta": {
+    "club": {
+      "Logo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
+      },
       "Name": "Southport Labrador Cricket Club",
       "Sponsors": [
         {
@@ -304,41 +295,116 @@
         }
       ]
     },
-    "Video": {
-      "Theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#0f150b",
-        "secondary": "#f8cb4c"
+    "video": {
+      "metadata": {
+        "title": "Roster",
+        "titleSplit": ["Roster", ""],
+        "videoTitle": "Roster",
+        "compositionId": "CricketRoster",
+        "assetId": 18,
+        "assetTypeId": 3,
+        "frames": [355, 600, 900, 1200, 1500],
+        "includeSponsors": true
       },
-      "Title": "Team List",
-      "FRAMES": [120, 180, 240],
-      "ASSETID": 32,
-      "TIMINGS": {
-        "FPS_MAIN": 180,
-        "FPS_INTRO": 90,
-        "FPS_OUTRO": 180,
-        "FPS_SCORECARD": 60
+
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#352466",
+          "secondary": "#ffa500"
+        },
+
+        "template": "Basic",
+        "type": "Pattern",
+        "templateOptions": {
+          "borderRadius": "10px",
+          "Background": "Solid",
+          "Palette": "primary"
+        }
       },
-      "Template": "Basic",
-      "HeroImage": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-        "ratio": "landscape",
-        "width": 1212,
-        "height": 853
+
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
+          "AgeGroup": "Both",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+        }
       },
-      "TitleSplit": ["Team List"],
-      "VideoTitle": "Southport Labrador Cricket Club RosterPoster",
-      "ASSETTYPEID": 1,
-      "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-      "CompositionID": "RosterPoster",
-      "includeSponsors": true,
-      "TemplateVariation": {
-        "Background": "Gradient",
+      "contentLayout": {
+        "diviedFixturesBy": {
+          "Ladder": 1,
+          "RosterPoster": 1,
+          "WeekendResults": 2,
+          "UpComingFixtures": 2,
+          "WeekendSingleGameResult": 1
+        }
+      },
+
+      "templateVariation": {
+        "Video": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
+          "fallbackUrl": "https://example.com/fallback-video.mp4",
+          "position": "center",
+          "size": "cover",
+          "loop": true,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": true,
+          "volume": 0.8,
+          "playbackRate": 1.0
+        },
+        "Image": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
+          "ratio": "portrait",
+          "width": 3290,
+          "height": 3354,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
+        },
+
+        "Palette": "primaryOnWhite",
         "borderRadius": "10px",
-        "Palette": "Primary"
+        "Gradient": {
+          "type": "primaryToSecondary",
+          "direction": "VERTICAL"
+        },
+        "Noise": {
+          "type": "grain"
+        },
+        "Pattern": {
+          "type": "dots",
+          "animation": "panDown",
+          "scale": 0.75,
+          "rotation": 0,
+          "opacity": 0.35,
+          "animationDuration": 300,
+          "animationSpeed": 0.8
+        },
+        "Particle": {
+          "type": "lines",
+          "particleCount": 400,
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        }
       }
     },
-    "grouping_category": "Senior"
+    "fixtureCategory": "Senior",
+    "groupingCategory": "Senior"
   }
 }

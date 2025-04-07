@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, AnimatedImage } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 
@@ -105,10 +105,12 @@ const AlternativeOutro: React.FC = () => {
     >
       {/* Logo */}
       {club?.Logo?.url && (
-        <img
+        <AnimatedImage
           src={club.Logo.url}
           alt={club.Name || "Club Logo"}
           className="w-1/3 max-h-1/3 object-contain mb-4"
+          width={100}
+          height={100}
         />
       )}
 

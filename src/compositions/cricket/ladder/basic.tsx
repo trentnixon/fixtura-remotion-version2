@@ -20,15 +20,23 @@ export const CricketLadderWithTransitions: React.FC = () => {
   const transitionConfig = animations.transition.Main;
 
   // If no data is available, show a placeholder
-  if (!CompositionData || CompositionData.length === 0) {
+  if (
+    !CompositionData ||
+    !Array.isArray(CompositionData) ||
+    CompositionData.length === 0
+  ) {
     return <NoLadderData />;
   }
 
+  // Explicitly cast CompositionData to LadderData[] for the map function
+  const ladderDataArray = CompositionData as unknown as LadderData[];
+
   return (
     <TransitionSeriesWrapper
-      sequences={CompositionData.map((ladder: LadderData) => ({
+      sequences={ladderDataArray.map((ladder: LadderData) => ({
         content: <LadderDisplay ladder={ladder} />,
-        durationInFrames: timings?.FPS_LADDER || 300, // Default to 300 if not specified
+        // Use a generic timing property or fallback if FPS_LADDER doesn't exist
+        durationInFrames: timings?.FPS_MAIN || 300, // Example: Use FPS_MAIN or fallback
       }))}
       transitionType={transitionConfig.type as TransitionType}
       direction={transitionConfig.direction as TransitionDirection}

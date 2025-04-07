@@ -31,15 +31,16 @@ export type DatasetCategories = Record<string, DatasetInfo[]>;
 export type DatasetRecord = Record<string, any>;
 
 // Organize datasets by sport and type
-export const testDatasets: Record<string, any> = {
+export const testDatasets: Record<string, DatasetRecord> = {
   // Cricket
   CricketLadder: CricketLadder,
   CricketUpcoming: CricketUpcoming,
   CricketResults: CricketResults,
-  CricketRoster: CricketRoster,
+
   CricketResultSingle: CricketResultSingle,
   CricketTop5Batting: CricketTop5Batting,
   CricketTop5Bowling: CricketTop5Bowling,
+  CricketRoster: CricketRoster,
 
   // AFL
   AFLLadder: AFLLadder,

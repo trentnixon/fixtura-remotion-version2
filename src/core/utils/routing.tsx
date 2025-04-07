@@ -14,6 +14,13 @@ type Sport = "cricket" | "afl" | "netball";
 type TemplateId = string;
 type CompositionId = string;
 
+// Define a more specific type for the sport modules, using unknown instead of any
+type SportModuleType = Record<
+  string,
+  | Record<string, React.ComponentType<unknown>> // Use unknown for template maps
+  | React.ComponentType<unknown> // Use unknown for direct components
+>;
+
 interface CompositionTypeMap {
   [key: string]: string;
 }
@@ -32,7 +39,7 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
     CricketTop5Batting: "CricketTop5",
     CricketTop5Bowling: "CricketTop5",
     CricketResultSingle: "CricketResultSingle",
-    CricketRosterPoster: "roster",
+    CricketRoster: "CricketRoster",
     CricketResults: "CricketResults",
   },
   afl: {
@@ -51,11 +58,13 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
   },
 };
 
-// Registry of sport modules
-const SPORT_MODULES: Record<Sport, any> = {
-  cricket: CricketCompositions,
-  afl: AFLCompositions,
-  netball: NetballCompositions,
+// Registry of sport modules - Use the specific type
+const SPORT_MODULES: Record<Sport, SportModuleType> = {
+  // Use type assertion to handle potential structural mismatches if necessary,
+  // especially if index files export both direct components and template maps.
+  cricket: CricketCompositions as SportModuleType,
+  afl: AFLCompositions as SportModuleType,
+  netball: NetballCompositions as SportModuleType,
 };
 
 /**
@@ -73,24 +82,36 @@ const getCompositionType = (
  * Gets the appropriate template component for a given composition
  */
 const getTemplateComponent = (
-  sportModule: any,
+  sportModule: SportModuleType,
   compositionType: string,
   templateId: TemplateId,
 ): React.ComponentType | undefined => {
   const compositionModule = sportModule[compositionType];
   if (!compositionModule) return undefined;
 
-  return (
+  if (typeof compositionModule === "function") {
+    console.warn(
+      `Composition ${compositionType} seems to be a direct component export, not a template map.`,
+    );
+    // Decide how to handle direct components; assuming they are not meant for templated routing here
+    return undefined;
+  }
+
+  // Proceed assuming it's a Record<string, React.ComponentType<unknown>>
+  const TemplateComponent =
     compositionModule[templateId] ||
     compositionModule[templateId.toLowerCase()] ||
-    compositionModule.basic
-  );
+    compositionModule.basic; // Fallback to basic template
+
+  // Cast the component back to ComponentType<any> or a more specific type if needed for rendering
+  // Or simply return it if the JSX renderer can handle ComponentType<unknown> (often it can)
+  return TemplateComponent as React.ComponentType | undefined; // Cast if necessary, or check JSX compatibility
 };
 
 /**
  * Routes to the appropriate composition based on template, sport, and composition ID
  */
-export const routeToComposition = (): React.ReactElement => {
+export const RouteToComposition = (): React.ReactElement => {
   const { data } = useVideoDataContext();
   const { videoMeta } = data;
   const { metadata, appearance } = videoMeta.video;

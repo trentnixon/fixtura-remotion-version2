@@ -9,10 +9,9 @@ import { MatchData } from "./match";
 export interface FixturaDataset {
   // Add id property that's being used in the codebase
   id?: string;
-
   data: MatchData[];
   ASSET: Asset;
-  PROMPT: any[];
+  PROMPT: string[];
   RENDER: Render;
   ACCOUNT: Account;
   timings: timings;

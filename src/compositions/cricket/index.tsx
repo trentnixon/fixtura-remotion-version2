@@ -5,6 +5,7 @@ import { basic as top5Basic } from "./top5";
 import { basic as resultsBasic } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import { Basic as resultSingleBasic } from "./resultSingle/BasicTemplate";
+import { basic as rosterBasic } from "./teamRoster/index";
 /* export * as ladder from './ladder';
 
 export * as results from './results';
@@ -37,8 +38,9 @@ export const CricketResultSingle = {
   basic: resultSingleBasic,
 };
 
-export const roster = {
-  basic: PlaceholderComposition,
+// Add CricketRoster export to match compositionId in test data
+export const CricketRoster = {
+  basic: rosterBasic,
 };
 
 export const singleGameResult = {

@@ -13,7 +13,7 @@ interface CompositionEntryProps {
   variant: string;
   sportName: string;
   datasetID: string;
-  templateComponent: React.ComponentType<any>;
+  templateComponent: React.ComponentType<{ data: FixturaDataset }>;
 }
 
 export const CompositionEntry: React.FC<CompositionEntryProps> = ({
@@ -24,7 +24,7 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
   templateComponent,
 }) => {
   // Get the dataset with proper typing
-  const datasetData: FixturaDataset | undefined = testDatasets[datasetID];
+  const datasetData = testDatasets[datasetID] as FixturaDataset | undefined;
 
   if (!datasetData) {
     console.warn(`Dataset not found: ${datasetID}`);
@@ -43,7 +43,6 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
   const durationInFrames = calculateDuration(processedData);
 
   // Create a unique composition ID for Remotion's registry
-  // This needs to be unique but the actual CompositionID in the data remains the proper one
   const remoteCompositionId = `${templateId}-${variant}-${datasetID}`;
 
   // at some point lets sort this out to be dynamic
@@ -53,18 +52,18 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
     ratio: 1080 / 1350,
     fps: 30,
   };
-  //console.log("[remoteCompositionId]", remoteCompositionId);
+
   return (
     <Composition
       key={remoteCompositionId}
       id={remoteCompositionId}
-      component={templateComponent}
+      component={templateComponent} // This is likely always the 'Basic' template component
       durationInFrames={durationInFrames}
       fps={VideoRatio.fps}
       width={VideoRatio.width}
       height={VideoRatio.height}
       defaultProps={{
-        data: processedData,
+        data: processedData, // Processed data includes datasetID implicitly
       }}
     />
   );

@@ -506,7 +506,7 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
 
   return (
     <Img
-      src={imageSrc}
+      src={imageSrc || "./assets/images/logos/DefaultLogo.png"}
       alt={debugAlt}
       className={className}
       style={combinedStyle}
