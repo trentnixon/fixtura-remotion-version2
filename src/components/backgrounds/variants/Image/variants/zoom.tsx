@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 
 export const ZoomDirection = {
   In: "in" as const,
@@ -10,7 +10,7 @@ export const ZoomDirection = {
 export type ZoomDirectionType =
   (typeof ZoomDirection)[keyof typeof ZoomDirection];
 
-interface ZoomEffectProps {
+export interface ZoomEffectProps {
   src: string;
   direction?: ZoomDirectionType;
   intensity?: number; // How much to zoom (e.g., 1.2 means zoom to 120%)
@@ -54,16 +54,15 @@ export const ZoomEffect: React.FC<ZoomEffectProps> = ({
 
   return (
     <AbsoluteFill className={`zoom-effect ${className}`}>
-      <div
+      <Img
+        src={src}
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          objectFit: "cover",
           transform: `scale(${scale})`,
           transition: "transform 0.1s linear",
           ...style,

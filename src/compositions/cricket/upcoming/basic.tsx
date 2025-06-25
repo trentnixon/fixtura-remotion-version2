@@ -6,34 +6,37 @@ import {
   TransitionSeriesWrapper,
   TransitionType,
 } from "../../../components/transitions";
-import GamesDisplay from "./controller/GamesDisplay/display";
+import GamesDisplayBasic from "./controller/GamesDisplay/FixtureDisplayBasic";
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
+import { GameData } from "./types";
 
 export const UpcomingGamesWithTransitions: React.FC = () => {
-  const { data, contentLayout } = useVideoDataContext();
-  const { data: CompositionData, options, video } = data;
-  const { timings } = data;
+  const { data, contentLayout, metadata } = useVideoDataContext();
+  const { data: CompositionData, timings } = data;
+
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
 
   // Extract metadata from video data
-  const metadata = video?.metadata || {};
-  const fixturesLayout = contentLayout.dividedFixturesBy || {};
+
+  console.log("[contentLayout]", contentLayout);
+  const fixturesLayout = contentLayout.divideFixturesBy || {};
 
   // Get games per screen from contentLayout - important fix
   // We need to specifically use the "UpComingFixtures" property
-  let gamesPerScreen = 3; // Default fallback
+  let gamesPerScreen = fixturesLayout.CricketUpcoming; // Default fallback
 
-  if (fixturesLayout && typeof fixturesLayout.UpComingFixtures === "number") {
-    gamesPerScreen = fixturesLayout.UpComingFixtures;
-  } else if (options && typeof options.gamesPerScreen === "number") {
-    gamesPerScreen = options.gamesPerScreen;
+  if (fixturesLayout && typeof fixturesLayout.CricketUpcoming === "number") {
+    gamesPerScreen = fixturesLayout.CricketUpcoming;
   }
+
+  console.log("[gamesPerScreen]", gamesPerScreen);
 
   // Get frame duration from metadata if available
   const frameOptions = metadata.frames || [300];
-  const displayDurationPerScreen = timings?.FPS_GAMES || frameOptions[0] || 300;
+  const displayDurationPerScreen =
+    timings?.FPS_SCORECARD || frameOptions[0] || 300;
 
   // If no data is available, show a placeholder
   if (!CompositionData || CompositionData.length === 0) {
@@ -46,8 +49,8 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <GamesDisplay
-        games={CompositionData}
+      <GamesDisplayBasic
+        games={CompositionData as GameData[]}
         gamesPerScreen={gamesPerScreen}
         screenIndex={index}
       />

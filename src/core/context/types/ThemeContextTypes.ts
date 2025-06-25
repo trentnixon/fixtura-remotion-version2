@@ -80,15 +80,11 @@ export interface ThemeTypography {
     Score?: TypographyElement;
     Stat?: TypographyElement;
     Label?: TypographyElement;
-    [key: string]: any;
   };
 
   // Legacy properties
   TitleAlt?: TypographyElement;
   Copy?: TypographyElement;
-
-  // Allow additional typography properties
-  [key: string]: any;
 }
 
 export interface ThemeLayout {
@@ -103,28 +99,23 @@ export interface ThemeLayout {
     item: string;
     [key: string]: string;
   };
-  [key: string]: any;
 }
 
 export interface ThemeSports {
   cricket?: {
     playerCardStyle: string;
     statHighlightColor: string;
-    [key: string]: any;
   };
   football?: {
     playerCardStyle: string;
     statHighlightColor: string;
-    [key: string]: any;
   };
-  [key: string]: any;
 }
 
 // Add component styles interface
 export interface ComponentStyles {
   [key: string]: {
     className: string;
-    style: Record<string, any>;
   };
 }
 
@@ -172,7 +163,4 @@ export interface ThemeContextProps {
 
   // Selected palette - direct access to the active palette
   selectedPalette: DesignPalette;
-
-  // Allow additional theme properties
-  [key: string]: any;
 }

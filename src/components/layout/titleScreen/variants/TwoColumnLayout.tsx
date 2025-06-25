@@ -2,8 +2,16 @@ import { AbsoluteFill } from "remotion";
 import { TitleScreenProps } from "../types";
 
 // Base TwoColumnLayout Component - accepts right column order as a parameter
-const createTwoColumnLayout = (rightColumnOrder: Array<"Title" | "Name">) => {
-  return ({ Logo, Title, Name, alignment = "center" }: TitleScreenProps) => {
+const createTwoColumnLayout = (
+  rightColumnOrder: Array<"Title" | "Name" | "PrimarySponsor">,
+) => {
+  return ({
+    Logo,
+    Title,
+    Name,
+    PrimarySponsor,
+    alignment = "center",
+  }: TitleScreenProps) => {
     // Calculate the right alignment classes based on the prop
     const containerAlignment =
       alignment === "start"
@@ -47,6 +55,9 @@ const createTwoColumnLayout = (rightColumnOrder: Array<"Title" | "Name">) => {
             </div>
           </div>
         </div>
+        <div className="w-full m-4 flex justify-center items-center">
+          {PrimarySponsor}
+        </div>
       </AbsoluteFill>
     );
   };
@@ -61,7 +72,7 @@ export const TwoColumnLayoutNameTitle = createTwoColumnLayout([
 
 // Now create variations with the logo on the right side
 const createReverseTwoColumnLayout = (
-  rightColumnOrder: Array<"Title" | "Name">,
+  rightColumnOrder: Array<"Title" | "Name" | "PrimarySponsor">,
 ) => {
   return ({ Logo, Title, Name, alignment = "center" }: TitleScreenProps) => {
     // Calculate the right alignment classes based on the prop
@@ -100,7 +111,6 @@ const createReverseTwoColumnLayout = (
                 }
               })}
             </div>
-
             {/* Right Column - Logo (1/3 width) */}
             <div className="w-1/3 flex items-start justify-start pl-1">
               <div>{Logo}</div>
@@ -116,8 +126,10 @@ const createReverseTwoColumnLayout = (
 export const ReverseTwoColumnLayout = createReverseTwoColumnLayout([
   "Title",
   "Name",
+  "PrimarySponsor",
 ]);
 export const ReverseTwoColumnLayoutNameTitle = createReverseTwoColumnLayout([
   "Name",
   "Title",
+  "PrimarySponsor",
 ]);

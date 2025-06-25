@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
 
-import { getContainerEasingFunction } from "../easingFunctions";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
 import React from "react";
 import { ContainerAnimationFunction } from "../animationTypes";
 
@@ -14,7 +14,7 @@ export const revealLeft: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleX = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -39,7 +39,7 @@ export const revealRight: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleX = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -64,7 +64,7 @@ export const revealTop: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleY = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -89,7 +89,7 @@ export const revealBottom: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleY = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -114,7 +114,7 @@ export const collapseLeft: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleX = interpolate(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
@@ -139,7 +139,7 @@ export const collapseRight: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleX = interpolate(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
@@ -164,7 +164,7 @@ export const collapseTop: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleY = interpolate(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
@@ -189,7 +189,7 @@ export const collapseBottom: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const scaleY = interpolate(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",

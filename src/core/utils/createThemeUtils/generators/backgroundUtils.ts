@@ -8,10 +8,7 @@ import {
 /**
  * Get a background color based on primary and secondary colors
  */
-export const getBackgroundColor = (
-  primary: string,
-  secondary: string,
-): string => {
+export const getBackgroundColor = (primary: string): string => {
   return tinycolor(primary).isDark()
     ? lightenColor(primary, 45)
     : darkenColor(primary, 5);
@@ -31,7 +28,7 @@ export const generateBackgroundColors = (
     light: "#F9FAFB",
     dark: "#111827",
     paper: isDarkPrimary ? "#1F2937" : "#FFFFFF",
-    default: getBackgroundColor(primary, secondary),
+    default: getBackgroundColor(primary),
     primary: primary,
     secondary: secondary,
     subtle: setOpacity(primary, 0.05),

@@ -8,5 +8,10 @@ export const BaseAudioTrack: React.FC = () => {
   // Only render audio if a track is specified
   if (!video.media?.audio?.url) return null;
 
-  return <Audio src={video.media.audio.url} volume={0.5} />;
+  return (
+    <Audio
+      src={video.media.audio.audioOption || video.media.audio.url}
+      volume={0.5}
+    />
+  );
 };

@@ -4,6 +4,10 @@ import {
   ensureContrast,
   GradientOptions,
   CSSGradientOptions,
+  TextColors,
+  ShadowOptions,
+  UtilityColors,
+  ContrastOptions,
 } from "./types";
 import tinycolor from "tinycolor2";
 
@@ -37,10 +41,10 @@ const createGradientOptions = (
 
 export const createTriadicPalette = (
   primary: string,
-  textColors: any,
-  shadows: any,
-  utility: any,
-  contrast: any,
+  textColors: TextColors,
+  shadows: ShadowOptions,
+  utility: UtilityColors,
+  contrast: ContrastOptions,
 ): DesignPalette => {
   const triadicColor1 = tinycolor(primary).spin(120).toHexString();
   const triadicColor2 = tinycolor(primary).spin(240).toHexString();
@@ -88,6 +92,18 @@ export const createTriadicPalette = (
       transparent: tinycolor(primary).spin(120).setAlpha(0.8).toRgbString(),
       accent: primary,
       highlight: triadicColor2,
+      gradientPrimaryToSecondaryHorizontal: `linear-gradient(to right, ${lightTriadic}, ${triadicColor2})`,
+      gradientPrimaryToSecondaryVertical: `linear-gradient(to bottom, ${lightTriadic}, ${triadicColor2})`,
+      gradientSecondaryToPrimaryHorizontal: `linear-gradient(to right, ${triadicColor2}, ${lightTriadic})`,
+      gradientSecondaryToPrimaryVertical: `linear-gradient(to bottom, ${triadicColor2}, ${lightTriadic})`,
+      saturated: tinycolor(lightTriadic).saturate(20).toString(),
+      transparentAccent: tinycolor(triadicColor2).setAlpha(0.7).toRgbString(),
+      transparentMain: tinycolor(lightTriadic).setAlpha(0.7).toRgbString(),
+      transparentPrimary: tinycolor(lightTriadic).toRgbString(),
+      transparentSecondary: tinycolor(triadicColor2)
+        .setAlpha(0.7)
+        .toRgbString(),
+      muted: tinycolor(lightTriadic).setAlpha(0.5).toRgbString(),
     },
     text: {
       onBackground: {

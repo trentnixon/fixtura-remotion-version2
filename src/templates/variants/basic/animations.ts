@@ -1,4 +1,6 @@
-export const templateAnimations = {
+import { AnimationConfig } from "../../types/AnimationConfig ";
+
+export const templateAnimations: AnimationConfig = {
   image: {
     intro: {
       logo: {
@@ -6,13 +8,13 @@ export const templateAnimations = {
           type: "slideInBottom",
           duration: 15,
           delay: 0,
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           custom: { distance: 100 },
         },
         introOut: {
           type: "fadeOut",
           duration: 15,
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
         },
         introExitFrame: 60,
       },
@@ -24,13 +26,13 @@ export const templateAnimations = {
             type: "slideInTop",
             duration: 30,
             delay: 0,
-            easing: "easeInOut",
+            easing: { type: "inOut", base: "ease" },
             custom: { distance: 100 },
           },
           introOut: {
             type: "fadeOut",
             duration: 15,
-            easing: "easeInOut",
+            easing: { type: "inOut", base: "ease" },
           },
         },
       },
@@ -40,14 +42,30 @@ export const templateAnimations = {
             type: "slideInTop",
             duration: 30,
             delay: 0,
-            easing: "easeInOut",
+            easing: { type: "inOut", base: "ease" },
             custom: { distance: 100 },
           },
           itemOut: {
             type: "fadeOut",
             duration: 15,
-            easing: "easeInOut",
+            easing: { type: "inOut", base: "ease" },
           },
+        },
+      },
+    },
+    sponsor: {
+      logo: {
+        introIn: {
+          type: "slideInLeft",
+          duration: 10,
+          delay: 0,
+          easing: { type: "inOut", base: "ease" },
+          custom: { distance: 100 },
+        },
+        introOut: {
+          type: "fadeOut",
+          duration: 5,
+          easing: { type: "inOut", base: "ease" },
         },
       },
     },
@@ -56,43 +74,43 @@ export const templateAnimations = {
     intro: {
       mainTitle: {
         type: "fadeInUp",
-        duration: 30,
-        easing: "easeInOut",
+        duration: 15,
+        easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 200 },
+        custom: { distance: 100 },
       },
       clubName: {
         type: "fadeInUp",
-        duration: 30,
-        easing: "easeInOut",
-        delay: 5,
-        custom: { distance: 200 },
+        duration: 15,
+        easing: { type: "inOut", base: "ease" },
+        delay: 3,
+        custom: { distance: 100 },
       },
       introOut: {
         type: "fadeOutUp",
-        duration: 15,
-        easing: "easeInOut",
+        duration: 30,
+        easing: { type: "inOut", base: "ease" },
       },
-      introExitFrame: 60,
+      introExitFrame: 45,
     },
     main: {
       title: {
         type: "fadeInDown",
         duration: 30,
-        easing: "easeInOut",
+        easing: { type: "inOut", base: "ease" },
         delay: 0,
         custom: { distance: 200 },
       },
       copyIn: {
         type: "typewriter",
         duration: 10,
-        easing: "easeInOut",
+        easing: { type: "inOut", base: "ease" },
         delay: 200,
       },
       copyOut: {
         type: "typewriter",
         duration: 15,
-        easing: "easeInOut",
+        easing: { type: "inOut", base: "ease" },
         delay: 200,
       },
     },
@@ -100,13 +118,13 @@ export const templateAnimations = {
       copyIn: {
         type: "typewriter",
         duration: 1000,
-        easing: "linear",
+        easing: { type: "inOut", base: "ease" },
         delay: 200,
       },
       copyOut: {
         type: "typewriter",
         duration: 1000,
-        easing: "linear",
+        easing: { type: "inOut", base: "ease" },
         delay: 200,
       },
     },
@@ -124,7 +142,7 @@ export const templateAnimations = {
       itemContainer: {
         containerIn: {
           type: "slideInBottom",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
             distance: "105%",
@@ -132,7 +150,7 @@ export const templateAnimations = {
         },
         containerOut: {
           type: "slideOutBottom",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 20,
           custom: {
             distance: "105%",
@@ -142,7 +160,7 @@ export const templateAnimations = {
       itemContainerOuter: {
         containerIn: {
           type: "slideInBottom",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
             distance: 200,
@@ -155,7 +173,7 @@ export const templateAnimations = {
       itemContainerInner: {
         containerIn: {
           type: "slideInBottom",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
             distance: 200,
@@ -168,7 +186,7 @@ export const templateAnimations = {
       itemContainerSecondary: {
         containerIn: {
           type: "slideInBottom",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
             distance: 200,
@@ -182,8 +200,8 @@ export const templateAnimations = {
   },
   transition: {
     Main: {
-      type: "slide",
-      direction: "from-bottom",
+      type: "none",
+      direction: "none",
       durationInFrames: 15,
     },
   },

@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { Pan as PanDirection } from "./pan";
 import { ZoomDirection } from "./zoom";
 
@@ -78,16 +78,15 @@ export const KenBurnsEffect: React.FC<KenBurnsEffectProps> = ({
 
   return (
     <AbsoluteFill className={`ken-burns-effect ${className}`}>
-      <div
+      <Img
+        src={src}
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          objectFit: "cover",
           transform: `scale(${totalScale}) translate(${transformX}%, ${transformY}%)`,
           ...style,
         }}

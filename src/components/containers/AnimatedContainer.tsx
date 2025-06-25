@@ -225,14 +225,14 @@ export const AnimatedContainer: React.FC<AnimatedContainerProps> = ({
   animation = "none",
   animationDelay = 0,
   animationDuration = 30,
-  animationEasing = "easeInOut",
+  animationEasing = { type: "inOut", base: "ease" },
   springConfig,
 
   // Exit Animation
   exitAnimation = "none",
   exitAnimationDelay = 0,
   exitAnimationDuration = 30,
-  exitAnimationEasing = "easeInOut",
+  exitAnimationEasing = { type: "inOut", base: "ease" },
   exitSpringConfig,
   exitFrame = 0,
 

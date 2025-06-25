@@ -11,7 +11,7 @@ import { VideoBackground as VideoBg } from "./variants/Video/VideoBackground";
 import { GraphicsBackground as GraphicsBg } from "./variants/GraphicsBackground";
 
 // Import NoiseBackground components
-import { NoiseBackground as NoiseBg } from "./variants/NoiseBackground/NoiseBackground";
+import { GridNoise as NoiseBg } from "./variants/NoiseBackground/GridNoise";
 import {
   NoiseVariant,
   NOISE_VARIANTS,
@@ -21,6 +21,13 @@ import GrainNoise from "./variants/NoiseBackground/variants/GrainNoise";
 import WaveNoise from "./variants/NoiseBackground/variants/WaveNoise";
 import FogNoise from "./variants/NoiseBackground/variants/FogNoise";
 import StaticNoise from "./variants/NoiseBackground/variants/StaticNoise";
+import FloatingParticles from "./variants/NoiseBackground/variants/FloatingParticles";
+import DynamicParticles from "./variants/NoiseBackground/variants/DynamicParticles";
+import TriangleSwarm from "./variants/NoiseBackground/variants/TriangleSwarm";
+import PulsingCircles from "./variants/NoiseBackground/variants/PulsingCircles";
+import DigitalRain from "./variants/NoiseBackground/variants/DigitalRain";
+import GradientGrid from "./variants/NoiseBackground/variants/GradientGrid";
+
 //import { LayeredBackground as LayeredBg } from "./variants/LayeredBackground";
 import { AnimatedBackground as AnimatedBg } from "./variants/AnimatedBackground";
 import { PatternBackground } from "./variants/Patterns";
@@ -42,6 +49,12 @@ export const BackgroundComponents = {
     Wave: WaveNoise,
     Fog: FogNoise,
     Static: StaticNoise,
+    FloatingParticles: FloatingParticles,
+    DynamicParticles: DynamicParticles,
+    TriangleSwarm: TriangleSwarm,
+    PulsingCircles: PulsingCircles,
+    DigitalRain: DigitalRain,
+    GradientGrid: GradientGrid,
   },
   Animated: AnimatedBg,
 };
@@ -55,7 +68,7 @@ export * from "./config";
 // Background component
 export const SelectTemplateBackground = () => {
   const { video } = useVideoDataContext();
-  const background = video.appearance?.type;
+  const background = video.templateVariation?.useBackground;
 
   // Render different backgrounds based on template variation
   switch (background) {
@@ -68,7 +81,7 @@ export const SelectTemplateBackground = () => {
     case "Graphics":
       return (
         <NoiseBackground
-          variant={video.templateVariation?.Noise?.type as NoiseVariant}
+          variant={video.templateVariation?.noise?.type as NoiseVariant}
         />
       );
     case "Pattern":
@@ -78,7 +91,7 @@ export const SelectTemplateBackground = () => {
     case "Noise":
       return (
         <NoiseBackground
-          variant={video.templateVariation?.Noise?.type as NoiseVariant}
+          variant={video.templateVariation?.noise?.type as NoiseVariant}
         />
       );
     /*   case "Layered":
@@ -106,7 +119,7 @@ const VideoBackground = () => {
 
   return (
     <VideoBg
-      src={video.templateVariation?.Video?.url}
+      src={video.templateVariation?.video?.url}
       position="center"
       size="cover"
       loop={true}
@@ -138,6 +151,18 @@ const NoiseBackground = ({
       return <FogNoise {...baseProps} />;
     case "static":
       return <StaticNoise {...baseProps} />;
+    case "floatingParticles":
+      return <FloatingParticles {...baseProps} />;
+    case "dynamicParticles":
+      return <DynamicParticles {...baseProps} />;
+    case "triangleSwarm":
+      return <TriangleSwarm {...baseProps} />;
+    case "pulsingCircles":
+      return <PulsingCircles {...baseProps} />;
+    case "digitalRain":
+      return <DigitalRain {...baseProps} />;
+    case "gradientGrid":
+      return <GradientGrid {...baseProps} />;
     default:
       return (
         <NoiseBg

@@ -93,7 +93,7 @@ export const findAccessibleVariant = (
   const isLight = colorObj.isLight();
   let adjustedColorObj = colorObj.clone();
   let adjustmentAmount = 0;
-  let maxAdjustments = 20;
+  const maxAdjustments = 20;
 
   // Try lightening or darkening the color until it meets the target ratio
   while (
@@ -199,7 +199,7 @@ export const improveColorAccessibility = (
   const bgIsDark = tinycolor(backgroundColor).isDark();
   const colorObj = tinycolor(color);
 
-  let step = 2;
+  const step = 2;
   let adjustedColor = color;
   let attempts = 0;
   const maxAttempts = 25;

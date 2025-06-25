@@ -1,1162 +1,717 @@
 {
   "data": [
     {
-      "date": "Sat, Jan 25",
-      "type": "Two Day+",
-      "round": "Round 7",
-      "gameID": "cb91bf08",
-      "gender": "Mixed",
-      "ground": "Bill Sohier Park / Sohier No.1",
-      "prompt": "Match Summary: Lisarow Ourimbah Mens 1st Grade vs. Southern Spirit Mens 1st Grade:\n      - This Senior Mens 1st Grade game is a Two Day+, played in Round: Round 7 at Bill Sohier Park / Sohier No.1.\n      - Scores: Lisarow Ourimbah Mens 1st Grade 6/250 in (80) overs, Southern Spirit Mens 1st Grade Yet to Bat in null overs\n      - Result: Match is still in progress\n      Player Performances:\n      - Lisarow Ourimbah Mens 1st Grade\n        - Batting: Ryan Fenning: 101 runs (Not out) from 167 balls, 9 fours, 4 sixes, SR: 60.47; Harrison Hudson: 45 runs  from 115 balls, 4 fours, 0 sixes, SR: 39.13; Max Oteiwi: 43 runs  from 56 balls, 3 fours, 3 sixes, SR: 76.78\n        - Bowling: \n        - FOW: \n        - Fielding: Liam O’Farrell  (c), Caught as fielder: 0, Caught as wicket keeper: 2, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Ross Watson, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n      - Southern Spirit Mens 1st Grade\n        - Batting: \n        - Bowling: Zakary Graham: 3 wickets from 17 overs, 51 runs, Econ: 3.00; Brett Bastow: 1 wickets from 10 overs, 27 runs, Econ: 2.70; Harrison Jaenke: 1 wickets from 13 overs, 51 runs, Econ: 3.92\n        - FOW: \n        - Fielding: Fielding details not available.",
-      "result": "Match is still in progress",
-      "status": "In Progress",
-      "ageGroup": "Senior",
-      "awayTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_49c9486fa8.jpg",
-          "width": 2048,
-          "height": 2048
-        },
-        "name": "Southern Spirit Mens 1st Grade",
-        "overs": null,
-        "score": "Yet to Bat",
-        "isHome": false,
-        "isClubTeam": false,
-        "battingPerformances": [],
-        "bowlingPerformances": [],
-        "awayScoresFirstInnings": null
-      },
+      "gameID": "d4adc2eb",
+      "status": "Final",
       "homeTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f049bad6b1.jpg",
-          "width": 1080,
-          "height": 1080
-        },
-        "name": "Lisarow Ourimbah Mens 1st Grade",
-        "overs": "(80)",
-        "score": "6/250",
+        "name": "GC 50's Thunder Div 2 Gold",
         "isHome": true,
-        "isClubTeam": false,
-        "battingPerformances": [
-          {
-            "SR": 60.47,
-            "runs": 101,
-            "team": "Lisarow Ourimbah Mens 1st Grade",
-            "balls": 167,
-            "fours": 9,
-            "sixes": 4,
-            "notOut": true,
-            "player": "Ryan Fenning"
-          },
-          {
-            "SR": 39.13,
-            "runs": 45,
-            "team": "Lisarow Ourimbah Mens 1st Grade",
-            "balls": 115,
-            "fours": 4,
-            "sixes": 0,
-            "notOut": false,
-            "player": "Harrison Hudson"
-          },
-          {
-            "SR": 76.78,
-            "runs": 43,
-            "team": "Lisarow Ourimbah Mens 1st Grade",
-            "balls": 56,
-            "fours": 3,
-            "sixes": 3,
-            "notOut": false,
-            "player": "Max Oteiwi"
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "runs": 51,
-            "team": "Southern Spirit Mens 1st Grade",
-            "overs": 17,
-            "player": "Zakary Graham",
-            "economy": "3.00",
-            "maidens": 3,
-            "wickets": 3
-          },
-          {
-            "runs": 27,
-            "team": "Southern Spirit Mens 1st Grade",
-            "overs": 10,
-            "player": "Brett Bastow",
-            "economy": "2.70",
-            "maidens": 0,
-            "wickets": 1
-          },
-          {
-            "runs": 51,
-            "team": "Southern Spirit Mens 1st Grade",
-            "overs": 13,
-            "player": "Harrison Jaenke",
-            "economy": "3.92",
-            "maidens": 2,
-            "wickets": 1
-          }
-        ],
-        "homeScoresFirstInnings": "1"
-      },
-      "gradeName": "Senior Mens 1st Grade",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_49c9486fa8.jpg",
-        "width": 2048,
-        "height": 2048
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f049bad6b1.jpg",
-        "width": 1080,
-        "height": 1080
-      },
-      "assignSponsors": {
-        "Teams": {
-          "away": {
-            "name": "Southern Spirit Mens 1st Grade"
-          },
-          "home": {
-            "name": "Lisarow Ourimbah Mens 1st Grade"
-          }
-        },
-        "grade": {
-          "id": 30115,
-          "name": "Senior Mens 1st Grade"
-        },
-        "competition": {
-          "id": 7163,
-          "name": "Central Coast Cricket Association - Senior Competition"
-        }
-      }
-    },
-    {
-      "date": "Sat, Jan 25",
-      "type": "Two Day+",
-      "round": "Round 7",
-      "gameID": "a29c5b4a",
-      "gender": "Mixed",
-      "ground": "Duffy's Road / Duffy's Road",
-      "prompt": "Match Summary: Terrigal Matcham Mens 1st Grade vs. Narara Wyoming Mens 1st Grade:\n      - This Senior Mens 1st Grade game is a Two Day+, played in Round: Round 7 at Duffy's Road / Duffy's Road.\n      - Scores: Terrigal Matcham Mens 1st Grade Yet to Bat in null overs, Narara Wyoming Mens 1st Grade 5/273 in (72) overs\n      - Result: Match is still in progress\n      Player Performances:\n      - Terrigal Matcham Mens 1st Grade\n        - Batting: \n        - Bowling: Josh Bridge: 1 wickets from 17 overs, 48 runs, Econ: 2.82; Jaime Brien: 1 wickets from 14 overs, 49 runs, Econ: 3.50; Harry Brien: 1 wickets from 12 overs, 43 runs, Econ: 3.58\n        - FOW: \n        - Fielding: Fielding details not available.\n      - Narara Wyoming Mens 1st Grade\n        - Batting: Peter Cross  (c): 93 runs  from 121 balls, 4 fours, 4 sixes, SR: 76.85; Lachie Shedden: 55 runs  from 61 balls, 5 fours, 0 sixes, SR: 90.16; Andrew Ryan: 34 runs (Not out) from 42 balls, 2 fours, 0 sixes, SR: 80.95\n        - Bowling: \n        - FOW: \n        - Fielding: Josh Bridge, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0",
-      "result": "Match is still in progress",
-      "status": "In Progress",
-      "ageGroup": "Senior",
-      "awayTeam": {
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_99b00fe11d.jpg",
-          "width": 228,
-          "height": 226
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+          "width": 379,
+          "height": 303
         },
-        "name": "Narara Wyoming Mens 1st Grade",
-        "overs": "(72)",
-        "score": "5/273",
-        "isHome": false,
-        "isClubTeam": false,
+        "score": "10/158",
+        "overs": "(38.4)",
+        "homeScoresFirstInnings": "1",
         "battingPerformances": [
           {
-            "SR": 76.85,
-            "runs": 93,
-            "team": "Narara Wyoming Mens 1st Grade",
-            "balls": 121,
+            "player": "Mark Snowden  (vc)",
+            "runs": 36,
+            "balls": 49,
             "fours": 4,
-            "sixes": 4,
-            "notOut": false,
-            "player": "Peter Cross  (c)"
-          },
-          {
-            "SR": 90.16,
-            "runs": 55,
-            "team": "Narara Wyoming Mens 1st Grade",
-            "balls": 61,
-            "fours": 5,
             "sixes": 0,
-            "notOut": false,
-            "player": "Lachie Shedden"
+            "SR": 73.46,
+            "team": "GC 50's Thunder Div 2 Gold",
+            "notOut": false
           },
           {
-            "SR": 80.95,
-            "runs": 34,
-            "team": "Narara Wyoming Mens 1st Grade",
-            "balls": 42,
+            "player": "Adam Bell",
+            "runs": 23,
+            "balls": 50,
             "fours": 2,
             "sixes": 0,
-            "notOut": true,
-            "player": "Andrew Ryan"
+            "SR": 46,
+            "team": "GC 50's Thunder Div 2 Gold",
+            "notOut": false
+          },
+          {
+            "player": "Rod Carrington",
+            "runs": 21,
+            "balls": 46,
+            "fours": 1,
+            "sixes": 0,
+            "SR": 45.65,
+            "team": "GC 50's Thunder Div 2 Gold",
+            "notOut": false
           }
         ],
         "bowlingPerformances": [
           {
-            "runs": 48,
-            "team": "Terrigal Matcham Mens 1st Grade",
-            "overs": 17,
-            "player": "Josh Bridge",
-            "economy": "2.82",
-            "maidens": 4,
-            "wickets": 1
+            "player": "Lachlan Pegler",
+            "overs": 7.4,
+            "maidens": 0,
+            "runs": 26,
+            "wickets": 3,
+            "economy": "3.51",
+            "team": "GC 50's Thunder Div 2 Green"
           },
           {
-            "runs": 49,
-            "team": "Terrigal Matcham Mens 1st Grade",
-            "overs": 14,
-            "player": "Jaime Brien",
-            "economy": "3.50",
-            "maidens": 1,
-            "wickets": 1
+            "player": "venu kondamudi",
+            "overs": 8,
+            "maidens": 0,
+            "runs": 35,
+            "wickets": 3,
+            "economy": "4.38",
+            "team": "GC 50's Thunder Div 2 Green"
           },
           {
-            "runs": 43,
-            "team": "Terrigal Matcham Mens 1st Grade",
-            "overs": 12,
-            "player": "Harry Brien",
-            "economy": "3.58",
+            "player": "Peter Holman",
+            "overs": 4,
             "maidens": 1,
-            "wickets": 1
+            "runs": 19,
+            "wickets": 2,
+            "economy": "4.75",
+            "team": "GC 50's Thunder Div 2 Green"
           }
         ],
-        "awayScoresFirstInnings": "1"
+        "isClubTeam": false
       },
-      "homeTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_56ac6f08a3.jpg",
-          "width": 179,
-          "height": 180
-        },
-        "name": "Terrigal Matcham Mens 1st Grade",
-        "overs": null,
-        "score": "Yet to Bat",
-        "isHome": true,
-        "isClubTeam": false,
-        "battingPerformances": [],
-        "bowlingPerformances": [],
-        "homeScoresFirstInnings": null
-      },
-      "gradeName": "Senior Mens 1st Grade",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_99b00fe11d.jpg",
-        "width": 228,
-        "height": 226
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_56ac6f08a3.jpg",
-        "width": 179,
-        "height": 180
-      },
-      "assignSponsors": {
-        "Teams": {
-          "away": {
-            "name": "Narara Wyoming Mens 1st Grade"
-          },
-          "home": {
-            "name": "Terrigal Matcham Mens 1st Grade"
-          }
-        },
-        "grade": {
-          "id": 30115,
-          "name": "Senior Mens 1st Grade"
-        },
-        "competition": {
-          "id": 7163,
-          "name": "Central Coast Cricket Association - Senior Competition"
-        }
-      }
-    },
-    {
-      "date": "Sat, Jan 25",
-      "type": "Two Day+",
-      "round": "Round 7",
-      "gameID": "9da2257e",
-      "gender": "Mixed",
-      "ground": "Jubilee Park (LONG JETTY) / Jubilee Park",
-      "prompt": "Match Summary: The Entrance Mens 1st Grade vs. Northern Power Mens 1st Grade:\n      - This Senior Mens 1st Grade game is a Two Day+, played in Round: Round 7 at Jubilee Park (LONG JETTY) / Jubilee Park.\n      - Scores: The Entrance Mens 1st Grade 10/250 in (70.1) overs, Northern Power Mens 1st Grade 0/25 in (9) overs\n      - Result: Match is still in progress\n      Player Performances:\n      - The Entrance Mens 1st Grade\n        - Batting: Broc Hardy: 133 runs  from 113 balls, 15 fours, 6 sixes, SR: 117.69; ashley hardy: 69 runs  from 138 balls, 9 fours, 0 sixes, SR: 50; Kobi Goldie: 13 runs  from 40 balls, 1 fours, 0 sixes, SR: 32.5\n        - Bowling: Jai Nanavati: 0 wickets from 5 overs, 12 runs, Econ: 2.40; Ryan Bullot: 0 wickets from 3 overs, 9 runs, Econ: 3.00; Broc Hardy: 0 wickets from 1 overs, 4 runs, Econ: 4.00\n        - FOW: \n        - Fielding: Mathew Clarke, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Zachary Abel, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Rahul Thakur, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Jeremy O'Connell, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 1, Run outs assisted: 0, Total run outs: 1, Stumpings: 0\n      - Northern Power Mens 1st Grade\n        - Batting: Zachary Abel: 17 runs (Not out) from 25 balls, 1 fours, 0 sixes, SR: 68; Mathew Clarke: 5 runs (Not out) from 29 balls, 1 fours, 0 sixes, SR: 17.24\n        - Bowling: Hayden Murphy: 4 wickets from 21 overs, 38 runs, Econ: 1.81; Rahul Thakur: 2 wickets from 15.1 overs, 58 runs, Econ: 3.84; Nathaniel Stokes: 2 wickets from 7 overs, 32 runs, Econ: 4.57\n        - FOW: \n        - Fielding: undefined, Caught as fielder: undefined, Caught as wicket keeper: undefined, Total catches: undefined, Run outs unassisted: undefined, Run outs assisted: undefined, Total run outs: undefined, Stumpings: undefined",
-      "result": "Match is still in progress",
-      "status": "In Progress",
-      "ageGroup": "Senior",
       "awayTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bc7b5866f.jpg",
-          "width": 196,
-          "height": 257
-        },
-        "name": "Northern Power Mens 1st Grade",
-        "overs": "(9)",
-        "score": "0/25",
+        "name": "GC 50's Thunder Div 2 Green",
         "isHome": false,
-        "isClubTeam": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+          "width": 379,
+          "height": 303
+        },
+        "score": "10/88",
+        "overs": "(27.5)",
+        "awayScoresFirstInnings": "1",
         "battingPerformances": [
           {
-            "SR": 68,
+            "player": "Scott Day",
+            "runs": 19,
+            "balls": 16,
+            "fours": 4,
+            "sixes": 0,
+            "SR": 118.75,
+            "team": "GC 50's Thunder Div 2 Green",
+            "notOut": false
+          },
+          {
+            "player": "Michael Friedman",
             "runs": 17,
-            "team": "Northern Power Mens 1st Grade",
-            "balls": 25,
-            "fours": 1,
-            "sixes": 0,
-            "notOut": true,
-            "player": "Zachary Abel"
-          },
-          {
-            "SR": 17.24,
-            "runs": 5,
-            "team": "Northern Power Mens 1st Grade",
-            "balls": 29,
-            "fours": 1,
-            "sixes": 0,
-            "notOut": true,
-            "player": "Mathew Clarke"
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "runs": 12,
-            "team": "The Entrance Mens 1st Grade",
-            "overs": 5,
-            "player": "Jai Nanavati",
-            "economy": "2.40",
-            "maidens": 1,
-            "wickets": 0
-          },
-          {
-            "runs": 9,
-            "team": "The Entrance Mens 1st Grade",
-            "overs": 3,
-            "player": "Ryan Bullot",
-            "economy": "3.00",
-            "maidens": 1,
-            "wickets": 0
-          },
-          {
-            "runs": 4,
-            "team": "The Entrance Mens 1st Grade",
-            "overs": 1,
-            "player": "Broc Hardy",
-            "economy": "4.00",
-            "maidens": 0,
-            "wickets": 0
-          }
-        ],
-        "awayScoresFirstInnings": "1"
-      },
-      "homeTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_a260bd55ba.jpg",
-          "width": 256,
-          "height": 256
-        },
-        "name": "The Entrance Mens 1st Grade",
-        "overs": "(70.1)",
-        "score": "10/250",
-        "isHome": true,
-        "isClubTeam": false,
-        "battingPerformances": [
-          {
-            "SR": 117.69,
-            "runs": 133,
-            "team": "The Entrance Mens 1st Grade",
-            "balls": 113,
-            "fours": 15,
-            "sixes": 6,
-            "notOut": false,
-            "player": "Broc Hardy"
-          },
-          {
-            "SR": 50,
-            "runs": 69,
-            "team": "The Entrance Mens 1st Grade",
-            "balls": 138,
-            "fours": 9,
-            "sixes": 0,
-            "notOut": false,
-            "player": "ashley hardy"
-          },
-          {
-            "SR": 32.5,
-            "runs": 13,
-            "team": "The Entrance Mens 1st Grade",
-            "balls": 40,
-            "fours": 1,
-            "sixes": 0,
-            "notOut": false,
-            "player": "Kobi Goldie"
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "runs": 38,
-            "team": "Northern Power Mens 1st Grade",
-            "overs": 21,
-            "player": "Hayden Murphy",
-            "economy": "1.81",
-            "maidens": 7,
-            "wickets": 4
-          },
-          {
-            "runs": 58,
-            "team": "Northern Power Mens 1st Grade",
-            "overs": 15.1,
-            "player": "Rahul Thakur",
-            "economy": "3.84",
-            "maidens": 3,
-            "wickets": 2
-          },
-          {
-            "runs": 32,
-            "team": "Northern Power Mens 1st Grade",
-            "overs": 7,
-            "player": "Nathaniel Stokes",
-            "economy": "4.57",
-            "maidens": 1,
-            "wickets": 2
-          }
-        ],
-        "homeScoresFirstInnings": "1"
-      },
-      "gradeName": "Senior Mens 1st Grade",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bc7b5866f.jpg",
-        "width": 196,
-        "height": 257
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_a260bd55ba.jpg",
-        "width": 256,
-        "height": 256
-      },
-      "assignSponsors": {
-        "Teams": {
-          "away": {
-            "name": "Northern Power Mens 1st Grade"
-          },
-          "home": {
-            "name": "The Entrance Mens 1st Grade"
-          }
-        },
-        "grade": {
-          "id": 30115,
-          "name": "Senior Mens 1st Grade"
-        },
-        "competition": {
-          "id": 7163,
-          "name": "Central Coast Cricket Association - Senior Competition"
-        }
-      }
-    },
-    {
-      "date": "Sat, Jan 25",
-      "type": "Two Day+",
-      "round": "Round 7",
-      "gameID": "095930b1",
-      "gender": "Mixed",
-      "ground": "Woongarrah Sports Complex / Woongarah Oval",
-      "prompt": "Match Summary: Warnervale Mens 1st Grade vs. Wyong Mens 1st Grade:\n      - This Senior Mens 1st Grade game is a Two Day+, played in Round: Round 7 at Woongarrah Sports Complex / Woongarah Oval.\n      - Scores: Warnervale Mens 1st Grade 10/238 in (68) overs, Wyong Mens 1st Grade 2/27 in (12) overs\n      - Result: Match is still in progress\n      Player Performances:\n      - Warnervale Mens 1st Grade\n        - Batting: Brett Russell  (c): 70 runs  from 146 balls, 7 fours, 0 sixes, SR: 47.94; Shaun Hill: 49 runs (Not out) from 61 balls, 3 fours, 2 sixes, SR: 80.32; Callum Dunkerley: 35 runs  from 73 balls, 4 fours, 0 sixes, SR: 47.94\n        - Bowling: Harrison Townsend: 1 wickets from 4 overs, 1 runs, Econ: 0.25; Bailey Lavin: 1 wickets from 1 overs, 10 runs, Econ: 10.00; Brett Russell  (c): 0 wickets from 1 overs, 0 runs, Econ: 0.00\n        - FOW: \n        - Fielding: Jacob McCormick, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Thomas Alderson, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Lachlan Rainger, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Jack Harris, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Aaron Rourke, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0\n      - Wyong Mens 1st Grade\n        - Batting: Callum Rainger: 10 runs (Not out) from 5 balls, 2 fours, 0 sixes, SR: 200; Shaun Eaton  (c): 6 runs (Not out) from 36 balls, 0 fours, 0 sixes, SR: 16.66; Jonathon Sammut: 4 runs  from 13 balls, 1 fours, 0 sixes, SR: 30.76\n        - Bowling: Shaun Eaton  (c): 3 wickets from 16 overs, 43 runs, Econ: 2.69; Aaron Rourke: 3 wickets from 19 overs, 54 runs, Econ: 2.84; Callum Rainger: 2 wickets from 7 overs, 36 runs, Econ: 5.14\n        - FOW: \n        - Fielding: Logan Kubica, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0",
-      "result": "Match is still in progress",
-      "status": "In Progress",
-      "ageGroup": "Senior",
-      "awayTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_eb7fedc568.jpg",
-          "width": 479,
-          "height": 480
-        },
-        "name": "Wyong Mens 1st Grade",
-        "overs": "(12)",
-        "score": "2/27",
-        "isHome": false,
-        "isClubTeam": false,
-        "battingPerformances": [
-          {
-            "SR": 200,
-            "runs": 10,
-            "team": "Wyong Mens 1st Grade",
-            "balls": 5,
+            "balls": 30,
             "fours": 2,
             "sixes": 0,
-            "notOut": true,
-            "player": "Callum Rainger"
+            "SR": 56.66,
+            "team": "GC 50's Thunder Div 2 Green",
+            "notOut": false
           },
           {
-            "SR": 16.66,
-            "runs": 6,
-            "team": "Wyong Mens 1st Grade",
-            "balls": 36,
+            "player": "Andy Coey",
+            "runs": 13,
+            "balls": 17,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 76.47,
+            "team": "GC 50's Thunder Div 2 Green",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Jason Hay",
+            "overs": 8,
+            "maidens": 2,
+            "runs": 35,
+            "wickets": 4,
+            "economy": "4.38",
+            "team": "GC 50's Thunder Div 2 Gold"
+          },
+          {
+            "player": "Paul Azzopardi",
+            "overs": 9,
+            "maidens": 4,
+            "runs": 16,
+            "wickets": 3,
+            "economy": "1.78",
+            "team": "GC 50's Thunder Div 2 Gold"
+          },
+          {
+            "player": "Michael Ross",
+            "overs": 4.5,
+            "maidens": 1,
+            "runs": 11,
+            "wickets": 3,
+            "economy": "2.44",
+            "team": "GC 50's Thunder Div 2 Gold"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "date": "21 June 2025",
+      "type": "One Day",
+      "ground": "Oxenford Oval / Choice Homes Oval",
+      "round": "Round 5",
+      "gender": "Mixed",
+      "ageGroup": "Over 50",
+      "gradeName": "O50 Div 2 - Andrew Knight Shield",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          },
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
+          }
+        ]
+      },
+      "result": "GC 50's Thunder Div 2 Gold won by 70 runs",
+      "prompt": "Match Summary: GC 50's Thunder Div 2 Gold vs. GC 50's Thunder Div 2 Green:\n  - This O50 Div 2 - Andrew Knight Shield game is a One Day, played in Round: Round 5 at Oxenford Oval / Choice Homes Oval.\n  - Scores: GC 50's Thunder Div 2 Gold 10/158 in (38.4) overs, GC 50's Thunder Div 2 Green 10/88 in (27.5) overs\n  - Result: GC 50's Thunder Div 2 Gold won by 70 runs\n  Player Performances:\n  - GC 50's Thunder Div 2 Gold\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 9 (Paul Rapson), Wicket 2: 9 (Dean Croft), Wicket 3: 74 (Mark Snowden), Wicket 4: 78 (Rod Carrington), Wicket 5: 101 (Quentin Ryan), Wicket 6: 113 (Jeff Lindemann), Wicket 7: 113 (Jason Hay), Wicket 8: 116 (Michael Ross), Wicket 9: 117 (Daniel Platts), Wicket 10: 158 (Adam Bell)\n    - Fielding: \n  Focus on highlighted team performances."
+    },
+    {
+      "gameID": "a98f8529",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Sunshine Coast Maroon",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        },
+        "score": "3/121",
+        "overs": "(30.1)",
+        "homeScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Rick Bean",
+            "runs": 35,
+            "balls": 34,
+            "fours": 4,
+            "sixes": 0,
+            "SR": 102.94,
+            "team": "Sunshine Coast Maroon",
+            "notOut": false
+          },
+          {
+            "player": "Adrian Knell",
+            "runs": 27,
+            "balls": 40,
+            "fours": 4,
+            "sixes": 0,
+            "SR": 67.5,
+            "team": "Sunshine Coast Maroon",
+            "notOut": false
+          },
+          {
+            "player": "Garry Zealand",
+            "runs": 18,
+            "balls": 19,
+            "fours": 3,
+            "sixes": 0,
+            "SR": 94.73,
+            "team": "Sunshine Coast Maroon",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Glenn Hines",
+            "overs": 7,
+            "maidens": 1,
+            "runs": 34,
+            "wickets": 2,
+            "economy": "4.86",
+            "team": "GC Thunder Gold"
+          },
+          {
+            "player": "Brian Olsen",
+            "overs": 7,
+            "maidens": 2,
+            "runs": 22,
+            "wickets": 1,
+            "economy": "3.14",
+            "team": "GC Thunder Gold"
+          },
+          {
+            "player": "Kevin Bell",
+            "overs": 8,
+            "maidens": 1,
+            "runs": 27,
+            "wickets": 0,
+            "economy": "3.38",
+            "team": "GC Thunder Gold"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "awayTeam": {
+        "name": "GC Thunder Gold",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+          "width": 379,
+          "height": 303
+        },
+        "score": "10/94",
+        "overs": "(28.1)",
+        "awayScoresFirstInnings": "1",
+        "battingPerformances": [
+          {
+            "player": "Glenn Hines",
+            "runs": 17,
+            "balls": 27,
             "fours": 0,
             "sixes": 0,
-            "notOut": true,
-            "player": "Shaun Eaton  (c)"
+            "SR": 62.96,
+            "team": "GC Thunder Gold",
+            "notOut": false
           },
           {
-            "SR": 30.76,
-            "runs": 4,
-            "team": "Wyong Mens 1st Grade",
-            "balls": 13,
-            "fours": 1,
+            "player": "tony binns",
+            "runs": 15,
+            "balls": 40,
+            "fours": 2,
             "sixes": 0,
-            "notOut": false,
-            "player": "Jonathon Sammut"
+            "SR": 37.5,
+            "team": "GC Thunder Gold",
+            "notOut": false
+          },
+          {
+            "player": "Ian Coyne",
+            "runs": 14,
+            "balls": 21,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 66.66,
+            "team": "GC Thunder Gold",
+            "notOut": false
           }
         ],
         "bowlingPerformances": [
           {
-            "runs": 1,
-            "team": "Warnervale Mens 1st Grade",
-            "overs": 4,
-            "player": "Harrison Townsend",
-            "economy": "0.25",
-            "maidens": 3,
-            "wickets": 1
+            "player": "Gregory Shearer",
+            "overs": 6,
+            "maidens": 1,
+            "runs": 9,
+            "wickets": 3,
+            "economy": "1.50",
+            "team": "Sunshine Coast Maroon"
           },
           {
-            "runs": 10,
-            "team": "Warnervale Mens 1st Grade",
-            "overs": 1,
-            "player": "Bailey Lavin",
-            "economy": "10.00",
+            "player": "Kerry Emery",
+            "overs": 6,
             "maidens": 0,
-            "wickets": 1
+            "runs": 21,
+            "wickets": 2,
+            "economy": "3.50",
+            "team": "Sunshine Coast Maroon"
           },
           {
-            "runs": 0,
-            "team": "Warnervale Mens 1st Grade",
-            "overs": 1,
-            "player": "Brett Russell  (c)",
-            "economy": "0.00",
-            "maidens": 1,
-            "wickets": 0
+            "player": "Wayne Brown",
+            "overs": 2.1,
+            "maidens": 0,
+            "runs": 11,
+            "wickets": 2,
+            "economy": "5.24",
+            "team": "Sunshine Coast Maroon"
           }
         ],
-        "awayScoresFirstInnings": "1"
-      },
-      "homeTeam": {
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f424234b1.jpg",
-          "width": 690,
-          "height": 712
-        },
-        "name": "Warnervale Mens 1st Grade",
-        "overs": "(68)",
-        "score": "10/238",
-        "isHome": true,
-        "isClubTeam": false,
-        "battingPerformances": [
-          {
-            "SR": 47.94,
-            "runs": 70,
-            "team": "Warnervale Mens 1st Grade",
-            "balls": 146,
-            "fours": 7,
-            "sixes": 0,
-            "notOut": false,
-            "player": "Brett Russell  (c)"
-          },
-          {
-            "SR": 80.32,
-            "runs": 49,
-            "team": "Warnervale Mens 1st Grade",
-            "balls": 61,
-            "fours": 3,
-            "sixes": 2,
-            "notOut": true,
-            "player": "Shaun Hill"
-          },
-          {
-            "SR": 47.94,
-            "runs": 35,
-            "team": "Warnervale Mens 1st Grade",
-            "balls": 73,
-            "fours": 4,
-            "sixes": 0,
-            "notOut": false,
-            "player": "Callum Dunkerley"
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "runs": 43,
-            "team": "Wyong Mens 1st Grade",
-            "overs": 16,
-            "player": "Shaun Eaton  (c)",
-            "economy": "2.69",
-            "maidens": 5,
-            "wickets": 3
-          },
-          {
-            "runs": 54,
-            "team": "Wyong Mens 1st Grade",
-            "overs": 19,
-            "player": "Aaron Rourke",
-            "economy": "2.84",
-            "maidens": 5,
-            "wickets": 3
-          },
-          {
-            "runs": 36,
-            "team": "Wyong Mens 1st Grade",
-            "overs": 7,
-            "player": "Callum Rainger",
-            "economy": "5.14",
-            "maidens": 1,
-            "wickets": 2
-          }
-        ],
-        "homeScoresFirstInnings": "1"
-      },
-      "gradeName": "Senior Mens 1st Grade",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_eb7fedc568.jpg",
-        "width": 479,
-        "height": 480
+        "isClubTeam": false
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f424234b1.jpg",
-        "width": 690,
-        "height": 712
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "date": "21 June 2025",
+      "type": "One Day",
+      "ground": "Caboolture Cricket Club / Superior Homes Oval",
+      "round": "Round 6",
+      "gender": "Mixed",
+      "ageGroup": "Over 60",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
       "assignSponsors": {
-        "Teams": {
-          "away": {
-            "name": "Wyong Mens 1st Grade"
-          },
-          "home": {
-            "name": "Warnervale Mens 1st Grade"
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
           }
-        },
-        "grade": {
-          "id": 30115,
-          "name": "Senior Mens 1st Grade"
-        },
-        "competition": {
-          "id": 7163,
-          "name": "Central Coast Cricket Association - Senior Competition"
-        }
-      }
+        ]
+      },
+      "result": "Sunshine Coast Maroon won by 27 runs",
+      "prompt": "Match Summary: Sunshine Coast Maroon vs. GC Thunder Gold:\n  - This O60 Div 2 - Kerry Emery Shield game is a One Day, played in Round: Round 6 at Caboolture Cricket Club / Superior Homes Oval.\n  - Scores: Sunshine Coast Maroon 3/121 in (30.1) overs, GC Thunder Gold 10/94 in (28.1) overs\n  - Result: Sunshine Coast Maroon won by 27 runs\n  Player Performances:\n  - Sunshine Coast Maroon\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 15 (Rod Armstrong), Wicket 2: 78 (Rick Bean), Wicket 3: 83 (Stephen Geils)\n    - Fielding: \n  Focus on highlighted team performances."
+    },
+    {
+      "gameID": "ba1c0f25",
+      "status": "Abandoned",
+      "homeTeam": {
+        "name": "Sunshine Coast Gold",
+        "score": "N/A",
+        "overs": "N/A"
+      },
+      "awayTeam": {
+        "name": "GC Thunder Blue",
+        "score": "N/A",
+        "overs": "N/A"
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "date": "22 June 2025",
+      "type": "One Day",
+      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
+      "round": "Round 7",
+      "gender": "Mixed",
+      "ageGroup": "Over 60",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ]
+      },
+      "result": "Abandoned Match",
+      "prompt": "Match Summary: Game was Abandoned: Sunshine Coast Gold vs. GC Thunder Blue"
+    },
+    {
+      "gameID": "c19127d6",
+      "status": "Abandoned",
+      "homeTeam": {
+        "name": "Wide Bay",
+        "score": "N/A",
+        "overs": "N/A"
+      },
+      "awayTeam": {
+        "name": "GC Thunder Gold",
+        "score": "N/A",
+        "overs": "N/A"
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "date": "22 June 2025",
+      "type": "One Day",
+      "ground": "Elizabeth Daniels Park / Ron McMullen Oval",
+      "round": "Round 7",
+      "gender": "Mixed",
+      "ageGroup": "Over 60",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
+          }
+        ]
+      },
+      "result": "Abandoned Match",
+      "prompt": "Match Summary: Game was Abandoned: Wide Bay vs. GC Thunder Gold"
     }
   ],
-  "ASSET": {
-    "ASSETID": 4,
-    "ASSETTYPEID": 2,
-    "ASSETSLINKID": "266f1928575114cbe018ffcb88ac8cadc590f7876d98d8018f78bd82f5637d3e",
-    "ASSETCATEGORYID": 1
+  "asset": {
+    "assetID": 13,
+    "assetTypeID": 2,
+    "assetCategoryID": 2,
+    "assetsLinkID": "e35cb8379f5f3586da46d8fa76a49248bbd76c9b6b721d0794f852015fca105a"
   },
-  "PROMPT": [],
-  "RENDER": {
-    "RenderID": 6567,
-    "SchedulerID": 144
+  "render": {
+    "schedulerId": 207,
+    "renderId": 8265
   },
-  "ACCOUNT": {
-    "accountId": 144
+  "account": {
+    "accountId": 319
   },
   "timings": {
-    "FPS_MAIN": 600,
+    "FPS_MAIN": 405,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 180,
-    "FPS_SCORECARD": 300
+    "FPS_OUTRO": 90,
+    "FPS_LADDER": 0,
+    "FPS_SCORECARD": 210
   },
+  "frames": [45, 195, 390, 525],
   "videoMeta": {
     "club": {
-      "Logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_47_fc0a3c8c18.jpg",
-        "width": 128,
-        "height": 128
+      "logo": {
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
-      "Name": "Central Coast Cricket Association",
-      "Sport": "Cricket",
-      "Sponsors": {
-        "grade": [
+      "name": "Gold Coast Veterans Cricket",
+      "sport": "Cricket",
+      "sponsors": {
+        "primary": [
           {
-            "id": 31488,
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
             "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_31488",
-            "sponsorId": 189,
-            "allocationName": "Male Youth League U17"
-          },
-          {
-            "id": 32543,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_32543",
-            "sponsorId": 189,
-            "allocationName": "U14B (Stage 2)"
-          },
-          {
-            "id": 32541,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_32541",
-            "sponsorId": 189,
-            "allocationName": "U10 North"
-          },
-          {
-            "id": 32546,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_32546",
-            "sponsorId": 189,
-            "allocationName": "Girls Stage 2"
-          },
-          {
-            "id": 31983,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_31983",
-            "sponsorId": 189,
-            "allocationName": "Senior Men 3rd Grade"
-          },
-          {
-            "id": 31986,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_31986",
-            "sponsorId": 189,
-            "allocationName": "Over 50 Masters"
-          },
-          {
-            "id": 32508,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_32508",
-            "sponsorId": 189,
-            "allocationName": "Senior Men 6th Grade"
-          },
-          {
-            "id": 31487,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_31487",
-            "sponsorId": 189,
-            "allocationName": "Female Youth League"
-          },
-          {
-            "id": 36855,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-              "width": 1082,
-              "height": 431
-            },
-            "name": "Aspire Physiotherapy",
-            "level": "grade_36855",
-            "sponsorId": 189,
-            "allocationName": "U12C"
-          },
-          {
-            "id": 32542,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_32542",
-            "sponsorId": 190,
-            "allocationName": "U10 South"
-          },
-          {
-            "id": 32545,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_32545",
-            "sponsorId": 190,
-            "allocationName": "Girls Sixers League"
-          },
-          {
-            "id": 31982,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_31982",
-            "sponsorId": 190,
-            "allocationName": "Senior Women 2nd Grade"
-          },
-          {
-            "id": 31985,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_31985",
-            "sponsorId": 190,
-            "allocationName": "Over 40 Masters"
-          },
-          {
-            "id": 32507,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_32507",
-            "sponsorId": 190,
-            "allocationName": "Senior Men 5th Grade"
-          },
-          {
-            "id": 32966,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_32966",
-            "sponsorId": 190,
-            "allocationName": "Senior Men 8th Grade"
-          },
-          {
-            "id": 31981,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_31981",
-            "sponsorId": 190,
-            "allocationName": "Senior Women 1st Grade"
-          },
-          {
-            "id": 36854,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_36854",
-            "sponsorId": 190,
-            "allocationName": "U12B"
-          },
-          {
-            "id": 30114,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-              "width": 383,
-              "height": 141
-            },
-            "name": "Weet-Bix",
-            "level": "grade_30114",
-            "sponsorId": 190,
-            "allocationName": "Senior Men T20 Competition"
-          },
-          {
-            "id": 36853,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Diggers_cd5a3ffdf5.jpg",
-              "width": 339,
-              "height": 135
-            },
-            "name": "Diggers",
-            "level": "grade_36853",
-            "sponsorId": 191,
-            "allocationName": "U12A"
-          },
-          {
-            "id": 30115,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Diggers_cd5a3ffdf5.jpg",
-              "width": 339,
-              "height": 135
-            },
-            "name": "Diggers",
-            "level": "grade_30115",
-            "sponsorId": 191,
-            "allocationName": "Senior Mens 1st Grade"
-          },
-          {
-            "id": 30116,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Diggers_cd5a3ffdf5.jpg",
-              "width": 339,
-              "height": 135
-            },
-            "name": "Diggers",
-            "level": "grade_30116",
-            "sponsorId": 191,
-            "allocationName": "Senior Mens 2nd Grade"
-          },
-          {
-            "id": 31489,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_31489",
-            "sponsorId": 192,
-            "allocationName": "U14A (Stage 3)"
-          },
-          {
-            "id": 32544,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_32544",
-            "sponsorId": 192,
-            "allocationName": "U14C (Stage 2)"
-          },
-          {
-            "id": 31486,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_31486",
-            "sponsorId": 192,
-            "allocationName": "U12 Mixed"
-          },
-          {
-            "id": 31984,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_31984",
-            "sponsorId": 192,
-            "allocationName": "Senior Women 3rd Grade"
-          },
-          {
-            "id": 32506,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_32506",
-            "sponsorId": 192,
-            "allocationName": "Senior Men 4th Grade"
-          },
-          {
-            "id": 32509,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_32509",
-            "sponsorId": 192,
-            "allocationName": "Senior Men 7th Grade"
-          },
-          {
-            "id": 32547,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-              "width": 353,
-              "height": 101
-            },
-            "name": "Triple M",
-            "level": "grade_32547",
-            "sponsorId": 192,
-            "allocationName": "U16"
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
           }
         ],
         "default": {
-          "primary_sponsor": {
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Diggers_cd5a3ffdf5.jpg",
-              "width": 339,
-              "height": 135
-            },
-            "name": "Diggers",
-            "sponsorId": 191
-          },
-          "general_sponsors": [
+          "primary_sponsor": [
             {
+              "id": 151,
+              "isPrimary": true,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
               "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Weet_Bix_bf6ea78478.png",
-                "width": 383,
-                "height": 141
-              },
-              "name": "Weet-Bix",
-              "position": 1,
-              "sponsorId": 190
-            },
+                "id": 12784,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+              }
+            }
+          ],
+          "general_sponsor_1": [
             {
+              "id": 152,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
               "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Aspire_Physio_0e78d5e5f0.jpg",
-                "width": 1082,
-                "height": 431
-              },
-              "name": "Aspire Physiotherapy",
-              "position": 2,
-              "sponsorId": 189
-            },
+                "id": 12785,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+              }
+            }
+          ],
+          "general_sponsor_2": [
             {
+              "id": 153,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
               "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Triple_M_2bd48aa3df.png",
-                "width": 353,
-                "height": 101
-              },
-              "name": "Triple M",
-              "position": 3,
-              "sponsorId": 192
+                "id": 12786,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+              }
             }
           ]
         }
       }
     },
-
     "video": {
-      "theme": {
-        "dark": "#111",
-        "white": "#FFF",
-        "primary": "#043666",
-        "secondary": "#fccb3d"
-      },
+      "fixtureCategory": "MASTERS",
+      "groupingCategory": "MASTERS",
       "metadata": {
         "title": "Results",
         "titleSplit": ["Results"],
-        "videoTitle": "Results",
+        "videoTitle": "Weekend Results",
         "compositionId": "CricketResults",
-        "assetId": 18,
-        "assetTypeId": 3,
-        "frames": [355, 600, 900, 1200, 1500],
+        "assetId": 13,
+        "assetTypeId": 2,
+        "frames": [],
         "includeSponsors": true
       },
-
       "appearance": {
         "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "dark": "#FFF",
+          "white": "#111",
+          "primary": "#800000",
+          "secondary": "#eeba2b"
         },
-
-        "template": "Basic",
-        "type": "Pattern",
-        "templateOptions": {
-          "borderRadius": "10px",
-          "Background": "Solid",
-          "Palette": "primary"
-        }
+        "template": "Basic"
       },
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853,
-          "AgeGroup": "Both",
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
         },
-
         "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3"
         }
       },
       "contentLayout": {
-        "dividedFixturesBy": {
-          "Ladder": 1,
-          "RosterPoster": 1,
-          "WeekendResults": 2,
-          "UpComingFixtures": 3,
-          "WeekendSingleGameResult": 1
+        "divideFixturesBy": {
+          "CricketLadder": 1,
+          "CricketRoster": 1,
+          "CricketResults": 2,
+          "CricketUpcoming": 3,
+          "CricketResultSingle": 1
         }
       },
       "templateVariation": {
-        "Video": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
-          "fallbackUrl": "https://example.com/fallback-video.mp4",
-          "position": "center",
+        "useBackground": "Graphics",
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": "left",
           "size": "cover",
-          "loop": true,
+          "loop": null,
           "muted": true,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "useOffthreadVideo": true,
+          "useOffthreadVideo": null,
           "volume": 0.8,
-          "playbackRate": 1.0
+          "playbackRate": null
         },
-        "Image": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
-          "ratio": "portrait",
-          "width": 3290,
-          "height": 3354,
-          "type": "pan",
-          "direction": "left",
-          "overlayStyle": "vignette",
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "focusblur",
+          "direction": "in",
+          "overlayStyle": "duotone",
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-
-        "Palette": "primary",
-        "borderRadius": "10px",
-        "Gradient": {
-          "type": "primaryToSecondary",
-          "direction": "VERTICAL"
+        "palette": "secondary",
+        "gradient": {
+          "type": "primaryRadial",
+          "direction": "DEFAULT"
         },
-        "Noise": {
-          "type": "grain"
+        "noise": {
+          "type": "floatingParticles"
         },
-        "Pattern": {
+        "pattern": {
           "type": "dots",
-          "animation": "panDown",
-          "scale": 0.75,
-          "rotation": 0,
-          "opacity": 0.35,
-          "animationDuration": 300,
-          "animationSpeed": 0.8
+          "animation": "up",
+          "scale": 0.5,
+          "rotation": null,
+          "opacity": 0.3,
+          "animationDuration": 1500,
+          "animationSpeed": 0.5
         },
-        "Particle": {
-          "type": "lines",
-          "particleCount": 400,
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
+        "particle": {
+          "type": "snow",
+          "particleCount": "150",
+          "speed": 1,
+          "direction": "down",
+          "animation": "fade"
         }
       }
-    },
-    "FixtureCategory": "central coast cricket association - senior competition - Senior Mens 1st Grade",
-    "grouping_category": "central coast cricket association - senior competition - Senior Mens 1st Grade"
-  }
+    }
+  },
+  "errors": []
 }

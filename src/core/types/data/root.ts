@@ -1,19 +1,18 @@
 // types/data/root.ts
 
 import { Asset } from "./assets";
-import { Render, Account, timings } from "./common";
+import { Render, Account, Timings } from "./common";
 import { VideoMeta } from "./videoData";
-import { MatchData } from "./match";
 
-// Main data structure that encompasses all
-export interface FixturaDataset {
-  // Add id property that's being used in the codebase
+// Make FixturaDataset generic for the data key
+export interface FixturaDataset<T = unknown> {
   id?: string;
-  data: MatchData[];
-  ASSET: Asset;
-  PROMPT: string[];
-  RENDER: Render;
-  ACCOUNT: Account;
-  timings: timings;
+  data: T[];
+  asset: Asset;
+  render: Render;
+  account: Account;
+  timings: Timings;
+  frames: number[];
   videoMeta: VideoMeta;
+  errors: unknown[];
 }

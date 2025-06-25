@@ -74,7 +74,7 @@ export const SlideInContainer = () => (
     rounded="md"
     animation="slideInLeft"
     animationDuration={25}
-    animationEasing="easeOut"
+    animationEasing={{ type: "out", base: "ease" }}
     style={{ padding: 20, width: 300, height: 200 }}
   >
     <Typography>Slide In Animation</Typography>
@@ -91,10 +91,10 @@ export const SlideInOutContainer = () => (
     rounded="md"
     animation="slideInLeft"
     animationDuration={25}
-    animationEasing="easeOut"
+    animationEasing={{ type: "out", base: "ease" }}
     exitAnimation="slideOutRight"
     exitAnimationDuration={25}
-    exitAnimationEasing="easeIn"
+    exitAnimationEasing={{ type: "in", base: "ease" }}
     exitFrame={90}
     style={{ padding: 20, width: 300, height: 200 }}
   >
@@ -176,7 +176,7 @@ export const RevealContainer = () => (
  */
 export const SequencedContainers = () => (
   <>
-    <Sequence from={0} durationInFrames={120}>
+    <Sequence durationInFrames={120}>
       <AnimatedContainer
         type="card"
         backgroundColor="primary"

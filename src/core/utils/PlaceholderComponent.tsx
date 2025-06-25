@@ -5,6 +5,7 @@ interface PlaceholderComponentProps {
   compositionId: string;
   templateId: string;
   sport: string;
+  reason?: string;
 }
 
 export const PlaceholderComponent: React.FC<PlaceholderComponentProps> = ({
@@ -12,6 +13,7 @@ export const PlaceholderComponent: React.FC<PlaceholderComponentProps> = ({
   compositionId,
   templateId,
   sport,
+  reason,
 }) => {
   const baseStyle = {
     display: "flex",
@@ -30,6 +32,7 @@ export const PlaceholderComponent: React.FC<PlaceholderComponentProps> = ({
       <h1 style={{ fontSize: "3em", marginBottom: "20px" }}>
         {title || "Composition"}
       </h1>
+      <h1 style={{ fontSize: "3em", marginBottom: "20px" }}>{reason}</h1>
       <p style={{ fontSize: "1.5em", marginBottom: "10px" }}>
         Missing Composition Implementation
       </p>

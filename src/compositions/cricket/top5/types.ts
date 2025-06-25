@@ -1,3 +1,5 @@
+import { AssignSponsors } from "../composition-types";
+
 // Types for top 5 players data structure
 export interface TeamLogo {
   url: string;
@@ -17,12 +19,6 @@ export interface Grade {
 export interface Competition {
   id: number;
   name: string;
-}
-
-export interface AssignSponsors {
-  Team: Team;
-  grade: Grade;
-  competition: Competition;
 }
 
 // Base player data that's common to both types

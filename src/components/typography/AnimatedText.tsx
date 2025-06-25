@@ -1,5 +1,5 @@
 import React from "react";
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, useVideoConfig } from "remotion";
 import { useThemeContext } from "../../core/context/ThemeContext";
 import { getVariantStyles, applyContrastSafety } from "./config/variants";
 import {
@@ -7,10 +7,11 @@ import {
   AnimationConfig,
   normalizeAnimation,
   useAnimation,
-  EasingType,
+  getAnimationStyles,
   SpringConfig,
   SPRING_CONFIGS,
 } from "./config/animations";
+import type { ImageEasingType } from "./config/animations/types";
 import { useFontContext } from "../../core/context/FontContext";
 
 // Define the possible typography types based on componentStyles keys
@@ -63,17 +64,13 @@ interface AnimatedTextProps {
   animation?: AnimationType | AnimationConfig;
   animationDelay?: number;
   animationDuration?: number;
-  animationEasing?: EasingType;
+  animationEasing?: ImageEasingType;
   springConfig?: SpringConfig;
-  staggerDelay?: number;
   letterAnimation?: AnimationMode;
 
   // Exit Animation props
   exitAnimation?: AnimationType | AnimationConfig;
-  exitAnimationDelay?: number;
   exitAnimationDuration?: number;
-  exitAnimationEasing?: EasingType;
-  exitSpringConfig?: SpringConfig;
   exitFrame?: number; // Frame at which to start the exit animation
 
   // Optional style overrides
@@ -106,17 +103,13 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   animation,
   animationDelay = 0,
   animationDuration = 30,
-  animationEasing = "easeInOut",
+  animationEasing = { type: "inOut", base: "ease" },
   springConfig = SPRING_CONFIGS.DEFAULT,
-  staggerDelay = 2,
   letterAnimation = "fadeIn",
 
   // Exit animation props
   exitAnimation,
-  exitAnimationDelay = 0,
   exitAnimationDuration = 30,
-  exitAnimationEasing = "easeInOut",
-  exitSpringConfig = SPRING_CONFIGS.DEFAULT,
   exitFrame = 0,
 
   // Style overrides
@@ -124,57 +117,37 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   textTransform,
   fontFamily,
 }) => {
-  // Get the current frame from Remotion
-  const currentFrame = useCurrentFrame();
-
-  // Get theme context and font context
-  const { colors, componentStyles, selectedPalette, fontClasses, fonts } =
+  // --- ALL HOOKS AT THE TOP ---
+  const frame = useCurrentFrame();
+  const { componentStyles, selectedPalette, fontClasses, fonts } =
     useThemeContext();
   const { loadFont } = useFontContext();
-  const { colorSystem } = colors;
-
-  // Get style from componentStyles or fallback to bodyText
-  const componentStyle = componentStyles[type] ||
-    componentStyles.bodyText || { className: "", style: {} };
+  /* const { colorSystem } = colors; */
+  const { fps } = useVideoConfig();
 
   // Get font family from various sources with cascading precedence
-  // 1. Direct prop override
-  // 2. Type-specific font class in theme
-  // 3. Default copy font from theme fonts
-  // 4. Fallback to system fonts
   const typeFontFamily = (() => {
-    // Direct prop override has highest priority
     if (fontFamily) return fontFamily;
-
-    // Next, check if we have a font class for this type
     if (fontClasses && fontClasses[type] && fontClasses[type]?.family) {
       return fontClasses[type]?.family;
     }
-
-    // Map common types to theme font configurations
     if (type === "title" || type === "heading") {
       if (fonts?.title?.family) return fonts.title.family;
       if (fontClasses?.heading?.family) return fontClasses.heading.family;
       return fonts?.heading?.family;
     }
-
     if (type === "subtitle" || type === "subheading") {
       if (fonts?.subheading?.family) return fonts.subheading.family;
       if (fontClasses?.subheading?.family) return fontClasses.subheading.family;
-      return "Heebo"; // Default fallback
+      return "Heebo";
     }
-
-    // Default to body/copy font
     if (fonts?.copy?.family) return fonts.copy.family;
     if (fontClasses?.body?.family) return fontClasses.body.family;
-
-    // Ultimate fallback
     return "Arial, sans-serif";
   })();
 
-  // Make sure we load the font on first render (as a safety measure)
+  // --- useEffect for font loading at the top ---
   React.useEffect(() => {
-    // Only try to load if it's not a system font
     if (
       typeFontFamily &&
       !typeFontFamily.includes(",") &&
@@ -187,13 +160,50 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     }
   }, [typeFontFamily, loadFont]);
 
-  // Get color variant styles
-  const variantStyles = getVariantStyles(
-    variant,
-    colorSystem,
-    colors,
-    contrastSafe,
+  // --- Compute container animation config and styles at the top ---
+  const containerAnimConfig = normalizeAnimation(
+    animation,
+    animationDelay,
+    animationDuration,
+    animationEasing as ImageEasingType,
+    springConfig,
   );
+  const containerAnimStyles = useAnimation(containerAnimConfig);
+
+  const exitAnimConfig = normalizeAnimation(
+    exitAnimation || "fadeOut",
+    0,
+    exitAnimationDuration,
+    animationEasing as ImageEasingType,
+    springConfig,
+  );
+
+  let animStyles: React.CSSProperties;
+  if (exitAnimation && exitFrame > 0 && frame >= exitFrame) {
+    // Use the exit animation, but offset the frame
+    animStyles = getAnimationStyles(exitAnimConfig, frame - exitFrame, fps);
+  } else {
+    animStyles = containerAnimStyles;
+  }
+
+  // --- EARLY RETURN CAN NOW USE 'frame' ---
+  if (exitFrame > 0 && frame >= exitFrame && !exitAnimation) {
+    return null;
+  }
+
+  // Ensure baseComponentStyle always has className and style
+  const baseComponentStyle = (componentStyles[type] ||
+    componentStyles.bodyText || { className: "", style: {} }) as {
+    className: string;
+    style: React.CSSProperties;
+  };
+  const componentStyle = {
+    className: baseComponentStyle.className ?? "",
+    style: baseComponentStyle.style ?? {},
+  };
+
+  // Get color variant styles
+  const variantStyles = getVariantStyles(variant, selectedPalette);
 
   // Apply contrast safety if needed
   const textColor =
@@ -209,7 +219,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   // Calculate entry animation progress
   const entryProgress = animation
     ? interpolate(
-        currentFrame,
+        frame,
         [animationDelay, animationDelay + animationDuration],
         [0, 1],
         {
@@ -221,9 +231,9 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   // Calculate exit animation progress
   const exitProgress =
-    exitFrame > 0 && currentFrame >= exitFrame
+    exitFrame > 0 && frame >= exitFrame
       ? interpolate(
-          currentFrame,
+          frame,
           [exitFrame, exitFrame + exitAnimationDuration],
           [0, 1],
           {
@@ -236,38 +246,12 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   // Determine if we should show exit animation
   const isExitActive = exitAnimation && exitProgress > 0;
 
-  // If we're past the exit frame and no exit animation is defined, don't render
-  if (exitFrame > 0 && currentFrame >= exitFrame && !exitAnimation) {
-    return null;
-  }
-
   // Calculate the final opacity based on both animations
   const opacity = isExitActive
     ? 1 - exitProgress
     : animation
       ? entryProgress
       : 1;
-
-  // Get container animation config
-  const containerAnimConfig = normalizeAnimation(
-    isExitActive ? exitAnimation : animation,
-    isExitActive ? exitAnimationDelay : animationDelay,
-    isExitActive ? exitAnimationDuration : animationDuration,
-    isExitActive ? exitAnimationEasing : animationEasing,
-    isExitActive ? exitSpringConfig : springConfig,
-  );
-
-  // Get container animation styles
-  const containerAnimStyles = containerAnimConfig
-    ? useAnimation(containerAnimConfig)
-    : {};
-
-  // Style overrides
-  const overrideStyles: React.CSSProperties = {
-    ...(textAlign && { textAlign }),
-    ...(textTransform && { textTransform }),
-    ...(typeFontFamily && { fontFamily: typeFontFamily }),
-  };
 
   // Convert children to string
   const text = String(children);
@@ -280,6 +264,17 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         ? "word"
         : "letter";
 
+  // Precompute words and letters
+  const words = text.split(/\s+/);
+  const chars = text.split("");
+
+  // Style overrides
+  const overrideStyles: React.CSSProperties = {
+    ...(textAlign && { textAlign }),
+    ...(textTransform && { textTransform }),
+    ...(typeFontFamily && { fontFamily: typeFontFamily }),
+  };
+
   return (
     <div
       className={`${componentStyle.className} ${className}`.trim()}
@@ -289,121 +284,34 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         ...variantStyles.additionalStyles,
         ...overrideStyles,
         ...style,
-        ...(containerAnimStyles as React.CSSProperties),
+        ...(animStyles as React.CSSProperties),
         opacity,
       }}
     >
       {animationMode === "none"
-        ? // Render the text as a whole without animation
-          text
+        ? text
         : animationMode === "word"
-          ? // Render with word-by-word animation
-            text.split(/\s+/).map((word, index) => {
-              // Calculate staggered delay for each word
-              const wordDelay =
-                (isExitActive ? exitAnimationDelay : animationDelay) +
-                index * staggerDelay;
-
-              // Calculate word-specific progress
-              const wordEntryProgress = animation
-                ? interpolate(
-                    currentFrame,
-                    [wordDelay, wordDelay + animationDuration],
-                    [0, 1],
-                    {
-                      extrapolateLeft: "clamp",
-                      extrapolateRight: "clamp",
-                    },
-                  )
-                : 1;
-
-              const wordOpacity = isExitActive
-                ? 1 - exitProgress
-                : animation
-                  ? wordEntryProgress
-                  : 1;
-
-              // Create animation config for this word
-              const wordAnimConfig = normalizeAnimation(
-                isExitActive ? exitAnimation : ("fadeIn" as AnimationType),
-                wordDelay,
-                isExitActive ? exitAnimationDuration : animationDuration,
-                isExitActive ? exitAnimationEasing : animationEasing,
-                isExitActive ? exitSpringConfig : springConfig,
-              );
-
-              // Get animation styles for this word
-              const wordAnimStyles = useAnimation(wordAnimConfig);
-
-              return (
-                <React.Fragment key={index}>
-                  {index > 0 && " "}
-                  <span
-                    style={{
-                      display: "inline-block",
-                      ...(wordAnimStyles as React.CSSProperties),
-                      opacity: wordOpacity,
-                    }}
-                  >
-                    {word}
-                  </span>
-                </React.Fragment>
-              );
-            })
-          : // Render with letter-by-letter animation
-            text.split("").map((char, index) => {
-              // Calculate staggered delay for each character
-              const charDelay =
-                (isExitActive ? exitAnimationDelay : animationDelay) +
-                index * staggerDelay;
-
-              // Calculate character-specific progress
-              const charEntryProgress = animation
-                ? interpolate(
-                    currentFrame,
-                    [charDelay, charDelay + animationDuration],
-                    [0, 1],
-                    {
-                      extrapolateLeft: "clamp",
-                      extrapolateRight: "clamp",
-                    },
-                  )
-                : 1;
-
-              const charOpacity = isExitActive
-                ? 1 - exitProgress
-                : animation
-                  ? charEntryProgress
-                  : 1;
-
-              // Create animation config for this character
-              const charAnimConfig = normalizeAnimation(
-                isExitActive
-                  ? exitAnimation
-                  : letterAnimation === "word" || letterAnimation === "none"
-                    ? ("fadeIn" as AnimationType)
-                    : (letterAnimation as AnimationType),
-                charDelay,
-                isExitActive ? exitAnimationDuration : animationDuration,
-                isExitActive ? exitAnimationEasing : animationEasing,
-                isExitActive ? exitSpringConfig : springConfig,
-              );
-
-              // Get animation styles for this character
-              const charAnimStyles = useAnimation(charAnimConfig);
-
-              // Handle spaces specially
+          ? words.map((word, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && " "}
+                <span
+                  style={{
+                    display: "inline-block",
+                  }}
+                >
+                  {word}
+                </span>
+              </React.Fragment>
+            ))
+          : chars.map((char, index) => {
               if (char === " ") {
                 return <span key={index}>&nbsp;</span>;
               }
-
               return (
                 <span
                   key={index}
                   style={{
                     display: "inline-block",
-                    ...(charAnimStyles as React.CSSProperties),
-                    opacity: charOpacity,
                   }}
                 >
                   {char}

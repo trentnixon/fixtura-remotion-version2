@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TypographyElement } from "../../../core/context/types/ThemeContextTypes";
 
 // Interface for the processed typography styles

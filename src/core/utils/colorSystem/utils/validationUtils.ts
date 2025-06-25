@@ -170,7 +170,7 @@ export const validateStandardizedPalettes = (
 
   // Validate each palette
   for (const [name, palette] of Object.entries(palettes)) {
-    const validation = validateStandardizedPalette(palette);
+    const validation = validateStandardizedPalette(palette as DesignPalette);
     if (!validation.isValid) {
       return {
         isValid: false,

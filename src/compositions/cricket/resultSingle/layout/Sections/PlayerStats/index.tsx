@@ -1,5 +1,5 @@
 import React from "react";
-import { Team } from "../../../types";
+import { BattingPerformance, BowlingPerformance, Team } from "../../../types";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
@@ -62,7 +62,7 @@ const StatItem: React.FC<StatItemProps> = ({
 
 // Component for a section of stats (batting or bowling)
 interface StatSectionProps {
-  players: any[];
+  players: BattingPerformance[] | BowlingPerformance[];
   isBatting: boolean;
   delay: number;
 }
@@ -82,8 +82,12 @@ const StatSection: React.FC<StatSectionProps> = ({
           playerName={player.player}
           statValue={
             isBatting
-              ? `${player.runs}${player.notOut ? "*" : ""} (${player.balls})`
-              : `${player.wickets}/${player.runs} (${player.overs})`
+              ? `${player.runs}${
+                  "notOut" in player && player.notOut ? "*" : ""
+                } (${"balls" in player ? player.balls : 0})`
+              : `${"wickets" in player ? player.wickets : 0}/${
+                  "runs" in player ? player.runs : 0
+                } (${"overs" in player ? player.overs : 0})`
           }
           delay={delay}
           index={i}
@@ -107,8 +111,12 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   maxPlayersPerStat,
   className = "",
 }) => {
-  const batters = team.battingPerformances.slice(0, maxPlayersPerStat);
-  const bowlers = team.bowlingPerformances.slice(0, maxPlayersPerStat);
+  const batters = team.battingPerformances
+    ? team.battingPerformances.slice(0, maxPlayersPerStat)
+    : [];
+  const bowlers = team.bowlingPerformances
+    ? team.bowlingPerformances.slice(0, maxPlayersPerStat)
+    : [];
 
   return (
     <div className={`flex-1 px-2 py-0 flex flex-col ${className}`}>

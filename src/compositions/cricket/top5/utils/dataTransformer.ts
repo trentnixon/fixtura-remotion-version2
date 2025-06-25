@@ -12,7 +12,7 @@ import {
  * @returns Properly typed player data
  */
 export const transformPlayerData = (
-  rawData: any[],
+  rawData: PlayerData[],
   compositionId: string,
 ): PlayerData[] => {
   if (!rawData || !Array.isArray(rawData) || rawData.length === 0) {

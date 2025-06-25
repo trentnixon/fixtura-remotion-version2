@@ -5,6 +5,7 @@ export type TitleScreenProps = {
   Logo: React.ReactNode;
   Title: React.ReactNode;
   Name: React.ReactNode;
+  PrimarySponsor: React.ReactNode;
   alignment?: "start" | "center" | "end";
   exitFrame?: number;
 };

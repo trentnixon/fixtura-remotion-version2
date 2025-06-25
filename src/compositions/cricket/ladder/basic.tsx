@@ -7,7 +7,7 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { LadderData } from "./types";
-import LadderDisplay from "./controller/Display/display";
+import LadderDisplayBasic from "./controller/Display/display-Basic";
 import NoLadderData from "./modules/NoLadderData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 
@@ -34,9 +34,9 @@ export const CricketLadderWithTransitions: React.FC = () => {
   return (
     <TransitionSeriesWrapper
       sequences={ladderDataArray.map((ladder: LadderData) => ({
-        content: <LadderDisplay ladder={ladder} />,
+        content: <LadderDisplayBasic ladder={ladder} />,
         // Use a generic timing property or fallback if FPS_LADDER doesn't exist
-        durationInFrames: timings?.FPS_MAIN || 300, // Example: Use FPS_MAIN or fallback
+        durationInFrames: timings?.FPS_LADDER || 300, // Example: Use FPS_MAIN or fallback
       }))}
       transitionType={transitionConfig.type as TransitionType}
       direction={transitionConfig.direction as TransitionDirection}

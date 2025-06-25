@@ -33,7 +33,6 @@ interface PatternTemplateVariation {
  * PatternBackground component that renders different pattern backgrounds
  */
 export const PatternBackground: React.FC<PatternBackgroundProps> = ({
-  pattern,
   scale = 1,
   rotation = 0,
   opacity = 0.5,
@@ -42,18 +41,14 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
   animationSpeed,
   className = "",
   style = {},
-  ...props
 }) => {
   const { video } = useVideoDataContext();
   const { selectedPalette } = useStylesContext();
 
   // Get pattern type and animation settings from template variation or use defaults
-  const patternConfig = (video.templateVariation?.Pattern ||
+  const patternConfig = (video.templateVariation?.pattern ||
     {}) as PatternTemplateVariation;
   const patternType = patternConfig.type || PATTERN_TYPES.DOTS;
-
-  // Create unique ID for the pattern
-  const patternId = `pattern-${patternType}-${Math.random().toString(36).substr(2, 9)}`;
 
   // Common pattern props
   const patternProps = {
@@ -62,7 +57,6 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
     scale: patternConfig.scale || scale,
     rotation: patternConfig.rotation || rotation,
     opacity,
-    patternId,
     animation: patternConfig.animation || animation,
     animationDuration: patternConfig.animationDuration || animationDuration,
     animationSpeed: patternConfig.animationSpeed || animationSpeed,

@@ -1,8 +1,6 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
-import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
-import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
 
 interface MatchHeaderProps {
@@ -12,6 +10,7 @@ interface MatchHeaderProps {
   ground: string;
   height: number;
   delay: number;
+  backgroundColor: string;
 }
 
 // Helper function to truncate text
@@ -27,13 +26,10 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   ground,
   height,
   delay,
+  backgroundColor,
 }) => {
-  const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-
-  // Background color from theme
-  const backgroundColor = selectedPalette.container.muted;
 
   // Format the left side text - use type and round, or date and round
   const leftText = type

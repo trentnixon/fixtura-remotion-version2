@@ -22,8 +22,8 @@ export function deepMerge<T extends object = object, S extends object = T>(
 
   // Iterate through source properties
   Object.keys(source).forEach((key) => {
-    const targetValue = (target as any)[key];
-    const sourceValue = (source as any)[key];
+    const targetValue = (target as Record<string, unknown>)[key];
+    const sourceValue = (source as Record<string, unknown>)[key];
 
     // If both values are objects, recursively merge them
     if (
@@ -34,15 +34,18 @@ export function deepMerge<T extends object = object, S extends object = T>(
       !Array.isArray(targetValue) &&
       !Array.isArray(sourceValue)
     ) {
-      (output as any)[key] = deepMerge(targetValue, sourceValue);
+      (output as Record<string, unknown>)[key] = deepMerge(
+        targetValue,
+        sourceValue,
+      );
     }
     // If source value is an array, use it directly (don't merge arrays)
     else if (Array.isArray(sourceValue)) {
-      (output as any)[key] = [...sourceValue];
+      (output as Record<string, unknown>)[key] = [...sourceValue];
     }
     // Otherwise, use the source value
     else if (sourceValue !== undefined) {
-      (output as any)[key] = sourceValue;
+      (output as Record<string, unknown>)[key] = sourceValue;
     }
   });
 
@@ -56,9 +59,9 @@ export function deepMerge<T extends object = object, S extends object = T>(
  * @returns A flattened object
  */
 export function flattenObject(
-  obj: Record<string, any>,
+  obj: Record<string, unknown>,
   prefix = "",
-): Record<string, any> {
+): Record<string, unknown> {
   return Object.keys(obj).reduce(
     (acc, k) => {
       const pre = prefix.length ? `${prefix}.` : "";
@@ -67,13 +70,16 @@ export function flattenObject(
         obj[k] !== null &&
         !Array.isArray(obj[k])
       ) {
-        Object.assign(acc, flattenObject(obj[k], pre + k));
+        Object.assign(
+          acc,
+          flattenObject(obj[k] as Record<string, unknown>, pre + k),
+        );
       } else {
         acc[pre + k] = obj[k];
       }
       return acc;
     },
-    {} as Record<string, any>,
+    {} as Record<string, unknown>,
   );
 }
 
@@ -84,8 +90,8 @@ export function flattenObject(
  * @param defaultValue The default value to return if the path doesn't exist
  * @returns The value at the path or the default value
  */
-export function getValueByPath<T = any>(
-  obj: Record<string, any>,
+export function getValueByPath<T = unknown>(
+  obj: Record<string, unknown>,
   path: string,
   defaultValue?: T,
 ): T {
@@ -96,7 +102,7 @@ export function getValueByPath<T = any>(
     if (result === undefined || result === null) {
       return defaultValue as T;
     }
-    result = result[key];
+    result = result[key] as Record<string, unknown>;
   }
 
   return (result === undefined ? defaultValue : result) as T;

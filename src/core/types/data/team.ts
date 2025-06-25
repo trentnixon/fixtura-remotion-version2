@@ -11,8 +11,8 @@ export interface Team {
   score: string;
   isHome: boolean;
   isClubTeam: boolean;
-  battingPerformances: BattingPerformance[];
-  bowlingPerformances: BowlingPerformance[];
+  battingPerformances?: BattingPerformance[];
+  bowlingPerformances?: BowlingPerformance[];
 }
 
 // Home team extends Team with additional property

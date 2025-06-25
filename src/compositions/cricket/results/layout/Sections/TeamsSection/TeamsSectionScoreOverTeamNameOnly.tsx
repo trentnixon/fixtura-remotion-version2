@@ -16,8 +16,6 @@ const truncateText = (text: string, maxLength: number): string => {
 export const TeamsSectionScoreOverTeamNameOnly: React.FC<TeamsSectionProps> = ({
   homeTeam,
   awayTeam,
-  homeTeamLogo,
-  awayTeamLogo,
   height,
   delay,
 }) => {

@@ -6,9 +6,9 @@ import { generateParticles, updateParticlePositions } from "../utils";
 
 const SnowParticles: React.FC<ParticleBackgroundProps> = ({
   particleColor = "#ffffff",
-  particleSize = [2, 6],
+  particleSize = [1, 10],
   particleCount = 150,
-  speed = 0.2,
+  speed = 2,
   direction = "up",
   background = "#0a1128",
   className = "",

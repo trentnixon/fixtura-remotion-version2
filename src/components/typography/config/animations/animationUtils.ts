@@ -1,7 +1,7 @@
 import {
   AnimationType,
   AnimationConfig,
-  EasingType,
+  ImageEasingType,
   SpringConfig,
 } from "./types";
 import { SPRING_CONFIGS } from "./springConfigs";
@@ -13,9 +13,10 @@ export const normalizeAnimation = (
   animation?: AnimationType | AnimationConfig,
   delay?: number,
   duration?: number,
-  easing?: EasingType,
+  easing?: ImageEasingType,
   springConfig?: SpringConfig,
 ): AnimationConfig => {
+  const defaultEasing: ImageEasingType = { type: "inOut", base: "ease" };
   if (!animation) {
     return { type: "none" };
   }
@@ -25,7 +26,7 @@ export const normalizeAnimation = (
       type: animation,
       delay: delay || 0,
       duration: duration || 30,
-      easing: easing || "easeInOut",
+      easing: easing || defaultEasing,
       springConfig: springConfig || SPRING_CONFIGS.DEFAULT,
     };
   }
@@ -34,7 +35,7 @@ export const normalizeAnimation = (
     ...animation,
     delay: animation.delay || delay || 0,
     duration: animation.duration || duration || 30,
-    easing: animation.easing || easing || "easeInOut",
+    easing: animation.easing || easing || defaultEasing,
     springConfig:
       animation.springConfig || springConfig || SPRING_CONFIGS.DEFAULT,
   };

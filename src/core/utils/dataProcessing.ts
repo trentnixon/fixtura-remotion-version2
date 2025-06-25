@@ -1,28 +1,38 @@
 // src/utils/dataProcessing.ts
-import { FixturaDataset } from "../types/data/index";
-import _ from "lodash";
+// Removed unused import: import { FixturaDataset } from "../types/data/index";
 
+export interface Logo {
+  url: string;
+  width: number;
+  height: number;
+}
+
+export interface TeamAllocation {
+  level: string;
+  id: number;
+  allocationName: string;
+  sponsorId: number;
+  name: string;
+  logo: Logo;
+}
 /**
- * Merges data objects using deep merge
+ * Generic deep merge for any object type
  */
-export const mergeData = (
-  baseData: FixturaDataset,
-  overrideData: Partial<FixturaDataset>,
-): FixturaDataset => {
-  // Deep merge implementation
+export const mergeData = <T extends object>(
+  baseData: T,
+  overrideData: Partial<T>,
+): T => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mergeDeep = (target: any, source: any): any => {
     if (typeof source !== "object" || source === null) {
       return source;
     }
-
     if (typeof target !== "object" || target === null) {
       return { ...source };
     }
-
     const result = { ...target };
-
     for (const key in source) {
-      if (source.hasOwnProperty(key)) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
         if (
           typeof source[key] === "object" &&
           source[key] !== null &&
@@ -35,13 +45,12 @@ export const mergeData = (
         }
       }
     }
-
     return result;
   };
-
   return mergeDeep(baseData, overrideData);
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const calculateDuration = (data: any) => {
   return (
     data.timings.FPS_INTRO +

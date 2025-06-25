@@ -72,10 +72,10 @@ const createPermutations = () => {
   > = {};
 
   // Generate 3-element permutations
-  for (let first of elements) {
-    for (let second of elements) {
+  for (const first of elements) {
+    for (const second of elements) {
       if (second === first) continue;
-      for (let third of elements) {
+      for (const third of elements) {
         if (third === first || third === second) continue;
         const key = `VerticalHeader${first}${second}${third}`;
         threeElementPerms[key] = createVerticalStack([first, second, third]);
@@ -84,8 +84,8 @@ const createPermutations = () => {
   }
 
   // Generate 2-element permutations
-  for (let first of elements) {
-    for (let second of elements) {
+  for (const first of elements) {
+    for (const second of elements) {
       if (second === first) continue;
       const key = `VerticalHeader${first}${second}`;
       twoElementPerms[key] = createVerticalStack([first, second]);

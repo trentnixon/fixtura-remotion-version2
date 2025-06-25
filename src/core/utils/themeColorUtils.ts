@@ -1,5 +1,7 @@
 // src/core/utils/themeColorUtils.ts
 
+import { DesignPalette } from "../context/StyleContext";
+
 /**
  * Helper functions for working with theme colors
  */
@@ -15,7 +17,7 @@
  * @returns The color value
  */
 export function getPaletteColor(
-  palette: any,
+  palette: DesignPalette,
   colorKey: string,
   fallback: string = "#000000",
   section?: string,
@@ -24,36 +26,67 @@ export function getPaletteColor(
     return fallback;
   }
 
+  console.log("[getPaletteColor]", palette);
   // Try section-specific lookup first if provided
-  if (section && palette[section] && palette[section][colorKey]) {
-    return palette[section][colorKey];
+  if (
+    section &&
+    (palette as unknown as Record<string, unknown>)[section] &&
+    (palette as unknown as Record<string, Record<string, unknown>>)[section][
+      colorKey
+    ]
+  ) {
+    return (palette as unknown as Record<string, Record<string, unknown>>)[
+      section
+    ][colorKey] as string;
   }
 
   // Try primary keys first
-  if (palette[colorKey]) {
-    return palette[colorKey];
+  if ((palette as unknown as Record<string, unknown>)[colorKey]) {
+    return (palette as unknown as Record<string, unknown>)[colorKey] as string;
   }
 
   // Check background section
-  if (palette.background && palette.background[colorKey]) {
-    return palette.background[colorKey];
+  if (
+    palette.background &&
+    (palette.background as unknown as Record<string, unknown>)[colorKey]
+  ) {
+    return (palette.background as unknown as Record<string, unknown>)[
+      colorKey
+    ] as string;
   }
 
   // Check container section
-  if (palette.container && palette.container[colorKey]) {
-    return palette.container[colorKey];
+  if (
+    palette.container &&
+    (palette.container as unknown as Record<string, unknown>)[colorKey]
+  ) {
+    return (palette.container as unknown as Record<string, unknown>)[
+      colorKey
+    ] as string;
   }
 
   // Check text section
   if (palette.text) {
     // Check onBackground section
-    if (palette.text.onBackground && palette.text.onBackground[colorKey]) {
-      return palette.text.onBackground[colorKey];
+    if (
+      palette.text.onBackground &&
+      (palette.text.onBackground as unknown as Record<string, unknown>)[
+        colorKey
+      ]
+    ) {
+      return (palette.text.onBackground as unknown as Record<string, unknown>)[
+        colorKey
+      ] as string;
     }
 
     // Check onContainer section
-    if (palette.text.onContainer && palette.text.onContainer[colorKey]) {
-      return palette.text.onContainer[colorKey];
+    if (
+      palette.text.onContainer &&
+      (palette.text.onContainer as unknown as Record<string, unknown>)[colorKey]
+    ) {
+      return (palette.text.onContainer as unknown as Record<string, unknown>)[
+        colorKey
+      ] as string;
     }
   }
 
@@ -99,12 +132,13 @@ export function getColorWithOpacity(color: string, opacity: number): string {
  * @param fallback Fallback gradient
  * @returns CSS gradient string
  */
-export function getPaletteGradient(
+/* export function getPaletteGradient(
   palette: any,
   gradientKey: string = "primaryToSecondary",
   direction: string = "HORIZONTAL",
   fallback: string = "linear-gradient(to right, #000, #555)",
 ): string {
+  console.log("[getPaletteGradient]", palette);
   if (!palette?.background?.gradient) {
     return fallback;
   }
@@ -121,7 +155,7 @@ export function getPaletteGradient(
 
   // Return the direction-specific CSS or the default
   return gradient.css?.[direction] || gradient.css?.DEFAULT || fallback;
-}
+} */
 
 /**
  * Gets a shadow from the theme
@@ -131,7 +165,7 @@ export function getPaletteGradient(
  * @param fallback Fallback shadow
  * @returns CSS shadow string
  */
-export function getPaletteShadow(
+/* export function getPaletteShadow(
   palette: any,
   shadowKey: string = "medium",
   fallback: string = "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -141,7 +175,7 @@ export function getPaletteShadow(
   }
 
   return palette.shadow[shadowKey] || fallback;
-}
+} */
 
 /**
  * Lightens a color by the specified amount
@@ -194,8 +228,8 @@ export function darkenColor(color: string, amount: number): string {
 export default {
   getPaletteColor,
   getColorWithOpacity,
-  getPaletteGradient,
-  getPaletteShadow,
+  /* getPaletteGradient,
+  getPaletteShadow, */
   lightenColor,
   darkenColor,
 };

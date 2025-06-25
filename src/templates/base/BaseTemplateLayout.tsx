@@ -34,19 +34,21 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
       <AbsoluteFill style={{ zIndex: 1000 }}>
         <Series>
           {/* Intro Sequence */}
-          <Series.Sequence durationInFrames={timings.FPS_INTRO}>
+          <Series.Sequence durationInFrames={timings.FPS_INTRO ?? 30}>
             {IntroComponent && <IntroComponent />}
           </Series.Sequence>
 
           {/* Main Content - Use routing to determine which composition to render
               or use the provided mainComponent if available */}
-          <Series.Sequence durationInFrames={timings.FPS_MAIN}>
+          <Series.Sequence durationInFrames={timings.FPS_MAIN ?? 30}>
             {MainComponentLayout && <MainComponentLayout />}
           </Series.Sequence>
 
           {/* Outro Sequence */}
           <Series.Sequence
-            durationInFrames={doesAccountHaveSponsors ? timings.FPS_OUTRO : 30}
+            durationInFrames={
+              doesAccountHaveSponsors ? (timings.FPS_OUTRO ?? 30) : 30
+            }
           >
             {OutroComponent && (
               <OutroComponent

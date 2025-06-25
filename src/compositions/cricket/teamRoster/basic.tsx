@@ -1,21 +1,15 @@
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
-import {
-  TransitionDirection,
-  TransitionSeriesWrapper,
-  TransitionType,
-} from "../../../components/transitions";
+import { Series } from "remotion";
 import { RosterDataItem } from "./types"; // Adjusted import path
 import RosterDisplay from "./controller/Display/display"; // Adjusted import path
 import NoRosterData from "./modules/NoData/no-data"; // Adjusted import path
-import { useAnimationContext } from "../../../core/context/AnimationContext";
+import RosterSponsors from "./layout/RosterSponsors/sponsors";
 
 // Main component with TransitionSeries
 export const CricketRosterWithTransitions: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: CompositionData, timings } = data;
-  const { animations } = useAnimationContext();
-  const transitionConfig = animations.transition.Main;
 
   // Cast CompositionData to the correct type
   const rosterData = CompositionData as unknown as RosterDataItem[];
@@ -26,18 +20,18 @@ export const CricketRosterWithTransitions: React.FC = () => {
   }
 
   return (
-    <TransitionSeriesWrapper
-      sequences={rosterData.map((rosterItem: RosterDataItem) => ({
-        content: <RosterDisplay roster={rosterItem} />,
-        durationInFrames: timings?.FPS_SCORECARD || 300,
-      }))}
-      transitionType={transitionConfig.type as TransitionType}
-      direction={transitionConfig.direction as TransitionDirection}
-      timing={{
-        type: "linear",
-        durationInFrames: transitionConfig.durationInFrames,
-      }}
-    />
+    <Series>
+      {rosterData.map((rosterItem: RosterDataItem, i) => (
+        <Series.Sequence
+          key={i}
+          durationInFrames={timings?.FPS_SCORECARD || 60}
+          className="flex flex-col justify-center"
+        >
+          <RosterDisplay roster={rosterItem} />
+          <RosterSponsors roster={rosterItem} />
+        </Series.Sequence>
+      ))}
+    </Series>
   );
 };
 

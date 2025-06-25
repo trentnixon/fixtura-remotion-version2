@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
-import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { ResultFixtureResult } from "../../../../utils/primitives/ResultFixtureResult";
 
 interface MatchStatusProps {
@@ -12,7 +12,7 @@ interface MatchStatusProps {
 }
 
 const MatchStatus: React.FC<MatchStatusProps> = ({ result, height, delay }) => {
-  const { selectedPalette, componentStyles } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
 
   // Get background color from theme

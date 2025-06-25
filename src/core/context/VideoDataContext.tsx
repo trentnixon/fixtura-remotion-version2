@@ -8,7 +8,7 @@ import {
   VideoContentLayout,
   VideoTemplateVariation,
 } from "../types/data/videoData";
-import { Club } from "../types/data/sponsors";
+import { Club, SponsorsData } from "../types/data/sponsors";
 import { FixturaDataset } from "../types/data/index";
 
 interface VideoDataContextProps {
@@ -20,6 +20,7 @@ interface VideoDataContextProps {
   appearance: VideoAppearance;
   contentLayout: VideoContentLayout;
   templateVariation: VideoTemplateVariation;
+  sponsors: SponsorsData;
 }
 
 const VideoDataContext = createContext<VideoDataContextProps | null>(null);
@@ -36,12 +37,12 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
     data,
     video,
     metadata: video.metadata,
-
     media: video.media,
     appearance: video.appearance,
     contentLayout: video.contentLayout,
     templateVariation: video.templateVariation,
     club,
+    sponsors: club.sponsors,
   };
 
   return (

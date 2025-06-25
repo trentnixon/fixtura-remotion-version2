@@ -15,6 +15,7 @@ import {
   getAllFontNames,
 } from "../utils/fontLoader";
 import { continueRender, delayRender } from "remotion";
+import { TemplateThemeConfig } from "../../templates/types/TemplateThemeConfig";
 
 interface FontContextProps {
   fontsLoaded: boolean;
@@ -64,11 +65,16 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
 
       try {
         // Load fonts from theme
-        await loadFontsFromTheme(createdTheme);
+        await loadFontsFromTheme(
+          createdTheme as unknown as TemplateThemeConfig,
+        );
 
         // Check if there are font testing metadata in the appearance or metadata
         // Use type assertion since these are custom properties
-        const metadata = video.metadata as any;
+        const metadata = video.metadata as {
+          fontTestMode?: boolean;
+          fontTestList?: string[];
+        };
         const fontTestMode = metadata?.fontTestMode || false;
         const fontTestList = metadata?.fontTestList || [];
 

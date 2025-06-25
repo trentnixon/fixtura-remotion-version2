@@ -60,9 +60,18 @@ const StatItem: React.FC<StatItemProps> = ({
   );
 };
 
+type PlayerStat = {
+  player: string;
+  runs: number;
+  balls?: number;
+  notOut?: boolean;
+  wickets?: number;
+  overs?: number;
+};
+
 // Component for a section of stats (batting or bowling)
 interface StatSectionProps {
-  players: any[];
+  players: PlayerStat[];
   isBatting: boolean;
   delay: number;
 }
@@ -107,8 +116,12 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   maxPlayersPerStat,
   className = "",
 }) => {
-  const batters = team.battingPerformances.slice(0, maxPlayersPerStat);
-  const bowlers = team.bowlingPerformances.slice(0, maxPlayersPerStat);
+  const batters = team.battingPerformances
+    ? team.battingPerformances.slice(0, maxPlayersPerStat)
+    : [];
+  const bowlers = team.bowlingPerformances
+    ? team.bowlingPerformances.slice(0, maxPlayersPerStat)
+    : [];
 
   return (
     <div className={`flex-1 px-2 py-0 flex flex-col ${className}`}>

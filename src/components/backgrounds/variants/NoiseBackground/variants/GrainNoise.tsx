@@ -1,5 +1,5 @@
 import React from "react";
-import { NoiseBackground } from "../NoiseBackground";
+import { GridNoise } from "../GridNoise";
 
 /**
  * GrainNoise - Film grain or paper texture effect
@@ -8,17 +8,17 @@ import { NoiseBackground } from "../NoiseBackground";
  * that resembles film grain or paper texture.
  * Great for creating a vintage or analog feel.
  */
-const GrainNoise: React.FC<React.ComponentProps<typeof NoiseBackground>> = (
+const GrainNoise: React.FC<React.ComponentProps<typeof GridNoise>> = (
   props,
 ) => {
   return (
-    <NoiseBackground
-      noiseOpacity={0.4}
-      noiseScale={1}
-      noiseSpeed={0.01}
-      noiseDimension="3d"
-      gridSize={100} // Higher resolution grain
+    <GridNoise
       {...props}
+      noiseOpacity={0.05}
+      noiseScale={1}
+      noiseSpeed={0.005}
+      noiseDimension="2d"
+      gridSize={100}
     />
   );
 };

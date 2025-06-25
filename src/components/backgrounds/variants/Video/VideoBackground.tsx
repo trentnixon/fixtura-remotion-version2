@@ -178,7 +178,7 @@ export const VideoBackgroundWithContext: React.FC<
 > = (props) => {
   // Import and use the context
   const { video } = useVideoDataContext();
-  const templateVariation = video?.templateVariation?.Video || {};
+  const templateVariation = video?.templateVariation?.video || {};
 
   return <VideoBackground {...props} templateVariation={templateVariation} />;
 };

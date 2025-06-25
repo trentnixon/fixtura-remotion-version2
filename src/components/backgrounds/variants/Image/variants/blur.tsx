@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 
 export const BlurDirection = {
   In: "in" as const,
@@ -11,8 +11,8 @@ export const BlurDirection = {
 export type BlurDirectionType =
   (typeof BlurDirection)[keyof typeof BlurDirection];
 
-interface FocusBlurEffectProps {
-  src: string;
+export interface FocusBlurEffectProps {
+  src?: string;
   direction?: BlurDirectionType;
   maxBlur?: number; // Maximum blur radius in pixels
   startTime?: number;
@@ -57,7 +57,7 @@ export const FocusBlurEffect: React.FC<FocusBlurEffectProps> = ({
       // Start clear and become blurred
       blurRadius = maxBlur * progress;
       break;
-    case "pulse":
+    case "pulse": {
       // Oscillate between clear and blurred
       const phase = progress * Math.PI * 2 * pulseFrequency;
       // Use sine wave for smooth transitions
@@ -65,20 +65,20 @@ export const FocusBlurEffect: React.FC<FocusBlurEffectProps> = ({
       // Map sine value (-1 to 1) to blur radius (0 to maxBlur)
       blurRadius = (maxBlur / 2) * (sineValue + 1);
       break;
+    }
   }
 
   return (
     <AbsoluteFill className={`focus-blur-effect ${className}`}>
-      <div
+      <Img
+        src={src || ""}
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          objectFit: "cover",
           filter: `blur(${blurRadius}px)`,
           // Slightly scale up to avoid blur edges
           transform: "scale(1.05)",

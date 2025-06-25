@@ -1,5 +1,5 @@
 // src/components/backgrounds/variants/ParticleBackground/variants/index.ts
-import { ParticleType } from "../config";
+import { ParticleBackgroundProps, ParticleType } from "../config";
 import DotsParticles from "./DotsRenderer";
 import LinesParticles from "./LinesRenderer";
 import BubblesParticles from "./BubblesRenderer";
@@ -9,7 +9,7 @@ import ConfettiParticles from "./ConfettiRenderer";
 // Map of particle types to their variant components
 export const particleVariants: Record<
   ParticleType,
-  React.ComponentType<any>
+  React.ComponentType<ParticleBackgroundProps>
 > = {
   dots: DotsParticles,
   lines: LinesParticles,

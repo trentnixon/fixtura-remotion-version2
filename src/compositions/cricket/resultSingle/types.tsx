@@ -1,4 +1,6 @@
-// Types for cricket single match results
+import { AssignSponsors } from "../composition-types";
+
+// Types for cricket match results
 export interface TeamLogo {
   url: string;
   width: number;
@@ -39,21 +41,6 @@ export interface Team {
   awayScoresFirstInnings?: string | null;
 }
 
-export interface AssignSponsors {
-  Teams: {
-    away: { name: string };
-    home: { name: string };
-  };
-  grade: {
-    id: number;
-    name: string;
-  };
-  competition: {
-    id: number;
-    name: string;
-  };
-}
-
 export interface MatchResult {
   date: string;
   type: string;
@@ -73,7 +60,7 @@ export interface MatchResult {
   assignSponsors: AssignSponsors;
 }
 
-// Constants for animation timing
+// Constants for animation timing and other configuration
 export const RESULT_HEADER_ANIMATION_DURATION = 45; // 1.5 seconds for header animation
 export const RESULT_STAGGER_DELAY = 15; // 0.5 seconds stagger between items
 export const RESULT_ANIMATION_DURATION = 30; // 1 second for animation

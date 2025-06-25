@@ -1,290 +1,340 @@
 {
-  "RENDER": {
-    "SchedulerID": 122,
-    "RenderID": 7076
+  "data": [
+    {
+      "name": "Jason Hay",
+      "runs": 35,
+      "overs": "8",
+      "prompt": "Jason Hay played for GC 50's Thunder Div 2 Gold, taking 4 wickets from 8 overs, conceding 35 runs. Game details: This was a One Day in the O50 Div 2 - Andrew Knight Shield grade, and the current match status is Match Completed . GC 50's Thunder Div 2 Gold, (1) vs GC 50's Thunder Div 2 Gold (1), the match result was GC 50's Thunder Div 2 Gold won by 70 runs.",
+      "wickets": 4,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 50's Thunder Div 2 Gold Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "GC 50's Thunder Div 2 Gold"
+        },
+        "grade": {
+          "id": 42416,
+          "name": "O50 Div 2 - Andrew Knight Shield"
+        },
+        "competition": {
+          "id": 13391,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "name": "Michael Ross",
+      "runs": 11,
+      "overs": "4.5",
+      "prompt": "Michael Ross played for GC 50's Thunder Div 2 Gold, taking 3 wickets from 4.5 overs, conceding 11 runs. Game details: This was a One Day in the O50 Div 2 - Andrew Knight Shield grade, and the current match status is Match Completed . GC 50's Thunder Div 2 Gold, (1) vs GC 50's Thunder Div 2 Gold (1), the match result was GC 50's Thunder Div 2 Gold won by 70 runs.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 50's Thunder Div 2 Gold Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "GC 50's Thunder Div 2 Gold"
+        },
+        "grade": {
+          "id": 42416,
+          "name": "O50 Div 2 - Andrew Knight Shield"
+        },
+        "competition": {
+          "id": 13391,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "name": "Paul Azzopardi",
+      "runs": 16,
+      "overs": "9",
+      "prompt": "Paul Azzopardi played for GC 50's Thunder Div 2 Gold, taking 3 wickets from 9 overs, conceding 16 runs. Game details: This was a One Day in the O50 Div 2 - Andrew Knight Shield grade, and the current match status is Match Completed . GC 50's Thunder Div 2 Gold, (1) vs GC 50's Thunder Div 2 Gold (1), the match result was GC 50's Thunder Div 2 Gold won by 70 runs.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 50's Thunder Div 2 Gold Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "GC 50's Thunder Div 2 Gold"
+        },
+        "grade": {
+          "id": 42416,
+          "name": "O50 Div 2 - Andrew Knight Shield"
+        },
+        "competition": {
+          "id": 13391,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "name": "Lachlan Pegler",
+      "runs": 26,
+      "overs": "7.4",
+      "prompt": "Lachlan Pegler played for GC 50's Thunder Div 2 Green, taking 3 wickets from 7.4 overs, conceding 26 runs. Game details: This was a One Day in the O50 Div 2 - Andrew Knight Shield grade, and the current match status is Match Completed . GC 50's Thunder Div 2 Green, (1) vs GC 50's Thunder Div 2 Gold (1), the match result was GC 50's Thunder Div 2 Gold won by 70 runs.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 50's Thunder Div 2 Green Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "GC 50's Thunder Div 2 Green"
+        },
+        "grade": {
+          "id": 42416,
+          "name": "O50 Div 2 - Andrew Knight Shield"
+        },
+        "competition": {
+          "id": 13391,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "name": "venu kondamudi",
+      "runs": 35,
+      "overs": "8",
+      "prompt": "venu kondamudi played for GC 50's Thunder Div 2 Green, taking 3 wickets from 8 overs, conceding 35 runs. Game details: This was a One Day in the O50 Div 2 - Andrew Knight Shield grade, and the current match status is Match Completed . GC 50's Thunder Div 2 Green, (1) vs GC 50's Thunder Div 2 Gold (1), the match result was GC 50's Thunder Div 2 Gold won by 70 runs.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 50's Thunder Div 2 Green Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "GC 50's Thunder Div 2 Green"
+        },
+        "grade": {
+          "id": 42416,
+          "name": "O50 Div 2 - Andrew Knight Shield"
+        },
+        "competition": {
+          "id": 13391,
+          "name": "QVC Competitions"
+        }
+      }
+    }
+  ],
+  "asset": {
+    "assetID": 7,
+    "assetTypeID": 3,
+    "assetCategoryID": 1,
+    "assetsLinkID": "23ba7b28dc73d604f1a5ba075dafea31dba7273e7dbda7bf319578d726673d71"
   },
-  "ACCOUNT": {
-    "accountId": 234
+  "render": {
+    "schedulerId": 207,
+    "renderId": 8265
   },
-  "ASSET": {
-    "ASSETID": 7,
-    "ASSETTYPEID": 3,
-    "ASSETCATEGORYID": 1,
-    "ASSETSLINKID": "28fb8430c6449428f3b982eb487578e963b23139667658f98a2bf5e1b27c8765"
+  "account": {
+    "accountId": 319
   },
+  "timings": {
+    "FPS_MAIN": 360,
+    "FPS_INTRO": 90,
+    "FPS_OUTRO": 90,
+    "FPS_LADDER": 0,
+    "FPS_SCORECARD": 0
+  },
+  "frames": [390, 45, 495],
   "videoMeta": {
+    "club": {
+      "logo": {
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "name": "Gold Coast Veterans Cricket",
+      "sport": "Cricket",
+      "sponsors": {
+        "primary": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ],
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 151,
+              "isPrimary": true,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
+              "logo": {
+                "id": 12784,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+              }
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 152,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
+              "logo": {
+                "id": 12785,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+              }
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 153,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
+              "logo": {
+                "id": 12786,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+              }
+            }
+          ]
+        }
+      }
+    },
     "video": {
+      "fixtureCategory": "MASTERS",
+      "groupingCategory": "MASTERS",
       "metadata": {
-        "title": "Top 5 Bowling",
-        "titleSplit": ["Top", "5", "Bowling"],
-        "videoTitle": "Top 5 Bowling",
+        "title": "Top 5",
+        "titleSplit": ["Bowlers", ""],
+        "videoTitle": "Top 5 Bowlers",
         "compositionId": "CricketTop5Bowling",
-        "assetId": 18,
+        "assetId": 7,
         "assetTypeId": 3,
-        "frames": [355, 600, 900, 1200, 1500],
+        "frames": [],
         "includeSponsors": true
       },
-
       "appearance": {
         "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "dark": "#FFF",
+          "white": "#111",
+          "primary": "#00843d",
+          "secondary": "#ffcd00"
         },
-
-        "template": "Basic",
-        "type": "Pattern",
-        "templateOptions": {
-          "borderRadius": "10px",
-          "Background": "Solid",
-          "Palette": "primary"
-        }
+        "template": "Basic"
       },
-
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853,
-          "AgeGroup": "Both",
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
         },
-
         "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
         }
       },
       "contentLayout": {
-        "dividedFixturesBy": {
-          "Ladder": 1,
-          "RosterPoster": 1,
-          "WeekendResults": 2,
-          "UpComingFixtures": 3,
-          "WeekendSingleGameResult": 1
+        "divideFixturesBy": {
+          "CricketLadder": 1,
+          "CricketRoster": 1,
+          "CricketResults": 2,
+          "CricketUpcoming": 3,
+          "CricketResultSingle": 1
         }
       },
-
       "templateVariation": {
-        "Video": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
-          "fallbackUrl": "https://example.com/fallback-video.mp4",
-          "position": "center",
+        "useBackground": "Graphics",
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": "left",
           "size": "cover",
-          "loop": true,
+          "loop": null,
           "muted": true,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "useOffthreadVideo": true,
+          "useOffthreadVideo": null,
           "volume": 0.8,
-          "playbackRate": 1.0
+          "playbackRate": null
         },
-        "Image": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
-          "ratio": "portrait",
-          "width": 3290,
-          "height": 3354,
-          "type": "pan",
-          "direction": "left",
-          "overlayStyle": "vignette",
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "focusblur",
+          "direction": "in",
+          "overlayStyle": "duotone",
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-
-        "Palette": "primaryOnWhite",
-        "borderRadius": "10px",
-        "Gradient": {
-          "type": "primaryToSecondary",
-          "direction": "VERTICAL"
+        "palette": "complementary",
+        "gradient": {
+          "type": "primaryRadial",
+          "direction": "DEFAULT"
         },
-        "Noise": {
-          "type": "grain"
+        "noise": {
+          "type": "floatingParticles"
         },
-        "Pattern": {
+        "pattern": {
           "type": "dots",
-          "animation": "panDown",
-          "scale": 0.75,
-          "rotation": 0,
-          "opacity": 0.35,
-          "animationDuration": 300,
-          "animationSpeed": 0.8
+          "animation": "rotate",
+          "scale": 0.5,
+          "rotation": null,
+          "opacity": 0.3,
+          "animationDuration": 1500,
+          "animationSpeed": 0.5
         },
-        "Particle": {
-          "type": "lines",
-          "particleCount": 400,
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
+        "particle": {
+          "type": "snow",
+          "particleCount": "150",
+          "speed": 1,
+          "direction": "down",
+          "animation": "fade"
         }
       }
-    },
-    "FixtureCategory": "Senior",
-    "grouping_category": "Senior",
-
-    "club": {
-      "Name": "Sydney Shires Competition",
-      "Sport": "Cricket",
-      "Logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Shire_White_SQ_fb4aa1c1bf.png",
-        "width": 1843,
-        "height": 1843
-      },
-      "Sponsors": {
-        "default": {
-          "primary_sponsor": {
-            "sponsorId": 85,
-            "name": "McDonald's",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_869a3e63ef.png",
-              "width": 582,
-              "height": 582
-            }
-          }
-        }
-      }
-    },
-    "FixtureCategory": "sydney shires competition - Fifth Grade (The Tim Creer Cup)"
-  },
-  "timings": {
-    "FPS_INTRO": 90,
-    "FPS_OUTRO": 180,
-    "FPS_MAIN": 360
-  },
-  "data": [
-    {
-      "name": "Harinadh Sirigiri",
-      "wickets": 7,
-      "overs": "7",
-      "runs": 21,
-      "playedFor": "Balmain South Sydney 5th Grade Bowling",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_48887bdf17_05ce89e38a.jpg",
-        "width": 136,
-        "height": 158
-      },
-      "assignSponsors": {
-        "competition": {
-          "id": 12368,
-          "name": "Sydney Shires Competition"
-        },
-        "grade": {
-          "id": 37964,
-          "name": "Fifth Grade (The Tim Creer Cup)"
-        },
-        "Team": {
-          "name": "Balmain South Sydney 5th Grade Bowling"
-        }
-      },
-      "prompt": "Harinadh Sirigiri played for Balmain South Sydney 5th Grade Bowling, taking 7 wickets from 7 overs, conceding 21 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Lindfield 5th Grade, (8/137) vs Balmain South Sydney 5th Grade (10/124), the match result was Lindfield 5th Grade won by 13 runs."
-    },
-    {
-      "name": "Kulwant Dhillon",
-      "wickets": 4,
-      "overs": "8",
-      "runs": 10,
-      "playedFor": "Epping Bulls 5th Grade Bowling",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_11_a0aca7e2b6.png",
-        "width": 256,
-        "height": 256
-      },
-      "assignSponsors": {
-        "competition": {
-          "id": 12368,
-          "name": "Sydney Shires Competition"
-        },
-        "grade": {
-          "id": 37964,
-          "name": "Fifth Grade (The Tim Creer Cup)"
-        },
-        "Team": {
-          "name": "Epping Bulls 5th Grade Bowling"
-        }
-      },
-      "prompt": "Kulwant Dhillon played for Epping Bulls 5th Grade Bowling, taking 4 wickets from 8 overs, conceding 10 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Roseville 5th Grade, (8/120) vs Epping Bulls 5th Grade (10/93), the match result was Roseville 5th Grade won by 27 runs."
-    },
-    {
-      "name": "Isaac Williams",
-      "wickets": 3,
-      "overs": "5.1",
-      "runs": 12,
-      "playedFor": "Roseville 5th Grade Bowling",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_123acd5e8c_2db92a9e33.jpg",
-        "width": 693,
-        "height": 682
-      },
-      "assignSponsors": {
-        "competition": {
-          "id": 12368,
-          "name": "Sydney Shires Competition"
-        },
-        "grade": {
-          "id": 37964,
-          "name": "Fifth Grade (The Tim Creer Cup)"
-        },
-        "Team": {
-          "name": "Roseville 5th Grade Bowling"
-        }
-      },
-      "prompt": "Isaac Williams played for Roseville 5th Grade Bowling, taking 3 wickets from 5.1 overs, conceding 12 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Roseville 5th Grade, (8/120) vs Epping Bulls 5th Grade (10/93), the match result was Roseville 5th Grade won by 27 runs."
-    },
-    {
-      "name": "Alex Colreavy",
-      "wickets": 3,
-      "overs": "8",
-      "runs": 15,
-      "playedFor": "Burwood Briars 5th Grade Bowling",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_35_1992f316c9.png",
-        "width": 256,
-        "height": 256
-      },
-      "assignSponsors": {
-        "competition": {
-          "id": 12368,
-          "name": "Sydney Shires Competition"
-        },
-        "grade": {
-          "id": 37964,
-          "name": "Fifth Grade (The Tim Creer Cup)"
-        },
-        "Team": {
-          "name": "Burwood Briars 5th Grade Bowling"
-        }
-      },
-      "prompt": "Alex Colreavy played for Burwood Briars 5th Grade Bowling, taking 3 wickets from 8 overs, conceding 15 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Burwood Briars 5th Grade, (10/104) vs Warringah 5th Grade (8/105), the match result was Warringah 5th Grade won by 2 wickets."
-    },
-    {
-      "name": "Murray Moran",
-      "wickets": 3,
-      "overs": "6.4",
-      "runs": 16,
-      "playedFor": "Warringah 5th Grade Bowling",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_98f069a40c_a387589db3.jpg",
-        "width": 272,
-        "height": 274
-      },
-      "assignSponsors": {
-        "competition": {
-          "id": 12368,
-          "name": "Sydney Shires Competition"
-        },
-        "grade": {
-          "id": 37964,
-          "name": "Fifth Grade (The Tim Creer Cup)"
-        },
-        "Team": {
-          "name": "Warringah 5th Grade Bowling"
-        }
-      },
-      "prompt": "Murray Moran played for Warringah 5th Grade Bowling, taking 3 wickets from 6.4 overs, conceding 16 runs. Game details: This was a One Day in the Fifth Grade (The Tim Creer Cup) grade, and the current match status is Match Completed . Burwood Briars 5th Grade, (10/104) vs Warringah 5th Grade (8/105), the match result was Warringah 5th Grade won by 2 wickets."
     }
-  ],
-  "PROMPT": []
+  },
+  "errors": []
 }

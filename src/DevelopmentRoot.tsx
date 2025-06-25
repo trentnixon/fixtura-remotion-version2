@@ -15,6 +15,7 @@ interface DatasetInfo {
  * Development environment for browsing templates
  */
 export const DevelopmentRoot: React.FC = () => {
+  console.log("[DevelopmentRoot]");
   return (
     <>
       {/* Template Registry */}

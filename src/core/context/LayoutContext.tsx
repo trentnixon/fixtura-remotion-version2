@@ -1,10 +1,7 @@
 import React, { createContext, useContext, ReactNode } from "react";
-import { useGlobalContext } from "./GlobalContext";
 import { useVideoDataContext } from "./VideoDataContext";
-
 interface LayoutContextProps {
   doesAccountHaveSponsors: boolean;
-  heights: any;
 }
 
 const LayoutContext = createContext<LayoutContextProps | null>(null);
@@ -12,16 +9,12 @@ const LayoutContext = createContext<LayoutContextProps | null>(null);
 export const LayoutProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const { settings } = useGlobalContext();
-  const { club } = useVideoDataContext();
+  const { sponsors } = useVideoDataContext();
 
   const doesAccountHaveSponsors =
-    club?.Sponsors?.default?.general_sponsors?.length > 0 ||
-    !!club?.Sponsors?.default?.primary_sponsor;
-
+    Boolean(sponsors?.primary) || Boolean(sponsors?.default);
   const contextValue: LayoutContextProps = {
     doesAccountHaveSponsors,
-    heights: settings.heights,
   };
 
   return (

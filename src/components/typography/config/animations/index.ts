@@ -9,13 +9,13 @@ export * from "./types";
 export { SPRING_CONFIGS } from "./springConfigs";
 
 // Export easing functions
-export { getEasingFunction } from "./easingFunctions";
+export { getImageEasingFunction as getEasingFunction } from "../../../easing/easingFunctions";
 
 // Export animation utilities
 export { normalizeAnimation } from "./animationUtils";
 
 // Export animation hook
-export { useAnimation } from "./useAnimation";
+export { useAnimation, getAnimationStyles } from "./useAnimation";
 
 // Export individual animations
 export { fadeIn, fadeInUp, fadeInDown } from "./fadeAnimations";

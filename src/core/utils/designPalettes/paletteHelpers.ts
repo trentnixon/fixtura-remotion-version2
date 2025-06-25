@@ -1,4 +1,4 @@
-import { GradientOptions, CSSGradientOptions } from "./types";
+import { GradientOptions, CSSGradientOptions, TextOptions } from "./types";
 
 // Create a CSS gradient options object
 export const createCSSGradientOptions = (
@@ -30,25 +30,27 @@ export const createGradientOptions = (
 
 // Create text options with defaults
 export const createTextOptions = (
-  onBackground: any,
-  onContainer: any,
-  additionalProps: any = {},
-) => ({
+  onBackground: TextOptions["onBackground"],
+  onContainer: TextOptions["onContainer"],
+  additionalProps: Partial<TextOptions> = {},
+): TextOptions => ({
   onBackground: {
     ...onBackground,
-    muted: onBackground.muted || `${onBackground.main}CC`, // Add 80% opacity if not provided
+    muted: onBackground.muted || `${onBackground.main}CC`,
     accent: onBackground.accent || onBackground.main,
   },
   onContainer: {
     ...onContainer,
-    muted: onContainer.muted || `${onContainer.primary}CC`, // Add 80% opacity if not provided
+    muted: onContainer.muted || `${onContainer.primary}CC`,
     accent: onContainer.accent || onContainer.primary,
   },
   ...additionalProps,
 });
 
 // Fix a container with onBackground property
-export const createContainerOptions = (containerOptions: any) => {
-  const { onBackground, ...restOptions } = containerOptions;
-  return restOptions;
+export const createContainerOptions = (
+  containerOptions: Record<string, unknown>,
+) => {
+  // Just return the object as-is, or copy it if needed
+  return { ...containerOptions };
 };

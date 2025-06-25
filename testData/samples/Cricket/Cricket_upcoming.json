@@ -1,984 +1,570 @@
 {
   "data": [
     {
-      "date": "Sat, Dec 14",
-      "time": "01:00 PM, Sat, 14 Dec 24",
-      "type": "Two Day+",
-      "round": null,
-      "gameID": "c956ffb6",
-      "gender": "Men",
-      "ground": "01:00 PM, Sat, 21 Dec 24",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Lynbrook vs Beaconsfield, Date and Time: Saturday, 14 December 2024, 01:00 PM, Sat, 14 Dec 2401:00 PM, Sat, 21 Dec 24, Location: 01:00 PM, Sat, 21 Dec 24\n        - Round: null, Match Type: Two Day+, Status: Upcoming\n        - League: B Grade, Lynbrook is currently in position 3 with 24.0 points, having won 4 games and lost 3.\n        Team Information and Recent Game History: Lynbrook: Games Played: 20, Wins: 4, Losses: 16, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Beaconsfield",
-      "teamHome": "Lynbrook",
-      "gradeName": "B Grade",
+      "date": "Sun, 29 June",
+      "time": "09:30 AM",
+      "type": "One Day",
+      "round": "Round 6",
+      "gameID": "c373dc6c",
+      "gender": "Mixed",
+      "ground": "Oxenford Oval / Choice Homes Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Gold Coast Thunder Gold (40s) vs University of QLD, Date and Time: Sunday, 29 June 2025, 09:30 AM, Location: Oxenford Oval / Choice Homes Oval\n- Round: Round 6, Match Type: One Day\n- League: Brisbane Over 40's Cricket",
+      "ageGroup": "Over 40",
+      "teamAway": "University of QLD",
+      "teamHome": "Gold Coast Thunder Gold (40s)",
+      "gradeName": "Brisbane Over 40's Cricket",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7d73ea2581.jpg",
-        "width": 287,
-        "height": 282
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Beaconsfield",
-          "teamHome": "Lynbrook"
-        },
-        "grade": {
-          "id": 31472,
-          "name": "B Grade"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
+          }
+        ]
       }
     },
     {
-      "date": "Sat, Dec 14",
-      "time": "01:00 PM",
-      "type": "Two Day+",
-      "round": "Round 9",
-      "gameID": "0f5c967b",
-      "gender": "Men",
-      "ground": "Marriott Waters Recreation Reserve / Marriott Waters Reserve 2",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Lynbrook vs Silverton, Date and Time: Saturday, 14 December 2024, 01:00 PM, Location: Marriott Waters Recreation Reserve / Marriott Waters Reserve 2\n        - Round: Round 9, Match Type: Two Day+, Status: Upcoming\n        - League: B Grade, Lynbrook is currently in position 3 with 24.0 points, having won 4 games and lost 3.\n        Team Information and Recent Game History: Lynbrook: Games Played: 20, Wins: 4, Losses: 16, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Silverton",
-      "teamHome": "Lynbrook",
-      "gradeName": "B Grade",
+      "date": "Sat, 28 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 6",
+      "gameID": "31813cba",
+      "gender": "Mixed",
+      "ground": "Ivor Marsden Memorial Park / Leaders Institute Ivor Marsden 4",
+      "prompt": "Upcoming cricket match details:\n- Teams: Ipswich Hornets vs GC 50's Thunder Div 3 Maroon, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Ivor Marsden Memorial Park / Leaders Institute Ivor Marsden 4\n- Round: Round 6, Match Type: One Day\n- League: O50 Div 3 - Peter Sherman Shield",
+      "ageGroup": "Over 50",
+      "teamAway": "GC 50's Thunder Div 3 Maroon",
+      "teamHome": "Ipswich Hornets",
+      "gradeName": "O50 Div 3 - Peter Sherman Shield",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0b4af6e283.jpg",
-        "width": 141,
-        "height": 141
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Silverton",
-          "teamHome": "Lynbrook"
-        },
-        "grade": {
-          "id": 31472,
-          "name": "B Grade"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 153,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12786,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+            }
+          }
+        ]
       }
     },
     {
-      "date": "Sat, Dec 14",
-      "time": "01:00 PM, Sat, 14 Dec 24",
-      "type": "Two Day+",
-      "round": null,
-      "gameID": "7e087fcc",
-      "gender": "Men",
-      "ground": "01:00 PM, Sat, 21 Dec 24",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Lyndale vs Lynbrook, Date and Time: Saturday, 14 December 2024, 01:00 PM, Sat, 14 Dec 2401:00 PM, Sat, 21 Dec 24, Location: 01:00 PM, Sat, 21 Dec 24\n        - Round: null, Match Type: Two Day+, Status: Upcoming\n        - League: C Grade, Lynbrook is currently in position 8 with 6.0 points, having won 0 games and lost 6.\n        Team Information and Recent Game History: Lynbrook: Games Played: 22, Wins: 0, Losses: 22, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Lynbrook",
-      "teamHome": "Lyndale",
-      "gradeName": "C Grade",
+      "date": "Sun, 29 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 6",
+      "gameID": "2538f10f",
+      "gender": "Mixed",
+      "ground": "Ropehill Cricket Grounds / Ropehill Turf",
+      "prompt": "Upcoming cricket match details:\n- Teams: Lockyer vs GC 50's Thunder Div 3 White, Date and Time: Sunday, 29 June 2025, 10:00 AM, Location: Ropehill Cricket Grounds / Ropehill Turf\n- Round: Round 6, Match Type: One Day\n- League: O50 Div 3 - Peter Sherman Shield",
+      "ageGroup": "Over 50",
+      "teamAway": "GC 50's Thunder Div 3 White",
+      "teamHome": "Lockyer",
+      "gradeName": "O50 Div 3 - Peter Sherman Shield",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e07dd03d45.jpg",
-        "width": 225,
-        "height": 225
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Lynbrook",
-          "teamHome": "Lyndale"
-        },
-        "grade": {
-          "id": 31473,
-          "name": "C Grade"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ]
       }
     },
     {
-      "date": "Sat, Dec 14",
-      "time": "01:00 PM",
-      "type": "Two Day+",
-      "round": "Round 9",
-      "gameID": "549d7e73",
-      "gender": "Men",
-      "ground": "Greaves Reserve (#1 & #2) / Greaves #2 - Western Oval",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Dandenong West vs Lynbrook, Date and Time: Saturday, 14 December 2024, 01:00 PM, Location: Greaves Reserve (#1 & #2) / Greaves #2 - Western Oval\n        - Round: Round 9, Match Type: Two Day+, Status: Upcoming\n        - League: C Grade, Lynbrook is currently in position 8 with 6.0 points, having won 0 games and lost 6.\n        Team Information and Recent Game History: Lynbrook: Games Played: 22, Wins: 0, Losses: 22, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Lynbrook",
-      "teamHome": "Dandenong West",
-      "gradeName": "C Grade",
+      "date": "Sat, 28 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 5",
+      "gameID": "85f7a9f1",
+      "gender": "Mixed",
+      "ground": "Caboolture Cricket Club / Superior Homes Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sunshine Coast vs GC Thunder Blue, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Caboolture Cricket Club / Superior Homes Oval\n- Round: Round 5, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "GC Thunder Blue",
+      "teamHome": "Sunshine Coast",
+      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_706fcc490e.jpg",
-        "width": 225,
-        "height": 225
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Lynbrook",
-          "teamHome": "Dandenong West"
-        },
-        "grade": {
-          "id": 31473,
-          "name": "C Grade"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
+          }
+        ]
       }
     },
     {
-      "date": "Sat, Dec 14",
-      "time": "12:30 PM",
-      "type": "Two Day+",
-      "round": "Round 9",
-      "gameID": "fedb31de",
-      "gender": "Men",
-      "ground": "Marriott Waters Recreation Reserve / Marriott Waters Reserve 1",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Lynbrook vs Keysborough, Date and Time: Saturday, 14 December 2024, 12:30 PM, Location: Marriott Waters Recreation Reserve / Marriott Waters Reserve 1\n        - Round: Round 9, Match Type: Two Day+, Status: Upcoming\n        - League: Turf 3, Lynbrook is currently in position 4 with 24.0 points, having won 3 games and lost 3.\n        Team Information and Recent Game History: Lynbrook: Games Played: 14, Wins: 3, Losses: 11, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Keysborough",
-      "teamHome": "Lynbrook",
-      "gradeName": "Turf 3",
+      "date": "Sat, 28 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 5",
+      "gameID": "dd790621",
+      "gender": "Mixed",
+      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: GC Thunder Gold vs Wide Bay, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Elizabeth Daniels Park / Kev Hackney Oval\n- Round: Round 5, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "Wide Bay",
+      "teamHome": "GC Thunder Gold",
+      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7b453c2a0f.jpg",
-        "width": 248,
-        "height": 203
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Keysborough",
-          "teamHome": "Lynbrook"
-        },
-        "grade": {
-          "id": 28021,
-          "name": "Turf 3"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 153,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12786,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+            }
+          }
+        ]
       }
     },
     {
-      "date": "Sat, Dec 14",
-      "time": "12:30 PM",
-      "type": "Two Day+",
-      "round": "Round 9",
-      "gameID": "78c96c44",
-      "gender": "Men",
-      "ground": "Keysborough Reserve / Rowley Allan",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Keysborough vs Lynbrook, Date and Time: Saturday, 14 December 2024, 12:30 PM, Location: Keysborough Reserve / Rowley Allan\n        - Round: Round 9, Match Type: Two Day+, Status: Upcoming\n        - League: Turf 3 Reserves, Lynbrook is currently in position 3 with 27.0 points, having won 3 games and lost 2.\n        Team Information and Recent Game History: Lynbrook: Games Played: 14, Wins: 3, Losses: 11, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Lynbrook",
-      "teamHome": "Keysborough",
-      "gradeName": "Turf 3 Reserves",
+      "date": "Sat, 28 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 7",
+      "gameID": "513e6973",
+      "gender": "Mixed",
+      "ground": "Palmwoods Sports Reserve / Oval 1 - Turf",
+      "prompt": "Upcoming cricket match details:\n- Teams: Wide Bay vs GC Thunder Blue, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Palmwoods Sports Reserve / Oval 1 - Turf\n- Round: Round 7, Match Type: One Day\n- League: O60 Div 3 - Kratzmann Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "GC Thunder Blue",
+      "teamHome": "Wide Bay",
+      "gradeName": "O60 Div 3 - Kratzmann Shield",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7b453c2a0f.jpg",
-        "width": 248,
-        "height": 203
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Lynbrook",
-          "teamHome": "Keysborough"
-        },
-        "grade": {
-          "id": 28022,
-          "name": "Turf 3 Reserves"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ]
       }
     },
     {
-      "date": "Sun, Dec 15",
-      "time": "01:00 PM",
-      "type": "Two Day+",
-      "round": "Round 9",
-      "gameID": "74e99216",
-      "gender": "Men",
-      "ground": "Marriott Waters Recreation Reserve / Marriott Waters Reserve 1",
-      "prompt": "Upcoming cricket match details:\n        - Teams: Lynbrook vs Narre South, Date and Time: Sunday, 15 December 2024, 01:00 PM, Location: Marriott Waters Recreation Reserve / Marriott Waters Reserve 1\n        - Round: Round 9, Match Type: Two Day+, Status: Upcoming\n        - League: Turf 4, Lynbrook is currently in position 10 with 12.0 points, having won 1 games and lost 4.\n        Team Information and Recent Game History: Lynbrook: Games Played: 14, Wins: 1, Losses: 13, Recent Form: L-L-L.",
-      "ageGroup": "Senior",
-      "teamAway": "Narre South",
-      "teamHome": "Lynbrook",
-      "gradeName": "Turf 4",
+      "date": "Sun, 29 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 6",
+      "gameID": "6f7f1921",
+      "gender": "Mixed",
+      "ground": "Elizabeth Daniels Park / Ron McMullen Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Wide Bay vs GC Thunder Blue, Date and Time: Sunday, 29 June 2025, 10:00 AM, Location: Elizabeth Daniels Park / Ron McMullen Oval\n- Round: Round 6, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "GC Thunder Blue",
+      "teamHome": "Wide Bay",
+      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5cd5e71b42.jpg",
-        "width": 1317,
-        "height": 877
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "Team": {
-          "teamAway": "Narre South",
-          "teamHome": "Lynbrook"
-        },
-        "grade": {
-          "id": 30526,
-          "name": "Turf 4"
-        },
-        "competition": {
-          "id": 7234,
-          "name": "DDCA Senior Competition"
-        }
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sun, 29 June",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 6",
+      "gameID": "fd2af090",
+      "gender": "Mixed",
+      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sunshine Coast vs GC Thunder Gold, Date and Time: Sunday, 29 June 2025, 10:00 AM, Location: Elizabeth Daniels Park / Kev Hackney Oval\n- Round: Round 6, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "GC Thunder Gold",
+      "teamHome": "Sunshine Coast",
+      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 153,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12786,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+            }
+          }
+        ]
       }
     }
   ],
-  "ASSET": {
-    "ASSETID": 2,
-    "ASSETTYPEID": 1,
-    "ASSETSLINKID": "a3fd17c43b718f37bb5d308e8831679330e67b0102b1ac579e49564b8a638dea",
-    "ASSETCATEGORYID": 2
+  "asset": {
+    "assetID": 1,
+    "assetTypeID": 1,
+    "assetCategoryID": 1,
+    "assetsLinkID": "de30b802bce4898274c301c63db322fc0d5991b5be67bead347234c3cb0a3100"
   },
-  "PROMPT": [],
-  "RENDER": {
-    "RenderID": 2715,
-    "SchedulerID": 107
+  "render": {
+    "schedulerId": 207,
+    "renderId": 8265
   },
-  "ACCOUNT": {
-    "accountId": 107
+  "account": {
+    "accountId": 319
   },
   "timings": {
-    "FPS_MAIN": 840,
+    "FPS_MAIN": 780,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 120,
-    "FPS_SCORECARD": 210
+    "FPS_OUTRO": 90,
+    "FPS_LADDER": 0,
+    "FPS_SCORECARD": 270
   },
+  "frames": [45, 225, 480, 735, 900],
   "videoMeta": {
     "club": {
-      "Logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LOGO_cf248e5fde.png",
-        "width": 350,
-        "height": 371
+      "logo": {
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
-      "Name": "Lynbrook Cricket Club",
-      "Sport": "Cricket",
-      "Sponsors": {
-        "team": [
+      "name": "Gold Coast Veterans Cricket",
+      "sport": "Cricket",
+      "sponsors": {
+        "primary": [
           {
-            "id": 7402,
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
             "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_7402",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7418,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_7418",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook Orange"
-          },
-          {
-            "id": 7477,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_7477",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7565,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_7565",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 10241,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_10241",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook U18 Girls"
-          },
-          {
-            "id": 13958,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_13958",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17372,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_17372",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17415,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-              "width": 1904,
-              "height": 795
-            },
-            "name": "Your Expert Real Estate",
-            "level": "team_17415",
-            "sponsorId": 81,
-            "allocationName": "Lynbrook Orange"
-          },
-          {
-            "id": 7391,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_7391",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7445,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_7445",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook Blue"
-          },
-          {
-            "id": 7482,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_7482",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7573,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_7573",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 11929,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_11929",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook Lakers"
-          },
-          {
-            "id": 13964,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_13964",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17384,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_17384",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17418,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "level": "team_17418",
-            "sponsorId": 173,
-            "allocationName": "Lynbrook Orange"
-          },
-          {
-            "id": 6222,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_6222",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook CC #1"
-          },
-          {
-            "id": 7449,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_7449",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook Orange"
-          },
-          {
-            "id": 7491,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_7491",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook U14's"
-          },
-          {
-            "id": 7594,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_7594",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 12631,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_12631",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 13981,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_13981",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17397,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_17397",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17420,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_17420",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook Blue"
-          },
-          {
-            "id": 17443,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-              "width": 246,
-              "height": 260
-            },
-            "name": "BUBBA PIZZA",
-            "level": "team_17443",
-            "sponsorId": 181,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7417,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_7417",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook Blue"
-          },
-          {
-            "id": 7464,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_7464",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7506,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_7506",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7609,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_7609",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 12639,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_12639",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17348,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_17348",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17407,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_17407",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17435,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_17435",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook Blue"
-          },
-          {
-            "id": 17450,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-              "width": 698,
-              "height": 848
-            },
-            "name": "I AM FITNESS",
-            "level": "team_17450",
-            "sponsorId": 182,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 6232,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_6232",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook CC #2"
-          },
-          {
-            "id": 7458,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_7458",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7561,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_7561",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 7678,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_7678",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 13338,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_13338",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17357,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_17357",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook"
-          },
-          {
-            "id": 17409,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_17409",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook Blue"
-          },
-          {
-            "id": 17439,
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-              "width": 966,
-              "height": 770
-            },
-            "name": "NISC",
-            "level": "team_17439",
-            "sponsorId": 183,
-            "allocationName": "Lynbrook Orange"
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
           }
         ],
         "default": {
-          "primary_sponsor": {
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-              "width": 1352,
-              "height": 720
-            },
-            "name": "REAL ESTATE AGENT",
-            "sponsorId": 173
-          },
-          "general_sponsors": [
+          "primary_sponsor": [
             {
+              "id": 151,
+              "isPrimary": true,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
               "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bubba_pizza_892928c1a8.png",
-                "width": 246,
-                "height": 260
-              },
-              "name": "BUBBA PIZZA",
-              "position": 1,
-              "sponsorId": 181
-            },
+                "id": 12784,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+              }
+            }
+          ],
+          "general_sponsor_1": [
             {
+              "id": 152,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
               "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_9d4dd7fe69.JPG",
-                "width": 1904,
-                "height": 795
-              },
-              "name": "Your Expert Real Estate",
-              "position": 2,
-              "sponsorId": 81
-            },
+                "id": 12785,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+              }
+            }
+          ],
+          "general_sponsor_2": [
             {
+              "id": 153,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
               "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/I_AM_FITNESS_5f1afc5188.png",
-                "width": 698,
-                "height": 848
-              },
-              "name": "I AM FITNESS",
-              "position": 3,
-              "sponsorId": 182
-            },
-            {
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2024_10_08_131801_d0f2ee4d68.png",
-                "width": 1352,
-                "height": 720
-              },
-              "name": "REAL ESTATE AGENT",
-              "position": 4,
-              "sponsorId": 173
-            },
-            {
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NISC_ec84dedd00.png",
-                "width": 966,
-                "height": 770
-              },
-              "name": "NISC",
-              "position": 5,
-              "sponsorId": 183
+                "id": 12786,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+              }
             }
           ]
         }
       }
     },
-
     "video": {
+      "fixtureCategory": "MASTERS",
+      "groupingCategory": "MASTERS",
       "metadata": {
-        "title": "Upcoming Fixtures",
-        "titleSplit": ["Upcoming", ""],
-        "videoTitle": "Upcoming Fixtures",
+        "title": "Fixtures",
+        "titleSplit": ["Fixtures", ""],
+        "videoTitle": "Up Coming Fixtures",
         "compositionId": "CricketUpcoming",
-        "assetId": 18,
-        "assetTypeId": 3,
-        "frames": [355, 600, 900, 1200, 1500],
+        "assetId": 1,
+        "assetTypeId": 1,
+        "frames": [],
         "includeSponsors": true
       },
-
       "appearance": {
         "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "dark": "#FFF",
+          "white": "#111",
+          "primary": "#00843d",
+          "secondary": "#ffcd00"
         },
-
-        "template": "Basic",
-        "type": "Pattern",
-        "templateOptions": {
-          "borderRadius": "10px",
-          "Background": "Solid",
-          "Palette": "primary"
-        }
+        "template": "Basic"
       },
-
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853,
-          "AgeGroup": "Both",
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
         },
-
         "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3"
         }
       },
       "contentLayout": {
-        "dividedFixturesBy": {
-          "Ladder": 1,
-          "RosterPoster": 1,
-          "WeekendResults": 2,
-          "UpComingFixtures": 3,
-          "WeekendSingleGameResult": 1
+        "divideFixturesBy": {
+          "CricketLadder": 1,
+          "CricketRoster": 1,
+          "CricketResults": 2,
+          "CricketUpcoming": 3,
+          "CricketResultSingle": 1
         }
       },
-
       "templateVariation": {
-        "Video": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
-          "fallbackUrl": "https://example.com/fallback-video.mp4",
-          "position": "center",
+        "useBackground": "Graphics",
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": "left",
           "size": "cover",
-          "loop": true,
+          "loop": null,
           "muted": true,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "useOffthreadVideo": true,
+          "useOffthreadVideo": null,
           "volume": 0.8,
-          "playbackRate": 1.0
+          "playbackRate": null
         },
-        "Image": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
-          "ratio": "portrait",
-          "width": 3290,
-          "height": 3354,
-          "type": "pan",
-          "direction": "left",
-          "overlayStyle": "vignette",
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "focusblur",
+          "direction": "in",
+          "overlayStyle": "duotone",
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-
-        "Palette": "primaryOnWhite",
-        "borderRadius": "10px",
-        "Gradient": {
-          "type": "primaryToSecondary",
-          "direction": "VERTICAL"
+        "palette": "complementary",
+        "gradient": {
+          "type": "primaryRadial",
+          "direction": "DEFAULT"
         },
-        "Noise": {
-          "type": "grain"
+        "noise": {
+          "type": "floatingParticles"
         },
-        "Pattern": {
+        "pattern": {
           "type": "dots",
-          "animation": "panDown",
-          "scale": 0.75,
-          "rotation": 0,
-          "opacity": 0.35,
-          "animationDuration": 300,
-          "animationSpeed": 0.8
+          "animation": "rotate",
+          "scale": 0.5,
+          "rotation": null,
+          "opacity": 0.3,
+          "animationDuration": 1500,
+          "animationSpeed": 0.5
         },
-        "Particle": {
-          "type": "lines",
-          "particleCount": 400,
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
+        "particle": {
+          "type": "snow",
+          "particleCount": "150",
+          "speed": 1,
+          "direction": "down",
+          "animation": "fade"
         }
       }
-    },
-    "FixtureCategory": "Senior",
-    "grouping_category": "Senior"
-  }
+    }
+  },
+  "errors": []
 }

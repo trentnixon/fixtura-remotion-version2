@@ -1,3 +1,4 @@
+import { DesignPalette } from "../../../core/utils/designPalettes";
 import { ContainerBackgroundColor } from "../types";
 
 /**
@@ -5,7 +6,7 @@ import { ContainerBackgroundColor } from "../types";
  */
 export const getBackgroundColorStyle = (
   backgroundColor: ContainerBackgroundColor,
-  themePalette: any,
+  themePalette: DesignPalette,
 ): React.CSSProperties => {
   if (backgroundColor === "none") {
     return {};

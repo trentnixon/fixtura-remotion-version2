@@ -24,7 +24,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
     {
@@ -33,7 +32,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
     {
@@ -42,7 +40,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
     {
@@ -51,7 +48,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
     {
@@ -60,7 +56,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
     {
@@ -69,7 +64,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
 
@@ -80,7 +74,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
     {
@@ -89,7 +82,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
 
@@ -100,7 +92,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
 
@@ -112,7 +103,6 @@ export const createPaletteConfigurations = (
         colorSpace: "hsl",
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
 
@@ -124,7 +114,6 @@ export const createPaletteConfigurations = (
         colorSpace: "hsl",
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
 
@@ -146,7 +135,6 @@ export const createPaletteConfigurations = (
       options: {
         includeGradients: true,
         includeShadows: true,
-        advancedGradients: true,
       },
     },
   ];

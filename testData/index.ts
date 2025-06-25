@@ -28,10 +28,10 @@ export interface DatasetInfo {
 }
 
 export type DatasetCategories = Record<string, DatasetInfo[]>;
-export type DatasetRecord = Record<string, any>;
+export type DatasetRecord = Record<string, unknown>;
 
 // Organize datasets by sport and type
-export const testDatasets: Record<string, DatasetRecord> = {
+export const testDatasets: DatasetRecord = {
   // Cricket
   CricketLadder: CricketLadder,
   CricketUpcoming: CricketUpcoming,

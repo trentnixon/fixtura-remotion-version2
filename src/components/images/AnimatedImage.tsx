@@ -260,14 +260,14 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
   animation = "none",
   animationDelay = 0,
   animationDuration = 30,
-  animationEasing = "easeInOut",
+  animationEasing = { type: "inOut", base: "ease" },
   springConfig = IMAGE_SPRING_CONFIGS.DEFAULT,
 
   // Exit Animation props
   exitAnimation = "none",
   exitAnimationDelay = 0,
   exitAnimationDuration = 30,
-  exitAnimationEasing = "easeInOut",
+  exitAnimationEasing = { type: "inOut", base: "ease" },
   exitSpringConfig = IMAGE_SPRING_CONFIGS.DEFAULT,
   exitFrame = 0,
 
@@ -276,11 +276,11 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
   onError,
 
   // Other props
-  loading = "eager",
+  //loading = "eager",
   draggable = false,
 }) => {
   // State to track if the primary image has loaded or errored
-  const [isLoaded, setIsLoaded] = useState(false);
+  //const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [imageDimensions, setImageDimensions] = useState<{
     width: number;
@@ -291,7 +291,7 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
 
   // Reset states when src changes
   useEffect(() => {
-    setIsLoaded(false);
+    //setIsLoaded(false);
     setHasError(false);
     setImageDimensions(null);
   }, [src]);
@@ -380,7 +380,7 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
         });
       }
 
-      setIsLoaded(true);
+      //setIsLoaded(true);
       if (onLoad) onLoad();
     },
     [imageDimensions, onLoad],

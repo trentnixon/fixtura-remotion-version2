@@ -13,7 +13,6 @@ interface TopSectionProps {
 }
 
 export const GradeDate: React.FC<TopSectionProps> = ({
-  ageGroup,
   gradeName,
   date,
   delay,
@@ -23,7 +22,7 @@ export const GradeDate: React.FC<TopSectionProps> = ({
   const TextAnimations = animations.text.main;
   const ContainerAnimations = animations.container;
 
-  const backgroundColor = selectedPalette.container.transparentMain;
+  const backgroundColor = selectedPalette.container.main;
 
   return (
     <AnimatedContainer
@@ -38,7 +37,7 @@ export const GradeDate: React.FC<TopSectionProps> = ({
     >
       <div className="flex justify-between">
         <MetadataLarge
-          value={`${ageGroup} ${gradeName}`}
+          value={`${gradeName}`}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-center"
         />

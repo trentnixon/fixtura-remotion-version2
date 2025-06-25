@@ -1,5 +1,6 @@
 // src/components/backgrounds/variants/ParticleBackground/utils.ts
 import { Particle, ParticleDirection } from "./config";
+import { random } from "remotion";
 
 /**
  * Generates an array of particles with random positions and specified properties
@@ -24,7 +25,7 @@ export function generateParticles({
     let particleSize: number;
     if (Array.isArray(size)) {
       const [min, max] = size;
-      particleSize = min + Math.random() * (max - min);
+      particleSize = min + random(`size-${i}`) * (max - min);
     } else {
       particleSize = size;
     }
@@ -32,7 +33,7 @@ export function generateParticles({
     // Determine particle color
     let particleColor: string;
     if (Array.isArray(color)) {
-      const index = Math.floor(Math.random() * color.length);
+      const index = Math.floor(random(`color-index-${i}`) * color.length);
       particleColor = color[index];
     } else {
       particleColor = color as string;
@@ -55,18 +56,18 @@ export function generateParticles({
         break;
       case "random":
       default:
-        angle = Math.random() * Math.PI * 2;
+        angle = random(`angle-${i}`) * Math.PI * 2;
         break;
     }
 
     // Create particle
     particles.push({
       id: i,
-      x: Math.random() * 100, // Position as percentage of container width
-      y: Math.random() * 100, // Position as percentage of container height
+      x: random(`x-pos-${i}`) * 100, // Position as percentage of container width
+      y: random(`y-pos-${i}`) * 100, // Position as percentage of container height
       size: particleSize,
       color: particleColor,
-      speed: speed * (0.5 + Math.random()), // Add some randomness to speed
+      speed: speed * (0.5 + random(`speed-offset-${i}`)), // Add some randomness to speed
       angle,
     });
   }

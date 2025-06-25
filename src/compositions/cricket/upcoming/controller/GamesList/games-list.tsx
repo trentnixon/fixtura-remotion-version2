@@ -1,15 +1,12 @@
 import React from "react";
-import GameCard from "../../layout/Card/card";
+import GameCard from "../../layout/Card/game-card-basic";
 import { GameData } from "../../types";
 interface GamesListProps {
   games: GameData[];
   gameRowHeight?: number;
 }
 
-export const GamesList: React.FC<GamesListProps> = ({
-  games,
-  gameRowHeight = 250,
-}) => {
+export const GamesList: React.FC<GamesListProps> = ({ games }) => {
   return (
     <div className="flex flex-col w-full">
       {games.map((game, index) => (

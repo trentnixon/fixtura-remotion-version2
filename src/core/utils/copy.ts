@@ -75,7 +75,7 @@ export const restrictName = (
   }
 
   // Extract the bracketed part
-  const bracketedPart = name.match(/\s\([^\)]+\)$/);
+  const bracketedPart = name.match(/\s\([^)]+\)$/);
   let nameWithoutBrackets = bracketedPart
     ? name.replace(bracketedPart[0], "")
     : name;
@@ -118,10 +118,8 @@ export const restrictName = (
  * Removes emojis and non-standard characters from a string
  */
 export function removeEmojis(str: string): string {
-  const regex =
-    /[\u0000-\u007F\u0080-\u00FF\u0100-\u017F\u0180-\u024F\u1E00-\u1EFF]/g;
-  const matches = str.match(regex);
-  return matches ? matches.join("") : "";
+  // Removes most emoji and some symbols
+  return str.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, "");
 }
 
 /**

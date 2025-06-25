@@ -7,55 +7,55 @@ import { ContainerAnimationConfig } from "../animations";
 export const DEFAULT_REVEAL_LEFT: ContainerAnimationConfig = {
   type: "revealLeft",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_REVEAL_RIGHT: ContainerAnimationConfig = {
   type: "revealRight",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_REVEAL_TOP: ContainerAnimationConfig = {
   type: "revealTop",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_REVEAL_BOTTOM: ContainerAnimationConfig = {
   type: "revealBottom",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_COLLAPSE_LEFT: ContainerAnimationConfig = {
   type: "collapseLeft",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_COLLAPSE_RIGHT: ContainerAnimationConfig = {
   type: "collapseRight",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_COLLAPSE_TOP: ContainerAnimationConfig = {
   type: "collapseTop",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_COLLAPSE_BOTTOM: ContainerAnimationConfig = {
   type: "collapseBottom",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_FADE_OUT: ContainerAnimationConfig = {
   type: "fadeOut",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 /**

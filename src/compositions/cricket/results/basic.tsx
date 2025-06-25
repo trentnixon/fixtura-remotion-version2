@@ -2,7 +2,7 @@ import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import { MatchResult } from "./types";
 import NoResultsData from "./modules/NoResultsData/no-data";
-import ResultsDisplay from "./controller/ResultsDisplay/display";
+import ResultsDisplayBasic from "./controller/ResultsDisplay/display-Basic";
 import {
   TransitionDirection,
   TransitionSeriesWrapper,
@@ -33,12 +33,12 @@ export const ResultsList: React.FC = () => {
   const totalScreens = Math.ceil(resultsData.length / resultsPerScreen);
 
   // Cast the data to the correct type
-  const matchResults = resultsData as MatchResult[];
+  const matchResults = resultsData as unknown as MatchResult[];
 
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <ResultsDisplay
+      <ResultsDisplayBasic
         results={matchResults}
         resultsPerScreen={resultsPerScreen}
         screenIndex={index}

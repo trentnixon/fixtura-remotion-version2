@@ -1,8 +1,8 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 
-interface BreathingEffectProps {
+export interface BreathingEffectProps {
   src: string;
   intensity?: number; // Maximum zoom percentage (e.g., 1.03 for 3% zoom)
   frequency?: number; // Number of complete "breaths" during the video
@@ -32,16 +32,15 @@ export const BreathingEffect: React.FC<BreathingEffectProps> = ({
   if (frame < startTime || frame > effectEndTime) {
     return (
       <AbsoluteFill className={`breathing-effect ${className}`}>
-        <div
+        <Img
+          src={src}
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundImage: `url(${src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            objectFit: "cover",
             ...style,
           }}
         />
@@ -64,16 +63,15 @@ export const BreathingEffect: React.FC<BreathingEffectProps> = ({
 
   return (
     <AbsoluteFill className={`breathing-effect ${className}`}>
-      <div
+      <Img
+        src={src}
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          objectFit: "cover",
           transform: `scale(${scale})`,
           ...style,
         }}

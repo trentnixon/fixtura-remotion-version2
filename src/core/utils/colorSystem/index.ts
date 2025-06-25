@@ -2,6 +2,13 @@ import { ColorSystem, ColorVariations } from "./core/types";
 import { getValidColorOrFallback } from "./config/defaultColors";
 import { createPaletteConfigurations } from "./config/paletteConfigurations";
 import { createStandardizedPalettes } from "./createStandardizedPalettes";
+import { DesignPalette } from "../designPalettes/types";
+import {
+  getContrastColor,
+  lightenColor,
+  darkenColor,
+  setOpacity,
+} from "./core/baseManipulation";
 
 /**
  * Creates a comprehensive color system based on primary and secondary colors
@@ -30,24 +37,23 @@ export const createColorSystem = (
   // Extract variations from the palettes for easy access
   const variations = Object.entries(palettes).reduce(
     (acc, [key, palette]) => {
-      // Extract variation data from the palette
+      const p = palette as DesignPalette;
       const variationData: ColorVariations = {
-        base: palette.background.main,
-        light: palette.background.light,
-        lighter: palette.background.light,
-        lightest: palette.background.light,
-        dark: palette.background.dark,
-        darker: palette.background.dark,
-        darkest: palette.background.dark,
-        transparent: palette.background.main,
-        semiTransparent: palette.background.main,
-        contrastText: palette.background.contrast,
-        saturated: palette.background.main,
-        desaturated: palette.background.main,
-        muted: palette.background.main,
-        accent: palette.background.accent,
+        base: p.background.main,
+        light: p.background.light,
+        lighter: p.background.light,
+        lightest: p.background.light,
+        dark: p.background.dark,
+        darker: p.background.dark,
+        darkest: p.background.dark,
+        transparent: p.background.main,
+        semiTransparent: p.background.main,
+        contrastText: p.background.contrast,
+        saturated: p.background.main,
+        desaturated: p.background.main,
+        muted: p.background.main,
+        accent: p.background.accent,
       };
-
       return {
         ...acc,
         [key]: variationData,
@@ -65,19 +71,10 @@ export const createColorSystem = (
     variations,
     palettes,
     utils: {
-      // Include utility functions for direct use
-      getContrastColor: (color: string) => {
-        return require("./core/baseManipulation").getContrastColor(color);
-      },
-      lightenColor: (color: string, amount: number) => {
-        return require("./core/baseManipulation").lightenColor(color, amount);
-      },
-      darkenColor: (color: string, amount: number) => {
-        return require("./core/baseManipulation").darkenColor(color, amount);
-      },
-      setOpacity: (color: string, alpha: number) => {
-        return require("./core/baseManipulation").setOpacity(color, alpha);
-      },
+      getContrastColor,
+      lightenColor,
+      darkenColor,
+      setOpacity,
       // Add other utility functions as needed
     },
   };

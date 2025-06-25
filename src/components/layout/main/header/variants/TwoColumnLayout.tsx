@@ -107,7 +107,7 @@ const createReverseTwoColumnHeader = (
           </div>
 
           {/* Right Column - Logo (1/3 width) */}
-          <div className="flex justify-center items-center">{Logo}</div>
+          <div className="flex justify-center items-center ">{Logo}</div>
         </div>
       </div>
     );
@@ -117,6 +117,7 @@ const createReverseTwoColumnHeader = (
 // Helper function to create all column permutations
 const createAllPermutations = () => {
   const elements = ["Title", "Name"] as const;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const permutations: Record<string, any> = {};
 
   // Generate all permutations for standard layout (Logo on left)
@@ -128,8 +129,8 @@ const createAllPermutations = () => {
   }
 
   // Full permutations (both elements)
-  for (let first of elements) {
-    for (let second of elements) {
+  for (const first of elements) {
+    for (const second of elements) {
       if (second === first) continue;
       const key = `TwoColumnHeader${first}${second}`;
       permutations[key] = createTwoColumnHeader([first, second]);
@@ -145,8 +146,8 @@ const createAllPermutations = () => {
   }
 
   // Full permutations (both elements)
-  for (let first of elements) {
-    for (let second of elements) {
+  for (const first of elements) {
+    for (const second of elements) {
       if (second === first) continue;
       const key = `ReverseTwoColumnHeader${first}${second}`;
       permutations[key] = createReverseTwoColumnHeader([first, second]);

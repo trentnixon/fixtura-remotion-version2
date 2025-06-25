@@ -1,9 +1,8 @@
 // src/core/utils/datasetProcessing.ts
-// @ts-nocheck - Ignoring TypeScript errors in this file as it's a migration utility
 import { FixturaDataset } from "../types/data/index";
 import { mergeData } from "./dataProcessing";
-import { getCompositionIdFromDatasetId } from "./compositionMapping";
-import { Video } from "../types/data/videoData";
+//import { getCompositionIdFromDatasetId } from "./compositionMapping";
+import { Video, VideoTemplateVariation } from "../types/data/videoData";
 
 /**
  * Processes dataset for a specific template and variant
@@ -24,25 +23,27 @@ export function processDatasetForTemplate(
   const datasetClone: FixturaDataset = JSON.parse(JSON.stringify(dataset));
 
   // Extract existing data from the dataset
-  const existingVideo = datasetClone.videoMeta?.video || ({} as any); // Using any for migration
+  const existingVideo = datasetClone.videoMeta?.video || ({} as Video); // Using any for migration
 
   const existingClub =
-    datasetClone.videoMeta?.club || datasetClone.videoMeta?.Club || {};
+    datasetClone.videoMeta?.club || datasetClone.videoMeta?.club || {};
+
+  //console.log("[existingVideo]", existingVideo);
 
   // Get the correct composition ID - either use existing one or derive it from the dataset ID
-  const compositionId =
+  /*   const compositionId =
     existingVideo.metadata?.compositionId ||
-    getCompositionIdFromDatasetId(dataset.id || "");
+    getCompositionIdFromDatasetId(dataset.id || ""); */
 
   // Create the full composition ID including template and variant - for internal reference only
-  const fullCompositionId = `${templateId}-${variant}-${dataset.id || "unknown"}`;
-
+  /*  const fullCompositionId = `${templateId}-${variant}-${dataset.id || "unknown"}`;
+   */
   // Extract existing theme data
   const existingTheme = existingVideo.appearance?.theme || {};
 
   // Extract existing template variation if any
   const existingTemplateVariation =
-    existingVideo.templateVariation || ({} as any);
+    existingVideo.templateVariation || ({} as VideoTemplateVariation);
 
   // Process the dataset with template information, preserving existing data
   return mergeData(datasetClone, {
@@ -50,15 +51,9 @@ export function processDatasetForTemplate(
       theme: {
         theme: existingTheme,
         template: existingVideo.appearance?.template || templateId,
-        templateVariation:
-          existingVideo.templateVariation ||
-          ({
-            Background: variant,
-          } as any), // Use type assertion for migration
       },
       // Support both naming conventions
       fixtureCategory: datasetClone.videoMeta?.fixtureCategory || "Default",
-      FixtureCategory: datasetClone.videoMeta?.fixtureCategory || "Default",
       groupingCategory: datasetClone.videoMeta?.groupingCategory || sportName,
 
       video: {
@@ -74,16 +69,18 @@ export function processDatasetForTemplate(
         },
         templateVariation: {
           ...existingTemplateVariation,
+          useBackground: variant,
         },
         media: existingVideo.media || {},
-        contentLayout: existingVideo.contentLayout || {
-          dividedFixturesBy: existingVideo.DiviedFixturesBy || {
-            Ladder: 1,
-            RosterPoster: 1,
-            WeekendResults: 2,
-            UpComingFixtures: 2,
-            WeekendSingleGameResult: 1,
+        contentLayout: {
+          divideFixturesBy: existingVideo.contentLayout?.divideFixturesBy || {
+            CricketLadder: 1,
+            CricketRoster: 1,
+            CricketResults: 2,
+            CricketUpcoming: 2,
+            CricketResultSingle: 1,
           },
+          // Add other contentLayout properties here if needed
         },
       } as Video, // Type assertion to allow for migration
       // Support both naming conventions
@@ -104,6 +101,7 @@ export function processDatasetForTemplate(
 export function calculateDuration(dataset: FixturaDataset): number {
   // Extract timing values from dataset with fallbacks
   const timings = dataset.timings || {};
+
   const introFrames = timings.FPS_INTRO || 60;
   const mainFrames = timings.FPS_MAIN || 180;
   const outroFrames = timings.FPS_OUTRO || 60;
@@ -111,7 +109,6 @@ export function calculateDuration(dataset: FixturaDataset): number {
   // Check if sponsors should be included
   const includeSponsors =
     dataset.videoMeta?.video?.metadata?.includeSponsors || false;
-
   // Calculate total duration
   return introFrames + mainFrames + (includeSponsors ? outroFrames : 30);
 }

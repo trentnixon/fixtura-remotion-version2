@@ -1,12 +1,18 @@
 import { createPrimaryPalette } from "./primaryPalette";
 import { createSecondaryPalette } from "./secondaryPalette";
-
 import { createAccentPalette } from "./accentPalette";
 import { createComplementaryPalette } from "./complementaryPalette";
 import { createDarkPalette } from "./darkPalette";
 import { createLightPalette } from "./lightPalette";
 import { createMonochromaticPalette } from "./monochromaticPalette";
 import { createTriadicPalette } from "./triadicPalette";
+import {
+  ColorVariations,
+  TextColors,
+  UtilityColors,
+  ShadowOptions,
+  ContrastOptions,
+} from "./types";
 
 // designPalettes/index.ts
 export * from "./types";
@@ -23,13 +29,13 @@ export { createMonochromaticPalette } from "./monochromaticPalette";
 export const generateAllPalettes = (
   primary: string,
   secondary: string,
-  colorVariations: any,
-  textColors: any,
-  backgrounds: any,
-  utility: any,
-  shadows: any,
-  contrast: any,
-  gradients: any,
+  colorVariations: ColorVariations,
+  textColors: TextColors,
+  backgrounds: { light?: string; dark?: string },
+  utility: UtilityColors,
+  shadows: ShadowOptions,
+  contrast: ContrastOptions,
+  gradients: unknown,
 ) => {
   return {
     primary: createPrimaryPalette(
@@ -38,7 +44,6 @@ export const generateAllPalettes = (
       colorVariations,
       textColors,
       shadows,
-      gradients,
     ),
     secondary: createSecondaryPalette(
       primary,

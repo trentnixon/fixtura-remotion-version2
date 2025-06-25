@@ -7,49 +7,49 @@ import { ContainerAnimationConfig } from "../animations";
 export const DEFAULT_FLIP_X: ContainerAnimationConfig = {
   type: "flipX",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_FLIP_Y: ContainerAnimationConfig = {
   type: "flipY",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_ROTATE_3D: ContainerAnimationConfig = {
   type: "rotate3D",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SWING: ContainerAnimationConfig = {
   type: "swing",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_ZOOM_PERSPECTIVE: ContainerAnimationConfig = {
   type: "zoomPerspective",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_GLITCH: ContainerAnimationConfig = {
   type: "glitch",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_BLUR: ContainerAnimationConfig = {
   type: "blur",
   duration: 40,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_FADE_OUT: ContainerAnimationConfig = {
   type: "fadeOut",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 /**

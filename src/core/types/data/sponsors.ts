@@ -1,7 +1,6 @@
 // types/data/sponsors.ts
 
 import { ImageLogo } from "./common";
-import { TeamsAssignSponsors } from "./team";
 
 // Grade structure for assign sponsors
 export interface GradeAssignSponsors {
@@ -15,39 +14,36 @@ export interface CompetitionAssignSponsors {
   name: string;
 }
 
-// Assign sponsors structure
-export interface AssignSponsors {
-  Teams: TeamsAssignSponsors;
-  grade: GradeAssignSponsors;
-  competition: CompetitionAssignSponsors;
+export interface SponsorsData {
+  primary: Sponsor[];
+  default: Record<string, Sponsor[]>;
 }
 
-// Sponsor structure
 export interface Sponsor {
-  logo: ImageLogo;
+  id: number;
+  isPrimary: boolean;
+  isActive: boolean;
+  isArticle: boolean;
+  isVideo: boolean;
+  url: string;
+
+  tagline: string;
+  description: string | null;
   name: string;
-  sponsorId: number;
-  position?: number;
-  level?: string;
-  allocationName?: string;
+  logo: Logo;
 }
 
-// Default sponsors structure
-export interface DefaultSponsors {
-  primary_sponsor: Sponsor;
-  general_sponsors: Sponsor[];
-}
-
-// Club sponsors structure
-export interface ClubSponsors {
-  grade: Sponsor[];
-  default: DefaultSponsors;
+export interface Logo {
+  id: number;
+  url: string;
+  width: number;
+  height: number;
 }
 
 // Club structure
 export interface Club {
-  Logo: ImageLogo;
-  Name: string;
-  Sport: string;
-  Sponsors: ClubSponsors;
+  logo: ImageLogo;
+  name: string;
+  sport: string;
+  sponsors: SponsorsData;
 }

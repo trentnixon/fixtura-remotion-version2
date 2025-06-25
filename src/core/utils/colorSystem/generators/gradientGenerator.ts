@@ -371,7 +371,7 @@ export const createAdvancedGradient = (
   type: GRADIENT_TYPES = GRADIENT_TYPES.LINEAR,
   config: GradientConfig = {},
 ): ExtendedGradientOptions => {
-  let css: { [key: string]: string } = {};
+  const css: { [key: string]: string } = {};
   const mainDirection = config.position || GRADIENT_DIRECTIONS.HORIZONTAL;
 
   // Generate the main CSS based on the type

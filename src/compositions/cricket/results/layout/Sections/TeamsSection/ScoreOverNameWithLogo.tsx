@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
-import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
 import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
@@ -21,13 +20,10 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
   awayTeamLogo,
   height,
   delay,
+  backgroundColor,
 }) => {
-  const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-
-  // Get background color from theme
-  const backgroundColor = selectedPalette.container.main;
 
   // Logo size based on height
   const logoSize = `w-[110px] h-[110px]`;
@@ -46,7 +42,7 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
     >
       <div className="flex w-full justify-between items-center">
         {/* Home team score and name */}
-        <div className="flex-1 flex flex-col items-center">
+        <div className="flex-1 flex flex-col items-end">
           <ResultScore
             value={homeTeam.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
@@ -55,11 +51,11 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
           <ResultTeamName
             value={truncateText(homeTeam.name, 50).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-            className="text-center"
+            className="text-right"
           />
         </div>
 
-        <div className="flex justify-center items-center mx-4 space-x-3">
+        <div className="flex justify-center items-center mx-8 space-x-6">
           <div className={`${logoSize}`}>
             <TeamLogo
               logo={homeTeamLogo || null}
@@ -77,7 +73,7 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
         </div>
 
         {/* Away team score and name */}
-        <div className="flex-1 flex flex-col items-center">
+        <div className="flex-1 flex flex-col items-start">
           <ResultScore
             value={awayTeam.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
@@ -85,7 +81,7 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
           <ResultTeamName
             value={truncateText(awayTeam.name, 50).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-            className="text-center"
+            className="text-left"
           />
         </div>
       </div>

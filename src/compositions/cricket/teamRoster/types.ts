@@ -1,10 +1,14 @@
 export interface Sponsor {
-  Logo: string;
-  Name: string;
-  width: number;
-  height: number;
+  id: number;
   isPrimary: boolean;
-  URL?: string; // Optional as seen in videoMeta.club.Sponsors
+  isActive: boolean;
+  isArticle: boolean;
+  isVideo: boolean;
+  url: string;
+  tagline: string;
+  description: string | null;
+  name: string;
+  logo: { id: number; url: string; width?: number; height?: number };
 }
 
 export interface RosterDataItem {

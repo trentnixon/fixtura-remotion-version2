@@ -1,5 +1,5 @@
 import { interpolate } from "remotion";
-import { getEasingFunction } from "./easingFunctions";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
 import { AnimationConfig } from "./types";
 import React from "react";
 
@@ -12,9 +12,12 @@ export const scaleIn = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
-  const initialScale = config.custom?.initialScale || 0.8;
+  const initialScale =
+    typeof config.custom?.initialScale === "number"
+      ? config.custom.initialScale
+      : 0.8;
 
   const scale = interpolate(frame, [startFrame, endFrame], [initialScale, 1], {
     extrapolateLeft: "clamp",
@@ -43,9 +46,12 @@ export const typewriter = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
-  const textLength = config.custom?.textLength || 1;
+  const textLength =
+    typeof config.custom?.textLength === "number"
+      ? config.custom.textLength
+      : 1;
   const visibleChars = interpolate(
     frame,
     [startFrame, endFrame],
@@ -58,7 +64,7 @@ export const typewriter = (
   );
 
   return {
-    clipPath: `inset(0 ${100 - (visibleChars / textLength) * 100}% 0 0)`,
+    clipPath: `inset(0 ${100 - (textLength ? (visibleChars / textLength) * 100 : 100)}% 0 0)`,
     display: "inline-block",
   };
 };

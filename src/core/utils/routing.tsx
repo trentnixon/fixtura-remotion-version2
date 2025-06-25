@@ -118,7 +118,7 @@ export const RouteToComposition = (): React.ReactElement => {
 
   const compositionId = normalizeCompositionId(metadata.compositionId);
   const templateId = appearance.template?.toLowerCase() || "basic";
-  const sport = (videoMeta.club?.Sport?.toLowerCase() || "cricket") as Sport;
+  const sport = (videoMeta.club?.sport?.toLowerCase() || "cricket") as Sport;
   const title = metadata.title;
 
   try {
@@ -132,6 +132,7 @@ export const RouteToComposition = (): React.ReactElement => {
           compositionId={compositionId}
           templateId={templateId}
           sport={sport}
+          reason="Missing sportModule"
         />
       );
     }
@@ -148,6 +149,7 @@ export const RouteToComposition = (): React.ReactElement => {
           compositionId={compositionId}
           templateId={templateId}
           sport={sport}
+          reason="Missing compositionType"
         />
       );
     }
@@ -168,6 +170,7 @@ export const RouteToComposition = (): React.ReactElement => {
           compositionId={compositionId}
           templateId={templateId}
           sport={sport}
+          reason="Missing TemplateComponent"
         />
       );
     }
@@ -181,6 +184,7 @@ export const RouteToComposition = (): React.ReactElement => {
         compositionId={compositionId}
         templateId={templateId}
         sport={sport}
+        reason="error in processing"
       />
     );
   }

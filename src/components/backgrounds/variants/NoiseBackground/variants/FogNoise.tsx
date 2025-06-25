@@ -1,5 +1,5 @@
 import React from "react";
-import { NoiseBackground } from "../NoiseBackground";
+import { GridNoise } from "../GridNoise";
 
 /**
  * FogNoise - Soft, foggy noise effect
@@ -8,16 +8,14 @@ import { NoiseBackground } from "../NoiseBackground";
  * that resembles fog or mist.
  * Perfect for creating atmospheric, dreamy backgrounds.
  */
-const FogNoise: React.FC<React.ComponentProps<typeof NoiseBackground>> = (
-  props,
-) => {
+const FogNoise: React.FC<React.ComponentProps<typeof GridNoise>> = (props) => {
   return (
-    <NoiseBackground
-      noiseOpacity={0.2}
-      noiseScale={0.3}
+    <GridNoise
+      noiseOpacity={0.15}
+      noiseScale={0.7}
       noiseSpeed={0.01}
-      noiseDimension="3d"
-      gridSize={15} // Larger cells for a softer look
+      noiseDimension="3d" // 3D for a more volumetric feel
+      gridSize={10}
       {...props}
     />
   );

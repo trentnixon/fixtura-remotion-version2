@@ -36,9 +36,9 @@ export const GradientBackground: React.FC<Props> = ({
 
   // Get gradient configuration from video data
   const gradientType =
-    video.templateVariation?.Gradient?.type || "primaryToSecondary";
+    video.templateVariation?.gradient?.type || "primaryToSecondary";
   const gradientDirection =
-    video.templateVariation?.Gradient?.direction || "to right";
+    video.templateVariation?.gradient?.direction || "HORIZONTAL";
 
   // Extract the CSS for the background
   const backgroundCSS = React.useMemo(() => {
@@ -59,6 +59,8 @@ export const GradientBackground: React.FC<Props> = ({
 
     return DEFAULT_GRADIENT;
   }, [selectedPalette, gradientType]);
+
+  //console.log("[GradientBackground] backgroundCSS", backgroundCSS);
 
   return (
     <AbsoluteFill

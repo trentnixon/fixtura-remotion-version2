@@ -2,6 +2,9 @@
  * Animation type definitions
  */
 
+import { ImageEasingType } from "../../../easing/types";
+export type { ImageEasingType };
+
 // Define animation types
 export type AnimationType =
   | "none"
@@ -16,18 +19,15 @@ export type AnimationType =
   | "springFadeIn"
   | "springScale"
   | "bounce"
-  | "elastic";
-
-// Define easing types
-export type EasingType =
-  | "linear"
-  | "ease"
-  | "easeIn"
-  | "easeOut"
-  | "easeInOut"
-  | "cubic"
-  | "bounce"
-  | "elastic";
+  | "elastic"
+  | "slideInLeft"
+  | "slideInRight"
+  | "slideInUp"
+  | "slideInDown"
+  | "slideOutLeft"
+  | "slideOutRight"
+  | "slideOutUp"
+  | "slideOutDown";
 
 // Spring configuration interface
 export interface SpringConfig {
@@ -42,9 +42,9 @@ export interface AnimationConfig {
   type: AnimationType;
   delay?: number;
   duration?: number;
-  easing?: EasingType;
+  easing?: ImageEasingType;
   springConfig?: SpringConfig;
-  custom?: Record<string, any>;
+  custom?: Record<string, unknown>;
 }
 
 // Default animation props
@@ -52,6 +52,6 @@ export interface AnimationProps {
   animation?: AnimationType | AnimationConfig;
   animationDelay?: number;
   animationDuration?: number;
-  animationEasing?: EasingType;
+  animationEasing?: ImageEasingType;
   springConfig?: SpringConfig;
 }

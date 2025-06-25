@@ -1,4 +1,4 @@
-import { useCurrentFrame, useVideoConfig, interpolate } from "remotion";
+import { useCurrentFrame, useVideoConfig } from "remotion";
 import { ImageAnimationConfig } from "./types";
 import React from "react";
 
@@ -224,6 +224,59 @@ export const useImageAnimation = (
   }
 };
 
+export const getImageAnimationStyles = (
+  config: ImageAnimationConfig,
+  frame: number,
+): React.CSSProperties => {
+  // Default style (no animation)
+  const defaultStyle: React.CSSProperties = {};
+
+  if (!config || config.type === "none") {
+    return defaultStyle;
+  }
+
+  const delay = config.delay || 0;
+  const duration = config.duration || 30;
+  const startFrame = delay;
+  const endFrame = delay + duration;
+
+  switch (config.type) {
+    case "fadeIn":
+      return fadeIn(frame, startFrame, endFrame, config);
+    case "fadeOut":
+      return fadeOut(frame, startFrame, endFrame, config);
+    case "zoomIn":
+      return zoomIn(frame, startFrame, endFrame, config);
+    case "zoomOut":
+      return zoomOut(frame, startFrame, endFrame, config);
+    case "slideInLeft":
+      return slideInLeft(frame, startFrame, endFrame, config);
+    case "slideInRight":
+      return slideInRight(frame, startFrame, endFrame, config);
+    case "slideInTop":
+      return slideInTop(frame, startFrame, endFrame, config);
+    case "slideInBottom":
+      return slideInBottom(frame, startFrame, endFrame, config);
+    case "slideOutLeft":
+      return slideOutLeft(frame, startFrame, endFrame, config);
+    case "slideOutRight":
+      return slideOutRight(frame, startFrame, endFrame, config);
+    case "slideOutTop":
+      return slideOutTop(frame, startFrame, endFrame, config);
+    case "slideOutBottom":
+      return slideOutBottom(frame, startFrame, endFrame, config);
+    case "kenBurns":
+      return kenBurns(frame, startFrame, endFrame, config);
+    case "pulse":
+      return pulse(frame, startFrame, endFrame, config);
+    case "rotate":
+      return rotate(frame, startFrame, endFrame, config);
+    // Add more cases as needed
+    default:
+      return defaultStyle;
+  }
+};
+
 /**
  * Hook to handle both entry and exit animations
  * This implements the Remotion approach for combining animations
@@ -234,366 +287,27 @@ export const useDualImageAnimation = (
   exitFrame: number = 0,
 ): React.CSSProperties => {
   const frame = useCurrentFrame();
+  // fps is no longer needed
 
-  // If no exit animation is specified or exitFrame is 0, just use the entry animation
-  if (exitConfig.type === "none" || exitFrame <= 0) {
-    return useImageAnimation(entryConfig);
+  const entryAnimStyles = useImageAnimation(entryConfig);
+  const actualExitConfig: ImageAnimationConfig =
+    exitConfig && exitConfig.type !== "none"
+      ? exitConfig
+      : {
+          type: "fadeOut",
+          duration: 30,
+          easing: { type: "inOut", base: "ease" },
+        };
+  const exitAnimStyles = getImageAnimationStyles(
+    actualExitConfig,
+    frame - exitFrame,
+  );
+
+  if (!exitConfig || exitConfig.type === "none" || exitFrame <= 0) {
+    return entryAnimStyles;
   }
-
-  // Calculate entry animation parameters
-  const entryDelay = entryConfig.delay || 0;
-  const entryDuration = entryConfig.duration || 30;
-  const entryStartFrame = entryDelay;
-  const entryEndFrame = entryDelay + entryDuration;
-
-  // Calculate exit animation parameters
-  const exitDelay = exitConfig.delay || 0;
-  const exitStartFrame = exitFrame + exitDelay;
-  const exitDuration = exitConfig.duration || 30;
-  const exitEndFrame = exitStartFrame + exitDuration;
-
-  // For fade in/out animations, use the Remotion approach
-  if (entryConfig.type === "fadeIn" && exitConfig.type === "fadeOut") {
-    // Fade In animation from frame 0 to entryEndFrame
-    const fadeInOpacity = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [0, 1],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Fade Out animation from exitStartFrame to exitEndFrame
-    const fadeOutOpacity = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [1, 0],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Final opacity is a product of the two animations
-    const opacity = fadeInOpacity * fadeOutOpacity;
-
-    return { opacity };
+  if (frame < exitFrame) {
+    return entryAnimStyles;
   }
-
-  // For zoom in/out animations, use a similar approach
-  if (entryConfig.type === "zoomIn" && exitConfig.type === "zoomOut") {
-    // Fade In animation from frame 0 to entryEndFrame
-    const fadeInOpacity = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [0, 1],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Fade Out animation from exitStartFrame to exitEndFrame
-    const fadeOutOpacity = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [1, 0],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Calculate scale for zoom in
-    const zoomInScale = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [0.5, 1],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Calculate scale for zoom out
-    const zoomOutScale = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [1, 0.5],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Determine which scale to use based on current frame
-    const scale = frame < exitStartFrame ? zoomInScale : zoomOutScale;
-
-    // Final opacity is a product of the two animations
-    const opacity = fadeInOpacity * fadeOutOpacity;
-
-    return {
-      opacity,
-      transform: `scale(${scale})`,
-    };
-  }
-
-  // For rotate in/out animations
-  if (entryConfig.type === "rotateIn" && exitConfig.type === "rotateOut") {
-    // Fade In animation from frame 0 to entryEndFrame
-    const fadeInOpacity = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [0, 1],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Fade Out animation from exitStartFrame to exitEndFrame
-    const fadeOutOpacity = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [1, 0],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Calculate rotation for rotate in
-    const rotateInDegrees = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [90, 0],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Calculate rotation for rotate out
-    const rotateOutDegrees = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [0, -90],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Determine which rotation to use based on current frame
-    const rotation =
-      frame < exitStartFrame ? rotateInDegrees : rotateOutDegrees;
-
-    // Final opacity is a product of the two animations
-    const opacity = fadeInOpacity * fadeOutOpacity;
-
-    return {
-      opacity,
-      transform: `rotate(${rotation}deg)`,
-    };
-  }
-
-  // For slide in/out animations
-  if (
-    (entryConfig.type === "slideInLeft" &&
-      exitConfig.type === "slideOutRight") ||
-    (entryConfig.type === "slideInRight" &&
-      exitConfig.type === "slideOutLeft") ||
-    (entryConfig.type === "slideInTop" &&
-      exitConfig.type === "slideOutBottom") ||
-    (entryConfig.type === "slideInBottom" && exitConfig.type === "slideOutTop")
-  ) {
-    // Default distance
-    const distance = 100;
-
-    // Determine the axis and direction based on the animation types
-    let axis: "X" | "Y";
-    let entryStartValue: number;
-    let entryEndValue: number;
-    let exitStartValue: number;
-    let exitEndValue: number;
-
-    if (
-      entryConfig.type === "slideInLeft" &&
-      exitConfig.type === "slideOutRight"
-    ) {
-      axis = "X";
-      entryStartValue = -distance;
-      entryEndValue = 0;
-      exitStartValue = 0;
-      exitEndValue = distance;
-    } else if (
-      entryConfig.type === "slideInRight" &&
-      exitConfig.type === "slideOutLeft"
-    ) {
-      axis = "X";
-      entryStartValue = distance;
-      entryEndValue = 0;
-      exitStartValue = 0;
-      exitEndValue = -distance;
-    } else if (
-      entryConfig.type === "slideInTop" &&
-      exitConfig.type === "slideOutBottom"
-    ) {
-      axis = "Y";
-      entryStartValue = -distance;
-      entryEndValue = 0;
-      exitStartValue = 0;
-      exitEndValue = distance;
-    } else {
-      // slideInBottom and slideOutTop
-      axis = "Y";
-      entryStartValue = distance;
-      entryEndValue = 0;
-      exitStartValue = 0;
-      exitEndValue = -distance;
-    }
-
-    // Calculate entry position
-    const entryPosition = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [entryStartValue, entryEndValue],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Calculate exit position
-    const exitPosition = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [exitStartValue, exitEndValue],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Determine which position to use based on current frame
-    const position = frame < exitStartFrame ? entryPosition : exitPosition;
-
-    // Fade In animation from frame 0 to entryEndFrame
-    const fadeInOpacity = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [0, 1],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Fade Out animation from exitStartFrame to exitEndFrame
-    const fadeOutOpacity = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [1, 0],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Final opacity is a product of the two animations
-    const opacity = fadeInOpacity * fadeOutOpacity;
-
-    return {
-      opacity,
-      transform: `translate${axis}(${position}px)`,
-    };
-  }
-
-  // For mixed animation types (any entry animation with fadeOut exit)
-  if (exitConfig.type === "fadeOut") {
-    // Get the entry animation styles
-    const entryStyles = useImageAnimation(entryConfig);
-
-    // Fade In animation from frame 0 to entryEndFrame
-    const fadeInOpacity = interpolate(
-      frame,
-      [entryStartFrame, entryEndFrame],
-      [0, 1],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Fade Out animation from exitStartFrame to exitEndFrame
-    const fadeOutOpacity = interpolate(
-      frame,
-      [exitStartFrame, exitEndFrame],
-      [1, 0],
-      {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      },
-    );
-
-    // Final opacity is a product of the two animations
-    const opacity = fadeInOpacity * fadeOutOpacity;
-
-    // If we're in the entry phase, use the entry animation styles with the combined opacity
-    if (frame < exitStartFrame) {
-      return {
-        ...entryStyles,
-        opacity:
-          typeof entryStyles.opacity === "number"
-            ? entryStyles.opacity * fadeOutOpacity
-            : opacity,
-      };
-    }
-
-    // If we're in the exit phase, just fade out
-    return { opacity: fadeOutOpacity };
-  }
-
-  // For mixed animation types (any entry animation with slide out exit)
-  if (exitConfig.type.startsWith("slideOut")) {
-    // Get the entry animation styles
-    const entryStyles = useImageAnimation(entryConfig);
-
-    // Get the exit animation styles
-    const exitStyles = useImageAnimation(exitConfig);
-
-    // If we're in the entry phase, use the entry animation styles
-    if (frame < exitStartFrame) {
-      return entryStyles;
-    }
-
-    // If we're in the exit phase, use the exit animation styles
-    return exitStyles;
-  }
-
-  // For mixed animation types (any entry animation with rotate out exit)
-  if (exitConfig.type === "rotateOut") {
-    // Get the entry animation styles
-    const entryStyles = useImageAnimation(entryConfig);
-
-    // Get the exit animation styles
-    const exitStyles = useImageAnimation(exitConfig);
-
-    // If we're in the entry phase, use the entry animation styles
-    if (frame < exitStartFrame) {
-      return entryStyles;
-    }
-
-    // If we're in the exit phase, use the exit animation styles
-    return exitStyles;
-  }
-
-  // For all other animation types, switch between entry and exit animations
-  if (frame < exitStartFrame) {
-    return useImageAnimation(entryConfig);
-  } else {
-    return useImageAnimation(exitConfig);
-  }
+  return exitAnimStyles;
 };

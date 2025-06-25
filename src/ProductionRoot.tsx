@@ -16,17 +16,24 @@ export const ProductionRoot: React.FC = () => {
   }
 
   // Extract template information from the data
-  const appearance = data.videoMeta.video.appearance;
+  const videoType = data.videoMeta.video;
+  const { appearance, templateVariation, metadata } = videoType;
+
+  console.log("[videoType]", videoType);
+  console.log("[appearance]", appearance);
+  console.log("[templateVariation]", templateVariation);
+  console.log("[metadata]", metadata);
+
   const templateId = appearance.template || null;
-  const type = appearance.type || null;
-  const compositionId = data.videoMeta.video.metadata.compositionId || null;
+  const useBackground = templateVariation.useBackground || "Solid";
+  const compositionId = metadata.compositionId || null;
 
   if (!templateId) {
     throw new Error("No template ID provided for production render");
   }
 
-  if (!type) {
-    throw new Error("No type provided for production render");
+  if (!useBackground) {
+    throw new Error("No useBackground provided for production render");
   }
 
   if (!compositionId) {
@@ -36,21 +43,25 @@ export const ProductionRoot: React.FC = () => {
   // Get the template component
   const TemplateComponent =
     templateRegistry[templateId as TemplateId].component;
-
+  const remoteCompositionId = `${templateId}-${useBackground}-${compositionId}`;
   // Calculate duration from the data
   const durationInFrames =
-    data.timings.FPS_INTRO +
-    data.timings.FPS_MAIN +
+    (data.timings.FPS_INTRO ?? 0) +
+    (data.timings.FPS_MAIN ?? 0) +
     (data.videoMeta.video.metadata.includeSponsors
-      ? data.timings.FPS_OUTRO
+      ? (data.timings.FPS_OUTRO ?? 0)
       : 30);
 
   console.log("[compositionId]", compositionId);
-  const remoteCompositionId = `${templateId}-${type}-${compositionId}`;
+  console.log("[templateId]", templateId);
+  console.log("[useBackground]", useBackground);
+  console.log("[durationInFrames]", durationInFrames);
+  console.log("[remoteCompositionId]", remoteCompositionId);
+  console.log("[TemplateComponent]", TemplateComponent);
   return (
     <Composition
       id={remoteCompositionId}
-      component={TemplateComponent as any}
+      component={TemplateComponent}
       durationInFrames={durationInFrames}
       fps={30}
       width={1080}

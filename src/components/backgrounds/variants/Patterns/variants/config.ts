@@ -65,14 +65,13 @@ export interface PatternBackgroundProps
     AnimationProps {
   pattern?: PatternType;
   className?: string;
-  customProps?: Record<string, any>;
+  customProps?: Record<string, unknown>;
 }
 
 // Pattern component shared props
 export interface PatternComponentProps
   extends PatternBaseProps,
     AnimationProps {
-  patternId: string;
   frame?: number; // Current frame for animation
 }
 

@@ -1,8 +1,8 @@
 // types/data/match.ts
 
+import { AssignSponsors } from "../../../compositions/cricket/composition-types";
 import { ImageLogo } from "./common";
 import { HomeTeam, AwayTeam } from "./team";
-import { AssignSponsors } from "./sponsors";
 
 // Match data structure
 export interface MatchData {

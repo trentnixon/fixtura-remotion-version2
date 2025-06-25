@@ -17,20 +17,20 @@ export const BasicMainHeader = () => {
   const { heights } = layout;
   const { timings } = data;
 
-  const exitFrame = timings.FPS_MAIN - 30;
+  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
   return (
     <TwoColumnHeaderTitle
       height={heights.header}
-      alignment="center"
+      alignment="start"
       Logo={
         <div className="w-full h-full flex justify-center items-center ">
-          <div className="w-full h-full flex items-center rounded-full max-h-[150px] max-w-[200px]">
+          <div className="w-full h-full flex items-center rounded-none max-h-[120px] max-w-[150px]">
             <AnimatedImage
-              src={club.Logo.url}
-              width={club.Logo.width}
-              height={club.Logo.height}
+              src={club.logo?.url}
+              width={club.logo?.width || "auto"}
+              height={club.logo?.height || "120px"}
               fit="contain"
-              className="rounded-full"
+              className="rounded-none"
               animation={LogoAnimations.introIn}
               exitAnimation={LogoAnimations.introOut}
               exitFrame={exitFrame}
@@ -63,7 +63,7 @@ export const BasicMainHeader = () => {
           exitAnimation={TextAnimations.copyOut}
           exitFrame={exitFrame}
         >
-          {club.Name}
+          {club.name}
         </AnimatedText>
       }
     />

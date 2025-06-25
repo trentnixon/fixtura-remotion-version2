@@ -1,3 +1,5 @@
+import { AssignSponsors } from "../composition-types";
+
 // Types for cricket match results
 export interface TeamLogo {
   url: string;
@@ -37,21 +39,6 @@ export interface Team {
   bowlingPerformances: BowlingPerformance[];
   homeScoresFirstInnings?: string | null;
   awayScoresFirstInnings?: string | null;
-}
-
-export interface AssignSponsors {
-  Teams: {
-    away: { name: string };
-    home: { name: string };
-  };
-  grade: {
-    id: number;
-    name: string;
-  };
-  competition: {
-    id: number;
-    name: string;
-  };
 }
 
 export interface MatchResult {

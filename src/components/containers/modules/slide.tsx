@@ -7,67 +7,67 @@ import { ContainerAnimationConfig, SPRING_CONFIGS } from "../animations";
 export const DEFAULT_SLIDE_IN_LEFT: ContainerAnimationConfig = {
   type: "slideInLeft",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_IN_RIGHT: ContainerAnimationConfig = {
   type: "slideInRight",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_IN_TOP: ContainerAnimationConfig = {
   type: "slideInTop",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_IN_BOTTOM: ContainerAnimationConfig = {
   type: "slideInBottom",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_OUT_LEFT: ContainerAnimationConfig = {
   type: "slideOutLeft",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_OUT_RIGHT: ContainerAnimationConfig = {
   type: "slideOutRight",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_OUT_TOP: ContainerAnimationConfig = {
   type: "slideOutTop",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SLIDE_OUT_BOTTOM: ContainerAnimationConfig = {
   type: "slideOutBottom",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SPRING_TRANSLATE_X: ContainerAnimationConfig = {
   type: "springTranslateX",
   duration: 45,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SPRING_TRANSLATE_Y: ContainerAnimationConfig = {
   type: "springTranslateY",
   duration: 45,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_FADE_OUT: ContainerAnimationConfig = {
   type: "fadeOut",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 /**

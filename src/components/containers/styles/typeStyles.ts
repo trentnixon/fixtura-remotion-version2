@@ -1,3 +1,5 @@
+//import { ThemePalettes } from "../../../core/context/types/ThemeContextTypes";
+import { DesignPalette } from "../../../core/utils/designPalettes";
 import { ContainerType } from "../types";
 
 /**
@@ -5,7 +7,7 @@ import { ContainerType } from "../types";
  */
 export const getTypeStyles = (
   type: ContainerType,
-  themePalette: any,
+  selectedPalette: DesignPalette,
 ): React.CSSProperties => {
   switch (type) {
     case "border":
@@ -36,7 +38,7 @@ export const getTypeStyles = (
       };
     case "gradient":
       return {
-        background: `linear-gradient(to bottom right, ${themePalette.background.gradient.primary}, ${themePalette.background.gradient.secondary})`,
+        background: `linear-gradient(to bottom right, ${selectedPalette.background.gradient.primary}, ${selectedPalette.background.gradient.secondary})`,
       };
     case "basic":
     case "full":

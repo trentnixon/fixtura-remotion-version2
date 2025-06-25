@@ -47,16 +47,10 @@ export type ContainerAnimationType =
   | "glitch"
   | "blur";
 
+import { ImageEasingType } from "../../images/config/types";
+
 // Animation easing options
-export type AnimationEasing =
-  | "linear"
-  | "ease"
-  | "easeIn"
-  | "easeOut"
-  | "easeInOut"
-  | "cubic"
-  | "bounce"
-  | "elastic";
+export type AnimationEasing = ImageEasingType;
 
 // Container animation configuration
 export interface ContainerAnimationConfig {
@@ -64,7 +58,8 @@ export interface ContainerAnimationConfig {
   delay?: number;
   duration?: number;
   easing?: AnimationEasing;
-  custom?: Record<string, any>;
+  springConfig?: ContainerSpringConfig;
+  custom?: Record<string, unknown>;
 }
 
 // Animation props
@@ -106,19 +101,6 @@ export type ContainerVariant =
 export type ContainerSize = "xs" | "sm" | "md" | "lg" | "xl" | "full" | "auto";
 
 /**
- * Easing types for container animations
- */
-export type ContainerEasingType =
-  | "linear"
-  | "ease"
-  | "easeIn"
-  | "easeOut"
-  | "easeInOut"
-  | "cubic"
-  | "bounce"
-  | "elastic";
-
-/**
  * Spring configuration for container animations
  */
 export interface ContainerSpringConfig {
@@ -126,18 +108,6 @@ export interface ContainerSpringConfig {
   damping?: number;
   stiffness?: number;
   overshootClamping?: boolean;
-}
-
-/**
- * Container animation configuration
- */
-export interface ContainerAnimationConfig {
-  type: ContainerAnimationType;
-  delay?: number;
-  duration?: number;
-  easing?: ContainerEasingType;
-  springConfig?: ContainerSpringConfig;
-  custom?: Record<string, any>;
 }
 
 /**
@@ -306,14 +276,14 @@ export interface ContainerProps {
   animation?: ContainerAnimationType | ContainerAnimationConfig;
   animationDelay?: number;
   animationDuration?: number;
-  animationEasing?: ContainerEasingType;
+  animationEasing?: AnimationEasing;
   springConfig?: ContainerSpringConfig;
 
   // Exit Animation
   exitAnimation?: ContainerAnimationType | ContainerAnimationConfig;
   exitAnimationDelay?: number;
   exitAnimationDuration?: number;
-  exitAnimationEasing?: ContainerEasingType;
+  exitAnimationEasing?: AnimationEasing;
   exitSpringConfig?: ContainerSpringConfig;
   exitFrame?: number;
 

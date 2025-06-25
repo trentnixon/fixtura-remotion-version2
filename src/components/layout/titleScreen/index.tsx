@@ -5,6 +5,7 @@ import {
   VerticalStackLogoNameTitle,
   VerticalStackNameLogoTitle,
   VerticalStackNameTitleLogo,
+  VerticalStackLogoTitleName,
 } from "./variants/VerticalStack";
 import {
   TwoColumnLayout,
@@ -25,7 +26,7 @@ export {
   VerticalStackLogoNameTitle,
   VerticalStackNameLogoTitle,
   VerticalStackNameTitleLogo,
-
+  VerticalStackLogoTitleName,
   // Two Column Layout variants
   TwoColumnLayout,
   TwoColumnLayoutNameTitle,

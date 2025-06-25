@@ -1,5 +1,5 @@
 import { interpolate } from "remotion";
-import { getEasingFunction } from "./easingFunctions";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
 import { AnimationConfig } from "./types";
 import React from "react";
 
@@ -12,7 +12,7 @@ export const fadeIn = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -34,7 +34,7 @@ export const fadeInUp = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -43,7 +43,8 @@ export const fadeInUp = (
   });
 
   // Distance can be customized
-  const distance = config.custom?.distance || 20;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 20;
 
   const translateY = interpolate(frame, [startFrame, endFrame], [distance, 0], {
     extrapolateLeft: "clamp",
@@ -66,7 +67,7 @@ export const fadeInDown = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -75,7 +76,8 @@ export const fadeInDown = (
   });
 
   // Distance can be customized
-  const distance = config.custom?.distance || 20;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 20;
 
   const translateY = interpolate(
     frame,
@@ -103,7 +105,7 @@ export const fadeInLeft = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -112,7 +114,8 @@ export const fadeInLeft = (
   });
 
   // Distance can be customized
-  const distance = config.custom?.distance || 30;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 30;
 
   const translateX = interpolate(frame, [startFrame, endFrame], [distance, 0], {
     extrapolateLeft: "clamp",
@@ -135,7 +138,7 @@ export const fadeInRight = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -144,7 +147,8 @@ export const fadeInRight = (
   });
 
   // Distance can be customized
-  const distance = config.custom?.distance || 30;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 30;
 
   const translateX = interpolate(
     frame,
@@ -172,7 +176,7 @@ export const fadeOut = (
   endFrame: number,
   config: AnimationConfig,
 ): React.CSSProperties => {
-  const easingFn = getEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",

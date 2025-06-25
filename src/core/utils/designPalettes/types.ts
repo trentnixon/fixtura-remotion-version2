@@ -58,6 +58,7 @@ export interface ContainerOptions {
   transparentAccent: string;
   transparentMain: string;
   transparentSecondary: string;
+  transparentPrimary: string;
   muted: string;
 }
 
@@ -101,8 +102,45 @@ export interface DesignPalette {
   background: BackgroundOptions;
   container: ContainerOptions;
   text: TextOptions;
-
   shadow: ShadowOptions;
+}
+
+export interface TextColors {
+  onPrimary?: string;
+  onSecondary?: string;
+  onLight?: string;
+  onDark?: string;
+  title?: string;
+  body?: string;
+  [key: string]: string | undefined;
+}
+
+export interface UtilityColors {
+  success: string;
+  warning?: string;
+  error?: string;
+  [key: string]: string | undefined;
+}
+
+export interface ContrastOptions {
+  primary: { safeColor: string };
+  secondary: { safeColor: string };
+}
+
+export interface ColorVariation {
+  base: string;
+  light: string;
+  dark: string;
+  lighter?: string;
+  darker?: string;
+  accent?: string;
+  contrastText?: string;
+}
+
+export interface ColorVariations {
+  primary: ColorVariation;
+  secondary: ColorVariation;
+  [key: string]: ColorVariation;
 }
 
 // Helper function to ensure text has good contrast with background

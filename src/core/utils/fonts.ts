@@ -18,6 +18,7 @@ const displayFonts = {
 const textFonts = {
   heebo: "Heebo",
   roboto: "Roboto",
+  robotoCondensed: "Roboto Condensed",
   inter: "Inter",
   openSans: "Open Sans",
   lato: "Lato",

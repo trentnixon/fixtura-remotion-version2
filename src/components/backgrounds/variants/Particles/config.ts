@@ -44,7 +44,7 @@ export interface ParticleBackgroundProps {
   exitFrame?: number;
 
   // For extensibility
-  customProps?: Record<string, any>;
+  customProps?: Record<string, unknown>;
 
   // Optional className and style props
   className?: string;

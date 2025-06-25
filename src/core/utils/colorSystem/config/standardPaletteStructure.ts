@@ -28,7 +28,7 @@ export const createStandardPaletteStructure = (
     includeGradients?: boolean;
     includeShadows?: boolean;
     highContrast?: boolean;
-    [key: string]: any;
+    [key: string]: unknown;
   } = {},
 ) => {
   // Helper function to ensure contrast for text on a background
@@ -69,11 +69,14 @@ export const createStandardPaletteStructure = (
       muted: colorVariations.muted,
       saturated: colorVariations.saturated,
       highlight: colorVariations.lighter,
-      transparentMain: tinycolor(mainColor).setAlpha(0.4).toRgbString(),
-      transparentSecondary: tinycolor(secondaryColor)
-        .setAlpha(0.4)
+      transparentMain: tinycolor(mainColor).setAlpha(0.7).toRgbString(),
+      transparentPrimary: tinycolor(colorVariations.light)
+        .setAlpha(0.7)
         .toRgbString(),
-      transparentAccent: tinycolor(secondaryColor).setAlpha(0.4).toRgbString(),
+      transparentSecondary: tinycolor(secondaryColor)
+        .setAlpha(0.7)
+        .toRgbString(),
+      transparentAccent: tinycolor(secondaryColor).setAlpha(0.7).toRgbString(),
       gradientPrimaryToSecondaryVertical:
         gradients.primaryToSecondary.css.VERTICAL,
       gradientSecondaryToPrimaryVertical:
@@ -97,7 +100,7 @@ export const createStandardPaletteStructure = (
         primary: ensureContrast(colorVariations.light, textColors.onPrimary),
         secondary: ensureContrast(
           colorVariations.lighter,
-          textColors.onPrimary,
+          textColors.onSecondary,
         ),
         light: ensureContrast("#FFFFFF", "#111827"),
         dark: ensureContrast(colorVariations.darker, textColors.onPrimary),

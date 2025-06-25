@@ -1,5 +1,5 @@
 import React from "react";
-import { NoiseBackground } from "../NoiseBackground";
+import { GridNoise } from "../GridNoise";
 
 /**
  * StaticNoise - TV static or electronic interference effect
@@ -8,11 +8,11 @@ import { NoiseBackground } from "../NoiseBackground";
  * that resembles TV static or electronic interference.
  * Great for creating glitchy, tech-inspired backgrounds.
  */
-const StaticNoise: React.FC<React.ComponentProps<typeof NoiseBackground>> = (
+const StaticNoise: React.FC<React.ComponentProps<typeof GridNoise>> = (
   props,
 ) => {
   return (
-    <NoiseBackground
+    <GridNoise
       noiseOpacity={0.5}
       noiseScale={3}
       noiseSpeed={0.2} // Faster movement for static effect

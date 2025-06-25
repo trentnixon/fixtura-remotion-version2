@@ -9,6 +9,7 @@ interface MatchStatusProps {
   result: string;
   height: number;
   delay: number;
+  backgroundColor: string;
 }
 
 // Helper function to truncate text
@@ -22,13 +23,12 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
   result,
   height,
   delay,
+  backgroundColor,
 }) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  console.log("[selectedPalette]", selectedPalette);
-  // Background color from theme
-  const backgroundColor = selectedPalette.container.transparentMain;
+
   // Format result status color
 
   // Truncate the result

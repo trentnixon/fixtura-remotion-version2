@@ -1,410 +1,386 @@
 {
   "data": [
     {
-      "date": "Sunday, 01 December 2024",
-      "type": "T20",
-      "round": "Round 4",
-      "gameId": "4619653e",
-      "gender": "Women",
-      "ground": "Brockman Oval (PACIFIC PINES) / Brockman Oval",
-      "ageGroup": "Senior",
-      "sponsors": [
-        {
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
-          "Name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
-          "width": 635,
-          "height": 420,
-          "isPrimary": true
-        }
-      ],
-      "teamAway": "Helensvale Aqua Women",
-      "teamHome": "Southport Labrador",
-      "gradeName": "Senior Women",
-      "isHomeTeam": true,
-      "teamRoster": ["No players allocated to line-up"],
-      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/5c8eb598-5565-4208-a701-1578325e7e5d/1656926786143/logo.png",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg"
-    },
-    {
-      "date": "Sunday, 01 December 2024",
-      "type": "T20",
-      "round": "Round 4",
-      "gameId": "4619653e",
-      "gender": "Women",
-      "ground": "Brockman Oval (PACIFIC PINES) / Brockman Oval",
-      "ageGroup": "Senior",
-      "sponsors": [
-        {
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
-          "Name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
-          "width": 635,
-          "height": 420,
-          "isPrimary": true
-        }
-      ],
-      "teamAway": "Helensvale Aqua Women",
-      "teamHome": "Southport Labrador",
-      "gradeName": "Senior Women",
-      "isHomeTeam": true,
-      "teamRoster": ["No players allocated to line-up"],
-      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/5c8eb598-5565-4208-a701-1578325e7e5d/1656926786143/logo.png",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg"
-    },
-    {
-      "date": "Saturday, 30 November 2024",
-      "type": "Two Day+",
-      "round": "Round 9",
-      "gameId": "54d86213",
-      "gender": "Mixed",
-      "ground": "Golden Wheel Park / Technika Oval",
-      "ageGroup": "Senior",
-      "sponsors": [
-        {
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
-          "Name": "TECHNIKA ",
-          "width": 1114,
-          "height": 192,
-          "isPrimary": false
-        },
-        {
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
-          "Name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
-          "width": 635,
-          "height": 420,
-          "isPrimary": true
-        }
-      ],
-      "teamAway": "Broadbeach Premier Div 2",
-      "teamHome": "Southport Premier Div 2",
-      "gradeName": "CGC Premier League - Division 2",
+      "ageGroup": "Over 50",
+      "gameId": "d4adc2eb",
+      "teamHome": "GC 50's Thunder Div 2 Gold",
+      "teamAway": "GC 50's Thunder Div 2 Green",
       "isHomeTeam": true,
       "teamRoster": [
-        "Daniel Carson",
-        "Justin Choromanski",
-        "Bradley Holmes",
-        "Cooper Johnson",
-        "Riley Johnson\nvc",
-        "Paul Johnston\nc",
-        "Max Kemp",
-        "Paul Morgan",
-        "Kyle Palmer-Hughes",
-        "Alexander Polglase",
-        "Joel Smith",
-        "Talvinder Raina",
-        "Jakson Webb",
-        "Bailey Johnston"
+        "Dean Croft (WK)\nc",
+        "Paul Azzopardi",
+        "Adam Bell",
+        "Rod Carrington",
+        "Craig Field",
+        "Jason Hay",
+        "Jeff Lindemann",
+        "Daniel Platts",
+        "Paul Rapson",
+        "Michael Ross",
+        "Quentin Ryan",
+        "Mark Snowden\nvc"
       ],
-      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/b6e5d0f3-3b71-411c-a74e-d1af23d474ed/1664703482786/logo.jpg",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg"
-    },
-    {
-      "date": "Saturday, 30 November 2024",
       "type": "One Day",
-      "round": "Round 8",
-      "gameId": "bb139b69",
+      "ground": "Oxenford Oval / Choice Homes Oval",
+      "round": "Round 5",
+      "date": "Saturday, 21 June 2025",
+      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
       "gender": "Mixed",
-      "ground": "Merrimac High School / School oval",
-      "ageGroup": "Senior",
+      "gradeName": "O50 Div 2 - Andrew Knight Shield",
       "sponsors": [
         {
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
-          "Name": "ZERO DRIVERS",
-          "width": 701,
-          "height": 356,
-          "isPrimary": false
-        },
-        {
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
-          "Name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
-          "width": 635,
-          "height": 420,
-          "isPrimary": true
-        }
-      ],
-      "teamAway": "Southport Community Div 1",
-      "teamHome": "Broadbeach Community Div 1",
-      "gradeName": "CGC Community League - Division 1",
-      "isHomeTeam": false,
-      "teamRoster": [
-        "sean campbell",
-        "Josh De'Ath",
-        "Gavan Jago",
-        "Dilruk Jay",
-        "Kenneth Jennycloss",
-        "Ankit Kalavikatte",
-        "Gagan Kapoor",
-        "Jonah Menzies\nc",
-        "Raakin Mia",
-        "TIM RENWICK",
-        "Chris Thompson",
-        "Riley Thompson",
-        "Mahesh Dissanayake"
-      ],
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
-      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/b6e5d0f3-3b71-411c-a74e-d1af23d474ed/1664703482786/logo.jpg"
-    }
-  ],
-  "ASSET": {
-    "ASSETID": 32,
-    "ASSETTYPEID": 1,
-    "ASSETCATEGORYID": 2
-  },
-
-  "PROMPT": [],
-  "RENDER": {
-    "RenderID": 2279,
-    "SchedulerID": 137
-  },
-  "ACCOUNT": {
-    "accountId": 137
-  },
-  "timings": {
-    "FPS_MAIN": 720,
-    "FPS_INTRO": 90,
-    "FPS_OUTRO": 180,
-    "FPS_SCORECARD": 180
-  },
-  "videoMeta": {
-    "club": {
-      "Logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "Name": "Southport Labrador Cricket Club",
-      "Sponsors": [
-        {
-          "URL": "https://www.austspray.com/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/AUSTSPRAY_environmental_LOGO_1a2495144c.png",
-          "Name": "AUSTSPRAY ENVIRONMENTAL WEED CONTROL PTY LTD",
-          "width": 635,
-          "height": 420,
-          "isPrimary": true
-        },
-        {
-          "URL": "https://www.technika.com.au/en-au",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Technika_Logo_de8950884a.png",
-          "Name": "TECHNIKA ",
-          "width": 1114,
-          "height": 192,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.hncqld.com/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Harvey_Norman_Commercial_logo_2022_7caa0de62f.jpg",
-          "Name": "HARVEY NORMAN COMMERCIAL QLD",
-          "width": 867,
-          "height": 531,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://firstchoiceremovals.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/First_Choice_Removals_Logo_4c02c110d0.png",
-          "Name": "FIRST CHOICE REMOVALS",
-          "width": 477,
-          "height": 313,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.pscinsurance.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/PSC_G_Coast_57df5ee2f7.jpg",
-          "Name": "PSC INSURANCE BROKERS ",
-          "width": 1181,
-          "height": 248,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://whacksports.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Whack_sports_logo_RGB_tagline_50e1f3b5c0.png",
-          "Name": "WHACK SPORTS",
-          "width": 1671,
-          "height": 587,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://zerodrivers.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Capture_45fab74c6d.PNG",
-          "Name": "ZERO DRIVERS",
-          "width": 701,
-          "height": 356,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.gameovergc.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Game_Over_FINAL_EXPANDED_LARGE_BORDER_5725fcf4f2.jpg",
-          "Name": "GAME OVER",
-          "width": 3507,
-          "height": 2480,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.facebook.com/PeakPerformanceCricket/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Peak_Performance_LOGO_BLACK_4a43fbcb03.jpg",
-          "Name": "PEAK PERFORMANCE CRICKET PTY LTD",
-          "width": 729,
-          "height": 510,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.yellowpages.com.au/nsw/ardlethan/london-hotel-motel-14064443-listing.html",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/LONDON_HOTEL_MOTEL_c6c0187b48.PNG",
-          "Name": "THE LONDON HOTEL MOTEL ",
-          "width": 1239,
-          "height": 620,
-          "isPrimary": false
-        },
-        {
-          "URL": "terra global australia",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/TERRA_GLOBAL_f4e06c6dbf.jpg",
-          "Name": "TERRA GLOBAL",
-          "width": 3334,
-          "height": 3334,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.mortgagechoice.com.au/darren.comerford/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mortgage_Choice_a9b8530494.jpg",
-          "Name": "MORTGAGE CHOICE ",
-          "width": 613,
-          "height": 791,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.rasauto.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/RAS_AUTO_613ec58b14.jpg",
-          "Name": "RAS AUTOMOBILE SERVICES",
-          "width": 1024,
-          "height": 479,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.parliament.qld.gov.au/Members/Current-Members/Member-List/Member-Details?id=557202589",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SAM_OCONNOR_LOGO_b1dbfad713.jpg",
-          "Name": "SAM OCONNOR",
-          "width": 596,
-          "height": 161,
-          "isPrimary": false
-        },
-        {
-          "URL": "https://www.arundeltavern.com.au/",
-          "Logo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ARUNDEL_TAVERN_LOGO_2b87d709b7.JPG",
-          "Name": "ARUNDEL TAVERN ",
-          "width": 407,
-          "height": 175,
-          "isPrimary": false
+          "id": 151,
+          "isPrimary": true,
+          "isActive": true,
+          "isArticle": true,
+          "isVideo": true,
+          "url": "test",
+          "tagline": "test",
+          "description": null,
+          "name": "test",
+          "logo": {
+            "id": 12784,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+          }
         }
       ]
     },
+    {
+      "ageGroup": "Over 60",
+      "gameId": "da1a8bad",
+      "teamHome": "Wide Bay",
+      "teamAway": "GC Thunder Blue",
+      "isHomeTeam": false,
+      "teamRoster": [
+        "John Foster",
+        "Phillip Hopgood",
+        "Jeffrey Manitzky",
+        "Ian Petherick",
+        "Brian Rowe\nc",
+        "David Russell",
+        "Raymond Sanders (WK)",
+        "Mick Seery",
+        "Mark Simes",
+        "Fred D Williams",
+        "Tony Williams",
+        "Chris Morton"
+      ],
+      "type": "One Day",
+      "ground": "Caboolture Cricket Club / Caboolture Cricket Club - Oval 2",
+      "round": "Round 6",
+      "date": "Saturday, 21 June 2025",
+      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "gender": "Mixed",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "sponsors": [
+        {
+          "id": 151,
+          "isPrimary": true,
+          "isActive": true,
+          "isArticle": true,
+          "isVideo": true,
+          "url": "test",
+          "tagline": "test",
+          "description": null,
+          "name": "test",
+          "logo": {
+            "id": 12784,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+          }
+        }
+      ]
+    },
+    {
+      "ageGroup": "Over 60",
+      "gameId": "a98f8529",
+      "teamHome": "Sunshine Coast Maroon",
+      "teamAway": "GC Thunder Gold",
+      "isHomeTeam": false,
+      "teamRoster": ["No players allocated to line-up"],
+      "type": "One Day",
+      "ground": "Caboolture Cricket Club / Superior Homes Oval",
+      "round": "Round 6",
+      "date": "Saturday, 21 June 2025",
+      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/7f6542ae-5a25-4ac0-ac9c-3a03bb2f78ba/1650198634682/logo.png",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "gender": "Mixed",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "sponsors": [
+        {
+          "id": 152,
+          "isPrimary": false,
+          "isActive": true,
+          "isArticle": true,
+          "isVideo": true,
+          "url": "test",
+          "tagline": "test",
+          "description": null,
+          "name": "test",
+          "logo": {
+            "id": 12785,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+          }
+        }
+      ]
+    },
+    {
+      "ageGroup": "Over 50",
+      "gameId": "d7f8d89e",
+      "teamHome": "GC 50's Thunder Div 1",
+      "teamAway": "Brisbane Sea Eagles",
+      "isHomeTeam": true,
+      "teamRoster": [
+        "Steven Baker (WK)",
+        "Darren Cox",
+        "Shane Dacey",
+        "Damien Day",
+        "Peter Goodchap",
+        "Mal Hancock",
+        "Jason Lavender",
+        "Wayne Leonard",
+        "Garry Lovett",
+        "Jason Simmons",
+        "Craig Sweet",
+        "Mark Wade"
+      ],
+      "type": "One Day",
+      "ground": "Oxenford Oval / Choice Homes Oval",
+      "round": "Round 5",
+      "date": "Sunday, 22 June 2025",
+      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/09d0b200-350d-476d-8620-9aa825886d62/1646785344443/logo.jpg",
+      "gender": "Mixed",
+      "gradeName": "O50 Div 1 - Gill Chapman Shield",
+      "sponsors": [
+        {
+          "id": 153,
+          "isPrimary": false,
+          "isActive": true,
+          "isArticle": true,
+          "isVideo": true,
+          "url": "test",
+          "tagline": "test",
+          "description": null,
+          "name": "test",
+          "logo": {
+            "id": 12786,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+          }
+        }
+      ]
+    },
+    {
+      "ageGroup": "Over 60",
+      "gameId": "ba1c0f25",
+      "teamHome": "Sunshine Coast Gold",
+      "teamAway": "GC Thunder Blue",
+      "isHomeTeam": false,
+      "teamRoster": [
+        "John Foster",
+        "Phillip Hopgood",
+        "Jeffrey Manitzky",
+        "Ian Petherick",
+        "Warren Rose",
+        "Brian Rowe\nc",
+        "David Russell",
+        "Mick Seery",
+        "Mark Simes",
+        "Fred D Williams",
+        "Tony Williams (WK)",
+        "john burns"
+      ],
+      "type": "One Day",
+      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
+      "round": "Round 7",
+      "date": "Sunday, 22 June 2025",
+      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/7f6542ae-5a25-4ac0-ac9c-3a03bb2f78ba/1650198634682/logo.png",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "gender": "Mixed",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "sponsors": [
+        {
+          "id": 151,
+          "isPrimary": true,
+          "isActive": true,
+          "isArticle": true,
+          "isVideo": true,
+          "url": "test",
+          "tagline": "test",
+          "description": null,
+          "name": "test",
+          "logo": {
+            "id": 12784,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+          }
+        }
+      ]
+    },
+    {
+      "ageGroup": "Over 60",
+      "gameId": "c19127d6",
+      "teamHome": "Wide Bay",
+      "teamAway": "GC Thunder Gold",
+      "isHomeTeam": false,
+      "teamRoster": ["No players allocated to line-up"],
+      "type": "One Day",
+      "ground": "Elizabeth Daniels Park / Ron McMullen Oval",
+      "round": "Round 7",
+      "date": "Sunday, 22 June 2025",
+      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "gender": "Mixed",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "sponsors": [
+        {
+          "id": 152,
+          "isPrimary": false,
+          "isActive": true,
+          "isArticle": true,
+          "isVideo": true,
+          "url": "test",
+          "tagline": "test",
+          "description": null,
+          "name": "test",
+          "logo": {
+            "id": 12785,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+          }
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "assetID": 32,
+    "assetTypeID": 1,
+    "assetCategoryID": 2,
+    "assetsLinkID": ""
+  },
+  "render": {
+    "renderId": 8251,
+    "schedulerId": 207
+  },
+  "account": {
+    "accountId": 319
+  },
+  "timings": {
+    "FPS_INTRO": 90,
+    "FPS_OUTRO": 180,
+    "FPS_SCORECARD": 60,
+    "FPS_MAIN": 360,
+    "FPS_LADDER": 0
+  },
+  "frames": [120, 180, 240, 300, 360, 420],
+  "videoMeta": {
+    "club": {
+      "logo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "name": "Gold Coast Veterans Cricket",
+      "sport": "Cricket"
+    },
     "video": {
       "metadata": {
-        "title": "Roster",
-        "titleSplit": ["Roster", ""],
-        "videoTitle": "Roster",
+        "title": "Team List",
+        "titleSplit": ["Team", "List"],
+        "videoTitle": "Gold Coast Veterans Cricket CricketRoster",
         "compositionId": "CricketRoster",
-        "assetId": 18,
-        "assetTypeId": 3,
-        "frames": [355, 600, 900, 1200, 1500],
-        "includeSponsors": true
+        "assetId": 32,
+        "assetTypeId": 1,
+        "frames": [120, 180, 240, 300, 360, 420],
+        "includeSponsors": false
       },
-
       "appearance": {
         "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "primary": "#00843d",
+          "secondary": "#ffcd00",
+          "dark": "#FFF",
+          "white": "#111"
         },
-
-        "template": "Basic",
-        "type": "Pattern",
-        "templateOptions": {
-          "borderRadius": "10px",
-          "Background": "Solid",
-          "Palette": "primary"
-        }
+        "template": "Basic"
       },
-
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853,
-          "AgeGroup": "Both",
-          "AssetType": "",
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "MASTERS",
+          "AssetType": "CricketRoster",
           "markerPosition": ""
         },
-
         "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3"
         }
       },
       "contentLayout": {
-        "diviedFixturesBy": {
-          "Ladder": 1,
-          "RosterPoster": 1,
-          "WeekendResults": 2,
-          "UpComingFixtures": 2,
-          "WeekendSingleGameResult": 1
+        "divideFixturesBy": {
+          "CricketLadder": 1,
+          "CricketRoster": 1,
+          "CricketResults": 2,
+          "CricketUpcoming": 3,
+          "CricketResultSingle": 1
         }
       },
-
       "templateVariation": {
-        "Video": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Fixtura_graphic_BG_Test005_512b7c791a.mp4",
-          "fallbackUrl": "https://example.com/fallback-video.mp4",
-          "position": "center",
-          "size": "cover",
-          "loop": true,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "useOffthreadVideo": true,
-          "volume": 0.8,
-          "playbackRate": 1.0
+        "useBackground": "Pattern",
+        "palette": "primaryOnWhite",
+        "gradient": {
+          "type": "primaryToSecondary",
+          "direction": "VERTICAL"
         },
-        "Image": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/183_A3066_ba8dc12541_4aabea8ceb.jpg",
-          "ratio": "portrait",
-          "width": 3290,
-          "height": 3354,
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
           "type": "pan",
           "direction": "left",
           "overlayStyle": "vignette",
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-
-        "Palette": "primaryOnWhite",
-        "borderRadius": "10px",
-        "Gradient": {
-          "type": "primaryToSecondary",
-          "direction": "VERTICAL"
+        "noise": {
+          "type": "Subtle"
         },
-        "Noise": {
-          "type": "grain"
+        "particle": {
+          "type": "lines",
+          "particleCount": "300",
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
         },
-        "Pattern": {
+        "pattern": {
           "type": "dots",
           "animation": "panDown",
           "scale": 0.75,
-          "rotation": 0,
+          "rotation": null,
           "opacity": 0.35,
           "animationDuration": 300,
           "animationSpeed": 0.8
         },
-        "Particle": {
-          "type": "lines",
-          "particleCount": 400,
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": "left",
+          "size": "cover",
+          "loop": null,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": null,
+          "volume": 0.8,
+          "playbackRate": null
         }
-      }
-    },
-    "fixtureCategory": "Senior",
-    "groupingCategory": "Senior"
-  }
+      },
+      "fixtureCategory": "MASTERS",
+      "groupingCategory": "MASTERS"
+    }
+  },
+  "errors": []
 }

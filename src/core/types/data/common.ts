@@ -15,16 +15,16 @@ export interface Theme {
   secondary: string;
 }
 
-export interface templateVariation {
-  Background?: string | null;
-  Palette?: string;
+export interface TemplateVariation {
+  background?: string | null;
+  palette?: string;
   borderRadius?: string;
-  Gradient?: {
+  gradient?: {
     type: string;
     direction: string;
   };
-  Noise?: any;
-  Video?: {
+  noise?: unknown;
+  video?: {
     url?: string;
     fallbackUrl?: string;
     position?: string;
@@ -39,9 +39,9 @@ export interface templateVariation {
     volume?: number;
     playbackRate?: number;
   };
-  Image?: {
+  image?: {
     url?: string;
-    ratio?: "landscape" | "portrait" | "square";
+    ratio?: string;
     width?: number;
     height?: number;
     type?: string;
@@ -53,9 +53,8 @@ export interface templateVariation {
 }
 
 export interface ThemeData {
-  Theme: Theme;
-  Template: string;
-  templateVariation: templateVariation;
+  theme: Theme;
+  template: string;
 }
 
 // Account structure
@@ -63,16 +62,17 @@ export interface Account {
   accountId: number;
 }
 
-// timings for video rendering
-export interface timings {
-  FPS_MAIN: number;
-  FPS_INTRO: number;
-  FPS_OUTRO: number;
-  FPS_SCORECARD: number;
+// Timings for video rendering
+export interface Timings {
+  FPS_MAIN?: number;
+  FPS_INTRO?: number;
+  FPS_OUTRO?: number;
+  FPS_LADDER?: number;
+  FPS_SCORECARD?: number;
 }
 
 // Render info
 export interface Render {
-  RenderID: number;
-  SchedulerID: number;
+  renderID: number;
+  schedulerID: number;
 }

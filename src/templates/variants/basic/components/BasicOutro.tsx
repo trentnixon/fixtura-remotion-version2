@@ -1,128 +1,119 @@
 import React from "react";
-import { AbsoluteFill, AnimatedImage } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { Sponsor } from "../../../../core/types/data/sponsors";
+import { AnimatedImage } from "../../../../components/images";
+import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { TransitionSeriesWrapper } from "../../../../components/transitions/TransitionSeriesWrapper";
+import {
+  ImageAnimationType,
+  ImageAnimationConfig,
+} from "../../../../components/images/config/types";
 
 interface BasicOutroProps {
   doesAccountHaveSponsors: boolean;
 }
 
+// Helper to chunk array into groups of n
+const chunkArray = <T,>(arr: T[], size: number): T[][] => {
+  // Normalize: if element is an object with a single numeric key '0', extract the value
+  const normalized = arr.map((item: unknown) => {
+    if (
+      typeof item === "object" &&
+      item !== null &&
+      Object.keys(item).length === 1 &&
+      Object.keys(item)[0] === "0" &&
+      Object.prototype.hasOwnProperty.call(item, "0")
+    ) {
+      // Type assertion: item is Record<string, T>
+      return (item as Record<string, T>)["0"];
+    }
+    return item as T;
+  });
+  const result: T[][] = [];
+  for (let i = 0; i < normalized.length; i += size) {
+    result.push(normalized.slice(i, i + size));
+  }
+  return result;
+};
+
+interface LogoAnimationsType {
+  introIn?: ImageAnimationType | ImageAnimationConfig;
+  exitAnimation?: ImageAnimationType | ImageAnimationConfig;
+}
+
+// Grid component for 2x3 layout
+const SponsorGrid: React.FC<{
+  sponsors: Sponsor[];
+  LogoAnimations: LogoAnimationsType;
+}> = ({ sponsors, LogoAnimations }) => (
+  <div className="grid grid-cols-2 grid-rows-3 gap-10  justify-center items-center">
+    {sponsors
+      .filter((sponsor) => sponsor.logo && sponsor.logo.url)
+      .map((sponsor, idx) => (
+        <div
+          key={`${sponsor.id}_${idx}`}
+          className="flex items-center justify-center p-4"
+        >
+          <AnimatedImage
+            src={sponsor.logo.url}
+            alt={sponsor.name || ""}
+            width={sponsor.logo.width ?? 300}
+            height={sponsor.logo.height ?? 300}
+            fit="contain"
+            animation={LogoAnimations.introIn}
+            exitAnimation={LogoAnimations.exitAnimation}
+            animationDelay={idx * 5}
+            exitFrame={300}
+          />
+        </div>
+      ))}
+  </div>
+);
+
 export const BasicOutro: React.FC<BasicOutroProps> = ({
   doesAccountHaveSponsors,
 }) => {
-  const theme = useThemeContext();
+  const { sponsors } = useVideoDataContext();
+  const { default: defaultSponsors = {} } = sponsors || {};
+  const { animations } = useAnimationContext();
+  const LogoAnimations = animations.image.sponsor.logo;
 
-  // Get font classes from theme
-  const fontClasses = theme.fontClasses || {};
-
-  // Combine Tailwind classes for heading
-  const headingClasses = [
-    fontClasses.heading?.size || "text-5xl",
-    fontClasses.heading?.weight || "font-bold",
-    fontClasses.heading?.spacing || "tracking-tight",
-    fontClasses.heading?.leading || "leading-tight",
-    "text-center",
-    "mb-8",
-  ].join(" ");
-
-  // Get colors from theme
-  const primaryColor = theme.colors.primary;
-  const secondaryColor = theme.colors.secondary;
-
-  // Get the heading font family from theme
-  const headingFontFamily = theme.headingFontFamily;
-
-  // If no sponsors, show alternative outro
   if (!doesAccountHaveSponsors) {
     return <AlternativeOutro />;
   }
 
-  return (
-    <AbsoluteFill
-      className="flex flex-col justify-center items-center"
-      style={{
-        backgroundColor: primaryColor,
-      }}
-    >
-      <h2
-        className={headingClasses}
-        style={{
-          color: secondaryColor,
-          fontFamily: headingFontFamily,
-        }}
-      >
-        Our Sponsors
-      </h2>
+  const defaultArray: Sponsor[] = convertToArray(defaultSponsors);
+  const sponsorsArray: Sponsor[] = [...defaultArray];
 
-      {/* Render sponsors - simplified for development */}
-      <div className="flex flex-wrap justify-center max-w-4/5">
-        {/* Sample sponsor for development */}
-        <div className="m-4 bg-white p-4">
-          <div className="w-[150px] h-[100px] flex items-center justify-center text-black font-bold">
-            Sponsor 1
-          </div>
-        </div>
-        <div className="m-4 bg-white p-4">
-          <div className="w-[150px] h-[100px] flex items-center justify-center text-black font-bold">
-            Sponsor 2
-          </div>
-        </div>
-      </div>
-    </AbsoluteFill>
+  console.log("[sponsorsArray]", sponsorsArray);
+  const groups = chunkArray(sponsorsArray, 6);
+  console.log("[groups]", groups);
+  // Each group is a sequence for 180 frames
+  const sequences = groups.map((group) => ({
+    content: (
+      <AbsoluteFill className="flex flex-col justify-center items-center">
+        <SponsorGrid sponsors={group} LogoAnimations={LogoAnimations} />
+      </AbsoluteFill>
+    ),
+    durationInFrames: 90,
+  }));
+
+  return (
+    <TransitionSeriesWrapper
+      sequences={sequences}
+      transitionType="none"
+      timing={{ type: "linear", durationInFrames: 1 }}
+    />
   );
 };
 
 // Alternative outro for when there are no sponsors
-const AlternativeOutro: React.FC = () => {
-  const { club } = useVideoDataContext();
-  const theme = useThemeContext();
+const AlternativeOutro: React.FC = () => (
+  <AbsoluteFill className="flex flex-col justify-center items-center">
+    <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
+  </AbsoluteFill>
+);
 
-  // Get font classes from theme
-  const fontClasses = theme.fontClasses || {};
-
-  // Combine Tailwind classes for subheading
-  const subheadingClasses = [
-    fontClasses.subheading?.size || "text-3xl",
-    fontClasses.subheading?.weight || "font-semibold",
-    fontClasses.subheading?.spacing || "tracking-normal",
-    fontClasses.subheading?.leading || "leading-snug",
-    "text-center",
-  ].join(" ");
-
-  // Get colors from theme
-  const primaryColor = theme.colors.primary;
-  const secondaryColor = theme.colors.secondary;
-
-  // Get the subheading font family from theme
-  const subheadingFontFamily = theme.subheadingFontFamily;
-
-  return (
-    <AbsoluteFill
-      className="flex flex-col justify-center items-center"
-      style={{
-        backgroundColor: primaryColor,
-      }}
-    >
-      {/* Logo */}
-      {club?.Logo?.url && (
-        <AnimatedImage
-          src={club.Logo.url}
-          alt={club.Name || "Club Logo"}
-          className="w-1/3 max-h-1/3 object-contain mb-4"
-          width={100}
-          height={100}
-        />
-      )}
-
-      <h3
-        className={subheadingClasses}
-        style={{
-          color: secondaryColor,
-          fontFamily: subheadingFontFamily,
-        }}
-      >
-        Visit our website
-      </h3>
-    </AbsoluteFill>
-  );
-};
+const convertToArray = (sponsors: Record<string, Sponsor[]>): Sponsor[] =>
+  Object.values(sponsors).flat();

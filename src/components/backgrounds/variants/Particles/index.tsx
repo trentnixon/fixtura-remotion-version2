@@ -30,13 +30,11 @@ interface ParticleTemplateVariation {
  * ParticleBackground component that dynamically renders different particle effects
  * based on the specified type.
  */
-export const ParticleBackground: React.FC<ParticleBackgroundProps> = (
-  props,
-) => {
+export const ParticleBackground: React.FC<ParticleBackgroundProps> = () => {
   const { video } = useVideoDataContext();
   const { selectedPalette } = useStylesContext();
 
-  const particleConfig = (video.templateVariation?.Particle ||
+  const particleConfig = (video.templateVariation?.particle ||
     {}) as ParticleTemplateVariation;
 
   const particleProps = {

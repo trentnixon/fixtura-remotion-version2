@@ -1,6 +1,7 @@
 import { loadFont } from "@remotion/fonts";
 import { staticFile } from "remotion";
 import { continueRender, delayRender } from "remotion";
+import { TemplateThemeConfig } from "../../templates/types/TemplateThemeConfig";
 
 /**
  * Font Loader Utility
@@ -131,7 +132,7 @@ const fontNameVariants: Record<string, string> = {
 const fontReverseMap: Record<string, string> = {};
 
 // Initialize the reverse map
-for (const [key, _] of Object.entries(fontPathMap)) {
+for (const [key] of Object.entries(fontPathMap)) {
   fontReverseMap[key.toLowerCase()] = key;
 }
 
@@ -279,7 +280,7 @@ export const loadFontFile = async (fontConfig: FontConfig): Promise<void> => {
 
     //console.log(`Successfully loaded font: ${fontConfig.family}`);
   } catch (error) {
-    //console.error(`Error loading font ${fontConfig.family}:`, error);
+    console.error(`Error loading font ${fontConfig.family}:`, error);
     //console.error(`Font URL was: ${fontConfig.url}`);
     // Don't throw the error - we'll handle the failure gracefully
     // by falling back to system fonts later in the rendering process
@@ -326,8 +327,10 @@ export const loadFontByName = async (
  * 3. theme.fonts.additional - Array of additional font names
  * 4. Legacy properties: fontConfig, defaultCopyFontFamily, headingFontFamily, subheadingFontFamily
  */
-export const loadFontsFromTheme = async (theme: any): Promise<void> => {
-  //console.log("Loading fonts from theme...");
+export const loadFontsFromTheme = async (
+  theme: TemplateThemeConfig,
+): Promise<void> => {
+  console.log("Loading fonts from theme...", theme);
   //console.log("Theme fonts config:", {
   //  fonts: theme.fonts,
   //  fontConfig: theme.fontConfig,
@@ -346,13 +349,6 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
     if (theme.fonts.copy && theme.fonts.copy.family) {
       fontsToLoad.add(theme.fonts.copy.family);
     }
-
-    // Add additional fonts if specified
-    if (theme.fonts.additional && Array.isArray(theme.fonts.additional)) {
-      theme.fonts.additional.forEach((font: string) => {
-        if (font) fontsToLoad.add(font);
-      });
-    }
   }
 
   // Add legacy font configurations
@@ -362,13 +358,13 @@ export const loadFontsFromTheme = async (theme: any): Promise<void> => {
   if (theme.subheadingFontFamily) fontsToLoad.add(theme.subheadingFontFamily);
 
   // Font class fonts
-  if (theme.fontClasses) {
-    Object.values(theme.fontClasses).forEach((fontClass: any) => {
+  /*   if (theme.fontClasses) {
+    Object.values(theme.fontClasses).forEach((fontClass: ThemeFontClasses) => {
       if (fontClass && fontClass.family) {
         fontsToLoad.add(fontClass.family);
       }
     });
-  }
+  } */
 
   // Filter out system fonts
   const fontsToLoadFiltered = Array.from(fontsToLoad).filter(

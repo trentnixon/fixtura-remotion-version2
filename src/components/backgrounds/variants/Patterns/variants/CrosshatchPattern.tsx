@@ -9,7 +9,6 @@ export const CrosshatchPattern: React.FC<PatternComponentProps> = ({
   scale = 1,
   rotation = 0,
   opacity = 0.7,
-  patternId,
   animation = "none",
   animationDuration = 600, // 20 seconds at 30fps
   animationSpeed = 1,
@@ -54,48 +53,48 @@ export const CrosshatchPattern: React.FC<PatternComponentProps> = ({
   };
 
   // Animation offsets
-  let animatedStyle: React.CSSProperties = {};
+  const animatedStyle: React.CSSProperties = {};
 
   // Calculate position for animations
   switch (animation) {
-    case ANIMATION_TYPES.PAN_LEFT:
+    case ANIMATION_TYPES.PAN_LEFT: {
       // For left pan, we move the background position from right to left
       const leftOffset = -(frame * animationSpeed) % (20 * scale);
       animatedStyle.backgroundPosition = `${leftOffset}px 0px`;
       break;
-
-    case ANIMATION_TYPES.PAN_RIGHT:
+    }
+    case ANIMATION_TYPES.PAN_RIGHT: {
       // For right pan, we move the background position from left to right
       const rightOffset = (frame * animationSpeed) % (20 * scale);
       animatedStyle.backgroundPosition = `${rightOffset}px 0px`;
       break;
-
-    case ANIMATION_TYPES.PAN_UP:
+    }
+    case ANIMATION_TYPES.PAN_UP: {
       // For up pan, we move the background position from bottom to top
       const upOffset = -(frame * animationSpeed) % (20 * scale);
       animatedStyle.backgroundPosition = `0px ${upOffset}px`;
       break;
-
-    case ANIMATION_TYPES.PAN_DOWN:
+    }
+    case ANIMATION_TYPES.PAN_DOWN: {
       // For down pan, we move the background position from top to bottom
       const downOffset = (frame * animationSpeed) % (20 * scale);
       animatedStyle.backgroundPosition = `0px ${downOffset}px`;
       break;
-
-    case ANIMATION_TYPES.ROTATE:
+    }
+    case ANIMATION_TYPES.ROTATE: {
       // For rotation, calculate continuous rotation
       const rotationAngle = rotation + ((frame * animationSpeed * 0.5) % 360);
       animatedStyle.transform = `rotate(${rotationAngle}deg)`;
       break;
-
-    case ANIMATION_TYPES.PULSE:
+    }
+    case ANIMATION_TYPES.PULSE: {
       // For pulse, use a sine wave to create smooth size pulsing
       const pulsePhase =
         (frame * animationSpeed * Math.PI * 2) / animationDuration;
       const pulseFactor = 1 + Math.sin(pulsePhase) * 0.1;
       animatedStyle.backgroundSize = `${20 * scale * pulseFactor}px ${20 * scale * pulseFactor}px`;
       break;
-
+    }
     default:
       break;
   }

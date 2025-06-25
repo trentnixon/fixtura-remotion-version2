@@ -2,7 +2,7 @@ import React from "react";
 import { RosterDataItem } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
-import RosterSponsors from "../../layout/RosterSponsors/sponsors";
+//import RosterSponsors from "../../layout/RosterSponsors/sponsors";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountTeam } from "../../layout/RosterHeader/AccountTeam";
 import { DateAndGround } from "../../layout/Metadata/DateAndGround";
@@ -25,7 +25,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
         className="flex-1 flex flex-col mx-16 rounded-lg overflow-hidden"
         backgroundColor="none"
         animation={{
-          type: "revealBottom",
+          type: "none",
           easing: "easeInOut",
           duration: 25,
           custom: {
@@ -43,7 +43,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
         }}
       >
         <div
-          className="w-full flex flex-col justify-start rounded-xl"
+          className="w-full flex flex-col justify-center rounded-xl"
           style={{ height: `${availableHeight}px` }}
         >
           <GradeAndRound roster={roster} />
@@ -52,7 +52,6 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
             className="flex flex-row gap-2 justify-between items-center "
             style={{ backgroundColor: backgroundColor }}
           >
-            <RosterSponsors roster={roster} />
             <RosterPlayerList roster={roster} />
           </div>
           <DateAndGround roster={roster} />

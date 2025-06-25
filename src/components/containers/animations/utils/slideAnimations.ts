@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
 
-import { getContainerEasingFunction } from "../easingFunctions";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
 import React from "react";
 import { ContainerAnimationFunction } from "../animationTypes";
 
@@ -13,7 +13,7 @@ export const slideInLeft: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container width
   const distance = config.custom?.distance || "100%";
@@ -56,7 +56,7 @@ export const slideInRight: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container width
   const distance = config.custom?.distance || "100%";
@@ -99,7 +99,7 @@ export const slideInTop: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container height
   const distance = config.custom?.distance || "100%";
@@ -142,7 +142,7 @@ export const slideInBottom: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container height
 
@@ -186,7 +186,7 @@ export const slideOutLeft: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container width
   const distance = config.custom?.distance || "100%";
@@ -229,7 +229,7 @@ export const slideOutRight: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container width
   const distance = config.custom?.distance || "100%";
@@ -272,7 +272,7 @@ export const slideOutTop: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container height
   const distance = config.custom?.distance || "100%";
@@ -315,7 +315,7 @@ export const slideOutBottom: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default distance is 100% of container height
   const distance = config.custom?.distance || "100%";

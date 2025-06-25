@@ -11,6 +11,7 @@ interface BaseLayoutProps {
   delay: number;
   bgColorClass: string;
   LadderRowHeight: number;
+  place: number;
 }
 
 // Standard layout - exactly as you had it
@@ -27,39 +28,45 @@ export const StandardLadderRow: React.FC<BaseLayoutProps> = ({
         height: `${LadderRowHeight}px`,
       }}
     >
-      <div className="w-10 mr-3 overflow-hidden">
-        {team.teamLogo ? (
-          <div className="rounded-full">
-            <TeamLogo
-              logo={team.teamLogo}
-              teamName={team.teamName}
-              delay={delay}
-            />
-          </div>
-        ) : (
-          <div className="w-8 h-8 bg-gray-300 rounded-full" />
-        )}
-      </div>
+      {/* Place column */}
 
-      <div className="flex-1">
-        <LadderTeamName value={team.teamName} delay={delay} />
+      {/* Team info section */}
+      <div className="flex items-center mr-3 p-1" style={{ width: "70%" }}>
+        <div className="w-16 flex-shrink-0 mr-4 overflow-hidden">
+          {team.clubLogo ? (
+            <div className="rounded-full">
+              <TeamLogo
+                logo={team.clubLogo || team.playHQLogo}
+                teamName={team.teamName}
+                delay={delay}
+              />
+            </div>
+          ) : (
+            <div className="w-16 h-16 bg-gray-300/10 rounded-full" />
+          )}
+        </div>
+        <div className="flex-1 truncate">
+          <LadderTeamName value={team.teamName} delay={delay} />
+        </div>
       </div>
 
       {/* Stats using primitive components */}
-      <div className="w-10">
-        <LadderTeamPoints value={team.P} delay={delay} />
-      </div>
-      <div className="w-10">
-        <LadderTeamPoints value={team.W} delay={delay} />
-      </div>
-      <div className="w-10">
-        <LadderTeamPoints value={team.L} delay={delay} />
-      </div>
-      <div className="w-10">
-        <LadderTeamPoints value={team.BYE} delay={delay} />
-      </div>
-      <div className="w-20">
-        <LadderTeamPoints value={team.PTS} delay={delay} />
+      <div className="flex flex-1 justify-evenly">
+        <div className="w-8 text-center">
+          <LadderTeamPoints value={team?.P || 0} delay={delay} />
+        </div>
+        <div className="w-8 text-center">
+          <LadderTeamPoints value={team?.W || 0} delay={delay} />
+        </div>
+        <div className="w-8 text-center">
+          <LadderTeamPoints value={team?.L || 0} delay={delay} />
+        </div>
+        <div className="w-8 text-center">
+          <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
+        </div>
+        <div className="w-16 text-center">
+          <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
+        </div>
       </div>
     </div>
   );
@@ -71,6 +78,7 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
   delay,
   bgColorClass,
   LadderRowHeight,
+  place,
 }) => {
   return (
     <div
@@ -79,6 +87,9 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
         height: `${LadderRowHeight}px`,
       }}
     >
+      {/* Place column */}
+      <div className="w-8 text-center font-bold">{place}</div>
+
       {/* Team info in a branded box */}
       <div
         className="flex items-center bg-black/40 rounded-lg mr-3 p-1"
@@ -97,7 +108,6 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
             <div className="w-8 h-8 bg-gray-300 rounded-full" />
           )}
         </div>
-
         <div className="flex-1 truncate">
           <LadderTeamName value={team.teamName} delay={delay} />
         </div>

@@ -217,7 +217,7 @@ export default CompactGameCard;
 
 The Upcoming Games component can be customized in several ways:
 
-1. **Games Per Screen**: Modify through `contentLayout.dividedFixturesBy.UpComingFixtures` or `options.gamesPerScreen`
+1. **Games Per Screen**: Modify through `contentLayout.divideFixturesBy.UpComingFixtures` or `options.gamesPerScreen`
 2. **Animation Timing**: Adjust the constants in `types.ts`
 3. **Layout Styles**: Create new layout components in the `layout` directory
 4. **Visual Themes**: Implement different visual styles through the styling system
@@ -282,7 +282,7 @@ The component can be configured in several ways:
 ```json
 {
   "contentLayout": {
-    "dividedFixturesBy": {
+    "divideFixturesBy": {
       "UpComingFixtures": 3
     }
   },

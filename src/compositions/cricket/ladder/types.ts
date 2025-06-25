@@ -1,14 +1,29 @@
 // Types for ladder data structure
+
+import { AssignSponsors } from "../composition-types";
+
+export interface LadderData {
+  ID: number;
+  gradeName: string;
+  League: TeamData[];
+  bias: string;
+  prompt: string;
+  assignSponsors: AssignSponsors;
+}
+
 export interface TeamLogo {
   url: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
+  id?: number;
 }
 
 export interface TeamData {
   position: string;
   teamName: string;
+  clubLogo: TeamLogo | null;
   teamLogo: TeamLogo | null;
+  playHQLogo: TeamLogo | null;
   P: string; // Played
   W: string; // Won
   L: string; // Lost
@@ -17,13 +32,6 @@ export interface TeamData {
   TIE: string; // Tie
   PTS: string; // Points
   Q: string; // Quotient
-}
-
-export interface LadderData {
-  ID: number;
-  name: string;
-  League: TeamData[];
-  bias: string;
   prompt: string;
 }
 

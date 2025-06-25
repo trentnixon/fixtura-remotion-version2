@@ -1,7 +1,7 @@
 // src/components/backgrounds/variants/Image/effects/colorOverlay.tsx
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 export const OverlayType = {
@@ -143,16 +143,15 @@ export const ColorOverlayEffect: React.FC<ColorOverlayEffectProps> = ({
   return (
     <AbsoluteFill className={`color-overlay-effect ${className}`}>
       {/* Background image */}
-      <div
+      <Img
+        src={src}
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          objectFit: "cover",
           zIndex: 0,
           ...style,
         }}

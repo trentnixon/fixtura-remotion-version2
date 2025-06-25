@@ -2,7 +2,7 @@ import React from "react";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { AnimatedImage } from "../../../../components/images";
-import { TwoColumnLayout } from "../../../../components/layout/titleScreen/index";
+import { VerticalStackTitleLogoName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
@@ -13,22 +13,22 @@ import { useAnimationContext } from "../../../../core/context/AnimationContext";
  * This template demonstrates how to style containers with various layout, text, and positioning options.
  */
 export const BasicIntro: React.FC = () => {
-  const { club, metadata } = useVideoDataContext();
+  const { club, metadata, sponsors } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
 
   return (
-    <TwoColumnLayout
+    <VerticalStackTitleLogoName
       alignment="center"
       Logo={
         <div className="w-full h-full flex justify-center items-center max-h-[300px] max-w-[300px]">
           <AnimatedImage
-            src={club.Logo.url}
-            alt={club.Name}
-            width={club.Logo.width}
-            height={club.Logo.height}
+            src={club.logo?.url || ""}
+            alt={club.name}
+            width={club.logo?.width}
+            height={club.logo?.height}
             fit="contain"
             animation={LogoAnimations.introIn}
             exitAnimation={LogoAnimations.introOut}
@@ -39,7 +39,7 @@ export const BasicIntro: React.FC = () => {
       Title={
         <div className="overflow-hidden mb-4">
           <AnimatedText
-            textAlign="left"
+            textAlign="center"
             type="title"
             variant="onBackgroundDark"
             letterAnimation="word"
@@ -64,9 +64,25 @@ export const BasicIntro: React.FC = () => {
             exitFrame={TextAnimations.introExitFrame}
             fontFamily={fontClasses.subtitle?.family}
           >
-            {club.Name}
+            {club.name}
           </AnimatedText>
         </div>
+      }
+      PrimarySponsor={
+        sponsors?.primary[0]?.logo?.url && (
+          <div className="w-full h-full ok justify-center items-center max-h-[150px] max-w-[150px]">
+            <AnimatedImage
+              src={sponsors?.primary[0]?.logo?.url || ""}
+              alt={sponsors?.primary[0]?.name || ""}
+              width={sponsors?.primary[0]?.logo?.width || 150}
+              height={sponsors?.primary[0]?.logo?.height || 150}
+              fit="contain"
+              animation={LogoAnimations.introIn}
+              exitAnimation={LogoAnimations.introOut}
+              exitFrame={LogoAnimations.introExitFrame}
+            />
+          </div>
+        )
       }
     />
   );

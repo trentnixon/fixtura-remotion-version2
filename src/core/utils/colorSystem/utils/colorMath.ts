@@ -12,11 +12,11 @@ interface RGB {
 /**
  * HSL color interface
  */
-interface HSL {
+/* interface HSL {
   h: number;
   s: number;
   l: number;
-}
+} */
 
 /**
  * LAB color interface
@@ -141,8 +141,8 @@ export const findColorWithTargetContrast = (
 
   // Otherwise, adjust the color to reach the target contrast
   // Start with opposite color and make it more like the background until we hit the target
-  let startColor = testColor;
-  let endColor = bgColor;
+  const startColor = testColor;
+  const endColor = bgColor;
   let iterations = 0;
   const maxIterations = 20;
 
@@ -187,11 +187,11 @@ export const interpolateColorsLab = (
   color2: string,
   steps: number,
 ): string[] => {
-  const rgb1 = tinycolor(color1).toRgb();
-  const rgb2 = tinycolor(color2).toRgb();
+  /* const rgb1 = tinycolor(color1).toRgb();
+  const rgb2 = tinycolor(color2).toRgb(); */
 
-  const lab1 = rgbToLab(rgb1);
-  const lab2 = rgbToLab(rgb2);
+  /*  const lab1 = rgbToLab(rgb1);
+  const lab2 = rgbToLab(rgb2); */
 
   const result: string[] = [];
 
@@ -199,11 +199,11 @@ export const interpolateColorsLab = (
     const t = i / (steps - 1);
 
     // Interpolate in LAB space
-    const labInterp = {
+    /* const labInterp = {
       l: lab1.l + t * (lab2.l - lab1.l),
       a: lab1.a + t * (lab2.a - lab1.a),
       b: lab1.b + t * (lab2.b - lab1.b),
-    };
+    }; */
 
     // Convert back to RGB - this is a simplification
     // For a proper implementation, you'd need to convert LAB to XYZ, then XYZ to RGB

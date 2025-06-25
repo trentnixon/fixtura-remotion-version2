@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
 
-import { getContainerEasingFunction } from "../easingFunctions";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
 import React from "react";
 import { ContainerAnimationFunction } from "../animationTypes";
 
@@ -13,11 +13,13 @@ export const scaleIn: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default start scale is 0
   const startScale =
-    config.custom?.startScale !== undefined ? config.custom.startScale : 0;
+    typeof config.custom?.startScale === "number"
+      ? config.custom.startScale
+      : 0;
 
   const scale = interpolate(frame, [startFrame, endFrame], [startScale, 1], {
     extrapolateLeft: "clamp",
@@ -50,11 +52,11 @@ export const scaleOut: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default end scale is 0
   const endScale =
-    config.custom?.endScale !== undefined ? config.custom.endScale : 0;
+    typeof config.custom?.endScale === "number" ? config.custom.endScale : 0;
 
   const scale = interpolate(frame, [startFrame, endFrame], [1, endScale], {
     extrapolateLeft: "clamp",
@@ -87,11 +89,13 @@ export const scaleInX: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default start scale is 0
   const startScale =
-    config.custom?.startScale !== undefined ? config.custom.startScale : 0;
+    typeof config.custom?.startScale === "number"
+      ? config.custom.startScale
+      : 0;
 
   const scaleX = interpolate(frame, [startFrame, endFrame], [startScale, 1], {
     extrapolateLeft: "clamp",
@@ -124,11 +128,13 @@ export const scaleInY: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default start scale is 0
   const startScale =
-    config.custom?.startScale !== undefined ? config.custom.startScale : 0;
+    typeof config.custom?.startScale === "number"
+      ? config.custom.startScale
+      : 0;
 
   const scaleY = interpolate(frame, [startFrame, endFrame], [startScale, 1], {
     extrapolateLeft: "clamp",
@@ -161,11 +167,11 @@ export const scaleOutX: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default end scale is 0
   const endScale =
-    config.custom?.endScale !== undefined ? config.custom.endScale : 0;
+    typeof config.custom?.endScale === "number" ? config.custom.endScale : 0;
 
   const scaleX = interpolate(frame, [startFrame, endFrame], [1, endScale], {
     extrapolateLeft: "clamp",
@@ -198,11 +204,11 @@ export const scaleOutY: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   // Default end scale is 0
   const endScale =
-    config.custom?.endScale !== undefined ? config.custom.endScale : 0;
+    typeof config.custom?.endScale === "number" ? config.custom.endScale : 0;
 
   const scaleY = interpolate(frame, [startFrame, endFrame], [1, endScale], {
     extrapolateLeft: "clamp",

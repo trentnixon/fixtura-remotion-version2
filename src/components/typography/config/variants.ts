@@ -1,4 +1,4 @@
-import { useThemeContext } from "../../../core/context/ThemeContext";
+import { DesignPalette } from "../../../core/utils/designPalettes";
 
 // Define all available typography variants in one place
 export type TypographyVariant =
@@ -27,13 +27,11 @@ export interface VariantStyle {
 // This is the function that will process variants consistently across components
 export const getVariantStyles = (
   variant: string, // Changed from TypographyVariant to string to accept any variant
-  utils: any,
-  colors: any,
-  contrastSafe: boolean = true,
+  selectedPalette: DesignPalette,
 ): VariantStyle => {
   let textColor: string | null = null;
   let additionalStyles = {};
-  const { selectedPalette } = useThemeContext();
+
   // Get the active palette
   const palette = selectedPalette || "primary";
 
@@ -109,7 +107,7 @@ export const getVariantStyles = (
 export const applyContrastSafety = (
   textColor: string | null | undefined,
   variant: string, // Changed from TypographyVariant to string to accept any variant
-  selectedPalette: any,
+  selectedPalette: DesignPalette,
   contrastSafe: boolean = true,
 ): string | null | undefined => {
   if (!textColor) return textColor;

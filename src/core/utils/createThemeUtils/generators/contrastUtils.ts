@@ -63,7 +63,7 @@ export const calculateContrastSafety = (color: string): ContrastSafety => {
     const isLight = colorObj.isLight();
     let adjustedColorObj = colorObj.clone();
     let adjustmentAmount = 0;
-    let maxAdjustments = 20;
+    const maxAdjustments = 20;
 
     while (
       tinycolor.readability(adjustedColorObj.toString(), safeColor) < 4.5 &&

@@ -65,6 +65,7 @@ export const createThemeColorUtils = (
   const contrast = generateContrastSafety(primary, secondary, background);
 
   // Generate design palettes using the imported function
+
   const designPalettes = generateAllPalettes(
     primary,
     secondary,

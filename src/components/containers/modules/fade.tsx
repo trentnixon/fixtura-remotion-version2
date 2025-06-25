@@ -7,19 +7,19 @@ import { SPRING_CONFIGS, ContainerAnimationConfig } from "../animations";
 export const DEFAULT_FADE_IN: ContainerAnimationConfig = {
   type: "fadeIn",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_FADE_OUT: ContainerAnimationConfig = {
   type: "fadeOut",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SPRING_IN: ContainerAnimationConfig = {
   type: "springIn",
   duration: 45,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 /**

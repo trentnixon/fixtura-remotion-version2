@@ -7,37 +7,37 @@ import { SPRING_CONFIGS, ContainerAnimationConfig } from "../animations";
 export const DEFAULT_SCALE_IN: ContainerAnimationConfig = {
   type: "scaleIn",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SCALE_OUT: ContainerAnimationConfig = {
   type: "scaleOut",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SCALE_IN_X: ContainerAnimationConfig = {
   type: "scaleInX",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SCALE_IN_Y: ContainerAnimationConfig = {
   type: "scaleInY",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_SPRING_SCALE: ContainerAnimationConfig = {
   type: "springScale",
   duration: 45,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 export const DEFAULT_FADE_OUT: ContainerAnimationConfig = {
   type: "fadeOut",
   duration: 30,
-  easing: "easeInOut",
+  easing: { type: "inOut", base: "ease" },
 };
 
 /**

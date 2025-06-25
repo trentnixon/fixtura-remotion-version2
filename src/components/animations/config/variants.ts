@@ -14,7 +14,7 @@ export interface AnimationConfig {
   duration: number;
   delay?: number;
   easing?: string;
-  keyframes?: Record<string, any>;
+  keyframes?: Record<string, unknown>;
   initialStyles?: React.CSSProperties;
   finalStyles?: React.CSSProperties;
 }

@@ -13,12 +13,14 @@ import {
   getPaletteColor,
   getColorWithOpacity,
 } from "../../../../../core/utils/themeColorUtils";
+import { DesignPalette } from "../../../../../core/utils/designPalettes";
 
 /**
  * Creates theme-based overlay presets using the current palette
  * This function generates overlay presets dynamically based on the current theme palette
  */
-export const createThemeOverlayPresets = (palette: any) => {
+export const createThemeOverlayPresets = (palette: DesignPalette) => {
+  console.log("[createThemeOverlayPresets]", palette);
   // Ensure palette exists, otherwise provide default values
   if (!palette) {
     console.warn(
@@ -100,7 +102,10 @@ export const createThemeOverlayPresets = (palette: any) => {
     ...createGradientsFromTheme(palette),
 
     // Add team-specific presets if they exist in the palette
-    ...(palette.team ? createTeamOverlays(palette.team) : {}),
+    ...(typeof (palette as unknown as Record<string, unknown>).team !==
+    "undefined"
+      ? createTeamOverlays((palette as unknown as Record<string, unknown>).team)
+      : {}),
 
     // Create some additional useful variations
     primaryFaint: createSolidOverlay(primaryColor, 0.25, BlendMode.Normal),
@@ -123,16 +128,24 @@ export const createThemeOverlayPresets = (palette: any) => {
 /**
  * Creates team-specific overlay presets if team colors are available
  */
-function createTeamOverlays(teamData: any) {
-  if (!teamData || !teamData.colors) {
+function createTeamOverlays(teamData: unknown) {
+  if (
+    !teamData ||
+    typeof teamData !== "object" ||
+    !("colors" in teamData) ||
+    typeof (teamData as Record<string, unknown>).colors !== "object"
+  ) {
     return {};
   }
 
-  const result: Record<string, any> = {};
-  const colors = teamData.colors;
+  const result: Record<string, unknown> = {};
+  const colors = (teamData as Record<string, unknown>).colors as Record<
+    string,
+    unknown
+  >;
 
   // Use primary team color as overlay
-  if (colors.primary) {
+  if (typeof colors.primary === "string") {
     result["teamPrimary"] = createSolidOverlay(
       colors.primary,
       0.5,
@@ -140,7 +153,7 @@ function createTeamOverlays(teamData: any) {
     );
 
     // Create a gradient if secondary color exists
-    if (colors.secondary) {
+    if (typeof colors.secondary === "string") {
       result["teamGradient"] = createGradientOverlay(
         colors.primary,
         colors.secondary,
@@ -151,62 +164,25 @@ function createTeamOverlays(teamData: any) {
     }
   }
 
-  // Add special gradient types from your theme
-  /*   if (gradients.primaryAdvanced) {
-    result["primaryAdvancedGradient"] = {
-      style: OverlayStyle.Gradient,
-      primaryColor: gradients.primaryAdvanced.stops[0],
-      secondaryColor: gradients.primaryAdvanced.stops[1],
-      gradientType: "linear",
-      gradientAngle: gradients.primaryAdvanced.direction || "to right",
-      opacity: 0.5,
-      blendMode: BlendMode.Normal,
-    };
-  } */
-
-  // Add mesh gradients if available
-  /*  if (gradients.meshGradient) {
-    result["meshGradient"] = {
-      style: OverlayStyle.Gradient,
-      primaryColor: gradients.meshGradient.stops[0],
-      secondaryColor: gradients.meshGradient.stops[1],
-      // Use the CSS directly for mesh gradients
-      customGradient: gradients.meshGradient.css.DEFAULT,
-      opacity: 0.6,
-      blendMode: BlendMode.Overlay,
-    };
-  } */
-
-  // Add hard stop gradients if available
-  /*   if (gradients.hardStopGradient) {
-    result["hardStopGradient"] = {
-      style: OverlayStyle.Gradient,
-      primaryColor: gradients.hardStopGradient.stops[0],
-      secondaryColor: gradients.hardStopGradient.stops[1],
-      customGradient: gradients.hardStopGradient.css.DEFAULT,
-      opacity: 0.5,
-      blendMode: BlendMode.Normal,
-    };
-  } */
-
   return result;
 }
 
 /**
  * Creates overlay presets from gradient definitions
  */
-function createGradientsFromTheme(palette: any) {
+function createGradientsFromTheme(palette: DesignPalette) {
   const gradients = palette?.background?.gradient;
 
   if (!gradients || Object.keys(gradients).length === 0) {
     return {};
   }
 
-  const result: Record<string, any> = {};
+  const result: Record<string, unknown> = {};
 
   // Process each gradient definition in the theme
-  Object.entries(gradients).forEach(([key, gradient]: [string, any]) => {
-    if (!gradient || !gradient.stops || gradient.stops.length < 2) {
+  Object.entries(gradients).forEach(([key, gradient]) => {
+    const g = gradient as { stops: string[]; type: string; direction?: string };
+    if (!g.stops || g.stops.length < 2) {
       return;
     }
 
@@ -214,32 +190,32 @@ function createGradientsFromTheme(palette: any) {
     const presetName = key.includes("Gradient") ? key : `${key}Gradient`;
 
     // Create gradient overlay from theme definition
-    if (gradient.type === "linear") {
+    if (g.type === "linear") {
       result[presetName] = createGradientOverlay(
-        gradient.stops[0],
-        gradient.stops[1],
-        gradient.direction || "to right",
+        g.stops[0],
+        g.stops[1],
+        g.direction || "to right",
         0.5,
         BlendMode.Normal,
       );
     }
     // Handle radial gradients
-    else if (gradient.type === "radial") {
+    else if (g.type === "radial") {
       result[presetName] = {
         style: OverlayStyle.Gradient,
-        primaryColor: gradient.stops[0],
-        secondaryColor: gradient.stops[1],
+        primaryColor: g.stops[0],
+        secondaryColor: g.stops[1],
         gradientType: "radial",
         opacity: 0.5,
         blendMode: BlendMode.Normal,
       };
     }
     // Handle conic gradients
-    else if (gradient.type === "conic") {
+    else if (g.type === "conic") {
       result[presetName] = {
         style: OverlayStyle.Gradient,
-        primaryColor: gradient.stops[0],
-        secondaryColor: gradient.stops[1],
+        primaryColor: g.stops[0],
+        secondaryColor: g.stops[1],
         gradientType: "conic",
         opacity: 0.5,
         blendMode: BlendMode.Normal,

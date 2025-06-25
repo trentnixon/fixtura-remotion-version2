@@ -156,7 +156,7 @@ export interface GraphicsBackgroundProps {
   exitAnimation?: BackgroundAnimationType;
   exitAnimationDuration?: number;
   exitFrame?: number;
-  customProps?: Record<string, any>;
+  customProps?: Record<string, unknown>;
 }
 
 /**
@@ -182,7 +182,7 @@ export interface PatternBackgroundProps {
   exitAnimation?: BackgroundAnimationType;
   exitAnimationDuration?: number;
   exitFrame?: number;
-  customProps?: Record<string, any>;
+  customProps?: Record<string, unknown>;
 }
 
 /**
@@ -203,7 +203,7 @@ export interface ParticleBackgroundProps {
   exitAnimation?: BackgroundAnimationType;
   exitAnimationDuration?: number;
   exitFrame?: number;
-  customProps?: Record<string, any>;
+  customProps?: Record<string, unknown>;
 }
 
 /**

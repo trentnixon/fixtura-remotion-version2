@@ -1,5 +1,14 @@
 // designPalettes/complementaryPalette.ts
-import { DesignPalette, ensureContrast, GradientOptions } from "./types";
+import {
+  DesignPalette,
+  ensureContrast,
+  GradientOptions,
+  TextColors,
+  ShadowOptions,
+  UtilityColors,
+  ContrastOptions,
+  ColorVariations,
+} from "./types";
 import tinycolor from "tinycolor2";
 
 // Helper function to create gradient options
@@ -26,11 +35,11 @@ const createGradientOptions = (
 
 export const createComplementaryPalette = (
   primary: string,
-  textColors: any,
-  shadows: any,
-  utility: any,
-  contrast: any,
-  colorVariations: any,
+  textColors: TextColors,
+  shadows: ShadowOptions,
+  utility: UtilityColors,
+  contrast: ContrastOptions,
+  colorVariations: ColorVariations,
 ): DesignPalette => {
   const complementaryColor = tinycolor(primary).complement().toHexString();
   const lightComplementary = tinycolor(primary)
@@ -105,6 +114,20 @@ export const createComplementaryPalette = (
       transparent: tinycolor(primary).complement().setAlpha(0.8).toRgbString(),
       accent: primary,
       highlight: tinycolor(primary).lighten(15).toHexString(),
+      gradientPrimaryToSecondaryHorizontal: `linear-gradient(to right, ${complementaryColor}, ${primary})`,
+      gradientPrimaryToSecondaryVertical: `linear-gradient(to bottom, ${complementaryColor}, ${primary})`,
+      gradientSecondaryToPrimaryHorizontal: `linear-gradient(to right, ${primary}, ${complementaryColor})`,
+      gradientSecondaryToPrimaryVertical: `linear-gradient(to bottom, ${primary}, ${complementaryColor})`,
+      saturated: tinycolor(complementaryColor).saturate(20).toString(),
+      transparentAccent: tinycolor(primary).setAlpha(0.7).toRgbString(),
+      transparentMain: tinycolor(complementaryColor)
+        .setAlpha(0.7)
+        .toRgbString(),
+      transparentPrimary: tinycolor(primary).setAlpha(0.7).toRgbString(),
+      transparentSecondary: tinycolor(lightComplementary)
+        .setAlpha(0.7)
+        .toRgbString(),
+      muted: tinycolor(complementaryColor).setAlpha(0.5).toRgbString(),
     },
     text: {
       onBackground: {

@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
 import { ContainerAnimationFunction } from "../animationTypes";
-import { getContainerEasingFunction } from "../easingFunctions";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
 import React from "react";
 
 /**
@@ -12,7 +12,7 @@ export const fadeIn: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -34,7 +34,7 @@ export const fadeOut: ContainerAnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getContainerEasingFunction(config.easing);
+  const easingFn = getImageEasingFunction(config.easing);
 
   const opacity = interpolate(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",

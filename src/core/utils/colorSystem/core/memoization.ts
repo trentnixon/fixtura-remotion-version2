@@ -3,7 +3,7 @@
  * @param fn The function to memoize
  * @returns Memoized function
  */
-export function memoize<T extends (...args: any[]) => any>(
+export function memoize<T extends (...args: unknown[]) => unknown>(
   fn: T,
 ): (...args: Parameters<T>) => ReturnType<T> {
   const cache = new Map<string, ReturnType<T>>();
@@ -19,8 +19,8 @@ export function memoize<T extends (...args: any[]) => any>(
 
     // Calculate result, cache it, and return
     const result = fn(...args);
-    cache.set(key, result);
-    return result;
+    cache.set(key, result as ReturnType<T>);
+    return result as ReturnType<T>;
   };
 }
 
@@ -30,7 +30,7 @@ export function memoize<T extends (...args: any[]) => any>(
  * @param maxSize Maximum cache size
  * @returns Memoized function with limited cache
  */
-export function memoizeWithLimit<T extends (...args: any[]) => any>(
+export function memoizeWithLimit<T extends (...args: unknown[]) => unknown>(
   fn: T,
   maxSize: number = 100,
 ): (...args: Parameters<T>) => ReturnType<T> {
@@ -66,10 +66,10 @@ export function memoizeWithLimit<T extends (...args: any[]) => any>(
 
     // Add new result to cache
     const result = fn(...args);
-    cache.set(key, result);
+    cache.set(key, result as ReturnType<T>);
     keyTimestamps.set(key, Date.now());
 
-    return result;
+    return result as ReturnType<T>;
   };
 }
 
@@ -79,7 +79,7 @@ export function memoizeWithLimit<T extends (...args: any[]) => any>(
  * @returns Memoized color function
  */
 export function memoizeColorFunction<
-  T extends (...args: any[]) => string | string[],
+  T extends (...args: unknown[]) => string | string[],
 >(colorFn: T): T {
   return memoize(colorFn) as unknown as T;
 }
@@ -90,7 +90,7 @@ export function memoizeColorFunction<
  */
 export function createCachedColorProcessors() {
   // Create an empty cache that will be filled as needed
-  const cache: Record<string, any> = {};
+  const cache: Record<string, unknown> = {};
 
   return {
     /**

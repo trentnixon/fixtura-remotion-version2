@@ -80,6 +80,12 @@ export const VerticalStackLogoNameTitle = createVerticalStack([
   "Name",
   "Title",
 ]);
+export const VerticalStackLogoTitleName = createVerticalStack([
+  "Logo",
+
+  "Title",
+  "Name",
+]);
 export const VerticalStackNameLogoTitle = createVerticalStack([
   "Name",
   "Logo",

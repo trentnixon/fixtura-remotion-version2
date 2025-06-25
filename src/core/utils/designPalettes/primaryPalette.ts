@@ -1,61 +1,80 @@
 // designPalettes/primaryPalette.ts
-import { DesignPalette, ensureContrast } from "./types";
+import {
+  DesignPalette,
+  ensureContrast,
+  TextColors,
+  ShadowOptions,
+  ColorVariations,
+} from "./types";
 import tinycolor from "tinycolor2";
 import { createGradientOptions } from "./paletteHelpers";
 
 export const createPrimaryPalette = (
   primary: string,
   secondary: string,
-  colorVariations: any,
-  textColors: any,
-  shadows: any,
-  gradients: any,
+  colorVariations: ColorVariations,
+  textColors: TextColors,
+  shadows: ShadowOptions,
 ): DesignPalette => {
   const primaryVariations = colorVariations.primary;
+
+  console.log("[createPrimaryPalette] textColors", textColors);
+
   return {
     name: "Primary",
     background: {
       main: primary,
-      light: primaryVariations.light,
-      dark: primaryVariations.dark,
-      contrast: primaryVariations.contrastText,
+      light: primaryVariations.light || primary,
+      dark: primaryVariations.dark || primary,
+      contrast: primaryVariations.contrastText || "#FFFFFF",
       accent: secondary,
       gradient: {
-        primary: createGradientOptions(primary, primaryVariations.dark),
-        secondary: createGradientOptions(primaryVariations.light, primary),
+        primary: createGradientOptions(
+          primary,
+          primaryVariations.dark || primary,
+        ),
+        secondary: createGradientOptions(
+          primaryVariations.light || primary,
+          primary,
+        ),
         primaryToSecondary: createGradientOptions(
           primary,
-          primaryVariations.light,
+          primaryVariations.light || primary,
         ),
         secondaryToPrimary: createGradientOptions(
-          primaryVariations.light,
+          primaryVariations.light || primary,
           primary,
         ),
-        radial: `radial-gradient(circle, ${primary}, ${primaryVariations.dark})`,
-        // Add required properties with sensible defaults
+        radial: `radial-gradient(circle, ${primary}, ${primaryVariations.dark || primary})`,
         conicGradient: createGradientOptions(
           primary,
-          primaryVariations.dark,
+          primaryVariations.dark || primary,
           "linear",
           "conic",
         ),
         hardStopGradient: createGradientOptions(
           primary,
-          primaryVariations.dark,
+          primaryVariations.dark || primary,
         ),
-        meshGradient: createGradientOptions(primary, primaryVariations.dark),
-        primaryAdvanced: createGradientOptions(primary, primaryVariations.dark),
+        meshGradient: createGradientOptions(
+          primary,
+          primaryVariations.dark || primary,
+        ),
+        primaryAdvanced: createGradientOptions(
+          primary,
+          primaryVariations.dark || primary,
+        ),
         primaryRadial: createGradientOptions(
           primary,
-          primaryVariations.dark,
+          primaryVariations.dark || primary,
           "radial",
         ),
         secondaryAdvanced: createGradientOptions(
-          primaryVariations.light,
+          primaryVariations.light || primary,
           primary,
         ),
         secondaryRadial: createGradientOptions(
-          primaryVariations.light,
+          primaryVariations.light || primary,
           primary,
           "radial",
         ),
@@ -65,10 +84,12 @@ export const createPrimaryPalette = (
       main: tinycolor(primary).lighten(10).toString(),
       light: tinycolor(primary).lighten(20).toString(),
       dark: tinycolor(primary).lighten(5).toString(),
-      primary: primaryVariations.light,
-      secondary: primaryVariations.lighter,
+      primary: primaryVariations.light || primary,
+      secondary:
+        primaryVariations.lighter || primaryVariations.light || primary,
       accent: secondary,
-      highlight: primaryVariations.lighter,
+      highlight:
+        primaryVariations.lighter || primaryVariations.light || primary,
       transparent: tinycolor(primary).setAlpha(0.8).toRgbString(),
       gradientPrimaryToSecondaryHorizontal: `linear-gradient(to right, ${primary}, ${secondary})`,
       gradientPrimaryToSecondaryVertical: `linear-gradient(to bottom, ${primary}, ${secondary})`,
@@ -77,33 +98,62 @@ export const createPrimaryPalette = (
       saturated: tinycolor(primary).saturate(20).toString(),
       transparentAccent: tinycolor(secondary).setAlpha(0.7).toRgbString(),
       transparentMain: tinycolor(primary).setAlpha(0.7).toRgbString(),
-      transparentSecondary: tinycolor(primaryVariations.lighter)
+      transparentPrimary: tinycolor(primary).toRgbString(),
+      transparentSecondary: tinycolor(
+        primaryVariations.lighter || primaryVariations.light || primary,
+      )
         .setAlpha(0.7)
         .toRgbString(),
+      muted: tinycolor(primary).setAlpha(0.5).toRgbString(),
     },
     text: {
       onBackground: {
-        main: ensureContrast(primary, textColors.onPrimary),
-        light: ensureContrast(primaryVariations.light, textColors.onPrimary),
-        dark: ensureContrast(primaryVariations.dark, textColors.onPrimary),
-        muted: tinycolor(ensureContrast(primary, textColors.onPrimary))
+        main: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+        light: ensureContrast(
+          primaryVariations.light || primary,
+          textColors.onPrimary || "#FFFFFF",
+        ),
+        dark: ensureContrast(
+          primaryVariations.dark || primary,
+          textColors.onPrimary || "#FFFFFF",
+        ),
+        muted: tinycolor(
+          ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+        )
           .setAlpha(0.7)
           .toRgbString(),
         accent: secondary,
       },
       onContainer: {
-        primary: ensureContrast(primaryVariations.light, textColors.onPrimary),
+        primary: ensureContrast(
+          primaryVariations.light || primary,
+          textColors.onPrimary || "#FFFFFF",
+        ),
         secondary: ensureContrast(
-          primaryVariations.lighter,
-          textColors.onPrimary,
+          primaryVariations.lighter || primaryVariations.light || primary,
+          textColors.onSecondary || "#FFFFFF",
         ),
         light: ensureContrast("#FFFFFF", "#111827"),
-        dark: ensureContrast(primaryVariations.darker, textColors.onPrimary),
-        muted: tinycolor(ensureContrast(primary, textColors.onPrimary))
+        dark: ensureContrast(
+          primaryVariations.darker || primary,
+          textColors.onPrimary || "#FFFFFF",
+        ),
+        muted: tinycolor(
+          ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+        )
           .setAlpha(0.7)
           .toRgbString(),
         accent: secondary,
       },
+      title: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+      body: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+      primary: primaryVariations.base || primary,
+      secondary: primaryVariations.light || primary,
+      accent: secondary,
+      contrast: textColors.onPrimary || "#FFFFFF",
+      safePrimary: textColors.safePrimary || "#FFFFFF",
+      safeSecondary: textColors.safeSecondary || "#FFFFFF",
+      highlight: textColors.highlight || "#00FF00",
     },
 
     shadow: {

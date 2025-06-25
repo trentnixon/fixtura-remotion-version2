@@ -1,5 +1,5 @@
 import React from "react";
-import { NoiseBackground } from "../NoiseBackground";
+import { GridNoise } from "../GridNoise";
 
 /**
  * SubtleNoise - A very light, subtle noise effect
@@ -8,15 +8,16 @@ import { NoiseBackground } from "../NoiseBackground";
  * that adds just a hint of grain to solid backgrounds.
  * Perfect for adding subtle texture without being distracting.
  */
-const SubtleNoise: React.FC<React.ComponentProps<typeof NoiseBackground>> = (
+const SubtleNoise: React.FC<React.ComponentProps<typeof GridNoise>> = (
   props,
 ) => {
   return (
-    <NoiseBackground
-      noiseOpacity={0.15}
-      noiseScale={0.8}
+    <GridNoise
+      noiseOpacity={0.05}
+      noiseScale={0.5}
       noiseSpeed={0.02}
-      noiseDimension="2d"
+      noiseDimension="3d"
+      gridSize={10}
       {...props}
     />
   );

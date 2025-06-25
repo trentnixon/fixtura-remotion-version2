@@ -1,11 +1,12 @@
 import { baseTheme } from "../../base/theme";
+import { TemplateThemeConfig } from "../../types/TemplateThemeConfig";
 
 /**
  * Basic template theme - simplified approach
  *
  * This theme provides ready-to-use style objects that can be directly applied to components
  */
-export const basicTheme = {
+export const basicTheme: TemplateThemeConfig = {
   ...baseTheme,
 
   // ===== FONT CONFIGURATION =====
@@ -24,13 +25,13 @@ export const basicTheme = {
     // Title component styles
     title: {
       className:
-        "text-8xl font-black tracking-tight leading-none text-center m-0 px-4",
+        "text-9xl font-black tracking-tight leading-none text-center m-0 px-4",
     },
 
     // Subtitle component styles
     subtitle: {
       className:
-        "text-5xl font-semibold tracking-normal leading-none text-center m-0 px-4",
+        "text-6xl font-semibold tracking-normal leading-none text-center m-0 px-4",
     },
 
     // Body text component styles
@@ -81,7 +82,7 @@ export const basicTheme = {
       className: "text-2xl font-black  tracking-wide leading-none",
     },
     ResultScore: {
-      className: "text-7xl font-black  tracking-normal leading-tight ",
+      className: "text-7xl font-bold  tracking-normal leading-tight ",
     },
     ResultScoreYetToBat: {
       className: "text-3xl font-bold  tracking-wider py-6",
@@ -109,7 +110,7 @@ export const basicTheme = {
       className: "text-3xl font-normal  tracking-wider leading-snug",
     },
     metadataSmall: {
-      className: "text-xl font-semibold  tracking-wider leading-snug",
+      className: "text-2xl font-normal  tracking-wider leading-snug",
     },
     metadataMedium: {
       className: "text-2xl font-semibold  tracking-wider leading-snug",

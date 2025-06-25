@@ -1,5 +1,5 @@
 import { interpolate, Easing } from "remotion";
-import { AnimationConfig } from "./types";
+// import { AnimationConfig } from "./types"; // Removed unused import
 import React from "react";
 
 /**
@@ -9,7 +9,6 @@ export const bounce = (
   frame: number,
   startFrame: number,
   endFrame: number,
-  config: AnimationConfig,
 ): React.CSSProperties => {
   const progress = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
@@ -32,7 +31,6 @@ export const elastic = (
   frame: number,
   startFrame: number,
   endFrame: number,
-  config: AnimationConfig,
 ): React.CSSProperties => {
   const progress = interpolate(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",

@@ -4,8 +4,8 @@ import {
   AnimationEasing,
   ContainerSpringConfig,
 } from "./animationTypes";
-import { interpolate, spring, useVideoConfig } from "remotion";
-import { getContainerEasingFunction } from "./easingFunctions";
+import { interpolate, spring, random } from "remotion";
+import { getImageEasingFunction } from "../../easing/easingFunctions";
 
 /**
  * Normalizes animation configuration
@@ -15,7 +15,7 @@ export const normalizeContainerAnimation = (
   animation: ContainerAnimationType | ContainerAnimationConfig,
   delay = 0,
   duration = 30,
-  easing: AnimationEasing = "easeInOut",
+  easing: AnimationEasing = { type: "inOut", base: "ease" },
 ): ContainerAnimationConfig => {
   if (typeof animation === "string") {
     return {
@@ -41,12 +41,12 @@ export const calculateAnimationProgress = (
   frame: number,
   startFrame: number,
   duration: number,
-  easing: AnimationEasing = "easeInOut",
+  easing: AnimationEasing = { type: "inOut", base: "ease" },
 ): number => {
   return interpolate(frame, [startFrame, startFrame + duration], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
-    easing: getContainerEasingFunction(easing),
+    easing: getImageEasingFunction(easing),
   });
 };
 
@@ -56,11 +56,10 @@ export const calculateAnimationProgress = (
 export const createSpringAnimation = (
   frame: number,
   startFrame: number,
+  fps: number,
   config?: ContainerSpringConfig,
   durationInFrames?: number,
 ) => {
-  const { fps } = useVideoConfig();
-
   return spring({
     frame: frame - startFrame,
     fps,
@@ -205,9 +204,9 @@ export const calculateAnimationStyles = (
       break;
     case "glitch":
       if (progress < 0.33) {
-        styles.transform = `translate(${Math.random() * 5 - 2.5}px, ${Math.random() * 5 - 2.5}px)`;
+        styles.transform = `translate(${random("glitch-x1") * 5 - 2.5}px, ${random("glitch-y1") * 5 - 2.5}px)`;
       } else if (progress < 0.66) {
-        styles.transform = `translate(${Math.random() * 3 - 1.5}px, ${Math.random() * 3 - 1.5}px)`;
+        styles.transform = `translate(${random("glitch-x2") * 3 - 1.5}px, ${random("glitch-y2") * 3 - 1.5}px)`;
       }
       break;
     case "blur":

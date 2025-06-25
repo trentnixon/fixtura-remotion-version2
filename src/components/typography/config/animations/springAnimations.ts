@@ -51,7 +51,11 @@ export const springScale = (
     stiffness: 100,
   };
 
-  const initialScale = config.custom?.initialScale || 0;
+  // Type guard for initialScale
+  const initialScale =
+    typeof config.custom?.initialScale === "number"
+      ? config.custom.initialScale
+      : 0;
 
   const springValue = spring({
     frame: frame - startFrame,

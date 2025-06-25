@@ -36,14 +36,16 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     // Helper function to get active palette
     const getActivePalette = (paletteName?: string): DesignPalette => {
       if (!paletteName) {
-        const variationPalette = templateVariation?.Palette;
+        const variationPalette = templateVariation?.palette;
+        console.log("[ThemeContext] variationPalette", variationPalette);
         paletteName = variationPalette || "primary";
       }
-      return (
-        colorSystem.palettes[
-          paletteName as keyof typeof colorSystem.palettes
-        ] || colorSystem.palettes.primary
-      );
+
+      const palette = colorSystem.palettes[
+        paletteName as keyof typeof colorSystem.palettes
+      ] as DesignPalette;
+      console.log("[ThemeContext] palette", palette);
+      return palette || colorSystem.palettes.primary;
     };
 
     // Font configuration with fallbacks

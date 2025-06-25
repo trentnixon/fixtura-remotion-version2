@@ -1,26 +1,6 @@
 // Src/structural/Sponsors/Utils/utils.js
 
-/**
- * Calculate image dimensions maintaining aspect ratio.
- *
- * @param logo - Logo object containing width and height
- * @param dimensions - Array with base width, base height, and max height
- * @returns Object containing calculated width and height
- */
-export const calculateImageDimensions = (
-  logo: { width: number; height: number },
-  [baseWidth, baseHeight, maxHeight]: [number, number, number],
-): { width: number; height: number } => {
-  const aspectRatio = logo.width / logo.height;
-  let width = baseWidth;
-  let height = baseHeight;
-  if (logo.height > maxHeight) {
-    height = maxHeight;
-    width = height * aspectRatio;
-  }
-
-  return { width, height };
-};
+import { Sponsor, SponsorsData } from "../types/data/sponsors";
 
 /**
  * Check if the sponsor list has any sponsors.
@@ -28,14 +8,16 @@ export const calculateImageDimensions = (
  * @param sponsorList - Sponsor list object
  * @returns Boolean indicating if sponsors exist
  */
-export const hasSponsors = (sponsorList: any): boolean => {
-  if (!sponsorList || !sponsorList.default) {
-    return false;
-  }
-  const hasGeneral = Boolean(sponsorList.default.general_sponsors?.length);
-  const hasPrimary = Boolean(sponsorList.default.primary_sponsor);
-  // Return true if either hasGeneral or hasPrimary is true
-  return hasGeneral || hasPrimary;
+export const hasSponsors = (sponsorList: SponsorsData): boolean => {
+  if (!sponsorList) return false;
+  const hasPrimary =
+    Array.isArray(sponsorList.primary) && sponsorList.primary.length > 0;
+  const hasDefault =
+    sponsorList.default &&
+    Object.values(sponsorList.default).some(
+      (arr) => Array.isArray(arr) && arr.length > 0,
+    );
+  return hasPrimary || hasDefault;
 };
 
 /**
@@ -44,53 +26,17 @@ export const hasSponsors = (sponsorList: any): boolean => {
  * @param sponsorList - Sponsor list object
  * @returns Primary sponsor object or null if not found
  */
-export const getPrimarySponsor = (sponsorList: any): any | null => {
+export const getPrimarySponsor = (
+  sponsorList: SponsorsData,
+): Sponsor | null => {
   if (
     !sponsorList ||
-    !sponsorList.default ||
-    !sponsorList.default.primary_sponsor
+    !Array.isArray(sponsorList.primary) ||
+    sponsorList.primary.length === 0
   ) {
-    // Console.error("Primary sponsor not found");
     return null;
   }
-  return sponsorList.default.primary_sponsor;
-};
-
-/**
- * Get sponsors relevant to a specific fixture.
- *
- * @param sponsorList - Sponsor list object
- * @param fixture - Fixture object containing match details
- * @returns Array of sponsors relevant to the fixture
- */
-export const getSponsorsForFixture = (
-  sponsorList: any,
-  fixture: any,
-): any[] => {
-  if (!sponsorList || !fixture) return [];
-  const sponsors: any[] = [];
-
-  // Add logic to get sponsors based on the fixture details (team, league, grade)
-  if (fixture.gradeName) {
-    sponsors.push(
-      ...sponsorList.grade.filter((s: any) => s.level === fixture.gradeName),
-    );
-  }
-  if (fixture.teamHome || fixture.teamAway) {
-    sponsors.push(
-      ...sponsorList.team.filter(
-        (s: any) =>
-          s.level === fixture.teamHome || s.level === fixture.teamAway,
-      ),
-    );
-  }
-  if (fixture.league) {
-    sponsors.push(
-      ...sponsorList.league.filter((s: any) => s.level === fixture.league),
-    );
-  }
-
-  return sponsors;
+  return sponsorList.primary[0]; // Or adjust logic if needed
 };
 
 /**

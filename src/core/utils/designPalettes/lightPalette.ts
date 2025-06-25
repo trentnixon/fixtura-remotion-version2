@@ -1,5 +1,12 @@
 // designPalettes/lightPalette.ts
-import { DesignPalette, GradientOptions } from "./types";
+import {
+  DesignPalette,
+  GradientOptions,
+  TextColors,
+  ShadowOptions,
+  UtilityColors,
+  ContrastOptions,
+} from "./types";
 import tinycolor from "tinycolor2";
 
 // Helper function to create gradient options
@@ -23,15 +30,15 @@ const createGradientOptions = (
     CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
   },
 });
-
+// REVIEW: BUGS IN SECONDARY COLOR
 export const createLightPalette = (
   primary: string,
   secondary: string,
-  backgrounds: any,
-  textColors: any,
-  shadows: any,
-  utility: any,
-  contrast: any,
+  backgrounds: { light?: string },
+  textColors: TextColors,
+  shadows: ShadowOptions,
+  utility: UtilityColors,
+  contrast: ContrastOptions,
 ): DesignPalette => {
   const lightBg = backgrounds.light || "#F9FAFB";
 
@@ -72,21 +79,35 @@ export const createLightPalette = (
       transparent: "rgba(255, 255, 255, 0.8)",
       accent: primary,
       highlight: secondary,
+      gradientPrimaryToSecondaryHorizontal: `linear-gradient(to right, #FFFFFF, ${secondary})`,
+      gradientPrimaryToSecondaryVertical: `linear-gradient(to bottom, #FFFFFF, ${secondary})`,
+      gradientSecondaryToPrimaryHorizontal: `linear-gradient(to right, ${secondary}, #FFFFFF)`,
+      gradientSecondaryToPrimaryVertical: `linear-gradient(to bottom, ${secondary}, #FFFFFF)`,
+      saturated: tinycolor("#FFFFFF").saturate(20).toString(),
+      transparentAccent: tinycolor(primary).setAlpha(0.7).toRgbString(),
+      transparentMain: tinycolor("#FFFFFF").setAlpha(0.7).toRgbString(),
+      transparentSecondary: tinycolor("#F3F4F6").setAlpha(0.7).toRgbString(),
+      transparentPrimary: tinycolor("#FFFFFF").toRgbString(),
+      muted: tinycolor("#FFFFFF").setAlpha(0.5).toRgbString(),
     },
     text: {
       onBackground: {
-        main: textColors.onLight,
-        light: textColors.onLight,
-        dark: textColors.onLight,
-        muted: tinycolor(textColors.onLight).setAlpha(0.7).toRgbString(),
+        main: textColors.onLight || "#111827",
+        light: textColors.onLight || "#F3F4F6",
+        dark: textColors.onLight || "#374151",
+        muted: tinycolor(textColors.onLight || "#111827")
+          .setAlpha(0.7)
+          .toRgbString(),
         accent: primary,
       },
       onContainer: {
-        primary: textColors.onLight,
-        secondary: textColors.onLight,
-        light: textColors.onLight,
-        dark: textColors.onLight,
-        muted: tinycolor(textColors.onLight).setAlpha(0.7).toRgbString(),
+        primary: textColors.onLight || "#111827",
+        secondary: textColors.onLight || "#F3F4F6",
+        light: textColors.onLight || "#F3F4F6",
+        dark: textColors.onLight || "#374151",
+        muted: tinycolor(textColors.onLight || "#111827")
+          .setAlpha(0.7)
+          .toRgbString(),
         accent: primary,
       },
       title: "#111827",
@@ -94,7 +115,7 @@ export const createLightPalette = (
       primary: "#111827",
       secondary: "#374151",
       accent: primary,
-      contrast: textColors.onLight,
+      contrast: textColors.onLight || "#111827",
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,

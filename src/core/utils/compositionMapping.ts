@@ -3,13 +3,13 @@
  * Maps dataset IDs to their corresponding composition IDs
  */
 export const datasetToCompositionMap = {
-  CricketLadder: "Ladder",
-  CricketResults: "WeekendResults",
-  CricketRoster: "RosterPoster",
-  CricketSingleGameResult: "SingleGameResult",
-  CricketTop5Batting: "Top5BattingList",
-  CricketTop5Bowling: "Top5BowlingList",
-  CricketUpcoming: "UpcomingFixtures",
+  CricketLadder: "CricketLadder",
+  CricketResults: "CricketResults",
+  CricketRoster: "CricketRoster",
+  CricketResultSingle: "CricketResultSingle",
+  CricketTop5Batting: "CricketTop5Batting",
+  CricketTop5Bowling: "CricketTop5Bowling",
+  CricketUpcoming: "CricketUpcoming",
 
   AFLLadder: "AFLLadder",
   AFLResults: "AFLResults",

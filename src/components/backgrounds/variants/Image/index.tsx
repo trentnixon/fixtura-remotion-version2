@@ -1,13 +1,11 @@
 // src/components/backgrounds/variants/Image/ImageBackground.tsx
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 import { ZoomEffect } from "./variants/zoom";
-
-// Import overlay system
 import { OverlayRenderer } from "./overlays/OverlayRenderer";
 import { OverlayConfig, OverlayStyle } from "./overlays/";
 
@@ -21,6 +19,10 @@ import {
 import { ImageBackgroundProps, ImageEffectType } from "./ImageBackground.types";
 import { adaptImageConfig } from "./TemplateVariationAdapter";
 import { BreathingEffect, FocusBlurEffect, Pan } from "./variants";
+import type { BreathingEffectProps } from "./variants/breath";
+import type { FocusBlurEffectProps } from "./variants/blur";
+import type { ZoomEffectProps } from "./variants/zoom";
+import type { PanEffectProps } from "./variants/pan";
 
 export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   className = "",
@@ -31,7 +33,7 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const { selectedPalette } = useThemeContext();
 
   // Extract raw configuration from template variation
-  const rawConfig = video?.templateVariation?.Image || {};
+  const rawConfig = video?.templateVariation?.image || {};
 
   // Adapt legacy configuration to enhanced format
   const config = adaptImageConfig(rawConfig);
@@ -44,24 +46,29 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
     ? (config.overlayStyle as string as OverlayStyle)
     : OverlayStyle.None;
 
-  // Extract image URL
-  const imageUrl = config.url || video?.templateVariation?.Image?.url;
+  const DEFAULT_IMAGE =
+    "https://images.unsplash.com/photo-1512719994953-eabf50895df7?q=80&w=1000";
 
+  // Extract image URL
+  const imageUrl =
+    config.url || video?.templateVariation?.image?.url || DEFAULT_IMAGE;
+
+  console.log("[ImageBackground] imageUrl", imageUrl);
   // If no image URL is available, return null
   if (!imageUrl) {
     console.warn("No image URL provided for ImageBackground");
-    return null;
+    //return null;
   }
 
   // Base props for all effects
-  const baseProps: any = {
+  const baseProps = {
     src: imageUrl,
     className,
     style,
     startTime: config.startTime || 0,
     endTime: config.endTime,
-    width: config.width,
-    height: config.height,
+    width: config.width || 1080,
+    height: config.height || 1080,
   };
 
   // Determine overlay configuration
@@ -198,25 +205,19 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
       case ImageEffectType.Zoom:
         return (
           <ZoomEffect
-            {...baseProps}
+            {...(baseProps as ZoomEffectProps)}
             direction={config.zoomDirection || "in"}
             intensity={config.zoomIntensity || 1.2}
           />
         );
 
       case ImageEffectType.Pan:
-        return (
-          <Pan
-            {...baseProps}
-            direction={config.panDirection || "left"}
-            intensity={config.panIntensity || 15}
-          />
-        );
+        return <Pan {...(baseProps as PanEffectProps)} />;
 
       case ImageEffectType.Breathing:
         return (
           <BreathingEffect
-            {...baseProps}
+            {...(baseProps as BreathingEffectProps)}
             intensity={config.breathingIntensity || 1.05}
           />
         );
@@ -224,7 +225,7 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
       case ImageEffectType.FocusBlur:
         return (
           <FocusBlurEffect
-            {...baseProps}
+            {...(baseProps as FocusBlurEffectProps)}
             direction={config.blurDirection || "in"}
             maxBlur={config.blurIntensity || 8}
           />
@@ -234,13 +235,12 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
       default:
         // Just show the static image with no effects
         return (
-          <div
+          <Img
+            src={imageUrl}
             style={{
-              backgroundImage: `url(${imageUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
               width: "100%",
               height: "100%",
+              objectFit: "cover",
               ...style,
             }}
           />

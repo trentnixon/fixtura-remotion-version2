@@ -1,6 +1,6 @@
 // standardPaletteFactory.ts
 import tinycolor from "tinycolor2";
-import { PaletteOptions } from "../core/types";
+import { GradientCollection, PaletteOptions } from "../core/types";
 import { createColorVariations } from "../core/baseManipulation";
 import {
   generateGradientOptions,
@@ -214,7 +214,7 @@ export const standardPaletteFactory = (
         stops: [],
         css: { DEFAULT: "" },
       },
-    }) as any,
-    options,
+    }) as GradientCollection,
+    options as unknown as { [key: string]: unknown },
   );
 };

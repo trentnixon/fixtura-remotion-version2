@@ -6,8 +6,21 @@ import {
   Easing,
 } from "remotion";
 
-export const Pan = (props: any) => {
-  const { src, width, height } = props;
+export interface PanEffectProps {
+  src: string;
+  width: number;
+  height: number;
+  style?: React.CSSProperties;
+  className?: string;
+}
+
+export const Pan: React.FC<PanEffectProps> = ({
+  src,
+  width,
+  height,
+  style = {},
+  className = "",
+}) => {
   const frame = useCurrentFrame();
   const {
     width: videoWidth,
@@ -82,6 +95,7 @@ export const Pan = (props: any) => {
 
   return (
     <div
+      className={className}
       style={{
         position: "relative",
         width: "100%",
@@ -90,6 +104,7 @@ export const Pan = (props: any) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        ...style,
       }}
     >
       <div

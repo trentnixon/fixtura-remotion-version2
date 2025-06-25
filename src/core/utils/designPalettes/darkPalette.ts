@@ -1,5 +1,12 @@
 // designPalettes/darkPalette.ts
-import { DesignPalette, GradientOptions } from "./types";
+import {
+  DesignPalette,
+  GradientOptions,
+  TextColors,
+  ShadowOptions,
+  UtilityColors,
+  ContrastOptions,
+} from "./types";
 import tinycolor from "tinycolor2";
 
 // Helper function to create gradient options
@@ -23,13 +30,13 @@ const createGradientOptions = (
     CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
   },
 });
-
+// REVIEW: BUGS IN SECONDARY COLOR
 export const createDarkPalette = (
-  backgrounds: any,
-  textColors: any,
-  shadows: any,
-  utility: any,
-  contrast: any,
+  backgrounds: { dark?: string },
+  textColors: TextColors,
+  shadows: ShadowOptions,
+  utility: UtilityColors,
+  contrast: ContrastOptions,
   primary: string,
 ): DesignPalette => {
   const darkBg = backgrounds.dark || "#111827";
@@ -77,28 +84,44 @@ export const createDarkPalette = (
       transparent: "rgba(26, 32, 44, 0.8)",
       accent: primary,
       highlight: "#4B5563",
+      gradientPrimaryToSecondaryHorizontal: `linear-gradient(to right, ${darkBgLight}, ${primary})`,
+      gradientPrimaryToSecondaryVertical: `linear-gradient(to bottom, ${darkBgLight}, ${primary})`,
+      gradientSecondaryToPrimaryHorizontal: `linear-gradient(to right, ${primary}, ${darkBgLight})`,
+      gradientSecondaryToPrimaryVertical: `linear-gradient(to bottom, ${primary}, ${darkBgLight})`,
+      saturated: tinycolor(darkBgLight).saturate(20).toString(),
+      transparentAccent: tinycolor(primary).setAlpha(0.7).toRgbString(),
+      transparentMain: tinycolor(darkBgLight).setAlpha(0.7).toRgbString(),
+      transparentPrimary: tinycolor(darkBgLight).toRgbString(),
+      transparentSecondary: tinycolor("#4A5568").setAlpha(0.7).toRgbString(),
+      muted: tinycolor(darkBgLight).setAlpha(0.5).toRgbString(),
     },
     text: {
       onBackground: {
-        main: textColors.onDark,
-        light: textColors.onDark,
-        dark: textColors.onDark,
-        muted: tinycolor(textColors.onDark).setAlpha(0.7).toRgbString(),
+        main: textColors.onDark || "#FFFFFF",
+        light: textColors.onDark || "#E5E7EB",
+        dark: textColors.onDark || "#111827",
+        muted: tinycolor(textColors.onDark || "#FFFFFF")
+          .setAlpha(0.7)
+          .toRgbString(),
         accent: primary,
       },
       onContainer: {
-        primary: textColors.onDark,
-        secondary: textColors.onDark,
-        light: textColors.onDark,
-        dark: textColors.onDark,
-        muted: tinycolor(textColors.onDark).setAlpha(0.7).toRgbString(),
+        primary: textColors.onDark || "#FFFFFF",
+        secondary: textColors.onDark || "#E5E7EB",
+        light: textColors.onDark || "#E5E7EB",
+        dark: textColors.onDark || "#111827",
+        muted: tinycolor(textColors.onDark || "#FFFFFF")
+          .setAlpha(0.7)
+          .toRgbString(),
         accent: primary,
       },
-      title: textColors.onDark,
-      body: tinycolor(textColors.onDark).setAlpha(0.9).toRgbString(),
-      primary: textColors.onDark,
-      secondary: textColors.onDark,
-      contrast: textColors.onDark,
+      title: textColors.onDark || "#FFFFFF",
+      body: tinycolor(textColors.onDark || "#FFFFFF")
+        .setAlpha(0.9)
+        .toRgbString(),
+      primary: textColors.onDark || "#FFFFFF",
+      secondary: textColors.onDark || "#E5E7EB",
+      contrast: textColors.onDark || "#FFFFFF",
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,

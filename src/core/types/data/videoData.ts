@@ -4,12 +4,12 @@ import { ThemeData } from "./common";
 import { Club } from "./sponsors";
 
 // Division fixtures structure
-export interface DividedFixturesBy {
-  Ladder: number;
-  RosterPoster: number;
-  WeekendResults: number;
-  UpComingFixtures: number;
-  WeekendSingleGameResult: number;
+export interface DivideFixturesBy {
+  CricketLadder: number;
+  CricketRoster: number;
+  CricketResults: number;
+  CricketUpcoming: number;
+  CricketResultSingle: number;
 }
 
 // Video structure
@@ -46,38 +46,34 @@ export interface VideoAppearance {
   type: string;
   templateOptions: {
     borderRadius: string;
-    Background: string;
-    Palette: string;
+    background: string;
+    palette: string;
   };
 }
 
 export interface VideoMedia {
-  HeroImage?: {
+  heroImage?: {
     url: string;
     ratio: string;
     width: number;
     height: number;
-    AgeGroup?: string;
-    AssetType?: string;
+    ageGroup?: string;
+    assetType?: string;
     markerPosition?: string;
   };
   audio?: {
     url: string;
+    audioOption?: string;
   };
 }
 
 export interface VideoContentLayout {
-  dividedFixturesBy: {
-    Ladder: number;
-    RosterPoster: number;
-    WeekendResults: number;
-    UpComingFixtures: number;
-    WeekendSingleGameResult: number;
-  };
+  divideFixturesBy: DivideFixturesBy;
 }
 
 export interface VideoTemplateVariation {
-  Video?: {
+  useBackground: string;
+  video?: {
     url: string;
     fallbackUrl?: string;
     position?: string;
@@ -92,7 +88,7 @@ export interface VideoTemplateVariation {
     volume?: number;
     playbackRate?: number;
   };
-  Image?: {
+  image?: {
     url: string;
     ratio: string;
     width: number;
@@ -103,17 +99,17 @@ export interface VideoTemplateVariation {
     gradientType?: string;
     overlayOpacity?: number;
   };
-  Background?: string;
-  Palette?: string;
+  background?: string;
+  palette?: string;
   borderRadius?: string;
-  Gradient?: {
+  gradient?: {
     type: string;
     direction: string;
   };
-  Noise?: {
+  noise?: {
     type: string;
   };
-  Pattern?: {
+  pattern?: {
     type: string;
     animation: string;
     scale: number;
@@ -122,7 +118,7 @@ export interface VideoTemplateVariation {
     animationDuration: number;
     animationSpeed: number;
   };
-  Particle?: {
+  particle?: {
     type: string;
     particleCount: number;
     speed: number;
@@ -133,14 +129,11 @@ export interface VideoTemplateVariation {
 
 // Video meta structure
 export interface VideoMeta {
-  Club: Club;
-  club?: Club;
+  club: Club;
   theme: ThemeData;
   video: Video;
   fixtureCategory?: string;
-  FixtureCategory?: string;
   groupingCategory?: string;
-  grouping_category?: string;
   cricketLadder?: CricketLadderData;
   sport?: string;
   competitionType?: string;

@@ -10,7 +10,13 @@ export type NoiseVariant =
   | "grain"
   | "wave"
   | "fog"
-  | "static";
+  | "static"
+  | "floatingParticles"
+  | "dynamicParticles"
+  | "triangleSwarm"
+  | "pulsingCircles"
+  | "digitalRain"
+  | "gradientGrid";
 
 export const NOISE_VARIANTS: Record<
   NoiseVariant,
@@ -40,5 +46,29 @@ export const NOISE_VARIANTS: Record<
   static: {
     name: "TV Static",
     description: "High-contrast, rapidly changing noise resembling TV static",
+  },
+  floatingParticles: {
+    name: "Floating Particles",
+    description: "A gentle, slow-moving field of 3D particles.",
+  },
+  dynamicParticles: {
+    name: "Dynamic Particles",
+    description: "An energetic field of 3D particles with more movement.",
+  },
+  triangleSwarm: {
+    name: "Triangle Swarm",
+    description: "A 3D field of floating, animated triangles.",
+  },
+  pulsingCircles: {
+    name: "Pulsing Circles",
+    description: "A 2D grid of soft, pulsing circles.",
+  },
+  digitalRain: {
+    name: "Digital Rain",
+    description: "A matrix-style effect with falling lines.",
+  },
+  gradientGrid: {
+    name: "Gradient Grid",
+    description: "A noise grid with a smooth color gradient.",
   },
 };

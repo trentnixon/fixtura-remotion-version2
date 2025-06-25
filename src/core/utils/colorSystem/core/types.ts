@@ -103,7 +103,6 @@ export interface ContrastSafetyCollection {
     secondary: ContrastSafety;
     [key: string]: ContrastSafety;
   };
-  [key: string]: any;
 }
 
 // Common utilities needed for palette generation
@@ -133,14 +132,13 @@ export interface PaletteOptions {
   includeShadows?: boolean;
   highContrast?: boolean;
   colorSpace?: "rgb" | "hsl" | "lab" | "lch";
-  [key: string]: any;
 }
 
 // Standard output of all color palettes
 export interface StandardizedPalettes {
-  primary: DesignPalette | any;
-  secondary: DesignPalette | any;
-  [key: string]: DesignPalette | any;
+  primary: DesignPalette | unknown;
+  secondary: DesignPalette | unknown;
+  [key: string]: DesignPalette | unknown;
 }
 
 // Complete color system output type
@@ -161,6 +159,5 @@ export interface ColorSystem {
     lightenColor: (color: string, amount: number) => string;
     darkenColor: (color: string, amount: number) => string;
     setOpacity: (color: string, alpha: number) => string;
-    [key: string]: any;
   };
 }

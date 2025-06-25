@@ -1,3 +1,5 @@
+import { AssignSponsors } from "../composition-types";
+
 // Types for upcoming games data structure
 export interface TeamLogo {
   url: string;
@@ -18,12 +20,6 @@ export interface Grade {
 export interface Competition {
   id: number | null;
   name: string | null;
-}
-
-export interface AssignSponsors {
-  Team: Sponsor;
-  grade: Grade;
-  competition: Competition;
 }
 
 export interface GameData {

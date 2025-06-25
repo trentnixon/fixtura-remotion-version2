@@ -1,10 +1,16 @@
 import React from "react";
-import { TeamLogo as TeamLogoType } from "../../upcoming/types";
 import { AnimatedImage } from "../../../../components/images/AnimatedImage";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
+export interface TeamLogo {
+  url: string;
+  width?: number;
+  height?: number;
+  id?: number;
+}
+
 interface TeamLogoProps {
-  logo: TeamLogoType | null;
+  logo: TeamLogo | null;
   teamName: string;
   delay: number;
   size?: number;
