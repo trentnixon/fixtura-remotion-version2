@@ -6,10 +6,10 @@ import {
   TransitionSeriesWrapper,
   TransitionType,
 } from "../../../components/transitions";
-import GamesDisplayBasic from "./controller/GamesDisplay/FixtureDisplayBasic";
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { GameData } from "./types";
+import GamesDisplayBrickWork from "./controller/GamesDisplay/FixtureDisplayBrickWork";
 
 export const UpcomingGamesWithTransitions: React.FC = () => {
   const { data, contentLayout, metadata } = useVideoDataContext();
@@ -45,7 +45,7 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <GamesDisplayBasic
+      <GamesDisplayBrickWork
         games={CompositionData as GameData[]}
         gamesPerScreen={gamesPerScreen}
         screenIndex={index}
@@ -68,8 +68,8 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
 };
 
 // Export as Basic for compatibility with original template
-export const Basic: React.FC = () => {
+export const BrickWork: React.FC = () => {
   return <UpcomingGamesWithTransitions />;
 };
 
-export default Basic;
+export default BrickWork;

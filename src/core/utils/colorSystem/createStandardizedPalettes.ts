@@ -1,3 +1,4 @@
+import { ThemeMode } from "../../../templates/types/TemplateThemeConfig";
 import { PaletteConfiguration, StandardizedPalettes } from "./core/types";
 import { standardPaletteFactory } from "./generators/standardPaletteFactory";
 
@@ -12,6 +13,7 @@ export const createStandardizedPalettes = (
   primary: string,
   secondary: string,
   configurations: PaletteConfiguration[],
+  useMode: ThemeMode,
 ): StandardizedPalettes => {
   // Initialize result object
   const result: StandardizedPalettes = {} as StandardizedPalettes;
@@ -22,7 +24,12 @@ export const createStandardizedPalettes = (
     const options = { ...config.options, includeGradients: true };
 
     // Generate the palette using the factory
-    const palette = standardPaletteFactory(config.name, config.colors, options);
+    const palette = standardPaletteFactory(
+      config.name,
+      config.colors,
+      options,
+      useMode,
+    );
 
     // Add the palette to the result object
     result[config.name] = palette;
@@ -32,10 +39,15 @@ export const createStandardizedPalettes = (
   if (!result.primary || !result.secondary) {
     // If configurations didn't include primary/secondary, add them
     if (!result.primary) {
-      result.primary = standardPaletteFactory("primary", [primary, secondary], {
-        includeGradients: true,
-        includeShadows: true,
-      });
+      result.primary = standardPaletteFactory(
+        "primary",
+        [primary, secondary],
+        {
+          includeGradients: true,
+          includeShadows: true,
+        },
+        useMode,
+      );
     }
 
     if (!result.secondary) {
@@ -43,6 +55,7 @@ export const createStandardizedPalettes = (
         "secondary",
         [secondary, primary],
         { includeGradients: true, includeShadows: true },
+        useMode,
       );
     }
   }

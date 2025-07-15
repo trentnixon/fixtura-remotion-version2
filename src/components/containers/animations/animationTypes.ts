@@ -47,7 +47,7 @@ export type ContainerAnimationType =
   | "glitch"
   | "blur";
 
-import { ImageEasingType } from "../../images/config/types";
+import { ImageEasingType } from "../../easing/types";
 
 // Animation easing options
 export type AnimationEasing = ImageEasingType;

@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -15,7 +15,8 @@ export const focusIn: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default blur range (10px to 0px)
-  const maxBlur = config.custom?.maxBlur || 10;
+  const maxBlur =
+    typeof config.custom?.maxBlur === "number" ? config.custom.maxBlur : 10;
 
   const blurAmount = interpolate(frame, [startFrame, endFrame], [maxBlur, 0], {
     extrapolateLeft: "clamp",
@@ -51,7 +52,8 @@ export const focusOut: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default blur range (0px to 10px)
-  const maxBlur = config.custom?.maxBlur || 10;
+  const maxBlur =
+    typeof config.custom?.maxBlur === "number" ? config.custom.maxBlur : 10;
 
   const blurAmount = interpolate(frame, [startFrame, endFrame], [0, maxBlur], {
     extrapolateLeft: "clamp",
@@ -82,7 +84,10 @@ export const exposureIn: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default brightness range (2 to 1)
-  const maxBrightness = config.custom?.maxBrightness || 2;
+  const maxBrightness =
+    typeof config.custom?.maxBrightness === "number"
+      ? config.custom.maxBrightness
+      : 2;
 
   const brightness = interpolate(
     frame,
@@ -123,7 +128,10 @@ export const exposureOut: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default brightness range (1 to 2)
-  const maxBrightness = config.custom?.maxBrightness || 2;
+  const maxBrightness =
+    typeof config.custom?.maxBrightness === "number"
+      ? config.custom.maxBrightness
+      : 2;
 
   const brightness = interpolate(
     frame,

@@ -1,5 +1,5 @@
 import { interpolate, spring } from "remotion";
-import { AnimationFunction } from "../types";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -18,7 +18,10 @@ export const springScale: AnimationFunction = (
     stiffness: 100,
   };
 
-  const initialScale = config.custom?.initialScale || 0.8;
+  const initialScale =
+    typeof config.custom?.initialScale === "number"
+      ? config.custom.initialScale
+      : 0.8;
 
   const springValue = spring({
     frame: frame - startFrame,

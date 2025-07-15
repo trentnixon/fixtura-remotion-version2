@@ -5,7 +5,6 @@ import { useThemeContext } from "../../../core/context/ThemeContext";
 
 export const OneColumn: React.FC<{ Header: React.FC }> = ({ Header }) => {
   const { layout } = useThemeContext();
-
   const { heights } = layout;
 
   return (

@@ -8,7 +8,7 @@ import { TransitionSeriesWrapper } from "../../../../components/transitions/Tran
 import {
   ImageAnimationType,
   ImageAnimationConfig,
-} from "../../../../components/images/config/types";
+} from "../../../../components/easing/types";
 
 interface BrickworkOutroProps {
   doesAccountHaveSponsors: boolean;

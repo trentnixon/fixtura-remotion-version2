@@ -98,10 +98,10 @@ const getTemplateComponent = (
   }
 
   // Proceed assuming it's a Record<string, React.ComponentType<unknown>>
+
   const TemplateComponent =
     compositionModule[templateId] ||
-    compositionModule[templateId.toLowerCase()] ||
-    compositionModule.basic; // Fallback to basic template
+    compositionModule[templateId.toLowerCase()];
 
   // Cast the component back to ComponentType<any> or a more specific type if needed for rendering
   // Or simply return it if the JSX renderer can handle ComponentType<unknown> (often it can)
@@ -120,6 +120,11 @@ export const RouteToComposition = (): React.ReactElement => {
   const templateId = appearance.template?.toLowerCase() || "basic";
   const sport = (videoMeta.club?.sport?.toLowerCase() || "cricket") as Sport;
   const title = metadata.title;
+
+  console.log("[appearance]", appearance);
+  console.log("[compositionId]", compositionId);
+  console.log("[templateId]", templateId);
+  console.log("[sport]", sport);
 
   try {
     // Get the sport module

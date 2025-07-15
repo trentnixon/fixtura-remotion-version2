@@ -28,7 +28,7 @@ export function processDatasetForTemplate(
   const existingClub =
     datasetClone.videoMeta?.club || datasetClone.videoMeta?.club || {};
 
-  //console.log("[existingVideo]", existingVideo);
+  console.log("[templateIdtemplateIdtemplateId]", templateId);
 
   // Get the correct composition ID - either use existing one or derive it from the dataset ID
   /*   const compositionId =
@@ -66,6 +66,7 @@ export function processDatasetForTemplate(
         appearance: {
           ...(existingVideo.appearance || {}),
           type: variant,
+          template: templateId || existingVideo.appearance?.template,
         },
         templateVariation: {
           ...existingTemplateVariation,

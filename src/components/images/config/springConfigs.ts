@@ -1,4 +1,4 @@
-import { ImageSpringConfig } from "./types";
+import { ImageSpringConfig } from "../../easing/types";
 
 /**
  * Predefined spring configurations for image animations

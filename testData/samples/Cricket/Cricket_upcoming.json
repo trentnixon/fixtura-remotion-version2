@@ -1,109 +1,19 @@
 {
   "data": [
     {
-      "date": "Sun, 29 June",
+      "date": "Sun, 20 July",
       "time": "09:30 AM",
       "type": "One Day",
-      "round": "Round 6",
-      "gameID": "c373dc6c",
+      "round": "Round 7",
+      "gameID": "7983f0d2",
       "gender": "Mixed",
-      "ground": "Oxenford Oval / Choice Homes Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Gold Coast Thunder Gold (40s) vs University of QLD, Date and Time: Sunday, 29 June 2025, 09:30 AM, Location: Oxenford Oval / Choice Homes Oval\n- Round: Round 6, Match Type: One Day\n- League: Brisbane Over 40's Cricket",
+      "ground": "Shaw Park / Ian Healy Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Northern Suburbs Over 40s vs Gold Coast Thunder Blue (40s), Date and Time: Sunday, 20 July 2025, 09:30 AM, Location: Shaw Park / Ian Healy Oval\n- Round: Round 7, Match Type: One Day\n- League: Brisbane Over 40's Cricket",
       "ageGroup": "Over 40",
-      "teamAway": "University of QLD",
-      "teamHome": "Gold Coast Thunder Gold (40s)",
+      "teamAway": "Gold Coast Thunder Blue (40s)",
+      "teamHome": "Northern Suburbs Over 40s",
       "gradeName": "Brisbane Over 40's Cricket",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-        "width": 379,
-        "height": 303
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 152,
-            "isPrimary": false,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": "test",
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 12785,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "date": "Sat, 28 June",
-      "time": "10:00 AM",
-      "type": "One Day",
-      "round": "Round 6",
-      "gameID": "31813cba",
-      "gender": "Mixed",
-      "ground": "Ivor Marsden Memorial Park / Leaders Institute Ivor Marsden 4",
-      "prompt": "Upcoming cricket match details:\n- Teams: Ipswich Hornets vs GC 50's Thunder Div 3 Maroon, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Ivor Marsden Memorial Park / Leaders Institute Ivor Marsden 4\n- Round: Round 6, Match Type: One Day\n- League: O50 Div 3 - Peter Sherman Shield",
-      "ageGroup": "Over 50",
-      "teamAway": "GC 50's Thunder Div 3 Maroon",
-      "teamHome": "Ipswich Hornets",
-      "gradeName": "O50 Div 3 - Peter Sherman Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-        "width": 379,
-        "height": 303
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 153,
-            "isPrimary": false,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": "test",
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 12786,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "date": "Sun, 29 June",
-      "time": "10:00 AM",
-      "type": "One Day",
-      "round": "Round 6",
-      "gameID": "2538f10f",
-      "gender": "Mixed",
-      "ground": "Ropehill Cricket Grounds / Ropehill Turf",
-      "prompt": "Upcoming cricket match details:\n- Teams: Lockyer vs GC 50's Thunder Div 3 White, Date and Time: Sunday, 29 June 2025, 10:00 AM, Location: Ropehill Cricket Grounds / Ropehill Turf\n- Round: Round 6, Match Type: One Day\n- League: O50 Div 3 - Peter Sherman Shield",
-      "ageGroup": "Over 50",
-      "teamAway": "GC 50's Thunder Div 3 White",
-      "teamHome": "Lockyer",
-      "gradeName": "O50 Div 3 - Peter Sherman Shield",
-      "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
         "width": 379,
         "height": 303
@@ -136,153 +46,18 @@
       }
     },
     {
-      "date": "Sat, 28 June",
-      "time": "10:00 AM",
-      "type": "One Day",
-      "round": "Round 5",
-      "gameID": "85f7a9f1",
-      "gender": "Mixed",
-      "ground": "Caboolture Cricket Club / Superior Homes Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sunshine Coast vs GC Thunder Blue, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Caboolture Cricket Club / Superior Homes Oval\n- Round: Round 5, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "GC Thunder Blue",
-      "teamHome": "Sunshine Coast",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-        "width": 379,
-        "height": 303
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 152,
-            "isPrimary": false,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": "test",
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 12785,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "date": "Sat, 28 June",
-      "time": "10:00 AM",
-      "type": "One Day",
-      "round": "Round 5",
-      "gameID": "dd790621",
-      "gender": "Mixed",
-      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: GC Thunder Gold vs Wide Bay, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Elizabeth Daniels Park / Kev Hackney Oval\n- Round: Round 5, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "Wide Bay",
-      "teamHome": "GC Thunder Gold",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-        "width": 379,
-        "height": 303
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 153,
-            "isPrimary": false,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": "test",
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 12786,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "date": "Sat, 28 June",
-      "time": "10:00 AM",
+      "date": "Sun, 20 July",
+      "time": "09:30 AM",
       "type": "One Day",
       "round": "Round 7",
-      "gameID": "513e6973",
+      "gameID": "329cf095",
       "gender": "Mixed",
-      "ground": "Palmwoods Sports Reserve / Oval 1 - Turf",
-      "prompt": "Upcoming cricket match details:\n- Teams: Wide Bay vs GC Thunder Blue, Date and Time: Saturday, 28 June 2025, 10:00 AM, Location: Palmwoods Sports Reserve / Oval 1 - Turf\n- Round: Round 7, Match Type: One Day\n- League: O60 Div 3 - Kratzmann Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "GC Thunder Blue",
-      "teamHome": "Wide Bay",
-      "gradeName": "O60 Div 3 - Kratzmann Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-        "width": 379,
-        "height": 303
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 151,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": "test",
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 12784,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "date": "Sun, 29 June",
-      "time": "10:00 AM",
-      "type": "One Day",
-      "round": "Round 6",
-      "gameID": "6f7f1921",
-      "gender": "Mixed",
-      "ground": "Elizabeth Daniels Park / Ron McMullen Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Wide Bay vs GC Thunder Blue, Date and Time: Sunday, 29 June 2025, 10:00 AM, Location: Elizabeth Daniels Park / Ron McMullen Oval\n- Round: Round 6, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "GC Thunder Blue",
-      "teamHome": "Wide Bay",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
+      "ground": "Shaw Park / Geoff Dymock Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sandgate-Redcliffe Over 40s vs Gold Coast Thunder Gold (40s), Date and Time: Sunday, 20 July 2025, 09:30 AM, Location: Shaw Park / Geoff Dymock Oval\n- Round: Round 7, Match Type: One Day\n- League: Brisbane Over 40's Cricket",
+      "ageGroup": "Over 40",
+      "teamAway": "Gold Coast Thunder Gold (40s)",
+      "teamHome": "Sandgate-Redcliffe Over 40s",
+      "gradeName": "Brisbane Over 40's Cricket",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
         "width": 379,
@@ -316,27 +91,27 @@
       }
     },
     {
-      "date": "Sun, 29 June",
+      "date": "Sat, 19 July",
       "time": "10:00 AM",
       "type": "One Day",
-      "round": "Round 6",
-      "gameID": "fd2af090",
+      "round": "Round 8",
+      "gameID": "7c8f6e99",
       "gender": "Mixed",
-      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sunshine Coast vs GC Thunder Gold, Date and Time: Sunday, 29 June 2025, 10:00 AM, Location: Elizabeth Daniels Park / Kev Hackney Oval\n- Round: Round 6, Match Type: One Day\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "GC Thunder Gold",
-      "teamHome": "Sunshine Coast",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
+      "ground": "Bob Brock Park / Paul Jackson Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Brisbane Red vs GC 50's Thunder Div 3 Maroon, Date and Time: Saturday, 19 July 2025, 10:00 AM, Location: Bob Brock Park / Paul Jackson Oval\n- Round: Round 8, Match Type: One Day\n- League: O50 Div 3 - Peter Sherman Shield",
+      "ageGroup": "Over 50",
+      "teamAway": "GC 50's Thunder Div 3 Maroon",
+      "teamHome": "Brisbane Red",
+      "gradeName": "O50 Div 3 - Peter Sherman Shield",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
         "width": 379,
         "height": 303
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7a09c26e96.jpg",
+        "width": 1334,
+        "height": 750
       },
       "assignSponsors": {
         "competition": [],
@@ -355,6 +130,141 @@
             "logo": {
               "id": 12786,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sun, 20 July",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 8",
+      "gameID": "99da8d67",
+      "gender": "Mixed",
+      "ground": "EGW Wood Reserve / Fred Kratzmann Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Redlands Logan Green vs GC 50's Thunder Div 3 White, Date and Time: Sunday, 20 July 2025, 10:00 AM, Location: EGW Wood Reserve / Fred Kratzmann Oval\n- Round: Round 8, Match Type: One Day\n- League: O50 Div 3 - Peter Sherman Shield",
+      "ageGroup": "Over 50",
+      "teamAway": "GC 50's Thunder Div 3 White",
+      "teamHome": "Redlands Logan Green",
+      "gradeName": "O50 Div 3 - Peter Sherman Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sat, 19 July",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 9",
+      "gameID": "aefd27b7",
+      "gender": "Mixed",
+      "ground": "Runaway Bay Cricket Club / Sam Loxton Oval 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: GC Thunder Blue vs Brisbane White, Date and Time: Saturday, 19 July 2025, 10:00 AM, Location: Runaway Bay Cricket Club / Sam Loxton Oval 1\n- Round: Round 9, Match Type: One Day\n- League: O60 Div 2 - Kerry Emery Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "Brisbane White",
+      "teamHome": "GC Thunder Blue",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7a09c26e96.jpg",
+        "width": 1334,
+        "height": 750
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sat, 19 July",
+      "time": "10:00 AM",
+      "type": "One Day",
+      "round": "Round 9",
+      "gameID": "c0d924bc",
+      "gender": "Mixed",
+      "ground": "Runaway Bay Cricket Club / Sam Loxton Oval 2",
+      "prompt": "Upcoming cricket match details:\n- Teams: GC Thunder Gold vs Redlands Logan, Date and Time: Saturday, 19 July 2025, 10:00 AM, Location: Runaway Bay Cricket Club / Sam Loxton Oval 2\n- Round: Round 9, Match Type: One Day\n- League: O60 Div 2 - Kerry Emery Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "Redlands Logan",
+      "teamHome": "GC Thunder Gold",
+      "gradeName": "O60 Div 2 - Kerry Emery Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
             }
           }
         ]
@@ -362,26 +272,26 @@
     }
   ],
   "asset": {
-    "assetID": 1,
+    "assetID": 2,
     "assetTypeID": 1,
-    "assetCategoryID": 1,
-    "assetsLinkID": "de30b802bce4898274c301c63db322fc0d5991b5be67bead347234c3cb0a3100"
+    "assetCategoryID": 2,
+    "assetsLinkID": "ca24f5684b7e662a6ae743ba3e9a036a00a7f42d619936de43dc06db40c832b1"
   },
   "render": {
     "schedulerId": 207,
-    "renderId": 8265
+    "renderId": 8303
   },
   "account": {
     "accountId": 319
   },
   "timings": {
-    "FPS_MAIN": 780,
+    "FPS_MAIN": 405,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 270
+    "FPS_SCORECARD": 210
   },
-  "frames": [45, 225, 480, 735, 900],
+  "frames": [45, 195, 390, 525],
   "videoMeta": {
     "club": {
       "logo": {
@@ -471,9 +381,9 @@
       "metadata": {
         "title": "Fixtures",
         "titleSplit": ["Fixtures", ""],
-        "videoTitle": "Up Coming Fixtures",
+        "videoTitle": "Upcoming Fixtures",
         "compositionId": "CricketUpcoming",
-        "assetId": 1,
+        "assetId": 2,
         "assetTypeId": 1,
         "frames": [],
         "includeSponsors": true
@@ -485,7 +395,7 @@
           "primary": "#00843d",
           "secondary": "#ffcd00"
         },
-        "template": "Basic"
+        "template": "Brickwork"
       },
       "media": {
         "HeroImage": {
@@ -499,7 +409,7 @@
         },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3"
+          "audioOption": null
         }
       },
       "contentLayout": {
@@ -512,7 +422,78 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Graphics",
+        "useBackground": "Particle",
+        "mode": "dark",
+        "category": {
+          "slug": "Brickwork",
+          "name": "Brick Work",
+          "divideFixturesBy": {
+            "CricketUpcoming": 3,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
+            "CricketLadder": 1,
+            "CricketRoster": 1
+          },
+          "bundleAudio": {
+            "id": 2,
+            "Name": "CNSW Audio Bundle",
+            "createdAt": "2023-12-01T01:47:09.580Z",
+            "updatedAt": "2023-12-01T01:47:10.749Z",
+            "publishedAt": "2023-12-01T01:47:10.747Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "Name": "Free The People_Moonlight",
+                "createdAt": "2023-12-01T01:45:28.293Z",
+                "updatedAt": "2023-12-08T01:05:28.076Z",
+                "publishedAt": "2023-12-01T01:46:00.813Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Free_The_People_Moonlight_Instrumental_1701394307461_mixdown_24f07b8a36.mp3",
+                "CompositionID": "UpComingFixtures",
+                "ComponentName": "UpComing Fixtures"
+              },
+              {
+                "id": 7,
+                "Name": "Theres No Stopping Us",
+                "createdAt": "2023-12-01T01:46:41.359Z",
+                "updatedAt": "2023-12-02T01:47:10.682Z",
+                "publishedAt": "2023-12-01T01:46:42.964Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_c1c90e4960.mp3",
+                "CompositionID": "WeekendResults",
+                "ComponentName": "Weekend Results"
+              },
+              {
+                "id": 8,
+                "Name": "Speed Out burst",
+                "createdAt": "2023-12-01T01:47:58.371Z",
+                "updatedAt": "2023-12-02T01:47:28.510Z",
+                "publishedAt": "2023-12-01T01:48:00.149Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Readyand_Go_Speed_Outburst_Inst_fb6bfe8381.mp3",
+                "CompositionID": "Top5BattingList",
+                "ComponentName": "Top 5 Batting"
+              },
+              {
+                "id": 9,
+                "Name": "Jack out",
+                "createdAt": "2023-12-01T01:48:30.829Z",
+                "updatedAt": "2024-09-13T05:57:42.015Z",
+                "publishedAt": "2023-12-01T01:48:31.820Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Simon_Osterhold_poprockvol1_Jack_it_out_a927e941f5.mp3",
+                "CompositionID": "Top5BowlingList",
+                "ComponentName": "Top 5 Bowling"
+              },
+              {
+                "id": 10,
+                "Name": "Ill BeAlright",
+                "createdAt": "2023-12-01T01:48:53.834Z",
+                "updatedAt": "2023-12-02T01:47:39.492Z",
+                "publishedAt": "2023-12-01T01:48:54.706Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Tate_Kirgiss_Analog_Inspired_Ill_Be_Alright_Inst_8d6691a7ca.mp3",
+                "CompositionID": "Ladder",
+                "ComponentName": "Ladder"
+              }
+            ]
+          }
+        },
         "video": {
           "url": null,
           "fallbackUrl": null,
@@ -539,13 +520,13 @@
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-        "palette": "complementary",
+        "palette": "accentPrimary",
         "gradient": {
           "type": "primaryRadial",
           "direction": "DEFAULT"
         },
         "noise": {
-          "type": "floatingParticles"
+          "type": "gradientGrid"
         },
         "pattern": {
           "type": "dots",
@@ -557,11 +538,11 @@
           "animationSpeed": 0.5
         },
         "particle": {
-          "type": "snow",
-          "particleCount": "150",
-          "speed": 1,
+          "type": "lines",
+          "particleCount": "250",
+          "speed": 4,
           "direction": "down",
-          "animation": "fade"
+          "animation": "slide"
         }
       }
     }

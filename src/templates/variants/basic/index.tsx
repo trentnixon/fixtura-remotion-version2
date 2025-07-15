@@ -15,6 +15,7 @@ import { UIConfig } from "../../types/settingsConfig";
  */
 export const Basic: React.FC<{ data: FixturaDataset }> = ({ data }) => {
   //console.log("Basic data", data);
+  //templateVariation
   return (
     <BaseTemplate
       data={data}

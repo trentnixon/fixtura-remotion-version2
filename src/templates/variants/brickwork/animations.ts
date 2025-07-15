@@ -31,7 +31,7 @@ export const templateAnimations: AnimationConfig = {
             custom: { distance: 100 },
           },
           introOut: {
-            type: "fadeOut",
+            type: "collapseBottom",
             duration: 15,
             easing: { type: "inOut", base: "ease" },
           },
@@ -40,16 +40,17 @@ export const templateAnimations: AnimationConfig = {
       item: {
         logo: {
           itemIn: {
-            type: "slideInTop",
+            type: "slideInRight",
             duration: 30,
-            delay: 0,
+            delay: 10,
             easing: { type: "inOut", base: "ease" },
             custom: { distance: 100 },
           },
           itemOut: {
-            type: "fadeOut",
+            type: "slideOutLeft",
             duration: 15,
             easing: { type: "inOut", base: "ease" },
+            custom: { distance: 100 },
           },
         },
       },
@@ -57,14 +58,14 @@ export const templateAnimations: AnimationConfig = {
     sponsor: {
       logo: {
         introIn: {
-          type: "slideInLeft",
+          type: "slideInBottom",
           duration: 10,
-          delay: 0,
+          delay: 30,
           easing: { type: "inOut", base: "ease" },
           custom: { distance: 100 },
         },
         introOut: {
-          type: "fadeOut",
+          type: "collapseRight",
           duration: 5,
           easing: { type: "inOut", base: "ease" },
         },
@@ -161,7 +162,7 @@ export const templateAnimations: AnimationConfig = {
       },
       itemContainerOuter: {
         containerIn: {
-          type: "slideInBottom",
+          type: "revealLeft",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
@@ -174,7 +175,7 @@ export const templateAnimations: AnimationConfig = {
       },
       itemContainerInner: {
         containerIn: {
-          type: "slideInBottom",
+          type: "revealLeft",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
@@ -187,11 +188,12 @@ export const templateAnimations: AnimationConfig = {
       },
       itemContainerSecondary: {
         containerIn: {
-          type: "slideInBottom",
+          type: "revealRight",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
+          delay: 15,
           custom: {
-            distance: 200,
+            distance: 100,
           },
         },
         containerOut: {

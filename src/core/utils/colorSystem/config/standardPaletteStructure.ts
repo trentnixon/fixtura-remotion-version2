@@ -1,3 +1,4 @@
+import { ThemeMode } from "../../../../templates/types/TemplateThemeConfig";
 import {
   ColorVariations,
   TextColors,
@@ -16,6 +17,7 @@ export const createStandardPaletteStructure = (
   secondaryColor: string,
   colorVariations: ColorVariations,
   textColors: TextColors,
+  useMode: ThemeMode,
   shadows: Shadows,
   gradients: {
     primary: GradientOptions;
@@ -47,6 +49,16 @@ export const createStandardPaletteStructure = (
     return whiteContrast > blackContrast ? "#FFFFFF" : "#000000";
   };
 
+  const backgroundTransparency = (baseBg: string) => {
+    return {
+      subtle: tinycolor(baseBg).setAlpha(0.1).toRgbString(),
+      low: tinycolor(baseBg).setAlpha(0.25).toRgbString(),
+      medium: tinycolor(baseBg).setAlpha(0.5).toRgbString(),
+      high: tinycolor(baseBg).setAlpha(0.65).toRgbString(),
+      strong: tinycolor(baseBg).setAlpha(0.8).toRgbString(),
+    };
+  };
+
   //console.log("[gradients]", gradients);
   // Return the standard palette structure
   return {
@@ -60,6 +72,12 @@ export const createStandardPaletteStructure = (
       gradient: gradients,
     },
     container: {
+      background: useMode.container.background,
+      backgroundAlt: useMode.container.backgroundAlt,
+      //backgroundTransparent: useMode.container.backgroundTransparent,
+      backgroundTransparent: backgroundTransparency(
+        useMode.container.background,
+      ),
       main: mainColor,
       light: tinycolor(mainColor).lighten(20).toString(),
       dark: tinycolor(mainColor).lighten(5).toString(),
@@ -97,6 +115,13 @@ export const createStandardPaletteStructure = (
         accent: secondaryColor,
       },
       onContainer: {
+        title: useMode.text.title,
+        copy: useMode.text.copy,
+        // Optionally, add a "safe" field if you want to ensure contrast:
+        safeCopy: ensureContrast(
+          useMode.container.background,
+          useMode.text.copy,
+        ),
         primary: ensureContrast(colorVariations.light, textColors.onPrimary),
         secondary: ensureContrast(
           colorVariations.lighter,

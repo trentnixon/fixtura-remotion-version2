@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -14,7 +14,8 @@ export const slideInLeft: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   const translateX = interpolate(
     frame,
@@ -50,7 +51,8 @@ export const slideInRight: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   const translateX = interpolate(frame, [startFrame, endFrame], [distance, 0], {
     extrapolateLeft: "clamp",
@@ -81,7 +83,8 @@ export const slideInTop: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   const translateY = interpolate(
     frame,
@@ -117,7 +120,8 @@ export const slideInBottom: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   const translateY = interpolate(frame, [startFrame, endFrame], [distance, 0], {
     extrapolateLeft: "clamp",
@@ -148,7 +152,8 @@ export const slideOutLeft: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   // Calculate the duration of the animation
   const duration = endFrame - startFrame;
@@ -198,7 +203,8 @@ export const slideOutRight: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   // Calculate the duration of the animation
   const duration = endFrame - startFrame;
@@ -243,7 +249,8 @@ export const slideOutTop: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   // Calculate the duration of the animation
   const duration = endFrame - startFrame;
@@ -293,7 +300,8 @@ export const slideOutBottom: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const distance = config.custom?.distance || 100;
+  const distance =
+    typeof config.custom?.distance === "number" ? config.custom.distance : 100;
 
   // Calculate the duration of the animation
   const duration = endFrame - startFrame;

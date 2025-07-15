@@ -9,6 +9,7 @@ import {
   darkenColor,
   setOpacity,
 } from "./core/baseManipulation";
+import { ThemeMode } from "../../../templates/types/TemplateThemeConfig";
 
 /**
  * Creates a comprehensive color system based on primary and secondary colors
@@ -19,6 +20,7 @@ import {
 export const createColorSystem = (
   primaryColor: string,
   secondaryColor: string,
+  useMode: ThemeMode,
 ): ColorSystem => {
   // Validate input colors and use fallbacks if necessary
   const primary = getValidColorOrFallback(primaryColor, "PRIMARY");
@@ -32,6 +34,7 @@ export const createColorSystem = (
     primary,
     secondary,
     paletteConfigurations,
+    useMode,
   );
 
   // Extract variations from the palettes for easy access

@@ -26,7 +26,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
         backgroundColor="none"
         animation={{
           type: "none",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 25,
           custom: {
             distance: 200,
@@ -35,7 +35,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
         animationDelay={0}
         exitAnimation={{
           type: "none",
-          easing: "easeInOut",
+          easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
             distance: 100,

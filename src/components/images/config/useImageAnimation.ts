@@ -1,5 +1,5 @@
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { ImageAnimationConfig } from "./types";
+import { ImageAnimationConfig } from "../../easing/types";
 import React from "react";
 
 // Import all animations

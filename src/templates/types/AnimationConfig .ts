@@ -1,4 +1,4 @@
-import { ImageEasingType } from "../../components/images/config/types";
+import { ImageEasingType } from "../../components/easing/types";
 
 export interface AnimationConfig {
   image: ImageConfig;

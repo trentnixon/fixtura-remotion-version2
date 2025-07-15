@@ -31,7 +31,17 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
       dataTheme.primary || settings.colors?.primary || "#111111";
     const secondaryColor =
       dataTheme.secondary || settings.colors?.secondary || "#ffffff";
-    const colorSystem = createColorSystem(primaryColor, secondaryColor);
+
+    const selectedMode = templateVariation.mode || "light";
+    const useMode = settings.mode[selectedMode];
+    console.log("[ThemeContext] selectedMode", selectedMode);
+    console.log("[ThemeContext] settings", useMode);
+
+    const colorSystem = createColorSystem(
+      primaryColor,
+      secondaryColor,
+      useMode,
+    );
 
     // Helper function to get active palette
     const getActivePalette = (paletteName?: string): DesignPalette => {

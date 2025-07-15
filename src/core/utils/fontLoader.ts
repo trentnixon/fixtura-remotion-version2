@@ -80,13 +80,13 @@ export const fontPathMap: Record<string, string> = {
 
   // ===== Specialty Fonts =====
   // Used for specific design elements or accent text
-  "Franklin Gothic Book":
-    "fonts/Franklin_Gothic_Book/Franklin_Gothic_Book_Regular.ttf",
+  "Franklin Gothic Book": "fonts/Franklin_Gothic_Book/FRABK.TTF",
+
   "Gloss And Bloom": "fonts/Gloss_And_Bloom/Gloss_And_Bloom.ttf",
   Impact: "fonts/impact/impact.ttf",
   Lemon: "fonts/Lemon/Lemon-Regular.ttf",
   Resolve: "fonts/Resolve/Resolve-Regular.otf",
-  "Slightly Marker": "fonts/Slightly_Marker/SlightlyMarker.ttf",
+  "Slightly Marker": "fonts/Slightly_Marker/Slightly_Marker.otf",
 };
 
 // System fonts that don't need to be loaded

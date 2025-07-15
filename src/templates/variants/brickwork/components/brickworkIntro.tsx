@@ -42,7 +42,7 @@ export const BrickworkIntro: React.FC = () => {
             textAlign="center"
             type="title"
             variant="onBackgroundDark"
-            letterAnimation="word"
+            letterAnimation="none"
             animation={TextAnimations.mainTitle}
             exitAnimation={TextAnimations.introOut}
             exitFrame={TextAnimations.introExitFrame}
@@ -56,9 +56,9 @@ export const BrickworkIntro: React.FC = () => {
         <div className="overflow-hidden">
           <AnimatedText
             type="subtitle"
-            textAlign="left"
+            textAlign="center"
             variant="onBackgroundDark"
-            letterAnimation="word"
+            letterAnimation="none"
             animation={TextAnimations.clubName}
             exitAnimation={TextAnimations.introOut}
             exitFrame={TextAnimations.introExitFrame}

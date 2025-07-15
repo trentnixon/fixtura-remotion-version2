@@ -78,7 +78,6 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
   delay,
   bgColorClass,
   LadderRowHeight,
-  place,
 }) => {
   return (
     <div
@@ -87,19 +86,16 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
         height: `${LadderRowHeight}px`,
       }}
     >
-      {/* Place column */}
-      <div className="w-8 text-center font-bold">{place}</div>
-
       {/* Team info in a branded box */}
       <div
         className="flex items-center bg-black/40 rounded-lg mr-3 p-1"
         style={{ width: "70%" }}
       >
         <div className="w-10 flex-shrink-0 mr-2 overflow-hidden">
-          {team.teamLogo ? (
+          {team.clubLogo || team.playHQLogo ? (
             <div className="rounded-full  border-white/20">
               <TeamLogo
-                logo={team.teamLogo}
+                logo={team.clubLogo || team.playHQLogo}
                 teamName={team.teamName}
                 delay={delay}
               />
@@ -116,19 +112,19 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
       {/* Stats in separated boxes */}
       <div className="flex flex-1 justify-evenly">
         <div className="w-8 text-center">
-          <LadderTeamPoints value={team.P} delay={delay} />
+          <LadderTeamPoints value={team?.P || 0} delay={delay} />
         </div>
         <div className="w-8 text-center">
-          <LadderTeamPoints value={team.W} delay={delay} />
+          <LadderTeamPoints value={team?.W || 0} delay={delay} />
         </div>
         <div className="w-8 text-center">
-          <LadderTeamPoints value={team.L} delay={delay} />
+          <LadderTeamPoints value={team?.L || 0} delay={delay} />
         </div>
         <div className="w-8 text-center">
-          <LadderTeamPoints value={team.BYE} delay={delay} />
+          <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
         </div>
         <div className="w-16 bg-gray-700/50 rounded-md text-center">
-          <LadderTeamPoints value={team.PTS} delay={delay} />
+          <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
         </div>
       </div>
     </div>
@@ -149,43 +145,44 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
         height: `${LadderRowHeight}px`,
       }}
     >
-      {/* Team name on left */}
-      <div className="flex-1 mr-2">
+      {/* Team name and logo container with fixed width */}
+      <div
+        className="flex items-center justify-between mr-2"
+        style={{ width: "70%" }}
+      >
         <LadderTeamName value={team.teamName} delay={delay} />
-      </div>
-
-      {/* Stats in alternating backgrounds */}
-      <div className="flex">
-        <div className="w-10 bg-black/20 rounded-l-md mx-px text-center">
-          <LadderTeamPoints value={team.P} delay={delay} />
-        </div>
-        <div className="w-10 bg-black/10 mx-px text-center">
-          <LadderTeamPoints value={team.W} delay={delay} />
-        </div>
-        <div className="w-10 bg-black/20 mx-px text-center">
-          <LadderTeamPoints value={team.L} delay={delay} />
-        </div>
-        <div className="w-10 bg-black/10 mx-px text-center">
-          <LadderTeamPoints value={team.BYE} delay={delay} />
-        </div>
-        <div className="w-16 bg-black/30 rounded-r-md mx-px text-center">
-          <LadderTeamPoints value={team.PTS} delay={delay} />
+        <div className="w-10 ml-2 overflow-hidden flex-shrink-0">
+          {team.clubLogo || team.playHQLogo ? (
+            <div className="rounded-full">
+              <TeamLogo
+                logo={team.clubLogo || team.playHQLogo}
+                teamName={team.teamName}
+                delay={delay}
+              />
+            </div>
+          ) : (
+            <div className="w-8 h-8 bg-gray-300 rounded-full" />
+          )}
         </div>
       </div>
 
-      {/* Logo on right */}
-      <div className="w-10 ml-3 overflow-hidden">
-        {team.teamLogo ? (
-          <div className="rounded-full">
-            <TeamLogo
-              logo={team.teamLogo}
-              teamName={team.teamName}
-              delay={delay}
-            />
-          </div>
-        ) : (
-          <div className="w-8 h-8 bg-gray-300 rounded-full" />
-        )}
+      {/* Stats in alternating backgrounds, matching StandardLadderRow widths */}
+      <div className="flex flex-1 justify-evenly bg-black/20">
+        <div className="w-8 mx-px text-center">
+          <LadderTeamPoints value={team?.P || 0} delay={delay} />
+        </div>
+        <div className="w-8 mx-px text-center">
+          <LadderTeamPoints value={team?.W || 0} delay={delay} />
+        </div>
+        <div className="w-8 mx-px text-center">
+          <LadderTeamPoints value={team?.L || 0} delay={delay} />
+        </div>
+        <div className="w-8 mx-px text-center">
+          <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
+        </div>
+        <div className="w-16 mx-px text-center">
+          <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
+        </div>
       </div>
     </div>
   );
@@ -212,10 +209,10 @@ export const CardLadderRow: React.FC<BaseLayoutProps> = ({
           style={{ width: "50%" }}
         >
           <div className="w-10 flex-shrink-0 mr-2 overflow-hidden">
-            {team.teamLogo ? (
+            {team.clubLogo || team.playHQLogo ? (
               <div className="rounded-full p-1 bg-white/10">
                 <TeamLogo
-                  logo={team.teamLogo}
+                  logo={team.clubLogo || team.playHQLogo}
                   teamName={team.teamName}
                   delay={delay}
                 />
@@ -234,19 +231,19 @@ export const CardLadderRow: React.FC<BaseLayoutProps> = ({
         <div className="flex flex-1 items-center justify-end border-l border-white/10 pr-2">
           <div className="flex space-x-1">
             <div className="w-8 text-center">
-              <LadderTeamPoints value={team.P} delay={delay} />
+              <LadderTeamPoints value={team?.P || 0} delay={delay} />
             </div>
             <div className="w-8 text-center">
-              <LadderTeamPoints value={team.W} delay={delay} />
+              <LadderTeamPoints value={team?.W || 0} delay={delay} />
             </div>
             <div className="w-8 text-center">
-              <LadderTeamPoints value={team.L} delay={delay} />
+              <LadderTeamPoints value={team?.L || 0} delay={delay} />
             </div>
             <div className="w-8 text-center">
-              <LadderTeamPoints value={team.BYE} delay={delay} />
+              <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
             </div>
             <div className="w-16 text-center border-l border-white/10 pl-1">
-              <LadderTeamPoints value={team.PTS} delay={delay} />
+              <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
             </div>
           </div>
         </div>
@@ -276,10 +273,10 @@ export const CenteredLogoLadderRow: React.FC<BaseLayoutProps> = ({
 
       {/* Logo in center */}
       <div className="col-span-2 flex justify-center">
-        {team.teamLogo ? (
+        {team.clubLogo || team.playHQLogo ? (
           <div className="rounded-full bg-white/10 p-1 w-10 h-10 flex items-center justify-center">
             <TeamLogo
-              logo={team.teamLogo}
+              logo={team.clubLogo || team.playHQLogo}
               teamName={team.teamName}
               delay={delay}
             />
@@ -292,19 +289,19 @@ export const CenteredLogoLadderRow: React.FC<BaseLayoutProps> = ({
       {/* Stats on right */}
       <div className="col-span-7 grid grid-cols-5 gap-1">
         <div className="text-center">
-          <LadderTeamPoints value={team.P} delay={delay} />
+          <LadderTeamPoints value={team?.P || 0} delay={delay} />
         </div>
         <div className="text-center">
-          <LadderTeamPoints value={team.W} delay={delay} />
+          <LadderTeamPoints value={team?.W || 0} delay={delay} />
         </div>
         <div className="text-center">
-          <LadderTeamPoints value={team.L} delay={delay} />
+          <LadderTeamPoints value={team?.L || 0} delay={delay} />
         </div>
         <div className="text-center">
-          <LadderTeamPoints value={team.BYE} delay={delay} />
+          <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
         </div>
         <div className="text-center bg-blue-900/40 rounded">
-          <LadderTeamPoints value={team.PTS} delay={delay} />
+          <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
         </div>
       </div>
     </div>

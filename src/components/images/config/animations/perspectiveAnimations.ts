@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -15,8 +15,14 @@ export const flipX: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default rotation range (-90 to 0 degrees)
-  const startRotation = config.custom?.startRotation || -90;
-  const endRotation = config.custom?.endRotation || 0;
+  const startRotation =
+    typeof config.custom?.startRotation === "number"
+      ? config.custom.startRotation
+      : -90;
+  const endRotation =
+    typeof config.custom?.endRotation === "number"
+      ? config.custom.endRotation
+      : 0;
 
   const rotation = interpolate(
     frame,
@@ -42,7 +48,10 @@ export const flipX: AnimationFunction = (
 
   return {
     transform: `perspective(1000px) rotateX(${rotation}deg)`,
-    transformOrigin: config.custom?.origin || "center bottom",
+    transformOrigin:
+      typeof config.custom?.origin === "string"
+        ? config.custom.origin
+        : "center bottom",
     opacity,
     backfaceVisibility: "hidden",
   };
@@ -60,8 +69,14 @@ export const flipY: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default rotation range (-90 to 0 degrees)
-  const startRotation = config.custom?.startRotation || -90;
-  const endRotation = config.custom?.endRotation || 0;
+  const startRotation =
+    typeof config.custom?.startRotation === "number"
+      ? config.custom.startRotation
+      : -90;
+  const endRotation =
+    typeof config.custom?.endRotation === "number"
+      ? config.custom.endRotation
+      : 0;
 
   const rotation = interpolate(
     frame,
@@ -87,7 +102,10 @@ export const flipY: AnimationFunction = (
 
   return {
     transform: `perspective(1000px) rotateY(${rotation}deg)`,
-    transformOrigin: config.custom?.origin || "center left",
+    transformOrigin:
+      typeof config.custom?.origin === "string"
+        ? config.custom.origin
+        : "center left",
     opacity,
     backfaceVisibility: "hidden",
   };
@@ -109,7 +127,8 @@ export const swing: AnimationFunction = (
   });
 
   // Amplitude of the swing (degrees)
-  const amplitude = config.custom?.amplitude || 30;
+  const amplitude =
+    typeof config.custom?.amplitude === "number" ? config.custom.amplitude : 30;
 
   // Create a damped oscillation
   const swingAngle =
@@ -128,7 +147,10 @@ export const swing: AnimationFunction = (
 
   return {
     transform: `rotate(${swingAngle}deg)`,
-    transformOrigin: config.custom?.origin || "top center",
+    transformOrigin:
+      typeof config.custom?.origin === "string"
+        ? config.custom.origin
+        : "top center",
     opacity,
   };
 };
@@ -145,8 +167,12 @@ export const zoomPerspective: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Scale range (0.5 to 1)
-  const startScale = config.custom?.startScale || 0.5;
-  const endScale = config.custom?.endScale || 1;
+  const startScale =
+    typeof config.custom?.startScale === "number"
+      ? config.custom.startScale
+      : 0.5;
+  const endScale =
+    typeof config.custom?.endScale === "number" ? config.custom.endScale : 1;
 
   const scale = interpolate(
     frame,
@@ -160,8 +186,14 @@ export const zoomPerspective: AnimationFunction = (
   );
 
   // Perspective range (500 to 1000)
-  const startPerspective = config.custom?.startPerspective || 500;
-  const endPerspective = config.custom?.endPerspective || 1000;
+  const startPerspective =
+    typeof config.custom?.startPerspective === "number"
+      ? config.custom.startPerspective
+      : 500;
+  const endPerspective =
+    typeof config.custom?.endPerspective === "number"
+      ? config.custom.endPerspective
+      : 1000;
 
   const perspective = interpolate(
     frame,
@@ -215,8 +247,10 @@ export const depthOfField: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Blur range (10 to 0)
-  const startBlur = config.custom?.startBlur || 10;
-  const endBlur = config.custom?.endBlur || 0;
+  const startBlur =
+    typeof config.custom?.startBlur === "number" ? config.custom.startBlur : 10;
+  const endBlur =
+    typeof config.custom?.endBlur === "number" ? config.custom.endBlur : 0;
 
   const blurAmount = interpolate(
     frame,
@@ -230,8 +264,12 @@ export const depthOfField: AnimationFunction = (
   );
 
   // Scale range (0.9 to 1)
-  const startScale = config.custom?.startScale || 0.9;
-  const endScale = config.custom?.endScale || 1;
+  const startScale =
+    typeof config.custom?.startScale === "number"
+      ? config.custom.startScale
+      : 0.9;
+  const endScale =
+    typeof config.custom?.endScale === "number" ? config.custom.endScale : 1;
 
   const scale = interpolate(
     frame,

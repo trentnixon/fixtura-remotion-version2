@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -14,7 +14,10 @@ export const zoomIn: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const initialScale = config.custom?.initialScale || 0.8;
+  const initialScale =
+    typeof config.custom?.initialScale === "number"
+      ? config.custom.initialScale
+      : 0.8;
 
   const scale = interpolate(frame, [startFrame, endFrame], [initialScale, 1], {
     extrapolateLeft: "clamp",
@@ -45,7 +48,10 @@ export const zoomOut: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const initialScale = config.custom?.initialScale || 1.2;
+  const initialScale =
+    typeof config.custom?.initialScale === "number"
+      ? config.custom.initialScale
+      : 1.2;
 
   const scale = interpolate(frame, [startFrame, endFrame], [initialScale, 1], {
     extrapolateLeft: "clamp",

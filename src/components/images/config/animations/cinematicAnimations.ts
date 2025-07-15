@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**

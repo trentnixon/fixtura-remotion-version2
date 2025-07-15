@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -38,7 +38,10 @@ export const saturate: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default saturation range (0 to 1.5)
-  const maxSaturation = config.custom?.maxSaturation || 1.5;
+  const maxSaturation =
+    typeof config.custom?.maxSaturation === "number"
+      ? config.custom.maxSaturation
+      : 1.5;
 
   const saturation = interpolate(
     frame,
@@ -104,12 +107,13 @@ export const glitch: AnimationFunction = (
   config,
 ): React.CSSProperties => {
   // Intensity of the glitch effect (0-10)
-  const intensity = config.custom?.intensity || 5;
+  const intensity =
+    typeof config.custom?.intensity === "number" ? config.custom.intensity : 5;
 
   // Create random offsets based on the current frame
   // Using sine functions with different frequencies to create a pseudo-random pattern
-  const xOffset = Math.sin(frame * 0.5) * (intensity * 0.5);
-  const yOffset = Math.cos(frame * 0.3) * (intensity * 0.2);
+  const xOffset = Math.sin(Number(frame) * 0.5) * (Number(intensity) * 0.5);
+  const yOffset = Math.cos(Number(frame) * 0.3) * (Number(intensity) * 0.2);
 
   // Color channel splitting
   //const redOffset = Math.sin(frame * 0.4) * (intensity * 0.3);
@@ -122,7 +126,7 @@ export const glitch: AnimationFunction = (
   });
 
   // Create a complex filter for the glitch effect
-  const hueRotate = (frame % 360) * (intensity * 0.05);
+  const hueRotate = (Number(frame) % 360) * (Number(intensity) * 0.05);
 
   return {
     opacity,
@@ -143,10 +147,14 @@ export const ripple: AnimationFunction = (
   config,
 ): React.CSSProperties => {
   // Amplitude of the wave (0-10)
-  const amplitude = config.custom?.amplitude || 5;
+  const amplitude =
+    typeof config.custom?.amplitude === "number" ? config.custom.amplitude : 5;
 
   // Frequency of the wave
-  const frequency = config.custom?.frequency || 0.2;
+  const frequency =
+    typeof config.custom?.frequency === "number"
+      ? config.custom.frequency
+      : 0.2;
 
   // Calculate progress through the animation (0-1)
   const progress = interpolate(frame, [startFrame, endFrame], [0, 1], {
@@ -163,8 +171,12 @@ export const ripple: AnimationFunction = (
   // Create a wave effect using sine functions
   // This is a simplified version - in practice, you'd use a more complex approach
   // with CSS filters or WebGL for a true ripple effect
-  const distortionX = Math.sin(progress * Math.PI * frequency * 10) * amplitude;
-  const distortionY = Math.cos(progress * Math.PI * frequency * 10) * amplitude;
+  const distortionX =
+    Math.sin(Number(progress) * Math.PI * Number(frequency) * 10) *
+    Number(amplitude);
+  const distortionY =
+    Math.cos(Number(progress) * Math.PI * Number(frequency) * 10) *
+    Number(amplitude);
 
   return {
     opacity,

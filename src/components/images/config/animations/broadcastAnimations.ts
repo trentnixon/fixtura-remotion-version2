@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -13,7 +13,9 @@ export const lowerThirdIn: AnimationFunction = (
   config,
 ): React.CSSProperties => {
   // Use bounce easing by default for this animation
-  const easingFn = getImageEasingFunction(config.easing || "bounce");
+  const easingFn = getImageEasingFunction(
+    config.easing || { type: "inOut", base: "ease" },
+  );
 
   const translateY = interpolate(frame, [startFrame, endFrame], [100, 0], {
     extrapolateLeft: "clamp",
@@ -46,7 +48,9 @@ export const lowerThirdOut: AnimationFunction = (
   endFrame,
   config,
 ): React.CSSProperties => {
-  const easingFn = getImageEasingFunction(config.easing || "easeIn");
+  const easingFn = getImageEasingFunction(
+    config.easing || { type: "inOut", base: "ease" },
+  );
 
   const translateY = interpolate(frame, [startFrame, endFrame], [0, 100], {
     extrapolateLeft: "clamp",
@@ -83,7 +87,9 @@ export const scoreboardIn: AnimationFunction = (
   config,
 ): React.CSSProperties => {
   // Use elastic easing by default for this animation
-  const easingFn = getImageEasingFunction(config.easing || "elastic");
+  const easingFn = getImageEasingFunction(
+    config.easing || { type: "inOut", base: "ease" },
+  );
 
   // Direction of the animation (left, right, top, bottom)
   const direction = config.custom?.direction || "left";
@@ -91,7 +97,7 @@ export const scoreboardIn: AnimationFunction = (
   let transform = "";
 
   switch (direction) {
-    case "right":
+    case "right": {
       const rightTranslate = interpolate(
         frame,
         [startFrame, endFrame],
@@ -104,8 +110,8 @@ export const scoreboardIn: AnimationFunction = (
       );
       transform = `translateX(${rightTranslate}%)`;
       break;
-
-    case "top":
+    }
+    case "top": {
       const topTranslate = interpolate(
         frame,
         [startFrame, endFrame],
@@ -118,8 +124,8 @@ export const scoreboardIn: AnimationFunction = (
       );
       transform = `translateY(${topTranslate}%)`;
       break;
-
-    case "bottom":
+    }
+    case "bottom": {
       const bottomTranslate = interpolate(
         frame,
         [startFrame, endFrame],
@@ -132,9 +138,9 @@ export const scoreboardIn: AnimationFunction = (
       );
       transform = `translateY(${bottomTranslate}%)`;
       break;
-
+    }
     case "left":
-    default:
+    default: {
       const leftTranslate = interpolate(
         frame,
         [startFrame, endFrame],
@@ -147,6 +153,7 @@ export const scoreboardIn: AnimationFunction = (
       );
       transform = `translateX(${leftTranslate}%)`;
       break;
+    }
   }
 
   return {
@@ -165,7 +172,9 @@ export const statReveal: AnimationFunction = (
   config,
 ): React.CSSProperties => {
   // Use elastic easing by default for this animation
-  const easingFn = getImageEasingFunction(config.easing || "easeOut");
+  const easingFn = getImageEasingFunction(
+    config.easing || { type: "inOut", base: "ease" },
+  );
 
   // Calculate the midpoint of the animation
   const midpoint = startFrame + (endFrame - startFrame) * 0.7;
@@ -202,6 +211,9 @@ export const statReveal: AnimationFunction = (
         extrapolateRight: "clamp",
       },
     ),
-    transformOrigin: config.custom?.origin || "center center",
+    transformOrigin:
+      typeof config.custom?.origin === "string"
+        ? config.custom.origin
+        : "center center",
   };
 };

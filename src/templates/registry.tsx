@@ -8,22 +8,23 @@ export type TemplateId = keyof typeof templateRegistry;
 /**
  * Central registry of all available templates
  */
+const Variants = [
+  "Graphics",
+  "Solid",
+  "Image",
+  "Gradient",
+  /* "Video", */
+  "Particle",
+  "Pattern",
+];
 export const templateRegistry = {
   Basic: {
     component: Basic,
-    variants: [
-      "Graphics",
-      "Solid",
-      "Image",
-      "Gradient",
-      "Video",
-      "Particle",
-      "Pattern",
-    ],
+    variants: Variants,
   },
   Brickwork: {
     component: Brickwork,
-    variants: ["Graphics"],
+    variants: Variants,
   },
 };
 

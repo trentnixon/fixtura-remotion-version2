@@ -73,6 +73,7 @@ export interface VideoContentLayout {
 
 export interface VideoTemplateVariation {
   useBackground: string;
+  mode?: string;
   video?: {
     url: string;
     fallbackUrl?: string;

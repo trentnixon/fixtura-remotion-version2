@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -15,8 +15,12 @@ export const kenBurns: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Scale range (default: 1.0 to 1.1)
-  const startScale = config.custom?.startScale || 1.0;
-  const endScale = config.custom?.endScale || 1.1;
+  const startScale =
+    typeof config.custom?.startScale === "number"
+      ? config.custom.startScale
+      : 1.0;
+  const endScale =
+    typeof config.custom?.endScale === "number" ? config.custom.endScale : 1.1;
 
   const scale = interpolate(
     frame,
@@ -30,8 +34,8 @@ export const kenBurns: AnimationFunction = (
   );
 
   // Optional pan effect
-  const panX = config.custom?.panX || 0;
-  const panY = config.custom?.panY || 0;
+  const panX = typeof config.custom?.panX === "number" ? config.custom.panX : 0;
+  const panY = typeof config.custom?.panY === "number" ? config.custom.panY : 0;
 
   const translateX = interpolate(frame, [startFrame, endFrame], [0, panX], {
     extrapolateLeft: "clamp",
@@ -50,10 +54,15 @@ export const kenBurns: AnimationFunction = (
     extrapolateRight: "clamp",
   });
 
+  const origin =
+    typeof config.custom?.origin === "string"
+      ? config.custom.origin
+      : "center center";
+
   return {
     opacity,
     transform: `scale(${scale}) translate(${translateX}px, ${translateY}px)`,
-    transformOrigin: config.custom?.origin || "center center",
+    transformOrigin: origin,
   };
 };
 
@@ -76,9 +85,14 @@ export const pulse: AnimationFunction = (
   //const totalDuration = endFrame - startFrame;
 
   // Get custom parameters or use defaults
-  const pulseCount = config.custom?.pulseCount || 2; // How many pulse cycles to complete
-  const minScale = config.custom?.minScale || 1.0;
-  const maxScale = config.custom?.maxScale || 1.1;
+  const pulseCount =
+    typeof config.custom?.pulseCount === "number"
+      ? config.custom.pulseCount
+      : 2; // How many pulse cycles to complete
+  const minScale =
+    typeof config.custom?.minScale === "number" ? config.custom.minScale : 1.0;
+  const maxScale =
+    typeof config.custom?.maxScale === "number" ? config.custom.maxScale : 1.1;
 
   // Calculate the current pulse cycle (0 to pulseCount)
   const currentCycle = progress * pulseCount;
@@ -97,10 +111,15 @@ export const pulse: AnimationFunction = (
     extrapolateRight: "clamp",
   });
 
+  const origin =
+    typeof config.custom?.origin === "string"
+      ? config.custom.origin
+      : "center center";
+
   return {
     opacity,
     transform: `scale(${scale})`,
-    transformOrigin: config.custom?.origin || "center center",
+    transformOrigin: origin,
   };
 };
 
@@ -115,7 +134,10 @@ export const rotate: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const maxRotation = config.custom?.maxRotation || 360;
+  const maxRotation =
+    typeof config.custom?.maxRotation === "number"
+      ? config.custom.maxRotation
+      : 360;
 
   const rotation = interpolate(
     frame,
@@ -150,7 +172,10 @@ export const rotateIn: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const initialRotation = config.custom?.initialRotation || -90;
+  const initialRotation =
+    typeof config.custom?.initialRotation === "number"
+      ? config.custom.initialRotation
+      : -90;
 
   const rotation = interpolate(
     frame,
@@ -186,7 +211,10 @@ export const rotateOut: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const finalRotation = config.custom?.finalRotation || 90;
+  const finalRotation =
+    typeof config.custom?.finalRotation === "number"
+      ? config.custom.finalRotation
+      : 90;
 
   const rotation = interpolate(
     frame,

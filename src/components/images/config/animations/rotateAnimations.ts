@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -15,7 +15,8 @@ export const rotate: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default rotation is 360 degrees (full rotation)
-  const degrees = config.custom?.degrees || 360;
+  const degrees =
+    typeof config.custom?.degrees === "number" ? config.custom.degrees : 360;
 
   // Direction of rotation (1 for clockwise, -1 for counter-clockwise)
   const direction = config.custom?.direction === "counterclockwise" ? -1 : 1;
@@ -36,10 +37,15 @@ export const rotate: AnimationFunction = (
     extrapolateRight: "clamp",
   });
 
+  const origin =
+    typeof config.custom?.origin === "string"
+      ? config.custom.origin
+      : "center center";
+
   return {
     opacity,
     transform: `rotate(${rotation}deg)`,
-    transformOrigin: config.custom?.origin || "center center",
+    transformOrigin: origin,
   };
 };
 
@@ -55,7 +61,8 @@ export const rotateIn: AnimationFunction = (
   const easingFn = getImageEasingFunction(config.easing);
 
   // Default rotation is 90 degrees
-  const degrees = config.custom?.degrees || 90;
+  const degrees =
+    typeof config.custom?.degrees === "number" ? config.custom.degrees : 90;
 
   // Direction of rotation (1 for clockwise, -1 for counter-clockwise)
   const direction = config.custom?.direction === "counterclockwise" ? -1 : 1;
@@ -77,10 +84,15 @@ export const rotateIn: AnimationFunction = (
     easing: easingFn,
   });
 
+  const origin =
+    typeof config.custom?.origin === "string"
+      ? config.custom.origin
+      : "center center";
+
   return {
     opacity,
     transform: `rotate(${rotation}deg)`,
-    transformOrigin: config.custom?.origin || "center center",
+    transformOrigin: origin,
   };
 };
 
@@ -95,7 +107,8 @@ export const rotateOut: AnimationFunction = (
 ): React.CSSProperties => {
   const easingFn = getImageEasingFunction(config.easing);
 
-  const degrees = config.custom?.degrees || 90;
+  const degrees =
+    typeof config.custom?.degrees === "number" ? config.custom.degrees : 90;
 
   // Direction of rotation (1 for clockwise, -1 for counter-clockwise)
   const direction = config.custom?.direction === "counterclockwise" ? -1 : 1;
@@ -125,9 +138,14 @@ export const rotateOut: AnimationFunction = (
     },
   );
 
+  const origin =
+    typeof config.custom?.origin === "string"
+      ? config.custom.origin
+      : "center center";
+
   return {
     opacity,
     transform: `rotate(${rotation}deg)`,
-    transformOrigin: config.custom?.origin || "center center",
+    transformOrigin: origin,
   };
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { LadderData } from "../../types";
-import TableHeader from "../../modules/TableHeader/header";
-import StandardRow from "../TeamRows/StandardRow";
+import { TableHeaderWrapped } from "../../modules/TableHeader/header";
+import { StandardRowWrapped } from "../TeamRows/StandardRow";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { SponsorFooter } from "../../../sponsorFooter";
@@ -10,10 +10,9 @@ interface LadderDisplayProps {
   ladder: LadderData;
 }
 
-export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
+export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
-  console.log("[ladder]", ladder);
   const { League, gradeName, bias, assignSponsors } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
@@ -23,38 +22,37 @@ export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
     League.length,
   );
 
-  console.log("[assignSponsors]", assignSponsors);
   return (
     <div className="p-0 flex flex-col w-full h-full">
       {/* <LadderHeader title={name} /> */}
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-8 p-4 bg-black/60 rounded-lg overflow-hidden"
+        className="flex-1 flex flex-col mx-8 p-4 bg-black/60 rounded-none overflow-hidden"
         backgroundColor="none"
         animation={{
-          type: "revealBottom",
+          type: "slideInRight",
           easing: { type: "inOut", base: "ease" },
-          duration: 25,
+          duration: 15,
           custom: {
-            distance: 200,
+            distance: 1000,
           },
         }}
         animationDelay={0}
         exitAnimation={{
-          type: "none",
+          type: "slideOutRight",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
-            distance: 100,
+            distance: 1000,
           },
         }}
       >
         <div>
-          <TableHeader title={gradeName} headerHeight={headerHeight} />
+          <TableHeaderWrapped title={gradeName} headerHeight={headerHeight} />
 
           <div className="flex-1 overflow-hidden">
             {League.map((team, index) => (
-              <StandardRow
+              <StandardRowWrapped
                 key={team.position}
                 team={team}
                 index={index}
@@ -73,7 +71,7 @@ export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
   );
 };
 
-export default LadderDisplayBasic;
+export default LadderDisplayBrickWork;
 
 ////Utilities////
 const calculateRowDimensions = (totalHeight: number, teamCount: number) => {

@@ -3,13 +3,13 @@
  */
 
 // Export types
-export * from "./types";
+export * from "../../easing/types";
 
 // Export spring configurations
 export { IMAGE_SPRING_CONFIGS } from "./springConfigs";
 
 // Export easing functions
-export { getImageEasingFunction } from "./easingFunctions";
+export { getImageEasingFunction } from "../../easing/easingFunctions";
 
 // Export animation utilities
 export { normalizeImageAnimation } from "./animationUtils";

@@ -16,6 +16,7 @@ import { generateShadows } from "./shadowGenerator";
 //import { generateBackgroundColors } from "./backgroundGenerator";
 import { createStandardPaletteStructure } from "../config/standardPaletteStructure";
 import { GRADIENT_DIRECTIONS } from "../config/constants";
+import { ThemeMode } from "../../../../templates/types/TemplateThemeConfig";
 
 // Extended palette options to include gradient configuration
 export interface ExtendedPaletteOptions extends PaletteOptions {
@@ -38,6 +39,7 @@ export const standardPaletteFactory = (
   name: string,
   colors: [string, string],
   options: ExtendedPaletteOptions = {},
+  useMode: ThemeMode,
 ) => {
   // Extract colors
   //console.log("[colors]", colors);
@@ -183,6 +185,7 @@ export const standardPaletteFactory = (
     secondary,
     mainVariations,
     textColors,
+    useMode,
     shadows || {
       small: "",
       medium: "",

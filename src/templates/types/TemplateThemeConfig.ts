@@ -19,6 +19,7 @@ export interface TemplateThemeConfig {
   gradientDegree?: string;
   animation?: ThemeAnimation;
   media?: ThemeMedia;
+  mode?: ThemeModes;
 }
 
 /**
@@ -273,4 +274,28 @@ export interface ThemeMedia {
     large: string;
     full: string;
   };
+}
+
+/**
+ * Mode-related tokens, including background, container, text, and shadow tokens.
+ */
+export interface ThemeModes {
+  light: ThemeMode;
+  dark: ThemeMode;
+}
+
+export interface ThemeMode {
+  container: ThemeModeContainer;
+  text: ThemeModeText;
+}
+
+export interface ThemeModeContainer {
+  background: string;
+  backgroundAlt: string;
+  backgroundTransparent: string;
+}
+
+export interface ThemeModeText {
+  title: string;
+  copy: string;
 }

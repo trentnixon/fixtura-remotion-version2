@@ -60,6 +60,16 @@ export interface ContainerOptions {
   transparentSecondary: string;
   transparentPrimary: string;
   muted: string;
+  background: string;
+  backgroundAlt: string;
+
+  backgroundTransparent: {
+    subtle: string;
+    low: string;
+    medium: string;
+    high: string;
+    strong: string;
+  };
 }
 
 export interface TextOptions {

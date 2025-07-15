@@ -49,7 +49,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
       <AnimatedText
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: delay + 12 }}
-        className={`text-sm `}
+        className={`text-4xl`}
         style={{ color: selectedPalette.text.onContainer.muted }}
       >
         {status}
@@ -58,7 +58,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
       <AnimatedText
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: delay + 13 }}
-        className="text-sm text-right"
+        className="text-4xl text-right"
         style={{ color: selectedPalette.text.onContainer.muted }}
       >
         {truncatedResult}

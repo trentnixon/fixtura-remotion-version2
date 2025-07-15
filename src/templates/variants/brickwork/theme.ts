@@ -12,10 +12,10 @@ export const brickworkTheme: TemplateThemeConfig = {
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Roboto Condensed",
+      family: "Roboto-Medium", //"Roboto-Medium",
     },
     copy: {
-      family: "Roboto Condensed",
+      family: "Roboto-Light", //"Roboto-Light",
     },
   },
 
@@ -31,7 +31,7 @@ export const brickworkTheme: TemplateThemeConfig = {
     // Subtitle component styles
     subtitle: {
       className:
-        "text-6xl font-semibold tracking-normal leading-none text-center m-0 px-4",
+        "text-7xl font-semibold tracking-normal leading-none text-center m-0 px-4",
     },
 
     // Body text component styles
@@ -60,29 +60,28 @@ export const brickworkTheme: TemplateThemeConfig = {
     },
     // Ladder label component styles
     ladderGradeLabel: {
-      className: "text-2xl font-medium tracking-normal leading-snug",
+      className: "text-2xl font-normal tracking-normal leading-snug",
     },
     ladderTeamName: {
       className: "text-3xl font-medium tracking-normal leading-snug",
     },
     ladderTeamPoints: {
-      className: "text-3xl font-medium tracking-normal leading-snug",
+      className: "text-4xl font-medium tracking-normal leading-snug",
     },
     Top5PlayerName: {
-      className: "text-5xl font-black  tracking-wide leading-snug",
+      className: "text-4xl font-black  tracking-wide leading-snug",
     },
     Top5PlayerTeam: {
-      className:
-        "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
+      className: "text-2xl font-normal  tracking-wider leading-tight",
     },
     Top5PlayerScore: {
-      className: "text-7xl font-black  tracking-normal leading-tight mr-4",
+      className: "text-6xl font-black  tracking-normal leading-snug mr-1",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-2xl font-black  tracking-wide leading-none",
+      className: "text-2xl font-normal  tracking-wide leading-none",
     },
     ResultScore: {
-      className: "text-7xl font-bold  tracking-normal leading-tight ",
+      className: "text-7xl font-black  tracking-normal leading-tight ",
     },
     ResultScoreYetToBat: {
       className: "text-3xl font-bold  tracking-wider py-6",
@@ -91,10 +90,10 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-2xl font-semibold  tracking-wider leading-snug",
     },
     ResultPlayerName: {
-      className: "text-2xl font-semibold  tracking-wider leading-snug",
+      className: "text-3xl font-semibold  tracking-normal leading-snug",
     },
     ResultPlayerScore: {
-      className: "text-2xl font-semibold  tracking-wider leading-snug",
+      className: "text-3xl font-semibold  tracking-normal leading-snug",
     },
     ResultSyntax: {
       className:
@@ -104,7 +103,7 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-4xl font-normal  tracking-wider leading-snug italic",
     },
     ResultMetaData: {
-      className: "text-xl font-semibold  tracking-wider leading-snug",
+      className: "text-xl font-normal  tracking-wider leading-snug",
     },
     RosterPlayerName: {
       className: "text-3xl font-normal  tracking-wider leading-snug",
@@ -135,6 +134,30 @@ export const brickworkTheme: TemplateThemeConfig = {
       container: "p-8",
       section: "py-6",
       item: "py-2",
+    },
+  },
+  mode: {
+    light: {
+      container: {
+        background: "#fff",
+        backgroundAlt: "#f0f0f0",
+        backgroundTransparent: "rgba(255, 255, 255, 0.5)",
+      },
+      text: {
+        title: "#000",
+        copy: "#000",
+      },
+    },
+    dark: {
+      container: {
+        background: "#000",
+        backgroundAlt: "#1a1a1a",
+        backgroundTransparent: "rgba(0, 0, 0, 0.5)",
+      },
+      text: {
+        title: "#fff",
+        copy: "#fff",
+      },
     },
   },
 };

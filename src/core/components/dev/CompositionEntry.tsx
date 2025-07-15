@@ -53,6 +53,8 @@ export const CompositionEntry: React.FC<CompositionEntryProps> = ({
     fps: 30,
   };
 
+  console.log("[templateComponent]", templateComponent);
+
   return (
     <Composition
       key={remoteCompositionId}

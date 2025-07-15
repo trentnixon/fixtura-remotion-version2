@@ -6,7 +6,7 @@ import { GameData } from "../../types";
 import GroundTime from "../Meta/GroundTime";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { LogosOnly } from "../Logos/variations";
-import TeamName from "../Meta/TeamName";
+import { TeamNameWrapped } from "../Meta/TeamName";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 interface GameCardProps {
@@ -14,7 +14,7 @@ interface GameCardProps {
   index: number;
 }
 
-export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
+export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
@@ -38,14 +38,13 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
         exitAnimation={ContainerAnimations.main.itemContainer.containerOut}
         exitFrame={animationOutFrame}
       >
-        <div className="rounded-lg w-full overflow-hidden">
+        <div className="rounded-none w-full overflow-hidden">
           {/* Grade/Competition Section - Top */}
-          <TeamName
+          <TeamNameWrapped
             teamName={game.teamHome}
             delay={delay}
-            backgroundColor={
-              selectedPalette.container.backgroundTransparent.medium
-            }
+            backgroundColor={selectedPalette.container.dark}
+            innerBackgroundColor={selectedPalette.container.primary}
           />
 
           {/* Teams Section - Middle */}
@@ -54,18 +53,15 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
             teamAway={game.teamAway}
             teamHomeLogo={game.teamHomeLogo}
             teamAwayLogo={game.teamAwayLogo}
-            delay={delay}
+            delay={delay + 10}
             vsAdditionalInfo={game.date}
-            backgroundColor={
-              selectedPalette.container.backgroundTransparent.low
-            }
+            backgroundColor={selectedPalette.container.transparentMain}
           />
-          <TeamName
+          <TeamNameWrapped
             teamName={game.teamAway}
-            delay={delay}
-            backgroundColor={
-              selectedPalette.container.backgroundTransparent.medium
-            }
+            delay={delay + 10}
+            backgroundColor={selectedPalette.container.dark}
+            innerBackgroundColor={selectedPalette.container.primary}
           />
           {/* Date/Ground Section - Bottom */}
           <GroundTime
@@ -80,4 +76,4 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
   );
 };
 
-export default GameCardBasic;
+export default GameCardBrickWork;

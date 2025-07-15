@@ -1,6 +1,6 @@
 import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easingFunctions";
-import { AnimationFunction } from "../types";
+import { getImageEasingFunction } from "../../../easing/easingFunctions";
+import { AnimationFunction } from "../../../easing/types";
 import React from "react";
 
 /**
@@ -10,7 +10,6 @@ export const popAndSpin: AnimationFunction = (
   frame,
   startFrame,
   endFrame,
-  config,
 ): React.CSSProperties => {
   // Calculate the midpoint of the animation for transitioning between effects
   const midPoint = startFrame + (endFrame - startFrame) * 0.5;
@@ -20,7 +19,7 @@ export const popAndSpin: AnimationFunction = (
     const scale = interpolate(frame, [startFrame, midPoint], [0.5, 1.2], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
-      easing: getImageEasingFunction("elastic"),
+      easing: getImageEasingFunction({ type: "inOut", base: "ease" }),
     });
 
     const opacity = interpolate(
@@ -43,13 +42,13 @@ export const popAndSpin: AnimationFunction = (
     const scale = interpolate(frame, [midPoint, endFrame], [1.2, 1], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
-      easing: getImageEasingFunction("easeOut"),
+      easing: getImageEasingFunction({ type: "inOut", base: "ease" }),
     });
 
     const rotation = interpolate(frame, [midPoint, endFrame], [0, 360], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
-      easing: getImageEasingFunction("easeOut"),
+      easing: getImageEasingFunction({ type: "inOut", base: "ease" }),
     });
 
     return {
@@ -75,7 +74,7 @@ export const bounceAndFade: AnimationFunction = (
   const translateY = interpolate(frame, [startFrame, midPoint], [100, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
-    easing: getImageEasingFunction("bounce"),
+    easing: getImageEasingFunction({ type: "inOut", base: "ease" }),
   });
 
   // Second part: fade from high opacity to normal
@@ -86,7 +85,7 @@ export const bounceAndFade: AnimationFunction = (
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
-      easing: getImageEasingFunction("easeOut"),
+      easing: getImageEasingFunction({ type: "inOut", base: "ease" }),
     },
   );
 
@@ -95,7 +94,7 @@ export const bounceAndFade: AnimationFunction = (
     ? interpolate(frame, [startFrame, midPoint, endFrame], [0.8, 1.1, 1], {
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp",
-        easing: getImageEasingFunction("easeOut"),
+        easing: getImageEasingFunction({ type: "inOut", base: "ease" }),
       })
     : 1;
 
