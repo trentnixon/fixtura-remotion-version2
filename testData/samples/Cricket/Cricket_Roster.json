@@ -327,6 +327,7 @@
       },
       "templateVariation": {
         "useBackground": "Pattern",
+        "mode": "dark",
         "palette": "primaryOnWhite",
         "gradient": {
           "type": "primaryToSecondary",

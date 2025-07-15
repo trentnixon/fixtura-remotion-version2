@@ -42,14 +42,14 @@ export const LogosOnly: React.FC<TeamLayoutProps> = ({
           value={`VS`}
           animation={metaDataAnimation}
           className="text-center"
-          variant="onBackgroundMain"
+          variant="onContainerCopy"
         />
         {vsAdditionalInfo && (
           <MetadataMedium
             value={vsAdditionalInfo}
             animation={metaDataAnimation}
             className="text-center mt-1"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
           />
         )}
       </div>

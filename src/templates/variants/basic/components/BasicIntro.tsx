@@ -41,7 +41,7 @@ export const BasicIntro: React.FC = () => {
           <AnimatedText
             textAlign="center"
             type="title"
-            variant="onBackgroundDark"
+            variant="onContainerTitle"
             letterAnimation="word"
             animation={TextAnimations.mainTitle}
             exitAnimation={TextAnimations.introOut}
@@ -57,7 +57,7 @@ export const BasicIntro: React.FC = () => {
           <AnimatedText
             type="subtitle"
             textAlign="left"
-            variant="onBackgroundDark"
+            variant="onContainerTitle"
             letterAnimation="word"
             animation={TextAnimations.clubName}
             exitAnimation={TextAnimations.introOut}

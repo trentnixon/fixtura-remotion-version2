@@ -21,7 +21,8 @@ export const DateAndGround: React.FC<RosterHeaderProps> = ({ roster }) => {
   const TextAnimations = animations.text.main;
   console.log("[selectedPalette]", selectedPalette);
   // Background color from theme
-  const backgroundColor = selectedPalette.container.main;
+  const backgroundColor =
+    selectedPalette.container.backgroundTransparent.subtle;
   // Format result status color
 
   /* {roster.gradeName} - {roster.round} */
@@ -42,8 +43,8 @@ export const DateAndGround: React.FC<RosterHeaderProps> = ({ roster }) => {
       <AnimatedText
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: 0 }}
-        className={`text-sm `}
-        style={{ color: selectedPalette.text.onContainer.muted }}
+        className={`text-md `}
+        variant="onContainerCopy"
       >
         {roster.date}
       </AnimatedText>
@@ -51,8 +52,8 @@ export const DateAndGround: React.FC<RosterHeaderProps> = ({ roster }) => {
       <AnimatedText
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: 0 }}
-        className="text-sm text-right"
-        style={{ color: selectedPalette.text.onContainer.muted }}
+        className="text-md text-right"
+        variant="onContainerCopy"
       >
         {truncatedGround}
       </AnimatedText>

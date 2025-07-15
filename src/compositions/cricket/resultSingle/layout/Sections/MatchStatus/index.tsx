@@ -16,8 +16,8 @@ const MatchStatus: React.FC<MatchStatusProps> = ({ result, height, delay }) => {
   const { animations } = useAnimationContext();
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.muted;
-  const textColor = selectedPalette.text.primary;
+  const backgroundColor =
+    selectedPalette.container.backgroundTransparent.subtle;
 
   const TextAnimations = animations.text.main;
   return (
@@ -27,7 +27,6 @@ const MatchStatus: React.FC<MatchStatusProps> = ({ result, height, delay }) => {
       backgroundColor="none"
       style={{
         height: `${height}px`,
-        color: textColor,
         background: backgroundColor,
       }}
       animation={animations.container.main.itemContainer.containerIn}

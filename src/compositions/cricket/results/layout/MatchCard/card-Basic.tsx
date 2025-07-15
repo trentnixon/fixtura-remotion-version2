@@ -50,7 +50,7 @@ const MatchCardBasic: React.FC<MatchCardProps> = ({
           result={match.result}
           height={headerHeight}
           delay={headerDelay}
-          backgroundColor={selectedPalette.container.transparentMain}
+          backgroundColor={selectedPalette.container.backgroundTransparent.high}
         />
       )}
 

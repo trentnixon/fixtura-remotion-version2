@@ -42,7 +42,7 @@ export const BasicMainHeader = () => {
         <AnimatedText
           textAlign="center"
           type="subtitle"
-          variant="onBackgroundMain"
+          variant="onContainerTitle"
           letterAnimation="none"
           animation={TextAnimations.title}
           exitAnimation={TextAnimations.copyOut}
@@ -57,7 +57,7 @@ export const BasicMainHeader = () => {
           fontFamily={fontClasses.subtitle?.family}
           type="subtitle"
           textAlign="right"
-          variant="onBackgroundDark"
+          variant="onContainerTitle"
           letterAnimation="word"
           animation={TextAnimations.title}
           exitAnimation={TextAnimations.copyOut}

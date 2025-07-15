@@ -17,7 +17,7 @@ type TextAlign = "left" | "right" | "center";
 
 export const ladderTeamPoints: React.FC<TeamStatTextProps> = ({
   value,
-  variant = "onBackgroundMain",
+  variant = "onContainerCopy",
   textAlign = "center",
   delay,
 }) => {

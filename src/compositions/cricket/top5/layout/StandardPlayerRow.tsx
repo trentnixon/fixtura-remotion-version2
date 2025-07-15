@@ -49,12 +49,12 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutProps> = ({
   // Determine background color
   const isTopPlayer = index === 0;
   const bgColor = isTopPlayer
-    ? selectedPalette.container.main
-    : selectedPalette.container.transparentMain;
+    ? selectedPalette.container.backgroundTransparent.high
+    : selectedPalette.container.backgroundTransparent.medium;
 
   const LogoBG = isTopPlayer
     ? selectedPalette.container.transparentSecondary
-    : selectedPalette.container.transparentMain;
+    : selectedPalette.container.backgroundTransparent.strong;
 
   // Get the appropriate score display based on player type
   const getScoreValues = () => {
@@ -115,14 +115,12 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutProps> = ({
             value={playerName} // Truncated and uppercase name
             animation={{ ...largeTextAnimation, delay: delay + 2 }}
             className=""
-            variant="onBackgroundMain"
           />
           {/* Team Name */}
           <Top5PlayerTeam
             value={teamName} // Truncated and uppercase team
             animation={{ ...smallTextAnimation, delay: delay + 4 }}
             className=""
-            variant="onBackgroundMain"
           />
         </div>
 
@@ -133,7 +131,6 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutProps> = ({
             value={mainValue}
             animation={{ ...largeTextAnimation, delay: delay + 6 }}
             className=""
-            variant="onBackgroundMain"
           />
 
           {/* Score suffix (balls or overs) */}
@@ -142,7 +139,6 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutProps> = ({
               value={suffix}
               animation={{ ...smallTextAnimation, delay: delay + 7 }}
               className=""
-              variant="onBackgroundMain"
             />
           )}
         </div>

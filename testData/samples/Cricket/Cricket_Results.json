@@ -660,6 +660,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
+        "mode": "dark",
         "video": {
           "url": null,
           "fallbackUrl": null,

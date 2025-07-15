@@ -107,7 +107,7 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-xl font-semibold  tracking-wider leading-snug",
     },
     RosterPlayerName: {
-      className: "text-3xl font-normal  tracking-wider leading-snug",
+      className: "text-3xl font-bold  tracking-wider leading-snug",
     },
     metadataSmall: {
       className: "text-2xl font-normal  tracking-wider leading-snug",
@@ -145,7 +145,7 @@ export const basicTheme: TemplateThemeConfig = {
         backgroundTransparent: "rgba(255, 255, 255, 0.5)",
       },
       text: {
-        title: "#000",
+        title: "#fff",
         copy: "#000",
       },
     },
@@ -156,7 +156,7 @@ export const basicTheme: TemplateThemeConfig = {
         backgroundTransparent: "rgba(0, 0, 0, 0.5)",
       },
       text: {
-        title: "#fff",
+        title: "#000",
         copy: "#fff",
       },
     },

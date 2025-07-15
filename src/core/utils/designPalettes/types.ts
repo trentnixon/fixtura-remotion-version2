@@ -87,6 +87,8 @@ export interface TextOptions {
     dark: string;
     muted: string;
     accent: string;
+    title: string;
+    copy: string;
   };
   title?: string;
   body?: string;

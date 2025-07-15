@@ -283,6 +283,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
+        "mode": "light",
         "video": {
           "url": null,
           "fallbackUrl": null,

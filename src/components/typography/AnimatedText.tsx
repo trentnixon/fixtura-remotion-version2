@@ -47,7 +47,9 @@ export type ColorVariant =
   | "onContainerLight"
   | "onContainerAccent"
   | "onContainerMuted"
-  | "onBackgroundMain";
+  | "onBackgroundMain"
+  | "onContainerCopy"
+  | "onContainerTitle";
 
 // Define animation modes
 export type AnimationMode = "none" | "word" | AnimationType | AnimationConfig;

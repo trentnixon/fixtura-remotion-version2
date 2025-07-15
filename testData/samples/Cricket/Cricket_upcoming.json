@@ -423,7 +423,7 @@
       },
       "templateVariation": {
         "useBackground": "Particle",
-        "mode": "dark",
+        "mode": "light",
         "category": {
           "slug": "Brickwork",
           "name": "Brick Work",

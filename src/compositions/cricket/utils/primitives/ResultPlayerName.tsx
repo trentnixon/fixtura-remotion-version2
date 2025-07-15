@@ -11,7 +11,7 @@ export const ResultPlayerName = ({
   value,
   animation,
   className,
-  variant = "onBackgroundMain",
+  variant = "onContainerCopy",
 }: {
   value: string;
   animation: AnimationConfig;
@@ -27,6 +27,7 @@ export const ResultPlayerName = ({
       fontFamily={fontClasses.copy?.family}
       className={className}
       animation={animation as AnimationConfig}
+      letterAnimation="none"
     >
       {value}
     </AnimatedText>

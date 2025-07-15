@@ -17,7 +17,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
   const { heights } = layout;
   const availableHeight = heights.asset;
   const { selectedPalette } = useThemeContext();
-  const backgroundColor = selectedPalette.container.transparentMain;
+  const backgroundColor = selectedPalette.container.backgroundTransparent.high;
   return (
     <div className="p-0 flex flex-col w-full h-full">
       <AnimatedContainer

@@ -75,6 +75,12 @@ export const getVariantStyles = (
     case "onContainerMuted":
       textColor = palette.text.onContainer.muted;
       break;
+    case "onContainerCopy":
+      textColor = palette.text.onContainer.copy;
+      break;
+    case "onContainerTitle":
+      textColor = palette.text.onContainer.title;
+      break;
 
     case "gradient":
       // Use gradient text

@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
-import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 
@@ -25,7 +24,6 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
   delay,
   backgroundColor,
 }) => {
-  const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
@@ -50,7 +48,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: delay + 12 }}
         className={`text-4xl`}
-        style={{ color: selectedPalette.text.onContainer.muted }}
+        variant="onContainerCopy"
       >
         {status}
       </AnimatedText>
@@ -59,7 +57,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: delay + 13 }}
         className="text-4xl text-right"
-        style={{ color: selectedPalette.text.onContainer.muted }}
+        variant="onContainerCopy"
       >
         {truncatedResult}
       </AnimatedText>

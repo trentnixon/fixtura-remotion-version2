@@ -29,10 +29,11 @@ export const AccountTeam: React.FC<RosterHeaderProps> = ({ roster }) => {
     : roster.teamAwayLogo;
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.main;
+  const backgroundColor =
+    selectedPalette.container.backgroundTransparent.medium;
 
   // Logo size based on height
-  const logoSize = `w-[110px] h-[110px]`;
+  const logoSize = `w-[150px] h-[150px]`;
 
   return (
     <AnimatedContainer
@@ -47,9 +48,9 @@ export const AccountTeam: React.FC<RosterHeaderProps> = ({ roster }) => {
     >
       <div className="flex flex-col items-center">
         {/* User team logo */}
-        <div className={`${logoSize} mb-2`}>
+        <div className={`${logoSize} my-2`}>
           <TeamLogo
-            logo={{ url: userTeamLogoUrl, width: 110, height: 110 }}
+            logo={{ url: userTeamLogoUrl, width: 150, height: 150 }}
             teamName={userTeamName}
             delay={5}
           />
@@ -60,6 +61,7 @@ export const AccountTeam: React.FC<RosterHeaderProps> = ({ roster }) => {
           <ResultTeamName
             value={truncateText(userTeamName, 50).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: 0 }}
+            variant="onContainerCopy"
             className="text-center"
           />
         </div>

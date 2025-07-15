@@ -13,7 +13,7 @@ interface LadderDisplayProps {
 export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
-  console.log("[ladder]", ladder);
+  const { selectedPalette } = useThemeContext();
   const { League, gradeName, bias, assignSponsors } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
@@ -29,8 +29,11 @@ export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
       {/* <LadderHeader title={name} /> */}
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-8 p-4 bg-black/60 rounded-lg overflow-hidden"
-        backgroundColor="none"
+        className="flex-1 flex flex-col mx-8 p-4  rounded-lg overflow-hidden"
+        backgroundColor={undefined}
+        style={{
+          background: selectedPalette.container.backgroundTransparent.high,
+        }}
         animation={{
           type: "revealBottom",
           easing: { type: "inOut", base: "ease" },

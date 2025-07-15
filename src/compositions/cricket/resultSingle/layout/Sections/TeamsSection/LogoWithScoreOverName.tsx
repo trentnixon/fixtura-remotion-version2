@@ -21,7 +21,7 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   const TextAnimations = animations.text.main;
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.main;
+  const backgroundColor = selectedPalette.container.backgroundTransparent.high;
 
   // Logo size based on height - larger for single match display
   const logoSize = `w-[120px] h-[120px]`;

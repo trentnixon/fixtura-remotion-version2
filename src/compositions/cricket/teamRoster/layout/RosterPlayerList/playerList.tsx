@@ -19,7 +19,7 @@ const RosterPlayerList: React.FC<RosterPlayerListProps> = ({ roster }) => {
             key={index}
             value={player.toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: 0 }}
-            className="text-center"
+            className="text-center font-bold"
           />
         ))}
       </div>

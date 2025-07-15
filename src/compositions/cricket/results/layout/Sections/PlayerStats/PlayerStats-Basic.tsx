@@ -141,16 +141,16 @@ const TeamStats: React.FC<TeamStatsProps> = ({
         players={batters}
         isBatting={true}
         delay={delay}
-        backgroundColor={selectedPalette.container.transparentMain}
-        textColor={"onContainerMain"}
+        backgroundColor={selectedPalette.container.backgroundTransparent.medium}
+        textColor={"onContainerCopy"}
       />
 
       <StatSection
         players={bowlers}
         isBatting={false}
         delay={delay + 2}
-        backgroundColor={selectedPalette.container.transparentSecondary}
-        textColor={"onContainerSecondary"}
+        backgroundColor={selectedPalette.container.backgroundTransparent.low}
+        textColor={"onContainerCopy"}
       />
     </div>
   );

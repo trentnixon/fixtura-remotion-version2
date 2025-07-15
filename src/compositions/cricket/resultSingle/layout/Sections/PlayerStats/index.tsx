@@ -41,7 +41,7 @@ const StatItem: React.FC<StatItemProps> = ({
     <div className="flex justify-between items-center py-1">
       <ResultPlayerName
         value={truncateText(playerName, 25)}
-        variant="onContainerDark"
+        variant="onContainerCopy"
         animation={{
           ...TextAnimations.copyIn,
           delay: delay + 2 + index,
@@ -50,7 +50,7 @@ const StatItem: React.FC<StatItemProps> = ({
 
       <ResultPlayerScore
         value={statValue}
-        variant="onContainerDark"
+        variant="onContainerCopy"
         animation={{
           ...TextAnimations.copyIn,
           delay: delay + 2 + index,
@@ -75,7 +75,7 @@ const StatSection: React.FC<StatSectionProps> = ({
   if (players.length === 0) return null;
 
   return (
-    <div className={`${isBatting ? "mb-4 py-1" : "mb-1"}`}>
+    <div className={`${isBatting ? "mb-16 py-1" : "mb-1"}`}>
       {players.map((player, i) => (
         <StatItem
           key={`${isBatting ? "bat" : "bowl"}-${i}`}
@@ -119,7 +119,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
     : [];
 
   return (
-    <div className={`flex-1 px-2 py-0 flex flex-col ${className}`}>
+    <div className={`flex-1 px-8 py-4 flex flex-col ${className}`}>
       <StatSection players={batters} isBatting={true} delay={delay} />
       <StatSection players={bowlers} isBatting={false} delay={delay + 2} />
     </div>
@@ -137,7 +137,7 @@ export const PlayerStats: React.FC<PlayerStatsProps> = ({
   const { animations } = useAnimationContext();
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.transparentMain;
+  const backgroundColor = selectedPalette.container.backgroundTransparent.low;
 
   return (
     <AnimatedContainer

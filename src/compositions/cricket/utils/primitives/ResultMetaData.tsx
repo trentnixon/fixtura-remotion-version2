@@ -11,7 +11,7 @@ export const ResultMetaData = ({
   value,
   animation,
   className,
-  variant = "onBackgroundMain",
+  variant = "onContainerCopy",
 }: {
   value: string;
   animation: AnimationConfig;

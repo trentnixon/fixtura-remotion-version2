@@ -23,7 +23,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
       <div className="flex items-center mr-3 px-2" style={{ width: "70%" }}>
         <AnimatedText
           type="ladderGradeLabel"
-          variant="onBackgroundMain"
+          variant="onContainerCopy"
           textAlign="left"
           letterAnimation="word"
           animationDelay={5}
@@ -45,7 +45,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             P
@@ -54,7 +54,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             W
@@ -63,7 +63,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             L
@@ -72,7 +72,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             B
@@ -81,7 +81,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <div className="w-16 bg-gray-700/50 rounded-md text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             PTS
@@ -109,7 +109,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
       <div className="flex items-center mr-3 px-2" style={{ width: "70%" }}>
         <AnimatedText
           type="ladderGradeLabel"
-          variant="onBackgroundMain"
+          variant="onContainerCopy"
           textAlign="left"
           letterAnimation="word"
           animationDelay={5}
@@ -131,7 +131,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             P
@@ -140,7 +140,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             W
@@ -149,7 +149,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             L
@@ -158,7 +158,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             B
@@ -167,7 +167,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
         <div className="w-16  text-center">
           <AnimatedText
             type="ladderGradeLabel"
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
             fontFamily={fontClasses.copy?.family}
           >
             PTS

@@ -17,7 +17,7 @@ type TextAlign = "left" | "right" | "center";
 
 export const LadderTeamName: React.FC<LadderTeamNameProps> = ({
   value,
-  variant = "onBackgroundMain",
+  variant = "onContainerCopy",
   textAlign = "left",
   delay,
 }) => {

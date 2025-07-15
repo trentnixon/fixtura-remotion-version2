@@ -32,7 +32,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   const TextAnimations = animations.text.main;
 
   // Background color from theme
-  const backgroundColor = selectedPalette.container.muted;
+  const backgroundColor = selectedPalette.container.backgroundTransparent.high;
 
   // Format the left side text - use type and round, or date and round
   const leftText = type

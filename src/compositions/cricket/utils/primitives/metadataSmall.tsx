@@ -18,7 +18,7 @@ export const MetadataSmall = ({
   return (
     <AnimatedText
       type="metadataSmall"
-      variant="onBackgroundMain"
+      variant="onContainerCopy"
       fontFamily={fontClasses.copy?.family}
       className={className}
       animation={animation as AnimationConfig}
