@@ -516,10 +516,10 @@
       },
       "appearance": {
         "theme": {
-          "dark": "#FFF",
-          "white": "#111",
-          "primary": "#00843d",
-          "secondary": "#ffcd00"
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#ff00a0",
+          "secondary": "#d40f7d"
         },
         "template": "Basic"
       },
@@ -549,7 +549,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
-        "mode": "dark",
+        "mode": "lightAlt",
         "video": {
           "url": null,
           "fallbackUrl": null,

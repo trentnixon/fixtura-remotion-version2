@@ -12,6 +12,7 @@ export interface TeamLayoutProps {
   delay: number;
   vsAdditionalInfo?: string; // Optional string to display under VS
   backgroundColor?: string;
+  logoPosition?: "center" | "split" | "together";
 }
 
 // Define logo sizes as constants for maintainability

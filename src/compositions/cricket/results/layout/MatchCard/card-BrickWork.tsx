@@ -25,6 +25,8 @@ const MatchCardBrickWork: React.FC<MatchCardProps> = ({
   const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
   const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
 
+  console.log("[match]", match);
+
   // Calculate delays
   const baseDelay = delay;
   const statsDelay = baseDelay + 4;
@@ -44,22 +46,30 @@ const MatchCardBrickWork: React.FC<MatchCardProps> = ({
         backgroundColor={"transparent"}
       />
       <TeamsSectionLogoAndScore
+        type={match.type}
         homeTeam={match.homeTeam}
         awayTeam={match.awayTeam}
         homeTeamLogo={match.teamHomeLogo}
         awayTeamLogo={match.teamAwayLogo}
-        height={teamsHeight}
         delay={baseDelay}
-        backgroundColor={selectedPalette.container.transparentMain}
+        outerContainer={{
+          backgroundColor: selectedPalette.container.backgroundTransparent.low,
+          height: `${teamsHeight}px`,
+          borderBottom: `2px solid ${selectedPalette.container.primary}`,
+        }}
       />
 
       {match.status === "Abandoned" && (
         <MatchStatus
           status={`${match.status}`}
           result={match.result}
-          height={headerHeight}
           delay={headerDelay}
-          backgroundColor={selectedPalette.container.transparentMain}
+          outerContainer={{
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.low,
+            height: `${teamsHeight}px`,
+            borderBottom: `2px solid ${selectedPalette.container.primary}`,
+          }}
         />
       )}
 

@@ -47,14 +47,14 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutProps> = ({
   // Determine background color
   const isTopPlayer = index === 0;
   const bgColor = isTopPlayer
-    ? selectedPalette.container.main
-    : selectedPalette.container.transparentMain;
+    ? selectedPalette.container.backgroundTransparent.strong
+    : selectedPalette.container.backgroundTransparent.medium;
 
   const LogoBG = isTopPlayer
-    ? selectedPalette.container.transparentSecondary
-    : selectedPalette.container.transparentMain;
+    ? selectedPalette.container.backgroundTransparent.strong
+    : selectedPalette.container.backgroundTransparent.medium;
 
-  const contrastBG = selectedPalette.container.dark;
+  const contrastBG = selectedPalette.container.backgroundTransparent.strong;
   // Get the appropriate score display based on player type
   const getScoreValues = () => {
     if (isBatter(player)) {
@@ -86,6 +86,7 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutProps> = ({
       style={{
         height: `${rowHeight}px`,
         background: bgColor,
+        borderBottom: `2px solid ${selectedPalette.container.primary}`,
       }}
     >
       {/* Name & Team (col-span-4) */}
@@ -94,13 +95,11 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutProps> = ({
           value={playerName}
           animation={{ ...largeTextAnimation, delay: delay + 2 }}
           className=""
-          variant="onBackgroundMain"
         />
         <Top5PlayerTeam
           value={teamName}
           animation={{ ...smallTextAnimation, delay: delay + 4 }}
           className=""
-          variant="onBackgroundMain"
         />
       </div>
 
@@ -128,14 +127,14 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutProps> = ({
           value={mainValue}
           animation={{ ...largeTextAnimation, delay: delay + 20 }}
           className=""
-          variant="onBackgroundMain"
+          variant="onContainerCopy"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
             animation={{ ...smallTextAnimation, delay: delay + 30 }}
             className=""
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
           />
         )}
       </div>

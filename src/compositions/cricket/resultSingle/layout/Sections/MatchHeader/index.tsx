@@ -11,6 +11,7 @@ interface MatchHeaderProps {
   ground: string;
   height: number;
   delay: number;
+  className?: string;
 }
 
 // Helper function to truncate text
@@ -26,6 +27,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   ground,
   height,
   delay,
+  className,
 }) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
@@ -44,7 +46,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className="w-full flex justify-between items-center p-4"
+      className={`w-full flex justify-between items-center p-4  ${className}`}
       backgroundColor="none"
       style={{
         background: backgroundColor,

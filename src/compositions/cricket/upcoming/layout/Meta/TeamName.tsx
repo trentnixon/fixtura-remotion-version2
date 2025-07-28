@@ -5,13 +5,15 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 interface TopSectionProps {
   teamName: string;
   delay: number;
-  backgroundColor: string;
+  delayName?: number;
+  style?: React.CSSProperties;
 }
 
 export const TeamName: React.FC<TopSectionProps> = ({
   teamName,
   delay,
-  backgroundColor,
+  delayName = 10,
+  style,
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -22,16 +24,13 @@ export const TeamName: React.FC<TopSectionProps> = ({
       type="full"
       className="w-full  p-3"
       backgroundColor="none"
-      style={{
-        background: backgroundColor,
-        textAlign: "center",
-      }}
+      style={style}
       animation={ContainerAnimations.main.itemContainer.containerIn}
       animationDelay={delay}
     >
       <MetadataMedium
         value={`${teamName}`}
-        animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
+        animation={{ ...TextAnimations.copyIn, delay: delayName }}
         className="text-center"
       />
     </AnimatedContainer>
@@ -43,14 +42,14 @@ export default TeamName;
 interface TeamNameWrappedProps {
   teamName: string;
   delay: number;
-  backgroundColor: string;
-  innerBackgroundColor: string;
+  outerStyles: object;
+  innerStyles: object;
 }
 export const TeamNameWrapped: React.FC<TeamNameWrappedProps> = ({
   teamName,
   delay,
-  backgroundColor,
-  innerBackgroundColor,
+  outerStyles,
+  innerStyles,
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -61,18 +60,14 @@ export const TeamNameWrapped: React.FC<TeamNameWrappedProps> = ({
       type="full"
       className="w-full p-2 flex justify-start items-center"
       backgroundColor="none"
-      style={{
-        background: backgroundColor,
-      }}
+      style={outerStyles}
       animation={ContainerAnimations.main.itemContainer.containerIn}
       animationDelay={delay}
     >
       <AnimatedContainer
         type="full"
         className="w-full py-2 px-8 flex justify-center items-center flex-1 text-center"
-        style={{
-          background: innerBackgroundColor,
-        }}
+        style={innerStyles}
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay + 10}
       >

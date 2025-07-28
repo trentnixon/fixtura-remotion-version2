@@ -49,6 +49,7 @@ export type ColorVariant =
   | "onContainerMuted"
   | "onBackgroundMain"
   | "onContainerCopy"
+  | "onContainerCopyNoBg"
   | "onContainerTitle";
 
 // Define animation modes

@@ -23,7 +23,7 @@ export const BasicIntro: React.FC = () => {
     <VerticalStackTitleLogoName
       alignment="center"
       Logo={
-        <div className="w-full h-full flex justify-center items-center max-h-[300px] max-w-[300px]">
+        <div className="w-full h-full flex justify-center py-8 items-center max-h-[500px] max-w-[500px]">
           <AnimatedImage
             src={club.logo?.url || ""}
             alt={club.name}

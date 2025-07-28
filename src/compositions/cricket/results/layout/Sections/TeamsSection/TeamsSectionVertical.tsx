@@ -4,7 +4,10 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
 import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
-import { ResultScore } from "../../../../utils/primitives/ResultScore";
+import {
+  ResultScore,
+  ResultScoreFirstInnings,
+} from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "./type";
 
@@ -15,6 +18,7 @@ const truncateText = (text: string, maxLength: number): string => {
 };
 
 export const TeamsSectionVertical: React.FC<TeamsSectionProps> = ({
+  type,
   homeTeam,
   awayTeam,
   homeTeamLogo,
@@ -27,7 +31,8 @@ export const TeamsSectionVertical: React.FC<TeamsSectionProps> = ({
   const TextAnimations = animations.text.main;
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.main;
+  const backgroundColor =
+    selectedPalette.container.backgroundTransparent.medium;
 
   // Logo size based on height
   const logoSize = `w-[90px] h-[90px]`;
@@ -44,17 +49,19 @@ export const TeamsSectionVertical: React.FC<TeamsSectionProps> = ({
       animation={animations.container.main.itemContainer.containerIn}
       animationDelay={delay}
     >
-      <div className="flex flex-col w-full">
+      <div className="grid w-full">
         {/* Logos row */}
-        <div className="flex justify-center items-center space-x-10 mb-2">
-          <div className={`${logoSize}`}>
-            <TeamLogo
-              logo={homeTeamLogo || null}
-              teamName={homeTeam.name}
-              delay={delay + 3}
-            />
+        <div className="grid grid-cols-2 gap-12 justify-center items-center mb-2">
+          <div className="flex justify-end w-full">
+            <div className={`${logoSize}`}>
+              <TeamLogo
+                logo={homeTeamLogo || null}
+                teamName={homeTeam.name}
+                delay={delay + 3}
+              />
+            </div>
           </div>
-          <div className={`${logoSize}`}>
+          <div className={`${logoSize} items-start`}>
             <TeamLogo
               logo={awayTeamLogo || null}
               teamName={awayTeam.name}
@@ -64,33 +71,47 @@ export const TeamsSectionVertical: React.FC<TeamsSectionProps> = ({
         </div>
 
         {/* Scores row */}
-        <div className="flex justify-center items-center space-x-20">
-          <ResultScore
-            value={homeTeam.score}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-          />
-          <ResultScore
-            value={awayTeam.score}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-          />
+        <div className="grid grid-cols-2 gap-12 justify-center items-center">
+          <div className="flex flex-col items-end justify-end">
+            {type === "Two Day+" && (
+              <ResultScoreFirstInnings
+                value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+              />
+            )}
+            {"  "}
+            <ResultScore
+              value={homeTeam.score}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+            />
+          </div>
+          <div className="flex flex-col items-start justify-end">
+            {type === "Two Day+" && (
+              <ResultScoreFirstInnings
+                value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+              />
+            )}
+            {"  "}
+            <ResultScore
+              value={awayTeam.score}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+            />
+          </div>
         </div>
 
         {/* Team names row */}
-        <div className="flex justify-center items-center space-x-6">
-          <div className="flex-1 text-center">
-            <ResultTeamName
-              value={truncateText(homeTeam.name, 30).toUpperCase()}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-              className="text-center"
-            />
-          </div>
-          <div className="flex-1 text-center">
-            <ResultTeamName
-              value={truncateText(awayTeam.name, 30).toUpperCase()}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-              className="text-center"
-            />
-          </div>
+        <div className="grid grid-cols-2 gap-12 justify-center items-center">
+          <ResultTeamName
+            value={truncateText(homeTeam.name, 30).toUpperCase()}
+            animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
+            className="text-right"
+          />
+          <ResultTeamName
+            value={truncateText(awayTeam.name, 30).toUpperCase()}
+            animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
+            className="text-left"
+          />
         </div>
       </div>
     </AnimatedContainer>

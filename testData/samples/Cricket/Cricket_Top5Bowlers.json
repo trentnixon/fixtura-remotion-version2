@@ -250,23 +250,14 @@
       },
       "appearance": {
         "theme": {
-          "dark": "#FFF",
-          "white": "#111",
-          "primary": "#00843d",
-          "secondary": "#ffcd00"
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#ff00a0",
+          "secondary": "#d40f7d"
         },
         "template": "Basic"
       },
       "media": {
-        "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "",
-          "AssetType": "",
-          "markerPosition": ""
-        },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
           "audioOption": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3"
@@ -283,7 +274,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
-        "mode": "light",
+        "mode": "lightAlt",
         "video": {
           "url": null,
           "fallbackUrl": null,
@@ -300,13 +291,13 @@
           "playbackRate": null
         },
         "image": {
-          "url": null,
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "type": "focusblur",
-          "direction": "in",
-          "overlayStyle": "duotone",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/387488575_6536743446451915_3029261276535247093_n_267727ef3a_1_daf1636b8f.jpg",
+          "ratio": "landscape",
+          "width": 2048,
+          "height": 1366,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },

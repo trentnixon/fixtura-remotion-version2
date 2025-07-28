@@ -1,0 +1,106 @@
+import React from "react";
+import { MatchResult } from "../../types";
+
+import { Horizontal_SingleTeam_LogoWithName_Score } from "../Sections/TeamsSection/index";
+import MatchStatus from "../Sections/MatchStatus/MatchStatus";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import SingleDataPointHeader from "../Sections/MatchHeader/SingleDataPointHeader";
+import { PlayerStatsSingleTeamOnly } from "../Sections/PlayerStats/PlayerStats-SingleTeamOnly";
+
+interface MatchCardProps {
+  match: MatchResult;
+  index: number;
+  rowHeight: number;
+  delay: number;
+}
+
+const MatchCardSixers: React.FC<MatchCardProps> = ({
+  match,
+  rowHeight,
+  delay,
+}) => {
+  const { selectedPalette } = useThemeContext();
+  // Calculate section heights
+  const teamsHeight = Math.floor(rowHeight * 0.4); // 40% for team scores
+  const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
+  const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
+
+  // Calculate delays
+  const baseDelay = delay;
+  const statsDelay = baseDelay + 4;
+  const headerDelay = statsDelay + 5;
+
+  return (
+    <div className="w-auto mx-8 overflow-hidden h-full">
+      {/* Section 3: Match info footer */}
+
+      <SingleDataPointHeader
+        grade={match.gradeName}
+        height={headerHeight}
+        delay={headerDelay}
+        backgroundColor={"transparent"}
+        align="right"
+      />
+      {/* Section 1: Team scores and names */}
+
+      {match.status === "Abandoned" && (
+        <MatchStatus
+          status={`${match.status}`}
+          result={match.result}
+          delay={headerDelay}
+          outerContainer={{
+            background: selectedPalette.container.backgroundTransparent.high,
+            height: headerHeight,
+          }}
+        />
+      )}
+
+      <Horizontal_SingleTeam_LogoWithName_Score
+        type={match.type}
+        Team={match.homeTeam}
+        TeamLogo={match.teamHomeLogo}
+        delay={baseDelay}
+        outerContainer={{
+          height: teamsHeight,
+        }}
+      />
+
+      {/* Section 2: Player statistics */}
+      <PlayerStatsSingleTeamOnly
+        Team={match.homeTeam}
+        height={statsHeight}
+        delay={statsDelay}
+        maxPlayersPerStat={2}
+      />
+
+      <Horizontal_SingleTeam_LogoWithName_Score
+        type={match.type}
+        Team={match.awayTeam}
+        TeamLogo={match.teamAwayLogo}
+        delay={baseDelay}
+        outerContainer={{
+          height: teamsHeight,
+          marginTop: "10px",
+        }}
+      />
+
+      <PlayerStatsSingleTeamOnly
+        Team={match.awayTeam}
+        height={statsHeight}
+        delay={statsDelay}
+        maxPlayersPerStat={2}
+      />
+      {/* Section 3: Match info footer */}
+
+      <SingleDataPointHeader
+        grade={match.result}
+        height={headerHeight}
+        delay={headerDelay}
+        backgroundColor={"transparent"}
+        align="right"
+      />
+    </div>
+  );
+};
+
+export default MatchCardSixers;

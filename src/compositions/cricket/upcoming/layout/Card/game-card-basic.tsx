@@ -43,9 +43,12 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
           <TeamName
             teamName={game.teamHome}
             delay={delay}
-            backgroundColor={
-              selectedPalette.container.backgroundTransparent.medium
-            }
+            style={{
+              background:
+                selectedPalette.container.backgroundTransparent.strong,
+              textAlign: "center",
+              borderRadius: "10px 10px 0 0px",
+            }}
           />
 
           {/* Teams Section - Middle */}
@@ -63,9 +66,12 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
           <TeamName
             teamName={game.teamAway}
             delay={delay}
-            backgroundColor={
-              selectedPalette.container.backgroundTransparent.medium
-            }
+            style={{
+              background:
+                selectedPalette.container.backgroundTransparent.strong,
+              textAlign: "center",
+              borderRadius: "0 0 10px 10px",
+            }}
           />
           {/* Date/Ground Section - Bottom */}
           <GroundTime

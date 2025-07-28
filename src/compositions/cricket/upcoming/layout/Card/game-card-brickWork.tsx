@@ -39,12 +39,25 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
         exitFrame={animationOutFrame}
       >
         <div className="rounded-none w-full overflow-hidden">
+          {/* Date/Ground Section - Bottom */}
+          <GroundTime
+            time={game.time}
+            ground={game.ground}
+            delay={delay}
+            backgroundColor={"transparent"}
+          />
           {/* Grade/Competition Section - Top */}
           <TeamNameWrapped
             teamName={game.teamHome}
             delay={delay}
-            backgroundColor={selectedPalette.container.dark}
-            innerBackgroundColor={selectedPalette.container.primary}
+            outerStyles={{
+              background: selectedPalette.container.backgroundTransparent.low,
+              borderBottom: `3px solid ${selectedPalette.container.primary}`,
+            }}
+            innerStyles={{
+              background:
+                selectedPalette.container.backgroundTransparent.medium,
+            }}
           />
 
           {/* Teams Section - Middle */}
@@ -55,20 +68,20 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
             teamAwayLogo={game.teamAwayLogo}
             delay={delay + 10}
             vsAdditionalInfo={game.date}
-            backgroundColor={selectedPalette.container.transparentMain}
+            backgroundColor={
+              selectedPalette.container.backgroundTransparent.subtle
+            }
           />
           <TeamNameWrapped
             teamName={game.teamAway}
             delay={delay + 10}
-            backgroundColor={selectedPalette.container.dark}
-            innerBackgroundColor={selectedPalette.container.primary}
-          />
-          {/* Date/Ground Section - Bottom */}
-          <GroundTime
-            time={game.time}
-            ground={game.ground}
-            delay={delay}
-            backgroundColor={"transparent"}
+            outerStyles={{
+              background: selectedPalette.container.backgroundTransparent.low,
+              borderBottom: `3px solid ${selectedPalette.container.secondary}`,
+            }}
+            innerStyles={{
+              background: selectedPalette.container.backgroundTransparent.low,
+            }}
           />
         </div>
       </AnimatedContainer>

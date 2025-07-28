@@ -49,6 +49,7 @@ const MatchCard: React.FC<MatchCardProps> = ({ match }) => {
       />
       {/* Teams section with logos, names and scores */}
       <LogoWithScoreOverName
+        type={match.type}
         homeTeam={match.homeTeam}
         awayTeam={match.awayTeam}
         homeTeamLogo={match.teamHomeLogo}

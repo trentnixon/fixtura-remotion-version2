@@ -11,6 +11,9 @@ import {
   VerticalHeaderNameLogo,
   VerticalHeaderTitleName,
   VerticalHeaderNameTitle,
+  VerticalHeaderTitleOnly,
+  VerticalHeaderNameOnly,
+  VerticalHeaderLogoOnly,
 } from "./variants/VerticalStack";
 import {
   TwoColumnHeaderTitleName,
@@ -47,6 +50,9 @@ export {
   VerticalHeaderNameLogo,
   VerticalHeaderTitleName,
   VerticalHeaderNameTitle,
+  VerticalHeaderTitleOnly,
+  VerticalHeaderNameOnly,
+  VerticalHeaderLogoOnly,
 
   // Two Column Layout variants
   TwoColumnHeaderTitleName,

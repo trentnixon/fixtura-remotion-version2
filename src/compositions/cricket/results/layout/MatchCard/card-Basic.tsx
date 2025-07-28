@@ -35,22 +35,26 @@ const MatchCardBasic: React.FC<MatchCardProps> = ({
       {/* Section 1: Team scores and names */}
 
       <ScoreOverNameWithLogo
+        type={match.type}
         homeTeam={match.homeTeam}
         awayTeam={match.awayTeam}
         homeTeamLogo={match.teamHomeLogo}
         awayTeamLogo={match.teamAwayLogo}
-        height={teamsHeight}
         delay={baseDelay}
-        backgroundColor={"transparent"}
+        outerContainer={{
+          height: teamsHeight,
+        }}
       />
 
       {match.status === "Abandoned" && (
         <MatchStatus
           status={`${match.status}`}
           result={match.result}
-          height={headerHeight}
           delay={headerDelay}
-          backgroundColor={selectedPalette.container.backgroundTransparent.high}
+          outerContainer={{
+            background: selectedPalette.container.backgroundTransparent.high,
+            height: headerHeight,
+          }}
         />
       )}
 

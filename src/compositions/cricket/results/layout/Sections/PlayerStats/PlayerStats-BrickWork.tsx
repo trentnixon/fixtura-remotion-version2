@@ -26,8 +26,9 @@ interface StatItemProps {
   statValue: string;
   delay: number;
   index: number;
-  textColor: string;
-  backgroundColor: string;
+
+  outerContainer: object;
+  innerContainer: object;
 }
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -35,31 +36,29 @@ const StatItem: React.FC<StatItemProps> = ({
   statValue,
   delay,
   index,
-  textColor,
-  backgroundColor,
+  outerContainer,
+  innerContainer,
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
   return (
-    <div className="flex  flex-row  justify-between items-center py-1 px-2 bg-white/70 ">
+    <div
+      className="flex  flex-row  justify-between items-center py-1 px-2 "
+      style={outerContainer}
+    >
       <div className="flex-4">
         <ResultPlayerName
-          value={truncateText(playerName, 25)}
-          variant={"#000"}
+          value={truncateText(playerName, 20)}
           animation={{
             ...TextAnimations.copyIn,
             delay: delay + 10 + index,
           }}
         />
       </div>
-      <div
-        className="p-2 flex-2 flex justify-end"
-        style={{ background: backgroundColor }}
-      >
+      <div className="p-2 flex-2 flex justify-end" style={innerContainer}>
         <ResultPlayerScore
           value={statValue}
-          variant={textColor}
           className="text-right"
           animation={{
             ...TextAnimations.copyIn,
@@ -85,16 +84,16 @@ interface StatSectionProps {
   players: PlayerStat[];
   isBatting: boolean;
   delay: number;
-  backgroundColor: string;
-  textColor: string;
+  outerContainer: object;
+  innerContainer: object;
 }
 
 const StatSection: React.FC<StatSectionProps> = ({
   players,
   isBatting,
   delay,
-  backgroundColor,
-  textColor,
+  outerContainer,
+  innerContainer,
 }) => {
   if (players.length === 0) return null;
 
@@ -111,8 +110,8 @@ const StatSection: React.FC<StatSectionProps> = ({
             }
             delay={delay}
             index={i}
-            textColor={textColor}
-            backgroundColor={backgroundColor}
+            outerContainer={outerContainer}
+            innerContainer={innerContainer}
           />
         </div>
       ))}
@@ -149,16 +148,32 @@ const TeamStats: React.FC<TeamStatsProps> = ({
         players={batters}
         isBatting={true}
         delay={delay}
-        backgroundColor={selectedPalette.container.main}
-        textColor={"onContainerMain"}
+        outerContainer={{
+          backgroundColor:
+            selectedPalette.container.backgroundTransparent.strong,
+          borderBottom: `2px solid ${selectedPalette.container.secondary}`,
+        }}
+        innerContainer={{
+          backgroundColor:
+            selectedPalette.container.backgroundTransparent.strong,
+          borderBottom: "none",
+        }}
       />
 
       <StatSection
         players={bowlers}
         isBatting={false}
         delay={delay + 2}
-        backgroundColor={selectedPalette.container.secondary}
-        textColor={"onContainerSecondary"}
+        outerContainer={{
+          backgroundColor:
+            selectedPalette.container.backgroundTransparent.strong,
+          borderBottom: `2px solid ${selectedPalette.container.secondary}`,
+        }}
+        innerContainer={{
+          backgroundColor:
+            selectedPalette.container.backgroundTransparent.strong,
+          borderBottom: "none",
+        }}
       />
     </div>
   );

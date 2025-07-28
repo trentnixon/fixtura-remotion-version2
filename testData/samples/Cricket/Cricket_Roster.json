@@ -295,10 +295,10 @@
       },
       "appearance": {
         "theme": {
-          "primary": "#00843d",
-          "secondary": "#ffcd00",
-          "dark": "#FFF",
-          "white": "#111"
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#ff00a0",
+          "secondary": "#d40f7d"
         },
         "template": "Basic"
       },
@@ -327,7 +327,7 @@
       },
       "templateVariation": {
         "useBackground": "Pattern",
-        "mode": "dark",
+        "mode": "lightAlt",
         "palette": "primaryOnWhite",
         "gradient": {
           "type": "primaryToSecondary",

@@ -72,6 +72,8 @@ export interface ThemeComponentStyles {
   Top5PlayerScore: ComponentStyle;
   Top5PlayerScoreSuffix: ComponentStyle;
   ResultScore: ComponentStyle;
+  ResultScoreFirstInnings: ComponentStyle;
+  ResultVS: ComponentStyle;
   ResultScoreYetToBat: ComponentStyle;
   ResultTeamName: ComponentStyle;
   ResultPlayerName: ComponentStyle;
@@ -282,6 +284,8 @@ export interface ThemeMedia {
 export interface ThemeModes {
   light: ThemeMode;
   dark: ThemeMode;
+  lightAlt: ThemeMode;
+  darkAlt: ThemeMode;
 }
 
 export interface ThemeMode {

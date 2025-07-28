@@ -58,13 +58,13 @@ export const GradientBackground: React.FC<Props> = ({
     if (fallbackCSS) return fallbackCSS;
 
     return DEFAULT_GRADIENT;
-  }, [selectedPalette, gradientType]);
+  }, [selectedPalette, gradientType, gradientDirection]);
 
   //console.log("[GradientBackground] backgroundCSS", backgroundCSS);
 
   return (
     <AbsoluteFill
-      className={`bg-gradient ${className}`}
+      className={` ${className}`}
       style={{
         background: backgroundCSS as string,
         zIndex: -1,

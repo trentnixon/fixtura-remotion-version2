@@ -47,12 +47,14 @@ export const GroundTime: React.FC<BottomSectionProps> = ({
           value={truncatedGround}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-left"
+          variant="onContainerCopyNoBg"
         />
 
         <MetadataSmall
           value={time}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-right"
+          variant="onContainerCopyNoBg"
         />
       </div>
     </AnimatedContainer>

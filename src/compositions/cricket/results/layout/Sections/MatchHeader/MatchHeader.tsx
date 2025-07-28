@@ -54,12 +54,14 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
         value={leftText}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className=""
+        variant="onContainerCopyNoBg"
       />
 
       <ResultMetaData
         value={truncateText(ground, 50)}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className="text-right"
+        variant="onContainerCopyNoBg"
       />
     </AnimatedContainer>
   );

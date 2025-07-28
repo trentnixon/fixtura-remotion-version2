@@ -3,7 +3,10 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
 import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
-import { ResultScore } from "../../../../utils/primitives/ResultScore";
+import {
+  ResultScore,
+  ResultScoreFirstInnings,
+} from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "./type";
 
@@ -14,13 +17,13 @@ const truncateText = (text: string, maxLength: number): string => {
 };
 
 export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
+  type,
   homeTeam,
   awayTeam,
   homeTeamLogo,
   awayTeamLogo,
-  height,
   delay,
-  backgroundColor,
+  outerContainer,
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -33,25 +36,31 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
       type="full"
       className="w-full flex justify-between items-center p-4"
       backgroundColor="none"
-      style={{
-        background: backgroundColor,
-        height: `${height}px`,
-      }}
+      style={outerContainer}
       animation={animations.container.main.itemContainer.containerIn}
       animationDelay={delay}
     >
       <div className="flex w-full justify-between items-center">
         {/* Home team score and name */}
         <div className="flex-1 flex flex-col items-end">
+          {type === "Two Day+" && (
+            <ResultScoreFirstInnings
+              value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            />
+          )}
+
           <ResultScore
             value={homeTeam.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+            variant="onContainerCopyNoBg"
           />
 
           <ResultTeamName
             value={truncateText(homeTeam.name, 50).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
             className="text-right"
+            variant="onContainerCopyNoBg"
           />
         </div>
 
@@ -74,14 +83,22 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
 
         {/* Away team score and name */}
         <div className="flex-1 flex flex-col items-start">
+          {type === "Two Day+" && (
+            <ResultScoreFirstInnings
+              value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            />
+          )}
           <ResultScore
             value={awayTeam.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+            variant="onContainerCopyNoBg"
           />
           <ResultTeamName
             value={truncateText(awayTeam.name, 50).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
             className="text-left"
+            variant="onContainerCopyNoBg"
           />
         </div>
       </div>

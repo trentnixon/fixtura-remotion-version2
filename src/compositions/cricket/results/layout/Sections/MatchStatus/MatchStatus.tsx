@@ -6,9 +6,10 @@ import { AnimatedText } from "../../../../../../components/typography/AnimatedTe
 interface MatchStatusProps {
   status: string;
   result: string;
-  height: number;
+
   delay: number;
-  backgroundColor: string;
+
+  outerContainer: object;
 }
 
 // Helper function to truncate text
@@ -20,9 +21,8 @@ const truncateText = (text: string, maxLength: number): string => {
 export const MatchStatus: React.FC<MatchStatusProps> = ({
   status,
   result,
-  height,
   delay,
-  backgroundColor,
+  outerContainer,
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -37,10 +37,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
       type="full"
       className="w-full flex justify-between items-center p-3"
       backgroundColor="none"
-      style={{
-        background: backgroundColor,
-        height: `${height}px`,
-      }}
+      style={outerContainer}
       animation={animations.container.main.itemContainer.containerIn}
       animationDelay={delay + 10}
     >

@@ -121,11 +121,11 @@ export const RouteToComposition = (): React.ReactElement => {
   const sport = (videoMeta.club?.sport?.toLowerCase() || "cricket") as Sport;
   const title = metadata.title;
 
-  console.log("[appearance]", appearance);
+  /*   console.log("[appearance]", appearance);
   console.log("[compositionId]", compositionId);
   console.log("[templateId]", templateId);
   console.log("[sport]", sport);
-
+ */
   try {
     // Get the sport module
     const sportModule = SPORT_MODULES[sport];

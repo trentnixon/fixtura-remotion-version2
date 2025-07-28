@@ -4,6 +4,7 @@ import TeamLogo from "../../utils/primitives/TeamLogo";
 import LadderTeamName from "../../utils/primitives/ladderTeamName";
 import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 import { TeamData } from "../types";
+import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 // Base props interface for all layouts
 interface BaseLayoutProps {
@@ -138,11 +139,15 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
   bgColorClass,
   LadderRowHeight,
 }) => {
+  const { selectedPalette } = useThemeContext();
+  const borderColor = selectedPalette.container.primary;
   return (
     <div
-      className={`flex items-center p-2 rounded mb-1 ${bgColorClass}`}
+      className={`flex items-center p-2 rounded mb-1 ${bgColorClass} border-b-2  `}
       style={{
         height: `${LadderRowHeight}px`,
+        background: bgColorClass,
+        borderColor: borderColor,
       }}
     >
       {/* Team name and logo container with fixed width */}
@@ -151,7 +156,7 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
         style={{ width: "70%" }}
       >
         <LadderTeamName value={team.teamName} delay={delay} />
-        <div className="w-10 ml-2 overflow-hidden flex-shrink-0">
+        <div className="w-20 mr-4 overflow-hidden flex-shrink-0">
           {team.clubLogo || team.playHQLogo ? (
             <div className="rounded-full">
               <TeamLogo
@@ -167,7 +172,12 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
       </div>
 
       {/* Stats in alternating backgrounds, matching StandardLadderRow widths */}
-      <div className="flex flex-1 justify-evenly bg-black/20">
+      <div
+        className="flex flex-1 justify-evenly"
+        style={{
+          background: selectedPalette.container.backgroundTransparent.medium,
+        }}
+      >
         <div className="w-8 mx-px text-center">
           <LadderTeamPoints value={team?.P || 0} delay={delay} />
         </div>
@@ -195,6 +205,7 @@ export const CardLadderRow: React.FC<BaseLayoutProps> = ({
   bgColorClass,
   LadderRowHeight,
 }) => {
+  const { selectedPalette } = useThemeContext();
   return (
     <div
       className={`flex items-center p-1 rounded mb-1 ${bgColorClass}`}
@@ -205,8 +216,11 @@ export const CardLadderRow: React.FC<BaseLayoutProps> = ({
       <div className="flex w-full h-full border border-white/20 rounded overflow-hidden">
         {/* Logo and team section */}
         <div
-          className="flex items-center p-1 bg-gradient-to-r from-black/40 to-transparent"
-          style={{ width: "50%" }}
+          className="flex items-center p-1"
+          style={{
+            background: selectedPalette.container.backgroundTransparent.strong,
+            width: "50%",
+          }}
         >
           <div className="w-10 flex-shrink-0 mr-2 overflow-hidden">
             {team.clubLogo || team.playHQLogo ? (

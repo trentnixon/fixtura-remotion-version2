@@ -16,7 +16,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
 
   return (
     <div
-      className="flex items-center p-2 border-b-2 border-white/20 mb-3"
+      className="flex items-center p-2 "
       style={{ height: `${headerHeight}px` }}
     >
       {/* Title (team info) */}
@@ -98,7 +98,7 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
   title,
   headerHeight,
 }) => {
-  const { fontClasses } = useThemeContext();
+  const { fontClasses, selectedPalette } = useThemeContext();
 
   return (
     <div
@@ -127,7 +127,12 @@ export const TableHeaderWrapped: React.FC<TableHeaderProps> = ({
       </div>
 
       {/* Stat columns */}
-      <div className="flex flex-1 justify-evenly bg-gray-700/50 p-2">
+      <div
+        className="flex flex-1 justify-evenly p-2"
+        style={{
+          background: selectedPalette.container.backgroundTransparent.high,
+        }}
+      >
         <div className="w-8 text-center">
           <AnimatedText
             type="ladderGradeLabel"

@@ -89,6 +89,7 @@ export interface TextOptions {
     accent: string;
     title: string;
     copy: string;
+    copyNoBg: string;
   };
   title?: string;
   body?: string;

@@ -53,7 +53,7 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const imageUrl =
     config.url || video?.templateVariation?.image?.url || DEFAULT_IMAGE;
 
-  console.log("[ImageBackground] imageUrl", imageUrl);
+  //console.log("[ImageBackground] imageUrl", imageUrl);
   // If no image URL is available, return null
   if (!imageUrl) {
     console.warn("No image URL provided for ImageBackground");
@@ -107,13 +107,10 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
     };
 
     // Default colors from the theme if not specified
-    const primaryColor = getPaletteColor(
-      "overlayColor",
-      selectedPalette?.background?.main || "rgba(0,0,0,0.5)",
-    );
+    const primaryColor = getPaletteColor("overlayColor", "rgba(0,0,0,0.8)");
     const secondaryColor = getPaletteColor(
       "overlaySecondaryColor",
-      selectedPalette?.background?.accent || "rgba(0,0,0,0)",
+      "rgba(0,0,0,0.5)",
     );
 
     // If we have a custom overlay, create it from the provided configuration
@@ -145,9 +142,9 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
         overlayConfig = {
           style: OverlayStyle.Vignette,
           color: primaryColor as string,
-          size: config.vignetteSize || 150,
+          size: config.vignetteSize || 80,
           shape: config.vignetteShape || "circle",
-          opacity: config.overlayOpacity || 0.9,
+          opacity: config.overlayOpacity || 0.75,
           animateOpacity: config.animateOverlayOpacity || false,
         };
         break;
@@ -251,7 +248,14 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   // Return the complete component with effect and overlay
   return (
     <AbsoluteFill className={`image-background-container ${className}`}>
-      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          opacity: 0.6,
+        }}
+      >
         {renderEffect()}
         <OverlayRenderer config={overlayConfig as OverlayConfig} />
       </div>

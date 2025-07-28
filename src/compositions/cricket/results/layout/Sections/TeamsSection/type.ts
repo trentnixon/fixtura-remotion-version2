@@ -1,10 +1,22 @@
 import { Team, TeamLogo as TeamLogoType } from "../../../types";
 export interface TeamsSectionProps {
+  type: string;
   homeTeam: Team;
   awayTeam: Team;
   homeTeamLogo?: TeamLogoType;
   awayTeamLogo?: TeamLogoType;
-  height: number;
   delay: number;
-  backgroundColor: string;
+  outerContainer: object;
+  backgroundColor?: string;
+  height?: number;
+}
+
+export interface HorizontalTeamsSectionProps {
+  type: string;
+  Team: Team;
+  TeamLogo?: TeamLogoType;
+  delay: number;
+  outerContainer: object;
+  backgroundColor?: string;
+  height?: number;
 }

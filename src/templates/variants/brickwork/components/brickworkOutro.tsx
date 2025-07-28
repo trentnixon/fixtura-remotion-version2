@@ -86,9 +86,8 @@ export const BrickworkOutro: React.FC<BrickworkOutroProps> = ({
   const defaultArray: Sponsor[] = convertToArray(defaultSponsors);
   const sponsorsArray: Sponsor[] = [...defaultArray];
 
-  console.log("[sponsorsArray]", sponsorsArray);
   const groups = chunkArray(sponsorsArray, 6);
-  console.log("[groups]", groups);
+
   // Each group is a sequence for 180 frames
   const sequences = groups.map((group) => ({
     content: (
@@ -111,7 +110,7 @@ export const BrickworkOutro: React.FC<BrickworkOutroProps> = ({
 // Alternative outro for when there are no sponsors
 const AlternativeOutro: React.FC = () => (
   <AbsoluteFill className="flex flex-col justify-center items-center">
-    <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
+    <h2 className="text-5xl font-bold text-center"></h2>
   </AbsoluteFill>
 );
 

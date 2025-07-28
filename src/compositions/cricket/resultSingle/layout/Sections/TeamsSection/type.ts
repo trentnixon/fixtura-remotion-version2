@@ -7,4 +7,5 @@ export interface TeamsSectionProps {
   awayTeamLogo: TeamLogo;
   height: number;
   delay: number;
+  type: string;
 }

@@ -3,12 +3,16 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { TeamsSectionProps } from "./type";
-import { ResultScore } from "../../../../utils/primitives/ResultScore";
+import {
+  ResultScore,
+  ResultScoreFirstInnings,
+} from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import TeamLogo from "../../../../utils/primitives/TeamLogo";
 import { ResultSyntax } from "../../../../utils/primitives/ResultSyntax";
 
 export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
+  type,
   homeTeam,
   awayTeam,
   homeTeamLogo,
@@ -38,9 +42,9 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
       animation={animations.container.main.itemContainer.containerIn}
       animationDelay={delay}
     >
-      <div className="flex w-full justify-between items-center">
+      <div className="grid grid-cols-5 gap-12 justify-center items-center w-full">
         {/* Home team section */}
-        <div className="flex flex-col items-center space-y-3">
+        <div className="flex flex-col items-center space-y-3 col-span-2">
           <div
             className={`${logoSize} flex justify-center items-center overflow-hidden`}
           >
@@ -52,10 +56,18 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
           </div>
           <div className="flex flex-col items-center">
             <div className="flex flex-row items-end">
-              <ResultScore
-                value={homeTeam.score}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-              />
+              <div className="flex flex-col items-end">
+                {type === "Two Day+" && (
+                  <ResultScoreFirstInnings
+                    value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+                    animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                  />
+                )}
+                <ResultScore
+                  value={homeTeam.score}
+                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+                />
+              </div>
               {homeTeam.overs && (
                 <ResultSyntax
                   value={`${homeTeam.overs}`}
@@ -72,7 +84,7 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
         </div>
 
         {/* VS or match status in the middle */}
-        <div className="flex flex-col items-center px-4">
+        <div className="flex flex-col items-center px-4 col-span-1">
           <ResultTeamName
             value={`VS`}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
@@ -81,7 +93,7 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
         </div>
 
         {/* Away team section */}
-        <div className="flex flex-col items-center space-y-3">
+        <div className="flex flex-col items-center space-y-3 col-span-2">
           <div
             className={`${logoSize} flex justify-center items-center overflow-hidden`}
           >
@@ -93,10 +105,18 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
           </div>
           <div className="flex flex-col items-center">
             <div className="flex flex-row items-end">
-              <ResultScore
-                value={awayTeam.score}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-              />
+              <div className="flex flex-col items-end">
+                {type === "Two Day+" && (
+                  <ResultScoreFirstInnings
+                    value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+                    animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                  />
+                )}
+                <ResultScore
+                  value={awayTeam.score}
+                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+                />
+              </div>
               {awayTeam.overs && (
                 <ResultSyntax
                   value={`${awayTeam.overs}`}

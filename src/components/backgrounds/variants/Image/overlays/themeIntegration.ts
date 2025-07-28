@@ -72,9 +72,9 @@ export const createThemeOverlayPresets = (palette: DesignPalette) => {
     ),
 
     // Themed vignette effects
-    primaryVignette: createVignetteOverlay(primaryDark, 150, 0.7),
+    primaryVignette: createVignetteOverlay("#000000", 150, 0.7),
 
-    accentVignette: createVignetteOverlay(accentColor, 150, 0.5),
+    accentVignette: createVignetteOverlay("#000000", 150, 0.5),
 
     // Themed duotone effects
     primaryDuotone: createDuotoneOverlay(primaryDark, accentColor, 0.7, 0.85),

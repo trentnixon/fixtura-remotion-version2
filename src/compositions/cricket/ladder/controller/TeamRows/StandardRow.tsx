@@ -6,6 +6,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import StandardLadderRow, {
   BalancedLadderRow,
 } from "../../layout/TableRowLayout";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 interface TeamRowProps {
   team: TeamData;
   index: number;
@@ -79,7 +80,7 @@ export const StandardRowWrapped: React.FC<TeamRowProps> = ({
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
-
+  const { selectedPalette } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { timings } = data;
 
@@ -98,7 +99,10 @@ export const StandardRowWrapped: React.FC<TeamRowProps> = ({
   } else if (position > totalTeams - 1) {
     bgColorClass = "bg-red-500/50";
   } else {
-    bgColorClass = index % 2 === 0 ? "bg-black/30" : "bg-black/10";
+    bgColorClass =
+      index % 2 === 0
+        ? selectedPalette.container.backgroundTransparent.low
+        : selectedPalette.container.backgroundTransparent.subtle;
   }
 
   return (

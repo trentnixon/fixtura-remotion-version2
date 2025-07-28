@@ -51,11 +51,11 @@ export const createStandardPaletteStructure = (
 
   const backgroundTransparency = (baseBg: string) => {
     return {
-      subtle: tinycolor(baseBg).setAlpha(0.1).toRgbString(),
-      low: tinycolor(baseBg).setAlpha(0.25).toRgbString(),
-      medium: tinycolor(baseBg).setAlpha(0.5).toRgbString(),
-      high: tinycolor(baseBg).setAlpha(0.65).toRgbString(),
-      strong: tinycolor(baseBg).setAlpha(0.8).toRgbString(),
+      subtle: tinycolor(baseBg).setAlpha(0.3).toRgbString(),
+      low: tinycolor(baseBg).setAlpha(0.4).toRgbString(),
+      medium: tinycolor(baseBg).setAlpha(0.55).toRgbString(),
+      high: tinycolor(baseBg).setAlpha(0.7).toRgbString(),
+      strong: tinycolor(baseBg).setAlpha(0.85).toRgbString(),
     };
   };
 
@@ -117,6 +117,7 @@ export const createStandardPaletteStructure = (
       onContainer: {
         title: useMode.text.title,
         copy: useMode.text.copy,
+        copyNoBg: useMode.text.title,
         // Optionally, add a "safe" field if you want to ensure contrast:
         safeCopy: ensureContrast(
           useMode.container.background,

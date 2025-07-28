@@ -5,9 +5,13 @@ import { RosterPlayerName } from "../../../utils/primitives/RosterPlayerName";
 
 interface RosterPlayerListProps {
   roster: RosterDataItem;
+  className?: string;
 }
 
-const RosterPlayerList: React.FC<RosterPlayerListProps> = ({ roster }) => {
+const RosterPlayerList: React.FC<RosterPlayerListProps> = ({
+  roster,
+  className = "text-center font-bold",
+}) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
@@ -19,7 +23,7 @@ const RosterPlayerList: React.FC<RosterPlayerListProps> = ({ roster }) => {
             key={index}
             value={player.toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: 0 }}
-            className="text-center font-bold"
+            className={className}
           />
         ))}
       </div>

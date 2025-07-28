@@ -1,5 +1,6 @@
 import { Basic } from "./variants/basic";
 import { Brickwork } from "./variants/brickwork";
+import { Sixers } from "./variants/sixers";
 /**
  * Define template registry key type
  */
@@ -24,6 +25,10 @@ export const templateRegistry = {
   },
   Brickwork: {
     component: Brickwork,
+    variants: Variants,
+  },
+  Sixers: {
+    component: Sixers,
     variants: Variants,
   },
 };

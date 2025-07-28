@@ -4,11 +4,15 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
 import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
-import { ResultScore } from "../../../../utils/primitives/ResultScore";
+import {
+  ResultScore,
+  ResultScoreFirstInnings,
+} from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "./type";
 
 export const TeamsSectionLogoBelow: React.FC<TeamsSectionProps> = ({
+  type,
   homeTeam,
   awayTeam,
   homeTeamLogo,
@@ -21,7 +25,8 @@ export const TeamsSectionLogoBelow: React.FC<TeamsSectionProps> = ({
   const TextAnimations = animations.text.main;
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.main;
+  const backgroundColor =
+    selectedPalette.container.backgroundTransparent.medium;
 
   // Logo size based on height
   const logoSize = `w-[100px] h-[100px]`;
@@ -38,29 +43,14 @@ export const TeamsSectionLogoBelow: React.FC<TeamsSectionProps> = ({
       animation={animations.container.main.itemContainer.containerIn}
       animationDelay={delay}
     >
-      {/* Score and team names in a row */}
-      <div className="flex w-full justify-around items-center">
-        {/* Home team score and name */}
-        <div className="flex items-end">
-          <ResultScore
-            value={homeTeam.score}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-            className="text-right"
-          />
-        </div>
-
-        {/* Away team score and name */}
-        <div className="flex items-start">
-          <ResultScore
-            value={awayTeam.score}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+      {/* Logos row at the top */}
+      <div className="grid grid-cols-2 gap-12 justify-center items-center w-full">
+        <div className="flex items-center space-x-4 justify-end">
+          <ResultTeamName
+            value={homeTeam.name.toUpperCase()}
+            animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
             className="text-left"
           />
-        </div>
-      </div>
-      {/* Logos row at the top */}
-      <div className="flex justify-center items-center  w-full">
-        <div className="flex items-start space-x-4 mr-6">
           <div className={`${logoSize}`}>
             <TeamLogo
               logo={homeTeamLogo || null}
@@ -68,13 +58,8 @@ export const TeamsSectionLogoBelow: React.FC<TeamsSectionProps> = ({
               delay={delay + 3}
             />
           </div>
-          <ResultTeamName
-            value={homeTeam.name.toUpperCase()}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-            className="text-left"
-          />
         </div>
-        <div className="flex items-start space-x-4 ml-6">
+        <div className="flex items-center space-x-4 justify-end">
           <ResultTeamName
             value={awayTeam.name.toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
@@ -87,6 +72,38 @@ export const TeamsSectionLogoBelow: React.FC<TeamsSectionProps> = ({
               delay={delay + 3}
             />
           </div>
+        </div>
+      </div>
+      {/* Score and team names in a row */}
+      <div className="grid grid-cols-2 gap-12 w-full justify-center items-center">
+        {/* Home team score and name */}
+        <div className="flex items-center space-x-2 justify-end">
+          {type === "Two Day+" && (
+            <ResultScoreFirstInnings
+              value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            />
+          )}
+          <ResultScore
+            value={homeTeam.score}
+            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+            className="text-right"
+          />
+        </div>
+
+        {/* Away team score and name */}
+        <div className="flex items-center space-x-2 justify-end">
+          {type === "Two Day+" && (
+            <ResultScoreFirstInnings
+              value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            />
+          )}
+          <ResultScore
+            value={awayTeam.score}
+            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+            className="text-left"
+          />
         </div>
       </div>
     </AnimatedContainer>

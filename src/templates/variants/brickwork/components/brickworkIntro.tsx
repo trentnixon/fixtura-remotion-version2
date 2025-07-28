@@ -41,7 +41,7 @@ export const BrickworkIntro: React.FC = () => {
           <AnimatedText
             textAlign="center"
             type="title"
-            variant="onBackgroundDark"
+            variant="onContainerTitle"
             letterAnimation="none"
             animation={TextAnimations.mainTitle}
             exitAnimation={TextAnimations.introOut}
@@ -57,7 +57,7 @@ export const BrickworkIntro: React.FC = () => {
           <AnimatedText
             type="subtitle"
             textAlign="center"
-            variant="onBackgroundDark"
+            variant="onContainerTitle"
             letterAnimation="none"
             animation={TextAnimations.clubName}
             exitAnimation={TextAnimations.introOut}

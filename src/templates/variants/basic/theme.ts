@@ -31,7 +31,7 @@ export const basicTheme: TemplateThemeConfig = {
     // Subtitle component styles
     subtitle: {
       className:
-        "text-6xl font-semibold tracking-normal leading-none text-center m-0 px-4",
+        "text-6xl font-black tracking-normal leading-none text-center m-0 px-4",
     },
 
     // Body text component styles
@@ -84,6 +84,9 @@ export const basicTheme: TemplateThemeConfig = {
     ResultScore: {
       className: "text-7xl font-bold  tracking-normal leading-tight ",
     },
+    ResultScoreFirstInnings: {
+      className: "text-3xl font-bold  tracking-normal leading-tight ",
+    },
     ResultScoreYetToBat: {
       className: "text-3xl font-bold  tracking-wider py-6",
     },
@@ -106,9 +109,13 @@ export const basicTheme: TemplateThemeConfig = {
     ResultMetaData: {
       className: "text-xl font-semibold  tracking-wider leading-snug",
     },
+    ResultVS: {
+      className: "text-2xl font-semibold  tracking-wider leading-snug",
+    },
     RosterPlayerName: {
       className: "text-3xl font-bold  tracking-wider leading-snug",
     },
+
     metadataSmall: {
       className: "text-2xl font-normal  tracking-wider leading-snug",
     },
@@ -145,11 +152,33 @@ export const basicTheme: TemplateThemeConfig = {
         backgroundTransparent: "rgba(255, 255, 255, 0.5)",
       },
       text: {
+        title: "#000",
+        copy: "#000",
+      },
+    },
+    lightAlt: {
+      container: {
+        background: "#fff",
+        backgroundAlt: "#f0f0f0",
+        backgroundTransparent: "rgba(255, 255, 255, 0.5)",
+      },
+      text: {
         title: "#fff",
         copy: "#000",
       },
     },
     dark: {
+      container: {
+        background: "#000",
+        backgroundAlt: "#1a1a1a",
+        backgroundTransparent: "rgba(0, 0, 0, 0.5)",
+      },
+      text: {
+        title: "#fff",
+        copy: "#fff",
+      },
+    },
+    darkAlt: {
       container: {
         background: "#000",
         backgroundAlt: "#1a1a1a",

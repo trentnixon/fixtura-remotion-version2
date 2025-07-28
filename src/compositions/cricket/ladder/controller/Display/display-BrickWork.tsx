@@ -14,9 +14,8 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { League, gradeName, bias, assignSponsors } = ladder;
-  const { layout } = useThemeContext();
+  const { layout, selectedPalette } = useThemeContext();
   const { heights } = layout;
-
   const { headerHeight, rowHeight } = calculateRowDimensions(
     heights.asset,
     League.length,
@@ -27,8 +26,11 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
       {/* <LadderHeader title={name} /> */}
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-8 p-4 bg-black/60 rounded-none overflow-hidden"
-        backgroundColor="none"
+        className="flex-1 flex flex-col mx-8 p-4 rounded-none overflow-hidden"
+        backgroundColor={undefined}
+        style={{
+          background: selectedPalette.container.backgroundTransparent.medium,
+        }}
         animation={{
           type: "slideInRight",
           easing: { type: "inOut", base: "ease" },

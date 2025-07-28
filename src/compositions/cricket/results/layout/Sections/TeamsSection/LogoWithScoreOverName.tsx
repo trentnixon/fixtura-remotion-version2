@@ -4,7 +4,10 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
 import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
-import { ResultScore } from "../../../../utils/primitives/ResultScore";
+import {
+  ResultScore,
+  ResultScoreFirstInnings,
+} from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "./type";
 
@@ -15,6 +18,7 @@ const truncateText = (text: string, maxLength: number): string => {
 };
 
 export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
+  type,
   homeTeam,
   awayTeam,
   homeTeamLogo,
@@ -27,7 +31,8 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   const TextAnimations = animations.text.main;
 
   // Get background color from theme
-  const backgroundColor = selectedPalette.container.main;
+  const backgroundColor =
+    selectedPalette.container.backgroundTransparent.medium;
 
   // Logo size based on height
   const logoSize = `w-[110px] h-[110px]`;
@@ -56,6 +61,12 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
           </div>
         </div>
         <div className="flex-1 flex flex-col items-start">
+          {type === "Two Day+" && (
+            <ResultScoreFirstInnings
+              value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            />
+          )}
           <ResultScore
             value={homeTeam.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
@@ -69,6 +80,12 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
 
         {/* Away team score and name */}
         <div className="flex-1 flex flex-col items-end">
+          {type === "Two Day+" && (
+            <ResultScoreFirstInnings
+              value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            />
+          )}
           <ResultScore
             value={awayTeam.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}

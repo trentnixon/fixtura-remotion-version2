@@ -59,14 +59,14 @@ export const templateAnimations: AnimationConfig = {
       logo: {
         introIn: {
           type: "slideInBottom",
-          duration: 10,
-          delay: 30,
+          duration: 15,
+          delay: 0,
           easing: { type: "inOut", base: "ease" },
           custom: { distance: 100 },
         },
         introOut: {
           type: "collapseRight",
-          duration: 5,
+          duration: 15,
           easing: { type: "inOut", base: "ease" },
         },
       },
