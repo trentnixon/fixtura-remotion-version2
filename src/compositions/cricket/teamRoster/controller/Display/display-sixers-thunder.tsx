@@ -12,7 +12,9 @@ interface RosterDisplayProps {
   roster: RosterDataItem;
 }
 
-const RosterDisplaySixers: React.FC<RosterDisplayProps> = ({ roster }) => {
+const RosterDisplaySixersThunder: React.FC<RosterDisplayProps> = ({
+  roster,
+}) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const availableHeight = heights.asset;
@@ -51,7 +53,7 @@ const RosterDisplaySixers: React.FC<RosterDisplayProps> = ({ roster }) => {
           />
 
           <div
-            className="flex flex-row gap-2 justify-between items-center rounded-lg p-4 "
+            className={`flex flex-row gap-2 justify-between items-center rounded-lg ${layout.borderRadius.container}  force-p-4`}
             style={{ backgroundColor: backgroundColor }}
           >
             <RosterPlayerList roster={roster} className="text-left" />
@@ -64,4 +66,4 @@ const RosterDisplaySixers: React.FC<RosterDisplayProps> = ({ roster }) => {
   );
 };
 
-export default RosterDisplaySixers;
+export default RosterDisplaySixersThunder;

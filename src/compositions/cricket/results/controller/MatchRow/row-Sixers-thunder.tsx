@@ -1,42 +1,45 @@
 import React from "react";
-import { PlayerData } from "../../types";
+import { MatchResult } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-import PlayerRowNameSixers from "../../layout/PlayerRowNameSixers";
+import MatchCardSixersThunder from "../../layout/MatchCard/card-Sixers-thunder";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
-interface PlayerRowProps {
-  player: PlayerData;
+interface MatchRowProps {
+  match: MatchResult;
   index: number;
   rowHeight: number;
 }
 
-const PlayerRowSixers: React.FC<PlayerRowProps> = ({
-  player,
+const MatchRowSixersThunder: React.FC<MatchRowProps> = ({
+  match,
   index,
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
   const { data } = useVideoDataContext();
   const { timings } = data;
-
+  const { layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = index * 5; // Stagger the animation of each row
-  const animationOutFrame = (timings?.FPS_MAIN || 30) - 30;
+  const delay = index * 5; // Base delay for animation
+  const animationOutFrame = timings?.FPS_SCORECARD
+    ? timings.FPS_SCORECARD - 20
+    : 280;
 
   return (
-    <div className="overflow-hidden">
+    <div className="h-full w-full">
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${layout.borderRadius.container} h-full w-full`}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <PlayerRowNameSixers
-          player={player}
+        <MatchCardSixersThunder
+          match={match}
           index={index}
           rowHeight={rowHeight}
           delay={delay}
@@ -46,4 +49,4 @@ const PlayerRowSixers: React.FC<PlayerRowProps> = ({
   );
 };
 
-export default PlayerRowSixers;
+export default MatchRowSixersThunder;

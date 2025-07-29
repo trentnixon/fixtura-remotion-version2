@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 interface TopSectionProps {
   teamName: string;
   delay: number;
@@ -18,11 +19,12 @@ export const TeamName: React.FC<TopSectionProps> = ({
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
   const ContainerAnimations = animations.container;
+  const { layout } = useThemeContext();
 
   return (
     <AnimatedContainer
       type="full"
-      className="w-full  p-3"
+      className={`w-full  p-3 ${layout.borderRadius.container}`}
       backgroundColor="none"
       style={style}
       animation={ContainerAnimations.main.itemContainer.containerIn}

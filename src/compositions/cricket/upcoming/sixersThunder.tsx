@@ -6,7 +6,7 @@ import {
   TransitionSeriesWrapper,
   TransitionType,
 } from "../../../components/transitions";
-import GamesDisplaySixers from "./controller/GamesDisplay/FixtureDisplaySixers";
+import { GamesDisplaySixersThunder } from "./controller/GamesDisplay/FixtureDisplaySixersThunder";
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { GameData } from "./types";
@@ -45,7 +45,7 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <GamesDisplaySixers
+      <GamesDisplaySixersThunder
         games={CompositionData as GameData[]}
         gamesPerScreen={gamesPerScreen}
         screenIndex={index}
@@ -68,8 +68,8 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
 };
 
 // Export as Basic for compatibility with original template
-export const Sixers: React.FC = () => {
+export const SixersThunder: React.FC = () => {
   return <UpcomingGamesWithTransitions />;
 };
 
-export default Sixers;
+export default SixersThunder;

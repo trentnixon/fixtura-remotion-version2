@@ -1,6 +1,7 @@
 import { Basic } from "./variants/basic";
 import { Brickwork } from "./variants/brickwork";
 import { Sixers } from "./variants/sixers";
+import { Thunder } from "./variants/thunder";
 /**
  * Define template registry key type
  */
@@ -29,6 +30,10 @@ export const templateRegistry = {
   },
   Sixers: {
     component: Sixers,
+    variants: Variants,
+  },
+  Thunder: {
+    component: Thunder,
     variants: Variants,
   },
 };

@@ -3,6 +3,7 @@ import TeamLogo from "../../../../utils/primitives/TeamLogo";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { MetadataMedium } from "../../../../utils/primitives/metadataMedium";
 import { LOGO_SIZES, TeamLayoutProps, useLayoutAnimations } from "./common";
+import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 
 export const LogosOnly: React.FC<TeamLayoutProps> = ({
   teamHome,
@@ -15,7 +16,7 @@ export const LogosOnly: React.FC<TeamLayoutProps> = ({
   logoPosition = "center",
 }) => {
   const { metaDataAnimation, containerAnimation } = useLayoutAnimations(delay);
-
+  const { layout } = useThemeContext();
   const logoPositionClass: Record<string, { home: string; away: string }> = {
     center: {
       home: "flex-1 flex flex-col items-center",
@@ -30,11 +31,11 @@ export const LogosOnly: React.FC<TeamLayoutProps> = ({
       away: "flex-1 flex flex-col items-start px-4",
     },
   };
-  console.log("[logoPosition]", logoPosition);
+
   return (
     <AnimatedContainer
       type="full"
-      className="flex items-center justify-center w-full bg-black/20 p-1"
+      className={`flex items-center justify-center w-full bg-black/20 p-1 ${layout.borderRadius.container}`}
       animation={containerAnimation}
       animationDelay={delay}
       style={{ background: backgroundColor }}

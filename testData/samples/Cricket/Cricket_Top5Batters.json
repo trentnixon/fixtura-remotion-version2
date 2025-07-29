@@ -257,8 +257,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#ff00a0",
-          "secondary": "#d40f7d"
+          "primary": "#84ff19",
+          "secondary": "#009300"
         },
         "template": "Basic"
       },
@@ -288,7 +288,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
-        "mode": "lightAlt",
+        "mode": "light",
         "video": {
           "url": null,
           "fallbackUrl": null,

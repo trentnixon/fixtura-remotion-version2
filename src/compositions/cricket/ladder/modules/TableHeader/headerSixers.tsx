@@ -8,12 +8,12 @@ interface TableHeaderProps {
   headerHeight: number;
 }
 
-export const TableHeaderSixers: React.FC<TableHeaderProps> = ({
+export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
   title,
   headerHeight,
 }) => {
   const { fontClasses, selectedPalette } = useThemeContext();
-
+  const { layout } = useThemeContext();
   return (
     <div
       className="flex items-center p-2 "
@@ -79,7 +79,7 @@ export const TableHeaderSixers: React.FC<TableHeaderProps> = ({
           </AnimatedText>
         </div>
         <div
-          className="w-16 rounded-md text-center"
+          className={`w-16 ${layout.borderRadius.container} text-center`}
           style={{
             background: selectedPalette.container.backgroundTransparent.strong,
           }}
@@ -97,4 +97,4 @@ export const TableHeaderSixers: React.FC<TableHeaderProps> = ({
   );
 };
 
-export default TableHeaderSixers;
+export default TableHeaderSixersThunder;

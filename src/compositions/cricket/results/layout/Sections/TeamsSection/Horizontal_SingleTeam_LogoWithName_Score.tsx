@@ -17,7 +17,7 @@ const truncateText = (text: string, maxLength: number): string => {
 export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
   HorizontalTeamsSectionProps
 > = ({ type, Team, TeamLogo: teamLogo, delay, outerContainer }) => {
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
@@ -40,7 +40,7 @@ export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
     >
       {/* Main white bar container */}
       <div
-        className="flex w-full justify-between items-center  rounded-lg p-2 relative"
+        className={`flex w-full justify-between items-center  p-2 relative ${layout.borderRadius.container}`}
         style={{
           background: backgroundColor,
         }}
@@ -70,7 +70,7 @@ export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
         <AnimatedContainer
           type="full"
           backgroundColor="none"
-          className="text-white px-4 py-2 rounded-md font-bold text-lg flex items-center shadow-md"
+          className={`text-white px-4 py-2 font-bold text-lg flex items-center shadow-md ${layout.borderRadius.container}`}
           style={{ backgroundColor: primaryColor }}
           animation={animations.container.main.itemContainerInner.containerIn}
           animationDelay={delay + 15}

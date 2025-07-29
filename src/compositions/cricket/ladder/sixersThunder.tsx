@@ -9,7 +9,7 @@ import {
 import { LadderData } from "./types";
 import NoLadderData from "./modules/NoLadderData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
-import LadderDisplaySixers from "./controller/Display/display-Sixers";
+import LadderDisplaySixersThunder from "./controller/Display/display-Sixers-thunder";
 
 // Main component with TransitionSeries
 export const CricketLadderWithTransitions: React.FC = () => {
@@ -34,7 +34,7 @@ export const CricketLadderWithTransitions: React.FC = () => {
   return (
     <TransitionSeriesWrapper
       sequences={ladderDataArray.map((ladder: LadderData) => ({
-        content: <LadderDisplaySixers ladder={ladder} />,
+        content: <LadderDisplaySixersThunder ladder={ladder} />,
         // Use a generic timing property or fallback if FPS_LADDER doesn't exist
         durationInFrames: timings?.FPS_LADDER || 300, // Example: Use FPS_MAIN or fallback
       }))}
@@ -49,8 +49,8 @@ export const CricketLadderWithTransitions: React.FC = () => {
 };
 
 // Export as Brickwork for compatibility with original template
-export const Sixers: React.FC = () => {
+export const sixersThunder: React.FC = () => {
   return <CricketLadderWithTransitions />;
 };
 
-export default Sixers;
+export default sixersThunder;

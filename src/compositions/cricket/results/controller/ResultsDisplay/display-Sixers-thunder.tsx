@@ -6,7 +6,7 @@ import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/he
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import MatchRowSixers from "../MatchRow/row-Sixers";
+import MatchRowSixersThunder from "../MatchRow/row-Sixers-thunder";
 
 interface ResultsDisplayProps {
   results: MatchResult[];
@@ -14,7 +14,7 @@ interface ResultsDisplayProps {
   screenIndex: number;
 }
 
-const ResultsDisplaySixers: React.FC<ResultsDisplayProps> = ({
+const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
   results,
   resultsPerScreen,
   screenIndex,
@@ -51,7 +51,11 @@ const ResultsDisplaySixers: React.FC<ResultsDisplayProps> = ({
               marginBottom: index === 0 ? "10px" : 0,
             }}
           >
-            <MatchRowSixers match={match} index={index} rowHeight={rowHeight} />
+            <MatchRowSixersThunder
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+            />
           </div>
         ))}
       </div>
@@ -83,4 +87,4 @@ const ResultsDisplaySixers: React.FC<ResultsDisplayProps> = ({
   );
 };
 
-export default ResultsDisplaySixers;
+export default ResultsDisplaySixersThunder;

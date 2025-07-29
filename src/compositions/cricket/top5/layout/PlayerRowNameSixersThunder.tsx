@@ -28,13 +28,13 @@ const truncateText = (text: string, maxLength: number): string => {
 };
 
 // --- Layout 1: Standard (Existing) ---
-export const PlayerRowNameSixers: React.FC<PlayerRowLayoutProps> = ({
+export const PlayerRowNameSixersThunder: React.FC<PlayerRowLayoutProps> = ({
   player,
   rowHeight,
   delay,
 }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   /*   const { data } = useVideoDataContext();
   const { videoMeta } = data;
   const compositionId = videoMeta?.video?.metadata?.compositionId; */
@@ -76,7 +76,7 @@ export const PlayerRowNameSixers: React.FC<PlayerRowLayoutProps> = ({
 
   return (
     <div
-      className="grid grid-cols-12 p-2 items-center h-full overflow-hidden rounded-md"
+      className={`grid grid-cols-12 p-2 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
       style={{
         height: `${rowHeight}px`,
         background: bgColor,
@@ -113,7 +113,7 @@ export const PlayerRowNameSixers: React.FC<PlayerRowLayoutProps> = ({
 
       {/* Stat (col-span-2) */}
       <div
-        className="col-span-3 flex items-end justify-center whitespace-nowrap leading-none px-0 py-6  h-full"
+        className="col-span-3 flex items-center justify-center whitespace-nowrap leading-none px-0  h-full"
         style={{ background: LogoBG }}
       >
         <Top5PlayerScore
@@ -135,4 +135,4 @@ export const PlayerRowNameSixers: React.FC<PlayerRowLayoutProps> = ({
   );
 };
 
-export default PlayerRowNameSixers; // Keep default export for compatibility if needed
+export default PlayerRowNameSixersThunder; // Keep default export for compatibility if needed

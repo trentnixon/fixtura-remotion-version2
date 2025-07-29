@@ -143,6 +143,9 @@ export const basicTheme: TemplateThemeConfig = {
       section: "py-6",
       item: "py-2",
     },
+    borderRadius: {
+      container: "rounded-none",
+    },
   },
   mode: {
     light: {

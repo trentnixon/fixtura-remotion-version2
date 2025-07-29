@@ -21,11 +21,11 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
   bgColorClass,
   LadderRowHeight,
 }) => {
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   const borderColor = selectedPalette.container.primary;
   return (
     <div
-      className={`flex items-center p-2 pl-4 rounded-lg mb-1 ${bgColorClass}  `}
+      className={`flex items-center p-2 pl-4 ${layout.borderRadius.container} mb-1 ${bgColorClass}  `}
       style={{
         height: `${LadderRowHeight}px`,
         background: bgColorClass,
@@ -48,14 +48,14 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
               />
             </div>
           ) : (
-            <div className="w-8 h-8 bg-gray-300 rounded-full" />
+            <div className="w-8 h-8 bg-gray-300 " />
           )}
         </div>
       </div>
 
       {/* Stats in alternating backgrounds, matching StandardLadderRow widths */}
       <div
-        className="flex flex-1 justify-evenly items-center h-full rounded-lg"
+        className={`flex flex-1 justify-evenly items-center h-full ${layout.borderRadius.container}`}
         style={{
           background: borderColor,
         }}

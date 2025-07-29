@@ -105,6 +105,9 @@ export interface ThemeLayout {
     section: string;
     item: string;
   };
+  borderRadius: {
+    container: string;
+  };
 }
 
 /**

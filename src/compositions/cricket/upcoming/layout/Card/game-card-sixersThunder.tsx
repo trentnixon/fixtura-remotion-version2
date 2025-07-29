@@ -13,11 +13,14 @@ interface GameCardProps {
   index: number;
 }
 
-export const GameCardSixers: React.FC<GameCardProps> = ({ game, index }) => {
+export const GameCardSixersThunder: React.FC<GameCardProps> = ({
+  game,
+  index,
+}) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
 
   const ContainerAnimations = animations.container;
 
@@ -30,14 +33,16 @@ export const GameCardSixers: React.FC<GameCardProps> = ({ game, index }) => {
     <div className="overflow-hidden my-2">
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
         exitAnimation={ContainerAnimations.main.itemContainer.containerOut}
         exitFrame={animationOutFrame}
       >
-        <div className="rounded-lg w-full overflow-hidden">
+        <div
+          className={`${layout.borderRadius.container} w-full overflow-hidden`}
+        >
           <SingleDataPointHeader
             value={game.time}
             height={100}
@@ -54,7 +59,6 @@ export const GameCardSixers: React.FC<GameCardProps> = ({ game, index }) => {
               background:
                 selectedPalette.container.backgroundTransparent.strong,
               textAlign: "center",
-              borderRadius: "10px 10px 0 0px",
             }}
           />
 
@@ -79,7 +83,6 @@ export const GameCardSixers: React.FC<GameCardProps> = ({ game, index }) => {
               background:
                 selectedPalette.container.backgroundTransparent.strong,
               textAlign: "center",
-              borderRadius: "0 0 10px 10px",
             }}
           />
 
@@ -96,4 +99,4 @@ export const GameCardSixers: React.FC<GameCardProps> = ({ game, index }) => {
   );
 };
 
-export default GameCardSixers;
+export default GameCardSixersThunder;

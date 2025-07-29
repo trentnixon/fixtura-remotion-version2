@@ -12,6 +12,7 @@ interface TeamRowProps {
   totalTeams: number;
   isBiasTeam: boolean;
   LadderRowHeight: number;
+  wrapperClass?: string;
 }
 
 export const StandardRowSixers: React.FC<TeamRowProps> = ({
@@ -20,6 +21,7 @@ export const StandardRowSixers: React.FC<TeamRowProps> = ({
   totalTeams,
   isBiasTeam,
   LadderRowHeight,
+  wrapperClass = "rounded-lg",
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
@@ -46,10 +48,10 @@ export const StandardRowSixers: React.FC<TeamRowProps> = ({
   }
 
   return (
-    <div className="overflow-hidden">
+    <OverflowHiddenWrapper>
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${wrapperClass}`}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
@@ -64,13 +66,13 @@ export const StandardRowSixers: React.FC<TeamRowProps> = ({
           place={position}
         />
       </AnimatedContainer>
-    </div>
+    </OverflowHiddenWrapper>
   );
 };
 
 export default StandardRowSixers;
 
-export const StandardRowSixersWrapped: React.FC<TeamRowProps> = ({
+export const StandardRowSixersThunderWrapped: React.FC<TeamRowProps> = ({
   team,
   index,
   totalTeams,
@@ -79,13 +81,15 @@ export const StandardRowSixersWrapped: React.FC<TeamRowProps> = ({
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { timings } = data;
 
   // Stagger the animation of each row
   const delay = index * 5;
   const animationOutFrame = timings?.FPS_LADDER ? timings.FPS_LADDER - 20 : 0;
+
+  console.log("[layoutlayout]", layout.borderRadius.container);
 
   // Determine background color based on position and bias team
   let bgColorClass = "";
@@ -105,10 +109,10 @@ export const StandardRowSixersWrapped: React.FC<TeamRowProps> = ({
   }
 
   return (
-    <div className="overflow-hidden ">
+    <OverflowHiddenWrapper>
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
@@ -123,7 +127,13 @@ export const StandardRowSixersWrapped: React.FC<TeamRowProps> = ({
           place={position}
         />
       </AnimatedContainer>
-    </div>
+    </OverflowHiddenWrapper>
   );
 };
 //
+
+const OverflowHiddenWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  return <div className="overflow-hidden">{children}</div>;
+};

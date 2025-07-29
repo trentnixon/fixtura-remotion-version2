@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { ResultMetaData } from "../../../utils/primitives/ResultMetaData";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 interface MatchHeaderProps {
   value: string;
@@ -20,11 +21,11 @@ export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-
+  const { layout } = useThemeContext();
   return (
     <AnimatedContainer
       type="full"
-      className={`w-full flex items-center px-4 py-0 ${
+      className={`w-full flex items-center px-4 py-0 ${layout.borderRadius.container} ${
         align === "right"
           ? "justify-end"
           : align === "center"

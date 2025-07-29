@@ -1286,8 +1286,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#004c3d",
-          "secondary": "#f7b718"
+          "primary": "#84ff19",
+          "secondary": "#009300"
         },
         "template": "Brickwork"
       },
@@ -1317,7 +1317,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
-        "mode": "dark",
+        "mode": "light",
         "category": {
           "slug": "Brickwork",
           "name": "Brick Work",

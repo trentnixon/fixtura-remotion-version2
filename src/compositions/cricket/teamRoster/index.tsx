@@ -1,4 +1,4 @@
 import { basic } from "./basic";
-import { sixers } from "./sixers";
+import { SixersThunder } from "./sixersThunder";
 
-export { basic, sixers };
+export { basic, SixersThunder };

@@ -1,8 +1,8 @@
 import { Basic as BasicResults } from "./basic";
 import { BrickWork as BrickWorkResults } from "./brickWork";
-import { Sixers as SixersResults } from "./sixers";
+import SixersThunder from "./sixersThunder";
 
 // Export all template implementations
 export { BasicResults as basic };
 export { BrickWorkResults as brickWork };
-export { SixersResults as sixers };
+export { SixersThunder as SixersThunder };

@@ -99,6 +99,9 @@ export interface ThemeLayout {
     item: string;
     [key: string]: string;
   };
+  borderRadius: {
+    container: string;
+  };
 }
 
 export interface ThemeSports {

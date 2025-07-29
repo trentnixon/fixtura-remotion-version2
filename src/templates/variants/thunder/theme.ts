@@ -2,20 +2,20 @@ import { baseTheme } from "../../base/theme";
 import { TemplateThemeConfig } from "../../types/TemplateThemeConfig";
 
 /**
- * Brickwork template theme - simplified approach
+ * Basic template theme - simplified approach
  *
  * This theme provides ready-to-use style objects that can be directly applied to components
  */
-export const brickworkTheme: TemplateThemeConfig = {
+export const basicTheme: TemplateThemeConfig = {
   ...baseTheme,
 
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Roboto-Medium", //"Roboto-Medium",
+      family: "Monument Extended",
     },
     copy: {
-      family: "Roboto-Medium", //"Roboto-Light",
+      family: "Tungsten",
     },
   },
 
@@ -25,18 +25,18 @@ export const brickworkTheme: TemplateThemeConfig = {
     // Title component styles
     title: {
       className:
-        "text-9xl font-black tracking-tight leading-none text-center m-0 px-4",
+        "text-9xl font-normal tracking-wider leading-snug text-center m-0 px-4",
     },
 
     // Subtitle component styles
     subtitle: {
       className:
-        "text-7xl font-semibold tracking-normal leading-none text-center m-0 px-4",
+        "text-6xl font-normal tracking-wider leading-tight text-center m-0  px-4",
     },
 
     // Body text component styles
     bodyText: {
-      className: "text-xl font-normal tracking-normal leading-relaxed",
+      className: "text-xl font-normal tracking-wider leading-tight",
     },
 
     // Player name component styles
@@ -56,72 +56,74 @@ export const brickworkTheme: TemplateThemeConfig = {
 
     // Label component styles
     label: {
-      className: "text-lg font-medium tracking-normal leading-snug",
+      className: "text-lg font-medium tracking-wider leading-tight",
     },
     // Ladder label component styles
     ladderGradeLabel: {
-      className: "text-2xl font-normal tracking-normal leading-snug",
+      className: "text-3xl font-medium tracking-wider leading-tight",
     },
     ladderTeamName: {
-      className: "text-3xl font-bold tracking-normal leading-snug",
+      className: "text-4xl font-medium tracking-wider leading-tight",
     },
     ladderTeamPoints: {
-      className: "text-3xl font-bold tracking-normal leading-snug",
+      className: "text-4xl font-bold tracking-wider leading-tight",
     },
     Top5PlayerName: {
-      className: "text-4xl font-black  tracking-wide leading-snug",
+      className: "text-6xl font-black tracking-wider leading-tight",
     },
     Top5PlayerTeam: {
-      className: "text-2xl font-normal  tracking-wider leading-tight",
+      className:
+        "text-3xl font-semibold opacity-80 tracking-wider leading-tight",
     },
     Top5PlayerScore: {
-      className: "text-6xl font-bold  tracking-normal leading-snug mr-1",
+      className: "text-7xl font-black  tracking-wider leading-tight mr-2",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-2xl font-normal  tracking-wide leading-none",
+      className: "text-2xl font-black  tracking-wide leading-loose",
     },
     ResultScore: {
-      className: "text-7xl font-bold  tracking-normal leading-tight ",
+      className: "text-4xl font-bold  tracking-wider leading-tight ",
     },
     ResultScoreFirstInnings: {
-      className: "text-3xl font-bold  tracking-normal leading-tight ",
-    },
-    ResultVS: {
-      className: "text-3xl font-normal  tracking-normal leading-tight ",
+      className: "text-4xl font-bold  tracking-wider leading-tight ",
     },
     ResultScoreYetToBat: {
-      className: "text-3xl font-bold  tracking-wider py-6",
+      className: "text-4xl font-bold  tracking-wider py-6",
     },
     ResultTeamName: {
-      className: "text-2xl font-normal  tracking-wider leading-snug",
+      className: "text-4xl font-semibold  tracking-wider leading-tight",
     },
     ResultPlayerName: {
-      className: "text-3xl font-normal  tracking-normal leading-snug",
+      className: "text-3xl font-semibold  tracking-wider leading-tight",
     },
     ResultPlayerScore: {
-      className: "text-3xl font-semibold  tracking-normal leading-snug",
+      className: "text-3xl font-semibold  tracking-wider leading-tight",
     },
     ResultSyntax: {
       className:
-        "text-2xl font-semibold  tracking-wider leading-snug py-4 ml-4",
+        "text-2xl font-semibold  tracking-wider leading-tight py-4 ml-4",
     },
     ResultFixtureResult: {
-      className: "text-4xl font-normal  tracking-wider leading-snug italic",
+      className: "text-4xl font-normal  tracking-wider leading-tight italic",
     },
     ResultMetaData: {
-      className: "text-2xl font-normal  tracking-wider leading-snug",
+      className: "text-3xl font-semibold  tracking-wider leading-tight",
+    },
+    ResultVS: {
+      className: "text-3xl font-semibold  tracking-wider leading-tight",
     },
     RosterPlayerName: {
-      className: "text-3xl font-normal  tracking-wider leading-snug",
+      className: "text-4xl font-bold  tracking-wider leading-tight",
     },
+
     metadataSmall: {
-      className: "text-2xl font-normal  tracking-wider leading-snug",
+      className: "text-3xl font-normal  tracking-wider leading-tight",
     },
     metadataMedium: {
-      className: "text-2xl font-semibold  tracking-wider leading-snug",
+      className: "text-4xl font-semibold  tracking-wider leading-tight",
     },
     metadataLarge: {
-      className: "text-2xl font-semibold  tracking-widest leading-snug",
+      className: "text-5xl font-semibold  tracking-widest leading-tight",
     },
   },
 

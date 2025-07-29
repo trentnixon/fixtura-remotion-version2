@@ -8,7 +8,7 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
-import ResultsDisplaySixers from "./controller/ResultsDisplay/display-Sixers";
+import ResultsDisplaySixersThunder from "./controller/ResultsDisplay/display-Sixers-thunder";
 
 export const ResultsList: React.FC = () => {
   const { data } = useVideoDataContext();
@@ -38,7 +38,7 @@ export const ResultsList: React.FC = () => {
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <ResultsDisplaySixers
+      <ResultsDisplaySixersThunder
         results={matchResults}
         resultsPerScreen={resultsPerScreen}
         screenIndex={index}
@@ -61,8 +61,8 @@ export const ResultsList: React.FC = () => {
 };
 
 // Export as Sixers for compatibility with original template
-export const Sixers: React.FC = () => {
+export const SixersThunder: React.FC = () => {
   return <ResultsList />;
 };
 
-export default Sixers;
+export default SixersThunder;

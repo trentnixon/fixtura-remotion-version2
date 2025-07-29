@@ -1,6 +1,6 @@
 import React from "react";
 import { PlayerData } from "../../types";
-import PlayerRowSixers from "../PlayerRow/row-Sixers";
+import PlayerRowSixersThunder from "../PlayerRow/row-SixersThunder";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
@@ -14,7 +14,9 @@ interface PlayersDisplayProps {
   title?: string; // Optional title to display
 }
 
-const PlayersDisplaySixers: React.FC<PlayersDisplayProps> = ({ players }) => {
+const PlayersDisplaySixersThunder: React.FC<PlayersDisplayProps> = ({
+  players,
+}) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { club } = useVideoDataContext();
@@ -39,7 +41,7 @@ const PlayersDisplaySixers: React.FC<PlayersDisplayProps> = ({ players }) => {
       >
         <div className="flex-1 grid grid-cols-1 gap-2">
           {players.map((player, index) => (
-            <PlayerRowSixers
+            <PlayerRowSixersThunder
               key={player.name}
               player={player}
               index={index}
@@ -91,4 +93,4 @@ const calculateRowDimensions = (totalHeight: number, playerCount: number) => {
   };
 };
 
-export default PlayersDisplaySixers;
+export default PlayersDisplaySixersThunder;

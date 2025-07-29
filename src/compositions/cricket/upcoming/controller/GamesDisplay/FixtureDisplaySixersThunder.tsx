@@ -3,7 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { GameData } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 
-import GamesListSixers from "../GamesList/games-list-sixers";
+import { GamesListSixersThunder } from "../GamesList/games-list-sixersThunder";
 import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
@@ -19,7 +19,7 @@ interface GamesDisplayProps {
   };
 }
 
-export const GamesDisplaySixers: React.FC<GamesDisplayProps> = ({
+export const GamesDisplaySixersThunder: React.FC<GamesDisplayProps> = ({
   games,
   gamesPerScreen,
   screenIndex,
@@ -56,7 +56,7 @@ export const GamesDisplaySixers: React.FC<GamesDisplayProps> = ({
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex-1 overflow-hidden">
-          <GamesListSixers
+          <GamesListSixersThunder
             games={displayedGames}
             gameRowHeight={gameCardHeight}
           />
@@ -90,4 +90,4 @@ export const GamesDisplaySixers: React.FC<GamesDisplayProps> = ({
   );
 };
 
-export default GamesDisplaySixers;
+export default GamesDisplaySixersThunder;

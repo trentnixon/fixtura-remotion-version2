@@ -14,7 +14,7 @@ interface MatchCardProps {
   delay: number;
 }
 
-const MatchCardSixers: React.FC<MatchCardProps> = ({
+const MatchCardSixersThunder: React.FC<MatchCardProps> = ({
   match,
   rowHeight,
   delay,
@@ -35,7 +35,7 @@ const MatchCardSixers: React.FC<MatchCardProps> = ({
       {/* Section 3: Match info footer */}
 
       <SingleDataPointHeader
-        grade={match.gradeName}
+        grade={`${match.result} | ${match.gradeName}`}
         height={headerHeight}
         delay={headerDelay}
         backgroundColor={"transparent"}
@@ -92,15 +92,15 @@ const MatchCardSixers: React.FC<MatchCardProps> = ({
       />
       {/* Section 3: Match info footer */}
 
-      <SingleDataPointHeader
+      {/* <SingleDataPointHeader
         grade={match.result}
         height={headerHeight}
         delay={headerDelay}
         backgroundColor={"transparent"}
         align="right"
-      />
+      /> */}
     </div>
   );
 };
 
-export default MatchCardSixers;
+export default MatchCardSixersThunder;

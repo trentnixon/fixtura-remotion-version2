@@ -2,22 +2,22 @@
 import {
   basic as ladderBasic,
   brickwork as ladderBrickWork,
-  sixers as ladderSixers,
+  sixersThunder as ladderSixersThunder,
 } from "./ladder";
 import {
   basic as upcomingBasic,
   brickWork as upcomingBrickWork,
-  sixers as upcomingSixers,
+  SixersThunder as upcomingSixersThunder,
 } from "./upcoming";
 import {
   basic as top5Basic,
   brickWork as top5BrickWork,
-  sixers as top5Sixers,
+  SixersThunder as top5SixersThunder,
 } from "./top5";
 import {
   basic as resultsBasic,
   brickWork as resultsBrickWork,
-  sixers as resultsSixers,
+  SixersThunder as resultsSixersThunder,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -27,7 +27,7 @@ import {
 
 import {
   basic as rosterBasic,
-  sixers as rosterSixers,
+  SixersThunder as rosterSixersThunder,
 } from "./teamRoster/index";
 
 /* export * as ladder from './ladder';
@@ -45,38 +45,44 @@ import { PlaceholderComposition } from "./placeholders";
 export const CricketLadder = {
   basic: ladderBasic,
   brickwork: ladderBrickWork,
-  sixers: ladderSixers,
+  sixers: ladderSixersThunder,
+  thunder: ladderSixersThunder,
 };
 
 export const CricketTop5 = {
   basic: top5Basic,
   brickwork: top5BrickWork,
-  sixers: top5Sixers,
+  sixers: top5SixersThunder,
+  thunder: top5SixersThunder,
 };
 
 export const CricketResults = {
   basic: resultsBasic,
   brickwork: resultsBrickWork,
-  sixers: resultsSixers,
+  sixers: resultsSixersThunder,
+  thunder: resultsSixersThunder,
 };
 
 export const CricketUpcoming = {
   basic: upcomingBasic,
   brickwork: upcomingBrickWork,
-  sixers: upcomingSixers,
+  sixers: upcomingSixersThunder,
+  thunder: upcomingSixersThunder,
 };
 
 export const CricketResultSingle = {
   basic: resultSingleBasic,
   brickwork: resultSingleBasic,
   sixers: resultSingleSixers,
+  thunder: resultSingleSixers,
 };
 
 // Add CricketRoster export to match compositionId in test data
 export const CricketRoster = {
   basic: rosterBasic,
   brickwork: rosterBasic,
-  sixers: rosterSixers,
+  sixers: rosterSixersThunder,
+  thunder: rosterSixersThunder,
 };
 
 export const singleGameResult = {

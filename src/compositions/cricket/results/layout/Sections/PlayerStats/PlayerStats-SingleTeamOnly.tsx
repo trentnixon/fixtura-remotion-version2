@@ -39,10 +39,10 @@ const StatItem: React.FC<StatItemProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-
+  const { layout } = useThemeContext();
   return (
     <div
-      className="flex justify-between items-center py-2  px-4 rounded-md mb-1"
+      className={`flex justify-between items-center py-2  px-4 mb-1 ${layout.borderRadius.container}`}
       style={{ background: backgroundColor }}
     >
       <div>
@@ -93,10 +93,12 @@ const StatSection: React.FC<StatSectionProps> = ({
   backgroundColor,
   textColor,
 }) => {
+  const { layout } = useThemeContext();
   if (players.length === 0) return null;
-
   return (
-    <div className={` rounded-md flex flex-col justify-between`}>
+    <div
+      className={` flex flex-col justify-between ${layout.borderRadius.container}`}
+    >
       {players.map((player, i) => (
         <StatItem
           key={`${isBatting ? "bat" : "bowl"}-${i}`}

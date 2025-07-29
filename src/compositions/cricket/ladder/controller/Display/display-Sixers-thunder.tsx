@@ -2,8 +2,8 @@ import React from "react";
 import { LadderData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { StandardRowSixersWrapped } from "../TeamRows/row-Sixers";
-import TableHeaderSixers from "../../modules/TableHeader/headerSixers";
+import { StandardRowSixersThunderWrapped } from "../TeamRows/row-Sixers-thunder";
+import TableHeaderSixersThunder from "../../modules/TableHeader/headerSixers";
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header/variants/VerticalStack";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
@@ -13,7 +13,7 @@ interface LadderDisplayProps {
   ladder: LadderData;
 }
 
-export const LadderDisplaySixers: React.FC<LadderDisplayProps> = ({
+export const LadderDisplaySixersThunder: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { club } = useVideoDataContext();
@@ -53,11 +53,14 @@ export const LadderDisplaySixers: React.FC<LadderDisplayProps> = ({
         }}
       >
         <div>
-          <TableHeaderSixers title={gradeName} headerHeight={headerHeight} />
+          <TableHeaderSixersThunder
+            title={gradeName}
+            headerHeight={headerHeight}
+          />
 
           <div className="flex-1 overflow-hidden">
             {League.map((team, index) => (
-              <StandardRowSixersWrapped
+              <StandardRowSixersThunderWrapped
                 key={team.position}
                 team={team}
                 index={index}
@@ -97,7 +100,7 @@ export const LadderDisplaySixers: React.FC<LadderDisplayProps> = ({
   );
 };
 
-export default LadderDisplaySixers;
+export default LadderDisplaySixersThunder;
 
 ////Utilities////
 const calculateRowDimensions = (totalHeight: number, teamCount: number) => {
