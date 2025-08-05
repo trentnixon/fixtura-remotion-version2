@@ -78,11 +78,11 @@ export const LadderDisplaySixersThunder: React.FC<LadderDisplayProps> = ({
           alignment="center"
           Logo={
             <div className="w-full h-full flex justify-center items-center ">
-              <div className="w-full h-full flex items-center rounded-none max-h-[130px] ">
+              <div className="w-full h-full flex items-center rounded-none max-h-[110px] ">
                 <AnimatedImage
                   src={club.logo?.url}
-                  width={club.logo?.width || "auto"}
-                  height={club.logo?.height || "130px"}
+                  width={"auto"}
+                  height={"auto"}
                   fit="contain"
                   className="rounded-none"
                   animation={LogoAnimations.introIn}

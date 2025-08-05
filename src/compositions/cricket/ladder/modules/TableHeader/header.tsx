@@ -42,7 +42,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
 
       {/* Stat columns */}
       <div className="flex flex-1 justify-evenly">
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerCopy"
@@ -51,7 +51,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
             P
           </AnimatedText>
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerCopy"
@@ -60,7 +60,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
             W
           </AnimatedText>
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerCopy"
@@ -69,7 +69,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
             L
           </AnimatedText>
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerCopy"
@@ -78,7 +78,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
             B
           </AnimatedText>
         </div>
-        <div className="w-16 bg-gray-700/50 rounded-md text-center">
+        <div className="w-20 bg-gray-700/50 rounded-md text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerCopy"

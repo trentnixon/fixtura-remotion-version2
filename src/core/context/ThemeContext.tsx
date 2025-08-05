@@ -34,8 +34,6 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
 
     const selectedMode = templateVariation.mode || "light";
     const useMode = settings.mode[selectedMode];
-    console.log("[ThemeContext] selectedMode", selectedMode);
-    console.log("[ThemeContext] settings", useMode);
 
     const colorSystem = createColorSystem(
       primaryColor,

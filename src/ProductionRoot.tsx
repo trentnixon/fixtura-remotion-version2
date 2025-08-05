@@ -19,11 +19,6 @@ export const ProductionRoot: React.FC = () => {
   const videoType = data.videoMeta.video;
   const { appearance, templateVariation, metadata } = videoType;
 
-  console.log("[videoType]", videoType);
-  console.log("[appearance]", appearance);
-  console.log("[templateVariation]", templateVariation);
-  console.log("[metadata]", metadata);
-
   const templateId = appearance.template || null;
   const useBackground = templateVariation.useBackground || "Solid";
   const compositionId = metadata.compositionId || null;
@@ -52,12 +47,6 @@ export const ProductionRoot: React.FC = () => {
       ? (data.timings.FPS_OUTRO ?? 0)
       : 30);
 
-  console.log("[compositionId]", compositionId);
-  console.log("[templateId]", templateId);
-  console.log("[useBackground]", useBackground);
-  console.log("[durationInFrames]", durationInFrames);
-  console.log("[remoteCompositionId]", remoteCompositionId);
-  console.log("[TemplateComponent]", TemplateComponent);
   return (
     <Composition
       id={remoteCompositionId}

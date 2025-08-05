@@ -27,8 +27,8 @@ export const BrickworkMainHeader = () => {
           <div className="w-full h-full flex items-center rounded-none max-h-[120px] max-w-[150px]">
             <AnimatedImage
               src={club.logo?.url}
-              width={club.logo?.width || "auto"}
-              height={club.logo?.height || "120px"}
+              width={"auto"}
+              height={"auto"}
               fit="contain"
               className="rounded-none"
               animation={LogoAnimations.introIn}

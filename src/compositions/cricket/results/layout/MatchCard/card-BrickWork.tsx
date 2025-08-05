@@ -25,8 +25,6 @@ const MatchCardBrickWork: React.FC<MatchCardProps> = ({
   const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
   const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
 
-  console.log("[match]", match);
-
   // Calculate delays
   const baseDelay = delay;
   const statsDelay = baseDelay + 4;

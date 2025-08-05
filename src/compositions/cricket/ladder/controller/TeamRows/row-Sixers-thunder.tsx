@@ -89,8 +89,6 @@ export const StandardRowSixersThunderWrapped: React.FC<TeamRowProps> = ({
   const delay = index * 5;
   const animationOutFrame = timings?.FPS_LADDER ? timings.FPS_LADDER - 20 : 0;
 
-  console.log("[layoutlayout]", layout.borderRadius.container);
-
   // Determine background color based on position and bias team
   let bgColorClass = "";
   const position = parseInt(team.position);

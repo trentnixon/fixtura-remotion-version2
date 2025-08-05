@@ -23,7 +23,6 @@ export const TeamsSectionLogoAndScore: React.FC<TeamsSectionProps> = ({
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
-  console.log("[homeTeam]", homeTeam);
   // Logo size based on height
   const logoSize = `w-[90px] h-[90px]`;
 

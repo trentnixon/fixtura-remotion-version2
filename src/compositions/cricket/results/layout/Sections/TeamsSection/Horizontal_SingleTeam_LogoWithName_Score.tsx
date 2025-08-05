@@ -75,14 +75,16 @@ export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
           animation={animations.container.main.itemContainerInner.containerIn}
           animationDelay={delay + 15}
         >
-          {type === "Two Day+" && Team.homeScoresFirstInnings && (
-            <ResultScore
-              value={Team.homeScoresFirstInnings}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-              className="mr-2"
-              variant="onContainerCopyNoBg"
-            />
-          )}
+          {type === "Two Day+" &&
+            Team.homeScoresFirstInnings &&
+            Team.homeScoresFirstInnings !== "1" && (
+              <ResultScore
+                value={Team.homeScoresFirstInnings}
+                animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+                className="mr-2"
+                variant="onContainerCopyNoBg"
+              />
+            )}
           <ResultScore
             value={Team.score}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}

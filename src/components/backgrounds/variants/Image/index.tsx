@@ -53,7 +53,6 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const imageUrl =
     config.url || video?.templateVariation?.image?.url || DEFAULT_IMAGE;
 
-  //console.log("[ImageBackground] imageUrl", imageUrl);
   // If no image URL is available, return null
   if (!imageUrl) {
     console.warn("No image URL provided for ImageBackground");

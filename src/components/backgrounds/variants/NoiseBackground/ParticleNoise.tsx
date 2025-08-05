@@ -37,7 +37,7 @@ export const ParticleNoise: React.FC<ParticleNoiseProps> = ({
   // selectedPalette
   const { selectedPalette } = useThemeContext();
   const bgOptions =
-    selectedPalette.container.gradientPrimaryToSecondaryHorizontal;
+    selectedPalette.container.gradientPrimaryToSecondaryVertical;
   return (
     <AbsoluteFill
       style={{

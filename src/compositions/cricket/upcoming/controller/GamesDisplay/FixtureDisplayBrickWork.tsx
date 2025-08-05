@@ -44,7 +44,6 @@ export const GamesDisplayBrickWork: React.FC<GamesDisplayProps> = ({
     (acc, game) => ({ ...acc, ...game.assignSponsors }),
     {},
   );
-  console.log("[mergedAssignSponsors]", mergedAssignSponsors);
 
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">

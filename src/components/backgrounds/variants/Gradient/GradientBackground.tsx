@@ -60,8 +60,6 @@ export const GradientBackground: React.FC<Props> = ({
     return DEFAULT_GRADIENT;
   }, [selectedPalette, gradientType, gradientDirection]);
 
-  //console.log("[GradientBackground] backgroundCSS", backgroundCSS);
-
   return (
     <AbsoluteFill
       className={` ${className}`}

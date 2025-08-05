@@ -1,1211 +1,253 @@
 {
   "data": [
     {
-      "gameID": "edea911b",
-      "status": "Final",
+      "gameID": "8071e69f",
+      "status": "Abandoned",
       "homeTeam": {
-        "name": "PINT A Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "10/196",
-        "overs": "(44.2)",
-        "homeScoresFirstInnings": "10/107 &",
-        "battingPerformances": [
-          {
-            "player": "Chander Ravi",
-            "runs": 65,
-            "balls": 72,
-            "fours": 11,
-            "sixes": 1,
-            "SR": 90.27,
-            "team": "PINT A Grade",
-            "notOut": false
-          },
-          {
-            "player": "Noah MacDonald",
-            "runs": 17,
-            "balls": 24,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 70.83,
-            "team": "PINT A Grade",
-            "notOut": false
-          },
-          {
-            "player": "Bradley Spann",
-            "runs": 9,
-            "balls": 16,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 56.25,
-            "team": "PINT A Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Andrew Bourne",
-            "overs": 2.4,
-            "maidens": 1,
-            "runs": 4,
-            "wickets": 3,
-            "economy": "1.67",
-            "team": "Palmerston A Grade"
-          },
-          {
-            "player": "Hamish Martin  (c)",
-            "overs": 11,
-            "maidens": 4,
-            "runs": 23,
-            "wickets": 3,
-            "economy": "2.09",
-            "team": "Palmerston A Grade"
-          },
-          {
-            "player": "Amogh Paranjpe",
-            "overs": 8,
-            "maidens": 3,
-            "runs": 27,
-            "wickets": 3,
-            "economy": "3.38",
-            "team": "Palmerston A Grade"
-          }
-        ],
-        "isClubTeam": false
+        "name": "Toowoomba",
+        "score": "N/A",
+        "overs": "N/A"
       },
       "awayTeam": {
-        "name": "Palmerston A Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "9/163",
-        "overs": "(32.2)",
-        "awayScoresFirstInnings": "3-d/108 &",
-        "battingPerformances": [
-          {
-            "player": "Harshtik Bimbral",
-            "runs": 47,
-            "balls": 83,
-            "fours": 6,
-            "sixes": 1,
-            "SR": 56.62,
-            "team": "Palmerston A Grade",
-            "notOut": true
-          },
-          {
-            "player": "Prasanna Ketheeshwaran",
-            "runs": 20,
-            "balls": 36,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 55.55,
-            "team": "Palmerston A Grade",
-            "notOut": false
-          },
-          {
-            "player": "Alex Bleakley",
-            "runs": 17,
-            "balls": 18,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 94.44,
-            "team": "Palmerston A Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Noah Vojinov",
-            "overs": 8,
-            "maidens": 2,
-            "runs": 30,
-            "wickets": 2,
-            "economy": "3.75",
-            "team": "PINT A Grade"
-          },
-          {
-            "player": "Jackson Gillespie",
-            "overs": 8.2,
-            "maidens": 2,
-            "runs": 40,
-            "wickets": 1,
-            "economy": "4.88",
-            "team": "PINT A Grade"
-          },
-          {
-            "player": "Bradley Ilott",
-            "overs": 5,
-            "maidens": 1,
-            "runs": 17,
-            "wickets": 0,
-            "economy": "3.40",
-            "team": "PINT A Grade"
-          }
-        ],
-        "isClubTeam": false
+        "name": "GC 50's Thunder Div 1",
+        "score": "N/A",
+        "overs": "N/A"
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
-      "date": "12 July 2025",
-      "type": "Two Day+",
-      "ground": "Marrara (DXC Arena) / DXC Arena 2",
-      "round": "Round 11",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
+      },
+      "date": "26 July 2025",
+      "type": "One Day",
+      "ground": "Ropehill Cricket Grounds / Ropehill Turf",
+      "round": "Round 7",
       "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "A Grade",
+      "ageGroup": "Over 50",
+      "gradeName": "O50 Div 1 - Gill Chapman Shield",
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 153,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12786,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+            }
+          }
+        ]
       },
-      "result": "PINT A Grade won by 33 runs",
-      "prompt": "Match Summary: PINT A Grade vs. Palmerston A Grade:\n  - This A Grade game is a Two Day+, played in Round: Round 11 at Marrara (DXC Arena) / DXC Arena 2.\n  - Scores: PINT A Grade 10/196 in (44.2) overs, Palmerston A Grade 9/163 in (32.2) overs\n  - Result: PINT A Grade won by 33 runs\n  Player Performances:\n  - PINT A Grade\n    - Batting: \n    - Bowling: \n    - FOW: \n    - Fielding: \n  Focus on highlighted team performances."
+      "result": "Abandoned Match",
+      "prompt": "Match Summary: Game was Abandoned: Toowoomba vs. GC 50's Thunder Div 1"
     },
     {
-      "gameID": "dfab30ff",
+      "gameID": "3c005ecd",
       "status": "Final",
       "homeTeam": {
-        "name": "Palmerston B Grade",
+        "name": "GC 50's Thunder Div 2 Gold",
         "isHome": true,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+          "width": 379,
+          "height": 303
         },
-        "score": "5/105",
-        "overs": "(24)",
-        "homeScoresFirstInnings": "10/230 &",
+        "score": "6/202",
+        "overs": "(45)",
+        "homeScoresFirstInnings": "1",
         "battingPerformances": [
           {
-            "player": "Bradley Williams",
-            "runs": 66,
-            "balls": 61,
-            "fours": 9,
-            "sixes": 1,
-            "SR": 108.19,
-            "team": "Palmerston B Grade",
+            "player": "Mark Snowden  (vc)",
+            "runs": 51,
+            "balls": 49,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 104.08,
+            "team": "GC 50's Thunder Div 2 Gold",
             "notOut": false
           },
           {
-            "player": "Dan Bridson",
-            "runs": 34,
-            "balls": 77,
-            "fours": 4,
+            "player": "Paul Rapson",
+            "runs": 51,
+            "balls": 57,
+            "fours": 7,
             "sixes": 0,
-            "SR": 44.15,
-            "team": "Palmerston B Grade",
-            "notOut": true
+            "SR": 89.47,
+            "team": "GC 50's Thunder Div 2 Gold",
+            "notOut": false
           },
           {
-            "player": "Andrew Somerville  (c)",
-            "runs": 28,
-            "balls": 27,
-            "fours": 6,
+            "player": "Dean Croft  (c)",
+            "runs": 27,
+            "balls": 57,
+            "fours": 2,
             "sixes": 0,
-            "SR": 103.7,
-            "team": "Palmerston B Grade",
+            "SR": 47.36,
+            "team": "GC 50's Thunder Div 2 Gold",
             "notOut": false
           }
         ],
         "bowlingPerformances": [
           {
-            "player": "Jashandeep Singh Saini",
-            "overs": 15.1,
-            "maidens": 4,
-            "runs": 53,
-            "wickets": 4,
-            "economy": "3.51",
-            "team": "PINT B Grade"
+            "player": "David Khan",
+            "overs": 7,
+            "maidens": 1,
+            "runs": 30,
+            "wickets": 3,
+            "economy": "4.29",
+            "team": "Brisbane Silver"
           },
           {
-            "player": "Amit Saini  (c)",
+            "player": "Mark Collyer",
+            "overs": 9,
+            "maidens": 1,
+            "runs": 25,
+            "wickets": 2,
+            "economy": "2.78",
+            "team": "Brisbane Silver"
+          },
+          {
+            "player": "Gary James",
             "overs": 9,
             "maidens": 2,
-            "runs": 25,
-            "wickets": 3,
-            "economy": "2.78",
-            "team": "PINT B Grade"
-          },
-          {
-            "player": "Ali Hassan",
-            "overs": 13,
-            "maidens": 2,
-            "runs": 48,
-            "wickets": 2,
-            "economy": "3.69",
-            "team": "PINT B Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "PINT B Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "10/154",
-        "overs": "(71.4)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Zachary Beniwal",
-            "runs": 52,
-            "balls": 106,
-            "fours": 9,
-            "sixes": 0,
-            "SR": 49.05,
-            "team": "PINT B Grade",
-            "notOut": false
-          },
-          {
-            "player": "Amit Saini  (c)",
-            "runs": 35,
-            "balls": 129,
-            "fours": 5,
-            "sixes": 0,
-            "SR": 27.13,
-            "team": "PINT B Grade",
-            "notOut": false
-          },
-          {
-            "player": "Jashandeep Singh Saini",
-            "runs": 26,
-            "balls": 66,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 39.39,
-            "team": "PINT B Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Darshan Thakkar",
-            "overs": 19.4,
-            "maidens": 13,
-            "runs": 29,
-            "wickets": 4,
-            "economy": "1.49",
-            "team": "Palmerston B Grade"
-          },
-          {
-            "player": "Andrew Somerville  (c)",
-            "overs": 15,
-            "maidens": 7,
-            "runs": 33,
-            "wickets": 3,
-            "economy": "2.20",
-            "team": "Palmerston B Grade"
-          },
-          {
-            "player": "Stefan James",
-            "overs": 12,
-            "maidens": 4,
-            "runs": 32,
-            "wickets": 2,
-            "economy": "2.67",
-            "team": "Palmerston B Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "date": "12 July 2025",
-      "type": "Two Day+",
-      "ground": "Cazalys Oval / Cazalys oval",
-      "round": "Round 11",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "B Grade",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "result": "PINT B Grade won by 10 wickets",
-      "prompt": "Match Summary: Palmerston B Grade vs. PINT B Grade:\n  - This B Grade game is a Two Day+, played in Round: Round 11 at Cazalys Oval / Cazalys oval.\n  - Scores: Palmerston B Grade 5/105 in (24) overs, PINT B Grade 10/154 in (71.4) overs\n  - Result: PINT B Grade won by 10 wickets\n  Player Performances:\n  - Palmerston B Grade\n    - Batting: \n    - Bowling: \n    - FOW: \n    - Fielding: \n  Focus on highlighted team performances."
-    },
-    {
-      "gameID": "f61c2f90",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Tracy Village Women's Div 2",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "3/130",
-        "overs": "(19)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Erica McCallum",
-            "runs": 43,
-            "balls": 67,
-            "fours": 6,
-            "sixes": 0,
-            "SR": 64.17,
-            "team": "Tracy Village Women's Div 2",
-            "notOut": true
-          },
-          {
-            "player": "BRYDIE HILL",
-            "runs": 13,
-            "balls": 31,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 41.93,
-            "team": "Tracy Village Women's Div 2",
-            "notOut": false
-          },
-          {
-            "player": "Chloe Wright",
-            "runs": 6,
-            "balls": 10,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 60,
-            "team": "Tracy Village Women's Div 2",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Rihanna-Frances Clark",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 17,
-            "wickets": 1,
-            "economy": "5.67",
-            "team": "PINT Women's Div 2"
-          },
-          {
-            "player": "Joshitha Kumar",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 32,
-            "wickets": 1,
-            "economy": "8.00",
-            "team": "PINT Women's Div 2"
-          },
-          {
-            "player": "Tina Carlson",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 9,
-            "wickets": 0,
-            "economy": "3.00",
-            "team": "PINT Women's Div 2"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "PINT Women's Div 2",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "2/129",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Carley Melbourne  (c)",
-            "runs": 47,
-            "balls": 64,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 73.43,
-            "team": "PINT Women's Div 2",
-            "notOut": true
-          },
-          {
-            "player": "Kelly Fogarty",
-            "runs": 25,
-            "balls": 30,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 83.33,
-            "team": "PINT Women's Div 2",
-            "notOut": false
-          },
-          {
-            "player": "Rihanna-Frances Clark",
-            "runs": 8,
-            "balls": 10,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 80,
-            "team": "PINT Women's Div 2",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Eleanor Rushforth",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 14,
-            "wickets": 2,
-            "economy": "4.67",
-            "team": "Tracy Village Women's Div 2"
-          },
-          {
-            "player": "Chloe Wright",
-            "overs": 3,
-            "maidens": 0,
             "runs": 19,
             "wickets": 1,
-            "economy": "6.33",
-            "team": "Tracy Village Women's Div 2"
-          },
-          {
-            "player": "Laura Morell  (c)",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 23,
-            "wickets": 0,
-            "economy": "5.75",
-            "team": "Tracy Village Women's Div 2"
+            "economy": "2.11",
+            "team": "Brisbane Silver"
           }
         ],
         "isClubTeam": false
       },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "date": "18 July 2025",
-      "type": "T20",
-      "ground": "Cazalys Arena / Cazalys Arena 2",
-      "round": "Round 11",
-      "gender": "Women",
-      "ageGroup": "Senior",
-      "gradeName": "Women's Div 2",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "result": "Tracy Village Women's Div 2 won by 1 runs",
-      "prompt": "Match Summary: Tracy Village Women's Div 2 vs. PINT Women's Div 2:\n  - This Women's Div 2 game is a T20, played in Round: Round 11 at Cazalys Arena / Cazalys Arena 2.\n  - Scores: Tracy Village Women's Div 2 3/130 in (19) overs, PINT Women's Div 2 2/129 in (20) overs\n  - Result: Tracy Village Women's Div 2 won by 1 runs\n  Player Performances:\n  - Tracy Village Women's Div 2\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 13 (Chloe Wright), Wicket 2: 19 (Eleanor Rushforth)\n    - Fielding: \n  Focus on highlighted team performances."
-    },
-    {
-      "gameID": "d9afc4fa",
-      "status": "Final",
-      "homeTeam": {
-        "name": "PINT Women's Div 1",
-        "isHome": true,
+      "awayTeam": {
+        "name": "Brisbane Silver",
+        "isHome": false,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7a09c26e96.jpg",
+          "width": 1334,
+          "height": 750
         },
-        "score": "10/48",
-        "overs": "(17.4)",
-        "homeScoresFirstInnings": "1",
+        "score": "0/65",
+        "overs": "(15)",
+        "awayScoresFirstInnings": "1",
         "battingPerformances": [
           {
-            "player": "Meghan McCartney",
-            "runs": 34,
-            "balls": 22,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 154.54,
-            "team": "PINT Women's Div 1",
-            "notOut": false
-          },
-          {
-            "player": "Melissa Nixon",
-            "runs": 28,
-            "balls": 24,
+            "player": "David Khan",
+            "runs": 31,
+            "balls": 46,
             "fours": 3,
             "sixes": 0,
-            "SR": 116.66,
-            "team": "PINT Women's Div 1",
+            "SR": 67.39,
+            "team": "Brisbane Silver",
             "notOut": true
           },
           {
-            "player": "Phoebe Murphy",
-            "runs": 24,
-            "balls": 26,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 92.3,
-            "team": "PINT Women's Div 1",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Jordi O’Toole",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 27,
-            "wickets": 2,
-            "economy": "6.75",
-            "team": "Tracy Village Women's Div 1"
-          },
-          {
-            "player": "Narelle Gosstray",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 2,
-            "economy": "9.67",
-            "team": "Tracy Village Women's Div 1"
-          },
-          {
-            "player": "Jasleen Kaur",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 15,
-            "wickets": 1,
-            "economy": "5.00",
-            "team": "Tracy Village Women's Div 1"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Tracy Village Women's Div 1",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "7/136",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Jasleen Kaur",
-            "runs": 13,
-            "balls": 24,
+            "player": "Stuart Lang",
+            "runs": 26,
+            "balls": 44,
             "fours": 1,
             "sixes": 0,
-            "SR": 54.16,
-            "team": "Tracy Village Women's Div 1",
-            "notOut": false
-          },
-          {
-            "player": "Tahli Williams",
-            "runs": 5,
-            "balls": 5,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 100,
-            "team": "Tracy Village Women's Div 1",
-            "notOut": false
-          },
-          {
-            "player": "Kristy O’Toole",
-            "runs": 3,
-            "balls": 9,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 33.33,
-            "team": "Tracy Village Women's Div 1",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Joanna Pickett",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 16,
-            "wickets": 3,
-            "economy": "5.33",
-            "team": "PINT Women's Div 1"
-          },
-          {
-            "player": "Zhoe Clarke",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 10,
-            "wickets": 2,
-            "economy": "2.50",
-            "team": "PINT Women's Div 1"
-          },
-          {
-            "player": "Heidi Scholz",
-            "overs": 1.4,
-            "maidens": 0,
-            "runs": 1,
-            "wickets": 1,
-            "economy": "0.71",
-            "team": "PINT Women's Div 1"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "18 July 2025",
-      "type": "T20",
-      "ground": "Gardens Oval / Gardens Oval",
-      "round": "Round 12",
-      "gender": "Women",
-      "ageGroup": "Senior",
-      "gradeName": "Women's Div 1",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "result": "Tracy Village Women's Div 1 won by 3 wickets",
-      "prompt": "Match Summary: PINT Women's Div 1 vs. Tracy Village Women's Div 1:\n  - This Women's Div 1 game is a T20, played in Round: Round 12 at Gardens Oval / Gardens Oval.\n  - Scores: PINT Women's Div 1 10/48 in (17.4) overs, Tracy Village Women's Div 1 7/136 in (20) overs\n  - Result: Tracy Village Women's Div 1 won by 3 wickets\n  Player Performances:\n  - PINT Women's Div 1\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 18 (Ekam Dhillon), Wicket 2: 22 (Eliza Jagger), Wicket 3: 56 (Phoebe Murphy), Wicket 4: 59 (Zhoe Clarke), Wicket 5: 74 (Meghan McCartney), Wicket 6: 91 (Carissa Lacco), Wicket 7: 111 (Joanna Pickett)\n    - Fielding: \n  Focus on highlighted team performances."
-    },
-    {
-      "gameID": "f475b3f7",
-      "status": "Final",
-      "homeTeam": {
-        "name": "PINT C Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "5/206",
-        "overs": "(40)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Leigh Forbes",
-            "runs": 101,
-            "balls": 120,
-            "fours": 5,
-            "sixes": 1,
-            "SR": 84.16,
-            "team": "PINT C Grade",
-            "notOut": true
-          },
-          {
-            "player": "Nick Glinatsis",
-            "runs": 49,
-            "balls": 86,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 56.97,
-            "team": "PINT C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Sean COCKFIELD",
-            "runs": 23,
-            "balls": 17,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 135.29,
-            "team": "PINT C Grade",
+            "SR": 59.09,
+            "team": "Brisbane Silver",
             "notOut": true
           }
         ],
         "bowlingPerformances": [
           {
-            "player": "Tannum Jones - Materne",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 20,
-            "wickets": 3,
-            "economy": "5.00",
-            "team": "Sth Districts C Grade"
-          },
-          {
-            "player": "Corey Dalton",
-            "overs": 8,
-            "maidens": 0,
-            "runs": 41,
-            "wickets": 1,
-            "economy": "5.13",
-            "team": "Sth Districts C Grade"
-          },
-          {
-            "player": "Ryan Harvey",
-            "overs": 5,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 1,
-            "economy": "5.80",
-            "team": "Sth Districts C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Sth Districts C Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "8/161",
-        "overs": "(40)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Nate Watson",
-            "runs": 36,
-            "balls": 84,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 42.85,
-            "team": "Sth Districts C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Daniel Derrington",
-            "runs": 28,
-            "balls": 32,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 87.5,
-            "team": "Sth Districts C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Jordan Doevendans",
-            "runs": 25,
-            "balls": 28,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 89.28,
-            "team": "Sth Districts C Grade",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Mariyatharsha Shanthakumar",
+            "player": "Daniel Platts",
             "overs": 8,
             "maidens": 0,
             "runs": 29,
-            "wickets": 4,
+            "wickets": 0,
             "economy": "3.63",
-            "team": "PINT C Grade"
+            "team": "GC 50's Thunder Div 2 Gold"
           },
           {
-            "player": "Jonathon Hewitson",
-            "overs": 8,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 1,
-            "economy": "2.63",
-            "team": "PINT C Grade"
-          },
-          {
-            "player": "M Jahid Anwar Mollik",
+            "player": "Sean Clark",
             "overs": 5,
             "maidens": 0,
-            "runs": 24,
-            "wickets": 1,
-            "economy": "4.80",
-            "team": "PINT C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "19 July 2025",
-      "type": "One Day",
-      "ground": "Alawa Oval / Uni oval",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "C Grade",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "result": "PINT C Grade won by 45 runs",
-      "prompt": "Match Summary: PINT C Grade vs. Sth Districts C Grade:\n  - This C Grade game is a One Day, played in Round: Round 15 at Alawa Oval / Uni oval.\n  - Scores: PINT C Grade 5/206 in (40) overs, Sth Districts C Grade 8/161 in (40) overs\n  - Result: PINT C Grade won by 45 runs\n  Player Performances:\n  - PINT C Grade\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 7 (Pradeep Palanisamy), Wicket 2: 15 (Jonathon Hewitson), Wicket 3: 21 (Boney Sebastian), Wicket 4: 21 (Varun Sudheer), Wicket 5: 156 (Nick Glinatsis)\n    - Fielding: \n  Focus on highlighted team performances."
-    },
-    {
-      "gameID": "610f0972",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Tracy Village D Gold",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "10/90",
-        "overs": "(30.1)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Amarjeet Bajwa",
-            "runs": 30,
-            "balls": 51,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 58.82,
-            "team": "Tracy Village D Gold",
-            "notOut": false
-          },
-          {
-            "player": "Amal Jose",
-            "runs": 24,
-            "balls": 66,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 36.36,
-            "team": "Tracy Village D Gold",
-            "notOut": false
-          },
-          {
-            "player": "Jaspreet Gill",
-            "runs": 14,
-            "balls": 33,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 42.42,
-            "team": "Tracy Village D Gold",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Harpreet Singh  (c)",
-            "overs": 6,
-            "maidens": 1,
-            "runs": 20,
-            "wickets": 3,
-            "economy": "3.33",
-            "team": "PINT Gold D Grade"
-          },
-          {
-            "player": "Nishan Sanjaya",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 30,
-            "wickets": 2,
-            "economy": "3.75",
-            "team": "PINT Gold D Grade"
-          },
-          {
-            "player": "Fill-in",
-            "overs": 7.4,
-            "maidens": 0,
-            "runs": 28,
-            "wickets": 2,
-            "economy": "3.78",
-            "team": "PINT Gold D Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "PINT Gold D Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "9/140",
-        "overs": "(36.4)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Abdul Bajwa",
-            "runs": 29,
-            "balls": 34,
-            "fours": 2,
-            "sixes": 2,
-            "SR": 85.29,
-            "team": "PINT Gold D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Sarfraz Khan",
             "runs": 22,
-            "balls": 50,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 44,
-            "team": "PINT Gold D Grade",
-            "notOut": false
+            "wickets": 0,
+            "economy": "4.40",
+            "team": "GC 50's Thunder Div 2 Gold"
           },
           {
-            "player": "Sandeep Shandilya",
-            "runs": 11,
-            "balls": 17,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 64.7,
-            "team": "PINT Gold D Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Amal Jose",
-            "overs": 7.1,
+            "player": "Michael Ross",
+            "overs": 2,
             "maidens": 1,
-            "runs": 20,
-            "wickets": 4,
-            "economy": "2.82",
-            "team": "Tracy Village D Gold"
-          },
-          {
-            "player": "Melvin Jose",
-            "overs": 6,
-            "maidens": 1,
-            "runs": 12,
-            "wickets": 3,
-            "economy": "2.00",
-            "team": "Tracy Village D Gold"
-          },
-          {
-            "player": "Princepal Singh",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 4,
-            "wickets": 1,
-            "economy": "1.33",
-            "team": "Tracy Village D Gold"
+            "runs": 10,
+            "wickets": 0,
+            "economy": "5.00",
+            "team": "GC 50's Thunder Div 2 Gold"
           }
         ],
         "isClubTeam": false
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7a09c26e96.jpg",
+        "width": 1334,
+        "height": 750
       },
-      "date": "19 July 2025",
+      "date": "26 July 2025",
       "type": "One Day",
-      "ground": "Haileybury Rendall School / Haileybury Rendall School 2",
-      "round": "Round 13",
+      "ground": "Oxenford Oval / Choice Homes Oval",
+      "round": "Round 7",
       "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
+      "ageGroup": "Over 50",
+      "gradeName": "O50 Div 2 - Andrew Knight Shield",
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ]
       },
-      "result": "PINT Gold D Grade won by 1 wickets",
-      "prompt": "Match Summary: Tracy Village D Gold vs. PINT Gold D Grade:\n  - This D Grade game is a One Day, played in Round: Round 13 at Haileybury Rendall School / Haileybury Rendall School 2.\n  - Scores: Tracy Village D Gold 10/90 in (30.1) overs, PINT Gold D Grade 9/140 in (36.4) overs\n  - Result: PINT Gold D Grade won by 1 wickets\n  Player Performances:\n  - Tracy Village D Gold\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 69 (Amarjeet Bajwa), Wicket 2: 72 (Bibin Mathew), Wicket 3: 72 (Amal Jose), Wicket 4: 100 (Manmeet Singh), Wicket 5: 119 (Jinu Thekkeparambil Sunny), Wicket 6: 120 (Jaspreet Gill), Wicket 7: 125 (Hariharan Ramamurthy), Wicket 8: 132 (Melvin Jose), Wicket 9: 140 (Princepal Singh)\n    - Fielding: \n  Focus on highlighted team performances."
+      "result": "GC 50's Thunder Div 2 Gold won by 137 runs",
+      "prompt": "Match Summary: GC 50's Thunder Div 2 Gold vs. Brisbane Silver:\n  - This O50 Div 2 - Andrew Knight Shield game is a One Day, played in Round: Round 7 at Oxenford Oval / Choice Homes Oval.\n  - Scores: GC 50's Thunder Div 2 Gold 6/202 in (45) overs, Brisbane Silver 0/65 in (15) overs\n  - Result: GC 50's Thunder Div 2 Gold won by 137 runs\n  Player Performances:\n  - GC 50's Thunder Div 2 Gold\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 76 (Dean Croft), Wicket 2: 113 (Rod Carrington), Wicket 3: 141 (Jeff Lindemann), Wicket 4: 151 (Quentin Ryan), Wicket 5: 162 (Jonathon Parker), Wicket 6: 202 (Adam Bell)\n    - Fielding: \n  Focus on highlighted team performances."
     },
     {
-      "gameID": "6452c8ce",
-      "status": "Final",
+      "gameID": "ec925ee3",
+      "status": "Abandoned",
       "homeTeam": {
-        "name": "Sth Districts D Grade White",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "4/107",
-        "overs": "(19.1)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Haydn Black",
-            "runs": 24,
-            "balls": 23,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 104.34,
-            "team": "Sth Districts D Grade White",
-            "notOut": false
-          },
-          {
-            "player": "Harry Tregloan",
-            "runs": 24,
-            "balls": 53,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 45.28,
-            "team": "Sth Districts D Grade White",
-            "notOut": false
-          },
-          {
-            "player": "Tennyson Phillips",
-            "runs": 11,
-            "balls": 20,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 55,
-            "team": "Sth Districts D Grade White",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Jeffrey Stafford",
-            "overs": 5.2,
-            "maidens": 2,
-            "runs": 11,
-            "wickets": 3,
-            "economy": "2.12",
-            "team": "PINT Green D Grade"
-          },
-          {
-            "player": "Lochlan Lyness",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 11,
-            "wickets": 2,
-            "economy": "2.75",
-            "team": "PINT Green D Grade"
-          },
-          {
-            "player": "Matthew James Gawthrope",
-            "overs": 6,
-            "maidens": 0,
-            "runs": 26,
-            "wickets": 2,
-            "economy": "4.33",
-            "team": "PINT Green D Grade"
-          }
-        ],
-        "isClubTeam": false
+        "name": "Redlands Logan Gold",
+        "score": "N/A",
+        "overs": "N/A"
       },
       "awayTeam": {
-        "name": "PINT Green D Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "10/103",
-        "overs": "(31.2)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Keidan Holt",
-            "runs": 41,
-            "balls": 25,
-            "fours": 7,
-            "sixes": 0,
-            "SR": 164,
-            "team": "PINT Green D Grade",
-            "notOut": true
-          },
-          {
-            "player": "Lochlan Lyness",
-            "runs": 35,
-            "balls": 24,
-            "fours": 7,
-            "sixes": 0,
-            "SR": 145.83,
-            "team": "PINT Green D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Mitchell Townsend",
-            "runs": 13,
-            "balls": 23,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 56.52,
-            "team": "PINT Green D Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Haydn Black",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 26,
-            "wickets": 2,
-            "economy": "8.67",
-            "team": "Sth Districts D Grade White"
-          },
-          {
-            "player": "Tennyson Phillips",
-            "overs": 8,
-            "maidens": 2,
-            "runs": 24,
-            "wickets": 1,
-            "economy": "3.00",
-            "team": "Sth Districts D Grade White"
-          },
-          {
-            "player": "Luke Phillips  (c)",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 14,
-            "wickets": 1,
-            "economy": "7.00",
-            "team": "Sth Districts D Grade White"
-          }
-        ],
-        "isClubTeam": false
+        "name": "GC 50's Thunder Div 2 Green",
+        "score": "N/A",
+        "overs": "N/A"
       },
       "teamHomeLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
@@ -1213,83 +255,167 @@
         "height": 1211
       },
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
-      "date": "19 July 2025",
+      "date": "26 July 2025",
       "type": "One Day",
-      "ground": "Howard Park / Howard Park Oval",
-      "round": "Round 13",
+      "ground": "Judy Holt Park / Judy Holt 1 (Turf)",
+      "round": "Round 7",
       "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
+      "ageGroup": "Over 50",
+      "gradeName": "O50 Div 2 - Andrew Knight Shield",
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 152,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12785,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+            }
+          }
+        ]
       },
-      "result": "Sth Districts D Grade White won by 4 runs",
-      "prompt": "Match Summary: Sth Districts D Grade White vs. PINT Green D Grade:\n  - This D Grade game is a One Day, played in Round: Round 13 at Howard Park / Howard Park Oval.\n  - Scores: Sth Districts D Grade White 4/107 in (19.1) overs, PINT Green D Grade 10/103 in (31.2) overs\n  - Result: Sth Districts D Grade White won by 4 runs\n  Player Performances:\n  - Sth Districts D Grade White\n    - Batting: \n    - Bowling: \n    - FOW: Wicket 1: 8 (Vincent Perry), Wicket 2: 9 (Sebastian Greely), Wicket 3: 19 (Stephen Vincent), Wicket 4: 20 (Luke Phillips), Wicket 5: 28 (Tufail Rashid), Wicket 6: 52 (Tennyson Phillips), Wicket 7: 60 (Harry Tregloan), Wicket 8: 82 (Naythan Phillips), Wicket 9: 97 (Jack Thomas), Wicket 10: 103 (Haydn Black)\n    - Fielding: \n  Focus on highlighted team performances."
+      "result": "Abandoned Match",
+      "prompt": "Match Summary: Game was Abandoned: Redlands Logan Gold vs. GC 50's Thunder Div 2 Green"
     }
   ],
   "asset": {
-    "assetID": 4,
+    "assetID": 13,
     "assetTypeID": 2,
-    "assetCategoryID": 1,
-    "assetsLinkID": "1d48297297a49b30e9c3066b233c05c46f638ddbdd94f10aff4b3e5520597020"
+    "assetCategoryID": 2,
+    "assetsLinkID": "b528499f2db31803d749b593831c93c635e374bc74c9383071edfdcbbbfb3d63"
   },
   "render": {
-    "schedulerId": 211,
-    "renderId": 8311
+    "schedulerId": 207,
+    "renderId": 8322
   },
   "account": {
-    "accountId": 323
+    "accountId": 319
   },
   "timings": {
-    "FPS_MAIN": 1155,
+    "FPS_MAIN": 405,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 300
+    "FPS_SCORECARD": 210
   },
-  "frames": [45, 240, 525, 810, 1095],
+  "frames": [45, 195, 390, 525],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_1315_6ers_Sixers_Cricket_League_Logo_Purple_Patch_47f017cb6a.png",
-        "width": 1920,
-        "height": 1080
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+        "width": 379,
+        "height": 303
       },
-      "name": "PINT Cricket Club",
+      "name": "Gold Coast Veterans Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "primary": [
+          {
+            "id": 151,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "test",
+            "tagline": "test",
+            "description": null,
+            "name": "test",
+            "logo": {
+              "id": 12784,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+            }
+          }
+        ],
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 151,
+              "isPrimary": true,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
+              "logo": {
+                "id": 12784,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
+              }
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 152,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
+              "logo": {
+                "id": 12785,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
+              }
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 153,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "test",
+              "tagline": "test",
+              "description": null,
+              "name": "test",
+              "logo": {
+                "id": 12786,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
+              }
+            }
+          ]
+        }
       }
     },
     "video": {
-      "fixtureCategory": "Senior",
-      "groupingCategory": "Senior",
+      "fixtureCategory": "MASTERS",
+      "groupingCategory": "MASTERS",
       "metadata": {
         "title": "Results",
         "titleSplit": ["Results"],
         "videoTitle": "Weekend Results",
         "compositionId": "CricketResults",
-        "assetId": 4,
+        "assetId": 13,
         "assetTypeId": 2,
         "frames": [],
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#84ff19",
-          "secondary": "#009300"
+          "primary": "#232734",
+          "secondary": "#fbc700"
         },
-        "template": "Brickwork"
+        "template": "Sixers"
       },
       "media": {
         "HeroImage": {
@@ -1311,79 +437,79 @@
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 3,
+          "CricketUpcoming": 2,
           "CricketResultSingle": 1
         }
       },
       "templateVariation": {
         "useBackground": "Graphics",
-        "mode": "light",
+        "mode": "lightAlt",
         "category": {
-          "slug": "Brickwork",
-          "name": "Brick Work",
+          "slug": "Sixers",
+          "name": "Sixers",
           "divideFixturesBy": {
-            "CricketUpcoming": 3,
+            "CricketUpcoming": 2,
             "CricketResults": 2,
             "CricketResultSingle": 1,
             "CricketLadder": 1,
             "CricketRoster": 1
           },
           "bundleAudio": {
-            "id": 2,
-            "Name": "CNSW Audio Bundle",
-            "createdAt": "2023-12-01T01:47:09.580Z",
-            "updatedAt": "2023-12-01T01:47:10.749Z",
-            "publishedAt": "2023-12-01T01:47:10.747Z",
+            "id": 4,
+            "Name": "Coastal Cricket League",
+            "createdAt": "2024-06-05T04:44:07.035Z",
+            "updatedAt": "2024-06-05T04:44:20.565Z",
+            "publishedAt": "2024-06-05T04:44:20.563Z",
             "audio_options": [
               {
-                "id": 6,
-                "Name": "Free The People_Moonlight",
-                "createdAt": "2023-12-01T01:45:28.293Z",
-                "updatedAt": "2023-12-08T01:05:28.076Z",
-                "publishedAt": "2023-12-01T01:46:00.813Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Free_The_People_Moonlight_Instrumental_1701394307461_mixdown_24f07b8a36.mp3",
-                "CompositionID": "UpComingFixtures",
-                "ComponentName": "UpComing Fixtures"
-              },
-              {
-                "id": 7,
-                "Name": "Theres No Stopping Us",
-                "createdAt": "2023-12-01T01:46:41.359Z",
-                "updatedAt": "2023-12-02T01:47:10.682Z",
-                "publishedAt": "2023-12-01T01:46:42.964Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_c1c90e4960.mp3",
+                "id": 24,
+                "Name": "sparkle_in_the_darkits_in_the_moon",
+                "createdAt": "2024-06-05T04:43:01.479Z",
+                "updatedAt": "2024-06-05T04:44:18.252Z",
+                "publishedAt": "2024-06-05T04:44:18.250Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/audiiocryotesparkle_in_the_darkits_in_the_moon_16deb6a046.mp3",
                 "CompositionID": "WeekendResults",
                 "ComponentName": "Weekend Results"
               },
               {
-                "id": 8,
-                "Name": "Speed Out burst",
-                "createdAt": "2023-12-01T01:47:58.371Z",
-                "updatedAt": "2023-12-02T01:47:28.510Z",
-                "publishedAt": "2023-12-01T01:48:00.149Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Readyand_Go_Speed_Outburst_Inst_fb6bfe8381.mp3",
+                "id": 23,
+                "Name": "Shockface_Splitting_distance",
+                "createdAt": "2024-06-05T04:42:36.350Z",
+                "updatedAt": "2024-06-05T04:44:34.747Z",
+                "publishedAt": "2024-06-05T04:44:34.745Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Shockface_Splitting_distance45s_Inst_fcddc61d58.mp3",
+                "CompositionID": "Ladder",
+                "ComponentName": "Ladder"
+              },
+              {
+                "id": 22,
+                "Name": "Sam_Ryder_SR_Darwins_Finches",
+                "createdAt": "2024-06-05T04:41:26.000Z",
+                "updatedAt": "2024-09-13T05:50:30.301Z",
+                "publishedAt": "2024-06-05T04:44:47.200Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Sam_Ryder_SR_Darwins_Finches_Inst_99162347e8.mp3",
+                "CompositionID": "UpComingFixtures",
+                "ComponentName": "UpComing Fixtures"
+              },
+              {
+                "id": 18,
+                "Name": "Free The People",
+                "createdAt": "2024-06-05T04:34:04.265Z",
+                "updatedAt": "2024-06-05T04:45:33.675Z",
+                "publishedAt": "2024-06-05T04:34:05.242Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Free_The_People_Volume00_Untie_My_Tongue_Inst_294bcadc99.mp3",
                 "CompositionID": "Top5BattingList",
                 "ComponentName": "Top 5 Batting"
               },
               {
-                "id": 9,
-                "Name": "Jack out",
-                "createdAt": "2023-12-01T01:48:30.829Z",
-                "updatedAt": "2024-09-13T05:57:42.015Z",
-                "publishedAt": "2023-12-01T01:48:31.820Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Simon_Osterhold_poprockvol1_Jack_it_out_a927e941f5.mp3",
+                "id": 21,
+                "Name": "That_Funky_Horn",
+                "createdAt": "2024-06-05T04:40:40.036Z",
+                "updatedAt": "2024-06-06T05:43:54.913Z",
+                "publishedAt": "2024-06-06T05:43:54.911Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Randon_Nelson_Blast_Off_EP_That_Funky_Horn_Inst_621c36babe.mp3",
                 "CompositionID": "Top5BowlingList",
                 "ComponentName": "Top 5 Bowling"
-              },
-              {
-                "id": 10,
-                "Name": "Ill BeAlright",
-                "createdAt": "2023-12-01T01:48:53.834Z",
-                "updatedAt": "2023-12-02T01:47:39.492Z",
-                "publishedAt": "2023-12-01T01:48:54.706Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Tate_Kirgiss_Analog_Inspired_Ill_Be_Alright_Inst_8d6691a7ca.mp3",
-                "CompositionID": "Ladder",
-                "ComponentName": "Ladder"
               }
             ]
           }
@@ -1391,13 +517,16 @@
         "video": {
           "url": null,
           "fallbackUrl": null,
-          "position": null,
-          "size": null,
+          "position": "left",
+          "size": "cover",
           "loop": null,
-          "muted": null,
-          "overlay": null,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
           "useOffthreadVideo": null,
-          "volume": null,
+          "volume": 0.8,
           "playbackRate": null
         },
         "image": {
@@ -1405,35 +534,35 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": null,
-          "direction": null,
-          "overlayStyle": null,
-          "gradientType": null,
-          "overlayOpacity": null
+          "type": "focusblur",
+          "direction": "in",
+          "overlayStyle": "duotone",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
         },
         "palette": "primary",
         "gradient": {
-          "type": null,
-          "direction": null
+          "type": "conicGradient",
+          "direction": "DIAGONAL"
         },
         "noise": {
-          "type": "gradientGrid"
+          "type": "floatingParticles"
         },
         "pattern": {
-          "type": "dots",
-          "animation": "rotate",
-          "scale": 0.5,
+          "type": "Crosshatch",
+          "animation": "panRight",
+          "scale": 0.8,
           "rotation": null,
-          "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "opacity": 0.1,
+          "animationDuration": 750,
+          "animationSpeed": 1
         },
         "particle": {
-          "type": null,
-          "particleCount": null,
-          "speed": null,
-          "direction": null,
-          "animation": null
+          "type": "lines",
+          "particleCount": "100",
+          "speed": 5,
+          "direction": "up",
+          "animation": "slide"
         }
       }
     }

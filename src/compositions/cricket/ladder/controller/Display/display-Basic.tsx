@@ -22,8 +22,6 @@ export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
     heights.asset,
     League.length,
   );
-
-  console.log("[assignSponsors]", assignSponsors);
   return (
     <div className="p-0 flex flex-col w-full h-full">
       {/* <LadderHeader title={name} /> */}

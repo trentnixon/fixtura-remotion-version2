@@ -53,13 +53,13 @@ const SponsorGrid: React.FC<{
       .map((sponsor, idx) => (
         <div
           key={`${sponsor.id}_${idx}`}
-          className="flex items-center justify-center p-4"
+          className="flex items-center justify-center p-4 max-h-[300px] max-w-[300px]"
         >
           <AnimatedImage
             src={sponsor.logo.url}
             alt={sponsor.name || ""}
-            width={sponsor.logo.width ?? 300}
-            height={sponsor.logo.height ?? 300}
+            width={"auto"}
+            height={"auto"}
             fit="contain"
             animation={LogoAnimations.introIn}
             exitAnimation={LogoAnimations.exitAnimation}
@@ -86,9 +86,8 @@ export const SixersOutro: React.FC<SixersOutroProps> = ({
   const defaultArray: Sponsor[] = convertToArray(defaultSponsors);
   const sponsorsArray: Sponsor[] = [...defaultArray];
 
-  console.log("[sponsorsArray]", sponsorsArray);
   const groups = chunkArray(sponsorsArray, 6);
-  console.log("[groups]", groups);
+
   // Each group is a sequence for 180 frames
   const sequences = groups.map((group) => ({
     content: (

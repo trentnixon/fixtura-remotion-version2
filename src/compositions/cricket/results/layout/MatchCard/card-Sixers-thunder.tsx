@@ -43,62 +43,57 @@ const MatchCardSixersThunder: React.FC<MatchCardProps> = ({
       />
       {/* Section 1: Team scores and names */}
 
-      {match.status === "Abandoned" && (
-        <MatchStatus
-          status={`${match.status}`}
-          result={match.result}
-          delay={headerDelay}
-          outerContainer={{
-            background: selectedPalette.container.backgroundTransparent.high,
-            height: headerHeight,
-          }}
-        />
+      {match.status === "Abandoned" ? (
+        <div className="mt-8">
+          <MatchStatus
+            status={`${match.homeTeam.name} vs ${match.awayTeam.name}`}
+            result={match.result}
+            delay={headerDelay}
+            outerContainer={{
+              background: selectedPalette.container.backgroundTransparent.high,
+              height: headerHeight,
+            }}
+          />
+        </div>
+      ) : (
+        <>
+          <Horizontal_SingleTeam_LogoWithName_Score
+            type={match.type}
+            Team={match.homeTeam}
+            TeamLogo={match.teamHomeLogo}
+            delay={baseDelay}
+            outerContainer={{
+              height: teamsHeight,
+            }}
+          />
+
+          {/* Section 2: Player statistics */}
+          <PlayerStatsSingleTeamOnly
+            Team={match.homeTeam}
+            height={statsHeight}
+            delay={statsDelay}
+            maxPlayersPerStat={2}
+          />
+
+          <Horizontal_SingleTeam_LogoWithName_Score
+            type={match.type}
+            Team={match.awayTeam}
+            TeamLogo={match.teamAwayLogo}
+            delay={baseDelay}
+            outerContainer={{
+              height: teamsHeight,
+              marginTop: "10px",
+            }}
+          />
+
+          <PlayerStatsSingleTeamOnly
+            Team={match.awayTeam}
+            height={statsHeight}
+            delay={statsDelay}
+            maxPlayersPerStat={2}
+          />
+        </>
       )}
-
-      <Horizontal_SingleTeam_LogoWithName_Score
-        type={match.type}
-        Team={match.homeTeam}
-        TeamLogo={match.teamHomeLogo}
-        delay={baseDelay}
-        outerContainer={{
-          height: teamsHeight,
-        }}
-      />
-
-      {/* Section 2: Player statistics */}
-      <PlayerStatsSingleTeamOnly
-        Team={match.homeTeam}
-        height={statsHeight}
-        delay={statsDelay}
-        maxPlayersPerStat={2}
-      />
-
-      <Horizontal_SingleTeam_LogoWithName_Score
-        type={match.type}
-        Team={match.awayTeam}
-        TeamLogo={match.teamAwayLogo}
-        delay={baseDelay}
-        outerContainer={{
-          height: teamsHeight,
-          marginTop: "10px",
-        }}
-      />
-
-      <PlayerStatsSingleTeamOnly
-        Team={match.awayTeam}
-        height={statsHeight}
-        delay={statsDelay}
-        maxPlayersPerStat={2}
-      />
-      {/* Section 3: Match info footer */}
-
-      {/* <SingleDataPointHeader
-        grade={match.result}
-        height={headerHeight}
-        delay={headerDelay}
-        backgroundColor={"transparent"}
-        align="right"
-      /> */}
     </div>
   );
 };

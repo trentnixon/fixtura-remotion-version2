@@ -19,8 +19,6 @@ export const AgainstTeam: React.FC<RosterHeaderProps> = ({ roster }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
-  console.log("[roster - AgainstTeam]", roster);
-
   // Determine opponent's team details based on isHomeTeam
   const isUserHomeTeam = roster.isHomeTeam;
   const opponentTeamName = isUserHomeTeam ? roster.teamAway : roster.teamHome;

@@ -26,7 +26,6 @@ export function getPaletteColor(
     return fallback;
   }
 
-  console.log("[getPaletteColor]", palette);
   // Try section-specific lookup first if provided
   if (
     section &&
@@ -132,30 +131,6 @@ export function getColorWithOpacity(color: string, opacity: number): string {
  * @param fallback Fallback gradient
  * @returns CSS gradient string
  */
-/* export function getPaletteGradient(
-  palette: any,
-  gradientKey: string = "primaryToSecondary",
-  direction: string = "HORIZONTAL",
-  fallback: string = "linear-gradient(to right, #000, #555)",
-): string {
-  console.log("[getPaletteGradient]", palette);
-  if (!palette?.background?.gradient) {
-    return fallback;
-  }
-
-  const gradients = palette.background.gradient;
-
-  // Check if the gradient exists
-  if (!gradients[gradientKey]) {
-    return fallback;
-  }
-
-  // Get the gradient CSS
-  const gradient = gradients[gradientKey];
-
-  // Return the direction-specific CSS or the default
-  return gradient.css?.[direction] || gradient.css?.DEFAULT || fallback;
-} */
 
 /**
  * Gets a shadow from the theme
@@ -165,17 +140,6 @@ export function getColorWithOpacity(color: string, opacity: number): string {
  * @param fallback Fallback shadow
  * @returns CSS shadow string
  */
-/* export function getPaletteShadow(
-  palette: any,
-  shadowKey: string = "medium",
-  fallback: string = "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-): string {
-  if (!palette?.shadow) {
-    return fallback;
-  }
-
-  return palette.shadow[shadowKey] || fallback;
-} */
 
 /**
  * Lightens a color by the specified amount

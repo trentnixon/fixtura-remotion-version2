@@ -30,6 +30,8 @@ const MatchCardBasic: React.FC<MatchCardProps> = ({
   const statsDelay = baseDelay + 4;
   const headerDelay = statsDelay + 5;
 
+  console.log("[match]", match);
+
   return (
     <div className="rounded-lg w-auto mx-8 overflow-hidden h-full">
       {/* Section 1: Team scores and names */}

@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
+import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 
 interface MatchStatusProps {
   status: string;
@@ -26,7 +27,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-
+  const { layout } = useThemeContext();
   // Format result status color
 
   // Truncate the result
@@ -35,7 +36,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className="w-full flex justify-between items-center p-3"
+      className={`w-full flex justify-between items-center p-3 ${layout.borderRadius.container}`}
       backgroundColor="none"
       style={outerContainer}
       animation={animations.container.main.itemContainer.containerIn}
@@ -44,7 +45,7 @@ export const MatchStatus: React.FC<MatchStatusProps> = ({
       <AnimatedText
         type="metadataSmall"
         animation={{ ...TextAnimations.copyIn, delay: delay + 12 }}
-        className={`text-4xl`}
+        className={`text-2xl`}
         variant="onContainerCopy"
       >
         {status}

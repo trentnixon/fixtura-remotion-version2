@@ -22,7 +22,6 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
 
   const ContainerAnimations = animations.container;
 
-  console.log("[timings?.FPS_SCORECARD]", timings);
   // Animation delay based on card index
   const delay = index * 5;
   const animationOutFrame = (timings?.FPS_SCORECARD || 270) - 20;

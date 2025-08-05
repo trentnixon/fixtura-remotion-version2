@@ -9,7 +9,6 @@ import { PlayerData } from "./types";
 export const Top5Players: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: playersData, videoMeta } = data;
-  console.log("[data]", data);
   const compositionId = videoMeta?.video?.metadata?.compositionId || "";
   const sponsors = videoMeta?.club.sponsors || [];
   // If no data is available, show a placeholder

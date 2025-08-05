@@ -42,7 +42,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
 
       {/* Stat columns */}
       <div className="flex flex-1 justify-evenly">
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -51,7 +51,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
             P
           </AnimatedText>
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -60,7 +60,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
             W
           </AnimatedText>
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -69,7 +69,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
             L
           </AnimatedText>
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -79,7 +79,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
           </AnimatedText>
         </div>
         <div
-          className={`w-16 ${layout.borderRadius.container} text-center`}
+          className={`w-20 ${layout.borderRadius.container} text-center`}
           style={{
             background: selectedPalette.container.backgroundTransparent.strong,
           }}

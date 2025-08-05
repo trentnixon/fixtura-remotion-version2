@@ -35,7 +35,6 @@ export const SponsorFooter = ({
   const LogoAnimations = animations.image.sponsor.logo;
 
   const defaultSponsorList = createFlatSponsorList(assignSponsors);
-  console.log("[defaultSponsorList]", defaultSponsorList);
   return (
     <div className="flex flex-row justify-start gap-4 items-center my-4 px-8">
       <IncludePrimarySponsor />
@@ -87,7 +86,6 @@ const IncludePrimarySponsor = () => {
   }
   const LogoAnimations = animations.image.sponsor.logo;
   const primaryArray = Object.values(sponsors.primary);
-  console.log("[IncludePrimarySponsor]", primaryArray);
   if (primaryArray.length > 0 && primaryArray[0]) {
     if (!primaryArray[0]?.logo?.url) {
       console.warn("[IncludePrimarySponsor] Primary sponsor missing logo url");
@@ -98,8 +96,8 @@ const IncludePrimarySponsor = () => {
         <AnimatedImage
           src={primaryArray[0].logo.url || ""}
           alt={primaryArray[0].name || ""}
-          width={primaryArray[0].logo.width || 100}
-          height={primaryArray[0].logo.height || 100}
+          width={"auto"}
+          height={"auto"}
           fit="contain"
           animation={LogoAnimations.introIn}
           exitAnimation={LogoAnimations.introOut}

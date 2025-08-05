@@ -18,8 +18,6 @@ export const createPrimaryPalette = (
 ): DesignPalette => {
   const primaryVariations = colorVariations.primary;
 
-  console.log("[createPrimaryPalette] textColors", textColors);
-
   return {
     name: "Primary",
     background: {
@@ -105,6 +103,15 @@ export const createPrimaryPalette = (
         .setAlpha(0.7)
         .toRgbString(),
       muted: tinycolor(primary).setAlpha(0.5).toRgbString(),
+      background: tinycolor(primary).lighten(15).toString(),
+      backgroundAlt: tinycolor(primary).lighten(25).toString(),
+      backgroundTransparent: {
+        subtle: tinycolor(primary).setAlpha(0.1).toRgbString(),
+        low: tinycolor(primary).setAlpha(0.2).toRgbString(),
+        medium: tinycolor(primary).setAlpha(0.4).toRgbString(),
+        high: tinycolor(primary).setAlpha(0.6).toRgbString(),
+        strong: tinycolor(primary).setAlpha(0.8).toRgbString(),
+      },
     },
     text: {
       onBackground: {
@@ -144,6 +151,9 @@ export const createPrimaryPalette = (
           .setAlpha(0.7)
           .toRgbString(),
         accent: secondary,
+        title: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+        copy: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+        copyNoBg: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
       },
       title: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
       body: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),

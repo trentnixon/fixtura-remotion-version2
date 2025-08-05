@@ -20,7 +20,6 @@ import { DesignPalette } from "../../../../../core/utils/designPalettes";
  * This function generates overlay presets dynamically based on the current theme palette
  */
 export const createThemeOverlayPresets = (palette: DesignPalette) => {
-  console.log("[createThemeOverlayPresets]", palette);
   // Ensure palette exists, otherwise provide default values
   if (!palette) {
     console.warn(

@@ -1,45 +1,360 @@
 {
   "data": [
     {
-      "date": "Tue, 29 July",
-      "time": "05:30 PM",
+      "date": "Fri, 01 Aug",
+      "time": "06:00 PM",
       "type": "T20",
-      "round": "Round 14",
-      "gameID": "ff48cd25",
-      "gender": "Mixed",
-      "ground": "Cazalys Arena / Cazalys Arena 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: PINT U18 vs Palmerston U18, Date and Time: Tuesday, 29 July 2025, 05:30 PM, Location: Cazalys Arena / Cazalys Arena 2\n- Round: Round 14, Match Type: T20\n- League: McDonald's Under 18",
-      "ageGroup": "U18",
-      "teamAway": "Palmerston U18",
-      "teamHome": "PINT U18",
-      "gradeName": "McDonald's Under 18",
+      "round": "Round 13",
+      "gameID": "e10f49e2",
+      "gender": "Women",
+      "ground": "Gardens Oval / Gardens Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Waratah Women's Div 1 vs PINT Women's Div 1, Date and Time: Friday, 01 August 2025, 06:00 PM, Location: Gardens Oval / Gardens Oval\n- Round: Round 13, Match Type: T20\n- League: Women's Div 1",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Women's Div 1",
+      "teamHome": "Waratah Women's Div 1",
+      "gradeName": "Women's Div 1",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
         "width": 512,
         "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
         "competition": [],
         "grade": [],
         "team": [
           {
-            "id": 164,
-            "isPrimary": true,
+            "id": 173,
+            "isPrimary": false,
             "isActive": true,
             "isArticle": true,
             "isVideo": true,
-            "url": "1",
-            "tagline": "1",
+            "url": "10",
+            "tagline": "10",
             "description": null,
-            "name": "1",
+            "name": "10",
             "logo": {
-              "id": 13156,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_3e00ce7ae2.png"
+              "id": 13165,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_2046cbd33c.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sun, 03 Aug",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Round 12",
+      "gameID": "bce94464",
+      "gender": "Mixed",
+      "ground": "Tracy Village Oval / Tracy Village Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Tracy Village Sunday 1 vs PINT Sunday 1, Date and Time: Sunday, 03 August 2025, 12:30 PM, Location: Tracy Village Oval / Tracy Village Oval\n- Round: Round 12, Match Type: One Day\n- League: Sunday 1",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Sunday 1",
+      "teamHome": "Tracy Village Sunday 1",
+      "gradeName": "Sunday 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 180,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "17",
+            "tagline": "17",
+            "description": null,
+            "name": "17",
+            "logo": {
+              "id": 13172,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor17_7a12c0a481.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Fri, 01 Aug",
+      "time": "06:00 PM",
+      "type": "T20",
+      "round": "Round 12",
+      "gameID": "ae928389",
+      "gender": "Women",
+      "ground": "Cazalys Arena / Cazalys Arena 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Darwin Women's Div 2 vs PINT Women's Div 2, Date and Time: Friday, 01 August 2025, 06:00 PM, Location: Cazalys Arena / Cazalys Arena 1\n- Round: Round 12, Match Type: T20\n- League: Women's Div 2",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Women's Div 2",
+      "teamHome": "Darwin Women's Div 2",
+      "gradeName": "Women's Div 2",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
+        "width": 300,
+        "height": 300
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 178,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "15",
+            "tagline": "15",
+            "description": null,
+            "name": "15",
+            "logo": {
+              "id": 13170,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_003ed9fa59.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sun, 03 Aug",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Round 12",
+      "gameID": "642ee92b",
+      "gender": "Mixed",
+      "ground": "Cazalys Arena / Cazalys Arena 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Tracy Village Sun 2 Red vs PINT Green Sunday 2, Date and Time: Sunday, 03 August 2025, 12:30 PM, Location: Cazalys Arena / Cazalys Arena 1\n- Round: Round 12, Match Type: One Day\n- League: Sunday 2",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Green Sunday 2",
+      "teamHome": "Tracy Village Sun 2 Red",
+      "gradeName": "Sunday 2",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 176,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "13",
+            "tagline": "13",
+            "description": null,
+            "name": "13",
+            "logo": {
+              "id": 13168,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_0ab5c6727a.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sun, 03 Aug",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Round 12",
+      "gameID": "63993d3f",
+      "gender": "Mixed",
+      "ground": "Marrara (DXC Arena) / DXC Arena 2",
+      "prompt": "Upcoming cricket match details:\n- Teams: Tracy Village Sun 2 Blue vs PINT Gold Sunday 2, Date and Time: Sunday, 03 August 2025, 12:30 PM, Location: Marrara (DXC Arena) / DXC Arena 2\n- Round: Round 12, Match Type: One Day\n- League: Sunday 2",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Gold Sunday 2",
+      "teamHome": "Tracy Village Sun 2 Blue",
+      "gradeName": "Sunday 2",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 177,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "14",
+            "tagline": "14",
+            "description": null,
+            "name": "14",
+            "logo": {
+              "id": 13169,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_b5d0d528bc.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sat, 02 Aug",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Round 17",
+      "gameID": "1017a301",
+      "gender": "Mixed",
+      "ground": "Cazalys Arena / Cazalys Arena 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Palmerston C Grade vs PINT C Grade, Date and Time: Saturday, 02 August 2025, 12:30 PM, Location: Cazalys Arena / Cazalys Arena 1\n- Round: Round 17, Match Type: One Day\n- League: C Grade",
+      "ageGroup": "Senior",
+      "teamAway": "PINT C Grade",
+      "teamHome": "Palmerston C Grade",
+      "gradeName": "C Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 170,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "7",
+            "tagline": "7",
+            "description": null,
+            "name": "7",
+            "logo": {
+              "id": 13162,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_6d12274c46.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sat, 02 Aug",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Round 14",
+      "gameID": "ba0e0580",
+      "gender": "Mixed",
+      "ground": "Cazalys Arena / Cazalys Arena 2",
+      "prompt": "Upcoming cricket match details:\n- Teams: Palmerston D Grade Grey vs PINT Gold D Grade, Date and Time: Saturday, 02 August 2025, 12:30 PM, Location: Cazalys Arena / Cazalys Arena 2\n- Round: Round 14, Match Type: One Day\n- League: D Grade",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Gold D Grade",
+      "teamHome": "Palmerston D Grade Grey",
+      "gradeName": "D Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 171,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "8",
+            "tagline": "8",
+            "description": null,
+            "name": "8",
+            "logo": {
+              "id": 13163,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_1aa8ff89e8.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sat, 02 Aug",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Round 14",
+      "gameID": "e10fdab8",
+      "gender": "Mixed",
+      "ground": "Tiwi Oval / Tiwi Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Tracy Village D Gold vs PINT Green D Grade, Date and Time: Saturday, 02 August 2025, 12:30 PM, Location: Tiwi Oval / Tiwi Oval\n- Round: Round 14, Match Type: One Day\n- League: D Grade",
+      "ageGroup": "Senior",
+      "teamAway": "PINT Green D Grade",
+      "teamHome": "Tracy Village D Gold",
+      "gradeName": "D Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": [
+          {
+            "id": 172,
+            "isPrimary": false,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "9",
+            "tagline": "9",
+            "description": null,
+            "name": "9",
+            "logo": {
+              "id": 13164,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_1268605e79.png"
             }
           }
         ]
@@ -47,26 +362,26 @@
     }
   ],
   "asset": {
-    "assetID": 1,
+    "assetID": 2,
     "assetTypeID": 1,
-    "assetCategoryID": 1,
-    "assetsLinkID": "82981a4dcf91b8b61a68cb8396b35b8b257469d834ad070d1cfa2a73efb13d0f"
+    "assetCategoryID": 2,
+    "assetsLinkID": "c6d06ac5c0d8501ffe3699f3c9591c88bc25b4e401e2f2bfc58884d84dcea23d"
   },
   "render": {
     "schedulerId": 211,
-    "renderId": 8315
+    "renderId": 8317
   },
   "account": {
     "accountId": 323
   },
   "timings": {
-    "FPS_MAIN": 270,
+    "FPS_MAIN": 795,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 360,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 270
+    "FPS_SCORECARD": 210
   },
-  "frames": [45, 225, 390, 480, 570, 660],
+  "frames": [45, 195, 390, 585, 780, 915, 1005, 1095, 1185],
   "videoMeta": {
     "club": {
       "logo": {
@@ -80,53 +395,53 @@
       "sponsors": {
         "primary": [
           {
-            "id": 164,
-            "isPrimary": true,
+            "id": 169,
+            "isPrimary": false,
             "isActive": true,
             "isArticle": true,
             "isVideo": true,
-            "url": "1",
-            "tagline": "1",
+            "url": "6",
+            "tagline": "6",
             "description": null,
-            "name": "1",
+            "name": "6",
             "logo": {
-              "id": 13156,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_3e00ce7ae2.png"
+              "id": 13176,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
             }
           }
         ],
         "default": {
           "primary_sponsor": [
             {
-              "id": 164,
-              "isPrimary": true,
+              "id": 169,
+              "isPrimary": false,
               "isActive": true,
               "isArticle": true,
               "isVideo": true,
-              "url": "1",
-              "tagline": "1",
+              "url": "6",
+              "tagline": "6",
               "description": null,
-              "name": "1",
+              "name": "6",
               "logo": {
-                "id": 13156,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_3e00ce7ae2.png"
+                "id": 13176,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
               }
             }
           ],
           "general_sponsor_1": [
             {
-              "id": 165,
+              "id": 169,
               "isPrimary": false,
               "isActive": true,
               "isArticle": true,
               "isVideo": true,
-              "url": "2",
-              "tagline": "2",
+              "url": "6",
+              "tagline": "6",
               "description": null,
-              "name": "2",
+              "name": "6",
               "logo": {
-                "id": 13157,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_165c6afcc8.png"
+                "id": 13176,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
               }
             }
           ],
@@ -183,18 +498,18 @@
           ],
           "general_sponsor_5": [
             {
-              "id": 169,
+              "id": 165,
               "isPrimary": false,
               "isActive": true,
               "isArticle": true,
               "isVideo": true,
-              "url": "6",
-              "tagline": "6",
+              "url": "2",
+              "tagline": "2",
               "description": null,
-              "name": "6",
+              "name": "2",
               "logo": {
-                "id": 13161,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor6_ffce411e69.png"
+                "id": 13157,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_165c6afcc8.png"
               }
             }
           ],
@@ -457,14 +772,14 @@
       }
     },
     "video": {
-      "fixtureCategory": "U18",
-      "groupingCategory": "U18",
+      "fixtureCategory": "Senior",
+      "groupingCategory": "Senior",
       "metadata": {
         "title": "Fixtures",
         "titleSplit": ["Fixtures", ""],
-        "videoTitle": "Up Coming Fixtures",
+        "videoTitle": "Upcoming Fixtures",
         "compositionId": "CricketUpcoming",
-        "assetId": 1,
+        "assetId": 2,
         "assetTypeId": 1,
         "frames": [],
         "includeSponsors": true
@@ -473,10 +788,10 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#84ff19",
-          "secondary": "#009300"
+          "primary": "#004c3d",
+          "secondary": "#f7b718"
         },
-        "template": "Brickwork"
+        "template": "Thunder"
       },
       "media": {
         "HeroImage": {
@@ -498,79 +813,79 @@
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 3,
+          "CricketUpcoming": 2,
           "CricketResultSingle": 1
         }
       },
       "templateVariation": {
-        "useBackground": "Graphics",
-        "mode": "light",
+        "useBackground": "Gradient",
+        "mode": "lightAlt",
         "category": {
-          "slug": "Brickwork",
-          "name": "Brick Work",
+          "slug": "Thunder",
+          "name": "Thunder",
           "divideFixturesBy": {
-            "CricketUpcoming": 3,
+            "CricketUpcoming": 2,
             "CricketResults": 2,
             "CricketResultSingle": 1,
             "CricketLadder": 1,
             "CricketRoster": 1
           },
           "bundleAudio": {
-            "id": 2,
-            "Name": "CNSW Audio Bundle",
-            "createdAt": "2023-12-01T01:47:09.580Z",
-            "updatedAt": "2023-12-01T01:47:10.749Z",
-            "publishedAt": "2023-12-01T01:47:10.747Z",
+            "id": 4,
+            "Name": "Coastal Cricket League",
+            "createdAt": "2024-06-05T04:44:07.035Z",
+            "updatedAt": "2024-06-05T04:44:20.565Z",
+            "publishedAt": "2024-06-05T04:44:20.563Z",
             "audio_options": [
               {
-                "id": 6,
-                "Name": "Free The People_Moonlight",
-                "createdAt": "2023-12-01T01:45:28.293Z",
-                "updatedAt": "2023-12-08T01:05:28.076Z",
-                "publishedAt": "2023-12-01T01:46:00.813Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Free_The_People_Moonlight_Instrumental_1701394307461_mixdown_24f07b8a36.mp3",
-                "CompositionID": "UpComingFixtures",
-                "ComponentName": "UpComing Fixtures"
-              },
-              {
-                "id": 7,
-                "Name": "Theres No Stopping Us",
-                "createdAt": "2023-12-01T01:46:41.359Z",
-                "updatedAt": "2023-12-02T01:47:10.682Z",
-                "publishedAt": "2023-12-01T01:46:42.964Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_c1c90e4960.mp3",
+                "id": 24,
+                "Name": "sparkle_in_the_darkits_in_the_moon",
+                "createdAt": "2024-06-05T04:43:01.479Z",
+                "updatedAt": "2024-06-05T04:44:18.252Z",
+                "publishedAt": "2024-06-05T04:44:18.250Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/audiiocryotesparkle_in_the_darkits_in_the_moon_16deb6a046.mp3",
                 "CompositionID": "WeekendResults",
                 "ComponentName": "Weekend Results"
               },
               {
-                "id": 8,
-                "Name": "Speed Out burst",
-                "createdAt": "2023-12-01T01:47:58.371Z",
-                "updatedAt": "2023-12-02T01:47:28.510Z",
-                "publishedAt": "2023-12-01T01:48:00.149Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Readyand_Go_Speed_Outburst_Inst_fb6bfe8381.mp3",
+                "id": 23,
+                "Name": "Shockface_Splitting_distance",
+                "createdAt": "2024-06-05T04:42:36.350Z",
+                "updatedAt": "2024-06-05T04:44:34.747Z",
+                "publishedAt": "2024-06-05T04:44:34.745Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Shockface_Splitting_distance45s_Inst_fcddc61d58.mp3",
+                "CompositionID": "Ladder",
+                "ComponentName": "Ladder"
+              },
+              {
+                "id": 22,
+                "Name": "Sam_Ryder_SR_Darwins_Finches",
+                "createdAt": "2024-06-05T04:41:26.000Z",
+                "updatedAt": "2024-09-13T05:50:30.301Z",
+                "publishedAt": "2024-06-05T04:44:47.200Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Sam_Ryder_SR_Darwins_Finches_Inst_99162347e8.mp3",
+                "CompositionID": "UpComingFixtures",
+                "ComponentName": "UpComing Fixtures"
+              },
+              {
+                "id": 18,
+                "Name": "Free The People",
+                "createdAt": "2024-06-05T04:34:04.265Z",
+                "updatedAt": "2024-06-05T04:45:33.675Z",
+                "publishedAt": "2024-06-05T04:34:05.242Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Free_The_People_Volume00_Untie_My_Tongue_Inst_294bcadc99.mp3",
                 "CompositionID": "Top5BattingList",
                 "ComponentName": "Top 5 Batting"
               },
               {
-                "id": 9,
-                "Name": "Jack out",
-                "createdAt": "2023-12-01T01:48:30.829Z",
-                "updatedAt": "2024-09-13T05:57:42.015Z",
-                "publishedAt": "2023-12-01T01:48:31.820Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Simon_Osterhold_poprockvol1_Jack_it_out_a927e941f5.mp3",
+                "id": 21,
+                "Name": "That_Funky_Horn",
+                "createdAt": "2024-06-05T04:40:40.036Z",
+                "updatedAt": "2024-06-06T05:43:54.913Z",
+                "publishedAt": "2024-06-06T05:43:54.911Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Randon_Nelson_Blast_Off_EP_That_Funky_Horn_Inst_621c36babe.mp3",
                 "CompositionID": "Top5BowlingList",
                 "ComponentName": "Top 5 Bowling"
-              },
-              {
-                "id": 10,
-                "Name": "Ill BeAlright",
-                "createdAt": "2023-12-01T01:48:53.834Z",
-                "updatedAt": "2023-12-02T01:47:39.492Z",
-                "publishedAt": "2023-12-01T01:48:54.706Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Tate_Kirgiss_Analog_Inspired_Ill_Be_Alright_Inst_8d6691a7ca.mp3",
-                "CompositionID": "Ladder",
-                "ComponentName": "Ladder"
               }
             ]
           }
@@ -592,28 +907,28 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": null,
-          "direction": null,
-          "overlayStyle": null,
-          "gradientType": null,
-          "overlayOpacity": null
+          "type": "zoom",
+          "direction": "in",
+          "overlayStyle": "duotone",
+          "gradientType": "linear",
+          "overlayOpacity": 0.7
         },
         "palette": "primaryOnWhite",
         "gradient": {
-          "type": null,
-          "direction": null
+          "type": "primary",
+          "direction": "VERTICAL"
         },
         "noise": {
           "type": "triangleSwarm"
         },
         "pattern": {
-          "type": "dots",
-          "animation": "rotate",
-          "scale": 0.5,
+          "type": "Crosshatch",
+          "animation": "panRight",
+          "scale": 0.8,
           "rotation": null,
-          "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "opacity": 0.1,
+          "animationDuration": 750,
+          "animationSpeed": 1
         },
         "particle": {
           "type": null,

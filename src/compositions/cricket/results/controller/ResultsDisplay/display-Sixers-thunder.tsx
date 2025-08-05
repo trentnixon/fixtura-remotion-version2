@@ -68,8 +68,8 @@ const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
               <div className="w-full h-full flex items-center rounded-none max-h-[130px] ">
                 <AnimatedImage
                   src={club.logo?.url}
-                  width={club.logo?.width || "auto"}
-                  height={club.logo?.height || "130px"}
+                  width={"auto"}
+                  height={"auto"}
                   fit="contain"
                   className="rounded-none"
                   animation={LogoAnimations.introIn}

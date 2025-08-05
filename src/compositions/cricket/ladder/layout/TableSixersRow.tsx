@@ -60,35 +60,35 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
           background: borderColor,
         }}
       >
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints
             value={team?.P || 0}
             delay={delay}
             variant="onContainerTitle"
           />
         </div>
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints
             value={team?.W || 0}
             delay={delay}
             variant="onContainerTitle"
           />
         </div>
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints
             value={team?.L || 0}
             delay={delay}
             variant="onContainerTitle"
           />
         </div>
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints
             value={team?.BYE || 0}
             delay={delay}
             variant="onContainerTitle"
           />
         </div>
-        <div className="w-16 mx-px text-center">
+        <div className="w-20 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints
             value={team?.PTS || 0}
             delay={delay}

@@ -53,19 +53,19 @@ export const StandardLadderRow: React.FC<BaseLayoutProps> = ({
 
       {/* Stats using primitive components */}
       <div className="flex flex-1 justify-evenly">
-        <div className="w-8 text-center">
+        <div className="w-10 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.P || 0} delay={delay} />
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.W || 0} delay={delay} />
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.L || 0} delay={delay} />
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
         </div>
-        <div className="w-16 text-center">
+        <div className="w-16 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
         </div>
       </div>
@@ -112,16 +112,16 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
 
       {/* Stats in separated boxes */}
       <div className="flex flex-1 justify-evenly">
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <LadderTeamPoints value={team?.P || 0} delay={delay} />
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <LadderTeamPoints value={team?.W || 0} delay={delay} />
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <LadderTeamPoints value={team?.L || 0} delay={delay} />
         </div>
-        <div className="w-8 text-center">
+        <div className="w-10 text-center">
           <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
         </div>
         <div className="w-16 bg-gray-700/50 rounded-md text-center">
@@ -178,19 +178,19 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
           background: selectedPalette.container.backgroundTransparent.medium,
         }}
       >
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.P || 0} delay={delay} />
         </div>
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.W || 0} delay={delay} />
         </div>
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.L || 0} delay={delay} />
         </div>
-        <div className="w-8 mx-px text-center">
+        <div className="w-10 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
         </div>
-        <div className="w-16 mx-px text-center">
+        <div className="w-20 mx-px text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
         </div>
       </div>

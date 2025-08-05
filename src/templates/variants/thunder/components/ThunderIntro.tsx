@@ -23,12 +23,12 @@ export const ThunderIntro: React.FC = () => {
     <VerticalStackLogoTitleName
       alignment="center"
       Logo={
-        <div className="w-full h-full flex justify-center py-0 items-center max-h-[500px] max-w-[800px]">
+        <div className="w-full h-full flex justify-center py-0 mb-16 items-center max-h-[500px] max-w-[800px]">
           <AnimatedImage
             src={club.logo?.url || ""}
             alt={club.name}
-            width={club.logo?.width}
-            height={club.logo?.height}
+            width={"auto"}
+            height={"auto"}
             fit="contain"
             animation={LogoAnimations.introIn}
             exitAnimation={LogoAnimations.introOut}
@@ -74,8 +74,8 @@ export const ThunderIntro: React.FC = () => {
             <AnimatedImage
               src={sponsors?.primary[0]?.logo?.url || ""}
               alt={sponsors?.primary[0]?.name || ""}
-              width={sponsors?.primary[0]?.logo?.width || 150}
-              height={sponsors?.primary[0]?.logo?.height || 150}
+              width={"auto"}
+              height={"auto"}
               fit="contain"
               animation={LogoAnimations.introIn}
               exitAnimation={LogoAnimations.introOut}

@@ -22,7 +22,6 @@ const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
   const startIndex = screenIndex * resultsPerScreen;
   const endIndex = Math.min(startIndex + resultsPerScreen, results.length);
   const displayedResults = results.slice(startIndex, endIndex);
-
   const availableHeight = heights.asset;
 
   // Calculate exactly half of the available height for each row
@@ -50,7 +49,6 @@ const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
       </div>
       <div style={{ height: `${heights.footer}px` }}>
         {displayedResults.map((match) => {
-          console.log("[match]", match.assignSponsors);
           return (
             <SponsorFooter
               key={match.gameID}

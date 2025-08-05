@@ -24,7 +24,6 @@ export const GameCardSixersThunder: React.FC<GameCardProps> = ({
 
   const ContainerAnimations = animations.container;
 
-  console.log("[timings?.FPS_SCORECARD]", timings);
   // Animation delay based on card index
   const delay = index * 15;
   const animationOutFrame = (timings?.FPS_SCORECARD || 270) - 20;
