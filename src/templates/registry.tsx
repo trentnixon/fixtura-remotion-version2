@@ -1,5 +1,6 @@
 import { Basic } from "./variants/basic";
 import { Brickwork } from "./variants/brickwork";
+import { Classic } from "./variants/classic";
 import { Sixers } from "./variants/sixers";
 import { Thunder } from "./variants/thunder";
 /**
@@ -26,6 +27,10 @@ export const templateRegistry = {
   },
   Brickwork: {
     component: Brickwork,
+    variants: Variants,
+  },
+  Classic: {
+    component: Classic,
     variants: Variants,
   },
   Sixers: {

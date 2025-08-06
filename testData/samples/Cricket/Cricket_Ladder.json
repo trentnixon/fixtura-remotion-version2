@@ -1358,7 +1358,7 @@
       },
       "templateVariation": {
         "useBackground": "Graphics",
-        "mode": "lightAlt",
+        "mode": "dark",
         "category": {
           "slug": "Basic",
           "name": "Basic",

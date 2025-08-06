@@ -20,7 +20,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
       style={{ height: `${headerHeight}px` }}
     >
       {/* Title (team info) */}
-      <div className="flex items-center mr-3 px-2" style={{ width: "70%" }}>
+      <div className="flex items-center mr-3 px-2" style={{ width: "65%" }}>
         <AnimatedText
           type="ladderGradeLabel"
           variant="onContainerTitle"
@@ -41,8 +41,8 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
       </div>
 
       {/* Stat columns */}
-      <div className="flex flex-1 justify-evenly">
-        <div className="w-10 text-center">
+      <div className="flex flex-1 justify-evenly items-center">
+        <div className="w-10 text-center py-2">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -51,7 +51,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
             P
           </AnimatedText>
         </div>
-        <div className="w-10 text-center">
+        <div className="w-10 text-center py-2">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -60,7 +60,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
             W
           </AnimatedText>
         </div>
-        <div className="w-10 text-center">
+        <div className="w-10 text-center py-2">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -69,7 +69,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
             L
           </AnimatedText>
         </div>
-        <div className="w-10 text-center">
+        <div className="w-10 text-center py-2">
           <AnimatedText
             type="ladderGradeLabel"
             variant="onContainerTitle"
@@ -79,7 +79,7 @@ export const TableHeaderSixersThunder: React.FC<TableHeaderProps> = ({
           </AnimatedText>
         </div>
         <div
-          className={`w-20 ${layout.borderRadius.container} text-center`}
+          className={`w-20 ${layout.borderRadius.container} text-center py-2`}
           style={{
             background: selectedPalette.container.backgroundTransparent.strong,
           }}

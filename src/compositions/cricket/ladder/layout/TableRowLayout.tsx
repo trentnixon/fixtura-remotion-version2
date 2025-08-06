@@ -24,7 +24,7 @@ export const StandardLadderRow: React.FC<BaseLayoutProps> = ({
 }) => {
   return (
     <div
-      className={`flex items-center p-2 rounded mb-1 ${bgColorClass}`}
+      className={`flex items-center p-2 rounded mb-1 ${bgColorClass} overflow-hidden`}
       style={{
         height: `${LadderRowHeight}px`,
       }}
@@ -156,7 +156,7 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
         style={{ width: "70%" }}
       >
         <LadderTeamName value={team.teamName} delay={delay} />
-        <div className="w-20 mr-4 overflow-hidden flex-shrink-0">
+        <div className="w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center">
           {team.clubLogo || team.playHQLogo ? (
             <div className="rounded-full">
               <TeamLogo

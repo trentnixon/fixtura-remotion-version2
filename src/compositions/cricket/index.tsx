@@ -3,32 +3,38 @@ import {
   basic as ladderBasic,
   brickwork as ladderBrickWork,
   sixersThunder as ladderSixersThunder,
+  classic as ladderClassic,
 } from "./ladder";
 import {
   basic as upcomingBasic,
   brickWork as upcomingBrickWork,
   SixersThunder as upcomingSixersThunder,
+  classic as upcomingClassic,
 } from "./upcoming";
 import {
   basic as top5Basic,
   brickWork as top5BrickWork,
   SixersThunder as top5SixersThunder,
+  classic as top5Classic,
 } from "./top5";
 import {
   basic as resultsBasic,
   brickWork as resultsBrickWork,
   SixersThunder as resultsSixersThunder,
+  classic as resultsClassic,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
   basic as resultSingleBasic,
+  classic as resultSingleClassic,
   sixers as resultSingleSixers,
 } from "./resultSingle";
 
 import {
   basic as rosterBasic,
   SixersThunder as rosterSixersThunder,
-} from "./teamRoster/index";
+  Classic as rosterClassic,
+} from "./teamRoster";
 
 /* export * as ladder from './ladder';
 
@@ -47,6 +53,7 @@ export const CricketLadder = {
   brickwork: ladderBrickWork,
   sixers: ladderSixersThunder,
   thunder: ladderSixersThunder,
+  classic: ladderClassic,
 };
 
 export const CricketTop5 = {
@@ -54,6 +61,7 @@ export const CricketTop5 = {
   brickwork: top5BrickWork,
   sixers: top5SixersThunder,
   thunder: top5SixersThunder,
+  classic: top5Classic,
 };
 
 export const CricketResults = {
@@ -61,6 +69,7 @@ export const CricketResults = {
   brickwork: resultsBrickWork,
   sixers: resultsSixersThunder,
   thunder: resultsSixersThunder,
+  classic: resultsClassic,
 };
 
 export const CricketUpcoming = {
@@ -68,6 +77,7 @@ export const CricketUpcoming = {
   brickwork: upcomingBrickWork,
   sixers: upcomingSixersThunder,
   thunder: upcomingSixersThunder,
+  classic: upcomingClassic,
 };
 
 export const CricketResultSingle = {
@@ -75,6 +85,7 @@ export const CricketResultSingle = {
   brickwork: resultSingleBasic,
   sixers: resultSingleSixers,
   thunder: resultSingleSixers,
+  classic: resultSingleClassic,
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -83,10 +94,12 @@ export const CricketRoster = {
   brickwork: rosterBasic,
   sixers: rosterSixersThunder,
   thunder: rosterSixersThunder,
+  classic: rosterClassic,
 };
 
 export const singleGameResult = {
   basic: PlaceholderComposition,
   brickwork: PlaceholderComposition,
   sixers: PlaceholderComposition,
+  classic: PlaceholderComposition,
 };

@@ -36,7 +36,7 @@ export const SponsorFooter = ({
 
   const defaultSponsorList = createFlatSponsorList(assignSponsors);
   return (
-    <div className="flex flex-row justify-start gap-4 items-center my-4 px-8">
+    <div className="flex flex-row justify-start gap-4 items-center my-2 px-8">
       <IncludePrimarySponsor />
       {defaultSponsorList.map((sponsor, idx) => {
         // Only grade and competition have id and name

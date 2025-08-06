@@ -25,7 +25,7 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
   const borderColor = selectedPalette.container.primary;
   return (
     <div
-      className={`flex items-center p-2 pl-4 ${layout.borderRadius.container} mb-1 ${bgColorClass}  `}
+      className={`flex items-center overflow-hidden p-2 pl-4 ${layout.borderRadius.container} mb-1 ${bgColorClass}  `}
       style={{
         height: `${LadderRowHeight}px`,
         background: bgColorClass,
@@ -35,10 +35,10 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
       {/* Team name and logo container with fixed width */}
       <div
         className="flex items-center justify-between mr-2"
-        style={{ width: "70%" }}
+        style={{ width: "65%" }}
       >
         <LadderTeamName value={team.teamName} delay={delay} />
-        <div className="w-20 mr-4 overflow-hidden flex-shrink-0">
+        <div className="w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center">
           {team.clubLogo || team.playHQLogo ? (
             <div className="rounded-full">
               <TeamLogo
@@ -48,7 +48,7 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
               />
             </div>
           ) : (
-            <div className="w-8 h-8 bg-gray-300 " />
+            <div className="w-8 h-8 bg-gray-100 rounded-full " />
           )}
         </div>
       </div>
