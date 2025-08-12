@@ -594,7 +594,7 @@
       },
       "templateVariation": {
         "useBackground": "Gradient",
-        "mode": "lightAlt",
+        "mode": "dark",
         "category": {
           "slug": "Thunder",
           "name": "Thunder",

@@ -58,6 +58,7 @@ export interface ComponentStyle {
  */
 export interface ThemeComponentStyles {
   title: ComponentStyle;
+  titleSmall: ComponentStyle;
   subtitle: ComponentStyle;
   bodyText: ComponentStyle;
   playerName: ComponentStyle;

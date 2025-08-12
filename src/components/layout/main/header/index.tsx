@@ -30,6 +30,9 @@ import {
   // Single-element reversed permutations
   ReverseTwoColumnHeaderTitle,
   ReverseTwoColumnHeaderName,
+  // Vertical narrow side-pane variants
+  TwoColumnVerticalHeaderTitleOnly,
+  TwoColumnVerticalHeaderLogoTitle,
 } from "./variants/TwoColumnLayout";
 
 // Re-export the types
@@ -69,4 +72,8 @@ export {
   // Single-element reversed permutations
   ReverseTwoColumnHeaderTitle,
   ReverseTwoColumnHeaderName,
+
+  // Vertical narrow side-pane variants
+  TwoColumnVerticalHeaderTitleOnly,
+  TwoColumnVerticalHeaderLogoTitle,
 };

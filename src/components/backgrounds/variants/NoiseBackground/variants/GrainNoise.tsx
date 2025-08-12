@@ -14,9 +14,10 @@ const GrainNoise: React.FC<React.ComponentProps<typeof GridNoise>> = (
   return (
     <GridNoise
       {...props}
-      noiseOpacity={0.05}
+      noiseColor={"ffffff"}
+      noiseOpacity={0.02}
       noiseScale={1}
-      noiseSpeed={0.005}
+      noiseSpeed={0.001}
       noiseDimension="2d"
       gridSize={100}
     />

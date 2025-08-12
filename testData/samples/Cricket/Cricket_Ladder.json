@@ -1469,11 +1469,11 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
-          "direction": "left",
+          "type": "none",
+          "direction": null,
           "overlayStyle": "vignette",
-          "gradientType": "linear",
-          "overlayOpacity": 0.7
+          "gradientType": "radial",
+          "overlayOpacity": 0.5
         },
         "palette": "primary",
         "gradient": {
@@ -1481,15 +1481,15 @@
           "direction": "VERTICAL"
         },
         "noise": {
-          "type": "floatingParticles"
+          "type": "spokes"
         },
         "pattern": {
-          "type": "dots",
+          "type": "grid",
           "animation": "none",
-          "scale": 0.75,
-          "rotation": null,
-          "opacity": 0.35,
-          "animationDuration": null,
+          "scale": 3,
+          "rotation": 0,
+          "opacity": 0.15,
+          "animationDuration": 0,
           "animationSpeed": 0.8
         },
         "particle": {

@@ -17,6 +17,7 @@ import { useFontContext } from "../../core/context/FontContext";
 // Define the possible typography types based on componentStyles keys
 export type TypographyType =
   | "title"
+  | "titleSmall"
   | "subtitle"
   | "bodyText"
   | "playerName"

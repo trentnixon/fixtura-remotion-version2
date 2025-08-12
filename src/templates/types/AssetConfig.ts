@@ -275,6 +275,10 @@ export interface Gradient {
 
 export interface Noise {
   type: string;
+  variant?: "geometric" | "organic" | "abstract" | "tech" | "flowing";
+  density?: "low" | "medium" | "high";
+  animationSpeed?: number;
+  opacity?: number;
 }
 
 export interface Pattern {

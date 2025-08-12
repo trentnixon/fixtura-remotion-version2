@@ -35,7 +35,7 @@ interface PatternTemplateVariation {
 export const PatternBackground: React.FC<PatternBackgroundProps> = ({
   scale = 1,
   rotation = 0,
-  opacity = 0.5,
+  opacity = 0.2,
   animation,
   animationDuration,
   animationSpeed,

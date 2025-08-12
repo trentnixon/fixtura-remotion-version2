@@ -8,7 +8,7 @@ export const DotsPattern: React.FC<PatternComponentProps> = ({
   secondaryColor,
   scale = 1,
   rotation = 0,
-  opacity = 0.7,
+  opacity = 0.3,
   animation = "none",
   animationDuration = 600, // 20 seconds at 30fps
   animationSpeed = 1,

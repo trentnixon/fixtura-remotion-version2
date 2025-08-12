@@ -3,6 +3,7 @@ import { Brickwork } from "./variants/brickwork";
 import { Classic } from "./variants/classic";
 import { Sixers } from "./variants/sixers";
 import { Thunder } from "./variants/thunder";
+import { TwoColumnClassic } from "./variants/twoColumnClassic";
 /**
  * Define template registry key type
  */
@@ -39,6 +40,10 @@ export const templateRegistry = {
   },
   Thunder: {
     component: Thunder,
+    variants: Variants,
+  },
+  TwoColumnClassic: {
+    component: TwoColumnClassic,
     variants: Variants,
   },
 };

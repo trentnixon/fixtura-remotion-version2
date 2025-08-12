@@ -56,7 +56,7 @@ export const BasicIntro: React.FC = () => {
         <div className="overflow-hidden">
           <AnimatedText
             type="subtitle"
-            textAlign="left"
+            textAlign="center"
             variant="onContainerTitle"
             letterAnimation="word"
             animation={TextAnimations.clubName}

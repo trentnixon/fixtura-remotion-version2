@@ -31,6 +31,62 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
   // Logo size based on height
   const logoSize = `w-[110px] h-[110px]`;
 
+  // Normalizes scores so that "N/A" renders as "Yet to Bat"
+  const normalizeScore = (rawScore?: string | null): string => {
+    const score = (rawScore || "").trim();
+    if (score.length === 0 || score.toUpperCase() === "N/A") {
+      return "Yet to Bat";
+    }
+    return score;
+  };
+
+  // Computes whether to show the first-innings helper row and which value to show
+  const getFirstInningsDisplay = (
+    matchType: string,
+    teamScore: string | undefined,
+    inningsValue?: string | null,
+  ): { show: boolean; value: string } => {
+    if (matchType !== "Two Day+") {
+      return { show: false, value: "" };
+    }
+
+    // Only show a legitimate first-innings score above the main score when the match is in second innings.
+    // Never show placeholders like "1", "N/A" or "Yet to Bat".
+    const value = (inningsValue || "").trim();
+    if (value.length === 0) return { show: false, value: "" };
+
+    const lowered = value.toLowerCase();
+    if (lowered === "1" || lowered === "n/a" || lowered === "yet to bat") {
+      return { show: false, value: "" };
+    }
+
+    // Heuristic: valid first-innings score strings often contain a wicket/runs pattern (e.g., 10/97),
+    // a declaration marker (d/), or an ampersand '&' separating innings summaries.
+    const looksLikeScore =
+      /\d+\s*\/\s*\d+/.test(value) ||
+      /\bd\//i.test(value) ||
+      value.includes("&");
+    if (!looksLikeScore) {
+      return { show: false, value: "" };
+    }
+
+    return { show: true, value };
+  };
+
+  const homeNormalizedScore = normalizeScore(homeTeam.score);
+  const awayNormalizedScore = normalizeScore(awayTeam.score);
+
+  const homeFirstInnings = getFirstInningsDisplay(
+    type,
+    homeTeam.score,
+    homeTeam.homeScoresFirstInnings,
+  );
+  const awayFirstInnings = getFirstInningsDisplay(
+    type,
+    awayTeam.score,
+    awayTeam.awayScoresFirstInnings,
+  );
+
   return (
     <AnimatedContainer
       type="full"
@@ -43,15 +99,16 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
       <div className="flex w-full justify-between items-center">
         {/* Home team score and name */}
         <div className="flex-1 flex flex-col items-end">
-          {type === "Two Day+" && (
+          {homeFirstInnings.show && (
             <ResultScoreFirstInnings
-              value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+              value={homeFirstInnings.value}
               animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+              variant="onContainerCopyNoBg"
             />
           )}
 
           <ResultScore
-            value={homeTeam.score}
+            value={homeNormalizedScore}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
             variant="onContainerCopyNoBg"
           />
@@ -83,14 +140,15 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
 
         {/* Away team score and name */}
         <div className="flex-1 flex flex-col items-start">
-          {type === "Two Day+" && (
+          {awayFirstInnings.show && (
             <ResultScoreFirstInnings
-              value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+              value={awayFirstInnings.value}
               animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+              variant="onContainerCopyNoBg"
             />
           )}
           <ResultScore
-            value={awayTeam.score}
+            value={awayNormalizedScore}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
             variant="onContainerCopyNoBg"
           />

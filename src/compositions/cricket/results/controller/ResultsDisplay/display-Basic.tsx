@@ -1,6 +1,7 @@
 import React from "react";
 import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { AssignSponsors } from "../../../composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import MatchRowBasic from "../MatchRow/row-Basic";
 
@@ -27,6 +28,12 @@ const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
   // Calculate exactly half of the available height for each row
   const rowHeight = Math.floor(availableHeight / 2);
 
+  // Merge all assignSponsors objects from displayedResults into one object
+  const mergedAssignSponsors = displayedResults.reduce(
+    (acc, result) => ({ ...acc, ...result.assignSponsors }),
+    {},
+  );
+
   return (
     <div className="flex flex-col h-full w-full">
       {/* Results container */}
@@ -48,14 +55,9 @@ const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
         ))}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        {displayedResults.map((match) => {
-          return (
-            <SponsorFooter
-              key={match.gameID}
-              assignSponsors={match.assignSponsors}
-            />
-          );
-        })}
+        <SponsorFooter
+          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
+        />
       </div>
     </div>
   );

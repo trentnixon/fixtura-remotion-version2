@@ -399,14 +399,14 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
       objectFit: fit,
     };
 
-    // If we have no dimensions yet, return base styles
+    // If we have no dimensions yet, return base styles with better defaults
     if (!imageDimensions && !aspectRatio) {
       return {
         ...baseStyles,
-        width,
-        height,
-        maxWidth,
-        maxHeight,
+        width: width || "auto",
+        height: height || "auto",
+        maxWidth: maxWidth || "100%",
+        maxHeight: maxHeight || "100%",
       };
     }
 
@@ -452,16 +452,19 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
         break;
 
       case "auto":
-      default:
+      default: {
         // Automatically determine the best approach
+        // Don't force 100% width when width is explicitly "auto"
+        const finalWidth = width === "auto" ? "auto" : width || "100%";
         return {
           ...baseStyles,
-          width: width || "100%",
+          width: finalWidth,
           height: height || "auto",
           maxWidth: maxWidth || "100%",
           maxHeight: maxHeight || "100%",
           aspectRatio: preserveRatio ? `${calculatedRatio}` : undefined,
         };
+      }
     }
 
     // Default fallback

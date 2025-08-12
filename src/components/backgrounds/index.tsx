@@ -8,7 +8,6 @@ import { SolidBackground as SolidBg } from "./variants/Solid/SolidBackground";
 import { GradientBackground as GradientBg } from "./variants/Gradient/GradientBackground";
 import { ImageBackground as ImageBg } from "./variants/Image";
 import { VideoBackground as VideoBg } from "./variants/Video/VideoBackground";
-import { GraphicsBackground as GraphicsBg } from "./variants/GraphicsBackground";
 
 // Import NoiseBackground components
 import { GridNoise as NoiseBg } from "./variants/NoiseBackground/GridNoise";
@@ -28,6 +27,10 @@ import PulsingCircles from "./variants/NoiseBackground/variants/PulsingCircles";
 import DigitalRain from "./variants/NoiseBackground/variants/DigitalRain";
 import GradientGrid from "./variants/NoiseBackground/variants/GradientGrid";
 
+// Import GraphicsBackground variants
+import GeometricGraphics from "./variants/NoiseBackground/variants/GeometricGraphics";
+import SpokesGraphics from "./variants/NoiseBackground/variants/SpokesGraphics";
+
 //import { LayeredBackground as LayeredBg } from "./variants/LayeredBackground";
 import { AnimatedBackground as AnimatedBg } from "./variants/AnimatedBackground";
 import { PatternBackground } from "./variants/Patterns";
@@ -39,7 +42,7 @@ export const BackgroundComponents = {
   Gradient: GradientBg,
   Image: ImageBg,
   Video: VideoBg,
-  Graphics: GraphicsBg,
+  Graphics: GeometricGraphics,
   Pattern: PatternBackground,
   Particle: ParticleBackground,
   Noise: {
@@ -55,6 +58,7 @@ export const BackgroundComponents = {
     PulsingCircles: PulsingCircles,
     DigitalRain: DigitalRain,
     GradientGrid: GradientGrid,
+    Graphics: GeometricGraphics,
   },
   Animated: AnimatedBg,
 };
@@ -79,6 +83,7 @@ export const SelectTemplateBackground = () => {
     case "Video":
       return <VideoBackground />;
     case "Graphics":
+    case "Noise":
       return (
         <NoiseBackground
           variant={video.templateVariation?.noise?.type as NoiseVariant}
@@ -88,12 +93,6 @@ export const SelectTemplateBackground = () => {
       return <PatternBackground />;
     case "Particle":
       return <ParticleBackground />;
-    case "Noise":
-      return (
-        <NoiseBackground
-          variant={video.templateVariation?.noise?.type as NoiseVariant}
-        />
-      );
     /*   case "Layered":
       return <LayeredBackground />; */
     case "Animated":
@@ -139,6 +138,7 @@ const NoiseBackground = ({
     baseColor: selectedPalette.background.main,
     noiseColor: selectedPalette.background.accent,
   };
+
   // video.templateVariation?.Noise.type
   switch (variant) {
     case "subtle":
@@ -163,6 +163,17 @@ const NoiseBackground = ({
       return <DigitalRain {...baseProps} />;
     case "gradientGrid":
       return <GradientGrid {...baseProps} />;
+    case "geometric":
+      return (
+        <GeometricGraphics
+          baseColor={baseProps.baseColor}
+          primaryColor={baseProps.noiseColor}
+          secondaryColor={selectedPalette.container.secondary}
+          accentColor={selectedPalette.container.accent}
+        />
+      );
+    case "spokes":
+      return <SpokesGraphics />;
     default:
       return (
         <NoiseBg

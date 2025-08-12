@@ -1,19 +1,67 @@
-# AnimatedContainer Component
+# AnimatedContainer and Container System
 
-A versatile container component with animation capabilities for Remotion videos. Supports both entry and exit animations, theme integration, and flexible styling options.
+A theme-aware, animation-first container system for Remotion videos. Provides a single `AnimatedContainer` component, a full animation pipeline, type-safe style utilities, and pre-wired modules for common motion patterns.
 
-## Features
+## Architecture
 
-- **Remotion Integration**: Uses Remotion's animation patterns for smooth, frame-based animations
-- **Multiple Animation Types**: Supports fade, slide, scale, spring, and many other animation types
-- **Entry and Exit Animations**: Configure separate animations for entering and exiting
-- **Spring Animations**: Physics-based spring animations with configurable parameters
-- **Theming Support**: Integrates with the theme system for consistent styling
-- **Flexible Styling**: Customize size, rounding, shadows, and more
+- Component: `AnimatedContainer.tsx`
+- Animations: `animations/` (types, utils, hooks, spring configs)
+- Styles: `styles/` (background, type, size, rounded, shadow mappers)
+- Modules: `modules/` (preconfigured wrappers for fade, slide, scale, reveal, spring, 3D)
+- Examples: `examples/`
+- Barrel: `index.ts`
+
+## Data & Theme Flow
+
+- Reads palette from `ThemeContext` to compute semantic container backgrounds and type-specific borders/shadows.
+- Entry/Exit animation selection and easing normalization follow image/typography systems for consistency.
+- Final inline styles are the union of: user `style` → animation styles → background/type/rounded/shadow/size styles.
+
+## AnimatedContainer.tsx (internals)
+
+1. Normalize entry and exit configs via `normalizeContainerAnimation(animation, delay, duration, easing)`.
+2. Merge optional spring config onto the normalized config.
+3. Compute `isExiting` by comparing `useCurrentFrame()` with `exitFrame`.
+4. Determine animation start frame, offsetting by delays and `exitFrame` for exits.
+5. Call `useAnimation(config, startFrame)` to resolve the current frame’s style object.
+6. Compose CSS from `getBackgroundColorStyle`, `getTypeStyles`, `getSizeStyles`, `getRoundedStyles`, `getShadowStyles`.
+7. Render a `<div>` with combined className/style and ARIA props.
+
+## Animations
+
+`containers/animations/` provides:
+
+- `animationTypes.ts`: `ContainerAnimationType` (fade, slide, scale, reveal, spring, 3D, special), easing types, and config interfaces.
+- `animationUtils.ts`:
+  - `normalizeContainerAnimation`
+  - `calculateAnimationProgress` (uses `interpolate` with `getImageEasingFunction`)
+  - `createSpringAnimation` (delegates to Remotion `spring`)
+  - `calculateAnimationStyles` (map progress to transforms/filters/clip-path)
+- `useAnimation.ts`: Hook to compute frame-based entry/exit animation styles.
+- `springConfigs.ts`: Named spring presets.
+- `utils/*`: Granular calculators grouped by category.
+
+## Styles
+
+- `backgroundStyles.ts`: Maps semantic names like `primary`, `main`, `transparentSecondary`, and various gradient tokens to palette values.
+- `typeStyles.ts`: Per-type decorations (borders, cards, gradients).
+- `sizeStyles.ts`, `roundedStyles.ts`, `shadowStyles.ts`: Common mappers to standardize layout.
+
+## Modules
+
+Preconfigured wrappers for frequent patterns. Each module exports a small set of components and default configs to ensure consistency:
+
+- `fade.tsx`: `FadeIn`, `FadeOut`, `FadeInOut`, `FadeInSpring`, with `DEFAULT_*` configs
+- `slide.tsx`: Directional slide-in/out and spring translate variants
+- `scale.tsx`: Scale-in/out/inX/inY and a spring scale
+- `reveal.tsx`: Reveal/collapse from edges
+- `spring.tsx`: Spring-in/out/scale/translate/rotate presets
+- `threeD.tsx`: FlipX/Y, rotate3D, swing, zoomPerspective, glitch, blur
+- `index.ts`: Aggregates all module exports
 
 ## Examples
 
-The component comes with a set of examples that demonstrate different animation types and configurations. You can find these examples in the `examples` directory.
+Use examples to verify behaviors and as a quick-start reference:
 
 ```tsx
 import {
@@ -26,267 +74,63 @@ import {
   SequencedContainers,
   AnimationShowcase,
   SpringConfigShowcase,
-} from "../components/containers/examples";
-
-// Use these examples in your compositions
-const MyComposition = () => (
-  <>
-    <BasicContainer />
-    <FadeInContainer />
-    {/* ... */}
-  </>
-);
+} from "./examples";
 ```
 
-For a complete showcase of all animation types, use the `AnimationShowcase` component:
+## Usage
+
+Basic:
 
 ```tsx
-const MyShowcaseComposition = () => <AnimationShowcase />;
+<AnimatedContainer
+  type="border"
+  backgroundColor="primary"
+  rounded="md"
+  shadow="md"
+>
+  <Typography>Container Content</Typography>
+</AnimatedContainer>
 ```
 
-## Basic Usage
+With animation and exit:
 
 ```tsx
-import { AnimatedContainer } from "../components/containers";
-
-const MyComponent = () => (
-  <AnimatedContainer
-    type="border"
-    backgroundColor="primary"
-    rounded="md"
-    shadow="md"
-  >
-    <Typography>Container Content</Typography>
-  </AnimatedContainer>
-);
+<AnimatedContainer
+  type="card"
+  backgroundColor="light"
+  rounded="lg"
+  shadow="lg"
+  animation={{
+    type: "fadeIn",
+    duration: 30,
+    easing: { type: "inOut", base: "ease" },
+  }}
+  exitAnimation={{ type: "fadeOut", duration: 30 }}
+  exitFrame={60}
+>
+  <Typography>Animated Container</Typography>
+</AnimatedContainer>
 ```
 
-## With Animation
+Spring animation:
 
 ```tsx
-import { AnimatedContainer, SPRING_CONFIGS } from "../components/containers";
-
-const MyAnimatedComponent = () => (
-  <AnimatedContainer
-    type="card"
-    backgroundColor="light"
-    rounded="lg"
-    shadow="lg"
-    animation={{
-      type: "fadeIn",
-      duration: 30,
-      easing: "easeInOut",
-    }}
-    exitAnimation={{
-      type: "fadeOut",
-      duration: 30,
-      easing: "easeInOut",
-    }}
-    exitFrame={60}
-  >
-    <Typography>Animated Container</Typography>
-  </AnimatedContainer>
-);
+<AnimatedContainer
+  type="card"
+  backgroundColor="light"
+  rounded="lg"
+  shadow="lg"
+  animation="springIn"
+  springConfig={{ mass: 1, damping: 8, stiffness: 100 }}
+  animationDuration={45}
+/>
 ```
 
-## With Spring Animation
+## Props (summary)
 
-```tsx
-import { AnimatedContainer, SPRING_CONFIGS } from "../components/containers";
+- Variant & layout: `type`, `size`, `rounded`, `shadow`, `backgroundColor`
+- Entry: `animation`, `animationDelay`, `animationDuration`, `animationEasing`, `springConfig`
+- Exit: `exitAnimation`, `exitAnimationDelay`, `exitAnimationDuration`, `exitAnimationEasing`, `exitSpringConfig`, `exitFrame`
+- Misc: `className`, `style`, `onClick`, `role`, `ariaLabel`, `tabIndex`
 
-const MySpringComponent = () => (
-  <AnimatedContainer
-    type="card"
-    backgroundColor="light"
-    rounded="lg"
-    shadow="lg"
-    animation="springIn"
-    springConfig={SPRING_CONFIGS.BOUNCE}
-    animationDuration={45}
-  >
-    <Typography>Spring Animated Container</Typography>
-  </AnimatedContainer>
-);
-```
-
-## Props
-
-### Container Styling
-
-| Prop              | Type                                                       | Default   | Description            |
-| ----------------- | ---------------------------------------------------------- | --------- | ---------------------- |
-| `type`            | `"basic" \| "border" \| "card" \| ...`                     | `"basic"` | Container type/variant |
-| `size`            | `"xs" \| "sm" \| "md" \| "lg" \| "xl" \| "full" \| "auto"` | `"auto"`  | Container size         |
-| `rounded`         | `"none" \| "sm" \| "md" \| "lg" \| "full"`                 | `"none"`  | Border radius          |
-| `shadow`          | `"none" \| "sm" \| "md" \| "lg" \| "xl"`                   | `"none"`  | Shadow size            |
-| `backgroundColor` | `string`                                                   | `"none"`  | Background color       |
-
-### Animation
-
-| Prop                | Type                                                 | Default       | Description                               |
-| ------------------- | ---------------------------------------------------- | ------------- | ----------------------------------------- |
-| `animation`         | `ContainerAnimationType \| ContainerAnimationConfig` | `"none"`      | Animation type or config                  |
-| `animationDelay`    | `number`                                             | `0`           | Delay before animation starts (in frames) |
-| `animationDuration` | `number`                                             | `30`          | Animation duration (in frames)            |
-| `animationEasing`   | `AnimationEasing`                                    | `"easeInOut"` | Animation easing function                 |
-| `springConfig`      | `ContainerSpringConfig`                              | -             | Spring animation configuration            |
-
-### Exit Animation
-
-| Prop                    | Type                                                 | Default       | Description                                    |
-| ----------------------- | ---------------------------------------------------- | ------------- | ---------------------------------------------- |
-| `exitAnimation`         | `ContainerAnimationType \| ContainerAnimationConfig` | `"none"`      | Exit animation type or config                  |
-| `exitAnimationDelay`    | `number`                                             | `0`           | Delay before exit animation starts (in frames) |
-| `exitAnimationDuration` | `number`                                             | `30`          | Exit animation duration (in frames)            |
-| `exitAnimationEasing`   | `AnimationEasing`                                    | `"easeInOut"` | Exit animation easing function                 |
-| `exitSpringConfig`      | `ContainerSpringConfig`                              | -             | Exit spring animation configuration            |
-| `exitFrame`             | `number`                                             | `0`           | Frame at which to start the exit animation     |
-
-### Additional Props
-
-| Prop        | Type                  | Default | Description              |
-| ----------- | --------------------- | ------- | ------------------------ |
-| `className` | `string`              | `""`    | Additional CSS classes   |
-| `style`     | `React.CSSProperties` | `{}`    | Additional inline styles |
-| `onClick`   | `() => void`          | -       | Click handler            |
-| `role`      | `string`              | -       | ARIA role                |
-| `ariaLabel` | `string`              | -       | ARIA label               |
-| `tabIndex`  | `number`              | -       | Tab index                |
-
-## Animation Types
-
-The component supports the following animation types:
-
-### Fade Animations
-
-- `fadeIn`: Fade in from transparent to opaque
-- `fadeOut`: Fade out from opaque to transparent
-
-### Slide Animations
-
-- `slideInLeft`: Slide in from the left
-- `slideInRight`: Slide in from the right
-- `slideInTop`: Slide in from the top
-- `slideInBottom`: Slide in from the bottom
-- `slideOutLeft`: Slide out to the left
-- `slideOutRight`: Slide out to the right
-- `slideOutTop`: Slide out to the top
-- `slideOutBottom`: Slide out to the bottom
-
-### Scale Animations
-
-- `scaleIn`: Scale in from 50% to 100%
-- `scaleOut`: Scale out from 100% to 50%
-- `scaleInX`: Scale in horizontally
-- `scaleInY`: Scale in vertically
-- `scaleOutX`: Scale out horizontally
-- `scaleOutY`: Scale out vertically
-
-### Special Animations
-
-- `revealLeft`: Reveal from left to right
-- `revealRight`: Reveal from right to left
-- `revealTop`: Reveal from top to bottom
-- `revealBottom`: Reveal from bottom to top
-- `collapseLeft`: Collapse from right to left
-- `collapseRight`: Collapse from left to right
-- `collapseTop`: Collapse from bottom to top
-- `collapseBottom`: Collapse from top to bottom
-
-### Spring Animations
-
-- `springIn`: Spring in with scale and opacity
-- `springOut`: Spring out with scale and opacity
-- `springScale`: Oscillating scale effect
-- `springTranslateX`: Oscillating horizontal movement
-- `springTranslateY`: Oscillating vertical movement
-- `springRotate`: Oscillating rotation
-
-### 3D Animations
-
-- `flipX`: Flip around the X axis
-- `flipY`: Flip around the Y axis
-- `rotate3D`: Rotate in 3D space
-- `swing`: Swing from the top
-- `zoomPerspective`: Zoom with perspective
-- `glitch`: Glitch effect
-- `blur`: Blur effect
-
-## Spring Configurations
-
-The component provides several predefined spring configurations:
-
-- `DEFAULT`: Standard spring animation
-- `GENTLE`: Gentle, slow spring animation
-- `WOBBLY`: Wobbly, oscillating spring animation
-- `STIFF`: Stiff, quick spring animation
-- `SLOW`: Slow, heavy spring animation
-- `MOLASSES`: Very slow, heavy spring animation
-- `BOUNCE`: Bouncy spring animation
-- `NO_WOBBLE`: Spring animation with no oscillation
-
-## Advanced Usage
-
-### Combining with Remotion's Sequence
-
-You can combine the AnimatedContainer with Remotion's Sequence component to create complex animations:
-
-```tsx
-import { Sequence } from "remotion";
-import { AnimatedContainer } from "../components/containers";
-
-const MySequencedAnimation = () => (
-  <>
-    <Sequence from={0} durationInFrames={120}>
-      <AnimatedContainer
-        type="card"
-        backgroundColor="primary"
-        animation="fadeIn"
-        animationDuration={30}
-        exitAnimation="fadeOut"
-        exitFrame={90}
-      >
-        <Typography>First Container</Typography>
-      </AnimatedContainer>
-    </Sequence>
-
-    <Sequence from={30} durationInFrames={120}>
-      <AnimatedContainer
-        type="card"
-        backgroundColor="secondary"
-        animation="slideInRight"
-        animationDuration={30}
-        exitAnimation="slideOutRight"
-        exitFrame={120}
-      >
-        <Typography>Second Container</Typography>
-      </AnimatedContainer>
-    </Sequence>
-  </>
-);
-```
-
-### Creating Staggered Animations
-
-You can create staggered animations by using multiple AnimatedContainers with different delays:
-
-```tsx
-const StaggeredAnimation = () => (
-  <AnimatedContainer type="basic" backgroundColor="transparent">
-    {[0, 1, 2, 3, 4].map((index) => (
-      <AnimatedContainer
-        key={index}
-        type="card"
-        backgroundColor="primary"
-        rounded="md"
-        shadow="md"
-        animation="slideInRight"
-        animationDelay={index * 5} // Stagger the animations
-        animationDuration={20}
-      >
-        <Typography>{`Item ${index + 1}`}</Typography>
-      </AnimatedContainer>
-    ))}
-  </AnimatedContainer>
-);
-```
+See `containers/types.ts` and `containers/animations/animationTypes.ts` for full typing.

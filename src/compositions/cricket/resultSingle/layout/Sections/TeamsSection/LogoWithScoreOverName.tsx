@@ -30,6 +30,48 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   // Logo size based on height - larger for single match display
   const logoSize = `w-[120px] h-[120px]`;
 
+  // Normalizes scores so that "N/A" renders as "Yet to Bat"
+  const normalizeScore = (rawScore?: string | null): string => {
+    const score = (rawScore || "").trim();
+    if (score.length === 0 || score.toUpperCase() === "N/A") {
+      return "Yet to Bat";
+    }
+    return score;
+  };
+
+  // Only render a legitimate first-innings string (not placeholders)
+  const getFirstInningsDisplay = (
+    matchType: string,
+    inningsValue?: string | null,
+  ): { show: boolean; value: string } => {
+    if (matchType !== "Two Day+") {
+      return { show: false, value: "" };
+    }
+    const value = (inningsValue || "").trim();
+    if (value.length === 0) return { show: false, value: "" };
+    const lowered = value.toLowerCase();
+    if (lowered === "1" || lowered === "n/a" || lowered === "yet to bat") {
+      return { show: false, value: "" };
+    }
+    const looksLikeScore =
+      /\d+\s*\/\s*\d+/.test(value) ||
+      /\bd\//i.test(value) ||
+      value.includes("&");
+    if (!looksLikeScore) return { show: false, value: "" };
+    return { show: true, value };
+  };
+
+  // Normalize overs: hide when value is missing or "N/A"
+  const normalizeOvers = (raw?: string | null): string | null => {
+    const value = (raw || "").trim();
+    if (value.length === 0) return null;
+    if (value.toUpperCase() === "N/A") return null;
+    return value;
+  };
+
+  const homeOvers = normalizeOvers(homeTeam.overs);
+  const awayOvers = normalizeOvers(awayTeam.overs);
+
   return (
     <AnimatedContainer
       type="full"
@@ -57,20 +99,26 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
           <div className="flex flex-col items-center">
             <div className="flex flex-row items-end">
               <div className="flex flex-col items-end">
-                {type === "Two Day+" && (
+                {getFirstInningsDisplay(type, homeTeam.homeScoresFirstInnings)
+                  .show && (
                   <ResultScoreFirstInnings
-                    value={homeTeam.homeScoresFirstInnings || "Yet to Bat"}
+                    value={
+                      getFirstInningsDisplay(
+                        type,
+                        homeTeam.homeScoresFirstInnings,
+                      ).value
+                    }
                     animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
                   />
                 )}
                 <ResultScore
-                  value={homeTeam.score}
+                  value={normalizeScore(homeTeam.score)}
                   animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
                 />
               </div>
-              {homeTeam.overs && (
+              {homeOvers && (
                 <ResultSyntax
-                  value={`${homeTeam.overs}`}
+                  value={`${homeOvers}`}
                   animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
                 />
               )}
@@ -106,20 +154,26 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
           <div className="flex flex-col items-center">
             <div className="flex flex-row items-end">
               <div className="flex flex-col items-end">
-                {type === "Two Day+" && (
+                {getFirstInningsDisplay(type, awayTeam.awayScoresFirstInnings)
+                  .show && (
                   <ResultScoreFirstInnings
-                    value={awayTeam.awayScoresFirstInnings || "Yet to Bat"}
+                    value={
+                      getFirstInningsDisplay(
+                        type,
+                        awayTeam.awayScoresFirstInnings,
+                      ).value
+                    }
                     animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
                   />
                 )}
                 <ResultScore
-                  value={awayTeam.score}
+                  value={normalizeScore(awayTeam.score)}
                   animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
                 />
               </div>
-              {awayTeam.overs && (
+              {awayOvers && (
                 <ResultSyntax
-                  value={`${awayTeam.overs}`}
+                  value={`${awayOvers}`}
                   animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
                 />
               )}

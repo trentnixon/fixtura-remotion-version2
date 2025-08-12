@@ -68,7 +68,7 @@ export const PlayerRowNameSixersThunder: React.FC<PlayerRowLayoutProps> = ({
   };
 
   // Get truncated player name and team name
-  const playerName = truncateText(player.name, 25).toUpperCase();
+  const playerName = truncateText(player.name, 20).toUpperCase();
   const teamName = truncateText(player.playedFor, 35).toUpperCase();
 
   // Get score display values

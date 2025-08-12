@@ -1,43 +1,81 @@
-# Typography Components Documentation
+# Typography
 
-## Overview
-This folder contains reusable typography components for the Remotion V2 project. These components provide consistent text styling across the application, with specialized components for sports-related content and animated text effects. The components are organized by their purpose and usage context.
+Animated, theme-aware typography primitives for Remotion compositions.
 
-## Component Breakdown
+## Components
 
-### Body Text Components
-- **BodyLarge.tsx**: Provides large-sized body text styling. Used for primary content or emphasized paragraphs.
-- **BodyMedium.tsx**: Standard body text component for general content.
-- **BodySmall.tsx**: Smaller body text, suitable for secondary information or captions.
-- **BodyXS.tsx**: Extra small text for fine print, footnotes, or other minimal text elements.
+- `AnimatedText.tsx`: Primary typography component supporting:
+  - Type-based styles (e.g., `title`, `subtitle`, `bodyText`, `score`, `teamName`, etc.) resolved via `ThemeContext.componentStyles`
+  - Color variants (e.g., `onBackgroundMain`, `onContainerSecondary`, `gradient`, etc.) resolved via palette in `config/variants.ts`
+  - Entry/Exit animations and optional word/letter splitting
+  - Optional overrides (`textAlign`, `textTransform`, `fontFamily`) and dynamic font loading (`FontContext`)
 
-### Sports-Specific Typography
-- **Score.tsx**: Specialized component for displaying game scores with appropriate styling.
-- **StatValue.tsx**: Component for displaying statistical values with proper formatting.
-- **PlayerName.tsx**: Styled component for athlete names with consistent appearance.
-- **TeamName.tsx**: Component for team names with appropriate styling and possibly team color integration.
-- **Label.tsx**: General-purpose label component, likely used for various data points in sports visualizations.
+## Data Flow
 
-### Special Animation Components
-- **AnimatedText.tsx**: Text component with built-in animation capabilities, possibly leveraging Remotion's animation features.
+1. Resolve font family from explicit prop → `ThemeContext.fontClasses` → `ThemeContext.fonts` (title/subtitle/body fallbacks)
+2. Normalize entry/exit animation configs via `config/animations.normalizeAnimation`
+3. Compute animation styles via `config/animations.useAnimation` or `getAnimationStyles` with exit frame offsets
+4. Derive base component styles from `ThemeContext.componentStyles[type]` (fallback to `bodyText`) and merge with `variant` styles via `config/variants.getVariantStyles`
+5. Optionally apply `applyContrastSafety` to text color for readability
+6. Render either:
+   - plain text
+   - word-split spans (if `letterAnimation = "word"`)
+   - character-split spans (if `letterAnimation` is a specific animation name)
 
-### Utility
-- **index.tsx**: Export file that consolidates all typography components for easy importing throughout the application.
+## Configuration & Utilities
 
-## Implementation Notes
-Each component likely encapsulates specific styling (font size, weight, color, etc.) and may include responsive behavior. Components are designed to be reusable and maintain consistency across the application.
+- `config/animations.ts`:
+  - Types: `AnimationType`, `AnimationConfig`, `SpringConfig` and re-exported `SPRING_CONFIGS`
+  - Easing function mapping via `easing/easingFunctions` (imported as `getEasingFunction`)
+  - Hooks: `useAnimation` + `getAnimationStyles`
+  - Implementations: `fadeIn`, `fadeInUp`, `fadeInDown`, `scaleIn`, `typewriter`, `springFadeIn`, `springScale`, `bounce`, `elastic`, etc.
+- `config/styles.ts`:
+  - `getTypographyStyles(typography, componentStyles, variant, defaultSize, defaultWeight, additionalClasses?)`
+  - Produces className and style with optional typography scale overrides (sizes/weights/letterSpacing/lineHeight)
+- `config/variants.ts`:
+  - `getVariantStyles(variant, selectedPalette)` returns `{ color?, additionalStyles? }`
+  - Special-case `gradient` variant yields gradient text fill
+  - `applyContrastSafety` is available for variant-aware safety adjustments
 
-## For LLMs/Developers
-When working with this typography system:
+## Props (AnimatedText)
 
-1. **Component Selection**: Choose the appropriate typography component based on the content's hierarchy and purpose. Body components are for general text, while specialized components should be used for their specific contexts.
+- `children: string`
+- `type?`: e.g., `"title" | "subtitle" | "bodyText" | ...` (string for custom types)
+- `variant?`: e.g., `"onBackgroundMain" | "onContainerSecondary" | "gradient" | ...`
+- `contrastSafe?`: boolean
+- `className?`, `style?`
+- Entry animation: `animation?`, `animationDelay?`, `animationDuration?`, `animationEasing?`, `springConfig?`, `letterAnimation?` ("none" | "word" | `AnimationType`)
+- Exit animation: `exitAnimation?`, `exitAnimationDuration?`, `exitFrame?`
+- Overrides: `textAlign?`, `textTransform?`, `fontFamily?`
 
-2. **Consistency**: Maintain design consistency by using these pre-defined components rather than creating custom text styles.
+## Usage
 
-3. **Extending Components**: When adding new typography components, follow the established pattern and export them through the index.tsx file.
+Basic:
+```tsx
+<AnimatedText type="title" variant="onBackgroundMain">Match Day</AnimatedText>
+```
 
-4. **Modifications**: When modifying existing components, consider the impact on all instances where they're used throughout the application.
+Word-by-word:
+```tsx
+<AnimatedText type="subtitle" letterAnimation="word">
+  Welcome to the finals
+</AnimatedText>
+```
 
-5. **Animation**: For text that requires animation, leverage the AnimatedText component rather than creating custom animation logic.
+With entry and exit animations:
+```tsx
+<AnimatedText
+  type="label"
+  animation={{ type: "fadeIn", duration: 30 }}
+  exitAnimation={{ type: "fadeOut", duration: 30 }}
+  exitFrame={120}
+>
+  KICK OFF
+</AnimatedText>
+```
 
-This typography system follows a component-based approach to text styling, ensuring consistency while providing specialized components for different contexts within the application.
+## Notes
+
+- Prefer using theme-provided types (`componentStyles`) for visual consistency.
+- When specifying custom `fontFamily`, the component attempts on-demand loading unless it is a generic family.
+- Combine with `AnimatedContainer` and Backgrounds for full scene composition.

@@ -105,7 +105,6 @@ const systemFonts = [
   "Tahoma",
   "Trebuchet MS",
   "Arial Black",
-  "Impact",
   "Comic Sans MS",
 ];
 
@@ -126,6 +125,8 @@ const fontNameVariants: Record<string, string> = {
   "MONUMENT EXTENDED": "Monument Extended",
   monumentextended: "Monument Extended",
   MonumentExtended: "Monument Extended",
+  impact: "Impact",
+  IMPACT: "Impact",
 };
 
 // Reverse lookup map for debugging (font string value to fontPathMap key)

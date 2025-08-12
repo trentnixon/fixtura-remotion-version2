@@ -1,147 +1,181 @@
 # Theme-Aware Image Overlay System Guide
 
-This guide explains how to use the enhanced image overlay system that integrates with your theme palette.
+This guide explains how to use and configure the theme-aware overlay system that integrates with your palette and template variations.
 
 ## Overview
 
-The theme-aware overlay system automatically uses colors from your theme palette to create visually consistent backgrounds. It pulls colors from your theme's:
+The overlay system composes one or more visual layers on top of an image effect. It supports the following overlay styles via the `OverlayStyle` enum:
 
-- `background` section (main, light, dark, accent, etc.)
-- `container` section
-- `text` sections
-- Gradients from `background.gradient`
+- `none`: No overlay
+- `solid`: Solid color layer
+- `gradient`: Linear or radial gradient layer
+- `vignette`: Corner darkening (circle/ellipse) via inset box-shadow
+- `duotone`: Two layers (shadow/highlight) blended to create a duotone feel
+- `pattern`: Repeating image pattern over an optional background color
+- `colorFilter`: Post-processing filter chain applied via `backdrop-filter`
 
-## Using Theme Colors in Template Variations
+These are strongly typed in `overlays/index.ts` with dedicated config interfaces and factory helpers.
+
+## Overlay Config Types
+
+- `SolidOverlayConfig`:
+
+  - `style: "solid"`
+  - `color: string`
+  - `opacity: number`
+  - `animateOpacity?: boolean`
+  - `blendMode?: BlendMode`
+
+- `GradientOverlayConfig`:
+
+  - `style: "gradient"`
+  - `primaryColor: string`, `secondaryColor: string`
+  - `gradientAngle?: string` (for linear)
+  - `gradientType?: "linear" | "radial"`
+  - `opacity: number`
+  - `animateOpacity?: boolean`
+  - `blendMode?: BlendMode`
+
+- `VignetteOverlayConfig`:
+
+  - `style: "vignette"`
+  - `color: string`
+  - `size?: number` (px)
+  - `shape?: "circle" | "ellipse"`
+  - `opacity: number`
+  - `animateOpacity?: boolean`
+
+- `DuotoneOverlayConfig`:
+
+  - `style: "duotone"`
+  - `shadowColor: string`, `highlightColor: string`
+  - `intensity?: number` (balance between shadow/highlight)
+  - `opacity: number`
+  - `animateOpacity?: boolean`
+
+- `PatternOverlayConfig`:
+
+  - `style: "pattern"`
+  - `patternUrl: string`
+  - `backgroundColor?: string`
+  - `patternScale?: number`
+  - `patternOpacity?: number`
+  - `opacity: number`
+  - `animateOpacity?: boolean`
+  - `blendMode?: BlendMode`
+
+- `ColorFilterOverlayConfig`:
+  - `style: "colorFilter"`
+  - `hueRotate?: number`, `saturate?: number`, `brightness?: number`, `contrast?: number`, `sepia?: number`
+  - `opacity: number`
+  - `animateOpacity?: boolean`
+
+## Factory Helpers
+
+Use helpers from `overlays/index.ts` to construct configs succinctly:
+
+- `createSolidOverlay(color, opacity=0.3, blendMode=Normal)`
+- `createGradientOverlay(primaryColor, secondaryColor, angle="135deg", opacity=0.3, blendMode=Normal)`
+- `createVignetteOverlay(color="rgba(0,0,0,0.8)", size=150, opacity=0.7, shape="circle")`
+- `createDuotoneOverlay(shadow="#222", highlight="#fff", intensity=0.8, opacity=0.85)`
+- `createPatternOverlay(patternUrl, backgroundColor="rgba(0,0,0,0.5)", scale=1, opacity=0.3, blendMode=Multiply)`
+- `createColorFilterOverlay(hue=0, sat=100, bright=100, contrast=100, sepia=0, opacity=1)`
+
+## Rendering and Animation
+
+`OverlayRenderer` renders the layer(s) and applies optional breathing-style opacity animation when `animateOpacity` is set:
+
+- Opacity is modulated using a sin() function relative to frame/fps
+- `mix-blend-mode` is used for solid/gradient/pattern layers when `blendMode` is provided
+- Duotone uses two stacked layers: `multiply` for the shadow, `screen` for the highlight
+- ColorFilter composes a `backdrop-filter` string (and `-webkit-` variant)
+
+## Theme Integration
+
+When overlay colors are omitted, `ImageBackground` derives them from your theme palette:
+
+- `background` tokens (e.g., `main`, `light`, `dark`, `accent`)
+- `container` tokens if `background` doesn’t supply a match
+- Gradient presets from `background.gradient`
+
+This allows template variations to specify minimal overlay config while staying visually consistent.
+
+## Template Variation Usage
 
 ### Automatic Theme Color Usage
 
-When you don't specify explicit colors, the system will automatically use appropriate colors from your theme:
-
-```javascript
+```json
 {
   "Background": "Image",
   "Image": {
     "url": "https://example.com/your-image.jpg",
     "effectType": "zoom",
-    "overlayStyle": "solid", // Will use theme.background.main automatically
+    "overlayStyle": "solid",
     "overlayOpacity": 0.5
   }
 }
 ```
 
-### Theme-Based Overlay Presets
+### Theme-Based Overlay Presets (Conceptual)
 
-You can use any of these theme-based overlay presets in your template variations:
-
-```javascript
+```json
 {
   "Background": "Image",
   "Image": {
     "url": "https://example.com/your-image.jpg",
     "effectType": "kenBurns",
-    "overlayPreset": "primaryGradient" // Use theme-based preset
+    "overlayPreset": "primaryToAccent"
   }
 }
 ```
 
-Available theme presets:
+Presets can be mapped to factory-created configs using your palette’s gradient/color definitions.
 
-- **Solid Color Presets**:
+## Examples
 
-  - `primarySolid`: Uses background.main
-  - `primaryLight`: Uses background.light
-  - `primaryDark`: Uses background.dark
-  - `accentSolid`: Uses background.accent
-  - `primaryFaint`: Primary color at low opacity
-  - `primaryStrong`: Primary color at high opacity
+1. Solid accent tint with slide pan:
 
-- **Gradient Presets**:
-
-  - `primaryGradient`: Main to light gradient
-  - `primaryToAccent`: Main to accent gradient
-  - `accentToPrimary`: Accent to main gradient
-  - All gradients from your theme are also available as presets
-
-- **Effect Presets**:
-
-  - `primaryVignette`: Vignette using primary dark color
-  - `accentVignette`: Vignette using accent color
-  - `darkVignette`: Dark vignette
-  - `primaryDuotone`: Duotone effect using theme colors
-  - `accentDuotone`: Duotone effect using accent colors
-  - `warmFilter`: Warm color filter
-  - `coolFilter`: Cool color filter
-  - `softGlow`: Subtle radial glow using theme colors
-
-- **Special Presets** (if available in your theme):
-
-  - `meshGradient`: Complex gradient with multiple colors
-  - `hardStopGradient`: Hard-stop gradient with theme colors
-  - `primaryAdvancedGradient`: Uses advanced gradient settings
-
-- **Team Color Presets** (if team colors are available):
-  - `teamPrimary`: Uses team's primary color
-  - `teamGradient`: Gradient using team's colors
-
-## Example Template Variations
-
-### 1. Simple Primary Color Overlay with Zoom
-
-```javascript
+```json
 {
   "Background": "Image",
   "Image": {
     "url": "https://example.com/your-image.jpg",
-    "effectType": "zoom",
-    "zoomDirection": "in",
-    "zoomIntensity": 1.2,
-    "overlayPreset": "primarySolid"
-  }
-}
-```
-
-### 2. Theme Gradient with Ken Burns Effect
-
-```javascript
-{
-  "Background": "Image",
-  "Image": {
-    "url": "https://example.com/your-image.jpg",
-    "effectType": "kenBurns",
-    "zoomDirection": "in",
+    "effectType": "pan",
     "panDirection": "left",
-    "overlayPreset": "primaryToAccent",
-    "overlayOpacity": 0.6, // Override preset opacity
-    "overlayBlendMode": "overlay" // Override preset blend mode
+    "overlayStyle": "solid",
+    "overlayColor": "rgba(255,255,255,0.85)",
+    "overlayOpacity": 0.25,
+    "overlayBlendMode": "overlay"
   }
 }
 ```
 
-### 3. Using Theme Gradient Directly
+2. Radial gradient over breathing effect:
 
-```javascript
-{
-  "Background": "Image",
-  "Image": {
-    "url": "https://example.com/your-image.jpg",
-    "effectType": "none",
-    "overlayPreset": "primaryAdvancedGradient", // Uses your theme's advanced gradient
-    "overlayBlendMode": "soft-light"
-  }
-}
-```
-
-### 4. Vignette Effect with Team Colors
-
-```javascript
+```json
 {
   "Background": "Image",
   "Image": {
     "url": "https://example.com/your-image.jpg",
     "effectType": "breathing",
-    "breathingIntensity": 1.05,
+    "overlayStyle": "gradient",
+    "gradientType": "radial",
+    "gradientAngle": "135deg",
+    "overlayOpacity": 0.45,
+    "animateOverlayOpacity": true
+  }
+}
+```
+
+3. Vignette with team primary color:
+
+```json
+{
+  "Background": "Image",
+  "Image": {
+    "url": "https://example.com/your-image.jpg",
+    "effectType": "none",
     "overlayStyle": "vignette",
-    // No color specified, will use team primary color if available or fall back to theme colors
     "vignetteSize": 180,
     "vignetteShape": "circle",
     "overlayOpacity": 0.7
@@ -149,43 +183,58 @@ Available theme presets:
 }
 ```
 
-### 5. Duotone Effect with Theme Colors
+4. Duotone with theme colors:
 
-```javascript
+```json
 {
   "Background": "Image",
   "Image": {
     "url": "https://example.com/your-image.jpg",
     "effectType": "focusBlur",
-    "blurDirection": "in",
-    "overlayPreset": "primaryDuotone"
+    "overlayStyle": "duotone",
+    "overlayOpacity": 0.85
   }
 }
 ```
 
-## Working with Color Palettes
-
-The theme palette you provided (primaryOnWhite) has been integrated with the overlay system. Here's how different parts of your palette map to overlay presets:
-
-### From Your Background Colors
+5. Pattern overlay with multiply blend:
 
 ```json
-"background": {
-  "main": "#043666",
-  "light": "#065097",
-  "dark": "#021c35",
-  "contrast": "#FFFFFF",
-  "accent": "white"
+{
+  "Background": "Image",
+  "Image": {
+    "url": "https://example.com/your-image.jpg",
+    "effectType": "kenBurns",
+    "overlayStyle": "pattern",
+    "patternUrl": "/assets/patterns/dots.png",
+    "patternScale": 0.75,
+    "patternOpacity": 0.6,
+    "overlayOpacity": 0.2,
+    "overlayBlendMode": "multiply"
+  }
 }
 ```
 
-- `primarySolid` uses `background.main` (#043666)
-- `primaryLight` uses `background.light` (#065097)
-- `primaryDark` uses `background.dark` (#021c35)
-- `accentSolid` uses `background.accent` (white)
+6. Color filter overlay for a vintage look:
 
-### From Your Gradients
+```json
+{
+  "Background": "Image",
+  "Image": {
+    "url": "https://example.com/your-image.jpg",
+    "effectType": "none",
+    "overlayStyle": "colorFilter",
+    "hueRotate": 0,
+    "saturate": 80,
+    "brightness": 90,
+    "contrast": 110,
+    "sepia": 30,
+    "overlayOpacity": 1
+  }
+}
+```
 
-Your palette includes multiple gradient definitions that are all available as presets:
+## Links
 
-- `
+- Parent: `../README.md`
+- Main component: `../README.md` (Image Background)

@@ -246,13 +246,13 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
 
   // Return the complete component with effect and overlay
   return (
-    <AbsoluteFill className={`image-background-container ${className}`}>
+    <AbsoluteFill className={`image-background-container ${className} `}>
       <div
         style={{
           position: "relative",
           width: "100%",
           height: "100%",
-          opacity: 0.6,
+          opacity: 0.9,
         }}
       >
         {renderEffect()}

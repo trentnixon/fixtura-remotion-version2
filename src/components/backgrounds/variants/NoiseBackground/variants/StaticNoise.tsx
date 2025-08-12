@@ -13,11 +13,11 @@ const StaticNoise: React.FC<React.ComponentProps<typeof GridNoise>> = (
 ) => {
   return (
     <GridNoise
-      noiseOpacity={0.5}
-      noiseScale={3}
-      noiseSpeed={0.2} // Faster movement for static effect
+      noiseOpacity={0.3}
+      noiseScale={10}
+      noiseSpeed={0.05} // Faster movement for static effect
       noiseDimension="2d"
-      gridSize={50} // Higher resolution for more detailed static
+      gridSize={15} // Higher resolution for more detailed static
       {...props}
     />
   );

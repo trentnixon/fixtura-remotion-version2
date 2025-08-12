@@ -16,7 +16,10 @@ export type NoiseVariant =
   | "triangleSwarm"
   | "pulsingCircles"
   | "digitalRain"
-  | "gradientGrid";
+  | "gradientGrid"
+  | "graphics"
+  | "geometric"
+  | "spokes";
 
 export const NOISE_VARIANTS: Record<
   NoiseVariant,
@@ -70,5 +73,20 @@ export const NOISE_VARIANTS: Record<
   gradientGrid: {
     name: "Gradient Grid",
     description: "A noise grid with a smooth color gradient.",
+  },
+  graphics: {
+    name: "Animated Graphics",
+    description:
+      "Animated SVG graphics with various geometric patterns and shapes.",
+  },
+  geometric: {
+    name: "Geometric Graphics",
+    description:
+      "Animated geometric shapes including triangles, squares, and circles with smooth rotations and scaling animations.",
+  },
+  spokes: {
+    name: "Spokes Graphics",
+    description:
+      "Animated spokes with gradient background, featuring intro and content animations with smooth transitions.",
   },
 };
