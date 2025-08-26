@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.single-team-font,
+.single-team-font * {
+  font-size: 1.8rem !important;
+}

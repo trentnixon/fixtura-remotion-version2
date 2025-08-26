@@ -34,7 +34,7 @@ export const basicTheme: TemplateThemeConfig = {
     // Subtitle component styles
     subtitle: {
       className:
-        "text-6xl font-normal tracking-normal leading-none text-center m-0  px-4",
+        "text-9xl font-normal tracking-normal leading-none text-center m-0  px-4",
     },
 
     // Body text component styles
@@ -69,10 +69,10 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-medium tracking-tight leading-tight",
     },
     ladderTeamPoints: {
-      className: "text-4xl font-normal tracking-tight leading-tight",
+      className: "text-3xl font-normal tracking-tight leading-tight",
     },
     Top5PlayerName: {
-      className: "text-5xl font-black tracking-tight leading-tight",
+      className: "text-4xl font-black tracking-tight leading-tight",
     },
     Top5PlayerTeam: {
       className: "text-2xl font-normal tracking-tight leading-tight",
@@ -81,7 +81,7 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-6xl font-black  tracking-tight leading-tight mr-2",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-2xl font-black  tracking-tight leading-loose",
+      className: "text-3xl font-black  tracking-tight leading-loose",
     },
     ResultScore: {
       className: "text-4xl font-black  tracking-tight leading-tight ",
@@ -96,14 +96,14 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-normal  tracking-tight leading-tight",
     },
     ResultPlayerName: {
-      className: "text-3xl font-normal  tracking-tight leading-tight",
+      className: "text-[1.6rem] font-normal  tracking-tight leading-tight",
     },
     ResultPlayerScore: {
-      className: "text-3xl font-bold  tracking-tight leading-tight",
+      className: "text-[1.6rem] font-bold  tracking-tight leading-tight",
     },
     ResultSyntax: {
       className:
-        "text-2xl font-semibold  tracking-tight leading-tight py-4 ml-4",
+        "text-[1.4rem] font-semibold  tracking-tight leading-tight py-4 ml-4",
     },
     ResultFixtureResult: {
       className: "text-4xl font-normal  tracking-tight leading-tight italic",
@@ -115,24 +115,24 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-normal  tracking-tight leading-tight",
     },
     RosterPlayerName: {
-      className: "text-4xl font-bold  tracking-tight py-2 leading-tight",
+      className: "text-3xl font-bold  tracking-tight py-2 leading-tight",
     },
 
     metadataSmall: {
-      className: "text-3xl font-normal  tracking-tight leading-tight",
+      className: "text-2xl font-normal  tracking-tight leading-tight",
     },
     metadataMedium: {
-      className: "text-4xl font-semibold  tracking-tight leading-tight",
+      className: "text-3xl font-semibold  tracking-tight leading-tight",
     },
     metadataLarge: {
-      className: "text-5xl font-semibold  tracking-tight leading-tight",
+      className: "text-4xl font-semibold  tracking-tight leading-tight",
     },
   },
 
   // ===== LAYOUT CONFIGURATION =====
   layout: {
     heights: {
-      asset: 1000,
+      asset: 1230,
       header: 230,
       footer: 120,
     },
@@ -146,7 +146,7 @@ export const basicTheme: TemplateThemeConfig = {
       item: "py-2",
     },
     borderRadius: {
-      container: "rounded-lg",
+      container: "rounded-none ",
     },
   },
   mode: {

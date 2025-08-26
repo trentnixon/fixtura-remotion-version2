@@ -19,6 +19,6 @@ export { useAnimation, getAnimationStyles } from "./useAnimation";
 
 // Export individual animations
 export { fadeIn, fadeInUp, fadeInDown } from "./fadeAnimations";
-export { scaleIn, typewriter } from "./scaleAnimations";
+export { scaleIn, scaleOutY, typewriter } from "./scaleAnimations";
 export { springFadeIn, springScale } from "./springAnimations";
 export { bounce, elastic } from "./specialAnimations";

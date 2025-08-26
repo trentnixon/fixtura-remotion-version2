@@ -5,17 +5,17 @@ export const templateAnimations: AnimationConfig = {
     intro: {
       logo: {
         introIn: {
-          type: "fadeIn",
-          duration: 30,
+          type: "ripple",
+          duration: 90,
           delay: 0,
           easing: { type: "inOut", base: "ease" },
           custom: { distance: 50 },
         },
         introOut: {
-          type: "fadeOut",
+          type: "slideOutTop",
           duration: 15,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 0 },
+          custom: { distance: 1000 },
         },
         introExitFrame: 70,
       },
@@ -24,14 +24,14 @@ export const templateAnimations: AnimationConfig = {
       title: {
         logo: {
           introIn: {
-            type: "fadeIn",
+            type: "slideInLeft",
             duration: 15,
-            delay: 5,
+            delay: 30,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 50 },
+            custom: { distance: 100 },
           },
           introOut: {
-            type: "fadeOut",
+            type: "slideOutLeft",
             duration: 15,
             easing: { type: "inOut", base: "ease" },
           },
@@ -74,30 +74,30 @@ export const templateAnimations: AnimationConfig = {
   text: {
     intro: {
       mainTitle: {
-        type: "fadeIn",
+        type: "slideInRight",
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 500 },
+        custom: { distance: 1000 },
       },
       clubName: {
-        type: "fadeIn",
+        type: "slideInRight",
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 5,
-        custom: { distance: 500 },
+        custom: { distance: 1000 },
       },
       introOut: {
-        type: "slideOutBottom",
-        duration: 15,
+        type: "slideOutRight",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         custom: { distance: 2000 },
       },
-      introExitFrame: 80,
+      introExitFrame: 70,
     },
     main: {
       title: {
-        type: "fadeIn",
+        type: "fadeInDown",
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 20,
@@ -110,10 +110,11 @@ export const templateAnimations: AnimationConfig = {
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
-        duration: 15,
+        type: "slideOutDown",
+        duration: 40,
         easing: { type: "inOut", base: "ease" },
-        delay: 200,
+        custom: { distance: 500 },
+        delay: 0,
       },
     },
     outro: {
@@ -215,7 +216,7 @@ export const templateAnimations: AnimationConfig = {
           type: "revealLeft",
           easing: { type: "inOut", base: "ease" },
           duration: 20,
-          custom: { distance: 1000 },
+          custom: { distance: 100 },
         },
         containerOut: {
           type: "collapseRight",
@@ -226,9 +227,9 @@ export const templateAnimations: AnimationConfig = {
       },
       mainPane: {
         containerIn: {
-          type: "slideInRight",
+          type: "revealLeft",
           easing: { type: "out", base: "cubic" },
-          duration: 25,
+          duration: 20,
           custom: { distance: 200 },
         },
         containerOut: {

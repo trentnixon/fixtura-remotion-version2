@@ -16,10 +16,19 @@ const truncateText = (text: string, maxLength: number): string => {
 
 export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
   HorizontalTeamsSectionProps
-> = ({ type, Team, TeamLogo: teamLogo, delay, outerContainer }) => {
+> = ({
+  type,
+  Team,
+  TeamLogo: teamLogo,
+  delay,
+  outerContainer,
+  firstInningsScore,
+}) => {
   const { selectedPalette, layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
+
+  console.log("Team", Team);
 
   // Get colors from theme
   const backgroundColor =
@@ -28,6 +37,37 @@ export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
 
   // Logo size - made larger to overlap the top edge
   const logoSize = `w-[100px] h-[100px]`;
+
+  // Normalizes scores so that "N/A" renders as "Yet to Bat"
+  const normalizeScore = (rawScore?: string | null): string => {
+    const score = (rawScore || "").trim();
+    if (score.length === 0 || score.toUpperCase() === "N/A") {
+      return "Yet to Bat";
+    }
+    return score;
+  };
+
+  // Only show legitimate first-innings strings
+  const getFirstInningsDisplay = (
+    matchType: string,
+    inningsValue?: string | null,
+  ): { show: boolean; value: string } => {
+    if (matchType !== "Two Day+") {
+      return { show: false, value: "" };
+    }
+    const value = (inningsValue || "").trim();
+    if (value.length === 0) return { show: false, value: "" };
+    const lowered = value.toLowerCase();
+    if (lowered === "1" || lowered === "n/a" || lowered === "yet to bat") {
+      return { show: false, value: "" };
+    }
+    const looksLikeScore =
+      /\d+\s*\/\s*\d+/.test(value) ||
+      /\bd\//i.test(value) ||
+      value.includes("&");
+    if (!looksLikeScore) return { show: false, value: "" };
+    return { show: true, value };
+  };
 
   return (
     <AnimatedContainer
@@ -75,18 +115,16 @@ export const Horizontal_SingleTeam_LogoWithName_Score: React.FC<
           animation={animations.container.main.itemContainerInner.containerIn}
           animationDelay={delay + 15}
         >
-          {type === "Two Day+" &&
-            Team.homeScoresFirstInnings &&
-            Team.homeScoresFirstInnings !== "1" && (
-              <ResultScore
-                value={Team.homeScoresFirstInnings}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-                className="mr-2"
-                variant="onContainerCopyNoBg"
-              />
-            )}
+          {getFirstInningsDisplay(type, firstInningsScore).show && (
+            <ResultScore
+              value={getFirstInningsDisplay(type, firstInningsScore).value}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+              className="mr-2"
+              variant="onContainerCopyNoBg"
+            />
+          )}
           <ResultScore
-            value={Team.score}
+            value={normalizeScore(Team.score)}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
             variant="onContainerCopyNoBg"
           />

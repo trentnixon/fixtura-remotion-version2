@@ -28,6 +28,7 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
       className={`flex items-center overflow-hidden p-2 pl-4 ${layout.borderRadius.container} mb-1 ${bgColorClass}  `}
       style={{
         height: `${LadderRowHeight}px`,
+        maxHeight: `120px`,
         background: bgColorClass,
         borderColor: borderColor,
       }}

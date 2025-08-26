@@ -1,5 +1,5 @@
 import React from "react";
-import { useCurrentFrame, interpolate, useVideoConfig } from "remotion";
+import { useCurrentFrame, useVideoConfig } from "remotion";
 import { useThemeContext } from "../../core/context/ThemeContext";
 import { getVariantStyles, applyContrastSafety } from "./config/variants";
 import {
@@ -127,7 +127,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     useThemeContext();
   const { loadFont } = useFontContext();
   /* const { colorSystem } = colors; */
-  const { fps } = useVideoConfig();
+  const { fps, durationInFrames } = useVideoConfig();
 
   // Get font family from various sources with cascading precedence
   const typeFontFamily = (() => {
@@ -182,10 +182,33 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     springConfig,
   );
 
+  // Force exit animations to begin at the provided exitFrame, ignoring any configured delay
+  const exitAnimConfigForced: AnimationConfig = {
+    ...exitAnimConfig,
+    delay: 0,
+  };
+
+  // Determine if exit should run (treat undefined as default fadeOut; 'none' disables exits)
+  const resolvedExitType =
+    (typeof exitAnimation === "string" ? exitAnimation : exitAnimation?.type) ||
+    "fadeOut";
+  const shouldRunExit = resolvedExitType !== "none";
+
+  // Determine effective exit frame when not provided: default near end of comp
+  const effectiveExitFrame = shouldRunExit
+    ? exitFrame > 0
+      ? exitFrame
+      : Math.max(0, (durationInFrames || 0) - (exitAnimationDuration || 30))
+    : 0;
+
   let animStyles: React.CSSProperties;
-  if (exitAnimation && exitFrame > 0 && frame >= exitFrame) {
+  if (shouldRunExit && effectiveExitFrame > 0 && frame >= effectiveExitFrame) {
     // Use the exit animation, but offset the frame
-    animStyles = getAnimationStyles(exitAnimConfig, frame - exitFrame, fps);
+    animStyles = getAnimationStyles(
+      exitAnimConfigForced,
+      frame - effectiveExitFrame,
+      fps,
+    );
   } else {
     animStyles = containerAnimStyles;
   }
@@ -220,43 +243,6 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         )
       : variantStyles.color;
 
-  // Calculate entry animation progress
-  const entryProgress = animation
-    ? interpolate(
-        frame,
-        [animationDelay, animationDelay + animationDuration],
-        [0, 1],
-        {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp",
-        },
-      )
-    : 1;
-
-  // Calculate exit animation progress
-  const exitProgress =
-    exitFrame > 0 && frame >= exitFrame
-      ? interpolate(
-          frame,
-          [exitFrame, exitFrame + exitAnimationDuration],
-          [0, 1],
-          {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          },
-        )
-      : 0;
-
-  // Determine if we should show exit animation
-  const isExitActive = exitAnimation && exitProgress > 0;
-
-  // Calculate the final opacity based on both animations
-  const opacity = isExitActive
-    ? 1 - exitProgress
-    : animation
-      ? entryProgress
-      : 1;
-
   // Convert children to string
   const text = String(children);
 
@@ -289,7 +275,6 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         ...overrideStyles,
         ...style,
         ...(animStyles as React.CSSProperties),
-        opacity,
       }}
     >
       {animationMode === "none"

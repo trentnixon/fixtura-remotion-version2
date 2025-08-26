@@ -24,6 +24,14 @@ import type { FocusBlurEffectProps } from "./variants/blur";
 import type { ZoomEffectProps } from "./variants/zoom";
 import type { PanEffectProps } from "./variants/pan";
 
+// Support both camelCase `heroImage` and legacy PascalCase `HeroImage`
+type LegacyHero = { url?: string; width?: number; height?: number };
+const extractHero = (media?: unknown): LegacyHero | undefined => {
+  if (!media || typeof media !== "object") return undefined;
+  const m = media as { heroImage?: LegacyHero; HeroImage?: LegacyHero };
+  return m.heroImage ?? m.HeroImage;
+};
+
 export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   className = "",
   style = {},
@@ -49,9 +57,18 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const DEFAULT_IMAGE =
     "https://images.unsplash.com/photo-1512719994953-eabf50895df7?q=80&w=1000";
 
-  // Extract image URL
+  // Prefer HeroImage from video media (support both camelCase and legacy PascalCase)
+  const hero = extractHero(video?.media);
+  const heroUrl: string | undefined = hero?.url || undefined;
+  const heroWidth: number | undefined = hero?.width || undefined;
+  const heroHeight: number | undefined = hero?.height || undefined;
+
+  // Extract image URL with precedence: HeroImage -> adapted config -> templateVariation -> default
   const imageUrl =
-    config.url || video?.templateVariation?.image?.url || DEFAULT_IMAGE;
+    heroUrl ||
+    config.url ||
+    video?.templateVariation?.image?.url ||
+    DEFAULT_IMAGE;
 
   // If no image URL is available, return null
   if (!imageUrl) {
@@ -66,8 +83,8 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
     style,
     startTime: config.startTime || 0,
     endTime: config.endTime,
-    width: config.width || 1080,
-    height: config.height || 1080,
+    width: config.width || heroWidth || 1080,
+    height: config.height || heroHeight || 1080,
   };
 
   // Determine overlay configuration

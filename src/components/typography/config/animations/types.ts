@@ -15,6 +15,7 @@ export type AnimationType =
   | "fadeInLeft"
   | "fadeInRight"
   | "scaleIn"
+  | "scaleOutY"
   | "typewriter"
   | "springFadeIn"
   | "springScale"

@@ -46,4 +46,5 @@ export interface Club {
   name: string;
   sport: string;
   sponsors: SponsorsData;
+  IsAccountClub?: boolean;
 }

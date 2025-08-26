@@ -3,6 +3,7 @@ import { Team } from "../../../types";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
+import { computePartialTwoDayVisibility } from "./utils";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 
@@ -12,6 +13,8 @@ interface PlayerStatsProps {
   height: number;
   delay: number;
   maxPlayersPerStat?: number;
+  matchType?: string;
+  matchStatus?: string;
 }
 
 // Helper function to truncate text
@@ -125,6 +128,8 @@ interface TeamStatsProps {
   delay: number;
   maxPlayersPerStat: number;
   className?: string;
+  showBatting?: boolean;
+  showBowling?: boolean;
 }
 
 const TeamStats: React.FC<TeamStatsProps> = ({
@@ -132,6 +137,8 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   delay,
   maxPlayersPerStat,
   className = "",
+  showBatting = true,
+  showBowling = true,
 }) => {
   const { selectedPalette } = useThemeContext();
 
@@ -144,37 +151,41 @@ const TeamStats: React.FC<TeamStatsProps> = ({
 
   return (
     <div className={`flex-1 px-0 py-0 flex flex-col  ${className}`}>
-      <StatSection
-        players={batters}
-        isBatting={true}
-        delay={delay}
-        outerContainer={{
-          backgroundColor:
-            selectedPalette.container.backgroundTransparent.strong,
-          borderBottom: `2px solid ${selectedPalette.container.secondary}`,
-        }}
-        innerContainer={{
-          backgroundColor:
-            selectedPalette.container.backgroundTransparent.strong,
-          borderBottom: "none",
-        }}
-      />
+      {showBatting && (
+        <StatSection
+          players={batters}
+          isBatting={true}
+          delay={delay}
+          outerContainer={{
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.strong,
+            borderBottom: `2px solid ${selectedPalette.container.secondary}`,
+          }}
+          innerContainer={{
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.strong,
+            borderBottom: "none",
+          }}
+        />
+      )}
 
-      <StatSection
-        players={bowlers}
-        isBatting={false}
-        delay={delay + 2}
-        outerContainer={{
-          backgroundColor:
-            selectedPalette.container.backgroundTransparent.strong,
-          borderBottom: `2px solid ${selectedPalette.container.secondary}`,
-        }}
-        innerContainer={{
-          backgroundColor:
-            selectedPalette.container.backgroundTransparent.strong,
-          borderBottom: "none",
-        }}
-      />
+      {showBowling && (
+        <StatSection
+          players={bowlers}
+          isBatting={false}
+          delay={delay + 2}
+          outerContainer={{
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.strong,
+            borderBottom: `2px solid ${selectedPalette.container.secondary}`,
+          }}
+          innerContainer={{
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.strong,
+            borderBottom: "none",
+          }}
+        />
+      )}
     </div>
   );
 };
@@ -185,8 +196,20 @@ export const PlayerStatsBrickWork: React.FC<PlayerStatsProps> = ({
   height,
   delay,
   maxPlayersPerStat = 3,
+  matchType,
+  matchStatus,
 }) => {
   const { animations } = useAnimationContext();
+  const homeBatted = (homeTeam.battingPerformances || []).length > 0;
+  const awayBatted = (awayTeam.battingPerformances || []).length > 0;
+  const { flags } = computePartialTwoDayVisibility({
+    matchType,
+    matchStatus,
+    homeBatted,
+    awayBatted,
+  });
+  const { homeShowBatting, homeShowBowling, awayShowBatting, awayShowBowling } =
+    flags;
 
   return (
     <AnimatedContainer
@@ -206,6 +229,8 @@ export const PlayerStatsBrickWork: React.FC<PlayerStatsProps> = ({
           team={homeTeam}
           delay={delay}
           maxPlayersPerStat={maxPlayersPerStat}
+          showBatting={homeShowBatting}
+          showBowling={homeShowBowling}
         />
 
         {/* Away team stats */}
@@ -214,6 +239,8 @@ export const PlayerStatsBrickWork: React.FC<PlayerStatsProps> = ({
           delay={delay}
           maxPlayersPerStat={maxPlayersPerStat}
           className=""
+          showBatting={awayShowBatting}
+          showBowling={awayShowBowling}
         />
       </div>
     </AnimatedContainer>

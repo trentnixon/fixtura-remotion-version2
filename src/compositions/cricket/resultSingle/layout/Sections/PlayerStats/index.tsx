@@ -12,6 +12,8 @@ interface PlayerStatsProps {
   height: number;
   delay: number;
   maxPlayersPerStat?: number;
+  matchType?: string;
+  matchStatus?: string;
 }
 
 // Helper function to truncate text
@@ -103,6 +105,8 @@ interface TeamStatsProps {
   delay: number;
   maxPlayersPerStat: number;
   className?: string;
+  showBatting?: boolean;
+  showBowling?: boolean;
 }
 
 const TeamStats: React.FC<TeamStatsProps> = ({
@@ -110,6 +114,8 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   delay,
   maxPlayersPerStat,
   className = "",
+  showBatting = true,
+  showBowling = true,
 }) => {
   const batters = team.battingPerformances
     ? team.battingPerformances.slice(0, maxPlayersPerStat)
@@ -120,8 +126,12 @@ const TeamStats: React.FC<TeamStatsProps> = ({
 
   return (
     <div className={`flex-1 px-8 py-4 flex flex-col ${className}`}>
-      <StatSection players={batters} isBatting={true} delay={delay} />
-      <StatSection players={bowlers} isBatting={false} delay={delay + 2} />
+      {showBatting && (
+        <StatSection players={batters} isBatting={true} delay={delay} />
+      )}
+      {showBowling && (
+        <StatSection players={bowlers} isBatting={false} delay={delay + 2} />
+      )}
     </div>
   );
 };
@@ -132,12 +142,21 @@ export const PlayerStats: React.FC<PlayerStatsProps> = ({
   height,
   delay,
   maxPlayersPerStat = 3,
+  matchType,
+  matchStatus,
 }) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
 
   // Get background color from theme
   const backgroundColor = selectedPalette.container.backgroundTransparent.low;
+
+  const homeBatted = (homeTeam.battingPerformances || []).length > 0;
+  const awayBatted = (awayTeam.battingPerformances || []).length > 0;
+  const isPartialTwoDay =
+    matchType === "Two Day+" &&
+    matchStatus === "In Progress" &&
+    homeBatted !== awayBatted;
 
   return (
     <AnimatedContainer
@@ -157,6 +176,8 @@ export const PlayerStats: React.FC<PlayerStatsProps> = ({
           team={homeTeam}
           delay={delay}
           maxPlayersPerStat={maxPlayersPerStat}
+          showBatting={!isPartialTwoDay || homeBatted}
+          showBowling={!isPartialTwoDay || !homeBatted}
         />
 
         {/* Away team stats */}
@@ -165,6 +186,8 @@ export const PlayerStats: React.FC<PlayerStatsProps> = ({
           delay={delay}
           maxPlayersPerStat={maxPlayersPerStat}
           className="border-l border-gray-700"
+          showBatting={!isPartialTwoDay || awayBatted}
+          showBowling={!isPartialTwoDay || !awayBatted}
         />
       </div>
     </AnimatedContainer>

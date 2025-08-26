@@ -1,2590 +1,744 @@
 {
   "data": [
     {
-      "gameID": "1a2508e0",
-      "status": "In Progress",
-      "homeTeam": {
-        "name": "Tracy Village A Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "10/399",
-        "overs": "(73.1)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Connor Carroll",
-            "runs": 258,
-            "balls": 173,
-            "fours": 16,
-            "sixes": 13,
-            "SR": 149.13,
-            "team": "Tracy Village A Grade",
-            "notOut": false
-          },
-          {
-            "player": "Jake Gerrans",
-            "runs": 42,
-            "balls": 60,
-            "fours": 5,
-            "sixes": 1,
-            "SR": 70,
-            "team": "Tracy Village A Grade",
-            "notOut": false
-          },
-          {
-            "player": "Janu Varatharajan  (c)",
-            "runs": 32,
-            "balls": 64,
-            "fours": 3,
-            "sixes": 1,
-            "SR": 50,
-            "team": "Tracy Village A Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Hamish Martin  (c)",
-            "overs": 29,
-            "maidens": 3,
-            "runs": 138,
-            "wickets": 4,
-            "economy": "4.76",
-            "team": "Palmerston A Grade"
-          },
-          {
-            "player": "Andrew Bourne",
-            "overs": 14.1,
-            "maidens": 1,
-            "runs": 77,
-            "wickets": 4,
-            "economy": "5.46",
-            "team": "Palmerston A Grade"
-          },
-          {
-            "player": "Alex Bleakley",
-            "overs": 9,
-            "maidens": 0,
-            "runs": 40,
-            "wickets": 2,
-            "economy": "4.44",
-            "team": "Palmerston A Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Palmerston A Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-          "width": 1162,
-          "height": 1162
-        },
-        "score": "0/10",
-        "overs": "(2)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Harshtik Bimbral",
-            "runs": 6,
-            "balls": 8,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 75,
-            "team": "Palmerston A Grade",
-            "notOut": true
-          },
-          {
-            "player": "Jerome Robinson",
-            "runs": 3,
-            "balls": 5,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 60,
-            "team": "Palmerston A Grade",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Jake Smith",
-            "overs": 1,
-            "maidens": 0,
-            "runs": 4,
-            "wickets": 0,
-            "economy": "4.00",
-            "team": "Tracy Village A Grade"
-          },
-          {
-            "player": "James Scott",
-            "overs": 1,
-            "maidens": 0,
-            "runs": 6,
-            "wickets": 0,
-            "economy": "6.00",
-            "team": "Tracy Village A Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "date": "09 Aug 2025",
-      "type": "Two Day+",
-      "ground": "Tracy Village Oval / Tracy Village Oval",
-      "round": "Round 13",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "A Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Match is still in progress",
-      "prompt": "Match Summary: Tracy Village A Grade vs. Palmerston A Grade:\n  - This A Grade game is a Two Day+, played in Round: Round 13 at Tracy Village Oval / Tracy Village Oval.\n  - Scores: Tracy Village A Grade 10/399 in (73.1) overs, Palmerston A Grade 0/10 in (2) overs\n  - Result: Match is still in progress\n  Player Performances:\n  - Tracy Village A Grade\n    - Batting: Connor Carroll: 258 runs from 173 balls, 16 fours, 13 sixes, SR: 149.13; Jake Gerrans: 42 runs from 60 balls, 5 fours, 1 sixes, SR: 70; Janu Varatharajan  (c): 32 runs from 64 balls, 3 fours, 1 sixes, SR: 50\n    - Bowling: Jake Smith: 0 wickets from 1 overs, 4 runs, Econ: 4.00; James Scott: 0 wickets from 1 overs, 6 runs, Econ: 6.00\n    - FOW: \n    - Fielding: Cadell McMahon, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 1; Harshtik Bimbral, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Daniel McKell, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Hamish Martin  (c), Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Prasanna Ketheeshwaran, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Alex Bleakley, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Palmerston A Grade\n    - Batting: Harshtik Bimbral: 6 runs (Not out) from 8 balls, 0 fours, 0 sixes, SR: 75; Jerome Robinson: 3 runs (Not out) from 5 balls, 0 fours, 0 sixes, SR: 60\n    - Bowling: Hamish Martin  (c): 4 wickets from 29 overs, 138 runs, Econ: 4.76; Andrew Bourne: 4 wickets from 14.1 overs, 77 runs, Econ: 5.46; Alex Bleakley: 2 wickets from 9 overs, 40 runs, Econ: 4.44\n    - FOW: \n    - Fielding: Fielding details not available."
-    },
-    {
-      "gameID": "64c8943e",
-      "status": "In Progress",
-      "homeTeam": {
-        "name": "Darwin A Grade",
-        "score": "N/A",
-        "overs": "N/A"
-      },
-      "awayTeam": {
-        "name": "Sth Districts A Grade",
-        "score": "10/290",
-        "overs": "(79)"
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-        "width": 300,
-        "height": 300
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "Two Day+",
-      "ground": "Kahlin Oval / Kahlin Oval",
-      "round": "Round 13",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "A Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Match is still in progress",
-      "prompt": "Match Summary: Darwin A Grade vs. Sth Districts A Grade – Result: Match is still in progress"
-    },
-    {
-      "gameID": "4ffabd0a",
-      "status": "In Progress",
-      "homeTeam": {
-        "name": "Nightcliff A Grade",
-        "score": "N/A",
-        "overs": "N/A"
-      },
-      "awayTeam": {
-        "name": "Waratah Warriors A Grade",
-        "score": "10/258",
-        "overs": "(78.2)"
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "Two Day+",
-      "ground": "Darwin Mazda Nightcliff Oval / Darwin Mazda Nightcliff Oval",
-      "round": "Round 13",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "A Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Match is still in progress",
-      "prompt": "Match Summary: Nightcliff A Grade vs. Waratah Warriors A Grade – Result: Match is still in progress"
-    },
-    {
-      "gameID": "6cf1f433",
-      "status": "In Progress",
-      "homeTeam": {
-        "name": "Sth Districts B Grade",
-        "score": "N/A",
-        "overs": "N/A"
-      },
-      "awayTeam": {
-        "name": "Darwin B Grade",
-        "score": "10/223",
-        "overs": "(77)"
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-        "width": 300,
-        "height": 300
-      },
-      "date": "09 Aug 2025",
-      "type": "Two Day+",
-      "ground": "Gerry Wood Oval / Gerry Wood Oval",
-      "round": "Round 13",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "B Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Match is still in progress",
-      "prompt": "Match Summary: Sth Districts B Grade vs. Darwin B Grade – Result: Match is still in progress"
-    },
-    {
-      "gameID": "928076a7",
-      "status": "In Progress",
-      "homeTeam": {
-        "name": "Waratah Warriors B Grade",
-        "score": "N/A",
-        "overs": "N/A"
-      },
-      "awayTeam": {
-        "name": "Nightcliff B Grade",
-        "score": "8/256",
-        "overs": "(82)"
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "Two Day+",
-      "ground": "Gardens Oval / Gardens Oval",
-      "round": "Round 13",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "B Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Match is still in progress",
-      "prompt": "Match Summary: Waratah Warriors B Grade vs. Nightcliff B Grade – Result: Match is still in progress"
-    },
-    {
-      "gameID": "1febde76",
-      "status": "In Progress",
-      "homeTeam": {
-        "name": "Palmerston B Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-          "width": 1162,
-          "height": 1162
-        },
-        "score": "5-d/108",
-        "overs": "(19.1)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Dhavalkumar Patel",
-            "runs": 28,
-            "balls": 105,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 26.66,
-            "team": "Palmerston B Grade",
-            "notOut": true
-          },
-          {
-            "player": "Tye Beer",
-            "runs": 24,
-            "balls": 43,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 55.81,
-            "team": "Palmerston B Grade",
-            "notOut": false
-          },
-          {
-            "player": "Akshay Patel",
-            "runs": 13,
-            "balls": 31,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 41.93,
-            "team": "Palmerston B Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Kai Snape",
-            "overs": 14,
-            "maidens": 7,
-            "runs": 20,
-            "wickets": 4,
-            "economy": "1.43",
-            "team": "Tracy Village B Grade"
-          },
-          {
-            "player": "Ben Worsfold",
-            "overs": 2.2,
-            "maidens": 1,
-            "runs": 6,
-            "wickets": 2,
-            "economy": "2.73",
-            "team": "Tracy Village B Grade"
-          },
-          {
-            "player": "Flynn Osborne",
-            "overs": 5,
-            "maidens": 0,
-            "runs": 9,
-            "wickets": 1,
-            "economy": "1.80",
-            "team": "Tracy Village B Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Tracy Village B Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "0/14",
-        "overs": "(7)",
-        "awayScoresFirstInnings": "10/97 &",
-        "battingPerformances": [
-          {
-            "player": "Daniel Fett",
-            "runs": 62,
-            "balls": 52,
-            "fours": 8,
-            "sixes": 2,
-            "SR": 119.23,
-            "team": "Tracy Village B Grade",
-            "notOut": false
-          },
-          {
-            "player": "Dean McArthur",
-            "runs": 31,
-            "balls": 37,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 83.78,
-            "team": "Tracy Village B Grade",
-            "notOut": false
-          },
-          {
-            "player": "Andrew Somerville  (c)",
-            "runs": 12,
-            "balls": 7,
-            "fours": 1,
-            "sixes": 1,
-            "SR": 171.42,
-            "team": "Tracy Village B Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Ankush Ankush",
-            "overs": 5.1,
-            "maidens": 1,
-            "runs": 27,
-            "wickets": 3,
-            "economy": "5.29",
-            "team": "Palmerston B Grade"
-          },
-          {
-            "player": "Tye Beer",
-            "overs": 6,
-            "maidens": 0,
-            "runs": 23,
-            "wickets": 1,
-            "economy": "3.83",
-            "team": "Palmerston B Grade"
-          },
-          {
-            "player": "Qadeer Hassan",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 22,
-            "wickets": 1,
-            "economy": "5.50",
-            "team": "Palmerston B Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "Two Day+",
-      "ground": "Cazalys Oval / Cazalys oval",
-      "round": "Round 13",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "B Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Match is still in progress",
-      "prompt": "Match Summary: Palmerston B Grade vs. Tracy Village B Grade:\n  - This B Grade game is a Two Day+, played in Round: Round 13 at Cazalys Oval / Cazalys oval.\n  - Scores: Palmerston B Grade 5-d/108 in (19.1) overs, Tracy Village B Grade 0/14 in (7) overs\n  - Result: Match is still in progress\n  Player Performances:\n  - Palmerston B Grade\n    - Batting: Dhavalkumar Patel: 28 runs (Not out) from 105 balls, 4 fours, 0 sixes, SR: 26.66; Tye Beer: 24 runs from 43 balls, 4 fours, 0 sixes, SR: 55.81; Akshay Patel: 13 runs from 31 balls, 3 fours, 0 sixes, SR: 41.93\n    - Bowling: Ankush Ankush: 3 wickets from 5.1 overs, 27 runs, Econ: 5.29; Tye Beer: 1 wickets from 6 overs, 23 runs, Econ: 3.83; Qadeer Hassan: 1 wickets from 4 overs, 22 runs, Econ: 5.50\n    - FOW: \n    - Fielding: Bradley Williams, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Daniel Fett, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Kai Snape, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Darshan Thakkar, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Tracy Village B Grade\n    - Batting: Daniel Fett: 62 runs from 52 balls, 8 fours, 2 sixes, SR: 119.23; Dean McArthur: 31 runs from 37 balls, 4 fours, 0 sixes, SR: 83.78; Andrew Somerville  (c): 12 runs from 7 balls, 1 fours, 1 sixes, SR: 171.42\n    - Bowling: Kai Snape: 4 wickets from 14 overs, 20 runs, Econ: 1.43; Ben Worsfold: 2 wickets from 2.2 overs, 6 runs, Econ: 2.73; Flynn Osborne: 1 wickets from 5 overs, 9 runs, Econ: 1.80\n    - FOW: \n    - Fielding: Dhavalkumar Patel, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Dhruv Shandilya, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "31362d93",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Tracy Village C Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "8/78",
-        "overs": "(20)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Dumindu Ranasinghe",
-            "runs": 108,
-            "balls": 54,
-            "fours": 12,
-            "sixes": 3,
-            "SR": 200,
-            "team": "Tracy Village C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Thilin Nugawela",
-            "runs": 28,
-            "balls": 18,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 155.55,
-            "team": "Tracy Village C Grade",
-            "notOut": true
-          },
-          {
-            "player": "Awais Mahmood",
-            "runs": 12,
-            "balls": 30,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 40,
-            "team": "Tracy Village C Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Istiyak Prottoy",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 28,
-            "wickets": 2,
-            "economy": "7.00",
-            "team": "Waratah Warriors C Grade"
-          },
-          {
-            "player": "Matthew Sharp",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 23,
-            "wickets": 2,
-            "economy": "11.50",
-            "team": "Waratah Warriors C Grade"
-          },
-          {
-            "player": "David Sinclair  (c)",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 23,
-            "wickets": 1,
-            "economy": "5.75",
-            "team": "Waratah Warriors C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Waratah Warriors C Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "7/180",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Kane Davis",
-            "runs": 17,
-            "balls": 11,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 154.54,
-            "team": "Waratah Warriors C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Istiyak Prottoy",
-            "runs": 14,
-            "balls": 16,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 87.5,
-            "team": "Waratah Warriors C Grade",
-            "notOut": false
-          },
-          {
-            "player": "David Sinclair  (c)",
-            "runs": 13,
-            "balls": 31,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 41.93,
-            "team": "Waratah Warriors C Grade",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Thilina Chathuranga",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 22,
-            "wickets": 3,
-            "economy": "5.50",
-            "team": "Tracy Village C Grade"
-          },
-          {
-            "player": "Dumindu Ranasinghe",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 5,
-            "wickets": 1,
-            "economy": "1.25",
-            "team": "Tracy Village C Grade"
-          },
-          {
-            "player": "Suresh Mallikaarachchi",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 11,
-            "wickets": 1,
-            "economy": "3.67",
-            "team": "Tracy Village C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
+      "date": "15 Aug 2025",
       "type": "T20",
-      "ground": "Alawa Oval / Uni oval",
-      "round": "Round 18",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "C Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Waratah Warriors C Grade won by 3 wickets",
-      "prompt": "Match Summary: Tracy Village C Grade vs. Waratah Warriors C Grade:\n  - This C Grade game is a T20, played in Round: Round 18 at Alawa Oval / Uni oval.\n  - Scores: Tracy Village C Grade 8/78 in (20) overs, Waratah Warriors C Grade 7/180 in (20) overs\n  - Result: Waratah Warriors C Grade won by 3 wickets\n  Player Performances:\n  - Tracy Village C Grade\n    - Batting: Dumindu Ranasinghe: 108 runs from 54 balls, 12 fours, 3 sixes, SR: 200; Thilin Nugawela: 28 runs (Not out) from 18 balls, 3 fours, 0 sixes, SR: 155.55; Awais Mahmood: 12 runs from 30 balls, 0 fours, 0 sixes, SR: 40\n    - Bowling: Thilina Chathuranga: 3 wickets from 4 overs, 22 runs, Econ: 5.50; Dumindu Ranasinghe: 1 wickets from 4 overs, 5 runs, Econ: 1.25; Suresh Mallikaarachchi: 1 wickets from 3 overs, 11 runs, Econ: 3.67\n    - FOW: Wicket 1: 8 (Harshana Jayasundara), Wicket 2: 16 (mostofa Mahin), Wicket 3: 23 (Mihira N Disanayake), Wicket 4: 68 (Awais Mahmood), Wicket 5: 169 (Dumindu Ranasinghe), Wicket 6: 169 (Minhaj Uddin Ridoy), Wicket 7: 180 (Lasitha Suwandarathne)\n    - Fielding: Aftab Abro, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Matthew Sharp, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Waratah Warriors C Grade\n    - Batting: Kane Davis: 17 runs from 11 balls, 0 fours, 0 sixes, SR: 154.54; Istiyak Prottoy: 14 runs from 16 balls, 1 fours, 0 sixes, SR: 87.5; David Sinclair  (c): 13 runs (Not out) from 31 balls, 0 fours, 0 sixes, SR: 41.93\n    - Bowling: Istiyak Prottoy: 2 wickets from 4 overs, 28 runs, Econ: 7.00; Matthew Sharp: 2 wickets from 2 overs, 23 runs, Econ: 11.50; David Sinclair  (c): 1 wickets from 4 overs, 23 runs, Econ: 5.75\n    - FOW: Wicket 1: 27 (Matthew Sharp), Wicket 2: 27 (Aftab Abro), Wicket 3: 27 (Kane Davis), Wicket 4: 36 (Phoebe Murphy), Wicket 5: 48 (Istiyak Prottoy), Wicket 6: 53 (Meghan McCartney), Wicket 7: 70 (Jack Clayton), Wicket 8: 78 (Eli Lewis)\n    - Fielding: Thilin Nugawela, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Mihira N Disanayake, Caught as fielder: 1, Caught as wicket keeper: -, Total catches: 1, Run outs unassisted: 1, Run outs assisted: -, Total run outs: 1, Stumpings: -; Lasitha Suwandarathne, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Dumindu Ranasinghe, Caught as fielder: 3, Caught as wicket keeper: 0, Total catches: 3, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; mostofa Mahin, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "19cc36f7",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Sth Districts C Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "4/109",
-        "overs": "(18.2)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Sam Menzies",
-            "runs": 19,
-            "balls": 23,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 82.6,
-            "team": "Sth Districts C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Jamie Chadwick",
-            "runs": 19,
-            "balls": 29,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 65.51,
-            "team": "Sth Districts C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Stephen McGrath",
-            "runs": 18,
-            "balls": 28,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 64.28,
-            "team": "Sth Districts C Grade",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Manthan Patel",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 2,
-            "economy": "5.25",
-            "team": "Darwin C Grade"
-          },
-          {
-            "player": "Rodney Cremona",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 14,
-            "wickets": 1,
-            "economy": "3.50",
-            "team": "Darwin C Grade"
-          },
-          {
-            "player": "Aaron Barb",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 16,
-            "wickets": 1,
-            "economy": "4.00",
-            "team": "Darwin C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Darwin C Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-          "width": 300,
-          "height": 300
-        },
-        "score": "7/105",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Jordan Smart",
-            "runs": 36,
-            "balls": 21,
-            "fours": 3,
-            "sixes": 1,
-            "SR": 171.42,
-            "team": "Darwin C Grade",
-            "notOut": true
-          },
-          {
-            "player": "Craig Johnston",
-            "runs": 23,
-            "balls": 30,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 76.66,
-            "team": "Darwin C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Daniel Derrington",
-            "runs": 19,
-            "balls": 35,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 54.28,
-            "team": "Darwin C Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Naveed Chohan",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 11,
-            "wickets": 1,
-            "economy": "2.75",
-            "team": "Sth Districts C Grade"
-          },
-          {
-            "player": "Marcus Nichols",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 15,
-            "wickets": 1,
-            "economy": "3.75",
-            "team": "Sth Districts C Grade"
-          },
-          {
-            "player": "Bachittar Singh",
-            "overs": 1,
-            "maidens": 0,
-            "runs": 12,
-            "wickets": 1,
-            "economy": "12.00",
-            "team": "Sth Districts C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-        "width": 300,
-        "height": 300
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Berry Springs Oval / Berry Springs Oval",
-      "round": "Round 18",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "C Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Sth Districts C Grade won by 4 runs",
-      "prompt": "Match Summary: Sth Districts C Grade vs. Darwin C Grade:\n  - This C Grade game is a T20, played in Round: Round 18 at Berry Springs Oval / Berry Springs Oval.\n  - Scores: Sth Districts C Grade 4/109 in (18.2) overs, Darwin C Grade 7/105 in (20) overs\n  - Result: Sth Districts C Grade won by 4 runs\n  Player Performances:\n  - Sth Districts C Grade\n    - Batting: Sam Menzies: 19 runs from 23 balls, 1 fours, 0 sixes, SR: 82.6; Jamie Chadwick: 19 runs from 29 balls, 2 fours, 0 sixes, SR: 65.51; Stephen McGrath: 18 runs (Not out) from 28 balls, 0 fours, 0 sixes, SR: 64.28\n    - Bowling: Naveed Chohan: 1 wickets from 4 overs, 11 runs, Econ: 2.75; Marcus Nichols: 1 wickets from 4 overs, 15 runs, Econ: 3.75; Bachittar Singh: 1 wickets from 1 overs, 12 runs, Econ: 12.00\n    - FOW: Wicket 1: 8 (Daniel Crowe), Wicket 2: 42 (Chris Elliott), Wicket 3: 47 (Shannon Johnson), Wicket 4: 59 (Jamie Chadwick), Wicket 5: 78 (Sam Menzies), Wicket 6: 81 (Bachittar Singh), Wicket 7: 98 (Marcus Nichols)\n    - Fielding: Rodney Cremona, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 1, Run outs assisted: 0, Total run outs: 1, Stumpings: 0\n  - Darwin C Grade\n    - Batting: Jordan Smart: 36 runs (Not out) from 21 balls, 3 fours, 1 sixes, SR: 171.42; Craig Johnston: 23 runs from 30 balls, 2 fours, 0 sixes, SR: 76.66; Daniel Derrington: 19 runs from 35 balls, 1 fours, 0 sixes, SR: 54.28\n    - Bowling: Manthan Patel: 2 wickets from 4 overs, 21 runs, Econ: 5.25; Rodney Cremona: 1 wickets from 4 overs, 14 runs, Econ: 3.50; Aaron Barb: 1 wickets from 4 overs, 16 runs, Econ: 4.00\n    - FOW: Wicket 1: 43 (Craig Johnston), Wicket 2: 45 (Daniel Derrington), Wicket 3: 63 (Rodney Cremona), Wicket 4: 88 (Allister Young)\n    - Fielding: Shannon Johnson, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "29d01a67",
-      "status": "Final",
-      "homeTeam": {
-        "name": "PINT C Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "5/189",
-        "overs": "(20)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Mariyatharsha Shanthakumar  (c)",
-            "runs": 96,
-            "balls": 54,
-            "fours": 10,
-            "sixes": 6,
-            "SR": 177.77,
-            "team": "PINT C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Nick Glinatsis",
-            "runs": 40,
-            "balls": 27,
-            "fours": 3,
-            "sixes": 3,
-            "SR": 148.14,
-            "team": "PINT C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Sean COCKFIELD",
-            "runs": 12,
-            "balls": 13,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 92.3,
-            "team": "PINT C Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Brayden McLay",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 2,
-            "economy": "7.25",
-            "team": "Nightcliff C Grade"
-          },
-          {
-            "player": "Saxon Theodore-Smith",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 1,
-            "economy": "7.00",
-            "team": "Nightcliff C Grade"
-          },
-          {
-            "player": "Sophia Di Venuto",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 26,
-            "wickets": 1,
-            "economy": "8.67",
-            "team": "Nightcliff C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Nightcliff C Grade",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "5/140",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Saxon Theodore-Smith",
-            "runs": 49,
-            "balls": 37,
-            "fours": 7,
-            "sixes": 0,
-            "SR": 132.43,
-            "team": "Nightcliff C Grade",
-            "notOut": false
-          },
-          {
-            "player": "Nick Manley  (c)",
-            "runs": 40,
-            "balls": 33,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 121.21,
-            "team": "Nightcliff C Grade",
-            "notOut": true
-          },
-          {
-            "player": "Kate Sherriff",
-            "runs": 29,
-            "balls": 20,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 145,
-            "team": "Nightcliff C Grade",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Jonathon Hewitson",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 25,
-            "wickets": 2,
-            "economy": "6.25",
-            "team": "PINT C Grade"
-          },
-          {
-            "player": "Zac OToole",
-            "overs": 3,
-            "maidens": 1,
-            "runs": 11,
-            "wickets": 1,
-            "economy": "3.67",
-            "team": "PINT C Grade"
-          },
-          {
-            "player": "Boney Sebastian",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 37,
-            "wickets": 1,
-            "economy": "9.25",
-            "team": "PINT C Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Wanguri Oval / Wanguri Oval",
-      "round": "Round 18",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "C Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "PINT C Grade won by 49 runs",
-      "prompt": "Match Summary: PINT C Grade vs. Nightcliff C Grade:\n  - This C Grade game is a T20, played in Round: Round 18 at Wanguri Oval / Wanguri Oval.\n  - Scores: PINT C Grade 5/189 in (20) overs, Nightcliff C Grade 5/140 in (20) overs\n  - Result: PINT C Grade won by 49 runs\n  Player Performances:\n  - PINT C Grade\n    - Batting: Mariyatharsha Shanthakumar  (c): 96 runs from 54 balls, 10 fours, 6 sixes, SR: 177.77; Nick Glinatsis: 40 runs from 27 balls, 3 fours, 3 sixes, SR: 148.14; Sean COCKFIELD: 12 runs from 13 balls, 2 fours, 0 sixes, SR: 92.3\n    - Bowling: Jonathon Hewitson: 2 wickets from 4 overs, 25 runs, Econ: 6.25; Zac OToole: 1 wickets from 3 overs, 11 runs, Econ: 3.67; Boney Sebastian: 1 wickets from 4 overs, 37 runs, Econ: 9.25\n    - FOW: Wicket 1: 22 (Sean COCKFIELD), Wicket 2: 65 (Varun Sudheer), Wicket 3: 158 (Nick Glinatsis), Wicket 4: 158 (Alen Jose), Wicket 5: 176 (Mariyatharsha Shanthakumar)\n    - Fielding: Samson Bament, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Kate Sherriff, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Nightcliff C Grade\n    - Batting: Saxon Theodore-Smith: 49 runs from 37 balls, 7 fours, 0 sixes, SR: 132.43; Nick Manley  (c): 40 runs (Not out) from 33 balls, 3 fours, 0 sixes, SR: 121.21; Kate Sherriff: 29 runs (Not out) from 20 balls, 2 fours, 0 sixes, SR: 145\n    - Bowling: Brayden McLay: 2 wickets from 4 overs, 29 runs, Econ: 7.25; Saxon Theodore-Smith: 1 wickets from 3 overs, 21 runs, Econ: 7.00; Sophia Di Venuto: 1 wickets from 3 overs, 26 runs, Econ: 8.67\n    - FOW: Wicket 1: 16 (Samson Bament), Wicket 2: 33 (Noah Ker), Wicket 3: 37 (Aidan Reisinger), Wicket 4: 43 (Sophia Di Venuto), Wicket 5: 91 (Saxon Theodore-Smith)\n    - Fielding: Pradeep Palanisamy, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 1; Billy OToole, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "a751e8a6",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Palmerston D Grade White",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-          "width": 1162,
-          "height": 1162
-        },
-        "score": "10/117",
-        "overs": "(19)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Todd Pemble",
-            "runs": 96,
-            "balls": 46,
-            "fours": 5,
-            "sixes": 10,
-            "SR": 208.69,
-            "team": "Palmerston D Grade White",
-            "notOut": true
-          },
-          {
-            "player": "Shane Moon",
-            "runs": 65,
-            "balls": 47,
-            "fours": 9,
-            "sixes": 1,
-            "SR": 138.29,
-            "team": "Palmerston D Grade White",
-            "notOut": false
-          },
-          {
-            "player": "Koby Henderson",
-            "runs": 10,
-            "balls": 8,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 125,
-            "team": "Palmerston D Grade White",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Reagan Lawrence",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 15,
-            "wickets": 2,
-            "economy": "3.75",
-            "team": "Sth Districts D Grade Black"
-          },
-          {
-            "player": "Olivia McSweeney",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 35,
-            "wickets": 1,
-            "economy": "11.67",
-            "team": "Sth Districts D Grade Black"
-          },
-          {
-            "player": "William Bingham",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 20,
-            "wickets": 0,
-            "economy": "5.00",
-            "team": "Sth Districts D Grade Black"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Sth Districts D Grade Black",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "3/188",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Olivia McSweeney",
-            "runs": 37,
-            "balls": 33,
-            "fours": 6,
-            "sixes": 0,
-            "SR": 112.12,
-            "team": "Sth Districts D Grade Black",
-            "notOut": false
-          },
-          {
-            "player": "Reagan Lawrence",
-            "runs": 23,
-            "balls": 12,
-            "fours": 4,
-            "sixes": 1,
-            "SR": 191.66,
-            "team": "Sth Districts D Grade Black",
-            "notOut": false
-          },
-          {
-            "player": "RANDENI WEERACHANDRA  (c)",
-            "runs": 19,
-            "balls": 25,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 76,
-            "team": "Sth Districts D Grade Black",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Mark Thompson",
-            "overs": 4,
-            "maidens": 1,
-            "runs": 10,
-            "wickets": 3,
-            "economy": "2.50",
-            "team": "Palmerston D Grade White"
-          },
-          {
-            "player": "Nicholas Shone",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 18,
-            "wickets": 3,
-            "economy": "6.00",
-            "team": "Palmerston D Grade White"
-          },
-          {
-            "player": "Samuel Hayward",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 35,
-            "wickets": 2,
-            "economy": "8.75",
-            "team": "Palmerston D Grade White"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Howard Park / Howard Park Oval",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Sth Districts D Grade Black won by 7 wickets",
-      "prompt": "Match Summary: Palmerston D Grade White vs. Sth Districts D Grade Black:\n  - This D Grade game is a T20, played in Round: Round 15 at Howard Park / Howard Park Oval.\n  - Scores: Palmerston D Grade White 10/117 in (19) overs, Sth Districts D Grade Black 3/188 in (20) overs\n  - Result: Sth Districts D Grade Black won by 7 wickets\n  Player Performances:\n  - Palmerston D Grade White\n    - Batting: Todd Pemble: 96 runs (Not out) from 46 balls, 5 fours, 10 sixes, SR: 208.69; Shane Moon: 65 runs from 47 balls, 9 fours, 1 sixes, SR: 138.29; Koby Henderson: 10 runs (Not out) from 8 balls, 1 fours, 0 sixes, SR: 125\n    - Bowling: Mark Thompson: 3 wickets from 4 overs, 10 runs, Econ: 2.50; Nicholas Shone: 3 wickets from 3 overs, 18 runs, Econ: 6.00; Samuel Hayward: 2 wickets from 4 overs, 35 runs, Econ: 8.75\n    - FOW: Wicket 1: 2 (David Taylor), Wicket 2: 20 (Jay Munday), Wicket 3: 133 (Shane Moon)\n    - Fielding: Fielding details not available.\n  - Sth Districts D Grade Black\n    - Batting: Olivia McSweeney: 37 runs from 33 balls, 6 fours, 0 sixes, SR: 112.12; Reagan Lawrence: 23 runs from 12 balls, 4 fours, 1 sixes, SR: 191.66; RANDENI WEERACHANDRA  (c): 19 runs from 25 balls, 3 fours, 0 sixes, SR: 76\n    - Bowling: Reagan Lawrence: 2 wickets from 4 overs, 15 runs, Econ: 3.75; Olivia McSweeney: 1 wickets from 3 overs, 35 runs, Econ: 11.67; William Bingham: 0 wickets from 4 overs, 20 runs, Econ: 5.00\n    - FOW: Wicket 1: 3 (William Bingham), Wicket 2: 25 (Lachlan Moffat), Wicket 3: 29 (Reagan Lawrence), Wicket 4: 29 (Darcy Easton), Wicket 5: 38 (Digantha Weerachandra), Wicket 6: 46 (Reece Torsney), Wicket 7: 64 (Yugant Patel), Wicket 8: 64 (Sam Mahomet), Wicket 9: 117 (RANDENI WEERACHANDRA), Wicket 10: 117 (Olivia McSweeney)\n    - Fielding: Bart Lyon, Caught as fielder: 0, Caught as wicket keeper: 3, Total catches: 3, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Nicholas Shone, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Brentley Holmes, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Shane Moon, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "2e676c3a",
-      "status": "Final",
-      "homeTeam": {
-        "name": "PINT Gold D Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "10/165",
-        "overs": "(20)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Jaspreet Gill",
-            "runs": 30,
-            "balls": 26,
-            "fours": 5,
-            "sixes": 1,
-            "SR": 115.38,
-            "team": "PINT Gold D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Jinu Thekkeparambil Sunny",
-            "runs": 26,
-            "balls": 12,
-            "fours": 2,
-            "sixes": 2,
-            "SR": 216.66,
-            "team": "PINT Gold D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Hariharan Ramamurthy",
-            "runs": 19,
-            "balls": 13,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 146.15,
-            "team": "PINT Gold D Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Arsalan Ahmed",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 16,
-            "wickets": 3,
-            "economy": "4.00",
-            "team": "Tracy Village D Red"
-          },
-          {
-            "player": "Abu Bakar Saeed",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 31,
-            "wickets": 2,
-            "economy": "7.75",
-            "team": "Tracy Village D Red"
-          },
-          {
-            "player": "Shaheryar Zafar",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 27,
-            "wickets": 2,
-            "economy": "13.50",
-            "team": "Tracy Village D Red"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Tracy Village D Red",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "10/149",
-        "overs": "(19.5)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Ebad Ahmed Siddiqui",
-            "runs": 72,
-            "balls": 41,
-            "fours": 6,
-            "sixes": 4,
-            "SR": 175.6,
-            "team": "Tracy Village D Red",
-            "notOut": false
-          },
-          {
-            "player": "TAMOOR MIRZA  (c)",
-            "runs": 18,
-            "balls": 18,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 100,
-            "team": "Tracy Village D Red",
-            "notOut": true
-          },
-          {
-            "player": "Shaheryar Zafar",
-            "runs": 17,
-            "balls": 14,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 121.42,
-            "team": "Tracy Village D Red",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Amal Jose",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 26,
-            "wickets": 3,
-            "economy": "6.50",
-            "team": "PINT Gold D Grade"
-          },
-          {
-            "player": "Manmeet Singh",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 20,
-            "wickets": 2,
-            "economy": "5.00",
-            "team": "PINT Gold D Grade"
-          },
-          {
-            "player": "Jinu Thekkeparambil Sunny",
-            "overs": 3.5,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 2,
-            "economy": "8.29",
-            "team": "PINT Gold D Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Dinah Oval / Dinah Beach Oval",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "PINT Gold D Grade won by 16 runs",
-      "prompt": "Match Summary: PINT Gold D Grade vs. Tracy Village D Red:\n  - This D Grade game is a T20, played in Round: Round 15 at Dinah Oval / Dinah Beach Oval.\n  - Scores: PINT Gold D Grade 10/165 in (20) overs, Tracy Village D Red 10/149 in (19.5) overs\n  - Result: PINT Gold D Grade won by 16 runs\n  Player Performances:\n  - PINT Gold D Grade\n    - Batting: Jaspreet Gill: 30 runs from 26 balls, 5 fours, 1 sixes, SR: 115.38; Jinu Thekkeparambil Sunny: 26 runs from 12 balls, 2 fours, 2 sixes, SR: 216.66; Hariharan Ramamurthy: 19 runs from 13 balls, 2 fours, 1 sixes, SR: 146.15\n    - Bowling: Amal Jose: 3 wickets from 4 overs, 26 runs, Econ: 6.50; Manmeet Singh: 2 wickets from 4 overs, 20 runs, Econ: 5.00; Jinu Thekkeparambil Sunny: 2 wickets from 3.5 overs, 29 runs, Econ: 8.29\n    - FOW: Wicket 1: 43 (Amal Jose), Wicket 2: 43 (Amarjeet Bajwa), Wicket 3: 54 (Arun kumar Gunigati), Wicket 4: 74 (Manmeet Singh), Wicket 5: 88 (Jaspreet Gill), Wicket 6: 126 (Achu Chathemkunnel Reji), Wicket 7: 133 (Jinu Thekkeparambil Sunny), Wicket 8: 142 (Bibin Mathew), Wicket 9: 147 (Melvin Jose), Wicket 10: 165 (Hariharan Ramamurthy)\n    - Fielding: Joel Kitching, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Abu Bakar Saeed, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Ebad Ahmed Siddiqui, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Shaheryar Zafar, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Tracy Village D Red\n    - Batting: Ebad Ahmed Siddiqui: 72 runs from 41 balls, 6 fours, 4 sixes, SR: 175.6; TAMOOR MIRZA  (c): 18 runs (Not out) from 18 balls, 2 fours, 0 sixes, SR: 100; Shaheryar Zafar: 17 runs from 14 balls, 2 fours, 1 sixes, SR: 121.42\n    - Bowling: Arsalan Ahmed: 3 wickets from 4 overs, 16 runs, Econ: 4.00; Abu Bakar Saeed: 2 wickets from 4 overs, 31 runs, Econ: 7.75; Shaheryar Zafar: 2 wickets from 2 overs, 27 runs, Econ: 13.50\n    - FOW: Wicket 1: 13 (Tarique Memon), Wicket 2: 28 (Md Mostofa Maruf), Wicket 3: 74 (Shaheryar Zafar), Wicket 4: 107 (Joel Kitching), Wicket 5: 114 (Alexander Pickett), Wicket 6: 116 (Abu Bakar Saeed), Wicket 7: 142 (Ebad Ahmed Siddiqui), Wicket 8: 147 (Arsalan Ahmed), Wicket 9: 147 (James Pickett), Wicket 10: 149 (Waleed Aziz)\n    - Fielding: Bibin Mathew, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Amarjeet Bajwa, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Jaspreet Gill, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Arun kumar Gunigati, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Melvin Jose, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Manmeet Singh, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Hariharan Ramamurthy, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "08db05bc",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Darwin D Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-          "width": 300,
-          "height": 300
-        },
-        "score": "3/243",
-        "overs": "(19.5)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Abdul Bajwa",
-            "runs": 138,
-            "balls": 66,
-            "fours": 12,
-            "sixes": 9,
-            "SR": 209.09,
-            "team": "Darwin D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Anjana marasinghe",
-            "runs": 72,
-            "balls": 38,
-            "fours": 10,
-            "sixes": 1,
-            "SR": 189.47,
-            "team": "Darwin D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Harpreet Singh  (c)",
-            "runs": 11,
-            "balls": 7,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 157.14,
-            "team": "Darwin D Grade",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Kane Hughes  (c)",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 34,
-            "wickets": 1,
-            "economy": "8.50",
-            "team": "Tracy Village D Gold"
-          },
-          {
-            "player": "Zachery Motlap",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 43,
-            "wickets": 1,
-            "economy": "10.75",
-            "team": "Tracy Village D Gold"
-          },
-          {
-            "player": "Aluthgamage Kumarajeewa",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 14,
-            "wickets": 0,
-            "economy": "7.00",
-            "team": "Tracy Village D Gold"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Tracy Village D Gold",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "3/240",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Aluthgamage Kumarajeewa",
-            "runs": 99,
-            "balls": 43,
-            "fours": 10,
-            "sixes": 7,
-            "SR": 230.23,
-            "team": "Tracy Village D Gold",
-            "notOut": false
-          },
-          {
-            "player": "Allan Trindle",
-            "runs": 59,
-            "balls": 37,
-            "fours": 8,
-            "sixes": 1,
-            "SR": 159.45,
-            "team": "Tracy Village D Gold",
-            "notOut": false
-          },
-          {
-            "player": "Kane Hughes  (c)",
-            "runs": 25,
-            "balls": 12,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 208.33,
-            "team": "Tracy Village D Gold",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Anjana marasinghe",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 2,
-            "economy": "7.25",
-            "team": "Darwin D Grade"
-          },
-          {
-            "player": "yuvraj _",
-            "overs": 3.5,
-            "maidens": 0,
-            "runs": 52,
-            "wickets": 1,
-            "economy": "14.86",
-            "team": "Darwin D Grade"
-          },
-          {
-            "player": "Fahad Khan",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 27,
-            "wickets": 0,
-            "economy": "9.00",
-            "team": "Darwin D Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-        "width": 300,
-        "height": 300
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Wulagi Oval / Wulagi Oval",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Darwin D Grade won by 3 runs",
-      "prompt": "Match Summary: Darwin D Grade vs. Tracy Village D Gold:\n  - This D Grade game is a T20, played in Round: Round 15 at Wulagi Oval / Wulagi Oval.\n  - Scores: Darwin D Grade 3/243 in (19.5) overs, Tracy Village D Gold 3/240 in (20) overs\n  - Result: Darwin D Grade won by 3 runs\n  Player Performances:\n  - Darwin D Grade\n    - Batting: Abdul Bajwa: 138 runs from 66 balls, 12 fours, 9 sixes, SR: 209.09; Anjana marasinghe: 72 runs from 38 balls, 10 fours, 1 sixes, SR: 189.47; Harpreet Singh  (c): 11 runs (Not out) from 7 balls, 1 fours, 0 sixes, SR: 157.14\n    - Bowling: Anjana marasinghe: 2 wickets from 4 overs, 29 runs, Econ: 7.25; yuvraj _: 1 wickets from 3.5 overs, 52 runs, Econ: 14.86; Fahad Khan: 0 wickets from 3 overs, 27 runs, Econ: 9.00\n    - FOW: Wicket 1: 24 (Prateek Goyal), Wicket 2: 213 (Lahiru Fernando), Wicket 3: 232 (Anjana marasinghe)\n    - Fielding: Fielding details not available.\n  - Tracy Village D Gold\n    - Batting: Aluthgamage Kumarajeewa: 99 runs from 43 balls, 10 fours, 7 sixes, SR: 230.23; Allan Trindle: 59 runs from 37 balls, 8 fours, 1 sixes, SR: 159.45; Kane Hughes  (c): 25 runs (Not out) from 12 balls, 4 fours, 0 sixes, SR: 208.33\n    - Bowling: Kane Hughes  (c): 1 wickets from 4 overs, 34 runs, Econ: 8.50; Zachery Motlap: 1 wickets from 4 overs, 43 runs, Econ: 10.75; Aluthgamage Kumarajeewa: 0 wickets from 2 overs, 14 runs, Econ: 7.00\n    - FOW: Wicket 1: 21 (Zachery Motlap), Wicket 2: 170 (Aluthgamage Kumarajeewa), Wicket 3: 213 (Allan Trindle)\n    - Fielding: Fielding details not available."
-    },
-    {
-      "gameID": "f55a3fa2",
-      "status": "Final",
-      "homeTeam": {
-        "name": "PINT Green D Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "width": 512,
-          "height": 512
-        },
-        "score": "10/117",
-        "overs": "(20)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Dan Murphy",
-            "runs": 30,
-            "balls": 20,
-            "fours": 4,
-            "sixes": 2,
-            "SR": 150,
-            "team": "PINT Green D Grade",
-            "notOut": false
-          },
-          {
-            "player": "Stephen Vincent",
-            "runs": 20,
-            "balls": 13,
-            "fours": 1,
-            "sixes": 1,
-            "SR": 153.84,
-            "team": "PINT Green D Grade",
-            "notOut": true
-          },
-          {
-            "player": "Sebastian Greely",
-            "runs": 18,
-            "balls": 27,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 66.66,
-            "team": "PINT Green D Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Tory St Clair  (c)",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 19,
-            "wickets": 5,
-            "economy": "6.33",
-            "team": "Sth Districts D Grade Red"
-          },
-          {
-            "player": "Logan Abbott",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 2,
-            "economy": "5.25",
-            "team": "Sth Districts D Grade Red"
-          },
-          {
-            "player": "Liam Pepper",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 8,
-            "wickets": 1,
-            "economy": "2.67",
-            "team": "Sth Districts D Grade Red"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Sth Districts D Grade Red",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "5/118",
-        "overs": "(18.4)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Ryan Abbott",
-            "runs": 42,
-            "balls": 28,
-            "fours": 6,
-            "sixes": 0,
-            "SR": 150,
-            "team": "Sth Districts D Grade Red",
-            "notOut": true
-          },
-          {
-            "player": "Tory St Clair  (c)",
-            "runs": 31,
-            "balls": 39,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 79.48,
-            "team": "Sth Districts D Grade Red",
-            "notOut": false
-          },
-          {
-            "player": "Brad Allpike",
-            "runs": 22,
-            "balls": 22,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 100,
-            "team": "Sth Districts D Grade Red",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Harry Tregloan",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 14,
-            "wickets": 3,
-            "economy": "3.50",
-            "team": "PINT Green D Grade"
-          },
-          {
-            "player": "Dan Murphy",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 18,
-            "wickets": 1,
-            "economy": "4.50",
-            "team": "PINT Green D Grade"
-          },
-          {
-            "player": "Fill-in",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 32,
-            "wickets": 1,
-            "economy": "10.67",
-            "team": "PINT Green D Grade"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Cazalys Arena / Cazalys Arena 2",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Sth Districts D Grade Red won by 5 wickets",
-      "prompt": "Match Summary: PINT Green D Grade vs. Sth Districts D Grade Red:\n  - This D Grade game is a T20, played in Round: Round 15 at Cazalys Arena / Cazalys Arena 2.\n  - Scores: PINT Green D Grade 10/117 in (20) overs, Sth Districts D Grade Red 5/118 in (18.4) overs\n  - Result: Sth Districts D Grade Red won by 5 wickets\n  Player Performances:\n  - PINT Green D Grade\n    - Batting: Dan Murphy: 30 runs from 20 balls, 4 fours, 2 sixes, SR: 150; Stephen Vincent: 20 runs (Not out) from 13 balls, 1 fours, 1 sixes, SR: 153.84; Sebastian Greely: 18 runs from 27 balls, 2 fours, 0 sixes, SR: 66.66\n    - Bowling: Harry Tregloan: 3 wickets from 4 overs, 14 runs, Econ: 3.50; Dan Murphy: 1 wickets from 4 overs, 18 runs, Econ: 4.50; Fill-in: 1 wickets from 3 overs, 32 runs, Econ: 10.67\n    - FOW: Wicket 1: 21 (Harry Tregloan), Wicket 2: 41 (Michael Tregloan), Wicket 3: 82 (Dan Murphy), Wicket 4: 82 (Tufail Rashid), Wicket 5: 97 (Sebastian Greely), Wicket 6: 97 (Robert Armstrong), Wicket 7: 106 (Jake Peterson), Wicket 8: 107 (Vincent Perry), Wicket 9: 117 (Player), Wicket 10: 117 (Player)\n    - Fielding: Ryan Abbott, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Stuart Barker  (vc), Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Jacob Boustead, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Sth Districts D Grade Red\n    - Batting: Ryan Abbott: 42 runs (Not out) from 28 balls, 6 fours, 0 sixes, SR: 150; Tory St Clair  (c): 31 runs from 39 balls, 2 fours, 0 sixes, SR: 79.48; Brad Allpike: 22 runs from 22 balls, 3 fours, 0 sixes, SR: 100\n    - Bowling: Tory St Clair  (c): 5 wickets from 3 overs, 19 runs, Econ: 6.33; Logan Abbott: 2 wickets from 4 overs, 21 runs, Econ: 5.25; Liam Pepper: 1 wickets from 3 overs, 8 runs, Econ: 2.67\n    - FOW: Wicket 1: 20 (Hannah Armstrong), Wicket 2: 20 (Stuart Barker), Wicket 3: 24 (Rachel Andrew), Wicket 4: 40 (Brad Allpike), Wicket 5: 106 (Tory St Clair)\n    - Fielding: Vincent Perry, Caught as fielder: 0, Caught as wicket keeper: 2, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Dan Murphy, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "6810e33b",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Palmerston D Grade Maroon",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-          "width": 1162,
-          "height": 1162
-        },
-        "score": "10/45",
-        "overs": "(13.3)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Ashton Ling",
-            "runs": 10,
-            "balls": 17,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 58.82,
-            "team": "Palmerston D Grade Maroon",
-            "notOut": false
-          },
-          {
-            "player": "James Hall",
-            "runs": 8,
-            "balls": 3,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 266.66,
-            "team": "Palmerston D Grade Maroon",
-            "notOut": false
-          },
-          {
-            "player": "Aaron Habermann",
-            "runs": 6,
-            "balls": 26,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 23.07,
-            "team": "Palmerston D Grade Maroon",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Mitchell Townsend",
-            "overs": 4,
-            "maidens": 3,
-            "runs": 3,
-            "wickets": 3,
-            "economy": "0.75",
-            "team": "Sth Districts D Grade White"
-          },
-          {
-            "player": "Joshua Hynes",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 6,
-            "wickets": 2,
-            "economy": "3.00",
-            "team": "Sth Districts D Grade White"
-          },
-          {
-            "player": "Warwick Peter-Budge",
-            "overs": 0.3,
-            "maidens": 0,
-            "runs": 0,
-            "wickets": 1,
-            "economy": "0.00",
-            "team": "Sth Districts D Grade White"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Sth Districts D Grade White",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "1/46",
-        "overs": "(3.2)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Sean Woodroffe",
-            "runs": 24,
-            "balls": 10,
-            "fours": 4,
-            "sixes": 1,
-            "SR": 240,
-            "team": "Sth Districts D Grade White",
-            "notOut": true
-          },
-          {
-            "player": "Grant Burton  (c)",
-            "runs": 19,
-            "balls": 9,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 211.11,
-            "team": "Sth Districts D Grade White",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Rhys Lavercombe",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 17,
-            "wickets": 1,
-            "economy": "8.50",
-            "team": "Palmerston D Grade Maroon"
-          },
-          {
-            "player": "Ryan Gleeson",
-            "overs": 0.2,
-            "maidens": 0,
-            "runs": 3,
-            "wickets": 0,
-            "economy": "15.00",
-            "team": "Palmerston D Grade Maroon"
-          },
-          {
-            "player": "James Hall",
-            "overs": 1,
-            "maidens": 0,
-            "runs": 25,
-            "wickets": 0,
-            "economy": "25.00",
-            "team": "Palmerston D Grade Maroon"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Good Shepherd Lutheran College (Howard Springs) / Good Shepherd Lutheran College (Howard Springs)",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Sth Districts D Grade White won by 9 wickets",
-      "prompt": "Match Summary: Palmerston D Grade Maroon vs. Sth Districts D Grade White:\n  - This D Grade game is a T20, played in Round: Round 15 at Good Shepherd Lutheran College (Howard Springs) / Good Shepherd Lutheran College (Howard Springs).\n  - Scores: Palmerston D Grade Maroon 10/45 in (13.3) overs, Sth Districts D Grade White 1/46 in (3.2) overs\n  - Result: Sth Districts D Grade White won by 9 wickets\n  Player Performances:\n  - Palmerston D Grade Maroon\n    - Batting: Ashton Ling: 10 runs from 17 balls, 1 fours, 0 sixes, SR: 58.82; James Hall: 8 runs from 3 balls, 2 fours, 0 sixes, SR: 266.66; Aaron Habermann: 6 runs from 26 balls, 1 fours, 0 sixes, SR: 23.07\n    - Bowling: Rhys Lavercombe: 1 wickets from 2 overs, 17 runs, Econ: 8.50; Ryan Gleeson: 0 wickets from 0.2 overs, 3 runs, Econ: 15.00; James Hall: 0 wickets from 1 overs, 25 runs, Econ: 25.00\n    - FOW: Wicket 1: 3 (Rhys Lavercombe), Wicket 2: 5 (SEBASTINO BABYCHAN), Wicket 3: 8 (Fletcher Johnson), Wicket 4: 11 (Joseph Miliado), Wicket 5: 28 (Aaron Habermann), Wicket 6: 29 (Jayden osborne), Wicket 7: 29 (Ashton Ling), Wicket 8: 34 (Ryan Lehmann), Wicket 9: 45 (James Hall), Wicket 10: 45 (Ryan Gleeson)\n    - Fielding: Lochlan Lyness, Caught as fielder: 0, Caught as wicket keeper: 2, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Sean Woodroffe, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Keidan Holt, Caught as fielder: 3, Caught as wicket keeper: 0, Total catches: 3, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Nicholas Sutcliffe-Woelders, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0\n  - Sth Districts D Grade White\n    - Batting: Sean Woodroffe: 24 runs (Not out) from 10 balls, 4 fours, 1 sixes, SR: 240; Grant Burton  (c): 19 runs (Not out) from 9 balls, 2 fours, 1 sixes, SR: 211.11\n    - Bowling: Mitchell Townsend: 3 wickets from 4 overs, 3 runs, Econ: 0.75; Joshua Hynes: 2 wickets from 2 overs, 6 runs, Econ: 3.00; Warwick Peter-Budge: 1 wickets from 0.3 overs, 0 runs, Econ: 0.00\n    - FOW: Wicket 1: 0 (Randhir Panwar)\n    - Fielding: Fielding details not available."
-    },
-    {
-      "gameID": "c2fac339",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Waratah Warriors D",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "6/77",
-        "overs": "(20)",
-        "homeScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Arik Kadalbajoo",
-            "runs": 73,
-            "balls": 43,
-            "fours": 11,
-            "sixes": 0,
-            "SR": 169.76,
-            "team": "Waratah Warriors D",
-            "notOut": true
-          },
-          {
-            "player": "Lava kumar Bollineni  (c)",
-            "runs": 24,
-            "balls": 25,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 96,
-            "team": "Waratah Warriors D",
-            "notOut": false
-          },
-          {
-            "player": "HARI KRISHNA PRASAD CHARUKURI",
-            "runs": 16,
-            "balls": 12,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 133.33,
-            "team": "Waratah Warriors D",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Jesse Dean",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 28,
-            "wickets": 2,
-            "economy": "7.00",
-            "team": "Nightcliff D Grade Gold"
-          },
-          {
-            "player": "Levi French",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 17,
-            "wickets": 1,
-            "economy": "8.50",
-            "team": "Nightcliff D Grade Gold"
-          },
-          {
-            "player": "Ty Jennings",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 18,
-            "wickets": 1,
-            "economy": "9.00",
-            "team": "Nightcliff D Grade Gold"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Nightcliff D Grade Gold",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "5/172",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Ty Jennings",
-            "runs": 28,
-            "balls": 35,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 80,
-            "team": "Nightcliff D Grade Gold",
-            "notOut": true
-          },
-          {
-            "player": "Saud Qudoos",
-            "runs": 15,
-            "balls": 20,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 75,
-            "team": "Nightcliff D Grade Gold",
-            "notOut": false
-          },
-          {
-            "player": "Arjumand Khan",
-            "runs": 10,
-            "balls": 38,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 26.31,
-            "team": "Nightcliff D Grade Gold",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Sunny Thethy",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 14,
-            "wickets": 2,
-            "economy": "3.50",
-            "team": "Waratah Warriors D"
-          },
-          {
-            "player": "Durga Prasad Viyyapu",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 22,
-            "wickets": 2,
-            "economy": "5.50",
-            "team": "Waratah Warriors D"
-          },
-          {
-            "player": "Shane Harvey",
-            "overs": 4,
-            "maidens": 1,
-            "runs": 14,
-            "wickets": 1,
-            "economy": "3.50",
-            "team": "Waratah Warriors D"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
+      "round": "Preliminary Final",
+      "gameID": "2ad56f47",
+      "gender": "Women",
       "ground": "Cazalys Arena / Cazalys Arena 1",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      },
-      "result": "Nightcliff D Grade Gold won by 5 wickets",
-      "prompt": "Match Summary: Waratah Warriors D vs. Nightcliff D Grade Gold:\n  - This D Grade game is a T20, played in Round: Round 15 at Cazalys Arena / Cazalys Arena 1.\n  - Scores: Waratah Warriors D 6/77 in (20) overs, Nightcliff D Grade Gold 5/172 in (20) overs\n  - Result: Nightcliff D Grade Gold won by 5 wickets\n  Player Performances:\n  - Waratah Warriors D\n    - Batting: Arik Kadalbajoo: 73 runs (Not out) from 43 balls, 11 fours, 0 sixes, SR: 169.76; Lava kumar Bollineni  (c): 24 runs from 25 balls, 2 fours, 0 sixes, SR: 96; HARI KRISHNA PRASAD CHARUKURI: 16 runs (Not out) from 12 balls, 1 fours, 0 sixes, SR: 133.33\n    - Bowling: Sunny Thethy: 2 wickets from 4 overs, 14 runs, Econ: 3.50; Durga Prasad Viyyapu: 2 wickets from 4 overs, 22 runs, Econ: 5.50; Shane Harvey: 1 wickets from 4 overs, 14 runs, Econ: 3.50\n    - FOW: Wicket 1: 23 (Durga Prasad Viyyapu), Wicket 2: 48 (Lava kumar Bollineni), Wicket 3: 62 (Satya Jyothi Babu Gutthula), Wicket 4: 106 (Midhun Baby), Wicket 5: 115 (Sunny Thethy)\n    - Fielding: Sanuja De Silva, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 2; Bibek Khadka, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Ty Jennings, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Nightcliff D Grade Gold\n    - Batting: Ty Jennings: 28 runs (Not out) from 35 balls, 3 fours, 0 sixes, SR: 80; Saud Qudoos: 15 runs from 20 balls, 2 fours, 0 sixes, SR: 75; Arjumand Khan: 10 runs (Not out) from 38 balls, 0 fours, 0 sixes, SR: 26.31\n    - Bowling: Jesse Dean: 2 wickets from 4 overs, 28 runs, Econ: 7.00; Levi French: 1 wickets from 2 overs, 17 runs, Econ: 8.50; Ty Jennings: 1 wickets from 2 overs, 18 runs, Econ: 9.00\n    - FOW: Wicket 1: 0 (Chris Garth), Wicket 2: 11 (Bibek Khadka), Wicket 3: 12 (Levi French), Wicket 4: 28 (Saud Qudoos), Wicket 5: 36 (Sanuja De Silva), Wicket 6: 38 (Abbey Warton)\n    - Fielding: Durga Prasad Viyyapu, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Sunny Thethy, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Shane Harvey, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 0, Run outs assisted: 1, Total run outs: 1, Stumpings: 0; Lalit Vig, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0"
-    },
-    {
-      "gameID": "dca2349c",
+      "prompt": "Match Summary: Sth Districts Women's Div 2 vs. Tracy Village Women's Div 2:\n  - This Women's Div 2 game is a T20, played in Round: Preliminary Final at Cazalys Arena / Cazalys Arena 1.\n  - Scores: Sth Districts Women's Div 2 5/97 in (20) overs, Tracy Village Women's Div 2 4/107 in (20) overs\n  - Result: Tracy Village Women's Div 2 won by 6 wickets\n  Player Performances:\n  - Sth Districts Women's Div 2\n    - Batting: Vida Lyon: 24 runs from 42 balls, 2 fours, 0 sixes, SR: 57.14; Juliet Johnston: 9 runs from 36 balls, 0 fours, 0 sixes, SR: 25; Anna Lyon: 8 runs from 9 balls, 0 fours, 0 sixes, SR: 88.88\n    - Bowling: Vida Lyon: 2 wickets from 4 overs, 24 runs, Econ: 6.00; Alex Bowley: 1 wickets from 4 overs, 13 runs, Econ: 3.25; Jade O’Neill: 1 wickets from 2 overs, 11 runs, Econ: 5.50\n    - FOW: Wicket 1: 14 (Tracey Tyrrell), Wicket 2: 15 (Anna Lyon), Wicket 3: 27 (Jasmine Hallen), Wicket 4: 60 (Juliet Johnston), Wicket 5: 89 (Vida Lyon)\n    - Fielding: Heidi Scholz, Caught as fielder: 0, Caught as wicket keeper: 0, Total catches: 0, Run outs unassisted: 1, Run outs assisted: 0, Total run outs: 1, Stumpings: 0; Rihanna-Frances Clark, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Tracy Village Women's Div 2\n    - Batting: Rihanna-Frances Clark: 52 runs from 43 balls, 6 fours, 0 sixes, SR: 120.93; Kylie Smith: 13 runs from 31 balls, 1 fours, 0 sixes, SR: 41.93; Carley Melbourne  (c): 8 runs (Not out) from 13 balls, 0 fours, 0 sixes, SR: 61.53\n    - Bowling: Rihanna-Frances Clark: 2 wickets from 4 overs, 10 runs, Econ: 2.50; Kylie Smith: 1 wickets from 4 overs, 19 runs, Econ: 4.75; Heidi Scholz: 1 wickets from 4 overs, 23 runs, Econ: 5.75\n    - FOW: Wicket 1: 25 (KIRSTY CAMPBELL), Wicket 2: 76 (Kylie Smith), Wicket 3: 89 (Carissa Lacco), Wicket 4: 97 (Kelly Fogarty)\n    - Fielding: Anna Lyon, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0",
+      "result": "Tracy Village Women's Div 2 won by 6 wickets",
       "status": "Final",
-      "homeTeam": {
-        "name": "Waratah Warriors University D",
-        "isHome": true,
+      "ageGroup": "Senior",
+      "awayTeam": {
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_20c67e1745.jpg",
+          "width": 800,
+          "height": 800
         },
-        "score": "6/211",
+        "name": "Tracy Village Women's Div 2",
         "overs": "(20)",
-        "homeScoresFirstInnings": "1",
+        "score": "4/107",
+        "isHome": false,
+        "isClubTeam": false,
         "battingPerformances": [
           {
-            "player": "Rohit Adhikari",
-            "runs": 81,
-            "balls": 39,
-            "fours": 8,
-            "sixes": 3,
-            "SR": 207.69,
-            "team": "Waratah Warriors University D",
-            "notOut": true
-          },
-          {
-            "player": "Ginij Karki",
-            "runs": 74,
-            "balls": 42,
+            "SR": 120.93,
+            "runs": 52,
+            "team": "Tracy Village Women's Div 2",
+            "balls": 43,
             "fours": 6,
-            "sixes": 3,
-            "SR": 176.19,
-            "team": "Waratah Warriors University D",
-            "notOut": false
+            "sixes": 0,
+            "notOut": false,
+            "player": "Rihanna-Frances Clark"
           },
           {
-            "player": "Biplav Kandel",
-            "runs": 15,
+            "SR": 41.93,
+            "runs": 13,
+            "team": "Tracy Village Women's Div 2",
+            "balls": 31,
+            "fours": 1,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Kylie Smith"
+          },
+          {
+            "SR": 61.53,
+            "runs": 8,
+            "team": "Tracy Village Women's Div 2",
+            "balls": 13,
+            "fours": 0,
+            "sixes": 0,
+            "notOut": true,
+            "player": "Carley Melbourne  (c)"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 24,
+            "team": "Sth Districts Women's Div 2",
+            "overs": 4,
+            "player": "Vida Lyon",
+            "economy": "6.00",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 13,
+            "team": "Sth Districts Women's Div 2",
+            "overs": 4,
+            "player": "Alex Bowley",
+            "economy": "3.25",
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 11,
+            "team": "Sth Districts Women's Div 2",
+            "overs": 2,
+            "player": "Jade O’Neill",
+            "economy": "5.50",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "awayScoresFirstInnings": "1"
+      },
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_bb6336db55.jpg",
+          "width": 300,
+          "height": 300
+        },
+        "name": "Sth Districts Women's Div 2",
+        "overs": "(20)",
+        "score": "5/97",
+        "isHome": true,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 57.14,
+            "runs": 24,
+            "team": "Sth Districts Women's Div 2",
+            "balls": 42,
+            "fours": 2,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Vida Lyon"
+          },
+          {
+            "SR": 25,
+            "runs": 9,
+            "team": "Sth Districts Women's Div 2",
+            "balls": 36,
+            "fours": 0,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Juliet Johnston"
+          },
+          {
+            "SR": 88.88,
+            "runs": 8,
+            "team": "Sth Districts Women's Div 2",
+            "balls": 9,
+            "fours": 0,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Anna Lyon"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 10,
+            "team": "Tracy Village Women's Div 2",
+            "overs": 4,
+            "player": "Rihanna-Frances Clark",
+            "economy": "2.50",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 19,
+            "team": "Tracy Village Women's Div 2",
+            "overs": 4,
+            "player": "Kylie Smith",
+            "economy": "4.75",
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 23,
+            "team": "Tracy Village Women's Div 2",
+            "overs": 4,
+            "player": "Heidi Scholz",
+            "economy": "5.75",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "homeScoresFirstInnings": "1"
+      },
+      "gradeName": "Women's Div 2",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_20c67e1745.jpg",
+        "width": 800,
+        "height": 800
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_bb6336db55.jpg",
+        "width": 300,
+        "height": 300
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "date": "15 Aug 2025",
+      "type": "T20",
+      "round": "Round 15",
+      "gameID": "c3654c85",
+      "gender": "Women",
+      "ground": "Gardens Oval / Gardens Oval",
+      "prompt": "Match Summary: Waratah Women's Div 1 vs. Tracy Village Women's Div 1:\n  - This Women's Div 1 game is a T20, played in Round: Round 15 at Gardens Oval / Gardens Oval.\n  - Scores: Waratah Women's Div 1 7/125 in (20) overs, Tracy Village Women's Div 1 4/144 in (20) overs\n  - Result: Tracy Village Women's Div 1 won by 6 wickets\n  Player Performances:\n  - Waratah Women's Div 1\n    - Batting: Melissa Campbell  (c): 29 runs (Not out) from 44 balls, 5 fours, 0 sixes, SR: 65.9; Monet Hunter: 25 runs from 16 balls, 5 fours, 0 sixes, SR: 156.25; Julie Page: 18 runs from 19 balls, 2 fours, 0 sixes, SR: 94.73\n    - Bowling: Morgan Higgins: 2 wickets from 4 overs, 23 runs, Econ: 5.75; Rebecca Harnischfeger: 1 wickets from 3 overs, 13 runs, Econ: 4.33; Abbey Warton: 1 wickets from 4 overs, 24 runs, Econ: 6.00\n    - FOW: Wicket 1: 11 (Lily-May Lyndon), Wicket 2: 27 (Abbey Warton), Wicket 3: 49 (Monet Hunter), Wicket 4: 77 (Julie Page), Wicket 5: 77 (Candida Rego), Wicket 6: 95 (Laila Malik), Wicket 7: 119 (Morgan Higgins)\n    - Fielding: Frances Ennor  (c), Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Melissa Nixon, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Tracy Village Women's Div 1\n    - Batting: Phoebe Murphy: 35 runs from 40 balls, 5 fours, 0 sixes, SR: 87.5; Ekam Dhillon: 31 runs from 24 balls, 4 fours, 0 sixes, SR: 129.16; Meghan McCartney: 21 runs from 15 balls, 3 fours, 0 sixes, SR: 140\n    - Bowling: Melissa Nixon: 3 wickets from 4 overs, 13 runs, Econ: 3.25; Joanna Pickett: 2 wickets from 4 overs, 53 runs, Econ: 13.25; Meghan McCartney: 1 wickets from 4 overs, 22 runs, Econ: 5.50\n    - FOW: Wicket 1: 47 (Frances Ennor), Wicket 2: 98 (Phoebe Murphy), Wicket 3: 104 (Ekam Dhillon), Wicket 4: 132 (Meghan McCartney)\n    - Fielding: Lily-May Lyndon, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Morgan Higgins, Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0",
+      "result": "Tracy Village Women's Div 1 won by 6 wickets",
+      "status": "Final",
+      "ageGroup": "Senior",
+      "awayTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_20c67e1745.jpg",
+          "width": 800,
+          "height": 800
+        },
+        "name": "Tracy Village Women's Div 1",
+        "overs": "(20)",
+        "score": "4/144",
+        "isHome": false,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 87.5,
+            "runs": 35,
+            "team": "Tracy Village Women's Div 1",
+            "balls": 40,
+            "fours": 5,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Phoebe Murphy"
+          },
+          {
+            "SR": 129.16,
+            "runs": 31,
+            "team": "Tracy Village Women's Div 1",
+            "balls": 24,
+            "fours": 4,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Ekam Dhillon"
+          },
+          {
+            "SR": 140,
+            "runs": 21,
+            "team": "Tracy Village Women's Div 1",
+            "balls": 15,
+            "fours": 3,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Meghan McCartney"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 23,
+            "team": "Waratah Women's Div 1",
+            "overs": 4,
+            "player": "Morgan Higgins",
+            "economy": "5.75",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 13,
+            "team": "Waratah Women's Div 1",
+            "overs": 3,
+            "player": "Rebecca Harnischfeger",
+            "economy": "4.33",
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 24,
+            "team": "Waratah Women's Div 1",
+            "overs": 4,
+            "player": "Abbey Warton",
+            "economy": "6.00",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "awayScoresFirstInnings": "1"
+      },
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_05974c4697.jpg",
+          "width": 1300,
+          "height": 1104
+        },
+        "name": "Waratah Women's Div 1",
+        "overs": "(20)",
+        "score": "7/125",
+        "isHome": true,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 65.9,
+            "runs": 29,
+            "team": "Waratah Women's Div 1",
+            "balls": 44,
+            "fours": 5,
+            "sixes": 0,
+            "notOut": true,
+            "player": "Melissa Campbell  (c)"
+          },
+          {
+            "SR": 156.25,
+            "runs": 25,
+            "team": "Waratah Women's Div 1",
+            "balls": 16,
+            "fours": 5,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Monet Hunter"
+          },
+          {
+            "SR": 94.73,
+            "runs": 18,
+            "team": "Waratah Women's Div 1",
             "balls": 19,
             "fours": 2,
             "sixes": 0,
-            "SR": 78.94,
-            "team": "Waratah Warriors University D",
-            "notOut": false
+            "notOut": false,
+            "player": "Julie Page"
           }
         ],
         "bowlingPerformances": [
           {
-            "player": "Neil Moores",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 22,
-            "wickets": 2,
-            "economy": "5.50",
-            "team": "Nightcliff D Grade Black"
-          },
-          {
-            "player": "John Boxsell",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 18,
-            "wickets": 2,
-            "economy": "9.00",
-            "team": "Nightcliff D Grade Black"
-          },
-          {
-            "player": "Andrew Innes",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 44,
-            "wickets": 1,
-            "economy": "11.00",
-            "team": "Nightcliff D Grade Black"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Nightcliff D Grade Black",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        },
-        "score": "7/135",
-        "overs": "(20)",
-        "awayScoresFirstInnings": "1",
-        "battingPerformances": [
-          {
-            "player": "Sham Sunder",
-            "runs": 57,
-            "balls": 55,
-            "fours": 7,
-            "sixes": 0,
-            "SR": 103.63,
-            "team": "Nightcliff D Grade Black",
-            "notOut": true
-          },
-          {
-            "player": "Stuart McLay",
-            "runs": 14,
-            "balls": 15,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 93.33,
-            "team": "Nightcliff D Grade Black",
-            "notOut": false
-          },
-          {
-            "player": "Jonty Beard",
             "runs": 13,
-            "balls": 11,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 118.18,
-            "team": "Nightcliff D Grade Black",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Avishek Yadav",
+            "team": "Tracy Village Women's Div 1",
             "overs": 4,
-            "maidens": 0,
-            "runs": 31,
-            "wickets": 4,
-            "economy": "7.75",
-            "team": "Waratah Warriors University D"
-          },
-          {
-            "player": "Bipol Khadka",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 13,
-            "wickets": 1,
+            "player": "Melissa Nixon",
             "economy": "3.25",
-            "team": "Waratah Warriors University D"
+            "maidens": 0,
+            "wickets": 3
           },
           {
-            "player": "Binaya Babu Koirala",
+            "runs": 53,
+            "team": "Tracy Village Women's Div 1",
             "overs": 4,
+            "player": "Joanna Pickett",
+            "economy": "13.25",
             "maidens": 0,
-            "runs": 21,
-            "wickets": 1,
-            "economy": "5.25",
-            "team": "Waratah Warriors University D"
+            "wickets": 2
+          },
+          {
+            "runs": 22,
+            "team": "Tracy Village Women's Div 1",
+            "overs": 4,
+            "player": "Meghan McCartney",
+            "economy": "5.50",
+            "maidens": 0,
+            "wickets": 1
           }
         ],
-        "isClubTeam": false
+        "homeScoresFirstInnings": "1"
+      },
+      "gradeName": "Women's Div 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_20c67e1745.jpg",
+        "width": 800,
+        "height": 800
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_05974c4697.jpg",
+        "width": 1300,
+        "height": 1104
       },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "date": "09 Aug 2025",
-      "type": "T20",
-      "ground": "Tiwi Oval / Tiwi Oval",
-      "round": "Round 15",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "D Grade",
       "assignSponsors": {
-        "competition": [
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "date": "15 Aug 2025",
+      "type": "T20",
+      "round": "Round 15",
+      "gameID": "b9deac43",
+      "gender": "Women",
+      "ground": "Nightcliff Oval / Nightcliff Oval (Darwin Mazda Oval)",
+      "prompt": "Match Summary: Nightcliff Women's Div 1 vs. PINT Women's Div 1:\n  - This Women's Div 1 game is a T20, played in Round: Round 15 at Nightcliff Oval / Nightcliff Oval (Darwin Mazda Oval).\n  - Scores: Nightcliff Women's Div 1 8/152 in (20) overs, PINT Women's Div 1 8/128 in (20) overs\n  - Result: Nightcliff Women's Div 1 won by 24 runs\n  Player Performances:\n  - Nightcliff Women's Div 1\n    - Batting: Sophia Di Venuto  (c): 68 runs (Not out) from 60 balls, 5 fours, 0 sixes, SR: 113.33; Kate Sherriff: 62 runs from 32 balls, 9 fours, 1 sixes, SR: 193.75; Deepisha Thakuri: 4 runs from 6 balls, 0 fours, 0 sixes, SR: 66.66\n    - Bowling: Ella Piccoli-Auckram: 3 wickets from 4 overs, 30 runs, Econ: 7.50; Sophia Di Venuto  (c): 2 wickets from 4 overs, 15 runs, Econ: 3.75; Deepisha Thakuri: 2 wickets from 3 overs, 19 runs, Econ: 6.33\n    - FOW: Wicket 1: 101 (Kate Sherriff), Wicket 2: 102 (Ella Piccoli-Auckram), Wicket 3: 114 (Hannah Wilson), Wicket 4: 114 (Meredith Quinn), Wicket 5: 128 (Deepisha Thakuri), Wicket 6: 133 (Zoe-Mellissa Webb), Wicket 7: 142 (Sanjana Akula), Wicket 8: 147 (Arabella Greene)\n    - Fielding: Libby Price  (c), Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Jasleen Kaur, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; Matilda Clemmens, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - PINT Women's Div 1\n    - Batting: Libby Price  (c): 30 runs from 28 balls, 4 fours, 0 sixes, SR: 107.14; Kristy O’Toole: 21 runs from 18 balls, 2 fours, 0 sixes, SR: 116.66; Elisha Halvorsen: 14 runs (Not out) from 25 balls, 2 fours, 0 sixes, SR: 56\n    - Bowling: Jasleen Kaur: 3 wickets from 4 overs, 11 runs, Econ: 2.75; Narelle Gosstray: 2 wickets from 4 overs, 31 runs, Econ: 7.75; Matilda Clemmens: 1 wickets from 1 overs, 6 runs, Econ: 6.00\n    - FOW: Wicket 1: 25 (Jasleen Kaur), Wicket 2: 25 (Jordi O’Toole), Wicket 3: 57 (Narelle Gosstray), Wicket 4: 66 (Matilda Clemmens), Wicket 5: 71 (Libby Price), Wicket 6: 98 (Ali Kirlew), Wicket 7: 98 (Phoebe Lynch-Grant), Wicket 8: 104 (Kristy O’Toole)\n    - Fielding: Zoe-Mellissa Webb, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0",
+      "result": "Nightcliff Women's Div 1 won by 24 runs",
+      "status": "Final",
+      "ageGroup": "Senior",
+      "awayTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_a3c03e8b39.jpg",
+          "width": 300,
+          "height": 300
+        },
+        "name": "PINT Women's Div 1",
+        "overs": "(20)",
+        "score": "8/128",
+        "isHome": false,
+        "isClubTeam": false,
+        "battingPerformances": [
           {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
+            "SR": 107.14,
+            "runs": 30,
+            "team": "PINT Women's Div 1",
+            "balls": 28,
+            "fours": 4,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Libby Price  (c)"
+          },
+          {
+            "SR": 116.66,
+            "runs": 21,
+            "team": "PINT Women's Div 1",
+            "balls": 18,
+            "fours": 2,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Kristy O’Toole"
+          },
+          {
+            "SR": 56,
+            "runs": 14,
+            "team": "PINT Women's Div 1",
+            "balls": 25,
+            "fours": 2,
+            "sixes": 0,
+            "notOut": true,
+            "player": "Elisha Halvorsen"
           }
         ],
-        "grade": [],
-        "team": []
+        "bowlingPerformances": [
+          {
+            "runs": 30,
+            "team": "Nightcliff Women's Div 1",
+            "overs": 4,
+            "player": "Ella Piccoli-Auckram",
+            "economy": "7.50",
+            "maidens": 0,
+            "wickets": 3
+          },
+          {
+            "runs": 15,
+            "team": "Nightcliff Women's Div 1",
+            "overs": 4,
+            "player": "Sophia Di Venuto  (c)",
+            "economy": "3.75",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 19,
+            "team": "Nightcliff Women's Div 1",
+            "overs": 3,
+            "player": "Deepisha Thakuri",
+            "economy": "6.33",
+            "maidens": 0,
+            "wickets": 2
+          }
+        ],
+        "awayScoresFirstInnings": "1"
       },
-      "result": "Waratah Warriors University D won by 76 runs",
-      "prompt": "Match Summary: Waratah Warriors University D vs. Nightcliff D Grade Black:\n  - This D Grade game is a T20, played in Round: Round 15 at Tiwi Oval / Tiwi Oval.\n  - Scores: Waratah Warriors University D 6/211 in (20) overs, Nightcliff D Grade Black 7/135 in (20) overs\n  - Result: Waratah Warriors University D won by 76 runs\n  Player Performances:\n  - Waratah Warriors University D\n    - Batting: Rohit Adhikari: 81 runs (Not out) from 39 balls, 8 fours, 3 sixes, SR: 207.69; Ginij Karki: 74 runs from 42 balls, 6 fours, 3 sixes, SR: 176.19; Biplav Kandel: 15 runs from 19 balls, 2 fours, 0 sixes, SR: 78.94\n    - Bowling: Avishek Yadav: 4 wickets from 4 overs, 31 runs, Econ: 7.75; Bipol Khadka: 1 wickets from 4 overs, 13 runs, Econ: 3.25; Binaya Babu Koirala: 1 wickets from 4 overs, 21 runs, Econ: 5.25\n    - FOW: Wicket 1: 49 (Biplav Kandel), Wicket 2: 49 (Prabhat Chapagain), Wicket 3: 63 (Binaya Babu Koirala), Wicket 4: 163 (Ginij Karki), Wicket 5: 206 (Awash siwakoti), Wicket 6: 206 (Bishal Dahal)\n    - Fielding: Joseph Nicholls-Kenny, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 1; Neil Moores, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0; John Boxsell, Caught as fielder: 1, Caught as wicket keeper: 0, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0\n  - Nightcliff D Grade Black\n    - Batting: Sham Sunder: 57 runs (Not out) from 55 balls, 7 fours, 0 sixes, SR: 103.63; Stuart McLay: 14 runs from 15 balls, 1 fours, 0 sixes, SR: 93.33; Jonty Beard: 13 runs from 11 balls, 2 fours, 0 sixes, SR: 118.18\n    - Bowling: Neil Moores: 2 wickets from 4 overs, 22 runs, Econ: 5.50; John Boxsell: 2 wickets from 2 overs, 18 runs, Econ: 9.00; Andrew Innes: 1 wickets from 4 overs, 44 runs, Econ: 11.00\n    - FOW: Wicket 1: 0 (John Boxsell), Wicket 2: 2 (Neil Moores), Wicket 3: 14 (Joseph Nicholls-Kenny), Wicket 4: 59 (Akhilesh Sharma), Wicket 5: 82 (Stuart McLay), Wicket 6: 116 (Jonty Beard), Wicket 7: 135 (Dallas Mellett)\n    - Fielding: Awash siwakoti, Caught as fielder: 0, Caught as wicket keeper: 1, Total catches: 1, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 1"
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b0f97111cb.jpg",
+          "width": 256,
+          "height": 256
+        },
+        "name": "Nightcliff Women's Div 1",
+        "overs": "(20)",
+        "score": "8/152",
+        "isHome": true,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 113.33,
+            "runs": 68,
+            "team": "Nightcliff Women's Div 1",
+            "balls": 60,
+            "fours": 5,
+            "sixes": 0,
+            "notOut": true,
+            "player": "Sophia Di Venuto  (c)"
+          },
+          {
+            "SR": 193.75,
+            "runs": 62,
+            "team": "Nightcliff Women's Div 1",
+            "balls": 32,
+            "fours": 9,
+            "sixes": 1,
+            "notOut": false,
+            "player": "Kate Sherriff"
+          },
+          {
+            "SR": 66.66,
+            "runs": 4,
+            "team": "Nightcliff Women's Div 1",
+            "balls": 6,
+            "fours": 0,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Deepisha Thakuri"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 11,
+            "team": "PINT Women's Div 1",
+            "overs": 4,
+            "player": "Jasleen Kaur",
+            "economy": "2.75",
+            "maidens": 1,
+            "wickets": 3
+          },
+          {
+            "runs": 31,
+            "team": "PINT Women's Div 1",
+            "overs": 4,
+            "player": "Narelle Gosstray",
+            "economy": "7.75",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 6,
+            "team": "PINT Women's Div 1",
+            "overs": 1,
+            "player": "Matilda Clemmens",
+            "economy": "6.00",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "homeScoresFirstInnings": "1"
+      },
+      "gradeName": "Women's Div 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_a3c03e8b39.jpg",
+        "width": 300,
+        "height": 300
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b0f97111cb.jpg",
+        "width": 256,
+        "height": 256
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "date": "17 Aug 2025",
+      "type": "T20",
+      "round": "Round 15",
+      "gameID": "42f5d11c",
+      "gender": "Women",
+      "ground": "Gerry Wood Oval / Gerry Wood Oval",
+      "prompt": "Match Summary: Sth Districts Women's Div 1 vs. Palmerston Women's Div 1:\n  - This Women's Div 1 game is a T20, played in Round: Round 15 at Gerry Wood Oval / Gerry Wood Oval.\n  - Scores: Sth Districts Women's Div 1 0/67 in (5.4) overs, Palmerston Women's Div 1 6/66 in (20) overs\n  - Result: Sth Districts Women's Div 1 won by 1 runs\n  Player Performances:\n  - Sth Districts Women's Div 1\n    - Batting: Rachel Andrew: 44 runs (Not out) from 18 balls, 7 fours, 1 sixes, SR: 244.44; Hannah Armstrong  (c): 14 runs (Not out) from 15 balls, 2 fours, 0 sixes, SR: 93.33\n    - Bowling: Rachel Andrew: 4 wickets from 4 overs, 12 runs, Econ: 3.00; Sam Quinn: 2 wickets from 4 overs, 12 runs, Econ: 3.00; Andrea Ellis: 0 wickets from 4 overs, 13 runs, Econ: 3.25\n    - FOW: Wicket Palmerston Women's Div 1 Bowling: Palmerston (Women's Div 1 Bowling)\n    - Fielding: Fielding details not available.\n  - Palmerston Women's Div 1\n    - Batting: Aeryn McCormack: 23 runs from 47 balls, 3 fours, 0 sixes, SR: 48.93; Emily McBride: 21 runs (Not out) from 0 balls, 0 fours, 0 sixes, SR: 0; Naomi McMahon: 5 runs from 11 balls, 1 fours, 0 sixes, SR: 45.45\n    - Bowling: Chloe McNaught: 0 wickets from 1 overs, 9 runs, Econ: 9.00; Naomi McMahon: 0 wickets from 2 overs, 23 runs, Econ: 11.50; Olivia McSweeney: 0 wickets from 2 overs, 26 runs, Econ: 13.00\n    - FOW: Wicket 1: 0 (Olivia McSweeney), Wicket 2: 0 (Vishali Bimbral), Wicket 3: 3 (Jennifer Sharma), Wicket 4: 17 (Joanne Linklater), Wicket 5: 50 (Aeryn McCormack), Wicket 6: 59 (Naomi McMahon)\n    - Fielding: Hannah Armstrong  (c), Caught as fielder: 2, Caught as wicket keeper: 0, Total catches: 2, Run outs unassisted: 0, Run outs assisted: 0, Total run outs: 0, Stumpings: 0",
+      "result": "Sth Districts Women's Div 1 won by 1 runs",
+      "status": "Final",
+      "ageGroup": "Senior",
+      "awayTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6860bcdeb1.jpg",
+          "width": 300,
+          "height": 300
+        },
+        "name": "Palmerston Women's Div 1",
+        "overs": "(20)",
+        "score": "6/66",
+        "isHome": false,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 48.93,
+            "runs": 23,
+            "team": "Palmerston Women's Div 1",
+            "balls": 47,
+            "fours": 3,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Aeryn McCormack"
+          },
+          {
+            "SR": 0,
+            "runs": 21,
+            "team": "Palmerston Women's Div 1",
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "notOut": true,
+            "player": "Emily McBride"
+          },
+          {
+            "SR": 45.45,
+            "runs": 5,
+            "team": "Palmerston Women's Div 1",
+            "balls": 11,
+            "fours": 1,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Naomi McMahon"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 12,
+            "team": "Sth Districts Women's Div 1",
+            "overs": 4,
+            "player": "Rachel Andrew",
+            "economy": "3.00",
+            "maidens": 0,
+            "wickets": 4
+          },
+          {
+            "runs": 12,
+            "team": "Sth Districts Women's Div 1",
+            "overs": 4,
+            "player": "Sam Quinn",
+            "economy": "3.00",
+            "maidens": 1,
+            "wickets": 2
+          },
+          {
+            "runs": 13,
+            "team": "Sth Districts Women's Div 1",
+            "overs": 4,
+            "player": "Andrea Ellis",
+            "economy": "3.25",
+            "maidens": 0,
+            "wickets": 0
+          }
+        ],
+        "awayScoresFirstInnings": "1"
+      },
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_bb6336db55.jpg",
+          "width": 300,
+          "height": 300
+        },
+        "name": "Sth Districts Women's Div 1",
+        "overs": "(5.4)",
+        "score": "0/67",
+        "isHome": true,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 244.44,
+            "runs": 44,
+            "team": "Sth Districts Women's Div 1",
+            "balls": 18,
+            "fours": 7,
+            "sixes": 1,
+            "notOut": true,
+            "player": "Rachel Andrew"
+          },
+          {
+            "SR": 93.33,
+            "runs": 14,
+            "team": "Sth Districts Women's Div 1",
+            "balls": 15,
+            "fours": 2,
+            "sixes": 0,
+            "notOut": true,
+            "player": "Hannah Armstrong  (c)"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 9,
+            "team": "Palmerston Women's Div 1",
+            "overs": 1,
+            "player": "Chloe McNaught",
+            "economy": "9.00",
+            "maidens": 0,
+            "wickets": 0
+          },
+          {
+            "runs": 23,
+            "team": "Palmerston Women's Div 1",
+            "overs": 2,
+            "player": "Naomi McMahon",
+            "economy": "11.50",
+            "maidens": 0,
+            "wickets": 0
+          },
+          {
+            "runs": 26,
+            "team": "Palmerston Women's Div 1",
+            "overs": 2,
+            "player": "Olivia McSweeney",
+            "economy": "13.00",
+            "maidens": 0,
+            "wickets": 0
+          }
+        ],
+        "homeScoresFirstInnings": "1"
+      },
+      "gradeName": "Women's Div 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6860bcdeb1.jpg",
+        "width": 300,
+        "height": 300
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_bb6336db55.jpg",
+        "width": 300,
+        "height": 300
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
     }
   ],
   "asset": {
     "assetID": 13,
     "assetTypeID": 2,
-    "assetCategoryID": 2,
-    "assetsLinkID": "d12744b6e7be61da92af16855d6535e66e9f31b0f50b9f90fabf04ff719add39"
+    "assetsLinkID": "a0e89e999a68e9634ced1ebe42ff1f3c8401db7bcaba1114a023d75fabf3dc0b",
+    "assetCategoryID": 2
   },
+  "errors": [],
+  "frames": [45, 195, 390],
   "render": {
-    "schedulerId": 314,
-    "renderId": 8338
+    "renderId": 14191,
+    "schedulerId": 635
   },
   "account": {
-    "accountId": 427
+    "accountId": 635
   },
   "timings": {
-    "FPS_MAIN": 1575,
+    "FPS_MAIN": 405,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210
   },
-  "frames": [45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1695],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52_328ab084c6.png",
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52_de158532ac.png",
         "width": 300,
-        "height": 300
+        "height": 300,
+        "hasLogo": true
       },
       "name": "Darwin & Districts Cricket Competition",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 192,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "test",
-              "tagline": null,
-              "description": null,
-              "name": "test",
-              "logo": {
-                "id": 13221,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-              }
-            }
-          ]
-        }
-      }
+        "default": {},
+        "primary": []
+      },
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "Darwin & Districts Senior Competition",
-      "groupingCategory": "Darwin & Districts Senior Competition",
-      "metadata": {
-        "title": "Results",
-        "titleSplit": ["Results"],
-        "videoTitle": "Weekend Results",
-        "compositionId": "CricketResults",
-        "assetId": 13,
-        "assetTypeId": 2,
-        "frames": [],
-        "includeSponsors": true
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#2281a8",
-          "secondary": "#a13535"
-        },
-        "template": "Basic"
-      },
       "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -2593,11 +747,26 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
         }
+      },
+      "metadata": {
+        "title": "Results",
+        "frames": [],
+        "assetId": 13,
+        "titleSplit": ["Results"],
+        "videoTitle": "Weekend Results",
+        "assetTypeId": 2,
+        "compositionId": "CricketResults",
+        "includeSponsors": false
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#de0000",
+          "secondary": "#ffa300"
+        },
+        "template": "Brickwork"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -2608,151 +777,132 @@
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "Darwin & Districts Women's Competition",
+      "groupingCategory": "Darwin & Districts Women's Competition",
       "templateVariation": {
-        "useBackground": "Image",
-        "mode": "lightAlt",
-        "category": {
-          "slug": "Basic",
-          "name": "Basic",
-          "divideFixturesBy": {
-            "CricketUpcoming": 3,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1
-          },
-          "bundleAudio": {
-            "id": 1,
-            "Name": "Basic",
-            "createdAt": "2023-09-27T10:36:24.428Z",
-            "updatedAt": "2025-06-15T04:50:57.910Z",
-            "publishedAt": "2023-09-27T10:36:25.639Z",
-            "audio_options": [
-              {
-                "id": 4,
-                "Name": "Better Start Now",
-                "createdAt": "2023-09-27T10:34:46.702Z",
-                "updatedAt": "2025-06-15T04:53:45.558Z",
-                "publishedAt": "2023-09-27T10:34:48.455Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "CompositionID": "CricketLadder",
-                "ComponentName": "CricketLadder"
-              },
-              {
-                "id": 2,
-                "Name": "Fifteen on Me",
-                "createdAt": "2022-12-20T01:59:28.337Z",
-                "updatedAt": "2025-06-15T04:53:11.194Z",
-                "publishedAt": "2022-12-20T01:59:29.080Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
-              },
-              {
-                "id": 5,
-                "Name": "Get The Gains",
-                "createdAt": "2023-09-27T10:35:01.053Z",
-                "updatedAt": "2025-06-15T04:53:59.493Z",
-                "publishedAt": "2023-09-27T10:35:29.163Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "CompositionID": "CricketTop5Bowling",
-                "ComponentName": "CricketTop5Bowling"
-              },
-              {
-                "id": 3,
-                "Name": "Groover",
-                "createdAt": "2022-12-20T01:59:34.014Z",
-                "updatedAt": "2025-06-15T04:53:28.656Z",
-                "publishedAt": "2022-12-20T01:59:34.670Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "CompositionID": "CricketTop5Batting",
-                "ComponentName": "CricketTop5Batting"
-              },
-              {
-                "id": 1,
-                "Name": "Saltine",
-                "createdAt": "2022-12-12T05:19:56.353Z",
-                "updatedAt": "2025-06-15T04:50:50.079Z",
-                "publishedAt": "2022-12-12T05:19:57.408Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-                "CompositionID": "CricketResults",
-                "ComponentName": "CricketResults"
-              },
-              {
-                "id": 16,
-                "Name": "BEECH LOVE",
-                "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2024-06-07T12:45:43.674Z",
-                "publishedAt": "2024-06-07T12:45:32.118Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "Top5AFLScorers",
-                "ComponentName": "Top 5 Scorers"
-              },
-              {
-                "id": 17,
-                "Name": "FAY V",
-                "createdAt": "2024-06-05T04:33:33.970Z",
-                "updatedAt": "2024-06-07T12:48:03.161Z",
-                "publishedAt": "2024-06-07T12:47:53.394Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
-                "CompositionID": "WeekendResultsAFL",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
-        },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
-          "loop": null,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
-        },
+        "mode": "dark",
         "image": {
           "url": null,
+          "type": "pan",
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
-          "direction": "right",
-          "overlayStyle": "gradient",
+          "direction": "left",
           "gradientType": "linear",
-          "overlayOpacity": 0.5
-        },
-        "palette": "secondaryOnBlack",
-        "gradient": {
-          "type": "primary",
-          "direction": "HORIZONTAL"
+          "overlayStyle": "vignette",
+          "overlayOpacity": 0.3
         },
         "noise": {
           "type": "spokes"
         },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": "cover",
+          "muted": true,
+          "volume": 0.8,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "secondary",
         "pattern": {
           "type": "dots",
-          "animation": "panUp",
           "scale": 0.5,
-          "rotation": null,
           "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "rotation": null,
+          "animation": "panUp",
+          "animationSpeed": 0.5,
+          "animationDuration": 1500
+        },
+        "category": {
+          "name": "Brick Work",
+          "slug": "Brickwork",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "conicGradient",
+          "direction": "HORIZONTAL"
         },
         "particle": {
           "type": "lines",
-          "particleCount": "300",
-          "speed": 0.8,
+          "speed": 5,
+          "animation": "slide",
           "direction": "up",
-          "animation": "scale"
-        }
+          "particleCount": "100"
+        },
+        "useBackground": "Graphics"
       }
     }
-  },
-  "errors": []
+  }
 }

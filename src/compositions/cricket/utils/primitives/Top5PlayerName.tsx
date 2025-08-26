@@ -27,6 +27,7 @@ export const Top5PlayerName = ({
       fontFamily={fontClasses.copy?.family}
       className={className}
       animation={animation as AnimationConfig}
+      letterAnimation="word"
     >
       {value}
     </AnimatedText>

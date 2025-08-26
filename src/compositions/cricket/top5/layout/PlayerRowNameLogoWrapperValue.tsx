@@ -19,6 +19,7 @@ interface PlayerRowLayoutProps {
   index: number;
   rowHeight: number;
   delay: number;
+  restrictions: { nameLength: number; teamLength: number };
 }
 
 // Helper function to truncate text
@@ -33,6 +34,7 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutProps> = ({
   index,
   rowHeight,
   delay,
+  restrictions,
 }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
@@ -74,8 +76,14 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutProps> = ({
   };
 
   // Get truncated player name and team name
-  const playerName = truncateText(player.name, 25).toUpperCase();
-  const teamName = truncateText(player.playedFor, 35).toUpperCase();
+  const playerName = truncateText(
+    player.name,
+    restrictions.nameLength,
+  ).toUpperCase();
+  const teamName = truncateText(
+    player.playedFor,
+    restrictions.teamLength,
+  ).toUpperCase();
 
   // Get score display values
   const { mainValue, suffix } = getScoreValues();

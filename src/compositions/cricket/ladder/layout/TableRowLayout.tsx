@@ -27,6 +27,7 @@ export const StandardLadderRow: React.FC<BaseLayoutProps> = ({
       className={`flex items-center p-2 rounded mb-1 ${bgColorClass} overflow-hidden`}
       style={{
         height: `${LadderRowHeight}px`,
+        maxHeight: `120px`,
       }}
     >
       {/* Place column */}

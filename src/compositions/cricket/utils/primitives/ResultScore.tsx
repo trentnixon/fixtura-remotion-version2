@@ -19,12 +19,9 @@ export const ResultScore = ({
   variant?: string;
 }) => {
   const { fontClasses } = useThemeContext();
-
-  const type = value === "Yet to Bat" ? "ResultScoreYetToBat" : "ResultScore";
-
   return (
     <AnimatedText
-      type={type}
+      type={"ResultScore"}
       variant={variant as ColorVariant}
       fontFamily={fontClasses.copy?.family}
       className={className}

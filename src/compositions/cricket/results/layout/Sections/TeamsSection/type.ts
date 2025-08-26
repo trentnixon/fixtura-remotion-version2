@@ -19,4 +19,5 @@ export interface HorizontalTeamsSectionProps {
   outerContainer: object;
   backgroundColor?: string;
   height?: number;
+  firstInningsScore?: string;
 }

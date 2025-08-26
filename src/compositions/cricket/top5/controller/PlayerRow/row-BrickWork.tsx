@@ -41,6 +41,7 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
           index={index}
           rowHeight={rowHeight}
           delay={delay}
+          restrictions={{ nameLength: 20, teamLength: 35 }}
         />
       </AnimatedContainer>
     </div>

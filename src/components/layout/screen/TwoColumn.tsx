@@ -1,8 +1,7 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, interpolate, Easing } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
-import { getImageEasingFunction } from "../../easing/easingFunctions";
 import { RouteToComposition } from "../../../core/utils/routing";
 import { AnimatedContainer } from "../../containers";
 
@@ -15,35 +14,6 @@ export type TwoColumnProps = {
   headerWidthPercent?: number;
   // Gap between columns in pixels
   gapPx?: number;
-  // Optional width animation for header pane
-  animateWidth?: {
-    fromPercent?: number; // defaults to headerWidthPercent
-    toPercent: number;
-    startFrame?: number; // default 0
-    durationInFrames?: number; // default 30
-    easing?: (t: number) => number; // default Easing.linear
-  };
-  // Optional slide+fade animations for side and main panes
-  paneAnimations?: {
-    side?: {
-      startFrame?: number; // default 0
-      durationInFrames?: number; // default 20
-      fromPx?: number; // default: -50 if left, +50 if right
-      toPx?: number; // default 0
-      fromOpacity?: number; // default 0
-      toOpacity?: number; // default 1
-      easing?: (t: number) => number; // default Easing.outCubic
-    };
-    main?: {
-      startFrame?: number; // default 5
-      durationInFrames?: number; // default 25
-      fromPx?: number; // default: +30 if left, -30 if right
-      toPx?: number; // default 0
-      fromOpacity?: number; // default 0
-      toOpacity?: number; // default 1
-      easing?: (t: number) => number; // default Easing.outCubic
-    };
-  };
   // Optional className/style on outer wrapper
   className?: string;
   style?: React.CSSProperties;
@@ -58,14 +28,11 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
   headerPosition,
   headerWidthPercent,
   gapPx,
-  animateWidth,
-  paneAnimations,
   className = "",
   style = {},
 }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
-  const frame = useCurrentFrame();
 
   // Read screen-level defaults from animations config
   const screenConfig = animations?.screen?.twoColumn ?? {};
@@ -76,121 +43,17 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
     headerWidthPercent ?? screenConfig.headerWidthPercent ?? 20;
   const effectiveGapPx: number = gapPx ?? screenConfig.gapPx ?? 0;
 
-  // Map context-based easing to functions when needed
-  const widthEasingFn: (t: number) => number = (() => {
-    const cfg = screenConfig.animateWidth?.easing;
-    if (animateWidth?.easing) return animateWidth.easing;
-    if (cfg) return getImageEasingFunction(cfg);
-    return Easing.linear;
-  })();
-
-  // Compute current header width (percent) with optional animation
-  const resolvedAnimateWidth = React.useMemo(() => {
-    // Prefer props; fall back to screen config
-    const fromCfg = animateWidth ?? screenConfig.animateWidth;
-    return fromCfg;
-  }, [animateWidth, screenConfig.animateWidth]);
-
-  const currentHeaderWidth = React.useMemo(() => {
-    if (!resolvedAnimateWidth) return effectiveHeaderWidthPercent;
-    const from =
-      resolvedAnimateWidth.fromPercent ?? effectiveHeaderWidthPercent;
-    const to = resolvedAnimateWidth.toPercent;
-    const start = resolvedAnimateWidth.startFrame ?? 0;
-    const duration = resolvedAnimateWidth.durationInFrames ?? 30;
-
-    const value = interpolate(frame, [start, start + duration], [from, to], {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-      easing: widthEasingFn,
-    });
-    return Math.max(0, Math.min(100, value));
-  }, [resolvedAnimateWidth, frame, effectiveHeaderWidthPercent, widthEasingFn]);
+  // Snap header width; no width animation
+  const currentHeaderWidth = effectiveHeaderWidthPercent;
 
   const mainWidth = Math.max(0, 100 - currentHeaderWidth);
   const contentHeightPx = (layout.heights.asset + layout.heights.footer) * 2;
 
-  // Defaults for slide+fade animations
-  const sideDefaults = {
-    startFrame: 0,
-    durationInFrames: 20,
-    fromPx: effectiveHeaderPosition === "left" ? -50 : 50,
-    toPx: 0,
-    fromOpacity: 0,
-    toOpacity: 1,
-    easing: getImageEasingFunction({ type: "out", base: "cubic" }),
-  } as const;
-  const mainDefaults = {
-    startFrame: 5,
-    durationInFrames: 25,
-    fromPx: effectiveHeaderPosition === "left" ? 30 : -30,
-    toPx: 0,
-    fromOpacity: 0,
-    toOpacity: 1,
-    easing: getImageEasingFunction({ type: "out", base: "cubic" }),
-  } as const;
-
-  const screenPane = screenConfig.paneAnimations ?? {};
-  // Build easing functions from screen config when provided
-  const sideEasingFromScreen = screenPane.side?.easing
-    ? getImageEasingFunction(screenPane.side.easing)
-    : undefined;
-  const mainEasingFromScreen = screenPane.main?.easing
-    ? getImageEasingFunction(screenPane.main.easing)
-    : undefined;
-
-  const sideAnim = {
-    ...sideDefaults,
-    ...(screenPane.side ?? {}),
-    ...(paneAnimations?.side ?? {}),
-    easing:
-      paneAnimations?.side?.easing ||
-      sideEasingFromScreen ||
-      sideDefaults.easing,
-  } as typeof sideDefaults &
-    Partial<NonNullable<typeof paneAnimations>["side"]>;
-  const mainAnim = {
-    ...mainDefaults,
-    ...(screenPane.main ?? {}),
-    ...(paneAnimations?.main ?? {}),
-    easing:
-      paneAnimations?.main?.easing ||
-      mainEasingFromScreen ||
-      mainDefaults.easing,
-  } as typeof mainDefaults &
-    Partial<NonNullable<typeof paneAnimations>["main"]>;
-
-  const sideProgress = interpolate(
-    frame,
-    [sideAnim.startFrame, sideAnim.startFrame + sideAnim.durationInFrames],
-    [0, 1],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-      easing: sideAnim.easing,
-    },
-  );
-  const mainProgress = interpolate(
-    frame,
-    [mainAnim.startFrame, mainAnim.startFrame + mainAnim.durationInFrames],
-    [0, 1],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-      easing: mainAnim.easing,
-    },
-  );
-
-  const sideTranslatePx =
-    sideAnim.fromPx + (sideAnim.toPx - sideAnim.fromPx) * sideProgress;
-  const sideOpacity =
-    sideAnim.fromOpacity +
-    (sideAnim.toOpacity - sideAnim.fromOpacity) * sideProgress;
-  const mainTranslatePx =
-    mainAnim.fromPx + (mainAnim.toPx - mainAnim.fromPx) * mainProgress;
-  const mainOpacity =
-    mainAnim.fromOpacity +
-    (mainAnim.toOpacity - mainAnim.fromOpacity) * mainProgress;
+  // Snap transforms and opacity (no slide/fade)
+  const sideTranslatePx = 0;
+  const sideOpacity = 1;
+  const mainTranslatePx = 0;
+  const mainOpacity = 1;
 
   // Read container animations for panes from the container config if present
   const twoColumnContainer = animations?.container?.twoColumn ?? {};

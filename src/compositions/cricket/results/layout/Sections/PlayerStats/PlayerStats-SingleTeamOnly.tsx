@@ -47,7 +47,8 @@ const StatItem: React.FC<StatItemProps> = ({
     >
       <div>
         <ResultPlayerName
-          value={truncateText(playerName, 25)}
+          className="whitespace-nowrap"
+          value={truncateText(playerName, 20)}
           variant={textColor}
           animation={{
             ...TextAnimations.copyIn,
@@ -57,6 +58,7 @@ const StatItem: React.FC<StatItemProps> = ({
       </div>
 
       <ResultPlayerScore
+        className="whitespace-nowrap"
         value={statValue}
         variant={textColor}
         animation={{
@@ -124,6 +126,8 @@ interface TeamStatsProps {
   delay: number;
   maxPlayersPerStat: number;
   className?: string;
+  showBatting?: boolean;
+  showBowling?: boolean;
 }
 
 const TeamStats: React.FC<TeamStatsProps> = ({
@@ -131,6 +135,8 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   delay,
   maxPlayersPerStat,
   className = "",
+  showBatting = true,
+  showBowling = true,
 }) => {
   const { selectedPalette } = useThemeContext();
 
@@ -143,21 +149,29 @@ const TeamStats: React.FC<TeamStatsProps> = ({
 
   return (
     <div className={`flex-1 px-2 py-0 grid grid-cols-2 gap-4 ${className}`}>
-      <StatSection
-        players={batters}
-        isBatting={true}
-        delay={delay}
-        backgroundColor={selectedPalette.container.backgroundTransparent.strong}
-        textColor={"onContainerCopy"}
-      />
+      {showBatting && (
+        <StatSection
+          players={batters}
+          isBatting={true}
+          delay={delay}
+          backgroundColor={
+            selectedPalette.container.backgroundTransparent.strong
+          }
+          textColor={"onContainerCopy"}
+        />
+      )}
 
-      <StatSection
-        players={bowlers}
-        isBatting={false}
-        delay={delay + 2}
-        backgroundColor={selectedPalette.container.backgroundTransparent.strong}
-        textColor={"onContainerCopy"}
-      />
+      {showBowling && (
+        <StatSection
+          players={bowlers}
+          isBatting={false}
+          delay={delay + 2}
+          backgroundColor={
+            selectedPalette.container.backgroundTransparent.strong
+          }
+          textColor={"onContainerCopy"}
+        />
+      )}
     </div>
   );
 };

@@ -67,6 +67,8 @@ const MatchCardBasic: React.FC<MatchCardProps> = ({
         height={statsHeight}
         delay={statsDelay}
         maxPlayersPerStat={2}
+        matchType={match.type}
+        matchStatus={match.status}
       />
 
       {/* Section 3: Match info footer */}

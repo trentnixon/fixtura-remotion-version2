@@ -99,7 +99,7 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-3xl font-normal  tracking-normal leading-snug",
     },
     ResultPlayerScore: {
-      className: "text-3xl font-semibold  tracking-normal leading-snug",
+      className: "text-2xl font-semibold  tracking-normal leading-snug",
     },
     ResultSyntax: {
       className:
@@ -122,6 +122,9 @@ export const brickworkTheme: TemplateThemeConfig = {
     },
     metadataLarge: {
       className: "text-2xl font-semibold  tracking-widest leading-snug",
+    },
+    titleSmall: {
+      className: "text-2xl font-semibold  tracking-normal leading-snug",
     },
   },
 

@@ -61,6 +61,7 @@ const MatchCardSixersThunder: React.FC<MatchCardProps> = ({
             type={match.type}
             Team={match.homeTeam}
             TeamLogo={match.teamHomeLogo}
+            firstInningsScore={match.homeTeam.homeScoresFirstInnings || ""}
             delay={baseDelay}
             outerContainer={{
               height: teamsHeight,
@@ -78,6 +79,7 @@ const MatchCardSixersThunder: React.FC<MatchCardProps> = ({
           <Horizontal_SingleTeam_LogoWithName_Score
             type={match.type}
             Team={match.awayTeam}
+            firstInningsScore={match.awayTeam.awayScoresFirstInnings || ""}
             TeamLogo={match.teamAwayLogo}
             delay={baseDelay}
             outerContainer={{

@@ -3,6 +3,7 @@ import { Basic as BasicUpcomingGames } from "./basic";
 import { BrickWork as BrickWorkUpcomingGames } from "./brickWork";
 import { Classic as ClassicUpcomingGames } from "./classic";
 import SixersThunder from "./sixersThunder";
+import ClassicTwoColumn from "./classicTwoColumn";
 // Import other template implementations
 
 // Export all template implementations
@@ -11,4 +12,5 @@ export {
   BrickWorkUpcomingGames as brickWork,
   ClassicUpcomingGames as classic,
   SixersThunder as SixersThunder,
+  ClassicTwoColumn as classicTwoColumn,
 };

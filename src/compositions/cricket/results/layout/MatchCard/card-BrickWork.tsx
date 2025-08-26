@@ -78,6 +78,8 @@ const MatchCardBrickWork: React.FC<MatchCardProps> = ({
         height={statsHeight}
         delay={statsDelay}
         maxPlayersPerStat={2}
+        matchType={match.type}
+        matchStatus={match.status}
       />
     </div>
   );

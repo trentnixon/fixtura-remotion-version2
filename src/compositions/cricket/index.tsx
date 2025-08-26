@@ -4,36 +4,42 @@ import {
   brickwork as ladderBrickWork,
   sixersThunder as ladderSixersThunder,
   classic as ladderClassic,
+  classicTwoColumn as ladderClassicTwoColumn,
 } from "./ladder";
 import {
   basic as upcomingBasic,
   brickWork as upcomingBrickWork,
   SixersThunder as upcomingSixersThunder,
   classic as upcomingClassic,
+  classicTwoColumn as upcomingClassicTwoColumn,
 } from "./upcoming";
 import {
   basic as top5Basic,
   brickWork as top5BrickWork,
   SixersThunder as top5SixersThunder,
   classic as top5Classic,
+  twocolumnclassic as top5ClassicTwoColumn,
 } from "./top5";
 import {
   basic as resultsBasic,
   brickWork as resultsBrickWork,
   SixersThunder as resultsSixersThunder,
   classic as resultsClassic,
+  classicTwoColumn as resultsClassicTwoColumn,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
   basic as resultSingleBasic,
   classic as resultSingleClassic,
   sixers as resultSingleSixers,
+  classicTwoColumns as resultSingleClassicTwoColumns,
 } from "./resultSingle";
 
 import {
   basic as rosterBasic,
   SixersThunder as rosterSixersThunder,
   Classic as rosterClassic,
+  ClassicTwoColumn as rosterClassicTwoColumn,
 } from "./teamRoster";
 
 /* export * as ladder from './ladder';
@@ -54,7 +60,7 @@ export const CricketLadder = {
   sixers: ladderSixersThunder,
   thunder: ladderSixersThunder,
   classic: ladderClassic,
-  twocolumnclassic: ladderClassic, // alias to classic
+  twocolumnclassic: ladderClassicTwoColumn, // alias to classic
 };
 
 export const CricketTop5 = {
@@ -63,7 +69,7 @@ export const CricketTop5 = {
   sixers: top5SixersThunder,
   thunder: top5SixersThunder,
   classic: top5Classic,
-  twocolumnclassic: top5Classic, // alias to classic
+  twocolumnclassic: top5ClassicTwoColumn, // alias to classic
 };
 
 export const CricketResults = {
@@ -72,7 +78,7 @@ export const CricketResults = {
   sixers: resultsSixersThunder,
   thunder: resultsSixersThunder,
   classic: resultsClassic,
-  twocolumnclassic: resultsClassic, // alias to classic
+  twocolumnclassic: resultsClassicTwoColumn, // alias to classic
 };
 
 export const CricketUpcoming = {
@@ -81,7 +87,7 @@ export const CricketUpcoming = {
   sixers: upcomingSixersThunder,
   thunder: upcomingSixersThunder,
   classic: upcomingClassic,
-  twocolumnclassic: upcomingClassic, // alias to classic
+  twocolumnclassic: upcomingClassicTwoColumn, // alias to classic
 };
 
 export const CricketResultSingle = {
@@ -90,7 +96,7 @@ export const CricketResultSingle = {
   sixers: resultSingleSixers,
   thunder: resultSingleSixers,
   classic: resultSingleClassic,
-  twocolumnclassic: resultSingleClassic, // alias to classic
+  twocolumnclassic: resultSingleClassicTwoColumns, // alias to classic
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -100,7 +106,7 @@ export const CricketRoster = {
   sixers: rosterSixersThunder,
   thunder: rosterSixersThunder,
   classic: rosterClassic,
-  twocolumnclassic: rosterClassic, // alias to classic
+  twocolumnclassic: rosterClassicTwoColumn, // alias to classic
 };
 
 export const singleGameResult = {

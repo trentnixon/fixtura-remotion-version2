@@ -9,12 +9,7 @@ import {
 } from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "./type";
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { getFirstInningsDisplay, normalizeScore, truncateText } from "./utils";
 
 export const TeamsSectionScoreOverTeamNameOnly: React.FC<TeamsSectionProps> = ({
   homeTeam,
@@ -30,36 +25,6 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<TeamsSectionProps> = ({
   // Get background color from theme
   const backgroundColor =
     selectedPalette.container.backgroundTransparent.medium;
-
-  // Normalizes scores so that "N/A" renders as "Yet to Bat"
-  const normalizeScore = (rawScore?: string | null): string => {
-    const score = (rawScore || "").trim();
-    if (score.length === 0 || score.toUpperCase() === "N/A") {
-      return "Yet to Bat";
-    }
-    return score;
-  };
-
-  const getFirstInningsDisplay = (
-    matchType: string,
-    inningsValue?: string | null,
-  ): { show: boolean; value: string } => {
-    if (matchType !== "Two Day+") {
-      return { show: false, value: "" };
-    }
-    const value = (inningsValue || "").trim();
-    if (value.length === 0) return { show: false, value: "" };
-    const lowered = value.toLowerCase();
-    if (lowered === "1" || lowered === "n/a" || lowered === "yet to bat") {
-      return { show: false, value: "" };
-    }
-    const looksLikeScore =
-      /\d+\s*\/\s*\d+/.test(value) ||
-      /\bd\//i.test(value) ||
-      value.includes("&");
-    if (!looksLikeScore) return { show: false, value: "" };
-    return { show: true, value };
-  };
 
   const homeFirstInnings = getFirstInningsDisplay(
     type,

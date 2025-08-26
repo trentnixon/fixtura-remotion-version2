@@ -18,7 +18,7 @@ import {
   slideOutUp,
   slideOutDown,
 } from "./slideAnimation";
-import { scaleIn, typewriter } from "./scaleAnimations";
+import { scaleIn, scaleOutY, typewriter } from "./scaleAnimations";
 import { springFadeIn, springScale } from "./springAnimations";
 import { bounce, elastic } from "./specialAnimations";
 import React from "react";
@@ -89,6 +89,8 @@ export const useAnimation = (config: AnimationConfig): React.CSSProperties => {
 
     case "scaleIn":
       return scaleIn(frame, startFrame, endFrame, config);
+    case "scaleOutY":
+      return scaleOutY(frame, startFrame, endFrame, config);
 
     case "typewriter":
       return typewriter(frame, startFrame, endFrame, config);
@@ -163,6 +165,8 @@ export const getAnimationStyles = (
       return slideOutDown(frame, startFrame, endFrame, config);
     case "scaleIn":
       return scaleIn(frame, startFrame, endFrame, config);
+    case "scaleOutY":
+      return scaleOutY(frame, startFrame, endFrame, config);
     case "typewriter":
       return typewriter(frame, startFrame, endFrame, config);
     case "springFadeIn":
