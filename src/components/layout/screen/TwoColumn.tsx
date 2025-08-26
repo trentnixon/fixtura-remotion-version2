@@ -33,7 +33,6 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
 }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
-
   // Read screen-level defaults from animations config
   const screenConfig = animations?.screen?.twoColumn ?? {};
 
@@ -71,8 +70,12 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
       <AnimatedContainer
         type="basic"
         backgroundColor="primary"
-        style={{ height: "100%", width: "100%" }}
+        style={{
+          height: "100%",
+          width: "100%",
+        }}
         animation={twoColumnContainer.sidePane?.containerIn ?? "none"}
+        className="shadow-2xl shadow-black/50 border-2 border-l-2 border-black/20"
       >
         <Header />
       </AnimatedContainer>
