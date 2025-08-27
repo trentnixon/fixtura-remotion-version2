@@ -18,6 +18,7 @@ export const LadderDisplaySixersThunder: React.FC<LadderDisplayProps> = ({
 }) => {
   const { club } = useVideoDataContext();
   const { animations } = useAnimationContext();
+  const containerAnimation = animations.container.main.itemContainer;
   const LogoAnimations = animations.image.main.title.logo;
   const { League, gradeName, bias } = ladder;
   const { layout } = useThemeContext();
@@ -34,23 +35,8 @@ export const LadderDisplaySixersThunder: React.FC<LadderDisplayProps> = ({
         type="full"
         className="flex-1 flex flex-col mx-8 p-4 rounded-none overflow-hidden"
         backgroundColor="none"
-        animation={{
-          type: "slideInRight",
-          easing: { type: "inOut", base: "ease" },
-          duration: 15,
-          custom: {
-            distance: 1000,
-          },
-        }}
-        animationDelay={0}
-        exitAnimation={{
-          type: "slideOutRight",
-          easing: { type: "inOut", base: "ease" },
-          duration: 15,
-          custom: {
-            distance: 1000,
-          },
-        }}
+        animation={containerAnimation.containerIn}
+        exitAnimation={containerAnimation.containerOut}
       >
         <div>
           <TableHeaderSixersThunder

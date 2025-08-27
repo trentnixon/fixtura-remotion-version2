@@ -219,10 +219,10 @@ export const templateAnimations: AnimationConfig = {
           custom: { distance: 100 },
         },
         containerOut: {
-          type: "collapseRight",
+          type: "collapseLeft",
           easing: { type: "inOut", base: "ease" },
           duration: 20,
-          custom: { distance: 1000 },
+          custom: { distance: 100 },
         },
       },
       mainPane: {

@@ -68,14 +68,15 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
       }}
     >
       <AnimatedContainer
-        type="basic"
-        backgroundColor="primary"
+        type="glass"
         style={{
           height: "100%",
           width: "100%",
+          borderRight: "1px solid rgba(255, 255, 255, 0.25)",
         }}
         animation={twoColumnContainer.sidePane?.containerIn ?? "none"}
-        className="shadow-2xl shadow-black/50 border-2 border-l-2 border-black/20"
+        exitAnimation={twoColumnContainer.sidePane?.containerOut ?? "none"}
+        className="shadow-2xl shadow-black/50"
       >
         <Header />
       </AnimatedContainer>

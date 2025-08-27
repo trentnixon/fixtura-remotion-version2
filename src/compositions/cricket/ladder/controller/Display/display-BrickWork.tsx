@@ -5,6 +5,7 @@ import { StandardRowWrapped } from "../TeamRows/StandardRow";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { SponsorFooter } from "../../../sponsorFooter";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 
 interface LadderDisplayProps {
   ladder: LadderData;
@@ -13,6 +14,8 @@ interface LadderDisplayProps {
 export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
+  const { animations } = useAnimationContext();
+  const containerAnimation = animations.container.main.itemContainer;
   const { League, gradeName, bias, assignSponsors } = ladder;
   const { layout, selectedPalette } = useThemeContext();
   const { heights } = layout;
@@ -31,23 +34,8 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
         style={{
           background: selectedPalette.container.backgroundTransparent.medium,
         }}
-        animation={{
-          type: "slideInRight",
-          easing: { type: "inOut", base: "ease" },
-          duration: 15,
-          custom: {
-            distance: 1000,
-          },
-        }}
-        animationDelay={0}
-        exitAnimation={{
-          type: "slideOutRight",
-          easing: { type: "inOut", base: "ease" },
-          duration: 15,
-          custom: {
-            distance: 1000,
-          },
-        }}
+        animation={containerAnimation.containerIn}
+        exitAnimation={containerAnimation.containerOut}
       >
         <div>
           <TableHeaderWrapped title={gradeName} headerHeight={headerHeight} />

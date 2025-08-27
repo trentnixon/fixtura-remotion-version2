@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useCurrentFrame } from "remotion";
+import { useCurrentFrame, useVideoConfig } from "remotion";
 import { useThemeContext } from "../../core/context/ThemeContext";
 import { classNames } from "../../core/utils/classNames";
 
@@ -251,6 +251,7 @@ export const AnimatedContainer: React.FC<AnimatedContainerProps> = ({
   // Get theme context
   const { selectedPalette } = useThemeContext();
   const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
 
   // Normalize animation configurations
   const animationConfig = useMemo(
@@ -297,12 +298,24 @@ export const AnimatedContainer: React.FC<AnimatedContainerProps> = ({
     [exitAnimationConfig, exitSpringConfig],
   );
 
+  // Compute a sensible default exit frame if not provided, so exit animations run
+  const computedExitFrame = useMemo(() => {
+    if (exitFrame > 0) return exitFrame;
+    if (!exitAnimationConfig || exitAnimationConfig.type === "none") return 0;
+    const delay = exitAnimationConfig.delay || 0;
+    const duration = exitAnimationConfig.duration || 30;
+    const totalFrames = durationInFrames ?? 0;
+    // Choose start so that (start + delay + duration) lands at composition end
+    const fallbackStart = Math.max(0, totalFrames - duration - delay);
+    return fallbackStart;
+  }, [exitFrame, exitAnimationConfig, durationInFrames]);
+
   // Determine if we should use entry or exit animation
-  const isExiting = exitFrame > 0 && frame >= exitFrame;
+  const isExiting = computedExitFrame > 0 && frame >= computedExitFrame;
 
   // Calculate animation start frame
   const animationStartFrame = isExiting
-    ? exitFrame + (exitAnimationConfig.delay || 0)
+    ? computedExitFrame + (exitAnimationConfig.delay || 0)
     : animationConfig.delay || 0;
 
   // Use the animation hook to get animation styles

@@ -10,6 +10,12 @@ export const getTypeStyles = (
   selectedPalette: DesignPalette,
 ): React.CSSProperties => {
   switch (type) {
+    case "glass":
+      return {
+        backgroundColor: "rgba(255, 255, 255, 0.12)",
+        backdropFilter: "blur(15px)",
+        WebkitBackdropFilter: "blur(15px)",
+      };
     case "border":
       return {
         border: "1px solid rgba(255, 255, 255, 0.2)",

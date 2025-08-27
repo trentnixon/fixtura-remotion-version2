@@ -8,6 +8,7 @@ export type ContainerType =
   | "borderLeft"
   | "borderRight"
   | "card"
+  | "glass"
   | "gradient";
 
 // Container size options

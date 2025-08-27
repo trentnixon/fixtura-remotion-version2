@@ -167,7 +167,12 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "none",
+          type: "slideOutBottom",
+          easing: { type: "inOut", base: "ease" },
+          duration: 20,
+          custom: {
+            distance: "105%",
+          },
         },
       },
       itemContainerInner: {
@@ -180,7 +185,12 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "none",
+          type: "slideOutBottom",
+          easing: { type: "inOut", base: "ease" },
+          duration: 20,
+          custom: {
+            distance: "105%",
+          },
         },
       },
       itemContainerSecondary: {
@@ -193,7 +203,12 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "none",
+          type: "slideOutBottom",
+          easing: { type: "inOut", base: "ease" },
+          duration: 20,
+          custom: {
+            distance: "105%",
+          },
         },
       },
     },
