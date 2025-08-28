@@ -34,6 +34,7 @@ export type TypographyType =
 
 // Define color variants
 export type ColorVariant =
+  | "default"
   | "main"
   | "onContainer"
   | "onBackground"

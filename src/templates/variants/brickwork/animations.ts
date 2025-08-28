@@ -31,7 +31,7 @@ export const templateAnimations: AnimationConfig = {
             custom: { distance: 100 },
           },
           introOut: {
-            type: "collapseBottom",
+            type: "slideOutTop",
             duration: 15,
             easing: { type: "inOut", base: "ease" },
           },
@@ -111,10 +111,9 @@ export const templateAnimations: AnimationConfig = {
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
+        type: "fadeOutUp",
         duration: 15,
         easing: { type: "inOut", base: "ease" },
-        delay: 200,
       },
     },
     outro: {
@@ -125,10 +124,9 @@ export const templateAnimations: AnimationConfig = {
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
-        duration: 1000,
+        type: "fadeOutUp",
+        duration: 15,
         easing: { type: "inOut", base: "ease" },
-        delay: 200,
       },
     },
   },

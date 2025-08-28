@@ -3,6 +3,10 @@ import { AnimationConfig } from "./types";
 import {
   fadeIn,
   fadeOut,
+  fadeOutUp,
+  fadeOutDown,
+  fadeOutLeft,
+  fadeOutRight,
   fadeInUp,
   fadeInDown,
   fadeInLeft,
@@ -45,11 +49,27 @@ export const useAnimation = (config: AnimationConfig): React.CSSProperties => {
 
   // Apply different animations based on type
   switch (config.type) {
+    case "slideInTop":
+      return slideInDown(frame, startFrame, endFrame, config);
+    case "slideInBottom":
+      return slideInUp(frame, startFrame, endFrame, config);
     case "fadeIn":
       return fadeIn(frame, startFrame, endFrame, config);
 
     case "fadeOut":
       return fadeOut(frame, startFrame, endFrame, config);
+    case "fadeOutTop":
+      return fadeOutUp(frame, startFrame, endFrame, config);
+    case "fadeOutBottom":
+      return fadeOutDown(frame, startFrame, endFrame, config);
+    case "fadeOutUp":
+      return fadeOutUp(frame, startFrame, endFrame, config);
+    case "fadeOutDown":
+      return fadeOutDown(frame, startFrame, endFrame, config);
+    case "fadeOutLeft":
+      return fadeOutLeft(frame, startFrame, endFrame, config);
+    case "fadeOutRight":
+      return fadeOutRight(frame, startFrame, endFrame, config);
 
     case "fadeInUp":
       return fadeInUp(frame, startFrame, endFrame, config);
@@ -81,6 +101,10 @@ export const useAnimation = (config: AnimationConfig): React.CSSProperties => {
     case "slideOutRight":
       return slideOutRight(frame, startFrame, endFrame, config);
 
+    case "slideOutTop":
+      return slideOutDown(frame, startFrame, endFrame, config);
+    case "slideOutBottom":
+      return slideOutUp(frame, startFrame, endFrame, config);
     case "slideOutUp":
       return slideOutUp(frame, startFrame, endFrame, config);
 
@@ -135,10 +159,26 @@ export const getAnimationStyles = (
 
   // Apply different animations based on type
   switch (config.type) {
+    case "slideInTop":
+      return slideInDown(frame, startFrame, endFrame, config);
+    case "slideInBottom":
+      return slideInUp(frame, startFrame, endFrame, config);
     case "fadeIn":
       return fadeIn(frame, startFrame, endFrame, config);
     case "fadeOut":
       return fadeOut(frame, startFrame, endFrame, config);
+    case "fadeOutTop":
+      return fadeOutUp(frame, startFrame, endFrame, config);
+    case "fadeOutBottom":
+      return fadeOutDown(frame, startFrame, endFrame, config);
+    case "fadeOutUp":
+      return fadeOutUp(frame, startFrame, endFrame, config);
+    case "fadeOutDown":
+      return fadeOutDown(frame, startFrame, endFrame, config);
+    case "fadeOutLeft":
+      return fadeOutLeft(frame, startFrame, endFrame, config);
+    case "fadeOutRight":
+      return fadeOutRight(frame, startFrame, endFrame, config);
     case "fadeInUp":
       return fadeInUp(frame, startFrame, endFrame, config);
     case "fadeInDown":
@@ -159,6 +199,10 @@ export const getAnimationStyles = (
       return slideOutLeft(frame, startFrame, endFrame, config);
     case "slideOutRight":
       return slideOutRight(frame, startFrame, endFrame, config);
+    case "slideOutTop":
+      return slideOutDown(frame, startFrame, endFrame, config);
+    case "slideOutBottom":
+      return slideOutUp(frame, startFrame, endFrame, config);
     case "slideOutUp":
       return slideOutUp(frame, startFrame, endFrame, config);
     case "slideOutDown":

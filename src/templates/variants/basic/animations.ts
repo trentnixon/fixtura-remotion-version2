@@ -88,10 +88,10 @@ export const templateAnimations: AnimationConfig = {
       },
       introOut: {
         type: "fadeOutUp",
-        duration: 30,
+        duration: 15,
         easing: { type: "inOut", base: "ease" },
       },
-      introExitFrame: 45,
+      introExitFrame: 60,
     },
     main: {
       title: {
@@ -108,7 +108,7 @@ export const templateAnimations: AnimationConfig = {
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
+        type: "fadeOut",
         duration: 15,
         easing: { type: "inOut", base: "ease" },
         delay: 200,
@@ -122,8 +122,8 @@ export const templateAnimations: AnimationConfig = {
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
-        duration: 1000,
+        type: "fadeOut",
+        duration: 10,
         easing: { type: "inOut", base: "ease" },
         delay: 200,
       },

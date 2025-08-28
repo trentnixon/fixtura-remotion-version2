@@ -14,6 +14,12 @@ export type AnimationType =
   | "fadeInDown"
   | "fadeInLeft"
   | "fadeInRight"
+  | "fadeOutUp"
+  | "fadeOutDown"
+  | "fadeOutLeft"
+  | "fadeOutRight"
+  | "fadeOutTop"
+  | "fadeOutBottom"
   | "scaleIn"
   | "scaleOutY"
   | "typewriter"
@@ -25,10 +31,14 @@ export type AnimationType =
   | "slideInRight"
   | "slideInUp"
   | "slideInDown"
+  | "slideInTop"
+  | "slideInBottom"
   | "slideOutLeft"
   | "slideOutRight"
   | "slideOutUp"
-  | "slideOutDown";
+  | "slideOutDown"
+  | "slideOutTop"
+  | "slideOutBottom";
 
 // Spring configuration interface
 export interface SpringConfig {

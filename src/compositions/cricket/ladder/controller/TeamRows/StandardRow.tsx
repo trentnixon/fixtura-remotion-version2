@@ -85,7 +85,7 @@ export const StandardRowWrapped: React.FC<TeamRowProps> = ({
   const { timings } = data;
 
   // Stagger the animation of each row
-  const delay = index * 5;
+  const delay = index * 9;
   const animationOutFrame = timings?.FPS_LADDER ? timings.FPS_LADDER - 20 : 0;
 
   // Determine background color based on position and bias team
