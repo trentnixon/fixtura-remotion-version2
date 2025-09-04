@@ -35,6 +35,8 @@ import SpokesGraphics from "./variants/NoiseBackground/variants/SpokesGraphics";
 import { AnimatedBackground as AnimatedBg } from "./variants/AnimatedBackground";
 import { PatternBackground } from "./variants/Patterns";
 import ParticleBackground from "./variants/Particles";
+import { VideoTemplateVariation } from "../../core/types/data/videoData";
+import TextureBackground from "./variants/Textures/TextureBackground";
 
 // Export all background variants
 export const BackgroundComponents = {
@@ -45,6 +47,7 @@ export const BackgroundComponents = {
   Graphics: GeometricGraphics,
   Pattern: PatternBackground,
   Particle: ParticleBackground,
+  Texture: TextureBackground,
   Noise: {
     Default: NoiseBg,
     Subtle: SubtleNoise,
@@ -82,6 +85,8 @@ export const SelectTemplateBackground = () => {
       return <ImageBackground />;
     case "Video":
       return <VideoBackground />;
+    case "Texture":
+      return <TextureBackground />;
     case "Graphics":
     case "Noise":
       return (
@@ -115,14 +120,23 @@ const ImageBackground = () => {
 // Video background
 const VideoBackground = () => {
   const { video } = useVideoDataContext();
+  type ExtendedVideoConfig = NonNullable<VideoTemplateVariation["video"]> & {
+    videoIntro?: { url?: string };
+    videoBackground?: { url?: string };
+    introFrames?: number;
+  };
+  const vcfg = (video.templateVariation?.video || {}) as ExtendedVideoConfig;
 
   return (
     <VideoBg
-      src={video.templateVariation?.video?.url}
-      position="center"
-      size="cover"
-      loop={true}
-      muted={true}
+      // Background video source, prefer new field, fallback to legacy video.url
+      src={vcfg?.videoBackground?.url || vcfg?.url}
+      // Intro video source
+      introSrc={vcfg?.videoIntro?.url}
+      // Intro frames configurable, default handled in component
+      introFrames={vcfg?.introFrames}
+      // Let component read position/size/muted/loop/overlay from templateVariation
+      templateVariation={vcfg}
     />
   );
 };

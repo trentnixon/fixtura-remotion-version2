@@ -300,6 +300,12 @@
       "templateVariation": {
         "useBackground": "Image",
         "mode": "lightAlt",
+        "texture": {
+          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Bat_Willow_Grain_8dd8e57e83.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": { "opacity": 1, "blendMode": "multiply" }
+        },
         "category": {
           "slug": "Basic",
           "name": "Basic",

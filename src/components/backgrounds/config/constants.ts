@@ -19,6 +19,8 @@ export const BACKGROUND_TYPES: Record<string, BackgroundType> = {
   GRAPHICS: "graphics",
   PATTERN: "pattern",
   PARTICLE: "particle",
+  // add texture for tiled images with color overlay
+  TEXTURE: "texture",
 };
 
 /**
@@ -115,4 +117,16 @@ export const DEFAULT_FALLBACK_BACKGROUND: SolidBackgroundProps = {
   color: "#1e293b", // Slate-800
   opacity: 1,
   animation: "none",
+};
+
+// Default texture background
+export const DEFAULT_TEXTURE_BACKGROUND = {
+  type: "texture" as const,
+  repeat: "repeat" as const,
+  size: "auto" as const,
+  position: "center" as const,
+  overlay: {
+    opacity: 0.35,
+    blendMode: "multiply" as const,
+  },
 };

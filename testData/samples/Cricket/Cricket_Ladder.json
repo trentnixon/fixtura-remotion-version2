@@ -366,7 +366,7 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Image",
+        "useBackground": "Texture",
         "mode": "lightAlt",
         "category": {
           "slug": "Basic",
@@ -458,7 +458,16 @@
             ]
           }
         },
+
         "video": {
+          "videoIntro": {
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/istockphoto_1616897621_640_adpp_is_1868f855a3.mp4"
+          },
+          "videoBackground": {
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/istockphoto_1440740357_640_adpp_is_da0b312a3d.mp4"
+          },
+          "introFrames": 90,
+
           "url": null,
           "fallbackUrl": null,
           "position": "left",
@@ -484,10 +493,16 @@
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-        "palette": "secondaryOnBlack",
+        "texture": {
+          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": { "opacity": 1, "blendMode": "multiply" }
+        },
+        "palette": "monochromatic",
         "gradient": {
           "type": "primary",
-          "direction": "HORIZONTAL"
+          "direction": "VERTICAL"
         },
         "noise": {
           "type": "spokes"

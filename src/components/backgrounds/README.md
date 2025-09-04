@@ -1,6 +1,6 @@
 ## Backgrounds
 
-Centralized background rendering for compositions. Provides Solid, Gradient, Image, Video, Patterns, Particles, Noise, and Animated background variants. Integrates with Theme and Video template variations.
+Centralized background rendering for compositions. Provides Solid, Gradient, Image, Video, Patterns, Particles, Noise, Animated, and Texture background variants. Integrates with Theme and Video template variations.
 
 ### Entry
 
@@ -10,7 +10,7 @@ Centralized background rendering for compositions. Provides Solid, Gradient, Ima
 
 ### Config
 
-- `config/constants.ts`: Enums/defaults for background types, positions, sizes, and default solid/gradient presets.
+- `config/constants.ts`: Enums/defaults for background types, positions, sizes, and default solid/gradient/texture presets.
 - `config/animations.ts`: Frame-based style calculators (`getBackgroundAnimation`) for fade/zoom/pan/kenBurns/parallax/slide.
 - `config/index.ts`, `config/types.ts`: Shared types/exports.
 
@@ -24,17 +24,19 @@ Centralized background rendering for compositions. Provides Solid, Gradient, Ima
 - Particles: `variants/Particles/index.tsx` — dynamic particle fields (dots/lines/bubbles/snow/confetti).
 - Noise: `variants/NoiseBackground/*` — procedural noise and SVG graphics variants (see child README).
 - Animated: `variants/AnimatedBackground.tsx` — CSS/SVG animated backgrounds independent of assets.
+- Texture: `variants/Textures/TextureBackground.tsx` — tiled image backgrounds with color overlay in multiply blend mode. See `variants/Textures/README.md`.
 
 ### Child Documentation
 
 - Noise backgrounds: `variants/NoiseBackground/README.md`
 - Image effect variants: `variants/Image/variants/README.md`
 - Image overlays: `variants/Image/overlays/readMe.md`
+- Texture backgrounds: `variants/Textures/README.md`
 
 ### Integration
 
 - Theme: `useThemeContext()` supplies palette and gradients.
-- Data: `useVideoDataContext()` provides `video.templateVariation` (e.g., background type, noise type, gradient direction, image overlay).
+- Data: `useVideoDataContext()` provides `video.templateVariation` (e.g., background type, texture config, gradient direction, image overlay).
 
 ### Example
 

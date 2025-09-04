@@ -62,9 +62,9 @@ export const standardPaletteFactory = (
   const gradients =
     options.includeGradients !== false
       ? {
-          // Basic gradients (for backward compatibility)
-          primary: generateGradientOptions(main),
-          secondary: generateGradientOptions(secondary),
+          // Basic gradients (aligned to palette pair ordering)
+          primary: generateGradientOptions(main, secondary),
+          secondary: generateGradientOptions(secondary, main),
           primaryToSecondary: generateGradientOptions(main, secondary),
           secondaryToPrimary: generateGradientOptions(secondary, main),
 
@@ -164,9 +164,9 @@ export const standardPaletteFactory = (
           },
         }
       : {
-          // Original basic gradients
-          primary: generateGradientOptions(main),
-          secondary: generateGradientOptions(secondary),
+          // Basic gradients when advanced disabled
+          primary: generateGradientOptions(main, secondary),
+          secondary: generateGradientOptions(secondary, main),
           primaryToSecondary: generateGradientOptions(main, secondary),
           secondaryToPrimary: generateGradientOptions(
             secondary,

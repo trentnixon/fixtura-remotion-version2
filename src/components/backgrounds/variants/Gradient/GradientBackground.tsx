@@ -2,27 +2,17 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
+import {
+  resolvePaletteGradient,
+  determineGradientTypeForPalette,
+} from "../../../../core/utils/colorSystem/gradientResolver";
 
 interface Props {
   className?: string;
   style?: React.CSSProperties;
 }
 
-// Type for gradient objects that might have a css property
-type GradientWithCSS = { css: string };
-
-// Helper function to safely extract CSS from different gradient formats
-const extractCSS = (gradient: unknown): string | null => {
-  if (!gradient) return null;
-
-  if (typeof gradient === "string") return gradient;
-
-  if (typeof gradient === "object" && gradient !== null && "css" in gradient) {
-    return (gradient as GradientWithCSS).css;
-  }
-
-  return null;
-};
+// No local gradient parsing: use centralized resolver
 
 export const GradientBackground: React.FC<Props> = ({
   className = "",
@@ -41,21 +31,30 @@ export const GradientBackground: React.FC<Props> = ({
     video.templateVariation?.gradient?.direction || "HORIZONTAL";
 
   // Extract the CSS for the background
-  const backgroundCSS = React.useMemo(() => {
+  const backgroundCSS = React.useMemo<string>(() => {
     if (!selectedPalette?.background?.gradient) return DEFAULT_GRADIENT;
 
-    const gradients = selectedPalette.background.gradient;
+    // Determine effective type based on selected palette, without mutating JSON
+    const effectiveType = determineGradientTypeForPalette(
+      (selectedPalette as unknown as { name?: string })?.name,
+      gradientType as string,
+    );
 
-    // Try primary requested gradient
-    const selectedGradient = gradients[gradientType as keyof typeof gradients];
-    const primaryCSS = extractCSS(selectedGradient);
+    // Resolve directly from palette gradients using centralized resolver
+    const resolved = resolvePaletteGradient(
+      selectedPalette,
+      effectiveType,
+      gradientDirection as string,
+    );
+    if (resolved) return resolved;
 
-    if (primaryCSS)
-      return primaryCSS[gradientDirection as keyof typeof primaryCSS];
-
-    // Try fallback to secondaryToPrimary
-    const fallbackCSS = extractCSS(gradients.secondaryToPrimary);
-    if (fallbackCSS) return fallbackCSS;
+    // Fallback to a sensible palette type before defaulting
+    const fallback = resolvePaletteGradient(
+      selectedPalette,
+      "secondaryToPrimary",
+      gradientDirection as string,
+    );
+    if (fallback) return fallback;
 
     return DEFAULT_GRADIENT;
   }, [selectedPalette, gradientType, gradientDirection]);

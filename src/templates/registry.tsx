@@ -17,9 +17,10 @@ const Variants = [
   "Solid",
   "Image",
   "Gradient",
-  /* "Video", */
+  "Video",
   "Particle",
   "Pattern",
+  "Texture",
 ];
 export const templateRegistry = {
   Basic: {

@@ -328,6 +328,12 @@
       "templateVariation": {
         "useBackground": "Pattern",
         "mode": "dark",
+        "texture": {
+          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_Stone_4b71c033b8.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": { "opacity": 1, "blendMode": "multiply" }
+        },
         "palette": "primaryOnWhite",
         "gradient": {
           "type": "primaryToSecondary",

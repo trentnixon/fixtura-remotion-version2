@@ -17,6 +17,8 @@ Families of background implementations used by compositions. Each family exposes
   - `index.tsx` (ParticleBackground): Particle fields (dots/lines/bubbles/snow/confetti) with variant renderers.
 - `Patterns/`:
   - `index.tsx` (PatternBackground): SVG pattern backgrounds (dots/lines/grid/crosshatch/triangles/chevron).
+- `Textures/`:
+  - `TextureBackground.tsx`: Tiled texture images with color overlay in multiply blend mode. See `Textures/README.md`.
 - `Solid/`:
   - `SolidBackground.tsx`: Theme background color fill.
 - `Video/`:

@@ -100,6 +100,19 @@ export interface VideoTemplateVariation {
     gradientType?: string;
     overlayOpacity?: number;
   };
+  texture?: {
+    url?: string;
+    name?: string;
+    position?: string;
+    size?: string;
+    repeat?: "no-repeat" | "repeat" | "repeat-x" | "repeat-y";
+    scale?: number | string;
+    overlay?: {
+      color?: string;
+      opacity?: number;
+      blendMode?: string;
+    };
+  };
   background?: string;
   palette?: string;
   borderRadius?: string;

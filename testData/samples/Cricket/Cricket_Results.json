@@ -781,6 +781,12 @@
       "groupingCategory": "Darwin & Districts Women's Competition",
       "templateVariation": {
         "mode": "dark",
+        "texture": {
+          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Geometric_Waves_Zigzags_c21b97f775.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": { "opacity": 1, "blendMode": "multiply" }
+        },
         "image": {
           "url": null,
           "type": "pan",

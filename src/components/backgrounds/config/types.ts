@@ -11,7 +11,8 @@ export type BackgroundType =
   | "particle"
   | "noise"
   | "layered"
-  | "animated";
+  | "animated"
+  | "texture";
 
 /**
  * Background animation types
@@ -109,6 +110,52 @@ export interface ImageBackgroundProps {
   overlay?: {
     color: string;
     opacity: number;
+  };
+  animation?: BackgroundAnimationType;
+  animationDuration?: number;
+  animationDelay?: number;
+  exitAnimation?: BackgroundAnimationType;
+  exitAnimationDuration?: number;
+  exitFrame?: number;
+}
+
+/**
+ * Texture background props
+ */
+export interface TextureBackgroundProps {
+  type: "texture";
+  src?: string;
+  name?: string; // maps to public/textures/{name}
+  position?: BackgroundPosition;
+  size?: BackgroundSize;
+  repeat?: "no-repeat" | "repeat" | "repeat-x" | "repeat-y";
+  scale?: number | string; // maps to backgroundSize (e.g., 50% or 400px)
+  overlay?: {
+    // Presentation
+    style?: "solid" | "gradient"; // default: solid
+    color?: string;
+    opacity?: number; // 0..1
+    blendMode?:
+      | "multiply"
+      | "overlay"
+      | "screen"
+      | "soft-light"
+      | "hard-light"
+      | "color-burn"
+      | "color-dodge"
+      | "darken"
+      | "lighten"
+      | "difference"
+      | "exclusion"
+      | "hue"
+      | "saturation"
+      | "color"
+      | "luminosity";
+    // Gradient-specific (used when style === 'gradient')
+    gradientCss?: string; // full CSS string takes precedence if provided
+    gradientType?: "linear" | "radial" | "conic";
+    gradientDirection?: string; // e.g. 'to right', '45deg'
+    gradientColors?: string[]; // e.g. ['#111', '#333']
   };
   animation?: BackgroundAnimationType;
   animationDuration?: number;
@@ -276,7 +323,8 @@ export type BackgroundProps =
   | ParticleBackgroundProps
   | NoiseBackgroundProps
   | LayeredBackgroundProps
-  | AnimatedBackgroundProps;
+  | AnimatedBackgroundProps
+  | TextureBackgroundProps;
 
 /**
  * Background controller props
