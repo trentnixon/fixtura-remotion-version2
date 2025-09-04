@@ -6,7 +6,7 @@ import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountLogoNoWrapper } from "../../layout/RosterHeader/AccountTeam";
 import { TwoMetaValuesNoWrapper } from "../../layout/Metadata/TwoMetaValues";
-import { truncateText } from "../../../utils/utils-text";
+import { formatDate, truncateText } from "../../../utils/utils-text";
 
 interface RosterDisplayProps {
   roster: RosterDataItem;
@@ -49,7 +49,7 @@ const RosterDisplaySixersThunder: React.FC<RosterDisplayProps> = ({
           style={{ height: `${availableHeight}px` }}
         >
           <TwoMetaValuesNoWrapper
-            values={[roster.date, truncateText(roster.ground, 50)]}
+            values={[formatDate(roster.date), truncateText(roster.ground, 50)]}
           />
 
           <div

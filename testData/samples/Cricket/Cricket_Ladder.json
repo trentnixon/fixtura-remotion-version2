@@ -499,7 +499,7 @@
           "scale": "100%",
           "overlay": { "opacity": 1, "blendMode": "multiply" }
         },
-        "palette": "monochromatic",
+        "palette": "primary",
         "gradient": {
           "type": "primary",
           "direction": "VERTICAL"
