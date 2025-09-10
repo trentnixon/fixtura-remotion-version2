@@ -61,6 +61,7 @@ export const CricketLadder = {
   thunder: ladderSixersThunder,
   classic: ladderClassic,
   twocolumnclassic: ladderClassicTwoColumn, // alias to classic
+  cnsw: ladderClassic,
 };
 
 export const CricketTop5 = {
@@ -70,6 +71,7 @@ export const CricketTop5 = {
   thunder: top5SixersThunder,
   classic: top5Classic,
   twocolumnclassic: top5ClassicTwoColumn, // alias to classic
+  cnsw: top5Classic,
 };
 
 export const CricketResults = {
@@ -79,6 +81,7 @@ export const CricketResults = {
   thunder: resultsSixersThunder,
   classic: resultsClassic,
   twocolumnclassic: resultsClassicTwoColumn, // alias to classic
+  cnsw: resultsClassic,
 };
 
 export const CricketUpcoming = {
@@ -88,6 +91,7 @@ export const CricketUpcoming = {
   thunder: upcomingSixersThunder,
   classic: upcomingClassic,
   twocolumnclassic: upcomingClassicTwoColumn, // alias to classic
+  cnsw: upcomingClassic,
 };
 
 export const CricketResultSingle = {
@@ -97,6 +101,7 @@ export const CricketResultSingle = {
   thunder: resultSingleSixers,
   classic: resultSingleClassic,
   twocolumnclassic: resultSingleClassicTwoColumns, // alias to classic
+  cnsw: resultSingleClassic,
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -107,6 +112,7 @@ export const CricketRoster = {
   thunder: rosterSixersThunder,
   classic: rosterClassic,
   twocolumnclassic: rosterClassicTwoColumn, // alias to classic
+  cnsw: rosterClassic,
 };
 
 export const singleGameResult = {
@@ -115,4 +121,5 @@ export const singleGameResult = {
   sixers: PlaceholderComposition,
   classic: PlaceholderComposition,
   twocolumnclassic: PlaceholderComposition, // alias to classic placeholder
+  cnsw: PlaceholderComposition,
 };

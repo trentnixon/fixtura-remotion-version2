@@ -1,38 +1,20 @@
-# Ladder Controller
+# Folder Overview
 
-This folder contains the logic controllers for the Cricket Ladder composition. Controllers handle the business logic and data processing for rendering ladder displays.
+Controller components orchestrating how ladder rows and displays assemble per variant.
 
 ## Files
 
-- `Display/`: Main display controller for orchestrating ladder rendering
-- `TeamRows/`: Controllers for individual team row rendering and data processing
+- `Display/`: variant display containers
+- `TeamRows/`: row renderers per variant and standard row
+- `README.md`: human notes
 
 ## Relations
 
-- Parent folder: [../ladder.md](../ladder.md)
-- Main composition: [../basic.tsx](../basic.tsx)
+- Parent folder: [../readMe.md](../readMe.md)
+- Key dependencies: composes layout rows with primitives
+- Consumed by: ladder variant entries
 
 ## Dependencies
 
-- Internal: Uses layout components from `../layout/` and modules from `../modules/`
-- External: Remotion framework, React, TypeScript
-
-## Architecture
-
-### Display Controller
-
-The main display controller handles:
-
-- Data retrieval from VideoDataContext
-- Template selection and rendering
-- Animation orchestration
-- Screen management for large datasets
-
-### Team Rows Controller
-
-Team row controllers handle:
-
-- Individual team data processing
-- Row animation timing
-- Team statistics calculations
-- Row styling and layout
+- Internal: `Display`, `TeamRows`
+- External: React

@@ -1,49 +1,21 @@
-# Ladder Modules
+# Folder Overview
 
-This folder contains reusable modular components for the Cricket Ladder composition. Modules provide specific functionality that can be shared across different templates.
+Reusable composition modules for ladder feature.
 
 ## Files
 
-- `LadderHeaders/`: Header components for ladder displays
-- `NoLadderData/`: Fallback component for missing ladder data
-- `TableHeader/`: Table header components with column definitions
+- `LadderHeaders/`: ladder header renderers
+- `NoLadderData/`: empty-state screen
+- `TableHeader/`: table header variants
+- `README.md`: human notes
 
 ## Relations
 
-- Parent folder: [../ladder.md](../ladder.md)
-- Controllers: [../controller/README.md](../controller/README.md)
-- Layout: [../layout/README.md](../layout/README.md)
+- Parent folder: [../readMe.md](../readMe.md)
+- Key dependencies: shared primitives and layout utilities
+- Consumed by: ladder controller and variant entries
 
 ## Dependencies
 
-- Internal: Used by controllers in `../controller/` and layouts in `../layout/`
-- External: Remotion framework, React, TypeScript
-
-## Architecture
-
-### LadderHeaders
-
-Header components provide:
-
-- Title and subtitle displays
-- Competition branding
-- Date and time information
-- Consistent header styling across templates
-
-### NoLadderData
-
-Fallback component provides:
-
-- Graceful handling of missing data
-- User-friendly error messages
-- Consistent styling with main composition
-- Placeholder content when data is unavailable
-
-### TableHeader
-
-Table header components provide:
-
-- Column definitions and labels
-- Sort indicators
-- Consistent header styling
-- Responsive column layouts
+- Internal: `LadderHeaders`, `NoLadderData`, `TableHeader`
+- External: React

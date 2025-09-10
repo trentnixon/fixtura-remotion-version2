@@ -2,6 +2,7 @@ import { Basic } from "./variants/basic";
 import { Brickwork } from "./variants/brickwork";
 import { Classic } from "./variants/classic";
 import { Sixers } from "./variants/sixers";
+import { CNSW } from "./variants/cnsw";
 import { Thunder } from "./variants/thunder";
 import { TwoColumnClassic } from "./variants/twoColumnClassic";
 /**
@@ -33,6 +34,10 @@ export const templateRegistry = {
   },
   Classic: {
     component: Classic,
+    variants: Variants,
+  },
+  CNSW: {
+    component: CNSW,
     variants: Variants,
   },
   Sixers: {

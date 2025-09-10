@@ -1,360 +1,691 @@
 {
   "data": [
     {
-      "ID": 42643,
-      "gradeName": "Women's Div 1",
-      "League": [
-        {
-          "position": "1",
-          "teamName": "Tracy Village Women's Div 1",
-          "teamHref": "/cricket-australia/org/tracy-village-cricket-club/44f2d154/darwin-and-districts-womens-competition-winter-2025/teams/tracy-village-womens-div-1/a95a5f90",
-          "P": "14",
-          "PTS": "52",
-          "Q": "2.501",
-          "W": "13",
-          "L": "1",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": 34548,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Tracy Village Women's Div 1 is currently positioned 1 in the Women's Div 1, with 13 wins and 1 losses, totaling 52 points."
-        },
-        {
-          "position": "2",
-          "teamName": "Sth Districts Women's Div 1",
-          "teamHref": "/cricket-australia/org/southern-districts-cricket-club-nt/2abde62d/darwin-and-districts-womens-competition-winter-2025/teams/sth-districts-womens-div-1/43ceac3d",
-          "P": "14",
-          "PTS": "36",
-          "Q": "1.461",
-          "W": "9",
-          "L": "5",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": 33885,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Sth Districts Women's Div 1 is currently positioned 2 in the Women's Div 1, with 9 wins and 5 losses, totaling 36 points."
-        },
-        {
-          "position": "3",
-          "teamName": "Nightcliff Women's Div 1",
-          "teamHref": "/cricket-australia/org/nightcliff-cricket-club/e3c4451d/darwin-and-districts-womens-competition-winter-2025/teams/nightcliff-womens-div-1/f95b60e6",
-          "P": "14",
-          "PTS": "28",
-          "Q": "0.847",
-          "W": "7",
-          "L": "7",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": 32699,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Nightcliff Women's Div 1 is currently positioned 3 in the Women's Div 1, with 7 wins and 7 losses, totaling 28 points."
-        },
-        {
-          "position": "4",
-          "teamName": "Waratah Women's Div 1",
-          "teamHref": "/cricket-australia/org/waratah-cricket-club/9f6fd9cd/darwin-and-districts-womens-competition-winter-2025/teams/waratah-womens-div-1/9abc25b4",
-          "P": "14",
-          "PTS": "20",
-          "Q": "0.795",
-          "W": "5",
-          "L": "9",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": 34887,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Waratah Women's Div 1 is currently positioned 4 in the Women's Div 1, with 5 wins and 9 losses, totaling 20 points."
-        },
-        {
-          "position": "5",
-          "teamName": "PINT Women's Div 1",
-          "teamHref": "/cricket-australia/org/pint-cricket-club/1540eec3/darwin-and-districts-womens-competition-winter-2025/teams/pint-womens-div-1/c03a015d",
-          "P": "14",
-          "PTS": "18",
-          "Q": "0.653",
-          "W": "4",
-          "L": "9",
-          "TIE": "0",
-          "N/R": "1",
-          "BYE": "0",
-          "clubId": 32961,
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "PINT Women's Div 1 is currently positioned 5 in the Women's Div 1, with 4 wins and 9 losses, totaling 18 points."
-        },
-        {
-          "position": "6",
-          "teamName": "Palmerston Women's Div 1",
-          "teamHref": "/cricket-australia/org/palmerston-cricket-club/9be1533d/darwin-and-districts-womens-competition-winter-2025/teams/palmerston-womens-div-1/d1f5c498",
-          "P": "14",
-          "PTS": "14",
-          "Q": "0.661",
-          "W": "3",
-          "L": "10",
-          "TIE": "0",
-          "N/R": "1",
-          "BYE": "0",
-          "clubId": 32980,
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Palmerston Women's Div 1 is currently positioned 6 in the Women's Div 1, with 3 wins and 10 losses, totaling 14 points."
-        }
-      ],
+      "ID": 70183,
       "bias": null,
-      "prompt": "Overview of Women's Div 1: Featuring teams such as Tracy Village Women's Div 1, Sth Districts Women's Div 1, Nightcliff Women's Div 1, Waratah Women's Div 1, PINT Women's Div 1, Palmerston Women's Div 1, each competing vigorously within the league.",
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "ID": 42642,
-      "gradeName": "Women's Div 2",
       "League": [
         {
-          "position": "1",
-          "teamName": "Darwin Women's Div 2",
-          "teamHref": "/cricket-australia/org/darwin-cricket-club/c30c783e/darwin-and-districts-womens-competition-winter-2025/teams/darwin-womens-div-2/ea316d8b",
-          "P": "12",
-          "PTS": "42",
-          "Q": "2.105",
-          "W": "10",
-          "L": "1",
-          "TIE": "1",
-          "N/R": "0",
+          "L": "0",
+          "P": "2",
+          "Q": "2.859",
+          "W": "2",
           "BYE": "0",
-          "clubId": 30753,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b1d492f22f.jpg",
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Darwin Women's Div 2 is currently positioned 1 in the Women's Div 2, with 10 wins and 1 losses, totaling 42 points."
-        },
-        {
-          "position": "2",
-          "teamName": "Sth Districts Women's Div 2",
-          "teamHref": "/cricket-australia/org/southern-districts-cricket-club-nt/2abde62d/darwin-and-districts-womens-competition-winter-2025/teams/sth-districts-womens-div-2/3955a2f5",
-          "P": "12",
-          "PTS": "26",
-          "Q": "1.307",
-          "W": "6",
-          "L": "5",
-          "TIE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": 33885,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
-          "prompt": "Sth Districts Women's Div 2 is currently positioned 2 in the Women's Div 2, with 6 wins and 5 losses, totaling 26 points."
-        },
-        {
-          "position": "3",
-          "teamName": "Tracy Village Women's Div 2",
-          "teamHref": "/cricket-australia/org/tracy-village-cricket-club/44f2d154/darwin-and-districts-womens-competition-winter-2025/teams/tracy-village-womens-div-2/a6f74936",
-          "P": "12",
-          "PTS": "24",
-          "Q": "0.909",
-          "W": "6",
-          "L": "6",
+          "PTS": "8",
           "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": 34548,
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "1",
+            "teamName": "Queens T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "4",
           "clubLogo": null,
-          "playHQLogo": null,
           "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/cricket-gold-coast-senior-competition-summer-202526/teams/queens-t20/9e887254",
           "teamLogo": null,
-          "prompt": "Tracy Village Women's Div 2 is currently positioned 3 in the Women's Div 2, with 6 wins and 6 losses, totaling 24 points."
+          "teamName": "Queens T20",
+          "playHQLogo": null
         },
         {
+          "L": "0",
+          "P": "2",
+          "Q": "2.016",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "8",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "2",
+            "teamName": "Surfers Paradise T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/cricket-gold-coast-senior-competition-summer-202526/teams/surfers-paradise-t20/a8a5cf29",
+          "teamLogo": null,
+          "teamName": "Surfers Paradise T20",
+          "playHQLogo": null
+        },
+        {
+          "L": "0",
+          "P": "2",
+          "Q": "3.129",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "8",
+          "TIE": "0",
+          "clubId": 8199,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "3",
+            "teamName": "Helensvale T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202526/teams/helensvale-t20/04316dd8",
+          "teamLogo": null,
+          "teamName": "Helensvale T20",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg"
+        },
+        {
+          "L": "0",
+          "P": "2",
+          "Q": "1.958",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "8",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "4",
+            "teamName": "Broadbeach T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "4",
+          "clubLogo": null,
+          "clubName": null,
           "position": "4",
-          "teamName": "PINT Women's Div 2",
-          "teamHref": "/cricket-australia/org/pint-cricket-club/1540eec3/darwin-and-districts-womens-competition-winter-2025/teams/pint-womens-div-2/cc73f06e",
-          "P": "12",
-          "PTS": "4",
-          "Q": "0.325",
+          "teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/cricket-gold-coast-senior-competition-summer-202526/teams/broadbeach-t20/2212f80d",
+          "teamLogo": null,
+          "teamName": "Broadbeach T20",
+          "playHQLogo": null
+        },
+        {
+          "L": "1",
+          "P": "2",
+          "Q": "1.604",
           "W": "1",
-          "L": "11",
-          "TIE": "0",
-          "N/R": "0",
           "BYE": "0",
-          "clubId": 32961,
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-          "playHQLogo": null,
+          "N/R": "0",
+          "PTS": "4",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "5",
+            "teamName": "Coomera T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "2",
+          "clubLogo": null,
           "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/cricket-gold-coast-senior-competition-summer-202526/teams/coomera-t20/bc371852",
           "teamLogo": null,
-          "prompt": "PINT Women's Div 2 is currently positioned 4 in the Women's Div 2, with 1 wins and 11 losses, totaling 4 points."
+          "teamName": "Coomera T20",
+          "playHQLogo": null
+        },
+        {
+          "L": "1",
+          "P": "2",
+          "Q": "0.842",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "4",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "6",
+            "teamName": "Southport T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/cricket-gold-coast-senior-competition-summer-202526/teams/southport-t20/0b8c92dc",
+          "teamLogo": null,
+          "teamName": "Southport T20",
+          "playHQLogo": null
+        },
+        {
+          "L": "1",
+          "P": "2",
+          "Q": "1.084",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "4",
+          "TIE": "0",
+          "clubId": 6755,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "7",
+            "teamName": "Burleigh T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/burleigh-cricket-club/74d56a83/cricket-gold-coast-senior-competition-summer-202526/teams/burleigh-t20/4d85a34d",
+          "teamLogo": null,
+          "teamName": "Burleigh T20",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg"
+        },
+        {
+          "L": "1",
+          "P": "2",
+          "Q": "1.765",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "4",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "8",
+            "teamName": "Palm Beach T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/palm-beach-currumbin-cricket-club-inc/af1d388c/cricket-gold-coast-senior-competition-summer-202526/teams/palm-beach-t20/671f1234",
+          "teamLogo": null,
+          "teamName": "Palm Beach T20",
+          "playHQLogo": null
+        },
+        {
+          "L": "2",
+          "P": "2",
+          "Q": "0.364",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "9",
+            "teamName": "Alberton T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "0",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "9",
+          "teamHref": "/cricket-australia/org/alberton-ormeau-cricket-club/1b01c8ba/cricket-gold-coast-senior-competition-summer-202526/teams/alberton-t20/f3497894",
+          "teamLogo": null,
+          "teamName": "Alberton T20",
+          "playHQLogo": null
+        },
+        {
+          "L": "2",
+          "P": "2",
+          "Q": "0.407",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 9939,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "10",
+            "teamName": "Runaway Bay T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "0",
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+          "clubName": null,
+          "position": "10",
+          "teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/cricket-gold-coast-senior-competition-summer-202526/teams/runaway-bay-t20/8360e95a",
+          "teamLogo": null,
+          "teamName": "Runaway Bay T20",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3adacdd3ba.jpg"
+        },
+        {
+          "L": "2",
+          "P": "2",
+          "Q": "0.187",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 9015,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "11",
+            "teamName": "Mudgeeraba T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "0",
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+          "clubName": null,
+          "position": "11",
+          "teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/cricket-gold-coast-senior-competition-summer-202526/teams/mudgeeraba-t20/9d9b3973",
+          "teamLogo": null,
+          "teamName": "Mudgeeraba T20",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_a58c005f2a.jpg"
+        },
+        {
+          "L": "2",
+          "P": "2",
+          "Q": "0.241",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": null,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "12",
+            "teamName": "Beaudesert T20",
+            "gradeName": "All Ballsports T20 2025"
+          },
+          "PTS AVG": "0",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "12",
+          "teamHref": "/cricket-australia/org/beaudesert-cricket-club/6d9c837b/cricket-gold-coast-senior-competition-summer-202526/teams/beaudesert-t20/0ef50c9f",
+          "teamLogo": null,
+          "teamName": "Beaudesert T20",
+          "playHQLogo": null
         }
       ],
-      "bias": null,
-      "prompt": "Overview of Women's Div 2: Featuring teams such as Darwin Women's Div 2, Sth Districts Women's Div 2, Tracy Village Women's Div 2, PINT Women's Div 2, each competing vigorously within the league.",
-      "assignSponsors": {
-        "competition": [
+      "prompt": {
+        "teams": [
           {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "1",
+            "teamName": "Queens T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "2",
+            "teamName": "Surfers Paradise T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "3",
+            "teamName": "Helensvale T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "0",
+              "points": "8",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "4",
+            "teamName": "Broadbeach T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "5",
+            "teamName": "Coomera T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "6",
+            "teamName": "Southport T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "7",
+            "teamName": "Burleigh T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "1",
+              "points": "4",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "8",
+            "teamName": "Palm Beach T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "9",
+            "teamName": "Alberton T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "10",
+            "teamName": "Runaway Bay T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "11",
+            "teamName": "Mudgeeraba T20"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "2"
+            },
+            "position": "12",
+            "teamName": "Beaudesert T20"
           }
         ],
+        "gradeName": "All Ballsports T20 2025"
+      },
+      "gradeName": "All Ballsports T20 2025",
+      "assignSponsors": {
+        "team": [],
         "grade": [],
-        "team": []
+        "competition": []
       }
     }
   ],
   "asset": {
     "assetID": 18,
     "assetTypeID": 3,
-    "assetCategoryID": 2,
-    "assetsLinkID": "bfd2842ed6a12a09077359fa5197f9fe37d73ce5113e44bfa39f0fb43a133747"
+    "assetsLinkID": "80787ba9086c4e94a30ec750d58fa733a5bbd53d81371066300416b1eca83406",
+    "assetCategoryID": 2
   },
+  "errors": [],
+  "frames": [45, 240, 420],
   "render": {
-    "schedulerId": 314,
-    "renderId": 8341
+    "renderId": 14883,
+    "schedulerId": 69
   },
   "account": {
-    "accountId": 427
+    "accountId": 69
   },
   "timings": {
-    "FPS_MAIN": 585,
+    "FPS_MAIN": 300,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 90,
     "FPS_LADDER": 300,
     "FPS_SCORECARD": 0
   },
-  "frames": [45, 240, 525, 705],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52_328ab084c6.png",
-        "width": 300,
-        "height": 300
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
+        "width": 126,
+        "height": 100,
+        "hasLogo": true
       },
-      "name": "Darwin & Districts Cricket Competition",
+      "name": "Mudgeeraba Nerang & Districts' Cricket Club",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
         "default": {
           "primary_sponsor": [
             {
-              "id": 192,
-              "isPrimary": true,
+              "id": 28,
+              "url": "https://nerangrsl.com.au/",
+              "logo": {
+                "id": 146,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Nerang_RSL_5ff2972354.png"
+              },
+              "name": "Nerang RSL & Memorial Club",
+              "isVideo": true,
+              "tagline": "Situated at the gateway to the Hinterland  we pride ourselves on being Nerang's premier dining, gaming and entertainment venue. ",
               "isActive": true,
               "isArticle": true,
-              "isVideo": true,
-              "url": "test",
-              "tagline": null,
-              "description": null,
-              "name": "test",
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 27,
+              "url": "https://corbwood.com.au/",
               "logo": {
-                "id": 13221,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-              }
+                "id": 145,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Corbwoodlogo_190aa1c916.jpg"
+              },
+              "name": "Corbwood Associates",
+              "isVideo": true,
+              "tagline": "As a team, we are here to educate, support and inspire people to use their Superannuation to buy an investment property to give them the brighter financial future they deserve.",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": true,
+              "description": "Corbwood & Associates takes a holistic approach towards wealth creation on the Gold Coast."
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 56,
+              "url": "https://www.mcglegal.com.au/",
+              "logo": {
+                "id": 404,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cropped_cropped_mcg_gold_coast_lawyers_035d4fb08c.jpeg"
+              },
+              "name": "MCG Legal",
+              "isVideo": true,
+              "tagline": "We are a boutique Gold Coast law firm located in Southport on the Gold Coast, providing the best legal advice in Family ",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
             }
           ]
-        }
-      }
+        },
+        "primary": [
+          {
+            "id": 28,
+            "url": "https://nerangrsl.com.au/",
+            "logo": {
+              "id": 146,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Nerang_RSL_5ff2972354.png"
+            },
+            "name": "Nerang RSL & Memorial Club",
+            "isVideo": true,
+            "tagline": "Situated at the gateway to the Hinterland  we pride ourselves on being Nerang's premier dining, gaming and entertainment venue. ",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": false,
+            "description": null
+          }
+        ]
+      },
+      "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "Darwin & Districts Women's Competition",
-      "groupingCategory": "Darwin & Districts Women's Competition",
+      "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/336766907_1390527955060590_2431286377613048814_n_2_thumbnail_b42322955c.png",
+          "ratio": "portrait",
+          "width": 406,
+          "height": 614,
+          "AgeGroup": "Both",
+          "AssetType": "ALL",
+          "markerPosition": null
+        }
+      },
       "metadata": {
         "title": "Ladder",
+        "frames": [390],
+        "assetId": 18,
         "titleSplit": ["Ladder", ""],
         "videoTitle": "League Tables",
-        "compositionId": "CricketLadder",
-        "assetId": 18,
         "assetTypeId": 3,
-        "frames": [390],
+        "compositionId": "CricketLadder",
         "includeSponsors": true
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#2281a8",
-          "secondary": "#a13535"
+          "primary": "#3025b5",
+          "secondary": "#ea2f2f"
         },
-        "template": "Basic"
-      },
-      "media": {
-        "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2023_Netball_Hero_CAV_9816_f604ae13e4.jpg",
-          "ratio": "landscape",
-          "width": 830,
-          "height": 400,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
-        }
+        "template": "TwoColumnClassic"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -365,166 +696,132 @@
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "templateVariation": {
-        "useBackground": "Texture",
         "mode": "lightAlt",
-        "category": {
-          "slug": "Basic",
-          "name": "Basic",
-          "divideFixturesBy": {
-            "CricketUpcoming": 3,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1
-          },
-          "bundleAudio": {
-            "id": 1,
-            "Name": "Basic",
-            "createdAt": "2023-09-27T10:36:24.428Z",
-            "updatedAt": "2025-06-15T04:50:57.910Z",
-            "publishedAt": "2023-09-27T10:36:25.639Z",
-            "audio_options": [
-              {
-                "id": 4,
-                "Name": "Better Start Now",
-                "createdAt": "2023-09-27T10:34:46.702Z",
-                "updatedAt": "2025-06-15T04:53:45.558Z",
-                "publishedAt": "2023-09-27T10:34:48.455Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "CompositionID": "CricketLadder",
-                "ComponentName": "CricketLadder"
-              },
-              {
-                "id": 2,
-                "Name": "Fifteen on Me",
-                "createdAt": "2022-12-20T01:59:28.337Z",
-                "updatedAt": "2025-06-15T04:53:11.194Z",
-                "publishedAt": "2022-12-20T01:59:29.080Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
-              },
-              {
-                "id": 5,
-                "Name": "Get The Gains",
-                "createdAt": "2023-09-27T10:35:01.053Z",
-                "updatedAt": "2025-06-15T04:53:59.493Z",
-                "publishedAt": "2023-09-27T10:35:29.163Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "CompositionID": "CricketTop5Bowling",
-                "ComponentName": "CricketTop5Bowling"
-              },
-              {
-                "id": 3,
-                "Name": "Groover",
-                "createdAt": "2022-12-20T01:59:34.014Z",
-                "updatedAt": "2025-06-15T04:53:28.656Z",
-                "publishedAt": "2022-12-20T01:59:34.670Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "CompositionID": "CricketTop5Batting",
-                "ComponentName": "CricketTop5Batting"
-              },
-              {
-                "id": 1,
-                "Name": "Saltine",
-                "createdAt": "2022-12-12T05:19:56.353Z",
-                "updatedAt": "2025-06-15T04:50:50.079Z",
-                "publishedAt": "2022-12-12T05:19:57.408Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-                "CompositionID": "CricketResults",
-                "ComponentName": "CricketResults"
-              },
-              {
-                "id": 16,
-                "Name": "BEECH LOVE",
-                "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2024-06-07T12:45:43.674Z",
-                "publishedAt": "2024-06-07T12:45:32.118Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "Top5AFLScorers",
-                "ComponentName": "Top 5 Scorers"
-              },
-              {
-                "id": 17,
-                "Name": "FAY V",
-                "createdAt": "2024-06-05T04:33:33.970Z",
-                "updatedAt": "2024-06-07T12:48:03.161Z",
-                "publishedAt": "2024-06-07T12:47:53.394Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
-                "CompositionID": "WeekendResultsAFL",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
-        },
-
-        "video": {
-          "videoIntro": {
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/istockphoto_1616897621_640_adpp_is_1868f855a3.mp4"
-          },
-          "videoBackground": {
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/istockphoto_1440740357_640_adpp_is_da0b312a3d.mp4"
-          },
-          "introFrames": 90,
-
+        "image": {
           "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
+          "type": "pan",
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "direction": "left",
+          "gradientType": "linear",
+          "overlayStyle": "vignette",
+          "overlayOpacity": 0.3
+        },
+        "noise": {
+          "type": "floatingParticles"
+        },
+        "video": {
+          "url": null,
           "loop": null,
+          "size": "cover",
           "muted": true,
+          "volume": 0.8,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
         },
-        "image": {
-          "url": null,
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "type": "zoom",
-          "direction": "in",
-          "overlayStyle": "duotone",
-          "gradientType": "linear",
-          "overlayOpacity": 0.7
-        },
-        "texture": {
-          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": { "opacity": 1, "blendMode": "multiply" }
-        },
-        "palette": "primary",
-        "gradient": {
-          "type": "primary",
-          "direction": "VERTICAL"
-        },
-        "noise": {
-          "type": "spokes"
-        },
+        "palette": "primaryOnBlack",
         "pattern": {
           "type": "dots",
-          "animation": "panUp",
-          "scale": 0.5,
+          "scale": 0.75,
+          "opacity": 0.35,
           "rotation": null,
-          "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
+        },
+        "category": {
+          "name": "Classic Two Column ",
+          "slug": "TwoColumnClassic",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "primary",
+          "direction": "DIAGONAL"
         },
         "particle": {
           "type": "lines",
-          "particleCount": "300",
           "speed": 0.8,
+          "animation": "scale",
           "direction": "up",
-          "animation": "scale"
-        }
+          "particleCount": "300"
+        },
+        "useBackground": "Gradient"
       }
     }
-  },
-  "errors": []
+  }
 }

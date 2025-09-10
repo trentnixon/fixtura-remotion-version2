@@ -27,6 +27,7 @@ export interface TemplateThemeConfig {
  */
 export interface ThemeFonts {
   title: FontDefinition;
+  subtitle: FontDefinition;
   copy: FontDefinition;
 }
 

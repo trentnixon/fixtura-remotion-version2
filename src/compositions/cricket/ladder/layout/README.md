@@ -1,38 +1,20 @@
-# Ladder Layout
+# Folder Overview
 
-This folder contains layout components for the Cricket Ladder composition. Layout components handle the visual structure and styling of ladder displays.
+Layout components for ladder compositions.
 
 ## Files
 
-- `TableRowLayout.tsx`: Main table row layout component with comprehensive styling
-- `TableSixersRow.tsx`: Sydney Sixers themed table row layout variant
+- `TableRowLayout.tsx`: standard row layout
+- `TableSixersRow.tsx`: sixers/thunder row layout
+- `README.md`: human notes
 
 ## Relations
 
-- Parent folder: [../ladder.md](../ladder.md)
-- Controllers: [../controller/README.md](../controller/README.md)
+- Parent folder: [../readMe.md](../readMe.md)
+- Key dependencies: composed by controllers and modules
+- Consumed by: ladder variant entries
 
 ## Dependencies
 
-- Internal: Uses controllers from `../controller/` and modules from `../modules/`
-- External: Remotion framework, React, TypeScript, CSS-in-JS
-
-## Architecture
-
-### TableRowLayout
-
-The main table row layout component provides:
-
-- Responsive table row styling
-- Animation integration
-- Theme-aware color schemes
-- Flexible content areas for team data
-
-### TableSixersRow
-
-Sydney Sixers themed variant provides:
-
-- Brand-specific styling
-- Team color integration
-- Custom visual elements
-- Consistent branding across templates
+- Internal: none
+- External: React

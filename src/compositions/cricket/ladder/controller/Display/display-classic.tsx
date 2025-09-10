@@ -28,7 +28,7 @@ export const LadderDisplayClassic: React.FC<LadderDisplayProps> = ({
     animations.container.main.parent.containerOut;
 
   return (
-    <div className="p-0 flex flex-col w-auto h-full">
+    <div className="p-0 flex flex-col w-full h-full">
       {/* <LadderHeader title={name} /> */}
       <AnimatedContainer
         type="full"
