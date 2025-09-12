@@ -12,8 +12,13 @@ Tiled texture images with a color or gradient overlay in configurable blend mode
 ### Props (TextureBackgroundProps)
 
 - `type`: "texture"
-- `src?` / `name?`: Texture source (direct URL or `public/textures/<name>`)
+- `src?` / `name?` / `url?`: Texture source (priority: url > src > name)
+  - `url?`: Direct URL to texture image
+  - `src?`: Alternative URL source
+  - `name?`: Maps to `public/textures/<name>` or can be direct URL/path
 - `position?`, `size?`, `repeat?`, `scale?`: Standard background properties
+  - `repeat?`: `no-repeat | repeat | repeat-x | repeat-y | cover`
+  - `cover`: Maps to `no-repeat` with `cover` background-size
 - `overlay?`:
   - `style?`: `solid | gradient` (default `solid`)
   - `color?`: Solid overlay color (default theme background main)
@@ -30,16 +35,13 @@ Tiled texture images with a color or gradient overlay in configurable blend mode
 {
   "useBackground": "Texture",
   "texture": {
-    "name": "Gemini_Stone.png",
-    "repeat": "repeat",
-    "scale": "50%",
+    "name": "Cricket_Pitch_Dry_Soil_Granular",
+    "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
+    "repeat": "cover",
+    "scale": "100%",
     "overlay": {
-      "style": "gradient",
-      "opacity": 0.4,
-      "blendMode": "multiply",
-      "gradientType": "linear",
-      "gradientDirection": "to bottom right",
-      "gradientColors": ["#0b1220", "#243b55"]
+      "opacity": 0.8,
+      "blendMode": "multiply"
     }
   }
 }
@@ -47,6 +49,8 @@ Tiled texture images with a color or gradient overlay in configurable blend mode
 
 ### Notes
 
-- If both `src` and `name` are provided, `src` takes precedence.
-- `name` resolves to `/textures/${name}` served from `public/textures`.
+- Priority order: `url` > `src` > `name`
+- `url` takes precedence over `src` and `name` if provided
+- `name` resolves to `/textures/${name}` served from `public/textures` unless it's a URL/path
+- `repeat: "cover"` maps to `background-repeat: no-repeat` with `background-size: cover`
 - Use `gradientCss` to pass a complete CSS gradient and override type/direction/colors.

@@ -647,7 +647,8 @@
           "animation": "scale"
         },
         "texture": {
-          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
+          "name": "Cricket_Pitch_Dry_Soil_Granular",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {

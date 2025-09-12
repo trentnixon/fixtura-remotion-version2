@@ -126,9 +126,10 @@ export interface TextureBackgroundProps {
   type: "texture";
   src?: string;
   name?: string; // maps to public/textures/{name}
+  url?: string; // direct URL to texture image
   position?: BackgroundPosition;
   size?: BackgroundSize;
-  repeat?: "no-repeat" | "repeat" | "repeat-x" | "repeat-y";
+  repeat?: "no-repeat" | "repeat" | "repeat-x" | "repeat-y" | "cover";
   scale?: number | string; // maps to backgroundSize (e.g., 50% or 400px)
   overlay?: {
     // Presentation

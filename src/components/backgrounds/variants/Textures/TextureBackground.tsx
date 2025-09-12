@@ -12,7 +12,17 @@ interface Props extends Partial<TextureBackgroundProps> {
 
 const isUrlLike = (val?: string) => !!val && /^(https?:)?\/\//i.test(val);
 
-const resolveTextureSrc = ({ src, name }: { src?: string; name?: string }) => {
+const resolveTextureSrc = ({
+  src,
+  name,
+  url,
+}: {
+  src?: string;
+  name?: string;
+  url?: string;
+}) => {
+  // Priority: url > src > name
+  if (url && url.length > 0) return url;
   if (src && src.length > 0) return src;
   if (!name || name.length === 0) return "";
   // If name looks like a URL or absolute path, use as-is
@@ -57,6 +67,7 @@ const buildGradientFromTemplate = (
 export const TextureBackground: React.FC<Props> = ({
   src,
   name,
+  url,
   position = "center",
   size = "auto",
   repeat = "repeat",
@@ -76,6 +87,7 @@ export const TextureBackground: React.FC<Props> = ({
   const resolvedSrc = resolveTextureSrc({
     src: tv?.url ?? src,
     name: tv?.name ?? name,
+    url: tv?.url ?? url,
   });
   const actualPosition = tv?.position ?? position;
   const actualRepeat = tv?.repeat ?? repeat;
@@ -101,6 +113,11 @@ export const TextureBackground: React.FC<Props> = ({
         ? `${actualScale}%`
         : (actualScale as string)
       : (actualSize as React.CSSProperties["backgroundSize"]);
+
+  // Handle "cover" repeat value - it should be no-repeat with cover background-size
+  const computedRepeat = actualRepeat === "cover" ? "no-repeat" : actualRepeat;
+  const computedSize =
+    actualRepeat === "cover" ? "cover" : computedBackgroundSize;
 
   // If gradient JSON exists, use it to build gradient overlay. Else, use solid color.
   const gradientConfig = video?.templateVariation?.gradient;
@@ -135,8 +152,8 @@ export const TextureBackground: React.FC<Props> = ({
           position: "absolute",
           inset: 0,
           backgroundImage: resolvedSrc ? `url(${resolvedSrc})` : undefined,
-          backgroundRepeat: actualRepeat,
-          backgroundSize: computedBackgroundSize,
+          backgroundRepeat: computedRepeat,
+          backgroundSize: computedSize,
           backgroundPosition: actualPosition,
           ...style,
         }}
