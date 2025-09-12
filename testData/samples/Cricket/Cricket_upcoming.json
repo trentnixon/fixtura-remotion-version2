@@ -1,63 +1,18 @@
 {
   "data": [
     {
-      "date": "Fri, 15 Aug",
-      "time": "06:00 PM",
-      "type": "T20",
-      "round": "Round 15",
-      "gameID": "c3654c85",
-      "gender": "Women",
+      "date": "Sat, 13 Sept",
+      "time": "12:30 PM",
+      "type": "One Day",
+      "round": "Grand Final",
+      "gameID": "60d8142c",
+      "gender": "Mixed",
       "ground": "Gardens Oval / Gardens Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Waratah Women's Div 1 vs Tracy Village Women's Div 1, Date and Time: Friday, 15 August 2025, 06:00 PM, Location: Gardens Oval / Gardens Oval\n- Round: Round 15, Match Type: T20\n- League: Women's Div 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Waratah Warriors C Grade vs PINT C Grade, Date and Time: Saturday, 13 September 2025, 12:30 PM, Location: Gardens Oval / Gardens Oval\n- Round: Grand Final, Match Type: One Day\n- League: C Grade",
       "ageGroup": "Senior",
-      "teamAway": "Tracy Village Women's Div 1",
-      "teamHome": "Waratah Women's Div 1",
-      "gradeName": "Women's Div 1",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Fri, 15 Aug",
-      "time": "06:00 PM",
-      "type": "T20",
-      "round": "Round 15",
-      "gameID": "b9deac43",
-      "gender": "Women",
-      "ground": "Nightcliff Oval / Nightcliff Oval (Darwin Mazda Oval)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Nightcliff Women's Div 1 vs PINT Women's Div 1, Date and Time: Friday, 15 August 2025, 06:00 PM, Location: Nightcliff Oval / Nightcliff Oval (Darwin Mazda Oval)\n- Round: Round 15, Match Type: T20\n- League: Women's Div 1",
-      "ageGroup": "Senior",
-      "teamAway": "PINT Women's Div 1",
-      "teamHome": "Nightcliff Women's Div 1",
-      "gradeName": "Women's Div 1",
+      "teamAway": "PINT C Grade",
+      "teamHome": "Waratah Warriors C Grade",
+      "gradeName": "C Grade",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
         "width": 512,
@@ -69,115 +24,25 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
+        "competition": [],
+        "grade": [],
+        "team": [
           {
-            "id": 192,
-            "isPrimary": true,
+            "id": 170,
+            "isPrimary": false,
             "isActive": true,
             "isArticle": true,
             "isVideo": true,
-            "url": "test",
-            "tagline": null,
+            "url": "7",
+            "tagline": "7",
             "description": null,
-            "name": "test",
+            "name": "7",
             "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
+              "id": 13162,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_6d12274c46.png"
             }
           }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 17 Aug",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 15",
-      "gameID": "42f5d11c",
-      "gender": "Women",
-      "ground": "Gerry Wood Oval / Gerry Wood Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sth Districts Women's Div 1 vs Palmerston Women's Div 1, Date and Time: Sunday, 17 August 2025, 08:30 AM, Location: Gerry Wood Oval / Gerry Wood Oval\n- Round: Round 15, Match Type: T20\n- League: Women's Div 1",
-      "ageGroup": "Senior",
-      "teamAway": "Palmerston Women's Div 1",
-      "teamHome": "Sth Districts Women's Div 1",
-      "gradeName": "Women's Div 1",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Fri, 15 Aug",
-      "time": "06:00 PM",
-      "type": "T20",
-      "round": "Preliminary Final",
-      "gameID": "2ad56f47",
-      "gender": "Women",
-      "ground": "Cazalys Arena / Cazalys Arena 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sth Districts Women's Div 2 vs Tracy Village Women's Div 2, Date and Time: Friday, 15 August 2025, 06:00 PM, Location: Cazalys Arena / Cazalys Arena 1\n- Round: Preliminary Final, Match Type: T20\n- League: Women's Div 2",
-      "ageGroup": "Senior",
-      "teamAway": "Tracy Village Women's Div 2",
-      "teamHome": "Sth Districts Women's Div 2",
-      "gradeName": "Women's Div 2",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
+        ]
       }
     }
   ],
@@ -185,75 +50,416 @@
     "assetID": 2,
     "assetTypeID": 1,
     "assetCategoryID": 2,
-    "assetsLinkID": "e6da6d5a270c442007374ec49f7d959c12821e8328d0ccd21e2f2d006156013a"
+    "assetsLinkID": "20d26f5fc72a09d99a5740d250313a159296c1669850c6c5bf9b4ac9ee9c8e5c"
   },
   "render": {
-    "schedulerId": 314,
-    "renderId": 8341
+    "schedulerId": 211,
+    "renderId": 8447
   },
   "account": {
-    "accountId": 427
+    "accountId": 323
   },
   "timings": {
-    "FPS_MAIN": 405,
+    "FPS_MAIN": 210,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 360,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210
   },
-  "frames": [45, 195, 390, 525],
+  "frames": [45, 195, 330, 420, 510, 600],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52_328ab084c6.png",
-        "width": 300,
-        "height": 300
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
+        "width": 512,
+        "height": 512
       },
-      "name": "Darwin & Districts Cricket Competition",
+      "name": "PINT Cricket Club",
       "sport": "Cricket",
       "sponsors": {
         "primary": [
           {
-            "id": 192,
-            "isPrimary": true,
+            "id": 169,
+            "isPrimary": false,
             "isActive": true,
             "isArticle": true,
             "isVideo": true,
-            "url": "test",
-            "tagline": null,
+            "url": "6",
+            "tagline": "6",
             "description": null,
-            "name": "test",
+            "name": "6",
             "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
+              "id": 13176,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
             }
           }
         ],
         "default": {
           "primary_sponsor": [
             {
-              "id": 192,
+              "id": 169,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "6",
+              "tagline": "6",
+              "description": null,
+              "name": "6",
+              "logo": {
+                "id": 13176,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
+              }
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 169,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "6",
+              "tagline": "6",
+              "description": null,
+              "name": "6",
+              "logo": {
+                "id": 13176,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
+              }
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 166,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "3",
+              "tagline": "3",
+              "description": null,
+              "name": "3",
+              "logo": {
+                "id": 13158,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_7b691dc0ff.png"
+              }
+            }
+          ],
+          "general_sponsor_3": [
+            {
+              "id": 167,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "4",
+              "tagline": "4",
+              "description": null,
+              "name": "4",
+              "logo": {
+                "id": 13159,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_2e99a89b64.png"
+              }
+            }
+          ],
+          "general_sponsor_4": [
+            {
+              "id": 168,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "5",
+              "tagline": "5",
+              "description": null,
+              "name": "5",
+              "logo": {
+                "id": 13160,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_5830015159.png"
+              }
+            }
+          ],
+          "general_sponsor_5": [
+            {
+              "id": 165,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "2",
+              "tagline": "2",
+              "description": null,
+              "name": "2",
+              "logo": {
+                "id": 13157,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_165c6afcc8.png"
+              }
+            }
+          ],
+          "general_sponsor_6": [
+            {
+              "id": 170,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "7",
+              "tagline": "7",
+              "description": null,
+              "name": "7",
+              "logo": {
+                "id": 13162,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_6d12274c46.png"
+              }
+            }
+          ],
+          "general_sponsor_7": [
+            {
+              "id": 171,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "8",
+              "tagline": "8",
+              "description": null,
+              "name": "8",
+              "logo": {
+                "id": 13163,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_1aa8ff89e8.png"
+              }
+            }
+          ],
+          "general_sponsor_8": [
+            {
+              "id": 172,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "9",
+              "tagline": "9",
+              "description": null,
+              "name": "9",
+              "logo": {
+                "id": 13164,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_1268605e79.png"
+              }
+            }
+          ],
+          "general_sponsor_9": [
+            {
+              "id": 173,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "10",
+              "tagline": "10",
+              "description": null,
+              "name": "10",
+              "logo": {
+                "id": 13165,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_2046cbd33c.png"
+              }
+            }
+          ],
+          "general_sponsor_10": [
+            {
+              "id": 174,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "11",
+              "tagline": "11",
+              "description": null,
+              "name": "11",
+              "logo": {
+                "id": 13166,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_0ab9d1a55f.png"
+              }
+            }
+          ],
+          "general_sponsor_11": [
+            {
+              "id": 175,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "12",
+              "tagline": "12",
+              "description": null,
+              "name": "12",
+              "logo": {
+                "id": 13167,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_1dfeb3110e.png"
+              }
+            }
+          ],
+          "general_sponsor_12": [
+            {
+              "id": 176,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "13",
+              "tagline": "13",
+              "description": null,
+              "name": "13",
+              "logo": {
+                "id": 13168,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_0ab5c6727a.png"
+              }
+            }
+          ],
+          "general_sponsor_13": [
+            {
+              "id": 177,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "14",
+              "tagline": "14",
+              "description": null,
+              "name": "14",
+              "logo": {
+                "id": 13169,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_b5d0d528bc.png"
+              }
+            }
+          ],
+          "general_sponsor_14": [
+            {
+              "id": 178,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "15",
+              "tagline": "15",
+              "description": null,
+              "name": "15",
+              "logo": {
+                "id": 13170,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_003ed9fa59.png"
+              }
+            }
+          ],
+          "general_sponsor_15": [
+            {
+              "id": 179,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "16",
+              "tagline": "16",
+              "description": null,
+              "name": "16",
+              "logo": {
+                "id": 13171,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_6719b8bcc6.png"
+              }
+            }
+          ],
+          "general_sponsor_16": [
+            {
+              "id": 180,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "17",
+              "tagline": "17",
+              "description": null,
+              "name": "17",
+              "logo": {
+                "id": 13172,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor17_7a12c0a481.png"
+              }
+            }
+          ],
+          "general_sponsor_17": [
+            {
+              "id": 181,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "18",
+              "tagline": "18",
+              "description": null,
+              "name": "18",
+              "logo": {
+                "id": 13173,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor18_d93386799c.png"
+              }
+            }
+          ],
+          "general_sponsor_18": [
+            {
+              "id": 182,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "19",
+              "tagline": "19",
+              "description": null,
+              "name": "19",
+              "logo": {
+                "id": 13174,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor19_e51e18d297.png"
+              }
+            }
+          ],
+          "general_sponsor_19": [
+            {
+              "id": 183,
+              "isPrimary": false,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "20",
+              "tagline": "20",
+              "description": null,
+              "name": "20",
+              "logo": {
+                "id": 13175,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor20_3ec2996247.png"
+              }
+            }
+          ],
+          "general_sponsor_20": [
+            {
+              "id": 164,
               "isPrimary": true,
               "isActive": true,
               "isArticle": true,
               "isVideo": true,
-              "url": "test",
-              "tagline": null,
+              "url": "1",
+              "tagline": "1",
               "description": null,
-              "name": "test",
+              "name": "1",
               "logo": {
-                "id": 13221,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
+                "id": 13156,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_3e00ce7ae2.png"
               }
             }
           ]
         }
-      }
+      },
+      "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "Darwin & Districts Women's Competition",
-      "groupingCategory": "Darwin & Districts Women's Competition",
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Fixtures",
         "titleSplit": ["Fixtures", ""],
@@ -268,19 +474,19 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#2281a8",
-          "secondary": "#a13535"
+          "primary": "#004c3d",
+          "secondary": "#f7b718"
         },
-        "template": "Basic"
+        "template": "TwoColumnClassic"
       },
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/gettyimages_1366011994_2048x2048_40d33086ce.jpg",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/gettyimages_1366011994_2048x2048_b3af207cd7.jpg",
           "ratio": "portrait",
           "width": 1339,
           "height": 1666,
           "AgeGroup": "Both",
-          "AssetType": "Upcoming Fixtures",
+          "AssetType": "ALL",
           "markerPosition": null
         },
         "audio": {
@@ -298,17 +504,11 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Image",
+        "useBackground": "Texture",
         "mode": "lightAlt",
-        "texture": {
-          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Bat_Willow_Grain_8dd8e57e83.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": { "opacity": 1, "blendMode": "multiply" }
-        },
         "category": {
-          "slug": "Basic",
-          "name": "Basic",
+          "slug": "TwoColumnClassic",
+          "name": "Classic Two Column ",
           "divideFixturesBy": {
             "CricketUpcoming": 3,
             "CricketResults": 2,
@@ -416,28 +616,28 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "zoom",
-          "direction": "in",
-          "overlayStyle": "duotone",
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
           "gradientType": "linear",
-          "overlayOpacity": 0.7
+          "overlayOpacity": 0.3
         },
-        "palette": "secondaryOnBlack",
+        "palette": "secondary",
         "gradient": {
           "type": "primary",
           "direction": "HORIZONTAL"
         },
         "noise": {
-          "type": "spokes"
+          "type": "floatingParticles"
         },
         "pattern": {
-          "type": "dots",
-          "animation": "panUp",
-          "scale": 0.5,
+          "type": "grid",
+          "animation": "none",
+          "scale": 3,
           "rotation": null,
-          "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "opacity": 0.15,
+          "animationDuration": null,
+          "animationSpeed": null
         },
         "particle": {
           "type": "lines",
@@ -445,6 +645,15 @@
           "speed": 0.8,
           "direction": "up",
           "animation": "scale"
+        },
+        "texture": {
+          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.8,
+            "blendMode": "multiply"
+          }
         }
       }
     }

@@ -55,10 +55,10 @@ export const cnswTheme: TemplateThemeConfig = {
         "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
     },
     Top5PlayerScore: {
-      className: "text-6xl font-black  tracking-normal leading-tight mr-2",
+      className: "text-4xl font-normal  tracking-normal leading-tight mr-2",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-2xl font-black  tracking-wide leading-loose",
+      className: "text-1xl font-normal  tracking-wide leading-loose",
     },
     ResultScore: {
       className: "text-3xl font-bold  tracking-normal leading-tight ",
@@ -109,9 +109,9 @@ export const cnswTheme: TemplateThemeConfig = {
   },
   layout: {
     heights: {
-      asset: 1040,
-      header: 190,
-      footer: 120,
+      asset: 980,
+      header: 280,
+      footer: 100,
     },
     spacing: {
       section: "space-y-8",
@@ -123,7 +123,7 @@ export const cnswTheme: TemplateThemeConfig = {
       item: "py-2",
     },
     borderRadius: {
-      container: "rounded-lg",
+      container: "rounded-none",
     },
   },
   mode: {

@@ -223,8 +223,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#2281a8",
-          "secondary": "#a13535"
+          "primary": "#002854",
+          "secondary": "#00ADEF"
         },
         "template": "Basic"
       },
@@ -377,10 +377,10 @@
           "gradientType": "linear",
           "overlayOpacity": 0.7
         },
-        "palette": "secondaryOnBlack",
+        "palette": "primary",
         "gradient": {
           "type": "primary",
-          "direction": "HORIZONTAL"
+          "direction": "VERTICAL"
         },
         "noise": {
           "type": "spokes"

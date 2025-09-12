@@ -19,6 +19,7 @@ import {
   SixersThunder as top5SixersThunder,
   classic as top5Classic,
   twocolumnclassic as top5ClassicTwoColumn,
+  cnsw as top5CNSW,
 } from "./top5";
 import {
   basic as resultsBasic,
@@ -71,7 +72,7 @@ export const CricketTop5 = {
   thunder: top5SixersThunder,
   classic: top5Classic,
   twocolumnclassic: top5ClassicTwoColumn, // alias to classic
-  cnsw: top5Classic,
+  cnsw: top5CNSW,
 };
 
 export const CricketResults = {

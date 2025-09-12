@@ -5,14 +5,14 @@ export const templateAnimations: AnimationConfig = {
     intro: {
       logo: {
         introIn: {
-          type: "statReveal",
+          type: "fadeIn",
           duration: 15,
           delay: 5,
           easing: { type: "inOut", base: "ease" },
           custom: { distance: 50 },
         },
         introOut: {
-          type: "slideOutTop",
+          type: "fadeOut",
           duration: 15,
           easing: { type: "inOut", base: "ease" },
           custom: { distance: 2000 },
@@ -24,14 +24,14 @@ export const templateAnimations: AnimationConfig = {
       title: {
         logo: {
           introIn: {
-            type: "statReveal",
+            type: "fadeIn",
             duration: 15,
             delay: 5,
             easing: { type: "inOut", base: "ease" },
             custom: { distance: 50 },
           },
           introOut: {
-            type: "slideOutTop",
+            type: "fadeOut",
             duration: 15,
             easing: { type: "inOut", base: "ease" },
           },
@@ -40,14 +40,14 @@ export const templateAnimations: AnimationConfig = {
       item: {
         logo: {
           itemIn: {
-            type: "statReveal",
+            type: "fadeIn",
             duration: 15,
             delay: 10,
             easing: { type: "inOut", base: "ease" },
             custom: { distance: 50 },
           },
           itemOut: {
-            type: "slideOutTop",
+            type: "fadeOut",
             duration: 15,
             easing: { type: "inOut", base: "ease" },
           },
@@ -57,14 +57,14 @@ export const templateAnimations: AnimationConfig = {
     sponsor: {
       logo: {
         introIn: {
-          type: "statReveal",
+          type: "fadeIn",
           duration: 15,
           delay: 5,
           easing: { type: "inOut", base: "ease" },
           custom: { distance: 50 },
         },
         introOut: {
-          type: "slideOutTop",
+          type: "fadeOut",
           duration: 15,
           easing: { type: "inOut", base: "ease" },
         },
@@ -74,21 +74,21 @@ export const templateAnimations: AnimationConfig = {
   text: {
     intro: {
       mainTitle: {
-        type: "typewriter",
+        type: "fadeIn",
         duration: 15,
         easing: { type: "inOut", base: "ease" },
         delay: 5,
         custom: { distance: 500 },
       },
       clubName: {
-        type: "typewriter",
+        type: "fadeIn",
         duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
         custom: { distance: 200 },
       },
       introOut: {
-        type: "slideOutRight",
+        type: "fadeOut",
         duration: 15,
         easing: { type: "inOut", base: "ease" },
         custom: { distance: 900 },
@@ -97,20 +97,20 @@ export const templateAnimations: AnimationConfig = {
     },
     main: {
       title: {
-        type: "fadeInDown",
+        type: "fadeIn",
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
         custom: { distance: 200 },
       },
       copyIn: {
-        type: "typewriter",
+        type: "fadeIn",
         duration: 10,
         easing: { type: "inOut", base: "ease" },
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
+        type: "fadeOut",
         duration: 15,
         easing: { type: "inOut", base: "ease" },
         delay: 200,
@@ -118,13 +118,13 @@ export const templateAnimations: AnimationConfig = {
     },
     outro: {
       copyIn: {
-        type: "typewriter",
+        type: "fadeIn",
         duration: 1000,
         easing: { type: "inOut", base: "ease" },
         delay: 200,
       },
       copyOut: {
-        type: "typewriter",
+        type: "fadeOut",
         duration: 1000,
         easing: { type: "inOut", base: "ease" },
         delay: 200,
@@ -135,15 +135,15 @@ export const templateAnimations: AnimationConfig = {
     main: {
       parent: {
         containerIn: {
-          type: "none",
+          type: "fadeIn",
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
         },
       },
       itemContainer: {
         containerIn: {
-          type: "slideInRight",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
@@ -151,7 +151,7 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "slideOutLeft",
+          type: "fadeOut",
           easing: { type: "inOut", base: "ease" },
           duration: 20,
           custom: {
@@ -161,7 +161,7 @@ export const templateAnimations: AnimationConfig = {
       },
       itemContainerOuter: {
         containerIn: {
-          type: "slideInLeft",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
@@ -169,12 +169,12 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
         },
       },
       itemContainerInner: {
         containerIn: {
-          type: "scaleIn",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
           duration: 10,
           custom: {
@@ -182,12 +182,12 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
         },
       },
       itemContainerSecondary: {
         containerIn: {
-          type: "slideInRight",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
@@ -195,7 +195,7 @@ export const templateAnimations: AnimationConfig = {
           },
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
         },
       },
     },

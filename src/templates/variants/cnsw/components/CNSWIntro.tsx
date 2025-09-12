@@ -39,7 +39,7 @@ export const CNSWIntro: React.FC = () => {
 
   // === COMBINED VALUE AND SPACING OBJECT ===
   const assetConfig = {
-    Ladder: {
+    CricketLadder: {
       topLine: {
         value: "LEAGUE",
         spacing: "0.25em",
@@ -49,31 +49,72 @@ export const CNSWIntro: React.FC = () => {
         spacing: "0.66em",
       },
     },
-    Results: {
+    CricketResults: {
       topLine: {
-        value: "RESULTS",
-        spacing: "2.0em",
+        value: "Weekend",
+        spacing: "0.069em",
       },
       bottomLine: {
-        value: "SCORES",
-        spacing: "2.0em",
+        value: "RESULTS",
+        spacing: "0.46em",
       },
     },
-    Fixtures: {
+    CricketUpcoming: {
       topLine: {
         value: "FIXTURES",
-        spacing: "1.8em",
+        spacing: "0.065em",
       },
       bottomLine: {
         value: "SCHEDULE",
-        spacing: "1.5em",
+        spacing: "0.3em",
+      },
+    },
+    CricketTop5Bowling: {
+      topLine: {
+        value: "Leading",
+        spacing: "0.155em",
+      },
+      bottomLine: {
+        value: "Wicket takers",
+        spacing: "0.055em",
+      },
+    },
+    CricketTop5Batting: {
+      topLine: {
+        value: "Leading",
+        spacing: "0.155em",
+      },
+      bottomLine: {
+        value: "Run-Scorers",
+        spacing: "0.07em",
+      },
+    },
+    CricketRoster: {
+      topLine: {
+        value: "Team",
+        spacing: "0.67em",
+      },
+      bottomLine: {
+        value: "Roster",
+        spacing: "0.62em",
+      },
+    },
+    CricketResultSingle: {
+      topLine: {
+        value: "Weekend",
+        spacing: "0.67em",
+      },
+      bottomLine: {
+        value: "Result",
+        spacing: "0.62em",
       },
     },
   };
 
+  console.log("[metadata.compositionId]", metadata.compositionId);
   const currentConfig =
-    assetConfig[metadata.title as keyof typeof assetConfig] ||
-    assetConfig.Ladder;
+    assetConfig[metadata.compositionId as keyof typeof assetConfig] ||
+    assetConfig["CricketResultSingle"];
 
   const topLine = currentConfig.topLine.value;
   const bottomLine = currentConfig.bottomLine.value;
