@@ -1,18 +1,22 @@
 # Folder Overview
 
-Header components for team roster layouts.
+Header components for team roster layouts, organized by accountHolder/Against perspective.
 
 ## Files
 
-- `AccountTeam.tsx`, `AgainstTeam.tsx`: header sections for account and opponent teams
+- `index.ts`: exports for all header components
+- `accountHolder/`: components for account holder team perspective
+- `Against/`: components for against team perspective
+- `DevelopmentRoadMap.md`: progress tracking and priorities
+- `Tickets.md`: detailed planning and task breakdowns
 
 ## Relations
 
 - Parent folder: [../readMe.md](../readMe.md)
-- Key dependencies: used by roster displays
+- Key dependencies: used by roster displays and controllers
 - Consumed by: teamRoster variant entries
 
 ## Dependencies
 
-- Internal: none
-- External: React
+- Internal: `accountHolder/`, `Against/`
+- External: React, AnimationContext, AnimatedContainer

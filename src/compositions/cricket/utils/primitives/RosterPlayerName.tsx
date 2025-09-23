@@ -4,17 +4,15 @@ import {
   AnimatedText,
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
-import { AnimationConfig } from "../../../../components/typography/config/animations";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 export const RosterPlayerName = ({
   value,
-  animation,
+
   className,
   variant = "onContainerCopy",
 }: {
   value: string;
-  animation: AnimationConfig;
   className?: string;
   variant?: string;
 }) => {
@@ -26,7 +24,7 @@ export const RosterPlayerName = ({
       variant={variant as ColorVariant}
       fontFamily={fontClasses.copy?.family}
       className={className}
-      animation={animation as AnimationConfig}
+      animation={undefined}
       letterAnimation="none"
     >
       {value}

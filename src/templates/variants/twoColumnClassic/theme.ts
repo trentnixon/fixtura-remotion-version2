@@ -14,6 +14,9 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       family: "Impact",
     },
+    subtitle: {
+      family: "Impact",
+    },
     copy: {
       family: "Heebo",
     },

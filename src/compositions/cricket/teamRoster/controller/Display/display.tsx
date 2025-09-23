@@ -4,9 +4,10 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 //import RosterSponsors from "../../layout/RosterSponsors/sponsors";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import AccountLogoInSubtleWrapper from "../../layout/RosterHeader/AccountTeam";
+import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
 import { TwoMetaValuesSubtleWrapper } from "../../layout/Metadata/TwoMetaValues";
 import { formatDate, truncateText } from "../../../utils/utils-text";
+import { VS } from "../../layout/Metadata/VS";
 
 interface RosterDisplayProps {
   roster: RosterDataItem;
@@ -18,8 +19,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
   const availableHeight = heights.asset;
   const { selectedPalette } = useThemeContext();
   const backgroundColor = selectedPalette.container.backgroundTransparent.high;
-  const TeamLogoBackground =
-    selectedPalette.container.backgroundTransparent.medium;
+
   return (
     <div className="p-0 flex flex-col w-full h-full">
       <AnimatedContainer
@@ -51,17 +51,17 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
           <TwoMetaValuesSubtleWrapper
             values={[formatDate(roster.date), truncateText(roster.ground, 50)]}
           />
-          <AccountLogoInSubtleWrapper
-            roster={roster}
-            variant="onContainerCopy"
-            logoSize="150"
-            backgroundColor={TeamLogoBackground}
-          />
+
           <div
             className="flex flex-row gap-2 justify-between items-center "
             style={{ backgroundColor: backgroundColor }}
           >
-            <RosterPlayerList roster={roster} />
+            <RosterPlayerList roster={roster} gap="gap-4" />
+            <div className="flex flex-col gap-4 p-4">
+              <AccountTeamLarge roster={roster} logoSize={"300"} />
+              <VS variant="onContainerCopy" />
+              <AgainstTeamLarge roster={roster} logoSize={"120"} />
+            </div>
           </div>
           <TwoMetaValuesSubtleWrapper
             values={[roster.gradeName, roster.round]}

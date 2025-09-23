@@ -4,9 +4,10 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 //import RosterSponsors from "../../layout/RosterSponsors/sponsors";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { AccountLogoNoWrapper } from "../../layout/RosterHeader/AccountTeam";
+import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
 import { TwoMetaValuesNoWrapper } from "../../layout/Metadata/TwoMetaValues";
 import { formatDate, truncateText } from "../../../utils/utils-text";
+import { VS } from "../../layout/Metadata/VS";
 
 interface RosterDisplayProps {
   roster: RosterDataItem;
@@ -61,8 +62,13 @@ const RosterDisplayClassicTwoColumn: React.FC<RosterDisplayProps> = ({
             <RosterPlayerList
               roster={roster}
               className="text-left whitespace-nowrap"
+              gap="gap-4"
             />
-            <AccountLogoNoWrapper roster={roster} logoSize="250" />
+            <div className="flex flex-col gap-4 p-4">
+              <AccountTeamLarge roster={roster} logoSize={"300"} />
+              <VS variant="onContainerCopy" />
+              <AgainstTeamLarge roster={roster} logoSize={"120"} />
+            </div>
           </div>
           <TwoMetaValuesNoWrapper values={[roster.gradeName, roster.round]} />
         </div>

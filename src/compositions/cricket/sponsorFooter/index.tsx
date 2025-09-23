@@ -1,113 +1,101 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/compositions/cricket/sponsorFooter/index.tsx
 
+import React, { useMemo } from "react";
 import { AnimatedImage } from "../../../components/images/AnimatedImage";
-import { useAnimationContext } from "../../../core/context/AnimationContext";
-import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import { AssignSponsors } from "../composition-types";
+import { useSponsorValidation } from "./hooks/useSponsorValidation";
+import { PrimarySponsor } from "./components/PrimarySponsor";
 
-export const SponsorFooter = ({
-  assignSponsors,
-}: {
-  assignSponsors: AssignSponsors;
-}) => {
-  const animationContext = useAnimationContext();
-  const videoDataContext = useVideoDataContext();
+// Sponsor configuration constants
+const SPONSOR_CONFIG = {
+  ANIMATION_DELAY_MULTIPLIER: 5,
+  EXIT_FRAME: 300,
+} as const;
 
-  if (!assignSponsors) {
-    console.warn("[SponsorFooter] Missing match or assignSponsors");
-    return null;
+// Helper function to calculate max width based on logo dimensions
+const calculateMaxWidth = (
+  logo: { width?: number; height?: number },
+  footerHeight: number,
+): number => {
+  if (logo.width && logo.height) {
+    // Calculate the natural aspect ratio
+    const aspectRatio = logo.width / logo.height;
+    // Calculate width if logo fills the full footer height
+    const naturalWidth = footerHeight * aspectRatio;
+    // Return the natural width (no artificial limits)
+    return naturalWidth;
   }
-  if (!animationContext || !videoDataContext) {
-    console.warn("[SponsorFooter] Missing animation or video data context");
-    return null;
-  }
-  //const { assignSponsors } = match;
-  const { animations } = animationContext;
-  const { data } = videoDataContext;
-  if (!animations || !animations.image?.sponsor?.logo) {
-    console.warn("[SponsorFooter] Missing logo animations");
-    return null;
-  }
-  if (!data || !data.timings) {
-    console.warn("[SponsorFooter] Missing video data or timings");
-    return null;
-  }
-  const LogoAnimations = animations.image.sponsor.logo;
-
-  const defaultSponsorList = createFlatSponsorList(assignSponsors);
-  return (
-    <div className="flex flex-row justify-start gap-4 items-center my-2 px-8">
-      <IncludePrimarySponsor />
-      {defaultSponsorList.map((sponsor, idx) => {
-        // Only grade and competition have id and name
-        const key = "id" in sponsor ? sponsor.id : idx;
-
-        if (!sponsor?.logo?.url) {
-          return null;
-        }
-        return (
-          <div key={key}>
-            <AnimatedImage
-              src={sponsor?.logo?.url || ""}
-              alt={""}
-              width={sponsor?.logo?.width || 100}
-              height={sponsor?.logo?.height || 100}
-              fit="contain"
-              animation={LogoAnimations.introIn}
-              exitAnimation={LogoAnimations.introOut}
-              animationDelay={idx * 5}
-              exitFrame={300}
-            />
-          </div>
-        );
-      })}
-    </div>
-  );
+  // Fallback: if no dimensions provided, allow up to 3x footer height
+  return footerHeight * 3;
 };
 
-const IncludePrimarySponsor = () => {
-  const videoDataContext = useVideoDataContext();
-  const animationContext = useAnimationContext();
-  if (!videoDataContext || !animationContext) {
-    console.warn(
-      "[IncludePrimarySponsor] Missing animation or video data context",
+export const SponsorFooter = React.memo(
+  ({ assignSponsors }: { assignSponsors: AssignSponsors }) => {
+    const validation = useSponsorValidation();
+
+    // Memoize expensive sponsor list calculation (must be before early returns)
+    const defaultSponsorList = useMemo(
+      () => createFlatSponsorList(assignSponsors),
+      [assignSponsors],
     );
-    return null;
-  }
-  const { sponsors } = videoDataContext;
-  const { animations } = animationContext;
-  if (!sponsors || !sponsors.primary) {
-    console.warn("[IncludePrimarySponsor] Missing sponsors or primary");
-    return null;
-  }
-  if (!animations || !animations.image?.sponsor?.logo) {
-    console.warn("[IncludePrimarySponsor] Missing logo animations");
-    return null;
-  }
-  const LogoAnimations = animations.image.sponsor.logo;
-  const primaryArray = Object.values(sponsors.primary);
-  if (primaryArray.length > 0 && primaryArray[0]) {
-    if (!primaryArray[0]?.logo?.url) {
-      console.warn("[IncludePrimarySponsor] Primary sponsor missing logo url");
+
+    if (!assignSponsors) {
+      console.warn("[SponsorFooter] Missing assignSponsors");
       return null;
     }
+
+    if (
+      !validation.isValid ||
+      !validation.logoAnimations ||
+      !validation.heights
+    ) {
+      return null;
+    }
+
+    const { logoAnimations, heights } = validation;
     return (
-      <div className="w-full h-full ok justify-center items-center max-h-[100px] max-w-[100px]">
-        <AnimatedImage
-          src={primaryArray[0].logo.url || ""}
-          alt={primaryArray[0].name || ""}
-          width={"auto"}
-          height={"auto"}
-          fit="contain"
-          animation={LogoAnimations.introIn}
-          exitAnimation={LogoAnimations.introOut}
-          exitFrame={300}
-        />
+      <div
+        className="flex flex-row justify-start gap-4 items-center my-0 px-16 overflow-hidden"
+        style={{ height: heights.footer }}
+      >
+        <PrimarySponsor />
+        {defaultSponsorList.map((sponsor, idx) => {
+          // Only grade and competition have id and name
+          const key = "id" in sponsor ? sponsor.id : idx;
+
+          if (!sponsor?.logo?.url) {
+            return null;
+          }
+          return (
+            <div
+              key={key}
+              className="flex items-center justify-center flex-shrink-0"
+              style={{ height: heights.footer }}
+            >
+              <AnimatedImage
+                src={sponsor?.logo?.url || ""}
+                alt={
+                  "name" in sponsor ? sponsor.name : `Sponsor logo ${idx + 1}`
+                }
+                width="auto"
+                height="auto"
+                maxHeight={heights.footer}
+                maxWidth={calculateMaxWidth(sponsor.logo, heights.footer)}
+                fit="contain"
+                preserveRatio={true}
+                animation={logoAnimations.introIn as any}
+                exitAnimation={logoAnimations.introOut as any}
+                animationDelay={idx * SPONSOR_CONFIG.ANIMATION_DELAY_MULTIPLIER}
+                exitFrame={SPONSOR_CONFIG.EXIT_FRAME}
+              />
+            </div>
+          );
+        })}
       </div>
     );
-  }
-  return null;
-};
+  },
+);
 
 function createFlatSponsorList(assignSponsors: AssignSponsors) {
   const { competition = [], grade = [], team = [] } = assignSponsors;

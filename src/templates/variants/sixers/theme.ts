@@ -14,6 +14,9 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       family: "Slightly Marker",
     },
+    subtitle: {
+      family: "Slightly Marker",
+    },
     copy: {
       family: "Resolve",
     },
@@ -26,6 +29,10 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       className:
         "text-[15em] font-normal tracking-normal leading-snug text-center m-0 px-4",
+    },
+    titleSmall: {
+      className:
+        "text-7xl font-normal tracking-normal leading-none text-center m-0 mt-8 px-4",
     },
 
     // Subtitle component styles

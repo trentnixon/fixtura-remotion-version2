@@ -14,6 +14,9 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       family: "Heebo",
     },
+    subtitle: {
+      family: "Heebo",
+    },
     copy: {
       family: "Heebo",
     },
@@ -26,6 +29,12 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       className:
         "text-9xl font-black tracking-tight leading-none text-center m-0 px-4",
+    },
+
+    // Title small component styles
+    titleSmall: {
+      className:
+        "text-6xl font-black tracking-tight leading-none text-center m-0 px-4",
     },
 
     // Subtitle component styles
@@ -130,9 +139,9 @@ export const basicTheme: TemplateThemeConfig = {
   // ===== LAYOUT CONFIGURATION =====
   layout: {
     heights: {
-      asset: 1040,
+      asset: 1010,
       header: 190,
-      footer: 120,
+      footer: 150,
     },
     spacing: {
       section: "space-y-8",

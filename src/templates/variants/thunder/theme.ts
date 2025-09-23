@@ -14,6 +14,9 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       family: "Monument Extended",
     },
+    subtitle: {
+      family: "Monument Extended",
+    },
     copy: {
       family: "Tungsten",
     },
@@ -27,7 +30,10 @@ export const basicTheme: TemplateThemeConfig = {
       className:
         "text-9xl font-normal tracking-wider leading-snug text-center m-0 px-4",
     },
-
+    titleSmall: {
+      className:
+        "text-7xl font-normal tracking-wider leading-none text-center m-0 mt-8 px-4",
+    },
     // Subtitle component styles
     subtitle: {
       className:

@@ -4,9 +4,10 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 //import RosterSponsors from "../../layout/RosterSponsors/sponsors";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { AccountLogoNoWrapper } from "../../layout/RosterHeader/AccountTeam";
+import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
 import { TwoMetaValuesNoWrapper } from "../../layout/Metadata/TwoMetaValues";
 import { formatDate, truncateText } from "../../../utils/utils-text";
+import { VS } from "../../layout/Metadata/VS";
 
 interface RosterDisplayProps {
   roster: RosterDataItem;
@@ -54,8 +55,16 @@ const RosterDisplayClassic: React.FC<RosterDisplayProps> = ({ roster }) => {
             className={`flex flex-row gap-2 justify-between items-center rounded-lg ${layout.borderRadius.container}  force-p-4`}
             style={{ backgroundColor: backgroundColor }}
           >
-            <RosterPlayerList roster={roster} className="text-left" />
-            <AccountLogoNoWrapper roster={roster} logoSize="250" />
+            <RosterPlayerList
+              roster={roster}
+              className="text-left"
+              gap="gap-0"
+            />
+            <div className="flex flex-col gap-4 p-4">
+              <AccountTeamLarge roster={roster} logoSize={"300"} />
+              <VS variant="onContainerCopy" />
+              <AgainstTeamLarge roster={roster} logoSize={"120"} />
+            </div>
           </div>
           <TwoMetaValuesNoWrapper values={[roster.gradeName, roster.round]} />
         </div>

@@ -14,6 +14,9 @@ export const basicTheme: TemplateThemeConfig = {
     title: {
       family: "Impact",
     },
+    subtitle: {
+      family: "Impact",
+    },
     copy: {
       family: "Heebo",
     },
@@ -132,9 +135,9 @@ export const basicTheme: TemplateThemeConfig = {
   // ===== LAYOUT CONFIGURATION =====
   layout: {
     heights: {
-      asset: 1000,
-      header: 230,
-      footer: 120,
+      asset: 1010,
+      header: 190,
+      footer: 150,
     },
     spacing: {
       section: "space-y-8",

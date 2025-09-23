@@ -14,6 +14,9 @@ export const brickworkTheme: TemplateThemeConfig = {
     title: {
       family: "Roboto-Medium", //"Roboto-Medium",
     },
+    subtitle: {
+      family: "Roboto-Medium",
+    },
     copy: {
       family: "Roboto-Medium", //"Roboto-Light",
     },
@@ -131,9 +134,9 @@ export const brickworkTheme: TemplateThemeConfig = {
   // ===== LAYOUT CONFIGURATION =====
   layout: {
     heights: {
-      asset: 1040,
+      asset: 1010,
       header: 190,
-      footer: 120,
+      footer: 150,
     },
     spacing: {
       section: "space-y-8",

@@ -1,28 +1,26 @@
 import React from "react";
 import { RosterDataItem } from "../../types"; // Adjust path as needed
-import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { RosterPlayerName } from "../../../utils/primitives/RosterPlayerName";
+import { truncatePlayerName } from "../utils";
 
 interface RosterPlayerListProps {
   roster: RosterDataItem;
   className?: string;
+  gap?: string;
 }
 
 const RosterPlayerList: React.FC<RosterPlayerListProps> = ({
   roster,
-  className = "text-center font-bold",
+  className = "text-left font-bold",
+  gap = "gap-2",
 }) => {
-  const { animations } = useAnimationContext();
-  const TextAnimations = animations.text.main;
-
   return (
     <div className="flex-grow">
-      <div className="flex flex-col p-8 gap-2">
+      <div className={`flex flex-col p-8 ${gap}`}>
         {roster.teamRoster.map((player, index) => (
           <RosterPlayerName
             key={index}
-            value={player.toUpperCase()}
-            animation={{ ...TextAnimations.copyIn, delay: 0 }}
+            value={truncatePlayerName(player.toUpperCase(), 20)}
             className={className}
           />
         ))}

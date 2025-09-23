@@ -14,7 +14,7 @@ export const ResultTeamName = ({
   variant = "onContainerCopy",
 }: {
   value: string;
-  animation: AnimationConfig;
+  animation: AnimationConfig | undefined;
   className?: string;
   variant?: string;
 }) => {

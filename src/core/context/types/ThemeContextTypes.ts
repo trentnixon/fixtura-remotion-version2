@@ -89,9 +89,9 @@ export interface ThemeTypography {
 
 export interface ThemeLayout {
   heights: {
-    AssetHeight: number;
-    Header: number;
-    Footer: number;
+    asset: number;
+    header: number;
+    footer: number;
     [key: string]: number;
   };
   spacing?: {

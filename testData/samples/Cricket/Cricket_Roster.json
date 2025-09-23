@@ -1,320 +1,132 @@
 {
   "data": [
     {
-      "ageGroup": "Over 50",
-      "gameId": "d4adc2eb",
-      "teamHome": "GC 50's Thunder Div 2 Gold",
-      "teamAway": "GC 50's Thunder Div 2 Green",
-      "isHomeTeam": true,
-      "teamRoster": [
-        "Dean Croft (WK)\nc",
-        "Paul Azzopardi",
-        "Adam Bell",
-        "Rod Carrington",
-        "Craig Field",
-        "Jason Hay",
-        "Jeff Lindemann",
-        "Daniel Platts",
-        "Paul Rapson",
-        "Michael Ross",
-        "Quentin Ryan",
-        "Mark Snowden\nvc"
-      ],
-      "type": "One Day",
-      "ground": "Oxenford Oval / Choice Homes Oval",
+      "date": "Saturday, 20 September 2025",
+      "type": "T20",
       "round": "Round 5",
-      "date": "Saturday, 21 June 2025",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "gameId": "6b615e63",
       "gender": "Mixed",
-      "gradeName": "O50 Div 2 - Andrew Knight Shield",
-      "sponsors": [
-        {
-          "id": 151,
-          "isPrimary": true,
-          "isActive": true,
-          "isArticle": true,
-          "isVideo": true,
-          "url": "test",
-          "tagline": "test",
-          "description": null,
-          "name": "test",
-          "logo": {
-            "id": 12784,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
-          }
-        }
-      ]
-    },
-    {
-      "ageGroup": "Over 60",
-      "gameId": "da1a8bad",
-      "teamHome": "Wide Bay",
-      "teamAway": "GC Thunder Blue",
+      "ground": "Selwyn Park (BEAUDESERT) / Selwyn Park",
+      "ageGroup": "Senior",
+      "sponsors": [],
+      "teamAway": "Southport T20",
+      "teamHome": "Beaudesert T20",
+      "gradeName": "All Ballsports T20 2025",
       "isHomeTeam": false,
       "teamRoster": [
-        "John Foster",
-        "Phillip Hopgood",
-        "Jeffrey Manitzky",
-        "Ian Petherick",
-        "Brian Rowe\nc",
-        "David Russell",
-        "Raymond Sanders (WK)",
-        "Mick Seery",
-        "Mark Simes",
-        "Fred D Williams",
-        "Tony Williams",
-        "Chris Morton"
+        "Brodie Ackerley",
+        "Manoj Frank Boteju",
+        "Ureshen Chinia",
+        "Justin Choromanski",
+        "Chamith De Silva",
+        "Cooper Johnson",
+        "Mitchell Johnson",
+        "Bailey Johnston",
+        "dhanushka mitipolaarachchi\nc",
+        "Ravindu Mudiyanselage Don",
+        "Kyle Palmer-Hughes",
+        "Kaleb Phillips"
       ],
-      "type": "One Day",
-      "ground": "Caboolture Cricket Club / Caboolture Cricket Club - Oval 2",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png"
+    },
+    {
+      "date": "Saturday, 20 September 2025",
+      "type": "T20",
       "round": "Round 6",
-      "date": "Saturday, 21 June 2025",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
+      "gameId": "5b2c0d93",
       "gender": "Mixed",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "sponsors": [
-        {
-          "id": 151,
-          "isPrimary": true,
-          "isActive": true,
-          "isArticle": true,
-          "isVideo": true,
-          "url": "test",
-          "tagline": "test",
-          "description": null,
-          "name": "test",
-          "logo": {
-            "id": 12784,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
-          }
-        }
-      ]
-    },
-    {
-      "ageGroup": "Over 60",
-      "gameId": "a98f8529",
-      "teamHome": "Sunshine Coast Maroon",
-      "teamAway": "GC Thunder Gold",
-      "isHomeTeam": false,
-      "teamRoster": ["No players allocated to line-up"],
-      "type": "One Day",
-      "ground": "Caboolture Cricket Club / Superior Homes Oval",
-      "round": "Round 6",
-      "date": "Saturday, 21 June 2025",
-      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/7f6542ae-5a25-4ac0-ac9c-3a03bb2f78ba/1650198634682/logo.png",
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-      "gender": "Mixed",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "sponsors": [
-        {
-          "id": 152,
-          "isPrimary": false,
-          "isActive": true,
-          "isArticle": true,
-          "isVideo": true,
-          "url": "test",
-          "tagline": "test",
-          "description": null,
-          "name": "test",
-          "logo": {
-            "id": 12785,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
-          }
-        }
-      ]
-    },
-    {
-      "ageGroup": "Over 50",
-      "gameId": "d7f8d89e",
-      "teamHome": "GC 50's Thunder Div 1",
-      "teamAway": "Brisbane Sea Eagles",
-      "isHomeTeam": true,
-      "teamRoster": [
-        "Steven Baker (WK)",
-        "Darren Cox",
-        "Shane Dacey",
-        "Damien Day",
-        "Peter Goodchap",
-        "Mal Hancock",
-        "Jason Lavender",
-        "Wayne Leonard",
-        "Garry Lovett",
-        "Jason Simmons",
-        "Craig Sweet",
-        "Mark Wade"
-      ],
-      "type": "One Day",
-      "ground": "Oxenford Oval / Choice Homes Oval",
-      "round": "Round 5",
-      "date": "Sunday, 22 June 2025",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/09d0b200-350d-476d-8620-9aa825886d62/1646785344443/logo.jpg",
-      "gender": "Mixed",
-      "gradeName": "O50 Div 1 - Gill Chapman Shield",
-      "sponsors": [
-        {
-          "id": 153,
-          "isPrimary": false,
-          "isActive": true,
-          "isArticle": true,
-          "isVideo": true,
-          "url": "test",
-          "tagline": "test",
-          "description": null,
-          "name": "test",
-          "logo": {
-            "id": 12786,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50_6a3b9f612c.png"
-          }
-        }
-      ]
-    },
-    {
-      "ageGroup": "Over 60",
-      "gameId": "ba1c0f25",
-      "teamHome": "Sunshine Coast Gold",
-      "teamAway": "GC Thunder Blue",
+      "ground": "Selwyn Park (BEAUDESERT) / Selwyn Park",
+      "ageGroup": "Senior",
+      "sponsors": [],
+      "teamAway": "Southport T20",
+      "teamHome": "Alberton T20",
+      "gradeName": "All Ballsports T20 2025",
       "isHomeTeam": false,
       "teamRoster": [
-        "John Foster",
-        "Phillip Hopgood",
-        "Jeffrey Manitzky",
-        "Ian Petherick",
-        "Warren Rose",
-        "Brian Rowe\nc",
-        "David Russell",
-        "Mick Seery",
-        "Mark Simes",
-        "Fred D Williams",
-        "Tony Williams (WK)",
-        "john burns"
+        "Manoj Frank Boteju",
+        "Ureshen Chinia",
+        "Justin Choromanski",
+        "Chamith De Silva",
+        "Cooper Johnson",
+        "Mitchell Johnson",
+        "Bailey Johnston",
+        "dhanushka mitipolaarachchi\nc",
+        "Ravindu Mudiyanselage Don",
+        "Kyle Palmer-Hughes",
+        "Kaleb Phillips",
+        "Talvinder Raina"
       ],
-      "type": "One Day",
-      "ground": "Elizabeth Daniels Park / Kev Hackney Oval",
-      "round": "Round 7",
-      "date": "Sunday, 22 June 2025",
-      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/7f6542ae-5a25-4ac0-ac9c-3a03bb2f78ba/1650198634682/logo.png",
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-      "gender": "Mixed",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "sponsors": [
-        {
-          "id": 151,
-          "isPrimary": true,
-          "isActive": true,
-          "isArticle": true,
-          "isVideo": true,
-          "url": "test",
-          "tagline": "test",
-          "description": null,
-          "name": "test",
-          "logo": {
-            "id": 12784,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HBLOGO_ea96695cc9.png"
-          }
-        }
-      ]
-    },
-    {
-      "ageGroup": "Over 60",
-      "gameId": "c19127d6",
-      "teamHome": "Wide Bay",
-      "teamAway": "GC Thunder Gold",
-      "isHomeTeam": false,
-      "teamRoster": ["No players allocated to line-up"],
-      "type": "One Day",
-      "ground": "Elizabeth Daniels Park / Ron McMullen Oval",
-      "round": "Round 7",
-      "date": "Sunday, 22 June 2025",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-      "gender": "Mixed",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "sponsors": [
-        {
-          "id": 152,
-          "isPrimary": false,
-          "isActive": true,
-          "isArticle": true,
-          "isVideo": true,
-          "url": "test",
-          "tagline": "test",
-          "description": null,
-          "name": "test",
-          "logo": {
-            "id": 12785,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/coffslogo_aedba58c84.png"
-          }
-        }
-      ]
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/1b01c8ba-0f3d-4171-9486-2a69220e2701/1656940104090/logo.png"
     }
   ],
   "asset": {
     "assetID": 32,
     "assetTypeID": 1,
-    "assetCategoryID": 2,
-    "assetsLinkID": ""
+    "assetsLinkID": "",
+    "assetCategoryID": 2
   },
+  "errors": [],
+  "frames": [120, 180],
   "render": {
-    "renderId": 8251,
-    "schedulerId": 207
+    "renderId": 15155,
+    "schedulerId": 137
   },
   "account": {
-    "accountId": 319
+    "accountId": 137
   },
   "timings": {
+    "FPS_MAIN": 180,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 180,
-    "FPS_SCORECARD": 60,
-    "FPS_MAIN": 360,
-    "FPS_LADDER": 0
+    "FPS_LADDER": 0,
+    "FPS_SCORECARD": 90
   },
-  "frames": [120, 180, 240, 300, 360, 420],
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_51_6b9fe4b2b0.png",
-        "width": 379,
-        "height": 303
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
       },
-      "name": "Gold Coast Veterans Cricket",
-      "sport": "Cricket"
+      "name": "Southport Labrador Cricket Club",
+      "sport": "Cricket",
+      "IsAccountClub": true
     },
     "video": {
+      "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3"
+        },
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
+          "AgeGroup": "SENIOR",
+          "AssetType": "CricketRoster",
+          "markerPosition": ""
+        }
+      },
       "metadata": {
         "title": "Team List",
-        "titleSplit": ["Team", "List"],
-        "videoTitle": "Gold Coast Veterans Cricket CricketRoster",
-        "compositionId": "CricketRoster",
+        "frames": [120, 180],
         "assetId": 32,
+        "titleSplit": ["Team", "List"],
+        "videoTitle": "Southport Labrador Cricket Club CricketRoster",
         "assetTypeId": 1,
-        "frames": [120, 180, 240, 300, 360, 420],
+        "compositionId": "CricketRoster",
         "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#84ff19",
-          "secondary": "#009300"
+          "primary": "#0f150b",
+          "secondary": "#f8cb4c"
         },
         "template": "Basic"
-      },
-      "media": {
-        "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "MASTERS",
-          "AssetType": "CricketRoster",
-          "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3"
-        }
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -325,69 +137,132 @@
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "templateVariation": {
-        "useBackground": "Pattern",
         "mode": "dark",
-        "texture": {
-          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_Stone_4b71c033b8.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": { "opacity": 1, "blendMode": "multiply" }
-        },
-        "palette": "primaryOnWhite",
-        "gradient": {
-          "type": "primaryToSecondary",
-          "direction": "VERTICAL"
-        },
         "image": {
-          "url": null,
-          "ratio": null,
-          "width": null,
-          "height": null,
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
           "type": "pan",
+          "ratio": "landscape",
+          "width": 1212,
+          "height": 853,
           "direction": "left",
-          "overlayStyle": "vignette",
           "gradientType": "linear",
-          "overlayOpacity": 0.7
+          "overlayStyle": "vignette",
+          "overlayOpacity": 0.3
         },
         "noise": {
-          "type": "Subtle"
-        },
-        "particle": {
-          "type": "lines",
-          "particleCount": "300",
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
-        },
-        "pattern": {
-          "type": "dots",
-          "animation": "panDown",
-          "scale": 0.75,
-          "rotation": null,
-          "opacity": 0.35,
-          "animationDuration": 300,
-          "animationSpeed": 0.8
+          "type": "floatingParticles"
         },
         "video": {
           "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
           "loop": null,
+          "size": "cover",
           "muted": true,
+          "volume": 0.8,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
-        }
-      },
-      "fixtureCategory": "MASTERS",
-      "groupingCategory": "MASTERS"
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "highContrast",
+        "pattern": {
+          "type": "dots",
+          "scale": 0.75,
+          "opacity": 0.35,
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
+        },
+        "category": {
+          "name": "Basic",
+          "slug": "Basic",
+          "bundleAudio": {
+            "id": 1,
+            "Name": "Upbeat Pop",
+            "createdAt": "2023-09-28T06:18:07.674Z",
+            "updatedAt": "2023-09-28T06:40:48.135Z",
+            "publishedAt": "2023-09-28T06:40:48.131Z",
+            "audio_options": [
+              {
+                "id": 13,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
+                "Name": "Better Start Now",
+                "createdAt": "2023-08-31T12:30:51.127Z",
+                "updatedAt": "2023-09-28T06:41:12.356Z",
+                "publishedAt": "2023-09-28T06:40:26.025Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 11,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Andy_D_Park_Andy_D_Park_Bruhaha_Inst_2b610a10b3.mp3",
+                "Name": "Bru ha ha",
+                "createdAt": "2023-08-31T12:30:14.961Z",
+                "updatedAt": "2023-09-28T06:42:51.950Z",
+                "publishedAt": "2023-08-31T12:30:16.245Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 2,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
+                "Name": "Fifteen on Me",
+                "createdAt": "2023-01-30T15:18:49.326Z",
+                "updatedAt": "2023-09-28T06:43:06.236Z",
+                "publishedAt": "2023-01-30T15:18:50.933Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 10,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Step_Rockets_Fire_Escape_Overtime_Inst_1623dd2a56.mp3",
+                "Name": "FireEscape",
+                "createdAt": "2023-08-31T12:29:50.321Z",
+                "updatedAt": "2023-09-28T06:43:47.509Z",
+                "publishedAt": "2023-08-31T12:29:51.668Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              },
+              {
+                "id": 9,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Single_Lets_Goft_Sara_Azriel_Inst_2e5921ce0b.mp3",
+                "Name": "Let's Go",
+                "createdAt": "2023-08-31T12:29:27.628Z",
+                "updatedAt": "2023-09-28T06:51:54.865Z",
+                "publishedAt": "2023-08-31T12:29:29.315Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "primary",
+          "direction": "VERTICAL"
+        },
+        "particle": {
+          "type": "lines",
+          "speed": 0.8,
+          "animation": "scale",
+          "direction": "up",
+          "particleCount": "300"
+        },
+        "useBackground": "Pattern"
+      }
     }
-  },
-  "errors": []
+  }
 }
