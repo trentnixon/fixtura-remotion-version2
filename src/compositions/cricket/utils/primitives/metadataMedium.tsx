@@ -14,7 +14,7 @@ export const MetadataMedium = ({
   variant = "onContainerCopy",
 }: {
   value: string;
-  animation: AnimationConfig;
+  animation: AnimationConfig | null;
   className?: string;
   variant?: string;
 }) => {

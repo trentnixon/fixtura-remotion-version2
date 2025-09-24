@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ThemeMode } from "../../../../templates/types/TemplateThemeConfig";
 import {
   ColorVariations,
@@ -59,12 +60,14 @@ export const createStandardPaletteStructure = (
     };
   };
 
-  //console.log("[gradients]", gradients);
-  // Return the standard palette structure
   return {
     name,
     background: {
       main: mainColor,
+      primary: mainColor,
+      secondary: secondaryColor,
+      userPrimary: (options as any).originalPrimary || mainColor,
+      userSecondary: (options as any).originalSecondary || secondaryColor,
       light: colorVariations.light,
       dark: colorVariations.dark,
       contrast: colorVariations.contrastText,

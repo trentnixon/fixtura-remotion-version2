@@ -474,8 +474,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#004c3d",
-          "secondary": "#f7b718"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "TwoColumnClassic"
       },
@@ -622,7 +622,7 @@
           "gradientType": "linear",
           "overlayOpacity": 0.3
         },
-        "palette": "secondary",
+        "palette": "primary",
         "gradient": {
           "type": "primary",
           "direction": "HORIZONTAL"

@@ -23,6 +23,10 @@ export interface BackgroundOptions {
   main: string;
   light: string;
   dark: string;
+  primary: string;
+  secondary: string;
+  userPrimary: string;
+  userSecondary: string;
   contrast: string;
   accent: string;
   gradient: {

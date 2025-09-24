@@ -682,8 +682,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#3025b5",
-          "secondary": "#ea2f2f"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "TwoColumnClassic"
       },
@@ -729,7 +729,7 @@
           "playbackRate": null,
           "useOffthreadVideo": null
         },
-        "palette": "primaryOnBlack",
+        "palette": "primary",
         "pattern": {
           "type": "dots",
           "scale": 0.75,

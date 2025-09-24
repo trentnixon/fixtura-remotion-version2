@@ -45,14 +45,12 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     const getActivePalette = (paletteName?: string): DesignPalette => {
       if (!paletteName) {
         const variationPalette = templateVariation?.palette;
-        console.log("[ThemeContext] variationPalette", variationPalette);
         paletteName = variationPalette || "primary";
       }
 
       const palette = colorSystem.palettes[
         paletteName as keyof typeof colorSystem.palettes
       ] as DesignPalette;
-      console.log("[ThemeContext] palette", palette);
       return palette || colorSystem.palettes.primary;
     };
 
@@ -108,7 +106,11 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
       // Color system and palette utilities
       colors: { colorSystem, primary: primaryColor, secondary: secondaryColor },
       getActivePalette,
-      selectedPalette: getActivePalette(),
+      selectedPalette: (() => {
+        const palette = getActivePalette();
+        console.log("[ThemeContext] selectedPalette:", palette);
+        return palette;
+      })(),
 
       // Additional configuration
       sports: (settings.sports as ThemeSports) || {},

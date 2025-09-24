@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
+import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
 import { mergeWithPriority } from "../../../../../../core/utils/classNames";
@@ -11,8 +12,9 @@ interface MatchHeaderProps {
   ground: string;
   height: number;
   delay: number;
-  backgroundColor: string;
   className?: string;
+  userBackgroundColor?: string;
+  variant?: string;
 }
 
 // Helper function to truncate text
@@ -21,18 +23,24 @@ const truncateText = (text: string, maxLength: number): string => {
   return text.substring(0, maxLength - 3) + "...";
 };
 
-export const MatchHeader: React.FC<MatchHeaderProps> = ({
+export const Round_Ground: React.FC<MatchHeaderProps> = ({
   date,
   type,
   round,
   ground,
   height,
   delay,
-  backgroundColor,
   className,
+  userBackgroundColor,
+  variant,
 }) => {
+  const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
+
+  // Background color from theme
+  const backgroundColor =
+    userBackgroundColor || selectedPalette.container.backgroundTransparent.high;
 
   // Format the left side text - use type and round, or date and round
   const leftText = type
@@ -60,17 +68,17 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
         value={leftText}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className=""
-        variant="onContainerCopyNoBg"
+        variant={variant}
       />
 
       <ResultMetaData
         value={truncateText(ground, 50)}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className="text-right"
-        variant="onContainerCopyNoBg"
+        variant={variant}
       />
     </AnimatedContainer>
   );
 };
 
-export default MatchHeader;
+export default Round_Ground;

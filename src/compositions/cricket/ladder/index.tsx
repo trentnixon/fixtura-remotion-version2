@@ -4,6 +4,7 @@ import { Classic as ClassicLadder } from "./classic";
 import { Brickwork as BrickworkLadder } from "./brickWork";
 import { sixersThunder as SixersLadder } from "./sixersThunder";
 import { ClassicTwoColumn as ClassicTwoColumnLadder } from "./classicTwoColumn";
+import { CNSW as CNSWLadder } from "./cnsw";
 // Import other template implementations
 
 // Export all template implementations
@@ -12,3 +13,4 @@ export { BrickworkLadder as brickwork };
 export { SixersLadder as sixersThunder };
 export { ClassicLadder as classic };
 export { ClassicTwoColumnLadder as classicTwoColumn };
+export { CNSWLadder as cnsw };

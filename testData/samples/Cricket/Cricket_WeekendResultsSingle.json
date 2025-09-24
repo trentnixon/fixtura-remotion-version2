@@ -1,139 +1,1896 @@
 {
   "data": [
     {
-      "date": "Saturday, 06 September 2025",
+      "date": "20 Sept 2025",
       "type": "T20",
-      "round": "Round 1",
-      "gameId": "96ae9702",
+      "round": "Round 5",
+      "gameID": "41d0479d",
       "gender": "Mixed",
-      "ground": "Runaway Bay Sports Precinct / Sam Loxton Oval 1 (Aussielec Oval)",
+      "ground": "Hession Oval / Hession Oval",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"All Ballsports T20 2025\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Mixed\",\n    \"round\": \"Round 5\",\n    \"ground\": \"Hession Oval / Hession Oval\",\n    \"date\": \"Saturday, 20 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Helensvale T20 won by 1 runs\",\n    \"dayOne\": \"2025-09-19T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Helensvale T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Helensvale T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 8,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 3,\n            \"strikeRate\": 200,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 81.39,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 138.46,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 1,\n            \"strikeRate\": 127.27,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 136.36,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 166.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 50,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 150,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 333.33,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Suranga Lakmal\",\n            \"catches\": 0,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Jake Wynd\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Darran Greene  (c)\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Cameron Davies\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Talha Anis\",\n            \"catches\": 3,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"23\",\n            \"batsman\": \"Sam Lickiss\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"65\",\n            \"batsman\": \"William Slack-Smith\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"107\",\n            \"batsman\": \"Jack Lickiss\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"113\",\n            \"batsman\": \"Roley Thomas\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"127\",\n            \"batsman\": \"Kaleb Day\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"130\",\n            \"batsman\": \"Joshua Stewart\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"138\",\n            \"batsman\": \"James Guthrig\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"142\",\n            \"batsman\": \"Shawn Riddell\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Helensvale T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"8/152\",\n    \"totalWickets\": 8\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Runaway Bay T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Runaway Bay T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 9,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 92.59,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 80,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 136.36,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 2,\n            \"strikeRate\": 142.1,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 28.57,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 2,\n            \"strikeRate\": 156.25,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 25,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 1,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 237.5,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 250,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Jack Lickiss\",\n            \"catches\": 3,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Kaleb Day\",\n            \"catches\": 2,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"James Guthrig\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Jack Baird\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Mitchell Parkes\",\n            \"catches\": 0,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Joshua Stewart\",\n            \"catches\": 0,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"16\",\n            \"batsman\": \"Talha Anis\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"47\",\n            \"batsman\": \"Yasiru Gamaarachchi\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"55\",\n            \"batsman\": \"Timothy Murdoch\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"75\",\n            \"batsman\": \"Lachlan Creed\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"81\",\n            \"batsman\": \"Jake Wynd\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"84\",\n            \"batsman\": \"Thomas Gossett\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"120\",\n            \"batsman\": \"Billy Walker\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"145\",\n            \"batsman\": \"Suranga Lakmal\"\n          },\n          {\n            \"wicketNumber\": 9,\n            \"score\": \"145\",\n            \"batsman\": \"Sayed Monib\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Runaway Bay T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/151\",\n    \"totalWickets\": 9\n  },\n  \"accountBias\": {\n    \"isBias\": \"Runaway Bay Cricket Club Inc\",\n    \"clubTeams\": [],\n    \"focusedTeams\": [\n      \"Helensvale T20\",\n      \"Runaway Bay T20\"\n    ]\n  }\n}",
+      "result": "Helensvale T20 won by 1 runs",
+      "status": "Final",
       "ageGroup": "Senior",
-      "sponsors": [],
-      "teamAway": "Broadbeach T20",
-      "teamHome": "Runaway Bay T20",
+      "awayTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+          "width": 500,
+          "height": 500
+        },
+        "name": "Runaway Bay T20",
+        "overs": "(20)",
+        "score": "9/151",
+        "isHome": false,
+        "isClubTeam": true,
+        "battingPerformances": [
+          {
+            "SR": 142.1,
+            "runs": 27,
+            "team": "Runaway Bay T20",
+            "balls": 19,
+            "fours": 1,
+            "sixes": 2,
+            "notOut": false,
+            "player": "Jake Wynd"
+          },
+          {
+            "SR": 156.25,
+            "runs": 25,
+            "team": "Runaway Bay T20",
+            "balls": 16,
+            "fours": 1,
+            "sixes": 2,
+            "notOut": false,
+            "player": "Billy Walker"
+          },
+          {
+            "SR": 92.59,
+            "runs": 25,
+            "team": "Runaway Bay T20",
+            "balls": 27,
+            "fours": 3,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Yasiru Gamaarachchi"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 19,
+            "team": "Helensvale T20",
+            "overs": 4,
+            "player": "Henry Shephard",
+            "economy": "4.75",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 24,
+            "team": "Helensvale T20",
+            "overs": 4,
+            "player": "Mitchell Parkes",
+            "economy": "6.00",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 38,
+            "team": "Helensvale T20",
+            "overs": 4,
+            "player": "Luke Herrmann",
+            "economy": "9.50",
+            "maidens": 0,
+            "wickets": 2
+          }
+        ],
+        "awayScoresFirstInnings": "1"
+      },
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+          "width": 256,
+          "height": 164
+        },
+        "name": "Helensvale T20",
+        "overs": "(19.5)",
+        "score": "8/152",
+        "isHome": true,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 81.39,
+            "runs": 35,
+            "team": "Helensvale T20",
+            "balls": 43,
+            "fours": 3,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Roley Thomas"
+          },
+          {
+            "SR": 127.27,
+            "runs": 28,
+            "team": "Helensvale T20",
+            "balls": 22,
+            "fours": 3,
+            "sixes": 1,
+            "notOut": false,
+            "player": "Jack Lickiss"
+          },
+          {
+            "SR": 200,
+            "runs": 22,
+            "team": "Helensvale T20",
+            "balls": 11,
+            "fours": 1,
+            "sixes": 3,
+            "notOut": false,
+            "player": "Sam Lickiss  (c)"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 26,
+            "team": "Runaway Bay T20",
+            "overs": 4,
+            "player": "Sayed Monib",
+            "economy": "6.50",
+            "maidens": 0,
+            "wickets": 3
+          },
+          {
+            "runs": 36,
+            "team": "Runaway Bay T20",
+            "overs": 3.5,
+            "player": "Cameron Davies",
+            "economy": "10.29",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 18,
+            "team": "Runaway Bay T20",
+            "overs": 3,
+            "player": "Ted Gossett",
+            "economy": "6.00",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "homeScoresFirstInnings": "1"
+      },
       "gradeName": "All Ballsports T20 2025",
-      "isHomeTeam": true,
-      "teamRoster": [
-        "Darran Greene\nc",
-        "Abinash Bohara",
-        "Bec Canning",
-        "Umair Nasir",
-        "Lachlan Creed",
-        "Tahla Abbasi",
-        "Syed Moneb",
-        "Ted Gosset",
-        "Corey Hucker",
-        "Cameron Davies",
-        "Billy Walker",
-        "Jawid Ahmed"
-      ],
-      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/b6e5d0f3-3b71-411c-a74e-d1af23d474ed/1664703482786/logo.jpg",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png"
+      "rawMatchData": {
+        "awayTeam": {
+          "innings": [
+            {
+              "overs": "",
+              "score": "",
+              "wickets": 9,
+              "teamName": "Runaway Bay T20",
+              "inningsName": "Runaway Bay T20 Batting",
+              "battingOrder": [
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 3,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 92.59
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 80
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 136.36
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 2,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 142.1
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 28.57
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 2,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 156.25
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 25
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 1,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 100
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 1,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 237.5
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 250
+                }
+              ],
+              "fallOfWickets": [
+                {
+                  "score": "16",
+                  "batsman": "Talha Anis",
+                  "wicketNumber": 1
+                },
+                {
+                  "score": "47",
+                  "batsman": "Yasiru Gamaarachchi",
+                  "wicketNumber": 2
+                },
+                {
+                  "score": "55",
+                  "batsman": "Timothy Murdoch",
+                  "wicketNumber": 3
+                },
+                {
+                  "score": "75",
+                  "batsman": "Lachlan Creed",
+                  "wicketNumber": 4
+                },
+                {
+                  "score": "81",
+                  "batsman": "Jake Wynd",
+                  "wicketNumber": 5
+                },
+                {
+                  "score": "84",
+                  "batsman": "Thomas Gossett",
+                  "wicketNumber": 6
+                },
+                {
+                  "score": "120",
+                  "batsman": "Billy Walker",
+                  "wicketNumber": 7
+                },
+                {
+                  "score": "145",
+                  "batsman": "Suranga Lakmal",
+                  "wicketNumber": 8
+                },
+                {
+                  "score": "145",
+                  "batsman": "Sayed Monib",
+                  "wicketNumber": 9
+                }
+              ],
+              "fieldingStats": [
+                {
+                  "player": "Jack Lickiss",
+                  "catches": 3,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Kaleb Day",
+                  "catches": 2,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "James Guthrig",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Jack Baird",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Mitchell Parkes",
+                  "catches": 0,
+                  "runOuts": 1,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Joshua Stewart",
+                  "catches": 0,
+                  "runOuts": 1,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                }
+              ],
+              "inningsNumber": 1,
+              "bowlingFigures": [
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                }
+              ]
+            }
+          ],
+          "teamName": "Runaway Bay T20",
+          "totalScore": "9/151",
+          "totalWickets": 9
+        },
+        "homeTeam": {
+          "innings": [
+            {
+              "overs": "",
+              "score": "",
+              "wickets": 8,
+              "teamName": "Helensvale T20",
+              "inningsName": "Helensvale T20 Batting",
+              "battingOrder": [
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 3,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 200
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 3,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 81.39
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 3,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 138.46
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 3,
+                  "sixes": 1,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 127.27
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 136.36
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 166.66
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 50
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 150
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 333.33
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                }
+              ],
+              "fallOfWickets": [
+                {
+                  "score": "23",
+                  "batsman": "Sam Lickiss",
+                  "wicketNumber": 1
+                },
+                {
+                  "score": "65",
+                  "batsman": "William Slack-Smith",
+                  "wicketNumber": 2
+                },
+                {
+                  "score": "107",
+                  "batsman": "Jack Lickiss",
+                  "wicketNumber": 3
+                },
+                {
+                  "score": "113",
+                  "batsman": "Roley Thomas",
+                  "wicketNumber": 4
+                },
+                {
+                  "score": "127",
+                  "batsman": "Kaleb Day",
+                  "wicketNumber": 5
+                },
+                {
+                  "score": "130",
+                  "batsman": "Joshua Stewart",
+                  "wicketNumber": 6
+                },
+                {
+                  "score": "138",
+                  "batsman": "James Guthrig",
+                  "wicketNumber": 7
+                },
+                {
+                  "score": "142",
+                  "batsman": "Shawn Riddell",
+                  "wicketNumber": 8
+                }
+              ],
+              "fieldingStats": [
+                {
+                  "player": "Suranga Lakmal",
+                  "catches": 0,
+                  "runOuts": 1,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Jake Wynd",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Darran Greene  (c)",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Cameron Davies",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Talha Anis",
+                  "catches": 3,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                }
+              ],
+              "inningsNumber": 1,
+              "bowlingFigures": [
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                }
+              ]
+            }
+          ],
+          "teamName": "Helensvale T20",
+          "totalScore": "8/152",
+          "totalWickets": 8
+        },
+        "accountBias": {
+          "isBias": "Runaway Bay Cricket Club Inc",
+          "clubTeams": [],
+          "focusedTeams": ["Helensvale T20", "Runaway Bay T20"]
+        },
+        "matchContext": {
+          "date": "Saturday, 20 September 2025",
+          "grade": "All Ballsports T20 2025",
+          "round": "Round 5",
+          "dayOne": "2025-09-19T14:00:00.000Z",
+          "gender": "Mixed",
+          "ground": "Hession Oval / Hession Oval",
+          "status": "Final",
+          "ageGroup": "Senior",
+          "matchType": "T20",
+          "competition": "Cricket Gold Coast Senior Competition",
+          "finalDaysPlay": "2025-09-20",
+          "resultStatement": "Helensvale T20 won by 1 runs"
+        }
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+        "width": 500,
+        "height": 500
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg",
+        "width": 256,
+        "height": 164
+      },
+      "assignSponsors": {
+        "team": [
+          {
+            "id": 134,
+            "url": "https://www.runawaybaycricketclub.com.au/our-sponsors",
+            "logo": {
+              "id": 5644,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_4_b8d44bf9f9.png"
+            },
+            "name": "Aussieelec Electrical",
+            "isVideo": true,
+            "tagline": "Prompt reliable service - Servicing all areas of the Gold Coast",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "grade": [],
+        "competition": []
+      }
     },
     {
-      "date": "Saturday, 06 September 2025",
+      "date": "20 Sept 2025",
       "type": "T20",
-      "round": "Round 2",
-      "gameId": "77171f1d",
+      "round": "Round 6",
+      "gameID": "eb5f96d2",
       "gender": "Mixed",
-      "ground": "Runaway Bay Sports Precinct / Sam Loxton Oval 1 (Aussielec Oval)",
+      "ground": "Hession Oval / Hession Oval",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"All Ballsports T20 2025\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Mixed\",\n    \"round\": \"Round 6\",\n    \"ground\": \"Hession Oval / Hession Oval\",\n    \"date\": \"Saturday, 20 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Burleigh T20 won by 6 wickets\",\n    \"dayOne\": \"2025-09-19T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Runaway Bay T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Runaway Bay T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 10,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 72.41,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 53.84,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 75,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 87.5,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 66.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 83.33,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 1,\n            \"strikeRate\": 137.5,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 1,\n            \"strikeRate\": 107.69,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 11.11,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 1,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Michael Iffland\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Tully Willson  (c)\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Sheldon Lowndes\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Darshan Lad\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"26\",\n            \"batsman\": \"Talha Anis\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"37\",\n            \"batsman\": \"Yasiru Gamaarachchi\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"38\",\n            \"batsman\": \"Lachlan Creed\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"40\",\n            \"batsman\": \"Jake Wynd\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"49\",\n            \"batsman\": \"Ahmad Jawid\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"49\",\n            \"batsman\": \"Thomas Gossett\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"59\",\n            \"batsman\": \"Ted Gossett\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"72\",\n            \"batsman\": \"Sayed Monib\"\n          },\n          {\n            \"wicketNumber\": 9,\n            \"score\": \"73\",\n            \"batsman\": \"Ben Canning\"\n          },\n          {\n            \"wicketNumber\": 10,\n            \"score\": \"87\",\n            \"batsman\": \"Jake Schultz\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Runaway Bay T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"10/87\",\n    \"totalWickets\": 10\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Burleigh T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Burleigh T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 4,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 150,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 85.71,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 6,\n            \"sixes\": 4,\n            \"strikeRate\": 156.86,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 80.48,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 2,\n            \"strikeRate\": 190.9,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Talha Anis\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Jake Schultz\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Sayed Monib\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Cameron Davies\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"18\",\n            \"batsman\": \"Josh Cox\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"19\",\n            \"batsman\": \"Anchit Devendra\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"117\",\n            \"batsman\": \"Scott Sanderson\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"152\",\n            \"batsman\": \"Shaun Snyder\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Burleigh T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"4/161\",\n    \"totalWickets\": 4\n  },\n  \"accountBias\": {\n    \"isBias\": \"Runaway Bay Cricket Club Inc\",\n    \"clubTeams\": [],\n    \"focusedTeams\": [\n      \"Runaway Bay T20\",\n      \"Burleigh T20\"\n    ]\n  }\n}",
+      "result": "Burleigh T20 won by 6 wickets",
+      "status": "Final",
       "ageGroup": "Senior",
-      "sponsors": [],
-      "teamAway": "Coomera T20",
-      "teamHome": "Runaway Bay T20",
+      "awayTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg",
+          "width": 500,
+          "height": 410
+        },
+        "name": "Burleigh T20",
+        "overs": "(20)",
+        "score": "4/161",
+        "isHome": false,
+        "isClubTeam": false,
+        "battingPerformances": [
+          {
+            "SR": 156.86,
+            "runs": 80,
+            "team": "Burleigh T20",
+            "balls": 51,
+            "fours": 6,
+            "sixes": 4,
+            "notOut": true,
+            "player": "Tully Willson  (c)"
+          },
+          {
+            "SR": 80.48,
+            "runs": 33,
+            "team": "Burleigh T20",
+            "balls": 41,
+            "fours": 3,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Scott Sanderson"
+          },
+          {
+            "SR": 190.9,
+            "runs": 21,
+            "team": "Burleigh T20",
+            "balls": 11,
+            "fours": 0,
+            "sixes": 2,
+            "notOut": false,
+            "player": "Shaun Snyder"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 19,
+            "team": "Runaway Bay T20",
+            "overs": 4,
+            "player": "Thomas Gossett",
+            "economy": "4.75",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 29,
+            "team": "Runaway Bay T20",
+            "overs": 3,
+            "player": "Ted Gossett",
+            "economy": "9.67",
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 31,
+            "team": "Runaway Bay T20",
+            "overs": 3,
+            "player": "Cameron Davies",
+            "economy": "10.33",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "awayScoresFirstInnings": "1"
+      },
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+          "width": 500,
+          "height": 500
+        },
+        "name": "Runaway Bay T20",
+        "overs": "(17.1)",
+        "score": "10/87",
+        "isHome": true,
+        "isClubTeam": true,
+        "battingPerformances": [
+          {
+            "SR": 72.41,
+            "runs": 21,
+            "team": "Runaway Bay T20",
+            "balls": 29,
+            "fours": 2,
+            "sixes": 1,
+            "notOut": false,
+            "player": "Yasiru Gamaarachchi"
+          },
+          {
+            "SR": 107.69,
+            "runs": 14,
+            "team": "Runaway Bay T20",
+            "balls": 13,
+            "fours": 1,
+            "sixes": 1,
+            "notOut": true,
+            "player": "Cameron Davies"
+          },
+          {
+            "SR": 137.5,
+            "runs": 11,
+            "team": "Runaway Bay T20",
+            "balls": 8,
+            "fours": 1,
+            "sixes": 1,
+            "notOut": false,
+            "player": "Ben Canning"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 16,
+            "team": "Burleigh T20",
+            "overs": 4,
+            "player": "Edward Wallace",
+            "economy": "4.00",
+            "maidens": 1,
+            "wickets": 4
+          },
+          {
+            "runs": 8,
+            "team": "Burleigh T20",
+            "overs": 2.1,
+            "player": "Darshan Lad",
+            "economy": "3.81",
+            "maidens": 0,
+            "wickets": 3
+          },
+          {
+            "runs": 22,
+            "team": "Burleigh T20",
+            "overs": 4,
+            "player": "Jake Kusuda-Nairn",
+            "economy": "5.50",
+            "maidens": 0,
+            "wickets": 2
+          }
+        ],
+        "homeScoresFirstInnings": "1"
+      },
       "gradeName": "All Ballsports T20 2025",
-      "isHomeTeam": true,
-      "teamRoster": [
-        "Darran Greene\nc",
-        "Abinash Bohara",
-        "Lachlan Creed",
-        "Suranga Lakmal",
-        "Umair Nasir",
-        "Billy Walker",
-        "Talah Abbasi",
-        "Corey Hucker",
-        "Syed Moneb",
-        "Ted Gosset",
-        "Cameron Davies",
-        "Jawid Ahmed"
-      ],
-      "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/e4b49fbd-762b-453f-853c-4f9a330a0638/1656502944344/logo.png",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png"
+      "rawMatchData": {
+        "awayTeam": {
+          "innings": [
+            {
+              "overs": "",
+              "score": "",
+              "wickets": 4,
+              "teamName": "Burleigh T20",
+              "inningsName": "Burleigh T20 Batting",
+              "battingOrder": [
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 3,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 150
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 85.71
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 6,
+                  "sixes": 4,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 156.86
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 3,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 80.48
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 2,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 190.9
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 100
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 0
+                }
+              ],
+              "fallOfWickets": [
+                {
+                  "score": "18",
+                  "batsman": "Josh Cox",
+                  "wicketNumber": 1
+                },
+                {
+                  "score": "19",
+                  "batsman": "Anchit Devendra",
+                  "wicketNumber": 2
+                },
+                {
+                  "score": "117",
+                  "batsman": "Scott Sanderson",
+                  "wicketNumber": 3
+                },
+                {
+                  "score": "152",
+                  "batsman": "Shaun Snyder",
+                  "wicketNumber": 4
+                }
+              ],
+              "fieldingStats": [
+                {
+                  "player": "Talha Anis",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Jake Schultz",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Sayed Monib",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Cameron Davies",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                }
+              ],
+              "inningsNumber": 1,
+              "bowlingFigures": [
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                }
+              ]
+            }
+          ],
+          "teamName": "Burleigh T20",
+          "totalScore": "4/161",
+          "totalWickets": 4
+        },
+        "homeTeam": {
+          "innings": [
+            {
+              "overs": "",
+              "score": "",
+              "wickets": 10,
+              "teamName": "Runaway Bay T20",
+              "inningsName": "Runaway Bay T20 Batting",
+              "battingOrder": [
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 1,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 72.41
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 100
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 53.84
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 75
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 87.5
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 66.66
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 83.33
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 100
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 1,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 137.5
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 1,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 107.69
+                },
+                {
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "notOut": false,
+                  "player": "",
+                  "dismissal": "",
+                  "strikeRate": 11.11
+                }
+              ],
+              "fallOfWickets": [
+                {
+                  "score": "26",
+                  "batsman": "Talha Anis",
+                  "wicketNumber": 1
+                },
+                {
+                  "score": "37",
+                  "batsman": "Yasiru Gamaarachchi",
+                  "wicketNumber": 2
+                },
+                {
+                  "score": "38",
+                  "batsman": "Lachlan Creed",
+                  "wicketNumber": 3
+                },
+                {
+                  "score": "40",
+                  "batsman": "Jake Wynd",
+                  "wicketNumber": 4
+                },
+                {
+                  "score": "49",
+                  "batsman": "Ahmad Jawid",
+                  "wicketNumber": 5
+                },
+                {
+                  "score": "49",
+                  "batsman": "Thomas Gossett",
+                  "wicketNumber": 6
+                },
+                {
+                  "score": "59",
+                  "batsman": "Ted Gossett",
+                  "wicketNumber": 7
+                },
+                {
+                  "score": "72",
+                  "batsman": "Sayed Monib",
+                  "wicketNumber": 8
+                },
+                {
+                  "score": "73",
+                  "batsman": "Ben Canning",
+                  "wicketNumber": 9
+                },
+                {
+                  "score": "87",
+                  "batsman": "Jake Schultz",
+                  "wicketNumber": 10
+                }
+              ],
+              "fieldingStats": [
+                {
+                  "player": "Michael Iffland",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Tully Willson  (c)",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Sheldon Lowndes",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Darshan Lad",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                }
+              ],
+              "inningsNumber": 1,
+              "bowlingFigures": [
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 1,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                },
+                {
+                  "runs": 0,
+                  "overs": 0,
+                  "player": "",
+                  "economy": "0.0",
+                  "maidens": 0,
+                  "wickets": 0
+                }
+              ]
+            }
+          ],
+          "teamName": "Runaway Bay T20",
+          "totalScore": "10/87",
+          "totalWickets": 10
+        },
+        "accountBias": {
+          "isBias": "Runaway Bay Cricket Club Inc",
+          "clubTeams": [],
+          "focusedTeams": ["Runaway Bay T20", "Burleigh T20"]
+        },
+        "matchContext": {
+          "date": "Saturday, 20 September 2025",
+          "grade": "All Ballsports T20 2025",
+          "round": "Round 6",
+          "dayOne": "2025-09-19T14:00:00.000Z",
+          "gender": "Mixed",
+          "ground": "Hession Oval / Hession Oval",
+          "status": "Final",
+          "ageGroup": "Senior",
+          "matchType": "T20",
+          "competition": "Cricket Gold Coast Senior Competition",
+          "finalDaysPlay": "2025-09-20",
+          "resultStatement": "Burleigh T20 won by 6 wickets"
+        }
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg",
+        "width": 500,
+        "height": 410
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+        "width": 500,
+        "height": 500
+      },
+      "assignSponsors": {
+        "team": [
+          {
+            "id": 134,
+            "url": "https://www.runawaybaycricketclub.com.au/our-sponsors",
+            "logo": {
+              "id": 5644,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_4_b8d44bf9f9.png"
+            },
+            "name": "Aussieelec Electrical",
+            "isVideo": true,
+            "tagline": "Prompt reliable service - Servicing all areas of the Gold Coast",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "grade": [],
+        "competition": []
+      }
     }
   ],
   "asset": {
-    "assetID": 32,
-    "assetTypeID": 1,
-    "assetsLinkID": "",
+    "assetID": 29,
+    "assetTypeID": 2,
+    "assetsLinkID": "3f6b1c1f3e8ca49eb8a13609c202f62e86c32d398e2a6df7470f71e780ad2a1c",
     "assetCategoryID": 2
   },
   "errors": [],
-  "frames": [
-    120,
-    180
-  ],
+  "frames": [195, 390],
   "render": {
-    "renderId": 14488,
+    "renderId": 15282,
     "schedulerId": 49
   },
   "account": {
     "accountId": 49
   },
   "timings": {
-    "FPS_MAIN": 120,
+    "FPS_MAIN": 10000,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 180,
+    "FPS_OUTRO": 360,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 60
+    "FPS_SCORECARD": 210
   },
   "videoMeta": {
     "club": {
       "logo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
         "width": 500,
-        "height": 500
+        "height": 500,
+        "hasLogo": true
       },
       "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
+      "sponsors": {
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 598,
+              "url": "https://www.synergycardiology.com.au/",
+              "logo": {
+                "id": 7314,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_12_eea3f7daa0.png"
+              },
+              "name": "Synergy Cardiology",
+              "isVideo": true,
+              "tagline": "We strive to create a warm and welcoming environment where you can feel comfortable and confident in the care you receiv",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 134,
+              "url": "https://www.runawaybaycricketclub.com.au/our-sponsors",
+              "logo": {
+                "id": 5644,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_4_b8d44bf9f9.png"
+              },
+              "name": "Aussieelec Electrical",
+              "isVideo": true,
+              "tagline": "Prompt reliable service - Servicing all areas of the Gold Coast",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": true,
+              "description": null
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 144,
+              "url": "https://www.qpf.com.au",
+              "logo": {
+                "id": 5670,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/32da5954_05ee_4021_861a_92025bc1013e_679fba694b.jfif"
+              },
+              "name": "QBF Finance & Insurance",
+              "isVideo": true,
+              "tagline": "Finance & Insurance To Drive Your Business Forward",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_3": [
+            {
+              "id": 599,
+              "url": "https://www.westerapartners.com.au/",
+              "logo": {
+                "id": 7315,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6e8c3c97_274e_49a6_a63e_c9eb2fc9ee60_515a984616.jpg"
+              },
+              "name": "Westera Partners",
+              "isVideo": true,
+              "tagline": "People Focused  Project Excellence",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_4": [
+            {
+              "id": 632,
+              "url": "https://southport.multidynamic.com.au/",
+              "logo": {
+                "id": 7503,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_22_adb0d7fe19.png"
+              },
+              "name": "Multi Dynamic",
+              "isVideo": true,
+              "tagline": "We are a full-service real estate agency operating in your area",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_5": [
+            {
+              "id": 334,
+              "url": "https://www.flexihire.com.au/",
+              "logo": {
+                "id": 6195,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/462569956_1072729634439256_8107546613115575304_n_56c260dc10.png"
+              },
+              "name": "Flexihire",
+              "isVideo": true,
+              "tagline": "GET THE JOB DONE RIGHT",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_6": [
+            {
+              "id": 138,
+              "url": "https://www.asapstumpgrinding.com.au/",
+              "logo": {
+                "id": 5651,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fca7f89f_d219_4afe_ad2a_12b018fe658e_fa98198d90.jfif"
+              },
+              "name": "ASAP Stump Grinding",
+              "isVideo": true,
+              "tagline": "QUICK PROMPT SERVICE | ALL  AREAS OF THE GOLD COAST",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_7": [
+            {
+              "id": 631,
+              "url": "https://tjays.com.au/",
+              "logo": {
+                "id": 7340,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo245_2367b249ca.jpg"
+              },
+              "name": "TJAYS Plumbing & Civil",
+              "isVideo": true,
+              "tagline": "Brisbane and Gold Coast’s trusted plumbing experts",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_8": [
+            {
+              "id": 139,
+              "url": "https://wireco.com.au/",
+              "logo": {
+                "id": 5659,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/images_de55b7ed12.jfif"
+              },
+              "name": "WiIRECO",
+              "isVideo": true,
+              "tagline": "TRUSTED PRODUCTS. UNMATCHED EXPERTISE.",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_9": [
+            {
+              "id": 141,
+              "url": "https://www.urbansolutions.net.au/",
+              "logo": {
+                "id": 5654,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/0ba00039_f094_422c_8c61_e493323785ad_39443b6002.jfif"
+              },
+              "name": "Mortons Urban Solutions",
+              "isVideo": true,
+              "tagline": "Urban and Regional Planning, Civil Engineering Design and Project Coordination",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_10": [
+            {
+              "id": 26,
+              "url": "https://www.ssq.net.au/",
+              "logo": {
+                "id": 121,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_43_579cc38621.png"
+              },
+              "name": "Schlencker Surveying",
+              "isVideo": true,
+              "tagline": "GET THE BEST PROPERTY DEVELOPMENT  ADVICE ON THE GOLD COAST",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": "We can assist with a variety of land surveying services including Cadastral, Engineering and Construction & Town Plannin"
+            }
+          ],
+          "general_sponsor_11": [
+            {
+              "id": 135,
+              "url": "https://www.aktilestone.com.au/",
+              "logo": {
+                "id": 5645,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_J_version_JPG_1_1_a526f1dcbf.jpg"
+              },
+              "name": "A & K Tile & Stone",
+              "isVideo": true,
+              "tagline": "Professional and Reliable Tile and Stone Contractors who take pride in their work. Contact us for a quote ",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_12": [
+            {
+              "id": 23,
+              "url": "https://essentialenergysolutions.com.au/",
+              "logo": {
+                "id": 118,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/295678203_805750660786940_8208108140140120547_n_9d2f0ce667.png"
+              },
+              "name": "Essential Energy Solutions",
+              "isVideo": true,
+              "tagline": "PROVIDING THE BEST SOLAR ENERGY SOLUTIONS FOR YOUR FUTURE",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": "We provide green solar power energy to local Gold Coasters with our solar services.  Solar power - it's great for our pl"
+            }
+          ],
+          "general_sponsor_13": [
+            {
+              "id": 143,
+              "url": "https://aigs.com.au/",
+              "logo": {
+                "id": 5658,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/assure2_pdf_7fe330f66c.jpg"
+              },
+              "name": "Assure Industrial Gates Solutions",
+              "isVideo": true,
+              "tagline": "Queensland manufacturer, installer and service provider of industrial automatic gate systems and traffic control.",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_14": [
+            {
+              "id": 133,
+              "url": "https://wildthingfishingcharters.com.au/",
+              "logo": {
+                "id": 5650,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/35c9aaa1_abaf_4d5c_957c_24edba82c712_8facd54422.jfif"
+              },
+              "name": "Wild Thing Fishing Charters",
+              "isVideo": true,
+              "tagline": " Wild Thing Fishing Charters the best fishing charter on the Gold Coast",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_15": [
+            {
+              "id": 140,
+              "url": "https://online.lnp.org.au/david-crisafulli",
+              "logo": {
+                "id": 5653,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fe83dfe1_0790_481a_b646_6ecf328569ef_2a297bdec5.jfif"
+              },
+              "name": "David Chrisafulli",
+              "isVideo": true,
+              "tagline": "The Right Priorities for Queensland's Future",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_16": [
+            {
+              "id": 145,
+              "url": "https://www.facebook.com/PeakPerformanceCricket/",
+              "logo": {
+                "id": 5671,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/122b3edd_0e29_4b1f_a788_d61c2f0a49fe_049c1721bb.jfif"
+              },
+              "name": "Peak Performance Cricket",
+              "isVideo": true,
+              "tagline": "Peak Performance Cricket provides structured 1;1 and group coaching sessions. ",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_17": [
+            {
+              "id": 697,
+              "url": "https://www.bendigobank.com.au/branch/qld/community-bank-paradise-point/",
+              "logo": {
+                "id": 7538,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bendigo_bank_250x250_b71bac5301.png"
+              },
+              "name": "Bendigo Bank Paradise Point",
+              "isVideo": true,
+              "tagline": "Community Bank Paradise Point not only gives you access to award-winning financial products and services, we're also com",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_18": [
+            {
+              "id": 698,
+              "url": "https://exchangedepot.com.au/",
+              "logo": {
+                "id": 7540,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/305302086_416190323831708_4580525394291034891_n_d1ea39420d.png"
+              },
+              "name": "Exchange Depot",
+              "isVideo": true,
+              "tagline": "Our facilities provide a quick and easy way to redeem your 10 cent deposit containers",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_19": [
+            {
+              "id": 700,
+              "url": "https://www.sicame.com.au/",
+              "logo": {
+                "id": 7542,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/web_logo_2018_trans_7200f6030e.png"
+              },
+              "name": "SCG Urban",
+              "isVideo": true,
+              "tagline": "At SCG Urban quality is never compromised and we pride ourselves on producing innovative & sustainable solutions to all ",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_20": [
+            {
+              "id": 699,
+              "url": "https://www.sicame.com.au/",
+              "logo": {
+                "id": 7541,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/sicame_australia_2bd50e2a10.png"
+              },
+              "name": "Sicame Australia",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ]
+        },
+        "primary": [
+          {
+            "id": 598,
+            "url": "https://www.synergycardiology.com.au/",
+            "logo": {
+              "id": 7314,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_12_eea3f7daa0.png"
+            },
+            "name": "Synergy Cardiology",
+            "isVideo": true,
+            "tagline": "We strive to create a warm and welcoming environment where you can feel comfortable and confident in the care you receiv",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": false,
+            "description": null
+          }
+        ]
+      },
       "IsAccountClub": true
     },
     "video": {
       "media": {
         "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3"
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
         },
         "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "SENIOR",
-          "AssetType": "CricketRoster",
-          "markerPosition": ""
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6fa63900_c3ae_4499_9abb_589dac44ffb9_a0b9adc3f1.jpg",
+          "ratio": "square",
+          "width": 1080,
+          "height": 1080,
+          "AgeGroup": "Both",
+          "AssetType": "Top 5 Bowlers",
+          "markerPosition": []
         }
       },
       "metadata": {
-        "title": "Team List",
-        "frames": [
-          120,
-          180
-        ],
-        "assetId": 32,
-        "titleSplit": [
-          "Team",
-          "List"
-        ],
-        "videoTitle": "Runaway Bay Cricket Club Inc CricketRoster",
-        "assetTypeId": 1,
-        "compositionId": "CricketRoster",
-        "includeSponsors": false
+        "title": "Weekend Result",
+        "frames": [],
+        "assetId": 29,
+        "titleSplit": ["Weekend", "Result"],
+        "videoTitle": "Weekend Result Single Game",
+        "assetTypeId": 2,
+        "compositionId": "CricketResultSingle",
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "Classic"
       },

@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/compositions/cricket/top5/basic.tsx
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import NoPlayersData from "./modules/NoPlayersData/no-data";
-import { transformPlayerData, getTitle } from "./utils/dataTransformer";
+import { transformPlayerData } from "./utils/dataTransformer";
 import { PlayerData } from "./types";
 import PlayersDisplayCNSW from "./controller/PlayersDisplay/display-CNSW";
 
@@ -23,7 +24,7 @@ export const Top5Players: React.FC = () => {
   );
 
   // Get appropriate title based on composition
-  const title = getTitle(compositionId);
+  const title = (playersData[0] as any).assignSponsors.grade.name;
 
   return (
     <PlayersDisplayCNSW

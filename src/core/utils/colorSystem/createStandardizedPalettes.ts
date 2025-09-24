@@ -21,7 +21,12 @@ export const createStandardizedPalettes = (
   // Process each configuration to create standardized palettes
   configurations.forEach((config) => {
     // Ensure includeGradients is true to avoid undefined gradient
-    const options = { ...config.options, includeGradients: true };
+    const options = {
+      ...config.options,
+      includeGradients: true,
+      originalPrimary: primary,
+      originalSecondary: secondary,
+    };
 
     // Generate the palette using the factory
     const palette = standardPaletteFactory(

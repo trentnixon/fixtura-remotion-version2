@@ -55,13 +55,13 @@ export const cnswTheme: TemplateThemeConfig = {
         "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
     },
     Top5PlayerScore: {
-      className: "text-4xl font-normal  tracking-normal leading-tight mr-2",
+      className: "text-4xl font-bold  tracking-normal leading-tight mr-2",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-1xl font-normal  tracking-wide leading-loose",
+      className: "text-2xl font-normal  tracking-wide leading-loose",
     },
     ResultScore: {
-      className: "text-3xl font-bold  tracking-normal leading-tight ",
+      className: "text-6xl font-bold  tracking-normal leading-tight ",
     },
     ResultScoreFirstInnings: {
       className: "text-3xl font-bold  tracking-normal leading-tight ",
@@ -101,7 +101,7 @@ export const cnswTheme: TemplateThemeConfig = {
       className: "text-3xl font-semibold  tracking-wider leading-normal",
     },
     metadataLarge: {
-      className: "text-4xl font-semibold  tracking-widest leading-normal",
+      className: "text-6xl font-bold  tracking-widest leading-normal",
     },
     titleSmall: {
       className: "text-4xl font-semibold tracking-normal leading-normal",
@@ -109,9 +109,9 @@ export const cnswTheme: TemplateThemeConfig = {
   },
   layout: {
     heights: {
-      asset: 980,
-      header: 280,
-      footer: 100,
+      asset: 910,
+      header: 300,
+      footer: 150,
     },
     spacing: {
       section: "space-y-8",

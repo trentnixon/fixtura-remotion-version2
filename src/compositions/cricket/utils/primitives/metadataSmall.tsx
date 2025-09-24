@@ -14,7 +14,7 @@ export const MetadataSmall = ({
   variant = "onContainerCopy",
 }: {
   value: string;
-  animation: AnimationConfig;
+  animation: AnimationConfig | null;
   className?: string;
   variant?: ColorVariant;
 }) => {

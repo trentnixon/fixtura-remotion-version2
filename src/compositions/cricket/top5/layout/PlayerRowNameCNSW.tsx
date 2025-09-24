@@ -7,6 +7,7 @@ import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
 import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { MetadataLarge } from "../../utils/primitives/metadataLarge";
 
 interface PlayerRowLayoutProps {
   player: PlayerData;
@@ -41,7 +42,7 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
   console.log("[selectedPalette]", selectedPalette);
   // Determine background color
   const bgColor = selectedPalette.container.secondary;
-  const ScorebgColor = selectedPalette.container.primary;
+  const ScorebgColor = selectedPalette.background.main;
   // Get the appropriate score display based on player type
   const getScoreValues = () => {
     if (isBatter(player)) {
@@ -69,14 +70,14 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
 
   return (
     <div
-      className={`grid grid-cols-12  p-2 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
+      className={`grid grid-cols-12  items-center h-full overflow-hidden ${layout.borderRadius.container}`}
       style={{
         height: `${rowHeight}px`,
         background: bgColor,
       }}
     >
       <div className="col-span-1 flex items-center justify-center h-full">
-        <Top5PlayerName
+        <MetadataLarge
           value={`${index + 1}`}
           animation={{ ...largeTextAnimation, delay: delay + 2 }}
           className=""
@@ -99,37 +100,22 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
         />
       </div>
 
-      {/* Logo (col-span-2) */}
-      {/*  <div
-        className="col-span-2 flex items-center justify-center h-full"
-        style={{ background: contrastBG }}
-      >
-        <div className="w-30 h-30 overflow-hidden">
-          <TeamLogo
-            logo={player.teamLogo as Top5TeamLogoType}
-            teamName={player.playedFor}
-            delay={delay + 20}
-            size={20} // smaller size to avoid pushing row height
-          />
-        </div>
-      </div> */}
-
       {/* Stat (col-span-2) */}
       <div
-        className="col-span-3 flex items-center justify-center whitespace-nowrap leading-none px-0  h-full"
+        className="col-span-3 p-2 m-2 mr-6 flex items-center justify-center whitespace-nowrap leading-none px-0  h-auto"
         style={{ background: ScorebgColor }}
       >
         <Top5PlayerScore
           value={mainValue}
           animation={{ ...largeTextAnimation, delay: delay + 20 }}
-          className=""
+          className="font-bold"
           variant="onContainerMain"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
             animation={{ ...smallTextAnimation, delay: delay + 30 }}
-            className=""
+            className="font-bold"
             variant="onContainerMain"
           />
         )}

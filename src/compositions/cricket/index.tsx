@@ -5,6 +5,7 @@ import {
   sixersThunder as ladderSixersThunder,
   classic as ladderClassic,
   classicTwoColumn as ladderClassicTwoColumn,
+  cnsw as ladderCNSW,
 } from "./ladder";
 import {
   basic as upcomingBasic,
@@ -27,6 +28,7 @@ import {
   SixersThunder as resultsSixersThunder,
   classic as resultsClassic,
   classicTwoColumn as resultsClassicTwoColumn,
+  cnsw as resultsCNSW,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -34,6 +36,7 @@ import {
   classic as resultSingleClassic,
   sixers as resultSingleSixers,
   classicTwoColumns as resultSingleClassicTwoColumns,
+  cnsw as resultSingleCNSW,
 } from "./resultSingle";
 
 import {
@@ -62,7 +65,7 @@ export const CricketLadder = {
   thunder: ladderSixersThunder,
   classic: ladderClassic,
   twocolumnclassic: ladderClassicTwoColumn, // alias to classic
-  cnsw: ladderClassic,
+  cnsw: ladderCNSW,
 };
 
 export const CricketTop5 = {
@@ -82,7 +85,7 @@ export const CricketResults = {
   thunder: resultsSixersThunder,
   classic: resultsClassic,
   twocolumnclassic: resultsClassicTwoColumn, // alias to classic
-  cnsw: resultsClassic,
+  cnsw: resultsCNSW,
 };
 
 export const CricketUpcoming = {
@@ -102,7 +105,7 @@ export const CricketResultSingle = {
   thunder: resultSingleSixers,
   classic: resultSingleClassic,
   twocolumnclassic: resultSingleClassicTwoColumns, // alias to classic
-  cnsw: resultSingleClassic,
+  cnsw: resultSingleCNSW,
 };
 
 // Add CricketRoster export to match compositionId in test data

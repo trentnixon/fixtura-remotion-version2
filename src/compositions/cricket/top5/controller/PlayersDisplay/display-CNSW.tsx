@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { PlayerData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -8,6 +9,7 @@ import { Sponsor } from "../../../../../core/types/data/sponsors";
 import { AssignSponsors } from "../../../composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import PlayerRowCNSW from "../PlayerRow/row-CNSW";
+import { Top5PlayerName } from "../../../utils/primitives/Top5PlayerName";
 
 interface PlayersDisplayProps {
   players: PlayerData[];
@@ -18,6 +20,7 @@ interface PlayersDisplayProps {
 const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
   players,
   sponsors,
+  title,
 }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
@@ -40,12 +43,20 @@ const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex-0 grid grid-cols-1 gap-1 px-16">
+          <Top5PlayerName
+            value={title || ""}
+            animation={null as any}
+            className=""
+            variant="onContainerMain"
+          />
+        </div>
+        <div className="flex-0 grid grid-cols-1 gap-1 px-16">
           {players.map((player, index) => (
             <PlayerRowCNSW
               key={player.name}
               player={player}
               index={index}
-              rowHeight={90}
+              rowHeight={110}
             />
           ))}
         </div>

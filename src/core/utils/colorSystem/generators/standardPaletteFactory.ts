@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // standardPaletteFactory.ts
 import tinycolor from "tinycolor2";
 import { GradientCollection, PaletteOptions } from "../core/types";
@@ -42,7 +43,6 @@ export const standardPaletteFactory = (
   useMode: ThemeMode,
 ) => {
   // Extract colors
-  //console.log("[colors]", colors);
   const [main, secondary] = colors;
 
   // Generate color variations
@@ -218,6 +218,10 @@ export const standardPaletteFactory = (
         css: { DEFAULT: "" },
       },
     }) as GradientCollection,
-    options as unknown as { [key: string]: unknown },
+    {
+      ...options,
+      originalPrimary: (options as any).originalPrimary || main,
+      originalSecondary: (options as any).originalSecondary || secondary,
+    } as unknown as { [key: string]: unknown },
   );
 };

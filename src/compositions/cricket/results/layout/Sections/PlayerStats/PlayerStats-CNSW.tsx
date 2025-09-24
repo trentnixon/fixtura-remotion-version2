@@ -150,9 +150,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
           players={batters}
           isBatting={true}
           delay={delay}
-          backgroundColor={
-            selectedPalette.container.backgroundTransparent.strong
-          }
+          backgroundColor={selectedPalette.background.userSecondary}
           textColor={"onContainerCopy"}
         />
       )}
@@ -162,9 +160,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
           players={bowlers}
           isBatting={false}
           delay={delay + 2}
-          backgroundColor={
-            selectedPalette.container.backgroundTransparent.strong
-          }
+          backgroundColor={selectedPalette.background.userSecondary}
           textColor={"onContainerCopy"}
         />
       )}
@@ -172,7 +168,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   );
 };
 
-export const PlayerStatsBasic: React.FC<PlayerStatsProps> = ({
+export const PlayerStatsCNSW: React.FC<PlayerStatsProps> = ({
   homeTeam,
   awayTeam,
   height,
@@ -229,4 +225,4 @@ export const PlayerStatsBasic: React.FC<PlayerStatsProps> = ({
   );
 };
 
-export default PlayerStatsBasic;
+export default PlayerStatsCNSW;

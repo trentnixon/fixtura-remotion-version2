@@ -763,8 +763,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#de0000",
-          "secondary": "#ffa300"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "Brickwork"
       },
@@ -816,7 +816,7 @@
           "playbackRate": null,
           "useOffthreadVideo": null
         },
-        "palette": "secondary",
+        "palette": "primary",
         "pattern": {
           "type": "dots",
           "scale": 0.5,

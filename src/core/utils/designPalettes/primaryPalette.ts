@@ -22,6 +22,10 @@ export const createPrimaryPalette = (
     name: "Primary",
     background: {
       main: primary,
+      primary: primary,
+      secondary: secondary,
+      userPrimary: primary,
+      userSecondary: secondary,
       light: primaryVariations.light || primary,
       dark: primaryVariations.dark || primary,
       contrast: primaryVariations.contrastText || "#FFFFFF",
