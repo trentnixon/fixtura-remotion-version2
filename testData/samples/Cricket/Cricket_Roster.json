@@ -123,8 +123,8 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#0f150b",
-          "secondary": "#f8cb4c"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "Basic"
       },

@@ -10,6 +10,7 @@ interface MatchHeaderProps {
   delay: number;
   backgroundColor: string;
   align: string;
+  variant?: string;
 }
 
 export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
@@ -18,6 +19,7 @@ export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
   delay,
   backgroundColor,
   align,
+  variant = "onContainerCopyNoBg",
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -44,7 +46,7 @@ export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
         value={value}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className={`${align === "right" ? "text-right" : align === "center" ? "text-center" : "text-left"}`}
-        variant="onContainerCopyNoBg"
+        variant={variant}
       />
     </AnimatedContainer>
   );

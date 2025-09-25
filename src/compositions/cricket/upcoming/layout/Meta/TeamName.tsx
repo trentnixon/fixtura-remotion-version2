@@ -8,6 +8,8 @@ interface TopSectionProps {
   delay: number;
   delayName?: number;
   style?: React.CSSProperties;
+  variant?: string;
+  className?: string;
 }
 
 export const TeamName: React.FC<TopSectionProps> = ({
@@ -15,6 +17,8 @@ export const TeamName: React.FC<TopSectionProps> = ({
   delay,
   delayName = 10,
   style,
+  variant = "onContainerCopy",
+  className = "text-center",
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -33,7 +37,8 @@ export const TeamName: React.FC<TopSectionProps> = ({
       <MetadataMedium
         value={`${teamName}`}
         animation={{ ...TextAnimations.copyIn, delay: delayName }}
-        className="text-center"
+        className={className}
+        variant={variant}
       />
     </AnimatedContainer>
   );

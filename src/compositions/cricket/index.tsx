@@ -13,6 +13,7 @@ import {
   SixersThunder as upcomingSixersThunder,
   classic as upcomingClassic,
   classicTwoColumn as upcomingClassicTwoColumn,
+  cnsw as upcomingCNSW,
 } from "./upcoming";
 import {
   basic as top5Basic,
@@ -95,7 +96,7 @@ export const CricketUpcoming = {
   thunder: upcomingSixersThunder,
   classic: upcomingClassic,
   twocolumnclassic: upcomingClassicTwoColumn, // alias to classic
-  cnsw: upcomingClassic,
+  cnsw: upcomingCNSW,
 };
 
 export const CricketResultSingle = {
