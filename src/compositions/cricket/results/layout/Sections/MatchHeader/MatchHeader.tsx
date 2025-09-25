@@ -13,6 +13,7 @@ interface MatchHeaderProps {
   delay: number;
   backgroundColor: string;
   className?: string;
+  CopyVariant?: string;
 }
 
 // Helper function to truncate text
@@ -30,6 +31,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   delay,
   backgroundColor,
   className,
+  CopyVariant = "onContainerCopy",
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -60,14 +62,14 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
         value={leftText}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className=""
-        variant="onContainerCopyNoBg"
+        variant={CopyVariant}
       />
 
       <ResultMetaData
         value={truncateText(ground, 50)}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className="text-right"
-        variant="onContainerCopyNoBg"
+        variant={CopyVariant}
       />
     </AnimatedContainer>
   );

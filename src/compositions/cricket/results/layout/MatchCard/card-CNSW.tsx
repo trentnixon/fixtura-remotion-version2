@@ -50,6 +50,7 @@ const MatchCardCNSW: React.FC<MatchCardProps> = ({
         outerContainer={{
           height: teamsHeight,
         }}
+        CopyVariant="onBackgroundMain"
       />
 
       {match.status === "Abandoned" && (
@@ -84,6 +85,7 @@ const MatchCardCNSW: React.FC<MatchCardProps> = ({
         delay={headerDelay}
         backgroundColor={"transparent"}
         className="py-0 px-4"
+        CopyVariant="onBackgroundMain"
       />
     </div>
   );

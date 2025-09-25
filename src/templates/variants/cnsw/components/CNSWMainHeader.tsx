@@ -12,17 +12,16 @@ import { AbsoluteFill, Img } from "remotion";
 
 export const CNSWMainHeader = () => {
   const { layout, fontClasses, selectedPalette } = useThemeContext();
-  const { metadata, data } = useVideoDataContext();
+  const { metadata, data, video } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
   const { heights } = layout;
   const { timings } = data;
-  const competitionName =
-    (data.data[0] as any)?.assignSponsors?.competition?.name || "";
+  const competitionName = video.fixtureCategory;
   // Get configuration using utility functions
   const headerConfig = getHeaderConfig(metadata.compositionId);
-  const leagueTitleConfig = getLeagueTitleConfig(metadata.videoTitle);
+  const leagueTitleConfig = getLeagueTitleConfig(video.fixtureCategory);
 
   // Apply header-specific styling to match the image design
   const leagueTitle = {

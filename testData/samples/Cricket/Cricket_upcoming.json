@@ -1,22 +1,22 @@
 {
   "data": [
     {
-      "date": "Sat, 13 Sept",
-      "time": "12:30 PM",
-      "type": "One Day",
-      "round": "Grand Final",
-      "gameID": "60d8142c",
-      "gender": "Mixed",
-      "ground": "Gardens Oval / Gardens Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Waratah Warriors C Grade vs PINT C Grade, Date and Time: Saturday, 13 September 2025, 12:30 PM, Location: Gardens Oval / Gardens Oval\n- Round: Grand Final, Match Type: One Day\n- League: C Grade",
+      "date": "Sat, 27 Sept",
+      "time": "09:00 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "e0b71a43",
+      "gender": "Men",
+      "ground": "Hurstville Oval / Hurstville Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: St George vs Sydney, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Hurstville Oval / Hurstville Oval\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
       "ageGroup": "Senior",
-      "teamAway": "PINT C Grade",
-      "teamHome": "Waratah Warriors C Grade",
-      "gradeName": "C Grade",
+      "teamAway": "Sydney",
+      "teamHome": "St George",
+      "gradeName": "Men's Kingsgrove Sports T20",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
@@ -26,23 +26,964 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": [
-          {
-            "id": 170,
-            "isPrimary": false,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "7",
-            "tagline": "7",
-            "description": null,
-            "name": "7",
-            "logo": {
-              "id": 13162,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_6d12274c46.png"
-            }
-          }
-        ]
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:00 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "138fbc9c",
+      "gender": "Men",
+      "ground": "Merrylands Park / Merrylands Park Oval 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Gordon vs Eastern Suburbs, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Merrylands Park / Merrylands Park Oval 1\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Eastern Suburbs",
+      "teamHome": "Gordon",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+        "width": 158,
+        "height": 182
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
+        "width": 180,
+        "height": 152
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:00 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "5c7703e2",
+      "gender": "Men",
+      "ground": "Manly Oval / Manly Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs Bankstown, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Manly Oval / Manly Oval\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Bankstown",
+      "teamHome": "Manly Warringah",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+        "width": 216,
+        "height": 216
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
+        "width": 180,
+        "height": 168
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:00 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "3e27bedc",
+      "gender": "Men",
+      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: UTS North Sydney vs UNSW, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "UNSW",
+      "teamHome": "UTS North Sydney",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "6a974a05",
+      "gender": "Men",
+      "ground": "Harold Fraser Reserve / Harold Fraser Reserve",
+      "prompt": "Upcoming cricket match details:\n- Teams: Fairfield-Liverpool vs Randwick Petersham, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Harold Fraser Reserve / Harold Fraser Reserve\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Randwick Petersham",
+      "teamHome": "Fairfield-Liverpool",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
+        "width": 200,
+        "height": 200
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "ddd58fdd",
+      "gender": "Men",
+      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 2)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sutherland vs Sydney University, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Raby Sports Complex / Raby Sports Complex (Oval 2)\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Sydney University",
+      "teamHome": "Sutherland",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "66ad2403",
+      "gender": "Men",
+      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 1)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Campbelltown Camden vs Penrith, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Raby Sports Complex / Raby Sports Complex (Oval 1)\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Penrith",
+      "teamHome": "Campbelltown Camden",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
+        "width": 1358,
+        "height": 1142
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 3",
+      "gameID": "92b9a743",
+      "gender": "Men",
+      "ground": "Old Kings Oval / Old Kings Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Parramatta vs Blacktown T20, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Old Kings Oval / Old Kings Oval\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Blacktown T20",
+      "teamHome": "Parramatta",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
+        "width": 1080,
+        "height": 1080
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "104f462c",
+      "gender": "Men",
+      "ground": "Harold Fraser Reserve / Harold Fraser Reserve",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sydney vs Fairfield-Liverpool, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Harold Fraser Reserve / Harold Fraser Reserve\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Fairfield-Liverpool",
+      "teamHome": "Sydney",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
+        "width": 200,
+        "height": 200
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "1ee85cad",
+      "gender": "Men",
+      "ground": "Hurstville Oval / Hurstville Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: St George vs Hawkesbury, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Hurstville Oval / Hurstville Oval\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Hawkesbury",
+      "teamHome": "St George",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
+        "width": 265,
+        "height": 252
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "e7717074",
+      "gender": "Men",
+      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 2)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sutherland vs Northern District, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Raby Sports Complex / Raby Sports Complex (Oval 2)\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Northern District",
+      "teamHome": "Sutherland",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
+        "width": 680,
+        "height": 912
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "e5e42182",
+      "gender": "Men",
+      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 1)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Campbelltown Camden vs Sydney University, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Raby Sports Complex / Raby Sports Complex (Oval 1)\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Sydney University",
+      "teamHome": "Campbelltown Camden",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
+        "width": 1358,
+        "height": 1142
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "9f7ff5b6",
+      "gender": "Men",
+      "ground": "Merrylands Park / Merrylands Park Oval 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Eastern Suburbs vs Western Suburbs, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Merrylands Park / Merrylands Park Oval 1\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Western Suburbs",
+      "teamHome": "Eastern Suburbs",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+        "width": 158,
+        "height": 182
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "df63b5f1",
+      "gender": "Men",
+      "ground": "Old Kings Oval / Old Kings Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Parramatta vs Gordon, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Old Kings Oval / Old Kings Oval\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Gordon",
+      "teamHome": "Parramatta",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
+        "width": 180,
+        "height": 152
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "6f58f677",
+      "gender": "Men",
+      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Mosman vs Bankstown, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Bankstown",
+      "teamHome": "Mosman",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+        "width": 216,
+        "height": 216
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
+        "width": 270,
+        "height": 266
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 27 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "68a2975f",
+      "gender": "Men",
+      "ground": "Manly Oval / Manly Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs UTS North Sydney, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Manly Oval / Manly Oval\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "UTS North Sydney",
+      "teamHome": "Manly Warringah",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
+        "width": 180,
+        "height": 168
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "87687026",
+      "gender": "Men",
+      "ground": "Coogee Oval / Coogee Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Randwick Petersham vs Sydney, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Coogee Oval / Coogee Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Sydney",
+      "teamHome": "Randwick Petersham",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "384a5783",
+      "gender": "Men",
+      "ground": "Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Hawkesbury vs Fairfield-Liverpool, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Fairfield-Liverpool",
+      "teamHome": "Hawkesbury",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
+        "width": 200,
+        "height": 200
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
+        "width": 265,
+        "height": 252
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "1bb279d3",
+      "gender": "Men",
+      "ground": "Mark Taylor Oval / Mark Taylor Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Northern District vs Campbelltown Camden, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Mark Taylor Oval / Mark Taylor Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Campbelltown Camden",
+      "teamHome": "Northern District",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
+        "width": 1358,
+        "height": 1142
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
+        "width": 680,
+        "height": 912
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "46e25491",
+      "gender": "Men",
+      "ground": "Sydney University / University Oval No. 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sydney University vs Penrith, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Sydney University / University Oval No. 1\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Penrith",
+      "teamHome": "Sydney University",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "f2ba7bbb",
+      "gender": "Men",
+      "ground": "Joe McAleer / Joe McAleer",
+      "prompt": "Upcoming cricket match details:\n- Teams: Blacktown T20 vs Western Suburbs, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Joe McAleer / Joe McAleer\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Western Suburbs",
+      "teamHome": "Blacktown T20",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
+        "width": 1080,
+        "height": 1080
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "d285f048",
+      "gender": "Men",
+      "ground": "Waverley Oval (NSW) / Waverley Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Eastern Suburbs vs Parramatta, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Waverley Oval (NSW) / Waverley Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "Parramatta",
+      "teamHome": "Eastern Suburbs",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+        "width": 158,
+        "height": 182
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "2178f19a",
+      "gender": "Men",
+      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Mosman vs UTS North Sydney, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "UTS North Sydney",
+      "teamHome": "Mosman",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
+        "width": 270,
+        "height": 266
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "02:00 PM",
+      "type": "T20",
+      "round": "Round 5",
+      "gameID": "e4a2c53a",
+      "gender": "Men",
+      "ground": "Manly Oval / Manly Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs UNSW, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Manly Oval / Manly Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "ageGroup": "Senior",
+      "teamAway": "UNSW",
+      "teamHome": "Manly Warringah",
+      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
+        "width": 180,
+        "height": 168
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "7066676a",
+      "gender": "Men",
+      "ground": "Hurstville Oval / Hurstville Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: St George vs Sutherland, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Hurstville Oval / Hurstville Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Sutherland",
+      "teamHome": "St George",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "707a1398",
+      "gender": "Men",
+      "ground": "Mark Taylor Oval / Mark Taylor Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Northern District vs Campbelltown Camden, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Mark Taylor Oval / Mark Taylor Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Campbelltown Camden",
+      "teamHome": "Northern District",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
+        "width": 1358,
+        "height": 1142
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
+        "width": 680,
+        "height": 912
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "d11f6e51",
+      "gender": "Men",
+      "ground": "Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Hawkesbury vs Fairfield-Liverpool, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Fairfield-Liverpool",
+      "teamHome": "Hawkesbury",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
+        "width": 200,
+        "height": 200
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
+        "width": 265,
+        "height": 252
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "46a98816",
+      "gender": "Men",
+      "ground": "Sydney University / University Oval No. 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Sydney University vs Penrith, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Sydney University / University Oval No. 1\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Penrith",
+      "teamHome": "Sydney University",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "81050faf",
+      "gender": "Men",
+      "ground": "Coogee Oval / Coogee Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Randwick Petersham vs Sydney, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Coogee Oval / Coogee Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Sydney",
+      "teamHome": "Randwick Petersham",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "ed32a77f",
+      "gender": "Men",
+      "ground": "Bankstown Oval / Bankstown Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Bankstown vs Gordon, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Bankstown Oval / Bankstown Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Gordon",
+      "teamHome": "Bankstown",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
+        "width": 180,
+        "height": 152
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+        "width": 216,
+        "height": 216
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "4ffacf14",
+      "gender": "Men",
+      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Mosman vs UTS North Sydney, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "UTS North Sydney",
+      "teamHome": "Mosman",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
+        "width": 270,
+        "height": 266
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "ca4d12e2",
+      "gender": "Men",
+      "ground": "Waverley Oval (NSW) / Waverley Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Eastern Suburbs vs Parramatta, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Waverley Oval (NSW) / Waverley Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Parramatta",
+      "teamHome": "Eastern Suburbs",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+        "width": 158,
+        "height": 182
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "86bd2b7a",
+      "gender": "Men",
+      "ground": "Manly Oval / Manly Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs UNSW, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Manly Oval / Manly Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "UNSW",
+      "teamHome": "Manly Warringah",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
+        "width": 180,
+        "height": 168
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sun, 28 Sept",
+      "time": "09:30 AM",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "032b1037",
+      "gender": "Men",
+      "ground": "Joe McAleer / Joe McAleer",
+      "prompt": "Upcoming cricket match details:\n- Teams: Blacktown PGs vs Western Suburbs, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Joe McAleer / Joe McAleer\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "ageGroup": "Senior",
+      "teamAway": "Western Suburbs",
+      "teamHome": "Blacktown PGs",
+      "gradeName": "Poidevin-Gray Shield",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
+        "width": 1080,
+        "height": 1080
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
       }
     }
   ],
@@ -50,416 +991,44 @@
     "assetID": 2,
     "assetTypeID": 1,
     "assetCategoryID": 2,
-    "assetsLinkID": "20d26f5fc72a09d99a5740d250313a159296c1669850c6c5bf9b4ac9ee9c8e5c"
+    "assetsLinkID": "c090b282cbb0a0041a21ef672094c66656ec476a61bf538b6b86520aa0de54db"
   },
   "render": {
-    "schedulerId": 211,
-    "renderId": 8447
+    "schedulerId": 318,
+    "renderId": 8449
   },
   "account": {
-    "accountId": 323
+    "accountId": 431
   },
   "timings": {
-    "FPS_MAIN": 210,
+    "FPS_MAIN": 2355,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 360,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210
   },
-  "frames": [45, 195, 330, 420, 510, 600],
+  "frames": [
+    45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1755, 1950, 2145, 2340
+  ],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_58_5e1504d484.jpg",
+        "width": 153,
+        "height": 256
       },
-      "name": "PINT Cricket Club",
+      "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 169,
-            "isPrimary": false,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "6",
-            "tagline": "6",
-            "description": null,
-            "name": "6",
-            "logo": {
-              "id": 13176,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 169,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "6",
-              "tagline": "6",
-              "description": null,
-              "name": "6",
-              "logo": {
-                "id": 13176,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
-              }
-            }
-          ],
-          "general_sponsor_1": [
-            {
-              "id": 169,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "6",
-              "tagline": "6",
-              "description": null,
-              "name": "6",
-              "logo": {
-                "id": 13176,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_ed16fb7881.png"
-              }
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 166,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "3",
-              "tagline": "3",
-              "description": null,
-              "name": "3",
-              "logo": {
-                "id": 13158,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_7b691dc0ff.png"
-              }
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 167,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "4",
-              "tagline": "4",
-              "description": null,
-              "name": "4",
-              "logo": {
-                "id": 13159,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_2e99a89b64.png"
-              }
-            }
-          ],
-          "general_sponsor_4": [
-            {
-              "id": 168,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "5",
-              "tagline": "5",
-              "description": null,
-              "name": "5",
-              "logo": {
-                "id": 13160,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_5830015159.png"
-              }
-            }
-          ],
-          "general_sponsor_5": [
-            {
-              "id": 165,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "2",
-              "tagline": "2",
-              "description": null,
-              "name": "2",
-              "logo": {
-                "id": 13157,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_165c6afcc8.png"
-              }
-            }
-          ],
-          "general_sponsor_6": [
-            {
-              "id": 170,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "7",
-              "tagline": "7",
-              "description": null,
-              "name": "7",
-              "logo": {
-                "id": 13162,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_6d12274c46.png"
-              }
-            }
-          ],
-          "general_sponsor_7": [
-            {
-              "id": 171,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "8",
-              "tagline": "8",
-              "description": null,
-              "name": "8",
-              "logo": {
-                "id": 13163,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_1aa8ff89e8.png"
-              }
-            }
-          ],
-          "general_sponsor_8": [
-            {
-              "id": 172,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "9",
-              "tagline": "9",
-              "description": null,
-              "name": "9",
-              "logo": {
-                "id": 13164,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_1268605e79.png"
-              }
-            }
-          ],
-          "general_sponsor_9": [
-            {
-              "id": 173,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "10",
-              "tagline": "10",
-              "description": null,
-              "name": "10",
-              "logo": {
-                "id": 13165,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_2046cbd33c.png"
-              }
-            }
-          ],
-          "general_sponsor_10": [
-            {
-              "id": 174,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "11",
-              "tagline": "11",
-              "description": null,
-              "name": "11",
-              "logo": {
-                "id": 13166,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_0ab9d1a55f.png"
-              }
-            }
-          ],
-          "general_sponsor_11": [
-            {
-              "id": 175,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "12",
-              "tagline": "12",
-              "description": null,
-              "name": "12",
-              "logo": {
-                "id": 13167,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_1dfeb3110e.png"
-              }
-            }
-          ],
-          "general_sponsor_12": [
-            {
-              "id": 176,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "13",
-              "tagline": "13",
-              "description": null,
-              "name": "13",
-              "logo": {
-                "id": 13168,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_0ab5c6727a.png"
-              }
-            }
-          ],
-          "general_sponsor_13": [
-            {
-              "id": 177,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "14",
-              "tagline": "14",
-              "description": null,
-              "name": "14",
-              "logo": {
-                "id": 13169,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_b5d0d528bc.png"
-              }
-            }
-          ],
-          "general_sponsor_14": [
-            {
-              "id": 178,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "15",
-              "tagline": "15",
-              "description": null,
-              "name": "15",
-              "logo": {
-                "id": 13170,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_003ed9fa59.png"
-              }
-            }
-          ],
-          "general_sponsor_15": [
-            {
-              "id": 179,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "16",
-              "tagline": "16",
-              "description": null,
-              "name": "16",
-              "logo": {
-                "id": 13171,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_6719b8bcc6.png"
-              }
-            }
-          ],
-          "general_sponsor_16": [
-            {
-              "id": 180,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "17",
-              "tagline": "17",
-              "description": null,
-              "name": "17",
-              "logo": {
-                "id": 13172,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor17_7a12c0a481.png"
-              }
-            }
-          ],
-          "general_sponsor_17": [
-            {
-              "id": 181,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "18",
-              "tagline": "18",
-              "description": null,
-              "name": "18",
-              "logo": {
-                "id": 13173,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor18_d93386799c.png"
-              }
-            }
-          ],
-          "general_sponsor_18": [
-            {
-              "id": 182,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "19",
-              "tagline": "19",
-              "description": null,
-              "name": "19",
-              "logo": {
-                "id": 13174,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor19_e51e18d297.png"
-              }
-            }
-          ],
-          "general_sponsor_19": [
-            {
-              "id": 183,
-              "isPrimary": false,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "20",
-              "tagline": "20",
-              "description": null,
-              "name": "20",
-              "logo": {
-                "id": 13175,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor20_3ec2996247.png"
-              }
-            }
-          ],
-          "general_sponsor_20": [
-            {
-              "id": 164,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "1",
-              "tagline": "1",
-              "description": null,
-              "name": "1",
-              "logo": {
-                "id": 13156,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_3e00ce7ae2.png"
-              }
-            }
-          ]
-        }
+        "primary": [],
+        "default": {}
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
+      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
       "metadata": {
         "title": "Fixtures",
         "titleSplit": ["Fixtures", ""],
@@ -468,7 +1037,7 @@
         "assetId": 2,
         "assetTypeId": 1,
         "frames": [],
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
@@ -477,17 +1046,17 @@
           "primary": "#002855",
           "secondary": "#00aeef"
         },
-        "template": "TwoColumnClassic"
+        "template": "Basic"
       },
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/gettyimages_1366011994_2048x2048_b3af207cd7.jpg",
-          "ratio": "portrait",
-          "width": 1339,
-          "height": 1666,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
         },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
@@ -504,11 +1073,11 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Texture",
-        "mode": "lightAlt",
+        "useBackground": "Graphics",
+        "mode": "light",
         "category": {
-          "slug": "TwoColumnClassic",
-          "name": "Classic Two Column ",
+          "slug": "Basic",
+          "name": "Basic",
           "divideFixturesBy": {
             "CricketUpcoming": 3,
             "CricketResults": 2,
@@ -625,19 +1194,19 @@
         "palette": "primary",
         "gradient": {
           "type": "primary",
-          "direction": "HORIZONTAL"
+          "direction": "VERTICAL"
         },
         "noise": {
           "type": "floatingParticles"
         },
         "pattern": {
-          "type": "grid",
+          "type": "dots",
           "animation": "none",
-          "scale": 3,
+          "scale": 0.75,
           "rotation": null,
-          "opacity": 0.15,
+          "opacity": 0.35,
           "animationDuration": null,
-          "animationSpeed": null
+          "animationSpeed": 0.8
         },
         "particle": {
           "type": "lines",
@@ -647,12 +1216,12 @@
           "animation": "scale"
         },
         "texture": {
-          "name": "Cricket_Pitch_Dry_Soil_Granular",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Dry_Soil_Granular_25b12ac62f.png",
+          "name": null,
+          "url": null,
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
-            "opacity": 0.8,
+            "opacity": 0.5,
             "blendMode": "multiply"
           }
         }

@@ -19,6 +19,8 @@ export interface Video {
   media: VideoMedia;
   contentLayout: VideoContentLayout;
   templateVariation: VideoTemplateVariation;
+  fixtureCategory: string;
+  groupingCategory: string;
 }
 
 // Video theme definition to match structure in data

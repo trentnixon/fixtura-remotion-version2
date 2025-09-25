@@ -14,6 +14,7 @@ import { getFirstInningsDisplay, normalizeScore, truncateText } from "./utils";
 interface ExtendedTeamsSectionProps extends TeamsSectionProps {
   backgroundColor?: string;
   alignment?: "start" | "end" | "alternate";
+  CopyVariant?: string;
 }
 
 export const TeamsSectionScoreOverTeamNameOnly: React.FC<
@@ -26,6 +27,7 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
   type,
   backgroundColor,
   alignment = "start",
+  CopyVariant = "onContainerCopy",
 }) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
@@ -72,7 +74,7 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
   return (
     <AnimatedContainer
       type="full"
-      className="w-full flex justify-center items-center p-4"
+      className="w-full flex justify-center items-center p-2"
       backgroundColor="none"
       style={{
         background: containerBackgroundColor,
@@ -91,12 +93,14 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
               <ResultScoreFirstInnings
                 value={homeFirstInnings.value}
                 animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                variant={CopyVariant}
               />
             )}
             <ResultScore
               value={normalizeScore(homeTeam.score)}
               animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
               className={`flex-1 ${getTextAlignment("home")}`}
+              variant={CopyVariant}
             />
           </div>
           <div
@@ -112,6 +116,7 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
               value={normalizeScore(awayTeam.score)}
               animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
               className={`flex-1 ${getTextAlignment("away")}`}
+              variant={CopyVariant}
             />
           </div>
         </div>
@@ -122,12 +127,14 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
             <ResultTeamName
               value={truncateText(homeTeam.name, 30).toUpperCase()}
               animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
+              variant={CopyVariant}
             />
           </div>
           <div className={`flex-1 ${getTextAlignment("away")}`}>
             <ResultTeamName
               value={truncateText(awayTeam.name, 30).toUpperCase()}
               animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
+              variant={CopyVariant}
             />
           </div>
         </div>

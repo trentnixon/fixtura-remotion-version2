@@ -41,9 +41,14 @@ const StatItem: React.FC<StatItemProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-
+  const { selectedPalette } = useThemeContext();
   return (
-    <div className="flex justify-between items-center py-1">
+    <div
+      className="flex justify-between items-center py-1 mb-1 pr-1 pl-4"
+      style={{
+        background: selectedPalette.background.userSecondary,
+      }}
+    >
       <ResultPlayerName
         value={truncateText(playerName, 25)}
         variant={textColor}
@@ -52,15 +57,23 @@ const StatItem: React.FC<StatItemProps> = ({
           delay: delay + 10 + index,
         }}
       />
-
-      <ResultPlayerScore
-        value={statValue}
-        variant={textColor}
-        animation={{
-          ...TextAnimations.copyIn,
-          delay: delay + 10 + index,
+      <div
+        className=" py-1 px-8"
+        style={{
+          background: selectedPalette.background.userPrimary,
+          minWidth: "160px",
+          textAlign: "right",
         }}
-      />
+      >
+        <ResultPlayerScore
+          value={statValue}
+          variant={textColor}
+          animation={{
+            ...TextAnimations.copyIn,
+            delay: delay + 10 + index,
+          }}
+        />
+      </div>
     </div>
   );
 };
@@ -87,7 +100,6 @@ const StatSection: React.FC<StatSectionProps> = ({
   players,
   isBatting,
   delay,
-  backgroundColor,
   textColor,
 }) => {
   const { layout } = useThemeContext();
@@ -95,8 +107,7 @@ const StatSection: React.FC<StatSectionProps> = ({
 
   return (
     <div
-      className={`${isBatting ? "mb-4 py-1" : "mb-1"} px-4 ${layout.borderRadius.container}`}
-      style={{ background: backgroundColor }}
+      className={`${isBatting ? "mb-2 py-1" : "mb-1"}  ${layout.borderRadius.container}`}
     >
       {players.map((player, i) => (
         <StatItem
@@ -151,7 +162,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
           isBatting={true}
           delay={delay}
           backgroundColor={selectedPalette.background.userSecondary}
-          textColor={"onContainerCopy"}
+          textColor={"onBackgroundMain"}
         />
       )}
 
@@ -161,7 +172,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
           isBatting={false}
           delay={delay + 2}
           backgroundColor={selectedPalette.background.userSecondary}
-          textColor={"onContainerCopy"}
+          textColor={"onBackgroundMain"}
         />
       )}
     </div>

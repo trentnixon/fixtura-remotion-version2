@@ -11,16 +11,17 @@ import {
 } from "../utils/compositionConfig";
 
 export const CNSWIntro: React.FC = () => {
-  const { metadata, sponsors } = useVideoDataContext();
+  const { metadata, sponsors, club } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const { fontClasses, selectedPalette } = useThemeContext();
 
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
 
+  console.log("[club]", club.name);
   // Get configuration using utility functions
   const currentConfig = getCompositionConfig(metadata.compositionId);
-  const titleConfig = getLeagueTitleConfig("Men's Premier Cricket");
+  const titleConfig = getLeagueTitleConfig(club.name);
 
   const topLine = currentConfig.topLine.value;
   const bottomLine = currentConfig.bottomLine.value;

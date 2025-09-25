@@ -72,8 +72,8 @@ export const compositionConfig: Record<string, CompositionConfig> = {
       },
       bottomLine: {
         value: "RESULTS",
-        spacing: "0.4em",
-        headerFontSize: "5em",
+        spacing: "0.38em",
+        headerFontSize: "5.2em",
       },
     },
   },
@@ -168,7 +168,7 @@ export const compositionConfig: Record<string, CompositionConfig> = {
   CricketResultSingle: {
     topLine: {
       value: "Weekend",
-      spacing: "0.67em",
+      spacing: "0.05em",
     },
     bottomLine: {
       value: "Result",
@@ -182,7 +182,7 @@ export const compositionConfig: Record<string, CompositionConfig> = {
       },
       bottomLine: {
         value: "Result",
-        spacing: "0.37em",
+        spacing: "0.4em",
         headerFontSize: "6em",
       },
     },
@@ -260,8 +260,8 @@ export const getLeagueTitleConfig = (
 ): LeagueTitleConfig => {
   return (
     leagueTitleConfig[leagueTitle || "Men's Premier Cricket"] || {
-      value: "MEN'S PREMIER CRICKET",
-      spacing: "0.5em",
+      value: leagueTitle?.toUpperCase(),
+      spacing: "0.31em",
     }
   );
 };

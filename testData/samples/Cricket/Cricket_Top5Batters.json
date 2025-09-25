@@ -1,137 +1,137 @@
 {
   "data": [
     {
-      "SR": 140,
-      "name": "Kate Sherriff",
-      "runs": 91,
-      "balls": 65,
-      "notOut": true,
-      "prompt": "Kate Sherriff played for Nightcliff Women's Div 1, scoring 91 runs from 65 balls with a strike rate of 140. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Nightcliff Women's Div 1, (1) vs Tracy Village Women's Div 1 (1), the match result was Tracy Village Women's Div 1 won by 1 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Nightcliff Women's Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Nightcliff Women's Div 1"
-        },
-        "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "SR": 125,
-      "name": "Olivia McSweeney",
-      "runs": 85,
-      "balls": 68,
-      "notOut": true,
-      "prompt": "Olivia McSweeney played for Palmerston Women's Div 1, scoring 85 runs from 68 balls with a strike rate of 125. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Palmerston Women's Div 1, (1) vs Waratah Women's Div 1 (1), the match result was Palmerston Women's Div 1 won by 18 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "playedFor": "Palmerston Women's Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Palmerston Women's Div 1"
-        },
-        "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "SR": 112.06,
-      "name": "Aeryn McCormack",
-      "runs": 65,
-      "balls": 58,
-      "notOut": true,
-      "prompt": "Aeryn McCormack played for Palmerston Women's Div 1, scoring 65 runs from 58 balls with a strike rate of 112.06. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Palmerston Women's Div 1, (1) vs Waratah Women's Div 1 (1), the match result was Palmerston Women's Div 1 won by 18 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_54_49587496c4.png",
-        "width": 1162,
-        "height": 1162
-      },
-      "playedFor": "Palmerston Women's Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Palmerston Women's Div 1"
-        },
-        "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "SR": 203.44,
-      "name": "Meghan McCartney",
-      "runs": 59,
-      "balls": 29,
-      "notOut": true,
-      "prompt": "Meghan McCartney played for Tracy Village Women's Div 1, scoring 59 runs from 29 balls with a strike rate of 203.44. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Tracy Village Women's Div 1, (1) vs Nightcliff Women's Div 1 (1), the match result was Tracy Village Women's Div 1 won by 1 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Tracy Village Women's Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Tracy Village Women's Div 1"
-        },
-        "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "SR": 100,
-      "name": "Jasleen Kaur",
-      "runs": 53,
-      "balls": 53,
+      "SR": 175.4,
+      "name": "Riley Kingsell",
+      "runs": 107,
+      "balls": 61,
       "notOut": false,
-      "prompt": "Jasleen Kaur played for PINT Women's Div 1, scoring 53 runs from 53 balls with a strike rate of 100. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . PINT Women's Div 1, (1) vs Sth Districts Women's Div 1 (1), the match result was Sth Districts Women's Div 1 won by 5 wickets.",
+      "prompt": "Riley Kingsell played for Bankstown, scoring 107 runs from 61 balls with a strike rate of 175.4. Game details: This was a T20 in the Poidevin-Gray Shield grade, and the current match status is Match Completed . Bankstown, (1) vs Blacktown PGs (1), the match result was Bankstown won by 64 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+        "width": 216,
+        "height": 216
       },
-      "playedFor": "PINT Women's Div 1",
+      "playedFor": "Bankstown",
       "assignSponsors": {
         "Team": {
-          "name": "PINT Women's Div 1"
+          "name": "Bankstown"
         },
         "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
+          "id": 53287,
+          "name": "Poidevin-Gray Shield"
         },
         "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "SR": 162.9,
+      "name": "Jack Wood",
+      "runs": 101,
+      "balls": 62,
+      "notOut": true,
+      "prompt": "Jack Wood played for Randwick Petersham, scoring 101 runs from 62 balls with a strike rate of 162.9. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Randwick Petersham, (1) vs Hawkesbury (1), the match result was Randwick Petersham won by 8 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "playedFor": "Randwick Petersham",
+      "assignSponsors": {
+        "Team": {
+          "name": "Randwick Petersham"
+        },
+        "grade": {
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "SR": 141.42,
+      "name": "Justin Avendano",
+      "runs": 99,
+      "balls": 70,
+      "notOut": true,
+      "prompt": "Justin Avendano played for UTS North Sydney, scoring 99 runs from 70 balls with a strike rate of 141.42. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . UTS North Sydney, (1) vs Bankstown (1), the match result was UTS North Sydney won by 6 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "playedFor": "UTS North Sydney",
+      "assignSponsors": {
+        "Team": {
+          "name": "UTS North Sydney"
+        },
+        "grade": {
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "SR": 167.85,
+      "name": "Jack Attenborough  (c)",
+      "runs": 94,
+      "balls": 56,
+      "notOut": true,
+      "prompt": "Jack Attenborough  (c) played for Sydney University, scoring 94 runs from 56 balls with a strike rate of 167.85. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Sydney University, (1) vs Northern District (1), the match result was Sydney University won by 6 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "playedFor": "Sydney University",
+      "assignSponsors": {
+        "Team": {
+          "name": "Sydney University"
+        },
+        "grade": {
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "SR": 191.11,
+      "name": "Riley Kingsell",
+      "runs": 86,
+      "balls": 45,
+      "notOut": true,
+      "prompt": "Riley Kingsell played for Bankstown, scoring 86 runs from 45 balls with a strike rate of 191.11. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Bankstown, (1) vs UNSW (1), the match result was Bankstown won by 2 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+        "width": 216,
+        "height": 216
+      },
+      "playedFor": "Bankstown",
+      "assignSponsors": {
+        "Team": {
+          "name": "Bankstown"
+        },
+        "grade": {
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
         }
       }
     }
@@ -140,75 +140,42 @@
     "assetID": 15,
     "assetTypeID": 3,
     "assetCategoryID": 2,
-    "assetsLinkID": "defa58a077c5c06f9dba661daa18dd99e38d35521382c0636bacf8a6f43eff58"
+    "assetsLinkID": "b5db6253d71c7e701b343eab6f6421b0cea92e1a63bd41621f9972362165c307"
   },
   "render": {
-    "schedulerId": 314,
-    "renderId": 8341
+    "schedulerId": 318,
+    "renderId": 8449
   },
   "account": {
-    "accountId": 427
+    "accountId": 431
   },
   "timings": {
     "FPS_MAIN": 360,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45, 495],
+  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52_328ab084c6.png",
-        "width": 300,
-        "height": 300
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_58_5e1504d484.jpg",
+        "width": 153,
+        "height": 256
       },
-      "name": "Darwin & Districts Cricket Competition",
+      "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 192,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "test",
-              "tagline": null,
-              "description": null,
-              "name": "test",
-              "logo": {
-                "id": 13221,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-              }
-            }
-          ]
-        }
-      }
+        "primary": [],
+        "default": {}
+      },
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "Darwin & Districts Women's Competition",
-      "groupingCategory": "Darwin & Districts Women's Competition",
+      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
       "metadata": {
         "title": "Top 5",
         "titleSplit": ["Batters"],
@@ -217,26 +184,26 @@
         "assetId": 15,
         "assetTypeId": 3,
         "frames": [390],
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#002854",
-          "secondary": "#00ADEF"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "Basic"
       },
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/gettyimages_1556632641_2048x2048_35f2128a6f.jpg",
-          "ratio": "portrait",
-          "width": 1419,
-          "height": 2048,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
         },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
@@ -253,14 +220,8 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Image",
-        "mode": "lightAlt",
-        "texture": {
-          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_liquid_surface_abc62e8f7a.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": { "opacity": 1, "blendMode": "multiply" }
-        },
+        "useBackground": "Graphics",
+        "mode": "light",
         "category": {
           "slug": "Basic",
           "name": "Basic",
@@ -371,11 +332,11 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "zoom",
-          "direction": "in",
-          "overlayStyle": "duotone",
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
           "gradientType": "linear",
-          "overlayOpacity": 0.7
+          "overlayOpacity": 0.3
         },
         "palette": "primary",
         "gradient": {
@@ -383,16 +344,16 @@
           "direction": "VERTICAL"
         },
         "noise": {
-          "type": "spokes"
+          "type": "floatingParticles"
         },
         "pattern": {
           "type": "dots",
-          "animation": "panUp",
-          "scale": 0.5,
+          "animation": "none",
+          "scale": 0.75,
           "rotation": null,
-          "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
         },
         "particle": {
           "type": "lines",
@@ -400,6 +361,16 @@
           "speed": 0.8,
           "direction": "up",
           "animation": "scale"
+        },
+        "texture": {
+          "name": null,
+          "url": null,
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
         }
       }
     }

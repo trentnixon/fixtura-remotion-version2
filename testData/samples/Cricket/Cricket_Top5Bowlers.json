@@ -1,132 +1,132 @@
 {
   "data": [
     {
-      "name": "Jordi O’Toole",
-      "runs": 40,
+      "name": "alexander parthenis  (vc)",
+      "runs": 9,
+      "overs": "3",
+      "prompt": "alexander parthenis  (vc) played for St George, taking 5 wickets from 3 overs, conceding 9 runs. Game details: This was a T20 in the Poidevin-Gray Shield grade, and the current match status is Match Completed . St George, (1) vs Hawkesbury (1), the match result was St George won by 5 wickets.",
+      "wickets": 5,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "playedFor": "St George Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "St George"
+        },
+        "grade": {
+          "id": 53287,
+          "name": "Poidevin-Gray Shield"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "name": "Marcus Atallah",
+      "runs": 25,
       "overs": "4",
-      "prompt": "Jordi O’Toole played for PINT Women's Div 1, taking 4 wickets from 4 overs, conceding 40 runs. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . PINT Women's Div 1, (1) vs PINT Women's Div 1 (1), the match result was Sth Districts Women's Div 1 won by 5 wickets.",
+      "prompt": "Marcus Atallah played for Eastern Suburbs, taking 5 wickets from 4 overs, conceding 25 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Eastern Suburbs, (1) vs Blacktown T20 (1), the match result was Eastern Suburbs won by 4 wickets.",
+      "wickets": 5,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+        "width": 158,
+        "height": 182
+      },
+      "playedFor": "Eastern Suburbs Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "Eastern Suburbs"
+        },
+        "grade": {
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "name": "Joshua Malone",
+      "runs": 14,
+      "overs": "4",
+      "prompt": "Joshua Malone played for Mosman, taking 4 wickets from 4 overs, conceding 14 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Mosman, (1) vs Manly Warringah (1), the match result was Mosman won by 4 wickets.",
+      "wickets": 4,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
+        "width": 270,
+        "height": 266
+      },
+      "playedFor": "Mosman Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "Mosman"
+        },
+        "grade": {
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
+        },
+        "competition": {
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+        }
+      }
+    },
+    {
+      "name": "Tharindu Kaushal",
+      "runs": 19,
+      "overs": "4",
+      "prompt": "Tharindu Kaushal played for Sutherland, taking 4 wickets from 4 overs, conceding 19 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Sutherland, (1) vs Penrith (1), the match result was Sutherland won by 4 wickets.",
       "wickets": 4,
       "teamLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
-      "playedFor": "PINT Women's Div 1 Bowling",
+      "playedFor": "Sutherland Bowling",
       "assignSponsors": {
         "Team": {
-          "name": "PINT Women's Div 1"
+          "name": "Sutherland"
         },
         "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
         },
         "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
         }
       }
     },
     {
-      "name": "Rihanna-Frances Clark",
-      "runs": 6,
+      "name": "Charlie Howard",
+      "runs": 22,
       "overs": "4",
-      "prompt": "Rihanna-Frances Clark played for Tracy Village Women's Div 2, taking 3 wickets from 4 overs, conceding 6 runs. Game details: This was a T20 in the Women's Div 2 grade, and the current match status is Match Completed . Tracy Village Women's Div 2, (1) vs Tracy Village Women's Div 2 (1), the match result was Tracy Village Women's Div 2 won by 4 runs.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_53_defb54d7ae.png",
-        "width": 512,
-        "height": 512
-      },
-      "playedFor": "Tracy Village Women's Div 2 Bowling",
-      "assignSponsors": {
-        "Team": {
-          "name": "Tracy Village Women's Div 2"
-        },
-        "grade": {
-          "id": 42642,
-          "name": "Women's Div 2"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "name": "Vicky Mansale",
-      "runs": 12,
-      "overs": "4",
-      "prompt": "Vicky Mansale played for Sth Districts Women's Div 1, taking 3 wickets from 4 overs, conceding 12 runs. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Sth Districts Women's Div 1, (1) vs PINT Women's Div 1 (1), the match result was Sth Districts Women's Div 1 won by 5 wickets.",
-      "wickets": 3,
+      "prompt": "Charlie Howard played for Sydney, taking 4 wickets from 4 overs, conceding 22 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Sydney, (1) vs Hawkesbury (1), the match result was Sydney won by 9 wickets.",
+      "wickets": 4,
       "teamLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
-      "playedFor": "Sth Districts Women's Div 1 Bowling",
+      "playedFor": "Sydney Bowling",
       "assignSponsors": {
         "Team": {
-          "name": "Sth Districts Women's Div 1"
+          "name": "Sydney"
         },
         "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
+          "id": 53286,
+          "name": "Men's Kingsgrove Sports T20"
         },
         "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "name": "Leyarna Wilton",
-      "runs": 23,
-      "overs": "3",
-      "prompt": "Leyarna Wilton played for Sth Districts Women's Div 1, taking 2 wickets from 3 overs, conceding 23 runs. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Sth Districts Women's Div 1, (1) vs PINT Women's Div 1 (1), the match result was Sth Districts Women's Div 1 won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Sth Districts Women's Div 1 Bowling",
-      "assignSponsors": {
-        "Team": {
-          "name": "Sth Districts Women's Div 1"
-        },
-        "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
-        }
-      }
-    },
-    {
-      "name": "Meghan McCartney",
-      "runs": 24,
-      "overs": "4",
-      "prompt": "Meghan McCartney played for Tracy Village Women's Div 1, taking 2 wickets from 4 overs, conceding 24 runs. Game details: This was a T20 in the Women's Div 1 grade, and the current match status is Match Completed . Tracy Village Women's Div 1, (1) vs Tracy Village Women's Div 1 (1), the match result was Tracy Village Women's Div 1 won by 1 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Tracy Village Women's Div 1 Bowling",
-      "assignSponsors": {
-        "Team": {
-          "name": "Tracy Village Women's Div 1"
-        },
-        "grade": {
-          "id": 42643,
-          "name": "Women's Div 1"
-        },
-        "competition": {
-          "id": 13449,
-          "name": "Darwin & Districts Women's Competition"
+          "id": 15747,
+          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
         }
       }
     }
@@ -135,75 +135,42 @@
     "assetID": 16,
     "assetTypeID": 3,
     "assetCategoryID": 2,
-    "assetsLinkID": "77369c0c2ad1689927b5a75878b1150e87234592d0d4a340ef41f17539786f15"
+    "assetsLinkID": "76d1f760ea758466d1253193cbaa6541fd9fd010e67c929b84a01d5a8be3cb39"
   },
   "render": {
-    "schedulerId": 314,
-    "renderId": 8341
+    "schedulerId": 318,
+    "renderId": 8449
   },
   "account": {
-    "accountId": 427
+    "accountId": 431
   },
   "timings": {
     "FPS_MAIN": 360,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45, 495],
+  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52_328ab084c6.png",
-        "width": 300,
-        "height": 300
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_58_5e1504d484.jpg",
+        "width": 153,
+        "height": 256
       },
-      "name": "Darwin & Districts Cricket Competition",
+      "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 192,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "test",
-            "tagline": null,
-            "description": null,
-            "name": "test",
-            "logo": {
-              "id": 13221,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 192,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "test",
-              "tagline": null,
-              "description": null,
-              "name": "test",
-              "logo": {
-                "id": 13221,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_0fadcdad72.png"
-              }
-            }
-          ]
-        }
-      }
+        "primary": [],
+        "default": {}
+      },
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "Darwin & Districts Women's Competition",
-      "groupingCategory": "Darwin & Districts Women's Competition",
+      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
       "metadata": {
         "title": "Top 5",
         "titleSplit": ["Bowlers"],
@@ -212,26 +179,26 @@
         "assetId": 16,
         "assetTypeId": 3,
         "frames": [390],
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#2281a8",
-          "secondary": "#a13535"
+          "primary": "#002855",
+          "secondary": "#00aeef"
         },
         "template": "Basic"
       },
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/gettyimages_72563218_612x612_2df25422f3.jpg",
-          "ratio": "portrait",
-          "width": 507,
-          "height": 612,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
         },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
@@ -248,14 +215,8 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Image",
-        "mode": "lightAlt",
-        "texture": {
-          "name": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_leather_surface_e7b6e41442.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": { "opacity": 1, "blendMode": "multiply" }
-        },
+        "useBackground": "Graphics",
+        "mode": "light",
         "category": {
           "slug": "Basic",
           "name": "Basic",
@@ -366,28 +327,28 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "zoom",
-          "direction": "in",
-          "overlayStyle": "duotone",
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
           "gradientType": "linear",
-          "overlayOpacity": 0.7
+          "overlayOpacity": 0.3
         },
-        "palette": "secondaryOnBlack",
+        "palette": "primary",
         "gradient": {
           "type": "primary",
-          "direction": "HORIZONTAL"
+          "direction": "VERTICAL"
         },
         "noise": {
-          "type": "spokes"
+          "type": "floatingParticles"
         },
         "pattern": {
           "type": "dots",
-          "animation": "panUp",
-          "scale": 0.5,
+          "animation": "none",
+          "scale": 0.75,
           "rotation": null,
-          "opacity": 0.3,
-          "animationDuration": 1500,
-          "animationSpeed": 0.5
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
         },
         "particle": {
           "type": "lines",
@@ -395,6 +356,16 @@
           "speed": 0.8,
           "direction": "up",
           "animation": "scale"
+        },
+        "texture": {
+          "name": null,
+          "url": null,
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
         }
       }
     }

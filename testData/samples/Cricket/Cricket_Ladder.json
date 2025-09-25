@@ -1,682 +1,1789 @@
 {
   "data": [
     {
-      "ID": 70183,
-      "bias": null,
+      "ID": 53286,
+      "gradeName": "Men's Kingsgrove Sports T20",
       "League": [
         {
-          "L": "0",
-          "P": "2",
-          "Q": "2.859",
-          "W": "2",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "8",
-          "TIE": "0",
-          "clubId": null,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "2",
-              "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "1",
-            "teamName": "Queens T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "4",
-          "clubLogo": null,
-          "clubName": null,
           "position": "1",
-          "teamHref": "/cricket-australia/org/queens-cricket-club/1550d335/cricket-gold-coast-senior-competition-summer-202526/teams/queens-t20/9e887254",
-          "teamLogo": null,
-          "teamName": "Queens T20",
-          "playHQLogo": null
-        },
-        {
-          "L": "0",
+          "teamName": "Randwick Petersham",
+          "teamHref": "/cricket-australia/org/randwick-petersham-cricket-club/25a64305/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/randwick-petersham/775d4e2f",
           "P": "2",
-          "Q": "2.016",
+          "PTS": "6",
           "W": "2",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "8",
+          "L": "0",
           "TIE": "0",
-          "clubId": null,
+          "N/R": "0",
+          "clubId": 33397,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
           "prompt": {
+            "teamName": "Randwick Petersham",
+            "position": "1",
+            "gradeName": "Men's Kingsgrove Sports T20",
             "stats": {
-              "ties": "0",
               "wins": "2",
               "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "2",
-            "teamName": "Surfers Paradise T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "4",
-          "clubLogo": null,
-          "clubName": null,
+              "points": "6",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
           "position": "2",
-          "teamHref": "/cricket-australia/org/surfers-paradise-cricket-club/91aa3470/cricket-gold-coast-senior-competition-summer-202526/teams/surfers-paradise-t20/a8a5cf29",
+          "teamName": "Fairfield-Liverpool",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-club/1878c0ec/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/fairfield-liverpool/0594a7d7",
+          "P": "1",
+          "PTS": "3",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 31069,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
+          "clubName": null,
           "teamLogo": null,
-          "teamName": "Surfers Paradise T20",
-          "playHQLogo": null
+          "prompt": {
+            "teamName": "Fairfield-Liverpool",
+            "position": "2",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "0",
-          "P": "2",
-          "Q": "3.129",
-          "W": "2",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "8",
-          "TIE": "0",
-          "clubId": 8199,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "2",
-              "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "3",
-            "teamName": "Helensvale T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "4",
-          "clubLogo": null,
-          "clubName": null,
           "position": "3",
-          "teamHref": "/cricket-australia/org/helensvale-pacific-pines-cricket-club/5c8eb598/cricket-gold-coast-senior-competition-summer-202526/teams/helensvale-t20/04316dd8",
+          "teamName": "Sydney",
+          "teamHref": "/cricket-australia/org/sydney-cricket-club/6aa807c6/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/sydney/8ebdb15f",
+          "P": "1",
+          "PTS": "3",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 34305,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
           "teamLogo": null,
-          "teamName": "Helensvale T20",
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c154430843.jpg"
+          "prompt": {
+            "teamName": "Sydney",
+            "position": "3",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "0",
+          "position": "4",
+          "teamName": "St George",
+          "teamHref": "/cricket-australia/org/st-george-cricket-club-nsw/78c4bba9/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/st-george/93e29ea7",
           "P": "2",
-          "Q": "1.958",
-          "W": "2",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "8",
+          "PTS": "0",
+          "W": "0",
+          "L": "2",
           "TIE": "0",
-          "clubId": null,
+          "N/R": "0",
+          "clubId": 34024,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
           "prompt": {
+            "teamName": "St George",
+            "position": "4",
+            "gradeName": "Men's Kingsgrove Sports T20",
             "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
               "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "5",
+          "teamName": "Hawkesbury",
+          "teamHref": "/cricket-australia/org/hawkesbury-cricket-club/2aad59e2/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/hawkesbury/e77ce6a8",
+          "P": "2",
+          "PTS": "0",
+          "W": "0",
+          "L": "2",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 31496,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Hawkesbury",
+            "position": "5",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "1",
+          "teamName": "Sutherland",
+          "teamHref": "/cricket-australia/org/sutherland-district-cricket-club/cd7e2d1a/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/sutherland/adb5280a",
+          "P": "2",
+          "PTS": "6",
+          "W": "2",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 34275,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Sutherland",
+            "position": "1",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
               "wins": "2",
               "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "4",
-            "teamName": "Broadbeach T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "4",
+              "points": "6",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "2",
+          "teamName": "Northern District",
+          "teamHref": "/cricket-australia/org/northern-district-cricket-club-nsw/c644c0b4/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/northern-district/1ff13989",
+          "P": "2",
+          "PTS": "3",
+          "W": "1",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 32798,
           "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
           "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Northern District",
+            "position": "2",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "1",
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "3",
+          "teamName": "Sydney University",
+          "teamHref": "/cricket-australia/org/sydney-university-cricket-club/c1ef1b54/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/sydney-university/4eb8105d",
+          "P": "1",
+          "PTS": "3",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 34326,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Sydney University",
+            "position": "3",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
           "position": "4",
-          "teamHref": "/cricket-australia/org/broadbeach-robina-cricket-club/b6e5d0f3/cricket-gold-coast-senior-competition-summer-202526/teams/broadbeach-t20/2212f80d",
+          "teamName": "Campbelltown Camden",
+          "teamHref": "/cricket-australia/org/campbelltown-camden-district-cricket-club/45ff5c55/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/campbelltown-camden/0bc5e93c",
+          "P": "1",
+          "PTS": "0",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 30184,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
+          "clubName": null,
           "teamLogo": null,
-          "teamName": "Broadbeach T20",
-          "playHQLogo": null
+          "prompt": {
+            "teamName": "Campbelltown Camden",
+            "position": "4",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "1",
-          "P": "2",
-          "Q": "1.604",
-          "W": "1",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "4",
-          "TIE": "0",
-          "clubId": null,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "1",
-              "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "5",
-            "teamName": "Coomera T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "2",
-          "clubLogo": null,
-          "clubName": null,
           "position": "5",
-          "teamHref": "/cricket-australia/org/coomera-hope-island-cricket-club/e4b49fbd/cricket-gold-coast-senior-competition-summer-202526/teams/coomera-t20/bc371852",
+          "teamName": "Penrith",
+          "teamHref": "/cricket-australia/org/penrith-cricket-club/12776da3/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/penrith/ffdbce2a",
+          "P": "2",
+          "PTS": "0",
+          "W": "0",
+          "L": "2",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 33066,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
           "teamLogo": null,
-          "teamName": "Coomera T20",
-          "playHQLogo": null
+          "prompt": {
+            "teamName": "Penrith",
+            "position": "5",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "1",
+          "position": "1",
+          "teamName": "Western Suburbs",
+          "teamHref": "/cricket-australia/org/western-suburbs-district-cricket-club/b8886552/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/western-suburbs/0c2c201b",
           "P": "2",
-          "Q": "0.842",
-          "W": "1",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "4",
+          "PTS": "6",
+          "W": "2",
+          "L": "0",
           "TIE": "0",
-          "clubId": null,
+          "N/R": "0",
+          "clubId": 35040,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
           "prompt": {
+            "teamName": "Western Suburbs",
+            "position": "1",
+            "gradeName": "Men's Kingsgrove Sports T20",
             "stats": {
+              "wins": "2",
+              "losses": "0",
+              "points": "6",
+              "pointsPlayed": "2",
               "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "2",
+          "teamName": "Eastern Suburbs",
+          "teamHref": "/cricket-australia/org/eastern-suburbs-cricket-club/c65225f3/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/eastern-suburbs/398963a7",
+          "P": "1",
+          "PTS": "3",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 30954,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Eastern Suburbs",
+            "position": "2",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "3",
+          "teamName": "Blacktown T20",
+          "teamHref": "/cricket-australia/org/blacktown-district-cricket-club/80048e97/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/blacktown-t20/3619ed42",
+          "P": "2",
+          "PTS": "3",
+          "W": "1",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 29458,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Blacktown T20",
+            "position": "3",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
               "wins": "1",
               "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "6",
-            "teamName": "Southport T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "2",
-          "clubLogo": null,
-          "clubName": null,
-          "position": "6",
-          "teamHref": "/cricket-australia/org/southport-labrador-cricket-club/43830d9b/cricket-gold-coast-senior-competition-summer-202526/teams/southport-t20/0b8c92dc",
-          "teamLogo": null,
-          "teamName": "Southport T20",
-          "playHQLogo": null
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "1",
+          "position": "4",
+          "teamName": "Gordon",
+          "teamHref": "/cricket-australia/org/gordon-district-cricket-club/58ec8d03/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/gordon/cceafd11",
           "P": "2",
-          "Q": "1.084",
-          "W": "1",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "4",
+          "PTS": "0",
+          "W": "0",
+          "L": "2",
           "TIE": "0",
-          "clubId": 6755,
+          "N/R": "0",
+          "clubId": 31326,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
+          "clubName": null,
+          "teamLogo": null,
           "prompt": {
+            "teamName": "Gordon",
+            "position": "4",
+            "gradeName": "Men's Kingsgrove Sports T20",
             "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
               "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "5",
+          "teamName": "Parramatta",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-club/40fec43b/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/parramatta/215eed30",
+          "P": "1",
+          "PTS": "0",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 33028,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Parramatta",
+            "position": "5",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "1",
+          "teamName": "Bankstown",
+          "teamHref": "/cricket-australia/org/bankstown-cricket-club/30c6475a/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/bankstown/49da1ad5",
+          "P": "2",
+          "PTS": "3",
+          "W": "1",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 29236,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Bankstown",
+            "position": "1",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
               "wins": "1",
               "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "7",
-            "teamName": "Burleigh T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "2",
-          "clubLogo": null,
-          "clubName": null,
-          "position": "7",
-          "teamHref": "/cricket-australia/org/burleigh-cricket-club/74d56a83/cricket-gold-coast-senior-competition-summer-202526/teams/burleigh-t20/4d85a34d",
-          "teamLogo": null,
-          "teamName": "Burleigh T20",
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_464311725a.jpg"
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "1",
+          "position": "2",
+          "teamName": "Mosman",
+          "teamHref": "/cricket-australia/org/mosman-cricket-club/0878f87d/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/mosman/8f7f463c",
           "P": "2",
-          "Q": "1.765",
+          "PTS": "3",
           "W": "1",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "4",
+          "L": "1",
           "TIE": "0",
-          "clubId": null,
+          "N/R": "0",
+          "clubId": 32463,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
+          "clubName": null,
+          "teamLogo": null,
           "prompt": {
+            "teamName": "Mosman",
+            "position": "2",
+            "gradeName": "Men's Kingsgrove Sports T20",
             "stats": {
-              "ties": "0",
               "wins": "1",
               "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "8",
-            "teamName": "Palm Beach T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "2",
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "3",
+          "teamName": "UTS North Sydney",
+          "teamHref": "/cricket-australia/org/uts-north-sydney-cricket-club/168c4d13/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/uts-north-sydney/387e8cf6",
+          "P": "1",
+          "PTS": "3",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "clubId": 34658,
           "clubLogo": null,
+          "playHQLogo": null,
           "clubName": null,
-          "position": "8",
-          "teamHref": "/cricket-australia/org/palm-beach-currumbin-cricket-club-inc/af1d388c/cricket-gold-coast-senior-competition-summer-202526/teams/palm-beach-t20/671f1234",
           "teamLogo": null,
-          "teamName": "Palm Beach T20",
-          "playHQLogo": null
+          "prompt": {
+            "teamName": "UTS North Sydney",
+            "position": "3",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "2",
+          "position": "4",
+          "teamName": "UNSW",
+          "teamHref": "/cricket-australia/org/university-of-nsw-cricket-club/2327bb2d/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/unsw/1e4d2e0c",
           "P": "2",
-          "Q": "0.364",
-          "W": "0",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "0",
+          "PTS": "3",
+          "W": "1",
+          "L": "1",
           "TIE": "0",
-          "clubId": null,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "9",
-            "teamName": "Alberton T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "0",
+          "N/R": "0",
+          "clubId": 34679,
           "clubLogo": null,
+          "playHQLogo": null,
           "clubName": null,
-          "position": "9",
-          "teamHref": "/cricket-australia/org/alberton-ormeau-cricket-club/1b01c8ba/cricket-gold-coast-senior-competition-summer-202526/teams/alberton-t20/f3497894",
           "teamLogo": null,
-          "teamName": "Alberton T20",
-          "playHQLogo": null
+          "prompt": {
+            "teamName": "UNSW",
+            "position": "4",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "1",
+              "losses": "1",
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         },
         {
-          "L": "2",
-          "P": "2",
-          "Q": "0.407",
-          "W": "0",
-          "BYE": "0",
-          "N/R": "0",
+          "position": "5",
+          "teamName": "Manly Warringah",
+          "teamHref": "/cricket-australia/org/manly-warringah-district-cricket-club/b4edf21d/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/manly-warringah/1da9fc4e",
+          "P": "1",
           "PTS": "0",
-          "TIE": "0",
-          "clubId": 9939,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "10",
-            "teamName": "Runaway Bay T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "0",
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
-          "clubName": null,
-          "position": "10",
-          "teamHref": "/cricket-australia/org/runaway-bay-cricket-club-inc/5e70931e/cricket-gold-coast-senior-competition-summer-202526/teams/runaway-bay-t20/8360e95a",
-          "teamLogo": null,
-          "teamName": "Runaway Bay T20",
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3adacdd3ba.jpg"
-        },
-        {
-          "L": "2",
-          "P": "2",
-          "Q": "0.187",
           "W": "0",
-          "BYE": "0",
-          "N/R": "0",
-          "PTS": "0",
+          "L": "1",
           "TIE": "0",
-          "clubId": 9015,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "11",
-            "teamName": "Mudgeeraba T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "0",
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
-          "clubName": null,
-          "position": "11",
-          "teamHref": "/cricket-australia/org/mudgeeraba-nerang-and-districts-cricket-club/5eb8ee9a/cricket-gold-coast-senior-competition-summer-202526/teams/mudgeeraba-t20/9d9b3973",
-          "teamLogo": null,
-          "teamName": "Mudgeeraba T20",
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_a58c005f2a.jpg"
-        },
-        {
-          "L": "2",
-          "P": "2",
-          "Q": "0.241",
-          "W": "0",
-          "BYE": "0",
           "N/R": "0",
-          "PTS": "0",
-          "TIE": "0",
-          "clubId": null,
-          "prompt": {
-            "stats": {
-              "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "12",
-            "teamName": "Beaudesert T20",
-            "gradeName": "All Ballsports T20 2025"
-          },
-          "PTS AVG": "0",
+          "clubId": 32163,
           "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
           "clubName": null,
-          "position": "12",
-          "teamHref": "/cricket-australia/org/beaudesert-cricket-club/6d9c837b/cricket-gold-coast-senior-competition-summer-202526/teams/beaudesert-t20/0ef50c9f",
           "teamLogo": null,
-          "teamName": "Beaudesert T20",
-          "playHQLogo": null
+          "prompt": {
+            "teamName": "Manly Warringah",
+            "position": "5",
+            "gradeName": "Men's Kingsgrove Sports T20",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
         }
       ],
+      "bias": null,
       "prompt": {
+        "gradeName": "Men's Kingsgrove Sports T20",
         "teams": [
           {
-            "stats": {
-              "ties": "0",
-              "wins": "2",
-              "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
+            "teamName": "Randwick Petersham",
             "position": "1",
-            "teamName": "Queens T20"
-          },
-          {
             "stats": {
-              "ties": "0",
               "wins": "2",
               "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
+              "points": "6",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Fairfield-Liverpool",
             "position": "2",
-            "teamName": "Surfers Paradise T20"
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
-            "stats": {
-              "ties": "0",
-              "wins": "2",
-              "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
+            "teamName": "Sydney",
             "position": "3",
-            "teamName": "Helensvale T20"
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "St George",
+            "position": "4",
             "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
               "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Hawkesbury",
+            "position": "5",
+            "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Sutherland",
+            "position": "1",
+            "stats": {
               "wins": "2",
               "losses": "0",
-              "points": "8",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
+              "points": "6",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Northern District",
+            "position": "2",
+            "stats": {
+              "wins": "1",
+              "losses": "1",
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Sydney University",
+            "position": "3",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Campbelltown Camden",
             "position": "4",
-            "teamName": "Broadbeach T20"
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
-            "stats": {
-              "ties": "0",
-              "wins": "1",
-              "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
+            "teamName": "Penrith",
             "position": "5",
-            "teamName": "Coomera T20"
+            "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "Western Suburbs",
+            "position": "1",
             "stats": {
+              "wins": "2",
+              "losses": "0",
+              "points": "6",
+              "pointsPlayed": "2",
               "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Eastern Suburbs",
+            "position": "2",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Blacktown T20",
+            "position": "3",
+            "stats": {
               "wins": "1",
               "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "6",
-            "teamName": "Southport T20"
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "Gordon",
+            "position": "4",
             "stats": {
+              "wins": "0",
+              "losses": "2",
+              "points": "0",
+              "pointsPlayed": "2",
               "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Parramatta",
+            "position": "5",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Bankstown",
+            "position": "1",
+            "stats": {
               "wins": "1",
               "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "7",
-            "teamName": "Burleigh T20"
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "Mosman",
+            "position": "2",
             "stats": {
-              "ties": "0",
               "wins": "1",
               "losses": "1",
-              "points": "4",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "8",
-            "teamName": "Palm Beach T20"
+              "points": "3",
+              "pointsPlayed": "2",
+              "ties": "0",
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "UTS North Sydney",
+            "position": "3",
             "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "3",
+              "pointsPlayed": "1",
               "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "9",
-            "teamName": "Alberton T20"
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "UNSW",
+            "position": "4",
             "stats": {
+              "wins": "1",
+              "losses": "1",
+              "points": "3",
+              "pointsPlayed": "2",
               "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "10",
-            "teamName": "Runaway Bay T20"
+              "noResult": "0"
+            }
           },
           {
+            "teamName": "Manly Warringah",
+            "position": "5",
             "stats": {
-              "ties": "0",
               "wins": "0",
-              "losses": "2",
+              "losses": "1",
               "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "11",
-            "teamName": "Mudgeeraba T20"
-          },
-          {
-            "stats": {
+              "pointsPlayed": "1",
               "ties": "0",
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "noResult": "0",
-              "pointsPlayed": "2"
-            },
-            "position": "12",
-            "teamName": "Beaudesert T20"
+              "noResult": "0"
+            }
           }
-        ],
-        "gradeName": "All Ballsports T20 2025"
+        ]
       },
-      "gradeName": "All Ballsports T20 2025",
       "assignSponsors": {
-        "team": [],
+        "competition": [],
         "grade": [],
-        "competition": []
+        "team": []
+      }
+    },
+    {
+      "ID": 53287,
+      "gradeName": "Poidevin-Gray Shield",
+      "League": [
+        {
+          "position": "1",
+          "teamName": "St George",
+          "teamHref": "/cricket-australia/org/st-george-cricket-club-nsw/78c4bba9/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/st-george/bcbc3851",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "2.444",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 34024,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "St George",
+            "position": "1",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "2",
+          "teamName": "Northern District",
+          "teamHref": "/cricket-australia/org/northern-district-cricket-club-nsw/c644c0b4/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/northern-district/f55564fb",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "1.273",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 32798,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Northern District",
+            "position": "2",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "3",
+          "teamName": "Sutherland",
+          "teamHref": "/cricket-australia/org/sutherland-district-cricket-club/cd7e2d1a/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/sutherland/eb6c158b",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "2.049",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 34275,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Sutherland",
+            "position": "3",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "4",
+          "teamName": "Fairfield-Liverpool",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-club/1878c0ec/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/fairfield-liverpool/5e923da7",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "1.276",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 31069,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Fairfield-Liverpool",
+            "position": "4",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "5",
+          "teamName": "Campbelltown Camden",
+          "teamHref": "/cricket-australia/org/campbelltown-camden-district-cricket-club/45ff5c55/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/campbelltown-camden/3e7ed88c",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "1.099",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 30184,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Campbelltown Camden",
+            "position": "5",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "6",
+          "teamName": "Sydney University",
+          "teamHref": "/cricket-australia/org/sydney-university-cricket-club/c1ef1b54/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/sydney-university/68fff2cd",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.909",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 34326,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Sydney University",
+            "position": "6",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "7",
+          "teamName": "Randwick Petersham",
+          "teamHref": "/cricket-australia/org/randwick-petersham-cricket-club/25a64305/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/randwick-petersham/106b0381",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.783",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 33397,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Randwick Petersham",
+            "position": "7",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "8",
+          "teamName": "Sydney",
+          "teamHref": "/cricket-australia/org/sydney-cricket-club/6aa807c6/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/sydney/c8a66f04",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.487",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 34305,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Sydney",
+            "position": "8",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "9",
+          "teamName": "Penrith",
+          "teamHref": "/cricket-australia/org/penrith-cricket-club/12776da3/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/penrith/85619a8c",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.785",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 33066,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Penrith",
+            "position": "9",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "10",
+          "teamName": "Hawkesbury",
+          "teamHref": "/cricket-australia/org/hawkesbury-cricket-club/2aad59e2/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/hawkesbury/3e98340e",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.409",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 31496,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Hawkesbury",
+            "position": "10",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "1",
+          "teamName": "Bankstown",
+          "teamHref": "/cricket-australia/org/bankstown-cricket-club/30c6475a/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/bankstown/4024c4cf",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "2.984",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 29236,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Bankstown",
+            "position": "1",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "2",
+          "teamName": "Mosman",
+          "teamHref": "/cricket-australia/org/mosman-cricket-club/0878f87d/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/mosman/42939c0c",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "9.398",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 32463,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Mosman",
+            "position": "2",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "3",
+          "teamName": "Gordon",
+          "teamHref": "/cricket-australia/org/gordon-district-cricket-club/58ec8d03/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/gordon/20f0240f",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "2.367",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 31326,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Gordon",
+            "position": "3",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "4",
+          "teamName": "Parramatta",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-club/40fec43b/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/parramatta/8801eba6",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "1.614",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 33028,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Parramatta",
+            "position": "4",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "5",
+          "teamName": "Manly Warringah",
+          "teamHref": "/cricket-australia/org/manly-warringah-district-cricket-club/b4edf21d/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/manly-warringah/ace9397f",
+          "P": "1",
+          "PTS": "4",
+          "BP": "0",
+          "Q": "1.473",
+          "W": "1",
+          "L": "0",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 32163,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Manly Warringah",
+            "position": "5",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "6",
+          "teamName": "UTS North Sydney",
+          "teamHref": "/cricket-australia/org/uts-north-sydney-cricket-club/168c4d13/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/uts-north-sydney/2a281e82",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.678",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 34658,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "UTS North Sydney",
+            "position": "6",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "7",
+          "teamName": "UNSW",
+          "teamHref": "/cricket-australia/org/university-of-nsw-cricket-club/2327bb2d/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/unsw/54319532",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.619",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 34679,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "UNSW",
+            "position": "7",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "8",
+          "teamName": "Eastern Suburbs",
+          "teamHref": "/cricket-australia/org/eastern-suburbs-cricket-club/c65225f3/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/eastern-suburbs/0902effa",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.422",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 30954,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Eastern Suburbs",
+            "position": "8",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "9",
+          "teamName": "Western Suburbs",
+          "teamHref": "/cricket-australia/org/western-suburbs-district-cricket-club/b8886552/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/western-suburbs/bb79d03d",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.106",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 35040,
+          "clubLogo": null,
+          "playHQLogo": null,
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Western Suburbs",
+            "position": "9",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        },
+        {
+          "position": "10",
+          "teamName": "Blacktown PGs",
+          "teamHref": "/cricket-australia/org/blacktown-district-cricket-club/80048e97/kingsgrove-sports-t20-and-poidevin-gray-shield-summer-202526/teams/blacktown-pgs/581809dc",
+          "P": "1",
+          "PTS": "0",
+          "BP": "0",
+          "Q": "0.335",
+          "W": "0",
+          "L": "1",
+          "TIE": "0",
+          "N/R": "0",
+          "BYE": "0",
+          "clubId": 29458,
+          "clubLogo": null,
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
+          "clubName": null,
+          "teamLogo": null,
+          "prompt": {
+            "teamName": "Blacktown PGs",
+            "position": "10",
+            "gradeName": "Poidevin-Gray Shield",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        }
+      ],
+      "bias": null,
+      "prompt": {
+        "gradeName": "Poidevin-Gray Shield",
+        "teams": [
+          {
+            "teamName": "St George",
+            "position": "1",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Northern District",
+            "position": "2",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Sutherland",
+            "position": "3",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Fairfield-Liverpool",
+            "position": "4",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Campbelltown Camden",
+            "position": "5",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Sydney University",
+            "position": "6",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Randwick Petersham",
+            "position": "7",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Sydney",
+            "position": "8",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Penrith",
+            "position": "9",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Hawkesbury",
+            "position": "10",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Bankstown",
+            "position": "1",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Mosman",
+            "position": "2",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Gordon",
+            "position": "3",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Parramatta",
+            "position": "4",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Manly Warringah",
+            "position": "5",
+            "stats": {
+              "wins": "1",
+              "losses": "0",
+              "points": "4",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "UTS North Sydney",
+            "position": "6",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "UNSW",
+            "position": "7",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Eastern Suburbs",
+            "position": "8",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Western Suburbs",
+            "position": "9",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          },
+          {
+            "teamName": "Blacktown PGs",
+            "position": "10",
+            "stats": {
+              "wins": "0",
+              "losses": "1",
+              "points": "0",
+              "pointsPlayed": "1",
+              "ties": "0",
+              "noResult": "0"
+            }
+          }
+        ]
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
       }
     }
   ],
   "asset": {
     "assetID": 18,
     "assetTypeID": 3,
-    "assetsLinkID": "80787ba9086c4e94a30ec750d58fa733a5bbd53d81371066300416b1eca83406",
-    "assetCategoryID": 2
+    "assetCategoryID": 2,
+    "assetsLinkID": "9c7ecc76c21cdd31360d32d38435e56ab7899a04cf3e0ad827314d50f997bfac"
   },
-  "errors": [],
-  "frames": [45, 240, 420],
   "render": {
-    "renderId": 14883,
-    "schedulerId": 69
+    "schedulerId": 318,
+    "renderId": 8449
   },
   "account": {
-    "accountId": 69
+    "accountId": 431
   },
   "timings": {
-    "FPS_MAIN": 300,
+    "FPS_MAIN": 585,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 300,
     "FPS_SCORECARD": 0
   },
+  "frames": [45, 240, 525],
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/mndcc_mighty_bushmen_38fa7ec65c.jpg",
-        "width": 126,
-        "height": 100,
-        "hasLogo": true
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_58_5e1504d484.jpg",
+        "width": 153,
+        "height": 256
       },
-      "name": "Mudgeeraba Nerang & Districts' Cricket Club",
+      "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 28,
-              "url": "https://nerangrsl.com.au/",
-              "logo": {
-                "id": 146,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Nerang_RSL_5ff2972354.png"
-              },
-              "name": "Nerang RSL & Memorial Club",
-              "isVideo": true,
-              "tagline": "Situated at the gateway to the Hinterland  we pride ourselves on being Nerang's premier dining, gaming and entertainment venue. ",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_1": [
-            {
-              "id": 27,
-              "url": "https://corbwood.com.au/",
-              "logo": {
-                "id": 145,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Corbwoodlogo_190aa1c916.jpg"
-              },
-              "name": "Corbwood Associates",
-              "isVideo": true,
-              "tagline": "As a team, we are here to educate, support and inspire people to use their Superannuation to buy an investment property to give them the brighter financial future they deserve.",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": true,
-              "description": "Corbwood & Associates takes a holistic approach towards wealth creation on the Gold Coast."
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 56,
-              "url": "https://www.mcglegal.com.au/",
-              "logo": {
-                "id": 404,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cropped_cropped_mcg_gold_coast_lawyers_035d4fb08c.jpeg"
-              },
-              "name": "MCG Legal",
-              "isVideo": true,
-              "tagline": "We are a boutique Gold Coast law firm located in Southport on the Gold Coast, providing the best legal advice in Family ",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
-        "primary": [
-          {
-            "id": 28,
-            "url": "https://nerangrsl.com.au/",
-            "logo": {
-              "id": 146,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Nerang_RSL_5ff2972354.png"
-            },
-            "name": "Nerang RSL & Memorial Club",
-            "isVideo": true,
-            "tagline": "Situated at the gateway to the Hinterland  we pride ourselves on being Nerang's premier dining, gaming and entertainment venue. ",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": false,
-            "description": null
-          }
-        ]
+        "primary": [],
+        "default": {}
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "media": {
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
-        },
-        "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/336766907_1390527955060590_2431286377613048814_n_2_thumbnail_b42322955c.png",
-          "ratio": "portrait",
-          "width": 406,
-          "height": 614,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
-        }
-      },
+      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
       "metadata": {
         "title": "Ladder",
-        "frames": [390],
-        "assetId": 18,
         "titleSplit": ["Ladder", ""],
         "videoTitle": "League Tables",
-        "assetTypeId": 3,
         "compositionId": "CricketLadder",
-        "includeSponsors": true
+        "assetId": 18,
+        "assetTypeId": 3,
+        "frames": [390],
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
@@ -685,7 +1792,22 @@
           "primary": "#002855",
           "secondary": "#00aeef"
         },
-        "template": "TwoColumnClassic"
+        "template": "Basic"
+      },
+      "media": {
+        "HeroImage": {
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        }
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -696,132 +1818,161 @@
           "CricketResultSingle": 1
         }
       },
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
       "templateVariation": {
-        "mode": "lightAlt",
-        "image": {
-          "url": null,
-          "type": "pan",
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "direction": "left",
-          "gradientType": "linear",
-          "overlayStyle": "vignette",
-          "overlayOpacity": 0.3
-        },
-        "noise": {
-          "type": "floatingParticles"
+        "useBackground": "Graphics",
+        "mode": "light",
+        "category": {
+          "slug": "Basic",
+          "name": "Basic",
+          "divideFixturesBy": {
+            "CricketUpcoming": 3,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
+            "CricketLadder": 1,
+            "CricketRoster": 1
+          },
+          "bundleAudio": {
+            "id": 1,
+            "Name": "Basic",
+            "createdAt": "2023-09-27T10:36:24.428Z",
+            "updatedAt": "2025-06-15T04:50:57.910Z",
+            "publishedAt": "2023-09-27T10:36:25.639Z",
+            "audio_options": [
+              {
+                "id": 4,
+                "Name": "Better Start Now",
+                "createdAt": "2023-09-27T10:34:46.702Z",
+                "updatedAt": "2025-06-15T04:53:45.558Z",
+                "publishedAt": "2023-09-27T10:34:48.455Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
+                "CompositionID": "CricketLadder",
+                "ComponentName": "CricketLadder"
+              },
+              {
+                "id": 2,
+                "Name": "Fifteen on Me",
+                "createdAt": "2022-12-20T01:59:28.337Z",
+                "updatedAt": "2025-06-15T04:53:11.194Z",
+                "publishedAt": "2022-12-20T01:59:29.080Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
+              },
+              {
+                "id": 5,
+                "Name": "Get The Gains",
+                "createdAt": "2023-09-27T10:35:01.053Z",
+                "updatedAt": "2025-06-15T04:53:59.493Z",
+                "publishedAt": "2023-09-27T10:35:29.163Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "CompositionID": "CricketTop5Bowling",
+                "ComponentName": "CricketTop5Bowling"
+              },
+              {
+                "id": 3,
+                "Name": "Groover",
+                "createdAt": "2022-12-20T01:59:34.014Z",
+                "updatedAt": "2025-06-15T04:53:28.656Z",
+                "publishedAt": "2022-12-20T01:59:34.670Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "CompositionID": "CricketTop5Batting",
+                "ComponentName": "CricketTop5Batting"
+              },
+              {
+                "id": 1,
+                "Name": "Saltine",
+                "createdAt": "2022-12-12T05:19:56.353Z",
+                "updatedAt": "2025-06-15T04:50:50.079Z",
+                "publishedAt": "2022-12-12T05:19:57.408Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
+                "CompositionID": "CricketResults",
+                "ComponentName": "CricketResults"
+              },
+              {
+                "id": 16,
+                "Name": "BEECH LOVE",
+                "createdAt": "2024-06-05T04:31:26.640Z",
+                "updatedAt": "2024-06-07T12:45:43.674Z",
+                "publishedAt": "2024-06-07T12:45:32.118Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
+                "CompositionID": "Top5AFLScorers",
+                "ComponentName": "Top 5 Scorers"
+              },
+              {
+                "id": 17,
+                "Name": "FAY V",
+                "createdAt": "2024-06-05T04:33:33.970Z",
+                "updatedAt": "2024-06-07T12:48:03.161Z",
+                "publishedAt": "2024-06-07T12:47:53.394Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
+                "CompositionID": "WeekendResultsAFL",
+                "ComponentName": "Weekend Results"
+              }
+            ]
+          }
         },
         "video": {
           "url": null,
-          "loop": null,
+          "fallbackUrl": null,
+          "position": "left",
           "size": "cover",
+          "loop": null,
           "muted": true,
-          "volume": 0.8,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "position": "left",
-          "fallbackUrl": null,
-          "playbackRate": null,
-          "useOffthreadVideo": null
+          "useOffthreadVideo": null,
+          "volume": 0.8,
+          "playbackRate": null
+        },
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.3
         },
         "palette": "primary",
-        "pattern": {
-          "type": "dots",
-          "scale": 0.75,
-          "opacity": 0.35,
-          "rotation": null,
-          "animation": "none",
-          "animationSpeed": 0.8,
-          "animationDuration": null
-        },
-        "category": {
-          "name": "Classic Two Column ",
-          "slug": "TwoColumnClassic",
-          "bundleAudio": {
-            "id": 2,
-            "Name": "Dark Rock",
-            "createdAt": "2023-09-28T06:40:59.713Z",
-            "updatedAt": "2023-09-28T06:41:01.197Z",
-            "publishedAt": "2023-09-28T06:41:01.194Z",
-            "audio_options": [
-              {
-                "id": 6,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
-                "Name": "Free Yourself",
-                "createdAt": "2023-08-31T12:28:12.437Z",
-                "updatedAt": "2023-09-28T06:44:26.805Z",
-                "publishedAt": "2023-08-31T12:28:13.798Z",
-                "ComponentName": "Top 5 Bowling",
-                "CompositionID": "Top5BowlingList"
-              },
-              {
-                "id": 5,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "Name": "Get The Gains",
-                "createdAt": "2023-08-31T12:27:46.922Z",
-                "updatedAt": "2023-09-28T06:44:42.399Z",
-                "publishedAt": "2023-08-31T12:27:48.202Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
-              },
-              {
-                "id": 3,
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "Name": "Groover",
-                "createdAt": "2023-01-30T15:19:02.557Z",
-                "updatedAt": "2023-09-28T06:45:23.690Z",
-                "publishedAt": "2023-01-30T15:19:03.983Z",
-                "ComponentName": "Weekend Results",
-                "CompositionID": "WeekendResults"
-              },
-              {
-                "id": 12,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
-                "Name": "Killer Inside of Me",
-                "createdAt": "2023-08-31T12:30:31.991Z",
-                "updatedAt": "2023-09-28T06:46:09.463Z",
-                "publishedAt": "2023-08-31T12:30:33.714Z",
-                "ComponentName": "Top 5 Batting",
-                "CompositionID": "Top5BattingList"
-              },
-              {
-                "id": 14,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
-                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
-                "createdAt": "2023-09-28T06:55:13.187Z",
-                "updatedAt": "2023-10-04T02:09:46.095Z",
-                "publishedAt": "2023-09-28T06:55:14.649Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              }
-            ]
-          },
-          "divideFixturesBy": {
-            "CricketLadder": 1,
-            "CricketRoster": 1,
-            "CricketResults": 2,
-            "CricketUpcoming": 3,
-            "CricketResultSingle": 1
-          }
-        },
         "gradient": {
           "type": "primary",
-          "direction": "DIAGONAL"
+          "direction": "VERTICAL"
+        },
+        "noise": {
+          "type": "floatingParticles"
+        },
+        "pattern": {
+          "type": "dots",
+          "animation": "none",
+          "scale": 0.75,
+          "rotation": null,
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
         },
         "particle": {
           "type": "lines",
+          "particleCount": "300",
           "speed": 0.8,
-          "animation": "scale",
           "direction": "up",
-          "particleCount": "300"
+          "animation": "scale"
         },
-        "useBackground": "Gradient"
+        "texture": {
+          "name": null,
+          "url": null,
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
+        }
       }
     }
-  }
+  },
+  "errors": []
 }
