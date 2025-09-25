@@ -2,11 +2,15 @@
 import { AbsoluteFill } from "remotion";
 import { RouteToComposition } from "../../../core/utils/routing";
 import { useThemeContext } from "../../../core/context/ThemeContext";
+import { ProgressTimer } from "../main/Timer/ProgressTimer";
+import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 
 export const OneColumn: React.FC<{ Header: React.FC }> = ({ Header }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
-
+  const { data } = useVideoDataContext();
+  const { timings } = data;
+  const { FPS_MAIN } = timings;
   return (
     <AbsoluteFill>
       <div className="flex flex-col h-full w-full ">
@@ -19,6 +23,7 @@ export const OneColumn: React.FC<{ Header: React.FC }> = ({ Header }) => {
         >
           {RouteToComposition()}
         </div>
+        <ProgressTimer FRAMES={FPS_MAIN ?? 0} />
       </div>
     </AbsoluteFill>
   );

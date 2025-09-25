@@ -4,6 +4,8 @@ import { useThemeContext } from "../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { RouteToComposition } from "../../../core/utils/routing";
 import { AnimatedContainer } from "../../containers";
+import { VerticalProgressTimer } from "../main/Timer/ProgressTimer";
+import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 
 export type TwoColumnProps = {
   // Header component to render in the side pane
@@ -33,6 +35,9 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
 }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
+  const { data } = useVideoDataContext();
+  const { timings } = data;
+  const { FPS_MAIN } = timings;
   // Read screen-level defaults from animations config
   const screenConfig = animations?.screen?.twoColumn ?? {};
 
@@ -103,6 +108,7 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
       >
         {RouteToComposition()}
       </AnimatedContainer>
+      <VerticalProgressTimer FRAMES={FPS_MAIN ?? 0} />
     </div>
   );
 
