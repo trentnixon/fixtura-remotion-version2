@@ -81,6 +81,7 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
   bgColorClass,
   LadderRowHeight,
 }) => {
+  const { layout } = useThemeContext();
   return (
     <div
       className={`flex items-center p-2 rounded mb-1 ${bgColorClass}`}
@@ -90,7 +91,7 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
     >
       {/* Team info in a branded box */}
       <div
-        className="flex items-center bg-black/40 rounded-lg mr-3 p-1"
+        className={`flex items-center bg-black/40 ${layout.borderRadius.container} mr-3 p-1`}
         style={{ width: "70%" }}
       >
         <div className="w-10 flex-shrink-0 mr-2 overflow-hidden">
@@ -125,7 +126,9 @@ export const ModernLadderRow: React.FC<BaseLayoutProps> = ({
         <div className="w-10 text-center">
           <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
         </div>
-        <div className="w-16 bg-gray-700/50 rounded-md text-center">
+        <div
+          className={`w-16 bg-gray-700/50 ${layout.borderRadius.container} text-center`}
+        >
           <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
         </div>
       </div>
@@ -140,11 +143,11 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
   bgColorClass,
   LadderRowHeight,
 }) => {
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   const borderColor = selectedPalette.container.primary;
   return (
     <div
-      className={`flex items-center p-2 rounded mb-1 ${bgColorClass} border-b-2  `}
+      className={`flex items-center p-2 ${layout.borderRadius.container} mb-1 ${bgColorClass} border-b-2  `}
       style={{
         height: `${LadderRowHeight}px`,
         background: bgColorClass,
@@ -159,7 +162,7 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
         <LadderTeamName value={team.teamName} delay={delay} />
         <div className="w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center">
           {team.clubLogo || team.playHQLogo ? (
-            <div className="rounded-full">
+            <div className={`${layout.borderRadius.container}`}>
               <TeamLogo
                 logo={team.clubLogo || team.playHQLogo}
                 teamName={team.teamName}
@@ -167,7 +170,9 @@ export const BalancedLadderRow: React.FC<BaseLayoutProps> = ({
               />
             </div>
           ) : (
-            <div className="w-8 h-8 bg-gray-300 rounded-full" />
+            <div
+              className={`w-8 h-8 bg-gray-300 ${layout.borderRadius.container}`}
+            />
           )}
         </div>
       </div>

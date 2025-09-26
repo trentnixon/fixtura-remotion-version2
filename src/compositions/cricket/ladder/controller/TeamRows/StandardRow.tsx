@@ -24,7 +24,7 @@ export const StandardRow: React.FC<TeamRowProps> = ({
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
-
+  const { layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { timings } = data;
 
@@ -50,7 +50,7 @@ export const StandardRow: React.FC<TeamRowProps> = ({
     <div className="overflow-hidden">
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
@@ -80,7 +80,7 @@ export const StandardRowWrapped: React.FC<TeamRowProps> = ({
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { timings } = data;
 
@@ -109,7 +109,7 @@ export const StandardRowWrapped: React.FC<TeamRowProps> = ({
     <div className="overflow-hidden ">
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}

@@ -24,7 +24,7 @@ export const BrickworkMainHeader = () => {
       alignment="center"
       Logo={
         <div className="w-full h-full flex justify-center items-center ">
-          <div className="w-full h-full flex items-center rounded-none max-h-[120px] max-w-[150px]">
+          <div className="w-full h-full flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
             <AnimatedImage
               src={club.logo?.url}
               width={"auto"}
