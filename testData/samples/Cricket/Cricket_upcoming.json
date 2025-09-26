@@ -24,7 +24,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -53,7 +69,23 @@
         "height": 152
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -82,7 +114,23 @@
         "height": 168
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -111,7 +159,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -140,7 +204,23 @@
         "height": 200
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -169,7 +249,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -198,7 +294,23 @@
         "height": 1142
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -227,7 +339,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -256,7 +384,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -285,7 +429,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -314,7 +474,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -343,7 +519,23 @@
         "height": 1142
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -372,7 +564,23 @@
         "height": 182
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -401,7 +609,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -430,7 +654,23 @@
         "height": 266
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -459,7 +699,23 @@
         "height": 168
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -488,7 +744,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -517,7 +789,23 @@
         "height": 252
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -546,7 +834,23 @@
         "height": 912
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -575,7 +879,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -604,7 +924,23 @@
         "height": 1080
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -633,7 +969,23 @@
         "height": 182
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -662,7 +1014,23 @@
         "height": 266
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -691,7 +1059,23 @@
         "height": 168
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -720,7 +1104,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -749,7 +1149,23 @@
         "height": 912
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -778,7 +1194,23 @@
         "height": 252
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -807,7 +1239,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -836,7 +1284,23 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -865,7 +1329,23 @@
         "height": 216
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -894,7 +1374,23 @@
         "height": 266
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -923,7 +1419,23 @@
         "height": 182
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -952,7 +1464,23 @@
         "height": 168
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -981,7 +1509,23 @@
         "height": 1080
       },
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       }
@@ -991,38 +1535,73 @@
     "assetID": 2,
     "assetTypeID": 1,
     "assetCategoryID": 2,
-    "assetsLinkID": "c090b282cbb0a0041a21ef672094c66656ec476a61bf538b6b86520aa0de54db"
+    "assetsLinkID": "9beb4dd2d38412e92a04bbb765c5d173475cf4ef2c8b3b7cea7ef07ff5050460"
   },
   "render": {
     "schedulerId": 318,
-    "renderId": 8449
+    "renderId": 8451
   },
   "account": {
     "accountId": 431
   },
   "timings": {
-    "FPS_MAIN": 2355,
+    "FPS_MAIN": 3330,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210
   },
   "frames": [
-    45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1755, 1950, 2145, 2340
+    45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1755, 1950, 2145, 2340, 2535,
+    2730, 2925, 3120, 3315, 3450
   ],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_58_5e1504d484.jpg",
-        "width": 153,
-        "height": 256
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928_dc5535ee75.png",
+        "width": 1106,
+        "height": 1843
       },
       "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "primary": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 193,
+              "isPrimary": true,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "Maccas",
+              "tagline": "Maccas",
+              "description": null,
+              "name": "Maccas",
+              "logo": {
+                "id": 13659,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+              }
+            }
+          ]
+        }
       },
       "IsAccountClub": false
     },
@@ -1037,7 +1616,7 @@
         "assetId": 2,
         "assetTypeId": 1,
         "frames": [],
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
@@ -1046,7 +1625,7 @@
           "primary": "#002855",
           "secondary": "#00aeef"
         },
-        "template": "Basic"
+        "template": "Classic"
       },
       "media": {
         "HeroImage": {
@@ -1068,98 +1647,78 @@
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 3,
+          "CricketUpcoming": 2,
           "CricketResultSingle": 1
         }
       },
       "templateVariation": {
-        "useBackground": "Graphics",
-        "mode": "light",
+        "useBackground": "Texture",
+        "mode": "lightAlt",
         "category": {
-          "slug": "Basic",
-          "name": "Basic",
+          "slug": "Classic",
+          "name": "Classic",
           "divideFixturesBy": {
-            "CricketUpcoming": 3,
+            "CricketUpcoming": 2,
             "CricketResults": 2,
             "CricketResultSingle": 1,
             "CricketLadder": 1,
             "CricketRoster": 1
           },
           "bundleAudio": {
-            "id": 1,
-            "Name": "Basic",
-            "createdAt": "2023-09-27T10:36:24.428Z",
-            "updatedAt": "2025-06-15T04:50:57.910Z",
-            "publishedAt": "2023-09-27T10:36:25.639Z",
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-29T00:24:54.890Z",
+            "updatedAt": "2024-10-29T00:24:56.001Z",
+            "publishedAt": "2024-10-29T00:24:56.000Z",
             "audio_options": [
               {
-                "id": 4,
-                "Name": "Better Start Now",
-                "createdAt": "2023-09-27T10:34:46.702Z",
-                "updatedAt": "2025-06-15T04:53:45.558Z",
-                "publishedAt": "2023-09-27T10:34:48.455Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "CompositionID": "CricketLadder",
-                "ComponentName": "CricketLadder"
+                "id": 25,
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-29T00:03:05.331Z",
+                "updatedAt": "2024-10-29T01:02:40.051Z",
+                "publishedAt": "2024-10-29T00:03:06.783Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
+                "CompositionID": "Top5BowlingList",
+                "ComponentName": "Top 5 Bowling"
               },
               {
-                "id": 2,
-                "Name": "Fifteen on Me",
-                "createdAt": "2022-12-20T01:59:28.337Z",
-                "updatedAt": "2025-06-15T04:53:11.194Z",
-                "publishedAt": "2022-12-20T01:59:29.080Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
+                "id": 30,
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-29T00:18:54.565Z",
+                "updatedAt": "2024-10-29T00:25:33.146Z",
+                "publishedAt": "2024-10-29T00:18:55.872Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
+                "CompositionID": "Top5BattingList",
+                "ComponentName": "Top 5 Batting"
               },
               {
-                "id": 5,
-                "Name": "Get The Gains",
-                "createdAt": "2023-09-27T10:35:01.053Z",
-                "updatedAt": "2025-06-15T04:53:59.493Z",
-                "publishedAt": "2023-09-27T10:35:29.163Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "CompositionID": "CricketTop5Bowling",
-                "ComponentName": "CricketTop5Bowling"
+                "id": 28,
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-29T00:13:15.572Z",
+                "updatedAt": "2024-10-29T00:25:48.719Z",
+                "publishedAt": "2024-10-29T00:13:16.481Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
+                "CompositionID": "Ladder",
+                "ComponentName": "Ladder"
               },
               {
-                "id": 3,
-                "Name": "Groover",
-                "createdAt": "2022-12-20T01:59:34.014Z",
-                "updatedAt": "2025-06-15T04:53:28.656Z",
-                "publishedAt": "2022-12-20T01:59:34.670Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "CompositionID": "CricketTop5Batting",
-                "ComponentName": "CricketTop5Batting"
+                "id": 31,
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-29T00:21:51.124Z",
+                "updatedAt": "2024-10-29T01:03:00.642Z",
+                "publishedAt": "2024-10-29T00:21:52.065Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
+                "CompositionID": "UpComingFixtures",
+                "ComponentName": "UpComing Fixtures"
               },
               {
-                "id": 1,
-                "Name": "Saltine",
-                "createdAt": "2022-12-12T05:19:56.353Z",
-                "updatedAt": "2025-06-15T04:50:50.079Z",
-                "publishedAt": "2022-12-12T05:19:57.408Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-                "CompositionID": "CricketResults",
-                "ComponentName": "CricketResults"
-              },
-              {
-                "id": 16,
-                "Name": "BEECH LOVE",
-                "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2024-06-07T12:45:43.674Z",
-                "publishedAt": "2024-06-07T12:45:32.118Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "Top5AFLScorers",
-                "ComponentName": "Top 5 Scorers"
-              },
-              {
-                "id": 17,
-                "Name": "FAY V",
-                "createdAt": "2024-06-05T04:33:33.970Z",
-                "updatedAt": "2024-06-07T12:48:03.161Z",
-                "publishedAt": "2024-06-07T12:47:53.394Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
-                "CompositionID": "WeekendResultsAFL",
+                "id": 27,
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-29T00:11:52.803Z",
+                "updatedAt": "2024-10-29T01:02:48.895Z",
+                "publishedAt": "2024-10-29T00:12:49.969Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
+                "CompositionID": "WeekendResults",
                 "ComponentName": "Weekend Results"
               }
             ]
@@ -1216,12 +1775,12 @@
           "animation": "scale"
         },
         "texture": {
-          "name": null,
-          "url": null,
+          "name": "Smooth Vignette",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Minimal_Smooth_Vignette_b8d4846c08.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
-            "opacity": 0.5,
+            "opacity": 1,
             "blendMode": "multiply"
           }
         }

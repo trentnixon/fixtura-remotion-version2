@@ -72,7 +72,7 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-medium tracking-tight leading-tight",
     },
     ladderTeamPoints: {
-      className: "text-4xl font-normal tracking-tight leading-tight",
+      className: "text-3xl font-normal tracking-tight leading-tight",
     },
     Top5PlayerName: {
       className: "text-5xl font-black tracking-tight leading-tight",

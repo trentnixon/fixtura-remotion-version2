@@ -52,44 +52,46 @@ Refactor SponsorFooter component to eliminate code duplication and improve maint
 
 ---
 
-# Ticket – TKT-2025-003
+# Ticket – TKT-2025-005
 
 ## Overview
 
-Implement comprehensive accessibility improvements for sponsor logos and footer.
+Implement sponsor deduplication and aggregation logic to prevent duplicate sponsors between primary and assigned sponsor lists.
 
 ## What We Need to Do
 
-Add proper ARIA support, meaningful alt text, and keyboard navigation for sponsor elements.
+Create a centralized sponsor aggregation function that intelligently merges primary and assigned sponsors, removing duplicates and ensuring optimal display order.
 
 ## Phases & Tasks
 
-### Phase 1: Basic Accessibility
+### Phase 1: Analysis & Design
 
-- [ ] Add meaningful alt text for all sponsor logos
-- [ ] Implement ARIA labels for sponsor sections
-- [ ] Add role attributes for sponsor containers
-- [ ] Test with screen readers
+- [ ] Analyze current sponsor data structure and duplication patterns
+- [ ] Design aggregation algorithm with priority rules
+- [ ] Define deduplication criteria (by ID, name, or logo URL)
+- [ ] Plan component interface changes
 
-### Phase 2: Advanced Accessibility
+### Phase 2: Implementation
 
-- [ ] Add keyboard navigation support
-- [ ] Implement focus management for sponsor elements
-- [ ] Add reduced motion support for animations
-- [ ] Ensure proper contrast ratios
+- [x] Create simple `getUniqueSponsors` utility function
+- [x] Implement unified sponsor rendering approach
+- [x] Remove complex aggregation logic
+- [x] Simplify component structure
+- [x] Remove separate PrimarySponsor component
 
 ### Phase 3: Testing & Validation
 
-- [ ] Add accessibility testing tools
-- [ ] Create accessibility test cases
-- [ ] Validate with real users
-- [ ] Document accessibility guidelines
+- [ ] Test with various sponsor configurations
+- [ ] Validate deduplication accuracy
+- [ ] Ensure animation timing remains consistent
+- [ ] Test edge cases (empty lists, missing data)
 
 ## Notes
 
-- Related to Roadmap item: _"Accessibility Enhancements (see TKT-2025-003)"_
-- Consider WCAG 2.1 AA compliance requirements
-- May require design system updates for contrast ratios
+- Related to Roadmap item: _"Performance Optimizations (see TKT-2025-004)"_
+- Consider impact on existing sponsor display logic
+- May require updates to sponsor data types
+- Priority: High - affects user experience and sponsor visibility
 
 ---
 

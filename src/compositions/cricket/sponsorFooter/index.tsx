@@ -5,7 +5,6 @@ import React, { useMemo } from "react";
 import { AnimatedImage } from "../../../components/images/AnimatedImage";
 import { AssignSponsors } from "../composition-types";
 import { useSponsorValidation } from "./hooks/useSponsorValidation";
-import { PrimarySponsor } from "./components/PrimarySponsor";
 
 // Sponsor configuration constants
 const SPONSOR_CONFIG = {
@@ -30,15 +29,46 @@ const calculateMaxWidth = (
   return footerHeight * 3;
 };
 
+// Helper function to get unique sponsors by ID
+const getUniqueSponsors = (sponsors: any[]): any[] => {
+  const seen = new Set<number>();
+  return sponsors.filter((sponsor) => {
+    if (sponsor.id && seen.has(sponsor.id)) {
+      return false;
+    }
+    if (sponsor.id) {
+      seen.add(sponsor.id);
+    }
+    return true;
+  });
+};
+
+// Helper function to calculate image height with padding
+const calculateImageHeight = (footerHeight: number): number => {
+  return footerHeight - 20;
+};
+
+// Helper function to get all sponsors with deduplication
+const getAllSponsors = (
+  primarySponsors: any[],
+  assignSponsors: AssignSponsors,
+): any[] => {
+  const assignedSponsors = createFlatSponsorList(assignSponsors);
+  return getUniqueSponsors([...primarySponsors, ...assignedSponsors]);
+};
+
 export const SponsorFooter = React.memo(
   ({ assignSponsors }: { assignSponsors: AssignSponsors }) => {
     const validation = useSponsorValidation();
 
-    // Memoize expensive sponsor list calculation (must be before early returns)
-    const defaultSponsorList = useMemo(
-      () => createFlatSponsorList(assignSponsors),
-      [assignSponsors],
-    );
+    // Memoize all sponsors with deduplication (must be before early returns)
+    const allSponsors = useMemo(() => {
+      if (!assignSponsors || !validation.sponsors) {
+        return [];
+      }
+      const primarySponsors = Object.values(validation.sponsors.primary);
+      return getAllSponsors(primarySponsors, assignSponsors);
+    }, [validation.sponsors, assignSponsors]);
 
     if (!assignSponsors) {
       console.warn("[SponsorFooter] Missing assignSponsors");
@@ -48,20 +78,25 @@ export const SponsorFooter = React.memo(
     if (
       !validation.isValid ||
       !validation.logoAnimations ||
-      !validation.heights
+      !validation.heights ||
+      !validation.sponsors
     ) {
       return null;
     }
 
     const { logoAnimations, heights } = validation;
+    const imageHeight = calculateImageHeight(heights.footer);
+
     return (
       <div
         className="flex flex-row justify-start gap-4 items-center my-0 px-16 overflow-hidden"
-        style={{ height: heights.footer }}
+        style={{
+          height: imageHeight,
+          paddingBottom: "10px",
+          paddingTop: "10px",
+        }}
       >
-        <PrimarySponsor />
-        {defaultSponsorList.map((sponsor, idx) => {
-          // Only grade and competition have id and name
+        {allSponsors.map((sponsor, idx) => {
           const key = "id" in sponsor ? sponsor.id : idx;
 
           if (!sponsor?.logo?.url) {
@@ -71,7 +106,7 @@ export const SponsorFooter = React.memo(
             <div
               key={key}
               className="flex items-center justify-center flex-shrink-0"
-              style={{ height: heights.footer }}
+              style={{ height: imageHeight }}
             >
               <AnimatedImage
                 src={sponsor?.logo?.url || ""}
@@ -80,8 +115,8 @@ export const SponsorFooter = React.memo(
                 }
                 width="auto"
                 height="auto"
-                maxHeight={heights.footer}
-                maxWidth={calculateMaxWidth(sponsor.logo, heights.footer)}
+                maxHeight={imageHeight}
+                maxWidth={calculateMaxWidth(sponsor.logo, imageHeight)}
                 fit="contain"
                 preserveRatio={true}
                 animation={logoAnimations.introIn as any}

@@ -15,7 +15,7 @@ interface TeamStatTextProps {
 
 type TextAlign = "left" | "right" | "center";
 
-export const ladderTeamPoints: React.FC<TeamStatTextProps> = ({
+export const LadderTeamPoints: React.FC<TeamStatTextProps> = ({
   value,
   variant = "onContainerCopy",
   textAlign = "center",
@@ -37,4 +37,4 @@ export const ladderTeamPoints: React.FC<TeamStatTextProps> = ({
   );
 };
 
-export default ladderTeamPoints;
+export default LadderTeamPoints;

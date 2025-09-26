@@ -24,13 +24,13 @@ export const ClassicMainHeader = () => {
       alignment="center"
       Logo={
         <div className="w-full h-full flex justify-center items-center mt-2 mb-2">
-          <div className="w-full h-full flex items-center rounded-none max-h-[100px] max-w-[120px]">
+          <div className="w-full h-full flex justify-center items-center rounded-none p-2 max-h-[100px] max-w-[120px]">
             <AnimatedImage
               src={club.logo?.url}
               width={"auto"}
               height={"auto"}
               fit="contain"
-              className="rounded-none max-h-[100px] max-w-[120px]"
+              className="rounded-none max-h-[100px] max-w-[120px] text-center"
               animation={LogoAnimations.introIn}
               exitAnimation={LogoAnimations.introOut}
               exitFrame={exitFrame}

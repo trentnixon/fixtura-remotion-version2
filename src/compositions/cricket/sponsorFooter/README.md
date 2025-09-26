@@ -4,7 +4,8 @@ Handles sponsor branding display in cricket compositions. Renders primary and as
 
 ## Files
 
-- `index.tsx`: main SponsorFooter component with primary and assigned sponsor rendering
+- `index.tsx`: main SponsorFooter component with unified sponsor rendering and deduplication
+- `hooks/useSponsorValidation.ts`: consolidated validation logic
 
 ## Relations
 

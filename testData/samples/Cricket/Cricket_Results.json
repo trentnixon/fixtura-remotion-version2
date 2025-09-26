@@ -169,7 +169,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -852,7 +868,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -1489,7 +1521,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -2175,7 +2223,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -2848,7 +2912,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -3558,7 +3638,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -4270,7 +4366,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -4952,7 +5064,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -5677,7 +5805,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -6351,12 +6495,28 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
       "result": "Sydney won by 9 wickets",
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Kingsgrove Sports T20 & Poidevin-Gray Shield\",\n    \"grade\": \"Men's Kingsgrove Sports T20\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Men\",\n    \"round\": \"Round 2\",\n    \"ground\": \"Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)\",\n    \"date\": \"Saturday, 20 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Sydney won by 9 wickets\",\n    \"dayOne\": \"2025-09-19T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Hawkesbury\",\n    \"innings\": [\n      {\n        \"teamName\": \"Hawkesbury\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 8,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 12.5,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 92.59,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 107.4,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 47.05,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 106.25,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 111.11,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 66.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Hayden Forner\",\n            \"catches\": 1,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"William Fort\",\n            \"catches\": 0,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Benjamin Roughan\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Fill-in\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Nathan Doyle  (c)\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"4\",\n            \"batsman\": \"Jack James\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"61\",\n            \"batsman\": \"Hemish Ahuja\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"70\",\n            \"batsman\": \"Dale McKay\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"90\",\n            \"batsman\": \"Player\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"99\",\n            \"batsman\": \"Tom Sargeant\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"115\",\n            \"batsman\": \"Ritish Sethi\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"115\",\n            \"batsman\": \"Ryan Fletcher\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"116\",\n            \"batsman\": \"Manan patel\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Hawkesbury Batting\"\n      }\n    ],\n    \"totalScore\": \"8/119\",\n    \"totalWickets\": 8\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Sydney\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sydney\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 1,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 4,\n            \"sixes\": 0,\n            \"strikeRate\": 120,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 3,\n            \"strikeRate\": 143.58,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 105.55,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"23\",\n            \"batsman\": \"William Fort\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sydney Batting\"\n      }\n    ],\n    \"totalScore\": \"1/123\",\n    \"totalWickets\": 1\n  }\n}",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Kingsgrove Sports T20 & Poidevin-Gray Shield\",\n    \"grade\": \"Men's Kingsgrove Sports T20\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Men\",\n    \"round\": \"Round 2\",\n    \"ground\": \"Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)\",\n    \"date\": \"Saturday, 20 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Sydney won by 9 wickets\",\n    \"dayOne\": \"2025-09-19T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Hawkesbury\",\n    \"innings\": [\n      {\n        \"teamName\": \"Hawkesbury\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 8,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 12.5,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 92.59,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 3,\n            \"sixes\": 0,\n            \"strikeRate\": 107.4,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 47.05,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 106.25,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 111.11,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 66.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Hayden Forner\",\n            \"catches\": 1,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"William Fort\",\n            \"catches\": 0,\n            \"runOuts\": 1,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Benjamin Roughan\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Hunter Hall\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Nathan Doyle  (c)\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"4\",\n            \"batsman\": \"Jack James\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"61\",\n            \"batsman\": \"Hemish Ahuja\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"70\",\n            \"batsman\": \"Dale McKay\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"90\",\n            \"batsman\": \"Player\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"99\",\n            \"batsman\": \"Tom Sargeant\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"115\",\n            \"batsman\": \"Ritish Sethi\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"115\",\n            \"batsman\": \"Ryan Fletcher\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"116\",\n            \"batsman\": \"Manan patel\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Hawkesbury Batting\"\n      }\n    ],\n    \"totalScore\": \"8/119\",\n    \"totalWickets\": 8\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Sydney\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sydney\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 1,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 4,\n            \"sixes\": 0,\n            \"strikeRate\": 120,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 3,\n            \"strikeRate\": 143.58,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 105.55,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"23\",\n            \"batsman\": \"William Fort\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sydney Batting\"\n      }\n    ],\n    \"totalScore\": \"1/123\",\n    \"totalWickets\": 1\n  }\n}",
       "rawMatchData": {
         "matchContext": {
           "competition": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
@@ -6575,7 +6735,7 @@
                   "fieldingDismissals": 0
                 },
                 {
-                  "player": "Fill-in",
+                  "player": "Hunter Hall",
                   "catches": 1,
                   "runOuts": 0,
                   "stumpings": 0,
@@ -6994,7 +7154,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -7664,7 +7840,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -8347,7 +8539,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -9037,7 +9245,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -9712,7 +9936,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -10366,7 +10606,23 @@
       "ageGroup": "Senior",
       "gradeName": "Men's Kingsgrove Sports T20",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -11081,7 +11337,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -11688,7 +11960,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -12366,7 +12654,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -13012,7 +13316,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -13680,7 +14000,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -14331,7 +14667,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -14914,7 +15266,7 @@
         ],
         "bowlingPerformances": [
           {
-            "player": "Fill-in",
+            "player": "Hunter Hall",
             "overs": 4,
             "maidens": 0,
             "runs": 19,
@@ -14966,7 +15318,7 @@
             "notOut": true
           },
           {
-            "player": "Fill-in",
+            "player": "Hunter Hall",
             "runs": 18,
             "balls": 13,
             "fours": 2,
@@ -15035,12 +15387,28 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
       "result": "Sutherland won by 18 runs",
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Kingsgrove Sports T20 & Poidevin-Gray Shield\",\n    \"grade\": \"Poidevin-Gray Shield\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Men\",\n    \"round\": \"Round 1\",\n    \"ground\": \"Sutherland Oval / Sutherland Oval 1\",\n    \"date\": \"Sunday, 21 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Sutherland won by 18 runs\",\n    \"dayOne\": \"2025-09-20T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-21\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Sutherland\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sutherland\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 5,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 2,\n            \"strikeRate\": 128.57,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 66.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 4,\n            \"strikeRate\": 131.81,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 1,\n            \"strikeRate\": 104.76,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 55.55,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 200,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Aditya Thakare\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Charlie Howard\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Matthew Sidhu\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"10\",\n            \"batsman\": \"Jared Ball\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"88\",\n            \"batsman\": \"Max Robinson\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"125\",\n            \"batsman\": \"Arnav Raina\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"133\",\n            \"batsman\": \"James Cisternas\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"146\",\n            \"batsman\": \"Kobey Freer\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sutherland Batting\"\n      }\n    ],\n    \"totalScore\": \"5/148\",\n    \"totalWickets\": 5\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Sydney\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sydney\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 9,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 138.46,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 44.44,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 1,\n            \"strikeRate\": 93.75,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 73.33,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 75,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 60,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 2,\n            \"strikeRate\": 178.94,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 1,\n            \"strikeRate\": 166.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Lucas Sheehy\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Jared Ball\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"James Cisternas\",\n            \"catches\": 2,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Tom Faulkner\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Saul Spyrides\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"0\",\n            \"batsman\": \"Aditya Thakare\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"23\",\n            \"batsman\": \"Hayden Forner\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"26\",\n            \"batsman\": \"Player\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"48\",\n            \"batsman\": \"Joel Wright\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"54\",\n            \"batsman\": \"Vansh Bhatia\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"79\",\n            \"batsman\": \"Daniel Craig\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"81\",\n            \"batsman\": \"Rajeev Navaratnam\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"94\",\n            \"batsman\": \"Carter Margetson\"\n          },\n          {\n            \"wicketNumber\": 9,\n            \"score\": \"125\",\n            \"batsman\": \"Vibhu-Sadayappan KARTHIKEYAN\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sydney Batting\"\n      }\n    ],\n    \"totalScore\": \"9/130\",\n    \"totalWickets\": 9\n  }\n}",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Kingsgrove Sports T20 & Poidevin-Gray Shield\",\n    \"grade\": \"Poidevin-Gray Shield\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Men\",\n    \"round\": \"Round 1\",\n    \"ground\": \"Sutherland Oval / Sutherland Oval 1\",\n    \"date\": \"Sunday, 21 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Sutherland won by 18 runs\",\n    \"dayOne\": \"2025-09-20T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-21\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Sutherland\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sutherland\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 5,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 2,\n            \"strikeRate\": 128.57,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 66.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 4,\n            \"strikeRate\": 131.81,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 1,\n            \"strikeRate\": 104.76,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 55.55,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 200,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Aditya Thakare\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Charlie Howard\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Matthew Sidhu\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"10\",\n            \"batsman\": \"Jared Ball\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"88\",\n            \"batsman\": \"Max Robinson\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"125\",\n            \"batsman\": \"Arnav Raina\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"133\",\n            \"batsman\": \"James Cisternas\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"146\",\n            \"batsman\": \"Kobey Freer\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sutherland Batting\"\n      }\n    ],\n    \"totalScore\": \"5/148\",\n    \"totalWickets\": 5\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Sydney\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sydney\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 8,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 138.46,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 44.44,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 1,\n            \"strikeRate\": 93.75,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 73.33,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 75,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 60,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 2,\n            \"strikeRate\": 178.94,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 1,\n            \"strikeRate\": 166.66,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Lucas Sheehy\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Jared Ball\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"James Cisternas\",\n            \"catches\": 2,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Tom Faulkner\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Saul Spyrides\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"0\",\n            \"batsman\": \"Aditya Thakare\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"23\",\n            \"batsman\": \"Hayden Forner\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"48\",\n            \"batsman\": \"Joel Wright\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"54\",\n            \"batsman\": \"Vansh Bhatia\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"79\",\n            \"batsman\": \"Daniel Craig\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"81\",\n            \"batsman\": \"Rajeev Navaratnam\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"94\",\n            \"batsman\": \"Carter Margetson\"\n          },\n          {\n            \"wicketNumber\": 9,\n            \"score\": \"125\",\n            \"batsman\": \"Vibhu-Sadayappan KARTHIKEYAN\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sydney Batting\"\n      }\n    ],\n    \"totalScore\": \"9/130\",\n    \"totalWickets\": 8\n  }\n}",
       "rawMatchData": {
         "matchContext": {
           "competition": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
@@ -15298,7 +15666,7 @@
               "teamName": "Sydney",
               "score": "",
               "overs": "",
-              "wickets": 9,
+              "wickets": 8,
               "battingOrder": [
                 {
                   "player": "",
@@ -15518,11 +15886,6 @@
                   "batsman": "Hayden Forner"
                 },
                 {
-                  "wicketNumber": 3,
-                  "score": "26",
-                  "batsman": "Player"
-                },
-                {
                   "wicketNumber": 4,
                   "score": "48",
                   "batsman": "Joel Wright"
@@ -15558,7 +15921,7 @@
             }
           ],
           "totalScore": "9/130",
-          "totalWickets": 9
+          "totalWickets": 8
         }
       }
     },
@@ -15731,7 +16094,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -16202,8 +16581,67 @@
         "score": "5/110",
         "overs": "(17.1)",
         "homeScoresFirstInnings": "1",
-        "battingPerformances": [],
-        "bowlingPerformances": [],
+        "battingPerformances": [
+          {
+            "player": "Nitesh Samuel",
+            "runs": 29,
+            "balls": 34,
+            "fours": 1,
+            "sixes": 0,
+            "SR": 85.29,
+            "team": "Parramatta",
+            "notOut": true
+          },
+          {
+            "player": "Akash Arnold",
+            "runs": 24,
+            "balls": 13,
+            "fours": 2,
+            "sixes": 1,
+            "SR": 184.61,
+            "team": "Parramatta",
+            "notOut": false
+          },
+          {
+            "player": "Athan Maraziotis",
+            "runs": 19,
+            "balls": 18,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 105.55,
+            "team": "Parramatta",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "ibrahim khan",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 19,
+            "wickets": 2,
+            "economy": "4.75",
+            "team": "UNSW"
+          },
+          {
+            "player": "Shrisai Chandrasekar",
+            "overs": 2,
+            "maidens": 0,
+            "runs": 12,
+            "wickets": 1,
+            "economy": "6.00",
+            "team": "UNSW"
+          },
+          {
+            "player": "Thomas Gibson",
+            "overs": 3.1,
+            "maidens": 0,
+            "runs": 19,
+            "wickets": 1,
+            "economy": "6.13",
+            "team": "UNSW"
+          }
+        ],
         "isClubTeam": false
       },
       "awayTeam": {
@@ -16217,8 +16655,67 @@
         "score": "8/109",
         "overs": "(20)",
         "awayScoresFirstInnings": "1",
-        "battingPerformances": [],
-        "bowlingPerformances": [],
+        "battingPerformances": [
+          {
+            "player": "Nicholas Allen",
+            "runs": 34,
+            "balls": 31,
+            "fours": 2,
+            "sixes": 2,
+            "SR": 109.67,
+            "team": "UNSW",
+            "notOut": false
+          },
+          {
+            "player": "Fletcher Gersbach",
+            "runs": 18,
+            "balls": 19,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 94.73,
+            "team": "UNSW",
+            "notOut": true
+          },
+          {
+            "player": "Ilankumaran Murugappan",
+            "runs": 13,
+            "balls": 17,
+            "fours": 1,
+            "sixes": 0,
+            "SR": 76.47,
+            "team": "UNSW",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Naden Cooray",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 12,
+            "wickets": 3,
+            "economy": "4.00",
+            "team": "Parramatta"
+          },
+          {
+            "player": "Isaac Earl  (c)",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 13,
+            "wickets": 2,
+            "economy": "3.25",
+            "team": "Parramatta"
+          },
+          {
+            "player": "Kye Thornley",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 22,
+            "wickets": 2,
+            "economy": "5.50",
+            "team": "Parramatta"
+          }
+        ],
         "isClubTeam": false
       },
       "teamHomeLogo": {
@@ -16239,12 +16736,28 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
       "result": "Parramatta won by 1 runs",
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Kingsgrove Sports T20 & Poidevin-Gray Shield\",\n    \"grade\": \"Poidevin-Gray Shield\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Men\",\n    \"round\": \"Round 1\",\n    \"ground\": \"Merrylands Park / Merrylands Park Oval 1\",\n    \"date\": \"Sunday, 21 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Parramatta won by 1 runs\",\n    \"dayOne\": \"2025-09-20T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-21\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Parramatta\",\n    \"innings\": [\n      {\n        \"teamName\": \"Parramatta\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Parramatta 1st Innings\"\n      }\n    ],\n    \"totalScore\": \"5/110\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"UNSW\",\n    \"innings\": [\n      {\n        \"teamName\": \"UNSW\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"UNSW 1st Innings\"\n      }\n    ],\n    \"totalScore\": \"8/109\",\n    \"totalWickets\": 0\n  }\n}",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Kingsgrove Sports T20 & Poidevin-Gray Shield\",\n    \"grade\": \"Poidevin-Gray Shield\",\n    \"ageGroup\": \"Senior\",\n    \"gender\": \"Men\",\n    \"round\": \"Round 1\",\n    \"ground\": \"Merrylands Park / Merrylands Park Oval 1\",\n    \"date\": \"Sunday, 21 September 2025\",\n    \"matchType\": \"T20\",\n    \"status\": \"Final\",\n    \"resultStatement\": \"Parramatta won by 1 runs\",\n    \"dayOne\": \"2025-09-20T14:00:00.000Z\",\n    \"finalDaysPlay\": \"2025-09-21\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Parramatta\",\n    \"innings\": [\n      {\n        \"teamName\": \"Parramatta\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 5,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 70,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 105.55,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 85.29,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 1,\n            \"strikeRate\": 184.61,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 1,\n            \"strikeRate\": 120,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 60,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Fletcher Gersbach\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Nicholas Allen\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Blayde Burke\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"24\",\n            \"batsman\": \"Santhosh Samuel\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"31\",\n            \"batsman\": \"Athan Maraziotis\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"46\",\n            \"batsman\": \"Advith Boreddy\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"84\",\n            \"batsman\": \"Akash Arnold\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"104\",\n            \"batsman\": \"Liam Roche\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Parramatta Batting\"\n      }\n    ],\n    \"totalScore\": \"5/110\",\n    \"totalWickets\": 5\n  },\n  \"awayTeam\": {\n    \"teamName\": \"UNSW\",\n    \"innings\": [\n      {\n        \"teamName\": \"UNSW\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 8,\n        \"battingOrder\": [\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 52.17,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 2,\n            \"strikeRate\": 109.67,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 40,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 1,\n            \"sixes\": 0,\n            \"strikeRate\": 76.47,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 50,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 62.5,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 60,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 2,\n            \"sixes\": 0,\n            \"strikeRate\": 94.73,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 33.33,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 100,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          },\n          {\n            \"player\": \"\",\n            \"runs\": 0,\n            \"balls\": 0,\n            \"fours\": 0,\n            \"sixes\": 0,\n            \"strikeRate\": 0,\n            \"notOut\": false,\n            \"dismissal\": \"\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          },\n          {\n            \"player\": \"\",\n            \"overs\": 0,\n            \"maidens\": 0,\n            \"runs\": 0,\n            \"wickets\": 0,\n            \"economy\": \"0.0\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"player\": \"Advith Boreddy\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Athan Maraziotis\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Sumair Sira\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Ryan Gupta\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          },\n          {\n            \"player\": \"Kye Thornley\",\n            \"catches\": 1,\n            \"runOuts\": 0,\n            \"stumpings\": 0,\n            \"fieldingDismissals\": 0\n          }\n        ],\n        \"fallOfWickets\": [\n          {\n            \"wicketNumber\": 1,\n            \"score\": \"39\",\n            \"batsman\": \"Neel PATEL\"\n          },\n          {\n            \"wicketNumber\": 2,\n            \"score\": \"52\",\n            \"batsman\": \"Hirav Gandhi\"\n          },\n          {\n            \"wicketNumber\": 3,\n            \"score\": \"55\",\n            \"batsman\": \"Nicholas Allen\"\n          },\n          {\n            \"wicketNumber\": 4,\n            \"score\": \"67\",\n            \"batsman\": \"Nikhil Thokala\"\n          },\n          {\n            \"wicketNumber\": 5,\n            \"score\": \"80\",\n            \"batsman\": \"Ilankumaran Murugappan\"\n          },\n          {\n            \"wicketNumber\": 6,\n            \"score\": \"80\",\n            \"batsman\": \"Jack Edwards\"\n          },\n          {\n            \"wicketNumber\": 7,\n            \"score\": \"86\",\n            \"batsman\": \"Shrisai Chandrasekar\"\n          },\n          {\n            \"wicketNumber\": 8,\n            \"score\": \"87\",\n            \"batsman\": \"Blayde Burke\"\n          }\n        ],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"UNSW Batting\"\n      }\n    ],\n    \"totalScore\": \"8/109\",\n    \"totalWickets\": 8\n  }\n}",
       "rawMatchData": {
         "matchContext": {
           "competition": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
@@ -16267,17 +16780,233 @@
               "teamName": "Parramatta",
               "score": "",
               "overs": "",
-              "wickets": 0,
-              "battingOrder": [],
-              "bowlingFigures": [],
-              "fieldingStats": [],
-              "fallOfWickets": [],
+              "wickets": 5,
+              "battingOrder": [
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "strikeRate": 70,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 0,
+                  "strikeRate": 105.55,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "strikeRate": 85.29,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 0,
+                  "strikeRate": 100,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 1,
+                  "strikeRate": 184.61,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 1,
+                  "strikeRate": 120,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 60,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 0,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 0,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 0,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 0,
+                  "notOut": false,
+                  "dismissal": ""
+                }
+              ],
+              "bowlingFigures": [
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                }
+              ],
+              "fieldingStats": [
+                {
+                  "player": "Fletcher Gersbach",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Nicholas Allen",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Blayde Burke",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                }
+              ],
+              "fallOfWickets": [
+                {
+                  "wicketNumber": 1,
+                  "score": "24",
+                  "batsman": "Santhosh Samuel"
+                },
+                {
+                  "wicketNumber": 2,
+                  "score": "31",
+                  "batsman": "Athan Maraziotis"
+                },
+                {
+                  "wicketNumber": 3,
+                  "score": "46",
+                  "batsman": "Advith Boreddy"
+                },
+                {
+                  "wicketNumber": 4,
+                  "score": "84",
+                  "batsman": "Akash Arnold"
+                },
+                {
+                  "wicketNumber": 5,
+                  "score": "104",
+                  "batsman": "Liam Roche"
+                }
+              ],
               "inningsNumber": 1,
-              "inningsName": "Parramatta 1st Innings"
+              "inningsName": "Parramatta Batting"
             }
           ],
           "totalScore": "5/110",
-          "totalWickets": 0
+          "totalWickets": 5
         },
         "awayTeam": {
           "teamName": "UNSW",
@@ -16286,17 +17015,254 @@
               "teamName": "UNSW",
               "score": "",
               "overs": "",
-              "wickets": 0,
-              "battingOrder": [],
-              "bowlingFigures": [],
-              "fieldingStats": [],
-              "fallOfWickets": [],
+              "wickets": 8,
+              "battingOrder": [
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 52.17,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 2,
+                  "strikeRate": 109.67,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 40,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 1,
+                  "sixes": 0,
+                  "strikeRate": 76.47,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 50,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 62.5,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 60,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 2,
+                  "sixes": 0,
+                  "strikeRate": 94.73,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 33.33,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 100,
+                  "notOut": false,
+                  "dismissal": ""
+                },
+                {
+                  "player": "",
+                  "runs": 0,
+                  "balls": 0,
+                  "fours": 0,
+                  "sixes": 0,
+                  "strikeRate": 0,
+                  "notOut": false,
+                  "dismissal": ""
+                }
+              ],
+              "bowlingFigures": [
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                },
+                {
+                  "player": "",
+                  "overs": 0,
+                  "maidens": 0,
+                  "runs": 0,
+                  "wickets": 0,
+                  "economy": "0.0"
+                }
+              ],
+              "fieldingStats": [
+                {
+                  "player": "Advith Boreddy",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Athan Maraziotis",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Sumair Sira",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Ryan Gupta",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                },
+                {
+                  "player": "Kye Thornley",
+                  "catches": 1,
+                  "runOuts": 0,
+                  "stumpings": 0,
+                  "fieldingDismissals": 0
+                }
+              ],
+              "fallOfWickets": [
+                {
+                  "wicketNumber": 1,
+                  "score": "39",
+                  "batsman": "Neel PATEL"
+                },
+                {
+                  "wicketNumber": 2,
+                  "score": "52",
+                  "batsman": "Hirav Gandhi"
+                },
+                {
+                  "wicketNumber": 3,
+                  "score": "55",
+                  "batsman": "Nicholas Allen"
+                },
+                {
+                  "wicketNumber": 4,
+                  "score": "67",
+                  "batsman": "Nikhil Thokala"
+                },
+                {
+                  "wicketNumber": 5,
+                  "score": "80",
+                  "batsman": "Ilankumaran Murugappan"
+                },
+                {
+                  "wicketNumber": 6,
+                  "score": "80",
+                  "batsman": "Jack Edwards"
+                },
+                {
+                  "wicketNumber": 7,
+                  "score": "86",
+                  "batsman": "Shrisai Chandrasekar"
+                },
+                {
+                  "wicketNumber": 8,
+                  "score": "87",
+                  "batsman": "Blayde Burke"
+                }
+              ],
               "inningsNumber": 1,
-              "inningsName": "UNSW 1st Innings"
+              "inningsName": "UNSW Batting"
             }
           ],
           "totalScore": "8/109",
-          "totalWickets": 0
+          "totalWickets": 8
         }
       }
     },
@@ -16469,7 +17435,23 @@
       "ageGroup": "Senior",
       "gradeName": "Poidevin-Gray Shield",
       "assignSponsors": {
-        "competition": [],
+        "competition": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
         "grade": [],
         "team": []
       },
@@ -17008,11 +17990,11 @@
     "assetID": 13,
     "assetTypeID": 2,
     "assetCategoryID": 2,
-    "assetsLinkID": "d02c94148b1193ad9299bcd71a4d9f74d278f7ab3415aa5ac787894e826b8f01"
+    "assetsLinkID": "3dabca3f1252f922855fb09ab9fc9ff74ee15bc0191feacd2e229e5325c89faa"
   },
   "render": {
     "schedulerId": 318,
-    "renderId": 8449
+    "renderId": 8451
   },
   "account": {
     "accountId": 431
@@ -17020,26 +18002,61 @@
   "timings": {
     "FPS_MAIN": 2550,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210
   },
   "frames": [
-    45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1755, 1950, 2145, 2340, 2535
+    45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1755, 1950, 2145, 2340, 2535,
+    2670
   ],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_58_5e1504d484.jpg",
-        "width": 153,
-        "height": 256
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928_dc5535ee75.png",
+        "width": 1106,
+        "height": 1843
       },
       "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "primary": [
+          {
+            "id": 193,
+            "isPrimary": true,
+            "isActive": true,
+            "isArticle": true,
+            "isVideo": true,
+            "url": "Maccas",
+            "tagline": "Maccas",
+            "description": null,
+            "name": "Maccas",
+            "logo": {
+              "id": 13659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+            }
+          }
+        ],
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 193,
+              "isPrimary": true,
+              "isActive": true,
+              "isArticle": true,
+              "isVideo": true,
+              "url": "Maccas",
+              "tagline": "Maccas",
+              "description": null,
+              "name": "Maccas",
+              "logo": {
+                "id": 13659,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
+              }
+            }
+          ]
+        }
       },
       "IsAccountClub": false
     },
@@ -17054,7 +18071,7 @@
         "assetId": 13,
         "assetTypeId": 2,
         "frames": [],
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
@@ -17063,7 +18080,7 @@
           "primary": "#002855",
           "secondary": "#00aeef"
         },
-        "template": "Basic"
+        "template": "Classic"
       },
       "media": {
         "HeroImage": {
@@ -17085,98 +18102,78 @@
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 3,
+          "CricketUpcoming": 2,
           "CricketResultSingle": 1
         }
       },
       "templateVariation": {
-        "useBackground": "Graphics",
-        "mode": "light",
+        "useBackground": "Texture",
+        "mode": "lightAlt",
         "category": {
-          "slug": "Basic",
-          "name": "Basic",
+          "slug": "Classic",
+          "name": "Classic",
           "divideFixturesBy": {
-            "CricketUpcoming": 3,
+            "CricketUpcoming": 2,
             "CricketResults": 2,
             "CricketResultSingle": 1,
             "CricketLadder": 1,
             "CricketRoster": 1
           },
           "bundleAudio": {
-            "id": 1,
-            "Name": "Basic",
-            "createdAt": "2023-09-27T10:36:24.428Z",
-            "updatedAt": "2025-06-15T04:50:57.910Z",
-            "publishedAt": "2023-09-27T10:36:25.639Z",
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-29T00:24:54.890Z",
+            "updatedAt": "2024-10-29T00:24:56.001Z",
+            "publishedAt": "2024-10-29T00:24:56.000Z",
             "audio_options": [
               {
-                "id": 4,
-                "Name": "Better Start Now",
-                "createdAt": "2023-09-27T10:34:46.702Z",
-                "updatedAt": "2025-06-15T04:53:45.558Z",
-                "publishedAt": "2023-09-27T10:34:48.455Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "CompositionID": "CricketLadder",
-                "ComponentName": "CricketLadder"
+                "id": 25,
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-29T00:03:05.331Z",
+                "updatedAt": "2024-10-29T01:02:40.051Z",
+                "publishedAt": "2024-10-29T00:03:06.783Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
+                "CompositionID": "Top5BowlingList",
+                "ComponentName": "Top 5 Bowling"
               },
               {
-                "id": 2,
-                "Name": "Fifteen on Me",
-                "createdAt": "2022-12-20T01:59:28.337Z",
-                "updatedAt": "2025-06-15T04:53:11.194Z",
-                "publishedAt": "2022-12-20T01:59:29.080Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
+                "id": 30,
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-29T00:18:54.565Z",
+                "updatedAt": "2024-10-29T00:25:33.146Z",
+                "publishedAt": "2024-10-29T00:18:55.872Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
+                "CompositionID": "Top5BattingList",
+                "ComponentName": "Top 5 Batting"
               },
               {
-                "id": 5,
-                "Name": "Get The Gains",
-                "createdAt": "2023-09-27T10:35:01.053Z",
-                "updatedAt": "2025-06-15T04:53:59.493Z",
-                "publishedAt": "2023-09-27T10:35:29.163Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "CompositionID": "CricketTop5Bowling",
-                "ComponentName": "CricketTop5Bowling"
+                "id": 28,
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-29T00:13:15.572Z",
+                "updatedAt": "2024-10-29T00:25:48.719Z",
+                "publishedAt": "2024-10-29T00:13:16.481Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
+                "CompositionID": "Ladder",
+                "ComponentName": "Ladder"
               },
               {
-                "id": 3,
-                "Name": "Groover",
-                "createdAt": "2022-12-20T01:59:34.014Z",
-                "updatedAt": "2025-06-15T04:53:28.656Z",
-                "publishedAt": "2022-12-20T01:59:34.670Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "CompositionID": "CricketTop5Batting",
-                "ComponentName": "CricketTop5Batting"
+                "id": 31,
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-29T00:21:51.124Z",
+                "updatedAt": "2024-10-29T01:03:00.642Z",
+                "publishedAt": "2024-10-29T00:21:52.065Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
+                "CompositionID": "UpComingFixtures",
+                "ComponentName": "UpComing Fixtures"
               },
               {
-                "id": 1,
-                "Name": "Saltine",
-                "createdAt": "2022-12-12T05:19:56.353Z",
-                "updatedAt": "2025-06-15T04:50:50.079Z",
-                "publishedAt": "2022-12-12T05:19:57.408Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-                "CompositionID": "CricketResults",
-                "ComponentName": "CricketResults"
-              },
-              {
-                "id": 16,
-                "Name": "BEECH LOVE",
-                "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2024-06-07T12:45:43.674Z",
-                "publishedAt": "2024-06-07T12:45:32.118Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "Top5AFLScorers",
-                "ComponentName": "Top 5 Scorers"
-              },
-              {
-                "id": 17,
-                "Name": "FAY V",
-                "createdAt": "2024-06-05T04:33:33.970Z",
-                "updatedAt": "2024-06-07T12:48:03.161Z",
-                "publishedAt": "2024-06-07T12:47:53.394Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
-                "CompositionID": "WeekendResultsAFL",
+                "id": 27,
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-29T00:11:52.803Z",
+                "updatedAt": "2024-10-29T01:02:48.895Z",
+                "publishedAt": "2024-10-29T00:12:49.969Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
+                "CompositionID": "WeekendResults",
                 "ComponentName": "Weekend Results"
               }
             ]
@@ -17233,12 +18230,12 @@
           "animation": "scale"
         },
         "texture": {
-          "name": null,
-          "url": null,
+          "name": "Smooth Vignette",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Minimal_Smooth_Vignette_b8d4846c08.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
-            "opacity": 0.5,
+            "opacity": 1,
             "blendMode": "multiply"
           }
         }
