@@ -29,7 +29,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   delay,
   className,
 }) => {
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
@@ -46,7 +46,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className={`w-full flex justify-between items-center p-4  ${className}`}
+      className={`w-full flex justify-between items-center p-4 ${layout.borderRadius.container}   ${className}`}
       backgroundColor="none"
       style={{
         background: backgroundColor,

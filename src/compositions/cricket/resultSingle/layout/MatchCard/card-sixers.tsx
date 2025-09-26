@@ -8,6 +8,7 @@ import MatchHeader from "../Sections/MatchHeader/index";
 import { SingleDataPointHeader } from "../../../results/layout/Sections/MatchHeader/SingleDataPointHeader";
 import { Horizontal_SingleTeam_LogoWithName_Score } from "../../../results/layout/Sections/TeamsSection/Horizontal_SingleTeam_LogoWithName_Score";
 import PlayerStatsSingleTeamOnly from "../../../results/layout/Sections/PlayerStats/PlayerStats-SingleTeamOnly";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 interface MatchCardProps {
   match: MatchResult;
@@ -15,7 +16,7 @@ interface MatchCardProps {
 
 const SixersMatchCard: React.FC<MatchCardProps> = ({ match }) => {
   const { animations } = useAnimationContext();
-
+  const { layout } = useThemeContext();
   // Animation setup
   const containerAnimation = animations.container.main.itemContainer;
   const baseDelay = 0;
@@ -32,7 +33,7 @@ const SixersMatchCard: React.FC<MatchCardProps> = ({ match }) => {
   return (
     <AnimatedContainer
       type="full"
-      className="rounded-lg w-auto mx-8 overflow-hidden h-full"
+      className={`${layout.borderRadius.container} w-auto mx-8 overflow-hidden h-full`}
       backgroundColor="none"
       animation={containerAnimation.containerIn}
       animationDelay={baseDelay}
@@ -97,7 +98,6 @@ const SixersMatchCard: React.FC<MatchCardProps> = ({ match }) => {
         ground={match.ground}
         height={headerHeight}
         delay={headerDelay}
-        className="rounded-lg"
       />
     </AnimatedContainer>
   );
