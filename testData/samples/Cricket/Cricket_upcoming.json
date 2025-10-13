@@ -1,18 +1,18 @@
 {
   "data": [
     {
-      "date": "Sat, 27 Sept",
-      "time": "09:00 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "e0b71a43",
-      "gender": "Men",
-      "ground": "Hurstville Oval / Hurstville Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: St George vs Sydney, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Hurstville Oval / Hurstville Oval\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "ac334928",
+      "gender": "Mixed",
+      "ground": "Sir Ross McLarty Park / Sir Ross McLarty Park - Turf",
+      "prompt": "Upcoming cricket match details:\n- Teams: Pinjarra A Grade vs Boddington Crane Hire Hornets, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Sir Ross McLarty Park / Sir Ross McLarty Park - Turf\n- Round: Round 1, Match Type: One Day\n- League: A Grade Wyllie Cup",
       "ageGroup": "Senior",
-      "teamAway": "Sydney",
-      "teamHome": "St George",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "Boddington Crane Hire Hornets",
+      "teamHome": "Pinjarra A Grade",
+      "gradeName": "A Grade Wyllie Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -24,130 +24,82 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sat, 27 Sept",
-      "time": "09:00 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "138fbc9c",
-      "gender": "Men",
-      "ground": "Merrylands Park / Merrylands Park Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Gordon vs Eastern Suburbs, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Merrylands Park / Merrylands Park Oval 1\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "64a5cdcd",
+      "gender": "Mixed",
+      "ground": "Peelwood Reserve / Oval 1 - Turf",
+      "prompt": "Upcoming cricket match details:\n- Teams: Halls Head A Grade vs White Knights Baldivis A Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Peelwood Reserve / Oval 1 - Turf\n- Round: Round 1, Match Type: One Day\n- League: A Grade Wyllie Cup",
       "ageGroup": "Senior",
-      "teamAway": "Eastern Suburbs",
-      "teamHome": "Gordon",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "White Knights Baldivis A Grade",
+      "teamHome": "Halls Head A Grade",
+      "gradeName": "A Grade Wyllie Cup",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
-        "width": 158,
-        "height": 182
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
-        "width": 180,
-        "height": 152
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f75b17cc3.jpg",
+        "width": 1531,
+        "height": 1356
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sat, 27 Sept",
-      "time": "09:00 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "5c7703e2",
-      "gender": "Men",
-      "ground": "Manly Oval / Manly Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs Bankstown, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Manly Oval / Manly Oval\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "be1301df",
+      "gender": "Mixed",
+      "ground": "Meadow Springs Sports Facility / Oval 1 - Turf",
+      "prompt": "Upcoming cricket match details:\n- Teams: MCC Senior Men A Grade vs Waroona Warriors Senior Men A, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Meadow Springs Sports Facility / Oval 1 - Turf\n- Round: Round 1, Match Type: One Day\n- League: A Grade Wyllie Cup",
       "ageGroup": "Senior",
-      "teamAway": "Bankstown",
-      "teamHome": "Manly Warringah",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "Waroona Warriors Senior Men A",
+      "teamHome": "MCC Senior Men A Grade",
+      "gradeName": "A Grade Wyllie Cup",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
-        "width": 216,
-        "height": 216
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
-        "width": 180,
-        "height": 168
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5c48487d86.jpg",
+        "width": 429,
+        "height": 359
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sat, 27 Sept",
-      "time": "09:00 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "3e27bedc",
-      "gender": "Men",
-      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: UTS North Sydney vs UNSW, Date and Time: Saturday, 27 September 2025, 09:00 AM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "12422baf",
+      "gender": "Mixed",
+      "ground": "Stan Twight Reserve / Stan Twight Reserve - Oval #1 (West)",
+      "prompt": "Upcoming cricket match details:\n- Teams: SHDCC Senior Men A Grade vs SBCC A Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Stan Twight Reserve / Stan Twight Reserve - Oval #1 (West)\n- Round: Round 1, Match Type: One Day\n- League: A Grade Wyllie Cup",
       "ageGroup": "Senior",
-      "teamAway": "UNSW",
-      "teamHome": "UTS North Sydney",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "SBCC A Grade",
+      "teamHome": "SHDCC Senior Men A Grade",
+      "gradeName": "A Grade Wyllie Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -159,85 +111,24 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sat, 27 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "6a974a05",
-      "gender": "Men",
-      "ground": "Harold Fraser Reserve / Harold Fraser Reserve",
-      "prompt": "Upcoming cricket match details:\n- Teams: Fairfield-Liverpool vs Randwick Petersham, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Harold Fraser Reserve / Harold Fraser Reserve\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "d75bc361",
+      "gender": "Mixed",
+      "ground": "Stan Twight Reserve / Stan Twight Reserve - Oval #2 (East)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Singleton Irwinians - A Grade vs WSCC Senior A Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Stan Twight Reserve / Stan Twight Reserve - Oval #2 (East)\n- Round: Round 1, Match Type: One Day\n- League: A Grade Wyllie Cup",
       "ageGroup": "Senior",
-      "teamAway": "Randwick Petersham",
-      "teamHome": "Fairfield-Liverpool",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
-        "width": 200,
-        "height": 200
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "ddd58fdd",
-      "gender": "Men",
-      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 2)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sutherland vs Sydney University, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Raby Sports Complex / Raby Sports Complex (Oval 2)\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Sydney University",
-      "teamHome": "Sutherland",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "WSCC Senior A Grade",
+      "teamHome": "Singleton Irwinians - A Grade",
+      "gradeName": "A Grade Wyllie Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -249,490 +140,24 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sat, 27 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "66ad2403",
-      "gender": "Men",
-      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 1)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Campbelltown Camden vs Penrith, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Raby Sports Complex / Raby Sports Complex (Oval 1)\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "98d9a8cb",
+      "gender": "Mixed",
+      "ground": "Falcon Reserve / Falcon Reserve",
+      "prompt": "Upcoming cricket match details:\n- Teams: Falcons SMCC B GRADE vs Pinjarra B Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Falcon Reserve / Falcon Reserve\n- Round: Round 1, Match Type: One Day\n- League: B Grade McIntosh Cup",
       "ageGroup": "Senior",
-      "teamAway": "Penrith",
-      "teamHome": "Campbelltown Camden",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
-        "width": 1358,
-        "height": 1142
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 3",
-      "gameID": "92b9a743",
-      "gender": "Men",
-      "ground": "Old Kings Oval / Old Kings Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Parramatta vs Blacktown T20, Date and Time: Saturday, 27 September 2025, 09:30 AM, Location: Old Kings Oval / Old Kings Oval\n- Round: Round 3, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Blacktown T20",
-      "teamHome": "Parramatta",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
-        "width": 1080,
-        "height": 1080
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "104f462c",
-      "gender": "Men",
-      "ground": "Harold Fraser Reserve / Harold Fraser Reserve",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sydney vs Fairfield-Liverpool, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Harold Fraser Reserve / Harold Fraser Reserve\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Fairfield-Liverpool",
-      "teamHome": "Sydney",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
-        "width": 200,
-        "height": 200
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "1ee85cad",
-      "gender": "Men",
-      "ground": "Hurstville Oval / Hurstville Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: St George vs Hawkesbury, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Hurstville Oval / Hurstville Oval\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Hawkesbury",
-      "teamHome": "St George",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
-        "width": 265,
-        "height": 252
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "e7717074",
-      "gender": "Men",
-      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 2)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sutherland vs Northern District, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Raby Sports Complex / Raby Sports Complex (Oval 2)\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Northern District",
-      "teamHome": "Sutherland",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
-        "width": 680,
-        "height": 912
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "e5e42182",
-      "gender": "Men",
-      "ground": "Raby Sports Complex / Raby Sports Complex (Oval 1)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Campbelltown Camden vs Sydney University, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Raby Sports Complex / Raby Sports Complex (Oval 1)\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Sydney University",
-      "teamHome": "Campbelltown Camden",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
-        "width": 1358,
-        "height": 1142
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "9f7ff5b6",
-      "gender": "Men",
-      "ground": "Merrylands Park / Merrylands Park Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Eastern Suburbs vs Western Suburbs, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Merrylands Park / Merrylands Park Oval 1\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Western Suburbs",
-      "teamHome": "Eastern Suburbs",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
-        "width": 158,
-        "height": 182
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "df63b5f1",
-      "gender": "Men",
-      "ground": "Old Kings Oval / Old Kings Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Parramatta vs Gordon, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Old Kings Oval / Old Kings Oval\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Gordon",
-      "teamHome": "Parramatta",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
-        "width": 180,
-        "height": 152
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "6f58f677",
-      "gender": "Men",
-      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Mosman vs Bankstown, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Bankstown",
-      "teamHome": "Mosman",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
-        "width": 216,
-        "height": 216
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
-        "width": 270,
-        "height": 266
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sat, 27 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 4",
-      "gameID": "68a2975f",
-      "gender": "Men",
-      "ground": "Manly Oval / Manly Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs UTS North Sydney, Date and Time: Saturday, 27 September 2025, 02:00 PM, Location: Manly Oval / Manly Oval\n- Round: Round 4, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "UTS North Sydney",
-      "teamHome": "Manly Warringah",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
-        "width": 180,
-        "height": 168
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "87687026",
-      "gender": "Men",
-      "ground": "Coogee Oval / Coogee Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Randwick Petersham vs Sydney, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Coogee Oval / Coogee Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "Sydney",
-      "teamHome": "Randwick Petersham",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "Pinjarra B Grade",
+      "teamHome": "Falcons SMCC B GRADE",
+      "gradeName": "B Grade McIntosh Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -744,130 +169,82 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "384a5783",
-      "gender": "Men",
-      "ground": "Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Hawkesbury vs Fairfield-Liverpool, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "c013d728",
+      "gender": "Mixed",
+      "ground": "Rhonda Scarrott Reserve / West Oval - Rhonda Scarrott",
+      "prompt": "Upcoming cricket match details:\n- Teams: SHDCC Senior Men B Grade vs Halls Head B Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Rhonda Scarrott Reserve / West Oval - Rhonda Scarrott\n- Round: Round 1, Match Type: One Day\n- League: B Grade McIntosh Cup",
       "ageGroup": "Senior",
-      "teamAway": "Fairfield-Liverpool",
-      "teamHome": "Hawkesbury",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "Halls Head B Grade",
+      "teamHome": "SHDCC Senior Men B Grade",
+      "gradeName": "B Grade McIntosh Cup",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
-        "width": 200,
-        "height": 200
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f75b17cc3.jpg",
+        "width": 1531,
+        "height": 1356
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
-        "width": 265,
-        "height": 252
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "1bb279d3",
-      "gender": "Men",
-      "ground": "Mark Taylor Oval / Mark Taylor Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Northern District vs Campbelltown Camden, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Mark Taylor Oval / Mark Taylor Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "8b968f9a",
+      "gender": "Mixed",
+      "ground": "Baldivis District Sporting Complex / Baldivis District - Turf (Total Containers)",
+      "prompt": "Upcoming cricket match details:\n- Teams: White Knights Baldivis B Grade vs MCC Senior Men B Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Baldivis District Sporting Complex / Baldivis District - Turf (Total Containers)\n- Round: Round 1, Match Type: One Day\n- League: B Grade McIntosh Cup",
       "ageGroup": "Senior",
-      "teamAway": "Campbelltown Camden",
-      "teamHome": "Northern District",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "MCC Senior Men B Grade",
+      "teamHome": "White Knights Baldivis B Grade",
+      "gradeName": "B Grade McIntosh Cup",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
-        "width": 1358,
-        "height": 1142
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5c48487d86.jpg",
+        "width": 429,
+        "height": 359
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
-        "width": 680,
-        "height": 912
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "46e25491",
-      "gender": "Men",
-      "ground": "Sydney University / University Oval No. 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sydney University vs Penrith, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Sydney University / University Oval No. 1\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:00 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "0021b040",
+      "gender": "Mixed",
+      "ground": "Warnbro Recreation Reserve / Warnbro Turf",
+      "prompt": "Upcoming cricket match details:\n- Teams: WSCC Senior B Grade vs SBCC B Grade, Date and Time: Saturday, 04 October 2025, 12:00 PM, Location: Warnbro Recreation Reserve / Warnbro Turf\n- Round: Round 1, Match Type: One Day\n- League: B Grade McIntosh Cup",
       "ageGroup": "Senior",
-      "teamAway": "Penrith",
-      "teamHome": "Sydney University",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "SBCC B Grade",
+      "teamHome": "WSCC Senior B Grade",
+      "gradeName": "B Grade McIntosh Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -879,220 +256,53 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "f2ba7bbb",
-      "gender": "Men",
-      "ground": "Joe McAleer / Joe McAleer",
-      "prompt": "Upcoming cricket match details:\n- Teams: Blacktown T20 vs Western Suburbs, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Joe McAleer / Joe McAleer\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "323ed824",
+      "gender": "Mixed",
+      "ground": "Baldivis District Sporting Complex / Baldivis District - Hard Wicket (Total Containers)",
+      "prompt": "Upcoming cricket match details:\n- Teams: White Knights Baldivis C Grade - Gold vs MCC Senior Men C Grade, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Baldivis District Sporting Complex / Baldivis District - Hard Wicket (Total Containers)\n- Round: Round 1, Match Type: One Day\n- League: C Grade Jeffrey Cup",
       "ageGroup": "Senior",
-      "teamAway": "Western Suburbs",
-      "teamHome": "Blacktown T20",
-      "gradeName": "Men's Kingsgrove Sports T20",
+      "teamAway": "MCC Senior Men C Grade",
+      "teamHome": "White Knights Baldivis C Grade - Gold",
+      "gradeName": "C Grade Jeffrey Cup",
       "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5c48487d86.jpg",
+        "width": 429,
+        "height": 359
+      },
+      "teamHomeLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
-        "width": 1080,
-        "height": 1080
-      },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "d285f048",
-      "gender": "Men",
-      "ground": "Waverley Oval (NSW) / Waverley Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Eastern Suburbs vs Parramatta, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Waverley Oval (NSW) / Waverley Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "9c876b34",
+      "gender": "Mixed",
+      "ground": "Shoalwater Oval / Shoalwater Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: SBCC C Grade vs Waroona Warriors Senior Men C, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Shoalwater Oval / Shoalwater Oval\n- Round: Round 1, Match Type: One Day\n- League: C Grade Jeffrey Cup",
       "ageGroup": "Senior",
-      "teamAway": "Parramatta",
-      "teamHome": "Eastern Suburbs",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
-        "width": 158,
-        "height": 182
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "2178f19a",
-      "gender": "Men",
-      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Mosman vs UTS North Sydney, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "UTS North Sydney",
-      "teamHome": "Mosman",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
-        "width": 270,
-        "height": 266
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 5",
-      "gameID": "e4a2c53a",
-      "gender": "Men",
-      "ground": "Manly Oval / Manly Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs UNSW, Date and Time: Sunday, 28 September 2025, 02:00 PM, Location: Manly Oval / Manly Oval\n- Round: Round 5, Match Type: T20\n- League: Men's Kingsgrove Sports T20",
-      "ageGroup": "Senior",
-      "teamAway": "UNSW",
-      "teamHome": "Manly Warringah",
-      "gradeName": "Men's Kingsgrove Sports T20",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
-        "width": 180,
-        "height": 168
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "7066676a",
-      "gender": "Men",
-      "ground": "Hurstville Oval / Hurstville Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: St George vs Sutherland, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Hurstville Oval / Hurstville Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
-      "ageGroup": "Senior",
-      "teamAway": "Sutherland",
-      "teamHome": "St George",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "Waroona Warriors Senior Men C",
+      "teamHome": "SBCC C Grade",
+      "gradeName": "C Grade Jeffrey Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -1104,130 +314,24 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "707a1398",
-      "gender": "Men",
-      "ground": "Mark Taylor Oval / Mark Taylor Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Northern District vs Campbelltown Camden, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Mark Taylor Oval / Mark Taylor Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "8d5d0bb4",
+      "gender": "Mixed",
+      "ground": "Laurie Stanford Reserve / LS South",
+      "prompt": "Upcoming cricket match details:\n- Teams: Singleton Irwinians - C Grade vs Spec Savers Livingston Hornets, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Laurie Stanford Reserve / LS South\n- Round: Round 1, Match Type: One Day\n- League: C Grade Jeffrey Cup",
       "ageGroup": "Senior",
-      "teamAway": "Campbelltown Camden",
-      "teamHome": "Northern District",
-      "gradeName": "Poidevin-Gray Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ad28a15865.jpg",
-        "width": 1358,
-        "height": 1142
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_26964aab1c.jpg",
-        "width": 680,
-        "height": 912
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "d11f6e51",
-      "gender": "Men",
-      "ground": "Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Hawkesbury vs Fairfield-Liverpool, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Bensons Lane / Bensons Lane - Oval 1 (Owen Earle Oval)\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
-      "ageGroup": "Senior",
-      "teamAway": "Fairfield-Liverpool",
-      "teamHome": "Hawkesbury",
-      "gradeName": "Poidevin-Gray Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_4608128a50.jpg",
-        "width": 200,
-        "height": 200
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
-        "width": 265,
-        "height": 252
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "46a98816",
-      "gender": "Men",
-      "ground": "Sydney University / University Oval No. 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sydney University vs Penrith, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Sydney University / University Oval No. 1\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
-      "ageGroup": "Senior",
-      "teamAway": "Penrith",
-      "teamHome": "Sydney University",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "Spec Savers Livingston Hornets",
+      "teamHome": "Singleton Irwinians - C Grade",
+      "gradeName": "C Grade Jeffrey Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -1239,40 +343,82 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "81050faf",
-      "gender": "Men",
-      "ground": "Coogee Oval / Coogee Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Randwick Petersham vs Sydney, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Coogee Oval / Coogee Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "156f1ea3",
+      "gender": "Mixed",
+      "ground": "Peelwood Reserve / Oval 3 - Synthetic",
+      "prompt": "Upcoming cricket match details:\n- Teams: Halls Head D Grade vs Falcons SMCC D GRADE, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Peelwood Reserve / Oval 3 - Synthetic\n- Round: Round 1, Match Type: One Day\n- League: D Grade Ritchie Cup",
       "ageGroup": "Senior",
-      "teamAway": "Sydney",
-      "teamHome": "Randwick Petersham",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "Falcons SMCC D GRADE",
+      "teamHome": "Halls Head D Grade",
+      "gradeName": "D Grade Ritchie Cup",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f75b17cc3.jpg",
+        "width": 1531,
+        "height": 1356
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "dd1d5d33",
+      "gender": "Mixed",
+      "ground": "Eighty Road Reserve / Eighty Road Reserve",
+      "prompt": "Upcoming cricket match details:\n- Teams: White Knights Baldivis D Grade - Blue vs MCC Senior Men D Grade, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Eighty Road Reserve / Eighty Road Reserve\n- Round: Round 1, Match Type: One Day\n- League: D Grade Ritchie Cup",
+      "ageGroup": "Senior",
+      "teamAway": "MCC Senior Men D Grade",
+      "teamHome": "White Knights Baldivis D Grade - Blue",
+      "gradeName": "D Grade Ritchie Cup",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5c48487d86.jpg",
+        "width": 429,
+        "height": 359
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "ddd4965c",
+      "gender": "Mixed",
+      "ground": "Koorana Reserve / Koorana West - David Parlor Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Rockingham Hornets D Grade vs White Knights Baldivis D Grade - Gold, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Koorana Reserve / Koorana West - David Parlor Oval\n- Round: Round 1, Match Type: One Day\n- League: D Grade Ritchie Cup",
+      "ageGroup": "Senior",
+      "teamAway": "White Knights Baldivis D Grade - Gold",
+      "teamHome": "Rockingham Hornets D Grade",
+      "gradeName": "D Grade Ritchie Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
@@ -1284,348 +430,360 @@
         "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "ed32a77f",
-      "gender": "Men",
-      "ground": "Bankstown Oval / Bankstown Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Bankstown vs Gordon, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Bankstown Oval / Bankstown Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "date": "Sat, 04 Oct",
+      "time": "12:15 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "ceef2531",
+      "gender": "Mixed",
+      "ground": "Warnbro Recreation Reserve / Warnbro hard wicket",
+      "prompt": "Upcoming cricket match details:\n- Teams: WSCC Senior D Grade vs SHDCC Senior Men D Grade, Date and Time: Saturday, 04 October 2025, 12:15 PM, Location: Warnbro Recreation Reserve / Warnbro hard wicket\n- Round: Round 1, Match Type: One Day\n- League: D Grade Ritchie Cup",
       "ageGroup": "Senior",
-      "teamAway": "Gordon",
-      "teamHome": "Bankstown",
-      "gradeName": "Poidevin-Gray Shield",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4d9ef3c50.jpg",
-        "width": 180,
-        "height": 152
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
-        "width": 216,
-        "height": 216
-      },
-      "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "4ffacf14",
-      "gender": "Men",
-      "ground": "Allan Border - Mosman Park / Allan Border - Mosman Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Mosman vs UTS North Sydney, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Allan Border - Mosman Park / Allan Border - Mosman Park\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
-      "ageGroup": "Senior",
-      "teamAway": "UTS North Sydney",
-      "teamHome": "Mosman",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "SHDCC Senior Men D Grade",
+      "teamHome": "WSCC Senior D Grade",
+      "gradeName": "D Grade Ritchie Cup",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
-        "width": 270,
-        "height": 266
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "ca4d12e2",
-      "gender": "Men",
-      "ground": "Waverley Oval (NSW) / Waverley Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Eastern Suburbs vs Parramatta, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Waverley Oval (NSW) / Waverley Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "3f2c673f",
+      "gender": "Mixed",
+      "ground": "Laurie Stanford Reserve / LS North",
+      "prompt": "Upcoming cricket match details:\n- Teams: Singleton Irwinians - E Grade vs Halls Head E Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Laurie Stanford Reserve / LS North\n- Round: Round 1, Match Type: One Day\n- League: E Grade",
       "ageGroup": "Senior",
-      "teamAway": "Parramatta",
-      "teamHome": "Eastern Suburbs",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "Halls Head E Grade",
+      "teamHome": "Singleton Irwinians - E Grade",
+      "gradeName": "E Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f75b17cc3.jpg",
+        "width": 1531,
+        "height": 1356
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "c7a3cdd6",
+      "gender": "Mixed",
+      "ground": "Meadow Springs Sports Facility / Oval 2 - Synthetic",
+      "prompt": "Upcoming cricket match details:\n- Teams: MCC Senior Men E Grade vs SBCC E Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Meadow Springs Sports Facility / Oval 2 - Synthetic\n- Round: Round 1, Match Type: One Day\n- League: E Grade",
+      "ageGroup": "Senior",
+      "teamAway": "SBCC E Grade",
+      "teamHome": "MCC Senior Men E Grade",
+      "gradeName": "E Grade",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
-        "width": 158,
-        "height": 182
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5c48487d86.jpg",
+        "width": 429,
+        "height": 359
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "86bd2b7a",
-      "gender": "Men",
-      "ground": "Manly Oval / Manly Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: Manly Warringah vs UNSW, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Manly Oval / Manly Oval\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "c213e253",
+      "gender": "Mixed",
+      "ground": "Arpenteur Park / Arpenteur Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: White Knights Baldivis E Grade vs Pinjarra E Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Arpenteur Park / Arpenteur Park\n- Round: Round 1, Match Type: One Day\n- League: E Grade",
       "ageGroup": "Senior",
-      "teamAway": "UNSW",
-      "teamHome": "Manly Warringah",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "Pinjarra E Grade",
+      "teamHome": "White Knights Baldivis E Grade",
+      "gradeName": "E Grade",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b83a0fa818.jpg",
-        "width": 180,
-        "height": 168
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
         "grade": [],
         "team": []
       }
     },
     {
-      "date": "Sun, 28 Sept",
-      "time": "09:30 AM",
-      "type": "T20",
-      "round": "Round 2",
-      "gameID": "032b1037",
-      "gender": "Men",
-      "ground": "Joe McAleer / Joe McAleer",
-      "prompt": "Upcoming cricket match details:\n- Teams: Blacktown PGs vs Western Suburbs, Date and Time: Sunday, 28 September 2025, 09:30 AM, Location: Joe McAleer / Joe McAleer\n- Round: Round 2, Match Type: T20\n- League: Poidevin-Gray Shield",
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "569b7465",
+      "gender": "Mixed",
+      "ground": "Rhonda Scarrott Reserve / East Oval - Tangadee",
+      "prompt": "Upcoming cricket match details:\n- Teams: SHDCC Senior Men E Grade vs WSCC Senior E Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Rhonda Scarrott Reserve / East Oval - Tangadee\n- Round: Round 1, Match Type: One Day\n- League: E Grade",
       "ageGroup": "Senior",
-      "teamAway": "Western Suburbs",
-      "teamHome": "Blacktown PGs",
-      "gradeName": "Poidevin-Gray Shield",
+      "teamAway": "WSCC Senior E Grade",
+      "teamHome": "SHDCC Senior Men E Grade",
+      "gradeName": "E Grade",
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
         "width": 1211,
         "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b3906ee63d.jpg",
-        "width": 1080,
-        "height": 1080
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "assignSponsors": {
-        "competition": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "e1eee647",
+      "gender": "Mixed",
+      "ground": "Peelwood Reserve / Oval 2 - Synthetic",
+      "prompt": "Upcoming cricket match details:\n- Teams: Halls Head F Grade vs White Knights Baldivis F Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Peelwood Reserve / Oval 2 - Synthetic\n- Round: Round 1, Match Type: One Day\n- League: F Grade",
+      "ageGroup": "Senior",
+      "teamAway": "White Knights Baldivis F Grade",
+      "teamHome": "Halls Head F Grade",
+      "gradeName": "F Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7f75b17cc3.jpg",
+        "width": 1531,
+        "height": 1356
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "07b34c05",
+      "gender": "Mixed",
+      "ground": "Madora Bay Primary School / Madora Bay Primary School",
+      "prompt": "Upcoming cricket match details:\n- Teams: MCC Senior Men F Grade vs Waroona Warriors Senior Mixed F, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Madora Bay Primary School / Madora Bay Primary School\n- Round: Round 1, Match Type: One Day\n- League: F Grade",
+      "ageGroup": "Senior",
+      "teamAway": "Waroona Warriors Senior Mixed F",
+      "teamHome": "MCC Senior Men F Grade",
+      "gradeName": "F Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5c48487d86.jpg",
+        "width": 429,
+        "height": 359
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "5be8be64",
+      "gender": "Mixed",
+      "ground": "Sir Ross McLarty Park / Sir Ross McLarty Park - Oval #2",
+      "prompt": "Upcoming cricket match details:\n- Teams: Pinjarra F Grade vs Rockingham Hornets F Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Sir Ross McLarty Park / Sir Ross McLarty Park - Oval #2\n- Round: Round 1, Match Type: One Day\n- League: F Grade",
+      "ageGroup": "Senior",
+      "teamAway": "Rockingham Hornets F Grade",
+      "teamHome": "Pinjarra F Grade",
+      "gradeName": "F Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "ec470f8a",
+      "gender": "Mixed",
+      "ground": "Koorana Reserve / Koorana East - Jim's Cleaning Reserve",
+      "prompt": "Upcoming cricket match details:\n- Teams: SBCC F Grade vs SHDCC Senior Men F Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Koorana Reserve / Koorana East - Jim's Cleaning Reserve\n- Round: Round 1, Match Type: One Day\n- League: F Grade",
+      "ageGroup": "Senior",
+      "teamAway": "SHDCC Senior Men F Grade",
+      "teamHome": "SBCC F Grade",
+      "gradeName": "F Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      }
+    },
+    {
+      "date": "Sat, 04 Oct",
+      "time": "12:35 PM",
+      "type": "One Day",
+      "round": "Round 1",
+      "gameID": "1df38c8a",
+      "gender": "Mixed",
+      "ground": "Careeba Oval / Careeba Reserve",
+      "prompt": "Upcoming cricket match details:\n- Teams: WSCC Senior F Grade vs Singleton Irwinians - F Grade, Date and Time: Saturday, 04 October 2025, 12:35 PM, Location: Careeba Oval / Careeba Reserve\n- Round: Round 1, Match Type: One Day\n- League: F Grade",
+      "ageGroup": "Senior",
+      "teamAway": "Singleton Irwinians - F Grade",
+      "teamHome": "WSCC Senior F Grade",
+      "gradeName": "F Grade",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
+      },
+      "assignSponsors": {
+        "competition": [],
         "grade": [],
         "team": []
       }
     }
   ],
   "asset": {
-    "assetID": 2,
+    "assetID": 1,
     "assetTypeID": 1,
-    "assetCategoryID": 2,
-    "assetsLinkID": "9beb4dd2d38412e92a04bbb765c5d173475cf4ef2c8b3b7cea7ef07ff5050460"
+    "assetCategoryID": 1,
+    "assetsLinkID": "55bde9a7badcc26ccec16480d13c31ff46d380c984d7662146dca44c218de4ff"
   },
   "render": {
-    "schedulerId": 318,
-    "renderId": 8451
+    "schedulerId": 319,
+    "renderId": 8458
   },
   "account": {
-    "accountId": 431
+    "accountId": 432
   },
   "timings": {
-    "FPS_MAIN": 3330,
+    "FPS_MAIN": 2310,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 210
+    "FPS_SCORECARD": 270
   },
-  "frames": [
-    45, 195, 390, 585, 780, 975, 1170, 1365, 1560, 1755, 1950, 2145, 2340, 2535,
-    2730, 2925, 3120, 3315, 3450
-  ],
+  "frames": [45, 225, 480, 735, 990, 1245, 1500, 1755, 2010, 2265],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928_dc5535ee75.png",
-        "width": 1106,
-        "height": 1843
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_b85e3d6b75.png",
+        "width": 582,
+        "height": 582
       },
-      "name": "NSW Premier Cricket",
+      "name": "Peel Cricket Association Inc.",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 193,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "Maccas",
-              "tagline": "Maccas",
-              "description": null,
-              "name": "Maccas",
-              "logo": {
-                "id": 13659,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-              }
-            }
-          ]
-        }
+        "primary": [],
+        "default": {}
       },
       "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
-      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "fixtureCategory": "Peel Cricket Association",
+      "groupingCategory": "Peel Cricket Association",
       "metadata": {
         "title": "Fixtures",
         "titleSplit": ["Fixtures", ""],
-        "videoTitle": "Upcoming Fixtures",
+        "videoTitle": "Up Coming Fixtures",
         "compositionId": "CricketUpcoming",
-        "assetId": 2,
+        "assetId": 1,
         "assetTypeId": 1,
         "frames": [],
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#002855",
-          "secondary": "#00aeef"
+          "dark": "#FFF",
+          "white": "#111",
+          "primary": "#00843d",
+          "secondary": "#ffcd00"
         },
-        "template": "Classic"
+        "template": "CNSW"
       },
       "media": {
         "HeroImage": {
@@ -1647,18 +805,18 @@
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 2,
+          "CricketUpcoming": 3,
           "CricketResultSingle": 1
         }
       },
       "templateVariation": {
         "useBackground": "Texture",
-        "mode": "lightAlt",
+        "mode": "light",
         "category": {
-          "slug": "Classic",
-          "name": "Classic",
+          "slug": "CNSW",
+          "name": "test cnsw",
           "divideFixturesBy": {
-            "CricketUpcoming": 2,
+            "CricketUpcoming": 3,
             "CricketResults": 2,
             "CricketResultSingle": 1,
             "CricketLadder": 1,
@@ -1750,7 +908,7 @@
           "gradientType": "linear",
           "overlayOpacity": 0.3
         },
-        "palette": "primary",
+        "palette": "primaryOnWhite",
         "gradient": {
           "type": "primary",
           "direction": "VERTICAL"
