@@ -1,226 +1,192 @@
 {
   "data": [
     {
-      "name": "alexander parthenis  (vc)",
-      "runs": 9,
-      "overs": "3",
-      "prompt": "alexander parthenis  (vc) played for St George, taking 5 wickets from 3 overs, conceding 9 runs. Game details: This was a T20 in the Poidevin-Gray Shield grade, and the current match status is Match Completed . St George, (1) vs Hawkesbury (1), the match result was St George won by 5 wickets.",
-      "wickets": 5,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "St George Bowling",
-      "assignSponsors": {
-        "Team": {
-          "name": "St George"
-        },
-        "grade": {
-          "id": 53287,
-          "name": "Poidevin-Gray Shield"
-        },
-        "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
-        }
-      }
-    },
-    {
-      "name": "Marcus Atallah",
-      "runs": 25,
-      "overs": "4",
-      "prompt": "Marcus Atallah played for Eastern Suburbs, taking 5 wickets from 4 overs, conceding 25 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Eastern Suburbs, (1) vs Blacktown T20 (1), the match result was Eastern Suburbs won by 4 wickets.",
-      "wickets": 5,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
-        "width": 158,
-        "height": 182
-      },
-      "playedFor": "Eastern Suburbs Bowling",
-      "assignSponsors": {
-        "Team": {
-          "name": "Eastern Suburbs"
-        },
-        "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
-        },
-        "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
-        }
-      }
-    },
-    {
-      "name": "Joshua Malone",
-      "runs": 14,
-      "overs": "4",
-      "prompt": "Joshua Malone played for Mosman, taking 4 wickets from 4 overs, conceding 14 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Mosman, (1) vs Manly Warringah (1), the match result was Mosman won by 4 wickets.",
+      "name": "Shaun Jarvis",
+      "runs": 29,
+      "overs": "5",
+      "prompt": "Shaun Jarvis played for Strathmore Heights (Allen), taking 4 wickets from 5 overs, conceding 29 runs. Game details: This was a One Day in the 2.6  Russell Allen Shield grade, and the current match status is Match Completed . Strathmore Heights (Allen), (1) vs Barkly St Dragons (Allen) (1), the match result was Barkly St Dragons (Allen) won by 1 runs.",
       "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8434f58082.jpg",
-        "width": 270,
-        "height": 266
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "Mosman Bowling",
+      "playedFor": "Strathmore Heights (Allen)",
       "assignSponsors": {
         "Team": {
-          "name": "Mosman"
+          "name": "Strathmore Heights (Allen)"
         },
         "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
+          "id": 53954,
+          "name": "2.6  Russell Allen Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     },
     {
-      "name": "Tharindu Kaushal",
-      "runs": 19,
+      "name": "Mohit Ganjoo  (c)",
+      "runs": 12,
       "overs": "4",
-      "prompt": "Tharindu Kaushal played for Sutherland, taking 4 wickets from 4 overs, conceding 19 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Sutherland, (1) vs Penrith (1), the match result was Sutherland won by 4 wickets.",
-      "wickets": 4,
+      "prompt": "Mohit Ganjoo  (c) played for Strathmore Heights (Kyte), taking 2 wickets from 4 overs, conceding 12 runs. Game details: This was a One Day in the 1.2 Vic Kyte Shield grade, and the current match status is Match Completed . Strathmore Heights (Kyte), (1) vs RMIT (Kyte) (1), the match result was Strathmore Heights (Kyte) won by 2 wickets.",
+      "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "Sutherland Bowling",
+      "playedFor": "Strathmore Heights (Kyte)",
       "assignSponsors": {
         "Team": {
-          "name": "Sutherland"
+          "name": "Strathmore Heights (Kyte)"
         },
         "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
+          "id": 53943,
+          "name": "1.2 Vic Kyte Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     },
     {
-      "name": "Charlie Howard",
-      "runs": 22,
+      "name": "Shane Webster  (c)",
+      "runs": 24,
       "overs": "4",
-      "prompt": "Charlie Howard played for Sydney, taking 4 wickets from 4 overs, conceding 22 runs. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Sydney, (1) vs Hawkesbury (1), the match result was Sydney won by 9 wickets.",
-      "wickets": 4,
+      "prompt": "Shane Webster  (c) played for Strathmore Heights (Allen), taking 2 wickets from 4 overs, conceding 24 runs. Game details: This was a One Day in the 2.6  Russell Allen Shield grade, and the current match status is Match Completed . Strathmore Heights (Allen), (1) vs Barkly St Dragons (Allen) (1), the match result was Barkly St Dragons (Allen) won by 1 runs.",
+      "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "Sydney Bowling",
+      "playedFor": "Strathmore Heights (Allen)",
       "assignSponsors": {
         "Team": {
-          "name": "Sydney"
+          "name": "Strathmore Heights (Allen)"
         },
         "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
+          "id": 53954,
+          "name": "2.6  Russell Allen Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
+        }
+      }
+    },
+    {
+      "name": "Cody Bowers",
+      "runs": 40,
+      "overs": "5",
+      "prompt": "Cody Bowers played for Strathmore Heights (Girolami), taking 2 wickets from 5 overs, conceding 40 runs. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
+      },
+      "playedFor": "Strathmore Heights (Girolami)",
+      "assignSponsors": {
+        "Team": {
+          "name": "Strathmore Heights (Girolami)"
+        },
+        "grade": {
+          "id": 53952,
+          "name": "2.4  Ern Girolami Shield"
+        },
+        "competition": {
+          "id": 15083,
+          "name": "NWMCA SENIORS"
+        }
+      }
+    },
+    {
+      "name": "Usman Aslam",
+      "runs": 45,
+      "overs": "7",
+      "prompt": "Usman Aslam played for Strathmore Heights (Girolami), taking 2 wickets from 7 overs, conceding 45 runs. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
+      },
+      "playedFor": "Strathmore Heights (Girolami)",
+      "assignSponsors": {
+        "Team": {
+          "name": "Strathmore Heights (Girolami)"
+        },
+        "grade": {
+          "id": 53952,
+          "name": "2.4  Ern Girolami Shield"
+        },
+        "competition": {
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     }
   ],
   "asset": {
-    "assetID": 16,
+    "assetID": 7,
     "assetTypeID": 3,
-    "assetCategoryID": 2,
-    "assetsLinkID": "a4974867393251cbea72aa95bf83a1f42e801ec417ff20a56ac18888807ee7d0"
+    "assetCategoryID": 1,
+    "assetsLinkID": "622ecbdbaf4027610b8b99ff1024e709f7526008167df27c797b795bfbdef072"
   },
   "render": {
-    "schedulerId": 318,
-    "renderId": 8451
+    "schedulerId": 321,
+    "renderId": 8468
   },
   "account": {
-    "accountId": 431
+    "accountId": 434
   },
   "timings": {
     "FPS_MAIN": 360,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45, 495],
+  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928_dc5535ee75.png",
-        "width": 1106,
-        "height": 1843
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "name": "NSW Premier Cricket",
+      "name": "Strathmore Heights Cricket Club",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 193,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "Maccas",
-              "tagline": "Maccas",
-              "description": null,
-              "name": "Maccas",
-              "logo": {
-                "id": 13659,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-              }
-            }
-          ]
-        }
+        "primary": [],
+        "default": {}
       },
-      "IsAccountClub": false
+      "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
-      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Top 5",
-        "titleSplit": ["Bowlers"],
+        "titleSplit": ["Bowlers", ""],
         "videoTitle": "Top 5 Bowlers",
         "compositionId": "CricketTop5Bowling",
-        "assetId": 16,
+        "assetId": 7,
         "assetTypeId": 3,
-        "frames": [390],
-        "includeSponsors": true
+        "frames": [],
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#002855",
-          "secondary": "#00aeef"
+          "primary": "#de0000",
+          "secondary": "#ffa300"
         },
         "template": "Classic"
       },
@@ -347,7 +313,7 @@
           "gradientType": "linear",
           "overlayOpacity": 0.3
         },
-        "palette": "primary",
+        "palette": "primaryOnBlack",
         "gradient": {
           "type": "primary",
           "direction": "VERTICAL"
@@ -372,12 +338,12 @@
           "animation": "scale"
         },
         "texture": {
-          "name": "Smooth Vignette",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Minimal_Smooth_Vignette_b8d4846c08.png",
+          "name": "Wood",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_wood_like_623b1be4c1.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
-            "opacity": 1,
+            "opacity": 0.7,
             "blendMode": "multiply"
           }
         }

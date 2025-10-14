@@ -28,7 +28,7 @@ export const basicTheme: TemplateThemeConfig = {
     // Title component styles
     title: {
       className:
-        "text-[15em] font-normal tracking-normal leading-snug text-center m-0 px-4",
+        "text-[14em] font-normal tracking-normal leading-snug text-center m-0 px-4 my-8",
     },
     titleSmall: {
       className:
@@ -38,7 +38,7 @@ export const basicTheme: TemplateThemeConfig = {
     // Subtitle component styles
     subtitle: {
       className:
-        "text-8xl font-normal tracking-wider leading-normal text-center m-0  px-4",
+        "text-7xl font-normal tracking-wider leading-normal text-center m-0  px-4",
     },
 
     // Body text component styles
@@ -137,8 +137,8 @@ export const basicTheme: TemplateThemeConfig = {
   // ===== LAYOUT CONFIGURATION =====
   layout: {
     heights: {
-      asset: 1040,
-      header: 190,
+      asset: 1100,
+      header: 130,
       footer: 120,
     },
     spacing: {

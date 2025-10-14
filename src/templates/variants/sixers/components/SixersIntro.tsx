@@ -23,7 +23,7 @@ export const SixersIntro: React.FC = () => {
     <VerticalStackLogoTitleName
       alignment="center"
       Logo={
-        <div className="w-full h-full flex justify-center py-0 items-center max-h-[500px] max-w-[800px]">
+        <div className="w-full h-full flex justify-center py-0 items-center max-h-[400px] max-w-[700px]">
           <AnimatedImage
             src={club.logo?.url || ""}
             alt={club.name}
@@ -53,10 +53,12 @@ export const SixersIntro: React.FC = () => {
         </div>
       }
       Name={
-        <div className="overflow-hidden mt-[-2.5em]">
+        null
+        /* {
+          <div className="overflow-hidden mt-[-2.5em]">
           <AnimatedText
-            type="subtitle"
-            textAlign="left"
+            type="titleSmall"
+            textAlign="center"
             variant="onContainerTitle"
             letterAnimation="word"
             animation={TextAnimations.clubName}
@@ -67,6 +69,7 @@ export const SixersIntro: React.FC = () => {
             {club.name}
           </AnimatedText>
         </div>
+        } */
       }
       PrimarySponsor={
         sponsors?.primary[0]?.logo?.url && (

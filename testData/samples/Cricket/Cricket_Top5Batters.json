@@ -1,231 +1,197 @@
 {
   "data": [
     {
-      "SR": 175.4,
-      "name": "Riley Kingsell",
-      "runs": 107,
-      "balls": 61,
+      "SR": 165.45,
+      "name": "Fainuulelei Sialaoa",
+      "runs": 91,
+      "balls": 55,
+      "notOut": true,
+      "prompt": "Fainuulelei Sialaoa played for Strathmore Heights (Allen), scoring 91 runs from 55 balls with a strike rate of 165.45. Game details: This was a One Day in the 2.6  Russell Allen Shield grade, and the current match status is Match Completed . Strathmore Heights (Allen), (1) vs Barkly St Dragons (Allen) (1), the match result was Barkly St Dragons (Allen) won by 1 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
+      },
+      "playedFor": "Strathmore Heights (Allen)",
+      "assignSponsors": {
+        "Team": {
+          "name": "Strathmore Heights (Allen)"
+        },
+        "grade": {
+          "id": 53954,
+          "name": "2.6  Russell Allen Shield"
+        },
+        "competition": {
+          "id": 15083,
+          "name": "NWMCA SENIORS"
+        }
+      }
+    },
+    {
+      "SR": 211.11,
+      "name": "Joel Kolep",
+      "runs": 57,
+      "balls": 27,
       "notOut": false,
-      "prompt": "Riley Kingsell played for Bankstown, scoring 107 runs from 61 balls with a strike rate of 175.4. Game details: This was a T20 in the Poidevin-Gray Shield grade, and the current match status is Match Completed . Bankstown, (1) vs Blacktown PGs (1), the match result was Bankstown won by 64 runs.",
+      "prompt": "Joel Kolep played for Strathmore Heights (Girolami), scoring 57 runs from 27 balls with a strike rate of 211.11. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
-        "width": 216,
-        "height": 216
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "Bankstown",
+      "playedFor": "Strathmore Heights (Girolami)",
       "assignSponsors": {
         "Team": {
-          "name": "Bankstown"
+          "name": "Strathmore Heights (Girolami)"
         },
         "grade": {
-          "id": 53287,
-          "name": "Poidevin-Gray Shield"
+          "id": 53952,
+          "name": "2.4  Ern Girolami Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     },
     {
-      "SR": 162.9,
-      "name": "Jack Wood",
-      "runs": 101,
-      "balls": 62,
-      "notOut": true,
-      "prompt": "Jack Wood played for Randwick Petersham, scoring 101 runs from 62 balls with a strike rate of 162.9. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Randwick Petersham, (1) vs Hawkesbury (1), the match result was Randwick Petersham won by 8 wickets.",
+      "SR": 59.52,
+      "name": "Jason King",
+      "runs": 50,
+      "balls": 84,
+      "notOut": false,
+      "prompt": "Jason King played for Strathmore Heights (Kyte), scoring 50 runs from 84 balls with a strike rate of 59.52. Game details: This was a One Day in the 1.2 Vic Kyte Shield grade, and the current match status is Match Completed . Strathmore Heights (Kyte), (1) vs RMIT (Kyte) (1), the match result was Strathmore Heights (Kyte) won by 2 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "Randwick Petersham",
+      "playedFor": "Strathmore Heights (Kyte)",
       "assignSponsors": {
         "Team": {
-          "name": "Randwick Petersham"
+          "name": "Strathmore Heights (Kyte)"
         },
         "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
+          "id": 53943,
+          "name": "1.2 Vic Kyte Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     },
     {
-      "SR": 141.42,
-      "name": "Justin Avendano",
-      "runs": 99,
-      "balls": 70,
-      "notOut": true,
-      "prompt": "Justin Avendano played for UTS North Sydney, scoring 99 runs from 70 balls with a strike rate of 141.42. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . UTS North Sydney, (1) vs Bankstown (1), the match result was UTS North Sydney won by 6 wickets.",
+      "SR": 118.42,
+      "name": "Solomona tony Sufia",
+      "runs": 45,
+      "balls": 38,
+      "notOut": false,
+      "prompt": "Solomona tony Sufia played for Strathmore Heights (Girolami), scoring 45 runs from 38 balls with a strike rate of 118.42. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "UTS North Sydney",
+      "playedFor": "Strathmore Heights (Girolami)",
       "assignSponsors": {
         "Team": {
-          "name": "UTS North Sydney"
+          "name": "Strathmore Heights (Girolami)"
         },
         "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
+          "id": 53952,
+          "name": "2.4  Ern Girolami Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     },
     {
-      "SR": 167.85,
-      "name": "Jack Attenborough  (c)",
-      "runs": 94,
-      "balls": 56,
-      "notOut": true,
-      "prompt": "Jack Attenborough  (c) played for Sydney University, scoring 94 runs from 56 balls with a strike rate of 167.85. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Sydney University, (1) vs Northern District (1), the match result was Sydney University won by 6 wickets.",
+      "SR": 90.9,
+      "name": "Saman Wijeratne",
+      "runs": 40,
+      "balls": 44,
+      "notOut": false,
+      "prompt": "Saman Wijeratne played for Strathmore Heights (Girolami), scoring 40 runs from 44 balls with a strike rate of 90.9. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "playedFor": "Sydney University",
+      "playedFor": "Strathmore Heights (Girolami)",
       "assignSponsors": {
         "Team": {
-          "name": "Sydney University"
+          "name": "Strathmore Heights (Girolami)"
         },
         "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
+          "id": 53952,
+          "name": "2.4  Ern Girolami Shield"
         },
         "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
-        }
-      }
-    },
-    {
-      "SR": 191.11,
-      "name": "Riley Kingsell",
-      "runs": 86,
-      "balls": 45,
-      "notOut": true,
-      "prompt": "Riley Kingsell played for Bankstown, scoring 86 runs from 45 balls with a strike rate of 191.11. Game details: This was a T20 in the Men's Kingsgrove Sports T20 grade, and the current match status is Match Completed . Bankstown, (1) vs UNSW (1), the match result was Bankstown won by 2 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_389b66f3b2.jpg",
-        "width": 216,
-        "height": 216
-      },
-      "playedFor": "Bankstown",
-      "assignSponsors": {
-        "Team": {
-          "name": "Bankstown"
-        },
-        "grade": {
-          "id": 53286,
-          "name": "Men's Kingsgrove Sports T20"
-        },
-        "competition": {
-          "id": 15747,
-          "name": "Kingsgrove Sports T20 & Poidevin-Gray Shield"
+          "id": 15083,
+          "name": "NWMCA SENIORS"
         }
       }
     }
   ],
   "asset": {
-    "assetID": 15,
+    "assetID": 6,
     "assetTypeID": 3,
-    "assetCategoryID": 2,
-    "assetsLinkID": "de471c2291facdc4eb9451834d326b7450b4f4982b61d1e2cfe7f8927fd0d7de"
+    "assetCategoryID": 1,
+    "assetsLinkID": "5cacf2ceba231d805b8a2180526e0650dd097d312f3ccfa2f296395d939d230f"
   },
   "render": {
-    "schedulerId": 318,
-    "renderId": 8451
+    "schedulerId": 321,
+    "renderId": 8469
   },
   "account": {
-    "accountId": 431
+    "accountId": 434
   },
   "timings": {
     "FPS_MAIN": 360,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45, 495],
+  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928_dc5535ee75.png",
-        "width": 1106,
-        "height": 1843
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "name": "NSW Premier Cricket",
+      "name": "Strathmore Heights Cricket Club",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 193,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": "Maccas",
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13659,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 193,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "Maccas",
-              "tagline": "Maccas",
-              "description": null,
-              "name": "Maccas",
-              "logo": {
-                "id": 13659,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Mc_Donald_s_bevelled_edge_2019_fe2efc8b7b_1_d3b1446433_3ccf2a17cf.png"
-              }
-            }
-          ]
-        }
+        "primary": [],
+        "default": {}
       },
-      "IsAccountClub": false
+      "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
-      "groupingCategory": "Kingsgrove Sports T20 & Poidevin-Gray Shield",
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Top 5",
         "titleSplit": ["Batters"],
         "videoTitle": "Top 5 Run Scorers",
         "compositionId": "CricketTop5Batting",
-        "assetId": 15,
+        "assetId": 6,
         "assetTypeId": 3,
-        "frames": [390],
-        "includeSponsors": true
+        "frames": [],
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#002855",
-          "secondary": "#00aeef"
+          "primary": "#de0000",
+          "secondary": "#ffa300"
         },
         "template": "Classic"
       },
@@ -352,7 +318,7 @@
           "gradientType": "linear",
           "overlayOpacity": 0.3
         },
-        "palette": "primary",
+        "palette": "primaryOnBlack",
         "gradient": {
           "type": "primary",
           "direction": "VERTICAL"
@@ -377,12 +343,12 @@
           "animation": "scale"
         },
         "texture": {
-          "name": "Smooth Vignette",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Minimal_Smooth_Vignette_b8d4846c08.png",
+          "name": "Wood",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_wood_like_623b1be4c1.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
-            "opacity": 1,
+            "opacity": 0.7,
             "blendMode": "multiply"
           }
         }
