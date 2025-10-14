@@ -1,45 +1,66 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
-//import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import {
   getHeaderConfig,
   getLeagueTitleConfig,
+  getHardcodedSpacing,
+  VIDEO_DIMENSIONS,
 } from "../utils/compositionConfig";
 import { AbsoluteFill, Img } from "remotion";
 
 export const CNSWMainHeader = () => {
   const { layout, fontClasses, selectedPalette } = useThemeContext();
-  const { metadata, data, video } = useVideoDataContext();
+  const { metadata, data, video, club } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
   const { heights } = layout;
   const { timings } = data;
-  const competitionName = video.fixtureCategory;
-  // Get configuration using utility functions
+  // const gradeName = video.fixtureCategory;
+  // === DATA PREPARATION ===
+  const competitionName = club.name || video.fixtureCategory;
   const headerConfig = getHeaderConfig(metadata.compositionId);
-  const leagueTitleConfig = getLeagueTitleConfig(video.fixtureCategory);
+  const topLineValue = headerConfig.topLine.value;
+  const bottomLineValue = headerConfig.bottomLine.value;
 
-  // Apply header-specific styling to match the image design
+  // === DYNAMIC SPACING CALCULATION (for league title only) ===
+  const containerWidth = VIDEO_DIMENSIONS.WIDTH * 0.9; // 972px (90% of 1080px)
+  const leagueTitleFontSize = 30; // Estimated actual rendered size (1.5em ≈ 30px)
+  const avgCharWidth = 0.5; // Calibrated for league title spacing
+  const leagueTitleConfig = getLeagueTitleConfig(
+    competitionName,
+    containerWidth,
+    leagueTitleFontSize,
+    avgCharWidth,
+  );
+
+  // === LETTER SPACING ASSIGNMENT ===
+  const leagueTitleSpacing = leagueTitleConfig.spacing; // Dynamic for league title
+  const topLineSpacing = getHardcodedSpacing(topLineValue, "header"); // Hardcoded lookup
+  const bottomLineSpacing = getHardcodedSpacing(bottomLineValue, "header"); // Hardcoded lookup
+
+  // === STYLING CONFIGURATION ===
   const leagueTitle = {
-    ...leagueTitleConfig,
+    value: leagueTitleConfig.value,
     fontSize: "1.5em",
     color: "#ffffff",
+    spacing: leagueTitleSpacing,
   };
 
   const topLine = {
-    ...headerConfig.topLine,
+    value: topLineValue,
     fontSize: headerConfig.topLine.headerFontSize || "7em",
-    color: selectedPalette.container.secondary, // Use theme color instead of CSS var
+    color: selectedPalette.container.secondary,
+    spacing: topLineSpacing,
   };
 
   const bottomLine = {
-    ...headerConfig.bottomLine,
+    value: bottomLineValue,
     fontSize: headerConfig.bottomLine.headerFontSize || "7em",
     color: "#ffffff",
+    spacing: bottomLineSpacing,
   };
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
@@ -67,21 +88,7 @@ export const CNSWMainHeader = () => {
         />
       </AbsoluteFill>
 
-      {/* Logo */}
-      {/*       <div className="absolute top-4 left-4 z-20">
-        <div className="w-full h-full flex items-center rounded-none max-h-[120px] max-w-[150px]">
-          <AnimatedImage
-            src={club.logo?.url}
-            width={"auto"}
-            height={"auto"}
-            fit="contain"
-            className="rounded-none"
-            animation={LogoAnimations.introIn}
-            exitAnimation={LogoAnimations.introOut}
-            exitFrame={exitFrame}
-          />
-        </div>
-      </div> */}
+      {/* Logo section commented out for now */}
 
       {/* Main Content */}
       <div className="flex flex-col items-center justify-end w-full h-full relative z-10">
@@ -106,8 +113,7 @@ export const CNSWMainHeader = () => {
               fontWeight: "300",
             }}
           >
-            {/* {leagueTitle.value} */}
-            {competitionName}
+            {leagueTitle.value}
           </AnimatedText>
         </div>
         <div>

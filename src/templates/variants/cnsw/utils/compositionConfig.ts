@@ -7,7 +7,7 @@
 
 export interface LineConfig {
   value: string;
-  spacing: string;
+  spacing?: string; // Optional - now using hardcoded lookup
   fontSize?: string;
   color?: string;
 }
@@ -189,29 +189,7 @@ export const compositionConfig: Record<string, CompositionConfig> = {
   },
 };
 
-// === LEAGUE TITLE CONFIGURATION ===
-export const leagueTitleConfig: Record<string, LeagueTitleConfig> = {
-  "Men's Premier Cricket": {
-    value: "MEN'S PREMIER CRICKET",
-    spacing: "0.22em",
-  },
-  "Women's Premier Cricket": {
-    value: "WOMEN'S PREMIER CRICKET",
-    spacing: "0.22em",
-  },
-  "Junior Premier Cricket": {
-    value: "JUNIOR PREMIER CRICKET",
-    spacing: "0.22em",
-  },
-  "Senior Premier Cricket": {
-    value: "SENIOR PREMIER CRICKET",
-    spacing: "0.22em",
-  },
-  "Mixed Premier Cricket": {
-    value: "MIXED PREMIER CRICKET",
-    spacing: "0.22em",
-  },
-};
+// League title config removed - now using dynamic spacing calculation
 
 // === UTILITY FUNCTIONS ===
 
@@ -252,42 +230,113 @@ export const getHeaderConfig = (
   };
 };
 
+// === VIDEO DIMENSION CONSTANTS ===
+// Remotion composition dimensions (from ProductionRoot.tsx)
+export const VIDEO_DIMENSIONS = {
+  WIDTH: 1080, // px
+  HEIGHT: 1350, // px
+} as const;
+
+// === HARDCODED TEXT SPACING LOOKUP ===
+// Specific letter spacing for known hardcoded values
+export const hardcodedTextSpacing: Record<
+  string,
+  { intro: string; header: string }
+> = {
+  // TopLine values
+  LEAGUE: { intro: "0.25em", header: "0.2em" },
+  Weekend: { intro: "0.069em", header: "0.2em" },
+  FIXTURES: { intro: "0.065em", header: "0.2em" },
+  Leading: { intro: "0.155em", header: "0.1em" },
+  Team: { intro: "0.67em", header: "0.3em" },
+
+  // BottomLine values
+  TABLES: { intro: "0.66em", header: "0.3em" },
+  RESULTS: { intro: "0.46em", header: "0.38em" },
+  SCHEDULE: { intro: "0.3em", header: "0.15em" },
+  "Wicket-takers": { intro: "0em", header: "0.27em" },
+  "Run-Scorers": { intro: "0.07em", header: "0.38em" },
+  Roster: { intro: "0.66em", header: "0.15em" },
+  Result: { intro: "0.62em", header: "0.4em" },
+};
+
 /**
- * Get league title configuration with fallback
+ * Get hardcoded letter spacing for known text values
+ */
+export const getHardcodedSpacing = (
+  text: string,
+  context: "intro" | "header",
+): string => {
+  return hardcodedTextSpacing[text]?.[context] || "0.2em";
+};
+
+/**
+ * Calculate letter spacing to make text fill a container width perfectly
+ *
+ * @param text - The text string to fit
+ * @param fontSize - Font size in pixels
+ * @param containerWidth - Container width in pixels
+ * @param avgCharWidth - Average character width as percentage of fontSize (default: 0.6 for condensed fonts)
+ * @returns Letter spacing in em units
+ */
+export const calculateFitToWidthSpacing = (
+  text: string,
+  fontSize: number,
+  containerWidth: number,
+  avgCharWidth: number = 0.5, // Adjust based on font - Druk is condensed
+): string => {
+  if (!text || text.length === 0) return "0em";
+
+  // 1. Estimate natural text width (without letter spacing)
+  const estimatedTextWidth = text.length * fontSize * avgCharWidth;
+
+  // 2. Calculate available space for letter spacing
+  const availableSpace = containerWidth - estimatedTextWidth;
+
+  // 3. Distribute space across character gaps (n-1 gaps for n characters)
+  const numGaps = text.length - 1;
+  if (numGaps <= 0) return "0em";
+
+  // 4. Calculate letter spacing per gap in pixels
+  const letterSpacingPx = availableSpace / numGaps;
+
+  // 5. Convert to em (relative to font size)
+  const letterSpacingEm = letterSpacingPx / fontSize;
+
+  // 6. Clamp to reasonable values (-0.1em to 1em)
+  const clampedSpacing = Math.max(-0.1, Math.min(1, letterSpacingEm));
+
+  // Debug logging removed for production
+
+  return `${clampedSpacing.toFixed(3)}em`;
+};
+
+/**
+ * Get league title configuration with fit-to-width spacing
  */
 export const getLeagueTitleConfig = (
   leagueTitle?: string,
+  containerWidth?: number,
+  fontSize?: number,
+  avgCharWidth?: number,
 ): LeagueTitleConfig => {
-  return (
-    leagueTitleConfig[leagueTitle || "Men's Premier Cricket"] || {
-      value: leagueTitle?.toUpperCase(),
-      spacing: "0.31em",
-    }
-  );
-};
+  const title = leagueTitle?.toUpperCase() || "";
 
-/**
- * Create header configuration with theme colors
- */
-export const createHeaderConfig = (
-  compositionId: string,
-  topLineColor: string,
-  bottomLineColor: string = "#ffffff",
-): Record<string, CompositionConfig> => {
-  const baseConfig = getCompositionConfig(compositionId);
+  // If container width and font size provided, calculate fit-to-width spacing
+  const spacing =
+    containerWidth && fontSize
+      ? calculateFitToWidthSpacing(
+          title,
+          fontSize,
+          containerWidth,
+          avgCharWidth,
+        )
+      : "0.22em"; // Default fallback
 
   return {
-    [compositionId]: {
-      topLine: {
-        ...baseConfig.topLine,
-        fontSize: "4em",
-        color: topLineColor,
-      },
-      bottomLine: {
-        ...baseConfig.bottomLine,
-        fontSize: "3em",
-        color: bottomLineColor,
-      },
-    },
+    value: title,
+    spacing,
   };
 };
+
+// createHeaderConfig removed - not used in current implementation

@@ -1,132 +1,132 @@
 {
   "data": [
     {
-      "name": "Shaun Jarvis",
-      "runs": 29,
-      "overs": "5",
-      "prompt": "Shaun Jarvis played for Strathmore Heights (Allen), taking 4 wickets from 5 overs, conceding 29 runs. Game details: This was a One Day in the 2.6  Russell Allen Shield grade, and the current match status is Match Completed . Strathmore Heights (Allen), (1) vs Barkly St Dragons (Allen) (1), the match result was Barkly St Dragons (Allen) won by 1 runs.",
+      "name": "Jonty Webb",
+      "runs": 39,
+      "overs": "10",
+      "prompt": "Jonty Webb played for Northern District 1st, taking 7 wickets from 10 overs, conceding 39 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Northern District 1st, (1) vs Hawkesbury 1st (1), the match result was Northern District 1st won by 4 wickets.",
+      "wickets": 7,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_aa4836ccb2.jpg",
+        "width": 680,
+        "height": 912
+      },
+      "playedFor": "Northern District 1st Bowling",
+      "assignSponsors": {
+        "Team": {
+          "name": "Northern District 1st"
+        },
+        "grade": {
+          "id": 67649,
+          "name": "First Grade (Belvidere Cup)"
+        },
+        "competition": {
+          "id": 28934,
+          "name": "NSW Premier Cricket (Men's)"
+        }
+      }
+    },
+    {
+      "name": "Reiley Mark",
+      "runs": 25,
+      "overs": "8.1",
+      "prompt": "Reiley Mark played for St George 1st, taking 4 wickets from 8.1 overs, conceding 25 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . St George 1st, (1) vs Eastern Suburbs 1st (1), the match result was St George 1st won by 2 wickets.",
       "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_bf18dfa7d6.jpg",
+        "width": 128,
+        "height": 128
       },
-      "playedFor": "Strathmore Heights (Allen)",
+      "playedFor": "St George 1st Bowling",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Allen)"
+          "name": "St George 1st"
         },
         "grade": {
-          "id": 53954,
-          "name": "2.6  Russell Allen Shield"
+          "id": 67649,
+          "name": "First Grade (Belvidere Cup)"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 28934,
+          "name": "NSW Premier Cricket (Men's)"
         }
       }
     },
     {
-      "name": "Mohit Ganjoo  (c)",
-      "runs": 12,
-      "overs": "4",
-      "prompt": "Mohit Ganjoo  (c) played for Strathmore Heights (Kyte), taking 2 wickets from 4 overs, conceding 12 runs. Game details: This was a One Day in the 1.2 Vic Kyte Shield grade, and the current match status is Match Completed . Strathmore Heights (Kyte), (1) vs RMIT (Kyte) (1), the match result was Strathmore Heights (Kyte) won by 2 wickets.",
-      "wickets": 2,
+      "name": "Ryan Gupta",
+      "runs": 44,
+      "overs": "10",
+      "prompt": "Ryan Gupta played for Parramatta First Grade, taking 4 wickets from 10 overs, conceding 44 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Parramatta First Grade, (1) vs Parramatta First Grade (1), the match result was Parramatta First Grade won by 71 runs.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e63919d6be.jpg",
+        "width": 201,
+        "height": 250
       },
-      "playedFor": "Strathmore Heights (Kyte)",
+      "playedFor": "Parramatta First Grade Bowling",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Kyte)"
+          "name": "Parramatta First Grade"
         },
         "grade": {
-          "id": 53943,
-          "name": "1.2 Vic Kyte Shield"
+          "id": 67649,
+          "name": "First Grade (Belvidere Cup)"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 28934,
+          "name": "NSW Premier Cricket (Men's)"
         }
       }
     },
     {
-      "name": "Shane Webster  (c)",
-      "runs": 24,
-      "overs": "4",
-      "prompt": "Shane Webster  (c) played for Strathmore Heights (Allen), taking 2 wickets from 4 overs, conceding 24 runs. Game details: This was a One Day in the 2.6  Russell Allen Shield grade, and the current match status is Match Completed . Strathmore Heights (Allen), (1) vs Barkly St Dragons (Allen) (1), the match result was Barkly St Dragons (Allen) won by 1 runs.",
-      "wickets": 2,
+      "name": "Liam Doddrell",
+      "runs": 47,
+      "overs": "9.2",
+      "prompt": "Liam Doddrell played for Penrith 1st, taking 4 wickets from 9.2 overs, conceding 47 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Penrith 1st, (1) vs Sydney 1st (1), the match result was Penrith 1st won by 7 wickets.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_52b787d55b.jpg",
+        "width": 865,
+        "height": 611
       },
-      "playedFor": "Strathmore Heights (Allen)",
+      "playedFor": "Penrith 1st Bowling",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Allen)"
+          "name": "Penrith 1st"
         },
         "grade": {
-          "id": 53954,
-          "name": "2.6  Russell Allen Shield"
+          "id": 67649,
+          "name": "First Grade (Belvidere Cup)"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 28934,
+          "name": "NSW Premier Cricket (Men's)"
         }
       }
     },
     {
-      "name": "Cody Bowers",
-      "runs": 40,
-      "overs": "5",
-      "prompt": "Cody Bowers played for Strathmore Heights (Girolami), taking 2 wickets from 5 overs, conceding 40 runs. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
-      "wickets": 2,
+      "name": "Bradley Simpson",
+      "runs": 54,
+      "overs": "10",
+      "prompt": "Bradley Simpson played for Bankstown 1st, taking 4 wickets from 10 overs, conceding 54 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Bankstown 1st, (1) vs Sutherland 1st (1), the match result was Bankstown 1st won by 8 wickets.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_969b5199ee.jpg",
+        "width": 216,
+        "height": 216
       },
-      "playedFor": "Strathmore Heights (Girolami)",
+      "playedFor": "Bankstown 1st Bowling",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Girolami)"
+          "name": "Bankstown 1st"
         },
         "grade": {
-          "id": 53952,
-          "name": "2.4  Ern Girolami Shield"
+          "id": 67649,
+          "name": "First Grade (Belvidere Cup)"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
-        }
-      }
-    },
-    {
-      "name": "Usman Aslam",
-      "runs": 45,
-      "overs": "7",
-      "prompt": "Usman Aslam played for Strathmore Heights (Girolami), taking 2 wickets from 7 overs, conceding 45 runs. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
-      },
-      "playedFor": "Strathmore Heights (Girolami)",
-      "assignSponsors": {
-        "Team": {
-          "name": "Strathmore Heights (Girolami)"
-        },
-        "grade": {
-          "id": 53952,
-          "name": "2.4  Ern Girolami Shield"
-        },
-        "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 28934,
+          "name": "NSW Premier Cricket (Men's)"
         }
       }
     }
@@ -134,63 +134,81 @@
   "asset": {
     "assetID": 7,
     "assetTypeID": 3,
-    "assetCategoryID": 1,
-    "assetsLinkID": "622ecbdbaf4027610b8b99ff1024e709f7526008167df27c797b795bfbdef072"
+    "assetsLinkID": "b8363130e82f9d2ce4d412783b27b573c3b0ef08feaa4548dcc7f57fe904830a",
+    "assetCategoryID": 1
   },
+  "errors": [],
+  "frames": [390, 45, 495],
   "render": {
-    "schedulerId": 321,
-    "renderId": 8468
+    "renderId": 16280,
+    "schedulerId": 191
   },
   "account": {
-    "accountId": 434
+    "accountId": 191
   },
   "timings": {
     "FPS_MAIN": 360,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928.png",
+        "width": 1106,
+        "height": 1843,
+        "hasLogo": true
       },
-      "name": "Strathmore Heights Cricket Club",
+      "name": "NSW Premier Cricket",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 150,
+              "url": "https://mcdonalds.com.au/",
+              "logo": {
+                "id": 8033,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_Premier_Cricket_major_partners_1_66658d2999.png"
+              },
+              "name": "McDonald's",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": true,
+              "description": null
+            }
+          ]
+        },
+        "primary": [
+          {
+            "id": 150,
+            "url": "https://mcdonalds.com.au/",
+            "logo": {
+              "id": 8033,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_Premier_Cricket_major_partners_1_66658d2999.png"
+            },
+            "name": "McDonald's",
+            "isVideo": true,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ]
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
-      "metadata": {
-        "title": "Top 5",
-        "titleSplit": ["Bowlers", ""],
-        "videoTitle": "Top 5 Bowlers",
-        "compositionId": "CricketTop5Bowling",
-        "assetId": 7,
-        "assetTypeId": 3,
-        "frames": [],
-        "includeSponsors": false
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#de0000",
-          "secondary": "#ffa300"
-        },
-        "template": "Classic"
-      },
       "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -199,156 +217,182 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
         }
+      },
+      "metadata": {
+        "title": "Top 5",
+        "frames": [],
+        "assetId": 7,
+        "titleSplit": ["Bowlers"],
+        "videoTitle": "Top 5 Bowlers",
+        "assetTypeId": 3,
+        "compositionId": "CricketTop5Bowling",
+        "includeSponsors": true
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#002855",
+          "secondary": "#00AEEF"
+        },
+        "template": "CNSW"
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 2,
+          "CricketUpcoming": 3,
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "First Grade (Belvidere Cup)",
+      "groupingCategory": "First Grade (Belvidere Cup)",
       "templateVariation": {
-        "useBackground": "Texture",
-        "mode": "lightAlt",
-        "category": {
-          "slug": "Classic",
-          "name": "Classic",
-          "divideFixturesBy": {
-            "CricketUpcoming": 2,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1
-          },
-          "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-29T00:24:54.890Z",
-            "updatedAt": "2024-10-29T00:24:56.001Z",
-            "publishedAt": "2024-10-29T00:24:56.000Z",
-            "audio_options": [
-              {
-                "id": 25,
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-29T00:03:05.331Z",
-                "updatedAt": "2024-10-29T01:02:40.051Z",
-                "publishedAt": "2024-10-29T00:03:06.783Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
-                "CompositionID": "Top5BowlingList",
-                "ComponentName": "Top 5 Bowling"
-              },
-              {
-                "id": 30,
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-29T00:18:54.565Z",
-                "updatedAt": "2024-10-29T00:25:33.146Z",
-                "publishedAt": "2024-10-29T00:18:55.872Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
-                "CompositionID": "Top5BattingList",
-                "ComponentName": "Top 5 Batting"
-              },
-              {
-                "id": 28,
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-29T00:13:15.572Z",
-                "updatedAt": "2024-10-29T00:25:48.719Z",
-                "publishedAt": "2024-10-29T00:13:16.481Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
-                "CompositionID": "Ladder",
-                "ComponentName": "Ladder"
-              },
-              {
-                "id": 31,
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-29T00:21:51.124Z",
-                "updatedAt": "2024-10-29T01:03:00.642Z",
-                "publishedAt": "2024-10-29T00:21:52.065Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
-                "CompositionID": "UpComingFixtures",
-                "ComponentName": "UpComing Fixtures"
-              },
-              {
-                "id": 27,
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-29T00:11:52.803Z",
-                "updatedAt": "2024-10-29T01:02:48.895Z",
-                "publishedAt": "2024-10-29T00:12:49.969Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
-                "CompositionID": "WeekendResults",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
-        },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
-          "loop": null,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
-        },
+        "mode": "light",
         "image": {
           "url": null,
+          "type": "pan",
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
           "direction": "left",
-          "overlayStyle": "vignette",
           "gradientType": "linear",
+          "overlayStyle": "vignette",
           "overlayOpacity": 0.3
-        },
-        "palette": "primaryOnBlack",
-        "gradient": {
-          "type": "primary",
-          "direction": "VERTICAL"
         },
         "noise": {
           "type": "floatingParticles"
         },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": "cover",
+          "muted": true,
+          "volume": 0.8,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "primary",
         "pattern": {
           "type": "dots",
-          "animation": "none",
           "scale": 0.75,
-          "rotation": null,
           "opacity": 0.35,
-          "animationDuration": null,
-          "animationSpeed": 0.8
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
+        },
+        "texture": {
+          "url": null,
+          "name": null,
+          "scale": "100%",
+          "repeat": "cover",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
+        },
+        "category": {
+          "name": "Cricket NSW",
+          "slug": "CNSW",
+          "bundleAudio": {
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-30T00:35:16.398Z",
+            "updatedAt": "2024-10-30T00:35:17.926Z",
+            "publishedAt": "2024-10-30T00:35:17.915Z",
+            "audio_options": [
+              {
+                "id": 33,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-30T00:35:04.160Z",
+                "updatedAt": "2024-10-30T00:36:30.358Z",
+                "publishedAt": "2024-10-30T00:35:05.839Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 34,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
+                "Name": "GoodGoodFeeling_Inst",
+                "createdAt": "2024-10-30T00:37:09.563Z",
+                "updatedAt": "2024-10-30T00:38:09.963Z",
+                "publishedAt": "2024-10-30T00:38:09.959Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              },
+              {
+                "id": 35,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-30T00:38:02.552Z",
+                "updatedAt": "2024-10-30T00:38:04.070Z",
+                "publishedAt": "2024-10-30T00:38:04.063Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 36,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-30T00:39:02.570Z",
+                "updatedAt": "2024-10-30T00:39:04.182Z",
+                "publishedAt": "2024-10-30T00:39:04.177Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 38,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-30T01:00:28.630Z",
+                "updatedAt": "2024-10-30T01:00:30.327Z",
+                "publishedAt": "2024-10-30T01:00:30.319Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 39,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-30T01:01:10.581Z",
+                "updatedAt": "2024-10-30T01:01:13.949Z",
+                "publishedAt": "2024-10-30T01:01:13.932Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "primary",
+          "direction": "VERTICAL"
         },
         "particle": {
           "type": "lines",
-          "particleCount": "300",
           "speed": 0.8,
+          "animation": "scale",
           "direction": "up",
-          "animation": "scale"
+          "particleCount": "300"
         },
-        "texture": {
-          "name": "Wood",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_wood_like_623b1be4c1.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": {
-            "opacity": 0.7,
-            "blendMode": "multiply"
-          }
-        }
+        "useBackground": "Solid"
       }
     }
-  },
-  "errors": []
+  }
 }

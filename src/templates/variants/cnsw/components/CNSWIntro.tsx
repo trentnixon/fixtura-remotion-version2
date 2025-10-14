@@ -7,7 +7,7 @@ import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { AnimatedImage } from "../../../../components/images";
 import {
   getCompositionConfig,
-  getLeagueTitleConfig,
+  getHardcodedSpacing,
 } from "../utils/compositionConfig";
 
 export const CNSWIntro: React.FC = () => {
@@ -18,17 +18,15 @@ export const CNSWIntro: React.FC = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
 
-  console.log("[club]", club.name);
-  // Get configuration using utility functions
+  // === DATA PREPARATION ===
+  const byLineValue = club.name || " ";
   const currentConfig = getCompositionConfig(metadata.compositionId);
-  const titleConfig = getLeagueTitleConfig(club.name);
-
   const topLine = currentConfig.topLine.value;
   const bottomLine = currentConfig.bottomLine.value;
 
-  const snugLetterSpacingTitle = titleConfig.spacing;
-  const snugLetterSpacingTopLine = currentConfig.topLine.spacing;
-  const snugLetterSpacingBottomLine = currentConfig.bottomLine.spacing;
+  // === LETTER SPACING ASSIGNMENT ===
+  const snugLetterSpacingTopLine = getHardcodedSpacing(topLine, "intro"); // Hardcoded lookup
+  const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro"); // Hardcoded lookup
 
   return (
     <>
@@ -58,7 +56,7 @@ export const CNSWIntro: React.FC = () => {
           }}
         >
           {/* SNUG-FIT TITLE */}
-          <div className="overflow-hidden mt-[-2.5em] w-[60%] mb-8 flex justify-center">
+          <div className="overflow-hidden mt-[-2.5em] w-[90%] mb-8 flex justify-center">
             <AnimatedText
               type="subtitle"
               variant="onContainerTitle"
@@ -71,11 +69,11 @@ export const CNSWIntro: React.FC = () => {
                 color: "#ffffff",
                 whiteSpace: "nowrap",
                 width: "100%",
-                letterSpacing: snugLetterSpacingTitle,
-                textAlign: "left",
+                letterSpacing: "0.06em",
+                textAlign: "center",
               }}
             >
-              {titleConfig.value}
+              {byLineValue.toUpperCase()}
             </AnimatedText>
           </div>
 
