@@ -6,6 +6,7 @@ import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 import { TeamData } from "../types";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { MetadataSmall } from "../../utils/primitives/metadataSmall";
+import { stripGradeNumberFromTeamName } from "../../utils/utils-text";
 
 // Base props interface for all layouts
 interface BaseLayoutProps {
@@ -14,6 +15,7 @@ interface BaseLayoutProps {
   LadderRowHeight: number;
   place: number;
 }
+
 // Balanced layout - logo on right, alternating backgrounds for stats
 export const CNSWLadderRow: React.FC<BaseLayoutProps> = ({
   team,
@@ -59,7 +61,7 @@ export const CNSWLadderRow: React.FC<BaseLayoutProps> = ({
         }}
       >
         <LadderTeamName
-          value={team.teamName}
+          value={stripGradeNumberFromTeamName(team.teamName)}
           delay={delay}
           variant="onBackgroundMain"
         />

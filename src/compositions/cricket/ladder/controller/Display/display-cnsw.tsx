@@ -40,16 +40,19 @@ export const LadderDisplayCNSW: React.FC<LadderDisplayProps> = ({ ladder }) => {
           <TableHeaderCNSW title={gradeName} headerHeight={headerHeight} />
 
           <div className="flex-1 overflow-hidden">
-            {League.map((team, index) => (
-              <StandardRowCNSWWrapped
-                key={team.position}
-                team={team}
-                index={index}
-                totalTeams={League.length}
-                isBiasTeam={team.teamName === bias}
-                LadderRowHeight={rowHeight}
-              />
-            ))}
+            {League.map((team, index) => {
+              console.log("team", team);
+              return (
+                <StandardRowCNSWWrapped
+                  key={team.position}
+                  team={team}
+                  index={index}
+                  totalTeams={League.length}
+                  isBiasTeam={team.teamName === bias}
+                  LadderRowHeight={rowHeight}
+                />
+              );
+            })}
           </div>
         </div>
       </AnimatedContainer>

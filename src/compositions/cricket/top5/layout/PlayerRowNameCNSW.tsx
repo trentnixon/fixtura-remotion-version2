@@ -8,6 +8,7 @@ import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { MetadataLarge } from "../../utils/primitives/metadataLarge";
+import { stripGradeNumberFromTeamName } from "../../utils/utils-text";
 
 interface PlayerRowLayoutProps {
   player: PlayerData;
@@ -93,7 +94,7 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
           variant="onContainerMain"
         />
         <Top5PlayerTeam
-          value={teamName}
+          value={stripGradeNumberFromTeamName(teamName)}
           animation={{ ...smallTextAnimation, delay: delay + 4 }}
           className=""
           variant="onContainerMain"
