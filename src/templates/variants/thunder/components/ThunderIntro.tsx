@@ -53,7 +53,8 @@ export const ThunderIntro: React.FC = () => {
         </div>
       }
       Name={
-        <div className="overflow-hidden mt-[-2.5em]">
+        null
+        /* <div className="overflow-hidden mt-[-2.5em]">
           <AnimatedText
             type="subtitle"
             textAlign="center"
@@ -66,7 +67,7 @@ export const ThunderIntro: React.FC = () => {
           >
             {club.name}
           </AnimatedText>
-        </div>
+        </div> */
       }
       PrimarySponsor={
         sponsors?.primary[0]?.logo?.url && (

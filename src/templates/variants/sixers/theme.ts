@@ -151,7 +151,7 @@ export const basicTheme: TemplateThemeConfig = {
       item: "py-2",
     },
     borderRadius: {
-      container: "rounded-lg",
+      container: "rounded-none",
     },
   },
   mode: {
