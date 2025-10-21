@@ -97,14 +97,13 @@ export const CNSWMainHeader = () => {
           <AnimatedText
             textAlign="center"
             type="subtitle"
-            variant="onContainerTitle"
+            variant="onContainerCopyNoBg"
             letterAnimation="none"
             animation={TextAnimations.title}
             exitAnimation={TextAnimations.copyOut}
             exitFrame={exitFrame}
             fontFamily={fontClasses.subtitle?.family}
             style={{
-              color: "#ffffff",
               textTransform: "uppercase",
               fontSize: leagueTitle.fontSize,
               whiteSpace: "nowrap",
@@ -122,7 +121,7 @@ export const CNSWMainHeader = () => {
             <AnimatedText
               textAlign="center"
               type="title"
-              variant="onContainerTitle"
+              variant="onContainerCopyNoBg"
               letterAnimation="none"
               animation={TextAnimations.title}
               exitAnimation={TextAnimations.copyOut}
@@ -147,14 +146,13 @@ export const CNSWMainHeader = () => {
             <AnimatedText
               textAlign="center"
               type="title"
-              variant="onContainerTitle"
+              variant="onContainerCopyNoBg"
               letterAnimation="none"
               animation={TextAnimations.title}
               exitAnimation={TextAnimations.copyOut}
               exitFrame={exitFrame}
               fontFamily={fontClasses.title?.family}
               style={{
-                color: "#ffffff",
                 textTransform: "uppercase",
                 fontSize: bottomLine.fontSize,
                 whiteSpace: "nowrap",

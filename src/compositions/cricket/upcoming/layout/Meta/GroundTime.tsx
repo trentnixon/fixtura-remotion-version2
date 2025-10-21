@@ -5,17 +5,17 @@ import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 
 interface BottomSectionProps {
-  time: string;
+  time: string | null;
   delay: number;
-  ground: string;
+  ground: string | null;
   truncateString?: number;
   backgroundColor?: string;
 }
 
 export const GroundTime: React.FC<BottomSectionProps> = ({
-  time,
+  time = "",
   delay,
-  ground,
+  ground = "",
   truncateString = 35,
   backgroundColor,
 }) => {
@@ -23,11 +23,11 @@ export const GroundTime: React.FC<BottomSectionProps> = ({
   const TextAnimations = animations.text.main;
   const ContainerAnimations = animations.container;
 
-  // truncate string
+  // truncate string and handle null values
   const truncatedGround =
-    ground.length > truncateString
+    ground && ground.length > truncateString
       ? ground.slice(0, truncateString) + "..."
-      : ground;
+      : ground || "";
 
   return (
     <AnimatedContainer
@@ -51,7 +51,7 @@ export const GroundTime: React.FC<BottomSectionProps> = ({
         />
 
         <MetadataSmall
-          value={time}
+          value={time || ""}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-right"
           variant="onContainerCopyNoBg"

@@ -13,7 +13,7 @@ import {
 export const CNSWIntro: React.FC = () => {
   const { metadata, sponsors, club } = useVideoDataContext();
   const { animations } = useAnimationContext();
-  const { fontClasses, selectedPalette } = useThemeContext();
+  const { fontClasses } = useThemeContext();
 
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
@@ -59,14 +59,13 @@ export const CNSWIntro: React.FC = () => {
           <div className="overflow-hidden mt-[-2.5em] w-[90%] mb-8 flex justify-center">
             <AnimatedText
               type="subtitle"
-              variant="onContainerTitle"
+              variant="onContainerCopyNoBg"
               letterAnimation="none"
               animation={TextAnimations.clubName}
               exitAnimation={TextAnimations.introOut}
               exitFrame={TextAnimations.introExitFrame}
               fontFamily={fontClasses.subtitle?.family}
               style={{
-                color: "#ffffff",
                 whiteSpace: "nowrap",
                 width: "100%",
                 letterSpacing: "0.06em",
@@ -81,15 +80,16 @@ export const CNSWIntro: React.FC = () => {
           <div className="overflow-hidden mt-[-1.5em] flex flex-col items-center justify-center w-full">
             <div className="w-[80%]">
               <AnimatedText
+                textAlign="center"
                 type="title"
-                variant="onContainerTitle"
-                letterAnimation="none"
+                variant="onContainerCopyNoBg"
+                letterAnimation="word"
                 animation={TextAnimations.mainTitle}
                 exitAnimation={TextAnimations.introOut}
                 exitFrame={TextAnimations.introExitFrame}
                 fontFamily={fontClasses.title?.family}
                 style={{
-                  color: selectedPalette.container.secondary,
+                  //color: selectedPalette.container.secondary,
                   textTransform: "uppercase",
                   fontSize: "12em",
                   whiteSpace: "nowrap",
@@ -103,15 +103,15 @@ export const CNSWIntro: React.FC = () => {
             </div>
             <div className="w-[80%]">
               <AnimatedText
+                textAlign="center"
                 type="title"
-                variant="onContainerTitle"
-                letterAnimation="none"
+                variant="onContainerCopyNoBg"
+                letterAnimation="word"
                 animation={TextAnimations.mainTitle}
                 exitAnimation={TextAnimations.introOut}
                 exitFrame={TextAnimations.introExitFrame}
                 fontFamily={fontClasses.title?.family}
                 style={{
-                  color: "#ffffff",
                   textTransform: "uppercase",
                   fontSize: "8em",
                   whiteSpace: "nowrap",

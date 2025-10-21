@@ -1,268 +1,262 @@
 {
   "data": [
     {
-      "date": "Saturday, 20 September 2025",
-      "type": "T20",
-      "round": "Round 5",
-      "gameId": "6b615e63",
-      "gender": "Mixed",
-      "ground": "Selwyn Park (BEAUDESERT) / Selwyn Park",
-      "ageGroup": "Senior",
-      "sponsors": [],
-      "teamAway": "Southport T20",
-      "teamHome": "Beaudesert T20",
-      "gradeName": "All Ballsports T20 2025",
+      "ageGroup": "U14",
+      "gameId": "06e100e6",
+      "teamHome": "Preston Druids U14",
+      "teamAway": "Strathmore Heights U14 Mixed SHCC U14 Mixed (Fri)",
       "isHomeTeam": false,
       "teamRoster": [
-        "Brodie Ackerley",
-        "Manoj Frank Boteju",
-        "Ureshen Chinia",
-        "Justin Choromanski",
-        "Chamith De Silva",
-        "Cooper Johnson",
-        "Mitchell Johnson",
-        "Bailey Johnston",
-        "dhanushka mitipolaarachchi\nc",
-        "Ravindu Mudiyanselage Don",
-        "Kyle Palmer-Hughes",
-        "Kaleb Phillips"
+        "Liam Jones",
+        "Oliver Kendall",
+        "Strati Kristan",
+        "Edison Roach",
+        "Stephan Szilassy",
+        "Asidu Wijeratne",
+        "Kilian Wijewardene",
+        "Wynter Fergie",
+        "Macy Roach"
       ],
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-      "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png"
+      "type": "One Day",
+      "ground": "W.H Robinson Reserve / W.H Robinson Reserve",
+      "round": "Round 1",
+      "date": "Friday, 17 October 2025",
+      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/0ddf0ab8-3a66-43e9-8309-47d62c59e416/1678443993434/logo",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+      "gender": "Mixed",
+      "gradeName": "U14 Friday East",
+      "sponsors": []
     },
     {
-      "date": "Saturday, 20 September 2025",
-      "type": "T20",
-      "round": "Round 6",
-      "gameId": "5b2c0d93",
-      "gender": "Mixed",
-      "ground": "Selwyn Park (BEAUDESERT) / Selwyn Park",
-      "ageGroup": "Senior",
-      "sponsors": [],
-      "teamAway": "Southport T20",
-      "teamHome": "Alberton T20",
-      "gradeName": "All Ballsports T20 2025",
+      "ageGroup": "U14",
+      "gameId": "f855e737",
+      "teamHome": "Strathmore U14 Girls",
+      "teamAway": "Strathmore Heights PVHCC Falcons",
       "isHomeTeam": false,
-      "teamRoster": [
-        "Manoj Frank Boteju",
-        "Ureshen Chinia",
-        "Justin Choromanski",
-        "Chamith De Silva",
-        "Cooper Johnson",
-        "Mitchell Johnson",
-        "Bailey Johnston",
-        "dhanushka mitipolaarachchi\nc",
-        "Ravindu Mudiyanselage Don",
-        "Kyle Palmer-Hughes",
-        "Kaleb Phillips",
-        "Talvinder Raina"
-      ],
-      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
-      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/1b01c8ba-0f3d-4171-9486-2a69220e2701/1656940104090/logo.png"
+      "teamRoster": ["No players allocated to line-up"],
+      "type": "T20",
+      "ground": "Strathnaver Reserve / Strathnaver Reserve",
+      "round": "Round 2",
+      "date": "Monday, 20 October 2025",
+      "teamHomeLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/4d1f2f9b-9029-44c7-9f92-76818d75fa7b/1685349914528/logo",
+      "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+      "gender": "Girls",
+      "gradeName": "All Girls U14 Catherine Morrow Shield",
+      "sponsors": []
     }
   ],
   "asset": {
     "assetID": 32,
     "assetTypeID": 1,
-    "assetsLinkID": "",
-    "assetCategoryID": 2
+    "assetCategoryID": 2,
+    "assetsLinkID": ""
   },
-  "errors": [],
-  "frames": [120, 180],
   "render": {
-    "renderId": 15155,
-    "schedulerId": 137
+    "renderId": 8474,
+    "schedulerId": 321
   },
   "account": {
-    "accountId": 137
+    "accountId": 434
   },
   "timings": {
-    "FPS_MAIN": 180,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 180,
-    "FPS_LADDER": 0,
-    "FPS_SCORECARD": 90
+    "FPS_SCORECARD": 60,
+    "FPS_MAIN": 120,
+    "FPS_LADDER": 0
   },
+  "frames": [120, 180],
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
-        "width": 1000,
-        "height": 1000
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
       },
-      "name": "Southport Labrador Cricket Club",
+      "name": "Strathmore Heights Cricket Club",
       "sport": "Cricket",
       "IsAccountClub": true
     },
     "video": {
-      "media": {
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3"
-        },
-        "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853,
-          "AgeGroup": "SENIOR",
-          "AssetType": "CricketRoster",
-          "markerPosition": ""
-        }
-      },
       "metadata": {
         "title": "Team List",
-        "frames": [120, 180],
-        "assetId": 32,
         "titleSplit": ["Team", "List"],
-        "videoTitle": "Southport Labrador Cricket Club CricketRoster",
-        "assetTypeId": 1,
+        "videoTitle": "Strathmore Heights Cricket Club CricketRoster",
         "compositionId": "CricketRoster",
+        "assetId": 32,
+        "assetTypeId": 1,
+        "frames": [120, 180],
         "includeSponsors": false
       },
       "appearance": {
         "theme": {
+          "primary": "#de0000",
+          "secondary": "#ffa300",
           "dark": "#111",
-          "white": "#FFF",
-          "primary": "#002855",
-          "secondary": "#00aeef"
+          "white": "#FFF"
         },
-        "template": "Basic"
+        "template": "Classic"
+      },
+      "media": {
+        "HeroImage": {
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "JUNIOR",
+          "AssetType": "CricketRoster",
+          "markerPosition": ""
+        },
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3"
+        }
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 3,
+          "CricketUpcoming": 2,
           "CricketResultSingle": 1
         }
       },
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
       "templateVariation": {
+        "category": {
+          "slug": "Classic",
+          "name": "Classic",
+          "divideFixturesBy": {
+            "CricketUpcoming": 2,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
+            "CricketLadder": 1,
+            "CricketRoster": 1
+          },
+          "bundleAudio": {
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-29T00:24:54.890Z",
+            "updatedAt": "2024-10-29T00:24:56.001Z",
+            "publishedAt": "2024-10-29T00:24:56.000Z",
+            "audio_options": [
+              {
+                "id": 25,
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-29T00:03:05.331Z",
+                "updatedAt": "2024-10-29T01:02:40.051Z",
+                "publishedAt": "2024-10-29T00:03:06.783Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
+                "CompositionID": "Top5BowlingList",
+                "ComponentName": "Top 5 Bowling"
+              },
+              {
+                "id": 30,
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-29T00:18:54.565Z",
+                "updatedAt": "2024-10-29T00:25:33.146Z",
+                "publishedAt": "2024-10-29T00:18:55.872Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
+                "CompositionID": "Top5BattingList",
+                "ComponentName": "Top 5 Batting"
+              },
+              {
+                "id": 28,
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-29T00:13:15.572Z",
+                "updatedAt": "2024-10-29T00:25:48.719Z",
+                "publishedAt": "2024-10-29T00:13:16.481Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
+                "CompositionID": "Ladder",
+                "ComponentName": "Ladder"
+              },
+              {
+                "id": 31,
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-29T00:21:51.124Z",
+                "updatedAt": "2024-10-29T01:03:00.642Z",
+                "publishedAt": "2024-10-29T00:21:52.065Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
+                "CompositionID": "UpComingFixtures",
+                "ComponentName": "UpComing Fixtures"
+              },
+              {
+                "id": 27,
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-29T00:11:52.803Z",
+                "updatedAt": "2024-10-29T01:02:48.895Z",
+                "publishedAt": "2024-10-29T00:12:49.969Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
+                "CompositionID": "WeekendResults",
+                "ComponentName": "Weekend Results"
+              }
+            ]
+          }
+        },
+        "useBackground": "Texture",
         "mode": "dark",
+        "palette": "primaryOnBlack",
+        "gradient": {
+          "type": "primary",
+          "direction": "VERTICAL"
+        },
         "image": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fifth_grade_team_photo_cf13abc80d.jpg",
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
           "type": "pan",
-          "ratio": "landscape",
-          "width": 1212,
-          "height": 853,
           "direction": "left",
-          "gradientType": "linear",
           "overlayStyle": "vignette",
+          "gradientType": "linear",
           "overlayOpacity": 0.3
         },
         "noise": {
           "type": "floatingParticles"
         },
+        "particle": {
+          "type": "lines",
+          "particleCount": "300",
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        },
+        "pattern": {
+          "type": "dots",
+          "animation": "none",
+          "scale": 0.75,
+          "rotation": null,
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
+        },
+        "texture": {
+          "name": "Wood",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_wood_like_623b1be4c1.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.7,
+            "blendMode": "multiply"
+          }
+        },
         "video": {
           "url": null,
-          "loop": null,
+          "fallbackUrl": null,
+          "position": "left",
           "size": "cover",
+          "loop": null,
           "muted": true,
-          "volume": 0.8,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "position": "left",
-          "fallbackUrl": null,
-          "playbackRate": null,
-          "useOffthreadVideo": null
-        },
-        "palette": "highContrast",
-        "pattern": {
-          "type": "dots",
-          "scale": 0.75,
-          "opacity": 0.35,
-          "rotation": null,
-          "animation": "none",
-          "animationSpeed": 0.8,
-          "animationDuration": null
-        },
-        "category": {
-          "name": "Basic",
-          "slug": "Basic",
-          "bundleAudio": {
-            "id": 1,
-            "Name": "Upbeat Pop",
-            "createdAt": "2023-09-28T06:18:07.674Z",
-            "updatedAt": "2023-09-28T06:40:48.135Z",
-            "publishedAt": "2023-09-28T06:40:48.131Z",
-            "audio_options": [
-              {
-                "id": 13,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "Name": "Better Start Now",
-                "createdAt": "2023-08-31T12:30:51.127Z",
-                "updatedAt": "2023-09-28T06:41:12.356Z",
-                "publishedAt": "2023-09-28T06:40:26.025Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
-              },
-              {
-                "id": 11,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Andy_D_Park_Andy_D_Park_Bruhaha_Inst_2b610a10b3.mp3",
-                "Name": "Bru ha ha",
-                "createdAt": "2023-08-31T12:30:14.961Z",
-                "updatedAt": "2023-09-28T06:42:51.950Z",
-                "publishedAt": "2023-08-31T12:30:16.245Z",
-                "ComponentName": "Top 5 Bowling",
-                "CompositionID": "Top5BowlingList"
-              },
-              {
-                "id": 2,
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "Name": "Fifteen on Me",
-                "createdAt": "2023-01-30T15:18:49.326Z",
-                "updatedAt": "2023-09-28T06:43:06.236Z",
-                "publishedAt": "2023-01-30T15:18:50.933Z",
-                "ComponentName": "Weekend Results",
-                "CompositionID": "WeekendResults"
-              },
-              {
-                "id": 10,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Step_Rockets_Fire_Escape_Overtime_Inst_1623dd2a56.mp3",
-                "Name": "FireEscape",
-                "createdAt": "2023-08-31T12:29:50.321Z",
-                "updatedAt": "2023-09-28T06:43:47.509Z",
-                "publishedAt": "2023-08-31T12:29:51.668Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              },
-              {
-                "id": 9,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Single_Lets_Goft_Sara_Azriel_Inst_2e5921ce0b.mp3",
-                "Name": "Let's Go",
-                "createdAt": "2023-08-31T12:29:27.628Z",
-                "updatedAt": "2023-09-28T06:51:54.865Z",
-                "publishedAt": "2023-08-31T12:29:29.315Z",
-                "ComponentName": "Top 5 Batting",
-                "CompositionID": "Top5BattingList"
-              }
-            ]
-          },
-          "divideFixturesBy": {
-            "CricketLadder": 1,
-            "CricketRoster": 1,
-            "CricketResults": 2,
-            "CricketUpcoming": 3,
-            "CricketResultSingle": 1
-          }
-        },
-        "gradient": {
-          "type": "primary",
-          "direction": "VERTICAL"
-        },
-        "particle": {
-          "type": "lines",
-          "speed": 0.8,
-          "animation": "scale",
-          "direction": "up",
-          "particleCount": "300"
-        },
-        "useBackground": "Pattern"
-      }
+          "useOffthreadVideo": null,
+          "volume": 0.8,
+          "playbackRate": null
+        }
+      },
+      "fixtureCategory": "JUNIOR",
+      "groupingCategory": "JUNIOR"
     }
-  }
+  },
+  "errors": []
 }

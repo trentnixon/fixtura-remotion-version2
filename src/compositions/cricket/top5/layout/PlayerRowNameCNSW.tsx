@@ -40,9 +40,8 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
   const largeTextAnimation = animations.text.main.copyIn;
   const smallTextAnimation = animations.text.main.copyIn;
 
-  console.log("[selectedPalette]", selectedPalette);
   // Determine background color
-  const bgColor = selectedPalette.container.secondary;
+  const bgColor = selectedPalette.container.backgroundTransparent.strong;
   const ScorebgColor = selectedPalette.background.main;
   // Get the appropriate score display based on player type
   const getScoreValues = () => {
@@ -82,7 +81,6 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
           value={`${index + 1}`}
           animation={{ ...largeTextAnimation, delay: delay + 2 }}
           className=""
-          variant="onContainerMain"
         />
       </div>
       {/* Name & Team (col-span-4) */}
@@ -91,13 +89,11 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
           value={playerName}
           animation={{ ...largeTextAnimation, delay: delay + 2 }}
           className=""
-          variant="onContainerMain"
         />
         <Top5PlayerTeam
           value={stripGradeNumberFromTeamName(teamName)}
           animation={{ ...smallTextAnimation, delay: delay + 4 }}
           className=""
-          variant="onContainerMain"
         />
       </div>
 
@@ -110,14 +106,12 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
           value={mainValue}
           animation={{ ...largeTextAnimation, delay: delay + 20 }}
           className="font-bold"
-          variant="onContainerMain"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
             animation={{ ...smallTextAnimation, delay: delay + 30 }}
             className="font-bold"
-            variant="onContainerMain"
           />
         )}
       </div>

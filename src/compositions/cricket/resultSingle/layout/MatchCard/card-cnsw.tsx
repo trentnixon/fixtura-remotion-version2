@@ -47,7 +47,7 @@ const CNSWMatchCard: React.FC<MatchCardProps> = ({ match }) => {
         delay={headerDelay}
         backgroundColor={"transparent"}
         align="right"
-        variant="onBackgroundMain"
+        variant="onContainerCopyNoBg"
       />
 
       <SingleDataPointHeader
@@ -56,7 +56,7 @@ const CNSWMatchCard: React.FC<MatchCardProps> = ({ match }) => {
         delay={headerDelay}
         backgroundColor={"transparent"}
         align="right"
-        variant="onBackgroundMain"
+        variant="onContainerCopyNoBg"
       />
       <Horizontal_SingleTeam_CNSW
         type={match.type}
@@ -102,7 +102,7 @@ const CNSWMatchCard: React.FC<MatchCardProps> = ({ match }) => {
         height={headerHeight}
         delay={headerDelay}
         userBackgroundColor={"transparent"}
-        variant="onBackgroundMain"
+        variant="onContainerCopyNoBg"
         className="py-0 px-6"
       />
     </AnimatedContainer>

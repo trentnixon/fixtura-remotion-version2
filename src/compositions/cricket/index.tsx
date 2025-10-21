@@ -6,6 +6,7 @@ import {
   classic as ladderClassic,
   classicTwoColumn as ladderClassicTwoColumn,
   cnsw as ladderCNSW,
+  cnswprivate as ladderCNSWPrivate,
 } from "./ladder";
 import {
   basic as upcomingBasic,
@@ -14,6 +15,7 @@ import {
   classic as upcomingClassic,
   classicTwoColumn as upcomingClassicTwoColumn,
   cnsw as upcomingCNSW,
+  cnswprivate as upcomingCNSWPrivate,
 } from "./upcoming";
 import {
   basic as top5Basic,
@@ -22,6 +24,7 @@ import {
   classic as top5Classic,
   twocolumnclassic as top5ClassicTwoColumn,
   cnsw as top5CNSW,
+  cnswprivate as top5CNSWPrivate,
 } from "./top5";
 import {
   basic as resultsBasic,
@@ -30,6 +33,7 @@ import {
   classic as resultsClassic,
   classicTwoColumn as resultsClassicTwoColumn,
   cnsw as resultsCNSW,
+  cnswPrivate as resultsCNSWPrivate,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -38,6 +42,7 @@ import {
   sixers as resultSingleSixers,
   classicTwoColumns as resultSingleClassicTwoColumns,
   cnsw as resultSingleCNSW,
+  cnswPrivate as resultSingleCNSWPrivate,
 } from "./resultSingle";
 
 import {
@@ -67,6 +72,7 @@ export const CricketLadder = {
   classic: ladderClassic,
   twocolumnclassic: ladderClassicTwoColumn, // alias to classic
   cnsw: ladderCNSW,
+  cnswprivate: ladderCNSWPrivate,
 };
 
 export const CricketTop5 = {
@@ -77,6 +83,7 @@ export const CricketTop5 = {
   classic: top5Classic,
   twocolumnclassic: top5ClassicTwoColumn, // alias to classic
   cnsw: top5CNSW,
+  cnswprivate: top5CNSWPrivate,
 };
 
 export const CricketResults = {
@@ -87,6 +94,7 @@ export const CricketResults = {
   classic: resultsClassic,
   twocolumnclassic: resultsClassicTwoColumn, // alias to classic
   cnsw: resultsCNSW,
+  cnswprivate: resultsCNSWPrivate,
 };
 
 export const CricketUpcoming = {
@@ -97,6 +105,7 @@ export const CricketUpcoming = {
   classic: upcomingClassic,
   twocolumnclassic: upcomingClassicTwoColumn, // alias to classic
   cnsw: upcomingCNSW,
+  cnswprivate: upcomingCNSWPrivate,
 };
 
 export const CricketResultSingle = {
@@ -107,6 +116,7 @@ export const CricketResultSingle = {
   classic: resultSingleClassic,
   twocolumnclassic: resultSingleClassicTwoColumns, // alias to classic
   cnsw: resultSingleCNSW,
+  cnswprivate: resultSingleCNSWPrivate,
 };
 
 // Add CricketRoster export to match compositionId in test data

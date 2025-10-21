@@ -44,7 +44,7 @@ export const GameCardCNSW: React.FC<GameCardProps> = ({ game, index }) => {
             delay={delay}
             backgroundColor={"transparent"}
             align="right"
-            variant="onBackgroundMain"
+            variant="onContainerCopyNoBg"
           />
           {/* Grade/Competition Section - Top */}
           <TeamName
@@ -52,10 +52,10 @@ export const GameCardCNSW: React.FC<GameCardProps> = ({ game, index }) => {
             delay={delay + 10}
             delayName={delay + 20}
             style={{
-              background: selectedPalette.background.userSecondary,
+              background:
+                selectedPalette.container.backgroundTransparent.strong,
             }}
             className="text-left"
-            variant="onBackgroundMain"
           />
           <SingleDataPointHeader
             value={"vs"}
@@ -70,10 +70,10 @@ export const GameCardCNSW: React.FC<GameCardProps> = ({ game, index }) => {
             delay={delay + 10}
             delayName={delay + 20}
             style={{
-              background: selectedPalette.background.userSecondary,
+              background:
+                selectedPalette.container.backgroundTransparent.strong,
             }}
             className="text-left"
-            variant="onBackgroundMain"
           />
           <SingleDataPointHeader
             value={game.ground}
@@ -81,7 +81,7 @@ export const GameCardCNSW: React.FC<GameCardProps> = ({ game, index }) => {
             delay={delay}
             backgroundColor={"transparent"}
             align="right"
-            variant="onBackgroundMain"
+            variant="onContainerCopyNoBg"
           />
         </div>
       </AnimatedContainer>

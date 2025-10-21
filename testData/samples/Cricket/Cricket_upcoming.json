@@ -1,2119 +1,362 @@
 {
   "data": [
     {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "1bda340a",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 3 (55-57)",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Sixers vs Easts U10 Mixed Clovelly Crickets AM Spring, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Heffron Park / Heffron 3 (55-57)\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group A) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed Clovelly Crickets AM Spring",
-      "teamHome": "RJCC U10 Sixers",
-      "gradeName": "Spring Saturday AM U10 (Group A) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "129361d0",
-      "gender": "Mixed",
-      "ground": "L'Estrange Park / L'Estrange Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: SSMCJCC U10 Mixed Funnelwebs Saturday vs Easts U10 Mixed Strikers AM Spring!, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: L'Estrange Park / L'Estrange Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group A) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed Strikers AM Spring!",
-      "teamHome": "SSMCJCC U10 Mixed Funnelwebs Saturday",
-      "gradeName": "Spring Saturday AM U10 (Group A) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "9917a2db",
-      "gender": "Mixed",
-      "ground": "Pioneers Park / Pioneers Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Force vs Easts U10 Mixed Warriors AM - Spring!, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Pioneers Park / Pioneers Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group A) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed Warriors AM - Spring!",
-      "teamHome": "RJCC U10 Force",
-      "gradeName": "Spring Saturday AM U10 (Group A) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "8415d946",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 1 (64-71)",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Stars vs RJCC U10 Thunder, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Heffron Park / Heffron 1 (64-71)\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group A) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "RJCC U10 Thunder",
-      "teamHome": "RJCC U10 Stars",
-      "gradeName": "Spring Saturday AM U10 (Group A) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "28a7d90c",
-      "gender": "Mixed",
-      "ground": "Lower Cooper / Lower Cooper 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: Reddam Ravens vs Easts U10 Mixed Bronte Banditz AM Spring, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Lower Cooper / Lower Cooper 2\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group B) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed Bronte Banditz AM Spring",
-      "teamHome": "Reddam Ravens",
-      "gradeName": "Spring Saturday AM U10 (Group B) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "b714441a",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Crushers vs Easts U10 Mixed Whales AM Spring, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Rowland Park / Oval 1\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group B) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed Whales AM Spring",
-      "teamHome": "RJCC U10 Crushers",
-      "gradeName": "Spring Saturday AM U10 (Group B) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "0051ad3a",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: SSMCJCC U10 Mixed White Tails Saturday vs RJCC U10 Heat, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Rowland Park / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group B) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "RJCC U10 Heat",
-      "teamHome": "SSMCJCC U10 Mixed White Tails Saturday",
-      "gradeName": "Spring Saturday AM U10 (Group B) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "65c950da",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Renegades vs RJCC U10 Scorchers, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Rowland Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group B) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "RJCC U10 Scorchers",
-      "teamHome": "RJCC U10 Renegades",
-      "gradeName": "Spring Saturday AM U10 (Group B) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "e62cdaf5",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: Reddam Rattlesnakes vs Easts U10 Mixed CROCS SAT AM SPRING!, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Booralee Park / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group C) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed CROCS SAT AM SPRING!",
-      "teamHome": "Reddam Rattlesnakes",
-      "gradeName": "Spring Saturday AM U10 (Group C) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "729c70e5",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Rangers vs Easts U10 Mixed Eels SPRING Sat AM!, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Booralee Park / Oval 1\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group C) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "Easts U10 Mixed Eels SPRING Sat AM!",
-      "teamHome": "RJCC U10 Rangers",
-      "gradeName": "Spring Saturday AM U10 (Group C) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "73f79cdd",
-      "gender": "Mixed",
-      "ground": "Lower Cooper / Lower Cooper 1 (West)",
-      "prompt": "Upcoming cricket match details:\n- Teams: Reddam Rhinos vs RJCC U10 Hurricanes, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Lower Cooper / Lower Cooper 1 (West)\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group C) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "RJCC U10 Hurricanes",
-      "teamHome": "Reddam Rhinos",
-      "gradeName": "Spring Saturday AM U10 (Group C) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "83bb2070",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U10 Strikers vs SCCC U10 Barracudas, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Booralee Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U10 (Group C) MIXED",
-      "ageGroup": "U10",
-      "teamAway": "SCCC U10 Barracudas",
-      "teamHome": "RJCC U10 Strikers",
-      "gradeName": "Spring Saturday AM U10 (Group C) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "b011f076",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U8 Clovelly Sixers SPRING! vs RJCC U8 Sixers, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #1\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U8s)",
-      "ageGroup": "U8",
-      "teamAway": "RJCC U8 Sixers",
-      "teamHome": "Easts U8 Clovelly Sixers SPRING!",
-      "gradeName": "Saturday AM Rowland Park Competition (U8s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "af45edcc",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #2",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U8 Hunters Spring! vs Easts U8 Dragons Spring!, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #2\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U8s)",
-      "ageGroup": "U8",
-      "teamAway": "Easts U8 Dragons Spring!",
-      "teamHome": "Easts U8 Hunters Spring!",
-      "gradeName": "Saturday AM Rowland Park Competition (U8s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "ac33c32b",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #4",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U8 Lions Spring vs RJCC U8 Heat, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #4\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U8s)",
-      "ageGroup": "U8",
-      "teamAway": "RJCC U8 Heat",
-      "teamHome": "Easts U8 Lions Spring",
-      "gradeName": "Saturday AM Rowland Park Competition (U8s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "89d58ce8",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #5",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U8 Lobsters Spring! vs SCCC U8 Wobbegongs, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #5\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U8s)",
-      "ageGroup": "U8",
-      "teamAway": "SCCC U8 Wobbegongs",
-      "teamHome": "Easts U8 Lobsters Spring!",
-      "gradeName": "Saturday AM Rowland Park Competition (U8s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "b145a560",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #3",
-      "prompt": "Upcoming cricket match details:\n- Teams: SCCC U8 Hammerheads vs RJCC U8 Renegades, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #3\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U8s)",
-      "ageGroup": "U8",
-      "teamAway": "RJCC U8 Renegades",
-      "teamHome": "SCCC U8 Hammerheads",
-      "gradeName": "Saturday AM Rowland Park Competition (U8s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "a42f2d5f",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #7",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U9 Clovelly Kookaburras Spring! vs Easts U9 Whales Srping!, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #7\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "Easts U9 Whales Srping!",
-      "teamHome": "Easts U9 Clovelly Kookaburras Spring!",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "e3f8302c",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #10",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U9 Crocs SPRING! vs Easts U9 Seals SPRING!, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #10\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "Easts U9 Seals SPRING!",
-      "teamHome": "Easts U9 Crocs SPRING!",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "d4e14601",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #11",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U9 Dolphin Riders - Spring! vs Easts U9 Orcas Spring!, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #11\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "Easts U9 Orcas Spring!",
-      "teamHome": "Easts U9 Dolphin Riders - Spring!",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "25ec5c57",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #9",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U9 Eels SPRING! vs Easts U9 Jellyfish Spring!, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #9\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "Easts U9 Jellyfish Spring!",
-      "teamHome": "Easts U9 Eels SPRING!",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "ce6b9e92",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #8",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U9 Stars vs Easts U9 Turtles SPRING!, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #8\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "Easts U9 Turtles SPRING!",
-      "teamHome": "RJCC U9 Stars",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "e558d5aa",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #12",
-      "prompt": "Upcoming cricket match details:\n- Teams: SCCC U9 Marlins vs RJCC U9 Scorchers, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #12\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "RJCC U9 Scorchers",
-      "teamHome": "SCCC U9 Marlins",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "9e6b0799",
-      "gender": "Mixed",
-      "ground": "MB Rowland Park / MB Rowland Park #6",
-      "prompt": "Upcoming cricket match details:\n- Teams: SSMCJCC U9 Mixed Huntsmen Blast vs RJCC U9 Strikers, Date and Time: Saturday, 18 October 2025, 08:30 AM, Location: MB Rowland Park / MB Rowland Park #6\n- Round: Round 1, Match Type: T20\n- League: Saturday AM Rowland Park Competition (U9s)",
-      "ageGroup": "U9",
-      "teamAway": "RJCC U9 Strikers",
-      "teamHome": "SSMCJCC U9 Mixed Huntsmen Blast",
-      "gradeName": "Saturday AM Rowland Park Competition (U9s)",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "2019fe9a",
-      "gender": "Mixed",
-      "ground": "L'Estrange Park / L'Estrange Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U13 Mixed Bin Chickens Fri Spring! vs Easts U13 Mixed Electric Wickets - Spring Fri, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: L'Estrange Park / L'Estrange Park\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 1 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Electric Wickets - Spring Fri",
-      "teamHome": "Easts U13 Mixed Bin Chickens Fri Spring!",
-      "gradeName": "Spring Friday PM U13 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "c92167ec",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 1 (64-71)",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Rebels vs Easts U13 Mixed Superkings Spring Fri, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Heffron Park / Heffron 1 (64-71)\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 1 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Superkings Spring Fri",
-      "teamHome": "RJCC U13 Rebels",
-      "gradeName": "Spring Friday PM U13 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "ebfd3a36",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 4 (3-9)",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Rangers vs RJCC U15 Strikers, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Heffron Park / Heffron 4 (3-9)\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 1 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "RJCC U15 Strikers",
-      "teamHome": "RJCC U13 Rangers",
-      "gradeName": "Spring Friday PM U13 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "201ef2db",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Renegades vs Easts U13 Mixed Clovelly Bolts Fri - Spring!, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Rowland Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Clovelly Bolts Fri - Spring!",
-      "teamHome": "RJCC U13 Renegades",
-      "gradeName": "Spring Friday PM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "975deffd",
-      "gender": "Mixed",
-      "ground": "Nagle / Nagle",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Stars vs Easts U13 Mixed Scorchers - Spring FRI!, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Nagle / Nagle\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Scorchers - Spring FRI!",
-      "teamHome": "RJCC U13 Stars",
-      "gradeName": "Spring Friday PM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "7470ac91",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Heat vs Easts U13 Mixed Srikers Fri Spring!, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Booralee Park / Oval 1\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Srikers Fri Spring!",
-      "teamHome": "RJCC U13 Heat",
-      "gradeName": "Spring Friday PM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "7da91114",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: Reddam Roos vs RJCC U13 Thunder, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Booralee Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "RJCC U13 Thunder",
-      "teamHome": "Reddam Roos",
-      "gradeName": "Spring Friday PM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "4ad88592",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: SSMCJCC U13 Mixed Friday Scorpions vs SSMCJCC U13 Mixed Friday 2, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Booralee Park / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "SSMCJCC U13 Mixed Friday 2",
-      "teamHome": "SSMCJCC U13 Mixed Friday Scorpions",
-      "gradeName": "Spring Friday PM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "d16ae64d",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U17 Renegades vs Easts U17 Mixed  Athletico Smash Fri Spring, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Rowland Park / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U17 MIXED",
-      "ageGroup": "U17",
-      "teamAway": "Easts U17 Mixed  Athletico Smash Fri Spring",
-      "teamHome": "RJCC U17 Renegades",
-      "gradeName": "Spring Friday PM U17 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "87bcc2cf",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U17 Raptors vs Easts U17 Mixed Bulls Fri Spring, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Rowland Park / Oval 1\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U17 MIXED",
-      "ageGroup": "U17",
-      "teamAway": "Easts U17 Mixed Bulls Fri Spring",
-      "teamHome": "RJCC U17 Raptors",
-      "gradeName": "Spring Friday PM U17 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Fri, 17 Oct",
-      "time": "04:30 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "e6ff9690",
-      "gender": "Mixed",
-      "ground": "Pioneers Park / Pioneers Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U17 Sixers vs Easts U17 Mixed Seahawks Fri Spring, Date and Time: Friday, 17 October 2025, 04:30 PM, Location: Pioneers Park / Pioneers Park\n- Round: Round 1, Match Type: T20\n- League: Spring Friday PM U17 MIXED",
-      "ageGroup": "U17",
-      "teamAway": "Easts U17 Mixed Seahawks Fri Spring",
-      "teamHome": "RJCC U17 Sixers",
-      "gradeName": "Spring Friday PM U17 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "345250dd",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U11 Mixed Devils AM Spring! vs RJCC U11 Scorchers, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Booralee Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 1 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "RJCC U11 Scorchers",
-      "teamHome": "Easts U11 Mixed Devils AM Spring!",
-      "gradeName": "Spring Saturday AM U11 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "31469661",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Hurricanes vs Easts U11 Mixed Piranas AM Spring, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Booralee Park / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 1 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Piranas AM Spring",
-      "teamHome": "RJCC U11 Hurricanes",
-      "gradeName": "Spring Saturday AM U11 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "2fa77e4f",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Heat vs SSMCJCC U11 Mixed Copperheads Saturday, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Booralee Park / Oval 1\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 1 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "SSMCJCC U11 Mixed Copperheads Saturday",
-      "teamHome": "RJCC U11 Heat",
-      "gradeName": "Spring Saturday AM U11 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "e4161ff3",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 4",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Thunder vs RJCC U11 Stars, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Rowland Park / Oval 4\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 1 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "RJCC U11 Stars",
-      "teamHome": "RJCC U11 Thunder",
-      "gradeName": "Spring Saturday AM U11 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "08:00 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "c9d2763c",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 4 (3-9)",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Rangers vs RJCC U11 Kenso Kookaburras, Date and Time: Saturday, 18 October 2025, 08:00 AM, Location: Heffron Park / Heffron 4 (3-9)\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "RJCC U11 Kenso Kookaburras",
-      "teamHome": "RJCC U11 Rangers",
-      "gradeName": "Spring Saturday AM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "41d6ddfd",
-      "gender": "Mixed",
-      "ground": "L'Estrange Park / L'Estrange Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U11 Mixed Rebels AM - Spring vs Easts U11 Mixed Otters AM Spring, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: L'Estrange Park / L'Estrange Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Otters AM Spring",
-      "teamHome": "Easts U11 Mixed Rebels AM - Spring",
-      "gradeName": "Spring Saturday AM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "2d96e3f1",
-      "gender": "Mixed",
-      "ground": "Pioneers Park / Pioneers Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Rebels vs Easts U11 Mixed Seahawks AM Spring, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Pioneers Park / Pioneers Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Seahawks AM Spring",
-      "teamHome": "RJCC U11 Rebels",
-      "gradeName": "Spring Saturday AM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "798541bb",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 3 (55-57)",
-      "prompt": "Upcoming cricket match details:\n- Teams: SCCC U11 Orcas vs RJCC U11 Raptors, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Heffron Park / Heffron 3 (55-57)\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "RJCC U11 Raptors",
-      "teamHome": "SCCC U11 Orcas",
-      "gradeName": "Spring Saturday AM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "10:30 AM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "4c737637",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 1 (64-71)",
-      "prompt": "Upcoming cricket match details:\n- Teams: SCCC U11 Whales vs RJCC U11 Renegades, Date and Time: Saturday, 18 October 2025, 10:30 AM, Location: Heffron Park / Heffron 1 (64-71)\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday AM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "RJCC U11 Renegades",
-      "teamHome": "SCCC U11 Whales",
-      "gradeName": "Spring Saturday AM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "0b6c5ded",
-      "gender": "Girls",
-      "ground": "Monash / Monash",
-      "prompt": "Upcoming cricket match details:\n- Teams: Pirates U15 Girls vs Easts U17 Girls Narwahls Spring, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Monash / Monash\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM Stage 3 GIRLS",
-      "ageGroup": "U15",
-      "teamAway": "Easts U17 Girls Narwahls Spring",
-      "teamHome": "Pirates U15 Girls",
-      "gradeName": "Spring Saturday PM Stage 3 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e25906c6f4.jpg",
-        "width": 440,
-        "height": 160
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "d604d6a3",
-      "gender": "Girls",
-      "ground": "Hughes Park (EARLWOOD) / Hughes Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: SHCC U15 Girls Spring vs LWCC S3 Girls Spring, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Hughes Park (EARLWOOD) / Hughes Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM Stage 3 GIRLS",
-      "ageGroup": "U15",
-      "teamAway": "LWCC S3 Girls Spring",
-      "teamHome": "SHCC U15 Girls Spring",
-      "gradeName": "Spring Saturday PM Stage 3 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bb66b4652.jpg",
-        "width": 261,
-        "height": 263
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_9cf2d4395c.jpg",
-        "width": 256,
-        "height": 255
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "3b9a81d7",
-      "gender": "Girls",
-      "ground": "Rowland Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U15 Sixers vs U15 Girls Concord Briars Gold - Spring, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Rowland Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM Stage 3 GIRLS",
-      "ageGroup": "U15",
-      "teamAway": "U15 Girls Concord Briars Gold - Spring",
-      "teamHome": "RJCC U15 Sixers",
-      "gradeName": "Spring Saturday PM Stage 3 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cfbb27685a.jpg",
-        "width": 256,
-        "height": 256
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "03:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "18f7fdf8",
-      "gender": "Mixed",
-      "ground": "L'Estrange Park / L'Estrange Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U11 Mixed Renegades PM - Spring! vs Easts U11 Mixed Eagles PM - Spring, Date and Time: Saturday, 18 October 2025, 03:00 PM, Location: L'Estrange Park / L'Estrange Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 Div 1 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Eagles PM - Spring",
-      "teamHome": "Easts U11 Mixed Renegades PM - Spring!",
-      "gradeName": "Spring Saturday PM U11 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "03:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "df43e991",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 4",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U11 Mixed Stingrays PM  Spring! vs Easts U11 Mixed Sunrisers PM - Spring!, Date and Time: Saturday, 18 October 2025, 03:00 PM, Location: Rowland Park / Oval 4\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 Div 1 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Sunrisers PM - Spring!",
-      "teamHome": "Easts U11 Mixed Stingrays PM  Spring!",
-      "gradeName": "Spring Saturday PM U11 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "03:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "f7e5addc",
-      "gender": "Mixed",
-      "ground": "Nagle / Nagle",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Force vs Easts U11 Mixed Kookaburras PM Spring, Date and Time: Saturday, 18 October 2025, 03:00 PM, Location: Nagle / Nagle\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Kookaburras PM Spring",
-      "teamHome": "RJCC U11 Force",
-      "gradeName": "Spring Saturday PM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "03:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "7e41b6b0",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 4",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U11 Mixed Sharks PM - Spring! vs Easts U11 Mixed Lobsters PM Spring!, Date and Time: Saturday, 18 October 2025, 03:00 PM, Location: Booralee Park / Oval 4\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed Lobsters PM Spring!",
-      "teamHome": "Easts U11 Mixed Sharks PM - Spring!",
-      "gradeName": "Spring Saturday PM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "03:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "7130a30c",
-      "gender": "Mixed",
-      "ground": "Upper Kippax / Upper Kippax",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U11 Mixed Pocket Rockets SAT PM SPRING! vs Easts U11 Mixed The Broken Stumps PM SPRING!, Date and Time: Saturday, 18 October 2025, 03:00 PM, Location: Upper Kippax / Upper Kippax\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 Div 2 MIXED",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Mixed The Broken Stumps PM SPRING!",
-      "teamHome": "Easts U11 Mixed Pocket Rockets SAT PM SPRING!",
-      "gradeName": "Spring Saturday PM U11 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "703b4fe5",
-      "gender": "Girls",
-      "ground": "Cohen Park / Cohen Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: ACC U11G Green Magpies vs SHCC U11 Girls Gold Spring, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Cohen Park / Cohen Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 GIRLS",
-      "ageGroup": "U11",
-      "teamAway": "SHCC U11 Girls Gold Spring",
-      "teamHome": "ACC U11G Green Magpies",
-      "gradeName": "Spring Saturday PM U11 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_9cf2d4395c.jpg",
-        "width": 256,
-        "height": 255
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b2320f5470.jpg",
-        "width": 640,
-        "height": 640
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "6dd0db73",
-      "gender": "Girls",
-      "ground": "Rowland Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U11 Belles vs Easts U11 Girls Dolphins, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Rowland Park / Oval 1\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 GIRLS",
-      "ageGroup": "U11",
-      "teamAway": "Easts U11 Girls Dolphins",
-      "teamHome": "RJCC U11 Belles",
-      "gradeName": "Spring Saturday PM U11 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "cb940e1a",
-      "gender": "Girls",
-      "ground": "Blackmore Oval / Blackmore Oval",
-      "prompt": "Upcoming cricket match details:\n- Teams: LWCC U11 Girls Black Spring vs LWCC U11 Girls Red Spring, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Blackmore Oval / Blackmore Oval\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 GIRLS",
-      "ageGroup": "U11",
-      "teamAway": "LWCC U11 Girls Red Spring",
-      "teamHome": "LWCC U11 Girls Black Spring",
-      "gradeName": "Spring Saturday PM U11 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bb66b4652.jpg",
-        "width": 261,
-        "height": 263
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bb66b4652.jpg",
-        "width": 261,
-        "height": 263
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "2280f332",
-      "gender": "Girls",
-      "ground": "TASKER PARK / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: MCC U11 Flaherty vs RJCC U11 Sixers, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: TASKER PARK / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U11 GIRLS",
-      "ageGroup": "U11",
-      "teamAway": "RJCC U11 Sixers",
-      "teamHome": "MCC U11 Flaherty",
-      "gradeName": "Spring Saturday PM U11 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_da9a12a165.jpg",
-        "width": 848,
-        "height": 1080
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "ecabd4c6",
-      "gender": "Girls",
-      "ground": "Russell / Russell",
-      "prompt": "Upcoming cricket match details:\n- Teams: LWCC U13 Girls Spring vs ACC U13G Magpies, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Russell / Russell\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U13 GIRLS",
-      "ageGroup": "U13",
-      "teamAway": "ACC U13G Magpies",
-      "teamHome": "LWCC U13 Girls Spring",
-      "gradeName": "Spring Saturday PM U13 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b2320f5470.jpg",
-        "width": 640,
-        "height": 640
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bb66b4652.jpg",
-        "width": 261,
-        "height": 263
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "67eff0c3",
-      "gender": "Girls",
-      "ground": "Rowland Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U13 Girls Sixers - Spring vs Carss Park Royals U13 Girls Red, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Rowland Park / Oval 2\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U13 GIRLS",
-      "ageGroup": "U13",
-      "teamAway": "Carss Park Royals U13 Girls Red",
-      "teamHome": "Easts U13 Girls Sixers - Spring",
-      "gradeName": "Spring Saturday PM U13 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1092f176e4.jpg",
-        "width": 180,
-        "height": 180
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "59122c69",
-      "gender": "Girls",
-      "ground": "Ashfield Park / Ashfield Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: SHCC U13 Girls Spring vs MCC U13 Hudson, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Ashfield Park / Ashfield Park\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U13 GIRLS",
-      "ageGroup": "U13",
-      "teamAway": "MCC U13 Hudson",
-      "teamHome": "SHCC U13 Girls Spring",
-      "gradeName": "Spring Saturday PM U13 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_da9a12a165.jpg",
-        "width": 848,
-        "height": 1080
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_9cf2d4395c.jpg",
-        "width": 256,
-        "height": 255
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 18 Oct",
-      "time": "02:00 PM",
-      "type": "T20",
-      "round": "Round 1",
-      "gameID": "4831d9b3",
-      "gender": "Girls",
-      "ground": "Booralee Park / Oval 3",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Belles vs RJCC U13 Daredevils, Date and Time: Saturday, 18 October 2025, 02:00 PM, Location: Booralee Park / Oval 3\n- Round: Round 1, Match Type: T20\n- League: Spring Saturday PM U13 GIRLS",
-      "ageGroup": "U13",
-      "teamAway": "RJCC U13 Daredevils",
-      "teamHome": "RJCC U13 Belles",
-      "gradeName": "Spring Saturday PM U13 GIRLS",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "30b18454",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Tigers vs Easts U13 Mixed Leopards SUN - Spring, Date and Time: Sunday, 19 October 2025, 08:30 AM, Location: Rowland Park / Oval 2\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 1 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Leopards SUN - Spring",
-      "teamHome": "RJCC U13 Tigers",
-      "gradeName": "Spring Sunday AM U13 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "3eee86cd",
-      "gender": "Mixed",
-      "ground": "Lees Park / Lees Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: SHCC U13 Boys Blue vs RJCC U13 Hurricanes, Date and Time: Sunday, 19 October 2025, 08:30 AM, Location: Lees Park / Lees Park\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 1 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "RJCC U13 Hurricanes",
-      "teamHome": "SHCC U13 Boys Blue",
-      "gradeName": "Spring Sunday AM U13 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_9cf2d4395c.jpg",
-        "width": 256,
-        "height": 255
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "c8621ba1",
-      "gender": "Mixed",
-      "ground": "Ashfield Park / Ashfield Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: SHCC U13 Boys Gold vs U13 Mixed Concord Briars Black - Spring, Date and Time: Sunday, 19 October 2025, 08:30 AM, Location: Ashfield Park / Ashfield Park\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 1 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "U13 Mixed Concord Briars Black - Spring",
-      "teamHome": "SHCC U13 Boys Gold",
-      "gradeName": "Spring Sunday AM U13 Div 1 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cfbb27685a.jpg",
-        "width": 256,
-        "height": 256
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_9cf2d4395c.jpg",
-        "width": 256,
-        "height": 255
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:00 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "6f2c9c06",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U13 Mixed Hot Shots - Spring vs SSMCJCC U13 Mixed CopperHeads Sunday, Date and Time: Sunday, 19 October 2025, 08:00 AM, Location: Booralee Park / Oval 1\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "SSMCJCC U13 Mixed CopperHeads Sunday",
-      "teamHome": "Easts U13 Mixed Hot Shots - Spring",
-      "gradeName": "Spring Sunday AM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "10:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "f14f7a57",
-      "gender": "Mixed",
-      "ground": "Booralee Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: SSMCJCC U13 Mixed Redbacks Sunday vs Easts U13 Mixed Sunrisers Sun - Spring, Date and Time: Sunday, 19 October 2025, 10:30 AM, Location: Booralee Park / Oval 2\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "Easts U13 Mixed Sunrisers Sun - Spring",
-      "teamHome": "SSMCJCC U13 Mixed Redbacks Sunday",
-      "gradeName": "Spring Sunday AM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "10:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "6efdb317",
-      "gender": "Mixed",
-      "ground": "Jellicoe Park / Jellicoe Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U13 Crushers vs LWCC U13 Black Spring, Date and Time: Sunday, 19 October 2025, 10:30 AM, Location: Jellicoe Park / Jellicoe Park\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "LWCC U13 Black Spring",
-      "teamHome": "RJCC U13 Crushers",
-      "gradeName": "Spring Sunday AM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bb66b4652.jpg",
-        "width": 261,
-        "height": 263
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "10:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "44132198",
-      "gender": "Mixed",
-      "ground": "Heffron Park / Heffron 4 (3-9)",
-      "prompt": "Upcoming cricket match details:\n- Teams: SCCC U13 Seals vs SSMCJCC U13 Mixed Cobras Sunday, Date and Time: Sunday, 19 October 2025, 10:30 AM, Location: Heffron Park / Heffron 4 (3-9)\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U13 Div 2 MIXED",
-      "ageGroup": "U13",
-      "teamAway": "SSMCJCC U13 Mixed Cobras Sunday",
-      "teamHome": "SCCC U13 Seals",
-      "gradeName": "Spring Sunday AM U13 Div 2 MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_491e05b7a8.jpg",
-        "width": 416,
-        "height": 512
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "55614646",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U15 Mixed Kookaburras Sun - Spring vs MCC U15 Toshack (SC), Date and Time: Sunday, 19 October 2025, 08:30 AM, Location: Rowland Park / Oval 1\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U15",
-      "ageGroup": "U15",
-      "teamAway": "MCC U15 Toshack (SC)",
-      "teamHome": "Easts U15 Mixed Kookaburras Sun - Spring",
-      "gradeName": "Spring Sunday AM U15",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_da9a12a165.jpg",
-        "width": 848,
-        "height": 1080
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "49e1aeac",
-      "gender": "Mixed",
-      "ground": "L'Estrange Park / L'Estrange Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Easts U15 Mixed Lions Sun Spring! vs SCCC U15 Stingers, Date and Time: Sunday, 19 October 2025, 08:30 AM, Location: L'Estrange Park / L'Estrange Park\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U15",
-      "ageGroup": "U15",
-      "teamAway": "SCCC U15 Stingers",
-      "teamHome": "Easts U15 Mixed Lions Sun Spring!",
-      "gradeName": "Spring Sunday AM U15",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3fc66b91ae.jpg",
-        "width": 850,
-        "height": 1024
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0ee61a42a2.jpg",
-        "width": 356,
-        "height": 401
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "08:30 AM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "e7a704cc",
-      "gender": "Mixed",
-      "ground": "Callan Park / Callan Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: U15 Mixed Concord Briars Black - Spring vs RJCC U15 Thunder, Date and Time: Sunday, 19 October 2025, 08:30 AM, Location: Callan Park / Callan Park\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday AM U15",
-      "ageGroup": "U15",
-      "teamAway": "RJCC U15 Thunder",
-      "teamHome": "U15 Mixed Concord Briars Black - Spring",
-      "gradeName": "Spring Sunday AM U15",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cfbb27685a.jpg",
-        "width": 256,
-        "height": 256
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "01:15 PM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "ad3df657",
-      "gender": "Mixed",
-      "ground": "Edwards Park / Edwards",
-      "prompt": "Upcoming cricket match details:\n- Teams: U17 Mixed Concord Briars Gold - Spring vs RJCC U17 Phoenix, Date and Time: Sunday, 19 October 2025, 01:15 PM, Location: Edwards Park / Edwards\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday PM U17 (TURF) MIXED",
-      "ageGroup": "U17",
-      "teamAway": "RJCC U17 Phoenix",
-      "teamHome": "U17 Mixed Concord Briars Gold - Spring",
-      "gradeName": "Spring Sunday PM U17 (TURF) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cfbb27685a.jpg",
-        "width": 256,
-        "height": 256
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "02:00 PM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "30003a74",
-      "gender": "Mixed",
-      "ground": "Rozelle Parklands Sporting Fields / Rozelle Parklands Oval 1",
-      "prompt": "Upcoming cricket match details:\n- Teams: LWCC U17 Black Spring vs MCC U17 Ernies, Date and Time: Sunday, 19 October 2025, 02:00 PM, Location: Rozelle Parklands Sporting Fields / Rozelle Parklands Oval 1\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday PM U17 (TURF) MIXED",
-      "ageGroup": "U17",
-      "teamAway": "MCC U17 Ernies",
-      "teamHome": "LWCC U17 Black Spring",
-      "gradeName": "Spring Sunday PM U17 (TURF) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_da9a12a165.jpg",
-        "width": 848,
-        "height": 1080
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3bb66b4652.jpg",
-        "width": 261,
-        "height": 263
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sun, 19 Oct",
-      "time": "02:00 PM",
-      "type": "One Day",
-      "round": "Round 1",
-      "gameID": "e6e88e47",
-      "gender": "Mixed",
-      "ground": "Rowland Park / Oval 2",
-      "prompt": "Upcoming cricket match details:\n- Teams: RJCC U17 Storm vs U17 Mixed Concord Briars Black - Spring, Date and Time: Sunday, 19 October 2025, 02:00 PM, Location: Rowland Park / Oval 2\n- Round: Round 1, Match Type: One Day\n- League: Spring Sunday PM U17 (TURF) MIXED",
-      "ageGroup": "U17",
-      "teamAway": "U17 Mixed Concord Briars Black - Spring",
-      "teamHome": "RJCC U17 Storm",
-      "gradeName": "Spring Sunday PM U17 (TURF) MIXED",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cfbb27685a.jpg",
-        "width": 256,
-        "height": 256
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dbbcde504d.jpg",
-        "width": 1885,
-        "height": 1105
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [],
+      "date": "Sat, 25 Oct",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 3",
+      "gameID": "2bf61c20",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Awa City CC - Combined High Schools P1 vs Matt Burke Engineering Marton Saracens CC P1, Date and Time: Saturday, 25 October 2025, null, Location: null\n- Round: Round 3, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Matt Burke Engineering Marton Saracens CC P1",
+      "teamHome": "Awa City CC - Combined High Schools P1",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
+        "width": 1181,
+        "height": 1181
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
+        "width": 243,
+        "height": 208
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 25 Oct",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 3",
+      "gameID": "a748cb7f",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Wanganui Vet Services Marist Premier Men vs Property Brokers Wanganui United Premier 1, Date and Time: Saturday, 25 October 2025, null, Location: null\n- Round: Round 3, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Property Brokers Wanganui United Premier 1",
+      "teamHome": "Wanganui Vet Services Marist Premier Men",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
+        "width": 476,
+        "height": 506
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
+        "width": 1054,
+        "height": 946
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 01 Nov",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 4",
+      "gameID": "0e26d7e1",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Awa City CC - Combined High Schools P1 vs Property Brokers Wanganui United Premier 1, Date and Time: Saturday, 01 November 2025, null, Location: null\n- Round: Round 4, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Property Brokers Wanganui United Premier 1",
+      "teamHome": "Awa City CC - Combined High Schools P1",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
+        "width": 476,
+        "height": 506
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
+        "width": 243,
+        "height": 208
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 01 Nov",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 4",
+      "gameID": "5f653d57",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Wanganui Vet Services Marist Premier Men vs Matt Burke Engineering Marton Saracens CC P1, Date and Time: Saturday, 01 November 2025, null, Location: null\n- Round: Round 4, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Matt Burke Engineering Marton Saracens CC P1",
+      "teamHome": "Wanganui Vet Services Marist Premier Men",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
+        "width": 1181,
+        "height": 1181
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
+        "width": 1054,
+        "height": 946
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 08 Nov",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 5",
+      "gameID": "fd1354a9",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Awa City CC - Combined High Schools P1 vs Wanganui Vet Services Marist Premier Men, Date and Time: Saturday, 08 November 2025, null, Location: null\n- Round: Round 5, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Wanganui Vet Services Marist Premier Men",
+      "teamHome": "Awa City CC - Combined High Schools P1",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
+        "width": 1054,
+        "height": 946
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
+        "width": 243,
+        "height": 208
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 08 Nov",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 5",
+      "gameID": "508ba142",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Property Brokers Wanganui United Premier 1 vs Matt Burke Engineering Marton Saracens CC P1, Date and Time: Saturday, 08 November 2025, null, Location: null\n- Round: Round 5, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Matt Burke Engineering Marton Saracens CC P1",
+      "teamHome": "Property Brokers Wanganui United Premier 1",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
+        "width": 1181,
+        "height": 1181
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
+        "width": 476,
+        "height": 506
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 15 Nov",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 6",
+      "gameID": "0265ad98",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Matt Burke Engineering Marton Saracens CC P1 vs Awa City CC - Combined High Schools P1, Date and Time: Saturday, 15 November 2025, null, Location: null\n- Round: Round 6, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Awa City CC - Combined High Schools P1",
+      "teamHome": "Matt Burke Engineering Marton Saracens CC P1",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
+        "width": 243,
+        "height": 208
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
+        "width": 1181,
+        "height": 1181
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
+        "competition": []
+      }
+    },
+    {
+      "date": "Sat, 15 Nov",
+      "time": "",
+      "type": "Two Day+",
+      "round": "Round 6",
+      "gameID": "ba098449",
+      "gender": "Men",
+      "ground": "",
+      "prompt": "Upcoming cricket match details:\n- Teams: Property Brokers Wanganui United Premier 1 vs Wanganui Vet Services Marist Premier Men, Date and Time: Saturday, 15 November 2025, null, Location: null\n- Round: Round 6, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
+      "ageGroup": "Senior/Open",
+      "teamAway": "Wanganui Vet Services Marist Premier Men",
+      "teamHome": "Property Brokers Wanganui United Premier 1",
+      "gradeName": "Jurgens Demolition Premier 1",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
+        "width": 1054,
+        "height": 946
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
+        "width": 476,
+        "height": 506
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ],
         "competition": []
       }
     }
@@ -2121,42 +364,157 @@
   "asset": {
     "assetID": 1,
     "assetTypeID": 1,
-    "assetsLinkID": "fa4e632e113838405072be3541983565ea572e8b990b0428540e9032b86561e2",
+    "assetsLinkID": "15ea8016fa80e47b95c91e6091b14be907ad26c2ce114b4d16728dff5f80793e",
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [
-    45, 225, 480, 735, 990, 1245, 1500, 1755, 2010, 2265, 2520, 2775, 3030,
-    3285, 3540, 3795, 4050, 4305, 4560, 4815, 5070, 5325, 5580, 5835, 6090,
-    6345, 6600, 6855, 7110, 7365, 7620, 7875, 8130, 8385, 8640, 8895, 9150, 9405
-  ],
+  "frames": [45, 225, 480, 735, 900],
   "render": {
-    "renderId": 16533,
-    "schedulerId": 138
+    "renderId": 17089,
+    "schedulerId": 78
   },
   "account": {
-    "accountId": 138
+    "accountId": 78
   },
   "timings": {
-    "FPS_MAIN": 9450,
+    "FPS_MAIN": 780,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 270
   },
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_1315_6ers_Sixers_Cricket_League_Logo_Purple_Patch_47f017cb6a.png",
-        "width": 1920,
-        "height": 1080,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_31a868b350.png",
+        "width": 500,
+        "height": 500,
         "hasLogo": true
       },
-      "name": "Sixers Cricket League - Sydney South East",
+      "name": "Cricket Whanganui",
       "sport": "Cricket",
       "sponsors": {
-        "default": {},
-        "primary": []
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 112,
+              "url": "https://jurgensdemolition.co.nz/",
+              "logo": {
+                "id": 5993,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+              },
+              "name": "Jurgens Demolitions",
+              "isVideo": true,
+              "tagline": "One Family. Three Generations. Zero Compromises.",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": true,
+              "description": null
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 111,
+              "url": "https://www.tastan.co.nz/",
+              "logo": {
+                "id": 5456,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/tasman_37a8b965d9.png"
+              },
+              "name": "Tasman Leathers of New Zealand",
+              "isVideo": true,
+              "tagline": "We make leather, beautifully",
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 218,
+              "url": "https://wanganuimotels.co.nz/accommodation/",
+              "logo": {
+                "id": 5995,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Riverview_Motel_4163c9194e.png"
+              },
+              "name": "Riverview Motel",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_3": [
+            {
+              "id": 219,
+              "url": "https://mcdonalds.co.nz/find-us/restaurants",
+              "logo": {
+                "id": 5998,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_b988cefbee.png"
+              },
+              "name": "McDonalds Whanganui",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_4": [
+            {
+              "id": 220,
+              "url": "https://www.propertybrokers.co.nz/community/whanganui",
+              "logo": {
+                "id": 5999,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Property_Brokers_Primary_RGB_Reverse_on_Blue_Clear_Idicators_74274184b0.png"
+              },
+              "name": "Property Brokers Whanganui",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_5": [
+            {
+              "id": 222,
+              "url": "https://www.yetitech.nz/",
+              "logo": {
+                "id": 6005,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_f868db05cd.png"
+              },
+              "name": "Yeti Tech",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ]
+        },
+        "primary": [
+          {
+            "id": 112,
+            "url": "https://jurgensdemolition.co.nz/",
+            "logo": {
+              "id": 5993,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
+            },
+            "name": "Jurgens Demolitions",
+            "isVideo": true,
+            "tagline": "One Family. Three Generations. Zero Compromises.",
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ]
       },
       "IsAccountClub": false
     },
@@ -2167,13 +525,13 @@
           "audioOption": null
         },
         "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "",
-          "AssetType": "",
-          "markerPosition": ""
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/144_A6598_a34f7efe68.jpg",
+          "ratio": "landscape",
+          "width": 5328,
+          "height": 3312,
+          "AgeGroup": null,
+          "AssetType": "ALL",
+          "markerPosition": null
         }
       },
       "metadata": {
@@ -2184,30 +542,30 @@
         "videoTitle": "Up Coming Fixtures",
         "assetTypeId": 1,
         "compositionId": "CricketUpcoming",
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#ff00a0",
-          "secondary": "#d40f7d"
+          "primary": "#233376",
+          "secondary": "#050505"
         },
-        "template": "Sixers"
+        "template": "Brickwork"
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 2,
+          "CricketUpcoming": 3,
           "CricketResultSingle": 1
         }
       },
-      "fixtureCategory": "SCL Junior Cricket Competitions",
-      "groupingCategory": "SCL Junior Cricket Competitions",
+      "fixtureCategory": "Jurgens Demolition Premier 1",
+      "groupingCategory": "Jurgens Demolition Premier 1",
       "templateVariation": {
-        "mode": "lightAlt",
+        "mode": "dark",
         "image": {
           "url": null,
           "type": "pan",
@@ -2248,74 +606,74 @@
           "animationDuration": null
         },
         "texture": {
-          "url": null,
-          "name": null,
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Minimal_Faint_Paper_Grain_24f18f3fdb.png",
+          "name": "Faint Paper Grain",
           "scale": "100%",
           "repeat": "cover",
           "overlay": {
-            "opacity": 0.5,
+            "opacity": 1,
             "blendMode": "multiply"
           }
         },
         "category": {
-          "name": "Sixers",
-          "slug": "Sixers",
+          "name": "Brick Work",
+          "slug": "Brickwork",
           "bundleAudio": {
-            "id": 3,
-            "Name": "Alt Rock V2",
-            "createdAt": "2023-12-08T01:10:59.010Z",
-            "updatedAt": "2023-12-08T01:11:13.412Z",
-            "publishedAt": "2023-12-08T01:11:13.409Z",
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
             "audio_options": [
               {
-                "id": 15,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Free_The_People_Moonlight_Instrumental_1701394307461_mixdown_1b3d403309.mp3",
-                "Name": "Free The People_Moonlight",
-                "createdAt": "2023-12-08T01:10:14.339Z",
-                "updatedAt": "2023-12-08T01:11:15.531Z",
-                "publishedAt": "2023-12-08T01:11:15.527Z",
-                "ComponentName": "Weekend Results",
-                "CompositionID": "WeekendResults"
-              },
-              {
-                "id": 16,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_8a6ba8ae9c.mp3",
-                "Name": "Theres No Stopping Us",
-                "createdAt": "2023-12-08T01:12:04.972Z",
-                "updatedAt": "2023-12-08T01:12:06.322Z",
-                "publishedAt": "2023-12-08T01:12:06.318Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              },
-              {
-                "id": 17,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Readyand_Go_Speed_Outburst_Inst_915756a62c.mp3",
-                "Name": "Speed Out burst",
-                "createdAt": "2023-12-08T01:14:13.240Z",
-                "updatedAt": "2023-12-08T01:14:15.054Z",
-                "publishedAt": "2023-12-08T01:14:15.051Z",
-                "ComponentName": "Top 5 Batting",
-                "CompositionID": "Top5BattingList"
-              },
-              {
-                "id": 18,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Simon_Osterhold_poprockvol1_Jack_it_out_096ca43ebf.mp3",
-                "Name": "Jack out",
-                "createdAt": "2023-12-08T01:14:57.196Z",
-                "updatedAt": "2023-12-08T01:14:58.619Z",
-                "publishedAt": "2023-12-08T01:14:58.616Z",
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
                 "ComponentName": "Top 5 Bowling",
                 "CompositionID": "Top5BowlingList"
               },
               {
-                "id": 19,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Tate_Kirgiss_Analog_Inspired_Ill_Be_Alright_Inst_02426c151b.mp3",
-                "Name": "Ill BeAlright",
-                "createdAt": "2023-12-08T01:15:38.904Z",
-                "updatedAt": "2023-12-08T01:15:40.225Z",
-                "publishedAt": "2023-12-08T01:15:40.220Z",
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
                 "ComponentName": "Ladder",
                 "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
               }
             ]
           },
@@ -2323,7 +681,7 @@
             "CricketLadder": 1,
             "CricketRoster": 1,
             "CricketResults": 2,
-            "CricketUpcoming": 2,
+            "CricketUpcoming": 3,
             "CricketResultSingle": 1
           }
         },
@@ -2338,7 +696,7 @@
           "direction": "up",
           "particleCount": "300"
         },
-        "useBackground": "Solid"
+        "useBackground": "Texture"
       }
     }
   }

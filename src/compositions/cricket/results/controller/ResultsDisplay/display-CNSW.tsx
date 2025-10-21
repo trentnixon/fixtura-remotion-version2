@@ -38,7 +38,7 @@ const ResultsDisplayCNSW: React.FC<ResultsDisplayProps> = ({
     <div className="flex flex-col h-full w-full">
       {/* Results container */}
       <div
-        className="w-full flex flex-col justify-end"
+        className="w-full flex flex-col justify-center"
         style={{ height: `${availableHeight}px` }}
       >
         {displayedResults.map((match, index) => (

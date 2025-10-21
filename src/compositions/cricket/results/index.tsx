@@ -4,6 +4,7 @@ import SixersThunder from "./sixersThunder";
 import Classic from "./classic";
 import ClassicTwoColumn from "./classicTwoColumn";
 import CNSW from "./cnsw";
+import CNSWPrivate from "./cnsw-private";
 
 // Export all template implementations
 export { BasicResults as basic };
@@ -12,3 +13,4 @@ export { SixersThunder as SixersThunder };
 export { Classic as classic };
 export { ClassicTwoColumn as classicTwoColumn };
 export { CNSW as cnsw };
+export { CNSWPrivate as cnswPrivate };

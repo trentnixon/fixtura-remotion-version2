@@ -47,7 +47,7 @@ const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
             value={title || ""}
             animation={null as any}
             className=""
-            variant="onContainerMain"
+            variant="onContainerCopyNoBg"
           />
         </div>
         <div className="flex-0 grid grid-cols-1 gap-1 px-16">

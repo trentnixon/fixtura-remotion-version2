@@ -19,8 +19,8 @@ export const Horizontal_SingleTeam_CNSW: React.FC<
   const { selectedPalette, layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main; // Get colors from theme
-  const backgroundColor = selectedPalette.background.userSecondary;
-  const primaryColor = selectedPalette.background.userPrimary;
+  const backgroundColor = selectedPalette.container.backgroundTransparent.high;
+  const primaryColor = selectedPalette.container.backgroundTransparent.strong;
 
   // Normalizes scores so that "N/A" renders as "Yet to Bat"
   const normalizeScore = (rawScore?: string | null): string => {
@@ -77,7 +77,7 @@ export const Horizontal_SingleTeam_CNSW: React.FC<
               value={truncateText(Team.name, 50).toUpperCase()}
               animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
               className=""
-              variant="onBackgroundMain"
+              variant="onContainerCopy"
             />
           </div>
         </div>
@@ -96,13 +96,13 @@ export const Horizontal_SingleTeam_CNSW: React.FC<
               value={getFirstInningsDisplay(type, firstInningsScore).value}
               animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
               className="mr-2"
-              variant="onBackgroundMain"
+              variant="onContainerCopy"
             />
           )}
           <MetadataMedium
             value={normalizeScore(Team.score)}
             animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-            variant="onBackgroundMain"
+            variant="onContainerCopy"
           />
         </AnimatedContainer>
       </div>

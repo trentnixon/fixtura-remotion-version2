@@ -5,6 +5,7 @@ import { Sixers } from "./variants/sixers";
 import { CNSW } from "./variants/cnsw";
 import { Thunder } from "./variants/thunder";
 import { TwoColumnClassic } from "./variants/twoColumnClassic";
+import { CNSWPrivate } from "./variants/cnsw-private";
 /**
  * Define template registry key type
  */
@@ -38,6 +39,10 @@ export const templateRegistry = {
   },
   CNSW: {
     component: CNSW,
+    variants: Variants,
+  },
+  CNSWPrivate: {
+    component: CNSWPrivate,
     variants: Variants,
   },
   Sixers: {

@@ -129,46 +129,46 @@ export const cnswTheme: TemplateThemeConfig = {
   mode: {
     light: {
       container: {
-        background: "#ffffff",
-        backgroundAlt: "#f2f6ff",
-        backgroundTransparent: "rgba(255, 255, 255, 0.65)",
+        background: "#fff",
+        backgroundAlt: "#f0f0f0",
+        backgroundTransparent: "rgba(255, 255, 255, 0.5)",
       },
       text: {
-        title: "#002C6E",
-        copy: "#0A1A2F",
+        title: "#000",
+        copy: "#000",
       },
     },
     lightAlt: {
       container: {
-        background: "#ffffff",
-        backgroundAlt: "#e9f1ff",
+        background: "#fff",
+        backgroundAlt: "#f0f0f0",
         backgroundTransparent: "rgba(255, 255, 255, 0.5)",
       },
       text: {
-        title: "#001a45",
-        copy: "#0A1A2F",
+        title: "#fff",
+        copy: "#000",
       },
     },
     dark: {
       container: {
-        background: "#0A1A2F",
-        backgroundAlt: "#031022",
-        backgroundTransparent: "rgba(10, 26, 47, 0.65)",
+        background: "#000",
+        backgroundAlt: "#1a1a1a",
+        backgroundTransparent: "rgba(0, 0, 0, 0.5)",
       },
       text: {
-        title: "#E6F0FF",
-        copy: "#E6F0FF",
+        title: "#fff",
+        copy: "#fff",
       },
     },
     darkAlt: {
       container: {
-        background: "#0A1A2F",
-        backgroundAlt: "#0c1c33",
-        backgroundTransparent: "rgba(10, 26, 47, 0.5)",
+        background: "#000",
+        backgroundAlt: "#1a1a1a",
+        backgroundTransparent: "rgba(0, 0, 0, 0.5)",
       },
       text: {
-        title: "#cfe3ff",
-        copy: "#e6f0ff",
+        title: "#000",
+        copy: "#fff",
       },
     },
   },

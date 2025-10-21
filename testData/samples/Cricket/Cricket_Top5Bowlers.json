@@ -1,228 +1,194 @@
 {
   "data": [
     {
-      "name": "Jonty Webb",
-      "runs": 39,
+      "name": "Bayley Latter",
+      "runs": 20,
+      "overs": "7",
+      "prompt": "Bayley Latter played for Napier Tech Complete Flooring Prems, taking 5 wickets from 7 overs, conceding 20 runs. Game details: This was a One Day in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Napier Tech Complete Flooring Prems (1) vs NOBMCC Prems (1), the match result was Napier Tech Complete Flooring Prems won by 6 wickets.",
+      "wickets": 5,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+        "width": 1181,
+        "height": 1181
+      },
+      "playedFor": "Napier Tech Complete Flooring Prems",
+      "assignSponsors": {
+        "Team": {
+          "name": "Napier Tech Complete Flooring Prems"
+        },
+        "grade": {
+          "id": 56784,
+          "name": "Property Brokers Premier Mens"
+        },
+        "competition": {
+          "id": 15748,
+          "name": "Senior"
+        }
+      }
+    },
+    {
+      "name": "Baljeet Singh Ranu",
+      "runs": 40,
       "overs": "10",
-      "prompt": "Jonty Webb played for Hawkesbury 1st, taking 7 wickets from 10 overs, conceding 39 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Hawkesbury 1st, (1) vs Northern District 1st (1), the match result was Northern District 1st won by 4 wickets.",
-      "wickets": 7,
+      "prompt": "Baljeet Singh Ranu played for Havelock North CC - Summit Capital - Prems, taking 5 wickets from 10 overs, conceding 40 runs. Game details: This was a One Day in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Havelock North CC - Summit Capital - Prems (1) vs Cornwall Prems (1), the match result was Havelock North CC - Summit Capital - Prems won by 9 wickets.",
+      "wickets": 5,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41dda6abf3.jpg",
-        "width": 265,
-        "height": 252
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_727ffa1417.jpg",
+        "width": 582,
+        "height": 600
       },
-      "playedFor": "Hawkesbury 1st",
+      "playedFor": "Havelock North CC - Summit Capital - Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Hawkesbury 1st"
+          "name": "Havelock North CC - Summit Capital - Prems"
         },
         "grade": {
-          "id": 53281,
-          "name": "First Grade (Belvidere Cup)"
+          "id": 56784,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 15073,
-          "name": "NSW Premier Cricket (Men's)"
+          "id": 15748,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Reiley Mark",
-      "runs": 25,
-      "overs": "8.1",
-      "prompt": "Reiley Mark played for Eastern Suburbs 1st, taking 4 wickets from 8.1 overs, conceding 25 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Eastern Suburbs 1st, (1) vs St George 1st (1), the match result was St George 1st won by 2 wickets.",
+      "name": "Paul Boardman",
+      "runs": 66,
+      "overs": "7.2",
+      "prompt": "Paul Boardman played for Havelock North CC - Development Nous - Seniors, taking 4 wickets from 7.2 overs, conceding 66 runs. Game details: This was a One Day in the Complete Paints Division 1 grade, and the current match status is Match Completed . Havelock North CC - Development Nous - Seniors (1) vs Cornwall Seniors (1), the match result was Havelock North CC - Development Nous - Seniors won by 72 runs.",
       "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ac5e0913d1.jpg",
-        "width": 158,
-        "height": 182
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_727ffa1417.jpg",
+        "width": 582,
+        "height": 600
       },
-      "playedFor": "Eastern Suburbs 1st",
+      "playedFor": "Havelock North CC - Development Nous - Seniors",
       "assignSponsors": {
         "Team": {
-          "name": "Eastern Suburbs 1st"
+          "name": "Havelock North CC - Development Nous - Seniors"
         },
         "grade": {
-          "id": 53281,
-          "name": "First Grade (Belvidere Cup)"
+          "id": 56782,
+          "name": "Complete Paints Division 1"
         },
         "competition": {
-          "id": 15073,
-          "name": "NSW Premier Cricket (Men's)"
+          "id": 15748,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Ryan Gupta",
-      "runs": 44,
-      "overs": "10",
-      "prompt": "Ryan Gupta played for Western Suburbs 1st, taking 4 wickets from 10 overs, conceding 44 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Western Suburbs 1st, (1) vs Parramatta First Grade (1), the match result was Parramatta First Grade won by 71 runs.",
-      "wickets": 4,
+      "name": "Lucas Jenyns",
+      "runs": 17,
+      "overs": "5",
+      "prompt": "Lucas Jenyns played for NBHS 1st XI, taking 3 wickets from 5 overs, conceding 17 runs. Game details: This was a One Day in the Complete Paints Division 1 grade, and the current match status is Match Completed . NBHS 1st XI (1) vs Napier Tech Kilbirnie Sports Div 1 Tigers (1), the match result was NBHS 1st XI won by 101 runs.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_60788a488f.jpg",
+        "width": 1265,
+        "height": 1429
       },
-      "playedFor": "Western Suburbs 1st",
+      "playedFor": "NBHS 1st XI",
       "assignSponsors": {
         "Team": {
-          "name": "Western Suburbs 1st"
+          "name": "NBHS 1st XI"
         },
         "grade": {
-          "id": 53281,
-          "name": "First Grade (Belvidere Cup)"
+          "id": 56782,
+          "name": "Complete Paints Division 1"
         },
         "competition": {
-          "id": 15073,
-          "name": "NSW Premier Cricket (Men's)"
+          "id": 15748,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Liam Doddrell",
-      "runs": 47,
-      "overs": "9.2",
-      "prompt": "Liam Doddrell played for Sydney 1st, taking 4 wickets from 9.2 overs, conceding 47 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Sydney 1st, (1) vs Penrith 1st (1), the match result was Penrith 1st won by 7 wickets.",
-      "wickets": 4,
+      "name": "Jez Reeves",
+      "runs": 19,
+      "overs": "6.3",
+      "prompt": "Jez Reeves played for Havelock North CC - Development Nous - Seniors, taking 3 wickets from 6.3 overs, conceding 19 runs. Game details: This was a One Day in the Complete Paints Division 1 grade, and the current match status is Match Completed . Havelock North CC - Development Nous - Seniors (1) vs Cornwall Seniors (1), the match result was Havelock North CC - Development Nous - Seniors won by 72 runs.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_727ffa1417.jpg",
+        "width": 582,
+        "height": 600
       },
-      "playedFor": "Sydney 1st",
+      "playedFor": "Havelock North CC - Development Nous - Seniors",
       "assignSponsors": {
         "Team": {
-          "name": "Sydney 1st"
+          "name": "Havelock North CC - Development Nous - Seniors"
         },
         "grade": {
-          "id": 53281,
-          "name": "First Grade (Belvidere Cup)"
+          "id": 56782,
+          "name": "Complete Paints Division 1"
         },
         "competition": {
-          "id": 15073,
-          "name": "NSW Premier Cricket (Men's)"
-        }
-      }
-    },
-    {
-      "name": "Bradley Simpson",
-      "runs": 54,
-      "overs": "10",
-      "prompt": "Bradley Simpson played for Sutherland 1st, taking 4 wickets from 10 overs, conceding 54 runs. Game details: This was a One Day in the First Grade (Belvidere Cup) grade, and the current match status is Match Completed . Sutherland 1st, (1) vs Bankstown 1st (1), the match result was Bankstown 1st won by 8 wickets.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Sutherland 1st",
-      "assignSponsors": {
-        "Team": {
-          "name": "Sutherland 1st"
-        },
-        "grade": {
-          "id": 53281,
-          "name": "First Grade (Belvidere Cup)"
-        },
-        "competition": {
-          "id": 15073,
-          "name": "NSW Premier Cricket (Men's)"
+          "id": 15748,
+          "name": "Senior"
         }
       }
     }
   ],
   "asset": {
-    "assetID": 7,
+    "assetID": 16,
     "assetTypeID": 3,
-    "assetCategoryID": 1,
-    "assetsLinkID": "12d6e28cd2015f8df9bdb3ba477d682d38472e7b4afd674db7fe5802e0da5bba"
+    "assetCategoryID": 2,
+    "assetsLinkID": "e8a9dc565bcaf640f3fbd11ef953fc52ce6e6382c360c460ae49c2fe3e6dc66e"
   },
   "render": {
-    "schedulerId": 322,
-    "renderId": 8472
+    "schedulerId": 323,
+    "renderId": 8485
   },
   "account": {
-    "accountId": 435
+    "accountId": 436
   },
   "timings": {
     "FPS_MAIN": 360,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45, 495],
+  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Premier_Cricket_Stack_R_17a04e7928_dc5535ee75.png",
-        "width": 1106,
-        "height": 1843
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_64_d6d6fd9fae.jpg",
+        "width": 4167,
+        "height": 4167
       },
-      "name": "NSW Premier Cricket",
+      "name": "Hawke's Bay Cricket Association",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 194,
-            "isPrimary": true,
-            "isActive": true,
-            "isArticle": true,
-            "isVideo": true,
-            "url": "Maccas",
-            "tagline": null,
-            "description": null,
-            "name": "Maccas",
-            "logo": {
-              "id": 13663,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_Premier_Cricket_major_partners_ed7879ffa6.png"
-            }
-          }
-        ],
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 194,
-              "isPrimary": true,
-              "isActive": true,
-              "isArticle": true,
-              "isVideo": true,
-              "url": "Maccas",
-              "tagline": null,
-              "description": null,
-              "name": "Maccas",
-              "logo": {
-                "id": 13663,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_Premier_Cricket_major_partners_ed7879ffa6.png"
-              }
-            }
-          ]
-        }
+        "primary": [],
+        "default": {}
       },
       "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "First Grade (Belvidere Cup)",
-      "groupingCategory": "First Grade (Belvidere Cup)",
+      "fixtureCategory": "Senior",
+      "groupingCategory": "Senior",
       "metadata": {
         "title": "Top 5",
-        "titleSplit": ["Bowlers", ""],
+        "titleSplit": ["Bowlers"],
         "videoTitle": "Top 5 Bowlers",
         "compositionId": "CricketTop5Bowling",
-        "assetId": 7,
+        "assetId": 16,
         "assetTypeId": 3,
-        "frames": [],
-        "includeSponsors": true
+        "frames": [390],
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#002855",
-          "secondary": "#00AEEF"
+          "primary": "#111 ",
+          "secondary": "#FFF"
         },
-        "template": "CNSW"
+        "template": "Basic"
       },
       "media": {
         "HeroImage": {
@@ -249,11 +215,11 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Solid",
-        "mode": "light",
+        "useBackground": "Graphics",
+        "mode": "lightAlt",
         "category": {
-          "slug": "CNSW",
-          "name": "test cnsw",
+          "slug": "Basic",
+          "name": "Basic",
           "divideFixturesBy": {
             "CricketUpcoming": 3,
             "CricketResults": 2,
@@ -262,60 +228,80 @@
             "CricketRoster": 1
           },
           "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-29T00:24:54.890Z",
-            "updatedAt": "2024-10-29T00:24:56.001Z",
-            "publishedAt": "2024-10-29T00:24:56.000Z",
+            "id": 1,
+            "Name": "Basic",
+            "createdAt": "2023-09-27T10:36:24.428Z",
+            "updatedAt": "2025-06-15T04:50:57.910Z",
+            "publishedAt": "2023-09-27T10:36:25.639Z",
             "audio_options": [
               {
-                "id": 25,
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-29T00:03:05.331Z",
-                "updatedAt": "2024-10-29T01:02:40.051Z",
-                "publishedAt": "2024-10-29T00:03:06.783Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
-                "CompositionID": "Top5BowlingList",
-                "ComponentName": "Top 5 Bowling"
+                "id": 4,
+                "Name": "Better Start Now",
+                "createdAt": "2023-09-27T10:34:46.702Z",
+                "updatedAt": "2025-06-15T04:53:45.558Z",
+                "publishedAt": "2023-09-27T10:34:48.455Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
+                "CompositionID": "CricketLadder",
+                "ComponentName": "CricketLadder"
               },
               {
-                "id": 30,
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-29T00:18:54.565Z",
-                "updatedAt": "2024-10-29T00:25:33.146Z",
-                "publishedAt": "2024-10-29T00:18:55.872Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
-                "CompositionID": "Top5BattingList",
-                "ComponentName": "Top 5 Batting"
+                "id": 2,
+                "Name": "Fifteen on Me",
+                "createdAt": "2022-12-20T01:59:28.337Z",
+                "updatedAt": "2025-06-15T04:53:11.194Z",
+                "publishedAt": "2022-12-20T01:59:29.080Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
               },
               {
-                "id": 28,
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-29T00:13:15.572Z",
-                "updatedAt": "2024-10-29T00:25:48.719Z",
-                "publishedAt": "2024-10-29T00:13:16.481Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
-                "CompositionID": "Ladder",
-                "ComponentName": "Ladder"
+                "id": 5,
+                "Name": "Get The Gains",
+                "createdAt": "2023-09-27T10:35:01.053Z",
+                "updatedAt": "2025-06-15T04:53:59.493Z",
+                "publishedAt": "2023-09-27T10:35:29.163Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "CompositionID": "CricketTop5Bowling",
+                "ComponentName": "CricketTop5Bowling"
               },
               {
-                "id": 31,
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-29T00:21:51.124Z",
-                "updatedAt": "2024-10-29T01:03:00.642Z",
-                "publishedAt": "2024-10-29T00:21:52.065Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
-                "CompositionID": "UpComingFixtures",
-                "ComponentName": "UpComing Fixtures"
+                "id": 3,
+                "Name": "Groover",
+                "createdAt": "2022-12-20T01:59:34.014Z",
+                "updatedAt": "2025-06-15T04:53:28.656Z",
+                "publishedAt": "2022-12-20T01:59:34.670Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "CompositionID": "CricketTop5Batting",
+                "ComponentName": "CricketTop5Batting"
               },
               {
-                "id": 27,
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-29T00:11:52.803Z",
-                "updatedAt": "2024-10-29T01:02:48.895Z",
-                "publishedAt": "2024-10-29T00:12:49.969Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
-                "CompositionID": "WeekendResults",
+                "id": 1,
+                "Name": "Saltine",
+                "createdAt": "2022-12-12T05:19:56.353Z",
+                "updatedAt": "2025-06-15T04:50:50.079Z",
+                "publishedAt": "2022-12-12T05:19:57.408Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
+                "CompositionID": "CricketResults",
+                "ComponentName": "CricketResults"
+              },
+              {
+                "id": 16,
+                "Name": "BEECH LOVE",
+                "createdAt": "2024-06-05T04:31:26.640Z",
+                "updatedAt": "2024-06-07T12:45:43.674Z",
+                "publishedAt": "2024-06-07T12:45:32.118Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
+                "CompositionID": "Top5AFLScorers",
+                "ComponentName": "Top 5 Scorers"
+              },
+              {
+                "id": 17,
+                "Name": "FAY V",
+                "createdAt": "2024-06-05T04:33:33.970Z",
+                "updatedAt": "2024-06-07T12:48:03.161Z",
+                "publishedAt": "2024-06-07T12:47:53.394Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
+                "CompositionID": "WeekendResultsAFL",
                 "ComponentName": "Weekend Results"
               }
             ]

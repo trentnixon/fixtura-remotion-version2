@@ -5,6 +5,7 @@ import { Classic as ClassicUpcomingGames } from "./classic";
 import SixersThunder from "./sixersThunder";
 import ClassicTwoColumn from "./classicTwoColumn";
 import CNSW from "./cnsw";
+import { CNSWPrivate } from "./cnsw-private";
 // Import other template implementations
 
 // Export all template implementations
@@ -15,4 +16,5 @@ export {
   SixersThunder as SixersThunder,
   ClassicTwoColumn as classicTwoColumn,
   CNSW as cnsw,
+  CNSWPrivate as cnswprivate,
 };

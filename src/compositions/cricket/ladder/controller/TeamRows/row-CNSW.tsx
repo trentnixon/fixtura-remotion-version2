@@ -75,7 +75,8 @@ export default StandardRowCNSW;
 export const StandardRowCNSWWrapped: React.FC<TeamRowProps> = ({
   team,
   index,
-
+  totalTeams,
+  isBiasTeam,
   LadderRowHeight,
 }) => {
   const { data } = useVideoDataContext();
@@ -90,8 +91,18 @@ export const StandardRowCNSWWrapped: React.FC<TeamRowProps> = ({
 
   // Determine background color based on position and bias team
 
+  let bgColorClass = "";
   const position = parseInt(team.position);
 
+  if (isBiasTeam) {
+    bgColorClass = "bg-blue-900/70";
+  } else if (position <= 1) {
+    bgColorClass = "bg-green-500/50";
+  } else if (position > totalTeams - 1) {
+    bgColorClass = "bg-red-500/50";
+  } else {
+    bgColorClass = index % 2 === 0 ? "bg-black/30" : "bg-black/10";
+  }
   return (
     <OverflowHiddenWrapper>
       <AnimatedContainer
@@ -108,6 +119,7 @@ export const StandardRowCNSWWrapped: React.FC<TeamRowProps> = ({
           delay={delay}
           LadderRowHeight={LadderRowHeight}
           place={position}
+          bgColorClass={bgColorClass}
         />
       </AnimatedContainer>
     </OverflowHiddenWrapper>

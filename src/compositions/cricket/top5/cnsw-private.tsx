@@ -1,0 +1,42 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// src/compositions/cricket/top5/basic.tsx
+import React from "react";
+import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import NoPlayersData from "./modules/NoPlayersData/no-data";
+import { transformPlayerData } from "./utils/dataTransformer";
+import { PlayerData } from "./types";
+import PlayersDisplayCNSWPrivate from "./controller/PlayersDisplay/display-CNSW-private";
+export const Top5PlayersPrivate: React.FC = () => {
+  const { data } = useVideoDataContext();
+  const { data: playersData, videoMeta } = data;
+  const compositionId = videoMeta?.video?.metadata?.compositionId || "";
+  const sponsors = videoMeta?.club.sponsors || [];
+  // If no data is available, show a placeholder
+  if (!playersData || playersData.length === 0) {
+    return <NoPlayersData />;
+  }
+
+  // Transform data based on composition type
+  const transformedData = transformPlayerData(
+    playersData as PlayerData[],
+    compositionId,
+  );
+
+  // Get appropriate title based on composition
+  const title = (playersData[0] as any).assignSponsors.grade.name;
+
+  return (
+    <PlayersDisplayCNSWPrivate
+      players={transformedData}
+      title={title}
+      sponsors={sponsors.primary}
+    />
+  );
+};
+
+// Export as Basic for compatibility with original template
+export const CNSWPrivate: React.FC = () => {
+  return <Top5PlayersPrivate />;
+};
+
+export default CNSWPrivate;

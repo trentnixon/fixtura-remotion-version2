@@ -35,7 +35,7 @@ export const TableHeaderCNSW: React.FC<TableHeaderProps> = ({
         <MetadataMedium
           value={title}
           animation={null}
-          variant="onBackgroundMain"
+          variant="onContainerCopyNoBg"
         ></MetadataMedium>
       </div>
       {/* Points header - Fixed width last cell */}
@@ -52,7 +52,7 @@ export const TableHeaderCNSW: React.FC<TableHeaderProps> = ({
           <MetadataMedium
             value={`POINTS`}
             animation={null}
-            variant="onBackgroundMain"
+            variant="onContainerCopyNoBg"
           ></MetadataMedium>
         </div>
       </div>

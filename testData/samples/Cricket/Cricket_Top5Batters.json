@@ -221,7 +221,7 @@
       },
       "templateVariation": {
         "useBackground": "Texture",
-        "mode": "lightAlt",
+        "mode": "light",
         "category": {
           "slug": "Classic",
           "name": "Classic",
