@@ -41,8 +41,8 @@ export const PlayerRowNameCNSW: React.FC<PlayerRowLayoutProps> = ({
   const smallTextAnimation = animations.text.main.copyIn;
 
   // Determine background color
-  const bgColor = selectedPalette.container.backgroundTransparent.strong;
-  const ScorebgColor = selectedPalette.background.main;
+  const bgColor = selectedPalette.container.backgroundTransparent.high;
+  const ScorebgColor = selectedPalette.container.backgroundTransparent.strong;
   // Get the appropriate score display based on player type
   const getScoreValues = () => {
     if (isBatter(player)) {

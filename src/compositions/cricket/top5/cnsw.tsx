@@ -24,8 +24,8 @@ export const Top5Players: React.FC = () => {
   );
 
   // Get appropriate title based on composition
-  const title = (playersData[0] as any).assignSponsors.grade.name;
-
+  //const title = (playersData[0] as any).assignSponsors.grade.name;
+  const title = videoMeta?.video?.groupingCategory;
   return (
     <PlayersDisplayCNSW
       players={transformedData}
