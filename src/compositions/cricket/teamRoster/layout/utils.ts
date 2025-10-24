@@ -14,14 +14,28 @@ export const truncateText = (text: string, maxLength: number): string => {
 
 /**
  * Truncates player name to show first character of first name and full last name
+ * Handles role indicators, captain/vice-captain suffixes, and invalid entries
  */
 export const truncatePlayerName = (text: string, maxLength: number): string => {
   if (!text || text.length <= maxLength) return text || "";
 
-  const nameParts = text.trim().split(" ");
+  const trimmedText = text.trim();
+
+  // Check if this is a role indicator (like "B. (WK) VC") - not a player name
+  if (isRoleIndicator(trimmedText)) {
+    return trimmedText;
+  }
+
+  // Extract ALL role suffixes (C, VC, (WK), etc.) to append later
+  const { cleanedName, roleSuffixes } = extractAllRoleSuffixes(trimmedText);
+
+  const nameParts = cleanedName.split(" ");
   if (nameParts.length < 2) {
     // If only one name, just truncate normally
-    return text.substring(0, maxLength - 3) + "...";
+    const truncated = cleanedName.substring(0, maxLength - 3) + "...";
+    return roleSuffixes.length > 0
+      ? `${truncated} ${roleSuffixes.join(" ")}`
+      : truncated;
   }
 
   const firstName = nameParts[0];
@@ -29,8 +43,64 @@ export const truncatePlayerName = (text: string, maxLength: number): string => {
   const truncatedName = `${firstName.charAt(0)}. ${lastName}`;
 
   // If even the truncated version is too long, fall back to normal truncation
+  if (truncatedName.length > maxLength) {
+    const truncated = cleanedName.substring(0, maxLength - 3) + "...";
+    return roleSuffixes.length > 0
+      ? `${truncated} ${roleSuffixes.join(" ")}`
+      : truncated;
+  }
 
-  return truncatedName;
+  // Append all role suffixes if they exist
+  return roleSuffixes.length > 0
+    ? `${truncatedName} ${roleSuffixes.join(" ")}`
+    : truncatedName;
+};
+
+/**
+ * Checks if text is a role indicator rather than a player name
+ */
+const isRoleIndicator = (text: string): boolean => {
+  // Only detect pure role indicators - single letter followed by roles only
+  // This excludes player names that happen to start with a single letter
+  const rolePatterns = [
+    /^[A-Z]\.\s*\([^)]+\)$/, // Pattern like "B. (WK)" - single letter + role in parentheses only
+    /^[A-Z]\.\s*[A-Z]+$/, // Pattern like "B. WK" - single letter + role only
+    /^\([^)]+\)$/, // Pattern like "(WK)" - just role in parentheses
+  ];
+
+  return rolePatterns.some((pattern) => pattern.test(text));
+};
+
+/**
+ * Extracts ALL role suffixes from player names and returns both cleaned name and all suffixes
+ */
+const extractAllRoleSuffixes = (
+  text: string,
+): { cleanedName: string; roleSuffixes: string[] } => {
+  // All possible role suffixes
+  const roleSuffixPatterns = [
+    " (WK)", // Wicket keeper in parentheses
+    " VC", // Vice captain
+    " C", // Captain
+    " (VC)", // Vice captain in parentheses
+    " (C)", // Captain in parentheses
+  ];
+
+  let cleaned = text;
+  const extractedSuffixes: string[] = [];
+
+  // Extract all suffixes in order of appearance
+  for (const suffix of roleSuffixPatterns) {
+    if (cleaned.includes(suffix)) {
+      extractedSuffixes.push(suffix.trim());
+      cleaned = cleaned.replace(suffix, "").trim();
+    }
+  }
+
+  return {
+    cleanedName: cleaned.trim(),
+    roleSuffixes: extractedSuffixes,
+  };
 };
 
 /**

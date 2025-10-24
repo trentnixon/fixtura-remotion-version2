@@ -20,7 +20,7 @@ const RosterPlayerList: React.FC<RosterPlayerListProps> = ({
         {roster.teamRoster.map((player, index) => (
           <RosterPlayerName
             key={index}
-            value={truncatePlayerName(player.toUpperCase(), 20)}
+            value={truncatePlayerName(player.toUpperCase(), 30)}
             className={className}
           />
         ))}
