@@ -79,6 +79,7 @@ const MatchCardBasic: React.FC<MatchCardProps> = ({
         height={headerHeight}
         delay={headerDelay}
         backgroundColor={"transparent"}
+        CopyVariant="onContainerCopyNoBg"
       />
     </div>
   );

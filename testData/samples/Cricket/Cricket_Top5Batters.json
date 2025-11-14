@@ -1,137 +1,137 @@
 {
   "data": [
     {
-      "SR": 165.45,
-      "name": "Fainuulelei Sialaoa",
-      "runs": 91,
-      "balls": 55,
+      "SR": 89.74,
+      "name": "Sachin Jayawardena",
+      "runs": 140,
+      "balls": 156,
       "notOut": true,
-      "prompt": "Fainuulelei Sialaoa played for Strathmore Heights (Allen), scoring 91 runs from 55 balls with a strike rate of 165.45. Game details: This was a One Day in the 2.6  Russell Allen Shield grade, and the current match status is Match Completed . Strathmore Heights (Allen), (1) vs Barkly St Dragons (Allen) (1), the match result was Barkly St Dragons (Allen) won by 1 runs.",
+      "prompt": "Sachin Jayawardena played for Taradale Gallagher Insurance Prems, scoring 140 runs from 156 balls with a strike rate of 89.74. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Taradale Gallagher Insurance Prems, (1) vs Havelock North CC - Summit Capital - Prems (1), the match result was Taradale Gallagher Insurance Prems won by 10 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
+        "width": 1000,
+        "height": 1000
       },
-      "playedFor": "Strathmore Heights (Allen)",
+      "playedFor": "Taradale Gallagher Insurance Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Allen)"
+          "name": "Taradale Gallagher Insurance Prems"
         },
         "grade": {
-          "id": 53954,
-          "name": "2.6  Russell Allen Shield"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "SR": 211.11,
-      "name": "Joel Kolep",
-      "runs": 57,
-      "balls": 27,
-      "notOut": false,
-      "prompt": "Joel Kolep played for Strathmore Heights (Girolami), scoring 57 runs from 27 balls with a strike rate of 211.11. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
+      "SR": 89.74,
+      "name": "Sachin Jayawardena",
+      "runs": 140,
+      "balls": 156,
+      "notOut": true,
+      "prompt": "Sachin Jayawardena played for Taradale Gallagher Insurance Prems, scoring 140 runs from 156 balls with a strike rate of 89.74. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Taradale Gallagher Insurance Prems, (1) vs Havelock North CC - Summit Capital - Prems (1), the match result was Taradale Gallagher Insurance Prems won by 10 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
+        "width": 1000,
+        "height": 1000
       },
-      "playedFor": "Strathmore Heights (Girolami)",
+      "playedFor": "Taradale Gallagher Insurance Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Girolami)"
+          "name": "Taradale Gallagher Insurance Prems"
         },
         "grade": {
-          "id": 53952,
-          "name": "2.4  Ern Girolami Shield"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "SR": 59.52,
-      "name": "Jason King",
-      "runs": 50,
-      "balls": 84,
-      "notOut": false,
-      "prompt": "Jason King played for Strathmore Heights (Kyte), scoring 50 runs from 84 balls with a strike rate of 59.52. Game details: This was a One Day in the 1.2 Vic Kyte Shield grade, and the current match status is Match Completed . Strathmore Heights (Kyte), (1) vs RMIT (Kyte) (1), the match result was Strathmore Heights (Kyte) won by 2 wickets.",
+      "SR": 89.74,
+      "name": "Sachin Jayawardena",
+      "runs": 140,
+      "balls": 156,
+      "notOut": true,
+      "prompt": "Sachin Jayawardena played for Taradale Gallagher Insurance Prems, scoring 140 runs from 156 balls with a strike rate of 89.74. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Taradale Gallagher Insurance Prems, (1) vs Havelock North CC - Summit Capital - Prems (1), the match result was Taradale Gallagher Insurance Prems won by 10 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
+        "width": 1000,
+        "height": 1000
       },
-      "playedFor": "Strathmore Heights (Kyte)",
+      "playedFor": "Taradale Gallagher Insurance Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Kyte)"
+          "name": "Taradale Gallagher Insurance Prems"
         },
         "grade": {
-          "id": 53943,
-          "name": "1.2 Vic Kyte Shield"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "SR": 118.42,
-      "name": "Solomona tony Sufia",
-      "runs": 45,
-      "balls": 38,
-      "notOut": false,
-      "prompt": "Solomona tony Sufia played for Strathmore Heights (Girolami), scoring 45 runs from 38 balls with a strike rate of 118.42. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
+      "SR": 89.74,
+      "name": "Sachin Jayawardena",
+      "runs": 140,
+      "balls": 156,
+      "notOut": true,
+      "prompt": "Sachin Jayawardena played for Taradale Gallagher Insurance Prems, scoring 140 runs from 156 balls with a strike rate of 89.74. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Taradale Gallagher Insurance Prems, (1) vs Havelock North CC - Summit Capital - Prems (1), the match result was Taradale Gallagher Insurance Prems won by 10 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
+        "width": 1000,
+        "height": 1000
       },
-      "playedFor": "Strathmore Heights (Girolami)",
+      "playedFor": "Taradale Gallagher Insurance Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Girolami)"
+          "name": "Taradale Gallagher Insurance Prems"
         },
         "grade": {
-          "id": 53952,
-          "name": "2.4  Ern Girolami Shield"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "SR": 90.9,
-      "name": "Saman Wijeratne",
-      "runs": 40,
-      "balls": 44,
+      "SR": 80.98,
+      "name": "Dominic Thompson",
+      "runs": 115,
+      "balls": 142,
       "notOut": false,
-      "prompt": "Saman Wijeratne played for Strathmore Heights (Girolami), scoring 40 runs from 44 balls with a strike rate of 90.9. Game details: This was a One Day in the 2.4  Ern Girolami Shield grade, and the current match status is Match Completed . Strathmore Heights (Girolami), (1) vs Glenroy (Girolami) (1), the match result was Strathmore Heights (Girolami) won by 62 runs.",
+      "prompt": "Dominic Thompson played for Central HB Waipawa Butchery Prems, scoring 115 runs from 142 balls with a strike rate of 80.98. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Central HB Waipawa Butchery Prems, (10/238 &) vs NOBMCC Prems (10/111 &), the match result was NOBMCC Prems won by 10 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9ba6f2a52.jpg",
+        "width": 2000,
+        "height": 889
       },
-      "playedFor": "Strathmore Heights (Girolami)",
+      "playedFor": "Central HB Waipawa Butchery Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Strathmore Heights (Girolami)"
+          "name": "Central HB Waipawa Butchery Prems"
         },
         "grade": {
-          "id": 53952,
-          "name": "2.4  Ern Girolami Shield"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 15083,
-          "name": "NWMCA SENIORS"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     }
@@ -139,15 +139,17 @@
   "asset": {
     "assetID": 6,
     "assetTypeID": 3,
-    "assetCategoryID": 1,
-    "assetsLinkID": "5cacf2ceba231d805b8a2180526e0650dd097d312f3ccfa2f296395d939d230f"
+    "assetsLinkID": "d35c80b3a5cf403c16f833f04ae43511282eb9db8e2090fa3448a5a0b19887b5",
+    "assetCategoryID": 1
   },
+  "errors": [],
+  "frames": [390, 45],
   "render": {
-    "schedulerId": 321,
-    "renderId": 8469
+    "renderId": 18282,
+    "schedulerId": 1130
   },
   "account": {
-    "accountId": 434
+    "accountId": 1130
   },
   "timings": {
     "FPS_MAIN": 360,
@@ -156,46 +158,28 @@
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc.png",
+        "width": 2671,
+        "height": 2671,
+        "hasLogo": true
       },
-      "name": "Strathmore Heights Cricket Club",
+      "name": "Hawke's Bay Cricket Association",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "default": {},
+        "primary": []
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
-      "metadata": {
-        "title": "Top 5",
-        "titleSplit": ["Batters"],
-        "videoTitle": "Top 5 Run Scorers",
-        "compositionId": "CricketTop5Batting",
-        "assetId": 6,
-        "assetTypeId": 3,
-        "frames": [],
-        "includeSponsors": false
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#de0000",
-          "secondary": "#ffa300"
-        },
-        "template": "Classic"
-      },
       "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -204,156 +188,172 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
         }
+      },
+      "metadata": {
+        "title": "Top 5",
+        "frames": [],
+        "assetId": 6,
+        "titleSplit": ["Batters"],
+        "videoTitle": "Top 5 Run Scorers",
+        "assetTypeId": 3,
+        "compositionId": "CricketTop5Batting",
+        "includeSponsors": false
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#000000",
+          "secondary": "#f3f3f3"
+        },
+        "template": "TwoColumnClassic"
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 2,
+          "CricketUpcoming": 3,
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "Senior",
+      "groupingCategory": "Senior",
       "templateVariation": {
-        "useBackground": "Texture",
-        "mode": "light",
-        "category": {
-          "slug": "Classic",
-          "name": "Classic",
-          "divideFixturesBy": {
-            "CricketUpcoming": 2,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1
-          },
-          "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-29T00:24:54.890Z",
-            "updatedAt": "2024-10-29T00:24:56.001Z",
-            "publishedAt": "2024-10-29T00:24:56.000Z",
-            "audio_options": [
-              {
-                "id": 25,
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-29T00:03:05.331Z",
-                "updatedAt": "2024-10-29T01:02:40.051Z",
-                "publishedAt": "2024-10-29T00:03:06.783Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
-                "CompositionID": "Top5BowlingList",
-                "ComponentName": "Top 5 Bowling"
-              },
-              {
-                "id": 30,
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-29T00:18:54.565Z",
-                "updatedAt": "2024-10-29T00:25:33.146Z",
-                "publishedAt": "2024-10-29T00:18:55.872Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
-                "CompositionID": "Top5BattingList",
-                "ComponentName": "Top 5 Batting"
-              },
-              {
-                "id": 28,
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-29T00:13:15.572Z",
-                "updatedAt": "2024-10-29T00:25:48.719Z",
-                "publishedAt": "2024-10-29T00:13:16.481Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
-                "CompositionID": "Ladder",
-                "ComponentName": "Ladder"
-              },
-              {
-                "id": 31,
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-29T00:21:51.124Z",
-                "updatedAt": "2024-10-29T01:03:00.642Z",
-                "publishedAt": "2024-10-29T00:21:52.065Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
-                "CompositionID": "UpComingFixtures",
-                "ComponentName": "UpComing Fixtures"
-              },
-              {
-                "id": 27,
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-29T00:11:52.803Z",
-                "updatedAt": "2024-10-29T01:02:48.895Z",
-                "publishedAt": "2024-10-29T00:12:49.969Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
-                "CompositionID": "WeekendResults",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
-        },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
-          "loop": null,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
-        },
+        "mode": "lightAlt",
         "image": {
           "url": null,
+          "type": "pan",
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
           "direction": "left",
-          "overlayStyle": "vignette",
           "gradientType": "linear",
+          "overlayStyle": "vignette",
           "overlayOpacity": 0.3
-        },
-        "palette": "primaryOnBlack",
-        "gradient": {
-          "type": "primary",
-          "direction": "VERTICAL"
         },
         "noise": {
           "type": "floatingParticles"
         },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": "cover",
+          "muted": true,
+          "volume": 0.8,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "primary",
         "pattern": {
           "type": "dots",
-          "animation": "none",
           "scale": 0.75,
-          "rotation": null,
           "opacity": 0.35,
-          "animationDuration": null,
-          "animationSpeed": 0.8
-        },
-        "particle": {
-          "type": "lines",
-          "particleCount": "300",
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
         },
         "texture": {
-          "name": "Wood",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_wood_like_623b1be4c1.png",
-          "repeat": "cover",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_concrete_c6e6159a76.png",
+          "name": "Concrete",
           "scale": "100%",
+          "repeat": "cover",
           "overlay": {
             "opacity": 0.7,
             "blendMode": "multiply"
           }
-        }
+        },
+        "category": {
+          "name": "Classic Two Column ",
+          "slug": "TwoColumnClassic",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "primary",
+          "direction": "VERTICAL"
+        },
+        "particle": {
+          "type": "lines",
+          "speed": 0.8,
+          "animation": "scale",
+          "direction": "up",
+          "particleCount": "300"
+        },
+        "useBackground": "Texture"
       }
     }
-  },
-  "errors": []
+  }
 }

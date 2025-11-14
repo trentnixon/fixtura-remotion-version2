@@ -14,6 +14,21 @@ interface ThunderOutroProps {
   doesAccountHaveSponsors: boolean;
 }
 
+const GRID_SETTINGS = {
+  columns: 2,
+  rows: 3,
+  gap: "0.25rem",
+  containerMaxWidth: 1600,
+  containerMaxHeight: 900,
+  cellMaxSize: 600,
+  cellPadding: 16,
+  cellAspectRatio: "1 / 1",
+  chunkSize: 6,
+  sequenceDurationInFrames: 90,
+  logoExitFrame: 300,
+  logoDelayIncrement: 5,
+} as const;
+
 // Helper to chunk array into groups of n
 const chunkArray = <T,>(arr: T[], size: number): T[][] => {
   // Normalize: if element is an object with a single numeric key '0', extract the value
@@ -42,29 +57,45 @@ interface LogoAnimationsType {
   exitAnimation?: ImageAnimationType | ImageAnimationConfig;
 }
 
-// Grid component for 2x3 layout
+// Grid component for 2x3 layout (6 equal boxes)
 const SponsorGrid: React.FC<{
   sponsors: Sponsor[];
   LogoAnimations: LogoAnimationsType;
 }> = ({ sponsors, LogoAnimations }) => (
-  <div className="grid grid-cols-2 grid-rows-3 gap-10  justify-center items-center">
+  <div
+    className="grid justify-center items-center w-full h-full"
+    style={{
+      gridTemplateColumns: `repeat(${GRID_SETTINGS.columns}, minmax(0, 1fr))`,
+      gridTemplateRows: `repeat(${GRID_SETTINGS.rows}, minmax(0, 1fr))`,
+      gap: GRID_SETTINGS.gap,
+      maxWidth: GRID_SETTINGS.containerMaxWidth,
+      maxHeight: GRID_SETTINGS.containerMaxHeight,
+      gridAutoRows: "1fr",
+    }}
+  >
     {sponsors
       .filter((sponsor) => sponsor.logo && sponsor.logo.url)
       .map((sponsor, idx) => (
         <div
           key={`${sponsor.id}_${idx}`}
-          className="flex items-center justify-center p-4 max-h-[300px] max-w-[300px]"
+          className="flex items-center justify-center w-full h-full"
+          style={{
+            aspectRatio: GRID_SETTINGS.cellAspectRatio,
+            maxWidth: GRID_SETTINGS.cellMaxSize,
+            maxHeight: GRID_SETTINGS.cellMaxSize,
+            padding: GRID_SETTINGS.cellPadding,
+          }}
         >
           <AnimatedImage
             src={sponsor.logo.url}
             alt={sponsor.name || ""}
-            width={"auto"}
-            height={"auto"}
+            width={"100%"}
+            height={"100%"}
             fit="contain"
             animation={LogoAnimations.introIn}
             exitAnimation={LogoAnimations.exitAnimation}
-            animationDelay={idx * 5}
-            exitFrame={300}
+            animationDelay={idx * GRID_SETTINGS.logoDelayIncrement}
+            exitFrame={GRID_SETTINGS.logoExitFrame}
           />
         </div>
       ))}
@@ -86,7 +117,7 @@ export const ThunderOutro: React.FC<ThunderOutroProps> = ({
   const defaultArray: Sponsor[] = convertToArray(defaultSponsors);
   const sponsorsArray: Sponsor[] = [...defaultArray];
 
-  const groups = chunkArray(sponsorsArray, 6);
+  const groups = chunkArray(sponsorsArray, GRID_SETTINGS.chunkSize);
   // Each group is a sequence for 180 frames
   const sequences = groups.map((group) => ({
     content: (
@@ -94,7 +125,7 @@ export const ThunderOutro: React.FC<ThunderOutroProps> = ({
         <SponsorGrid sponsors={group} LogoAnimations={LogoAnimations} />
       </AbsoluteFill>
     ),
-    durationInFrames: 90,
+    durationInFrames: GRID_SETTINGS.sequenceDurationInFrames,
   }));
 
   return (

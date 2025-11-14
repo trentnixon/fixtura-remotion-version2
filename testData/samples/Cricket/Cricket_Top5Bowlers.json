@@ -1,148 +1,150 @@
 {
   "data": [
     {
-      "name": "A.J Francesconi",
-      "runs": 5,
-      "overs": "5",
-      "prompt": "A.J Francesconi played for Runaway Bay Seagulls Opens Div 1, taking 2 wickets from 5 overs, conceding 5 runs. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is Match Completed . Runaway Bay Seagulls Opens Div 1 (1) vs Burleigh Open Div 1 (1), the match result was Runaway Bay Seagulls Opens Div 1 won by 10 wickets.",
-      "wickets": 2,
+      "name": "Simphiwe Yiba",
+      "runs": 47,
+      "overs": "16",
+      "prompt": "Simphiwe Yiba played for Cornwall Prems, taking 4 wickets from 16 overs, conceding 47 runs. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Cornwall Prems (1) vs Napier Tech Complete Flooring Prems (10/215 &), the match result was Cornwall Prems won by 90 runs.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
+        "width": 600,
+        "height": 600
       },
-      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "playedFor": "Cornwall Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Seagulls Opens Div 1"
+          "name": "Cornwall Prems"
         },
         "grade": {
-          "id": 56027,
-          "name": "Open Division 1"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 13441,
-          "name": "Gold Coast Juniors"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Stephen Watson",
-      "runs": 7,
-      "overs": "6.5",
-      "prompt": "Stephen Watson played for Runaway Bay Seagulls Opens Div 1, taking 2 wickets from 6.5 overs, conceding 7 runs. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is Match Completed . Runaway Bay Seagulls Opens Div 1 (1) vs Burleigh Open Div 1 (1), the match result was Runaway Bay Seagulls Opens Div 1 won by 10 wickets.",
-      "wickets": 2,
+      "name": "Simphiwe Yiba",
+      "runs": 47,
+      "overs": "16",
+      "prompt": "Simphiwe Yiba played for Cornwall Prems, taking 4 wickets from 16 overs, conceding 47 runs. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Cornwall Prems (1) vs Napier Tech Complete Flooring Prems (10/215 &), the match result was Cornwall Prems won by 90 runs.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
+        "width": 600,
+        "height": 600
       },
-      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "playedFor": "Cornwall Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Seagulls Opens Div 1"
+          "name": "Cornwall Prems"
         },
         "grade": {
-          "id": 56027,
-          "name": "Open Division 1"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 13441,
-          "name": "Gold Coast Juniors"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Quaid Rogers",
-      "runs": 8,
-      "overs": "5",
-      "prompt": "Quaid Rogers played for Runaway Bay Seagulls Opens Div 1, taking 2 wickets from 5 overs, conceding 8 runs. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is Match Completed . Runaway Bay Seagulls Opens Div 1 (1) vs Burleigh Open Div 1 (1), the match result was Runaway Bay Seagulls Opens Div 1 won by 10 wickets.",
-      "wickets": 2,
+      "name": "Simphiwe Yiba",
+      "runs": 47,
+      "overs": "16",
+      "prompt": "Simphiwe Yiba played for Cornwall Prems, taking 4 wickets from 16 overs, conceding 47 runs. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Cornwall Prems (1) vs Napier Tech Complete Flooring Prems (10/215 &), the match result was Cornwall Prems won by 90 runs.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
+        "width": 600,
+        "height": 600
       },
-      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "playedFor": "Cornwall Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Seagulls Opens Div 1"
+          "name": "Cornwall Prems"
         },
         "grade": {
-          "id": 56027,
-          "name": "Open Division 1"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 13441,
-          "name": "Gold Coast Juniors"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Joshua Schultz",
-      "runs": 9,
-      "overs": "5",
-      "prompt": "Joshua Schultz played for Runaway Bay Seagulls U13 Div 1, taking 2 wickets from 5 overs, conceding 9 runs. Game details: This was a Two Day+ in the Under 13 Division 1 grade, and the current match status is Match Completed . Runaway Bay Seagulls U13 Div 1 (1) vs Mudgee Maulers U13 Div 1 (1), the match result was Runaway Bay Seagulls U13 Div 1 won by 69 runs.",
-      "wickets": 2,
+      "name": "Simphiwe Yiba",
+      "runs": 47,
+      "overs": "16",
+      "prompt": "Simphiwe Yiba played for Cornwall Prems, taking 4 wickets from 16 overs, conceding 47 runs. Game details: This was a Two Day+ in the Property Brokers Premier Mens grade, and the current match status is Match Completed . Cornwall Prems (1) vs Napier Tech Complete Flooring Prems (10/215 &), the match result was Cornwall Prems won by 90 runs.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
+        "width": 600,
+        "height": 600
       },
-      "playedFor": "Runaway Bay Seagulls U13 Div 1",
+      "playedFor": "Cornwall Prems",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Seagulls U13 Div 1"
+          "name": "Cornwall Prems"
         },
         "grade": {
-          "id": 56024,
-          "name": "Under 13 Division 1"
+          "id": 80055,
+          "name": "Property Brokers Premier Mens"
         },
         "competition": {
-          "id": 13441,
-          "name": "Gold Coast Juniors"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     },
     {
-      "name": "Alfie Joshi",
-      "runs": 12,
-      "overs": "4.2",
-      "prompt": "Alfie Joshi played for Runaway Bay Seagulls U13 Div 1, taking 2 wickets from 4.2 overs, conceding 12 runs. Game details: This was a Two Day+ in the Under 13 Division 1 grade, and the current match status is Match Completed . Runaway Bay Seagulls U13 Div 1 (1) vs Mudgee Maulers U13 Div 1 (1), the match result was Runaway Bay Seagulls U13 Div 1 won by 69 runs.",
-      "wickets": 2,
+      "name": "Austin Thomas",
+      "runs": 56,
+      "overs": "8",
+      "prompt": "Austin Thomas played for Cornwall Seniors, taking 4 wickets from 8 overs, conceding 56 runs. Game details: This was a One Day in the Complete Paints Division 1 grade, and the current match status is Match Completed . Cornwall Seniors (1) vs Lindisfarne 1st XI (1), the match result was Cornwall Seniors won by 3 runs.",
+      "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
+        "width": 600,
+        "height": 600
       },
-      "playedFor": "Runaway Bay Seagulls U13 Div 1",
+      "playedFor": "Cornwall Seniors",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Seagulls U13 Div 1"
+          "name": "Cornwall Seniors"
         },
         "grade": {
-          "id": 56024,
-          "name": "Under 13 Division 1"
+          "id": 80901,
+          "name": "Complete Paints Division 1"
         },
         "competition": {
-          "id": 13441,
-          "name": "Gold Coast Juniors"
+          "id": 38096,
+          "name": "Senior"
         }
       }
     }
   ],
   "asset": {
-    "assetID": 16,
+    "assetID": 7,
     "assetTypeID": 3,
-    "assetCategoryID": 2,
-    "assetsLinkID": "725ac24d9a62d1c7e2e2f0e6f8ca684182b160cef955d5da39fed82991c38f95"
+    "assetsLinkID": "1f0e11666e29b2e9c49b67ad1c9c87cb794fb12111b4b372840906aebe724146",
+    "assetCategoryID": 1
   },
+  "errors": [],
+  "frames": [390, 45],
   "render": {
-    "schedulerId": 317,
-    "renderId": 8494
+    "renderId": 18315,
+    "schedulerId": 1130
   },
   "account": {
-    "accountId": 430
+    "accountId": 1130
   },
   "timings": {
     "FPS_MAIN": 360,
@@ -151,59 +153,56 @@
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0
   },
-  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc.png",
+        "width": 2671,
+        "height": 2671,
+        "hasLogo": true
       },
-      "name": "Runaway Bay Cricket Club Inc",
+      "name": "Hawke's Bay Cricket Association",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "default": {},
+        "primary": []
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "JUNIOR",
-      "groupingCategory": "JUNIOR",
+      "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
+        "HeroImage": {
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
+        }
+      },
       "metadata": {
         "title": "Top 5",
+        "frames": [],
+        "assetId": 7,
         "titleSplit": ["Bowlers"],
         "videoTitle": "Top 5 Bowlers",
-        "compositionId": "CricketTop5Bowling",
-        "assetId": 16,
         "assetTypeId": 3,
-        "frames": [390],
+        "compositionId": "CricketTop5Bowling",
         "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "primary": "#000000",
+          "secondary": "#f3f3f3"
         },
         "template": "TwoColumnClassic"
-      },
-      "media": {
-        "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/524abe1dc7ebb37effc4d4d3cd959eb3_fbf19bb25a.jpg",
-          "ratio": "portrait",
-          "width": 702,
-          "height": 1024,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
-        }
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -214,161 +213,142 @@
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "Senior",
+      "groupingCategory": "Senior",
       "templateVariation": {
-        "useBackground": "Texture",
         "mode": "lightAlt",
-        "category": {
-          "slug": "TwoColumnClassic",
-          "name": "Classic Two Column ",
-          "divideFixturesBy": {
-            "CricketUpcoming": 3,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1
-          },
-          "bundleAudio": {
-            "id": 1,
-            "Name": "Basic",
-            "createdAt": "2023-09-27T10:36:24.428Z",
-            "updatedAt": "2025-06-15T04:50:57.910Z",
-            "publishedAt": "2023-09-27T10:36:25.639Z",
-            "audio_options": [
-              {
-                "id": 4,
-                "Name": "Better Start Now",
-                "createdAt": "2023-09-27T10:34:46.702Z",
-                "updatedAt": "2025-06-15T04:53:45.558Z",
-                "publishedAt": "2023-09-27T10:34:48.455Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "CompositionID": "CricketLadder",
-                "ComponentName": "CricketLadder"
-              },
-              {
-                "id": 2,
-                "Name": "Fifteen on Me",
-                "createdAt": "2022-12-20T01:59:28.337Z",
-                "updatedAt": "2025-06-15T04:53:11.194Z",
-                "publishedAt": "2022-12-20T01:59:29.080Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
-              },
-              {
-                "id": 5,
-                "Name": "Get The Gains",
-                "createdAt": "2023-09-27T10:35:01.053Z",
-                "updatedAt": "2025-06-15T04:53:59.493Z",
-                "publishedAt": "2023-09-27T10:35:29.163Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "CompositionID": "CricketTop5Bowling",
-                "ComponentName": "CricketTop5Bowling"
-              },
-              {
-                "id": 3,
-                "Name": "Groover",
-                "createdAt": "2022-12-20T01:59:34.014Z",
-                "updatedAt": "2025-06-15T04:53:28.656Z",
-                "publishedAt": "2022-12-20T01:59:34.670Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "CompositionID": "CricketTop5Batting",
-                "ComponentName": "CricketTop5Batting"
-              },
-              {
-                "id": 1,
-                "Name": "Saltine",
-                "createdAt": "2022-12-12T05:19:56.353Z",
-                "updatedAt": "2025-06-15T04:50:50.079Z",
-                "publishedAt": "2022-12-12T05:19:57.408Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-                "CompositionID": "CricketResults",
-                "ComponentName": "CricketResults"
-              },
-              {
-                "id": 16,
-                "Name": "BEECH LOVE",
-                "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2024-06-07T12:45:43.674Z",
-                "publishedAt": "2024-06-07T12:45:32.118Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "Top5AFLScorers",
-                "ComponentName": "Top 5 Scorers"
-              },
-              {
-                "id": 17,
-                "Name": "FAY V",
-                "createdAt": "2024-06-05T04:33:33.970Z",
-                "updatedAt": "2024-06-07T12:48:03.161Z",
-                "publishedAt": "2024-06-07T12:47:53.394Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
-                "CompositionID": "WeekendResultsAFL",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
-        },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
-          "loop": null,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
-        },
         "image": {
           "url": null,
+          "type": "pan",
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
           "direction": "left",
-          "overlayStyle": "vignette",
           "gradientType": "linear",
+          "overlayStyle": "vignette",
           "overlayOpacity": 0.3
-        },
-        "palette": "primaryOnWhite",
-        "gradient": {
-          "type": "primary",
-          "direction": "HORIZONTAL"
         },
         "noise": {
           "type": "floatingParticles"
         },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": "cover",
+          "muted": true,
+          "volume": 0.8,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "primary",
         "pattern": {
           "type": "dots",
-          "animation": "none",
           "scale": 0.75,
-          "rotation": null,
           "opacity": 0.35,
-          "animationDuration": null,
-          "animationSpeed": 0.8
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
+        },
+        "texture": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_concrete_c6e6159a76.png",
+          "name": "Concrete",
+          "scale": "100%",
+          "repeat": "cover",
+          "overlay": {
+            "opacity": 0.7,
+            "blendMode": "multiply"
+          }
+        },
+        "category": {
+          "name": "Classic Two Column ",
+          "slug": "TwoColumnClassic",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "primary",
+          "direction": "VERTICAL"
         },
         "particle": {
           "type": "lines",
-          "particleCount": "300",
           "speed": 0.8,
+          "animation": "scale",
           "direction": "up",
-          "animation": "scale"
+          "particleCount": "300"
         },
-        "texture": {
-          "name": "Print Texture",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Geometric_Halftone_Print_Texture_cb888287e4.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": {
-            "opacity": 0.8,
-            "blendMode": "multiply"
-          }
-        }
+        "useBackground": "Texture"
       }
     }
-  },
-  "errors": []
+  }
 }
