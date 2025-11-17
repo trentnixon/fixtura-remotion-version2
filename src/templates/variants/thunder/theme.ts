@@ -110,7 +110,8 @@ export const basicTheme: TemplateThemeConfig = {
         "text-2xl font-semibold  tracking-wider leading-tight py-4 ml-4",
     },
     ResultFixtureResult: {
-      className: "text-4xl font-normal  tracking-wider leading-tight italic",
+      className:
+        "text-4xl font-normal text-center tracking-wider leading-tight italic",
     },
     ResultMetaData: {
       className: "text-3xl font-semibold  tracking-wider leading-tight",
