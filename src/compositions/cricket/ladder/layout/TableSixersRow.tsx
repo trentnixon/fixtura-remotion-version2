@@ -5,6 +5,7 @@ import LadderTeamName from "../../utils/primitives/ladderTeamName";
 import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 import { TeamData } from "../types";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { truncateText } from "../../utils/utils-text";
 
 // Base props interface for all layouts
 interface BaseLayoutProps {
@@ -38,7 +39,7 @@ export const SixersLadderRow: React.FC<BaseLayoutProps> = ({
         className="flex items-center justify-between mr-2"
         style={{ width: "65%" }}
       >
-        <LadderTeamName value={team.teamName} delay={delay} />
+        <LadderTeamName value={truncateText(team.teamName, 29)} delay={delay} />
         <div className="w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center">
           {team.clubLogo || team.playHQLogo ? (
             <div className="rounded-full">

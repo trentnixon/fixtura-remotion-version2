@@ -1,1063 +1,4981 @@
 {
   "data": [
     {
-      "ID": 53943,
-      "gradeName": "1.2 Vic Kyte Shield",
+      "ID": 67656,
+      "bias": null,
       "League": [
         {
-          "position": "1",
-          "teamName": "Lalor Warriors (Kyte)",
-          "teamHref": "/cricket-australia/org/lalor-warriors-cricket-club/b6cfc4dd/nwmca-seniors-summer-202526/teams/lalor-warriors-kyte/31f984f9",
-          "P": "2",
-          "PTS": "12",
-          "Q": "3.032",
-          "W": "2",
-          "L": "0",
-          "TIE": "0",
-          "N/R": "0",
+          "L": "1",
+          "P": "6",
+          "W": "5",
           "BYE": "0",
-          "clubId": 31938,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_36cd0f0921.jpg",
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 6528,
           "prompt": {
-            "teamName": "Lalor Warriors (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "1",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "2",
-              "losses": "0",
-              "points": "12",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
-        },
-        {
-          "position": "2",
-          "teamName": "Donnybrook (Kyte)",
-          "teamHref": "/cricket-australia/org/donnybrook-cricket-club-vic/a2c07ed8/nwmca-seniors-summer-202526/teams/donnybrook-kyte/324fbe94",
-          "P": "2",
-          "PTS": "12",
-          "Q": "1.695",
-          "W": "2",
-          "L": "0",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
+            "teamName": "Blacktown District",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
           "clubLogo": null,
-          "playHQLogo": null,
           "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/85dd74b4",
           "teamLogo": null,
-          "prompt": {
-            "teamName": "Donnybrook (Kyte)",
-            "position": "2",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "2",
-              "losses": "0",
-              "points": "12",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
         },
         {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 7807,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Fairfield-Liverpool U12 DIV 1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u12-div-1/5fab4f46",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U12 DIV 1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 8268,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Hornsby Ku-ring-gai & Hills District",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
           "position": "3",
-          "teamName": "Merrifield Panthers (Kyte)",
-          "teamHref": "/cricket-australia/org/merrifield-panthers-cricket-club/e712e007/nwmca-seniors-summer-202526/teams/merrifield-panthers-kyte/5c0b19ed",
-          "P": "2",
-          "PTS": "9",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-and-hills-district/cd0ecdf1",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai & Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 8175,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Hawkesbury U12-1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HB_Logo_05273a54d0.png",
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/hawkesbury-district-cricket-association-rep-teams/4cd85c14/metro-youth-championships-male-summer-202526/teams/hawkesbury-u12-1/05122ece",
+          "teamLogo": null,
+          "teamName": "Hawkesbury U12-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_89719f70cc.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8735,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Manly Warringah U12/1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u121/833a4487",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U12/1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
+        },
+        {
+          "L": "6",
+          "P": "6",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "SSJCA U12 Arch Cawsey Shield",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u12-arch-cawsey-shield/0c502ff6",
+          "teamLogo": null,
+          "teamName": "SSJCA U12 Arch Cawsey Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "0",
+          "P": "6",
+          "W": "6",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "36",
+          "TIE": "0",
+          "clubId": 8322,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "36",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Inner West Harbour U12- 1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/inner-west-harbour-u12-1/9251208e",
+          "teamLogo": null,
+          "teamName": "Inner West Harbour U12- 1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 9461,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Parramatta U12-1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u12-1/15aaaca1",
+          "teamLogo": null,
+          "teamName": "Parramatta U12-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "26",
+          "TIE": "0",
+          "clubId": 9236,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "26",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "North Shore U12/1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/north-shore-junior-cricket-association-rep-teams/964bd0e3/metro-youth-championships-male-summer-202526/teams/north-shore-u121/5cbf863a",
+          "teamLogo": null,
+          "teamName": "North Shore U12/1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_09c1c06c40.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 12648,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "U12s Nepean DCA",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/nepean-district-cricket-association-rep-teams/c7179661/metro-youth-championships-male-summer-202526/teams/u12s-nepean-dca/bf43f06d",
+          "teamLogo": null,
+          "teamName": "U12s Nepean DCA",
+          "playHQLogo": null
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10321,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "St George CAWSEY U12 Boys Div 1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/st-george-district-cricket-association-nsw-rep-teams/f8e9fe74/metro-youth-championships-male-summer-202526/teams/st-george-cawsey-u12-boys-div-1/6abaaecb",
+          "teamLogo": null,
+          "teamName": "St George CAWSEY U12 Boys Div 1",
+          "playHQLogo": null
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 9260,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Northern District U12/1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u121/246e88fa",
+          "teamLogo": null,
+          "teamName": "Northern District U12/1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10166,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "SEJCA U12 Div 1",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u12-div-1/6d8bd111",
+          "teamLogo": null,
+          "teamName": "SEJCA U12 Div 1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 7063,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "CDCA U12-1 Cawsey Shield",
+            "gradeName": "U12 - 1 Cawsey Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/camden-district-cricket-association-representative-teams/3509ee81/metro-youth-championships-male-summer-202526/teams/cdca-u12-1-cawsey-shield/d4dcf1cf",
+          "teamLogo": null,
+          "teamName": "CDCA U12-1 Cawsey Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b973206324.jpg"
+        }
+      ],
+      "prompt": {
+        "teams": [
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Blacktown District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Fairfield-Liverpool U12 DIV 1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Hornsby Ku-ring-gai & Hills District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Hawkesbury U12-1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Manly Warringah U12/1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "SSJCA U12 Arch Cawsey Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "36",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Inner West Harbour U12- 1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Parramatta U12-1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "26",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "North Shore U12/1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "U12s Nepean DCA"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "St George CAWSEY U12 Boys Div 1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Northern District U12/1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "SEJCA U12 Div 1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "CDCA U12-1 Cawsey Shield"
+          }
+        ],
+        "gradeName": "U12 - 1 Cawsey Shield"
+      },
+      "gradeName": "U12 - 1 Cawsey Shield",
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "ID": 67657,
+      "bias": null,
+      "League": [
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 9236,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "North Shore U12/2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/north-shore-junior-cricket-association-rep-teams/964bd0e3/metro-youth-championships-male-summer-202526/teams/north-shore-u122/7fc985d2",
+          "teamLogo": null,
+          "teamName": "North Shore U12/2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_09c1c06c40.jpg"
+        },
+        {
+          "L": "0",
+          "P": "5",
+          "W": "5",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "30",
+          "TIE": "0",
+          "clubId": 8268,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "30",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "Hornsby Ku-ring-gai & Hills District",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-and-hills-district/4e28dd73",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai & Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 6528,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "3",
+            "teamName": "Blacktown District",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/71d9c9e4",
+          "teamLogo": null,
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 7161,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "Central Coast",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/central-coast-cricket-zone-representative-teams/58935943/metro-youth-championships-male-summer-202526/teams/central-coast/93d224e1",
+          "teamLogo": null,
+          "teamName": "Central Coast",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6ca4175a12.jpg"
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 9153,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "Newcastle",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/newcastle-cricket-zone-representative-team/0f710817/metro-youth-championships-male-summer-202526/teams/newcastle/93d3e5ec",
+          "teamLogo": null,
+          "teamName": "Newcastle",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50f8d0281d.jpg"
+        },
+        {
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 9153,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "Lake Macquarie",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/newcastle-cricket-zone-representative-team/0f710817/metro-youth-championships-male-summer-202526/teams/lake-macquarie/bc14362a",
+          "teamLogo": null,
+          "teamName": "Lake Macquarie",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_50f8d0281d.jpg"
+        },
+        {
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 9461,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Parramatta U12-2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u12-2/9342a5ec",
+          "teamLogo": null,
+          "teamName": "Parramatta U12-2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 8735,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Manly Warringah U12/2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u122/ec55f843",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U12/2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
+        },
+        {
+          "L": "6",
+          "P": "6",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 9260,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "9",
+            "teamName": "Northern District U12/2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "9",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u122/16c584c7",
+          "teamLogo": null,
+          "teamName": "Northern District U12/2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "34",
+          "TIE": "0",
+          "clubId": 7381,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "34",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Illawarra U12 Boys",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/cricket-illawarra-representative-teams/aab90955/metro-youth-championships-male-summer-202526/teams/illawarra-u12-boys/2f6dd0c2",
+          "teamLogo": null,
+          "teamName": "Illawarra U12 Boys",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6906857f49.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 7096,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "C&WSCA Youth Championship U12 Boys Div 2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/canterbury-and-western-suburbs-cricket-association-rep-teams/2127fd69/metro-youth-championships-male-summer-202526/teams/candwsca-youth-championship-u12-boys-div-2/ad488ea5",
+          "teamLogo": null,
+          "teamName": "C&WSCA Youth Championship U12 Boys Div 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4561fcd33.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 8219,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Highlands Cricket",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/highlands-district-cricket-association-rep-teams/bc02b73b/metro-youth-championships-male-summer-202526/teams/highlands-cricket/a20e6a17",
+          "teamLogo": null,
+          "teamName": "Highlands Cricket",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_d0c607ccc7.jpg"
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "27",
+          "TIE": "0",
+          "clubId": 6349,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Bankstown U12s",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/bankstown-district-cricket-association-rep-teams/70f32d5a/metro-youth-championships-male-summer-202526/teams/bankstown-u12s/cef3097b",
+          "teamLogo": null,
+          "teamName": "Bankstown U12s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_10d465dd51.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "SSJCA U12 Foster Shield",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u12-foster-shield/f525f168",
+          "teamLogo": null,
+          "teamName": "SSJCA U12 Foster Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 10151,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "South Coast DCA Foster Shield",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/south-coast-district-cricket-association-rep-teams/4f63198f/metro-youth-championships-male-summer-202526/teams/south-coast-dca-foster-shield/84552602",
+          "teamLogo": null,
+          "teamName": "South Coast DCA Foster Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cccf584bd0.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 7807,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "Fairfield-Liverpool U12 DIV 2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u12-div-2/01c4e093",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U12 DIV 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "7",
+          "TIE": "0",
+          "clubId": 10166,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "7",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "SEJCA U12 Div 2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u12-div-2/ec2d6302",
+          "teamLogo": null,
+          "teamName": "SEJCA U12 Div 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 10321,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "9",
+            "teamName": "St George FOSTER U12 Boys Div 2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "9",
+          "teamHref": "/cricket-australia/org/st-george-district-cricket-association-nsw-rep-teams/f8e9fe74/metro-youth-championships-male-summer-202526/teams/st-george-foster-u12-boys-div-2/0be6b7e3",
+          "teamLogo": null,
+          "teamName": "St George FOSTER U12 Boys Div 2",
+          "playHQLogo": null
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 8322,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "10",
+            "teamName": "Inner West Harbour U12-2",
+            "gradeName": "U12 - 2 Foster Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "10",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/inner-west-harbour-u12-2/f18c1061",
+          "teamLogo": null,
+          "teamName": "Inner West Harbour U12-2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
+        }
+      ],
+      "prompt": {
+        "teams": [
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "North Shore U12/2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "30",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "Hornsby Ku-ring-gai & Hills District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "3",
+            "teamName": "Blacktown District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "Central Coast"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "Newcastle"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "Lake Macquarie"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Parramatta U12-2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Manly Warringah U12/2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "9",
+            "teamName": "Northern District U12/2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "34",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Illawarra U12 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "C&WSCA Youth Championship U12 Boys Div 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Highlands Cricket"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Bankstown U12s"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "SSJCA U12 Foster Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "South Coast DCA Foster Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "Fairfield-Liverpool U12 DIV 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "7",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "SEJCA U12 Div 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "9",
+            "teamName": "St George FOSTER U12 Boys Div 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "10",
+            "teamName": "Inner West Harbour U12-2"
+          }
+        ],
+        "gradeName": "U12 - 2 Foster Shield"
+      },
+      "gradeName": "U12 - 2 Foster Shield",
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "ID": 67658,
+      "bias": null,
+      "League": [
+        {
+          "L": "0",
+          "P": "6",
+          "W": "6",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "38",
+          "TIE": "0",
+          "clubId": 6528,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "38",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Blacktown District",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/c244389f",
+          "teamLogo": null,
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "24",
+          "TIE": "0",
+          "clubId": 7807,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Fairfield-Liverpool U13 DIV 1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u13-div-1/95e82b62",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U13 DIV 1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8268,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Hornsby Ku-ring-gai & Hills District",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-and-hills-district/c54113a2",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai & Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8735,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Manly Warringah U13/1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u131/2658bd7f",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U13/1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "SSJCA U13 WS Gee Shield",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u13-ws-gee-shield/17a058c8",
+          "teamLogo": null,
+          "teamName": "SSJCA U13 WS Gee Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8175,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Hawkesbury U13-1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HB_Logo_05273a54d0.png",
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/hawkesbury-district-cricket-association-rep-teams/4cd85c14/metro-youth-championships-male-summer-202526/teams/hawkesbury-u13-1/73c8a755",
+          "teamLogo": null,
+          "teamName": "Hawkesbury U13-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_89719f70cc.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 10166,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "SEJCA U13",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u13/a50dbda5",
+          "teamLogo": null,
+          "teamName": "SEJCA U13",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "30",
+          "TIE": "0",
+          "clubId": 9461,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "30",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Parramatta U13-1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u13-1/106bdb9e",
+          "teamLogo": null,
+          "teamName": "Parramatta U13-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 12648,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "U13.1 Nepean DCA",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/nepean-district-cricket-association-rep-teams/c7179661/metro-youth-championships-male-summer-202526/teams/u131-nepean-dca/d0041fe9",
+          "teamLogo": null,
+          "teamName": "U13.1 Nepean DCA",
+          "playHQLogo": null
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 9236,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "North Shore U13/1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/north-shore-junior-cricket-association-rep-teams/964bd0e3/metro-youth-championships-male-summer-202526/teams/north-shore-u131/658de24f",
+          "teamLogo": null,
+          "teamName": "North Shore U13/1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_09c1c06c40.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 7063,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "CDCA U13-1 Gee Shield",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/camden-district-cricket-association-representative-teams/3509ee81/metro-youth-championships-male-summer-202526/teams/cdca-u13-1-gee-shield/db6e7b9f",
+          "teamLogo": null,
+          "teamName": "CDCA U13-1 Gee Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b973206324.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 9260,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Northern District U13/1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u131/630f6f2b",
+          "teamLogo": null,
+          "teamName": "Northern District U13/1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 8322,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "Inner West Harbour U13- 1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/inner-west-harbour-u13-1/c3bb3689",
+          "teamLogo": null,
+          "teamName": "Inner West Harbour U13- 1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 10321,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "St George GEE U13 Boys Div 1",
+            "gradeName": "U13 - 1 Gee Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/st-george-district-cricket-association-nsw-rep-teams/f8e9fe74/metro-youth-championships-male-summer-202526/teams/st-george-gee-u13-boys-div-1/8c873355",
+          "teamLogo": null,
+          "teamName": "St George GEE U13 Boys Div 1",
+          "playHQLogo": null
+        }
+      ],
+      "prompt": {
+        "teams": [
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "38",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Blacktown District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Fairfield-Liverpool U13 DIV 1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Hornsby Ku-ring-gai & Hills District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Manly Warringah U13/1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "SSJCA U13 WS Gee Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Hawkesbury U13-1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "SEJCA U13"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "30",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Parramatta U13-1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "U13.1 Nepean DCA"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "North Shore U13/1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "CDCA U13-1 Gee Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Northern District U13/1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "Inner West Harbour U13- 1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "St George GEE U13 Boys Div 1"
+          }
+        ],
+        "gradeName": "U13 - 1 Gee Shield"
+      },
+      "gradeName": "U13 - 1 Gee Shield",
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "ID": 67659,
+      "bias": null,
+      "League": [
+        {
+          "L": "0",
+          "P": "5",
+          "W": "5",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 9461,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "1",
+            "teamName": "Parramatta U13-2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "6.2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u13-2/5ed4d56b",
+          "teamLogo": null,
+          "teamName": "Parramatta U13-2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
+        },
+        {
+          "L": "1",
+          "P": "5",
+          "W": "4",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "24",
+          "TIE": "0",
+          "clubId": 9260,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "Northern District U13/2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "4.8",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u132/72d24714",
+          "teamLogo": null,
+          "teamName": "Northern District U13/2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 9236,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "3",
+            "teamName": "North Shore U13/2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "3.8",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/north-shore-junior-cricket-association-rep-teams/964bd0e3/metro-youth-championships-male-summer-202526/teams/north-shore-u132/585d9474",
+          "teamLogo": null,
+          "teamName": "North Shore U13/2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_09c1c06c40.jpg"
+        },
+        {
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10166,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "SEJCA U13 Div 2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "2.4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u13-div-2/0f71d199",
+          "teamLogo": null,
+          "teamName": "SEJCA U13 Div 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
+        },
+        {
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "SSJCA U13 Creak Shield",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "2.4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u13-creak-shield/bff4c76f",
+          "teamLogo": null,
+          "teamName": "SSJCA U13 Creak Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "14",
+          "TIE": "0",
+          "clubId": 7096,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "14",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "C&WSCA Youth Championship U13 Boys Div 2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "2.333",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/canterbury-and-western-suburbs-cricket-association-rep-teams/2127fd69/metro-youth-championships-male-summer-202526/teams/candwsca-youth-championship-u13-boys-div-2/9bcb942e",
+          "teamLogo": null,
+          "teamName": "C&WSCA Youth Championship U13 Boys Div 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4561fcd33.jpg"
+        },
+        {
+          "L": "5",
+          "P": "5",
+          "W": "0",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 7807,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "5",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Fairfield-Liverpool U13 DIV 2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "0",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u13-div-2/da7c7f78",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U13 DIV 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
+        },
+        {
+          "L": "0",
+          "P": "6",
+          "W": "6",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "39",
+          "TIE": "0",
+          "clubId": 6528,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "39",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Blacktown District",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "6.5",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/e253acbc",
+          "teamLogo": null,
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 12648,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "U13.2 Nepean DCA",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "3",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/nepean-district-cricket-association-rep-teams/c7179661/metro-youth-championships-male-summer-202526/teams/u132-nepean-dca/dd7c25fa",
+          "teamLogo": null,
+          "teamName": "U13.2 Nepean DCA",
+          "playHQLogo": null
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 6349,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Bankstown U13s",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "3",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/bankstown-district-cricket-association-rep-teams/70f32d5a/metro-youth-championships-male-summer-202526/teams/bankstown-u13s/6fd6cbaa",
+          "teamLogo": null,
+          "teamName": "Bankstown U13s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_10d465dd51.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 8322,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Inner West Harbour U13- 2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "2.167",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/inner-west-harbour-u13-2/3dbf3fac",
+          "teamLogo": null,
+          "teamName": "Inner West Harbour U13- 2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8735,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Manly Warringah U13/2",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u132/0695f33a",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U13/2",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8268,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Hornsby Ku-ring-gai & Hills District",
+            "gradeName": "U13 - 2 Creak Shield"
+          },
+          "PTS AVG": "2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-and-hills-district/f66550eb",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai & Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
+        }
+      ],
+      "prompt": {
+        "teams": [
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "1",
+            "teamName": "Parramatta U13-2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "Northern District U13/2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "3",
+            "teamName": "North Shore U13/2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "SEJCA U13 Div 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "SSJCA U13 Creak Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "14",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "C&WSCA Youth Championship U13 Boys Div 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "5",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Fairfield-Liverpool U13 DIV 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "39",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Blacktown District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "U13.2 Nepean DCA"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Bankstown U13s"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Inner West Harbour U13- 2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Manly Warringah U13/2"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "Hornsby Ku-ring-gai & Hills District"
+          }
+        ],
+        "gradeName": "U13 - 2 Creak Shield"
+      },
+      "gradeName": "U13 - 2 Creak Shield",
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "ID": 67660,
+      "bias": null,
+      "League": [
+        {
+          "L": "1",
+          "P": "6",
+          "Q": "1.343",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 8268,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Hornsby Ku-ring-gai & Hills District",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-and-hills-district/76602bb9",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai & Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "Q": "1.676",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 9260,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Northern District U14",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u14/21795fb8",
+          "teamLogo": null,
+          "teamName": "Northern District U14",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "Q": "1.654",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "26",
+          "TIE": "0",
+          "clubId": 6528,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "26",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Blacktown District",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/c44f2d6c",
+          "teamLogo": null,
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "Q": "0.844",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "SSJCA U14 Harold Moore Shield",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u14-harold-moore-shield/e41df192",
+          "teamLogo": null,
+          "teamName": "SSJCA U14 Harold Moore Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "Q": "0.970",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 8322,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Inner West Harbour U14",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/inner-west-harbour-u14/0e900444",
+          "teamLogo": null,
+          "teamName": "Inner West Harbour U14",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "Q": "0.711",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 10166,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "SEJCA U14",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u14/204d2243",
+          "teamLogo": null,
+          "teamName": "SEJCA U14",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "Q": "1.066",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 12648,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "U14 Nepean DCA",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/nepean-district-cricket-association-rep-teams/c7179661/metro-youth-championships-male-summer-202526/teams/u14-nepean-dca/89e185c5",
+          "teamLogo": null,
+          "teamName": "U14 Nepean DCA",
+          "playHQLogo": null
+        },
+        {
+          "L": "6",
+          "P": "6",
+          "Q": "0.435",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 6349,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Bankstown U14s",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/bankstown-district-cricket-association-rep-teams/70f32d5a/metro-youth-championships-male-summer-202526/teams/bankstown-u14s/ef86938b",
+          "teamLogo": null,
+          "teamName": "Bankstown U14s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_10d465dd51.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "Q": "1.890",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 9461,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Parramatta U14",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u14/4d2d0aa0",
+          "teamLogo": null,
+          "teamName": "Parramatta U14",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "Q": "1.522",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 7096,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "C&WSCA Youth Championship U14 Boys",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/canterbury-and-western-suburbs-cricket-association-rep-teams/2127fd69/metro-youth-championships-male-summer-202526/teams/candwsca-youth-championship-u14-boys/97873148",
+          "teamLogo": null,
+          "teamName": "C&WSCA Youth Championship U14 Boys",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4561fcd33.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "Q": "1.692",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "32",
+          "TIE": "0",
+          "clubId": 8735,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Manly Warringah U14",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u14/6beceb67",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U14",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "Q": "1.166",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "24",
+          "TIE": "0",
+          "clubId": 9236,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "North Shore 14s",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/north-shore-junior-cricket-association-rep-teams/964bd0e3/metro-youth-championships-male-summer-202526/teams/north-shore-14s/2b3e2a9d",
+          "teamLogo": null,
+          "teamName": "North Shore 14s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_09c1c06c40.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "Q": "0.692",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 7807,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Fairfield-Liverpool U14",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u14/5da8b83f",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U14",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "Q": "0.867",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10321,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "St George MOORE U14 Boys",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/st-george-district-cricket-association-nsw-rep-teams/f8e9fe74/metro-youth-championships-male-summer-202526/teams/st-george-moore-u14-boys/42da1d78",
+          "teamLogo": null,
+          "teamName": "St George MOORE U14 Boys",
+          "playHQLogo": null
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "Q": "0.536",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 7063,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "CDCA U14 Moore Shield",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/camden-district-cricket-association-representative-teams/3509ee81/metro-youth-championships-male-summer-202526/teams/cdca-u14-moore-shield/8473378a",
+          "teamLogo": null,
+          "teamName": "CDCA U14 Moore Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b973206324.jpg"
+        },
+        {
+          "L": "6",
+          "P": "6",
+          "Q": "0.542",
+          "W": "0",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 8175,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Hawkesbury U14-1",
+            "gradeName": "U14 - 1 Moore Shield"
+          },
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HB_Logo_05273a54d0.png",
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/hawkesbury-district-cricket-association-rep-teams/4cd85c14/metro-youth-championships-male-summer-202526/teams/hawkesbury-u14-1/ba2b47a8",
+          "teamLogo": null,
+          "teamName": "Hawkesbury U14-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_89719f70cc.jpg"
+        }
+      ],
+      "prompt": {
+        "teams": [
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Hornsby Ku-ring-gai & Hills District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Northern District U14"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "26",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Blacktown District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "SSJCA U14 Harold Moore Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Inner West Harbour U14"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "SEJCA U14"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "U14 Nepean DCA"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Bankstown U14s"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Parramatta U14"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "C&WSCA Youth Championship U14 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "32",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Manly Warringah U14"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "North Shore 14s"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Fairfield-Liverpool U14"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "St George MOORE U14 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "CDCA U14 Moore Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Hawkesbury U14-1"
+          }
+        ],
+        "gradeName": "U14 - 1 Moore Shield"
+      },
+      "gradeName": "U14 - 1 Moore Shield",
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      }
+    },
+    {
+      "ID": 67661,
+      "bias": null,
+      "League": [
+        {
+          "L": "0",
+          "P": "6",
+          "Q": "2.194",
+          "W": "6",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "39",
+          "TIE": "0",
+          "clubId": 6528,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "39",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Blacktown District",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/ae347300",
+          "teamLogo": null,
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
           "Q": "1.072",
-          "W": "1",
-          "L": "0",
-          "TIE": "0",
-          "N/R": "1",
+          "W": "5",
           "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 10509,
           "prompt": {
-            "teamName": "Merrifield Panthers (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "SSJCA U15 EG Weblin Shield",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u15-eg-weblin-shield/2bcfcc76",
+          "teamLogo": null,
+          "teamName": "SSJCA U15 EG Weblin Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "Q": "1.593",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "25",
+          "TIE": "0",
+          "clubId": 9260,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "25",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "3",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "9",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "1"
-            }
-          }
+            "teamName": "Northern District U15",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u15/20d1b4d3",
+          "teamLogo": null,
+          "teamName": "Northern District U15",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
         },
         {
-          "position": "4",
-          "teamName": "Strathmore Heights (Kyte)",
-          "teamHref": "/cricket-australia/org/strathmore-heights-cricket-club/422771ad/nwmca-seniors-summer-202526/teams/strathmore-heights-kyte/13cff146",
-          "P": "2",
-          "PTS": "6",
-          "Q": "1.007",
-          "W": "1",
-          "L": "1",
-          "TIE": "0",
-          "N/R": "0",
+          "L": "2",
+          "P": "6",
+          "Q": "1.031",
+          "W": "4",
           "BYE": "0",
-          "clubId": 34216,
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "25",
+          "TIE": "0",
+          "clubId": 8268,
           "prompt": {
-            "teamName": "Strathmore Heights (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "25",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "4",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "1",
-              "points": "6",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Hornsby Ku-ring-gai & Hills District",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-and-hills-district/1da13f1c",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai & Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
         },
         {
-          "position": "5",
-          "teamName": "Chargers (Kyte)",
-          "teamHref": "/cricket-australia/org/chargers-cricket-club/b2cc5e6e/nwmca-seniors-summer-202526/teams/chargers-kyte/db4294de",
-          "P": "2",
-          "PTS": "6",
-          "Q": "0.691",
-          "W": "1",
-          "L": "1",
-          "TIE": "0",
-          "N/R": "0",
+          "L": "4",
+          "P": "6",
+          "Q": "0.806",
+          "W": "2",
           "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 10166,
           "prompt": {
-            "teamName": "Chargers (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "5",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "1",
-              "points": "6",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "SEJCA U15",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u15/8cdbbdf4",
+          "teamLogo": null,
+          "teamName": "SEJCA U15",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
         },
         {
-          "position": "6",
-          "teamName": "Aberfeldie St Johns (Kyte)",
-          "teamHref": "/cricket-australia/org/aberfeldie-st-johns-cricket-club/21157797/nwmca-seniors-summer-202526/teams/aberfeldie-st-johns-kyte/74a75f53",
-          "P": "2",
-          "PTS": "3",
-          "Q": "0.919",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
-          "N/R": "1",
+          "L": "4",
+          "P": "6",
+          "Q": "0.810",
+          "W": "2",
           "BYE": "0",
-          "clubId": 28967,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_abdab348d0.jpg",
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8322,
           "prompt": {
-            "teamName": "Aberfeldie St Johns (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "6",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "3",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "1"
-            }
-          }
+            "teamName": "Inner West Harbour U15",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/inner-west-harbour-u15/14e55626",
+          "teamLogo": null,
+          "teamName": "Inner West Harbour U15",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
         },
         {
-          "position": "7",
-          "teamName": "Buckley Park (Kyte)",
-          "teamHref": "/cricket-australia/org/buckley-park-cricket-club/02ec5afd/nwmca-seniors-summer-202526/teams/buckley-park-kyte/cd1745c1",
-          "P": "2",
-          "PTS": "0",
-          "Q": "0.606",
-          "W": "0",
-          "L": "2",
-          "TIE": "0",
-          "N/R": "0",
+          "L": "5",
+          "P": "6",
+          "Q": "0.715",
+          "W": "1",
           "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "7",
+          "TIE": "0",
+          "clubId": 12648,
           "prompt": {
-            "teamName": "Buckley Park (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "7",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "7",
-            "gradeName": "1.2 Vic Kyte Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "U15.1 Nepean DCA",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/nepean-district-cricket-association-rep-teams/c7179661/metro-youth-championships-male-summer-202526/teams/u151-nepean-dca/9c8e6a88",
+          "teamLogo": null,
+          "teamName": "U15.1 Nepean DCA",
+          "playHQLogo": null
         },
         {
-          "position": "8",
-          "teamName": "RMIT (Kyte)",
-          "teamHref": "/cricket-australia/org/rmit-cricket-club/df98420b/nwmca-seniors-summer-202526/teams/rmit-kyte/13c1555d",
-          "P": "2",
-          "PTS": "0",
-          "Q": "0.577",
+          "L": "6",
+          "P": "6",
+          "Q": "0.455",
           "W": "0",
-          "L": "2",
-          "TIE": "0",
-          "N/R": "0",
           "BYE": "0",
-          "clubId": 33380,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 6349,
           "prompt": {
-            "teamName": "RMIT (Kyte)",
-            "position": "8",
-            "gradeName": "1.2 Vic Kyte Shield",
             "stats": {
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "pointsPlayed": "2",
               "ties": "0",
-              "noResult": "0"
-            }
-          }
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Bankstown U15s",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/bankstown-district-cricket-association-rep-teams/70f32d5a/metro-youth-championships-male-summer-202526/teams/bankstown-u15s/1e4462ac",
+          "teamLogo": null,
+          "teamName": "Bankstown U15s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_10d465dd51.jpg"
+        },
+        {
+          "L": "0",
+          "P": "6",
+          "Q": "3.351",
+          "W": "6",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "41",
+          "TIE": "0",
+          "clubId": 9461,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "41",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Parramatta U15",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u15/8ceda038",
+          "teamLogo": null,
+          "teamName": "Parramatta U15",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
+        },
+        {
+          "L": "1",
+          "P": "6",
+          "Q": "2.371",
+          "W": "5",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "31",
+          "TIE": "0",
+          "clubId": 8735,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Manly Warringah U15",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u15/80b542b5",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U15",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
+        },
+        {
+          "L": "2",
+          "P": "6",
+          "Q": "1.041",
+          "W": "4",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "24",
+          "TIE": "0",
+          "clubId": 9236,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "North Shore 15s",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/north-shore-junior-cricket-association-rep-teams/964bd0e3/metro-youth-championships-male-summer-202526/teams/north-shore-15s/c11a3025",
+          "teamLogo": null,
+          "teamName": "North Shore 15s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_09c1c06c40.jpg"
+        },
+        {
+          "L": "3",
+          "P": "6",
+          "Q": "0.971",
+          "W": "3",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 8175,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Hawkesbury U15-1",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HB_Logo_05273a54d0.png",
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/hawkesbury-district-cricket-association-rep-teams/4cd85c14/metro-youth-championships-male-summer-202526/teams/hawkesbury-u15-1/e38f18fc",
+          "teamLogo": null,
+          "teamName": "Hawkesbury U15-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_89719f70cc.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "Q": "0.636",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 7807,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Fairfield-Liverpool U15",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u15/ccc267bc",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U15",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
+        },
+        {
+          "L": "4",
+          "P": "6",
+          "Q": "0.637",
+          "W": "2",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 7096,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "C&WSCA Youth Championship U15 Boys",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/canterbury-and-western-suburbs-cricket-association-rep-teams/2127fd69/metro-youth-championships-male-summer-202526/teams/candwsca-youth-championship-u15-boys/a64a3ab9",
+          "teamLogo": null,
+          "teamName": "C&WSCA Youth Championship U15 Boys",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4561fcd33.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "Q": "0.605",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 7063,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "CDCA U15 Weblin Shield",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/camden-district-cricket-association-representative-teams/3509ee81/metro-youth-championships-male-summer-202526/teams/cdca-u15-weblin-shield/62840469",
+          "teamLogo": null,
+          "teamName": "CDCA U15 Weblin Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_b973206324.jpg"
+        },
+        {
+          "L": "5",
+          "P": "6",
+          "Q": "0.617",
+          "W": "1",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 10321,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "St George WEBLIN U15 Boys",
+            "gradeName": "U15 - 1 Weblin Shield"
+          },
+          "clubLogo": null,
+          "clubName": null,
+          "position": "8",
+          "teamHref": "/cricket-australia/org/st-george-district-cricket-association-nsw-rep-teams/f8e9fe74/metro-youth-championships-male-summer-202526/teams/st-george-weblin-u15-boys/afa1048e",
+          "teamLogo": null,
+          "teamName": "St George WEBLIN U15 Boys",
+          "playHQLogo": null
         }
       ],
-      "bias": null,
       "prompt": {
-        "gradeName": "1.2 Vic Kyte Shield",
         "teams": [
           {
-            "teamName": "Lalor Warriors (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "39",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "1",
-            "stats": {
-              "wins": "2",
-              "losses": "0",
-              "points": "12",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Blacktown District"
           },
           {
-            "teamName": "Donnybrook (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "2",
-            "stats": {
-              "wins": "2",
-              "losses": "0",
-              "points": "12",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "SSJCA U15 EG Weblin Shield"
           },
           {
-            "teamName": "Merrifield Panthers (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "25",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "3",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "9",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "1"
-            }
+            "teamName": "Northern District U15"
           },
           {
-            "teamName": "Strathmore Heights (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "25",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "4",
-            "stats": {
-              "wins": "1",
-              "losses": "1",
-              "points": "6",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Hornsby Ku-ring-gai & Hills District"
           },
           {
-            "teamName": "Chargers (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "5",
-            "stats": {
-              "wins": "1",
-              "losses": "1",
-              "points": "6",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "SEJCA U15"
           },
           {
-            "teamName": "Aberfeldie St Johns (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "6",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "3",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "1"
-            }
+            "teamName": "Inner West Harbour U15"
           },
           {
-            "teamName": "Buckley Park (Kyte)",
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "7",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "7",
-            "stats": {
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "pointsPlayed": "2",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "U15.1 Nepean DCA"
           },
           {
-            "teamName": "RMIT (Kyte)",
-            "position": "8",
             "stats": {
-              "wins": "0",
-              "losses": "2",
-              "points": "0",
-              "pointsPlayed": "2",
               "ties": "0",
-              "noResult": "0"
-            }
+              "wins": "0",
+              "losses": "6",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "Bankstown U15s"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "41",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Parramatta U15"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "1",
+              "points": "31",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "2",
+            "teamName": "Manly Warringah U15"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "24",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "North Shore 15s"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "3",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "4",
+            "teamName": "Hawkesbury U15-1"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "5",
+            "teamName": "Fairfield-Liverpool U15"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "4",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "6",
+            "teamName": "C&WSCA Youth Championship U15 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "7",
+            "teamName": "CDCA U15 Weblin Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "5",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "8",
+            "teamName": "St George WEBLIN U15 Boys"
           }
-        ]
+        ],
+        "gradeName": "U15 - 1 Weblin Shield"
       },
+      "gradeName": "U15 - 1 Weblin Shield",
       "assignSponsors": {
-        "competition": [],
+        "team": [],
         "grade": [],
-        "team": []
+        "competition": []
       }
     },
     {
-      "ID": 53952,
-      "gradeName": "2.4  Ern Girolami Shield",
+      "ID": 67662,
+      "bias": null,
       "League": [
         {
-          "position": "1",
-          "teamName": "Strathmore Heights (Girolami)",
-          "teamHref": "/cricket-australia/org/strathmore-heights-cricket-club/422771ad/nwmca-seniors-summer-202526/teams/strathmore-heights-girolami/aa547f26",
-          "P": "1",
-          "PTS": "6",
-          "Q": "2.281",
-          "W": "1",
           "L": "0",
-          "TIE": "0",
-          "N/R": "0",
+          "P": "6",
+          "W": "5",
           "BYE": "0",
-          "clubId": 34216,
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "1",
+          "PTS": "35",
+          "TIE": "0",
+          "clubId": 8322,
           "prompt": {
-            "teamName": "Strathmore Heights (Girolami)",
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "35",
+              "noResult": "1",
+              "pointsPlayed": "6"
+            },
             "position": "1",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "U17 Boys Inner West Harbour",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "5.833",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/inner-west-harbour-junior-cricket-association-rep-teams/16547662/metro-youth-championships-male-summer-202526/teams/u17-boys-inner-west-harbour/807e2587",
+          "teamLogo": null,
+          "teamName": "U17 Boys Inner West Harbour",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9862d1696.jpg"
         },
         {
-          "position": "2",
-          "teamName": "Genesis (Griolami)",
-          "teamHref": "/cricket-australia/org/genesis-cricket-club/28c20570/nwmca-seniors-summer-202526/teams/genesis-griolami/75af8a5d",
-          "P": "1",
-          "PTS": "6",
-          "Q": "2.045",
-          "W": "1",
-          "L": "0",
-          "TIE": "0",
+          "L": "1",
+          "P": "5",
+          "W": "4",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": 31208,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_08bf8982d3.jpg",
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "27",
+          "TIE": "0",
+          "clubId": 7807,
           "prompt": {
-            "teamName": "Genesis (Griolami)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "2",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Fairfield-Liverpool U17 Blue",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "5.4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u17-blue/b571cf80",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U17 Blue",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
         },
         {
-          "position": "3",
-          "teamName": "Kallo Koalas (Girolami)",
-          "teamHref": "/cricket-australia/org/kallo-koalas-cricket-club/aba0d236/nwmca-seniors-summer-202526/teams/kallo-koalas-girolami/a1cc09e3",
-          "P": "1",
-          "PTS": "6",
-          "Q": "1.798",
-          "W": "1",
-          "L": "0",
-          "TIE": "0",
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 6349,
           "prompt": {
-            "teamName": "Kallo Koalas (Girolami)",
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "3",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Bankstown U17s",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "3.8",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/bankstown-district-cricket-association-rep-teams/70f32d5a/metro-youth-championships-male-summer-202526/teams/bankstown-u17s/bc3aa455",
+          "teamLogo": null,
+          "teamName": "Bankstown U17s",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_10d465dd51.jpg"
         },
         {
-          "position": "4",
-          "teamName": "Gladstone Park (Girolami)",
-          "teamHref": "/cricket-australia/org/gladstone-park-cricket-club/3fb2c98f/nwmca-seniors-summer-202526/teams/gladstone-park-girolami/0af2583b",
-          "P": "1",
-          "PTS": "6",
-          "Q": "1.507",
-          "W": "1",
-          "L": "0",
+          "L": "2",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
+          "N/R": "1",
+          "PTS": "15",
           "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "clubId": 7807,
           "prompt": {
-            "teamName": "Gladstone Park (Girolami)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "2",
+              "points": "15",
+              "noResult": "1",
+              "pointsPlayed": "5"
+            },
             "position": "4",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Fairfield-Liverpool U17 Yellow",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "3",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/fairfield-liverpool-cricket-assoc-representative-teams/ae87ec0e/metro-youth-championships-male-summer-202526/teams/fairfield-liverpool-u17-yellow/92f27bd6",
+          "teamLogo": null,
+          "teamName": "Fairfield-Liverpool U17 Yellow",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8ee980e5de.jpg"
         },
         {
-          "position": "5",
-          "teamName": "East Coburg (Girolami)",
-          "teamHref": "/cricket-australia/org/east-coburg-cricket-club/0a8ef36e/nwmca-seniors-summer-202526/teams/east-coburg-girolami/73253e7e",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.663",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "12",
+          "TIE": "0",
+          "clubId": 8175,
           "prompt": {
-            "teamName": "East Coburg (Girolami)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "5",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
-        },
-        {
-          "position": "6",
-          "teamName": "Ascot Vale (Girolami)",
-          "teamHref": "/cricket-australia/org/ascot-vale-cricket-club/193463f2/nwmca-seniors-summer-202526/teams/ascot-vale-girolami/ebb14286",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.555",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
+            "teamName": "Hawkesbury U17-1",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "2.4",
+          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/HB_Logo_05273a54d0.png",
           "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/hawkesbury-district-cricket-association-rep-teams/4cd85c14/metro-youth-championships-male-summer-202526/teams/hawkesbury-u17-1/2c74a675",
           "teamLogo": null,
-          "prompt": {
-            "teamName": "Ascot Vale (Girolami)",
-            "position": "6",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+          "teamName": "Hawkesbury U17-1",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_89719f70cc.jpg"
         },
         {
+          "L": "4",
+          "P": "5",
+          "W": "1",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 12648,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "4",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "U17 Nepean DCA",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "1.2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/nepean-district-cricket-association-rep-teams/c7179661/metro-youth-championships-male-summer-202526/teams/u17-nepean-dca/183d1641",
+          "teamLogo": null,
+          "teamName": "U17 Nepean DCA",
+          "playHQLogo": null
+        },
+        {
+          "L": "5",
+          "P": "5",
+          "W": "0",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 6528,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "5",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Blacktown District",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "0",
+          "clubLogo": null,
+          "clubName": null,
           "position": "7",
-          "teamName": "Northern Lions (Girolami)",
-          "teamHref": "/cricket-australia/org/northern-lions-cricket-club/e4906f81/nwmca-seniors-summer-202526/teams/northern-lions-girolami/5478c806",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.488",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
+          "teamHref": "/cricket-australia/org/blacktown-city-and-district-cricket-association-rep-teams/1a28262c/metro-youth-championships-male-summer-202526/teams/blacktown-district/30ae87e2",
           "teamLogo": null,
-          "prompt": {
-            "teamName": "Northern Lions (Girolami)",
-            "position": "7",
-            "gradeName": "2.4  Ern Girolami Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+          "teamName": "Blacktown District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_ca90e6fab2.jpg"
         },
         {
-          "position": "8",
-          "teamName": "Glenroy (Girolami)",
-          "teamHref": "/cricket-australia/org/glenroy-cricket-club/94fab75f/nwmca-seniors-summer-202526/teams/glenroy-girolami/6c018e28",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.438",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
+          "L": "0",
+          "P": "5",
+          "W": "5",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": 31278,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_16c40ce586.jpg",
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "30",
+          "TIE": "0",
+          "clubId": 9461,
           "prompt": {
-            "teamName": "Glenroy (Girolami)",
-            "position": "8",
-            "gradeName": "2.4  Ern Girolami Shield",
             "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
               "ties": "0",
-              "noResult": "0"
-            }
-          }
-        }
-      ],
-      "bias": null,
-      "prompt": {
-        "gradeName": "2.4  Ern Girolami Shield",
-        "teams": [
-          {
-            "teamName": "Strathmore Heights (Girolami)",
+              "wins": "5",
+              "losses": "0",
+              "points": "30",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "1",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Parramatta U17 Blue",
+            "gradeName": "U17 Watson Shield"
           },
-          {
-            "teamName": "Genesis (Griolami)",
-            "position": "2",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          },
-          {
-            "teamName": "Kallo Koalas (Girolami)",
-            "position": "3",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          },
-          {
-            "teamName": "Gladstone Park (Girolami)",
-            "position": "4",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          },
-          {
-            "teamName": "East Coburg (Girolami)",
-            "position": "5",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          },
-          {
-            "teamName": "Ascot Vale (Girolami)",
-            "position": "6",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          },
-          {
-            "teamName": "Northern Lions (Girolami)",
-            "position": "7",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          },
-          {
-            "teamName": "Glenroy (Girolami)",
-            "position": "8",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
-        ]
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      }
-    },
-    {
-      "ID": 53954,
-      "gradeName": "2.6  Russell Allen Shield",
-      "League": [
-        {
+          "PTS AVG": "6",
+          "clubLogo": null,
+          "clubName": null,
           "position": "1",
-          "teamName": "Caroline Springs (Allen)",
-          "teamHref": "/cricket-australia/org/caroline-springs-cricket-club/28188bf5/nwmca-seniors-summer-202526/teams/caroline-springs-allen/52685d64",
-          "P": "1",
-          "PTS": "6",
-          "Q": "3.018",
-          "W": "1",
-          "L": "0",
-          "TIE": "0",
-          "N/R": "0",
-          "BYE": "0",
-          "clubId": 30240,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_df9def8ba2.jpg",
-          "clubName": null,
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u17-blue/fd34f47f",
           "teamLogo": null,
-          "prompt": {
-            "teamName": "Caroline Springs (Allen)",
-            "position": "1",
-            "gradeName": "2.6  Russell Allen Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+          "teamName": "Parramatta U17 Blue",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
         },
         {
-          "position": "2",
-          "teamName": "Burnside Springs United (Allen)",
-          "teamHref": "/cricket-australia/org/burnside-springs-united-cricket-club/66bd5c4d/nwmca-seniors-summer-202526/teams/burnside-springs-united-allen/3fc282df",
-          "P": "1",
-          "PTS": "6",
-          "Q": "2.370",
-          "W": "1",
-          "L": "0",
-          "TIE": "0",
+          "L": "1",
+          "P": "5",
+          "W": "4",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "27",
+          "TIE": "0",
+          "clubId": 8735,
           "prompt": {
-            "teamName": "Burnside Springs United (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "2",
-            "gradeName": "2.6  Russell Allen Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Manly Warringah U17",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "5.4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/manly-warringah-junior-cricket-association-rep-teams/e8d16038/metro-youth-championships-male-summer-202526/teams/manly-warringah-u17/0af78bcb",
+          "teamLogo": null,
+          "teamName": "Manly Warringah U17",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_61e8aa0f54.jpg"
         },
         {
-          "position": "3",
-          "teamName": "Barkly St Dragons (Allen)",
-          "teamHref": "/cricket-australia/org/barkly-street-uniting-cricket-club/e9adda78/nwmca-seniors-summer-202526/teams/barkly-st-dragons-allen/b6ab5393",
-          "P": "1",
-          "PTS": "6",
-          "Q": "1.807",
-          "W": "1",
-          "L": "0",
-          "TIE": "0",
-          "N/R": "0",
+          "L": "2",
+          "P": "6",
+          "W": "4",
           "BYE": "0",
-          "clubId": 29255,
-          "clubLogo": null,
-          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_63bad5eef5.jpg",
-          "clubName": null,
-          "teamLogo": null,
+          "N/R": "0",
+          "PTS": "26",
+          "TIE": "0",
+          "clubId": 9260,
           "prompt": {
-            "teamName": "Barkly St Dragons (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "26",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
             "position": "3",
-            "gradeName": "2.6  Russell Allen Shield",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Northern District U17",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "4.333",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/northern-district-junior-cricket-association-rep-teams/1a0db384/metro-youth-championships-male-summer-202526/teams/northern-district-u17/4b60dd2f",
+          "teamLogo": null,
+          "teamName": "Northern District U17",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f0c0f8cd70.jpg"
         },
         {
-          "position": "4",
-          "teamName": "Strathmore Heights (Allen)",
-          "teamHref": "/cricket-australia/org/strathmore-heights-cricket-club/422771ad/nwmca-seniors-summer-202526/teams/strathmore-heights-allen/721585fd",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.553",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": 34216,
-          "clubLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 9461,
           "prompt": {
-            "teamName": "Strathmore Heights (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "4",
-            "gradeName": "2.6  Russell Allen Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Parramatta U17 Gold",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "2.6",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/parramatta-district-cricket-association-rep-teams/8f7f1859/metro-youth-championships-male-summer-202526/teams/parramatta-u17-gold/4e2fc97a",
+          "teamLogo": null,
+          "teamName": "Parramatta U17 Gold",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f4a729f7a8.jpg"
         },
         {
-          "position": "5",
-          "teamName": "East Coburg (Allen)",
-          "teamHref": "/cricket-australia/org/east-coburg-cricket-club/0a8ef36e/nwmca-seniors-summer-202526/teams/east-coburg-allen/a480e0d7",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.421",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
+          "L": "3",
+          "P": "5",
+          "W": "2",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "13",
+          "TIE": "0",
+          "clubId": 7253,
           "prompt": {
-            "teamName": "East Coburg (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "5",
-            "gradeName": "2.6  Russell Allen Shield",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
-          }
+            "teamName": "Coalfields U17's",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "2.6",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/coalfields-junior-cricket-association-representative-teams/be421a1a/metro-youth-championships-male-summer-202526/teams/coalfields-u17s/06daeb3e",
+          "teamLogo": null,
+          "teamName": "Coalfields U17's",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_9f2123cd1a.jpg"
         },
         {
-          "position": "6",
-          "teamName": "Preston Druids (Allen)",
-          "teamHref": "/cricket-australia/org/preston-druids-cricket-club/0ddf0ab8/nwmca-seniors-summer-202526/teams/preston-druids-allen/aca671b1",
-          "P": "1",
-          "PTS": "0",
-          "Q": "0.331",
-          "W": "0",
-          "L": "1",
-          "TIE": "0",
+          "L": "4",
+          "P": "5",
+          "W": "1",
+          "BYE": "1",
           "N/R": "0",
-          "BYE": "0",
-          "clubId": null,
-          "clubLogo": null,
-          "playHQLogo": null,
-          "clubName": null,
-          "teamLogo": null,
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 8715,
           "prompt": {
-            "teamName": "Preston Druids (Allen)",
-            "position": "6",
-            "gradeName": "2.6  Russell Allen Shield",
             "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
               "ties": "0",
-              "noResult": "0"
-            }
-          }
+              "wins": "1",
+              "losses": "4",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "Maitland U17 Boys",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "1.2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/maitland-district-junior-cricket-association-rep-teams/c1f76df8/metro-youth-championships-male-summer-202526/teams/maitland-u17-boys/33bcc0b5",
+          "teamLogo": null,
+          "teamName": "Maitland U17 Boys",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0c4b73f87e.jpg"
+        },
+        {
+          "L": "5",
+          "P": "5",
+          "W": "0",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "0",
+          "TIE": "0",
+          "clubId": 8268,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "5",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Hornsby Ku-ring-gai &Hills District",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "0",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/hornsby-ku-ring-gai-and-hills-district-cricket-assoc-rep-teams/697ff543/metro-youth-championships-male-summer-202526/teams/hornsby-ku-ring-gai-andhills-district/646f2dbd",
+          "teamLogo": null,
+          "teamName": "Hornsby Ku-ring-gai &Hills District",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_e4f64f814b.jpg"
+        },
+        {
+          "L": "0",
+          "P": "6",
+          "W": "6",
+          "BYE": "0",
+          "N/R": "0",
+          "PTS": "37",
+          "TIE": "0",
+          "clubId": 7381,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "37",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Illawarra U17 Boys",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "6.167",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "1",
+          "teamHref": "/cricket-australia/org/cricket-illawarra-representative-teams/aab90955/metro-youth-championships-male-summer-202526/teams/illawarra-u17-boys/05fc90d1",
+          "teamLogo": null,
+          "teamName": "Illawarra U17 Boys",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6906857f49.jpg"
+        },
+        {
+          "L": "1",
+          "P": "5",
+          "W": "4",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "27",
+          "TIE": "0",
+          "clubId": 10321,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "St George WATSON U17 Boys",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "5.4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "2",
+          "teamHref": "/cricket-australia/org/st-george-district-cricket-association-nsw-rep-teams/f8e9fe74/metro-youth-championships-male-summer-202526/teams/st-george-watson-u17-boys/57ddb58a",
+          "teamLogo": null,
+          "teamName": "St George WATSON U17 Boys",
+          "playHQLogo": null
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "19",
+          "TIE": "0",
+          "clubId": 10166,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "3",
+            "teamName": "SEJCA U17 Boys Watsons Shield",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "3.8",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "3",
+          "teamHref": "/cricket-australia/org/south-eastern-junior-cricket-association-rep-teams/38bc918a/metro-youth-championships-male-summer-202526/teams/sejca-u17-boys-watsons-shield/48bd4c7a",
+          "teamLogo": null,
+          "teamName": "SEJCA U17 Boys Watsons Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_1033cb31e6.jpg"
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "3",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "18",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "SSJCA U17-1 Watson Shield",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "3.6",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "4",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u17-1-watson-shield/735bcbc4",
+          "teamLogo": null,
+          "teamName": "SSJCA U17-1 Watson Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "4",
+          "P": "5",
+          "W": "1",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "7",
+          "TIE": "0",
+          "clubId": 10509,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "4",
+              "points": "7",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "SSJCA U17-2 Watson Shield",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "1.4",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "5",
+          "teamHref": "/cricket-australia/org/sutherland-shire-junior-cricket-association-rep-teams/df2866b4/metro-youth-championships-male-summer-202526/teams/ssjca-u17-2-watson-shield/63578e9b",
+          "teamLogo": null,
+          "teamName": "SSJCA U17-2 Watson Shield",
+          "playHQLogo": null
+        },
+        {
+          "L": "4",
+          "P": "5",
+          "W": "1",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "6",
+          "TIE": "0",
+          "clubId": 10151,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "4",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "South Coast DCA Watson Shield",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "1.2",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "6",
+          "teamHref": "/cricket-australia/org/south-coast-district-cricket-association-rep-teams/4f63198f/metro-youth-championships-male-summer-202526/teams/south-coast-dca-watson-shield/3a48d31b",
+          "teamLogo": null,
+          "teamName": "South Coast DCA Watson Shield",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_cccf584bd0.jpg"
+        },
+        {
+          "L": "2",
+          "P": "5",
+          "W": "0",
+          "BYE": "1",
+          "N/R": "0",
+          "PTS": "-18",
+          "TIE": "0",
+          "clubId": 10211,
+          "prompt": {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "-18",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Southern Districts Cricket Zone",
+            "gradeName": "U17 Watson Shield"
+          },
+          "PTS AVG": "-3.6",
+          "clubLogo": null,
+          "clubName": null,
+          "position": "7",
+          "teamHref": "/cricket-australia/org/southern-districts-cricket-zone-representative-teams/3c2497be/metro-youth-championships-male-summer-202526/teams/southern-districts-cricket-zone/d6a2fcb4",
+          "teamLogo": null,
+          "teamName": "Southern Districts Cricket Zone",
+          "playHQLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f5f0990edf.jpg"
         }
       ],
-      "bias": null,
       "prompt": {
-        "gradeName": "2.6  Russell Allen Shield",
         "teams": [
           {
-            "teamName": "Caroline Springs (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "35",
+              "noResult": "1",
+              "pointsPlayed": "6"
+            },
             "position": "1",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "U17 Boys Inner West Harbour"
           },
           {
-            "teamName": "Burnside Springs United (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "2",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Fairfield-Liverpool U17 Blue"
           },
           {
-            "teamName": "Barkly St Dragons (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "3",
-            "stats": {
-              "wins": "1",
-              "losses": "0",
-              "points": "6",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Bankstown U17s"
           },
           {
-            "teamName": "Strathmore Heights (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "2",
+              "points": "15",
+              "noResult": "1",
+              "pointsPlayed": "5"
+            },
             "position": "4",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Fairfield-Liverpool U17 Yellow"
           },
           {
-            "teamName": "East Coburg (Allen)",
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "12",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
             "position": "5",
-            "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
-              "ties": "0",
-              "noResult": "0"
-            }
+            "teamName": "Hawkesbury U17-1"
           },
           {
-            "teamName": "Preston Druids (Allen)",
-            "position": "6",
             "stats": {
-              "wins": "0",
-              "losses": "1",
-              "points": "0",
-              "pointsPlayed": "1",
               "ties": "0",
-              "noResult": "0"
-            }
+              "wins": "1",
+              "losses": "4",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "U17 Nepean DCA"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "5",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Blacktown District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "5",
+              "losses": "0",
+              "points": "30",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "1",
+            "teamName": "Parramatta U17 Blue"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "Manly Warringah U17"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "2",
+              "points": "26",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "3",
+            "teamName": "Northern District U17"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "Parramatta U17 Gold"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "2",
+              "losses": "3",
+              "points": "13",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "Coalfields U17's"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "4",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "Maitland U17 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "5",
+              "points": "0",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Hornsby Ku-ring-gai &Hills District"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "6",
+              "losses": "0",
+              "points": "37",
+              "noResult": "0",
+              "pointsPlayed": "6"
+            },
+            "position": "1",
+            "teamName": "Illawarra U17 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "4",
+              "losses": "1",
+              "points": "27",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "2",
+            "teamName": "St George WATSON U17 Boys"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "19",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "3",
+            "teamName": "SEJCA U17 Boys Watsons Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "3",
+              "losses": "2",
+              "points": "18",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "4",
+            "teamName": "SSJCA U17-1 Watson Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "4",
+              "points": "7",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "5",
+            "teamName": "SSJCA U17-2 Watson Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "1",
+              "losses": "4",
+              "points": "6",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "6",
+            "teamName": "South Coast DCA Watson Shield"
+          },
+          {
+            "stats": {
+              "ties": "0",
+              "wins": "0",
+              "losses": "2",
+              "points": "-18",
+              "noResult": "0",
+              "pointsPlayed": "5"
+            },
+            "position": "7",
+            "teamName": "Southern Districts Cricket Zone"
           }
-        ]
+        ],
+        "gradeName": "U17 Watson Shield"
       },
+      "gradeName": "U17 Watson Shield",
       "assignSponsors": {
-        "competition": [],
+        "team": [],
         "grade": [],
-        "team": []
+        "competition": []
       }
     }
   ],
   "asset": {
     "assetID": 18,
     "assetTypeID": 3,
-    "assetCategoryID": 2,
-    "assetsLinkID": "f2757002f3f760b44719f7b196a766b55987e49e50bd89c47665e38fd94b8cf0"
+    "assetsLinkID": "0d02ba9bd7eda8a7b19698b43d76198c2b1e1d9b590d9a1671f2a87fc9e27dde",
+    "assetCategoryID": 2
   },
+  "errors": [],
+  "frames": [45, 240, 525, 810, 1095, 1380, 1665, 1950],
   "render": {
-    "schedulerId": 321,
-    "renderId": 8474
+    "renderId": 20658,
+    "schedulerId": 145
   },
   "account": {
-    "accountId": 434
+    "accountId": 145
   },
   "timings": {
-    "FPS_MAIN": 870,
+    "FPS_MAIN": 2010,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 30,
     "FPS_LADDER": 300,
     "FPS_SCORECARD": 0
   },
-  "frames": [45, 240, 525, 810],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/4273_Thunder_Youth_Championship_180px_Reverse_612b4d1f8b.png",
+        "width": 400,
+        "height": 400,
+        "hasLogo": true
       },
-      "name": "Strathmore Heights Cricket Club",
+      "name": "NSW Youth Championships",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "default": {},
+        "primary": []
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
-      "metadata": {
-        "title": "Ladder",
-        "titleSplit": ["Ladder", ""],
-        "videoTitle": "League Tables",
-        "compositionId": "CricketLadder",
-        "assetId": 18,
-        "assetTypeId": 3,
-        "frames": [390],
-        "includeSponsors": false
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#de0000",
-          "secondary": "#ffa300"
-        },
-        "template": "Classic"
-      },
       "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -1066,156 +4984,172 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
         }
+      },
+      "metadata": {
+        "title": "Ladder",
+        "frames": [390],
+        "assetId": 18,
+        "titleSplit": ["Ladder", ""],
+        "videoTitle": "League Tables",
+        "assetTypeId": 3,
+        "compositionId": "CricketLadder",
+        "includeSponsors": false
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#002855",
+          "secondary": "#00aeef"
+        },
+        "template": "TwoColumnClassic"
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 2,
+          "CricketUpcoming": 3,
           "CricketResultSingle": 1
         }
       },
+      "fixtureCategory": "Metro Youth Championships - Male",
+      "groupingCategory": "Metro Youth Championships - Male",
       "templateVariation": {
-        "useBackground": "Texture",
-        "mode": "light",
-        "category": {
-          "slug": "Classic",
-          "name": "Classic",
-          "divideFixturesBy": {
-            "CricketUpcoming": 2,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1
-          },
-          "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-29T00:24:54.890Z",
-            "updatedAt": "2024-10-29T00:24:56.001Z",
-            "publishedAt": "2024-10-29T00:24:56.000Z",
-            "audio_options": [
-              {
-                "id": 25,
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-29T00:03:05.331Z",
-                "updatedAt": "2024-10-29T01:02:40.051Z",
-                "publishedAt": "2024-10-29T00:03:06.783Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_73c30c8a79.mp3",
-                "CompositionID": "Top5BowlingList",
-                "ComponentName": "Top 5 Bowling"
-              },
-              {
-                "id": 30,
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-29T00:18:54.565Z",
-                "updatedAt": "2024-10-29T00:25:33.146Z",
-                "publishedAt": "2024-10-29T00:18:55.872Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_4c381d1d1e.mp3",
-                "CompositionID": "Top5BattingList",
-                "ComponentName": "Top 5 Batting"
-              },
-              {
-                "id": 28,
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-29T00:13:15.572Z",
-                "updatedAt": "2024-10-29T00:25:48.719Z",
-                "publishedAt": "2024-10-29T00:13:16.481Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_6f66edfd0b.mp3",
-                "CompositionID": "Ladder",
-                "ComponentName": "Ladder"
-              },
-              {
-                "id": 31,
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-29T00:21:51.124Z",
-                "updatedAt": "2024-10-29T01:03:00.642Z",
-                "publishedAt": "2024-10-29T00:21:52.065Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_707b263836.mp3",
-                "CompositionID": "UpComingFixtures",
-                "ComponentName": "UpComing Fixtures"
-              },
-              {
-                "id": 27,
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-29T00:11:52.803Z",
-                "updatedAt": "2024-10-29T01:02:48.895Z",
-                "publishedAt": "2024-10-29T00:12:49.969Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_784c0e8008.mp3",
-                "CompositionID": "WeekendResults",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
-        },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
-          "loop": null,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "useOffthreadVideo": null,
-          "volume": 0.8,
-          "playbackRate": null
-        },
+        "mode": "lightAlt",
         "image": {
           "url": null,
+          "type": "pan",
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
           "direction": "left",
-          "overlayStyle": "vignette",
           "gradientType": "linear",
+          "overlayStyle": "vignette",
           "overlayOpacity": 0.3
-        },
-        "palette": "primaryOnBlack",
-        "gradient": {
-          "type": "primary",
-          "direction": "VERTICAL"
         },
         "noise": {
           "type": "floatingParticles"
         },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": "cover",
+          "muted": true,
+          "volume": 0.8,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "primary",
         "pattern": {
           "type": "dots",
-          "animation": "none",
           "scale": 0.75,
-          "rotation": null,
           "opacity": 0.35,
-          "animationDuration": null,
-          "animationSpeed": 0.8
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
+        },
+        "texture": {
+          "url": null,
+          "name": null,
+          "scale": "100%",
+          "repeat": "cover",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
+        },
+        "category": {
+          "name": "Classic Two Column ",
+          "slug": "TwoColumnClassic",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1
+          }
+        },
+        "gradient": {
+          "type": "primaryToSecondary",
+          "direction": "DIAGONAL_REVERSE"
         },
         "particle": {
           "type": "lines",
-          "particleCount": "300",
           "speed": 0.8,
+          "animation": "scale",
           "direction": "up",
-          "animation": "scale"
+          "particleCount": "300"
         },
-        "texture": {
-          "name": "Wood",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_wood_like_623b1be4c1.png",
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": {
-            "opacity": 0.7,
-            "blendMode": "multiply"
-          }
-        }
+        "useBackground": "Gradient"
       }
     }
-  },
-  "errors": []
+  }
 }
