@@ -1,0 +1,465 @@
+{
+  "data": [
+    {
+      "SR": 71.11,
+      "name": "William",
+      "runs": 64,
+      "balls": 90,
+      "notOut": false,
+      "prompt": "William played for Runaway Bay Seagulls Opens Div 1, scoring 64 runs from 90 balls with a strike rate of 71.11. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is In Progress . Runaway Bay Seagulls Opens Div 1, (1) vs Coomera Hope Island OTJ Div 1 (), the match result was Match is still in progress.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls Opens Div 1"
+        },
+        "grade": {
+          "id": 56027,
+          "name": "Open Division 1"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 113.51,
+      "name": "Magdalena",
+      "runs": 42,
+      "balls": 37,
+      "notOut": true,
+      "prompt": "Magdalena played for Runaway Bay Seagulls U13 Div 2, scoring 42 runs from 37 balls with a strike rate of 113.51. Game details: This was a One Day in the Under 13 Division 2 grade, and the current match status is Match Completed . Runaway Bay Seagulls U13 Div 2, (1) vs Mudgeeraba Mixed U13 Division 2 (1), the match result was Runaway Bay Seagulls U13 Div 2 won by 5 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls U13 Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls U13 Div 2"
+        },
+        "grade": {
+          "id": 56025,
+          "name": "Under 13 Division 2"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 35.71,
+      "name": "Zach",
+      "runs": 30,
+      "balls": 84,
+      "notOut": false,
+      "prompt": "Zach played for Runaway Bay Seagulls U13 Div 1, scoring 30 runs from 84 balls with a strike rate of 35.71. Game details: This was a Two Day+ in the Under 13 Division 1 grade, and the current match status is In Progress . Runaway Bay Seagulls U13 Div 1, (1) vs Mudgeeraba U13 Division 1 (), the match result was Match is still in progress.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls U13 Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls U13 Div 1"
+        },
+        "grade": {
+          "id": 56024,
+          "name": "Under 13 Division 1"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 87.5,
+      "name": "Hudson",
+      "runs": 28,
+      "balls": 32,
+      "notOut": true,
+      "prompt": "Hudson played for Runaway Bay Seagulls U13 Div 2, scoring 28 runs from 32 balls with a strike rate of 87.5. Game details: This was a One Day in the Under 13 Division 2 grade, and the current match status is Match Completed . Runaway Bay Seagulls U13 Div 2, (1) vs Mudgeeraba Mixed U13 Division 2 (1), the match result was Runaway Bay Seagulls U13 Div 2 won by 5 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls U13 Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls U13 Div 2"
+        },
+        "grade": {
+          "id": 56025,
+          "name": "Under 13 Division 2"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 68.29,
+      "name": "Taika",
+      "runs": 28,
+      "balls": 41,
+      "notOut": false,
+      "prompt": "Taika played for Runaway Bay Seagulls Opens Div 1, scoring 28 runs from 41 balls with a strike rate of 68.29. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is In Progress . Runaway Bay Seagulls Opens Div 1, (1) vs Coomera Hope Island OTJ Div 1 (), the match result was Match is still in progress.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls Opens Div 1"
+        },
+        "grade": {
+          "id": 56027,
+          "name": "Open Division 1"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 66.66,
+      "name": "Flynn",
+      "runs": 28,
+      "balls": 42,
+      "notOut": false,
+      "prompt": "Flynn played for Runaway Bay Seagulls Opens Div 1, scoring 28 runs from 42 balls with a strike rate of 66.66. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is In Progress . Runaway Bay Seagulls Opens Div 1, (1) vs Coomera Hope Island OTJ Div 1 (), the match result was Match is still in progress.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls Opens Div 1"
+        },
+        "grade": {
+          "id": 56027,
+          "name": "Open Division 1"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 113.63,
+      "name": "A.J",
+      "runs": 25,
+      "balls": 22,
+      "notOut": true,
+      "prompt": "A.J played for Runaway Bay Seagulls Opens Div 1, scoring 25 runs from 22 balls with a strike rate of 113.63. Game details: This was a Two Day+ in the Open Division 1 grade, and the current match status is In Progress . Runaway Bay Seagulls Opens Div 1, (1) vs Coomera Hope Island OTJ Div 1 (), the match result was Match is still in progress.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls Opens Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls Opens Div 1"
+        },
+        "grade": {
+          "id": 56027,
+          "name": "Open Division 1"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    },
+    {
+      "SR": 39.68,
+      "name": "Oliver",
+      "runs": 25,
+      "balls": 63,
+      "notOut": false,
+      "prompt": "Oliver played for Runaway Bay Seagulls U13 Div 1, scoring 25 runs from 63 balls with a strike rate of 39.68. Game details: This was a Two Day+ in the Under 13 Division 1 grade, and the current match status is In Progress . Runaway Bay Seagulls U13 Div 1, (1) vs Mudgeeraba U13 Division 1 (), the match result was Match is still in progress.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Seagulls U13 Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Seagulls U13 Div 1"
+        },
+        "grade": {
+          "id": 56024,
+          "name": "Under 13 Division 1"
+        },
+        "competition": {
+          "id": 13441,
+          "name": "Gold Coast Juniors"
+        }
+      }
+    }
+  ],
+  "asset": {
+    "assetID": 64,
+    "assetTypeID": 3,
+    "assetCategoryID": 2,
+    "assetsLinkID": "31d7f46e2f5451b900a9ab3ec75f5a2850265841c8200ed806aefc2987f053d0"
+  },
+  "render": {
+    "schedulerId": 317,
+    "renderId": 8607
+  },
+  "account": {
+    "accountId": 430
+  },
+  "timings": {
+    "FPS_MAIN": 345,
+    "FPS_INTRO": 90,
+    "FPS_OUTRO": 30,
+    "FPS_LADDER": 0,
+    "FPS_SCORECARD": 0,
+    "FPS_PREFORMANCECARD": 180
+  },
+  "frames": [45, 180, 345],
+  "videoMeta": {
+    "club": {
+      "logo": {
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "name": "Runaway Bay Cricket Club Inc",
+      "sport": "Cricket",
+      "sponsors": {
+        "primary": [],
+        "default": {}
+      },
+      "IsAccountClub": true
+    },
+    "video": {
+      "fixtureCategory": "JUNIOR",
+      "groupingCategory": "JUNIOR",
+      "metadata": {
+        "title": "Batting Performances",
+        "titleSplit": [""],
+        "videoTitle": "Batting Performances",
+        "compositionId": "CricketBattingPerformances",
+        "assetId": 64,
+        "assetTypeId": 3,
+        "frames": [],
+        "includeSponsors": false
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#352466",
+          "secondary": "#ffa500"
+        },
+        "template": "TwoColumnClassic"
+      },
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/524abe1dc7ebb37effc4d4d3cd959eb3_fbf19bb25a.jpg",
+          "ratio": "portrait",
+          "width": 702,
+          "height": 1024,
+          "AgeGroup": "Both",
+          "AssetType": "ALL",
+          "markerPosition": null
+        },
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        }
+      },
+      "contentLayout": {
+        "divideFixturesBy": {
+          "CricketLadder": 1,
+          "CricketRoster": 1,
+          "CricketResults": 2,
+          "CricketUpcoming": 3,
+          "CricketResultSingle": 1,
+          "CricketBattingPerformances": 5,
+          "CricketBowlingPerformances": 5
+        }
+      },
+      "templateVariation": {
+        "useBackground": "Texture",
+        "mode": "lightAlt",
+        "category": {
+          "slug": "TwoColumnClassic",
+          "name": "Classic Two Column ",
+          "divideFixturesBy": {
+            "CricketUpcoming": 3,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketBowlingPerformances": 5,
+            "CricketBattingPerformances": 5
+          },
+          "bundleAudio": {
+            "id": 1,
+            "Name": "Basic",
+            "createdAt": "2023-09-27T10:36:24.428Z",
+            "updatedAt": "2025-06-15T04:50:57.910Z",
+            "publishedAt": "2023-09-27T10:36:25.639Z",
+            "audio_options": [
+              {
+                "id": 4,
+                "Name": "Better Start Now",
+                "createdAt": "2023-09-27T10:34:46.702Z",
+                "updatedAt": "2025-06-15T04:53:45.558Z",
+                "publishedAt": "2023-09-27T10:34:48.455Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
+                "CompositionID": "CricketLadder",
+                "ComponentName": "CricketLadder"
+              },
+              {
+                "id": 2,
+                "Name": "Fifteen on Me",
+                "createdAt": "2022-12-20T01:59:28.337Z",
+                "updatedAt": "2025-06-15T04:53:11.194Z",
+                "publishedAt": "2022-12-20T01:59:29.080Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
+              },
+              {
+                "id": 5,
+                "Name": "Get The Gains",
+                "createdAt": "2023-09-27T10:35:01.053Z",
+                "updatedAt": "2025-06-15T04:53:59.493Z",
+                "publishedAt": "2023-09-27T10:35:29.163Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "CompositionID": "CricketTop5Bowling",
+                "ComponentName": "CricketTop5Bowling"
+              },
+              {
+                "id": 3,
+                "Name": "Groover",
+                "createdAt": "2022-12-20T01:59:34.014Z",
+                "updatedAt": "2025-06-15T04:53:28.656Z",
+                "publishedAt": "2022-12-20T01:59:34.670Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "CompositionID": "CricketTop5Batting",
+                "ComponentName": "CricketTop5Batting"
+              },
+              {
+                "id": 1,
+                "Name": "Saltine",
+                "createdAt": "2022-12-12T05:19:56.353Z",
+                "updatedAt": "2025-06-15T04:50:50.079Z",
+                "publishedAt": "2022-12-12T05:19:57.408Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
+                "CompositionID": "CricketResults",
+                "ComponentName": "CricketResults"
+              },
+              {
+                "id": 16,
+                "Name": "BEECH LOVE",
+                "createdAt": "2024-06-05T04:31:26.640Z",
+                "updatedAt": "2024-06-07T12:45:43.674Z",
+                "publishedAt": "2024-06-07T12:45:32.118Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
+                "CompositionID": "Top5AFLScorers",
+                "ComponentName": "Top 5 Scorers"
+              },
+              {
+                "id": 17,
+                "Name": "FAY V",
+                "createdAt": "2024-06-05T04:33:33.970Z",
+                "updatedAt": "2024-06-07T12:48:03.161Z",
+                "publishedAt": "2024-06-07T12:47:53.394Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
+                "CompositionID": "WeekendResultsAFL",
+                "ComponentName": "Weekend Results"
+              }
+            ]
+          }
+        },
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": "left",
+          "size": "cover",
+          "loop": null,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": null,
+          "volume": 0.8,
+          "playbackRate": null
+        },
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.3
+        },
+        "palette": "primaryOnWhite",
+        "gradient": {
+          "type": "primary",
+          "direction": "HORIZONTAL"
+        },
+        "noise": {
+          "type": "floatingParticles"
+        },
+        "pattern": {
+          "type": "dots",
+          "animation": "none",
+          "scale": 0.75,
+          "rotation": null,
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
+        },
+        "particle": {
+          "type": "lines",
+          "particleCount": "300",
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        },
+        "texture": {
+          "name": "Print Texture",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Geometric_Halftone_Print_Texture_cb888287e4.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.8,
+            "blendMode": "multiply"
+          }
+        }
+      }
+    }
+  },
+  "errors": []
+}

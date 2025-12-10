@@ -6,6 +6,8 @@ import CricketRoster from "./samples/Cricket/Cricket_Roster.json";
 import CricketResultSingle from "./samples/Cricket/Cricket_WeekendResultsSingle.json";
 import CricketTop5Batting from "./samples/Cricket/Cricket_Top5Batters.json";
 import CricketTop5Bowling from "./samples/Cricket/Cricket_Top5Bowlers.json";
+import CricketBattingPerformances from "./samples/Cricket/Cricket_BattingPerformances.json";
+import CricketBowlingPerformances from "./samples/Cricket/Cricket_BowlingPerformances.json";
 import CricketUpcoming from "./samples/Cricket/Cricket_upcoming.json";
 
 // AFL
@@ -40,6 +42,8 @@ export const testDatasets: DatasetRecord = {
   CricketResultSingle: CricketResultSingle,
   CricketTop5Batting: CricketTop5Batting,
   CricketTop5Bowling: CricketTop5Bowling,
+  CricketBattingPerformances: CricketBattingPerformances,
+  CricketBowlingPerformances: CricketBowlingPerformances,
   CricketRoster: CricketRoster,
 
   // AFL
@@ -63,6 +67,8 @@ export const datasetsByCategory: DatasetCategories = {
     { id: "CricketUpcoming", name: "Upcoming Fixtures" },
     { id: "CricketTop5Batting", name: "Top 5 Batting" },
     { id: "CricketTop5Bowling", name: "Top 5 Bowling" },
+    { id: "CricketBattingPerformances", name: "Batting Performances" },
+    { id: "CricketBowlingPerformances", name: "Bowling Performances" },
     { id: "CricketResults", name: "Results" },
     { id: "CricketRoster", name: "Roster" },
     { id: "CricketResultSingle", name: "Single Game Result" },

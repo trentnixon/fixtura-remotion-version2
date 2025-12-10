@@ -51,6 +51,15 @@ import {
   Classic as rosterClassic,
   ClassicTwoColumn as rosterClassicTwoColumn,
 } from "./teamRoster";
+import {
+  basic as performancesBasic,
+  brickWork as performancesBrickWork,
+  classic as performancesClassic,
+  classicTwoColumn as performancesClassicTwoColumn,
+  cnsw as performancesCNSW,
+  cnswPrivate as performancesCNSWPrivate,
+  sixersThunder as performancesSixersThunder,
+} from "./performances";
 
 /* export * as ladder from './ladder';
 
@@ -128,6 +137,18 @@ export const CricketRoster = {
   classic: rosterClassic,
   twocolumnclassic: rosterClassicTwoColumn, // alias to classic
   cnsw: rosterClassic,
+};
+
+// Add CricketPerformances export for batting and bowling performances
+export const CricketPerformances = {
+  basic: performancesBasic,
+  brickwork: performancesBrickWork,
+  sixers: performancesSixersThunder,
+  thunder: performancesSixersThunder,
+  classic: performancesClassic,
+  twocolumnclassic: performancesClassicTwoColumn,
+  cnsw: performancesCNSW,
+  cnswprivate: performancesCNSWPrivate,
 };
 
 export const singleGameResult = {

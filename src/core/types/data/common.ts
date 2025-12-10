@@ -69,6 +69,7 @@ export interface Timings {
   FPS_OUTRO?: number;
   FPS_LADDER?: number;
   FPS_SCORECARD?: number;
+  FPS_PREFORMANCECARD?: number;
 }
 
 // Render info

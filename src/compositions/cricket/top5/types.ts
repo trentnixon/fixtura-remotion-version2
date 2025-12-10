@@ -69,4 +69,6 @@ export const PLAYER_ANIMATION_DURATION = 30; // 1 second for player animation
 export const TOP5_COMPOSITIONS = {
   BATTING: "CricketTop5Batting",
   BOWLING: "CricketTop5Bowling",
+  BATTING_PERFORMANCES: "CricketBattingPerformances",
+  BOWLING_PERFORMANCES: "CricketBowlingPerformances",
 } as const;

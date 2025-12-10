@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { getSimplifiedTitle } from "../utils/titleLookup";
 
 export const ClassicMainHeaderRotated: React.FC = () => {
   const { fontClasses } = useThemeContext();
@@ -16,6 +17,9 @@ export const ClassicMainHeaderRotated: React.FC = () => {
   const { timings } = data;
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
 
+  // Get simplified title using lookup
+  const displayTitle = getSimplifiedTitle(metadata.title || "");
+
   // Measure unrotated width and use it as min-height for the rotated block to prevent clipping
   const [rotatedMinHeight, setRotatedMinHeight] = React.useState<number>(0);
   const measureRef = React.useRef<HTMLDivElement | null>(null);
@@ -23,7 +27,7 @@ export const ClassicMainHeaderRotated: React.FC = () => {
     if (measureRef.current) {
       setRotatedMinHeight(measureRef.current.offsetWidth);
     }
-  }, [metadata.title, fontClasses.title?.family]);
+  }, [displayTitle, fontClasses.title?.family]);
 
   const TitleNode = (
     <div
@@ -42,7 +46,7 @@ export const ClassicMainHeaderRotated: React.FC = () => {
           fontFamily={fontClasses.title?.family}
           className="mt-0 whitespace-nowrap"
         >
-          {metadata.title}
+          {displayTitle}
         </AnimatedText>
       </div>
       {/* Hidden measurement clone to compute natural width */}
@@ -62,7 +66,7 @@ export const ClassicMainHeaderRotated: React.FC = () => {
           fontFamily={fontClasses.title?.family}
           className="mt-0 whitespace-nowrap"
         >
-          {metadata.title}
+          {displayTitle}
         </AnimatedText>
       </div>
     </div>

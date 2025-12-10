@@ -143,6 +143,50 @@ export const compositionConfig: Record<string, CompositionConfig> = {
       },
     },
   },
+  CricketBattingPerformances: {
+    topLine: {
+      value: "Batting",
+      spacing: "0.155em",
+    },
+    bottomLine: {
+      value: "Performances",
+      spacing: "0.07em",
+    },
+    header: {
+      topLine: {
+        value: "Batting",
+        spacing: "0.1em",
+        headerFontSize: "10em",
+      },
+      bottomLine: {
+        value: "Performances",
+        spacing: "0.38em",
+        headerFontSize: "4em",
+      },
+    },
+  },
+  CricketBowlingPerformances: {
+    topLine: {
+      value: "Bowling",
+      spacing: "0.155em",
+    },
+    bottomLine: {
+      value: "Performances",
+      spacing: "0.055em",
+    },
+    header: {
+      topLine: {
+        value: "Bowling",
+        spacing: "0.1em",
+        headerFontSize: "10em",
+      },
+      bottomLine: {
+        value: "Performances",
+        spacing: "0.27em",
+        headerFontSize: "4em",
+      },
+    },
+  },
   CricketRoster: {
     topLine: {
       value: "Team",
@@ -249,6 +293,8 @@ export const hardcodedTextSpacing: Record<
   FIXTURES: { intro: "0.065em", header: "0.2em" },
   Leading: { intro: "0.155em", header: "0.1em" },
   Team: { intro: "0.67em", header: "0.3em" },
+  Batting: { intro: "0.155em", header: "0.1em" },
+  Bowling: { intro: "0.1em", header: "0.1em" },
 
   // BottomLine values
   TABLES: { intro: "0.66em", header: "0.3em" },
@@ -258,6 +304,7 @@ export const hardcodedTextSpacing: Record<
   "Run-Scorers": { intro: "0.07em", header: "0.38em" },
   Roster: { intro: "0.66em", header: "0.15em" },
   Result: { intro: "0.62em", header: "0.4em" },
+  Performances: { intro: "0.015em", header: "0.25em" },
 };
 
 /**

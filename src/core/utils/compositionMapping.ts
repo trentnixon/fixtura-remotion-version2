@@ -9,6 +9,8 @@ export const datasetToCompositionMap = {
   CricketResultSingle: "CricketResultSingle",
   CricketTop5Batting: "CricketTop5Batting",
   CricketTop5Bowling: "CricketTop5Bowling",
+  CricketBattingPerformances: "CricketBattingPerformances",
+  CricketBowlingPerformances: "CricketBowlingPerformances",
   CricketUpcoming: "CricketUpcoming",
 
   AFLLadder: "AFLLadder",

@@ -20,7 +20,10 @@ export const transformPlayerData = (
   }
 
   return rawData.map((player) => {
-    if (compositionId === TOP5_COMPOSITIONS.BATTING) {
+    if (
+      compositionId === TOP5_COMPOSITIONS.BATTING ||
+      compositionId === TOP5_COMPOSITIONS.BATTING_PERFORMANCES
+    ) {
       // Transform batting data
       return {
         ...player,
@@ -47,6 +50,10 @@ export const getTitle = (compositionId: string): string => {
       return "Top 5 Batters";
     case TOP5_COMPOSITIONS.BOWLING:
       return "Top 5 Bowlers";
+    case TOP5_COMPOSITIONS.BATTING_PERFORMANCES:
+      return "Batting Performances";
+    case TOP5_COMPOSITIONS.BOWLING_PERFORMANCES:
+      return "Bowling Performances";
     default:
       return "Top 5 Players";
   }

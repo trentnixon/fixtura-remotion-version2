@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackLogoTitleName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { getSimplifiedTitle } from "../utils/titleLookup";
 
 /**
  * BasicIntro Component
@@ -18,6 +19,9 @@ export const ThunderIntro: React.FC = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
+
+  // Get simplified title using lookup
+  const displayTitle = getSimplifiedTitle(metadata.title || "");
 
   return (
     <VerticalStackLogoTitleName
@@ -48,7 +52,7 @@ export const ThunderIntro: React.FC = () => {
             exitFrame={TextAnimations.introExitFrame}
             fontFamily={fontClasses.title?.family}
           >
-            {metadata.title}
+            {displayTitle}
           </AnimatedText>
         </div>
       }

@@ -10,6 +10,8 @@ export interface DivideFixturesBy {
   CricketResults: number;
   CricketUpcoming: number;
   CricketResultSingle: number;
+  CricketBattingPerformances?: number;
+  CricketBowlingPerformances?: number;
 }
 
 // Video structure

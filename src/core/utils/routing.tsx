@@ -38,6 +38,8 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
     CricketUpcoming: "CricketUpcoming",
     CricketTop5Batting: "CricketTop5",
     CricketTop5Bowling: "CricketTop5",
+    CricketBattingPerformances: "CricketPerformances",
+    CricketBowlingPerformances: "CricketPerformances",
     CricketResultSingle: "CricketResultSingle",
     CricketRoster: "CricketRoster",
     CricketResults: "CricketResults",
