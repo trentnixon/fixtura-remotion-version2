@@ -11,7 +11,8 @@ import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
 import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-import { MetadataLarge } from "../../utils/primitives/metadataLarge";
+
+import { MetadataMedium } from "../../utils/primitives/metadataMedium";
 import { stripGradeNumberFromTeamName } from "../../utils/utils-text";
 
 interface PerformanceRowLayoutProps {
@@ -79,7 +80,7 @@ export const StandardPerformanceRowCNSW: React.FC<
       }}
     >
       <div className="col-span-1 flex items-center justify-center h-full">
-        <MetadataLarge
+        <MetadataMedium
           value={`${index + 1}`}
           animation={{ ...largeTextAnimation, delay: delay + 2 }}
           className=""
