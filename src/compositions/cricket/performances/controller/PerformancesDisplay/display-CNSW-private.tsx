@@ -38,7 +38,7 @@ const PerformancesDisplayCNSWPrivate: React.FC<PerformancesDisplayProps> = ({
       : "";
 
   // Static row height for CNSW-private template (matching top5)
-  const rowHeight = 110;
+  const rowHeight = 100;
 
   return (
     <div className="flex flex-col h-full ">
@@ -61,7 +61,7 @@ const PerformancesDisplayCNSWPrivate: React.FC<PerformancesDisplayProps> = ({
             variant="onContainerMain"
           />
         </div>
-        <div className="flex-1 flex flex-col items-center justify-start gap-2 w-full">
+        <div className="flex-1 flex flex-col items-center justify-start gap-0 w-full">
           {displayedPerformances.map((performance, index) => {
             // Calculate the actual index number accounting for screen pagination
             const actualIndex = screenIndex * itemsPerScreen + index;

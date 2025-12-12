@@ -107,13 +107,13 @@ export const StandardPerformanceRowCNSW: React.FC<
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + 20 }}
+          animation={{ ...largeTextAnimation, delay: delay + 10 }}
           className="font-bold"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + 30 }}
+            animation={{ ...smallTextAnimation, delay: delay + 15 }}
             className="font-bold"
           />
         )}

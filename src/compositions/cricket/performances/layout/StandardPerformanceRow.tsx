@@ -51,9 +51,9 @@ export const StandardPerformanceRow: React.FC<PerformanceRowLayoutProps> = ({
     ? selectedPalette.container.backgroundTransparent.high
     : selectedPalette.container.backgroundTransparent.medium;
 
-  const LogoBG = isTopPerformance
+  /*   const LogoBG = isTopPerformance
     ? selectedPalette.container.transparentSecondary
-    : selectedPalette.container.backgroundTransparent.strong;
+    : selectedPalette.container.backgroundTransparent.strong; */
 
   // Get the appropriate score display based on performance type
   const getScoreValues = () => {
@@ -94,12 +94,7 @@ export const StandardPerformanceRow: React.FC<PerformanceRowLayoutProps> = ({
       style={{ height: `${rowHeight}px` }}
     >
       {/* Logo Section (Fixed Width) */}
-      <div
-        className="w-30 bg-white flex items-center justify-center p-1 shrink-0"
-        style={{
-          background: LogoBG,
-        }}
-      >
+      <div className="w-30 bg-white flex items-center justify-center p-0 shrink-0">
         <TeamLogo
           logo={performance.teamLogo as PerformanceTeamLogoType}
           teamName={performance.playedFor}

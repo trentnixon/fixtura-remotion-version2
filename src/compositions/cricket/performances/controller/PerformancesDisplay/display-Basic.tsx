@@ -29,13 +29,13 @@ const PerformancesDisplayBasic: React.FC<PerformancesDisplayProps> = ({
     itemsPerScreen,
   );
   // Static row height for basic template
-  const rowHeight = 140;
+  const rowHeight = 115;
 
   return (
     <div className="flex flex-col h-full ">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-16 overflow-hidden py-32"
+        className="flex-1 flex flex-col mx-16 overflow-hidden py-8"
         style={{
           height: heights.asset,
         }}
@@ -44,7 +44,7 @@ const PerformancesDisplayBasic: React.FC<PerformancesDisplayProps> = ({
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 flex flex-col items-center justify-center gap-4 w-full">
+        <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full">
           {displayedPerformances.map((performance, index) => (
             <div
               key={`${performance.name}-${screenIndex}-${index}`}

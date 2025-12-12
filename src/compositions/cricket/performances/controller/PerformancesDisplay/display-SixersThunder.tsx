@@ -12,9 +12,11 @@ interface PerformancesDisplayProps {
   screenIndex: number;
 }
 
-const PerformancesDisplaySixersThunder: React.FC<
-  PerformancesDisplayProps
-> = ({ performances, itemsPerScreen, screenIndex }) => {
+const PerformancesDisplaySixersThunder: React.FC<PerformancesDisplayProps> = ({
+  performances,
+  itemsPerScreen,
+  screenIndex,
+}) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { animations } = useAnimationContext();
@@ -28,13 +30,13 @@ const PerformancesDisplaySixersThunder: React.FC<
   );
 
   // Static row height for sixersThunder template (matching classic)
-  const rowHeight = 140;
+  const rowHeight = 115;
 
   return (
     <div className="flex flex-col h-full ">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-16 overflow-hidden py-32 "
+        className="flex-1 flex flex-col mx-16 overflow-hidden py-16 "
         style={{
           height: heights.asset,
         }}
@@ -43,7 +45,7 @@ const PerformancesDisplaySixersThunder: React.FC<
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full">
+        <div className="flex-1 flex flex-col items-center justify-center gap-1 w-full">
           {displayedPerformances.map((performance, index) => (
             <div
               key={`${performance.name}-${screenIndex}-${index}`}

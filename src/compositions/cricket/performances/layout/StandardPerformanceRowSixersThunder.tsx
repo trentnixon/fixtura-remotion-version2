@@ -74,7 +74,7 @@ export const StandardPerformanceRowSixersThunder: React.FC<
 
   return (
     <div
-      className={`grid grid-cols-12 p-2 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
+      className={`grid grid-cols-12 p-0 pl-2 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
       style={{
         height: `${rowHeight}px`,
         background: bgColor,

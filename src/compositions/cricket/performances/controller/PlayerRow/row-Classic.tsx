@@ -27,7 +27,7 @@ const PerformanceRowClassic: React.FC<PerformanceRowProps> = ({
   const animationOutFrame = (timings?.FPS_PREFORMANCECARD || 180) - 30;
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden px-8">
       <AnimatedContainer
         type="full"
         className={`${layout.borderRadius.container}`}

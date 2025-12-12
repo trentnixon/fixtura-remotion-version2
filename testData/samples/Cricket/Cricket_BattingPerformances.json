@@ -299,8 +299,8 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketBattingPerformances": 5,
-          "CricketBowlingPerformances": 5
+          "CricketBattingPerformances": 7,
+          "CricketBowlingPerformances": 7
         }
       },
       "templateVariation": {

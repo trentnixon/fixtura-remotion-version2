@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { PerformanceData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -36,7 +37,7 @@ const PerformancesDisplayCNSW: React.FC<PerformancesDisplayProps> = ({
   const title = data.videoMeta?.video?.groupingCategory || "";
 
   // Static row height for CNSW template (matching top5)
-  const rowHeight = 110;
+  const rowHeight = 100;
 
   return (
     <div className="flex flex-col h-full ">
@@ -59,7 +60,7 @@ const PerformancesDisplayCNSW: React.FC<PerformancesDisplayProps> = ({
             variant="onContainerCopyNoBg"
           />
         </div>
-        <div className="flex-1 flex flex-col items-center justify-start gap-2 w-full">
+        <div className="flex-1 flex flex-col items-center justify-start gap-0 w-full">
           {displayedPerformances.map((performance, index) => {
             // Calculate the actual index number accounting for screen pagination
             const actualIndex = screenIndex * itemsPerScreen + index;

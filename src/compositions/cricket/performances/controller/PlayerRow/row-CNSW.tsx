@@ -23,7 +23,7 @@ const PerformanceRowCNSW: React.FC<PerformanceRowProps> = ({
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = index * 5; // Stagger the animation of each row
+  const delay = (index % 7) * 2.5; // Stagger the animation every 7 rows (modulo 7)
   const animationOutFrame = (timings?.FPS_PREFORMANCECARD || 180) - 30;
 
   return (

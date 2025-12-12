@@ -30,7 +30,7 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
   );
 
   // Static row height for brickWork template
-  const rowHeight = 140;
+  const rowHeight = 115;
 
   return (
     <div className="flex flex-col h-full ">
@@ -45,7 +45,7 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 flex flex-col items-center justify-center gap-4 w-full">
+        <div className="flex-1 flex flex-col items-center justify-center gap-1 w-full">
           {displayedPerformances.map((performance, index) => (
             <div
               key={`${performance.name}-${screenIndex}-${index}`}

@@ -74,14 +74,14 @@ export const StandardPerformanceRowClassic: React.FC<
 
   return (
     <div
-      className={`grid grid-cols-12 p-2 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
+      className={`grid grid-cols-12 p-0 pl-2 items-center  overflow-hidden ${layout.borderRadius.container}`}
       style={{
         height: `${rowHeight}px`,
         background: bgColor,
       }}
     >
       {/* Name & Team (col-span-7) */}
-      <div className="col-span-7 flex flex-col justify-center px-2 h-full">
+      <div className="col-span-7 flex flex-col justify-center px-2 ">
         <Top5PlayerName
           value={playerName}
           animation={{ ...largeTextAnimation, delay: delay + 2 }}
