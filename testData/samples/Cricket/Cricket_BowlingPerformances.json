@@ -1,2082 +1,444 @@
 {
   "data": [
     {
-      "name": "Louis Makiora",
-      "runs": 0,
-      "overs": "0",
-      "prompt": "Louis Makiora played for Cornwall Danger Islanders, taking 8 wickets from 0 overs, conceding 0 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Cornwall Danger Islanders () vs Marewa D2B (), the match result was Match is still in progress.",
-      "wickets": 8,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Danger Islanders",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Danger Islanders"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Gasula Marukore",
-      "runs": 0,
-      "overs": "0",
-      "prompt": "Gasula Marukore played for Cornwall Danger Islanders, taking 7 wickets from 0 overs, conceding 0 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Cornwall Danger Islanders () vs Marewa D2B (), the match result was Match is still in progress.",
-      "wickets": 7,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Danger Islanders",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Danger Islanders"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ngaturi Maroti",
-      "runs": 0,
-      "overs": "0",
-      "prompt": "Ngaturi Maroti played for Cornwall Danger Islanders, taking 7 wickets from 0 overs, conceding 0 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Cornwall Danger Islanders () vs Marewa D2B (), the match result was Match is still in progress.",
-      "wickets": 7,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Danger Islanders",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Danger Islanders"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Jeff Young",
-      "runs": 1,
-      "overs": "0",
-      "prompt": "Jeff Young played for Marewa D2B, taking 7 wickets from 0 overs, conceding 1 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Marewa D2B () vs Cornwall Danger Islanders (), the match result was Match is still in progress.",
-      "wickets": 7,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marewa_9edb043a60.png",
-        "width": 433,
-        "height": 344
-      },
-      "playedFor": "Marewa D2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Marewa D2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Dag Wakenshaw",
-      "runs": 0,
-      "overs": "1",
-      "prompt": "Dag Wakenshaw played for Marewa D2B, taking 6 wickets from 1 overs, conceding 0 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Marewa D2B () vs Cornwall Danger Islanders (), the match result was Match is still in progress.",
-      "wickets": 6,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marewa_9edb043a60.png",
-        "width": 433,
-        "height": 344
-      },
-      "playedFor": "Marewa D2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Marewa D2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Pedro Lowe",
-      "runs": 1,
-      "overs": "0",
-      "prompt": "Pedro Lowe played for Marewa D2B, taking 6 wickets from 0 overs, conceding 1 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Marewa D2B () vs Cornwall Danger Islanders (), the match result was Match is still in progress.",
-      "wickets": 6,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marewa_9edb043a60.png",
-        "width": 433,
-        "height": 344
-      },
-      "playedFor": "Marewa D2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Marewa D2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Tuiva Tuiva",
-      "runs": 2,
-      "overs": "1",
-      "prompt": "Tuiva Tuiva played for Cornwall Danger Islanders, taking 6 wickets from 1 overs, conceding 2 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Cornwall Danger Islanders () vs Marewa D2B (), the match result was Match is still in progress.",
-      "wickets": 6,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Danger Islanders",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Danger Islanders"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Daniel Ackland",
-      "runs": 3,
-      "overs": "0",
-      "prompt": "Daniel Ackland played for Marewa D2B, taking 5 wickets from 0 overs, conceding 3 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Marewa D2B () vs Cornwall Danger Islanders (), the match result was Match is still in progress.",
-      "wickets": 5,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marewa_9edb043a60.png",
-        "width": 433,
-        "height": 344
-      },
-      "playedFor": "Marewa D2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Marewa D2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Graeme Woolf  (c)",
-      "runs": 9,
-      "overs": "6.2",
-      "prompt": "Graeme Woolf  (c) played for Hibernian 2B, taking 5 wickets from 6.2 overs, conceding 9 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is Match Completed . Hibernian 2B (1) vs HBHS 2nd XI D2b (1), the match result was Hibernian 2B won by 5 wickets.",
-      "wickets": 5,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_903a246e01.jpg",
-        "width": 1134,
-        "height": 1270
-      },
-      "playedFor": "Hibernian 2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hibernian 2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Lucky JR",
-      "runs": 34,
-      "overs": "9",
-      "prompt": "Lucky JR played for Sher-E-Punjab XMAS, taking 5 wickets from 9 overs, conceding 34 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Sher-E-Punjab XMAS (1) vs Cornwall Senior XMAS (1), the match result was Sher-E-Punjab XMAS won by 10 wickets.",
-      "wickets": 5,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sher_e_punjab_ca19bbe5d9.png",
-        "width": 444,
-        "height": 444
-      },
-      "playedFor": "Sher-E-Punjab XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "Sher-E-Punjab XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Kenny Makonia",
-      "runs": 0,
-      "overs": "0",
-      "prompt": "Kenny Makonia played for Cornwall Danger Islanders, taking 4 wickets from 0 overs, conceding 0 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Cornwall Danger Islanders () vs Marewa D2B (), the match result was Match is still in progress.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Danger Islanders",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Danger Islanders"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Maika Maika",
-      "runs": 1,
-      "overs": "0",
-      "prompt": "Maika Maika played for Cornwall Danger Islanders, taking 4 wickets from 0 overs, conceding 1 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Cornwall Danger Islanders () vs Marewa D2B (), the match result was Match is still in progress.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Danger Islanders",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Danger Islanders"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Thaine Newport",
-      "runs": 3,
-      "overs": "0",
-      "prompt": "Thaine Newport played for Marewa D2B, taking 4 wickets from 0 overs, conceding 3 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Marewa D2B () vs Cornwall Danger Islanders (), the match result was Match is still in progress.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marewa_9edb043a60.png",
-        "width": 433,
-        "height": 344
-      },
-      "playedFor": "Marewa D2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Marewa D2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Chris O'Connor",
-      "runs": 11,
-      "overs": "6",
-      "prompt": "Chris O'Connor played for NOBM Rugby D3, taking 4 wickets from 6 overs, conceding 11 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBM Rugby D3 (1) vs Taradale CC Gallagher Insurance Division 3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBM_Rugby_92e6a883d6.png",
-        "width": 360,
-        "height": 458
-      },
-      "playedFor": "NOBM Rugby D3",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBM Rugby D3"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Matthew Geldard",
+      "name": "Aidan Cox-Bishop",
       "runs": 15,
-      "overs": "7",
-      "prompt": "Matthew Geldard played for NOBMCC Hobblers D2b, taking 4 wickets from 7 overs, conceding 15 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is Match Completed . NOBMCC Hobblers D2b (1) vs HNCC Hansen Bate - Div 2 - The Molly's (1), the match result was NOBMCC Hobblers D2b won by 7 wickets.",
-      "wickets": 4,
+      "overs": "3.5",
+      "prompt": "Aidan Cox-Bishop played for Rats, taking 5 wickets from 3.5 overs, conceding 15 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Rats (1) vs Pirates 2nd Grade (1), the match result was Rats won by 8 wickets.",
+      "wickets": 5,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
       },
-      "playedFor": "NOBMCC Hobblers D2b",
+      "playedFor": "Rats",
       "assignSponsors": {
         "Team": {
-          "name": "NOBMCC Hobblers D2b"
+          "name": "Rats"
         },
         "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
+          "id": 76731,
+          "name": "1st & 2nd Grade Combined"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Daniel Wallace",
-      "runs": 18,
-      "overs": "4.4",
-      "prompt": "Daniel Wallace played for NOBMCC Sausages D3 - HH Smith Shield, taking 4 wickets from 4.4 overs, conceding 18 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBMCC Sausages D3 - HH Smith Shield (1) vs Hawke's Bay United CSC Warriors (1), the match result was NOBMCC Sausages D3 - HH Smith Shield won by 5 wickets.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
-      },
-      "playedFor": "NOBMCC Sausages D3 - HH Smith Shield",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBMCC Sausages D3 - HH Smith Shield"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Oscar Field",
-      "runs": 22,
-      "overs": "6",
-      "prompt": "Oscar Field played for Hibernian Jarks Cityside, taking 4 wickets from 6 overs, conceding 22 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Hibernian Jarks Cityside (1) vs Cornwall Oaks (1), the match result was Cornwall Oaks won by 1 wicket.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_903a246e01.jpg",
-        "width": 1134,
-        "height": 1270
-      },
-      "playedFor": "Hibernian Jarks Cityside",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hibernian Jarks Cityside"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Adam Morris-Jenkins",
-      "runs": 27,
+      "name": "Jett T Edwards",
+      "runs": 36,
       "overs": "8",
-      "prompt": "Adam Morris-Jenkins played for Taradale CC Gallagher Insurance Gold, taking 4 wickets from 8 overs, conceding 27 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Gold (1) vs NBHS 2nd XI (1), the match result was NBHS 2nd XI won by 11 runs.",
+      "prompt": "Jett T Edwards played for SJCC OG, taking 4 wickets from 8 overs, conceding 36 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
       "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
-      "playedFor": "Taradale CC Gallagher Insurance Gold",
+      "playedFor": "SJCC OG",
       "assignSponsors": {
         "Team": {
-          "name": "Taradale CC Gallagher Insurance Gold"
+          "name": "SJCC OG"
         },
         "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
+          "id": 76731,
+          "name": "1st & 2nd Grade Combined"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "James McCorkindale  (c)",
-      "runs": 29,
-      "overs": "6",
-      "prompt": "James McCorkindale  (c) played for NOBMCC Sausages D3 - HH Smith Shield, taking 4 wickets from 6 overs, conceding 29 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBMCC Sausages D3 - HH Smith Shield (1) vs Hawke's Bay United CSC Warriors (1), the match result was NOBMCC Sausages D3 - HH Smith Shield won by 5 wickets.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
-      },
-      "playedFor": "NOBMCC Sausages D3 - HH Smith Shield",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBMCC Sausages D3 - HH Smith Shield"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Reilly Hannan",
-      "runs": 32,
-      "overs": "9",
-      "prompt": "Reilly Hannan played for Napier Invitational Div 1 Xmas, taking 4 wickets from 9 overs, conceding 32 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Napier Invitational Div 1 Xmas (1) vs HBHS 1st XI XMAS (1), the match result was Napier Invitational Div 1 Xmas won by 2 wickets.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Napier Invitational Div 1 Xmas",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Invitational Div 1 Xmas"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Manish Sharma",
-      "runs": 38,
-      "overs": "8",
-      "prompt": "Manish Sharma played for Hawke's Bay United Kings, taking 4 wickets from 8 overs, conceding 38 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Hawke's Bay United Kings (1) vs St Johns College 1st XI (1), the match result was Hawke's Bay United Kings won by 7 wickets.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Hawke's Bay United Kings",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hawke's Bay United Kings"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Carl Miller",
-      "runs": 1,
-      "overs": "1",
-      "prompt": "Carl Miller played for Marewa D2B, taking 3 wickets from 1 overs, conceding 1 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is In Progress . Marewa D2B () vs Cornwall Danger Islanders (), the match result was Match is still in progress.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marewa_9edb043a60.png",
-        "width": 433,
-        "height": 344
-      },
-      "playedFor": "Marewa D2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Marewa D2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Josh Taylor",
-      "runs": 5,
-      "overs": "1.3",
-      "prompt": "Josh Taylor played for Wounders CC, taking 3 wickets from 1.3 overs, conceding 5 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . Wounders CC (1) vs Mallards (1), the match result was Wounders CC won by 3 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Wounders CC",
-      "assignSponsors": {
-        "Team": {
-          "name": "Wounders CC"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "James McNatty",
-      "runs": 7,
-      "overs": "2",
-      "prompt": "James McNatty played for City, taking 3 wickets from 2 overs, conceding 7 runs. Game details: This was a T20 in the Clifton County Cricket Club T20 Competition grade, and the current match status is Match Completed . City (1) vs Stings (1), the match result was City won by 4 runs.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "City",
-      "assignSponsors": {
-        "Team": {
-          "name": "City"
-        },
-        "grade": {
-          "id": 75542,
-          "name": "Clifton County Cricket Club T20 Competition"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Dilwinder Singh",
-      "runs": 11,
-      "overs": "4",
-      "prompt": "Dilwinder Singh played for Hawke's Bay United Kings, taking 3 wickets from 4 overs, conceding 11 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Hawke's Bay United Kings (1) vs St Johns College 1st XI (1), the match result was Hawke's Bay United Kings won by 7 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Hawke's Bay United Kings",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hawke's Bay United Kings"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Tony Sherriff",
-      "runs": 19,
-      "overs": "7.4",
-      "prompt": "Tony Sherriff played for NOBMCC Hobblers D2b, taking 3 wickets from 7.4 overs, conceding 19 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is Match Completed . NOBMCC Hobblers D2b (1) vs HNCC Hansen Bate - Div 2 - The Molly's (1), the match result was NOBMCC Hobblers D2b won by 7 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
-      },
-      "playedFor": "NOBMCC Hobblers D2b",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBMCC Hobblers D2b"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Vance Morris",
-      "runs": 27,
-      "overs": "9",
-      "prompt": "Vance Morris played for Taradale CC Gallagher Insurance Maroon Div 1, taking 3 wickets from 9 overs, conceding 27 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Maroon Div 1 (1) vs NBHS 1st XI XMAS (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Maroon Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Maroon Div 1"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ben Stewart",
-      "runs": 34,
-      "overs": "5.4",
-      "prompt": "Ben Stewart played for Taradale CC Gallagher Insurance Gold, taking 3 wickets from 5.4 overs, conceding 34 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Gold (1) vs NBHS 2nd XI (1), the match result was NBHS 2nd XI won by 11 runs.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Gold",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Gold"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Glen Fairbrother  (c)",
-      "runs": 35,
-      "overs": "7.2",
-      "prompt": "Glen Fairbrother  (c) played for Hibernian Jarks Cityside, taking 3 wickets from 7.2 overs, conceding 35 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Hibernian Jarks Cityside (1) vs Cornwall Oaks (1), the match result was Cornwall Oaks won by 1 wicket.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_903a246e01.jpg",
-        "width": 1134,
-        "height": 1270
-      },
-      "playedFor": "Hibernian Jarks Cityside",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hibernian Jarks Cityside"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Saul Barker",
-      "runs": 37,
-      "overs": "9",
-      "prompt": "Saul Barker played for NBHS 1st XI XMAS, taking 3 wickets from 9 overs, conceding 37 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . NBHS 1st XI XMAS (1) vs Taradale CC Gallagher Insurance Maroon Div 1 (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NBHS_logo_2019_bb0b1c7b27.png",
-        "width": 1265,
-        "height": 1429
-      },
-      "playedFor": "NBHS 1st XI XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "NBHS 1st XI XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Mahi Gakhal",
-      "runs": 56,
-      "overs": "9",
-      "prompt": "Mahi Gakhal played for Napier Tech Tigers XMAS, taking 3 wickets from 9 overs, conceding 56 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Napier Tech Tigers XMAS (1) vs HNCC Division One XMAS (1), the match result was Napier Tech Tigers XMAS won by 4 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
-        "width": 490,
-        "height": 386
-      },
-      "playedFor": "Napier Tech Tigers XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Tech Tigers XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Nick Dale  (c)",
-      "runs": 2,
-      "overs": "1",
-      "prompt": "Nick Dale  (c) played for The Ugly Bunch, taking 2 wickets from 1 overs, conceding 2 runs. Game details: This was a T20 in the Tui Mercantile League Pool B grade, and the current match status is Match Completed . The Ugly Bunch (1) vs Six Offenders (1), the match result was The Ugly Bunch won by 8 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "The Ugly Bunch",
-      "assignSponsors": {
-        "Team": {
-          "name": "The Ugly Bunch"
-        },
-        "grade": {
-          "id": 82794,
-          "name": "Tui Mercantile League Pool B"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Dave Jellyman",
-      "runs": 5,
-      "overs": "1.4",
-      "prompt": "Dave Jellyman played for NOBM Rugby D3, taking 2 wickets from 1.4 overs, conceding 5 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBM Rugby D3 (1) vs Taradale CC Gallagher Insurance Division 3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBM_Rugby_92e6a883d6.png",
-        "width": 360,
-        "height": 458
-      },
-      "playedFor": "NOBM Rugby D3",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBM Rugby D3"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Princily Jose",
-      "runs": 5,
-      "overs": "2",
-      "prompt": "Princily Jose played for Taradale CC Gallagher Insurance Division 3, taking 2 wickets from 2 overs, conceding 5 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Division 3 (1) vs NOBM Rugby D3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Division 3",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Division 3"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Zeb Meehan",
-      "runs": 6,
-      "overs": "2",
-      "prompt": "Zeb Meehan played for Wounders CC, taking 2 wickets from 2 overs, conceding 6 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . Wounders CC (1) vs Mallards (1), the match result was Wounders CC won by 3 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Wounders CC",
-      "assignSponsors": {
-        "Team": {
-          "name": "Wounders CC"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Jono Kight",
+      "name": "Martin Smithers",
       "runs": 8,
-      "overs": "2",
-      "prompt": "Jono Kight played for Costal, taking 2 wickets from 2 overs, conceding 8 runs. Game details: This was a T20 in the Clifton County Cricket Club T20 Competition grade, and the current match status is Match Completed . Costal (1) vs Village (1), the match result was Costal won by 53 runs.",
-      "wickets": 2,
+      "overs": "5",
+      "prompt": "Martin Smithers played for Hibo Country, taking 3 wickets from 5 overs, conceding 8 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Country (1) vs Mice (1), the match result was Mice won by 3 wickets.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
+        "width": 236,
+        "height": 289
       },
-      "playedFor": "Costal",
+      "playedFor": "Hibo Country",
       "assignSponsors": {
         "Team": {
-          "name": "Costal"
+          "name": "Hibo Country"
         },
         "grade": {
-          "id": 75542,
-          "name": "Clifton County Cricket Club T20 Competition"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Johnny Valler",
-      "runs": 9,
-      "overs": "2",
-      "prompt": "Johnny Valler played for ATK Engineering, taking 2 wickets from 2 overs, conceding 9 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . ATK Engineering (1) vs Those Guys (1), the match result was ATK Engineering won by 6 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "ATK Engineering",
-      "assignSponsors": {
-        "Team": {
-          "name": "ATK Engineering"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Tim Carter",
+      "name": "Robert Hogg",
       "runs": 10,
-      "overs": "1.2",
-      "prompt": "Tim Carter played for The Ugly Bunch, taking 2 wickets from 1.2 overs, conceding 10 runs. Game details: This was a T20 in the Tui Mercantile League Pool B grade, and the current match status is Match Completed . The Ugly Bunch (1) vs Six Offenders (1), the match result was The Ugly Bunch won by 8 wickets.",
-      "wickets": 2,
+      "overs": "5",
+      "prompt": "Robert Hogg played for Mice, taking 3 wickets from 5 overs, conceding 10 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
       },
-      "playedFor": "The Ugly Bunch",
+      "playedFor": "Mice",
       "assignSponsors": {
         "Team": {
-          "name": "The Ugly Bunch"
+          "name": "Mice"
         },
         "grade": {
-          "id": 82794,
-          "name": "Tui Mercantile League Pool B"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Carl Miller",
-      "runs": 10,
-      "overs": "2",
-      "prompt": "Carl Miller played for Mallards, taking 2 wickets from 2 overs, conceding 10 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . Mallards (1) vs Wounders CC (1), the match result was Wounders CC won by 3 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Mallards",
-      "assignSponsors": {
-        "Team": {
-          "name": "Mallards"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "William Wright",
-      "runs": 10,
-      "overs": "2",
-      "prompt": "William Wright played for Mallards, taking 2 wickets from 2 overs, conceding 10 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . Mallards (1) vs Wounders CC (1), the match result was Wounders CC won by 3 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Mallards",
-      "assignSponsors": {
-        "Team": {
-          "name": "Mallards"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Liam Galbraith",
-      "runs": 12,
-      "overs": "3",
-      "prompt": "Liam Galbraith played for Those Guys, taking 2 wickets from 3 overs, conceding 12 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . Those Guys (1) vs ATK Engineering (1), the match result was ATK Engineering won by 6 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Those Guys",
-      "assignSponsors": {
-        "Team": {
-          "name": "Those Guys"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Jaskaran Singh",
-      "runs": 12,
-      "overs": "3.4",
-      "prompt": "Jaskaran Singh played for Hawke's Bay United Kings, taking 2 wickets from 3.4 overs, conceding 12 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Hawke's Bay United Kings (1) vs St Johns College 1st XI (1), the match result was Hawke's Bay United Kings won by 7 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Hawke's Bay United Kings",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hawke's Bay United Kings"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ev Clare",
-      "runs": 13,
-      "overs": "2",
-      "prompt": "Ev Clare played for Wounders CC, taking 2 wickets from 2 overs, conceding 13 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . Wounders CC (1) vs Mallards (1), the match result was Wounders CC won by 3 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Wounders CC",
-      "assignSponsors": {
-        "Team": {
-          "name": "Wounders CC"
-        },
-        "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Jon Baker",
-      "runs": 14,
-      "overs": "2",
-      "prompt": "Jon Baker played for The Ugly Bunch, taking 2 wickets from 2 overs, conceding 14 runs. Game details: This was a T20 in the Tui Mercantile League Pool B grade, and the current match status is Match Completed . The Ugly Bunch (1) vs Six Offenders (1), the match result was The Ugly Bunch won by 8 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "The Ugly Bunch",
-      "assignSponsors": {
-        "Team": {
-          "name": "The Ugly Bunch"
-        },
-        "grade": {
-          "id": 82794,
-          "name": "Tui Mercantile League Pool B"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ross Clements",
+      "name": "Daniel Cooper",
       "runs": 14,
       "overs": "4",
-      "prompt": "Ross Clements played for NOBM Rugby D3, taking 2 wickets from 4 overs, conceding 14 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBM Rugby D3 (1) vs Taradale CC Gallagher Insurance Division 3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 2,
+      "prompt": "Daniel Cooper played for MadBulls, taking 3 wickets from 4 overs, conceding 14 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . MadBulls (1) vs Pirates 1st Grade (1), the match result was MadBulls won by 9 wickets.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBM_Rugby_92e6a883d6.png",
-        "width": 360,
-        "height": 458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
+        "width": 1051,
+        "height": 1324
       },
-      "playedFor": "NOBM Rugby D3",
+      "playedFor": "MadBulls",
       "assignSponsors": {
         "Team": {
-          "name": "NOBM Rugby D3"
+          "name": "MadBulls"
         },
         "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
+          "id": 76731,
+          "name": "1st & 2nd Grade Combined"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Luke Pawson",
-      "runs": 14,
+      "name": "matthew anderson",
+      "runs": 16,
       "overs": "5",
-      "prompt": "Luke Pawson played for NBHS 1st XI XMAS, taking 2 wickets from 5 overs, conceding 14 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . NBHS 1st XI XMAS (1) vs Taradale CC Gallagher Insurance Maroon Div 1 (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
-      "wickets": 2,
+      "prompt": "matthew anderson played for Mice, taking 3 wickets from 5 overs, conceding 16 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NBHS_logo_2019_bb0b1c7b27.png",
-        "width": 1265,
-        "height": 1429
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
       },
-      "playedFor": "NBHS 1st XI XMAS",
+      "playedFor": "Mice",
       "assignSponsors": {
         "Team": {
-          "name": "NBHS 1st XI XMAS"
+          "name": "Mice"
         },
         "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Sethindu Maduwagoda",
+      "name": "Micah Taylor",
+      "runs": 31,
+      "overs": "6",
+      "prompt": "Micah Taylor played for Hibo Country, taking 3 wickets from 6 overs, conceding 31 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Country (1) vs Mice (1), the match result was Mice won by 3 wickets.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
+        "width": 236,
+        "height": 289
+      },
+      "playedFor": "Hibo Country",
+      "assignSponsors": {
+        "Team": {
+          "name": "Hibo Country"
+        },
+        "grade": {
+          "id": 76732,
+          "name": "3rd Grade"
+        },
+        "competition": {
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
+        }
+      }
+    },
+    {
+      "name": "Deacon Collins",
+      "runs": 74,
+      "overs": "7",
+      "prompt": "Deacon Collins played for MadBulls, taking 3 wickets from 7 overs, conceding 74 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MadBulls (1) vs SJCC Blues (1), the match result was SJCC Blues won by 130 runs.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
+        "width": 1051,
+        "height": 1324
+      },
+      "playedFor": "MadBulls",
+      "assignSponsors": {
+        "Team": {
+          "name": "MadBulls"
+        },
+        "grade": {
+          "id": 76732,
+          "name": "3rd Grade"
+        },
+        "competition": {
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
+        }
+      }
+    },
+    {
+      "name": "Miraj Hossain",
       "runs": 15,
+      "overs": "5",
+      "prompt": "Miraj Hossain played for Rats, taking 2 wickets from 5 overs, conceding 15 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Rats (1) vs Pirates 2nd Grade (1), the match result was Rats won by 8 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
+      },
+      "playedFor": "Rats",
+      "assignSponsors": {
+        "Team": {
+          "name": "Rats"
+        },
+        "grade": {
+          "id": 76731,
+          "name": "1st & 2nd Grade Combined"
+        },
+        "competition": {
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
+        }
+      }
+    },
+    {
+      "name": "Jake Crawford",
+      "runs": 16,
       "overs": "4",
-      "prompt": "Sethindu Maduwagoda played for HBHS 2nd XI D2b, taking 2 wickets from 4 overs, conceding 15 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is Match Completed . HBHS 2nd XI D2b (1) vs Hibernian 2B (1), the match result was Hibernian 2B won by 5 wickets.",
+      "prompt": "Jake Crawford played for Mice, taking 2 wickets from 4 overs, conceding 16 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0d2ee966d2.jpg",
-        "width": 201,
-        "height": 251
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
       },
-      "playedFor": "HBHS 2nd XI D2b",
+      "playedFor": "Mice",
       "assignSponsors": {
         "Team": {
-          "name": "HBHS 2nd XI D2b"
+          "name": "Mice"
         },
         "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Rusty Groenveld",
-      "runs": 17,
-      "overs": "3",
-      "prompt": "Rusty Groenveld played for ATK Engineering, taking 2 wickets from 3 overs, conceding 17 runs. Game details: This was a T20 in the Tui Mercantile League Pool A grade, and the current match status is Match Completed . ATK Engineering (1) vs Those Guys (1), the match result was ATK Engineering won by 6 wickets.",
+      "name": "James Blake-Dyke",
+      "runs": 21,
+      "overs": "3.1",
+      "prompt": "James Blake-Dyke played for SJCC Blues, taking 2 wickets from 3.1 overs, conceding 21 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
-      "playedFor": "ATK Engineering",
+      "playedFor": "SJCC Blues",
       "assignSponsors": {
         "Team": {
-          "name": "ATK Engineering"
+          "name": "SJCC Blues"
         },
         "grade": {
-          "id": 82793,
-          "name": "Tui Mercantile League Pool A"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Tom Grant",
-      "runs": 17,
-      "overs": "4",
-      "prompt": "Tom Grant played for NOBM Rugby D3, taking 2 wickets from 4 overs, conceding 17 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBM Rugby D3 (1) vs Taradale CC Gallagher Insurance Division 3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBM_Rugby_92e6a883d6.png",
-        "width": 360,
-        "height": 458
-      },
-      "playedFor": "NOBM Rugby D3",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBM Rugby D3"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Stuart Lindsay  (c)",
-      "runs": 18,
-      "overs": "2",
-      "prompt": "Stuart Lindsay  (c) played for Norfolk n Chance, taking 2 wickets from 2 overs, conceding 18 runs. Game details: This was a T20 in the Tui Mercantile League Pool B grade, and the current match status is Match Completed . Norfolk n Chance (1) vs Old & Broken (1), the match result was Norfolk n Chance won by 49 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Norfolk n Chance",
-      "assignSponsors": {
-        "Team": {
-          "name": "Norfolk n Chance"
-        },
-        "grade": {
-          "id": 82794,
-          "name": "Tui Mercantile League Pool B"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Roger Stonehouse",
-      "runs": 19,
-      "overs": "8",
-      "prompt": "Roger Stonehouse played for Hibernian 2B, taking 2 wickets from 8 overs, conceding 19 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is Match Completed . Hibernian 2B (1) vs HBHS 2nd XI D2b (1), the match result was Hibernian 2B won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_903a246e01.jpg",
-        "width": 1134,
-        "height": 1270
-      },
-      "playedFor": "Hibernian 2B",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hibernian 2B"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Charlie Furlong",
-      "runs": 20,
-      "overs": "6",
-      "prompt": "Charlie Furlong played for NBHS 1st XI XMAS, taking 2 wickets from 6 overs, conceding 20 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . NBHS 1st XI XMAS (1) vs Taradale CC Gallagher Insurance Maroon Div 1 (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NBHS_logo_2019_bb0b1c7b27.png",
-        "width": 1265,
-        "height": 1429
-      },
-      "playedFor": "NBHS 1st XI XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "NBHS 1st XI XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Jack Beeby",
-      "runs": 22,
-      "overs": "2",
-      "prompt": "Jack Beeby played for Stings, taking 2 wickets from 2 overs, conceding 22 runs. Game details: This was a T20 in the Clifton County Cricket Club T20 Competition grade, and the current match status is Match Completed . Stings (1) vs City (1), the match result was City won by 4 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Stings",
-      "assignSponsors": {
-        "Team": {
-          "name": "Stings"
-        },
-        "grade": {
-          "id": 75542,
-          "name": "Clifton County Cricket Club T20 Competition"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Shiv Thakur",
-      "runs": 22,
-      "overs": "6",
-      "prompt": "Shiv Thakur played for Hawke's Bay United CSC Warriors, taking 2 wickets from 6 overs, conceding 22 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . Hawke's Bay United CSC Warriors (1) vs NOBMCC Sausages D3 - HH Smith Shield (1), the match result was NOBMCC Sausages D3 - HH Smith Shield won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Hawke's Bay United CSC Warriors",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hawke's Bay United CSC Warriors"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "ABISHEK ANBAZHAGUN SHIVAKAMY",
-      "runs": 22,
-      "overs": "6",
-      "prompt": "ABISHEK ANBAZHAGUN SHIVAKAMY played for Taradale CC Gallagher Insurance Division 3, taking 2 wickets from 6 overs, conceding 22 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Division 3 (1) vs NOBM Rugby D3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Division 3",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Division 3"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Chris Burch",
-      "runs": 23,
-      "overs": "3",
-      "prompt": "Chris Burch played for Rolled Bowled, taking 2 wickets from 3 overs, conceding 23 runs. Game details: This was a T20 in the Tui Mercantile League Pool B grade, and the current match status is Match Completed . Rolled Bowled (1) vs Bayview Biffers (1), the match result was Tie.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Rolled Bowled",
-      "assignSponsors": {
-        "Team": {
-          "name": "Rolled Bowled"
-        },
-        "grade": {
-          "id": 82794,
-          "name": "Tui Mercantile League Pool B"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Charlie Geange",
+      "name": "Joel Frazer",
       "runs": 24,
+      "overs": "4",
+      "prompt": "Joel Frazer played for Pirates 2nd Grade, taking 2 wickets from 4 overs, conceding 24 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Pirates 2nd Grade (1) vs Rats (1), the match result was Rats won by 8 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f76b057253.jpg",
+        "width": 4096,
+        "height": 2902
+      },
+      "playedFor": "Pirates 2nd Grade",
+      "assignSponsors": {
+        "Team": {
+          "name": "Pirates 2nd Grade"
+        },
+        "grade": {
+          "id": 76731,
+          "name": "1st & 2nd Grade Combined"
+        },
+        "competition": {
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
+        }
+      }
+    },
+    {
+      "name": "James Watson",
+      "runs": 27,
       "overs": "5",
-      "prompt": "Charlie Geange played for Taradale CC Gallagher Insurance Maroon Div 1, taking 2 wickets from 5 overs, conceding 24 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Maroon Div 1 (1) vs NBHS 1st XI XMAS (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
+      "prompt": "James Watson played for SJCC OG, taking 2 wickets from 5 overs, conceding 27 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
-      "playedFor": "Taradale CC Gallagher Insurance Maroon Div 1",
+      "playedFor": "SJCC OG",
       "assignSponsors": {
         "Team": {
-          "name": "Taradale CC Gallagher Insurance Maroon Div 1"
+          "name": "SJCC OG"
         },
         "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
+          "id": 76731,
+          "name": "1st & 2nd Grade Combined"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Lahiru Ayodhya Karunarathna Mathota Arachchilage",
-      "runs": 25,
+      "name": "Timothy Bruckshaw",
+      "runs": 28,
       "overs": "6",
-      "prompt": "Lahiru Ayodhya Karunarathna Mathota Arachchilage played for Napier Tech  Lions - 25/26, taking 2 wickets from 6 overs, conceding 25 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Napier Tech  Lions - 25/26 (1) vs NOBMCC Eagles D2a - Geoff Pollard Cup (1), the match result was Napier Tech  Lions - 25/26 won by 6 wickets.",
+      "prompt": "Timothy Bruckshaw played for SJCC Blues, taking 2 wickets from 6 overs, conceding 28 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
-        "width": 490,
-        "height": 386
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
-      "playedFor": "Napier Tech  Lions - 25/26",
+      "playedFor": "SJCC Blues",
       "assignSponsors": {
         "Team": {
-          "name": "Napier Tech  Lions - 25/26"
+          "name": "SJCC Blues"
         },
         "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Gowrishankar Swaminathan",
-      "runs": 25,
+      "name": "Prashant Benakatti",
+      "runs": 28,
       "overs": "6",
-      "prompt": "Gowrishankar Swaminathan played for Taradale CC Gallagher Insurance Division 3, taking 2 wickets from 6 overs, conceding 25 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Division 3 (1) vs NOBM Rugby D3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
+      "prompt": "Prashant Benakatti played for MALARVAADI SOLDIERS KINGS CC 3rd Grade, taking 2 wickets from 6 overs, conceding 28 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MALARVAADI SOLDIERS KINGS CC 3rd Grade (1) vs Hibo Green (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
-      "playedFor": "Taradale CC Gallagher Insurance Division 3",
+      "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
       "assignSponsors": {
         "Team": {
-          "name": "Taradale CC Gallagher Insurance Division 3"
+          "name": "MALARVAADI SOLDIERS KINGS CC 3rd Grade"
         },
         "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Prasanna Senarathne",
-      "runs": 26,
-      "overs": "5.1",
-      "prompt": "Prasanna Senarathne played for Napier Tech  Lions - 25/26, taking 2 wickets from 5.1 overs, conceding 26 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Napier Tech  Lions - 25/26 (1) vs NOBMCC Eagles D2a - Geoff Pollard Cup (1), the match result was Napier Tech  Lions - 25/26 won by 6 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
-        "width": 490,
-        "height": 386
-      },
-      "playedFor": "Napier Tech  Lions - 25/26",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Tech  Lions - 25/26"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Eben Nel",
-      "runs": 26,
-      "overs": "6",
-      "prompt": "Eben Nel played for HBHS 1st XI XMAS, taking 2 wickets from 6 overs, conceding 26 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . HBHS 1st XI XMAS (1) vs Napier Invitational Div 1 Xmas (1), the match result was Napier Invitational Div 1 Xmas won by 2 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0d2ee966d2.jpg",
-        "width": 201,
-        "height": 251
-      },
-      "playedFor": "HBHS 1st XI XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "HBHS 1st XI XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Cade Onekawa",
-      "runs": 26,
-      "overs": "8",
-      "prompt": "Cade Onekawa played for NBHS 2nd XI, taking 2 wickets from 8 overs, conceding 26 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . NBHS 2nd XI (1) vs Taradale CC Gallagher Insurance Gold (1), the match result was NBHS 2nd XI won by 11 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NBHS_logo_2019_bb0b1c7b27.png",
-        "width": 1265,
-        "height": 1429
-      },
-      "playedFor": "NBHS 2nd XI",
-      "assignSponsors": {
-        "Team": {
-          "name": "NBHS 2nd XI"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Gavin Robertson",
+      "name": "Evan Rees",
       "runs": 29,
-      "overs": "2",
-      "prompt": "Gavin Robertson played for Old & Broken, taking 2 wickets from 2 overs, conceding 29 runs. Game details: This was a T20 in the Tui Mercantile League Pool B grade, and the current match status is Match Completed . Old & Broken (1) vs Norfolk n Chance (1), the match result was Norfolk n Chance won by 49 runs.",
+      "overs": "3",
+      "prompt": "Evan Rees played for Hibo Green, taking 2 wickets from 3 overs, conceding 29 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Green (1) vs MALARVAADI SOLDIERS KINGS CC 3rd Grade (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
+        "width": 236,
+        "height": 289
       },
-      "playedFor": "Old & Broken",
+      "playedFor": "Hibo Green",
       "assignSponsors": {
         "Team": {
-          "name": "Old & Broken"
+          "name": "Hibo Green"
         },
         "grade": {
-          "id": 82794,
-          "name": "Tui Mercantile League Pool B"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     },
     {
-      "name": "Jacob Murdoch",
-      "runs": 30,
-      "overs": "5",
-      "prompt": "Jacob Murdoch played for Napier Invitational Div 1 Xmas, taking 2 wickets from 5 overs, conceding 30 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Napier Invitational Div 1 Xmas (1) vs HBHS 1st XI XMAS (1), the match result was Napier Invitational Div 1 Xmas won by 2 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Napier Invitational Div 1 Xmas",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Invitational Div 1 Xmas"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Kris Simmonds",
-      "runs": 30,
-      "overs": "8",
-      "prompt": "Kris Simmonds played for Taradale CC Gallagher Insurance Gold, taking 2 wickets from 8 overs, conceding 30 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Gold (1) vs NBHS 2nd XI (1), the match result was NBHS 2nd XI won by 11 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Gold",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Gold"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Alex Ketel",
-      "runs": 31,
-      "overs": "5",
-      "prompt": "Alex Ketel played for HBHS 1st XI XMAS, taking 2 wickets from 5 overs, conceding 31 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . HBHS 1st XI XMAS (1) vs Napier Invitational Div 1 Xmas (1), the match result was Napier Invitational Div 1 Xmas won by 2 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0d2ee966d2.jpg",
-        "width": 201,
-        "height": 251
-      },
-      "playedFor": "HBHS 1st XI XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "HBHS 1st XI XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ryan Jones",
-      "runs": 31,
-      "overs": "6",
-      "prompt": "Ryan Jones played for Taradale CC Gallagher Insurance Division 3, taking 2 wickets from 6 overs, conceding 31 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Division 3 (1) vs NOBM Rugby D3 (1), the match result was NOBM Rugby D3 won by 56 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Division 3",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Division 3"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Oscar Maxted",
-      "runs": 33,
-      "overs": "8",
-      "prompt": "Oscar Maxted played for NBHS 2nd XI, taking 2 wickets from 8 overs, conceding 33 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . NBHS 2nd XI (1) vs Taradale CC Gallagher Insurance Gold (1), the match result was NBHS 2nd XI won by 11 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NBHS_logo_2019_bb0b1c7b27.png",
-        "width": 1265,
-        "height": 1429
-      },
-      "playedFor": "NBHS 2nd XI",
-      "assignSponsors": {
-        "Team": {
-          "name": "NBHS 2nd XI"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ashar Slade",
-      "runs": 35,
-      "overs": "5",
-      "prompt": "Ashar Slade played for Cornwall Oaks, taking 2 wickets from 5 overs, conceding 35 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Cornwall Oaks (1) vs Hibernian Jarks Cityside (1), the match result was Cornwall Oaks won by 1 wicket.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Oaks",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Oaks"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Dinesh Alawathugoda  (c)",
-      "runs": 37,
-      "overs": "9",
-      "prompt": "Dinesh Alawathugoda  (c) played for Taradale CC Gallagher Insurance Maroon Div 1, taking 2 wickets from 9 overs, conceding 37 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Maroon Div 1 (1) vs NBHS 1st XI XMAS (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Maroon Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Maroon Div 1"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Max Vining",
-      "runs": 38,
-      "overs": "9",
-      "prompt": "Max Vining played for HBHS 1st XI XMAS, taking 2 wickets from 9 overs, conceding 38 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . HBHS 1st XI XMAS (1) vs Napier Invitational Div 1 Xmas (1), the match result was Napier Invitational Div 1 Xmas won by 2 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0d2ee966d2.jpg",
-        "width": 201,
-        "height": 251
-      },
-      "playedFor": "HBHS 1st XI XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "HBHS 1st XI XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Finn Diphoorn",
-      "runs": 39,
-      "overs": "9",
-      "prompt": "Finn Diphoorn played for Napier Invitational Div 1 Xmas, taking 2 wickets from 9 overs, conceding 39 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Napier Invitational Div 1 Xmas (1) vs HBHS 1st XI XMAS (1), the match result was Napier Invitational Div 1 Xmas won by 2 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "Napier Invitational Div 1 Xmas",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Invitational Div 1 Xmas"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Paul Boardman",
-      "runs": 44,
-      "overs": "7",
-      "prompt": "Paul Boardman played for HNCC Division One XMAS, taking 2 wickets from 7 overs, conceding 44 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . HNCC Division One XMAS (1) vs Napier Tech Tigers XMAS (1), the match result was Napier Tech Tigers XMAS won by 4 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3ad892dbca.jpg",
-        "width": 582,
-        "height": 600
-      },
-      "playedFor": "HNCC Division One XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "HNCC Division One XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Jacob Henderson",
-      "runs": 45,
-      "overs": "6",
-      "prompt": "Jacob Henderson played for Cornwall Oaks, taking 2 wickets from 6 overs, conceding 45 runs. Game details: This was a One Day in the Division 2a - Geoff Pollard Cup grade, and the current match status is Match Completed . Cornwall Oaks (1) vs Hibernian Jarks Cityside (1), the match result was Cornwall Oaks won by 1 wicket.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
-      },
-      "playedFor": "Cornwall Oaks",
-      "assignSponsors": {
-        "Team": {
-          "name": "Cornwall Oaks"
-        },
-        "grade": {
-          "id": 81896,
-          "name": "Division 2a - Geoff Pollard Cup"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Patrick Hurley",
-      "runs": 46,
-      "overs": "6",
-      "prompt": "Patrick Hurley played for Taradale CC Gallagher Insurance Maroon Div 1, taking 2 wickets from 6 overs, conceding 46 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Taradale CC Gallagher Insurance Maroon Div 1 (1) vs NBHS 1st XI XMAS (1), the match result was NBHS 1st XI XMAS won by 57 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
-      },
-      "playedFor": "Taradale CC Gallagher Insurance Maroon Div 1",
-      "assignSponsors": {
-        "Team": {
-          "name": "Taradale CC Gallagher Insurance Maroon Div 1"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Sukh Padda",
-      "runs": 47,
-      "overs": "7",
-      "prompt": "Sukh Padda played for Napier Tech Tigers XMAS, taking 2 wickets from 7 overs, conceding 47 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Napier Tech Tigers XMAS (1) vs HNCC Division One XMAS (1), the match result was Napier Tech Tigers XMAS won by 4 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
-        "width": 490,
-        "height": 386
-      },
-      "playedFor": "Napier Tech Tigers XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Tech Tigers XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Scott Morgan",
-      "runs": 47,
-      "overs": "8",
-      "prompt": "Scott Morgan played for NOBMCC Hobblers D2b, taking 2 wickets from 8 overs, conceding 47 runs. Game details: This was a One Day in the Division 2b Pre XMAS grade, and the current match status is Match Completed . NOBMCC Hobblers D2b (1) vs HNCC Hansen Bate - Div 2 - The Molly's (1), the match result was NOBMCC Hobblers D2b won by 7 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
-      },
-      "playedFor": "NOBMCC Hobblers D2b",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBMCC Hobblers D2b"
-        },
-        "grade": {
-          "id": 82265,
-          "name": "Division 2b Pre XMAS"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Presley Kupa",
+      "name": "Adam Bruckshaw  (vc)",
       "runs": 50,
-      "overs": "9",
-      "prompt": "Presley Kupa played for HNCC Division One XMAS, taking 2 wickets from 9 overs, conceding 50 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . HNCC Division One XMAS (1) vs Napier Tech Tigers XMAS (1), the match result was Napier Tech Tigers XMAS won by 4 wickets.",
+      "overs": "7",
+      "prompt": "Adam Bruckshaw  (vc) played for SJCC Blues, taking 2 wickets from 7 overs, conceding 50 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3ad892dbca.jpg",
-        "width": 582,
-        "height": 600
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
-      "playedFor": "HNCC Division One XMAS",
+      "playedFor": "SJCC Blues",
       "assignSponsors": {
         "Team": {
-          "name": "HNCC Division One XMAS"
+          "name": "SJCC Blues"
         },
         "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
+          "id": 76732,
+          "name": "3rd Grade"
         },
         "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Varun Vinayak",
-      "runs": 51,
-      "overs": "6",
-      "prompt": "Varun Vinayak played for NOBMCC Sausages D3 - HH Smith Shield, taking 2 wickets from 6 overs, conceding 51 runs. Game details: This was a One Day in the Division 3 - HH Smith Shield grade, and the current match status is Match Completed . NOBMCC Sausages D3 - HH Smith Shield (1) vs Hawke's Bay United CSC Warriors (1), the match result was NOBMCC Sausages D3 - HH Smith Shield won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
-      },
-      "playedFor": "NOBMCC Sausages D3 - HH Smith Shield",
-      "assignSponsors": {
-        "Team": {
-          "name": "NOBMCC Sausages D3 - HH Smith Shield"
-        },
-        "grade": {
-          "id": 82266,
-          "name": "Division 3 - HH Smith Shield"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
-        }
-      }
-    },
-    {
-      "name": "Ram Brar",
-      "runs": 60,
-      "overs": "8.3",
-      "prompt": "Ram Brar played for Napier Tech Tigers XMAS, taking 2 wickets from 8.3 overs, conceding 60 runs. Game details: This was a One Day in the Complete Paints Division 1 Christmas 45 Over Comp grade, and the current match status is Match Completed . Napier Tech Tigers XMAS (1) vs HNCC Division One XMAS (1), the match result was Napier Tech Tigers XMAS won by 4 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
-        "width": 490,
-        "height": 386
-      },
-      "playedFor": "Napier Tech Tigers XMAS",
-      "assignSponsors": {
-        "Team": {
-          "name": "Napier Tech Tigers XMAS"
-        },
-        "grade": {
-          "id": 85352,
-          "name": "Complete Paints Division 1 Christmas 45 Over Comp"
-        },
-        "competition": {
-          "id": 38096,
-          "name": "Senior"
+          "id": 38318,
+          "name": "Goulburn District Cricket Association"
         }
       }
     }
@@ -2084,22 +446,28 @@
   "asset": {
     "assetID": 68,
     "assetTypeID": 3,
-    "assetsLinkID": "5a7de6467bf72312394a33bcbf6233030afa0c32cac1d980ffc3a06abffaafce",
+    "assetsLinkID": "d9eab53206ac7623be0c4e3b64d65711aa50533987de8aecc32bdbc9ad95ef4a",
     "assetCategoryID": 2
   },
   "errors": [],
-  "frames": [45, 180, 345, 510, 675, 840, 1005, 1170, 1335, 1500, 1665],
+  "frames": [
+    45,
+    180,
+    345,
+    510,
+    645
+  ],
   "render": {
-    "renderId": 23001,
-    "schedulerId": 1130
+    "renderId": 23107,
+    "schedulerId": 1097
   },
   "account": {
-    "accountId": 1130
+    "accountId": 1097
   },
   "timings": {
-    "FPS_MAIN": 1665,
+    "FPS_MAIN": 510,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
@@ -2107,16 +475,67 @@
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc.png",
-        "width": 2671,
-        "height": 2671,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_65_c67e5b1404.jpg",
+        "width": 1031,
+        "height": 1330,
         "hasLogo": true
       },
-      "name": "Hawke's Bay Cricket Association",
+      "name": "Goulburn District Cricket Association",
       "sport": "Cricket",
       "sponsors": {
-        "default": {},
-        "primary": []
+        "default": {
+          "primary_sponsor": [
+            {
+              "id": 1390,
+              "url": "https://goulburnsoldiers.com.au/",
+              "logo": {
+                "id": 8796,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Glbn_Soldiers_Club_Logo_4b1eb2cade.jpg"
+              },
+              "name": "Goulburn Soldiers Club",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": true,
+              "description": null
+            }
+          ],
+          "general_sponsor_1": [
+            {
+              "id": 1391,
+              "url": "https://gpubg.com/",
+              "logo": {
+                "id": 8797,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/GPG_8c147ac418.jpg"
+              },
+              "name": "Goulburn Pub Group",
+              "isVideo": true,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": true,
+              "isPrimary": false,
+              "description": null
+            }
+          ]
+        },
+        "primary": [
+          {
+            "id": 1390,
+            "url": "https://goulburnsoldiers.com.au/",
+            "logo": {
+              "id": 8796,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Glbn_Soldiers_Club_Logo_4b1eb2cade.jpg"
+            },
+            "name": "Goulburn Soldiers Club",
+            "isVideo": true,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": true,
+            "isPrimary": true,
+            "description": null
+          }
+        ]
       },
       "IsAccountClub": false
     },
@@ -2140,20 +559,22 @@
         "title": "Bowling Performances",
         "frames": [],
         "assetId": 68,
-        "titleSplit": ["Performances"],
+        "titleSplit": [
+          "Performances"
+        ],
         "videoTitle": "Bowling Performances",
         "assetTypeId": 3,
         "compositionId": "CricketBowlingPerformances",
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#000000",
-          "secondary": "#f3f3f3"
+          "primary": "#de0000",
+          "secondary": "#ffa300"
         },
-        "template": "TwoColumnClassic"
+        "template": "CNSW"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -2162,12 +583,12 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketBattingPerformances": 8,
-          "CricketBowlingPerformances": 8
+          "CricketBattingPerformances": 7,
+          "CricketBowlingPerformances": 7
         }
       },
-      "fixtureCategory": "Senior",
-      "groupingCategory": "Senior",
+      "fixtureCategory": "Goulburn District Cricket Association",
+      "groupingCategory": "Goulburn District Cricket Association",
       "templateVariation": {
         "mode": "lightAlt",
         "image": {
@@ -2199,7 +620,7 @@
           "playbackRate": null,
           "useOffthreadVideo": null
         },
-        "palette": "primary",
+        "palette": "secondary",
         "pattern": {
           "type": "dots",
           "scale": 0.75,
@@ -2210,8 +631,8 @@
           "animationDuration": null
         },
         "texture": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_concrete_c6e6159a76.png",
-          "name": "Concrete",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_Stone_007e575f87.png",
+          "name": "Stone 2",
           "scale": "100%",
           "repeat": "cover",
           "overlay": {
@@ -2220,62 +641,72 @@
           }
         },
         "category": {
-          "name": "Classic Two Column ",
-          "slug": "TwoColumnClassic",
+          "name": "Cricket NSW",
+          "slug": "CNSW",
           "bundleAudio": {
-            "id": 2,
-            "Name": "Dark Rock",
-            "createdAt": "2023-09-28T06:40:59.713Z",
-            "updatedAt": "2023-09-28T06:41:01.197Z",
-            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-30T00:35:16.398Z",
+            "updatedAt": "2024-10-30T00:35:17.926Z",
+            "publishedAt": "2024-10-30T00:35:17.915Z",
             "audio_options": [
               {
-                "id": 6,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
-                "Name": "Free Yourself",
-                "createdAt": "2023-08-31T12:28:12.437Z",
-                "updatedAt": "2023-09-28T06:44:26.805Z",
-                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "id": 33,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-30T00:35:04.160Z",
+                "updatedAt": "2024-10-30T00:36:30.358Z",
+                "publishedAt": "2024-10-30T00:35:05.839Z",
                 "ComponentName": "Top 5 Bowling",
                 "CompositionID": "Top5BowlingList"
               },
               {
-                "id": 5,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "Name": "Get The Gains",
-                "createdAt": "2023-08-31T12:27:46.922Z",
-                "updatedAt": "2023-09-28T06:44:42.399Z",
-                "publishedAt": "2023-08-31T12:27:48.202Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
+                "id": 34,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
+                "Name": "GoodGoodFeeling_Inst",
+                "createdAt": "2024-10-30T00:37:09.563Z",
+                "updatedAt": "2024-10-30T00:38:09.963Z",
+                "publishedAt": "2024-10-30T00:38:09.959Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
               },
               {
-                "id": 3,
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "Name": "Groover",
-                "createdAt": "2023-01-30T15:19:02.557Z",
-                "updatedAt": "2023-09-28T06:45:23.690Z",
-                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "id": 35,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-30T00:38:02.552Z",
+                "updatedAt": "2024-10-30T00:38:04.070Z",
+                "publishedAt": "2024-10-30T00:38:04.063Z",
                 "ComponentName": "Weekend Results",
                 "CompositionID": "WeekendResults"
               },
               {
-                "id": 12,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
-                "Name": "Killer Inside of Me",
-                "createdAt": "2023-08-31T12:30:31.991Z",
-                "updatedAt": "2023-09-28T06:46:09.463Z",
-                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "id": 36,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-30T00:39:02.570Z",
+                "updatedAt": "2024-10-30T00:39:04.182Z",
+                "publishedAt": "2024-10-30T00:39:04.177Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 38,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-30T01:00:28.630Z",
+                "updatedAt": "2024-10-30T01:00:30.327Z",
+                "publishedAt": "2024-10-30T01:00:30.319Z",
                 "ComponentName": "Top 5 Batting",
                 "CompositionID": "Top5BattingList"
               },
               {
-                "id": 14,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
-                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
-                "createdAt": "2023-09-28T06:55:13.187Z",
-                "updatedAt": "2023-10-04T02:09:46.095Z",
-                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "id": 39,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-30T01:01:10.581Z",
+                "updatedAt": "2024-10-30T01:01:13.949Z",
+                "publishedAt": "2024-10-30T01:01:13.932Z",
                 "ComponentName": "UpComing Fixtures",
                 "CompositionID": "UpComingFixtures"
               }
@@ -2287,13 +718,13 @@
             "CricketResults": 2,
             "CricketUpcoming": 3,
             "CricketResultSingle": 1,
-            "CricketBattingPerformances": 8,
-            "CricketBowlingPerformances": 8
+            "CricketBattingPerformances": 7,
+            "CricketBowlingPerformances": 7
           }
         },
         "gradient": {
           "type": "primary",
-          "direction": "VERTICAL"
+          "direction": "HORIZONTAL"
         },
         "particle": {
           "type": "lines",

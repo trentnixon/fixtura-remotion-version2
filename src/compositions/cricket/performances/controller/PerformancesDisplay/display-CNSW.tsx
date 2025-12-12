@@ -43,7 +43,7 @@ const PerformancesDisplayCNSW: React.FC<PerformancesDisplayProps> = ({
     <div className="flex flex-col h-full ">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-4 overflow-hidden py-32 "
+        className="flex-1 flex flex-col mx-4 overflow-hidden py-16 "
         style={{
           height: heights.asset,
         }}

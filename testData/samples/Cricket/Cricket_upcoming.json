@@ -1,520 +1,219 @@
 {
   "data": [
     {
-      "date": "Sat, 25 Oct",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 3",
-      "gameID": "2bf61c20",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Awa City CC - Combined High Schools P1 vs Matt Burke Engineering Marton Saracens CC P1, Date and Time: Saturday, 25 October 2025, null, Location: null\n- Round: Round 3, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Matt Burke Engineering Marton Saracens CC P1",
-      "teamHome": "Awa City CC - Combined High Schools P1",
-      "gradeName": "Jurgens Demolition Premier 1",
+      "date": "Sat, 13 Dec",
+      "time": "01:00 PM",
+      "type": "One Day",
+      "round": "Round 10",
+      "gameID": "b72e950b",
+      "gender": "Mixed",
+      "ground": "Trinity College Goulburn / Trinity Wexted Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: SJCC OG vs MadBulls, Date and Time: Saturday, 13 December 2025, 01:00 PM, Location: Trinity College Goulburn / Trinity Wexted Oval\n- Round: Round 10, Match Type: One Day\n- League: 1st & 2nd Grade Combined",
+      "ageGroup": "Senior",
+      "teamAway": "MadBulls",
+      "teamHome": "SJCC OG",
+      "gradeName": "1st & 2nd Grade Combined",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
+        "width": 1051,
+        "height": 1324
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
-        "width": 243,
-        "height": 208
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
       "assignSponsors": {
         "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
+        "grade": [],
         "competition": []
       }
     },
     {
-      "date": "Sat, 25 Oct",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 3",
-      "gameID": "a748cb7f",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Wanganui Vet Services Marist Premier Men vs Property Brokers Wanganui United Premier 1, Date and Time: Saturday, 25 October 2025, null, Location: null\n- Round: Round 3, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Property Brokers Wanganui United Premier 1",
-      "teamHome": "Wanganui Vet Services Marist Premier Men",
-      "gradeName": "Jurgens Demolition Premier 1",
+      "date": "Sat, 13 Dec",
+      "time": "01:00 PM",
+      "type": "One Day",
+      "round": "Round 10",
+      "gameID": "d0ca9bfd",
+      "gender": "Mixed",
+      "ground": "The Grange / The Grange",
+      "prompt": "Upcoming cricket match details:\n- Teams: Pirates 1st Grade vs Rats, Date and Time: Saturday, 13 December 2025, 01:00 PM, Location: The Grange / The Grange\n- Round: Round 10, Match Type: One Day\n- League: 1st & 2nd Grade Combined",
+      "ageGroup": "Senior",
+      "teamAway": "Rats",
+      "teamHome": "Pirates 1st Grade",
+      "gradeName": "1st & 2nd Grade Combined",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
-        "width": 476,
-        "height": 506
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
-        "width": 1054,
-        "height": 946
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f76b057253.jpg",
+        "width": 4096,
+        "height": 2902
       },
       "assignSponsors": {
         "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
+        "grade": [],
         "competition": []
       }
     },
     {
-      "date": "Sat, 01 Nov",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 4",
-      "gameID": "0e26d7e1",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Awa City CC - Combined High Schools P1 vs Property Brokers Wanganui United Premier 1, Date and Time: Saturday, 01 November 2025, null, Location: null\n- Round: Round 4, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Property Brokers Wanganui United Premier 1",
-      "teamHome": "Awa City CC - Combined High Schools P1",
-      "gradeName": "Jurgens Demolition Premier 1",
+      "date": "Sat, 13 Dec",
+      "time": "01:00 PM",
+      "type": "One Day",
+      "round": "Round 10",
+      "gameID": "10f7505a",
+      "gender": "Mixed",
+      "ground": "Seiffert Oval / Seiffert Oval",
+      "prompt": "Upcoming cricket match details:\n- Teams: Pirates 2nd Grade vs Big Merino Titans CC 2nd Grade, Date and Time: Saturday, 13 December 2025, 01:00 PM, Location: Seiffert Oval / Seiffert Oval\n- Round: Round 10, Match Type: One Day\n- League: 1st & 2nd Grade Combined",
+      "ageGroup": "Senior",
+      "teamAway": "Big Merino Titans CC 2nd Grade",
+      "teamHome": "Pirates 2nd Grade",
+      "gradeName": "1st & 2nd Grade Combined",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
-        "width": 476,
-        "height": 506
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
-        "width": 243,
-        "height": 208
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f76b057253.jpg",
+        "width": 4096,
+        "height": 2902
       },
       "assignSponsors": {
         "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
+        "grade": [],
         "competition": []
       }
     },
     {
-      "date": "Sat, 01 Nov",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 4",
-      "gameID": "5f653d57",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Wanganui Vet Services Marist Premier Men vs Matt Burke Engineering Marton Saracens CC P1, Date and Time: Saturday, 01 November 2025, null, Location: null\n- Round: Round 4, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Matt Burke Engineering Marton Saracens CC P1",
-      "teamHome": "Wanganui Vet Services Marist Premier Men",
-      "gradeName": "Jurgens Demolition Premier 1",
+      "date": "Sat, 13 Dec",
+      "time": "01:00 PM",
+      "type": "One Day",
+      "round": "Round 10",
+      "gameID": "845c6c5a",
+      "gender": "Mixed",
+      "ground": "North Park / North Park - Oval #1",
+      "prompt": "Upcoming cricket match details:\n- Teams: Mice vs MadBulls, Date and Time: Saturday, 13 December 2025, 01:00 PM, Location: North Park / North Park - Oval #1\n- Round: Round 10, Match Type: One Day\n- League: 3rd Grade",
+      "ageGroup": "Senior",
+      "teamAway": "MadBulls",
+      "teamHome": "Mice",
+      "gradeName": "3rd Grade",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
+        "width": 1051,
+        "height": 1324
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
-        "width": 1054,
-        "height": 946
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
+        "width": 1046,
+        "height": 1054
       },
       "assignSponsors": {
         "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
+        "grade": [],
         "competition": []
       }
     },
     {
-      "date": "Sat, 08 Nov",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 5",
-      "gameID": "fd1354a9",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Awa City CC - Combined High Schools P1 vs Wanganui Vet Services Marist Premier Men, Date and Time: Saturday, 08 November 2025, null, Location: null\n- Round: Round 5, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Wanganui Vet Services Marist Premier Men",
-      "teamHome": "Awa City CC - Combined High Schools P1",
-      "gradeName": "Jurgens Demolition Premier 1",
+      "date": "Sat, 13 Dec",
+      "time": "01:00 PM",
+      "type": "One Day",
+      "round": "Round 10",
+      "gameID": "5f41aaff",
+      "gender": "Mixed",
+      "ground": "Carr Confoy / Oval 1",
+      "prompt": "Upcoming cricket match details:\n- Teams: SJCC Blues vs MALARVAADI SOLDIERS KINGS CC 3rd Grade, Date and Time: Saturday, 13 December 2025, 01:00 PM, Location: Carr Confoy / Oval 1\n- Round: Round 10, Match Type: One Day\n- League: 3rd Grade",
+      "ageGroup": "Senior",
+      "teamAway": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
+      "teamHome": "SJCC Blues",
+      "gradeName": "3rd Grade",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
-        "width": 1054,
-        "height": 946
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+        "width": 1211,
+        "height": 1211
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
-        "width": 243,
-        "height": 208
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
+        "width": 1203,
+        "height": 1458
       },
       "assignSponsors": {
         "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
+        "grade": [],
         "competition": []
       }
     },
     {
-      "date": "Sat, 08 Nov",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 5",
-      "gameID": "508ba142",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Property Brokers Wanganui United Premier 1 vs Matt Burke Engineering Marton Saracens CC P1, Date and Time: Saturday, 08 November 2025, null, Location: null\n- Round: Round 5, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Matt Burke Engineering Marton Saracens CC P1",
-      "teamHome": "Property Brokers Wanganui United Premier 1",
-      "gradeName": "Jurgens Demolition Premier 1",
+      "date": "Sat, 13 Dec",
+      "time": "01:00 PM",
+      "type": "One Day",
+      "round": "Round 10",
+      "gameID": "e49efaea",
+      "gender": "Mixed",
+      "ground": "Marulan Cricket Ground / Marulan Cricket Ground",
+      "prompt": "Upcoming cricket match details:\n- Teams: Hibo Green vs Hibo Country, Date and Time: Saturday, 13 December 2025, 01:00 PM, Location: Marulan Cricket Ground / Marulan Cricket Ground\n- Round: Round 10, Match Type: One Day\n- League: 3rd Grade",
+      "ageGroup": "Senior",
+      "teamAway": "Hibo Country",
+      "teamHome": "Hibo Green",
+      "gradeName": "3rd Grade",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
-        "width": 1181,
-        "height": 1181
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
+        "width": 236,
+        "height": 289
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
-        "width": 476,
-        "height": 506
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
+        "width": 236,
+        "height": 289
       },
       "assignSponsors": {
         "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 15 Nov",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 6",
-      "gameID": "0265ad98",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Matt Burke Engineering Marton Saracens CC P1 vs Awa City CC - Combined High Schools P1, Date and Time: Saturday, 15 November 2025, null, Location: null\n- Round: Round 6, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Awa City CC - Combined High Schools P1",
-      "teamHome": "Matt Burke Engineering Marton Saracens CC P1",
-      "gradeName": "Jurgens Demolition Premier 1",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_42c6b4a4bd.jpg",
-        "width": 243,
-        "height": 208
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_559dc1601a.jpg",
-        "width": 1181,
-        "height": 1181
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
-        "competition": []
-      }
-    },
-    {
-      "date": "Sat, 15 Nov",
-      "time": "",
-      "type": "Two Day+",
-      "round": "Round 6",
-      "gameID": "ba098449",
-      "gender": "Men",
-      "ground": "",
-      "prompt": "Upcoming cricket match details:\n- Teams: Property Brokers Wanganui United Premier 1 vs Wanganui Vet Services Marist Premier Men, Date and Time: Saturday, 15 November 2025, null, Location: null\n- Round: Round 6, Match Type: Two Day+\n- League: Jurgens Demolition Premier 1",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Wanganui Vet Services Marist Premier Men",
-      "teamHome": "Property Brokers Wanganui United Premier 1",
-      "gradeName": "Jurgens Demolition Premier 1",
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_520e1f0d26.jpg",
-        "width": 1054,
-        "height": 946
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_dfdc2ff2ab.jpg",
-        "width": 476,
-        "height": 506
-      },
-      "assignSponsors": {
-        "team": [],
-        "grade": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ],
+        "grade": [],
         "competition": []
       }
     }
   ],
   "asset": {
-    "assetID": 1,
+    "assetID": 2,
     "assetTypeID": 1,
-    "assetsLinkID": "15ea8016fa80e47b95c91e6091b14be907ad26c2ce114b4d16728dff5f80793e",
-    "assetCategoryID": 1
+    "assetsLinkID": "d472e82f5bd8a4d776baf6767b0d39994220f346ef481e0551cf2dafcfba9535",
+    "assetCategoryID": 2
   },
   "errors": [],
-  "frames": [45, 225, 480, 735, 900],
+  "frames": [
+    45,
+    195,
+    390
+  ],
   "render": {
-    "renderId": 17089,
-    "schedulerId": 78
+    "renderId": 22593,
+    "schedulerId": 1097
   },
   "account": {
-    "accountId": 78
+    "accountId": 1097
   },
   "timings": {
-    "FPS_MAIN": 780,
+    "FPS_MAIN": 405,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 270
+    "FPS_SCORECARD": 210
   },
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cw_transparent_31a868b350.png",
-        "width": 500,
-        "height": 500,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_65_c67e5b1404.jpg",
+        "width": 1031,
+        "height": 1330,
         "hasLogo": true
       },
-      "name": "Cricket Whanganui",
+      "name": "Goulburn District Cricket Association",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 112,
-              "url": "https://jurgensdemolition.co.nz/",
-              "logo": {
-                "id": 5993,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-              },
-              "name": "Jurgens Demolitions",
-              "isVideo": true,
-              "tagline": "One Family. Three Generations. Zero Compromises.",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": true,
-              "description": null
-            }
-          ],
-          "general_sponsor_1": [
-            {
-              "id": 111,
-              "url": "https://www.tastan.co.nz/",
-              "logo": {
-                "id": 5456,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/tasman_37a8b965d9.png"
-              },
-              "name": "Tasman Leathers of New Zealand",
-              "isVideo": true,
-              "tagline": "We make leather, beautifully",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 218,
-              "url": "https://wanganuimotels.co.nz/accommodation/",
-              "logo": {
-                "id": 5995,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Riverview_Motel_4163c9194e.png"
-              },
-              "name": "Riverview Motel",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 219,
-              "url": "https://mcdonalds.co.nz/find-us/restaurants",
-              "logo": {
-                "id": 5998,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_b988cefbee.png"
-              },
-              "name": "McDonalds Whanganui",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_4": [
-            {
-              "id": 220,
-              "url": "https://www.propertybrokers.co.nz/community/whanganui",
-              "logo": {
-                "id": 5999,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Property_Brokers_Primary_RGB_Reverse_on_Blue_Clear_Idicators_74274184b0.png"
-              },
-              "name": "Property Brokers Whanganui",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_5": [
-            {
-              "id": 222,
-              "url": "https://www.yetitech.nz/",
-              "logo": {
-                "id": 6005,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_f868db05cd.png"
-              },
-              "name": "Yeti Tech",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
-        "primary": [
-          {
-            "id": 112,
-            "url": "https://jurgensdemolition.co.nz/",
-            "logo": {
-              "id": 5993,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/JURGENS_LOGO_399a0ca3b0.png"
-            },
-            "name": "Jurgens Demolitions",
-            "isVideo": true,
-            "tagline": "One Family. Three Generations. Zero Compromises.",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ]
+        "default": {},
+        "primary": []
       },
       "IsAccountClub": false
     },
@@ -525,33 +224,36 @@
           "audioOption": null
         },
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/144_A6598_a34f7efe68.jpg",
-          "ratio": "landscape",
-          "width": 5328,
-          "height": 3312,
-          "AgeGroup": null,
-          "AssetType": "ALL",
-          "markerPosition": null
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
         }
       },
       "metadata": {
         "title": "Fixtures",
         "frames": [],
-        "assetId": 1,
-        "titleSplit": ["Fixtures", ""],
-        "videoTitle": "Up Coming Fixtures",
+        "assetId": 2,
+        "titleSplit": [
+          "Fixtures",
+          ""
+        ],
+        "videoTitle": "Upcoming Fixtures",
         "assetTypeId": 1,
         "compositionId": "CricketUpcoming",
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#233376",
-          "secondary": "#050505"
+          "primary": "#de0000",
+          "secondary": "#ffa300"
         },
-        "template": "Brickwork"
+        "template": "CNSW"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -562,10 +264,10 @@
           "CricketResultSingle": 1
         }
       },
-      "fixtureCategory": "Jurgens Demolition Premier 1",
-      "groupingCategory": "Jurgens Demolition Premier 1",
+      "fixtureCategory": "Goulburn District Cricket Association",
+      "groupingCategory": "Goulburn District Cricket Association",
       "templateVariation": {
-        "mode": "dark",
+        "mode": "lightAlt",
         "image": {
           "url": null,
           "type": "pan",
@@ -595,7 +297,7 @@
           "playbackRate": null,
           "useOffthreadVideo": null
         },
-        "palette": "primary",
+        "palette": "secondary",
         "pattern": {
           "type": "dots",
           "scale": 0.75,
@@ -606,72 +308,82 @@
           "animationDuration": null
         },
         "texture": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Minimal_Faint_Paper_Grain_24f18f3fdb.png",
-          "name": "Faint Paper Grain",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_Stone_007e575f87.png",
+          "name": "Stone 2",
           "scale": "100%",
           "repeat": "cover",
           "overlay": {
-            "opacity": 1,
+            "opacity": 0.7,
             "blendMode": "multiply"
           }
         },
         "category": {
-          "name": "Brick Work",
-          "slug": "Brickwork",
+          "name": "Cricket NSW",
+          "slug": "CNSW",
           "bundleAudio": {
-            "id": 2,
-            "Name": "Dark Rock",
-            "createdAt": "2023-09-28T06:40:59.713Z",
-            "updatedAt": "2023-09-28T06:41:01.197Z",
-            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-30T00:35:16.398Z",
+            "updatedAt": "2024-10-30T00:35:17.926Z",
+            "publishedAt": "2024-10-30T00:35:17.915Z",
             "audio_options": [
               {
-                "id": 6,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
-                "Name": "Free Yourself",
-                "createdAt": "2023-08-31T12:28:12.437Z",
-                "updatedAt": "2023-09-28T06:44:26.805Z",
-                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "id": 33,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-30T00:35:04.160Z",
+                "updatedAt": "2024-10-30T00:36:30.358Z",
+                "publishedAt": "2024-10-30T00:35:05.839Z",
                 "ComponentName": "Top 5 Bowling",
                 "CompositionID": "Top5BowlingList"
               },
               {
-                "id": 5,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "Name": "Get The Gains",
-                "createdAt": "2023-08-31T12:27:46.922Z",
-                "updatedAt": "2023-09-28T06:44:42.399Z",
-                "publishedAt": "2023-08-31T12:27:48.202Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
+                "id": 34,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
+                "Name": "GoodGoodFeeling_Inst",
+                "createdAt": "2024-10-30T00:37:09.563Z",
+                "updatedAt": "2024-10-30T00:38:09.963Z",
+                "publishedAt": "2024-10-30T00:38:09.959Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
               },
               {
-                "id": 3,
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "Name": "Groover",
-                "createdAt": "2023-01-30T15:19:02.557Z",
-                "updatedAt": "2023-09-28T06:45:23.690Z",
-                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "id": 35,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-30T00:38:02.552Z",
+                "updatedAt": "2024-10-30T00:38:04.070Z",
+                "publishedAt": "2024-10-30T00:38:04.063Z",
                 "ComponentName": "Weekend Results",
                 "CompositionID": "WeekendResults"
               },
               {
-                "id": 12,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
-                "Name": "Killer Inside of Me",
-                "createdAt": "2023-08-31T12:30:31.991Z",
-                "updatedAt": "2023-09-28T06:46:09.463Z",
-                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "id": 36,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-30T00:39:02.570Z",
+                "updatedAt": "2024-10-30T00:39:04.182Z",
+                "publishedAt": "2024-10-30T00:39:04.177Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 38,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-30T01:00:28.630Z",
+                "updatedAt": "2024-10-30T01:00:30.327Z",
+                "publishedAt": "2024-10-30T01:00:30.319Z",
                 "ComponentName": "Top 5 Batting",
                 "CompositionID": "Top5BattingList"
               },
               {
-                "id": 14,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
-                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
-                "createdAt": "2023-09-28T06:55:13.187Z",
-                "updatedAt": "2023-10-04T02:09:46.095Z",
-                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "id": 39,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-30T01:01:10.581Z",
+                "updatedAt": "2024-10-30T01:01:13.949Z",
+                "publishedAt": "2024-10-30T01:01:13.932Z",
                 "ComponentName": "UpComing Fixtures",
                 "CompositionID": "UpComingFixtures"
               }
@@ -687,7 +399,7 @@
         },
         "gradient": {
           "type": "primary",
-          "direction": "VERTICAL"
+          "direction": "HORIZONTAL"
         },
         "particle": {
           "type": "lines",

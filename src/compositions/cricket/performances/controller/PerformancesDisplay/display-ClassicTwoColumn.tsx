@@ -5,16 +5,19 @@ import { getItemsForScreen } from "../../utils/screenCalculator";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PerformanceRowClassicTwoColumn from "../PlayerRow/row-ClassicTwoColumn";
+import { AssignSponsors } from "../../../composition-types";
+import { SponsorFooter } from "../../../sponsorFooter";
 
 interface PerformancesDisplayProps {
   performances: PerformanceData[];
   itemsPerScreen: number;
   screenIndex: number;
+  assignSponsors: AssignSponsors;
 }
 
 const PerformancesDisplayClassicTwoColumn: React.FC<
   PerformancesDisplayProps
-> = ({ performances, itemsPerScreen, screenIndex }) => {
+> = ({ performances, itemsPerScreen, screenIndex, assignSponsors }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { animations } = useAnimationContext();
@@ -54,6 +57,9 @@ const PerformancesDisplayClassicTwoColumn: React.FC<
           ))}
         </div>
       </AnimatedContainer>
+      <div style={{ height: `${heights.footer}px` }}>
+        <SponsorFooter assignSponsors={assignSponsors} />
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import {
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
-import { SponsorFooter } from "../sponsorFooter/index";
+
 import { AssignSponsors } from "../composition-types";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import PerformancesDisplayClassicTwoColumn from "./controller/PerformancesDisplay/display-ClassicTwoColumn";
@@ -18,7 +18,7 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
   const { data: performancesData, timings } = data;
   const { animations } = useAnimationContext();
   const { layout } = useThemeContext();
-  const { heights } = layout;
+
   const transitionConfig = animations.transition.Main;
 
   // Extract metadata from video data
@@ -107,28 +107,6 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
   // Final validation - ensure duration is still valid before creating sequences
   const finalDuration = Math.max(1, Math.floor(displayDurationPerScreen));
 
-  // Create sequence data for each screen
-  const sequences = Array.from({ length: totalScreens }, (_, index) => ({
-    content: (
-      <PerformancesDisplayClassicTwoColumn
-        performances={transformedData}
-        itemsPerScreen={itemsPerScreen}
-        screenIndex={index}
-      />
-    ),
-    durationInFrames: finalDuration,
-  }));
-
-  // Debug logging for sequences (remove in production)
-  console.log("[PerformancesListClassicTwoColumn] Sequences created:", {
-    totalScreens,
-    sequencesCount: sequences.length,
-    sequences: sequences.map((seq, idx) => ({
-      screenIndex: idx,
-      durationInFrames: seq.durationInFrames,
-    })),
-  });
-
   // Merge and transform assignSponsors from all performances (global level)
   // Transform from performance format to SponsorFooter expected format
   const mergedAssignSponsors = transformedData.reduce(
@@ -192,6 +170,31 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
     { grade: [], competition: [], team: [] } as AssignSponsors,
   );
 
+  // Create sequence data for each screen
+  const sequences = Array.from({ length: totalScreens }, (_, index) => ({
+    content: (
+      <PerformancesDisplayClassicTwoColumn
+        performances={transformedData}
+        itemsPerScreen={itemsPerScreen}
+        screenIndex={index}
+        assignSponsors={mergedAssignSponsors}
+      />
+    ),
+    durationInFrames: finalDuration,
+  }));
+
+  // Debug logging for sequences (remove in production)
+  console.log("[PerformancesListClassicTwoColumn] Sequences created:", {
+    totalScreens,
+    sequencesCount: sequences.length,
+    sequences: sequences.map((seq, idx) => ({
+      screenIndex: idx,
+      durationInFrames: seq.durationInFrames,
+    })),
+  });
+
+
+
   return (
     <div className="flex flex-col h-full w-full">
       <div className="flex-1">
@@ -203,11 +206,6 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
             type: "linear",
             durationInFrames: transitionConfig.durationInFrames,
           }}
-        />
-      </div>
-      <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
         />
       </div>
     </div>

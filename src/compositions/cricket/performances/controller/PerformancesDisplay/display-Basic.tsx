@@ -44,7 +44,7 @@ const PerformancesDisplayBasic: React.FC<PerformancesDisplayProps> = ({
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full">
+        <div className="flex-1 flex flex-col items-center justify-center gap-1 w-full">
           {displayedPerformances.map((performance, index) => (
             <div
               key={`${performance.name}-${screenIndex}-${index}`}
