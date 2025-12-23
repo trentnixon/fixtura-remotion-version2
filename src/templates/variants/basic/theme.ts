@@ -90,6 +90,18 @@ export const basicTheme: TemplateThemeConfig = {
     Top5PlayerScoreSuffix: {
       className: "text-2xl font-black  tracking-wide leading-none",
     },
+    TeamOfTheWeekPlayerName: {
+      className: "text-2xl font-bold tracking-tighter leading-tight",
+    },
+    TeamOfTheWeekTeam: {
+      className: "text-xs font-normal tracking-wider leading-tight",
+    },
+    TeamOfTheWeekType: {
+      className: "text-xs font-bold uppercase tracking-wider leading-none",
+    },
+    TeamOfTheWeekStat: {
+      className: "text-3xl font-bold tracking-tight leading-tight",
+    },
     ResultScore: {
       className: "text-7xl font-bold  tracking-normal leading-tight ",
     },

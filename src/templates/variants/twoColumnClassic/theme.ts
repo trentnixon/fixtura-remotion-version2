@@ -131,6 +131,18 @@ export const basicTheme: TemplateThemeConfig = {
     metadataLarge: {
       className: "text-4xl font-semibold  tracking-tight leading-tight",
     },
+    TeamOfTheWeekPlayerName: {
+      className: "text-3xl font-black tracking-tight leading-none",
+    },
+    TeamOfTheWeekTeam: {
+      className: "text-2xl font-normal tracking-tight leading-none",
+    },
+    TeamOfTheWeekType: {
+      className: "text-xl font-normal tracking-wider leading-none",
+    },
+    TeamOfTheWeekStat: {
+      className: "text-5xl font-black tracking-tight leading-none mr-2",
+    },
   },
 
   // ===== LAYOUT CONFIGURATION =====

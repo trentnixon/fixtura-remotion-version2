@@ -1,0 +1,686 @@
+{
+  "data": [
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "topscorer"
+      },
+      "rank": 1,
+      "player": "christian leopard  (vc)",
+      "primaryTeam": "Napier Tech Complete Flooring Prems",
+      "club": {
+        "name": "Napier Tech Complete Flooring Prems",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+          "width": 1181,
+          "height": 1181
+        }
+      },
+      "batting": {
+        "runs": 79,
+        "balls": 39,
+        "fours": 6,
+        "sixes": 6,
+        "strikeRate": 202.56,
+        "notOut": true,
+        "team": "Napier Tech Complete Flooring Prems"
+      },
+      "rankings": {
+        "topRunScorer": 3,
+        "highestStrikeRate": 11
+      }
+    },
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "higheststrikerate"
+      },
+      "rank": 2,
+      "player": "levi armstrong",
+      "primaryTeam": "Nui Style",
+      "club": {
+        "name": "Nui Style",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        }
+      },
+      "batting": {
+        "runs": 39,
+        "balls": 14,
+        "fours": 2,
+        "sixes": 4,
+        "strikeRate": 278.57,
+        "notOut": false,
+        "team": "Nui Style"
+      },
+      "rankings": {
+        "topRunScorer": 25,
+        "highestStrikeRate": 1
+      }
+    },
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "topscorer"
+      },
+      "rank": 3,
+      "player": "danial ibrahim",
+      "primaryTeam": "Central HB Waipawa Butchery Prems",
+      "club": {
+        "name": "Central HB Waipawa Butchery Prems",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_403e89d6e2.jpg",
+          "width": 2000,
+          "height": 889
+        }
+      },
+      "batting": {
+        "runs": 89,
+        "balls": 50,
+        "fours": 6,
+        "sixes": 7,
+        "strikeRate": 178,
+        "notOut": false,
+        "team": "Central HB Waipawa Butchery Prems"
+      },
+      "rankings": {
+        "topRunScorer": 1,
+        "highestStrikeRate": 19
+      }
+    },
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "higheststrikerate"
+      },
+      "rank": 4,
+      "player": "lachlan faulknor",
+      "primaryTeam": "Six Offenders",
+      "club": {
+        "name": "Six Offenders",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        }
+      },
+      "batting": {
+        "runs": 40,
+        "balls": 16,
+        "fours": 1,
+        "sixes": 5,
+        "strikeRate": 250,
+        "notOut": false,
+        "team": "Six Offenders"
+      },
+      "rankings": {
+        "topRunScorer": 23,
+        "highestStrikeRate": 3
+      }
+    },
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "higheststrikerate"
+      },
+      "rank": 5,
+      "player": "stephen price",
+      "primaryTeam": "OC's",
+      "club": {
+        "name": "OC's",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        }
+      },
+      "batting": {
+        "runs": 36,
+        "balls": 14,
+        "fours": 3,
+        "sixes": 2,
+        "strikeRate": 257.14,
+        "notOut": false,
+        "team": "OC's"
+      },
+      "rankings": {
+        "topRunScorer": 44,
+        "highestStrikeRate": 2
+      }
+    },
+    {
+      "category": "All-Rounder",
+      "categoryDetail": {
+        "type": "All-Rounder",
+        "position": "topallrounder"
+      },
+      "rank": 1,
+      "player": "jagdeep singh",
+      "primaryTeam": "NOBMCC Eagles D2a - Geoff Pollard Cup",
+      "club": {
+        "name": "NOBMCC Eagles D2a - Geoff Pollard Cup",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55c76bc9cc.jpg",
+          "width": 944,
+          "height": 960
+        }
+      },
+      "batting": {
+        "runs": 63,
+        "balls": 42,
+        "fours": 3,
+        "sixes": 5,
+        "strikeRate": 150,
+        "notOut": false,
+        "team": "NOBMCC Eagles D2a - Geoff Pollard Cup"
+      },
+      "bowling": {
+        "wickets": 3,
+        "overs": 8,
+        "maidens": 1,
+        "runs": 54,
+        "economy": 6.75,
+        "team": "NOBMCC Eagles D2a - Geoff Pollard Cup"
+      },
+      "allRounder": {
+        "score": 189,
+        "formula": "runs × wickets",
+        "battingContribution": 63,
+        "bowlingContribution": 3
+      },
+      "rankings": {
+        "topRunScorer": 6,
+        "highestStrikeRate": 32,
+        "mostWickets": 10,
+        "bestEconomy": 31,
+        "topAllRounder": 1
+      }
+    },
+    {
+      "category": "All-Rounder",
+      "categoryDetail": {
+        "type": "All-Rounder",
+        "position": "topallrounder"
+      },
+      "rank": 2,
+      "player": "naveen samarakkodi",
+      "primaryTeam": "Napier Tech  Lions - 25/26",
+      "club": {
+        "name": "Napier Tech  Lions - 25/26",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
+          "width": 1181,
+          "height": 1181
+        }
+      },
+      "batting": {
+        "runs": 56,
+        "balls": 45,
+        "fours": 10,
+        "sixes": 0,
+        "strikeRate": 124.44,
+        "notOut": true,
+        "team": "Napier Tech  Lions - 25/26"
+      },
+      "bowling": {
+        "wickets": 3,
+        "overs": 7,
+        "maidens": 1,
+        "runs": 30,
+        "economy": 4.29,
+        "team": "Napier Tech  Lions - 25/26"
+      },
+      "allRounder": {
+        "score": 168,
+        "formula": "runs × wickets",
+        "battingContribution": 56,
+        "bowlingContribution": 3
+      },
+      "rankings": {
+        "topRunScorer": 10,
+        "highestStrikeRate": 48,
+        "mostWickets": 8,
+        "bestEconomy": 13,
+        "topAllRounder": 2
+      }
+    },
+    {
+      "category": "Bowler",
+      "categoryDetail": {
+        "type": "Bowler",
+        "position": "mostwickets"
+      },
+      "rank": 1,
+      "player": "jack pyott",
+      "primaryTeam": "HNCC Hansen Bate - Div 2 - The Molly's",
+      "club": {
+        "name": "HNCC Hansen Bate - Div 2 - The Molly's",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_727ffa1417.jpg",
+          "width": 582,
+          "height": 600
+        }
+      },
+      "bowling": {
+        "wickets": 4,
+        "overs": 8,
+        "maidens": 1,
+        "runs": 23,
+        "economy": 2.88,
+        "team": "HNCC Hansen Bate - Div 2 - The Molly's"
+      },
+      "rankings": {
+        "mostWickets": 3,
+        "bestEconomy": 6
+      }
+    },
+    {
+      "category": "Bowler",
+      "categoryDetail": {
+        "type": "Bowler",
+        "position": "mostwickets"
+      },
+      "rank": 2,
+      "player": "gagandeep singh saini",
+      "primaryTeam": "Hawke's Bay United Kings",
+      "club": {
+        "name": "Hawke's Bay United Kings",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        }
+      },
+      "bowling": {
+        "wickets": 4,
+        "overs": 8,
+        "maidens": 0,
+        "runs": 37,
+        "economy": 4.63,
+        "team": "Hawke's Bay United Kings"
+      },
+      "rankings": {
+        "mostWickets": 2,
+        "bestEconomy": 20
+      }
+    },
+    {
+      "category": "Bowler",
+      "categoryDetail": {
+        "type": "Bowler",
+        "position": "besteconomy"
+      },
+      "rank": 3,
+      "player": "scott morgan",
+      "primaryTeam": "NOBMCC Hobblers D2b",
+      "club": {
+        "name": "NOBMCC Hobblers D2b",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55c76bc9cc.jpg",
+          "width": 944,
+          "height": 960
+        }
+      },
+      "bowling": {
+        "wickets": 3,
+        "overs": 8,
+        "maidens": 2,
+        "runs": 11,
+        "economy": 1.38,
+        "team": "NOBMCC Hobblers D2b"
+      },
+      "rankings": {
+        "mostWickets": 17,
+        "bestEconomy": 1
+      }
+    },
+    {
+      "category": "Bowler",
+      "categoryDetail": {
+        "type": "Bowler",
+        "position": "besteconomy"
+      },
+      "rank": 4,
+      "player": "jason sayer",
+      "primaryTeam": "Norfolk n Chance",
+      "club": {
+        "name": "Norfolk n Chance",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        }
+      },
+      "batting": {
+        "runs": 37,
+        "balls": 21,
+        "fours": 5,
+        "sixes": 1,
+        "strikeRate": 176.19,
+        "notOut": false,
+        "team": "Norfolk n Chance"
+      },
+      "bowling": {
+        "wickets": 3,
+        "overs": 5,
+        "maidens": 1,
+        "runs": 13,
+        "economy": 2.6,
+        "team": "NOBMCC Hobblers D2b"
+      },
+      "allRounder": {
+        "score": 111,
+        "formula": "runs × wickets",
+        "battingContribution": 37,
+        "bowlingContribution": 3
+      },
+      "rankings": {
+        "topRunScorer": 35,
+        "highestStrikeRate": 20,
+        "mostWickets": 5,
+        "bestEconomy": 3,
+        "topAllRounder": 3
+      }
+    },
+    {
+      "category": "Twelfth Man",
+      "categoryDetail": {
+        "type": "Twelfth Man",
+        "position": "bestoftherest"
+      },
+      "rank": 1,
+      "player": "nick dale  (c)",
+      "primaryTeam": "The Ugly Bunch",
+      "club": {
+        "name": "The Ugly Bunch",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
+          "width": 1211,
+          "height": 1211
+        }
+      },
+      "batting": {
+        "runs": 36,
+        "balls": 19,
+        "fours": 4,
+        "sixes": 2,
+        "strikeRate": 189.47,
+        "notOut": false,
+        "team": "The Ugly Bunch"
+      },
+      "bowling": {
+        "wickets": 2,
+        "overs": 1,
+        "maidens": 0,
+        "runs": 2,
+        "economy": 2,
+        "team": "The Ugly Bunch"
+      },
+      "allRounder": {
+        "score": 72,
+        "formula": "runs × wickets",
+        "battingContribution": 36,
+        "bowlingContribution": 2
+      },
+      "rankings": {
+        "topRunScorer": 43,
+        "highestStrikeRate": 15,
+        "mostWickets": 24,
+        "topAllRounder": 9
+      }
+    }
+  ],
+  "asset": {
+    "assetID": 69,
+    "assetTypeID": 3,
+    "assetCategoryID": 1,
+    "assetsLinkID": "5fdca42e4bc60235b0d7617c1d66ffd6962fbec184919598dbee2be14e3ba0ae"
+  },
+  "render": {
+    "schedulerId": 323,
+    "renderId": 8661
+  },
+  "account": {
+    "accountId": 436
+  },
+  "timings": {
+    "FPS_MAIN": 1005,
+    "FPS_INTRO": 90,
+    "FPS_OUTRO": 30,
+    "FPS_LADDER": 0,
+    "FPS_SCORECARD": 0,
+    "FPS_PREFORMANCECARD": 180
+  },
+  "frames": [45, 180, 345, 510, 675, 840, 1005],
+  "videoMeta": {
+    "club": {
+      "logo": {
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_64_d6d6fd9fae.jpg",
+        "width": 4167,
+        "height": 4167
+      },
+      "name": "Hawke's Bay Cricket Association",
+      "sport": "Cricket",
+      "sponsors": {
+        "primary": [],
+        "default": {}
+      },
+      "IsAccountClub": false
+    },
+    "video": {
+      "fixtureCategory": "Senior",
+      "groupingCategory": "Senior",
+      "metadata": {
+        "title": "Team of the Week",
+        "titleSplit": ["Team of the Week"],
+        "videoTitle": "Team of the Week",
+        "compositionId": "CricketTeamOfTheWeek",
+        "assetId": 69,
+        "assetTypeId": 3,
+        "frames": [],
+        "includeSponsors": false
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#000000",
+          "secondary": "#ffffff"
+        },
+        "template": "Basic"
+      },
+      "media": {
+        "HeroImage": {
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        }
+      },
+      "contentLayout": {
+        "divideFixturesBy": {
+          "CricketLadder": 1,
+          "CricketRoster": 1,
+          "CricketResults": 2,
+          "CricketUpcoming": 3,
+          "CricketResultSingle": 1,
+          "CricketBattingPerformances": 5,
+          "CricketBowlingPerformances": 5,
+          "CricketTeamOfTheWeek": 2
+        }
+      },
+      "templateVariation": {
+        "useBackground": "Texture",
+        "mode": "lightAlt",
+        "category": {
+          "slug": "Basic",
+          "name": "Basic",
+          "divideFixturesBy": {
+            "CricketUpcoming": 3,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketBowlingPerformances": 5,
+            "CricketBattingPerformances": 5
+          },
+          "bundleAudio": {
+            "id": 1,
+            "Name": "Basic",
+            "createdAt": "2023-09-27T10:36:24.428Z",
+            "updatedAt": "2025-06-15T04:50:57.910Z",
+            "publishedAt": "2023-09-27T10:36:25.639Z",
+            "audio_options": [
+              {
+                "id": 4,
+                "Name": "Better Start Now",
+                "createdAt": "2023-09-27T10:34:46.702Z",
+                "updatedAt": "2025-06-15T04:53:45.558Z",
+                "publishedAt": "2023-09-27T10:34:48.455Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
+                "CompositionID": "CricketLadder",
+                "ComponentName": "CricketLadder"
+              },
+              {
+                "id": 2,
+                "Name": "Fifteen on Me",
+                "createdAt": "2022-12-20T01:59:28.337Z",
+                "updatedAt": "2025-06-15T04:53:11.194Z",
+                "publishedAt": "2022-12-20T01:59:29.080Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
+              },
+              {
+                "id": 5,
+                "Name": "Get The Gains",
+                "createdAt": "2023-09-27T10:35:01.053Z",
+                "updatedAt": "2025-06-15T04:53:59.493Z",
+                "publishedAt": "2023-09-27T10:35:29.163Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "CompositionID": "CricketTop5Bowling",
+                "ComponentName": "CricketTop5Bowling"
+              },
+              {
+                "id": 3,
+                "Name": "Groover",
+                "createdAt": "2022-12-20T01:59:34.014Z",
+                "updatedAt": "2025-06-15T04:53:28.656Z",
+                "publishedAt": "2022-12-20T01:59:34.670Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "CompositionID": "CricketTop5Batting",
+                "ComponentName": "CricketTop5Batting"
+              },
+              {
+                "id": 1,
+                "Name": "Saltine",
+                "createdAt": "2022-12-12T05:19:56.353Z",
+                "updatedAt": "2025-06-15T04:50:50.079Z",
+                "publishedAt": "2022-12-12T05:19:57.408Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
+                "CompositionID": "CricketResults",
+                "ComponentName": "CricketResults"
+              },
+              {
+                "id": 16,
+                "Name": "BEECH LOVE",
+                "createdAt": "2024-06-05T04:31:26.640Z",
+                "updatedAt": "2024-06-07T12:45:43.674Z",
+                "publishedAt": "2024-06-07T12:45:32.118Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
+                "CompositionID": "Top5AFLScorers",
+                "ComponentName": "Top 5 Scorers"
+              },
+              {
+                "id": 17,
+                "Name": "FAY V",
+                "createdAt": "2024-06-05T04:33:33.970Z",
+                "updatedAt": "2024-06-07T12:48:03.161Z",
+                "publishedAt": "2024-06-07T12:47:53.394Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
+                "CompositionID": "WeekendResultsAFL",
+                "ComponentName": "Weekend Results"
+              }
+            ]
+          }
+        },
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": "left",
+          "size": "cover",
+          "loop": null,
+          "muted": true,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "useOffthreadVideo": null,
+          "volume": 0.8,
+          "playbackRate": null
+        },
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.3
+        },
+        "palette": "primaryOnWhite",
+        "gradient": {
+          "type": "primary",
+          "direction": "VERTICAL"
+        },
+        "noise": {
+          "type": "floatingParticles"
+        },
+        "pattern": {
+          "type": "dots",
+          "animation": "none",
+          "scale": 0.75,
+          "rotation": null,
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
+        },
+        "particle": {
+          "type": "lines",
+          "particleCount": "300",
+          "speed": 0.8,
+          "direction": "up",
+          "animation": "scale"
+        },
+        "texture": {
+          "name": "Grass",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Grass_Texture_f188e51974.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.8,
+            "blendMode": "multiply"
+          }
+        }
+      }
+    }
+  },
+  "errors": []
+}

@@ -130,6 +130,18 @@ export const brickworkTheme: TemplateThemeConfig = {
     titleSmall: {
       className: "text-2xl font-semibold  tracking-normal leading-snug",
     },
+    TeamOfTheWeekPlayerName: {
+      className: "text-3xl font-black tracking-wide leading-snug",
+    },
+    TeamOfTheWeekTeam: {
+      className: "text-2xl font-normal tracking-wider leading-tight",
+    },
+    TeamOfTheWeekType: {
+      className: "text-md font-bold uppercase tracking-wider leading-none",
+    },
+    TeamOfTheWeekStat: {
+      className: "text-5xl font-bold tracking-tight leading-tight",
+    },
   },
 
   // ===== LAYOUT CONFIGURATION =====

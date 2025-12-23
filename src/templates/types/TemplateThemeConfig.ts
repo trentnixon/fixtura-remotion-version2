@@ -73,6 +73,10 @@ export interface ThemeComponentStyles {
   Top5PlayerTeam: ComponentStyle;
   Top5PlayerScore: ComponentStyle;
   Top5PlayerScoreSuffix: ComponentStyle;
+  TeamOfTheWeekPlayerName: ComponentStyle;
+  TeamOfTheWeekTeam: ComponentStyle;
+  TeamOfTheWeekType: ComponentStyle;
+  TeamOfTheWeekStat: ComponentStyle;
   ResultScore: ComponentStyle;
   ResultScoreFirstInnings: ComponentStyle;
   ResultVS: ComponentStyle;

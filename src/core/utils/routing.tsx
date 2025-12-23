@@ -43,6 +43,7 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
     CricketResultSingle: "CricketResultSingle",
     CricketRoster: "CricketRoster",
     CricketResults: "CricketResults",
+    CricketTeamOfTheWeek: "CricketTeamOfTheWeek",
   },
   afl: {
     AFLLadder: "ladder",
@@ -89,6 +90,18 @@ const getTemplateComponent = (
   templateId: TemplateId,
 ): React.ComponentType | undefined => {
   const compositionModule = sportModule[compositionType];
+
+  // Debug logging
+  console.log("[getTemplateComponent] Debug:", {
+    compositionType,
+    templateId,
+    hasCompositionModule: !!compositionModule,
+    compositionModuleType: typeof compositionModule,
+    compositionModuleKeys: compositionModule
+      ? Object.keys(compositionModule)
+      : [],
+  });
+
   if (!compositionModule) return undefined;
 
   if (typeof compositionModule === "function") {
@@ -104,6 +117,11 @@ const getTemplateComponent = (
   const TemplateComponent =
     compositionModule[templateId] ||
     compositionModule[templateId.toLowerCase()];
+
+  console.log(
+    "[getTemplateComponent] TemplateComponent found:",
+    !!TemplateComponent,
+  );
 
   // Cast the component back to ComponentType<any> or a more specific type if needed for rendering
   // Or simply return it if the JSX renderer can handle ComponentType<unknown> (often it can)

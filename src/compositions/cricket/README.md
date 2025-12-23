@@ -18,5 +18,5 @@ Cricket feature compositions and modules. Contains multiple composition families
 
 ## Dependencies
 
-- Internal: `ladder`, `results`, `resultSingle`, `sponsorFooter`, `teamRoster`, `top5`, `upcoming`, `utils`
+- Internal: `ladder`, `results`, `resultSingle`, `sponsorFooter`, `teamRoster`, `TeamOfTheWeek`, `top5`, `upcoming`, `utils`
 - External: Remotion, React

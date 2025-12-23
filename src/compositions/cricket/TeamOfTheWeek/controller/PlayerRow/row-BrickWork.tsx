@@ -1,0 +1,304 @@
+import React from "react";
+import { TeamOfTheWeekPlayer, PLAYER_STAGGER_DELAY } from "../../types";
+import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { Img } from "remotion";
+import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
+//import { TeamOfTheWeekTeam } from "../../../utils/primitives/TeamOfTheWeekTeam";
+import { TeamOfTheWeekType } from "../../../utils/primitives/TeamOfTheWeekType";
+import { TeamOfTheWeekStat } from "../../../utils/primitives/TeamOfTheWeekStat";
+import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
+import { BattingStats, BowlingStats } from "../../types";
+
+interface PlayerRowProps {
+  player: TeamOfTheWeekPlayer;
+  index: number;
+  rowHeight: number;
+}
+
+const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
+  player,
+  index,
+  rowHeight,
+}) => {
+  const { animations } = useAnimationContext();
+  const { selectedPalette } = useThemeContext();
+  const containerAnimation = animations.container.main.itemContainer;
+  const delay = index * PLAYER_STAGGER_DELAY;
+
+  // Text animations
+  const largeTextAnimation = animations.text.main.copyIn;
+  const smallTextAnimation = animations.text.main.copyIn;
+
+  // Background colors matching Top5 BrickWork pattern
+  // Top player gets 'strong' background, others get 'medium'
+  const isTopPlayer = index === 0;
+  const bgColor = isTopPlayer
+    ? selectedPalette.container.backgroundTransparent.strong
+    : selectedPalette.container.backgroundTransparent.medium;
+
+  // Logo and stats sections use same background as main row
+  const LogoBG = isTopPlayer
+    ? selectedPalette.container.backgroundTransparent.strong
+    : selectedPalette.container.backgroundTransparent.medium;
+
+  // Logo section always uses 'strong' for contrast
+  const contrastBG = selectedPalette.container.backgroundTransparent.strong;
+
+  // All-rounders use same height as other players
+  const isAllRounderPosition =
+    player.categoryDetail.position === "topallrounder" ||
+    player.categoryDetail.position === "bestoftherest";
+  const hasBothStats = player.batting && player.bowling;
+  const adjustedHeight = rowHeight;
+
+  return (
+    <div className="overflow-hidden">
+      <AnimatedContainer
+        type="full"
+        className="rounded-lg"
+        backgroundColor="none"
+        animation={containerAnimation.containerIn}
+        animationDelay={delay}
+        exitAnimation={containerAnimation.containerOut}
+      >
+        <div
+          className="grid grid-cols-12 p-0 items-center h-full overflow-hidden rounded-none"
+          style={{
+            height: `${adjustedHeight}px`,
+            background: bgColor,
+            borderBottom: `2px solid ${selectedPalette.container.primary}`,
+          }}
+        >
+          {/* Player Info Section: Type, Player, Team - col-span-7 (left) */}
+          <div className="col-span-7 flex flex-col justify-center px-1 h-full">
+            {/* Position Label */}
+            <div className="leading-tight mb-0">
+              <TeamOfTheWeekType
+                value={getCategoryPositionLabel(
+                  player.categoryDetail.position,
+                ).toUpperCase()}
+                animation={{ ...smallTextAnimation, delay: delay }}
+              />
+            </div>
+
+            {/* Player Name */}
+            <TeamOfTheWeekPlayerName
+              value={player.player.toUpperCase()}
+              animation={{ ...largeTextAnimation, delay: delay + 2 }}
+              className="leading-tight"
+            />
+
+            {/* Team Name */}
+            {/*  <TeamOfTheWeekTeam
+              value={player.primaryTeam.toUpperCase()}
+              animation={{ ...smallTextAnimation, delay: delay + 4 }}
+              className="leading-tight"
+            /> */}
+          </div>
+
+          {/* Logo Section - col-span-2 (middle) */}
+          <div
+            className="col-span-1 flex items-center justify-center h-full"
+            style={{ background: contrastBG }}
+          >
+            <div className="w-30 h-30 overflow-hidden">
+              <Img
+                src={player.club.logo.url}
+                alt={player.club.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Stats Section - col-span-3 (right) */}
+          <div
+            className="col-span-4 flex whitespace-nowrap leading-none px-2 h-full items-center justify-center"
+            style={{ background: LogoBG }}
+          >
+            {/* Top All-Rounder and Best of Rest show two stat rows when both stats available */}
+            {isAllRounderPosition &&
+            hasBothStats &&
+            player.batting &&
+            player.bowling ? (
+              <div className="flex flex-col items-center justify-center gap-0">
+                {/* Batting Stats */}
+                <BattingStatDisplay
+                  batting={player.batting}
+                  delay={delay + 20}
+                />
+
+                {/* Bowling Stats */}
+                <BowlingStatDisplay
+                  bowling={player.bowling}
+                  delay={delay + 30}
+                />
+              </div>
+            ) : (
+              /* Single stat row based on position type */
+              <>
+                {/* Batting positions: topscorer, higheststrikerate */}
+                {(player.categoryDetail.position === "topscorer" ||
+                  player.categoryDetail.position === "higheststrikerate") &&
+                  player.batting && (
+                    <BattingStatDisplay
+                      batting={player.batting}
+                      delay={delay + 20}
+                    />
+                  )}
+
+                {/* Bowling positions: mostwickets, besteconomy */}
+                {(player.categoryDetail.position === "mostwickets" ||
+                  player.categoryDetail.position === "besteconomy") &&
+                  player.bowling && (
+                    <BowlingStatDisplay
+                      bowling={player.bowling}
+                      delay={delay + 20}
+                    />
+                  )}
+
+                {/* Best of Rest fallback: show whatever is available if not both stats */}
+                {player.categoryDetail.position === "bestoftherest" &&
+                  (!player.batting || !player.bowling) && (
+                    <>
+                      {player.batting && (
+                        <BattingStatDisplay
+                          batting={player.batting}
+                          delay={delay + 20}
+                        />
+                      )}
+                      {player.bowling && (
+                        <BowlingStatDisplay
+                          bowling={player.bowling}
+                          delay={delay + 20}
+                        />
+                      )}
+                      {player.allRounder && (
+                        <StatItem
+                          label="AR SCORE"
+                          value={player.allRounder.score}
+                          delay={delay + 20}
+                          highlight
+                        />
+                      )}
+                    </>
+                  )}
+              </>
+            )}
+          </div>
+        </div>
+      </AnimatedContainer>
+    </div>
+  );
+};
+
+// Component to display formatted batting stats
+const BattingStatDisplay: React.FC<{
+  batting: BattingStats;
+  delay: number;
+}> = ({ batting, delay }) => {
+  const { animations } = useAnimationContext();
+  const largeTextAnimation = animations.text.main.copyIn;
+  const smallTextAnimation = animations.text.main.copyIn;
+
+  const scoreDisplay = `${batting.runs}${batting.notOut ? "*" : ""}`;
+  const ballsDisplay = `(${batting.balls})`;
+
+  return (
+    <div className="flex items-baseline gap-1">
+      <TeamOfTheWeekStat
+        value={scoreDisplay}
+        animation={{ ...largeTextAnimation, delay: delay }}
+        variant="onContainerCopy"
+        className=""
+      />
+      <MetadataSmall
+        value={ballsDisplay}
+        animation={{ ...smallTextAnimation, delay: delay + 10 }}
+        variant="onContainerCopy"
+        className="text-md"
+      />
+    </div>
+  );
+};
+
+// Component to display formatted bowling stats
+const BowlingStatDisplay: React.FC<{
+  bowling: BowlingStats;
+  delay: number;
+}> = ({ bowling, delay }) => {
+  const { animations } = useAnimationContext();
+  const largeTextAnimation = animations.text.main.copyIn;
+  const smallTextAnimation = animations.text.main.copyIn;
+
+  const wicketsRunsDisplay = `${bowling.wickets}/${bowling.runs}`;
+  const oversDisplay = `(${bowling.overs})`;
+
+  return (
+    <div className="flex items-baseline gap-1">
+      <TeamOfTheWeekStat
+        value={wicketsRunsDisplay}
+        animation={{ ...largeTextAnimation, delay: delay }}
+        variant="onContainerCopy"
+        className=""
+      />
+      <MetadataSmall
+        value={oversDisplay}
+        animation={{ ...smallTextAnimation, delay: delay + 10 }}
+        variant="onContainerCopy"
+        className="text-md tracking-tighter"
+      />
+    </div>
+  );
+};
+
+// Helper component for stat items (still used for all-rounder score)
+const StatItem: React.FC<{
+  label: string;
+  value: string | number;
+  delay: number;
+  highlight?: boolean;
+}> = ({ label, value, delay }) => {
+  const { animations } = useAnimationContext();
+  const smallTextAnimation = animations.text.main.copyIn;
+  const largeTextAnimation = animations.text.main.copyIn;
+
+  return (
+    <div>
+      <TeamOfTheWeekStat
+        value={label}
+        animation={{ ...smallTextAnimation, delay: delay }}
+        variant="onContainerCopy"
+        className="mb-0.5"
+      />
+      {" : "}
+      <TeamOfTheWeekStat
+        value={String(value)}
+        animation={{ ...largeTextAnimation, delay: delay + 10 }}
+        variant="onContainerCopy"
+        className=""
+      />
+    </div>
+  );
+};
+
+// Helper function to format category position
+const getCategoryPositionLabel = (position: string): string => {
+  const labels: Record<string, string> = {
+    topscorer: "Top Scorer",
+    higheststrikerate: "Highest Strike Rate",
+    mostwickets: "Most Wickets",
+    besteconomy: "Best Economy",
+    topallrounder: "Top All-Rounder",
+    bestoftherest: "12th Man",
+  };
+
+  return labels[position] || position;
+};
+
+export default PlayerRowBrickWork;

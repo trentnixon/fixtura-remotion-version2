@@ -60,6 +60,15 @@ import {
   cnswPrivate as performancesCNSWPrivate,
   sixersThunder as performancesSixersThunder,
 } from "./performances";
+import {
+  basic as teamOfTheWeekBasic,
+  classic as teamOfTheWeekClassic,
+  brickwork as teamOfTheWeekBrickWork,
+  cnsw as teamOfTheWeekCNSW,
+  cnswPrivate as teamOfTheWeekCNSWPrivate,
+  sixersThunder as teamOfTheWeekSixersThunder,
+  classicTwoColumn as teamOfTheWeekClassicTwoColumn,
+} from "./TeamOfTheWeek";
 
 /* export * as ladder from './ladder';
 
@@ -149,6 +158,18 @@ export const CricketPerformances = {
   twocolumnclassic: performancesClassicTwoColumn,
   cnsw: performancesCNSW,
   cnswprivate: performancesCNSWPrivate,
+};
+
+// Add CricketTeamOfTheWeek export for Team of the Week
+export const CricketTeamOfTheWeek = {
+  basic: teamOfTheWeekBasic,
+  classic: teamOfTheWeekClassic,
+  brickwork: teamOfTheWeekBrickWork,
+  cnsw: teamOfTheWeekCNSW,
+  cnswprivate: teamOfTheWeekCNSWPrivate,
+  sixers: teamOfTheWeekSixersThunder,
+  thunder: teamOfTheWeekSixersThunder,
+  twocolumnclassic: teamOfTheWeekClassicTwoColumn,
 };
 
 export const singleGameResult = {
