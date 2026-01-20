@@ -1,21 +1,18 @@
 import React from "react";
-import { TeamOfTheWeekPlayer, PLAYER_STAGGER_DELAY } from "../../types";
+import { PLAYER_STAGGER_DELAY, PlayerRowProps } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { Img } from "remotion";
 import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
-import { TeamOfTheWeekTeam } from "../../../utils/primitives/TeamOfTheWeekTeam";
-import { TeamOfTheWeekType } from "../../../utils/primitives/TeamOfTheWeekType";
 import { TeamOfTheWeekStat } from "../../../utils/primitives/TeamOfTheWeekStat";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { BattingStats, BowlingStats } from "../../types";
+import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
+import { cleanPlayerName, getPositionIcon } from "../../utils/config";
 
-interface PlayerRowProps {
-  player: TeamOfTheWeekPlayer;
-  index: number;
-  rowHeight: number;
-}
+// Icon pack configuration for Basic variant
+const ICON_PACK = "icon1"; // Change this to use a different icon pack (e.g., "icon2", "icon3")
 
 const PlayerRowBasic: React.FC<PlayerRowProps> = ({
   player,
@@ -25,11 +22,13 @@ const PlayerRowBasic: React.FC<PlayerRowProps> = ({
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
+  const { club } = useVideoDataContext();
+  const isAccountClub = club.IsAccountClub || false;
   const delay = index * PLAYER_STAGGER_DELAY;
 
   // Text animations
   const largeTextAnimation = animations.text.main.copyIn;
-  const smallTextAnimation = animations.text.main.copyIn;
+  //const smallTextAnimation = animations.text.main.copyIn;
 
   // Determine background color like Top5
   const isTopPlayer = index === 0;
@@ -41,15 +40,27 @@ const PlayerRowBasic: React.FC<PlayerRowProps> = ({
     ? selectedPalette.container.transparentSecondary
     : selectedPalette.container.backgroundTransparent.strong;
 
-  // All-rounders need more height for two rows of stats
-  //const isAllRounder = player.batting && player.bowling;
-  const adjustedHeight = rowHeight;
+  // Icon section uses primary color (matching Classic)
+  const statsBG = selectedPalette.container.primary;
+
+  // Get the color for onContainerTitle variant to match the text
+  const iconColor = selectedPalette.text.onContainer.title;
+
+  // All-rounders use same height as other players
+  const isAllRounderPosition =
+    player.categoryDetail.position === "topallrounder" ||
+    player.categoryDetail.position === "bestoftherest";
+  const hasBothStats = player.batting && player.bowling;
+
+  // Get the appropriate SVG icon component for the position
+  // Uses the icon pack configured for Basic variant (see ICON_PACK constant above)
+  const PositionIcon = getPositionIcon(player.categoryDetail.position, ICON_PACK);
 
   return (
     <AnimatedContainer
       type="full"
       className="relative h-full"
-      style={{ height: adjustedHeight }}
+      style={{ height: rowHeight }}
       backgroundColor="none"
       animation={containerAnimation.containerIn}
       animationDelay={delay}
@@ -57,119 +68,113 @@ const PlayerRowBasic: React.FC<PlayerRowProps> = ({
     >
       <div
         className="flex items-center h-full overflow-hidden rounded-lg"
-        style={{ height: `${adjustedHeight}px`, background: bgColor }}
+        style={{ height: `${rowHeight}px`, background: bgColor }}
       >
-        {/* Logo Section */}
+        {/* Icon Section */}
         <div
-          className="w-20 h-full shrink-0 relative overflow-hidden"
-          style={{
-            background: logoBG,
-          }}
+          className="w-20 h-full shrink-0 flex items-center justify-center"
+          style={{ background: statsBG }}
         >
-          <Img
-            src={player.club.logo.url}
-            alt={player.club.name}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
+          {/* Position Icon */}
+          {PositionIcon && (
+            <PositionIcon
+              className="w-20 h-20 flex-shrink-0"
+              style={{ color: iconColor }}
+            />
+          )}
         </div>
 
-        {/* Player Info Section: Type, Player, Team */}
+        {/* Player Info Section: Stats, Player Name */}
         <div className="flex-1 flex flex-col justify-center px-3">
-          {/* Position Label */}
-          <div className="mb-0">
-            <TeamOfTheWeekType
-              value={getCategoryPositionLabel(
-                player.categoryDetail.position,
-              ).toUpperCase()}
-              animation={{ ...smallTextAnimation, delay: delay }}
-            />
+          {/* Stats Display */}
+          <div className="mt-1">
+            {isAllRounderPosition && hasBothStats && player.batting && player.bowling ? (
+              <div className="flex flex-row gap-4 items-baseline">
+                {/* Batting Stats */}
+                <BattingStatDisplay batting={player.batting} delay={delay + 20} />
+                <span>&amp;</span>
+                {/* Bowling Stats */}
+                <BowlingStatDisplay bowling={player.bowling} delay={delay + 30} />
+              </div>
+            ) : (
+              <>
+                {/* Batting positions: topscorer, higheststrikerate */}
+                {(player.categoryDetail.position === "topscorer" ||
+                  player.categoryDetail.position === "higheststrikerate") &&
+                  player.batting && (
+                    <BattingStatDisplay
+                      batting={player.batting}
+                      delay={delay + 20}
+                    />
+                  )}
+
+                {/* Bowling positions: mostwickets, besteconomy */}
+                {(player.categoryDetail.position === "mostwickets" ||
+                  player.categoryDetail.position === "besteconomy") &&
+                  player.bowling && (
+                    <BowlingStatDisplay
+                      bowling={player.bowling}
+                      delay={delay + 20}
+                    />
+                  )}
+
+                {/* Best of Rest fallback: show whatever is available if not both stats */}
+                {player.categoryDetail.position === "bestoftherest" &&
+                  (!player.batting || !player.bowling) && (
+                    <>
+                      {player.batting && (
+                        <BattingStatDisplay
+                          batting={player.batting}
+                          delay={delay + 20}
+                        />
+                      )}
+                      {player.bowling && (
+                        <BowlingStatDisplay
+                          bowling={player.bowling}
+                          delay={delay + 20}
+                        />
+                      )}
+                      {player.allRounder && (
+                        <StatItem
+                          label="AR SCORE"
+                          value={player.allRounder.score}
+                          delay={delay + 20}
+                          highlight
+                        />
+                      )}
+                    </>
+                  )}
+              </>
+            )}
           </div>
 
           {/* Player Name */}
           <TeamOfTheWeekPlayerName
-            value={player.player.toUpperCase()}
+            value={cleanPlayerName(player.player).toUpperCase()}
             animation={{ ...largeTextAnimation, delay: delay + 2 }}
             className=""
           />
-
-          {/* Team Name */}
-          <TeamOfTheWeekTeam
-            value={player.primaryTeam.toUpperCase()}
-            animation={{ ...smallTextAnimation, delay: delay + 4 }}
-            className=""
-          />
         </div>
 
-        {/* Stats Section */}
-        <div className="flex-shrink-0 px-1">
-          {/* Top All-Rounder and Best of Rest show two stat rows when both stats available */}
-          {(player.categoryDetail.position === "topallrounder" ||
-            player.categoryDetail.position === "bestoftherest") &&
-          player.batting &&
-          player.bowling ? (
-            <div className="flex flex-col gap-2">
-              {/* Batting Stats */}
-              <BattingStatDisplay batting={player.batting} delay={delay + 6} />
-
-              {/* Bowling Stats */}
-              <BowlingStatDisplay bowling={player.bowling} delay={delay + 16} />
-            </div>
-          ) : (
-            /* Single stat row based on position type */
-            <>
-              {/* Batting positions: topscorer, higheststrikerate */}
-              {(player.categoryDetail.position === "topscorer" ||
-                player.categoryDetail.position === "higheststrikerate") &&
-                player.batting && (
-                  <BattingStatDisplay
-                    batting={player.batting}
-                    delay={delay + 6}
-                  />
-                )}
-
-              {/* Bowling positions: mostwickets, besteconomy */}
-              {(player.categoryDetail.position === "mostwickets" ||
-                player.categoryDetail.position === "besteconomy") &&
-                player.bowling && (
-                  <BowlingStatDisplay
-                    bowling={player.bowling}
-                    delay={delay + 6}
-                  />
-                )}
-
-              {/* Best of Rest fallback: show whatever is available if not both stats */}
-              {player.categoryDetail.position === "bestoftherest" &&
-                (!player.batting || !player.bowling) && (
-                  <>
-                    {player.batting && (
-                      <BattingStatDisplay
-                        batting={player.batting}
-                        delay={delay + 6}
-                      />
-                    )}
-                    {player.bowling && (
-                      <BowlingStatDisplay
-                        bowling={player.bowling}
-                        delay={delay + 6}
-                      />
-                    )}
-                    {player.allRounder && (
-                      <StatItem
-                        label="AR SCORE"
-                        value={player.allRounder.score}
-                        delay={delay + 6}
-                        highlight
-                      />
-                    )}
-                  </>
-                )}
-            </>
-          )}
-        </div>
+        {/* Logo Section - conditional */}
+        {!isAccountClub && (
+          <div
+            className="w-20 h-full shrink-0 relative overflow-hidden"
+            style={{
+              background: logoBG,
+            }}
+          >
+            <Img
+              src={player.club.logo.url}
+              alt={player.club.name}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+        )}
       </div>
     </AnimatedContainer>
   );
@@ -189,7 +194,7 @@ const BattingStatDisplay: React.FC<{
 
   return (
     <div className="flex items-baseline gap-1">
-      <TeamOfTheWeekStat
+      <MetadataSmall
         value={scoreDisplay}
         animation={{ ...largeTextAnimation, delay: delay }}
         variant="onContainerCopy"
@@ -197,9 +202,9 @@ const BattingStatDisplay: React.FC<{
       />
       <MetadataSmall
         value={ballsDisplay}
-        animation={{ ...smallTextAnimation, delay: delay + 1 }}
+        animation={{ ...smallTextAnimation, delay: delay + 10 }}
         variant="onContainerCopy"
-        className="text-xs"
+        className="text-md"
       />
     </div>
   );
@@ -235,7 +240,7 @@ const BowlingStatDisplay: React.FC<{
   );
 };
 
-// Helper component for stat items (still used for bowling stats)
+// Helper component for stat items (still used for all-rounder score)
 const StatItem: React.FC<{
   label: string;
   value: string | number;
@@ -251,32 +256,18 @@ const StatItem: React.FC<{
       <TeamOfTheWeekStat
         value={label}
         animation={{ ...smallTextAnimation, delay: delay }}
-        variant="onContainerCopy"
+        variant="onContainerTitle"
         className="mb-0.5"
       />
       {" : "}
       <TeamOfTheWeekStat
         value={String(value)}
-        animation={{ ...largeTextAnimation, delay: delay + 1 }}
-        variant={"onContainerCopy"}
+        animation={{ ...largeTextAnimation, delay: delay + 10 }}
+        variant="onContainerTitle"
         className=""
       />
     </div>
   );
-};
-
-// Helper function to format category position
-const getCategoryPositionLabel = (position: string): string => {
-  const labels: Record<string, string> = {
-    topscorer: "Top Scorer",
-    higheststrikerate: "Highest Strike Rate",
-    mostwickets: "Most Wickets",
-    besteconomy: "Best Economy",
-    topallrounder: "Top All-Rounder",
-    bestoftherest: "12th Man",
-  };
-
-  return labels[position] || position;
 };
 
 export default PlayerRowBasic;

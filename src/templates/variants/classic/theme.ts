@@ -132,7 +132,7 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-5xl font-semibold  tracking-tight leading-tight",
     },
     TeamOfTheWeekPlayerName: {
-      className: "text-xl font-normal tracking-tight leading-tight",
+      className: "text-3xl font-semibold tracking-tight leading-tight",
     },
     TeamOfTheWeekTeam: {
       className: "text-xs font-normal tracking-tight leading-tight",

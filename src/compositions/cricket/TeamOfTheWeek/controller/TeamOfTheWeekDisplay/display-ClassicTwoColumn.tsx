@@ -36,13 +36,7 @@ const TeamOfTheWeekDisplayClassicTwoColumn: React.FC<
       >
         <div className="flex flex-col h-full gap-1 justify-center">
           {players.map((player, index) => {
-            // All-rounders and 12th man with both stats need more height
-            const isAllRounder =
-              (player.categoryDetail.position === "topallrounder" ||
-                player.categoryDetail.position === "bestoftherest") &&
-              player.batting &&
-              player.bowling;
-            const rowHeight = isAllRounder ? 115 : 85;
+            const rowHeight = 85;
 
             return (
               <PlayerRowClassicTwoColumn

@@ -1,580 +1,392 @@
 {
   "data": [
     {
-      "name": "Aidan Cox-Bishop",
-      "runs": 15,
-      "overs": "3.5",
-      "prompt": "Aidan Cox-Bishop played for Rats, taking 5 wickets from 3.5 overs, conceding 15 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Rats (1) vs Pirates 2nd Grade (1), the match result was Rats won by 8 wickets.",
+      "name": "Freddie Fowler  (c)",
+      "runs": 24,
+      "overs": "9",
+      "prompt": "Freddie Fowler  (c) played for Runaway Bay Premier Div 1, taking 5 wickets from 9 overs, conceding 24 runs. Game details: This was a One Day in the (1) CGC Premier League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Premier Div 1 (1) vs Helensvale 1st Grade (1), the match result was Helensvale 1st Grade won by 57 runs.",
       "wickets": 5,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
-        "width": 1046,
-        "height": 1054
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
       },
-      "playedFor": "Rats",
+      "playedFor": "Runaway Bay Premier Div 1",
       "assignSponsors": {
         "Team": {
-          "name": "Rats"
+          "name": "Runaway Bay Premier Div 1"
         },
         "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+          "id": 53103,
+          "name": "(1) CGC Premier League - Division 1"
         },
         "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
         }
       }
     },
     {
-      "name": "Jett T Edwards",
-      "runs": 36,
+      "name": "Jack Hocart",
+      "runs": 22,
       "overs": "8",
-      "prompt": "Jett T Edwards played for SJCC OG, taking 4 wickets from 8 overs, conceding 36 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
+      "prompt": "Jack Hocart played for Runaway Bay Premier Div 2, taking 4 wickets from 8 overs, conceding 22 runs. Game details: This was a One Day in the (2) CGC Premier League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Premier Div 2 (1) vs Helensvale 2nd Grade (1), the match result was Runaway Bay Premier Div 2 won by 5 wickets.",
       "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
       },
-      "playedFor": "SJCC OG",
+      "playedFor": "Runaway Bay Premier Div 2",
       "assignSponsors": {
         "Team": {
-          "name": "SJCC OG"
+          "name": "Runaway Bay Premier Div 2"
         },
         "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+          "id": 53104,
+          "name": "(2) CGC Premier League - Division 2"
         },
         "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
         }
       }
     },
     {
-      "name": "Martin Smithers",
+      "name": "Muhammad Abdul Wahab",
+      "runs": 30,
+      "overs": "6",
+      "prompt": "Muhammad Abdul Wahab played for Runaway Bay Navy Community Div 1, taking 3 wickets from 6 overs, conceding 30 runs. Game details: This was a One Day in the (4) CGC Community League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Navy Community Div 1 (1) vs Bond University Community Div 1 (1), the match result was Runaway Bay Navy Community Div 1 won by 5 wickets.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Navy Community Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Navy Community Div 1"
+        },
+        "grade": {
+          "id": 53295,
+          "name": "(4) CGC Community League - Division 1"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Harrison Rachow",
+      "runs": 30,
+      "overs": "6",
+      "prompt": "Harrison Rachow played for Runaway Bay Orange Community Div 3, taking 3 wickets from 6 overs, conceding 30 runs. Game details: This was a One Day in the (6) CGC Community League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Orange Community Div 3 (1) vs Mudgeeraba Community Div 3 (1), the match result was Runaway Bay Orange Community Div 3 won by 49 runs.",
+      "wickets": 3,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Orange Community Div 3",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Orange Community Div 3"
+        },
+        "grade": {
+          "id": 53297,
+          "name": "(6) CGC Community League - Division 3"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Stephen Rudd",
+      "runs": 0,
+      "overs": "0.2",
+      "prompt": "Stephen Rudd played for Runaway Bay Navy Community Div 1, taking 2 wickets from 0.2 overs, conceding 0 runs. Game details: This was a One Day in the (4) CGC Community League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Navy Community Div 1 (1) vs Bond University Community Div 1 (1), the match result was Runaway Bay Navy Community Div 1 won by 5 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Navy Community Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Navy Community Div 1"
+        },
+        "grade": {
+          "id": 53295,
+          "name": "(4) CGC Community League - Division 1"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Austin Billing",
       "runs": 8,
-      "overs": "5",
-      "prompt": "Martin Smithers played for Hibo Country, taking 3 wickets from 5 overs, conceding 8 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Country (1) vs Mice (1), the match result was Mice won by 3 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
-        "width": 236,
-        "height": 289
-      },
-      "playedFor": "Hibo Country",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hibo Country"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Robert Hogg",
-      "runs": 10,
-      "overs": "5",
-      "prompt": "Robert Hogg played for Mice, taking 3 wickets from 5 overs, conceding 10 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
-        "width": 1046,
-        "height": 1054
-      },
-      "playedFor": "Mice",
-      "assignSponsors": {
-        "Team": {
-          "name": "Mice"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Daniel Cooper",
-      "runs": 14,
-      "overs": "4",
-      "prompt": "Daniel Cooper played for MadBulls, taking 3 wickets from 4 overs, conceding 14 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . MadBulls (1) vs Pirates 1st Grade (1), the match result was MadBulls won by 9 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
-        },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "matthew anderson",
-      "runs": 16,
-      "overs": "5",
-      "prompt": "matthew anderson played for Mice, taking 3 wickets from 5 overs, conceding 16 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
-        "width": 1046,
-        "height": 1054
-      },
-      "playedFor": "Mice",
-      "assignSponsors": {
-        "Team": {
-          "name": "Mice"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Micah Taylor",
-      "runs": 31,
-      "overs": "6",
-      "prompt": "Micah Taylor played for Hibo Country, taking 3 wickets from 6 overs, conceding 31 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Country (1) vs Mice (1), the match result was Mice won by 3 wickets.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
-        "width": 236,
-        "height": 289
-      },
-      "playedFor": "Hibo Country",
-      "assignSponsors": {
-        "Team": {
-          "name": "Hibo Country"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Deacon Collins",
-      "runs": 74,
-      "overs": "7",
-      "prompt": "Deacon Collins played for MadBulls, taking 3 wickets from 7 overs, conceding 74 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MadBulls (1) vs SJCC Blues (1), the match result was SJCC Blues won by 130 runs.",
-      "wickets": 3,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Miraj Hossain",
-      "runs": 15,
-      "overs": "5",
-      "prompt": "Miraj Hossain played for Rats, taking 2 wickets from 5 overs, conceding 15 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Rats (1) vs Pirates 2nd Grade (1), the match result was Rats won by 8 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
-        "width": 1046,
-        "height": 1054
-      },
-      "playedFor": "Rats",
-      "assignSponsors": {
-        "Team": {
-          "name": "Rats"
-        },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Jake Crawford",
-      "runs": 16,
-      "overs": "4",
-      "prompt": "Jake Crawford played for Mice, taking 2 wickets from 4 overs, conceding 16 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
-        "width": 1046,
-        "height": 1054
-      },
-      "playedFor": "Mice",
-      "assignSponsors": {
-        "Team": {
-          "name": "Mice"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "James Blake-Dyke",
-      "runs": 21,
-      "overs": "3.1",
-      "prompt": "James Blake-Dyke played for SJCC Blues, taking 2 wickets from 3.1 overs, conceding 21 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC Blues",
-      "assignSponsors": {
-        "Team": {
-          "name": "SJCC Blues"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Joel Frazer",
-      "runs": 24,
-      "overs": "4",
-      "prompt": "Joel Frazer played for Pirates 2nd Grade, taking 2 wickets from 4 overs, conceding 24 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Pirates 2nd Grade (1) vs Rats (1), the match result was Rats won by 8 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f76b057253.jpg",
-        "width": 4096,
-        "height": 2902
-      },
-      "playedFor": "Pirates 2nd Grade",
-      "assignSponsors": {
-        "Team": {
-          "name": "Pirates 2nd Grade"
-        },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "James Watson",
-      "runs": 27,
-      "overs": "5",
-      "prompt": "James Watson played for SJCC OG, taking 2 wickets from 5 overs, conceding 27 runs. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC OG",
-      "assignSponsors": {
-        "Team": {
-          "name": "SJCC OG"
-        },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Timothy Bruckshaw",
-      "runs": 28,
-      "overs": "6",
-      "prompt": "Timothy Bruckshaw played for SJCC Blues, taking 2 wickets from 6 overs, conceding 28 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC Blues",
-      "assignSponsors": {
-        "Team": {
-          "name": "SJCC Blues"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Prashant Benakatti",
-      "runs": 28,
-      "overs": "6",
-      "prompt": "Prashant Benakatti played for MALARVAADI SOLDIERS KINGS CC 3rd Grade, taking 2 wickets from 6 overs, conceding 28 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MALARVAADI SOLDIERS KINGS CC 3rd Grade (1) vs Hibo Green (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
-      "assignSponsors": {
-        "Team": {
-          "name": "MALARVAADI SOLDIERS KINGS CC 3rd Grade"
-        },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
-        },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
-        }
-      }
-    },
-    {
-      "name": "Evan Rees",
-      "runs": 29,
       "overs": "3",
-      "prompt": "Evan Rees played for Hibo Green, taking 2 wickets from 3 overs, conceding 29 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Green (1) vs MALARVAADI SOLDIERS KINGS CC 3rd Grade (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
+      "prompt": "Austin Billing played for Runaway Bay Premier Div 2, taking 2 wickets from 3 overs, conceding 8 runs. Game details: This was a One Day in the (2) CGC Premier League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Premier Div 2 (1) vs Helensvale 2nd Grade (1), the match result was Runaway Bay Premier Div 2 won by 5 wickets.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
-        "width": 236,
-        "height": 289
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
       },
-      "playedFor": "Hibo Green",
+      "playedFor": "Runaway Bay Premier Div 2",
       "assignSponsors": {
         "Team": {
-          "name": "Hibo Green"
+          "name": "Runaway Bay Premier Div 2"
         },
         "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+          "id": 53104,
+          "name": "(2) CGC Premier League - Division 2"
         },
         "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
         }
       }
     },
     {
-      "name": "Adam Bruckshaw  (vc)",
-      "runs": 50,
-      "overs": "7",
-      "prompt": "Adam Bruckshaw  (vc) played for SJCC Blues, taking 2 wickets from 7 overs, conceding 50 runs. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
+      "name": "Dale Rachow",
+      "runs": 10,
+      "overs": "3",
+      "prompt": "Dale Rachow played for Runaway Bay Orange Community Div 3, taking 2 wickets from 3 overs, conceding 10 runs. Game details: This was a One Day in the (6) CGC Community League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Orange Community Div 3 (1) vs Mudgeeraba Community Div 3 (1), the match result was Runaway Bay Orange Community Div 3 won by 49 runs.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
       },
-      "playedFor": "SJCC Blues",
+      "playedFor": "Runaway Bay Orange Community Div 3",
       "assignSponsors": {
         "Team": {
-          "name": "SJCC Blues"
+          "name": "Runaway Bay Orange Community Div 3"
         },
         "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+          "id": 53297,
+          "name": "(6) CGC Community League - Division 3"
         },
         "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Conan Dunning",
+      "runs": 16,
+      "overs": "3",
+      "prompt": "Conan Dunning played for Runaway Bay Community Div 2, taking 2 wickets from 3 overs, conceding 16 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs CHICC 5th grade (1), the match result was Runaway Bay Community Div 2 won by 83 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Community Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Community Div 2"
+        },
+        "grade": {
+          "id": 53296,
+          "name": "(5) CGC Community League - Division 2"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Chris Nilon",
+      "runs": 21,
+      "overs": "5",
+      "prompt": "Chris Nilon played for Runaway Bay Community Div 2, taking 2 wickets from 5 overs, conceding 21 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs CHICC 5th grade (1), the match result was Runaway Bay Community Div 2 won by 83 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Community Div 2",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Community Div 2"
+        },
+        "grade": {
+          "id": 53296,
+          "name": "(5) CGC Community League - Division 2"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Hamad Ahmad",
+      "runs": 25,
+      "overs": "6",
+      "prompt": "Hamad Ahmad played for Runaway Bay Navy Community Div 1, taking 2 wickets from 6 overs, conceding 25 runs. Game details: This was a One Day in the (4) CGC Community League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Navy Community Div 1 (1) vs Bond University Community Div 1 (1), the match result was Runaway Bay Navy Community Div 1 won by 5 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Navy Community Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Navy Community Div 1"
+        },
+        "grade": {
+          "id": 53295,
+          "name": "(4) CGC Community League - Division 1"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "Suranga Lakmal",
+      "runs": 30,
+      "overs": "8",
+      "prompt": "Suranga Lakmal played for Runaway Bay Premier Div 1, taking 2 wickets from 8 overs, conceding 30 runs. Game details: This was a One Day in the (1) CGC Premier League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Premier Div 1 (1) vs Helensvale 1st Grade (1), the match result was Helensvale 1st Grade won by 57 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Premier Div 1",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Premier Div 1"
+        },
+        "grade": {
+          "id": 53103,
+          "name": "(1) CGC Premier League - Division 1"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
+        }
+      }
+    },
+    {
+      "name": "William Altass",
+      "runs": 35,
+      "overs": "5",
+      "prompt": "William Altass played for Runaway Bay Premier Div 3, taking 2 wickets from 5 overs, conceding 35 runs. Game details: This was a One Day in the (3) CGC Premier League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Premier Div 3 (1) vs Burleigh Premier Div 3 (1), the match result was Runaway Bay Premier Div 3 won by 9 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
+      },
+      "playedFor": "Runaway Bay Premier Div 3",
+      "assignSponsors": {
+        "Team": {
+          "name": "Runaway Bay Premier Div 3"
+        },
+        "grade": {
+          "id": 53105,
+          "name": "(3) CGC Premier League - Division 3"
+        },
+        "competition": {
+          "id": 13440,
+          "name": "Cricket Gold Coast Senior Competition"
         }
       }
     }
   ],
   "asset": {
-    "assetID": 68,
+    "assetID": 66,
     "assetTypeID": 3,
-    "assetsLinkID": "d9eab53206ac7623be0c4e3b64d65711aa50533987de8aecc32bdbc9ad95ef4a",
-    "assetCategoryID": 2
+    "assetCategoryID": 1,
+    "assetsLinkID": "20582e085a467f6bcab99aa146b68bcbfc8692471d07e24cd7d85f291d8dfc9e"
   },
-  "errors": [],
-  "frames": [
-    45,
-    180,
-    345,
-    510,
-    645
-  ],
   "render": {
-    "renderId": 23107,
-    "schedulerId": 1097
+    "schedulerId": 317,
+    "renderId": 8676
   },
   "account": {
-    "accountId": 1097
+    "accountId": 430
   },
   "timings": {
     "FPS_MAIN": 510,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
+  "frames": [45, 180, 345, 510],
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_65_c67e5b1404.jpg",
-        "width": 1031,
-        "height": 1330,
-        "hasLogo": true
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
       },
-      "name": "Goulburn District Cricket Association",
+      "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 1390,
-              "url": "https://goulburnsoldiers.com.au/",
-              "logo": {
-                "id": 8796,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Glbn_Soldiers_Club_Logo_4b1eb2cade.jpg"
-              },
-              "name": "Goulburn Soldiers Club",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": true,
-              "description": null
-            }
-          ],
-          "general_sponsor_1": [
-            {
-              "id": 1391,
-              "url": "https://gpubg.com/",
-              "logo": {
-                "id": 8797,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/GPG_8c147ac418.jpg"
-              },
-              "name": "Goulburn Pub Group",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
-        "primary": [
-          {
-            "id": 1390,
-            "url": "https://goulburnsoldiers.com.au/",
-            "logo": {
-              "id": 8796,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Glbn_Soldiers_Club_Logo_4b1eb2cade.jpg"
-            },
-            "name": "Goulburn Soldiers Club",
-            "isVideo": true,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
-            "description": null
-          }
-        ]
+        "primary": [],
+        "default": {}
       },
-      "IsAccountClub": false
+      "IsAccountClub": true
     },
     "video": {
-      "media": {
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
-        },
-        "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "",
-          "AssetType": "",
-          "markerPosition": ""
-        }
-      },
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Bowling Performances",
-        "frames": [],
-        "assetId": 68,
-        "titleSplit": [
-          "Performances"
-        ],
+        "titleSplit": ["Performances"],
         "videoTitle": "Bowling Performances",
-        "assetTypeId": 3,
         "compositionId": "CricketBowlingPerformances",
-        "includeSponsors": true
+        "assetId": 66,
+        "assetTypeId": 3,
+        "frames": [],
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#de0000",
-          "secondary": "#ffa300"
+          "primary": "#352466",
+          "secondary": "#ffa500"
         },
-        "template": "CNSW"
+        "template": "TwoColumnClassic"
+      },
+      "media": {
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2023_Netball_Hero_CAV_9816_ddd33794fc.jpg",
+          "ratio": "landscape",
+          "width": 830,
+          "height": 400,
+          "AgeGroup": "Both",
+          "AssetType": "ALL",
+          "markerPosition": null
+        },
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        }
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -583,158 +395,168 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketBattingPerformances": 7,
-          "CricketBowlingPerformances": 7
+          "CricketBattingPerformances": 5,
+          "CricketBowlingPerformances": 5,
+          "CricketTeamOfTheWeek": 2
         }
       },
-      "fixtureCategory": "Goulburn District Cricket Association",
-      "groupingCategory": "Goulburn District Cricket Association",
       "templateVariation": {
+        "useBackground": "Texture",
         "mode": "lightAlt",
-        "image": {
-          "url": null,
-          "type": "pan",
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "direction": "left",
-          "gradientType": "linear",
-          "overlayStyle": "vignette",
-          "overlayOpacity": 0.3
-        },
-        "noise": {
-          "type": "floatingParticles"
+        "category": {
+          "slug": "TwoColumnClassic",
+          "name": "Classic Two Column ",
+          "divideFixturesBy": {
+            "CricketUpcoming": 3,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketBowlingPerformances": 5,
+            "CricketBattingPerformances": 5
+          },
+          "bundleAudio": {
+            "id": 1,
+            "Name": "Basic",
+            "createdAt": "2023-09-27T10:36:24.428Z",
+            "updatedAt": "2025-06-15T04:50:57.910Z",
+            "publishedAt": "2023-09-27T10:36:25.639Z",
+            "audio_options": [
+              {
+                "id": 4,
+                "Name": "Better Start Now",
+                "createdAt": "2023-09-27T10:34:46.702Z",
+                "updatedAt": "2025-06-15T04:53:45.558Z",
+                "publishedAt": "2023-09-27T10:34:48.455Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
+                "CompositionID": "CricketLadder",
+                "ComponentName": "CricketLadder"
+              },
+              {
+                "id": 2,
+                "Name": "Fifteen on Me",
+                "createdAt": "2022-12-20T01:59:28.337Z",
+                "updatedAt": "2025-06-15T04:53:11.194Z",
+                "publishedAt": "2022-12-20T01:59:29.080Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
+              },
+              {
+                "id": 5,
+                "Name": "Get The Gains",
+                "createdAt": "2023-09-27T10:35:01.053Z",
+                "updatedAt": "2025-06-15T04:53:59.493Z",
+                "publishedAt": "2023-09-27T10:35:29.163Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "CompositionID": "CricketTop5Bowling",
+                "ComponentName": "CricketTop5Bowling"
+              },
+              {
+                "id": 3,
+                "Name": "Groover",
+                "createdAt": "2022-12-20T01:59:34.014Z",
+                "updatedAt": "2025-06-15T04:53:28.656Z",
+                "publishedAt": "2022-12-20T01:59:34.670Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "CompositionID": "CricketTop5Batting",
+                "ComponentName": "CricketTop5Batting"
+              },
+              {
+                "id": 1,
+                "Name": "Saltine",
+                "createdAt": "2022-12-12T05:19:56.353Z",
+                "updatedAt": "2025-06-15T04:50:50.079Z",
+                "publishedAt": "2022-12-12T05:19:57.408Z",
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
+                "CompositionID": "CricketResults",
+                "ComponentName": "CricketResults"
+              },
+              {
+                "id": 16,
+                "Name": "BEECH LOVE",
+                "createdAt": "2024-06-05T04:31:26.640Z",
+                "updatedAt": "2026-01-05T09:04:09.788Z",
+                "publishedAt": "2024-06-07T12:45:32.118Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
+              },
+              {
+                "id": 17,
+                "Name": "FAY V",
+                "createdAt": "2024-06-05T04:33:33.970Z",
+                "updatedAt": "2024-06-07T12:48:03.161Z",
+                "publishedAt": "2024-06-07T12:47:53.394Z",
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
+                "CompositionID": "WeekendResultsAFL",
+                "ComponentName": "Weekend Results"
+              }
+            ]
+          }
         },
         "video": {
           "url": null,
-          "loop": null,
+          "fallbackUrl": null,
+          "position": "left",
           "size": "cover",
+          "loop": null,
           "muted": true,
-          "volume": 0.8,
           "overlay": {
             "color": "rgba(0,0,0,0.5)",
             "opacity": 0.7
           },
-          "position": "left",
-          "fallbackUrl": null,
-          "playbackRate": null,
-          "useOffthreadVideo": null
+          "useOffthreadVideo": null,
+          "volume": 0.8,
+          "playbackRate": null
         },
-        "palette": "secondary",
-        "pattern": {
-          "type": "dots",
-          "scale": 0.75,
-          "opacity": 0.35,
-          "rotation": null,
-          "animation": "none",
-          "animationSpeed": 0.8,
-          "animationDuration": null
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": "pan",
+          "direction": "left",
+          "overlayStyle": "vignette",
+          "gradientType": "linear",
+          "overlayOpacity": 0.3
         },
-        "texture": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_Stone_007e575f87.png",
-          "name": "Stone 2",
-          "scale": "100%",
-          "repeat": "cover",
-          "overlay": {
-            "opacity": 0.7,
-            "blendMode": "multiply"
-          }
-        },
-        "category": {
-          "name": "Cricket NSW",
-          "slug": "CNSW",
-          "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-30T00:35:16.398Z",
-            "updatedAt": "2024-10-30T00:35:17.926Z",
-            "publishedAt": "2024-10-30T00:35:17.915Z",
-            "audio_options": [
-              {
-                "id": 33,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-30T00:35:04.160Z",
-                "updatedAt": "2024-10-30T00:36:30.358Z",
-                "publishedAt": "2024-10-30T00:35:05.839Z",
-                "ComponentName": "Top 5 Bowling",
-                "CompositionID": "Top5BowlingList"
-              },
-              {
-                "id": 34,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
-                "Name": "GoodGoodFeeling_Inst",
-                "createdAt": "2024-10-30T00:37:09.563Z",
-                "updatedAt": "2024-10-30T00:38:09.963Z",
-                "publishedAt": "2024-10-30T00:38:09.959Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              },
-              {
-                "id": 35,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-30T00:38:02.552Z",
-                "updatedAt": "2024-10-30T00:38:04.070Z",
-                "publishedAt": "2024-10-30T00:38:04.063Z",
-                "ComponentName": "Weekend Results",
-                "CompositionID": "WeekendResults"
-              },
-              {
-                "id": 36,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-30T00:39:02.570Z",
-                "updatedAt": "2024-10-30T00:39:04.182Z",
-                "publishedAt": "2024-10-30T00:39:04.177Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
-              },
-              {
-                "id": 38,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-30T01:00:28.630Z",
-                "updatedAt": "2024-10-30T01:00:30.327Z",
-                "publishedAt": "2024-10-30T01:00:30.319Z",
-                "ComponentName": "Top 5 Batting",
-                "CompositionID": "Top5BattingList"
-              },
-              {
-                "id": 39,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-30T01:01:10.581Z",
-                "updatedAt": "2024-10-30T01:01:13.949Z",
-                "publishedAt": "2024-10-30T01:01:13.932Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              }
-            ]
-          },
-          "divideFixturesBy": {
-            "CricketLadder": 1,
-            "CricketRoster": 1,
-            "CricketResults": 2,
-            "CricketUpcoming": 3,
-            "CricketResultSingle": 1,
-            "CricketBattingPerformances": 7,
-            "CricketBowlingPerformances": 7
-          }
-        },
+        "palette": "primaryOnWhite",
         "gradient": {
           "type": "primary",
           "direction": "HORIZONTAL"
         },
+        "noise": {
+          "type": "floatingParticles"
+        },
+        "pattern": {
+          "type": "dots",
+          "animation": "none",
+          "scale": 0.75,
+          "rotation": null,
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
+        },
         "particle": {
           "type": "lines",
+          "particleCount": "300",
           "speed": 0.8,
-          "animation": "scale",
           "direction": "up",
-          "particleCount": "300"
+          "animation": "scale"
         },
-        "useBackground": "Texture"
+        "texture": {
+          "name": "Print Texture",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Geometric_Halftone_Print_Texture_cb888287e4.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.8,
+            "blendMode": "multiply"
+          }
+        }
       }
     }
-  }
+  },
+  "errors": []
 }

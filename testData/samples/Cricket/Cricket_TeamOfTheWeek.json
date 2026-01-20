@@ -4,32 +4,33 @@
       "category": "Batter",
       "categoryDetail": {
         "type": "Batter",
-        "position": "topscorer"
+        "position": "higheststrikerate"
       },
       "rank": 1,
-      "player": "christian leopard  (vc)",
-      "primaryTeam": "Napier Tech Complete Flooring Prems",
+      "player": "joshua foenander",
+      "primaryTeam": "Runaway Bay Community Div 2",
       "club": {
-        "name": "Napier Tech Complete Flooring Prems",
+        "name": "Runaway Bay Community Div 2",
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-          "width": 1181,
-          "height": 1181
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
         }
       },
       "batting": {
-        "runs": 79,
-        "balls": 39,
-        "fours": 6,
-        "sixes": 6,
-        "strikeRate": 202.56,
-        "notOut": true,
-        "team": "Napier Tech Complete Flooring Prems"
+        "runs": 45,
+        "balls": 17,
+        "fours": 3,
+        "sixes": 5,
+        "strikeRate": 264.71,
+        "notOut": false,
+        "team": "Runaway Bay Community Div 2"
       },
       "rankings": {
-        "topRunScorer": 3,
-        "highestStrikeRate": 11
-      }
+        "topRunScorer": 8,
+        "highestStrikeRate": 1
+      },
+      "prompt": "joshua foenander from Runaway Bay Community Div 2. has been selected as the top batter in the Team of the Week. Batting: scored 45 runs, from 17 balls, with a strike rate of 264.7, including 3 fours, and 5 sixes. Overall rankings: ranked #8 in runs scored, ranked #1 in strike rate."
     },
     {
       "category": "Batter",
@@ -38,60 +39,30 @@
         "position": "higheststrikerate"
       },
       "rank": 2,
-      "player": "levi armstrong",
-      "primaryTeam": "Nui Style",
+      "player": "luke northam",
+      "primaryTeam": "Runaway Bay Community Div 2",
       "club": {
-        "name": "Nui Style",
+        "name": "Runaway Bay Community Div 2",
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
         }
       },
       "batting": {
-        "runs": 39,
-        "balls": 14,
-        "fours": 2,
-        "sixes": 4,
-        "strikeRate": 278.57,
-        "notOut": false,
-        "team": "Nui Style"
+        "runs": 64,
+        "balls": 34,
+        "fours": 10,
+        "sixes": 2,
+        "strikeRate": 188.24,
+        "notOut": true,
+        "team": "Runaway Bay Community Div 2"
       },
       "rankings": {
-        "topRunScorer": 25,
-        "highestStrikeRate": 1
-      }
-    },
-    {
-      "category": "Batter",
-      "categoryDetail": {
-        "type": "Batter",
-        "position": "topscorer"
+        "topRunScorer": 3,
+        "highestStrikeRate": 2
       },
-      "rank": 3,
-      "player": "danial ibrahim",
-      "primaryTeam": "Central HB Waipawa Butchery Prems",
-      "club": {
-        "name": "Central HB Waipawa Butchery Prems",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_403e89d6e2.jpg",
-          "width": 2000,
-          "height": 889
-        }
-      },
-      "batting": {
-        "runs": 89,
-        "balls": 50,
-        "fours": 6,
-        "sixes": 7,
-        "strikeRate": 178,
-        "notOut": false,
-        "team": "Central HB Waipawa Butchery Prems"
-      },
-      "rankings": {
-        "topRunScorer": 1,
-        "highestStrikeRate": 19
-      }
+      "prompt": "luke northam from Runaway Bay Community Div 2. has been selected as rank 2 batter in the Team of the Week. Batting: scored 64 runs, from 34 balls, with a strike rate of 188.2, including 10 fours, and 2 sixes, (not out). Overall rankings: ranked #3 in runs scored, ranked #2 in strike rate."
     },
     {
       "category": "Batter",
@@ -99,157 +70,192 @@
         "type": "Batter",
         "position": "higheststrikerate"
       },
-      "rank": 4,
-      "player": "lachlan faulknor",
-      "primaryTeam": "Six Offenders",
+      "rank": 3,
+      "player": "ahmad jawid",
+      "primaryTeam": "Runaway Bay Premier Div 1",
       "club": {
-        "name": "Six Offenders",
+        "name": "Runaway Bay Premier Div 1",
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "batting": {
+        "runs": 33,
+        "balls": 18,
+        "fours": 0,
+        "sixes": 4,
+        "strikeRate": 183.33,
+        "notOut": false,
+        "team": "Runaway Bay Premier Div 1"
+      },
+      "rankings": {
+        "topRunScorer": 13,
+        "highestStrikeRate": 3
+      },
+      "prompt": "ahmad jawid from Runaway Bay Premier Div 1. has been selected as rank 3 batter in the Team of the Week. Batting: scored 33 runs, from 18 balls, with a strike rate of 183.3, and 4 sixes. Overall rankings: ranked #13 in runs scored, ranked #3 in strike rate."
+    },
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "topscorer"
+      },
+      "rank": 4,
+      "player": "brendan roberts",
+      "primaryTeam": "Runaway Bay Premier Div 3",
+      "club": {
+        "name": "Runaway Bay Premier Div 3",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "batting": {
+        "runs": 68,
+        "balls": 80,
+        "fours": 7,
+        "sixes": 0,
+        "strikeRate": 85,
+        "notOut": true,
+        "team": "Runaway Bay Premier Div 3"
+      },
+      "rankings": {
+        "topRunScorer": 2,
+        "highestStrikeRate": 10
+      },
+      "prompt": "brendan roberts from Runaway Bay Premier Div 3. has been selected as rank 4 batter in the Team of the Week. Batting: scored 68 runs, from 80 balls, with a strike rate of 85.0, including 7 fours, (not out). Overall rankings: ranked #2 in runs scored, ranked #10 in strike rate."
+    },
+    {
+      "category": "Batter",
+      "categoryDetail": {
+        "type": "Batter",
+        "position": "topscorer"
+      },
+      "rank": 5,
+      "player": "yasiru gamaarachchi",
+      "primaryTeam": "Runaway Bay Premier Div 1",
+      "club": {
+        "name": "Runaway Bay Premier Div 1",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "batting": {
+        "runs": 71,
+        "balls": 93,
+        "fours": 6,
+        "sixes": 1,
+        "strikeRate": 76.34,
+        "notOut": false,
+        "team": "Runaway Bay Premier Div 1"
+      },
+      "rankings": {
+        "topRunScorer": 1,
+        "highestStrikeRate": 11
+      },
+      "prompt": "yasiru gamaarachchi from Runaway Bay Premier Div 1. has been selected as rank 5 batter in the Team of the Week. Batting: scored 71 runs, from 93 balls, with a strike rate of 76.3, including 6 fours, and 1 sixes. Overall rankings: ranked #1 in runs scored, ranked #11 in strike rate."
+    },
+    {
+      "category": "All-Rounder",
+      "categoryDetail": {
+        "type": "All-Rounder",
+        "position": "topallrounder"
+      },
+      "rank": 1,
+      "player": "thomas gossett",
+      "primaryTeam": "Runaway Bay Premier Div 2",
+      "club": {
+        "name": "Runaway Bay Premier Div 2",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "batting": {
+        "runs": 42,
+        "balls": 47,
+        "fours": 4,
+        "sixes": 0,
+        "strikeRate": 89.36,
+        "notOut": false,
+        "team": "Runaway Bay Premier Div 2"
+      },
+      "bowling": {
+        "wickets": 1,
+        "overs": 8,
+        "maidens": 1,
+        "runs": 27,
+        "economy": 3.38,
+        "team": "Runaway Bay Premier Div 2"
+      },
+      "allRounder": {
+        "score": 42,
+        "formula": "runs × wickets",
+        "battingContribution": 42,
+        "bowlingContribution": 1
+      },
+      "rankings": {
+        "topRunScorer": 9,
+        "highestStrikeRate": 9,
+        "mostWickets": 12,
+        "bestEconomy": 5,
+        "topAllRounder": 1
+      },
+      "prompt": "thomas gossett from Runaway Bay Premier Div 2. has been selected as the top all-rounder in the Team of the Week. Batting: scored 42 runs, from 47 balls, with a strike rate of 89.4, including 4 fours. Bowling: took 1 wicket, from 8 overs, conceding 27 runs, with an economy rate of 3.38, including 1 maiden. All-rounder score: 42.0. Overall rankings: ranked #9 in runs scored, ranked #9 in strike rate, ranked #12 in wickets taken, ranked #5 in economy rate, ranked #1 in all-rounder performance."
+    },
+    {
+      "category": "All-Rounder",
+      "categoryDetail": {
+        "type": "All-Rounder",
+        "position": "topallrounder"
+      },
+      "rank": 2,
+      "player": "chris schultz  (c)",
+      "primaryTeam": "Runaway Bay Orange Community Div 3",
+      "club": {
+        "name": "Runaway Bay Orange Community Div 3",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
         }
       },
       "batting": {
         "runs": 40,
-        "balls": 16,
-        "fours": 1,
-        "sixes": 5,
-        "strikeRate": 250,
-        "notOut": false,
-        "team": "Six Offenders"
-      },
-      "rankings": {
-        "topRunScorer": 23,
-        "highestStrikeRate": 3
-      }
-    },
-    {
-      "category": "Batter",
-      "categoryDetail": {
-        "type": "Batter",
-        "position": "higheststrikerate"
-      },
-      "rank": 5,
-      "player": "stephen price",
-      "primaryTeam": "OC's",
-      "club": {
-        "name": "OC's",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        }
-      },
-      "batting": {
-        "runs": 36,
-        "balls": 14,
-        "fours": 3,
-        "sixes": 2,
-        "strikeRate": 257.14,
-        "notOut": false,
-        "team": "OC's"
-      },
-      "rankings": {
-        "topRunScorer": 44,
-        "highestStrikeRate": 2
-      }
-    },
-    {
-      "category": "All-Rounder",
-      "categoryDetail": {
-        "type": "All-Rounder",
-        "position": "topallrounder"
-      },
-      "rank": 1,
-      "player": "jagdeep singh",
-      "primaryTeam": "NOBMCC Eagles D2a - Geoff Pollard Cup",
-      "club": {
-        "name": "NOBMCC Eagles D2a - Geoff Pollard Cup",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55c76bc9cc.jpg",
-          "width": 944,
-          "height": 960
-        }
-      },
-      "batting": {
-        "runs": 63,
-        "balls": 42,
-        "fours": 3,
-        "sixes": 5,
-        "strikeRate": 150,
-        "notOut": false,
-        "team": "NOBMCC Eagles D2a - Geoff Pollard Cup"
-      },
-      "bowling": {
-        "wickets": 3,
-        "overs": 8,
-        "maidens": 1,
-        "runs": 54,
-        "economy": 6.75,
-        "team": "NOBMCC Eagles D2a - Geoff Pollard Cup"
-      },
-      "allRounder": {
-        "score": 189,
-        "formula": "runs × wickets",
-        "battingContribution": 63,
-        "bowlingContribution": 3
-      },
-      "rankings": {
-        "topRunScorer": 6,
-        "highestStrikeRate": 32,
-        "mostWickets": 10,
-        "bestEconomy": 31,
-        "topAllRounder": 1
-      }
-    },
-    {
-      "category": "All-Rounder",
-      "categoryDetail": {
-        "type": "All-Rounder",
-        "position": "topallrounder"
-      },
-      "rank": 2,
-      "player": "naveen samarakkodi",
-      "primaryTeam": "Napier Tech  Lions - 25/26",
-      "club": {
-        "name": "Napier Tech  Lions - 25/26",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_59_cf6fbe615e.png",
-          "width": 1181,
-          "height": 1181
-        }
-      },
-      "batting": {
-        "runs": 56,
-        "balls": 45,
-        "fours": 10,
+        "balls": 37,
+        "fours": 4,
         "sixes": 0,
-        "strikeRate": 124.44,
-        "notOut": true,
-        "team": "Napier Tech  Lions - 25/26"
+        "strikeRate": 108.11,
+        "notOut": false,
+        "team": "Runaway Bay Orange Community Div 3"
       },
       "bowling": {
-        "wickets": 3,
-        "overs": 7,
+        "wickets": 1,
+        "overs": 4,
         "maidens": 1,
-        "runs": 30,
-        "economy": 4.29,
-        "team": "Napier Tech  Lions - 25/26"
+        "runs": 14,
+        "economy": 3.5,
+        "team": "Runaway Bay Orange Community Div 3"
       },
       "allRounder": {
-        "score": 168,
+        "score": 40,
         "formula": "runs × wickets",
-        "battingContribution": 56,
-        "bowlingContribution": 3
+        "battingContribution": 40,
+        "bowlingContribution": 1
       },
       "rankings": {
         "topRunScorer": 10,
-        "highestStrikeRate": 48,
-        "mostWickets": 8,
-        "bestEconomy": 13,
+        "highestStrikeRate": 8,
+        "mostWickets": 13,
         "topAllRounder": 2
-      }
+      },
+      "prompt": "chris schultz  (c) from Runaway Bay Orange Community Div 3. has been selected as rank 2 all-rounder in the Team of the Week. Batting: scored 40 runs, from 37 balls, with a strike rate of 108.1, including 4 fours. Bowling: took 1 wicket, from 4 overs, conceding 14 runs, with an economy rate of 3.50, including 1 maiden. All-rounder score: 40.0. Overall rankings: ranked #10 in runs scored, ranked #8 in strike rate, ranked #13 in wickets taken, ranked #2 in all-rounder performance."
     },
     {
       "category": "Bowler",
@@ -258,28 +264,46 @@
         "position": "mostwickets"
       },
       "rank": 1,
-      "player": "jack pyott",
-      "primaryTeam": "HNCC Hansen Bate - Div 2 - The Molly's",
+      "player": "sean clark  (c)",
+      "primaryTeam": "Runaway Bay Navy Community Div 1",
       "club": {
-        "name": "HNCC Hansen Bate - Div 2 - The Molly's",
+        "name": "Runaway Bay Navy Community Div 1",
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_727ffa1417.jpg",
-          "width": 582,
-          "height": 600
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
         }
       },
+      "batting": {
+        "runs": 6,
+        "balls": 21,
+        "fours": 1,
+        "sixes": 0,
+        "strikeRate": 28.57,
+        "notOut": false,
+        "team": "Runaway Bay Navy Community Div 1"
+      },
       "bowling": {
-        "wickets": 4,
-        "overs": 8,
-        "maidens": 1,
-        "runs": 23,
-        "economy": 2.88,
-        "team": "HNCC Hansen Bate - Div 2 - The Molly's"
+        "wickets": 5,
+        "overs": 6,
+        "maidens": 0,
+        "runs": 38,
+        "economy": 6.33,
+        "team": "Runaway Bay Navy Community Div 1"
+      },
+      "allRounder": {
+        "score": 30,
+        "formula": "runs × wickets",
+        "battingContribution": 6,
+        "bowlingContribution": 5
       },
       "rankings": {
-        "mostWickets": 3,
-        "bestEconomy": 6
-      }
+        "topRunScorer": 21,
+        "mostWickets": 1,
+        "bestEconomy": 10,
+        "topAllRounder": 3
+      },
+      "prompt": "sean clark  (c) from Runaway Bay Navy Community Div 1. has been selected as the top bowler in the Team of the Week. Batting: scored 6 runs, from 21 balls, with a strike rate of 28.6, including 1 fours. Bowling: took 5 wickets, from 6 overs, conceding 38 runs, with an economy rate of 6.33. All-rounder score: 30.0. Overall rankings: ranked #21 in runs scored, ranked #1 in wickets taken, ranked #10 in economy rate, ranked #3 in all-rounder performance."
     },
     {
       "category": "Bowler",
@@ -288,106 +312,91 @@
         "position": "mostwickets"
       },
       "rank": 2,
-      "player": "gagandeep singh saini",
-      "primaryTeam": "Hawke's Bay United Kings",
+      "player": "kunal thakur",
+      "primaryTeam": "Runaway Bay Premier Div 3",
       "club": {
-        "name": "Hawke's Bay United Kings",
+        "name": "Runaway Bay Premier Div 3",
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
         }
-      },
-      "bowling": {
-        "wickets": 4,
-        "overs": 8,
-        "maidens": 0,
-        "runs": 37,
-        "economy": 4.63,
-        "team": "Hawke's Bay United Kings"
-      },
-      "rankings": {
-        "mostWickets": 2,
-        "bestEconomy": 20
-      }
-    },
-    {
-      "category": "Bowler",
-      "categoryDetail": {
-        "type": "Bowler",
-        "position": "besteconomy"
-      },
-      "rank": 3,
-      "player": "scott morgan",
-      "primaryTeam": "NOBMCC Hobblers D2b",
-      "club": {
-        "name": "NOBMCC Hobblers D2b",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_55c76bc9cc.jpg",
-          "width": 944,
-          "height": 960
-        }
-      },
-      "bowling": {
-        "wickets": 3,
-        "overs": 8,
-        "maidens": 2,
-        "runs": 11,
-        "economy": 1.38,
-        "team": "NOBMCC Hobblers D2b"
-      },
-      "rankings": {
-        "mostWickets": 17,
-        "bestEconomy": 1
-      }
-    },
-    {
-      "category": "Bowler",
-      "categoryDetail": {
-        "type": "Bowler",
-        "position": "besteconomy"
-      },
-      "rank": 4,
-      "player": "jason sayer",
-      "primaryTeam": "Norfolk n Chance",
-      "club": {
-        "name": "Norfolk n Chance",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
-        }
-      },
-      "batting": {
-        "runs": 37,
-        "balls": 21,
-        "fours": 5,
-        "sixes": 1,
-        "strikeRate": 176.19,
-        "notOut": false,
-        "team": "Norfolk n Chance"
       },
       "bowling": {
         "wickets": 3,
         "overs": 5,
         "maidens": 1,
-        "runs": 13,
-        "economy": 2.6,
-        "team": "NOBMCC Hobblers D2b"
-      },
-      "allRounder": {
-        "score": 111,
-        "formula": "runs × wickets",
-        "battingContribution": 37,
-        "bowlingContribution": 3
+        "runs": 17,
+        "economy": 3.4,
+        "team": "Runaway Bay Premier Div 3"
       },
       "rankings": {
-        "topRunScorer": 35,
-        "highestStrikeRate": 20,
+        "mostWickets": 2,
+        "bestEconomy": 6
+      },
+      "prompt": "kunal thakur from Runaway Bay Premier Div 3. has been selected as rank 2 bowler in the Team of the Week. Bowling: took 3 wickets, from 5 overs, conceding 17 runs, with an economy rate of 3.40, including 1 maiden. Overall rankings: ranked #2 in wickets taken, ranked #6 in economy rate."
+    },
+    {
+      "category": "Bowler",
+      "categoryDetail": {
+        "type": "Bowler",
+        "position": "mostwickets"
+      },
+      "rank": 3,
+      "player": "michael schumacher",
+      "primaryTeam": "Runaway Bay Community Div 2",
+      "club": {
+        "name": "Runaway Bay Community Div 2",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "bowling": {
+        "wickets": 3,
+        "overs": 6,
+        "maidens": 0,
+        "runs": 28,
+        "economy": 4.67,
+        "team": "Runaway Bay Community Div 2"
+      },
+      "rankings": {
+        "mostWickets": 4,
+        "bestEconomy": 8
+      },
+      "prompt": "michael schumacher from Runaway Bay Community Div 2. has been selected as rank 3 bowler in the Team of the Week. Bowling: took 3 wickets, from 6 overs, conceding 28 runs, with an economy rate of 4.67. Overall rankings: ranked #4 in wickets taken, ranked #8 in economy rate."
+    },
+    {
+      "category": "Bowler",
+      "categoryDetail": {
+        "type": "Bowler",
+        "position": "mostwickets"
+      },
+      "rank": 4,
+      "player": "arron quine",
+      "primaryTeam": "Runaway Bay Community Div 2",
+      "club": {
+        "name": "Runaway Bay Community Div 2",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "bowling": {
+        "wickets": 3,
+        "overs": 6,
+        "maidens": 1,
+        "runs": 28,
+        "economy": 4.67,
+        "team": "Runaway Bay Community Div 2"
+      },
+      "rankings": {
         "mostWickets": 5,
-        "bestEconomy": 3,
-        "topAllRounder": 3
-      }
+        "bestEconomy": 9
+      },
+      "prompt": "arron quine from Runaway Bay Community Div 2. has been selected as rank 4 bowler in the Team of the Week. Bowling: took 3 wickets, from 6 overs, conceding 28 runs, with an economy rate of 4.67, including 1 maiden. Overall rankings: ranked #5 in wickets taken, ranked #9 in economy rate."
     },
     {
       "category": "Twelfth Man",
@@ -396,78 +405,66 @@
         "position": "bestoftherest"
       },
       "rank": 1,
-      "player": "nick dale  (c)",
-      "primaryTeam": "The Ugly Bunch",
+      "player": "harrison rachow",
+      "primaryTeam": "Runaway Bay Orange Community Div 1",
       "club": {
-        "name": "The Ugly Bunch",
+        "name": "Runaway Bay Orange Community Div 1",
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-          "width": 1211,
-          "height": 1211
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
         }
       },
       "batting": {
-        "runs": 36,
-        "balls": 19,
-        "fours": 4,
-        "sixes": 2,
-        "strikeRate": 189.47,
+        "runs": 50,
+        "balls": 43,
+        "fours": 7,
+        "sixes": 1,
+        "strikeRate": 116.28,
         "notOut": false,
-        "team": "The Ugly Bunch"
-      },
-      "bowling": {
-        "wickets": 2,
-        "overs": 1,
-        "maidens": 0,
-        "runs": 2,
-        "economy": 2,
-        "team": "The Ugly Bunch"
-      },
-      "allRounder": {
-        "score": 72,
-        "formula": "runs × wickets",
-        "battingContribution": 36,
-        "bowlingContribution": 2
+        "team": "Runaway Bay Orange Community Div 1"
       },
       "rankings": {
-        "topRunScorer": 43,
-        "highestStrikeRate": 15,
-        "mostWickets": 24,
-        "topAllRounder": 9
-      }
+        "topRunScorer": 4,
+        "highestStrikeRate": 5
+      },
+      "prompt": "harrison rachow from Runaway Bay Orange Community Div 1. has been selected as the top twelfth man in the Team of the Week. Batting: scored 50 runs, from 43 balls, with a strike rate of 116.3, including 7 fours, and 1 sixes. Overall rankings: ranked #4 in runs scored, ranked #5 in strike rate."
     }
   ],
   "asset": {
     "assetID": 69,
     "assetTypeID": 3,
     "assetCategoryID": 1,
-    "assetsLinkID": "5fdca42e4bc60235b0d7617c1d66ffd6962fbec184919598dbee2be14e3ba0ae"
+    "assetsLinkID": "77ddda4411015a47006b171bb14937af3c44832c39a4c4038c960ab5d8c81c43"
   },
   "render": {
-    "schedulerId": 323,
-    "renderId": 8661
+    "schedulerId": 317,
+    "renderId": 8702
   },
   "account": {
-    "accountId": 436
+    "accountId": 430
   },
   "timings": {
-    "FPS_MAIN": 1005,
+    "FPS_MAIN": 180,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
-  "frames": [45, 180, 345, 510, 675, 840, 1005],
+  "frames": [
+    45,
+    180
+  ],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_64_d6d6fd9fae.jpg",
-        "width": 4167,
-        "height": 4167
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+        "width": 500,
+        "height": 500
       },
-      "name": "Hawke's Bay Cricket Association",
+      "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
       "sponsors": {
         "primary": [],
@@ -476,11 +473,13 @@
       "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "Senior",
-      "groupingCategory": "Senior",
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Team of the Week",
-        "titleSplit": ["Team of the Week"],
+        "titleSplit": [
+          "Team of the Week"
+        ],
         "videoTitle": "Team of the Week",
         "compositionId": "CricketTeamOfTheWeek",
         "assetId": 69,
@@ -492,20 +491,20 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#000000",
-          "secondary": "#ffffff"
+          "primary": "#352466",
+          "secondary": "#ffa500"
         },
-        "template": "Basic"
+        "template": "TwoColumnClassic"
       },
       "media": {
         "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "",
-          "AssetType": "",
-          "markerPosition": ""
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2023_Netball_Hero_CAV_9816_ddd33794fc.jpg",
+          "ratio": "landscape",
+          "width": 830,
+          "height": 400,
+          "AgeGroup": "Both",
+          "AssetType": "ALL",
+          "markerPosition": null
         },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
@@ -528,8 +527,8 @@
         "useBackground": "Texture",
         "mode": "lightAlt",
         "category": {
-          "slug": "Basic",
-          "name": "Basic",
+          "slug": "TwoColumnClassic",
+          "name": "Classic Two Column ",
           "divideFixturesBy": {
             "CricketUpcoming": 3,
             "CricketResults": 2,
@@ -600,11 +599,11 @@
                 "id": 16,
                 "Name": "BEECH LOVE",
                 "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2024-06-07T12:45:43.674Z",
+                "updatedAt": "2026-01-05T09:04:09.788Z",
                 "publishedAt": "2024-06-07T12:45:32.118Z",
                 "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "Top5AFLScorers",
-                "ComponentName": "Top 5 Scorers"
+                "CompositionID": "CricketUpcoming",
+                "ComponentName": "CricketUpcoming"
               },
               {
                 "id": 17,
@@ -648,7 +647,7 @@
         "palette": "primaryOnWhite",
         "gradient": {
           "type": "primary",
-          "direction": "VERTICAL"
+          "direction": "HORIZONTAL"
         },
         "noise": {
           "type": "floatingParticles"
@@ -670,8 +669,8 @@
           "animation": "scale"
         },
         "texture": {
-          "name": "Grass",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Pitch_Grass_Texture_f188e51974.png",
+          "name": "Print Texture",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Geometric_Halftone_Print_Texture_cb888287e4.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {

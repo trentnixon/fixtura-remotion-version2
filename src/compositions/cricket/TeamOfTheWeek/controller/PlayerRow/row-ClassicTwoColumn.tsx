@@ -1,34 +1,20 @@
 import React from "react";
-import { TeamOfTheWeekPlayer, PLAYER_STAGGER_DELAY } from "../../types";
+import { PLAYER_STAGGER_DELAY, PlayerRowProps } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { Img } from "remotion";
 import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
 //import { TeamOfTheWeekTeam } from "../../../utils/primitives/TeamOfTheWeekTeam";
-import { TeamOfTheWeekType } from "../../../utils/primitives/TeamOfTheWeekType";
+//import { TeamOfTheWeekType } from "../../../utils/primitives/TeamOfTheWeekType";
 import { TeamOfTheWeekStat } from "../../../utils/primitives/TeamOfTheWeekStat";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { BattingStats, BowlingStats } from "../../types";
+import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
+import { cleanPlayerName, getPositionIcon } from "../../utils/config";
 
-interface PlayerRowProps {
-  player: TeamOfTheWeekPlayer;
-  index: number;
-  rowHeight: number;
-}
-
-// Helper function to format category position
-const getCategoryPositionLabel = (position: string): string => {
-  const labels: Record<string, string> = {
-    topscorer: "Top Scorer",
-    higheststrikerate: "Highest Strike Rate",
-    mostwickets: "Most Wickets",
-    besteconomy: "Best Economy",
-    topallrounder: "Top All-Rounder",
-    bestoftherest: "12th Man",
-  };
-  return labels[position] || position;
-};
+// Icon pack configuration for ClassicTwoColumn variant
+const ICON_PACK = "icon1"; // Change this to use a different icon pack (e.g., "icon2", "icon3")
 
 const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
   player,
@@ -38,23 +24,31 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
   const { animations } = useAnimationContext();
   const { selectedPalette, layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
+  const { club } = useVideoDataContext();
+  const isAccountClub = club.IsAccountClub || false;
   const delay = index * PLAYER_STAGGER_DELAY;
 
   // Text animations
   const largeTextAnimation = animations.text.main.copyIn;
-  const smallTextAnimation = animations.text.main.copyIn;
+  // const smallTextAnimation = animations.text.main.copyIn;
 
   // Background colors matching Top5 ClassicTwoColumn
   const bgColor = selectedPalette.container.backgroundTransparent.strong;
   const logoBG = selectedPalette.container.primary;
   const contrastBG = selectedPalette.container.backgroundTransparent.strong;
 
+  // Get the color for onContainerTitle variant to match the text
+  const iconColor = selectedPalette.text.onContainer.title;
+
   // All-rounders use same height as other players
   const isAllRounderPosition =
     player.categoryDetail.position === "topallrounder" ||
     player.categoryDetail.position === "bestoftherest";
   const hasBothStats = player.batting && player.bowling;
-  const adjustedHeight = rowHeight;
+
+  // Get the appropriate SVG icon component for the position
+  // Uses the icon pack configured for ClassicTwoColumn variant (see ICON_PACK constant above)
+  const PositionIcon = getPositionIcon(player.categoryDetail.position, ICON_PACK);
 
   return (
     <AnimatedContainer
@@ -68,74 +62,63 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
       <div
         className={`grid grid-cols-12 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
         style={{
-          height: `${adjustedHeight}px`,
+          height: `${rowHeight}px`,
           background: bgColor,
         }}
       >
-        {/* Player Info Section: Type, Player, Team - col-span-7 (left) */}
-        <div className="col-span-7 flex flex-col justify-center px-2 h-full">
-          {/* Position Label */}
-          <div className="mb-0">
-            <TeamOfTheWeekType
-              value={getCategoryPositionLabel(
-                player.categoryDetail.position,
-              ).toUpperCase()}
-              animation={{ ...smallTextAnimation, delay: delay }}
-            />
+        {/* [img] Logo Section - shown only when account is NOT a club (association) */}
+        {!isAccountClub && (
+          <div
+            className="col-span-2 flex items-center justify-center h-full overflow-hidden"
+            style={{ background: contrastBG }}
+          >
+            <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
+              <Img
+                src={player.club.logo.url}
+                alt={player.club.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
           </div>
+        )}
+
+        {/* [position] Position Label Section */}
+        <div
+          className="col-span-1 flex whitespace-nowrap leading-none px-0 h-full items-center justify-center gap-2"
+          style={{ background: logoBG }}
+        >
+          {PositionIcon && (
+            <PositionIcon
+              className="w-20 h-20 flex-shrink-0"
+              style={{ color: iconColor }}
+            />
+          )}
+
+        </div>
+        {/* [name and stats] Player Name and Stats Section */}
+        <div
+          className={`ml-4 flex flex-col justify-center px-2 h-full ${isAccountClub ? "col-span-10" : "col-span-9"
+            }`}
+        >
 
           {/* Player Name */}
           <TeamOfTheWeekPlayerName
-            value={player.player.toUpperCase()}
+            value={cleanPlayerName(player.player).toUpperCase()}
             animation={{ ...largeTextAnimation, delay: delay + 2 }}
             className=""
           />
 
-          {/* Team Name */}
-          {/*  <TeamOfTheWeekTeam
-            value={player.primaryTeam.toUpperCase()}
-            animation={{ ...smallTextAnimation, delay: delay + 4 }}
-            className=""
-          /> */}
-        </div>
-
-        {/* Logo Section - col-span-2 (middle) */}
-        <div
-          className="col-span-2 flex items-center justify-center h-full overflow-hidden"
-          style={{ background: contrastBG }}
-        >
-          <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
-            <Img
-              src={player.club.logo.url}
-              alt={player.club.name}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Stats Section - col-span-3 (right) */}
-        <div
-          className="col-span-3 flex whitespace-nowrap leading-none px-0 h-full items-center justify-center"
-          style={{ background: logoBG }}
-        >
-          {/* Top All-Rounder and Best of Rest show two stat rows when both stats available */}
-          {isAllRounderPosition &&
-          hasBothStats &&
-          player.batting &&
-          player.bowling ? (
-            <div className="flex flex-col items-center justify-center gap-1">
-              {/* Batting Stats */}
-              <BattingStatDisplay batting={player.batting} delay={delay + 20} />
-
-              {/* Bowling Stats */}
+          {/* Stats Display */}
+          {isAllRounderPosition && hasBothStats && player.batting && player.bowling ? (
+            <div className="flex flex-row gap-4 mt-1">
+              <BattingStatDisplay batting={player.batting} delay={delay + 20} /> &amp;
               <BowlingStatDisplay bowling={player.bowling} delay={delay + 30} />
             </div>
           ) : (
-            /* Single stat row based on position type */
             <>
               {/* Batting positions: topscorer, higheststrikerate */}
               {(player.categoryDetail.position === "topscorer" ||
@@ -157,7 +140,7 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
                   />
                 )}
 
-              {/* Best of Rest fallback: show whatever is available if not both stats */}
+              {/* Best of Rest fallback */}
               {player.categoryDetail.position === "bestoftherest" &&
                 (!player.batting || !player.bowling) && (
                   <>
@@ -186,6 +169,7 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
             </>
           )}
         </div>
+
       </div>
     </AnimatedContainer>
   );
@@ -205,16 +189,16 @@ const BattingStatDisplay: React.FC<{
 
   return (
     <div className="flex items-baseline gap-1">
-      <TeamOfTheWeekStat
+      <MetadataSmall
         value={scoreDisplay}
         animation={{ ...largeTextAnimation, delay: delay }}
-        variant="onContainerTitle"
+        variant="onContainerCopy"
         className=""
       />
       <MetadataSmall
         value={ballsDisplay}
         animation={{ ...smallTextAnimation, delay: delay + 10 }}
-        variant="onContainerTitle"
+        variant="onContainerCopy"
         className="text-md"
       />
     </div>
@@ -235,16 +219,16 @@ const BowlingStatDisplay: React.FC<{
 
   return (
     <div className="flex items-baseline gap-1">
-      <TeamOfTheWeekStat
+      <MetadataSmall
         value={wicketsRunsDisplay}
         animation={{ ...largeTextAnimation, delay: delay }}
-        variant="onContainerTitle"
+        variant="onContainerCopy"
         className=""
       />
       <MetadataSmall
         value={oversDisplay}
         animation={{ ...smallTextAnimation, delay: delay + 10 }}
-        variant="onContainerTitle"
+        variant="onContainerCopy"
         className="text-md"
       />
     </div>

@@ -180,3 +180,10 @@ export interface ScreenCalculationResult {
   itemsPerScreen: number;
   getItemsForScreen: (screenIndex: number) => TeamOfTheWeekPlayer[];
 }
+
+// Player row component props
+export interface PlayerRowProps {
+  player: TeamOfTheWeekPlayer;
+  index: number;
+  rowHeight: number;
+}
