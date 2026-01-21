@@ -231,6 +231,28 @@ export const compositionConfig: Record<string, CompositionConfig> = {
       },
     },
   },
+  CricketTeamOfTheWeek: {
+    topLine: {
+      value: "Team",
+      spacing: "0.62em",
+    },
+    bottomLine: {
+      value: "OF THE WEEK",
+      spacing: "0.62em",
+    },
+    header: {
+      topLine: {
+        value: "Team",
+        spacing: "0.3em",
+        headerFontSize: "6em",
+      },
+      bottomLine: {
+        value: "OF THE WEEK",
+        spacing: "0.38em",
+        headerFontSize: "5em",
+      },
+    },
+  },
 };
 
 // League title config removed - now using dynamic spacing calculation
@@ -292,7 +314,7 @@ export const hardcodedTextSpacing: Record<
   Weekend: { intro: "0.069em", header: "0.2em" },
   FIXTURES: { intro: "0.065em", header: "0.2em" },
   Leading: { intro: "0.155em", header: "0.1em" },
-  Team: { intro: "0.67em", header: "0.3em" },
+  Team: { intro: "0.62em", header: "0.3em" },
   Batting: { intro: "0.155em", header: "0.1em" },
   Bowling: { intro: "0.1em", header: "0.1em" },
 
@@ -305,6 +327,7 @@ export const hardcodedTextSpacing: Record<
   Roster: { intro: "0.66em", header: "0.15em" },
   Result: { intro: "0.62em", header: "0.4em" },
   Performances: { intro: "0.015em", header: "0.25em" },
+  "OF THE WEEK": { intro: "0.095em", header: "0.28em" },
 };
 
 /**
