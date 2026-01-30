@@ -3,24 +3,8 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
 import { mergeWithPriority } from "../../../../../../core/utils/classNames";
-
-interface MatchHeaderProps {
-  date?: string;
-  type?: string;
-  round: string;
-  ground: string;
-  height: number;
-  delay: number;
-  backgroundColor: string;
-  className?: string;
-  CopyVariant?: string;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { MatchHeaderProps } from "./_types/MatchHeaderProps";
+import { truncateText, formatMatchHeaderLeftText } from "./_utils/helpers";
 
 export const MatchHeader: React.FC<MatchHeaderProps> = ({
   date,
@@ -37,11 +21,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
   const TextAnimations = animations.text.main;
 
   // Format the left side text - use type and round, or date and round
-  const leftText = type
-    ? `${type} - ${round}`
-    : date
-      ? `${date} - ${round}`
-      : round;
+  const leftText = formatMatchHeaderLeftText(type, date, round);
 
   return (
     <AnimatedContainer

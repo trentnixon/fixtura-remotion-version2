@@ -1,18 +1,11 @@
 import React from "react";
-import { MatchResult } from "../../types";
-
 import MatchHeader from "../Sections/MatchHeader/MatchHeader";
 import { ScoreOverNameWithLogo } from "../Sections/TeamsSection/index";
 import PlayerStatsBasic from "../Sections/PlayerStats/PlayerStats-Basic";
 import MatchStatus from "../Sections/MatchStatus/MatchStatus";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface MatchCardProps {
-  match: MatchResult;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
+import { MatchCardProps } from "./_types/MatchCardProps";
+import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
 
 const MatchCardBasic: React.FC<MatchCardProps> = ({
   match,
@@ -20,17 +13,12 @@ const MatchCardBasic: React.FC<MatchCardProps> = ({
   delay,
 }) => {
   const { selectedPalette } = useThemeContext();
+
   // Calculate section heights
-  const teamsHeight = Math.floor(rowHeight * 0.4); // 40% for team scores
-  const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
-  const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
+  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const baseDelay = delay;
-  const statsDelay = baseDelay + 4;
-  const headerDelay = statsDelay + 5;
-
-  console.log("[match]", match);
+  const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);
 
   return (
     <div className="rounded-lg w-auto mx-8 overflow-hidden h-full">

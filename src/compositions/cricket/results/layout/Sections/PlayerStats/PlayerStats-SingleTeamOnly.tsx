@@ -1,33 +1,11 @@
 import React from "react";
-import { Team } from "../../../types";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
-
-interface PlayerStatsProps {
-  Team: Team;
-  height: number;
-  delay: number;
-  maxPlayersPerStat?: number;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
-
-// Component for a single stat item (batter or bowler)
-interface StatItemProps {
-  playerName: string;
-  statValue: string;
-  delay: number;
-  index: number;
-  textColor: string;
-  backgroundColor: string;
-}
+import { PlayerStatsSingleTeamProps, StatItemProps, StatSectionProps, TeamStatsProps, PlayerStat } from "./_types/PlayerStatsProps";
+import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({
   playerName,
@@ -70,24 +48,6 @@ const StatItem: React.FC<StatItemProps> = ({
   );
 };
 
-type PlayerStat = {
-  player: string;
-  runs: number;
-  balls?: number;
-  notOut?: boolean;
-  wickets?: number;
-  overs?: number;
-};
-
-// Component for a section of stats (batting or bowling)
-interface StatSectionProps {
-  players: PlayerStat[];
-  isBatting: boolean;
-  delay: number;
-  backgroundColor: string;
-  textColor: string;
-}
-
 const StatSection: React.FC<StatSectionProps> = ({
   players,
   isBatting,
@@ -119,16 +79,6 @@ const StatSection: React.FC<StatSectionProps> = ({
     </div>
   );
 };
-
-// Component for a team's stats (both batting and bowling)
-interface TeamStatsProps {
-  team: Team;
-  delay: number;
-  maxPlayersPerStat: number;
-  className?: string;
-  showBatting?: boolean;
-  showBowling?: boolean;
-}
 
 const TeamStats: React.FC<TeamStatsProps> = ({
   team,
@@ -176,7 +126,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   );
 };
 
-export const PlayerStatsSingleTeamOnly: React.FC<PlayerStatsProps> = ({
+export const PlayerStatsSingleTeamOnly: React.FC<PlayerStatsSingleTeamProps> = ({
   Team,
   height,
   delay,

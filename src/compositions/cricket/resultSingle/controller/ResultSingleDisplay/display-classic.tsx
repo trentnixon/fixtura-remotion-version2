@@ -1,12 +1,8 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { SponsorFooter } from "../../../sponsorFooter";
 import SixersMatchCard from "../../layout/MatchCard/card-sixers";
-
-interface ResultSingleDisplayProps {
-  match: MatchResult;
-}
+import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
 const ClassicSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
   const { layout } = useThemeContext();

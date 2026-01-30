@@ -9,7 +9,7 @@ import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
 export const BasicMainHeader = () => {
   const { layout, fontClasses } = useThemeContext();
-  const { club, metadata, data } = useVideoDataContext();
+  const { club, metadata, data, isAccountClub } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
   const LogoAnimations = animations.image.main.title.logo;
@@ -18,25 +18,31 @@ export const BasicMainHeader = () => {
   const { timings } = data;
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+
+
+  const OrgLogo = () => (<div className="w-full h-full flex justify-center items-center ">
+    <div className="w-full h-full flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
+      <AnimatedImage
+        src={club.logo?.url}
+        width={"auto"}
+        height={"auto"}
+        fit="contain"
+        className="rounded-none"
+        animation={LogoAnimations.introIn}
+        exitAnimation={LogoAnimations.introOut}
+        exitFrame={exitFrame}
+      />
+    </div>
+  </div>)
+
+
+
   return (
     <TwoColumnHeaderTitle
       height={heights.header}
       alignment="start"
       Logo={
-        <div className="w-full h-full flex justify-center items-center ">
-          <div className="w-full h-full flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
-            <AnimatedImage
-              src={club.logo?.url}
-              width={"auto"}
-              height={"auto"}
-              fit="contain"
-              className="rounded-none"
-              animation={LogoAnimations.introIn}
-              exitAnimation={LogoAnimations.introOut}
-              exitFrame={exitFrame}
-            />
-          </div>
-        </div>
+        isAccountClub ? null : <OrgLogo />
       }
       Title={
         <AnimatedText

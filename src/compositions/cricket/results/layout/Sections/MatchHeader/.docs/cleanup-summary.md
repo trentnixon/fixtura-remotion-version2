@@ -1,0 +1,3 @@
+# MatchHeader Cleanup Summary
+
+Refactored MatchHeader components by extracting shared types (`MatchHeaderProps`, `SingleDataPointHeaderProps`) into `_types/MatchHeaderProps.ts` and utility functions (`truncateText`, `formatMatchHeaderLeftText`) into `_utils/helpers.ts` (both `_types` and `_utils` folders are in the current MatchHeader directory - create them if they don't exist). Updated component imports to use the new folder structure, removing inline type definitions and helper functions, and fixed naming conflict by renaming `SingleDataPointHeader`'s props interface from `MatchHeaderProps` to `SingleDataPointHeaderProps`.

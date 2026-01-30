@@ -1,17 +1,9 @@
 import React from "react";
-import { MatchResult } from "../../types";
-
 import { Horizontal_SingleTeam_LogoWithName_Score } from "../Sections/TeamsSection/index";
-
 import SingleDataPointHeader from "../Sections/MatchHeader/SingleDataPointHeader";
 import { PlayerStatsSingleTeamOnly } from "../Sections/PlayerStats/PlayerStats-SingleTeamOnly";
-
-interface MatchCardProps {
-  match: MatchResult;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
+import { MatchCardProps } from "./_types/MatchCardProps";
+import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
 
 const MatchCardSixersThunder: React.FC<MatchCardProps> = ({
   match,
@@ -19,14 +11,10 @@ const MatchCardSixersThunder: React.FC<MatchCardProps> = ({
   delay,
 }) => {
   // Calculate section heights
-  const teamsHeight = Math.floor(rowHeight * 0.4); // 40% for team scores
-  const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
-  const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
+  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const baseDelay = delay;
-  const statsDelay = baseDelay + 4;
-  const headerDelay = statsDelay + 5;
+  const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);
 
   return (
     <div className="w-auto mx-8 overflow-hidden h-full">

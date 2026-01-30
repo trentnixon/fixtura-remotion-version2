@@ -1,0 +1,3 @@
+# MatchHeader Cleanup Summary
+
+Refactored all MatchHeader components by extracting shared types (`MatchHeaderProps`, `RoundGroundProps`) into `_types/MatchHeaderProps.ts` and utility functions (`truncateText`, `formatLeftText`) into `_utils/helpers.ts` (both `_types` and `_utils` folders are in the current MatchHeader directory - create them if they don't exist). Updated both component files (index.tsx, Round_Ground.tsx) to use the shared types and utilities, removing duplicate interface definitions and helper functions. The `RoundGroundProps` interface extends `MatchHeaderProps` to include additional props (`userBackgroundColor`, `variant`) specific to the Round_Ground component.

@@ -2,17 +2,9 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
+import { SingleDataPointHeaderProps } from "./_types/MatchHeaderProps";
 
-interface MatchHeaderProps {
-  grade: string;
-  height: number;
-  delay: number;
-  backgroundColor: string;
-  align: string;
-  variant?: string;
-}
-
-export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
+export const SingleDataPointHeader: React.FC<SingleDataPointHeaderProps> = ({
   grade,
   height,
   delay,
@@ -26,13 +18,12 @@ export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className={`w-full flex items-center px-4 py-0 ${
-        align === "right"
+      className={`w-full flex items-center px-4 py-0 ${align === "right"
           ? "justify-end"
           : align === "center"
             ? "justify-center"
             : "justify-start"
-      }`}
+        }`}
       backgroundColor="none"
       style={{
         background: backgroundColor,

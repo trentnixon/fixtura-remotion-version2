@@ -1,0 +1,3 @@
+# TeamsSection Cleanup Summary
+
+Refactored all TeamsSection components by consolidating shared types into `_types/TeamsSectionProps.ts` and utility functions (`truncateText`, `normalizeScore`, `getFirstInningsDisplay`, `normalizeOvers`) into `_utils/helpers.ts` (both `_types` and `_utils` folders are in the current TeamsSection directory - create them if they don't exist). Updated `LogoWithScoreOverName.tsx` to use shared types and utilities, removing duplicate helper functions. Deleted old `type.ts` file that contained duplicate type definitions. Updated `TeamsSectionProps` to make `outerContainer` optional for compatibility with both component variants. The `ScoreOverNameWithLogo.tsx` component already used the shared types and utilities.

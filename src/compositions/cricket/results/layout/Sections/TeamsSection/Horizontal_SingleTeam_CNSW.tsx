@@ -4,7 +4,7 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
-import { HorizontalTeamsSectionProps } from "./type";
+import { HorizontalTeamsSectionProps } from "./_types/TeamsSectionProps";
 import { MetadataMedium } from "../../../../utils/primitives/metadataMedium";
 
 // Helper function to truncate text

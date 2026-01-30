@@ -1,18 +1,15 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
 import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import MatchRowSixersThunder from "../MatchRow/row-Sixers-thunder";
-
-interface ResultsDisplayProps {
-  results: MatchResult[];
-  resultsPerScreen: number;
-  screenIndex: number;
-}
+import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
+import {
+  calculateDisplayedResults,
+  calculateRowHeight,
+} from "./_utils/calculations";
 
 const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
   results,
@@ -26,14 +23,16 @@ const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
   const { heights } = layout;
 
   // Calculate which results to show on this screen
-  const startIndex = screenIndex * resultsPerScreen;
-  const endIndex = Math.min(startIndex + resultsPerScreen, results.length);
-  const displayedResults = results.slice(startIndex, endIndex);
+  const { displayedResults } = calculateDisplayedResults(
+    results,
+    resultsPerScreen,
+    screenIndex,
+  );
 
   const availableHeight = heights.asset;
 
   // Calculate exactly half of the available height for each row
-  const rowHeight = Math.floor(availableHeight / 2);
+  const rowHeight = calculateRowHeight(availableHeight);
 
   return (
     <div className="flex flex-col h-full w-full">

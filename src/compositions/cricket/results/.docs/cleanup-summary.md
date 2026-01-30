@@ -1,0 +1,3 @@
+# Results Cleanup Summary
+
+Refactored all Results composition files by extracting shared utility functions (`calculateDisplayDurationPerScreen`, `calculateTotalScreens`, `castToMatchResults`, `hasValidResults`) and constants (`DEFAULT_RESULTS_PER_SCREEN`, `DEFAULT_DISPLAY_DURATION`) into `_utils/calculations.ts` (both `_types` and `_utils` folders are in the current results directory - create them if they don't exist). Updated all 7 composition files (basic.tsx, brickWork.tsx, classic.tsx, classicTwoColumn.tsx, cnsw.tsx, cnsw-private.tsx, sixersThunder.tsx) to use the shared utilities, removing duplicate calculation logic and improving code consistency.

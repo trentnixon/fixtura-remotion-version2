@@ -1,15 +1,13 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { AssignSponsors } from "../../../composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import MatchRowCNSW from "../MatchRow/row-CNSW";
-
-interface ResultsDisplayProps {
-  results: MatchResult[];
-  resultsPerScreen: number;
-  screenIndex: number;
-}
+import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
+import {
+  calculateDisplayedResults,
+  calculateRowHeight,
+  mergeAssignSponsors,
+} from "./_utils/calculations";
 
 const ResultsDisplayCNSW: React.FC<ResultsDisplayProps> = ({
   results,
@@ -20,19 +18,18 @@ const ResultsDisplayCNSW: React.FC<ResultsDisplayProps> = ({
   const { heights } = layout;
 
   // Calculate which results to show on this screen
-  const startIndex = screenIndex * resultsPerScreen;
-  const endIndex = Math.min(startIndex + resultsPerScreen, results.length);
-  const displayedResults = results.slice(startIndex, endIndex);
+  const { displayedResults } = calculateDisplayedResults(
+    results,
+    resultsPerScreen,
+    screenIndex,
+  );
   const availableHeight = heights.asset;
 
   // Calculate exactly half of the available height for each row
-  const rowHeight = Math.floor(availableHeight / 2);
+  const rowHeight = calculateRowHeight(availableHeight);
 
   // Merge all assignSponsors objects from displayedResults into one object
-  const mergedAssignSponsors = displayedResults.reduce(
-    (acc, result) => ({ ...acc, ...result.assignSponsors }),
-    {},
-  );
+  const mergedAssignSponsors = mergeAssignSponsors(displayedResults);
 
   return (
     <div className="flex flex-col h-full w-full">
@@ -54,9 +51,7 @@ const ResultsDisplayCNSW: React.FC<ResultsDisplayProps> = ({
         ))}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter assignSponsors={mergedAssignSponsors} />
       </div>
     </div>
   );

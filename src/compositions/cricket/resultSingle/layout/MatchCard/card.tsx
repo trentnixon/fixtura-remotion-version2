@@ -1,5 +1,4 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
@@ -7,11 +6,8 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import PlayerStats from "../Sections/PlayerStats/index";
 import MatchHeader from "../Sections/MatchHeader/index";
 import MatchStatus from "../Sections/MatchStatus/index";
-import { LogoWithScoreOverName } from "../Sections/TeamsSection/LogoWithScoreOverName";
-
-interface MatchCardProps {
-  match: MatchResult;
-}
+import { LogoWithScoreOverName } from "../Sections/TeamsSection/components/LogoWithScoreOverName";
+import { MatchCardProps } from "./_types/MatchCardProps";
 
 const MatchCard: React.FC<MatchCardProps> = ({ match }) => {
   const { animations } = useAnimationContext();

@@ -1,15 +1,11 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import MatchCardBasic from "../../layout/MatchCard/card-Basic";
-
-interface MatchRowProps {
-  match: MatchResult;
-  index: number;
-  rowHeight: number;
-}
+import MatchCardBasicClubOnly from "../../layout/MatchCard/card-Basic-clubOnly";
+import { MatchRowProps } from "./_types/MatchRowProps";
+import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
 
 const MatchRowBasic: React.FC<MatchRowProps> = ({
   match,
@@ -17,14 +13,12 @@ const MatchRowBasic: React.FC<MatchRowProps> = ({
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { data } = useVideoDataContext();
+  const { data, isAccountClub } = useVideoDataContext();
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = index * 5; // Base delay for animation
-  const animationOutFrame = timings?.FPS_SCORECARD
-    ? timings.FPS_SCORECARD - 20
-    : 280;
+  const delay = calculateDelay(index);
+  const animationOutFrame = calculateAnimationOutFrame(timings?.FPS_SCORECARD);
 
   return (
     <div className="h-full w-full">
@@ -37,12 +31,26 @@ const MatchRowBasic: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <MatchCardBasic
-          match={match}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-        />
+
+        {
+          isAccountClub ? (
+            <MatchCardBasicClubOnly
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          ) : (
+            <MatchCardBasic
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          )
+        }
+
+
       </AnimatedContainer>
     </div>
   );

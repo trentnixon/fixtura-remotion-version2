@@ -1,16 +1,11 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import MatchCardCNSW from "../../layout/MatchCard/card-CNSW";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface MatchRowProps {
-  match: MatchResult;
-  index: number;
-  rowHeight: number;
-}
+import { MatchRowProps } from "./_types/MatchRowProps";
+import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
 
 const MatchRowCNSW: React.FC<MatchRowProps> = ({ match, index, rowHeight }) => {
   const { animations } = useAnimationContext();
@@ -19,10 +14,8 @@ const MatchRowCNSW: React.FC<MatchRowProps> = ({ match, index, rowHeight }) => {
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = index * 5; // Base delay for animation
-  const animationOutFrame = timings?.FPS_SCORECARD
-    ? timings.FPS_SCORECARD - 20
-    : 280;
+  const delay = calculateDelay(index);
+  const animationOutFrame = calculateAnimationOutFrame(timings?.FPS_SCORECARD);
 
   return (
     <div className="h-full w-full ">

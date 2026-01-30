@@ -1,6 +1,5 @@
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
-import { MatchResult } from "./types";
 import NoResultData from "./modules/NoResultData/no-data";
 import ResultSingleDisplay from "./controller/ResultSingleDisplay/display";
 import {
@@ -9,6 +8,11 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
+import {
+  calculateDisplayDurationPerMatch,
+  castToMatchResults,
+  hasValidResults,
+} from "./_utils/calculations";
 
 export const ResultSingle: React.FC = () => {
   const { data } = useVideoDataContext();
@@ -17,17 +21,19 @@ export const ResultSingle: React.FC = () => {
   const transitionConfig = animations.transition.Main;
 
   // If no data is available, show a placeholder
-  if (!resultData || !Array.isArray(resultData) || resultData.length === 0) {
+  if (!hasValidResults(resultData)) {
     return <NoResultData />;
   }
 
   // Get frame duration from timings or use default
   const frameOptions = videoMeta?.video?.metadata?.frames || [300];
-  const displayDurationPerMatch =
-    timings?.FPS_SCORECARD || frameOptions[0] || 300;
+  const displayDurationPerMatch = calculateDisplayDurationPerMatch(
+    timings,
+    frameOptions,
+  );
 
   // Cast the data to the correct type
-  const matchResults = resultData as MatchResult[];
+  const matchResults = castToMatchResults(resultData);
 
   // Create sequence data for each match result
   const sequences = matchResults.map((match) => ({

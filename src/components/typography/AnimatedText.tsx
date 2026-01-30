@@ -49,6 +49,8 @@ export type TypographyType =
   | "ResultMetaData"
   | "ResultVS"
   | "RosterPlayerName"
+  | "ResultStatementShort"
+  | "ResultStatementText"
   | string; // Allow for custom types
 
 // Define color variants
@@ -241,9 +243,9 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   // Ensure baseComponentStyle always has className and style
   const baseComponentStyle = (componentStyles[type] ||
     componentStyles.bodyText || { className: "", style: {} }) as {
-    className: string;
-    style: React.CSSProperties;
-  };
+      className: string;
+      style: React.CSSProperties;
+    };
   const componentStyle = {
     className: baseComponentStyle.className ?? "",
     style: baseComponentStyle.style ?? {},
@@ -256,11 +258,11 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   const textColor =
     contrastSafe && variantStyles.color
       ? applyContrastSafety(
-          variantStyles.color,
-          variant,
-          selectedPalette,
-          contrastSafe,
-        )
+        variantStyles.color,
+        variant,
+        selectedPalette,
+        contrastSafe,
+      )
       : variantStyles.color;
 
   // Convert children to string
@@ -301,32 +303,32 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         ? text
         : animationMode === "word"
           ? words.map((word, index) => (
-              <React.Fragment key={index}>
-                {index > 0 && " "}
-                <span
-                  style={{
-                    display: "inline-block",
-                  }}
-                >
-                  {word}
-                </span>
-              </React.Fragment>
-            ))
+            <React.Fragment key={index}>
+              {index > 0 && " "}
+              <span
+                style={{
+                  display: "inline-block",
+                }}
+              >
+                {word}
+              </span>
+            </React.Fragment>
+          ))
           : chars.map((char, index) => {
-              if (char === " ") {
-                return <span key={index}>&nbsp;</span>;
-              }
-              return (
-                <span
-                  key={index}
-                  style={{
-                    display: "inline-block",
-                  }}
-                >
-                  {char}
-                </span>
-              );
-            })}
+            if (char === " ") {
+              return <span key={index}>&nbsp;</span>;
+            }
+            return (
+              <span
+                key={index}
+                style={{
+                  display: "inline-block",
+                }}
+              >
+                {char}
+              </span>
+            );
+          })}
     </div>
   );
 };

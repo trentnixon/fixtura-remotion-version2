@@ -1,5 +1,4 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
@@ -8,10 +7,7 @@ import { SingleDataPointHeader } from "../../../results/layout/Sections/MatchHea
 import PlayerStatsSingleTeamOnly from "../../../results/layout/Sections/PlayerStats/PlayerStats-SingleTeamOnly";
 import Horizontal_SingleTeam_CNSW from "../../../results/layout/Sections/TeamsSection/Horizontal_SingleTeam_CNSW";
 import Round_Ground from "../Sections/MatchHeader/Round_Ground";
-
-interface MatchCardProps {
-  match: MatchResult;
-}
+import { MatchCardProps } from "./_types/MatchCardProps";
 
 const CNSWMatchCard: React.FC<MatchCardProps> = ({ match }) => {
   const { animations } = useAnimationContext();

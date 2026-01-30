@@ -1,5 +1,5 @@
 import React from "react";
-import { MatchResult, TeamLogo as ResultTeamLogoType } from "../types";
+import { MatchResult, TeamLogo as ResultTeamLogoType } from "../_types/types";
 import { TeamLogo } from "../../utils/primitives/TeamLogo";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";

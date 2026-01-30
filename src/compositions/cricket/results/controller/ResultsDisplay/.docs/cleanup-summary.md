@@ -1,0 +1,3 @@
+# ResultsDisplay Cleanup Summary
+
+Refactored all ResultsDisplay components by extracting shared type (`ResultsDisplayProps`) into `_types/ResultsDisplayProps.ts` and utility functions (`calculateDisplayedResults`, `calculateRowHeight`, `mergeAssignSponsors`) into `_utils/calculations.ts` (both `_types` and `_utils` folders are in the current ResultsDisplay directory - create them if they don't exist). Updated all component imports to use the new folder structure, removing duplicate type definitions and calculation logic across 7 display component files, and improved type safety by removing unnecessary type assertions for AssignSponsors.

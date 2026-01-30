@@ -1,0 +1,3 @@
+# MatchCard Cleanup Summary
+
+Refactored all MatchCard components by extracting shared type (`MatchCardProps`) into `_types/MatchCardProps.ts` (both `_types` and `_utils` folders are in the current MatchCard directory - create them if they don't exist). Updated all 6 card component files (card.tsx, card-Basic-ClubOnly.tsx, card-cnsw.tsx, card-cnsw-private.tsx, card-sixers.tsx, card-classic-two-columns.tsx) to use the shared type, removing duplicate interface definitions across all component files. The `_utils/calculations.ts` file already existed with shared utility functions (`calculateSectionHeights`, `calculateDelays`, `getClubTeamPlayers`).

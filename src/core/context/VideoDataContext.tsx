@@ -21,6 +21,7 @@ interface VideoDataContextProps {
   contentLayout: VideoContentLayout;
   templateVariation: VideoTemplateVariation;
   sponsors: SponsorsData;
+  isAccountClub: boolean;
 }
 
 const VideoDataContext = createContext<VideoDataContextProps | null>(null);
@@ -43,6 +44,7 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
     templateVariation: video.templateVariation,
     club,
     sponsors: club.sponsors,
+    isAccountClub: !!data.videoMeta?.club?.IsAccountClub,
   };
 
   return (

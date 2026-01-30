@@ -9,8 +9,8 @@ import {
   ResultScoreFirstInnings,
 } from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
-import { TeamsSectionProps } from "./type";
-import { getFirstInningsDisplay, normalizeScore, truncateText } from "./utils";
+import { TeamsSectionProps } from "./_types/TeamsSectionProps";
+import { getFirstInningsDisplay, normalizeScore, truncateText } from "./_utils/helpers";
 
 export const TeamsSectionVertical: React.FC<TeamsSectionProps> = ({
   type,

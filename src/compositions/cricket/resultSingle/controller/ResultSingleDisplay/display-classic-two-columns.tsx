@@ -1,12 +1,8 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { SponsorFooter } from "../../../sponsorFooter";
 import ClassicTwoColumnsMatchCard from "../../layout/MatchCard/card-classic-two-columns";
-
-interface ResultSingleDisplayProps {
-  match: MatchResult;
-}
+import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
 const ClassicSingleResultTwoColumns: React.FC<ResultSingleDisplayProps> = ({
   match,

@@ -1,5 +1,4 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
@@ -7,10 +6,7 @@ import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/he
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import SixersMatchCard from "../../layout/MatchCard/card-sixers";
-
-interface ResultSingleDisplayProps {
-  match: MatchResult;
-}
+import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
 const SixersSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
   const { layout } = useThemeContext();

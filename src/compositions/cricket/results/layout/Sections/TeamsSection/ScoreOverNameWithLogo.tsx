@@ -8,8 +8,8 @@ import {
   ResultScoreFirstInnings,
 } from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
-import { TeamsSectionProps } from "./type";
-import { truncateText, normalizeScore, getFirstInningsDisplay } from "./utils";
+import { TeamsSectionProps } from "./_types/TeamsSectionProps";
+import { truncateText, normalizeScore, getFirstInningsDisplay } from "./_utils/helpers";
 
 export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
   type,
@@ -47,50 +47,44 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
       animation={animations.container.main.itemContainer.containerIn}
       animationDelay={delay}
     >
-      <div className="flex w-full justify-between items-center">
+      <div className="flex w-full justify-between items-center space-x-8">
         {/* Home team score and name */}
-        <div className="flex-1 flex flex-col items-end">
-          {homeFirstInnings.show && (
-            <ResultScoreFirstInnings
-              value={homeFirstInnings.value}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-              variant="onContainerCopyNoBg"
-            />
-          )}
+        <div className="flex-1 flex flex-col items-start space-y-4">
+          <div className="flex flex-col items-start">
+            {homeFirstInnings.show && (
+              <ResultScoreFirstInnings
+                value={homeFirstInnings.value}
+                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                variant="onContainerCopyNoBg"
+              />
+            )}
+            <div className="flex flex-row items-center space-x-8 justify-start">
+              <div className={`${logoSize}`}>
 
-          <ResultScore
-            value={homeNormalizedScore}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-            variant="onContainerCopyNoBg"
-          />
+                <TeamLogo
+                  logo={homeTeamLogo || null}
+                  teamName={homeTeam.name}
+                  delay={delay + 5}
+                />
+              </div>
+              <ResultScore
+                value={homeNormalizedScore}
+                animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+                variant="onContainerCopyNoBg"
+              />
 
+            </div>
+          </div>
           <ResultTeamName
-            value={truncateText(homeTeam.name, 50).toUpperCase()}
+            value={truncateText(homeTeam.name, 30).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-            className="text-right"
+            className="text-left"
             variant="onContainerCopyNoBg"
           />
-        </div>
-
-        <div className="flex justify-center items-center mx-8 space-x-6">
-          <div className={`${logoSize}`}>
-            <TeamLogo
-              logo={homeTeamLogo || null}
-              teamName={homeTeam.name}
-              delay={delay + 5}
-            />
-          </div>
-          <div className={`${logoSize}`}>
-            <TeamLogo
-              logo={awayTeamLogo || null}
-              teamName={awayTeam.name}
-              delay={delay + 10}
-            />
-          </div>
         </div>
 
         {/* Away team score and name */}
-        <div className="flex-1 flex flex-col items-start">
+        <div className="flex-1 flex flex-col items-end space-y-4">
           {awayFirstInnings.show && (
             <ResultScoreFirstInnings
               value={awayFirstInnings.value}
@@ -98,15 +92,25 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
               variant="onContainerCopyNoBg"
             />
           )}
-          <ResultScore
-            value={awayNormalizedScore}
-            animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-            variant="onContainerCopyNoBg"
-          />
+          <div className="flex flex-row items-center space-x-8 justify-end">
+
+            <ResultScore
+              value={awayNormalizedScore}
+              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+              variant="onContainerCopyNoBg"
+            />
+            <div className={`${logoSize}`}>
+              <TeamLogo
+                logo={awayTeamLogo || null}
+                teamName={awayTeam.name}
+                delay={delay + 10}
+              />
+            </div>
+          </div>
           <ResultTeamName
-            value={truncateText(awayTeam.name, 50).toUpperCase()}
+            value={truncateText(awayTeam.name, 30).toUpperCase()}
             animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
-            className="text-left"
+            className="text-right"
             variant="onContainerCopyNoBg"
           />
         </div>

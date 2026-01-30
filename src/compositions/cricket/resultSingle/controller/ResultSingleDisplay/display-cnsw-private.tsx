@@ -1,12 +1,8 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { SponsorFooter } from "../../../sponsorFooter";
 import CNSWMatchCardPrivate from "../../layout/MatchCard/card-cnsw-private";
-
-interface ResultSingleDisplayProps {
-  match: MatchResult;
-}
+import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
 const CNSWSingleResultPrivate: React.FC<ResultSingleDisplayProps> = ({
   match,

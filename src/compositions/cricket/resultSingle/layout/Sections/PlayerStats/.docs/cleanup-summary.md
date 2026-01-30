@@ -1,0 +1,3 @@
+# PlayerStats Cleanup Summary
+
+Refactored PlayerStats components by updating `index.tsx` to use shared types (`PlayerStatsProps`, `StatItemProps`, `StatSectionProps`, `TeamStatsProps`) from `_types/PlayerStatsProps.ts` and utility function (`truncateText`) from `_utils/helpers.ts` (both `_types` and `_utils` folders are in the current PlayerStats directory - create them if they don't exist). Removed duplicate interface definitions and helper function from `index.tsx`. Updated `StatSectionProps` in shared types to support both `PlayerStat[]` and `BattingPerformance[] | BowlingPerformance[]` for compatibility. The `PlayerStats-clubOnly-Basic.tsx` component already used the shared types and utilities.

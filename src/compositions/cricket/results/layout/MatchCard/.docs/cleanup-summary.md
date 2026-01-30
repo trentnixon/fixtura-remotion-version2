@@ -1,0 +1,3 @@
+# MatchCard Cleanup Summary
+
+Refactored all MatchCard components by extracting shared types (`MatchCardProps`) into `_types/MatchCardProps.ts` and utility functions (`calculateSectionHeights`, `calculateDelays`) into `_utils/calculations.ts` (both `_types` and `_utils` folders are in the current MatchCard directory - create them if they don't exist). Created `getClubTeamPlayers` utility function to filter club team players and integrated it into `PlayerStats-clubOnly-Basic` component, which now displays only the club team's stats side-by-side (batting and bowling) instead of showing both teams stacked vertically.

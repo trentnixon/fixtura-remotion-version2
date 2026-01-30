@@ -1,34 +1,19 @@
 import React from "react";
-import { BattingPerformance, BowlingPerformance, Team } from "../../../types";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
+import {
+  PlayerStatsProps,
+  StatItemProps,
+  StatSectionProps,
+  TeamStatsProps,
+} from "./_types/PlayerStatsProps";
+import { truncateText } from "./_utils/helpers";
 
-interface PlayerStatsProps {
-  homeTeam: Team;
-  awayTeam: Team;
-  height: number;
-  delay: number;
-  maxPlayersPerStat?: number;
-  matchType?: string;
-  matchStatus?: string;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
-
-// Component for a single stat item (batter or bowler)
-interface StatItemProps {
-  playerName: string;
-  statValue: string;
-  delay: number;
-  index: number;
-}
+// Export club-only variant
+export { PlayerStatsClubOnlyBasic } from "./PlayerStats-clubOnly-Basic";
 
 const StatItem: React.FC<StatItemProps> = ({
   playerName,
@@ -63,12 +48,6 @@ const StatItem: React.FC<StatItemProps> = ({
 };
 
 // Component for a section of stats (batting or bowling)
-interface StatSectionProps {
-  players: BattingPerformance[] | BowlingPerformance[];
-  isBatting: boolean;
-  delay: number;
-}
-
 const StatSection: React.FC<StatSectionProps> = ({
   players,
   isBatting,
@@ -84,12 +63,10 @@ const StatSection: React.FC<StatSectionProps> = ({
           playerName={player.player}
           statValue={
             isBatting
-              ? `${player.runs}${
-                  "notOut" in player && player.notOut ? "*" : ""
-                } (${"balls" in player ? player.balls : 0})`
-              : `${"wickets" in player ? player.wickets : 0}/${
-                  "runs" in player ? player.runs : 0
-                } (${"overs" in player ? player.overs : 0})`
+              ? `${player.runs}${"notOut" in player && player.notOut ? "*" : ""
+              } (${"balls" in player ? player.balls : 0})`
+              : `${"wickets" in player ? player.wickets : 0}/${"runs" in player ? player.runs : 0
+              } (${"overs" in player ? player.overs : 0})`
           }
           delay={delay}
           index={i}
@@ -100,15 +77,6 @@ const StatSection: React.FC<StatSectionProps> = ({
 };
 
 // Component for a team's stats (both batting and bowling)
-interface TeamStatsProps {
-  team: Team;
-  delay: number;
-  maxPlayersPerStat: number;
-  className?: string;
-  showBatting?: boolean;
-  showBowling?: boolean;
-}
-
 const TeamStats: React.FC<TeamStatsProps> = ({
   team,
   delay,

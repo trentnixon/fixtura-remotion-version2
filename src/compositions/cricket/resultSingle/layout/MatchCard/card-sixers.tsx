@@ -1,5 +1,4 @@
 import React from "react";
-import { MatchResult } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
@@ -9,10 +8,7 @@ import { SingleDataPointHeader } from "../../../results/layout/Sections/MatchHea
 import { Horizontal_SingleTeam_LogoWithName_Score } from "../../../results/layout/Sections/TeamsSection/Horizontal_SingleTeam_LogoWithName_Score";
 import PlayerStatsSingleTeamOnly from "../../../results/layout/Sections/PlayerStats/PlayerStats-SingleTeamOnly";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface MatchCardProps {
-  match: MatchResult;
-}
+import { MatchCardProps } from "./_types/MatchCardProps";
 
 const SixersMatchCard: React.FC<MatchCardProps> = ({ match }) => {
   const { animations } = useAnimationContext();

@@ -1,0 +1,3 @@
+# ResultSingle Cleanup Summary
+
+Refactored all ResultSingle entry point files by extracting shared utility functions (`calculateDisplayDurationPerMatch`, `castToMatchResults`, `hasValidResults`) and constants (`DEFAULT_DISPLAY_DURATION`) into `_utils/calculations.ts` (both `_types` and `_utils` folders are in the current resultSingle directory - create them if they don't exist). Updated all 6 entry point files (BasicTemplate.tsx, classic.tsx, classicTwoColumns.tsx, CNSW.tsx, CNSW-private.tsx, sixers.tsx) to use the shared utilities, removing duplicate calculation logic and improving code consistency. The `types.tsx` file remains in the root as it contains domain types used across the entire resultSingle module.

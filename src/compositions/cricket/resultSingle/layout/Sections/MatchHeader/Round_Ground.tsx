@@ -4,26 +4,10 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
 import { mergeWithPriority } from "../../../../../../core/utils/classNames";
+import { RoundGroundProps } from "./_types/MatchHeaderProps";
+import { truncateText, formatLeftText } from "./_utils/helpers";
 
-interface MatchHeaderProps {
-  date?: string;
-  type?: string;
-  round: string;
-  ground: string;
-  height: number;
-  delay: number;
-  className?: string;
-  userBackgroundColor?: string;
-  variant?: string;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
-
-export const Round_Ground: React.FC<MatchHeaderProps> = ({
+export const Round_Ground: React.FC<RoundGroundProps> = ({
   date,
   type,
   round,
@@ -43,11 +27,7 @@ export const Round_Ground: React.FC<MatchHeaderProps> = ({
     userBackgroundColor || selectedPalette.container.backgroundTransparent.high;
 
   // Format the left side text - use type and round, or date and round
-  const leftText = type
-    ? `${type} - ${round}`
-    : date
-      ? `${date} - ${round}`
-      : round;
+  const leftText = formatLeftText(type, date, round);
 
   return (
     <AnimatedContainer

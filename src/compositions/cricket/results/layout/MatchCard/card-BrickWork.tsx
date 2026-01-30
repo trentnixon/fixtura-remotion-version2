@@ -1,18 +1,11 @@
 import React from "react";
-import { MatchResult } from "../../types";
-
 import MatchHeader from "../Sections/MatchHeader/MatchHeader";
 import { TeamsSectionLogoAndScore } from "../Sections/TeamsSection/index";
 import MatchStatus from "../Sections/MatchStatus/MatchStatus";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerStatsBrickWork from "../Sections/PlayerStats/PlayerStats-BrickWork";
-
-interface MatchCardProps {
-  match: MatchResult;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
+import { MatchCardProps } from "./_types/MatchCardProps";
+import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
 
 const MatchCardBrickWork: React.FC<MatchCardProps> = ({
   match,
@@ -20,15 +13,12 @@ const MatchCardBrickWork: React.FC<MatchCardProps> = ({
   delay,
 }) => {
   const { selectedPalette } = useThemeContext();
+
   // Calculate section heights
-  const teamsHeight = Math.floor(rowHeight * 0.4); // 40% for team scores
-  const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
-  const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
+  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const baseDelay = delay;
-  const statsDelay = baseDelay + 4;
-  const headerDelay = statsDelay + 5;
+  const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);
 
   return (
     <div className="rounded-none w-auto mx-8 overflow-hidden h-full">

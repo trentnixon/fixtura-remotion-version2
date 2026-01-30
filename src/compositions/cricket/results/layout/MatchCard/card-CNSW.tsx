@@ -1,17 +1,10 @@
 import React from "react";
-import { MatchResult } from "../../types";
-
 import MatchHeader from "../Sections/MatchHeader/MatchHeader";
 import { TeamsSectionScoreOverTeamNameOnly } from "../Sections/TeamsSection/index";
 import PlayerStatsCNSW from "../Sections/PlayerStats/PlayerStats-CNSW";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface MatchCardProps {
-  match: MatchResult;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
+import { MatchCardProps } from "./_types/MatchCardProps";
+import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
 
 const MatchCardCNSW: React.FC<MatchCardProps> = ({
   match,
@@ -19,15 +12,12 @@ const MatchCardCNSW: React.FC<MatchCardProps> = ({
   delay,
 }) => {
   const { layout } = useThemeContext();
+
   // Calculate section heights
-  const teamsHeight = Math.floor(rowHeight * 0.4); // 40% for team scores
-  const statsHeight = Math.floor(rowHeight * 0.5); // 50% for player stats
-  const headerHeight = Math.floor(rowHeight * 0.1); // 10% for match info
+  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const baseDelay = delay;
-  const statsDelay = baseDelay + 4;
-  const headerDelay = statsDelay + 5;
+  const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);
 
   return (
     <div

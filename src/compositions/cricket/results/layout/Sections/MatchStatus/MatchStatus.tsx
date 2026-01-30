@@ -3,21 +3,8 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
-
-interface MatchStatusProps {
-  status: string;
-  result: string;
-
-  delay: number;
-
-  outerContainer: object;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (!text || text.length <= maxLength) return text || "";
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { MatchStatusProps } from "./_types/MatchStatusProps";
+import { truncateText } from "./_utils/helpers";
 
 export const MatchStatus: React.FC<MatchStatusProps> = ({
   status,

@@ -8,8 +8,8 @@ import {
   ResultScoreFirstInnings,
 } from "../../../../utils/primitives/ResultScore";
 
-import { TeamsSectionProps } from "./type";
-import { getFirstInningsDisplay, normalizeScore } from "./utils";
+import { TeamsSectionProps } from "./_types/TeamsSectionProps";
+import { getFirstInningsDisplay, normalizeScore } from "./_utils/helpers";
 import { AnimatedText } from "../../../../../../components/typography";
 
 export const TeamsSectionLogoAndScore: React.FC<TeamsSectionProps> = ({

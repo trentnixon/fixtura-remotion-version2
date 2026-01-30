@@ -1,18 +1,27 @@
 # Folder Overview
 
-Match header components for results layouts.
+Match header components for results layouts. Displays match metadata including date, type, round, and ground information.
 
 ## Files
 
-- (files present): match title and metadata header components
+- `MatchHeader.tsx`: Standard match header with date, type, round, and ground
+- `SingleDataPointHeader.tsx`: Single data point header variant for grade display
+
+## Child Modules
+
+- `_types/`: Shared type definitions
+  - `MatchHeaderProps.ts`: Props interface for MatchHeader component
+  - `SingleDataPointHeaderProps.ts`: Props interface for SingleDataPointHeader component
+- `_utils/`: Shared utility functions
+  - `helpers.ts`: Text truncation and formatting helpers
 
 ## Relations
 
 - Parent folder: [../readMe.md](../readMe.md)
-- Key dependencies: used by card and row layouts
-- Consumed by: results displays
+- Key dependencies: uses primitives, animation context, theme context
+- Consumed by: MatchCard and MatchRow layouts
 
 ## Dependencies
 
-- Internal: none
+- Internal: `utils/primitives`, `core/context`, `components`
 - External: React

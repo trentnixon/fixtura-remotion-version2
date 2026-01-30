@@ -131,6 +131,13 @@ export const basicTheme: TemplateThemeConfig = {
     ResultMetaData: {
       className: "text-xl font-semibold  tracking-wider leading-snug",
     },
+    ResultStatementShort: {
+      className:
+        "text-3xl font-semibold  tracking-wider leading-snug py-2 px-16",
+    },
+    ResultStatementText: {
+      className: "text-3xl font-semibold  tracking-wider leading-snug ",
+    },
     ResultVS: {
       className: "text-2xl font-semibold  tracking-wider leading-snug",
     },

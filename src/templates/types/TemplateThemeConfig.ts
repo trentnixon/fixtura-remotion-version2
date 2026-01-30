@@ -87,6 +87,8 @@ export interface ThemeComponentStyles {
   ResultSyntax: ComponentStyle;
   ResultFixtureResult: ComponentStyle;
   ResultMetaData: ComponentStyle;
+  ResultStatementShort: ComponentStyle;
+  ResultStatementText: ComponentStyle;
   RosterPlayerName: ComponentStyle;
   metadataSmall: ComponentStyle;
   metadataMedium: ComponentStyle;
