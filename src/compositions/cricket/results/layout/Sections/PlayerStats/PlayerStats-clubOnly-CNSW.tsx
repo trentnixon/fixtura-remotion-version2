@@ -1,11 +1,13 @@
 import React from "react";
+import { Team } from "../../../_types/types";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { computePartialTwoDayVisibility } from "./_utils/visibility";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
-import { PlayerStatsProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
+import { getClubTeamPlayers } from "../../MatchCard/_utils/calculations";
+import { PlayerStatsClubOnlyProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
 import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -93,7 +95,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   showBatting = true,
   showBowling = true,
 }) => {
-  const { selectedPalette } = useThemeContext();
+  //const { selectedPalette } = useThemeContext();
 
   const batters = team.battingPerformances
     ? team.battingPerformances.slice(0, maxPlayersPerStat)
@@ -103,37 +105,34 @@ const TeamStats: React.FC<TeamStatsProps> = ({
     : [];
 
   return (
-    <div className={`flex-1 px-2 py-0 flex flex-col ${className}`}>
+    <div className={`w-full px-2 py-0 flex flex-row gap-4 ${className}`}>
       {showBatting && (
-        <StatSection
-          players={batters}
-          isBatting={true}
-          delay={delay}
-          backgroundColor={
-            selectedPalette.container.backgroundTransparent.strong
-          }
-          textColor={"onContainerCopy"}
-        />
+        <div className="w-1/2">
+          <StatSection
+            players={batters}
+            isBatting={true}
+            delay={delay}
+            textColor={"onContainerCopy"}
+          />
+        </div>
       )}
 
       {showBowling && (
-        <StatSection
-          players={bowlers}
-          isBatting={false}
-          delay={delay + 2}
-          backgroundColor={
-            selectedPalette.container.backgroundTransparent.strong
-          }
-          textColor={"onContainerCopy"}
-        />
+        <div className="w-1/2">
+          <StatSection
+            players={bowlers}
+            isBatting={false}
+            delay={delay + 2}
+            textColor={"onContainerCopy"}
+          />
+        </div>
       )}
     </div>
   );
 };
 
-export const PlayerStatsCNSW: React.FC<PlayerStatsProps> = ({
-  homeTeam,
-  awayTeam,
+export const PlayerStatsClubOnlyCNSW: React.FC<PlayerStatsClubOnlyProps> = ({
+  match,
   height,
   delay,
   maxPlayersPerStat = 3,
@@ -141,18 +140,34 @@ export const PlayerStatsCNSW: React.FC<PlayerStatsProps> = ({
   matchStatus,
 }) => {
   const { animations } = useAnimationContext();
-  const homeBatted = (homeTeam.battingPerformances || []).length > 0;
-  const awayBatted = (awayTeam.battingPerformances || []).length > 0;
+
+  // Get club team players
+  const clubTeamPlayers = getClubTeamPlayers(match);
+
+  // Determine which team is the club team
+  const clubTeam = match.homeTeam.isClubTeam ? match.homeTeam : match.awayTeam.isClubTeam ? match.awayTeam : null;
+
+  if (!clubTeamPlayers || !clubTeam) {
+    return null; // Don't render if no club team found
+  }
+
+  // Create a club team object with only club team players
+  const clubTeamWithFilteredPlayers: Team = {
+    ...clubTeam,
+    battingPerformances: clubTeamPlayers.battingPerformances,
+    bowlingPerformances: clubTeamPlayers.bowlingPerformances,
+  };
+
+  // Determine visibility flags for club team
+  const clubBatted = clubTeamPlayers.battingPerformances.length > 0;
   const { flags } = computePartialTwoDayVisibility({
     matchType,
     matchStatus,
-    homeBatted,
-    awayBatted,
+    homeBatted: clubBatted,
+    awayBatted: false, // Only showing club team
   });
-  const { homeShowBatting, homeShowBowling, awayShowBatting, awayShowBowling } =
-    flags;
+  const { homeShowBatting, homeShowBowling } = flags;
 
-  // flex-col  w-3/4  mx-auto
   return (
     <AnimatedContainer
       type="full"
@@ -165,27 +180,16 @@ export const PlayerStatsCNSW: React.FC<PlayerStatsProps> = ({
       animationDelay={delay}
     >
       <div className="flex w-full h-full">
-        {/* Home team stats */}
         <TeamStats
-          team={homeTeam}
+          team={clubTeamWithFilteredPlayers}
           delay={delay}
           maxPlayersPerStat={maxPlayersPerStat}
           showBatting={homeShowBatting}
           showBowling={homeShowBowling}
-        />
-
-        {/* Away team stats */}
-        <TeamStats
-          team={awayTeam}
-          delay={delay}
-          maxPlayersPerStat={maxPlayersPerStat}
-          className="border-l border-gray-700"
-          showBatting={awayShowBatting}
-          showBowling={awayShowBowling}
         />
       </div>
     </AnimatedContainer>
   );
 };
 
-export default PlayerStatsCNSW;
+export default PlayerStatsClubOnlyCNSW;

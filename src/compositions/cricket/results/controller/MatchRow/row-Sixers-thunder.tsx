@@ -3,6 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import MatchCardSixersThunder from "../../layout/MatchCard/card-Sixers-thunder";
+import MatchCardSixersThunderClubOnly from "../../layout/MatchCard/card-Sixers-thunder-clubOnly";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MatchRowProps } from "./_types/MatchRowProps";
 import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
@@ -13,7 +14,7 @@ const MatchRowSixersThunder: React.FC<MatchRowProps> = ({
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { data } = useVideoDataContext();
+  const { data, isAccountClub } = useVideoDataContext();
   const { timings } = data;
   const { layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
@@ -31,12 +32,23 @@ const MatchRowSixersThunder: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <MatchCardSixersThunder
-          match={match}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-        />
+        {
+          isAccountClub ? (
+            <MatchCardSixersThunderClubOnly
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          ) : (
+            <MatchCardSixersThunder
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          )
+        }
       </AnimatedContainer>
     </div>
   );

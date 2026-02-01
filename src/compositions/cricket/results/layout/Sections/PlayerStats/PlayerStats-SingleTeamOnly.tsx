@@ -4,7 +4,7 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
-import { PlayerStatsSingleTeamProps, StatItemProps, StatSectionProps, TeamStatsProps, PlayerStat } from "./_types/PlayerStatsProps";
+import { PlayerStatsSingleTeamProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
 import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -97,8 +97,10 @@ const TeamStats: React.FC<TeamStatsProps> = ({
     ? team.bowlingPerformances.slice(0, maxPlayersPerStat)
     : [];
 
+  const gridCols = showBatting && showBowling ? "grid-cols-2" : "grid-cols-1";
+
   return (
-    <div className={`flex-1 px-2 py-0 grid grid-cols-2 gap-4 ${className}`}>
+    <div className={`w-full px-2 py-0 grid ${gridCols} gap-4 ${className}`}>
       {showBatting && (
         <StatSection
           players={batters}
@@ -131,6 +133,8 @@ export const PlayerStatsSingleTeamOnly: React.FC<PlayerStatsSingleTeamProps> = (
   height,
   delay,
   maxPlayersPerStat = 3,
+  showBatting = true,
+  showBowling = true,
 }) => {
   const { animations } = useAnimationContext();
 
@@ -152,6 +156,8 @@ export const PlayerStatsSingleTeamOnly: React.FC<PlayerStatsSingleTeamProps> = (
           team={Team}
           delay={delay}
           maxPlayersPerStat={maxPlayersPerStat}
+          showBatting={showBatting}
+          showBowling={showBowling}
         />
       </div>
     </AnimatedContainer>

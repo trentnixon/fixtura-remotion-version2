@@ -3,11 +3,13 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { ResultStatementShortProps } from "./_types/ResultStatementProps";
+import { ColorVariant } from "../../../../../../components/typography/AnimatedText";
 
 export const ResultStatementShort: React.FC<ResultStatementShortProps> = ({
   resultShort,
   delay,
   outerContainer,
+  variant = "onContainerCopyNoBg",
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -24,7 +26,7 @@ export const ResultStatementShort: React.FC<ResultStatementShortProps> = ({
       <AnimatedText
         type="ResultStatementShort"
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-        variant="onContainerCopyNoBg"
+        variant={variant as ColorVariant}
         letterAnimation="word"
 
       >

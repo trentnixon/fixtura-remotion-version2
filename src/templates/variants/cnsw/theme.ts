@@ -86,6 +86,13 @@ export const cnswTheme: TemplateThemeConfig = {
       className:
         "text-4xl font-normal text-center tracking-wider leading-normal italic",
     },
+    ResultStatementShort: {
+      className:
+        "text-3xl font-semibold  tracking-wider leading-snug py-2 px-16",
+    },
+    ResultStatementText: {
+      className: "text-3xl font-semibold  tracking-wider leading-snug ",
+    },
     ResultMetaData: {
       className: "text-2xl font-semibold  tracking-wider leading-normal",
     },

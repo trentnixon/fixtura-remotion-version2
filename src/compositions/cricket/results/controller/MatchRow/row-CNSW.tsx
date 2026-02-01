@@ -3,13 +3,14 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import MatchCardCNSW from "../../layout/MatchCard/card-CNSW";
+import MatchCardCNSWClubOnly from "../../layout/MatchCard/card-CNSW-clubOnly";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MatchRowProps } from "./_types/MatchRowProps";
 import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
 
 const MatchRowCNSW: React.FC<MatchRowProps> = ({ match, index, rowHeight }) => {
   const { animations } = useAnimationContext();
-  const { data } = useVideoDataContext();
+  const { data, isAccountClub } = useVideoDataContext();
   const { layout } = useThemeContext();
   const { timings } = data;
 
@@ -28,12 +29,23 @@ const MatchRowCNSW: React.FC<MatchRowProps> = ({ match, index, rowHeight }) => {
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <MatchCardCNSW
-          match={match}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-        />
+        {
+          isAccountClub ? (
+            <MatchCardCNSWClubOnly
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          ) : (
+            <MatchCardCNSW
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          )
+        }
       </AnimatedContainer>
     </div>
   );

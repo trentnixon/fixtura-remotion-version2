@@ -1,12 +1,13 @@
 import React from "react";
 import { Type_Round_Ground_stacked } from "../Sections/MatchHeader/index";
 import { ScoreOverNameWithLogo } from "../Sections/TeamsSection/index";
-import { ResultStatementShort } from "../Sections/ResultStatement/index";
+import { ResultStatementShort, ResultStatementText } from "../Sections/ResultStatement/index";
 import { MatchStatus } from "../Sections/MatchStatus/index";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { PlayerStatsClubOnlyBasic } from "../Sections/PlayerStats/index";
 import { MatchCardProps } from "./_types/MatchCardProps";
 import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import { ResultSummary } from "../../types";
 
 const MatchCardClubOnlyBasic: React.FC<MatchCardProps> = ({ match }) => {
     const { selectedPalette, layout } = useThemeContext();
@@ -24,12 +25,25 @@ const MatchCardClubOnlyBasic: React.FC<MatchCardProps> = ({ match }) => {
 
     // Check if resultShort exists (may not be in type definition)
     const resultShort = 'resultShort' in match ? (match as { resultShort?: string }).resultShort : undefined;
-
+    const resultSummary = 'resultSummary' in match ? (match as { resultSummary?: ResultSummary }).resultSummary : undefined;
     return (
         <div className="rounded-lg w-auto mx-8 overflow-hidden h-full flex flex-col justify-center ">
 
             {
-                resultShort && (
+                resultSummary && (
+                    <div className="w-full flex justify-center items-center mb-16">
+                        <ResultStatementText
+                            resultSummary={resultSummary}
+                            delay={headerDelay}
+                            outerContainer={{
+                                height: headerHeight,
+                            }}
+                        />
+                    </div>
+                )
+            }
+            {
+                resultShort && !resultSummary && (
                     <div className="w-full flex justify-center items-center mb-8">
                         <ResultStatementShort
                             resultShort={resultShort}

@@ -41,6 +41,13 @@ export interface Team {
   awayScoresFirstInnings?: string | null;
 }
 
+export interface ResultSummary {
+  homeTeam: string;
+  awayTeam: string;
+  winner: string;
+  resultWord: string;
+}
+
 export interface MatchResult {
   date: string;
   type: string;

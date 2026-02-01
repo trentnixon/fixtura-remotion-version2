@@ -4,6 +4,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import MatchCardClassicTwoColumn from "../../layout/MatchCard/card-classic-twocolumn";
+import MatchCardClassicTwoColumnClubOnly from "../../layout/MatchCard/card-classic-twocolumn-clubOnly";
 import { MatchRowProps } from "./_types/MatchRowProps";
 import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
 
@@ -13,7 +14,7 @@ const MatchRowClassicTwoColumn: React.FC<MatchRowProps> = ({
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { data } = useVideoDataContext();
+  const { data, isAccountClub } = useVideoDataContext();
   const { timings } = data;
   const { layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
@@ -32,12 +33,23 @@ const MatchRowClassicTwoColumn: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <MatchCardClassicTwoColumn
-          match={match}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-        />
+        {
+          isAccountClub ? (
+            <MatchCardClassicTwoColumnClubOnly
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          ) : (
+            <MatchCardClassicTwoColumn
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+              delay={delay}
+            />
+          )
+        }
       </AnimatedContainer>
     </div>
   );

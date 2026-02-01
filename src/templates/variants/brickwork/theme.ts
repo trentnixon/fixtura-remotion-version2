@@ -115,6 +115,13 @@ export const brickworkTheme: TemplateThemeConfig = {
     ResultMetaData: {
       className: "text-2xl font-normal  tracking-wider leading-snug",
     },
+    ResultStatementShort: {
+      className:
+        "text-3xl font-semibold  tracking-wider leading-snug py-2 px-16",
+    },
+    ResultStatementText: {
+      className: "text-3xl font-semibold  tracking-wider leading-snug ",
+    },
     RosterPlayerName: {
       className: "text-3xl font-normal  tracking-wider leading-snug",
     },
