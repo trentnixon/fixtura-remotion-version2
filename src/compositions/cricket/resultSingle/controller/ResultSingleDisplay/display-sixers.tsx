@@ -6,12 +6,13 @@ import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/he
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import SixersMatchCard from "../../layout/MatchCard/card-sixers";
+import SixersMatchCardClubOnly from "../../layout/MatchCard/card-sixers-ClubOnly";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
 const SixersSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
-  const { club } = useVideoDataContext();
+  const { club, isAccountClub } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const LogoAnimations = animations.image.main.title.logo;
   // Full height is available for a single match
@@ -24,7 +25,11 @@ const SixersSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
         className="w-full flex flex-col justify-center"
         style={{ height: `${availableHeight}px` }}
       >
-        <SixersMatchCard match={match} />
+        {isAccountClub ? (
+          <SixersMatchCardClubOnly match={match} />
+        ) : (
+          <SixersMatchCard match={match} />
+        )}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
         <VerticalHeaderLogoOnly

@@ -113,10 +113,16 @@ export const basicTheme: TemplateThemeConfig = {
         "text-4xl font-normal text-center tracking-tight leading-tight italic",
     },
     ResultMetaData: {
-      className: "text-2xl font-normal  tracking-tight leading-tight",
+      className: "text-2xl font-normal tracking-tight leading-tight font-['Heebo']",
     },
     ResultVS: {
       className: "text-3xl font-normal  tracking-tight leading-tight",
+    },
+    ResultStatementShort: {
+      className: "text-6xl font-normal tracking-tight leading-tight text-center",
+    },
+    ResultStatementText: {
+      className: "text-5xl font-normal tracking-tight leading-tight text-center",
     },
     RosterPlayerName: {
       className: "text-4xl font-bold  tracking-tight py-2 leading-tight",

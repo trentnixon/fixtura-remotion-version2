@@ -65,6 +65,8 @@ export interface MatchResult {
   teamAwayLogo: TeamLogo;
   teamHomeLogo: TeamLogo;
   assignSponsors: AssignSponsors;
+  resultShort?: string;
+  resultSummary?: ResultSummary;
 }
 
 // Constants for animation timing and other configuration

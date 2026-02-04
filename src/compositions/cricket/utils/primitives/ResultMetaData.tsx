@@ -27,6 +27,7 @@ export const ResultMetaData = ({
       fontFamily={fontClasses.copy?.family}
       className={className}
       animation={animation as AnimationConfig}
+      letterAnimation="none"
     >
       {value}
     </AnimatedText>

@@ -42,10 +42,10 @@ export const cnswTheme: TemplateThemeConfig = {
       className: "text-2xl font-medium tracking-normal leading-normal",
     },
     ladderTeamName: {
-      className: "text-2xl font-bold tracking-normal leading-normal",
+      className: "text-3xl font-normal tracking-normal leading-normal",
     },
     ladderTeamPoints: {
-      className: "text-2xl font-bold tracking-normal leading-normal",
+      className: "text-3xl font-bold tracking-normal leading-normal",
     },
     Top5PlayerName: {
       className: "text-4xl font-black tracking-normal leading-normal",

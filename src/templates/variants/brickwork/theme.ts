@@ -66,10 +66,10 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-2xl font-normal tracking-normal leading-snug",
     },
     ladderTeamName: {
-      className: "text-3xl font-bold tracking-normal leading-snug",
+      className: "text-3xl font-normal tracking-normal leading-snug",
     },
     ladderTeamPoints: {
-      className: "text-3xl font-bold tracking-normal leading-snug",
+      className: "text-3xl font-normal tracking-normal leading-snug",
     },
     Top5PlayerName: {
       className: "text-4xl font-black  tracking-wide leading-snug",

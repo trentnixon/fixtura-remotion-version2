@@ -63,15 +63,16 @@ const MatchCardSixersThunderClubOnly: React.FC<MatchCardProps> = ({
         />
 
         {/* Club team batting statistics */}
-        <PlayerStatsSingleTeamOnly
-          Team={clubTeam}
-          height={statsHeight}
-          delay={statsDelay}
-          maxPlayersPerStat={2}
-          showBatting={true}
-          showBowling={false}
-        />
-
+        <div className="ml-32">
+          <PlayerStatsSingleTeamOnly
+            Team={clubTeam}
+            height={statsHeight}
+            delay={statsDelay}
+            maxPlayersPerStat={2}
+            showBatting={true}
+            showBowling={false}
+          />
+        </div>
         {/* Opposition team (scores only) */}
         <Horizontal_SingleTeam_LogoWithName_Score
           type={match.type}
@@ -88,14 +89,16 @@ const MatchCardSixersThunderClubOnly: React.FC<MatchCardProps> = ({
         />
 
         {/* Club team bowling statistics */}
-        <PlayerStatsSingleTeamOnly
-          Team={clubTeam}
-          height={statsHeight}
-          delay={statsDelay}
-          maxPlayersPerStat={2}
-          showBatting={false}
-          showBowling={true}
-        />
+        <div className="ml-32">
+          <PlayerStatsSingleTeamOnly
+            Team={clubTeam}
+            height={statsHeight}
+            delay={statsDelay}
+            maxPlayersPerStat={2}
+            showBatting={false}
+            showBowling={true}
+          />
+        </div>
       </>
     </div>
   );

@@ -43,6 +43,7 @@ import {
   classicTwoColumns as resultSingleClassicTwoColumns,
   cnsw as resultSingleCNSW,
   cnswPrivate as resultSingleCNSWPrivate,
+  brickWork as resultSingleBrickWork,
 } from "./resultSingle";
 
 import {
@@ -128,7 +129,7 @@ export const CricketUpcoming = {
 
 export const CricketResultSingle = {
   basic: resultSingleBasic,
-  brickwork: resultSingleBasic,
+  brickwork: resultSingleBrickWork,
   sixers: resultSingleSixers,
   thunder: resultSingleSixers,
   classic: resultSingleClassic,

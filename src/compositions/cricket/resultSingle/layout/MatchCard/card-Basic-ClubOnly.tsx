@@ -7,7 +7,6 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { PlayerStatsClubOnlyBasic } from "../Sections/PlayerStats/index";
 import { MatchCardProps } from "./_types/MatchCardProps";
 import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
-import { ResultSummary } from "../../types";
 
 const MatchCardClubOnlyBasic: React.FC<MatchCardProps> = ({ match }) => {
     const { selectedPalette, layout } = useThemeContext();
@@ -23,9 +22,8 @@ const MatchCardClubOnlyBasic: React.FC<MatchCardProps> = ({ match }) => {
     // Calculate delays
     const { baseDelay: calculatedBaseDelay, statsDelay, headerDelay } = calculateDelays(baseDelay);
 
-    // Check if resultShort exists (may not be in type definition)
-    const resultShort = 'resultShort' in match ? (match as { resultShort?: string }).resultShort : undefined;
-    const resultSummary = 'resultSummary' in match ? (match as { resultSummary?: ResultSummary }).resultSummary : undefined;
+    // Extract optional result statement fields
+    const { resultShort, resultSummary } = match;
     return (
         <div className="rounded-lg w-auto mx-8 overflow-hidden h-full flex flex-col justify-center ">
 

@@ -4,6 +4,7 @@ import { Classic } from "./classic";
 import { ClassicTwoColumns } from "./classicTwoColumns";
 import { CNSW } from "./CNSW";
 import { CNSWPrivate } from "./CNSW-private";
+import { BrickWork } from "./brickWork";
 
 // Export all template implementations
 export {
@@ -13,4 +14,5 @@ export {
   ClassicTwoColumns as classicTwoColumns,
   CNSW as cnsw,
   CNSWPrivate as cnswPrivate,
+  BrickWork as brickWork,
 };

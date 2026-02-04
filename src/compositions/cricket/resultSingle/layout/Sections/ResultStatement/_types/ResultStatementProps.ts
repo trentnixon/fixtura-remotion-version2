@@ -12,3 +12,17 @@ export interface ResultStatementTextProps {
   outerContainer: object;
   CopyVariant?: string;
 }
+
+export interface ResultStatementClassicProps {
+  resultShort?: string;
+  resultSummary?: ResultSummary;
+  height: number;
+  delay: number;
+}
+
+export interface ResultStatementBrickWorkProps {
+  resultShort?: string;
+  resultSummary?: ResultSummary;
+  height: number;
+  delay: number;
+}
