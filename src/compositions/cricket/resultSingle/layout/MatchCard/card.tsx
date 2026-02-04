@@ -5,7 +5,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 // Import sections for match layout
 import PlayerStats from "../Sections/PlayerStats/index";
 import MatchHeader from "../Sections/MatchHeader/index";
-import MatchStatus from "../Sections/MatchStatus/index";
+import { MatchStatus } from "../Sections/MatchStatus/index";
 import { LogoWithScoreOverName } from "../Sections/TeamsSection/components/LogoWithScoreOverName";
 import { MatchCardProps } from "./_types/MatchCardProps";
 
