@@ -3,11 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-interface TopSectionProps {
-  ageGroup: string;
-  gradeName: string;
-  delay: number;
-}
+import { TopSectionProps } from "./_types/GradeProps";
 
 export const Grade: React.FC<TopSectionProps> = ({
   ageGroup,

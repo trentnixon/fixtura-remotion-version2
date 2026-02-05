@@ -1,6 +1,5 @@
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
-
 import {
   TransitionDirection,
   TransitionSeriesWrapper,
@@ -10,6 +9,12 @@ import { GamesDisplayClassic } from "./controller/GamesDisplay/FixtureDisplayCla
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { GameData } from "./types";
+import {
+  getGamesPerScreen,
+  calculateDisplayDurationPerScreen,
+  hasValidGames,
+  calculateTotalScreens,
+} from "./_utils/calculations";
 
 export const UpcomingGamesWithTransitions: React.FC = () => {
   const { data, contentLayout, metadata } = useVideoDataContext();
@@ -21,26 +26,26 @@ export const UpcomingGamesWithTransitions: React.FC = () => {
   // Extract metadata from video data
   const fixturesLayout = contentLayout.divideFixturesBy || {};
 
-  // Get games per screen from contentLayout - important fix
-  // We need to specifically use the "UpComingFixtures" property
-  let gamesPerScreen = fixturesLayout.CricketUpcoming; // Default fallback
-
-  if (fixturesLayout && typeof fixturesLayout.CricketUpcoming === "number") {
-    gamesPerScreen = fixturesLayout.CricketUpcoming;
-  }
+  // Get games per screen from contentLayout
+  const gamesPerScreen = getGamesPerScreen(fixturesLayout);
 
   // Get frame duration from metadata if available
   const frameOptions = metadata.frames || [300];
-  const displayDurationPerScreen =
-    timings?.FPS_SCORECARD || frameOptions[0] || 300;
+  const displayDurationPerScreen = calculateDisplayDurationPerScreen(
+    timings,
+    frameOptions,
+  );
 
   // If no data is available, show a placeholder
-  if (!CompositionData || CompositionData.length === 0) {
+  if (!hasValidGames(CompositionData)) {
     return <NoGamesData />;
   }
 
   // Calculate how many screens we need based on games per screen
-  const totalScreens = Math.ceil(CompositionData.length / gamesPerScreen);
+  const totalScreens = calculateTotalScreens(
+    CompositionData.length,
+    gamesPerScreen,
+  );
 
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({

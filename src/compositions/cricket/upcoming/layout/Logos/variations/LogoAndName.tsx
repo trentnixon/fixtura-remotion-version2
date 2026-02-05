@@ -2,7 +2,9 @@ import React from "react";
 import TeamLogo from "../../../../utils/primitives/TeamLogo";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { MetadataMedium } from "../../../../utils/primitives/metadataMedium";
-import { LOGO_SIZES, TeamLayoutProps, useLayoutAnimations } from "./common";
+import { TeamLayoutProps } from "./_types/TeamLayoutProps";
+import { LOGO_SIZES } from "./_utils/helpers";
+import { useLayoutAnimations } from "./_utils/animations";
 
 export const LogoAndName: React.FC<TeamLayoutProps> = ({
   teamHome,

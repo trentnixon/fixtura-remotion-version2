@@ -1,22 +1,15 @@
 import React from "react";
-
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
-interface BottomSectionProps {
-  time: string | null;
-  delay: number;
-  ground: string | null;
-  truncateString?: number;
-  backgroundColor?: string;
-}
+import { BottomSectionProps } from "./_types/GroundTimeProps";
+import { truncateString } from "./_utils/helpers";
 
 export const GroundTime: React.FC<BottomSectionProps> = ({
   time = "",
   delay,
   ground = "",
-  truncateString = 35,
+  truncateString: maxLength = 35,
   backgroundColor,
 }) => {
   const { animations } = useAnimationContext();
@@ -24,10 +17,7 @@ export const GroundTime: React.FC<BottomSectionProps> = ({
   const ContainerAnimations = animations.container;
 
   // truncate string and handle null values
-  const truncatedGround =
-    ground && ground.length > truncateString
-      ? ground.slice(0, truncateString) + "..."
-      : ground || "";
+  const truncatedGround = truncateString(ground, maxLength);
 
   return (
     <AnimatedContainer

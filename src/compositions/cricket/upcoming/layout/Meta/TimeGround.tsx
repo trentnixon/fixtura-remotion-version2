@@ -1,15 +1,9 @@
 import React from "react";
-
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
-interface BottomSectionProps {
-  time: string;
-  delay: number;
-  ground: string;
-}
+import { BottomSectionProps } from "./_types/TimeGroundProps";
 
 export const TimeGround: React.FC<BottomSectionProps> = ({
   time,

@@ -2,7 +2,9 @@ import React from "react";
 import TeamLogo from "../../../../utils/primitives/TeamLogo";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { MetadataMedium } from "../../../../utils/primitives/metadataMedium";
-import { LOGO_SIZES, TeamLayoutProps, useLayoutAnimations } from "./common";
+import { TeamLayoutProps } from "./_types/TeamLayoutProps";
+import { LOGO_SIZES, LOGO_POSITION_CLASSES } from "./_utils/helpers";
+import { useLayoutAnimations } from "./_utils/animations";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 
 export const LogosOnly: React.FC<TeamLayoutProps> = ({
@@ -17,20 +19,6 @@ export const LogosOnly: React.FC<TeamLayoutProps> = ({
 }) => {
   const { metaDataAnimation, containerAnimation } = useLayoutAnimations(delay);
   const { layout } = useThemeContext();
-  const logoPositionClass: Record<string, { home: string; away: string }> = {
-    center: {
-      home: "flex-1 flex flex-col items-center",
-      away: "flex-1 flex flex-col items-center",
-    },
-    split: {
-      home: "flex-1 flex flex-col items-start px-4",
-      away: "flex-1 flex flex-col items-end px-4",
-    },
-    together: {
-      home: "flex-1 flex flex-col items-end px-4",
-      away: "flex-1 flex flex-col items-start px-4",
-    },
-  };
 
   return (
     <AnimatedContainer
@@ -41,7 +29,7 @@ export const LogosOnly: React.FC<TeamLayoutProps> = ({
       style={{ background: backgroundColor }}
     >
       {/* Home Team */}
-      <div className={logoPositionClass[logoPosition].home}>
+      <div className={LOGO_POSITION_CLASSES[logoPosition].home}>
         <div
           className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
         >
@@ -71,7 +59,7 @@ export const LogosOnly: React.FC<TeamLayoutProps> = ({
         )}
       </div>
       {/* Away Team */}
-      <div className={logoPositionClass[logoPosition].away}>
+      <div className={LOGO_POSITION_CLASSES[logoPosition].away}>
         <div
           className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
         >

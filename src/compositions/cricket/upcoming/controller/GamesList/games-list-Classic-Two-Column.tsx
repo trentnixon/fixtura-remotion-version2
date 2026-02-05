@@ -1,12 +1,6 @@
 import React from "react";
-
-import { GameData } from "../../types";
-
 import GameCardClassicTwoColumn from "../../layout/Card/game-card-Classic-Two-Column";
-interface GamesListProps {
-  games: GameData[];
-  gameRowHeight?: number;
-}
+import { GamesListProps } from "./_types/GamesListProps";
 
 export const GamesListClassicTwoColumn: React.FC<GamesListProps> = ({
   games,

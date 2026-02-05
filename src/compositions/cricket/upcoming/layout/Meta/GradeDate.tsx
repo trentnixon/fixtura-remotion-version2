@@ -4,13 +4,7 @@ import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataLarge } from "../../../utils/primitives/metadataLarge";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
-interface TopSectionProps {
-  ageGroup: string;
-  gradeName: string;
-  date: string;
-  delay: number;
-}
+import { TopSectionProps } from "./_types/GradeDateProps";
 
 export const GradeDate: React.FC<TopSectionProps> = ({
   gradeName,

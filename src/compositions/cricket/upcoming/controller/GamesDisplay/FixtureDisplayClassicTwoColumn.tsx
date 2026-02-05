@@ -1,21 +1,15 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { GameData } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
 import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../composition-types";
 import { GamesListClassicTwoColumn } from "../GamesList/games-list-Classic-Two-Column";
-interface GamesDisplayProps {
-  games: GameData[];
-  gamesPerScreen: number;
-  screenIndex: number;
-
-  heights?: {
-    asset: number;
-    [key: string]: number;
-  };
-}
+import { GamesDisplayProps } from "./_types/GamesDisplayProps";
+import {
+  calculateDisplayedGames,
+  calculateGameCardHeight,
+  mergeAssignSponsors,
+} from "./_utils/calculations";
 
 export const GamesDisplayClassicTwoColumn: React.FC<GamesDisplayProps> = ({
   games,
@@ -25,25 +19,23 @@ export const GamesDisplayClassicTwoColumn: React.FC<GamesDisplayProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
-  // Calculate which games to show on this screen
-  const startIndex = screenIndex * gamesPerScreen;
-  const endIndex = Math.min(startIndex + gamesPerScreen, games.length);
-  const displayedGames = games.slice(startIndex, endIndex);
 
-  // Calculate game card heights
-  const headerHeight = 0;
-  const contentPadding = 20;
-  const cardSpacing = 10;
-  const availableHeight = heights.asset - headerHeight - contentPadding;
-  const gameCardHeight = Math.floor(
-    availableHeight / gamesPerScreen - cardSpacing,
+  // Calculate which games to show on this screen
+  const displayedGames = calculateDisplayedGames(
+    games,
+    gamesPerScreen,
+    screenIndex,
   );
+
+  // Calculate game card heights with custom spacing for two-column layout
+  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen, {
+    headerHeight: 0,
+    contentPadding: 20,
+    cardSpacing: 10,
+  });
 
   // Merge all assignSponsors objects from displayedGames into one object
-  const mergedAssignSponsors = displayedGames.reduce(
-    (acc, game) => ({ ...acc, ...game.assignSponsors }),
-    {},
-  );
+  const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
   return (
     <div
       className="p-0 flex flex-col w-full h-full justify-center"

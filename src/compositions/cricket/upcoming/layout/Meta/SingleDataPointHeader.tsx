@@ -3,15 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { ResultMetaData } from "../../../utils/primitives/ResultMetaData";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface MatchHeaderProps {
-  value: string;
-  height: number;
-  delay: number;
-  backgroundColor: string;
-  align: string;
-  variant?: string;
-}
+import { MatchHeaderProps } from "./_types/SingleDataPointHeaderProps";
 
 export const SingleDataPointHeader: React.FC<MatchHeaderProps> = ({
   value,

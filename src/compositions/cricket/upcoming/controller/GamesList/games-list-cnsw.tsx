@@ -1,11 +1,6 @@
 import React from "react";
-
-import { GameData } from "../../types";
 import GameCardCNSW from "../../layout/Card/game-card-cnsw";
-interface GamesListProps {
-  games: GameData[];
-  gameRowHeight?: number;
-}
+import { GamesListProps } from "./_types/GamesListProps";
 
 export const GamesListCNSW: React.FC<GamesListProps> = ({ games }) => {
   return (

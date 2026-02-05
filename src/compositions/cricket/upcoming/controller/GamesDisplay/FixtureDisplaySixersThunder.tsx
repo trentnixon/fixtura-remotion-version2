@@ -1,23 +1,15 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { GameData } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
 import { GamesListSixersThunder } from "../GamesList/games-list-sixersThunder";
 import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-
-interface GamesDisplayProps {
-  games: GameData[];
-  gamesPerScreen: number;
-  screenIndex: number;
-
-  heights?: {
-    asset: number;
-    [key: string]: number;
-  };
-}
+import { GamesDisplayProps } from "./_types/GamesDisplayProps";
+import {
+  calculateDisplayedGames,
+  calculateGameCardHeight,
+} from "./_utils/calculations";
 
 export const GamesDisplaySixersThunder: React.FC<GamesDisplayProps> = ({
   games,
@@ -29,21 +21,19 @@ export const GamesDisplaySixersThunder: React.FC<GamesDisplayProps> = ({
   const { animations } = useAnimationContext();
   const LogoAnimations = animations.image.main.title.logo;
   const ContainerAnimations = animations.container;
-  // Calculate which games to show on this screen
-  const startIndex = screenIndex * gamesPerScreen;
-  const endIndex = Math.min(startIndex + gamesPerScreen, games.length);
-  const displayedGames = games.slice(startIndex, endIndex);
 
-  // Calculate game card heights
-  const headerHeight = 100;
-  const contentPadding = 40;
-  const cardSpacing = 20;
-  const availableHeight = heights.asset - headerHeight - contentPadding;
-  const gameCardHeight = Math.floor(
-    availableHeight / gamesPerScreen - cardSpacing,
+  // Calculate which games to show on this screen
+  const displayedGames = calculateDisplayedGames(
+    games,
+    gamesPerScreen,
+    screenIndex,
   );
 
-  // Merge all assignSponsors objects from displayedGames into one object
+  // Calculate game card heights
+  const gameCardHeight = calculateGameCardHeight(
+    heights.asset,
+    gamesPerScreen,
+  );
 
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">

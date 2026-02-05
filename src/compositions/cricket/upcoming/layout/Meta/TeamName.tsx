@@ -3,14 +3,10 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-interface TopSectionProps {
-  teamName: string;
-  delay: number;
-  delayName?: number;
-  style?: React.CSSProperties;
-  variant?: string;
-  className?: string;
-}
+import {
+  TopSectionProps,
+  TeamNameWrappedProps,
+} from "./_types/TeamNameProps";
 
 export const TeamName: React.FC<TopSectionProps> = ({
   teamName,
@@ -39,6 +35,7 @@ export const TeamName: React.FC<TopSectionProps> = ({
         animation={{ ...TextAnimations.copyIn, delay: delayName }}
         className={className}
         variant={variant}
+        letterAnimation="none"
       />
     </AnimatedContainer>
   );
@@ -46,12 +43,6 @@ export const TeamName: React.FC<TopSectionProps> = ({
 
 export default TeamName;
 
-interface TeamNameWrappedProps {
-  teamName: string;
-  delay: number;
-  outerStyles: object;
-  innerStyles: object;
-}
 export const TeamNameWrapped: React.FC<TeamNameWrappedProps> = ({
   teamName,
   delay,

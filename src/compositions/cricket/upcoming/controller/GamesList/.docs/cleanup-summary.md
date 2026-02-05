@@ -1,0 +1,3 @@
+# GamesList Cleanup Summary
+
+Refactored all GamesList component files by consolidating the shared `GamesListProps` interface into `_types/GamesListProps.ts` (both `_types` and `_utils` folders are in the current GamesList directory - create them if they don't exist). Updated all 7 component files (games-list.tsx, games-list-basic.tsx, games-list-brickWork.tsx, games-list-Classic-Two-Column.tsx, games-list-cnsw.tsx, games-list-cnsw-private.tsx, games-list-sixersThunder.tsx) to use the shared type, removing duplicate interface definitions. No utility functions were extracted as the components do not contain shared calculation logic or helper functions that need to be reused - they simply map over games and render card components.

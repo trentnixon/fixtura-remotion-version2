@@ -1,16 +1,16 @@
 import React from "react";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { GameData } from "../../types";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import TeamName from "../Meta/TeamName";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { SingleDataPointHeader } from "../Meta/SingleDataPointHeader";
-
-interface GameCardProps {
-  game: GameData;
-  index: number;
-}
+import { GameCardProps } from "./_types/GameCardProps";
+import {
+  calculateAnimationDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
+import { ResultMetaData } from "../../../utils/primitives/ResultMetaData";
 
 export const GameCardCNSWPrivate: React.FC<GameCardProps> = ({
   game,
@@ -24,8 +24,8 @@ export const GameCardCNSWPrivate: React.FC<GameCardProps> = ({
   const ContainerAnimations = animations.container;
 
   // Animation delay based on card index
-  const delay = index * 15;
-  const animationOutFrame = (timings?.FPS_SCORECARD || 270) - 20;
+  const delay = calculateAnimationDelay(index);
+  const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
     <div className="overflow-hidden my-4">
@@ -41,15 +41,26 @@ export const GameCardCNSWPrivate: React.FC<GameCardProps> = ({
         <div
           className={`${layout.borderRadius.container} w-full overflow-hidden`}
         >
-          <SingleDataPointHeader
-            value={game.time}
-            height={100}
-            delay={delay}
-            backgroundColor={"transparent"}
-            align="right"
-            variant="onBackgroundMain"
-          />
-          {/* Grade/Competition Section - Top */}
+          {/* Grade Section - Top */}
+          <AnimatedContainer
+            type="full"
+            className={`w-full flex items-center justify-end px-4 py-0 ${layout.borderRadius.container}`}
+            backgroundColor="none"
+            style={{
+              background: "transparent",
+              height: `100px`,
+            }}
+            animation={ContainerAnimations.main.itemContainer.containerIn}
+            animationDelay={delay}
+          >
+            <ResultMetaData
+              value={game.gradeName}
+              animation={{ ...animations.text.main.copyIn, delay: delay + 1 }}
+              className="text-right"
+              variant="onContainerCopyNoBg"
+            />
+          </AnimatedContainer>
+          {/* Team Names Section */}
           <TeamName
             teamName={game.teamHome}
             delay={delay + 10}
@@ -60,14 +71,31 @@ export const GameCardCNSWPrivate: React.FC<GameCardProps> = ({
             className="text-left"
             variant="onBackgroundMain"
           />
-          <SingleDataPointHeader
-            value={"vs"}
-            height={100}
-            delay={delay}
-            backgroundColor={"transparent"}
-            align="left"
-            variant="onBackgroundMain"
-          />
+          {/* Date, Time Section */}
+          <AnimatedContainer
+            type="full"
+            className={`w-full flex items-center px-4 py-1 ${layout.borderRadius.container}`}
+            backgroundColor="none"
+            style={{
+              background: "transparent",
+              height: `100px`,
+            }}
+            animation={ContainerAnimations.main.itemContainer.containerIn}
+            animationDelay={delay}
+          >
+            <ResultMetaData
+              value={game.date}
+              animation={{ ...animations.text.main.copyIn, delay: delay + 1 }}
+              className="text-left mr-4"
+              variant="onContainerCopyNoBg"
+            />
+            <ResultMetaData
+              value={game.time}
+              animation={{ ...animations.text.main.copyIn, delay: delay + 1 }}
+              className="text-left"
+              variant="onContainerCopyNoBg"
+            />
+          </AnimatedContainer>
           <TeamName
             teamName={game.teamAway}
             delay={delay + 10}
@@ -84,7 +112,7 @@ export const GameCardCNSWPrivate: React.FC<GameCardProps> = ({
             delay={delay}
             backgroundColor={"transparent"}
             align="right"
-            variant="onBackgroundMain"
+            variant="onContainerCopyNoBg"
           />
         </div>
       </AnimatedContainer>

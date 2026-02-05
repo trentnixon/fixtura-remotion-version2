@@ -1,30 +1,31 @@
 import React from "react";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { GameData } from "../../types";
-
-import GroundTime from "../Meta/GroundTime";
+import Ground from "../Meta/Ground";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import { LogosOnly } from "../Logos/variations";
+import TeamLogo from "../../../utils/primitives/TeamLogo";
 import TeamName from "../Meta/TeamName";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface GameCardProps {
-  game: GameData;
-  index: number;
-}
+import { GameCardProps } from "./_types/GameCardProps";
+import {
+  calculateAnimationDelay,
+  calculateAnimationOutFrame,
+  FAST_DELAY_MULTIPLIER,
+} from "./_utils/calculations";
+import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { LOGO_SIZES } from "../Logos/variations/_utils/helpers";
 
 export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, layout } = useThemeContext();
 
   const ContainerAnimations = animations.container;
 
   // Animation delay based on card index
-  const delay = index * 5;
-  const animationOutFrame = (timings?.FPS_SCORECARD || 270) - 20;
+  const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
+  const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
     <div className="overflow-hidden my-2">
@@ -38,7 +39,13 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
         exitFrame={animationOutFrame}
       >
         <div className="rounded-lg w-full overflow-hidden">
-          {/* Grade/Competition Section - Top */}
+          {/* Grade Section - Top */}
+          <Ground
+            ground={game.gradeName}
+            delay={delay}
+            backgroundColor="transparent"
+          />
+          {/* Team Names Section */}
           <TeamName
             teamName={game.teamHome}
             delay={delay}
@@ -51,17 +58,88 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
           />
 
           {/* Teams Section - Middle */}
-          <LogosOnly
-            teamHome={game.teamHome}
-            teamAway={game.teamAway}
-            teamHomeLogo={game.teamHomeLogo}
-            teamAwayLogo={game.teamAwayLogo}
-            delay={delay}
-            vsAdditionalInfo={game.date}
-            backgroundColor={
-              selectedPalette.container.backgroundTransparent.low
-            }
-          />
+          <AnimatedContainer
+            type="full"
+            className={`flex items-center justify-center w-full bg-black/20 p-1 ${layout.borderRadius.container}`}
+            animation={ContainerAnimations.main.itemContainerSecondary.containerIn}
+            animationDelay={delay}
+            style={{
+              background: selectedPalette.container.backgroundTransparent.low,
+            }}
+          >
+            {/* Home Team Logo */}
+            <div className="flex-1 flex flex-col items-center">
+              <div
+                className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
+              >
+                <TeamLogo
+                  logo={game.teamHomeLogo}
+                  teamName={game.teamHome}
+                  delay={delay + 15}
+                  size={LOGO_SIZES.large.size}
+                />
+              </div>
+            </div>
+
+            {/* Middle Section: VS, Ground, Date, Time */}
+            <div className="mx-6 flex flex-col items-center">
+              {/* VS */}
+              <MetadataMedium
+                value="VS"
+                animation={{
+                  ...animations.text.main.copyIn,
+                  delay: delay + 20,
+                }}
+                className="text-center mb-1"
+                variant="onContainerCopy"
+              />
+              {/* Ground */}
+              <MetadataMedium
+                value={game.ground}
+                animation={{
+                  ...animations.text.main.copyIn,
+                  delay: delay + 20,
+                }}
+                className="text-center my-0"
+                variant="onContainerCopy"
+              />
+              {/* Date and Time */}
+              <div className="flex items-center gap-2 mt-1">
+                <MetadataMedium
+                  value={game.date}
+                  animation={{
+                    ...animations.text.main.copyIn,
+                    delay: delay + 20,
+                  }}
+                  className="text-center"
+                  variant="onContainerCopy"
+                />
+                <MetadataMedium
+                  value={game.time}
+                  animation={{
+                    ...animations.text.main.copyIn,
+                    delay: delay + 20,
+                  }}
+                  className="text-center"
+                  variant="onContainerCopy"
+                />
+              </div>
+            </div>
+
+            {/* Away Team Logo */}
+            <div className="flex-1 flex flex-col items-center">
+              <div
+                className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
+              >
+                <TeamLogo
+                  logo={game.teamAwayLogo}
+                  teamName={game.teamAway}
+                  delay={delay + 20}
+                  size={LOGO_SIZES.large.size}
+                />
+              </div>
+            </div>
+          </AnimatedContainer>
           <TeamName
             teamName={game.teamAway}
             delay={delay}
@@ -71,13 +149,6 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
               textAlign: "center",
               borderRadius: "0 0 10px 10px",
             }}
-          />
-          {/* Date/Ground Section - Bottom */}
-          <GroundTime
-            time={game.time}
-            ground={game.ground}
-            delay={delay}
-            backgroundColor={"transparent"}
           />
         </div>
       </AnimatedContainer>

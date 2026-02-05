@@ -1,11 +1,6 @@
 import React from "react";
-
-import { GameData } from "../../types";
 import GameCardSixersThunder from "../../layout/Card/game-card-sixersThunder";
-interface GamesListProps {
-  games: GameData[];
-  gameRowHeight?: number;
-}
+import { GamesListProps } from "./_types/GamesListProps";
 
 export const GamesListSixersThunder: React.FC<GamesListProps> = ({ games }) => {
   return (

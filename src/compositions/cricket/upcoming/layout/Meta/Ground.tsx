@@ -3,26 +3,22 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { BottomSectionProps } from "./_types/GroundProps";
 
-interface BottomSectionProps {
-  ground: string;
-  delay: number;
-}
-
-export const Ground: React.FC<BottomSectionProps> = ({ ground, delay }) => {
+export const Ground: React.FC<BottomSectionProps> = ({ ground, delay, backgroundColor }) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
   const ContainerAnimations = animations.container;
-  const backgroundColor = selectedPalette.container.light;
+  const bgColor = backgroundColor ?? selectedPalette.container.light;
 
   return (
     <AnimatedContainer
       type="full"
-      className={`w-full p-3 flex justify-between `}
+      className={`w-full p-1 flex justify-between `}
       backgroundColor="none"
       style={{
-        backgroundColor: backgroundColor,
+        backgroundColor: bgColor,
       }}
       animation={ContainerAnimations.main.itemContainer.containerIn}
       animationDelay={delay + 10}
@@ -34,6 +30,7 @@ export const Ground: React.FC<BottomSectionProps> = ({ ground, delay }) => {
           value={ground}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-center"
+          variant="onContainerCopyNoBg"
         />
       </div>
     </AnimatedContainer>
