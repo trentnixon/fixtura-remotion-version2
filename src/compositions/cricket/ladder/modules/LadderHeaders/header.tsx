@@ -1,10 +1,7 @@
 import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import { HEADER_ANIMATION_DURATION } from "../../types";
-
-interface LadderHeaderProps {
-  title: string;
-}
+import { LadderHeaderProps } from "./_types/LadderHeaderProps";
 
 export const LadderHeader: React.FC<LadderHeaderProps> = ({ title }) => {
   const frame = useCurrentFrame();

@@ -3,17 +3,8 @@ import React from "react";
 import TeamLogo from "../../utils/primitives/TeamLogo";
 import LadderTeamName from "../../utils/primitives/ladderTeamName";
 import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
-import { TeamData } from "../types";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-
-// Base props interface for all layouts
-interface BaseLayoutProps {
-  team: TeamData;
-  delay: number;
-  bgColorClass: string;
-  LadderRowHeight: number;
-  place: number;
-}
+import { BaseLayoutProps } from "./_types/BaseLayoutProps";
 
 // Standard layout - exactly as you had it
 export const StandardLadderRow: React.FC<BaseLayoutProps> = ({

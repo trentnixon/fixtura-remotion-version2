@@ -1,9 +1,4 @@
 import React from "react";
-import {
-  PerformanceData,
-  isBattingPerformance,
-  isBowlingPerformance,
-} from "../types";
 
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { Top5PlayerName } from "../../utils/primitives/Top5PlayerName";
@@ -14,19 +9,8 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 import { MetadataMedium } from "../../utils/primitives/metadataMedium";
 import { stripGradeNumberFromTeamName } from "../../utils/utils-text";
-
-interface PerformanceRowLayoutProps {
-  performance: PerformanceData;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { PerformanceRowLayoutProps } from "./_types/PerformanceRowLayoutProps";
+import { truncateText, getScoreValues } from "./_utils/helpers";
 
 // --- Layout: CNSW ---
 export const StandardPerformanceRowCNSW: React.FC<
@@ -44,32 +28,12 @@ export const StandardPerformanceRowCNSW: React.FC<
   const bgColor = dynamicBackground.high;
   const ScorebgColor = dynamicBackground.strong;
 
-  // Get the appropriate score display based on performance type
-  const getScoreValues = () => {
-    if (isBattingPerformance(performance)) {
-      // Main value is runs (with * for not out), suffix is only balls faced
-      const mainValue = performance.notOut
-        ? `${performance.runs}*`
-        : `${performance.runs}`;
-      const suffix = performance.balls > 0 ? `(${performance.balls})` : "";
-      return { mainValue, suffix };
-    } else if (isBowlingPerformance(performance)) {
-      // Main value is wickets-runs, suffix is overs
-      const mainValue = `${performance.wickets}/${performance.runs}`;
-      const suffix = `(${performance.overs})`;
-      return { mainValue, suffix };
-    }
-
-    // Fallback
-    return { mainValue: "--", suffix: "" };
-  };
-
   // Get truncated player name and team name
   const playerName = truncateText(performance.name, 20).toUpperCase();
   const teamName = truncateText(performance.playedFor, 35).toUpperCase();
 
   // Get score display values
-  const { mainValue, suffix } = getScoreValues();
+  const { mainValue, suffix } = getScoreValues(performance);
 
   return (
     <div

@@ -1,27 +1,24 @@
 import React from "react";
-import { PerformanceData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { getItemsForScreen } from "../../utils/screenCalculator";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PerformanceRowClassicTwoColumn from "../PlayerRow/row-ClassicTwoColumn";
-import { AssignSponsors } from "../../../composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
-
-interface PerformancesDisplayProps {
-  performances: PerformanceData[];
-  itemsPerScreen: number;
-  screenIndex: number;
-  assignSponsors: AssignSponsors;
-}
+import {
+  PerformancesDisplayWithSponsorsProps,
+} from "./_types/PerformancesDisplayProps";
 
 const PerformancesDisplayClassicTwoColumn: React.FC<
-  PerformancesDisplayProps
+  PerformancesDisplayWithSponsorsProps
 > = ({ performances, itemsPerScreen, screenIndex, assignSponsors }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
+
+  // Test: Log heights.asset to verify it's being used
+  console.log("[PerformancesDisplayClassicTwoColumn] heights.asset:", heights.asset);
 
   // Get items for this specific screen
   const displayedPerformances = getItemsForScreen(

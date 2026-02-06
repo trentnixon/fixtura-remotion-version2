@@ -10,6 +10,11 @@ import { LadderData } from "./types";
 import NoLadderData from "./modules/NoLadderData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import LadderDisplayClassic from "./controller/Display/display-classic";
+import {
+  hasValidLadderData,
+  castToLadderDataArray,
+  calculateLadderDuration,
+} from "./_utils/helpers";
 
 // Main component with TransitionSeries
 export const CricketLadderWithTransitions: React.FC = () => {
@@ -20,23 +25,18 @@ export const CricketLadderWithTransitions: React.FC = () => {
   const transitionConfig = animations.transition.Main;
 
   // If no data is available, show a placeholder
-  if (
-    !CompositionData ||
-    !Array.isArray(CompositionData) ||
-    CompositionData.length === 0
-  ) {
+  if (!hasValidLadderData(CompositionData)) {
     return <NoLadderData />;
   }
 
   // Explicitly cast CompositionData to LadderData[] for the map function
-  const ladderDataArray = CompositionData as unknown as LadderData[];
+  const ladderDataArray = castToLadderDataArray(CompositionData);
 
   return (
     <TransitionSeriesWrapper
       sequences={ladderDataArray.map((ladder: LadderData) => ({
         content: <LadderDisplayClassic ladder={ladder} />,
-        // Use a generic timing property or fallback if FPS_LADDER doesn't exist
-        durationInFrames: timings?.FPS_LADDER || 300, // Example: Use FPS_MAIN or fallback
+        durationInFrames: calculateLadderDuration(timings),
       }))}
       transitionType={transitionConfig.type as TransitionType}
       direction={transitionConfig.direction as TransitionDirection}

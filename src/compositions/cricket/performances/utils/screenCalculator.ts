@@ -1,4 +1,4 @@
-import { PerformanceData, ScreenCalculationResult } from "../types";
+import { PerformanceData, ScreenCalculationResult } from "../_types/types";
 
 /**
  * Calculate screen configuration for pagination

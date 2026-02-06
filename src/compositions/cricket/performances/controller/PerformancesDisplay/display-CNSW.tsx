@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { PerformanceData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { getItemsForScreen } from "../../utils/screenCalculator";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
@@ -8,12 +7,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import PerformanceRowCNSW from "../PlayerRow/row-CNSW";
 import { Top5PlayerName } from "../../../utils/primitives/Top5PlayerName";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-
-interface PerformancesDisplayProps {
-  performances: PerformanceData[];
-  itemsPerScreen: number;
-  screenIndex: number;
-}
+import { PerformancesDisplayProps } from "./_types/PerformancesDisplayProps";
 
 const PerformancesDisplayCNSW: React.FC<PerformancesDisplayProps> = ({
   performances,
@@ -25,6 +19,9 @@ const PerformancesDisplayCNSW: React.FC<PerformancesDisplayProps> = ({
   const { animations } = useAnimationContext();
   const { data } = useVideoDataContext();
   const ContainerAnimations = animations.container;
+
+  // Test: Log heights.asset to verify it's being used
+  console.log("[PerformancesDisplayCNSW] heights.asset:", heights.asset);
 
   // Get items for this specific screen
   const displayedPerformances = getItemsForScreen(

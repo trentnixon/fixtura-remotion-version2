@@ -1,16 +1,14 @@
 import React from "react";
-import { PerformanceData } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { StandardPerformanceRowCNSW } from "../../layout/StandardPerformanceRowCNSW";
-
-interface PerformanceRowProps {
-  performance: PerformanceData;
-  index: number;
-  rowHeight: number;
-}
+import { PerformanceRowProps } from "./_types/PerformanceRowProps";
+import {
+  calculateAnimationDelayModulo,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const PerformanceRowCNSW: React.FC<PerformanceRowProps> = ({
   performance,
@@ -23,8 +21,8 @@ const PerformanceRowCNSW: React.FC<PerformanceRowProps> = ({
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = (index % 7) * 2.5; // Stagger the animation every 7 rows (modulo 7)
-  const animationOutFrame = (timings?.FPS_PREFORMANCECARD || 180) - 30;
+  const delay = calculateAnimationDelayModulo(index, 7, 2.5);
+  const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
     <div className="overflow-hidden mb-2">

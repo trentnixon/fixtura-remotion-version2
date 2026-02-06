@@ -3,7 +3,7 @@ import {
   BowlingPerformanceData,
   PerformanceData,
   PERFORMANCES_COMPOSITIONS,
-} from "../types";
+} from "../_types/types";
 
 /**
  * Transform raw performance data based on the composition type

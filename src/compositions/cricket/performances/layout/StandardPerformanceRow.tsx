@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  PerformanceData,
-  TeamLogo as PerformanceTeamLogoType,
-  isBattingPerformance,
-  isBowlingPerformance,
-} from "../types";
+import { TeamLogo as PerformanceTeamLogoType } from "../_types/types";
 import { TeamLogo } from "../../utils/primitives/TeamLogo";
 
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -13,29 +8,13 @@ import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
 import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-
-interface PerformanceRowLayoutProps {
-  performance: PerformanceData;
-  index: number;
-  rowHeight: number;
-  delay: number;
-  restrictions: { nameLength: number; teamLength: number };
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { PerformanceRowLayoutPropsWithRestrictions } from "./_types/PerformanceRowLayoutProps";
+import { truncateText, getScoreValues, formatPlayerName } from "./_utils/helpers";
 
 // --- Layout: Standard Performance Row ---
-export const StandardPerformanceRow: React.FC<PerformanceRowLayoutProps> = ({
-  performance,
-  index,
-  rowHeight,
-  delay,
-  restrictions,
-}) => {
+export const StandardPerformanceRow: React.FC<
+  PerformanceRowLayoutPropsWithRestrictions
+> = ({ performance, index, rowHeight, delay, restrictions }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
 
@@ -55,43 +34,20 @@ export const StandardPerformanceRow: React.FC<PerformanceRowLayoutProps> = ({
     ? selectedPalette.container.transparentSecondary
     : selectedPalette.container.backgroundTransparent.strong; */
 
-  // Get the appropriate score display based on performance type
-  const getScoreValues = () => {
-    if (isBattingPerformance(performance)) {
-      // Main value is runs (with * for not out), suffix is balls faced
-      const mainValue = performance.notOut
-        ? `${performance.runs}*`
-        : `${performance.runs}`;
-      const suffix = performance.balls > 0 ? `(${performance.balls})` : "";
-      return { mainValue, suffix };
-    } else if (isBowlingPerformance(performance)) {
-      // Main value is wickets-runs, suffix is overs
-      const mainValue = `${performance.wickets}/${performance.runs}`;
-      const suffix = `(${performance.overs})`;
-      return { mainValue, suffix };
-    }
-
-    // Fallback
-    return { mainValue: "--", suffix: "" };
-  };
-
-  // Get truncated player name and team name
-  const playerName = truncateText(
-    performance.name,
-    restrictions.nameLength,
-  ).toUpperCase();
+  // Format player name as "First Initial. Last Name"
+  const playerName = formatPlayerName(performance.name);
   const teamName = truncateText(
     performance.playedFor,
     restrictions.teamLength,
   ).toUpperCase();
 
   // Get score display values
-  const { mainValue, suffix } = getScoreValues();
+  const { mainValue, suffix } = getScoreValues(performance);
 
   return (
     <div
       className="flex items-stretch h-full w-full overflow-hidden rounded-lg"
-      style={{ height: `${rowHeight}px` }}
+      style={{ height: `${rowHeight}px`, width: "100%" }}
     >
       {/* Logo Section (Fixed Width) */}
       <div className="w-30 bg-white flex items-center justify-center p-0 shrink-0">
@@ -114,7 +70,7 @@ export const StandardPerformanceRow: React.FC<PerformanceRowLayoutProps> = ({
         <div className="flex flex-col justify-start">
           {/* Player Name */}
           <Top5PlayerName
-            value={playerName} // Truncated and uppercase name
+            value={playerName} // Formatted as "First Initial. Last Name"
             animation={{ ...largeTextAnimation, delay: delay + 2 }}
             className=""
           />

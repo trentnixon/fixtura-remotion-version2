@@ -1,5 +1,4 @@
 import React from "react";
-import { LadderData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
@@ -7,10 +6,8 @@ import { SponsorFooter } from "../../../sponsorFooter";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import TableHeaderClassicTwoColumn from "../../modules/TableHeader/headerClassicTwoColumn";
 import { StandardRowClassicTwoColumnWrapped } from "../TeamRows/row-Classic-two-column";
-
-interface LadderDisplayProps {
-  ladder: LadderData;
-}
+import { LadderDisplayProps } from "./_types/LadderDisplayProps";
+import { calculateRowDimensions } from "./_utils/calculations";
 
 export const LadderDisplayClassicTwoColumn: React.FC<LadderDisplayProps> = ({
   ladder,
@@ -70,21 +67,3 @@ export const LadderDisplayClassicTwoColumn: React.FC<LadderDisplayProps> = ({
 };
 
 export default LadderDisplayClassicTwoColumn;
-
-////Utilities////
-const calculateRowDimensions = (totalHeight: number, teamCount: number) => {
-  const headerHeight = 70;
-  const VERTICAL_GAP = 4;
-  const PADDING = 20;
-  const HEADER_MARGIN = 10;
-
-  const ladderHeight = totalHeight - headerHeight;
-  const totalVerticalGaps = (teamCount - 1) * VERTICAL_GAP;
-  const availableHeight = ladderHeight - PADDING * 2 - HEADER_MARGIN;
-  const rowHeight = (availableHeight - totalVerticalGaps) / teamCount;
-
-  return {
-    headerHeight,
-    rowHeight,
-  };
-};

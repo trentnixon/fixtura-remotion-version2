@@ -1,11 +1,8 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
-
-interface TableHeaderProps {
-  title: string;
-  headerHeight: number;
-}
+import { TableHeaderProps } from "./_types/TableHeaderProps";
+import { calculateActualHeight } from "./_utils/calculations";
 
 export const TableHeaderCNSWPrivate: React.FC<TableHeaderProps> = ({
   title,
@@ -14,7 +11,7 @@ export const TableHeaderCNSWPrivate: React.FC<TableHeaderProps> = ({
   const { layout } = useThemeContext();
 
   // Calculate the actual height with max constraint (same as rows)
-  const actualHeight = Math.min(headerHeight, 120);
+  const actualHeight = calculateActualHeight(headerHeight);
 
   return (
     <div

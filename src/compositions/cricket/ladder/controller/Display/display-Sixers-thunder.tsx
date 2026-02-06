@@ -1,5 +1,4 @@
 import React from "react";
-import { LadderData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { StandardRowSixersThunderWrapped } from "../TeamRows/row-Sixers-thunder";
@@ -8,10 +7,8 @@ import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header/variants/VerticalStack";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
-interface LadderDisplayProps {
-  ladder: LadderData;
-}
+import { LadderDisplayProps } from "./_types/LadderDisplayProps";
+import { calculateRowDimensions } from "./_utils/calculations";
 
 export const LadderDisplaySixersThunder: React.FC<LadderDisplayProps> = ({
   ladder,
@@ -87,21 +84,3 @@ export const LadderDisplaySixersThunder: React.FC<LadderDisplayProps> = ({
 };
 
 export default LadderDisplaySixersThunder;
-
-////Utilities////
-const calculateRowDimensions = (totalHeight: number, teamCount: number) => {
-  const headerHeight = 70;
-  const VERTICAL_GAP = 4;
-  const PADDING = 20;
-  const HEADER_MARGIN = 10;
-
-  const ladderHeight = totalHeight - headerHeight;
-  const totalVerticalGaps = (teamCount - 1) * VERTICAL_GAP;
-  const availableHeight = ladderHeight - PADDING * 2 - HEADER_MARGIN;
-  const rowHeight = (availableHeight - totalVerticalGaps) / teamCount;
-
-  return {
-    headerHeight,
-    rowHeight,
-  };
-};

@@ -1,19 +1,17 @@
 import React from "react";
-import { TeamData } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import StandardLadderRow from "../../layout/TableRowLayout";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { SixersLadderRow } from "../../layout/TableSixersRow";
-interface TeamRowProps {
-  team: TeamData;
-  index: number;
-  totalTeams: number;
-  isBiasTeam: boolean;
-  LadderRowHeight: number;
-  wrapperClass?: string;
-}
+import { TeamRowProps } from "./_types/TeamRowProps";
+import {
+  calculateAnimationDelay,
+  calculateAnimationOutFrame,
+  parseTeamPosition,
+} from "./_utils/calculations";
+import { OverflowHiddenWrapper } from "./_utils/components";
 
 export const StandardRowSixers: React.FC<TeamRowProps> = ({
   team,
@@ -30,12 +28,12 @@ export const StandardRowSixers: React.FC<TeamRowProps> = ({
   const { timings } = data;
 
   // Stagger the animation of each row
-  const delay = index * 5;
-  const animationOutFrame = timings?.FPS_LADDER ? timings.FPS_LADDER - 20 : 0;
+  const delay = calculateAnimationDelay(index, 5);
+  const animationOutFrame = calculateAnimationOutFrame(timings);
 
   // Determine background color based on position and bias team
   let bgColorClass = "";
-  const position = parseInt(team.position);
+  const position = parseTeamPosition(team.position);
 
   if (isBiasTeam) {
     bgColorClass = "bg-blue-900/70";
@@ -86,12 +84,12 @@ export const StandardRowSixersThunderWrapped: React.FC<TeamRowProps> = ({
   const { timings } = data;
 
   // Stagger the animation of each row
-  const delay = index * 5;
-  const animationOutFrame = timings?.FPS_LADDER ? timings.FPS_LADDER - 20 : 0;
+  const delay = calculateAnimationDelay(index, 5);
+  const animationOutFrame = calculateAnimationOutFrame(timings);
 
   // Determine background color based on position and bias team
   let bgColorClass = "";
-  const position = parseInt(team.position);
+  const position = parseTeamPosition(team.position);
 
   if (isBiasTeam) {
     bgColorClass = "bg-blue-900/70";
@@ -129,9 +127,3 @@ export const StandardRowSixersThunderWrapped: React.FC<TeamRowProps> = ({
   );
 };
 //
-
-const OverflowHiddenWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  return <div className="overflow-hidden">{children}</div>;
-};

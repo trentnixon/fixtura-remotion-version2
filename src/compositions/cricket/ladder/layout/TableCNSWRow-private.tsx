@@ -3,18 +3,10 @@ import React from "react";
 //import TeamLogo from "../../utils/primitives/TeamLogo";
 import LadderTeamName from "../../utils/primitives/ladderTeamName";
 import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
-import { TeamData } from "../types";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { MetadataSmall } from "../../utils/primitives/metadataSmall";
 import { stripGradeNumberFromTeamName } from "../../utils/utils-text";
-
-// Base props interface for all layouts
-interface BaseLayoutProps {
-  team: TeamData;
-  delay: number;
-  LadderRowHeight: number;
-  place: number;
-}
+import { BaseLayoutProps } from "./_types/BaseLayoutProps";
 
 // Balanced layout - logo on right, alternating backgrounds for stats
 export const CNSWLadderRowPrivate: React.FC<BaseLayoutProps> = ({

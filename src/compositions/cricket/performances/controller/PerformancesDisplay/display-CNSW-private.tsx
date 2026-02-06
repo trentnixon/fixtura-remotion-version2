@@ -1,17 +1,11 @@
 import React from "react";
-import { PerformanceData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { getItemsForScreen } from "../../utils/screenCalculator";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PerformanceRowCNSWPrivate from "../PlayerRow/row-CNSW-private";
 import { Top5PlayerName } from "../../../utils/primitives/Top5PlayerName";
-
-interface PerformancesDisplayProps {
-  performances: PerformanceData[];
-  itemsPerScreen: number;
-  screenIndex: number;
-}
+import { PerformancesDisplayProps } from "./_types/PerformancesDisplayProps";
 
 const PerformancesDisplayCNSWPrivate: React.FC<PerformancesDisplayProps> = ({
   performances,

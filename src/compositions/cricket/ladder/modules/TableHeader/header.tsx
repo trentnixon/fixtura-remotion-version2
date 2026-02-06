@@ -2,11 +2,7 @@ import React from "react";
 
 import { AnimatedText } from "../../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-
-interface TableHeaderProps {
-  title: string;
-  headerHeight: number;
-}
+import { TableHeaderProps } from "./_types/TableHeaderProps";
 
 export const TableHeader: React.FC<TableHeaderProps> = ({
   title,

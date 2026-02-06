@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  PerformanceData,
-  TeamLogo as PerformanceTeamLogoType,
-  isBattingPerformance,
-  isBowlingPerformance,
-} from "../types";
+import { TeamLogo as PerformanceTeamLogoType } from "../_types/types";
 import { TeamLogo } from "../../utils/primitives/TeamLogo";
 
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -13,19 +8,8 @@ import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
 import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-
-interface PerformanceRowLayoutProps {
-  performance: PerformanceData;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { PerformanceRowLayoutProps } from "./_types/PerformanceRowLayoutProps";
+import { truncateText, getScoreValues, formatPlayerName } from "./_utils/helpers";
 
 // --- Layout: Classic (SixersThunder style) ---
 export const StandardPerformanceRowClassic: React.FC<
@@ -45,38 +29,20 @@ export const StandardPerformanceRowClassic: React.FC<
 
   const contrastBG = selectedPalette.container.backgroundTransparent.strong;
 
-  // Get the appropriate score display based on performance type
-  const getScoreValues = () => {
-    if (isBattingPerformance(performance)) {
-      // Main value is runs (with * for not out), suffix is only balls faced
-      const mainValue = performance.notOut
-        ? `${performance.runs}*`
-        : `${performance.runs}`;
-      const suffix = performance.balls > 0 ? `(${performance.balls})` : "";
-      return { mainValue, suffix };
-    } else if (isBowlingPerformance(performance)) {
-      // Main value is wickets-runs, suffix is overs
-      const mainValue = `${performance.wickets}/${performance.runs}`;
-      const suffix = `(${performance.overs})`;
-      return { mainValue, suffix };
-    }
-
-    // Fallback
-    return { mainValue: "--", suffix: "" };
-  };
-
-  // Get truncated player name and team name
-  const playerName = truncateText(performance.name, 20).toUpperCase();
+  // Format player name as "First Initial. Last Name"
+  const playerName = formatPlayerName(performance.name);
+  // Get truncated team name
   const teamName = truncateText(performance.playedFor, 35).toUpperCase();
 
   // Get score display values
-  const { mainValue, suffix } = getScoreValues();
+  const { mainValue, suffix } = getScoreValues(performance);
 
   return (
     <div
       className={`grid grid-cols-12 p-0 pl-2 items-center  overflow-hidden ${layout.borderRadius.container}`}
       style={{
         height: `${rowHeight}px`,
+        width: "100%",
         background: bgColor,
       }}
     >

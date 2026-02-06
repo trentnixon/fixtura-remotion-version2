@@ -12,6 +12,13 @@ import { SponsorFooter } from "../sponsorFooter/index";
 import { AssignSponsors } from "../composition-types";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import PerformancesDisplaySixersThunder from "./controller/PerformancesDisplay/display-SixersThunder";
+import {
+  getItemsPerScreen,
+  calculateDisplayDurationPerScreen,
+  hasValidPerformances,
+  calculateTotalScreens,
+  mergeAssignSponsors,
+} from "./_utils/calculations";
 
 export const PerformancesListSixersThunder: React.FC = () => {
   const { data, contentLayout, metadata } = useVideoDataContext();
@@ -24,55 +31,18 @@ export const PerformancesListSixersThunder: React.FC = () => {
   // Extract metadata from video data
   const fixturesLayout = contentLayout.divideFixturesBy || {};
 
-  // Get items per screen from contentLayout - match upcoming pattern exactly
-  const fixturesConfig = fixturesLayout as unknown as {
-    CricketBattingPerformances?: number;
-    CricketBowlingPerformances?: number;
-  };
-
-  let itemsPerScreen: number;
-  if (
-    fixturesConfig &&
-    typeof fixturesConfig.CricketBattingPerformances === "number" &&
-    fixturesConfig.CricketBattingPerformances > 0
-  ) {
-    itemsPerScreen = fixturesConfig.CricketBattingPerformances;
-  } else if (
-    fixturesConfig &&
-    typeof fixturesConfig.CricketBowlingPerformances === "number" &&
-    fixturesConfig.CricketBowlingPerformances > 0
-  ) {
-    itemsPerScreen = fixturesConfig.CricketBowlingPerformances;
-  } else {
-    itemsPerScreen = 5; // Default fallback
-  }
+  // Get items per screen from contentLayout
+  const itemsPerScreen = getItemsPerScreen(fixturesLayout);
 
   // Get frame duration from metadata if available
-  // Use FPS_PREFORMANCECARD for performances composition
   const frameOptions = metadata.frames || [300];
-  // Use || instead of ?? to handle 0 values (match upcoming pattern)
-  let displayDurationPerScreen =
-    timings?.FPS_PREFORMANCECARD || frameOptions[0] || 300;
-
-  // Ensure duration is always positive (defensive check)
-  if (
-    typeof displayDurationPerScreen !== "number" ||
-    displayDurationPerScreen <= 0
-  ) {
-    console.warn(
-      "[PerformancesListSixersThunder] Invalid durationInFrames:",
-      displayDurationPerScreen,
-      "using default 300",
-    );
-    displayDurationPerScreen = 300;
-  }
+  const displayDurationPerScreen = calculateDisplayDurationPerScreen(
+    timings,
+    frameOptions,
+  );
 
   // If no data is available, show a placeholder
-  if (
-    !performancesData ||
-    !Array.isArray(performancesData) ||
-    performancesData.length === 0
-  ) {
+  if (!hasValidPerformances(performancesData)) {
     return <NoPlayersData />;
   }
 
@@ -85,7 +55,10 @@ export const PerformancesListSixersThunder: React.FC = () => {
   );
 
   // Calculate how many screens we need based on items per screen
-  const totalScreens = Math.ceil(transformedData.length / itemsPerScreen);
+  const totalScreens = calculateTotalScreens(
+    transformedData.length,
+    itemsPerScreen,
+  );
 
   // Ensure we have at least one screen
   if (totalScreens <= 0) {
@@ -129,72 +102,18 @@ export const PerformancesListSixersThunder: React.FC = () => {
     })),
   });
 
-  // Merge and transform assignSponsors from all performances (global level)
-  // Transform from performance format to SponsorFooter expected format
-  const mergedAssignSponsors = transformedData.reduce(
-    (acc, performance) => {
-      const { assignSponsors } = performance;
-      if (!assignSponsors) return acc;
+  // Merge and transform assignSponsors from all performances
+  const mergedAssignSponsors = mergeAssignSponsors(transformedData);
 
-      // Collect unique grades and competitions
-      const grades = acc.grade || [];
-      const competitions = acc.competition || [];
-      const teams = acc.team || [];
-
-      // Add grade if it exists and is unique
-      if (assignSponsors.grade && assignSponsors.grade.id) {
-        const gradeExists = grades.some(
-          (g) => g.id === assignSponsors.grade.id,
-        );
-        if (!gradeExists) {
-          grades.push({
-            id: assignSponsors.grade.id,
-            name: assignSponsors.grade.name,
-            logo: { url: "" }, // Performance data doesn't include logos
-          });
-        }
-      }
-
-      // Add competition if it exists and is unique
-      if (assignSponsors.competition && assignSponsors.competition.id) {
-        const compExists = competitions.some(
-          (c) => c.id === assignSponsors.competition.id,
-        );
-        if (!compExists) {
-          competitions.push({
-            id: assignSponsors.competition.id,
-            name: assignSponsors.competition.name,
-            logo: { url: "" }, // Performance data doesn't include logos
-          });
-        }
-      }
-
-      // Add team if it exists (Team is an object, not array in performance data)
-      if (assignSponsors.Team && assignSponsors.Team.name) {
-        const teamExists = teams.some(
-          (t) => t.home?.name === assignSponsors.Team.name,
-        );
-        if (!teamExists) {
-          teams.push({
-            home: { name: assignSponsors.Team.name },
-            away: { name: "" },
-            logo: { url: "" }, // Performance data doesn't include logos
-          });
-        }
-      }
-
-      return {
-        grade: grades,
-        competition: competitions,
-        team: teams,
-      };
-    },
-    { grade: [], competition: [], team: [] } as AssignSponsors,
-  );
+  // Total composition height: asset (1010) + footer (150) = 1160px
+  // (Header 190px is rendered by parent OneColumn layout)
+  // Content area gets full asset height (1010px)
+  const contentHeight = heights.asset;
 
   return (
-    <div className="flex flex-col h-full w-full">
-      <div className="flex-1">
+    <div className="flex flex-col w-full" style={{ height: `${heights.asset + heights.footer}px` }}>
+      <div
+        style={{ height: `${contentHeight}px`, overflow: "hidden", position: "relative" }}>
         <TransitionSeriesWrapper
           sequences={sequences}
           transitionType={transitionConfig.type as TransitionType}
