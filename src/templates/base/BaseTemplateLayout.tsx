@@ -2,13 +2,13 @@ import React from "react";
 import { Series, AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../core/context/VideoDataContext";
 import { useLayoutContext } from "../../core/context/LayoutContext";
-interface BaseTemplateLayoutProps {
-  introComponent?: React.FC;
-  outroComponent?: React.FC<{ doesAccountHaveSponsors: boolean }>;
-  backgroundComponent: React.FC;
-  customAudioComponent: React.FC;
-  mainComponentLayout?: React.FC;
-}
+import { BaseTemplateLayoutProps } from "./_types/BaseTemplateLayoutProps";
+import { CONTENT_Z_INDEX } from "./_utils/constants";
+import {
+  calculateIntroDuration,
+  calculateMainDuration,
+  calculateOutroDuration,
+} from "./_utils/calculations";
 
 /**
  * BaseTemplateLayout component
@@ -31,24 +31,25 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
 
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{ zIndex: 1000 }}>
+      <AbsoluteFill style={{ zIndex: CONTENT_Z_INDEX }}>
         <Series>
           {/* Intro Sequence */}
-          <Series.Sequence durationInFrames={timings.FPS_INTRO ?? 30}>
+          <Series.Sequence durationInFrames={calculateIntroDuration(timings)}>
             {IntroComponent && <IntroComponent />}
           </Series.Sequence>
 
           {/* Main Content - Use routing to determine which composition to render
               or use the provided mainComponent if available */}
-          <Series.Sequence durationInFrames={timings.FPS_MAIN ?? 30}>
+          <Series.Sequence durationInFrames={calculateMainDuration(timings)}>
             {MainComponentLayout && <MainComponentLayout />}
           </Series.Sequence>
 
           {/* Outro Sequence */}
           <Series.Sequence
-            durationInFrames={
-              doesAccountHaveSponsors ? (timings.FPS_OUTRO ?? 30) : 30
-            }
+            durationInFrames={calculateOutroDuration(
+              timings,
+              doesAccountHaveSponsors,
+            )}
           >
             {OutroComponent && (
               <OutroComponent

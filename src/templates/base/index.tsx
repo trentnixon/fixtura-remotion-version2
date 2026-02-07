@@ -7,26 +7,13 @@ import { ThemeProvider } from "../../core/context/ThemeContext";
 import { StyleProvider } from "../../core/context/StyleContext";
 import { LayoutProvider } from "../../core/context/LayoutContext";
 import { FontProvider } from "../../core/context/FontContext";
-import { FixturaDataset } from "../../core/types/data";
 
 // Import base template components
 import { BaseAudioTrack } from "./components/BaseAudioTrack";
 import { BaseBackground } from "./components/BaseBackground";
 import { BaseTemplateLayout } from "./BaseTemplateLayout";
 import { AnimationProvider } from "../../core/context/AnimationContext";
-import { UIConfig } from "../types/settingsConfig";
-import { AnimationConfig } from "../types/AnimationConfig ";
-
-interface BaseTemplateProps {
-  data: FixturaDataset;
-  settings: UIConfig;
-  introComponent?: React.FC;
-  outroComponent?: React.FC<{ doesAccountHaveSponsors: boolean }>;
-  backgroundComponent?: React.FC;
-  customAudioComponent?: React.FC;
-  mainComponentLayout?: React.FC;
-  animations: AnimationConfig;
-}
+import { BaseTemplateProps } from "./_types/BaseTemplateProps";
 
 /**
  * BaseTemplate component

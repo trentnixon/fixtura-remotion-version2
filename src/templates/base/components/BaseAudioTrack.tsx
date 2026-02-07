@@ -1,6 +1,7 @@
 import React from "react";
 import { Audio } from "remotion";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { DEFAULT_AUDIO_VOLUME } from "./_utils/constants";
 
 export const BaseAudioTrack: React.FC = () => {
   const { video } = useVideoDataContext();
@@ -11,7 +12,7 @@ export const BaseAudioTrack: React.FC = () => {
   return (
     <Audio
       src={video.media.audio.audioOption || video.media.audio.url}
-      volume={0.5}
+      volume={DEFAULT_AUDIO_VOLUME}
     />
   );
 };
