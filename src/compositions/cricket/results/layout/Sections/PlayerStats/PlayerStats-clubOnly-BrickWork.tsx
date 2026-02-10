@@ -8,7 +8,7 @@ import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName"
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { getClubTeamPlayers } from "../../MatchCard/_utils/calculations";
 import { PlayerStatsClubOnlyProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
-import { truncatePlayerName } from "./_utils/helpers";
+import { truncatePlayerName } from "../../../../utils/utils-text";
 
 const StatItem: React.FC<StatItemProps> = ({
   playerName,

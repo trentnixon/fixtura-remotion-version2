@@ -1,9 +1,14 @@
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import { Series } from "remotion";
-import { RosterDataItem } from "./types"; // Adjusted import path
-import NoRosterData from "./modules/NoData/no-data"; // Adjusted import path
+import { RosterDataItem } from "./_types/types";
+import NoRosterData from "./modules/NoData/no-data";
 import RosterDisplayClassic from "./controller/Display/display-classic";
+import {
+  hasValidRosterData,
+  castToRosterDataArray,
+  calculateRosterDuration,
+} from "./_utils/dataHelpers";
 /* import RosterSponsors from "./layout/RosterSponsors/sponsors";
  */
 // Main component with TransitionSeries
@@ -12,10 +17,10 @@ export const CricketRosterWithTransitions: React.FC = () => {
   const { data: CompositionData, timings } = data;
 
   // Cast CompositionData to the correct type
-  const rosterData = CompositionData as unknown as RosterDataItem[];
+  const rosterData = castToRosterDataArray(CompositionData);
 
   // If no data is available, show a placeholder
-  if (!rosterData || !Array.isArray(rosterData) || rosterData.length === 0) {
+  if (!hasValidRosterData(rosterData)) {
     return <NoRosterData />;
   }
 
@@ -24,7 +29,7 @@ export const CricketRosterWithTransitions: React.FC = () => {
       {rosterData.map((rosterItem: RosterDataItem, i) => (
         <Series.Sequence
           key={i}
-          durationInFrames={timings?.FPS_SCORECARD || 60}
+          durationInFrames={calculateRosterDuration(timings)}
           className="flex flex-col justify-center"
         >
           <RosterDisplayClassic roster={rosterItem} />

@@ -6,23 +6,20 @@ import {
   AnimatedText,
   ColorVariant,
 } from "../../../../../components/typography/AnimatedText";
+import { TwoMetaValuesProps } from "./_types/TwoMetaValuesProps";
+import {
+  DEFAULT_METADATA_VARIANT,
+  DEFAULT_METADATA_ANIMATION_DELAY,
+} from "./_utils/constants";
+import { getSubtleBackgroundColor } from "./_utils/helpers";
 
-interface RosterHeaderProps {
-  values: [string, string];
-  variant?: ColorVariant;
-}
-
-export const TwoMetaValuesSubtleWrapper: React.FC<RosterHeaderProps> = ({
+export const TwoMetaValuesSubtleWrapper: React.FC<TwoMetaValuesProps> = ({
   values,
 }) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
 
-  // Background color from theme
-  const backgroundColor =
-    selectedPalette.container.backgroundTransparent.subtle;
-  // Format result status color
-  // Truncate the result
+  const backgroundColor = getSubtleBackgroundColor(selectedPalette);
 
   return (
     <AnimatedContainer
@@ -33,14 +30,14 @@ export const TwoMetaValuesSubtleWrapper: React.FC<RosterHeaderProps> = ({
         background: backgroundColor,
       }}
       animation={animations.container.main.itemContainer.containerIn}
-      animationDelay={0}
+      animationDelay={DEFAULT_METADATA_ANIMATION_DELAY}
     >
-      <TwoMetaValuesValues values={values} variant="onContainerCopy" />
+      <TwoMetaValuesValues values={values} variant={DEFAULT_METADATA_VARIANT} />
     </AnimatedContainer>
   );
 };
 
-export const TwoMetaValuesNoWrapper: React.FC<RosterHeaderProps> = ({
+export const TwoMetaValuesNoWrapper: React.FC<TwoMetaValuesProps> = ({
   values,
 }) => {
   const { animations } = useAnimationContext();
@@ -51,7 +48,7 @@ export const TwoMetaValuesNoWrapper: React.FC<RosterHeaderProps> = ({
       className="w-full flex justify-between items-center p-3"
       backgroundColor="none"
       animation={animations.container.main.itemContainer.containerIn}
-      animationDelay={0}
+      animationDelay={DEFAULT_METADATA_ANIMATION_DELAY}
     >
       <TwoMetaValuesValues values={values} variant="onContainerTitle" />
     </AnimatedContainer>
@@ -60,18 +57,19 @@ export const TwoMetaValuesNoWrapper: React.FC<RosterHeaderProps> = ({
 
 const TwoMetaValuesValues = ({
   values,
-  variant = "onContainerCopy",
-}: RosterHeaderProps & { variant: ColorVariant }) => {
+  variant = DEFAULT_METADATA_VARIANT,
+}: TwoMetaValuesProps & { variant: ColorVariant }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  // Truncate the result
-  //const truncatedGround = truncateText(roster.ground, 50);
 
   return (
     <>
       <AnimatedText
         type="metadataSmall"
-        animation={{ ...TextAnimations.copyIn, delay: 0 }}
+        animation={{
+          ...TextAnimations.copyIn,
+          delay: DEFAULT_METADATA_ANIMATION_DELAY,
+        }}
         className={`text-md `}
         variant={variant}
       >
@@ -80,7 +78,10 @@ const TwoMetaValuesValues = ({
 
       <AnimatedText
         type="metadataSmall"
-        animation={{ ...TextAnimations.copyIn, delay: 0 }}
+        animation={{
+          ...TextAnimations.copyIn,
+          delay: DEFAULT_METADATA_ANIMATION_DELAY,
+        }}
         className="text-md text-right"
         variant={variant}
       >

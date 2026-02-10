@@ -3,7 +3,7 @@
 
 import React, { useMemo } from "react";
 import { AnimatedImage } from "../../../components/images/AnimatedImage";
-import { AssignSponsors } from "../composition-types";
+import { AssignSponsors } from "../_types/composition-types";
 import { useSponsorValidation } from "./hooks/useSponsorValidation";
 
 // Sponsor configuration constants

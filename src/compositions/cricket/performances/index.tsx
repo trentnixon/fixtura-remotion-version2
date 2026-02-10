@@ -6,6 +6,7 @@ import { ClassicTwoColumn as ClassicTwoColumnPerformances } from "./classicTwoCo
 import { CNSW as CNSWPerformances } from "./cnsw";
 import { CNSWPrivate as CNSWPrivatePerformances } from "./cnsw-private";
 import { SixersThunder as SixersThunderPerformances } from "./sixersThunder";
+import { mudgeeraba as MudgeerabaPerformances } from "./mudgeeraba";
 
 // Export all template implementations
 export { BasicPerformances as basic };
@@ -15,3 +16,4 @@ export { ClassicTwoColumnPerformances as classicTwoColumn };
 export { CNSWPerformances as cnsw };
 export { CNSWPrivatePerformances as cnswPrivate };
 export { SixersThunderPerformances as sixersThunder };
+export { MudgeerabaPerformances as mudgeeraba };

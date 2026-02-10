@@ -1,5 +1,5 @@
 import { MatchResult } from "../../../_types/types";
-import { AssignSponsors } from "../../../../composition-types";
+import { AssignSponsors } from "../../../../_types/composition-types";
 
 /**
  * Calculates which results to display on the current screen

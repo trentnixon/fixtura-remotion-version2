@@ -1,11 +1,12 @@
 import React from "react";
-import { RosterDataItem } from "../../types"; // Adjust path as needed
 import TeamLogo from "../../../utils/primitives/TeamLogo";
 import AgainstTeam from "../RosterHeader/AgainstTeam";
-
-interface RosterSponsorsProps {
-  roster: RosterDataItem;
-}
+import { RosterSponsorsProps } from "./_types/RosterSponsorsProps";
+import {
+  SPONSOR_LOGO_SIZE,
+  SPONSOR_LOGO_DELAY_OFFSET,
+  DEFAULT_TEAM_HEADER_ANIMATION_DELAY,
+} from "./_utils/constants";
 
 const RosterSponsors: React.FC<RosterSponsorsProps> = ({ roster }) => {
   return (
@@ -14,10 +15,14 @@ const RosterSponsors: React.FC<RosterSponsorsProps> = ({ roster }) => {
         (sponsor, index) =>
           sponsor.isPrimary && (
             <TeamLogo
-              logo={{ url: sponsor.logo.url, width: 220, height: 220 }}
+              logo={{
+                url: sponsor.logo.url,
+                width: SPONSOR_LOGO_SIZE,
+                height: SPONSOR_LOGO_SIZE,
+              }}
               teamName={sponsor.name}
               key={index}
-              delay={0 + 5}
+              delay={DEFAULT_TEAM_HEADER_ANIMATION_DELAY + SPONSOR_LOGO_DELAY_OFFSET}
             />
           ),
       )}

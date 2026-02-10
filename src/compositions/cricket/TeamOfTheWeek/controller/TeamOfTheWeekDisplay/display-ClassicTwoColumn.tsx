@@ -1,17 +1,12 @@
 import React from "react";
-import { TeamOfTheWeekPlayer } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowClassicTwoColumn from "../PlayerRow/row-ClassicTwoColumn";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-import { AssignSponsors } from "../../../composition-types";
-
-interface TeamOfTheWeekDisplayProps {
-  players: TeamOfTheWeekPlayer[];
-  sponsors: Sponsor[];
-}
+import { AssignSponsors } from "../../../_types/composition-types";
+import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
+import { DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN } from "./_utils/constants";
 
 const TeamOfTheWeekDisplayClassicTwoColumn: React.FC<
   TeamOfTheWeekDisplayProps
@@ -35,18 +30,14 @@ const TeamOfTheWeekDisplayClassicTwoColumn: React.FC<
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex flex-col h-full gap-1 justify-center">
-          {players.map((player, index) => {
-            const rowHeight = 85;
-
-            return (
-              <PlayerRowClassicTwoColumn
-                key={player.player}
-                player={player}
-                index={index}
-                rowHeight={rowHeight}
-              />
-            );
-          })}
+          {players.map((player, index) => (
+            <PlayerRowClassicTwoColumn
+              key={player.player}
+              player={player}
+              index={index}
+              rowHeight={DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN}
+            />
+          ))}
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>

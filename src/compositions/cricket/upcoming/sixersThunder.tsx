@@ -8,7 +8,7 @@ import {
 import { GamesDisplaySixersThunder } from "./controller/GamesDisplay/FixtureDisplaySixersThunder";
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
-import { GameData } from "./types";
+import { GameData } from "./_types/types";
 import {
   getGamesPerScreen,
   calculateDisplayDurationPerScreen,

@@ -1,30 +1,27 @@
-// MetadataSmall.tsx
+// Top5PlayerName.tsx
 
 import {
   AnimatedText,
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
 import { AnimationConfig } from "../../../../components/typography/config/animations";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { AnimatedTextPrimitivePropsRequiredAnimation } from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
 export const Top5PlayerName = ({
   value,
   animation,
   className,
-  variant = "onContainerCopy",
-}: {
-  value: string;
-  animation: AnimationConfig;
-  className?: string;
-  variant?: string;
-}) => {
-  const { fontClasses } = useThemeContext();
+  variant = DEFAULT_VARIANT,
+}: AnimatedTextPrimitivePropsRequiredAnimation) => {
+  const fontFamily = useFontFamily();
 
   return (
     <AnimatedText
       type="Top5PlayerName"
       variant={variant as ColorVariant}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       className={className}
       animation={animation as AnimationConfig}
       letterAnimation="word"

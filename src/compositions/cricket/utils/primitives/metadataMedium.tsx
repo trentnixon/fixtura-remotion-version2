@@ -1,33 +1,28 @@
-// MetadataSmall.tsx
+// MetadataMedium.tsx
 
 import {
   AnimatedText,
   ColorVariant,
-  AnimationMode,
 } from "../../../../components/typography/AnimatedText";
 import { AnimationConfig } from "../../../../components/typography/config/animations";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { AnimatedTextPrimitivePropsWithLetterAnimation } from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT, DEFAULT_LETTER_ANIMATION } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
 export const MetadataMedium = ({
   value,
   animation,
   className,
-  variant = "onContainerCopy",
-  letterAnimation = "none",
-}: {
-  value: string;
-  animation: AnimationConfig | null;
-  className?: string;
-  variant?: string;
-  letterAnimation?: AnimationMode;
-}) => {
-  const { fontClasses } = useThemeContext();
+  variant = DEFAULT_VARIANT,
+  letterAnimation = DEFAULT_LETTER_ANIMATION,
+}: AnimatedTextPrimitivePropsWithLetterAnimation) => {
+  const fontFamily = useFontFamily();
 
   return (
     <AnimatedText
       type="metadataMedium"
       variant={variant as ColorVariant}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       className={className}
       animation={animation as AnimationConfig}
       letterAnimation={letterAnimation}

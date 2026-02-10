@@ -1,49 +1,37 @@
 import React from "react";
-import { RosterDataItem } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
-//import RosterSponsors from "../../layout/RosterSponsors/sponsors";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
 import { TwoMetaValuesNoWrapper } from "../../layout/Metadata/TwoMetaValues";
 import { formatDate, truncateText } from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
-
-interface RosterDisplayProps {
-  roster: RosterDataItem;
-}
+import { RosterDisplayProps } from "./_types/RosterDisplayProps";
+import {
+  DEFAULT_CONTAINER_ANIMATION,
+  DEFAULT_CONTAINER_EXIT_ANIMATION,
+} from "./_utils/animations";
+import { getAvailableHeight, getBackgroundColor } from "./_utils/helpers";
+import {
+  ACCOUNT_TEAM_LOGO_SIZE,
+  AGAINST_TEAM_LOGO_SIZE,
+} from "./_utils/constants";
 
 const RosterDisplaySixersThunder: React.FC<RosterDisplayProps> = ({
   roster,
 }) => {
-  const { layout } = useThemeContext();
-  const { heights } = layout;
-  const availableHeight = heights.asset;
-  const { selectedPalette } = useThemeContext();
-  const backgroundColor = selectedPalette.container.backgroundTransparent.high;
+  const { layout, selectedPalette } = useThemeContext();
+  const availableHeight = getAvailableHeight(layout.heights);
+  const backgroundColor = getBackgroundColor(selectedPalette);
   return (
     <div className="p-0 flex flex-col w-full h-full">
       <AnimatedContainer
         type="full"
         className="flex-1 flex flex-col mx-16 rounded-lg overflow-hidden"
         backgroundColor="none"
-        animation={{
-          type: "none",
-          easing: { type: "inOut", base: "ease" },
-          duration: 25,
-          custom: {
-            distance: 200,
-          },
-        }}
+        animation={DEFAULT_CONTAINER_ANIMATION}
         animationDelay={0}
-        exitAnimation={{
-          type: "none",
-          easing: { type: "inOut", base: "ease" },
-          duration: 15,
-          custom: {
-            distance: 100,
-          },
-        }}
+        exitAnimation={DEFAULT_CONTAINER_EXIT_ANIMATION}
       >
         <div
           className="w-full flex flex-col justify-center"
@@ -63,9 +51,9 @@ const RosterDisplaySixersThunder: React.FC<RosterDisplayProps> = ({
               gap="gap-4"
             />
             <div className="flex flex-col gap-4 p-4">
-              <AccountTeamLarge roster={roster} logoSize={"300"} />
+              <AccountTeamLarge roster={roster} logoSize={ACCOUNT_TEAM_LOGO_SIZE} />
               <VS variant="onContainerCopy" />
-              <AgainstTeamLarge roster={roster} logoSize={"120"} />
+              <AgainstTeamLarge roster={roster} logoSize={AGAINST_TEAM_LOGO_SIZE} />
             </div>
           </div>
           <TwoMetaValuesNoWrapper values={[roster.gradeName, roster.round]} />

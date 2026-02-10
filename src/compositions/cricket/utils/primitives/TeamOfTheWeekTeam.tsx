@@ -5,29 +5,26 @@ import {
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
 import { AnimationConfig } from "../../../../components/typography/config/animations";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { AnimatedTextPrimitivePropsRequiredAnimation } from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT, DEFAULT_LETTER_ANIMATION } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
 export const TeamOfTheWeekTeam = ({
   value,
   animation,
   className,
-  variant = "onContainerCopy",
-}: {
-  value: string;
-  animation: AnimationConfig;
-  className?: string;
-  variant?: string;
-}) => {
-  const { fontClasses } = useThemeContext();
+  variant = DEFAULT_VARIANT,
+}: AnimatedTextPrimitivePropsRequiredAnimation) => {
+  const fontFamily = useFontFamily();
 
   return (
     <AnimatedText
       type="TeamOfTheWeekTeam"
       variant={variant as ColorVariant}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       className={className}
       animation={animation as AnimationConfig}
-      letterAnimation="none"
+      letterAnimation={DEFAULT_LETTER_ANIMATION}
     >
       {value}
     </AnimatedText>

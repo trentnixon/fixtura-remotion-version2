@@ -1,34 +1,31 @@
-// MetadataSmall.tsx
+// ResultScore.tsx
 
 import {
   AnimatedText,
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
 import { AnimationConfig } from "../../../../components/typography/config/animations";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { AnimatedTextPrimitivePropsRequiredAnimation } from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT, DEFAULT_LETTER_ANIMATION } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
 export const ResultScore = ({
   value,
   animation,
   className,
-  variant = "onContainerCopy",
-}: {
-  value: string;
-  animation: AnimationConfig;
-  className?: string;
-  variant?: string;
-}) => {
-  const { fontClasses } = useThemeContext();
+  variant = DEFAULT_VARIANT,
+}: AnimatedTextPrimitivePropsRequiredAnimation) => {
+  const fontFamily = useFontFamily();
 
   if (value === "Yet to Bat") {
     return (
       <AnimatedText
-        type={"ResultScoreYetToBat"}
+        type="ResultScoreYetToBat"
         variant={variant as ColorVariant}
-        fontFamily={fontClasses.copy?.family}
+        fontFamily={fontFamily}
         className={className}
         animation={animation as AnimationConfig}
-        letterAnimation="none"
+        letterAnimation={DEFAULT_LETTER_ANIMATION}
       >
         {value}
       </AnimatedText>
@@ -37,12 +34,12 @@ export const ResultScore = ({
 
   return (
     <AnimatedText
-      type={"ResultScore"}
+      type="ResultScore"
       variant={variant as ColorVariant}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       className={className}
       animation={animation as AnimationConfig}
-      letterAnimation="none"
+      letterAnimation={DEFAULT_LETTER_ANIMATION}
     >
       {value}
     </AnimatedText>
@@ -53,14 +50,9 @@ export const ResultScoreFirstInnings = ({
   value,
   animation,
   className,
-  variant = "onContainerCopy",
-}: {
-  value: string;
-  animation: AnimationConfig;
-  className?: string;
-  variant?: string;
-}) => {
-  const { fontClasses } = useThemeContext();
+  variant = DEFAULT_VARIANT,
+}: AnimatedTextPrimitivePropsRequiredAnimation) => {
+  const fontFamily = useFontFamily();
 
   if (value === "1") return null;
 
@@ -68,10 +60,10 @@ export const ResultScoreFirstInnings = ({
     <AnimatedText
       type="ResultScoreFirstInnings"
       variant={variant as ColorVariant}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       className={className}
       animation={animation as AnimationConfig}
-      letterAnimation="none"
+      letterAnimation={DEFAULT_LETTER_ANIMATION}
     >
       {value}
     </AnimatedText>

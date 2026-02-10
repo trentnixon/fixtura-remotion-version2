@@ -1,16 +1,14 @@
 import React from "react";
-import { PlayerData } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerRowNameCNSWPrivate from "../../layout/PlayerRowNameCNSW-private";
-
-interface PlayerRowProps {
-  player: PlayerData;
-  index: number;
-  rowHeight: number;
-}
+import { PlayerRowProps } from "./_types/PlayerRowProps";
+import {
+  calculatePlayerDelay,
+  calculateExitFrame,
+} from "./_utils/calculations";
 
 const PlayerRowCNSWPrivate: React.FC<PlayerRowProps> = ({
   player,
@@ -23,8 +21,8 @@ const PlayerRowCNSWPrivate: React.FC<PlayerRowProps> = ({
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = index * 5; // Stagger the animation of each row
-  const animationOutFrame = (timings?.FPS_MAIN || 30) - 30;
+  const delay = calculatePlayerDelay(index);
+  const animationOutFrame = calculateExitFrame(timings);
 
   return (
     <div className="overflow-hidden mb-2">

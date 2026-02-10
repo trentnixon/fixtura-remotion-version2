@@ -1,5 +1,5 @@
-import { GameData } from "../../../types";
-import { AssignSponsors } from "../../../../composition-types";
+import { GameData } from "../../../_types/types";
+import { AssignSponsors } from "../../../../_types/composition-types";
 
 /**
  * Default spacing configuration for game card height calculations

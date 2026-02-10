@@ -1,29 +1,17 @@
 import React from "react";
 import { AnimatedImage } from "../../../../components/images/AnimatedImage";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { TeamLogo as TeamLogoType, TeamLogoProps } from "./_types/TeamLogoProps";
+import { DEFAULT_TEAM_LOGO_SIZE, DEFAULT_TEAM_LOGO_FIT } from "./_utils/constants";
 
-export interface TeamLogo {
-  url: string;
-  width?: number;
-  height?: number;
-  id?: number;
-}
-
-interface TeamLogoProps {
-  logo: TeamLogo | null;
-  teamName: string;
-  delay: number;
-  size?: number;
-  fit?: "contain" | "cover" | "fill" | "none" | "scale-down";
-  bgColor?: string;
-}
+export type { TeamLogoType as TeamLogo };
 
 export const TeamLogo: React.FC<TeamLogoProps> = ({
   logo,
   teamName,
   delay,
-  size = 20,
-  fit = "contain",
+  size = DEFAULT_TEAM_LOGO_SIZE,
+  fit = DEFAULT_TEAM_LOGO_FIT,
 }) => {
   const sizeClass = `w-${size} h-${size}`;
   const { animations } = useAnimationContext();
@@ -39,12 +27,12 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
     srcUrl = logo.url;
     imgWidth = logo.width;
     imgHeight = logo.height;
-  } else if (typeof logo === "string" && (logo as string).length > 0) {
+  } else if (typeof logo === "string" && logo.length > 0) {
     // It's a direct string URL (handle legacy/inconsistent data)
     console.warn(
       `[TeamLogo] Received string URL for ${teamName}. Consider standardizing data to { url, width, height }.`,
     );
-    srcUrl = logo as string; // Cast to string
+    srcUrl = logo;
     // We don't have width/height in this case
   }
 

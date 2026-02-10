@@ -6,6 +6,7 @@ import { sixersThunder as SixersLadder } from "./sixersThunder";
 import { ClassicTwoColumn as ClassicTwoColumnLadder } from "./classicTwoColumn";
 import { CNSW as CNSWLadder } from "./cnsw";
 import { CNSWPrivate as CNSWPrivateLadder } from "./cnsw-private";
+import { mudgeeraba as MudgeerabaLadder } from "./mudgeeraba";
 // Import other template implementations
 
 // Export all template implementations
@@ -16,3 +17,4 @@ export { ClassicLadder as classic };
 export { ClassicTwoColumnLadder as classicTwoColumn };
 export { CNSWLadder as cnsw };
 export { CNSWPrivateLadder as cnswprivate };
+export { MudgeerabaLadder as mudgeeraba };

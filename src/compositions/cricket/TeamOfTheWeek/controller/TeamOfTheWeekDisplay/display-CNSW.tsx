@@ -1,20 +1,13 @@
 import React from "react";
-import { TeamOfTheWeekPlayer } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowCNSW from "../PlayerRow/row-CNSW";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-import { AssignSponsors } from "../../../composition-types";
-//import { Top5PlayerName } from "../../../utils/primitives/Top5PlayerName";
-import { PLAYER_STAGGER_DELAY } from "../../types";
-
-interface TeamOfTheWeekDisplayProps {
-  players: TeamOfTheWeekPlayer[];
-  sponsors: Sponsor[];
-  title?: string;
-}
+import { AssignSponsors } from "../../../_types/composition-types";
+import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
+import { DEFAULT_ROW_HEIGHT_CNSW } from "./_utils/constants";
+import { calculatePlayerDelay } from "./_utils/calculations";
 
 const TeamOfTheWeekDisplayCNSW: React.FC<TeamOfTheWeekDisplayProps> = ({
   players,
@@ -54,8 +47,8 @@ const TeamOfTheWeekDisplayCNSW: React.FC<TeamOfTheWeekDisplayProps> = ({
               key={player.player}
               player={player}
               index={index}
-              rowHeight={70}
-              delay={index * PLAYER_STAGGER_DELAY}
+              rowHeight={DEFAULT_ROW_HEIGHT_CNSW}
+              delay={calculatePlayerDelay(index)}
             />
           ))}
         </div>

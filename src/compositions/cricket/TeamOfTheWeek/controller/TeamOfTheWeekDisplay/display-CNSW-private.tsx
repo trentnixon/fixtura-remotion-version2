@@ -1,20 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { TeamOfTheWeekPlayer } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowCNSWPrivate from "../PlayerRow/row-CNSW-private";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-import { AssignSponsors } from "../../../composition-types";
-import { PLAYER_STAGGER_DELAY } from "../../types";
-
-interface TeamOfTheWeekDisplayProps {
-  players: TeamOfTheWeekPlayer[];
-  sponsors: Sponsor[];
-  title?: string;
-}
+import { AssignSponsors } from "../../../_types/composition-types";
+import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
+import { DEFAULT_ROW_HEIGHT_CNSW_PRIVATE } from "./_utils/constants";
+import { calculatePlayerDelay } from "./_utils/calculations";
 
 const TeamOfTheWeekDisplayCNSWPrivate: React.FC<TeamOfTheWeekDisplayProps> = ({
   players,
@@ -44,8 +38,8 @@ const TeamOfTheWeekDisplayCNSWPrivate: React.FC<TeamOfTheWeekDisplayProps> = ({
               key={player.player}
               player={player}
               index={index}
-              rowHeight={70}
-              delay={index * PLAYER_STAGGER_DELAY}
+              rowHeight={DEFAULT_ROW_HEIGHT_CNSW_PRIVATE}
+              delay={calculatePlayerDelay(index)}
             />
           ))}
         </div>

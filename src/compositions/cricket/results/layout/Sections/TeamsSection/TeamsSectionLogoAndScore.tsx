@@ -54,12 +54,14 @@ export const TeamsSectionLogoAndScore: React.FC<TeamsSectionProps> = ({
               <ResultScoreFirstInnings
                 value={homeFirstInnings.value}
                 animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                variant="onContainerCopyNoBg"
               />
             )}
 
             <ResultScore
               value={normalizeScore(homeTeam.score)}
               animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+              variant="onContainerCopyNoBg"
             />
           </div>
           <div className={`${logoSize} mr-4 overflow-hidden`}>
@@ -73,7 +75,7 @@ export const TeamsSectionLogoAndScore: React.FC<TeamsSectionProps> = ({
         <div className="text-3xl font-bold flex-1 text-center">
           <AnimatedText
             type="ResultVS"
-            variant="onContainerCopy"
+            variant="onContainerCopyNoBg"
             animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
           >
             VS
@@ -92,11 +94,13 @@ export const TeamsSectionLogoAndScore: React.FC<TeamsSectionProps> = ({
               <ResultScoreFirstInnings
                 value={awayFirstInnings.value}
                 animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                variant="onContainerCopyNoBg"
               />
             )}
             <ResultScore
               value={normalizeScore(awayTeam.score)}
               animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+              variant="onContainerCopyNoBg"
             />
           </div>
         </div>

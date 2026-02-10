@@ -1,20 +1,16 @@
 import React from "react";
-import { PlayerData } from "../../types";
 import PlayerRowSixersThunder from "../PlayerRow/row-SixersThunder";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-
 import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
+import { PlayersDisplayPropsWithoutSponsors } from "./_types/PlayersDisplayPropsWithoutSponsors";
+import { calculateRowDimensions } from "./_utils/calculations";
+import { DEFAULT_CONTAINER_ANIMATION_DELAY } from "./_utils/constants";
 
-interface PlayersDisplayProps {
-  players: PlayerData[];
-  title?: string; // Optional title to display
-}
-
-const PlayersDisplaySixersThunder: React.FC<PlayersDisplayProps> = ({
+const PlayersDisplaySixersThunder: React.FC<PlayersDisplayPropsWithoutSponsors> = ({
   players,
 }) => {
   const { layout } = useThemeContext();
@@ -36,7 +32,7 @@ const PlayersDisplaySixersThunder: React.FC<PlayersDisplayProps> = ({
         }}
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
-        animationDelay={0}
+        animationDelay={DEFAULT_CONTAINER_ANIMATION_DELAY}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex-1 grid grid-cols-1 gap-2">
@@ -76,21 +72,6 @@ const PlayersDisplaySixersThunder: React.FC<PlayersDisplayProps> = ({
       </div>
     </div>
   );
-};
-
-// Utility function to calculate row dimensions
-const calculateRowDimensions = (totalHeight: number, playerCount: number) => {
-  const VERTICAL_GAP = 8; // 8rem gap between rows
-  const PADDING = 8; // 8rem padding top and bottom
-  const TITLE_HEIGHT = 48; // Height for the title if present
-
-  const totalVerticalGaps = (playerCount - 1) * VERTICAL_GAP;
-  const availableHeight = totalHeight / 1.3 - PADDING * 2 - TITLE_HEIGHT;
-  const rowHeight = (availableHeight - totalVerticalGaps) / playerCount;
-
-  return {
-    rowHeight,
-  };
 };
 
 export default PlayersDisplaySixersThunder;

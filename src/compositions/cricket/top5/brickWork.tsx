@@ -3,33 +3,40 @@ import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import PlayersDisplayBrickWork from "./controller/PlayersDisplay/display-BrickWork";
 import NoPlayersData from "./modules/NoPlayersData/no-data";
-import { transformPlayerData, getTitle } from "./utils/dataTransformer";
-import { PlayerData } from "./types";
+import { transformPlayerData } from "./utils/dataTransformer";
+import {
+  hasValidPlayersData,
+  castToPlayerDataArray,
+  extractCompositionId,
+  extractPrimarySponsors,
+} from "./_utils/dataHelpers";
+import { getStandardTitle } from "./_utils/titleHelpers";
 
 export const Top5PlayersBrickWork: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: playersData, videoMeta } = data;
-  const compositionId = videoMeta?.video?.metadata?.compositionId || "";
-  const sponsors = videoMeta?.club.sponsors || [];
+  const compositionId = extractCompositionId(videoMeta);
+  const sponsors = extractPrimarySponsors(videoMeta);
+  
   // If no data is available, show a placeholder
-  if (!playersData || playersData.length === 0) {
+  if (!hasValidPlayersData(playersData)) {
     return <NoPlayersData />;
   }
 
   // Transform data based on composition type
   const transformedData = transformPlayerData(
-    playersData as PlayerData[],
+    castToPlayerDataArray(playersData),
     compositionId,
   );
 
   // Get appropriate title based on composition
-  const title = getTitle(compositionId);
+  const title = getStandardTitle(compositionId);
 
   return (
     <PlayersDisplayBrickWork
       players={transformedData}
       title={title}
-      sponsors={sponsors.primary}
+      sponsors={sponsors}
     />
   );
 };

@@ -1,16 +1,14 @@
 import React from "react";
-import { PlayerData } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-
 import PlayerRowNameLogoWrapperValue from "../../layout/PlayerRowNameLogoWrapperValue";
-
-interface PlayerRowProps {
-  player: PlayerData;
-  index: number;
-  rowHeight: number;
-}
+import { PlayerRowProps } from "./_types/PlayerRowProps";
+import {
+  calculatePlayerDelay,
+  calculateExitFrame,
+} from "./_utils/calculations";
+import { getDefaultRestrictions } from "./_utils/helpers";
 
 const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
   player,
@@ -22,8 +20,8 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = index * 5; // Stagger the animation of each row
-  const animationOutFrame = (timings?.FPS_MAIN || 30) - 30;
+  const delay = calculatePlayerDelay(index);
+  const animationOutFrame = calculateExitFrame(timings);
 
   return (
     <div className="overflow-hidden">
@@ -41,7 +39,7 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
           index={index}
           rowHeight={rowHeight}
           delay={delay}
-          restrictions={{ nameLength: 20, teamLength: 35 }}
+          restrictions={getDefaultRestrictions()}
         />
       </AnimatedContainer>
     </div>

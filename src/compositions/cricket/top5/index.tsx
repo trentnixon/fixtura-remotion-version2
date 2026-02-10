@@ -6,6 +6,7 @@ import { ClassicTwoColumn as ClassicTwoColumnTop5 } from "./classicTwoColumn";
 import { SixersThunder as top5SixersThunder } from "./sixersThunder";
 import { CNSW as CNSWTop5 } from "./cnsw";
 import { CNSWPrivate as CNSWPrivateTop5 } from "./cnsw-private";
+import { mudgeeraba as mudgeerabaTop5 } from "./mudgeeraba";
 // Import other template implementations
 
 // Export all template implementations
@@ -16,3 +17,4 @@ export { ClassicTop5 as classic };
 export { ClassicTwoColumnTop5 as twocolumnclassic };
 export { CNSWTop5 as cnsw };
 export { CNSWPrivateTop5 as cnswprivate };
+export { mudgeerabaTop5 as mudgeeraba };

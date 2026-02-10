@@ -1,4 +1,4 @@
-import { GameData } from "../../../types";
+import { GameData } from "../../../_types/types";
 
 export interface GameCardProps {
   game: GameData;

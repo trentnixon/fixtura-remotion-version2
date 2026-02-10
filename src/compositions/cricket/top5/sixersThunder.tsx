@@ -1,29 +1,34 @@
-// src/compositions/cricket/top5/basic.tsx
+// src/compositions/cricket/top5/sixersThunder.tsx
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import PlayersDisplaySixersThunder from "./controller/PlayersDisplay/display-SixersThunder";
 import NoPlayersData from "./modules/NoPlayersData/no-data";
-import { transformPlayerData, getTitle } from "./utils/dataTransformer";
-import { PlayerData } from "./types";
+import { transformPlayerData } from "./utils/dataTransformer";
+import {
+  hasValidPlayersData,
+  castToPlayerDataArray,
+  extractCompositionId,
+} from "./_utils/dataHelpers";
+import { getStandardTitle } from "./_utils/titleHelpers";
 
 export const Top5Players: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: playersData, videoMeta } = data;
-  const compositionId = videoMeta?.video?.metadata?.compositionId || "";
+  const compositionId = extractCompositionId(videoMeta);
 
   // If no data is available, show a placeholder
-  if (!playersData || playersData.length === 0) {
+  if (!hasValidPlayersData(playersData)) {
     return <NoPlayersData />;
   }
 
   // Transform data based on composition type
   const transformedData = transformPlayerData(
-    playersData as PlayerData[],
+    castToPlayerDataArray(playersData),
     compositionId,
   );
 
   // Get appropriate title based on composition
-  const title = getTitle(compositionId);
+  const title = getStandardTitle(compositionId);
 
   return (
     <PlayersDisplaySixersThunder players={transformedData} title={title} />

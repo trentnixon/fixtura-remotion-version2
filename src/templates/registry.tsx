@@ -6,6 +6,7 @@ import { CNSW } from "./variants/cnsw";
 import { Thunder } from "./variants/thunder";
 import { TwoColumnClassic } from "./variants/twoColumnClassic";
 import { CNSWPrivate } from "./variants/cnsw-private";
+import { Mudgeeraba } from "./variants/mudgeeraba";
 /**
  * Define template registry key type
  */
@@ -55,6 +56,10 @@ export const templateRegistry = {
   },
   TwoColumnClassic: {
     component: TwoColumnClassic,
+    variants: Variants,
+  },
+  Mudgeeraba: {
+    component: Mudgeeraba,
     variants: Variants,
   },
 };

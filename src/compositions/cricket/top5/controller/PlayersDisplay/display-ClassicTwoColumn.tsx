@@ -1,19 +1,12 @@
 import React from "react";
-import { PlayerData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-
-import { AssignSponsors } from "../../../composition-types";
+import { AssignSponsors } from "../../../_types/composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import PlayerRowClassicTwoColumn from "../PlayerRow/row-ClassicTwoCoulmn";
-
-interface PlayersDisplayProps {
-  players: PlayerData[];
-  title?: string; // Optional title to display
-  sponsors: Sponsor[];
-}
+import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
+import { DEFAULT_CONTAINER_ANIMATION_DELAY, DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN } from "./_utils/constants";
 
 const PlayersDisplayClassicTwoColumn: React.FC<PlayersDisplayProps> = ({
   players,
@@ -34,7 +27,7 @@ const PlayersDisplayClassicTwoColumn: React.FC<PlayersDisplayProps> = ({
         }}
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
-        animationDelay={0}
+        animationDelay={DEFAULT_CONTAINER_ANIMATION_DELAY}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex flex-col h-full gap-2 justify-center ">
@@ -43,7 +36,7 @@ const PlayersDisplayClassicTwoColumn: React.FC<PlayersDisplayProps> = ({
               key={player.name}
               player={player}
               index={index}
-              rowHeight={140}
+              rowHeight={DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN}
             />
           ))}
         </div>

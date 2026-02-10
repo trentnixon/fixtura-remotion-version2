@@ -1,18 +1,17 @@
 import React from "react";
-import { RosterDataItem } from "../../types"; // Adjust path as needed
 import { RosterPlayerName } from "../../../utils/primitives/RosterPlayerName";
 import { truncatePlayerName } from "../utils";
-
-interface RosterPlayerListProps {
-  roster: RosterDataItem;
-  className?: string;
-  gap?: string;
-}
+import { RosterPlayerListProps } from "./_types/RosterPlayerListProps";
+import {
+  DEFAULT_PLAYER_LIST_CLASSNAME,
+  DEFAULT_PLAYER_LIST_GAP,
+  MAX_PLAYER_NAME_LENGTH,
+} from "./_utils/constants";
 
 const RosterPlayerList: React.FC<RosterPlayerListProps> = ({
   roster,
-  className = "text-left font-bold",
-  gap = "gap-2",
+  className = DEFAULT_PLAYER_LIST_CLASSNAME,
+  gap = DEFAULT_PLAYER_LIST_GAP,
 }) => {
   return (
     <div className="flex-grow">
@@ -20,7 +19,10 @@ const RosterPlayerList: React.FC<RosterPlayerListProps> = ({
         {roster.teamRoster.map((player, index) => (
           <RosterPlayerName
             key={index}
-            value={truncatePlayerName(player.toUpperCase(), 30)}
+            value={truncatePlayerName(
+              player.toUpperCase(),
+              MAX_PLAYER_NAME_LENGTH,
+            )}
             className={className}
           />
         ))}

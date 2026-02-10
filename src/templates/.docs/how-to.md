@@ -1,6 +1,24 @@
-# How to Create a New Template
+# How to Create a New Template Variant
 
-This guide provides a definitive, step-by-step process for creating a new template variant from scratch. It explains the template system architecture, how templates integrate with compositions, and how routing works.
+This guide provides a definitive, step-by-step process for creating a **new template variant** that extends the base template. 
+
+**What is a Template Variant?**
+A template variant is a visual style/layout implementation (like `Basic`, `Classic`, `Brickwork`, `CNSW`, `Sixers`, `Thunder`, `TwoColumnClassic`) that lives in `src/templates/variants/{variantName}/`. All variants extend the same base template infrastructure but provide different:
+- Theme configurations (colors, fonts, component styles)
+- Animation presets
+- Component implementations (Intro, Outro, Main, Background)
+
+**Existing Variants:**
+- `basic/` - Minimal, flexible template
+- `classic/` - Classic styling
+- `brickwork/` - Custom brickwork styling
+- `cnsw/` - CNSW-specific variant
+- `cnsw-private/` - CNSW private variant
+- `sixers/` - Sixers-specific variant
+- `thunder/` - Thunder-specific variant
+- `twoColumnClassic/` - Two-column classic layout
+
+This guide explains how to create a new variant following the same pattern as these existing ones.
 
 ---
 
@@ -10,7 +28,7 @@ This guide provides a definitive, step-by-step process for creating a new templa
 2. [Creating a New Template Variant](#creating-a-new-template-variant)
 3. [Hooking Up to Compositions](#hooking-up-to-compositions)
 4. [Hooking Up to Routes](#hooking-up-to-routes)
-5. [Testing Your Template](#testing-your-template)
+5. [Testing Your Variant](#testing-your-variant)
 
 ---
 
@@ -31,7 +49,7 @@ The template system uses a **base + variant** pattern:
   - Animation presets
   - Variant-specific components (Intro, Outro, Main, Background)
 
-- **Template Registry** (`src/templates/registry.tsx`): Central registry mapping template IDs to components
+- **Template Registry** (`src/templates/registry.tsx`): Central registry mapping variant IDs to variant components
 
 - **Compositions** (`src/compositions/{sport}/{compositionType}/`): Sport-specific composition logic that uses templates
 
@@ -45,42 +63,50 @@ Video Data → Template Registry → Base Template → Variant Components → Co
 
 ### Key Concepts
 
-1. **Template ID**: Unique identifier (e.g., `Basic`, `Classic`, `Brickwork`) used throughout the system - this is the visual style/layout template
+1. **Variant ID**: Unique identifier (e.g., `Basic`, `Classic`, `Brickwork`) used throughout the system - this is the template variant you're creating
 2. **Background Variant**: Background style option (e.g., `Solid`, `Gradient`, `Image`, `Video`, `Graphics`, `Particle`, `Pattern`, `Texture`) - all templates share the same background variants
 3. **Composition Type**: Sport-specific composition (e.g., `CricketLadder`, `CricketTop5`)
 4. **Main Component Layout**: The layout wrapper for the main content (typically uses `OneColumn` or `TwoColumn`)
 
 **Important Terminology Distinction:**
-- **Template Variants** (e.g., `Basic`, `Classic`, `Brickwork`): The visual style/layout template - this is what you're creating
-- **Background Variants** (e.g., `Solid`, `Gradient`, `Image`): The background type selected via `data.videoMeta.video.templateVariation.useBackground`
+- **Template Variants** (e.g., `Basic`, `Classic`, `Brickwork`, `YourVariant`): Visual style/layout variants that extend `BaseTemplate` - **this is what you're creating**
+- **Base Template** (`src/templates/base/`): The foundational infrastructure that all variants extend - you don't modify this
+- **Background Variants** (e.g., `Solid`, `Gradient`, `Image`): Background type options shared across all template variants, selected via `data.videoMeta.video.templateVariation.useBackground`
 - The registry's `variants` array refers to **background variants**, not template variants
 
 ---
 
 ## Creating a New Template Variant
 
+**Goal:** Create a new variant folder in `src/templates/variants/` that extends the base template, following the same structure as existing variants (`basic/`, `classic/`, `brickwork/`, etc.).
+
 ### Step 1: Create Variant Folder Structure
 
-Create a new folder under `src/templates/variants/` with your template name (use PascalCase):
+Create a new folder under `src/templates/variants/` with your variant name (use PascalCase, matching existing variants like `Basic`, `Classic`, `Brickwork`):
 
 ```
-src/templates/variants/YourTemplate/
-├── index.tsx          # Main template component
-├── theme.ts           # Theme configuration
-├── animations.ts      # Animation presets
+src/templates/variants/YourVariant/
+├── index.tsx          # Main variant component (composes BaseTemplate)
+├── theme.ts           # Variant-specific theme configuration
+├── animations.ts      # Variant-specific animation presets
 ├── readMe.md          # Folder documentation (REQUIRED)
 └── components/
-    ├── YourTemplateIntro.tsx
-    ├── YourTemplateOutro.tsx
-    ├── YourTemplateMain.tsx
-    ├── YourTemplateMainHeader.tsx
-    ├── YourTemplateBackground.tsx
+    ├── YourVariantIntro.tsx
+    ├── YourVariantOutro.tsx
+    ├── YourVariantMain.tsx
+    ├── YourVariantMainHeader.tsx
+    ├── YourVariantBackground.tsx
     └── readMe.md      # Components folder documentation (REQUIRED)
 ```
 
-**Important:** All folders must have `readMe.md` files per `.cursorrules` documentation requirements.
+**Important:** 
+- All folders must have `readMe.md` files per `.cursorrules` documentation requirements
+- Follow the same structure as existing variants (see `src/templates/variants/basic/` as reference)
+- Your variant will extend `BaseTemplate` - you're not creating a new base, just a new visual style
 
 ### Step 2: Create Theme Configuration (`theme.ts`)
+
+**Purpose:** Define your variant's visual styling (colors, fonts, component styles) that extends the base theme.
 
 The theme extends `baseTheme` and defines:
 - Font families
@@ -94,7 +120,7 @@ The theme extends `baseTheme` and defines:
 import { baseTheme } from "../../base/theme";
 import { TemplateThemeConfig } from "../../types/TemplateThemeConfig";
 
-export const yourTemplateTheme: TemplateThemeConfig = {
+export const yourVariantTheme: TemplateThemeConfig = {
   ...baseTheme,
 
   // Override fonts
@@ -160,7 +186,12 @@ export const yourTemplateTheme: TemplateThemeConfig = {
 };
 ```
 
-**Reference:** See `src/templates/variants/basic/theme.ts` for a complete example.
+**Reference:** 
+- See `src/templates/variants/basic/theme.ts` for a minimal example
+- See `src/templates/variants/classic/theme.ts` for a classic styling example
+- See `src/templates/variants/brickwork/theme.ts` for custom styling patterns
+
+**Note:** Your variant theme extends `baseTheme`, so you only need to override what's different from the base.
 
 **Font Configuration:**
 Fonts are loaded via `FontContext` and accessed through `useThemeContext()`. Configure fonts in your theme:
@@ -180,6 +211,8 @@ const { fontClasses } = useThemeContext();
 ```
 
 ### Step 3: Create Animation Configuration (`animations.ts`)
+
+**Purpose:** Define your variant's animation behavior (how elements animate in/out, transitions).
 
 Define animation presets for:
 - Image animations (intro, main, sponsor logos)
@@ -258,7 +291,11 @@ export const templateAnimations: AnimationConfig = {
 
 ### Step 4: Create Variant Components
 
-#### 4a. Intro Component (`YourTemplateIntro.tsx`)
+**Purpose:** Create variant-specific component implementations that define how your variant renders intro, outro, main content, and background.
+
+**Important:** These components extend the base template's structure. You're implementing the visual style, not the infrastructure.
+
+#### 4a. Intro Component (`YourVariantIntro.tsx`)
 
 The intro component displays at the start of the video. It typically shows:
 - Club logo
@@ -277,7 +314,7 @@ import { VerticalStackTitleLogoName } from "../../../../components/layout/titleS
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
-export const YourTemplateIntro: React.FC = () => {
+export const YourVariantIntro: React.FC = () => {
   const { club, metadata, sponsors } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
@@ -338,9 +375,11 @@ export const YourTemplateIntro: React.FC = () => {
 };
 ```
 
-**Reference:** See `src/templates/variants/basic/components/BasicIntro.tsx` for a complete example.
+**Reference:** 
+- See `src/templates/variants/basic/components/BasicIntro.tsx` for a minimal example
+- See `src/templates/variants/classic/components/ClassicIntro.tsx` for alternative patterns
 
-#### 4b. Outro Component (`YourTemplateOutro.tsx`)
+#### 4b. Outro Component (`YourVariantOutro.tsx`)
 
 The outro component displays sponsors or a closing message. It receives `doesAccountHaveSponsors` prop.
 
@@ -353,11 +392,11 @@ import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedImage } from "../../../../components/images";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
-interface YourTemplateOutroProps {
+interface YourVariantOutroProps {
   doesAccountHaveSponsors: boolean;
 }
 
-export const YourTemplateOutro: React.FC<YourTemplateOutroProps> = ({
+export const YourVariantOutro: React.FC<YourVariantOutroProps> = ({
   doesAccountHaveSponsors,
 }) => {
   const { sponsors } = useVideoDataContext();
@@ -381,9 +420,9 @@ export const YourTemplateOutro: React.FC<YourTemplateOutroProps> = ({
 };
 ```
 
-**Reference:** See `src/templates/variants/basic/components/BasicOutro.tsx` for a complete example.
+**Reference:** See `src/templates/variants/basic/components/BasicOutro.tsx` for a complete example with sponsor grid.
 
-#### 4c. Main Component (`YourTemplateMain.tsx`)
+#### 4c. Main Component (`YourVariantMain.tsx`)
 
 The main component wraps the composition content. It typically uses a layout component (`OneColumn`, `TwoColumn`) and includes a header.
 
@@ -392,16 +431,18 @@ The main component wraps the composition content. It typically uses a layout com
 ```typescript
 import React from "react";
 import { OneColumn } from "../../../../components/layout/screen/OneColumn";
-import { YourTemplateMainHeader } from "./YourTemplateMainHeader";
+import { YourVariantMainHeader } from "./YourVariantMainHeader";
 
-export const YourTemplateMain: React.FC = () => {
-  return <OneColumn Header={YourTemplateMainHeader} />;
+export const YourVariantMain: React.FC = () => {
+  return <OneColumn Header={YourVariantMainHeader} />;
 };
 ```
 
-**Reference:** See `src/templates/variants/basic/components/BasicMain.tsx` for a complete example.
+**Reference:** 
+- See `src/templates/variants/basic/components/BasicMain.tsx` for `OneColumn` example
+- See `src/templates/variants/twoColumnClassic/components/ClassicMain.tsx` for `TwoColumn` example
 
-#### 4d. Main Header Component (`YourTemplateMainHeader.tsx`)
+#### 4d. Main Header Component (`YourVariantMainHeader.tsx`)
 
 The header component displays at the top of the main content area.
 
@@ -414,7 +455,7 @@ import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
-export const YourTemplateMainHeader: React.FC = () => {
+export const YourVariantMainHeader: React.FC = () => {
   const { metadata } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const { fontClasses } = useThemeContext();
@@ -436,7 +477,9 @@ export const YourTemplateMainHeader: React.FC = () => {
 };
 ```
 
-#### 4e. Background Component (`YourTemplateBackground.tsx`)
+#### 4e. Background Component (`YourVariantBackground.tsx`)
+
+**Important:** Almost all variants use `SelectTemplateBackground()` - the centralized background system. Only create custom backgrounds if you need variant-specific behavior.
 
 **CRITICAL:** Almost all templates should use `SelectTemplateBackground()` - a centralized component that automatically selects the correct background based on `data.videoMeta.video.templateVariation.useBackground`.
 
@@ -446,7 +489,7 @@ export const YourTemplateMainHeader: React.FC = () => {
 import React from "react";
 import { SelectTemplateBackground } from "../../../../components/backgrounds";
 
-export const YourTemplateBackground: React.FC = () => {
+export const YourVariantBackground: React.FC = () => {
   return <SelectTemplateBackground />;
 };
 ```
@@ -470,57 +513,65 @@ export const YourTemplateBackground: React.FC = () => {
 Only create a custom background implementation if you need template-specific behavior that cannot be achieved through the standard background system. This is rare.
 
 **Reference:** 
-- See `src/templates/variants/basic/components/BasicBackground.tsx` for the standard pattern
+- See `src/templates/variants/basic/components/BasicBackground.tsx` for the standard pattern (all variants use this)
 - See `src/components/backgrounds/README.md` for background system details
 
-### Step 5: Create Main Template Component (`index.tsx`)
+### Step 5: Create Main Variant Component (`index.tsx`)
 
-This is the entry point that composes `BaseTemplate` with your variant components.
+**Purpose:** This is the entry point that composes `BaseTemplate` with your variant-specific components, theme, and animations.
+
+**Important:** You're not creating a new base template - you're creating a variant that uses `BaseTemplate` and provides your variant's customizations.
 
 **Example:**
 
 ```typescript
 import React from "react";
 import { BaseTemplate } from "../../base";
-import { yourTemplateTheme } from "./theme";
+import { yourVariantTheme } from "./theme";
 import { FixturaDataset } from "../../../core/types/data";
 import { UIConfig } from "../../types/settingsConfig";
 
 // Import your variant components
-import { YourTemplateIntro } from "./components/YourTemplateIntro";
-import { YourTemplateOutro } from "./components/YourTemplateOutro";
-import { YourTemplateBackground } from "./components/YourTemplateBackground";
-import { YourTemplateMain } from "./components/YourTemplateMain";
+import { YourVariantIntro } from "./components/YourVariantIntro";
+import { YourVariantOutro } from "./components/YourVariantOutro";
+import { YourVariantBackground } from "./components/YourVariantBackground";
+import { YourVariantMain } from "./components/YourVariantMain";
 import { templateAnimations } from "./animations";
 
 /**
- * YourTemplate variant
+ * YourVariant - extends BaseTemplate with variant-specific styling and components
+ * 
+ * This variant follows the same pattern as Basic, Classic, Brickwork, etc.
+ * It composes BaseTemplate with custom theme, animations, and components.
  */
-export const YourTemplate: React.FC<{ data: FixturaDataset }> = ({ data }) => {
+export const YourVariant: React.FC<{ data: FixturaDataset }> = ({ data }) => {
   return (
     <BaseTemplate
       data={data}
-      settings={yourTemplateTheme as unknown as UIConfig}
-      introComponent={YourTemplateIntro}
-      outroComponent={YourTemplateOutro}
-      backgroundComponent={YourTemplateBackground}
-      mainComponentLayout={YourTemplateMain}
+      settings={yourVariantTheme as unknown as UIConfig}
+      introComponent={YourVariantIntro}
+      outroComponent={YourVariantOutro}
+      backgroundComponent={YourVariantBackground}
+      mainComponentLayout={YourVariantMain}
       animations={templateAnimations}
     />
   );
 };
 ```
 
-**Reference:** See `src/templates/variants/basic/index.tsx` for a complete example.
+**Reference:** 
+- See `src/templates/variants/basic/index.tsx` for a minimal example
+- See `src/templates/variants/classic/index.tsx` for another example
+- All variants follow this same pattern - compose `BaseTemplate` with variant-specific props
 
 ### Optional: Create Utility Functions
 
 If your template needs helper functions (e.g., text transformations, data formatting, complex calculations), create a `utils/` folder:
 
 ```
-src/templates/variants/YourTemplate/
+src/templates/variants/YourVariant/
 ├── utils/
-│   └── titleLookup.ts  # Example utility
+│   └── titleLookup.ts  # Example utility (optional)
 ```
 
 **Example:**
@@ -544,7 +595,10 @@ export const getSimplifiedTitle = (title: string): string => {
 - One-time calculations
 - UI-specific transformations
 
-**Reference:** See `src/templates/variants/twoColumnClassic/utils/titleLookup.ts` for an example.
+**Reference:** 
+- See `src/templates/variants/twoColumnClassic/utils/titleLookup.ts` for an example
+- See `src/templates/variants/thunder/utils/titleLookup.ts` for another example
+- Not all variants need utilities - only add them if you have reusable logic
 
 ### Step 6: Create Documentation Files
 
@@ -552,7 +606,7 @@ Per `.cursorrules` requirements, you must create `readMe.md` files for documenta
 
 #### 6a. Variant Root `readMe.md`
 
-Create `src/templates/variants/YourTemplate/readMe.md`:
+Create `src/templates/variants/YourVariant/readMe.md`:
 
 ```markdown
 # Folder Overview
@@ -561,10 +615,10 @@ Create `src/templates/variants/YourTemplate/readMe.md`:
 
 ## Files
 
-- `index.tsx`: Main entry point exporting the YourTemplate variant composition
-- `theme.ts`: YourTemplate-specific theme tokens and overrides
-- `animations.ts`: Animation presets used by YourTemplate components
-- `components/`: All YourTemplate variant building blocks
+- `index.tsx`: Main entry point exporting the YourVariant composition (composes BaseTemplate)
+- `theme.ts`: YourVariant-specific theme tokens and overrides (extends baseTheme)
+- `animations.ts`: Animation presets used by YourVariant components
+- `components/`: All YourVariant building blocks (Intro, Outro, Main, Background)
 
 ## Relations
 
@@ -580,20 +634,20 @@ Create `src/templates/variants/YourTemplate/readMe.md`:
 
 #### 6b. Components Folder `readMe.md`
 
-Create `src/templates/variants/YourTemplate/components/readMe.md`:
+Create `src/templates/variants/YourVariant/components/readMe.md`:
 
 ```markdown
 # Folder Overview
 
-YourTemplate variant components: Intro, Outro, Main, MainHeader, and Background components.
+YourVariant components: Intro, Outro, Main, MainHeader, and Background components that extend BaseTemplate.
 
 ## Files
 
-- `YourTemplateIntro.tsx`: Intro sequence component
-- `YourTemplateOutro.tsx`: Outro sequence component
-- `YourTemplateMain.tsx`: Main content layout wrapper
-- `YourTemplateMainHeader.tsx`: Header component for main content
-- `YourTemplateBackground.tsx`: Background component wrapper
+- `YourVariantIntro.tsx`: Intro sequence component
+- `YourVariantOutro.tsx`: Outro sequence component
+- `YourVariantMain.tsx`: Main content layout wrapper
+- `YourVariantMainHeader.tsx`: Header component for main content
+- `YourVariantBackground.tsx`: Background component wrapper (typically uses SelectTemplateBackground)
 
 ## Relations
 
@@ -607,42 +661,60 @@ YourTemplate variant components: Intro, Outro, Main, MainHeader, and Background 
 - External: Remotion, React
 ```
 
-**Reference:** See `src/templates/variants/basic/readMe.md` for a complete example.
+**Reference:** 
+- See `src/templates/variants/basic/readMe.md` for a minimal example
+- See `src/templates/variants/classic/readMe.md` for another example
 
-### Step 7: Register Template in Registry
+### Step 7: Register Variant in Registry
+
+**Purpose:** Add your variant to the template registry so it can be discovered and used by the system.
 
 Add your template to `src/templates/registry.tsx`:
 
 ```typescript
-import { YourTemplate } from "./variants/yourTemplate";
+import { YourVariant } from "./variants/yourVariant";
 
-// ... existing imports
+// ... existing imports (Basic, Classic, Brickwork, etc.)
 
 export const templateRegistry = {
-  // ... existing templates
-  YourTemplate: {
-    component: YourTemplate,
-    variants: Variants, // Shared variants array
+  Basic: {
+    component: Basic,
+    variants: Variants, // Shared background variants array
+  },
+  Classic: {
+    component: Classic,
+    variants: Variants,
+  },
+  // ... other existing variants
+  YourVariant: {
+    component: YourVariant,
+    variants: Variants, // Shared background variants array (Solid, Gradient, Image, etc.)
   },
 };
 ```
 
 **Important:** 
-- The key in `templateRegistry` (e.g., `YourTemplate`) becomes the **template ID** used throughout the system. Use PascalCase.
-- Component naming must follow conventions: `YourTemplateIntro`, `YourTemplateOutro`, etc. (NOT `Intro`, `Outro`)
-- File naming: PascalCase for components (`YourTemplateIntro.tsx`), camelCase for utilities (`titleLookup.ts`)
+- The key in `templateRegistry` (e.g., `YourVariant`) becomes the **variant ID** used throughout the system. Use PascalCase.
+- This ID must match your folder name and component export name
+- The `variants` array refers to **background variants** (Solid, Gradient, Image, etc.), not template variants
+- Component naming must follow conventions: `YourVariantIntro`, `YourVariantOutro`, etc. (NOT `Intro`, `Outro`)
+- File naming: PascalCase for components (`YourVariantIntro.tsx`), camelCase for utilities (`titleLookup.ts`)
+
+**See existing variants:** Check `src/templates/registry.tsx` to see how `Basic`, `Classic`, `Brickwork`, etc. are registered.
 
 ---
 
 ## Hooking Up to Compositions
 
-Compositions are sport-specific modules that contain the logic for rendering different types of content (ladder, top5, results, etc.). Each composition type exports a map of template IDs to component implementations.
+Compositions are sport-specific modules that contain the logic for rendering different types of content (ladder, top5, results, etc.). Each composition type exports a map of variant IDs to component implementations.
 
 ### Step 1: Create Composition Template Implementation
 
 For each composition type (e.g., `CricketLadder`), create a template-specific implementation file.
 
-**Example:** `src/compositions/cricket/ladder/yourTemplate.tsx`
+**Example:** `src/compositions/cricket/ladder/yourVariant.tsx`
+
+**Important:** Before creating this file, you must first create the display component (see Step 1b below).
 
 ```typescript
 import React from "react";
@@ -653,7 +725,7 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { LadderData } from "./types";
-import LadderDisplayYourTemplate from "./controller/Display/display-YourTemplate";
+import LadderDisplayYourVariant from "./controller/Display/display-YourVariant";
 import NoLadderData from "./modules/NoLadderData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import {
@@ -679,7 +751,7 @@ export const CricketLadderWithTransitions: React.FC = () => {
   return (
     <TransitionSeriesWrapper
       sequences={ladderDataArray.map((ladder: LadderData) => ({
-        content: <LadderDisplayYourTemplate ladder={ladder} />,
+        content: <LadderDisplayYourVariant ladder={ladder} />,
         durationInFrames: calculateLadderDuration(timings),
       }))}
       transitionType={transitionConfig.type as TransitionType}
@@ -692,31 +764,117 @@ export const CricketLadderWithTransitions: React.FC = () => {
   );
 };
 
-// Export with lowercase name matching template ID
-export const YourTemplate: React.FC = () => {
+// Export with lowercase name matching variant ID
+export const YourVariant: React.FC = () => {
   return <CricketLadderWithTransitions />;
 };
 
-export default YourTemplate;
+export default YourVariant;
 ```
 
-**Note:** The export name should match your template ID (lowercase). The component uses `useVideoDataContext()` to access data - this is provided by `BaseTemplate`.
+**Note:** The export name should match your variant ID (lowercase). The component uses `useVideoDataContext()` to access data - this is provided by `BaseTemplate`.
+
+### Step 1b: Create Display Component
+
+**CRITICAL:** Each composition implementation requires a corresponding display component that renders the actual content. The display component lives in `controller/Display/`.
+
+**Example:** `src/compositions/cricket/ladder/controller/Display/display-YourVariant.tsx`
+
+```typescript
+import React from "react";
+import TableHeader from "../../modules/TableHeader/header";
+import StandardRow from "../TeamRows/StandardRow";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
+import { SponsorFooter } from "../../../sponsorFooter";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { LadderDisplayProps } from "./_types/LadderDisplayProps";
+import { calculateRowDimensions } from "./_utils/calculations";
+
+export const LadderDisplayYourVariant: React.FC<LadderDisplayProps> = ({
+  ladder,
+}) => {
+  const { selectedPalette, layout } = useThemeContext();
+  const { League, gradeName, bias, assignSponsors } = ladder;
+  const { heights } = layout;
+  const { animations } = useAnimationContext();
+  const containerAnimation = animations.container.main.itemContainer;
+  const { headerHeight, rowHeight } = calculateRowDimensions(
+    heights.asset,
+    League.length,
+  );
+
+  return (
+    <div className="p-0 flex flex-col w-full h-full">
+      <AnimatedContainer
+        type="full"
+        className={`${layout.borderRadius.container} flex-1 flex flex-col mx-8 p-2 overflow-hidden`}
+        backgroundColor={undefined}
+        style={{
+          background: selectedPalette.container.backgroundTransparent.high,
+        }}
+        animation={containerAnimation.containerIn}
+        exitAnimation={containerAnimation.containerOut}
+      >
+        <div>
+          <TableHeader title={gradeName} headerHeight={headerHeight} />
+          <div className="flex-1 overflow-hidden">
+            {League.map((team, index) => (
+              <StandardRow
+                key={team.position}
+                team={team}
+                index={index}
+                totalTeams={League.length}
+                isBiasTeam={team.teamName === bias}
+                LadderRowHeight={rowHeight}
+              />
+            ))}
+          </div>
+        </div>
+      </AnimatedContainer>
+      <div style={{ height: `${heights.footer}px` }}>
+        <SponsorFooter assignSponsors={assignSponsors} />
+      </div>
+    </div>
+  );
+};
+
+export default LadderDisplayYourVariant;
+```
+
+**Key Points:**
+- Display components are variant-specific implementations of how data is rendered
+- They use shared types from `_types/` folder (e.g., `LadderDisplayProps`)
+- They use shared utilities from `_utils/` folder (e.g., `calculateRowDimensions`)
+- They access theme and animations via context hooks
+- File naming: `display-YourVariant.tsx` (lowercase variant name with hyphens)
+
+**Display Component Structure:**
+- Each composition type has its own display component structure
+- Display components are located in `controller/Display/` folder
+- They receive composition-specific data as props (e.g., `ladder: LadderData`)
+- They render the visual representation using template-specific styling
+
+**Reference:** 
+- See `src/compositions/cricket/ladder/controller/Display/display-Basic.tsx` for a complete example
+- See `src/compositions/cricket/ladder/controller/Display/_types/LadderDisplayProps.ts` for type definitions
+- See `src/compositions/cricket/ladder/controller/Display/_utils/calculations.ts` for shared utilities
 
 ### Step 2: Export from Composition Index
 
-Add your template to the composition's index file.
+Add your variant to the composition's index file.
 
 **Example:** `src/compositions/cricket/ladder/index.tsx`
 
 ```typescript
-import { YourTemplate as ladderYourTemplate } from "./yourTemplate";
+import { YourVariant as ladderYourVariant } from "./yourVariant";
 
 // ... existing imports
 
 export const CricketLadder = {
   basic: ladderBasic,
-  // ... existing templates
-  yourtemplate: ladderYourTemplate, // lowercase key matching template ID
+  // ... existing variants
+  yourvariant: ladderYourVariant, // lowercase key matching variant ID
 };
 ```
 
@@ -728,63 +886,63 @@ Add the composition to the sport's main index file.
 
 ```typescript
 import {
-  yourtemplate as ladderYourTemplate,
+  yourvariant as ladderYourVariant,
 } from "./ladder";
 
 // ... existing imports
 
 export const CricketLadder = {
   basic: ladderBasic,
-  // ... existing templates
-  yourtemplate: ladderYourTemplate,
+  // ... existing variants
+  yourvariant: ladderYourVariant,
 };
 ```
 
-**Important:** The key in the composition map (e.g., `yourtemplate`) must match the template ID from the registry (lowercase). The routing system uses this to find the correct component.
+**Important:** The key in the composition map (e.g., `yourvariant`) must match the variant ID from the registry (lowercase). The routing system uses this to find the correct component.
 
 ---
 
 ## Hooking Up to Routes
 
-The routing system automatically discovers templates from the composition maps. However, you need to ensure:
+The routing system automatically discovers variants from the composition maps. However, you need to ensure:
 
-1. **Template Registry** is updated (already done in Step 6 above)
+1. **Template Registry** is updated (already done in Step 7 above)
 2. **Composition Maps** are updated (already done in Steps 2-3 above)
 3. **Production Root** uses the registry (already configured)
 
 ### How Routing Works
 
 1. **Production Root** (`src/ProductionRoot.tsx`):
-   - Reads `templateId` from `data.videoMeta.video.appearance.template`
-   - Looks up template in `templateRegistry`
-   - Creates a Remotion `Composition` with the template component
+   - Reads `templateId` from `data.videoMeta.video.appearance.template` (this is your variant ID)
+   - Looks up variant in `templateRegistry`
+   - Creates a Remotion `Composition` with the variant component
 
 2. **Development Root** (`src/DevelopmentRoot.tsx`):
    - Iterates through `templateRegistry`
-   - Creates compositions for each template + variant + dataset combination
-   - Used for previewing templates in Remotion Studio
+   - Creates compositions for each variant + background variant + dataset combination
+   - Used for previewing variants in Remotion Studio
 
 3. **Route to Composition** (`src/core/utils/routing.tsx`):
    - Used in development/preview mode
-   - Reads sport, composition type, and template ID from data
-   - Looks up component from sport module → composition type → template ID
+   - Reads sport, composition type, and variant ID from data
+   - Looks up component from sport module → composition type → variant ID
    - Returns the component for rendering
 
-### Template ID Matching
+### Variant ID Matching
 
-The system matches template IDs using:
-- **Registry keys**: PascalCase (e.g., `YourTemplate`)
-- **Composition map keys**: lowercase (e.g., `yourtemplate`)
-- **Data template ID**: Can be either case (system normalizes to lowercase)
+The system matches variant IDs using:
+- **Registry keys**: PascalCase (e.g., `YourVariant`)
+- **Composition map keys**: lowercase (e.g., `yourvariant`)
+- **Data template ID**: Can be either case (system normalizes to lowercase) - note: the data field is called `template` but it contains the variant ID
 
 **Important:** Ensure consistency:
-- Registry key: `YourTemplate` (PascalCase)
-- Composition map key: `yourtemplate` (lowercase)
-- Both refer to the same template component
+- Registry key: `YourVariant` (PascalCase)
+- Composition map key: `yourvariant` (lowercase)
+- Both refer to the same variant component
 
 ---
 
-## Testing Your Template
+## Testing Your Variant
 
 ### 1. Development Mode
 
@@ -794,18 +952,18 @@ Start Remotion Studio:
 npm run dev
 ```
 
-Your template should appear in the Remotion Studio sidebar under:
-- Template name → Variant → Sport → Dataset
+Your variant should appear in the Remotion Studio sidebar under:
+- Variant name → Background Variant → Sport → Dataset
 
-### 2. Verify Template Registration
+### 2. Verify Variant Registration
 
-Check that your template appears in:
+Check that your variant appears in:
 - `src/templates/registry.tsx` (registry export)
-- Composition index files (sport → composition type → template map)
+- Composition index files (sport → composition type → variant map)
 
 ### 3. Test with Different Compositions
 
-Ensure your template works with all composition types:
+Ensure your variant works with all composition types:
 - Ladder
 - Top5
 - Results
@@ -815,9 +973,9 @@ Ensure your template works with all composition types:
 - TeamOfTheWeek
 - Roster
 
-### 4. Test with Different Variants
+### 4. Test with Different Background Variants
 
-Test that background variants work:
+Test that background variants work (these are shared across all template variants):
 - Solid
 - Gradient
 - Image
@@ -837,7 +995,7 @@ Ensure your components can access:
 
 ### 6. Test with Test Data
 
-Test your template with actual test data files:
+Test your variant with actual test data files:
 - Location: `testData/samples/{Sport}/{DatasetName}.json`
 - Use Remotion Studio to preview with different datasets
 - Test edge cases: empty data, missing fields, etc.
@@ -849,7 +1007,7 @@ Test your template with actual test data files:
 
 ### Pattern Library References
 
-When implementing your template, refer to existing templates for patterns:
+When implementing your variant, refer to existing variants for patterns:
 
 - **Minimal Example**: `src/templates/variants/basic/` - Simplest template implementation
 - **Complex Layout**: `src/templates/variants/twoColumnClassic/` - Two-column layout with utilities
@@ -858,11 +1016,11 @@ When implementing your template, refer to existing templates for patterns:
 
 ### Common Gotchas
 
-1. **Template ID Case Sensitivity**: Registry uses PascalCase, composition maps use lowercase
+1. **Variant ID Case Sensitivity**: Registry uses PascalCase, composition maps use lowercase
 2. **Background Component**: Always use `SelectTemplateBackground()` unless you have a specific need
-3. **Component Naming**: Must include template prefix to avoid conflicts
+3. **Component Naming**: Must include variant prefix to avoid conflicts
 4. **Font Access**: Use `fontClasses` from `ThemeContext`, not direct font names
-5. **Animation Keys**: Must match exactly what components expect (check existing templates)
+5. **Animation Keys**: Must match exactly what components expect (check existing variants)
 
 ## Common Patterns and Best Practices
 
@@ -875,15 +1033,15 @@ When implementing your template, refer to existing templates for patterns:
 
 ### 1a. Component Naming Conventions
 
-**CRITICAL:** All components must use the template name prefix:
-- ✅ `YourTemplateIntro` (correct)
-- ❌ `Intro` (incorrect - conflicts with other templates)
-- ✅ `YourTemplateOutro` (correct)
-- ✅ `YourTemplateMain` (correct)
-- ✅ `YourTemplateBackground` (correct)
+**CRITICAL:** All components must use the variant name prefix:
+- ✅ `YourVariantIntro` (correct)
+- ❌ `Intro` (incorrect - conflicts with other variants)
+- ✅ `YourVariantOutro` (correct)
+- ✅ `YourVariantMain` (correct)
+- ✅ `YourVariantBackground` (correct)
 
 File naming:
-- Components: PascalCase (`YourTemplateIntro.tsx`)
+- Components: PascalCase (`YourVariantIntro.tsx`)
 - Utilities: camelCase (`titleLookup.ts`)
 
 ### 2. Animation Usage
@@ -936,7 +1094,7 @@ if (!hasValidData(CompositionData)) {
 
 ### 5. Type Safety
 
-- Use `FixturaDataset` type for template props
+- Use `FixturaDataset` type for variant props
 - Use `UIConfig` type for settings
 - Use `AnimationConfig` type for animations
 
@@ -946,15 +1104,15 @@ If your template needs custom types beyond base types, create a `types.ts` file:
 
 ```typescript
 // types.ts
-export interface YourTemplateConfig {
+export interface YourVariantConfig {
   customSetting: string;
   // ... other custom types
 }
 ```
 
 **When to create custom types:**
-- Template-specific configuration
-- Complex data structures unique to your template
+- Variant-specific configuration
+- Complex data structures unique to your variant
 - Types shared between multiple components
 
 **When to use base types:**
@@ -971,25 +1129,25 @@ For Remotion-specific optimizations:
 - Avoid unnecessary re-renders by properly structuring component dependencies
 - Consider Remotion's frame-based rendering model when optimizing
 
-**Note:** Most templates don't need performance optimization initially. Focus on correctness first, optimize later if needed.
+**Note:** Most variants don't need performance optimization initially. Focus on correctness first, optimize later if needed.
 
 ---
 
 ## Troubleshooting
 
-### Template Not Appearing in Studio
+### Variant Not Appearing in Studio
 
-- Check registry export name matches template ID (case-sensitive, PascalCase)
-- Verify composition map includes your template (lowercase key)
-- Ensure template component is exported correctly
-- Check that `DevelopmentRoot.tsx` includes your template in iteration
-- Verify template ID consistency: Registry (PascalCase) vs Composition map (lowercase)
+- Check registry export name matches variant ID (case-sensitive, PascalCase)
+- Verify composition map includes your variant (lowercase key)
+- Ensure variant component is exported correctly
+- Check that `DevelopmentRoot.tsx` includes your variant in iteration
+- Verify variant ID consistency: Registry (PascalCase) vs Composition map (lowercase)
 
 ### Composition Not Found
 
 - Verify composition type is registered in `SPORT_COMPOSITION_TYPES`
 - Check sport module includes your composition type
-- Ensure template key matches (case-sensitive in maps)
+- Ensure variant key matches (case-sensitive in maps)
 
 ### Styling Issues
 
@@ -1022,28 +1180,29 @@ For Remotion-specific optimizations:
 
 ## Summary Checklist
 
-When creating a new template, ensure:
+When creating a new **template variant** (like Basic, Classic, Brickwork), ensure:
 
 ### Setup & Structure
-- [ ] Created variant folder structure
+- [ ] Created variant folder in `src/templates/variants/YourVariant/` (following same structure as `basic/`, `classic/`, etc.)
 - [ ] Created `readMe.md` files (variant root + components/)
-- [ ] Created `theme.ts` extending `baseTheme`
+- [ ] Created `theme.ts` extending `baseTheme` (only override what's different)
 - [ ] Created `animations.ts` with animation presets
 - [ ] Created all variant components (Intro, Outro, Main, MainHeader, Background)
-- [ ] Background component uses `SelectTemplateBackground()` (unless custom needed)
-- [ ] Created `index.tsx` composing `BaseTemplate`
-- [ ] Component naming follows conventions (template name prefix)
+- [ ] Background component uses `SelectTemplateBackground()` (standard pattern - see `basic/components/BasicBackground.tsx`)
+- [ ] Created `index.tsx` composing `BaseTemplate` with variant-specific props
+- [ ] Component naming follows conventions (variant name prefix: `YourVariantIntro`, NOT `Intro`)
 
 ### Registration & Integration
-- [ ] Registered template in `registry.tsx` with correct template ID (PascalCase)
-- [ ] Created composition implementations for each composition type
-- [ ] Added template to composition index files (lowercase key)
-- [ ] Added template to sport module exports
+- [ ] Registered variant in `registry.tsx` with correct variant ID (PascalCase, e.g., `YourVariant`)
+- [ ] Created display components for each composition type (`controller/Display/display-YourVariant.tsx`)
+- [ ] Created composition implementations for each composition type (`yourVariant.tsx`)
+- [ ] Added variant to composition index files (lowercase key: `yourvariant`)
+- [ ] Added variant to sport module exports
 - [ ] Updated parent documentation (`templates/.docs/readMe.md` if needed)
 
 ### Testing & Verification
 - [ ] Tested in Remotion Studio
-- [ ] Verified template appears in sidebar (Template → Variant → Sport → Dataset)
+- [ ] Verified variant appears in sidebar (Variant → Background Variant → Sport → Dataset)
 - [ ] Tested with all background variants (Solid, Gradient, Image, Video, Graphics, Particle, Pattern, Texture)
 - [ ] Tested with all composition types (Ladder, Results, Top5, Upcoming, ResultSingle, Performances, TeamOfTheWeek, Roster)
 - [ ] Verified theme colors work correctly
@@ -1058,11 +1217,11 @@ When creating a new template, ensure:
 ## Quick Reference
 
 ### Naming Conventions
-- **Template ID**: PascalCase (e.g., `YourTemplate`)
-- **Composition map key**: lowercase (e.g., `yourtemplate`)
-- **Component files**: PascalCase (`YourTemplateIntro.tsx`)
+- **Variant ID**: PascalCase (e.g., `YourVariant`) - matches folder name and registry key
+- **Composition map key**: lowercase (e.g., `yourvariant`)
+- **Component files**: PascalCase (`YourVariantIntro.tsx`)
 - **Utility files**: camelCase (`titleLookup.ts`)
-- **Component names**: Must include template prefix (`YourTemplateIntro`, NOT `Intro`)
+- **Component names**: Must include variant prefix (`YourVariantIntro`, NOT `Intro`)
 
 ### Standard Patterns
 - **Background**: `SelectTemplateBackground()` (99% of templates)
@@ -1071,16 +1230,21 @@ When creating a new template, ensure:
 - **Data**: Access via `useVideoDataContext()` → `data.videoMeta.video.*`
 
 ### Key Distinctions
-- **Template Variants**: Visual style/layout (Basic, Classic, Brickwork) - what you're creating
-- **Background Variants**: Background type (Solid, Gradient, Image) - selected via `templateVariation.useBackground`
+- **Template Variants** (what you're creating): Visual style/layout variants that extend BaseTemplate (Basic, Classic, Brickwork, YourVariant)
+- **Background Variants**: Background type options (Solid, Gradient, Image, Video, etc.) - shared across all template variants, selected via `templateVariation.useBackground`
+- **Base Template**: The foundational infrastructure (`src/templates/base/`) that all variants extend - you don't modify this
 
 ## Reference Files
 
 ### Core Template Files
-- Base Template: `src/templates/base/index.tsx`
-- Example Variant: `src/templates/variants/basic/`
+- **Base Template** (infrastructure - don't modify): `src/templates/base/index.tsx`
+- **Example Variants** (reference implementations):
+  - Minimal: `src/templates/variants/basic/`
+  - Classic: `src/templates/variants/classic/`
+  - Custom styling: `src/templates/variants/brickwork/`
+  - Two-column: `src/templates/variants/twoColumnClassic/`
 - Variant Documentation: `src/templates/variants/basic/readMe.md`
-- Registry: `src/templates/registry.tsx`
+- Registry: `src/templates/registry.tsx` (see how existing variants are registered)
 
 ### Background System
 - Background Selector: `src/components/backgrounds/index.tsx` (`SelectTemplateBackground`)

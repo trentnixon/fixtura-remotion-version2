@@ -1,4 +1,4 @@
-import { TeamLogo as TeamLogoType } from "../../../../types";
+import { TeamLogo as TeamLogoType } from "../../../../_types/types";
 
 export interface TeamLayoutProps {
   teamHome: string;

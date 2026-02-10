@@ -1,21 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { PlayerData } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-
-import { AssignSponsors } from "../../../composition-types";
+import { AssignSponsors } from "../../../_types/composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import PlayerRowCNSW from "../PlayerRow/row-CNSW";
 import { Top5PlayerName } from "../../../utils/primitives/Top5PlayerName";
-
-interface PlayersDisplayProps {
-  players: PlayerData[];
-  title?: string; // Optional title to display
-  sponsors: Sponsor[];
-}
+import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
+import { DEFAULT_CONTAINER_ANIMATION_DELAY, DEFAULT_ROW_HEIGHT_CNSW } from "./_utils/constants";
 
 const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
   players,
@@ -39,7 +32,7 @@ const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
         }}
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
-        animationDelay={0}
+        animationDelay={DEFAULT_CONTAINER_ANIMATION_DELAY}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex-0 grid grid-cols-1 gap-1 px-16">
@@ -56,7 +49,7 @@ const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
               key={player.name}
               player={player}
               index={index}
-              rowHeight={110}
+              rowHeight={DEFAULT_ROW_HEIGHT_CNSW}
             />
           ))}
         </div>
@@ -67,20 +60,5 @@ const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
     </div>
   );
 };
-
-// Utility function to calculate row dimensions
-/* const calculateRowDimensions = (totalHeight: number, playerCount: number) => {
-  const VERTICAL_GAP = 8; // 8rem gap between rows
-  const PADDING = 8; // 8rem padding top and bottom
-  const TITLE_HEIGHT = 48; // Height for the title if present
-
-  const totalVerticalGaps = (playerCount - 1) * VERTICAL_GAP;
-  const availableHeight = totalHeight / 1.3 - PADDING * 2 - TITLE_HEIGHT;
-  const rowHeight = (availableHeight - totalVerticalGaps) / playerCount;
-
-  return {
-    rowHeight,
-  };
-}; */
 
 export default PlayersDisplayCNSW;

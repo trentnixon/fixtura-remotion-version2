@@ -1,31 +1,25 @@
 import React from "react";
-import {
-  PlayerData,
-  TeamLogo as Top5TeamLogoType,
-  isBatter,
-  isBowler,
-} from "../types";
+import { TeamLogo as Top5TeamLogoType } from "../_types/types";
 import { TeamLogo } from "../../utils/primitives/TeamLogo";
-
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { Top5PlayerName } from "../../utils/primitives/Top5PlayerName";
 import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
 import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-
-interface PlayerRowLayoutProps {
-  player: PlayerData;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { PlayerRowLayoutProps } from "./_types/PlayerRowLayoutProps";
+import { truncateText } from "./_utils/helpers";
+import { getScoreValues } from "./_utils/scoreHelpers";
+import {
+  SMALL_LOGO_SIZE,
+  DEFAULT_NAME_LENGTH,
+  DEFAULT_TEAM_LENGTH,
+  PLAYER_NAME_DELAY_OFFSET,
+  TEAM_NAME_DELAY_OFFSET,
+  STAT_DELAY_OFFSET,
+  STAT_SUFFIX_DELAY_OFFSET,
+  LOGO_DELAY_OFFSET,
+} from "./_utils/constants";
 
 // --- Layout 1: Standard (Existing) ---
 export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
@@ -49,30 +43,13 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
   const LogoBG = selectedPalette.container.primary;
 
   const contrastBG = selectedPalette.container.backgroundTransparent.strong;
-  // Get the appropriate score display based on player type
-  const getScoreValues = () => {
-    if (isBatter(player)) {
-      // Main value is runs (with * for not out), suffix is only balls faced
-      const mainValue = player.notOut ? `${player.runs}*` : `${player.runs}`;
-      const suffix = player.balls > 0 ? `(${player.balls})` : "";
-      return { mainValue, suffix };
-    } else if (isBowler(player)) {
-      // Main value is wickets-runs, suffix is overs
-      const mainValue = `${player.wickets}/${player.runs}`;
-      const suffix = `(${player.overs})`;
-      return { mainValue, suffix };
-    }
-
-    // Fallback
-    return { mainValue: "--", suffix: "" };
-  };
 
   // Get truncated player name and team name
-  const playerName = truncateText(player.name, 20).toUpperCase();
-  const teamName = truncateText(player.playedFor, 35).toUpperCase();
+  const playerName = truncateText(player.name, DEFAULT_NAME_LENGTH).toUpperCase();
+  const teamName = truncateText(player.playedFor, DEFAULT_TEAM_LENGTH).toUpperCase();
 
   // Get score display values
-  const { mainValue, suffix } = getScoreValues();
+  const { mainValue, suffix } = getScoreValues(player);
 
   return (
     <div
@@ -86,12 +63,12 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
       <div className="col-span-7 flex flex-col justify-center px-2 h-full">
         <Top5PlayerName
           value={playerName}
-          animation={{ ...largeTextAnimation, delay: delay + 2 }}
+          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
           className=""
         />
         <Top5PlayerTeam
           value={teamName}
-          animation={{ ...smallTextAnimation, delay: delay + 4 }}
+          animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
           className=""
         />
       </div>
@@ -105,8 +82,8 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
           <TeamLogo
             logo={player.teamLogo as Top5TeamLogoType}
             teamName={player.playedFor}
-            delay={delay + 20}
-            size={20} // smaller size to avoid pushing row height
+            delay={delay + LOGO_DELAY_OFFSET}
+            size={SMALL_LOGO_SIZE}
           />
         </div>
       </div>
@@ -118,14 +95,14 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + 20 }}
+          animation={{ ...largeTextAnimation, delay: delay + STAT_DELAY_OFFSET }}
           className=""
           variant="onContainerTitle"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + 30 }}
+            animation={{ ...smallTextAnimation, delay: delay + STAT_SUFFIX_DELAY_OFFSET }}
             className=""
             variant="onContainerTitle"
           />

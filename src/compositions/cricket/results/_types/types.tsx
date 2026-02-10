@@ -1,4 +1,4 @@
-import { AssignSponsors } from "../../composition-types";
+import { AssignSponsors } from "../../_types/composition-types";
 
 // Types for cricket match results
 export interface TeamLogo {

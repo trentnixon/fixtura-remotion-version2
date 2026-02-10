@@ -1,27 +1,23 @@
 import React from "react";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
 import {
   AnimatedText,
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import {
+  AnimatedTextPrimitivePropsWithDelay,
+  TextAlign,
+} from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT, DEFAULT_TEXT_ALIGN } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
-interface LadderTeamNameProps {
-  value: string;
-  variant?: string;
-  textAlign?: string;
-  delay: number;
-}
-
-type TextAlign = "left" | "right" | "center";
-
-export const LadderTeamName: React.FC<LadderTeamNameProps> = ({
+export const LadderTeamName: React.FC<AnimatedTextPrimitivePropsWithDelay> = ({
   value,
-  variant = "onContainerCopy",
-  textAlign = "left",
+  variant = DEFAULT_VARIANT,
+  textAlign = DEFAULT_TEXT_ALIGN,
   delay,
 }) => {
-  const { fontClasses } = useThemeContext();
+  const fontFamily = useFontFamily();
   const { animations } = useAnimationContext();
 
   return (
@@ -29,7 +25,7 @@ export const LadderTeamName: React.FC<LadderTeamNameProps> = ({
       type="ladderTeamName"
       variant={variant as ColorVariant}
       textAlign={textAlign as TextAlign}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       animation={{ ...animations.text.main.copyIn, delay: delay }}
     >
       {value}

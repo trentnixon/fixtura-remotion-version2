@@ -7,7 +7,7 @@ import {
 } from "../../../components/transitions";
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
-import { GameData } from "./types";
+import { GameData } from "./_types/types";
 import GamesDisplayCNSWPrivate from "./controller/GamesDisplay/FixtureDisplayCNSW-private";
 import {
   getGamesPerScreen,

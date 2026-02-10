@@ -13,12 +13,17 @@ import {
   getScoreValues,
   getPositionIcon,
 } from "../../utils/config";
-import { BattingStats, BowlingStats } from "../../types";
+import { BattingStats } from "../../types";
+import { DEFAULT_ICON_PACK } from "./_utils/constants";
+import {
+  STAT_DISPLAY_DELAY_OFFSET,
+  BOWLING_STAT_DELAY_OFFSET,
+  STAT_SUFFIX_DELAY_OFFSET,
+} from "./_utils/constants";
+import { isAllRounderPosition, hasBothStats } from "./_utils/helpers";
+import { BowlingStatDisplay } from "./_utils/components";
 
-// Icon pack configuration for SixersThunder variant
-const ICON_PACK = "icon1"; // Change this to use a different icon pack (e.g., "icon2", "icon3")
-
-// Component to display formatted batting stats
+// Component to display formatted batting stats (SixersThunder variant uses TeamOfTheWeekStat)
 const BattingStatDisplay: React.FC<{
   batting: BattingStats;
   delay: number;
@@ -40,37 +45,10 @@ const BattingStatDisplay: React.FC<{
       />
       <TeamOfTheWeekStat
         value={ballsDisplay}
-        animation={{ ...smallTextAnimation, delay: delay + 10 }}
-        variant="onContainerCopy"
-        className="text-md"
-      />
-    </div>
-  );
-};
-
-// Component to display formatted bowling stats
-const BowlingStatDisplay: React.FC<{
-  bowling: BowlingStats;
-  delay: number;
-}> = ({ bowling, delay }) => {
-  const { animations } = useAnimationContext();
-  const largeTextAnimation = animations.text.main.copyIn;
-  const smallTextAnimation = animations.text.main.copyIn;
-
-  const wicketsRunsDisplay = `${bowling.wickets}/${bowling.runs}`;
-  const oversDisplay = `(${bowling.overs})`;
-
-  return (
-    <div className="flex items-baseline gap-1">
-      <TeamOfTheWeekStat
-        value={wicketsRunsDisplay}
-        animation={{ ...largeTextAnimation, delay: delay }}
-        variant="onContainerCopy"
-        className=""
-      />
-      <TeamOfTheWeekStat
-        value={oversDisplay}
-        animation={{ ...smallTextAnimation, delay: delay + 10 }}
+        animation={{
+          ...smallTextAnimation,
+          delay: delay + STAT_SUFFIX_DELAY_OFFSET,
+        }}
         variant="onContainerCopy"
         className="text-md"
       />
@@ -114,17 +92,19 @@ const PlayerRowSixersThunder: React.FC<PlayerRowProps> = ({
   const playerName = cleanPlayerName(player.player).toUpperCase();
 
   // All-rounders check
-  const isAllRounderPosition =
-    player.categoryDetail.position === "topallrounder" ||
-    player.categoryDetail.position === "bestoftherest";
-  const hasBothStats = player.batting && player.bowling;
+  const isAllRounder = isAllRounderPosition(
+    player.categoryDetail.position,
+  );
+  const hasBoth = hasBothStats(player);
 
   // Get score display values (only used for non-all-rounder positions)
   const { mainValue, suffix } = getScoreValues(player);
 
   // Get the appropriate SVG icon component for the position
-  // Uses the icon pack configured for SixersThunder variant (see ICON_PACK constant above)
-  const PositionIcon = getPositionIcon(player.categoryDetail.position, ICON_PACK);
+  const PositionIcon = getPositionIcon(
+    player.categoryDetail.position,
+    DEFAULT_ICON_PACK,
+  );
 
   return (
     <div className="overflow-hidden">
@@ -167,26 +147,38 @@ const PlayerRowSixersThunder: React.FC<PlayerRowProps> = ({
             />
             {/* Stats Display */}
             <div className="flex items-center gap-1 ml-4">
-              {isAllRounderPosition && hasBothStats && player.batting && player.bowling ? (
+              {isAllRounder && hasBoth && player.batting && player.bowling ? (
                 <div className="flex flex-row gap-4 items-baseline">
                   {/* Batting Stats */}
-                  <BattingStatDisplay batting={player.batting} delay={delay + 20} />
+                  <BattingStatDisplay
+                    batting={player.batting}
+                    delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                  />
                   <span>&amp;</span>
                   {/* Bowling Stats */}
-                  <BowlingStatDisplay bowling={player.bowling} delay={delay + 30} />
+                  <BowlingStatDisplay
+                    bowling={player.bowling}
+                    delay={delay + BOWLING_STAT_DELAY_OFFSET}
+                  />
                 </div>
               ) : (
                 <>
                   <TeamOfTheWeekStat
                     value={mainValue}
-                    animation={{ ...largeTextAnimation, delay: delay + 20 }}
+                    animation={{
+                      ...largeTextAnimation,
+                      delay: delay + STAT_DISPLAY_DELAY_OFFSET,
+                    }}
                     className=""
                     variant="onContainerCopy"
                   />
                   {suffix && (
                     <TeamOfTheWeekStat
                       value={suffix}
-                      animation={{ ...smallTextAnimation, delay: delay + 30 }}
+                      animation={{
+                        ...smallTextAnimation,
+                        delay: delay + BOWLING_STAT_DELAY_OFFSET,
+                      }}
                       className="text-md"
                       variant="onContainerCopy"
                     />

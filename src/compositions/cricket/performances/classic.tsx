@@ -9,7 +9,7 @@ import {
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
 import { SponsorFooter } from "../sponsorFooter/index";
-import { AssignSponsors } from "../composition-types";
+import { AssignSponsors } from "../_types/composition-types";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import PerformancesDisplayClassic from "./controller/PerformancesDisplay/display-Classic";
 import {

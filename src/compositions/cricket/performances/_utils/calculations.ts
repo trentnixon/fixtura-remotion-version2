@@ -1,6 +1,6 @@
 import { Timings } from "../../../../core/types/data/common";
 import { PerformanceData } from "../_types/types";
-import { AssignSponsors } from "../../composition-types";
+import { AssignSponsors } from "../../_types/composition-types";
 import { DivideFixturesBy } from "../../../../core/types/data/videoData";
 
 /**

@@ -16,14 +16,9 @@ import {
   getScoreValues,
 } from "../../utils/config";
 
-interface PlayerRowProps {
-  player: TeamOfTheWeekPlayer;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
+import { PlayerRowPropsWithDelay } from "./_types/PlayerRowPropsWithDelay";
 
-const PlayerRowCNSW: React.FC<PlayerRowProps> = ({
+const PlayerRowCNSW: React.FC<PlayerRowPropsWithDelay> = ({
   player,
   index,
   rowHeight,

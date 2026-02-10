@@ -1,6 +1,4 @@
 import React from "react";
-import { PlayerData, isBatter, isBowler } from "../types";
-
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { Top5PlayerName } from "../../utils/primitives/Top5PlayerName";
 import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
@@ -9,19 +7,17 @@ import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuf
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { MetadataLarge } from "../../utils/primitives/metadataLarge";
 import { stripGradeNumberFromTeamName } from "../../utils/utils-text";
-
-interface PlayerRowLayoutProps {
-  player: PlayerData;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
-
-// Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength - 3) + "...";
-};
+import { PlayerRowLayoutProps } from "./_types/PlayerRowLayoutProps";
+import { truncateText } from "./_utils/helpers";
+import { getScoreValues } from "./_utils/scoreHelpers";
+import {
+  DEFAULT_NAME_LENGTH,
+  DEFAULT_TEAM_LENGTH,
+  PLAYER_NAME_DELAY_OFFSET,
+  TEAM_NAME_DELAY_OFFSET,
+  STAT_DELAY_OFFSET,
+  STAT_SUFFIX_DELAY_OFFSET,
+} from "./_utils/constants";
 
 // --- Layout 1: Standard (Existing) ---
 export const PlayerRowNameCNSWPrivate: React.FC<PlayerRowLayoutProps> = ({
@@ -44,30 +40,13 @@ export const PlayerRowNameCNSWPrivate: React.FC<PlayerRowLayoutProps> = ({
   // Determine background color
   const bgColor = selectedPalette.container.secondary;
   const ScorebgColor = selectedPalette.background.main;
-  // Get the appropriate score display based on player type
-  const getScoreValues = () => {
-    if (isBatter(player)) {
-      // Main value is runs (with * for not out), suffix is only balls faced
-      const mainValue = player.notOut ? `${player.runs}*` : `${player.runs}`;
-      const suffix = player.balls > 0 ? `(${player.balls})` : "";
-      return { mainValue, suffix };
-    } else if (isBowler(player)) {
-      // Main value is wickets-runs, suffix is overs
-      const mainValue = `${player.wickets}/${player.runs}`;
-      const suffix = `(${player.overs})`;
-      return { mainValue, suffix };
-    }
-
-    // Fallback
-    return { mainValue: "--", suffix: "" };
-  };
 
   // Get truncated player name and team name
-  const playerName = truncateText(player.name, 20).toUpperCase();
-  const teamName = truncateText(player.playedFor, 35).toUpperCase();
+  const playerName = truncateText(player.name, DEFAULT_NAME_LENGTH).toUpperCase();
+  const teamName = truncateText(player.playedFor, DEFAULT_TEAM_LENGTH).toUpperCase();
 
   // Get score display values
-  const { mainValue, suffix } = getScoreValues();
+  const { mainValue, suffix } = getScoreValues(player);
 
   return (
     <div
@@ -80,7 +59,7 @@ export const PlayerRowNameCNSWPrivate: React.FC<PlayerRowLayoutProps> = ({
       <div className="col-span-1 flex items-center justify-center h-full">
         <MetadataLarge
           value={`${index + 1}`}
-          animation={{ ...largeTextAnimation, delay: delay + 2 }}
+          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
           className=""
           variant="onContainerMain"
         />
@@ -89,13 +68,13 @@ export const PlayerRowNameCNSWPrivate: React.FC<PlayerRowLayoutProps> = ({
       <div className="col-span-8 flex flex-col justify-center p-0 m-0 h-full">
         <Top5PlayerName
           value={playerName}
-          animation={{ ...largeTextAnimation, delay: delay + 2 }}
+          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
           className=""
           variant="onContainerMain"
         />
         <Top5PlayerTeam
           value={stripGradeNumberFromTeamName(teamName)}
-          animation={{ ...smallTextAnimation, delay: delay + 4 }}
+          animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
           className=""
           variant="onContainerMain"
         />
@@ -108,14 +87,14 @@ export const PlayerRowNameCNSWPrivate: React.FC<PlayerRowLayoutProps> = ({
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + 20 }}
+          animation={{ ...largeTextAnimation, delay: delay + STAT_DELAY_OFFSET }}
           className="font-bold"
           variant="onContainerMain"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + 30 }}
+            animation={{ ...smallTextAnimation, delay: delay + STAT_SUFFIX_DELAY_OFFSET }}
             className="font-bold"
             variant="onContainerMain"
           />

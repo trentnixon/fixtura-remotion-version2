@@ -13,7 +13,7 @@ import {
   loadFontByName,
   loadFontsFromTheme,
   getAllFontNames,
-} from "../utils/fontLoader";
+} from "../utils/fonts/fontLoader";
 import { continueRender, delayRender } from "remotion";
 import { TemplateThemeConfig } from "../../templates/types/TemplateThemeConfig";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { TeamOfTheWeekPlayer } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -13,14 +12,9 @@ import {
   getScoreValues,
 } from "../../utils/config";
 
-interface PlayerRowProps {
-  player: TeamOfTheWeekPlayer;
-  index: number;
-  rowHeight: number;
-  delay: number;
-}
+import { PlayerRowPropsWithDelay } from "./_types/PlayerRowPropsWithDelay";
 
-const PlayerRowCNSWPrivate: React.FC<PlayerRowProps> = ({
+const PlayerRowCNSWPrivate: React.FC<PlayerRowPropsWithDelay> = ({
   player,
   index,
   rowHeight,

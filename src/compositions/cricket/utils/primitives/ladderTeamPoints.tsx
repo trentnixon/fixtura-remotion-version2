@@ -1,27 +1,20 @@
 import React from "react";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
 import {
   AnimatedText,
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
-
-interface TeamStatTextProps {
-  value: string | number;
-  variant?: string;
-  textAlign?: string;
-  delay: number;
-}
-
-type TextAlign = "left" | "right" | "center";
+import { TeamStatTextProps, TextAlign } from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
 export const LadderTeamPoints: React.FC<TeamStatTextProps> = ({
   value,
-  variant = "onContainerCopy",
+  variant = DEFAULT_VARIANT,
   textAlign = "center",
   delay,
 }) => {
-  const { fontClasses } = useThemeContext();
+  const fontFamily = useFontFamily();
   const { animations } = useAnimationContext();
 
   return (
@@ -29,7 +22,7 @@ export const LadderTeamPoints: React.FC<TeamStatTextProps> = ({
       type="ladderTeamPoints"
       variant={variant as ColorVariant}
       textAlign={textAlign as TextAlign}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       animation={{ ...animations.text.main.copyIn, delay: delay }}
     >
       {String(value)}

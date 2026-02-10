@@ -1,17 +1,12 @@
 import React from "react";
-import { TeamOfTheWeekPlayer } from "../../types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowBasic from "../PlayerRow/row-Basic";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-import { AssignSponsors } from "../../../composition-types";
-
-interface TeamOfTheWeekDisplayProps {
-  players: TeamOfTheWeekPlayer[];
-  sponsors: Sponsor[];
-}
+import { AssignSponsors } from "../../../_types/composition-types";
+import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
+import { DEFAULT_ROW_HEIGHT_BASIC } from "./_utils/constants";
 
 const TeamOfTheWeekDisplayBasic: React.FC<TeamOfTheWeekDisplayProps> = ({
   players,
@@ -44,7 +39,7 @@ const TeamOfTheWeekDisplayBasic: React.FC<TeamOfTheWeekDisplayProps> = ({
               key={player.player}
               player={player}
               index={index}
-              rowHeight={110}
+              rowHeight={DEFAULT_ROW_HEIGHT_BASIC}
             />
           ))}
         </div>

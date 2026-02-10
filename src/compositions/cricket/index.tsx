@@ -7,6 +7,7 @@ import {
   classicTwoColumn as ladderClassicTwoColumn,
   cnsw as ladderCNSW,
   cnswprivate as ladderCNSWPrivate,
+  mudgeeraba as ladderMudgeeraba,
 } from "./ladder";
 import {
   basic as upcomingBasic,
@@ -16,6 +17,7 @@ import {
   classicTwoColumn as upcomingClassicTwoColumn,
   cnsw as upcomingCNSW,
   cnswprivate as upcomingCNSWPrivate,
+  mudgeeraba as upcomingMudgeeraba,
 } from "./upcoming";
 import {
   basic as top5Basic,
@@ -25,6 +27,7 @@ import {
   twocolumnclassic as top5ClassicTwoColumn,
   cnsw as top5CNSW,
   cnswprivate as top5CNSWPrivate,
+  mudgeeraba as top5Mudgeeraba,
 } from "./top5";
 import {
   basic as resultsBasic,
@@ -34,6 +37,7 @@ import {
   classicTwoColumn as resultsClassicTwoColumn,
   cnsw as resultsCNSW,
   cnswPrivate as resultsCNSWPrivate,
+  mudgeeraba as resultsMudgeeraba,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -44,6 +48,7 @@ import {
   cnsw as resultSingleCNSW,
   cnswPrivate as resultSingleCNSWPrivate,
   brickWork as resultSingleBrickWork,
+  mudgeeraba as resultSingleMudgeeraba,
 } from "./resultSingle";
 
 import {
@@ -51,6 +56,7 @@ import {
   SixersThunder as rosterSixersThunder,
   Classic as rosterClassic,
   ClassicTwoColumn as rosterClassicTwoColumn,
+  mudgeeraba as rosterMudgeeraba,
 } from "./teamRoster";
 import {
   basic as performancesBasic,
@@ -60,6 +66,7 @@ import {
   cnsw as performancesCNSW,
   cnswPrivate as performancesCNSWPrivate,
   sixersThunder as performancesSixersThunder,
+  mudgeeraba as performancesMudgeeraba,
 } from "./performances";
 import {
   basic as teamOfTheWeekBasic,
@@ -69,6 +76,7 @@ import {
   cnswPrivate as teamOfTheWeekCNSWPrivate,
   sixersThunder as teamOfTheWeekSixersThunder,
   classicTwoColumn as teamOfTheWeekClassicTwoColumn,
+  mudgeeraba as teamOfTheWeekMudgeeraba,
 } from "./TeamOfTheWeek";
 
 /* export * as ladder from './ladder';
@@ -92,6 +100,7 @@ export const CricketLadder = {
   twocolumnclassic: ladderClassicTwoColumn, // alias to classic
   cnsw: ladderCNSW,
   cnswprivate: ladderCNSWPrivate,
+  mudgeeraba: ladderMudgeeraba,
 };
 
 export const CricketTop5 = {
@@ -103,6 +112,7 @@ export const CricketTop5 = {
   twocolumnclassic: top5ClassicTwoColumn, // alias to classic
   cnsw: top5CNSW,
   cnswprivate: top5CNSWPrivate,
+  mudgeeraba: top5Mudgeeraba,
 };
 
 export const CricketResults = {
@@ -114,6 +124,7 @@ export const CricketResults = {
   twocolumnclassic: resultsClassicTwoColumn, // alias to classic
   cnsw: resultsCNSW,
   cnswprivate: resultsCNSWPrivate,
+  mudgeeraba: resultsMudgeeraba,
 };
 
 export const CricketUpcoming = {
@@ -125,6 +136,7 @@ export const CricketUpcoming = {
   twocolumnclassic: upcomingClassicTwoColumn, // alias to classic
   cnsw: upcomingCNSW,
   cnswprivate: upcomingCNSWPrivate,
+  mudgeeraba: upcomingMudgeeraba,
 };
 
 export const CricketResultSingle = {
@@ -136,6 +148,7 @@ export const CricketResultSingle = {
   twocolumnclassic: resultSingleClassicTwoColumns, // alias to classic
   cnsw: resultSingleCNSW,
   cnswprivate: resultSingleCNSWPrivate,
+  mudgeeraba: resultSingleMudgeeraba,
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -147,6 +160,7 @@ export const CricketRoster = {
   classic: rosterClassic,
   twocolumnclassic: rosterClassicTwoColumn, // alias to classic
   cnsw: rosterClassic,
+  mudgeeraba: rosterMudgeeraba,
 };
 
 // Add CricketPerformances export for batting and bowling performances
@@ -159,6 +173,7 @@ export const CricketPerformances = {
   twocolumnclassic: performancesClassicTwoColumn,
   cnsw: performancesCNSW,
   cnswprivate: performancesCNSWPrivate,
+  mudgeeraba: performancesMudgeeraba,
 };
 
 // Add CricketTeamOfTheWeek export for Team of the Week
@@ -171,6 +186,7 @@ export const CricketTeamOfTheWeek = {
   sixers: teamOfTheWeekSixersThunder,
   thunder: teamOfTheWeekSixersThunder,
   twocolumnclassic: teamOfTheWeekClassicTwoColumn,
+  mudgeeraba: teamOfTheWeekMudgeeraba,
 };
 
 export const singleGameResult = {

@@ -1,31 +1,28 @@
-// MetadataSmall.tsx
+// RosterPlayerName.tsx
 
 import {
   AnimatedText,
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
-import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { RosterPlayerNameProps } from "./_types/AnimatedTextPrimitiveProps";
+import { DEFAULT_VARIANT, DEFAULT_LETTER_ANIMATION } from "./_utils/constants";
+import { useFontFamily } from "./_utils/helpers";
 
 export const RosterPlayerName = ({
   value,
-
   className,
-  variant = "onContainerCopy",
-}: {
-  value: string;
-  className?: string;
-  variant?: string;
-}) => {
-  const { fontClasses } = useThemeContext();
+  variant = DEFAULT_VARIANT,
+}: RosterPlayerNameProps) => {
+  const fontFamily = useFontFamily();
 
   return (
     <AnimatedText
       type="RosterPlayerName"
       variant={variant as ColorVariant}
-      fontFamily={fontClasses.copy?.family}
+      fontFamily={fontFamily}
       className={className}
       animation={undefined}
-      letterAnimation="none"
+      letterAnimation={DEFAULT_LETTER_ANIMATION}
     >
       {value}
     </AnimatedText>

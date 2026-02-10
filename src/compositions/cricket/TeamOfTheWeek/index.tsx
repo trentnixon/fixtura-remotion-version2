@@ -6,6 +6,7 @@ import CNSWTeamOfTheWeek from "./cnsw";
 import CNSWPrivateTeamOfTheWeek from "./cnswPrivate";
 import SixersThunderTeamOfTheWeek from "./sixersThunder";
 import ClassicTwoColumnTeamOfTheWeek from "./classicTwoColumn";
+import MudgeerabaTeamOfTheWeek from "./mudgeeraba";
 
 // Export all template implementations
 export const basic = BasicTeamOfTheWeek;
@@ -15,3 +16,4 @@ export const cnsw = CNSWTeamOfTheWeek;
 export const cnswPrivate = CNSWPrivateTeamOfTheWeek;
 export const sixersThunder = SixersThunderTeamOfTheWeek;
 export const classicTwoColumn = ClassicTwoColumnTeamOfTheWeek;
+export const mudgeeraba = MudgeerabaTeamOfTheWeek;

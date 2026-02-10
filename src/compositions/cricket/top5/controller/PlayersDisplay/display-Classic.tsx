@@ -1,19 +1,13 @@
 import React from "react";
-import { PlayerData } from "../../types";
 import PlayerRowSixersThunder from "../PlayerRow/row-SixersThunder";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import { Sponsor } from "../../../../../core/types/data/sponsors";
-
-import { AssignSponsors } from "../../../composition-types";
+import { AssignSponsors } from "../../../_types/composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
-
-interface PlayersDisplayProps {
-  players: PlayerData[];
-  title?: string; // Optional title to display
-  sponsors: Sponsor[];
-}
+import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
+import { calculateRowDimensions } from "./_utils/calculations";
+import { DEFAULT_CONTAINER_ANIMATION_DELAY } from "./_utils/constants";
 
 const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
   players,
@@ -55,21 +49,6 @@ const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
       </div>
     </div>
   );
-};
-
-// Utility function to calculate row dimensions
-const calculateRowDimensions = (totalHeight: number, playerCount: number) => {
-  const VERTICAL_GAP = 8; // 8rem gap between rows
-  const PADDING = 8; // 8rem padding top and bottom
-  const TITLE_HEIGHT = 48; // Height for the title if present
-
-  const totalVerticalGaps = (playerCount - 1) * VERTICAL_GAP;
-  const availableHeight = totalHeight / 1.3 - PADDING * 2 - TITLE_HEIGHT;
-  const rowHeight = (availableHeight - totalVerticalGaps) / playerCount;
-
-  return {
-    rowHeight,
-  };
 };
 
 export default PlayersDisplayClassic;

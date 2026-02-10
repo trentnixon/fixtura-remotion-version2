@@ -3,7 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { GamesListSixersThunder } from "../GamesList/games-list-sixersThunder";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../composition-types";
+import { AssignSponsors } from "../../../_types/composition-types";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,

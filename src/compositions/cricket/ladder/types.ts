@@ -1,6 +1,6 @@
 // Types for ladder data structure
 
-import { AssignSponsors } from "../composition-types";
+import { AssignSponsors } from "../_types/composition-types";
 
 export interface LadderData {
   ID: number;

@@ -1,5 +1,5 @@
 import { PerformanceData } from "../../../_types/types";
-import { AssignSponsors } from "../../../../composition-types";
+import { AssignSponsors } from "../../../../_types/composition-types";
 
 export interface PerformancesDisplayProps {
   performances: PerformanceData[];

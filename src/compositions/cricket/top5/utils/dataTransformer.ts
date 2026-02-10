@@ -3,7 +3,7 @@ import {
   BowlerData,
   PlayerData,
   TOP5_COMPOSITIONS,
-} from "../types";
+} from "../_types/types";
 
 /**
  * Transform raw player data based on the composition type

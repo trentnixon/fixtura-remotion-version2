@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../composition-types";
+import { AssignSponsors } from "../../../_types/composition-types";
 import GamesListBrickWork from "../GamesList/games-list-brickWork";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {

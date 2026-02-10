@@ -5,6 +5,7 @@ import Classic from "./classic";
 import ClassicTwoColumn from "./classicTwoColumn";
 import CNSW from "./cnsw";
 import CNSWPrivate from "./cnsw-private";
+import { mudgeeraba as MudgeerabaResults } from "./mudgeeraba";
 
 // Export all template implementations
 export { BasicResults as basic };
@@ -14,3 +15,4 @@ export { Classic as classic };
 export { ClassicTwoColumn as classicTwoColumn };
 export { CNSW as cnsw };
 export { CNSWPrivate as cnswPrivate };
+export { MudgeerabaResults as mudgeeraba };

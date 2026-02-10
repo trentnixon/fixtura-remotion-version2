@@ -6,6 +6,7 @@ import SixersThunder from "./sixersThunder";
 import ClassicTwoColumn from "./classicTwoColumn";
 import CNSW from "./cnsw";
 import { CNSWPrivate } from "./cnsw-private";
+import { mudgeeraba as MudgeerabaUpcomingGames } from "./mudgeeraba";
 // Import other template implementations
 
 // Export all template implementations
@@ -17,4 +18,5 @@ export {
   ClassicTwoColumn as classicTwoColumn,
   CNSW as cnsw,
   CNSWPrivate as cnswprivate,
+  MudgeerabaUpcomingGames as mudgeeraba,
 };
