@@ -19,7 +19,7 @@ import { MAX_PLAYER_NAME_LENGTH } from "../../layout/RosterPlayerList/_utils/con
 const CLIP_ROW = "polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)";
 /** Thin strip along the angled right edge */
 const CLIP_EDGE_STRIP = "polygon(100% 0%, 95% 100%, 94% 100%, 99% 0%)";
-const ROSTER_ROW_HEIGHT = 44;
+const ROSTER_ROW_HEIGHT = 58;
 
 const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
   const { layout, selectedPalette, colors } = useThemeContext();
@@ -45,8 +45,8 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
           style={{ height: `${availableHeight}px` }}
         >
           <div className="flex flex-row gap-4 justify-between items-stretch my-4 mx-4">
-            {/* Player list – Mudgeeraba angled rows with edge strip */}
-            <div className="flex-grow flex flex-col gap-2 p-4">
+            {/* Player list – Mudgeeraba angled rows; take most of the width */}
+            <div className="flex-1 min-w-0 flex flex-col gap-2 p-4">
               {roster.teamRoster.map((player, index) => (
                 <div
                   key={index}
@@ -74,32 +74,40 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
               ))}
             </div>
 
-            <div className="flex flex-col gap-4 p-4 justify-center">
-              <AccountTeamLarge roster={roster} logoSize={ACCOUNT_TEAM_LOGO_SIZE} />
-              <VS variant="onContainerCopy" />
-              <AgainstTeamLarge roster={roster} logoSize={AGAINST_TEAM_LOGO_SIZE} />
+            <div className="flex flex-col gap-4 p-4 justify-center flex-shrink-0 max-w-[380px]">
+              <AccountTeamLarge
+                roster={roster}
+                logoSize={ACCOUNT_TEAM_LOGO_SIZE}
+                variant="onContainerCopyNoBg"
+              />
+              <VS variant="onContainerCopyNoBg" />
+              <AgainstTeamLarge
+                roster={roster}
+                logoSize={AGAINST_TEAM_LOGO_SIZE}
+                variant="onContainerCopyNoBg"
+              />
             </div>
           </div>
 
-          {/* Metadata stacked at bottom – no truncation */}
-          <div className="w-full flex flex-col gap-2 p-4 flex-shrink-0">
+          {/* Metadata stacked at bottom – no truncation, no bg variant */}
+          <div className="w-full flex flex-col gap-0 p-4 flex-shrink-0">
             <MetadataLarge
               value={formatDate(roster.date)}
               animation={{ ...textAnimations, delay: 1 }}
-              className="text-left"
-              variant="onContainerCopy"
+              className="text-center text-3xl"
+              variant="onContainerCopyNoBg"
             />
             <MetadataLarge
               value={roster.ground}
               animation={{ ...textAnimations, delay: 2 }}
-              className="text-left"
-              variant="onContainerCopy"
+              className="text-center text-3xl"
+              variant="onContainerCopyNoBg"
             />
             <MetadataLarge
               value={`${roster.gradeName} – ${roster.round}`}
               animation={{ ...textAnimations, delay: 3 }}
-              className="text-left"
-              variant="onContainerCopy"
+              className="text-center text-3xl"
+              variant="onContainerCopyNoBg"
             />
           </div>
         </div>

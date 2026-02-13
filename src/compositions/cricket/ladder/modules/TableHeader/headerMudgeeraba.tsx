@@ -9,13 +9,15 @@ const CLIP_HEADER = "polygon(2% 0%, 98% 0%, 100% 100%, 0% 100%)";
 export const TableHeaderMudgeeraba: React.FC<TableHeaderProps> = ({
   title,
   headerHeight,
+  compact = false,
 }) => {
   const { fontClasses, selectedPalette } = useThemeContext();
   const rowBg = selectedPalette.container.backgroundTransparent.high;
 
+  // Header stays fixed: same text size and padding regardless of compact (only table rows resize)
   return (
     <div
-      className="flex items-center pl-4 pr-10 overflow-hidden"
+      className="flex items-center overflow-hidden pl-4 pr-10"
       style={{
         height: `${headerHeight}px`,
         backgroundColor: rowBg,

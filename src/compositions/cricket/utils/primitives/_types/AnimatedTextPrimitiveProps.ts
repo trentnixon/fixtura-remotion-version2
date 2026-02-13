@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { AnimationConfig } from "../../../../../components/typography/config/animations";
 import { AnimationMode, ColorVariant } from "../../../../../components/typography/AnimatedText";
 
@@ -42,6 +43,8 @@ export interface AnimatedTextPrimitivePropsWithDelay {
   variant?: string;
   textAlign?: TextAlign;
   delay: number;
+  /** Optional style (e.g. fontSize for dynamic sizing) */
+  style?: CSSProperties;
 }
 
 /**

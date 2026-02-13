@@ -27,6 +27,7 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   totalTeams,
   isBiasTeam,
   LadderRowHeight,
+  compact = false,
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
@@ -49,17 +50,30 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
     edgeStripColor = colors.primary;
   }
 
+  // Dynamic vertical padding: scale with row height (clamp so it never overflows)
+  const paddingY = Math.max(2, Math.min(8, Math.round(LadderRowHeight * 0.15)));
+
+  // Font size by team count: < 12 = normal, >= 12 = smaller
+  const useSmallerFont = totalTeams >= 12;
+  const teamNameFontSizePx = useSmallerFont ? 24 : 30;
+  const statsFontSizePx = useSmallerFont ? 24 : 30;
+  const teamNameStyle = { fontSize: `${teamNameFontSizePx}px` };
+  const statsStyle = { fontSize: `${statsFontSizePx}px` };
+
   let rowStyle: React.CSSProperties = {
     backgroundColor: rowBg,
     clipPath: CLIP_ROW,
+    height: `${LadderRowHeight}px`,
     minHeight: `${LadderRowHeight}px`,
+    paddingTop: paddingY,
+    paddingBottom: paddingY,
+    boxSizing: "border-box",
   };
 
   if (isBiasTeam) {
     rowStyle = {
       ...rowStyle,
       borderLeft: `4px solid ${colors.primary}`,
-      boxSizing: "border-box",
     };
   }
 
@@ -75,7 +89,7 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
         exitFrame={animationOutFrame}
       >
         <div
-          className="flex items-center py-2 relative overflow-hidden pl-4 pr-10"
+          className={`flex items-center relative overflow-hidden ${compact ? "pl-2 pr-6" : "pl-4 pr-10"}`}
           style={rowStyle}
         >
           {/* Colored edge strip: second polygon, animates in after row */}
@@ -99,10 +113,10 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
           </AnimatedContainer>
           {/* Team info - logo + name */}
           <div
-            className="flex items-center mr-3 min-w-0 flex-1"
+            className={`flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`}
             style={{ width: "70%", minWidth: 0 }}
           >
-            <div className="w-14 h-14 flex-shrink-0 mr-3 overflow-hidden rounded-full">
+            <div className={`flex-shrink-0 overflow-hidden rounded-full ${compact ? "w-9 h-9 mr-2" : "w-14 h-14 mr-3"}`}>
               {team.clubLogo ?? team.playHQLogo ? (
                 <TeamLogo
                   logo={team.clubLogo ?? team.playHQLogo ?? null}
@@ -114,12 +128,16 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
               )}
             </div>
             <div className="flex-1 truncate min-w-0">
-              <LadderTeamName value={team.teamName} delay={delay} />
+              <LadderTeamName
+                value={team.teamName}
+                delay={delay}
+                style={teamNameStyle}
+              />
             </div>
           </div>
 
           {/* Stats */}
-          <div className="flex flex-1 justify-evenly shrink-0">
+          <div className="flex flex-1 justify-evenly shrink-0" style={statsStyle}>
             <div className="w-10 text-center whitespace-nowrap">
               <LadderTeamPoints value={team?.P ?? 0} delay={delay} />
             </div>
