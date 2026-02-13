@@ -2,76 +2,103 @@ import React from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
-// Import sections for match layout
-import PlayerStats from "../Sections/PlayerStats/index";
-import MatchHeader from "../Sections/MatchHeader/index";
-import { MatchStatus } from "../Sections/MatchStatus/index";
-import { LogoWithScoreOverName } from "../Sections/TeamsSection/components/LogoWithScoreOverName";
+import MatchStatus from "../Sections/MatchStatus/index";
+import { Type_Round_Ground_stacked } from "../Sections/MatchHeader/index";
 import { MatchCardProps } from "./_types/MatchCardProps";
+
+import MudgeerabaSingleTeamHeader from "../Sections/MatchHeader/MudgeerabaSingleTeamHeader";
+import PlayerStatsMudgeeraba from "../Sections/PlayerStats/PlayerStats-Mudgeeraba";
+import { computePartialTwoDayVisibility } from "../Sections/PlayerStats/_utils/visibility";
 
 const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({ match }) => {
   const { animations } = useAnimationContext();
 
-  // Animation setup
   const containerAnimation = animations.container.main.itemContainer;
   const baseDelay = 0;
-  const teamsSectionDelay = baseDelay + 5;
-  const statsDelay = teamsSectionDelay + 5;
-  const headerDelay = statsDelay + 5;
+  const homeHeaderDelay = baseDelay + 5;
+  const homeStatsDelay = baseDelay + 10;
+  const awayHeaderDelay = baseDelay + 20;
+  const awayStatsDelay = baseDelay + 30;
+  const headerDelay = baseDelay + 40;
 
-  // Calculate section heights for a more detailed single match display
-  // More space for team info and player stats since we're showing only one match
-  const headerHeight = 80; // Fixed height for header
-  const statusHeight = 80; // Fixed height for status
-  const teamsHeight = 240; // More space for team info
-  const statsHeight = 560; // More space for player stats
+  const statusHeight = 80;
+  const teamHeaderHeight = 60;
+  const statsHeight = 520;
+  const matchHeaderHeight = 80;
+
+  const homeBatted = (match.homeTeam.battingPerformances || []).length > 0;
+  const awayBatted = (match.awayTeam.battingPerformances || []).length > 0;
+  const visibility = computePartialTwoDayVisibility({
+    matchType: match.type,
+    matchStatus: match.status,
+    homeBatted,
+    awayBatted,
+  });
 
   return (
     <AnimatedContainer
       type="full"
-      className="rounded-lg w-auto mx-8 overflow-hidden h-full"
+      className="rounded-none w-auto mx-6 overflow-hidden h-full flex flex-col"
       backgroundColor="none"
       animation={containerAnimation.containerIn}
       animationDelay={baseDelay}
       exitAnimation={containerAnimation.containerOut}
-      exitFrame={250} // Adjust based on your needs
+      exitFrame={250}
     >
-      {/* Match status (result info) */}
+      {/* Result at top – unchanged */}
       <MatchStatus
         status={match.status}
         result={match.result}
         height={statusHeight}
         delay={baseDelay}
       />
-      {/* Teams section with logos, names and scores */}
-      <LogoWithScoreOverName
-        type={match.type}
-        homeTeam={match.homeTeam}
-        awayTeam={match.awayTeam}
-        homeTeamLogo={match.teamHomeLogo}
-        awayTeamLogo={match.teamAwayLogo}
-        height={teamsHeight}
-        delay={teamsSectionDelay}
+
+      {/* Home team – Mudgeeraba style (name, logo, score in angled bar) */}
+      <MudgeerabaSingleTeamHeader
+        team={match.homeTeam}
+        teamLogo={match.teamHomeLogo}
+        delay={homeHeaderDelay}
+        outerContainer={{ height: teamHeaderHeight }}
       />
 
-      {/* Player statistics */}
-      <PlayerStats
-        homeTeam={match.homeTeam}
-        awayTeam={match.awayTeam}
-        height={statsHeight}
-        delay={statsDelay}
-        maxPlayersPerStat={3} // Show more player stats for single match view
-        matchType={match.type}
-        matchStatus={match.status}
+      {/* Home team stats – Mudgeeraba angled rows */}
+      <div style={{ height: `${statsHeight / 2}px` }}>
+        <PlayerStatsMudgeeraba
+          Team={match.homeTeam}
+          delay={homeStatsDelay}
+          maxPlayersPerStat={3}
+          showBatting={visibility.flags.homeShowBatting}
+          showBowling={visibility.flags.homeShowBowling}
+        />
+      </div>
+
+      {/* Away team – Mudgeeraba style */}
+      <MudgeerabaSingleTeamHeader
+        team={match.awayTeam}
+        teamLogo={match.teamAwayLogo}
+        delay={awayHeaderDelay}
+        outerContainer={{ height: teamHeaderHeight }}
       />
 
-      {/* Match info footer */}
-      <MatchHeader
+      {/* Away team stats – Mudgeeraba angled rows */}
+      <div style={{ height: `${statsHeight / 2}px` }}>
+        <PlayerStatsMudgeeraba
+          Team={match.awayTeam}
+          delay={awayStatsDelay}
+          maxPlayersPerStat={3}
+          showBatting={visibility.flags.awayShowBatting}
+          showBowling={visibility.flags.awayShowBowling}
+        />
+      </div>
+
+      {/* Match info footer – stacked list, no truncation (like Basic/BrickWork) */}
+      <Type_Round_Ground_stacked
         type={match.type}
         round={match.round}
         ground={match.ground}
-        height={headerHeight}
+        height={matchHeaderHeight}
         delay={headerDelay}
+        backgroundColor="transparent"
       />
     </AnimatedContainer>
   );

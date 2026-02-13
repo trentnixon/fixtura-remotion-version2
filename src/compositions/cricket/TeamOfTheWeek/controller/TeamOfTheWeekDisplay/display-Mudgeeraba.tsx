@@ -17,28 +17,31 @@ const TeamOfTheWeekDisplayMudgeeraba: React.FC<TeamOfTheWeekDisplayProps> = ({
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
 
+  // Mudgeeraba pattern: row height a little taller; two columns for many items
+  const rowHeightMudgeeraba = DEFAULT_ROW_HEIGHT_BASIC * 0.95;
+
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full mx-6">
       <AnimatedContainer
         type="full"
-        className={`flex-1 flex flex-col mx-4 overflow-hidden py-32 justify-center ${layout.borderRadius.container}`}
-        style={{
-          height: heights.asset,
-        }}
+        className="flex-1 flex flex-col overflow-hidden rounded-none"
+        style={{ height: heights.asset }}
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="grid grid-cols-2 gap-4">
-          {players.map((player, index) => (
+        <div className="flex-1 flex flex-col justify-center min-h-0">
+          <div className="grid grid-cols-2 gap-4 mx-4">
+            {players.map((player, index) => (
             <PlayerRowMudgeeraba
               key={player.player}
               player={player}
               index={index}
-              rowHeight={DEFAULT_ROW_HEIGHT_BASIC}
+              rowHeight={rowHeightMudgeeraba}
             />
           ))}
+          </div>
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>

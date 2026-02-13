@@ -1,5 +1,5 @@
 import React from "react";
-import TableHeader from "../../modules/TableHeader/header";
+import TableHeaderMudgeeraba from "../../modules/TableHeader/headerMudgeeraba";
 import RowMudgeeraba from "../TeamRows/row-Mudgeeraba";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
@@ -12,7 +12,7 @@ export const LadderDisplayMudgeeraba: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { selectedPalette, layout } = useThemeContext();
-  const { League, gradeName, bias, assignSponsors } = ladder;
+  const { League, gradeName, assignSponsors } = ladder;
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
@@ -24,7 +24,7 @@ export const LadderDisplayMudgeeraba: React.FC<LadderDisplayProps> = ({
     <div className="p-0 flex flex-col w-full h-full">
       <AnimatedContainer
         type="full"
-        className={`${layout.borderRadius.container} flex-1 flex flex-col mx-8 p-2 overflow-hidden`}
+        className="flex-1 flex flex-col overflow-hidden rounded-none"
         backgroundColor={undefined}
         style={{
           background: selectedPalette.container.backgroundTransparent.high,
@@ -32,17 +32,17 @@ export const LadderDisplayMudgeeraba: React.FC<LadderDisplayProps> = ({
         animation={containerAnimation.containerIn}
         exitAnimation={containerAnimation.containerOut}
       >
-        <div>
-          <TableHeader title={gradeName} headerHeight={headerHeight} />
+        <div className="my-4 mx-4 flex flex-col gap-4">
+          <TableHeaderMudgeeraba title={gradeName} headerHeight={headerHeight} />
 
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 flex flex-col gap-4 overflow-hidden min-h-0">
             {League.map((team, index) => (
               <RowMudgeeraba
                 key={team.position}
                 team={team}
                 index={index}
                 totalTeams={League.length}
-                isBiasTeam={team.teamName === bias}
+                isBiasTeam={team.teamName === ladder.bias}
                 LadderRowHeight={rowHeight}
               />
             ))}

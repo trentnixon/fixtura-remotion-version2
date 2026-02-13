@@ -39,9 +39,11 @@ export interface PlayerStatsClubOnlyProps {
 // Props for single team player stats component
 export interface PlayerStatsSingleTeamProps {
   Team: Team;
-  height: number;
+  height?: number;
   delay: number;
   maxPlayersPerStat?: number;
+  showBatting?: boolean;
+  showBowling?: boolean;
 }
 
 // Props for stat item component

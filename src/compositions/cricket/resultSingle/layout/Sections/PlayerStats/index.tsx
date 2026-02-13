@@ -14,6 +14,8 @@ import { truncateText } from "./_utils/helpers";
 
 // Export club-only variant
 export { PlayerStatsClubOnlyBasic } from "./PlayerStats-clubOnly-Basic";
+// Export Mudgeeraba single-team variant
+export { default as PlayerStatsMudgeeraba } from "./PlayerStats-Mudgeeraba";
 
 const StatItem: React.FC<StatItemProps> = ({
   playerName,

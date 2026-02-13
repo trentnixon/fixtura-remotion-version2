@@ -17,7 +17,7 @@ export const Top5PlayersMudgeeraba: React.FC = () => {
   const { data: playersData, videoMeta } = data;
   const compositionId = extractCompositionId(videoMeta);
   const sponsors = extractPrimarySponsors(videoMeta);
-  
+
   // If no data is available, show a placeholder
   if (!hasValidPlayersData(playersData)) {
     return <NoPlayersData />;

@@ -9,7 +9,6 @@ import {
 } from "../_types/StatDisplayProps";
 import {
   STAT_SUFFIX_DELAY_OFFSET,
-  PLAYER_NAME_DELAY_OFFSET,
 } from "./constants";
 
 /**
@@ -29,7 +28,7 @@ export const BattingStatDisplay: React.FC<BattingStatDisplayProps> = ({
 
   return (
     <div className="flex items-baseline gap-1">
-      <MetadataSmall
+      <TeamOfTheWeekStat
         value={scoreDisplay}
         animation={{ ...largeTextAnimation, delay: delay }}
         variant="onContainerCopy"
@@ -42,7 +41,7 @@ export const BattingStatDisplay: React.FC<BattingStatDisplayProps> = ({
           delay: delay + STAT_SUFFIX_DELAY_OFFSET,
         }}
         variant="onContainerCopy"
-        className="text-md"
+        className="text-base"
       />
     </div>
   );
@@ -78,7 +77,7 @@ export const BowlingStatDisplay: React.FC<BowlingStatDisplayProps> = ({
           delay: delay + STAT_SUFFIX_DELAY_OFFSET,
         }}
         variant="onContainerCopy"
-        className="text-xs"
+        className="text-base"
       />
     </div>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PerformanceRowMudgeeraba from "../PlayerRow/row-Mudgeeraba";
 import { getItemsForScreen } from "../../utils/screenCalculator";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
@@ -11,8 +10,6 @@ const PerformancesDisplayMudgeeraba: React.FC<PerformancesDisplayProps> = ({
   itemsPerScreen,
   screenIndex,
 }) => {
-  const { layout } = useThemeContext();
-  const { heights } = layout;
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
 
@@ -26,43 +23,35 @@ const PerformancesDisplayMudgeeraba: React.FC<PerformancesDisplayProps> = ({
   const rowHeight = 115;
 
   return (
-    <div 
-      className="flex items-center justify-center"
-      style={{ 
+    <div
+      className="flex flex-col h-full "
+      style={{
         position: "absolute",
         inset: 0,
         width: "100%",
         height: "100%",
-      }}>
-      <div 
-        className="flex flex-col flex-shrink-0"
-        style={{ width: "100%", paddingLeft: "2rem", paddingRight: "2rem" }}
+      }}
+    >
+      <AnimatedContainer
+        type="full"
+        className="flex-1 flex flex-col overflow-hidden rounded-none mx-8"
+        style={{ width: "100%" }}
+        backgroundColor="none"
+        animation={ContainerAnimations.main.parent.containerIn}
+        animationDelay={0}
+        exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <AnimatedContainer
-          type="full"
-          className="flex flex-col"
-          style={{ width: "100%" }}
-          backgroundColor="none"
-          animation={ContainerAnimations.main.parent.containerIn}
-          animationDelay={0}
-          exitAnimation={ContainerAnimations.main.parent.containerOut}
-        >
-          <div className="flex flex-col items-center gap-1 w-full">
-            {displayedPerformances.map((performance, index) => (
-              <div
-                key={`${performance.name}-${screenIndex}-${index}`}
-                className="w-full flex-shrink-0"
-              >
-                <PerformanceRowMudgeeraba
-                  performance={performance}
-                  index={index}
-                  rowHeight={rowHeight}
-                />
-              </div>
-            ))}
-          </div>
-        </AnimatedContainer>
-      </div>
+        <div className="flex-1 flex flex-col gap-4 my-4 mx-4 min-h-0 justify-center">
+          {displayedPerformances.map((performance, index) => (
+            <PerformanceRowMudgeeraba
+              key={`${performance.name}-${screenIndex}-${index}`}
+              performance={performance}
+              index={index}
+              rowHeight={rowHeight}
+            />
+          ))}
+        </div>
+      </AnimatedContainer>
     </div>
   );
 };

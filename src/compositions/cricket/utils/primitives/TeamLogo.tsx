@@ -4,7 +4,7 @@ import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { TeamLogo as TeamLogoType, TeamLogoProps } from "./_types/TeamLogoProps";
 import { DEFAULT_TEAM_LOGO_SIZE, DEFAULT_TEAM_LOGO_FIT } from "./_utils/constants";
 
-export type { TeamLogoType as TeamLogo };
+export type { TeamLogoType };
 
 export const TeamLogo: React.FC<TeamLogoProps> = ({
   logo,
@@ -12,6 +12,7 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
   delay,
   size = DEFAULT_TEAM_LOGO_SIZE,
   fit = DEFAULT_TEAM_LOGO_FIT,
+  imgStyle,
 }) => {
   const sizeClass = `w-${size} h-${size}`;
   const { animations } = useAnimationContext();
@@ -56,6 +57,7 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
       height={imgHeight}
       className={`object-contain`}
       fit={fit}
+      style={imgStyle}
       animation={{ ...logoAnimation.logo.itemIn, delay: delay }}
     />
   );

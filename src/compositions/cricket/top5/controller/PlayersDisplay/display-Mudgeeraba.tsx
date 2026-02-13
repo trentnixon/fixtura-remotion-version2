@@ -19,27 +19,25 @@ const PlayersDisplayMudgeeraba: React.FC<PlayersDisplayProps> = ({
   const ContainerAnimations = animations.container;
 
   const { rowHeight } = calculateRowDimensions(heights.asset, players.length);
+  const rowHeightMudgeeraba = rowHeight * 0.85;
 
   return (
-    <div className="flex flex-col h-full ">
+    <div className="flex flex-col h-full mx-8">
       <AnimatedContainer
         type="full"
-        className={`flex-1 flex flex-col mx-16 overflow-hidden py-32 ${layout.borderRadius.container}`}
-        style={{
-          height: heights.asset,
-        }}
+        className="flex-1 flex flex-col overflow-hidden rounded-none"
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
         animationDelay={DEFAULT_CONTAINER_ANIMATION_DELAY}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 grid grid-cols-1 gap-2">
+        <div className="flex-1 flex flex-col gap-4 my-4 mx-4 min-h-0 justify-center">
           {players.map((player, index) => (
             <PlayerRowMudgeeraba
               key={player.name}
               player={player}
               index={index}
-              rowHeight={rowHeight}
+              rowHeight={rowHeightMudgeeraba}
             />
           ))}
         </div>

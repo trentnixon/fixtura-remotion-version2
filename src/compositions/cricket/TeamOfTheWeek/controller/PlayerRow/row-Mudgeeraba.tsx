@@ -20,13 +20,20 @@ import {
   StatItem,
 } from "./_utils/components";
 
+/** Icon block (left): straight left, angled right edge */
+const CLIP_ICON = "polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%)";
+/** Logo block (right): mirrored – angled left edge, straight right (flush to row edge) */
+const CLIP_LOGO = "polygon(30% 0%, 0% 100%, 100% 100%, 100% 0%)";
+/** Width of icon/logo containers as fraction of row height (thinner than square) */
+const ICON_LOGO_WIDTH_RATIO = 0.72;
+
 const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
   player,
   index,
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, layout } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { club } = useVideoDataContext();
   const isAccountClub = club.IsAccountClub || false;
@@ -64,35 +71,46 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
   );
 
   return (
-    <AnimatedContainer
-      type="full"
-      className="relative h-full"
-      style={{ height: rowHeight }}
-      backgroundColor="none"
-      animation={containerAnimation.containerIn}
-      animationDelay={delay}
-      exitAnimation={containerAnimation.containerOut}
-    >
-      <div
-        className={`flex items-center h-full overflow-hidden ${layout.borderRadius.container}`}
-        style={{ height: `${rowHeight}px`, background: bgColor }}
+    <div className="overflow-hidden">
+      <AnimatedContainer
+        type="full"
+        className="rounded-none"
+        style={{ height: rowHeight }}
+        backgroundColor="none"
+        animation={containerAnimation.containerIn}
+        animationDelay={delay}
+        exitAnimation={containerAnimation.containerOut}
       >
-        {/* Icon Section */}
         <div
-          className="w-20 h-full shrink-0 flex items-center justify-center"
-          style={{ background: statsBG }}
+          className="flex items-center w-full overflow-hidden pl-0 pr-0"
+          style={{
+            height: `${rowHeight}px`,
+            backgroundColor: bgColor,
+          }}
         >
-          {/* Position Icon */}
-          {PositionIcon && (
-            <PositionIcon
-              className="w-20 h-20 flex-shrink-0"
-              style={{ color: iconColor }}
-            />
-          )}
-        </div>
+          {/* Icon Section – angled right edge, drop shadow */}
+          <div
+            className="flex shrink-0 mr-2 overflow-hidden items-center justify-center"
+            style={{
+              width: `${rowHeight * ICON_LOGO_WIDTH_RATIO}px`,
+              height: `${rowHeight}px`,
+              background: statsBG,
+              clipPath: CLIP_ICON,
+              WebkitClipPath: CLIP_ICON,
+              filter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
+              WebkitFilter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
+            }}
+          >
+            {PositionIcon && (
+              <PositionIcon
+                className="w-20 h-20 flex-shrink-0"
+                style={{ color: iconColor }}
+              />
+            )}
+          </div>
 
-        {/* Player Info Section: Stats, Player Name */}
-        <div className="flex-1 flex flex-col justify-center px-3">
+          {/* Player Info Section: Stats, Player Name */}
+          <div className="flex-1 flex flex-col justify-center min-w-0 ml-2">
           {/* Stats Display */}
           <div className="mt-1">
             {isAllRounder && hasBoth && player.batting && player.bowling ? (
@@ -172,12 +190,18 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
           />
         </div>
 
-        {/* Logo Section - conditional */}
+        {/* Logo Section – flush right, mirrored angle (angled left edge) */}
         {!isAccountClub && (
           <div
-            className="w-20 h-full shrink-0 relative overflow-hidden"
+            className="flex shrink-0 overflow-hidden items-center justify-center ml-2"
             style={{
+              width: `${rowHeight * ICON_LOGO_WIDTH_RATIO}px`,
+              height: `${rowHeight}px`,
               background: logoBG,
+              clipPath: CLIP_LOGO,
+              WebkitClipPath: CLIP_LOGO,
+              filter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
+              WebkitFilter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
             }}
           >
             <Img
@@ -191,8 +215,9 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
             />
           </div>
         )}
-      </div>
-    </AnimatedContainer>
+        </div>
+      </AnimatedContainer>
+    </div>
   );
 };
 

@@ -1,99 +1,130 @@
 import React from "react";
-import { Type_Round_Ground_stacked } from "../Sections/MatchHeader/index";
-import { ScoreOverNameWithLogo } from "../Sections/TeamsSection/index";
-import { ResultStatementShort, ResultStatementText } from "../Sections/ResultStatement/index";
-import { MatchStatus } from "../Sections/MatchStatus/index";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { PlayerStatsClubOnlyBasic } from "../Sections/PlayerStats/index";
+
+import { Type_Round_Ground_stacked } from "../Sections/MatchHeader/index";
+import { ResultStatementShort, ResultStatementText } from "../Sections/ResultStatement/index";
 import { MatchCardProps } from "./_types/MatchCardProps";
 import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
 
+import MudgeerabaSingleTeamHeader from "../Sections/MatchHeader/MudgeerabaSingleTeamHeader";
+import { PlayerStatsMudgeeraba } from "../Sections/PlayerStats/index";
+
 const MatchCardMudgeerabaClubOnly: React.FC<MatchCardProps> = ({ match }) => {
-  const { selectedPalette, layout } = useThemeContext();
+  const { animations } = useAnimationContext();
+  const { layout } = useThemeContext();
   const { heights } = layout;
 
-  // For single result, use full asset height available
-  const rowHeight = heights.asset;
+  const containerAnimation = animations.container.main.itemContainer;
   const baseDelay = 0;
+  const clubHeaderDelay = baseDelay + 5;
+  const clubBattingDelay = baseDelay + 10;
+  const oppositionHeaderDelay = baseDelay + 20;
+  const clubBowlingDelay = baseDelay + 30;
+  const headerDelay = baseDelay + 40;
 
-  // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const teamHeaderHeight = 60;
+  const statsHeight = 520;
+  const matchHeaderHeight = 80;
+  const rowHeight = heights.asset;
+  const { headerHeight } = calculateSectionHeights(rowHeight);
+  const { headerDelay: statementDelay } = calculateDelays(baseDelay);
 
-  // Calculate delays
-  const { baseDelay: calculatedBaseDelay, statsDelay, headerDelay } = calculateDelays(baseDelay);
+  // Club-first layout (like classic): club header → club batting → opposition header → club bowling
+  const isHomeClub = match.homeTeam.isClubTeam;
+  const clubTeam = isHomeClub ? match.homeTeam : match.awayTeam;
+  const oppositionTeam = isHomeClub ? match.awayTeam : match.homeTeam;
+  const clubTeamLogo = isHomeClub ? match.teamHomeLogo : match.teamAwayLogo;
+  const oppositionTeamLogo = isHomeClub ? match.teamAwayLogo : match.teamHomeLogo;
 
-  // Extract optional result statement fields
   const { resultShort, resultSummary } = match;
+
   return (
-    <div className="rounded-lg w-auto mx-8 overflow-hidden h-full flex flex-col justify-center ">
+    <AnimatedContainer
+      type="full"
+      className="rounded-none w-auto mx-6 overflow-hidden h-full flex flex-col"
+      backgroundColor="none"
+      animation={containerAnimation.containerIn}
+      animationDelay={baseDelay}
+      exitAnimation={containerAnimation.containerOut}
+      exitFrame={250}
+    >
+      {/* Optional club-only result statement at top */}
       {resultSummary && (
-        <div className="w-full flex justify-center items-center mb-16">
+        <div className="w-full flex justify-center items-center mb-4">
           <ResultStatementText
             resultSummary={resultSummary}
-            delay={headerDelay}
-            outerContainer={{
-              height: headerHeight,
-            }}
+            delay={statementDelay}
+            outerContainer={{ height: headerHeight }}
           />
         </div>
       )}
       {resultShort && !resultSummary && (
-        <div className="w-full flex justify-center items-center mb-8">
+        <div className="w-full flex justify-center items-center mb-4">
           <ResultStatementShort
             resultShort={resultShort}
-            delay={headerDelay}
-            outerContainer={{
-              height: headerHeight,
-            }}
+            delay={statementDelay}
+            outerContainer={{ height: headerHeight }}
           />
         </div>
       )}
-      {/* Section 1: Team scores and names */}
-      <ScoreOverNameWithLogo
-        type={match.type}
-        homeTeam={match.homeTeam}
-        awayTeam={match.awayTeam}
-        homeTeamLogo={match.teamHomeLogo}
-        awayTeamLogo={match.teamAwayLogo}
-        delay={calculatedBaseDelay}
-        outerContainer={{
-          height: teamsHeight,
-        }}
-      />
 
-      {match.status === "Abandoned" && (
-        <MatchStatus
-          status={`${match.status}`}
-          result={match.result}
+      {/* Three sections grouped closer: 1st inn, 2nd inn, metadata */}
+      <div className="flex flex-col gap-1">
+        {/* Metadata footer */}
+        <Type_Round_Ground_stacked
+          type={match.type}
+          round={match.round}
+          ground={match.ground}
+          height={matchHeaderHeight}
           delay={headerDelay}
-          outerContainer={{
-            background: selectedPalette.container.backgroundTransparent.high,
-            height: headerHeight,
-          }}
+          className={layout.borderRadius.container}
+          backgroundColor="transparent"
+          CopyVariant="onContainerCopyNoBg"
         />
-      )}
 
-      {/* Section 2: Player statistics */}
-      <PlayerStatsClubOnlyBasic
-        match={match}
-        height={statsHeight}
-        delay={statsDelay}
-        maxPlayersPerStat={5}
-        matchType={match.type}
-        matchStatus={match.status}
-      />
+        {/* 1st inn: club header + batting */}
+        <div className="flex flex-col gap-0">
+          <MudgeerabaSingleTeamHeader
+            team={clubTeam}
+            teamLogo={clubTeamLogo}
+            delay={clubHeaderDelay}
+            outerContainer={{ height: teamHeaderHeight }}
+          />
+          <div className="-mb-2" style={{ height: `${statsHeight / 2}px` }}>
+            <PlayerStatsMudgeeraba
+              Team={clubTeam}
+              delay={clubBattingDelay}
+              maxPlayersPerStat={3}
+              showBatting={true}
+              showBowling={false}
+            />
+          </div>
+        </div>
 
-      {/* Section 3: Match info footer */}
-      <Type_Round_Ground_stacked
-        type={match.type}
-        round={match.round}
-        ground={match.ground}
-        height={headerHeight}
-        delay={headerDelay}
-        backgroundColor={"transparent"}
-        CopyVariant="onContainerCopyNoBg"
-      />
-    </div>
+        {/* 2nd inn: opposition header + club bowling */}
+        <div className="flex flex-col gap-0">
+          <MudgeerabaSingleTeamHeader
+            team={oppositionTeam}
+            teamLogo={oppositionTeamLogo}
+            delay={oppositionHeaderDelay}
+            outerContainer={{ height: teamHeaderHeight }}
+          />
+          <div className="-mb-2" style={{ height: `${statsHeight / 2}px` }}>
+            <PlayerStatsMudgeeraba
+              Team={clubTeam}
+              delay={clubBowlingDelay}
+              maxPlayersPerStat={3}
+              showBatting={false}
+              showBowling={true}
+            />
+          </div>
+        </div>
+
+
+      </div>
+    </AnimatedContainer>
   );
 };
 

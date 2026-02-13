@@ -18,4 +18,6 @@ export interface TeamLogoProps {
   size?: number;
   fit?: "contain" | "cover" | "fill" | "none" | "scale-down";
   bgColor?: string;
+  /** Optional style merged onto the img (e.g. clipPath for angled edges). */
+  imgStyle?: React.CSSProperties;
 }
