@@ -40,14 +40,13 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   const position = parseTeamPosition(team.position);
   const rowBg = selectedPalette.container.backgroundTransparent.high;
 
-  // Position color for the edge-strip polygon only (not the row bg)
-  let edgeStripColor = colors.primary;
+  // Secondary polygon (angled edge strip): user's primary from video.appearance.theme,
+  // except green tip (#1) and red tip (last place)
+  let edgeStripColor = colors.primary; // User's primary color from theme
   if (position <= 1) {
     edgeStripColor = "rgb(34, 197, 94)"; // green-500 – top of ladder
   } else if (position >= totalTeams) {
     edgeStripColor = "rgb(239, 68, 68)"; // red-500 – bottom of ladder
-  } else if (isBiasTeam) {
-    edgeStripColor = colors.primary;
   }
 
   // Dynamic vertical padding: scale with row height (clamp so it never overflows)

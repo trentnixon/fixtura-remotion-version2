@@ -67,7 +67,7 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
             clipPath: CLIP_ROW,
           }}
         >
-          {/* Colored edge strip along angled border */}
+          {/* Colored edge strip along angled border – user's primary */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{

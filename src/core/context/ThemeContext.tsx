@@ -76,6 +76,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     };
 
     // Create theme object with all required properties and fallbacks
+    // NOTE: colors, getActivePalette, selectedPalette MUST come AFTER ...settings
+    // so user-derived colors (video.appearance.theme) take precedence over
+    // static template/base theme colors (e.g. baseTheme.colors.primary).
     const themeObject: ThemeContextProps = {
       // Core font properties
       fonts: (settings.fonts as ThemeFonts) || {
@@ -103,21 +106,21 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
         },
       },
 
-      // Color system and palette utilities
-      colors: { colorSystem, primary: primaryColor, secondary: secondaryColor },
-      getActivePalette,
-      selectedPalette: (() => {
-        const palette = getActivePalette();
-        console.log("[ThemeContext] selectedPalette:", palette);
-        return palette;
-      })(),
-
       // Additional configuration
       sports: (settings.sports as ThemeSports) || {},
       gradientDegree: settings.gradientDegree || "45deg",
 
-      // Include remaining settings
+      // Include remaining settings (may contain static colors from template)
       ...settings,
+
+      // User-derived colors - MUST override any settings.colors so score bar,
+      // result bar, and other accents use video.appearance.theme from user obj
+      colors: { colorSystem, primary: primaryColor, secondary: secondaryColor },
+      getActivePalette,
+      selectedPalette: (() => {
+        const palette = getActivePalette();
+        return palette;
+      })(),
     };
 
     return themeObject;
