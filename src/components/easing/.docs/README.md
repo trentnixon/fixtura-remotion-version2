@@ -1,27 +1,23 @@
-## Easing
+# Folder Overview
 
-Shared animation types and utilities for mapping declarative easing descriptors to actual Remotion easing functions.
+Shared animation types and easing utilities for mapping declarative easing descriptors to Remotion easing functions. Used by images, containers, and typography.
 
-### Files
+## Skill
 
-- `types.ts`: Cross-package animation type definitions used by images, containers, and typography, including:
-  - `ImageAnimationType`, `ImageEasingType`, `ImageSpringConfig`, `ImageAnimationConfig`, etc.
-- `easingFunctions.ts`: `getImageEasingFunction(easing)` which returns a concrete `(t:number) => number` easing function.
-  - Supports strings: `linear`, `ease`, `quad`, `cubic`, `sin`, `circle`, `exp`, `bounce`
-  - Parameterized: `{ type: "poly", n }`, `{ type: "elastic", bounciness }`, `{ type: "back", s }`, `{ type: "bezier", values }`
-  - Composed: `{ type: "in" | "out" | "inOut", base: ImageEasingType }`
+- `.skills/architecture/components-easing-folder.md` – getImageEasingFunction; types shared by images, containers, typography
 
-### Usage
+## Files
 
-```ts
-import { interpolate } from "remotion";
-import { getImageEasingFunction } from "../easing/easingFunctions";
+- **`types.ts`**: ImageAnimationType, ImageEasingType, ImageSpringConfig, ImageAnimationConfig; cross-domain types for animations
+- **`easingFunctions.ts`**: `getImageEasingFunction(easing)` → `(t: number) => number`; supports strings (linear, ease, quad, cubic, sin, circle, exp, bounce), parameterized (poly, elastic, back, bezier), composed (in, out, inOut with base)
 
-const progress = interpolate(frame, [0, 30], [0, 1], {
-  easing: getImageEasingFunction({ type: "inOut", base: "cubic" }),
-});
-```
+## Relations
 
-### Notes
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: Remotion Easing API
+- Consumed by: images/config, containers/animations, typography/config/animations
 
-- This module intentionally keeps types generic so they can be used by other domains (containers, typography) beyond images.
+## Dependencies
+
+- Internal: none
+- External: Remotion (Easing)

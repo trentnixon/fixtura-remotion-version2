@@ -1,20 +1,27 @@
-## Typography Animations (Internals)
+# Folder Overview
 
-Low-level pieces that power `config/animations.ts` for typography.
+Low-level typography animation implementation. Types, normalization, useAnimation hook, per-effect calculators. Tuned for letter/word splitting in AnimatedText.
 
-### Files
+## Files
 
-- `types.ts` — Animation types and configs
-- `animationUtils.ts` — Normalization helpers and shared math
-- `useAnimation.ts` — Hook computing frame-based styles for text
-- `fadeAnimations.ts` — Fade-in variants (including directional fade)
-- `scaleAnimations.ts` — Scale-in, typewriter-like scale effects
-- `springAnimations.ts` — Spring-powered text motion
-- `slideAnimation.ts` — Single-file slide animation for text
-- `specialAnimations.ts` — Extra effects (e.g., bounce, elastic)
-- `springConfigs.ts` — Named spring configs for text
-- `index.ts` — Barrel export
+- **`types.ts`**: animation types and configs
+- **`animationUtils.ts`**: normalization helpers, shared math
+- **`useAnimation.ts`**: hook for frame-based text animation styles
+- **`fadeAnimations.ts`**: fade-in variants (directional)
+- **`scaleAnimations.ts`**: scale-in, typewriter-like
+- **`springAnimations.ts`**: spring-powered text motion
+- **`slideAnimation.ts`**: slide for text
+- **`specialAnimations.ts`**: bounce, elastic, etc.
+- **`springConfigs.ts`**: named presets
+- **`index.ts`**: barrel export
 
-### Notes
+## Relations
 
-- Text animations are tuned for readability and work well with letter/word splitting in `AnimatedText`.
+- Parent folder: [../../.docs/readMe.md](../.docs/readMe.md)
+- Key dependencies: Remotion interpolate, easing
+- Consumed by: config/animations.ts
+
+## Dependencies
+
+- Internal: ../../../easing
+- External: React, Remotion

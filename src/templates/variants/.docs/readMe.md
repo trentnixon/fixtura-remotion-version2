@@ -8,7 +8,7 @@ Contains concrete template implementations (“variants”) that extend the base
 
 ## Relations
 
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
 - Key dependencies: imports base building blocks from `../base` and types from `../types`
 - Consumed by: `../registry.tsx` registers these for use by compositions
 

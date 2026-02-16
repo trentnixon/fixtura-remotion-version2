@@ -1,11 +1,28 @@
-## UI (Placeholder)
+# Folder Overview
 
-This folder is reserved for shared UI primitives (atoms/molecules) such as buttons, badges, loaders, and utility wrappers that are not tied to Remotion’s per-frame animation logic.
+Placeholder for shared UI primitives (atoms/molecules): buttons, badges, loaders, utility wrappers. Not tied to Remotion per-frame animation. No components currently defined.
 
-### Guidelines
+## Skill
 
-- Keep UI primitives stateless where possible and theme-aware via `ThemeContext`
-- Prefer composition via `AnimatedContainer`/`AnimatedText` if animation is required
-- Provide `index.ts` barrel exports for ergonomic importing
+- `.skills/architecture/components-ui-folder.md` – Guidelines for future UI primitives; stateless, theme-aware
 
-No components are currently defined.
+## Files
+
+None.
+
+## Relations
+
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: none
+- Consumed by: intended for templates, compositions when implemented
+
+## Dependencies
+
+- Internal: none
+- External: none
+
+## Guidelines
+
+- Keep UI primitives stateless; theme-aware via ThemeContext
+- Prefer AnimatedContainer/AnimatedText for animation
+- Provide index.ts barrel exports when adding components

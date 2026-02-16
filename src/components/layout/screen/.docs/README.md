@@ -1,16 +1,18 @@
-## Screen Layouts
+# Folder Overview
 
-High-level screen wrappers for compositions.
+High-level screen wrappers for compositions. OneColumn uses ThemeContext.layout.heights and RouteToComposition.
 
-### Files
+## Files
 
-- `OneColumn.tsx` — A single-column screen that:
-  - Uses `ThemeContext.layout.heights` for header/content sizing
-  - Renders the provided `Header` component into the header region
-  - Calls `RouteToComposition()` to render the active composition in the content region
+- **`OneColumn.tsx`**: single-column screen; Header slot; ThemeContext.layout.heights for header/content; RouteToComposition for content; ProgressTimer
 
-### Usage
+## Relations
 
-```tsx
-<OneColumn Header={VerticalHeaderTitleLogoName} />
-```
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: `core/context/ThemeContext`, `core/context/VideoDataContext`, `core/utils/routing`, `../main/Timer/ProgressTimer`
+- Consumed by: compositions, routing
+
+## Dependencies
+
+- Internal: core/context, core/utils, main
+- External: React, Remotion (AbsoluteFill)

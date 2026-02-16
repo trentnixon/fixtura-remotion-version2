@@ -1,25 +1,30 @@
-# Image Animations
+# Folder Overview
 
-This folder contains the animation functions that power the `AnimatedImage` component. Each file in this directory is responsible for a specific category of animations, making the system modular and easy to extend.
+Per-category animation functions for AnimatedImage. Each exports AnimationFunction(frame, start, end, config) → React.CSSProperties. Dispatched by useImageAnimation.
 
-## Animation Categories
+## Files
 
--   **`broadcastAnimations.ts`**: Contains animations that mimic broadcast television graphics, such as lower thirds and scoreboards.
--   **`cameraAnimations.ts`**: Includes animations that simulate camera effects, like focus pulls and exposure changes.
--   **`cinematicAnimations.ts`**: Provides cinematic transition effects, such as wipes and splits.
--   **`compositeAnimations.ts`**: Contains more complex animations that are composed of multiple simpler animations.
--   **`effectsAnimations.ts`**: Includes special effects animations, such as glitch, ripple, and tint.
--   **`fadeAnimations.ts`**: Contains basic fade in and fade out animations.
--   **`index.ts`**: This file serves as the main entry point for all the animation functions. It exports all the animations from the other files, making them available to the `useImageAnimation` hook.
--   **`perspectiveAnimations.ts`**: Includes 3D perspective animations, such as flips and swings.
--   **`rotateAnimations.ts`**: Contains animations for rotating images.
--   **`slideAnimations.ts`**: Provides animations for sliding images in and out from different directions.
--   **`specialAnimations.ts`**: Contains unique animations like the Ken Burns effect and a pulse effect.
--   **`springAnimations.ts`**: Includes animations that use a physics-based spring model for natural-looking motion.
--   **`zoomAnimations.ts`**: Contains animations for zooming images in and out.
+- **`fadeAnimations.ts`**: fade in/out
+- **`zoomAnimations.ts`**: zoom in/out
+- **`slideAnimations.ts`**: slide in/out from edges
+- **`specialAnimations.ts`**: kenBurns, pulse
+- **`rotateAnimations.ts`**: rotate
+- **`springAnimations.ts`**: physics-based spring
+- **`cameraAnimations.ts`**: focus, exposure
+- **`cinematicAnimations.ts`**: wipes, splits
+- **`effectsAnimations.ts`**: glitch, ripple, tint
+- **`perspectiveAnimations.ts`**: flips, swings
+- **`broadcastAnimations.ts`**: lower thirds, scoreboards
+- **`compositeAnimations.ts`**: composed multi-step
+- **`index.ts`**: barrel export; aggregates for useImageAnimation switch
 
-## How it Works
+## Relations
 
-Each animation file exports one or more `AnimationFunction`s. An `AnimationFunction` is a function that takes the current frame, the start and end frames of the animation, and an animation configuration object as input. It returns a `React.CSSProperties` object that defines the style of the image at the given frame.
+- Parent folder: [../../.docs/readMe.md](../.docs/readMe.md)
+- Key dependencies: Remotion interpolate, easing
+- Consumed by: useImageAnimation hook
 
-The `useImageAnimation` hook imports all of these animation functions and uses a `switch` statement to select the correct one based on the `type` of the animation config. This makes it easy to add new animations by simply creating a new animation function and adding it to the `switch` statement in `useImageAnimation.ts` and the `index.ts` in this directory.
+## Dependencies
+
+- Internal: ../../../easing
+- External: React, Remotion

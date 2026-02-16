@@ -1,5 +1,18 @@
-## Sponsors Layout (Placeholder)
+# Folder Overview
 
-Reserved for sponsor-related layout components (e.g., sponsor grids, scrolling marquees, or footer sponsor bars).
+Placeholder for sponsor-related layout components (sponsor grids, scrolling marquees, footer sponsor bars). No components defined.
 
-No components are currently defined.
+## Files
+
+None.
+
+## Relations
+
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: none
+- Consumed by: intended for compositions when implemented
+
+## Dependencies
+
+- Internal: none
+- External: none

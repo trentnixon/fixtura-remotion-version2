@@ -17,7 +17,7 @@
 
 ## 🎯 Current Focus
 
-- **TKT-2025-013**: readMe updates — migrations in progress; animations + backgrounds complete; see `Tickets.md` for remaining parent folders
+- **TKT-2025-013**: readMe updates — Phase 1, 2, 3 complete
 
 ## ⏳ To Do (easy → hard)
 
@@ -73,7 +73,7 @@
 
 - ✅ All main folders have readMe/README files
 - ✅ Standard format complete: animations, backgrounds (incl. all children)
-- ⏳ Standard format pending: containers, easing, images, layout, transitions, typography, ui, components root
+- [x] Standard format complete: all folders including components root (Phase 1, 2, 3)
 - ⏳ See TKT-2025-013 in Tickets.md for full status
 
 ## 🔄 Recent Updates

@@ -1,6 +1,6 @@
 # Completed Tickets Index
 
-- (none yet)
+- TKT-2025-013
 
 ---
 
@@ -8,11 +8,101 @@
 
 ---
 
-## TKT-2025-013: Component readMe Updates — Standard Format Migration
+## TKT-2025-014: Components Skill Tree — .skills/architecture
+
+---
+ID: TKT-2025-014
+Status: Draft
+Priority: Medium
+Owner: Development Team
+Created: 2025-02-16
+Updated: 2025-02-16
+Related: TKT-2025-013, Skills System, cricket-compositions-feature pattern
+---
+
+### Overview
+
+Create a skill tree in `.skills/architecture/` for the components folder and its subdirectories. Skills provide LLM-first guidance for navigating, extending, and debugging component logic. Follow patterns from cricket-compositions-feature (feature root + per-folder) and color-system-folder (single skill covering subfolders).
+
+### Proposed Skill Tree Structure
+
+**Tier 1 — Feature root (1 skill)**
+
+- `components-folder-structure.md` — Overview of components directory; ThemeContext/VideoDataContext integration; cross-cutting concerns (theme, data, animation); how parts compose; links to all child skills
+
+**Tier 2 — Top-level folders (9 skills)**
+
+- `components-animations-folder.md` — Generic animation configs; getAnimationConfig; when to use vs domain-specific (containers/images/typography)
+- `components-backgrounds-folder.md` — BackgroundComponents, SelectTemplateBackground; config, variants (Solid, Gradient, Image, Video, Patterns, Particles, Noise, Animated, Textures); TemplateVariationAdapter; overlay system
+- `components-containers-folder.md` — AnimatedContainer; animations, styles, modules, examples; entry/exit flow; when to use modules vs raw AnimatedContainer
+- `components-easing-folder.md` — getImageEasingFunction; types shared by images/containers/typography
+- `components-images-folder.md` — AnimatedImage; config/animations; useDualImageAnimation; when to add new animation types
+- `components-layout-folder.md` — screen (OneColumn), main/header, titleScreen, sponsors; RouteToComposition; slot composition pattern
+- `components-transitions-folder.md` — TransitionWrapper, TransitionSeriesWrapper; @remotion/transitions; when to use linear vs spring timing
+- `components-typography-folder.md` — AnimatedText; config (animations, styles, variants); letter/word splitting; when to add types or variants
+- `components-ui-folder.md` — Placeholder; guidelines for future UI primitives
+
+**Tier 3 — Optional deep-dive (if needed)**
+
+- `components-backgrounds-image-folder.md` — ImageBackground effect system, overlays, TemplateVariationAdapter (only if backgrounds-folder becomes too large)
+- `components-backgrounds-noise-folder.md` — Noise variants, SpokesGraphics, NOISE_VARIANTS (only if needed)
+
+### Phases & Tasks
+
+#### Phase 1: Feature root + lightweight folders
+
+##### Tasks
+
+- [x] Create `components-folder-structure.md` (references all Tier 2 skills)
+- [x] Create `components-easing-folder.md`
+- [x] Create `components-animations-folder.md`
+- [x] Create `components-transitions-folder.md`
+- [x] Create `components-ui-folder.md`
+- [x] Add Skill section to each folder readMe (animations, easing, transitions, ui)
+
+#### Phase 2: Core composition folders
+
+##### Tasks
+
+- [x] Create `components-containers-folder.md`
+- [x] Create `components-images-folder.md`
+- [x] Create `components-typography-folder.md`
+- [x] Add Skill section to containers, images, typography readMe
+
+#### Phase 3: Complex folders
+
+##### Tasks
+
+- [x] Create `components-backgrounds-folder.md`
+- [x] Create `components-layout-folder.md`
+- [x] Add Skill section to backgrounds, layout readMe
+
+#### Phase 4: Cross-link and verify
+
+##### Tasks
+
+- [x] Add References section to components-folder-structure listing all child skills
+- [x] Ensure each child skill References back to parent
+- [x] Verify skill-ref pattern in readMe matches cricket/colorSystem
+
+### Naming Convention
+
+- `components-{folder}-folder.md` (kebab-case)
+- Keeps skills in `.skills/architecture/` (no subfolders for components, unlike cricket which could have compositions subfolder — we follow flat architecture)
+
+### Constraints, Risks, Assumptions
+
+- Skills must NOT invent conventions; extract from readMe and code
+- Backgrounds may need splitting (Image, Noise) if single skill exceeds ~100 lines of guidance
+- Start with Tier 1 + Tier 2; Tier 3 only if user requests or backgrounds skill is unwieldy
+
+---
+
+## TKT-2025-013: [Completed] Component readMe Updates — Standard Format Migration
 
 ---
 ID: TKT-2025-013
-Status: In Progress
+Status: Completed
 Priority: Medium
 Owner: Development Team
 Created: 2025-02-16
@@ -32,73 +122,21 @@ Update remaining parent and child readMe files to the standard format. Reference
 
 **Core (outside components):**
 
-- `src/core/types` (root, data, sport, cricket)
-- `src/core/context`
+- [x] `src/core/types` (root, data, sport, cricket)
+- [x] `src/core/context`
 
 **Components:**
 
-- `components/animations` (root, config)
-- `components/backgrounds` (root + all children):
-  - config, hooks, variants
-  - variants/Solid, Gradient, Video, Patterns, Particles
-  - variants/Patterns/variants, variants/Particles/variants
-  - variants/NoiseBackground, variants/NoiseBackground/variants
-  - variants/Image, variants/Image/variants, variants/Image/overlays
-  - variants/Textures
+- [x] `components/animations` (root, config)
+- [x] `components/backgrounds` (root + config, hooks, variants, Solid, Gradient, Video, Patterns, Particles, NoiseBackground, Textures, Image + overlays/variants)
+- [x] `components/containers` (root)
+- [x] `components/easing` (root)
+- [x] `components/images` (root)
+- [x] `components/layout` (root)
+- [x] `components/transitions` (root)
+- [x] `components/typography` (root; created readMe from README.txt)
+- [x] `components/ui` (root)
 
-### Parent Folders Left To Do
+### Completion Summary
 
-1. [ ] **`components/`** (root) — README.md is comprehensive but not in standard contract format; consider splitting into readMe + Directory Map or condensing
-2. [ ] **`containers/`** — root readMe + children (animations, animations/utils, styles, modules, examples)
-3. [ ] **`easing/`**
-4. [ ] **`images/`** — root + config, config/animations
-5. [ ] **`layout/`** — root + main, main/header, main/header/variants, screen, sponsors, titleScreen, titleScreen/variants
-6. [ ] **`transitions/`**
-7. [ ] **`typography/`** — root + config, config/animations, utils
-8. [ ] **`ui/`** — currently placeholder/minimal
-
-### Phases & Tasks
-
-#### Phase 1: Top-Level Parent Folders
-
-##### Tasks
-
-- [ ] Update `containers/.docs/readMe.md`
-- [ ] Update `easing/.docs/readMe.md`
-- [ ] Update `images/.docs/readMe.md`
-- [ ] Update `layout/.docs/readMe.md`
-- [ ] Update `transitions/.docs/readMe.md`
-- [ ] Update `typography/.docs/readMe.md`
-- [ ] Update `ui/.docs/readMe.md`
-
-#### Phase 2: Child Folders
-
-##### Tasks
-
-- [ ] Containers: animations, animations/utils, styles, modules, examples
-- [ ] Images: config, config/animations
-- [ ] Layout: main, main/header, main/header/variants, screen, sponsors, titleScreen, titleScreen/variants
-- [ ] Typography: config, config/animations, utils
-
-#### Phase 3: Components Root
-
-##### Tasks
-
-- [ ] Decide approach: condense existing README to standard format vs. split (readMe + reference doc)
-- [ ] Update `components/.docs/readMe.md` or create `readMe.md` with standard sections
-
-### Standard Format Reference
-
-Each readMe should include:
-
-- **Folder Overview** — 1–3 lines
-- **Files** — per-file descriptions and main exports
-- **Child Modules** — subfolders with brief descriptions
-- **Relations** — Parent folder, Key dependencies, Consumed by
-- **Dependencies** — Internal, External
-
-### Constraints, Risks, Assumptions
-
-- Components root README is very detailed (directory map, backgrounds deep-dive, etc.); may need to preserve as separate reference or compress
-- Some folders (e.g. typography) use README.txt; standardize to readMe.md in .docs/
-- README vs readMe naming: components uses README.md; core uses readMe.md — align per Feature Documentation rules (readMe.md)
+All component folder readMe files migrated to standard format (Folder Overview, Files, Child Modules, Relations, Dependencies). Phase 1: 7 top-level parents (containers, easing, images, layout, transitions, typography, ui). Phase 2: child folders (containers/animations, styles, modules, examples; images/config; layout/main, header, screen, sponsors, titleScreen; typography/config, utils). Phase 3: components root — readMe.md (contract) + DirectoryMap.md (reference). Typography README.txt removed; content in typography/.docs/readMe.md.

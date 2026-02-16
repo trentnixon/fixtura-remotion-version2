@@ -1,26 +1,25 @@
-## Title Screen Layouts
+# Folder Overview
 
-Reusable arrangements for title screens combining `Logo`, `Title`, `Name`, and `PrimarySponsor`.
+Reusable title-screen arrangements: Logo, Title, Name, PrimarySponsor slots. Vertical and two-column variants with alignment support.
 
-### Files
+## Files
 
-- `index.tsx` — Exports vertical and two-column variants for title screens
-- `types.ts` — Shared props and `getAlignmentClasses(alignment)`
-- `variants/VerticalStack.tsx` — Vertical permutations
-- `variants/TwoColumnLayout.tsx` — Two-column permutations (including reversed)
+- **`index.tsx`**: exports vertical and two-column title-screen variants
+- **`types.ts`**: shared props, getAlignmentClasses(alignment)
+- **`variants/VerticalStack.tsx`**: stacked permutations
+- **`variants/TwoColumnLayout.tsx`**: two-column permutations (including reversed)
 
-### Usage
+## Child Modules
 
-```tsx
-<VerticalStack
-  alignment="center"
-  Logo={<img src={logo} />}
-  Title={<AnimatedText type="title">Grand Final</AnimatedText>}
-  Name={<AnimatedText type="subtitle">Round 7</AnimatedText>}
-  PrimarySponsor={<Sponsor />}
-/>
-```
+- **`variants/`**: VerticalStack, TwoColumnLayout
 
-### Notes
+## Relations
 
-- Coordinate animations within each slot using `AnimatedContainer` and `AnimatedText`.
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: none
+- Consumed by: compositions
+
+## Dependencies
+
+- Internal: variants
+- External: React

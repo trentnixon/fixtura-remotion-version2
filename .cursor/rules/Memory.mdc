@@ -12,7 +12,7 @@ alwaysApply: true
 ### Memory Files (authoritative locations)
 - `/.memory/state.md` = current priorities, active work, open tasks, blockers.
 - `/.memory/decisions.md` = durable architectural or product decisions with rationale.
-- `/.memory/episodes/YYYY-MM-DD.md` = daily work log (append-only).
+- `/.memory/episodes/YYYY-MM-DD.md` = daily work log.
 - `/.memory/summaries/week_YYYY-MM-DD.md` and `/.memory/summaries/month_YYYY-MM.md` = compressed rollups (only when explicitly asked).
 
 ### Memory Workflow (when triggered)
@@ -47,10 +47,21 @@ alwaysApply: true
 ## Links
 - Optional: PRs, tickets, files, URLs (if provided)
 
+### Daily Episode Integrity Rules
+- Never overwrite or delete existing episode content for a given date.
+- If `/.memory/episodes/YYYY-MM-DD.md` already exists:
+  - Append new entries to the existing file.
+- Do NOT duplicate identical information within the same day.
+- If the new `LOG:` entry is clearly an update to something already written earlier that same day:
+  - Edit the relevant section to reflect the updated state instead of duplicating it.
+  - Preserve historical accuracy (do not remove important prior context).
+- Do not rewrite the entire file unless explicitly instructed.
+
 ### State File Rules
 - Keep `/.memory/state.md` concise (prefer <= 60 lines).
 - Only include current and actionable items.
 - Remove completed tasks or move them into the latest episode.
+- `state.md` represents the present snapshot, not history.
 
 ### Decisions File Rules
 - Only store decisions that should still matter in 1–6 months.
@@ -67,7 +78,9 @@ alwaysApply: true
 - Never store secrets (API keys, passwords, tokens, private keys).
 
 ### Append vs Overwrite
-- Episodes are append-only.
+- Episodes are append-only by default.
+- Never overwrite prior days.
+- Never delete historical entries.
 - `state.md` is rewritten as a current snapshot.
 - `decisions.md` is append-only.
 

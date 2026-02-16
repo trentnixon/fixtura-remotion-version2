@@ -5,15 +5,24 @@ Templates define composable video composition blueprints. Variants extend a base
 ## Skill
 
 - `.skills/architecture/templates-folder-structure.md` – Implementation guidance for templates and variants
+- `.skills/architecture/templates-base-folder.md` – BaseTemplate, provider stack, extension points
+- `.skills/workflows/create-template-variant.md` – Step-by-step workflow for creating new variants
 
 ## Files
 
 - `registry.tsx`: registers available templates/variants for use by compositions
-- `HowToCreateANewVariation.md`: step-by-step guide for creating a new variant
+- `.docs/HowToCreateANewVariation.md`: step-by-step guide for creating a new variant
+- `.docs/how-to.md`: detailed how-to for variant creation, theming, and integration
+
+## Child Modules
+
+- **`base/`**: [base/.docs/readMe.md](../base/.docs/readMe.md) — foundational layout, shared components, theme contract
+- **`types/`**: [types/.docs/readMe.md](../types/.docs/readMe.md) — TemplateThemeConfig, settingsConfig, AssetConfig, AnimationConfig
+- **`variants/`**: [variants/.docs/readMe.md](../variants/.docs/readMe.md) — concrete template implementations (basic, classic, brickwork, etc.)
 
 ## Relations
 
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../../README.md](../../README.md) (project root)
 - Key dependencies: uses `src/components` for primitives; integrates with `src/core` types and utils
 - Consumed by: compositions under `src/compositions/*` select variants via `registry`
 

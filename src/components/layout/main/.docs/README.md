@@ -1,12 +1,24 @@
-## Main Layout
+# Folder Overview
 
-Top-level main layout area composed of reusable header/footer regions.
+Top-level main layout area: header and footer regions. Referenced by screen wrappers (OneColumn) using ThemeContext.layout.heights.
 
-### Structure
+## Files
 
-- `header/` — See `./header/.docs/README.md`
-- `footer/` — Reserved for future footer variants (currently empty)
+No root-level files.
 
-### Notes
+## Child Modules
 
-- The main layout regions are referenced by screen wrappers (e.g., `screen/OneColumn.tsx`) using heights from `ThemeContext.layout`.
+- **`header/`**: header layout variants (Title, Logo, Name slots); VerticalStack, TwoColumnLayout
+- **`Timer/`**: ProgressTimer
+- **`footer/`**: reserved (empty)
+
+## Relations
+
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: ThemeContext.layout
+- Consumed by: screen/OneColumn
+
+## Dependencies
+
+- Internal: header, core/context
+- External: React, Remotion

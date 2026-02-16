@@ -1,17 +1,24 @@
-## Animation Utilities (by Category)
+# Folder Overview
 
-Helper functions grouped by effect category. These are used internally by the container animation system.
+Category-specific animation calculators used internally by the container animation system. Prefer useAnimation; direct use for custom animation graphs.
 
-### Files
+## Files
 
-- `fadeAnimations.ts` — Opacity-only transitions
-- `slideAnimations.ts` — Translate X/Y based on edge direction and progress
-- `scaleAnimations.ts` — Scale in/out and axis-specific scaling
-- `perspectiveAnimations.ts` — 3D-like transforms (`flipX/Y`, `rotate3D`, `zoomPerspective`, `swing`)
-- `springAnimations.ts` — Spring-in/out/scale/translate/rotate helpers
-- `specialAnimations.ts` — Extras like `glitch`, `blur`
-- `index.ts` — Barrel export
+- **`fadeAnimations.ts`**: opacity-only transitions
+- **`slideAnimations.ts`**: translate X/Y by edge direction and progress
+- **`scaleAnimations.ts`**: scale in/out, axis-specific
+- **`perspectiveAnimations.ts`**: 3D-like transforms (flipX/Y, rotate3D, zoomPerspective, swing)
+- **`springAnimations.ts`**: spring-in/out/scale/translate/rotate
+- **`specialAnimations.ts`**: glitch, blur
+- **`index.ts`**: barrel export
 
-### Notes
+## Relations
 
-- Prefer using `useAnimation` which routes to these helpers. Direct use is possible when composing custom animation graphs.
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: Remotion interpolate
+- Consumed by: useAnimation, calculateAnimationStyles
+
+## Dependencies
+
+- Internal: none
+- External: Remotion

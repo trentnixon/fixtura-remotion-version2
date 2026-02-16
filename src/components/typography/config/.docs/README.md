@@ -1,21 +1,25 @@
-## Typography Config
+# Folder Overview
 
-Configuration, styles, variants, and animation surface for typography components.
+Configuration, styles, variants, and animation surface for AnimatedText. Normalize config, compute per-frame styles, merge component + variant + animation styles.
 
-### Files
+## Files
 
-- `animations.ts` — Export types (`AnimationType`, `AnimationConfig`, `SpringConfig`), `SPRING_CONFIGS`, `getEasingFunction`, `normalizeAnimation`, `useAnimation`, and named animations (fade/scale/spring/special/typewriter)
-- `styles.ts` — `getTypographyStyles(typography, componentStyles, variant, defaultSize, defaultWeight, additionalClasses?)` generating className/style
-- `variants.ts` — `getVariantStyles` (palette → color/additionalStyles) and `applyContrastSafety`
-- `animations/` — Implementation details:
-  - `types.ts`, `animationUtils.ts`, `useAnimation.ts`, `fadeAnimations.ts`, `scaleAnimations.ts`, `springAnimations.ts`, `slideAnimation.ts`, `specialAnimations.ts`, `springConfigs.ts`
+- **`animations.ts`**: AnimationType, AnimationConfig, SpringConfig; SPRING_CONFIGS; getEasingFunction, normalizeAnimation, useAnimation; named animations (fade, scale, spring, special, typewriter)
+- **`styles.ts`**: getTypographyStyles(typography, componentStyles, variant, defaultSize, defaultWeight, additionalClasses?)
+- **`variants.ts`**: getVariantStyles(palette), applyContrastSafety
+- **`animations/`**: implementation (types, animationUtils, useAnimation, fade, scale, spring, slide, special, springConfigs)
 
-### Flow
+## Child Modules
 
-1. Normalize config and map easing
-2. Compute per-frame animation styles via hook
-3. Merge base component styles + variant styles + overrides + animation styles
+- **`animations/`**: types, animationUtils, useAnimation; fadeAnimations, scaleAnimations, springAnimations, slideAnimation, specialAnimations; springConfigs
 
-### Links
+## Relations
 
-- Parent: `../README.txt`
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: `../../easing`
+- Consumed by: AnimatedText.tsx
+
+## Dependencies
+
+- Internal: animations, ../../easing
+- External: React, Remotion

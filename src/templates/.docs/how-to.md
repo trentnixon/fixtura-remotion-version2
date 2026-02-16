@@ -89,18 +89,20 @@ src/templates/variants/YourVariant/
 ├── index.tsx          # Main variant component (composes BaseTemplate)
 ├── theme.ts           # Variant-specific theme configuration
 ├── animations.ts      # Variant-specific animation presets
-├── readMe.md          # Folder documentation (REQUIRED)
+├── .docs/
+│   └── readMe.md      # Folder documentation (REQUIRED)
 └── components/
     ├── YourVariantIntro.tsx
     ├── YourVariantOutro.tsx
     ├── YourVariantMain.tsx
     ├── YourVariantMainHeader.tsx
     ├── YourVariantBackground.tsx
-    └── readMe.md      # Components folder documentation (REQUIRED)
+    └── .docs/
+        └── readMe.md  # Components folder documentation (REQUIRED)
 ```
 
 **Important:** 
-- All folders must have `readMe.md` files per `.cursorrules` documentation requirements
+- All folders must have `.docs/readMe.md` files per `.cursorrules` documentation requirements
 - Follow the same structure as existing variants (see `src/templates/variants/basic/` as reference)
 - Your variant will extend `BaseTemplate` - you're not creating a new base, just a new visual style
 
@@ -514,7 +516,7 @@ Only create a custom background implementation if you need template-specific beh
 
 **Reference:** 
 - See `src/templates/variants/basic/components/BasicBackground.tsx` for the standard pattern (all variants use this)
-- See `src/components/backgrounds/README.md` for background system details
+- See `src/components/backgrounds/.docs/README.md` for background system details
 
 ### Step 5: Create Main Variant Component (`index.tsx`)
 
@@ -602,11 +604,11 @@ export const getSimplifiedTitle = (title: string): string => {
 
 ### Step 6: Create Documentation Files
 
-Per `.cursorrules` requirements, you must create `readMe.md` files for documentation.
+Per `.cursorrules` requirements, you must create `.docs/readMe.md` files for documentation.
 
-#### 6a. Variant Root `readMe.md`
+#### 6a. Variant Root `.docs/readMe.md`
 
-Create `src/templates/variants/YourVariant/readMe.md`:
+Create `src/templates/variants/YourVariant/.docs/readMe.md`:
 
 ```markdown
 # Folder Overview
@@ -622,7 +624,7 @@ Create `src/templates/variants/YourVariant/readMe.md`:
 
 ## Relations
 
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../../variants/.docs/readMe.md](../../variants/.docs/readMe.md)
 - Key dependencies: composes from `../../base`; uses `../../types` for config
 - Consumed by: `../../registry.tsx`
 
@@ -632,9 +634,9 @@ Create `src/templates/variants/YourVariant/readMe.md`:
 - External: Remotion, React
 ```
 
-#### 6b. Components Folder `readMe.md`
+#### 6b. Components Folder `.docs/readMe.md`
 
-Create `src/templates/variants/YourVariant/components/readMe.md`:
+Create `src/templates/variants/YourVariant/components/.docs/readMe.md`:
 
 ```markdown
 # Folder Overview
@@ -651,7 +653,7 @@ YourVariant components: Intro, Outro, Main, MainHeader, and Background component
 
 ## Relations
 
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../.docs/readMe.md](../.docs/readMe.md)
 - Key dependencies: uses contexts from `../../../../core/context`
 - Consumed by: `../index.tsx`
 
@@ -662,8 +664,8 @@ YourVariant components: Intro, Outro, Main, MainHeader, and Background component
 ```
 
 **Reference:** 
-- See `src/templates/variants/basic/readMe.md` for a minimal example
-- See `src/templates/variants/classic/readMe.md` for another example
+- See `src/templates/variants/basic/.docs/readMe.md` for a minimal example
+- See `src/templates/variants/classic/.docs/readMe.md` for another example
 
 ### Step 7: Register Variant in Registry
 
@@ -1167,7 +1169,7 @@ For Remotion-specific optimizations:
 - Verify `SelectTemplateBackground()` is imported correctly
 - Check `video.templateVariation.useBackground` value in test data
 - Ensure background variant is in registry's `Variants` array
-- See `src/components/backgrounds/README.md` for background system details
+- See `src/components/backgrounds/.docs/README.md` for background system details
 
 ### Fonts Not Loading
 
@@ -1184,7 +1186,7 @@ When creating a new **template variant** (like Basic, Classic, Brickwork), ensur
 
 ### Setup & Structure
 - [ ] Created variant folder in `src/templates/variants/YourVariant/` (following same structure as `basic/`, `classic/`, etc.)
-- [ ] Created `readMe.md` files (variant root + components/)
+- [ ] Created `.docs/readMe.md` files (variant root + components/)
 - [ ] Created `theme.ts` extending `baseTheme` (only override what's different)
 - [ ] Created `animations.ts` with animation presets
 - [ ] Created all variant components (Intro, Outro, Main, MainHeader, Background)
@@ -1243,12 +1245,12 @@ When creating a new **template variant** (like Basic, Classic, Brickwork), ensur
   - Classic: `src/templates/variants/classic/`
   - Custom styling: `src/templates/variants/brickwork/`
   - Two-column: `src/templates/variants/twoColumnClassic/`
-- Variant Documentation: `src/templates/variants/basic/readMe.md`
+- Variant Documentation: `src/templates/variants/basic/.docs/readMe.md`
 - Registry: `src/templates/registry.tsx` (see how existing variants are registered)
 
 ### Background System
 - Background Selector: `src/components/backgrounds/index.tsx` (`SelectTemplateBackground`)
-- Background Documentation: `src/components/backgrounds/README.md`
+- Background Documentation: `src/components/backgrounds/.docs/README.md`
 
 ### Context Providers
 - Theme Context: `src/core/context/ThemeContext.tsx`

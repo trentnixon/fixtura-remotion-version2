@@ -1,26 +1,25 @@
-## Header Layouts
+# Folder Overview
 
-Reusable header arrangements using permutations of `Title`, `Logo`, and `Name` slots.
+Reusable header arrangements with permutations of Title, Logo, Name slots. Vertical stack and two-column variants; alignment via getAlignmentClasses.
 
-### Files
+## Files
 
-- `index.tsx` — Exports a suite of header variants (vertical stack, two-column, reversed permutations, and single-element variants)
-- `types.ts` — Shared props and `getAlignmentClasses(alignment)` helper to derive flex alignment classes
-- `variants/VerticalStack.tsx` — Vertical ordering variants (all permutations + singletons)
-- `variants/TwoColumnLayout.tsx` — Two-column variants including reversed orders and singletons
+- **`index.tsx`**: exports header variants (VerticalHeader, VerticalHeaderTitleLogoName, TwoColumnHeader*, Reverse*, etc.)
+- **`types.ts`**: shared props, getAlignmentClasses(alignment)
+- **`variants/VerticalStack.tsx`**: vertical ordering permutations
+- **`variants/TwoColumnLayout.tsx`**: two-column arrangements
 
-### Usage
+## Child Modules
 
-```tsx
-<VerticalHeaderTitleLogoName
-  alignment="center"
-  Title={<AnimatedText type="title">Title</AnimatedText>}
-  Logo={<img src={logo} />}
-  Name={<AnimatedText type="subtitle">Name</AnimatedText>}
-/>
-```
+- **`variants/`**: VerticalStack, TwoColumnLayout
 
-### Notes
+## Relations
 
-- Alignment affects flexbox alignment across the header block (start/center/end).
-- Pair with `AnimatedText` and `AnimatedContainer` for motion/styling.
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: none
+- Consumed by: screen wrappers, compositions
+
+## Dependencies
+
+- Internal: variants
+- External: React

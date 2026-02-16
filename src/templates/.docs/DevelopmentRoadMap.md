@@ -3,10 +3,11 @@
 ## ✅ Completed
 
 - [x] Initial folder structure: base, types, variants, registry
+- [x] Per-folder readMe coverage in .docs (base, types, variants and subfolders)
 
 ## ⏳ To Do (easy → hard)
 
-1. Add per-folder readMe.md coverage (base, types, variants and subfolders)
+1. ~~Add per-folder readMe.md coverage~~ (done — base, types, variants; all in .docs)
 2. Document template composition contract in `types` (settings, assets, animations)
 3. Describe common base layout responsibilities and extension points
 4. Add guidance for creating new variants from base
@@ -16,7 +17,7 @@
 
 ## 💡 Recommendations
 
-- Keep `readMe.md` files written for LLMs: roles, relations, dependencies only
+- Keep `readMe.md` files in `.docs/` per repo rules; written for LLMs: roles, relations, dependencies only
 - Co-locate any example JSON in `testData` and reference from docs
 - When adding variants, ensure consistent file naming and `index.tsx` exports
 - Consider a lightweight generator script to scaffold new variants from base

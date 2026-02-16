@@ -1,5 +1,18 @@
-## Typography Utilities (Placeholder)
+# Folder Overview
 
-Reserved for typography-specific helper functions (e.g., measuring text, layout helpers, or splitting logic abstractions).
+Placeholder for typography-specific helpers (text measurement, layout, splitting logic). Currently empty.
 
-Currently empty.
+## Files
+
+None.
+
+## Relations
+
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: none
+- Consumed by: intended for AnimatedText when implemented
+
+## Dependencies
+
+- Internal: none
+- External: none

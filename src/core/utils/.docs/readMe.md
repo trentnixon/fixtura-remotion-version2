@@ -2,6 +2,10 @@
 
 Foundational utilities: color systems, theme creation, data processing, environment, assets, and general helpers used app-wide.
 
+## Skill
+
+- `.skills/architecture/core-utils-folder.md` – Routing, compositionMapping, datasetProcessing; when to use vs colorSystem/createThemeUtils
+
 ## Files
 
 - `classNames.ts`, `copy.ts`, `general.ts`, `helpers.ts`, `objectUtils.ts`: generic helpers
@@ -18,7 +22,7 @@ Foundational utilities: color systems, theme creation, data processing, environm
 
 ## Relations
 
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
 - Key dependencies: used by `src/templates/*`, `src/components/*`, and core contexts
 - Consumed by: anywhere needing color, theme, or data helpers
 

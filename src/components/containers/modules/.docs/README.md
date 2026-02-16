@@ -1,27 +1,24 @@
-## Container Modules
+# Folder Overview
 
-Preconfigured wrapper components around `AnimatedContainer` for common animation patterns. Provide defaults and consistent naming.
+Preconfigured wrapper components around AnimatedContainer for common patterns. Provide defaults and consistent naming.
 
-### Files
+## Files
 
-- `fade.tsx` — `FadeIn`, `FadeOut`, `FadeInOut`, `FadeInSpring` + default configs
-- `slide.tsx` — Slide in/out variants with directional control and spring translate helpers
-- `scale.tsx` — Scale-in/out and axis-specific variants plus spring scale
-- `reveal.tsx` — Reveal/collapse from edges
-- `spring.tsx` — Spring primitives: in/out/scale/translate/rotate
-- `threeD.tsx` — `FlipX`, `FlipY`, `Rotate3D`, `Swing`, `ZoomPerspective`, `Glitch`, `Blur`
-- `index.ts` — Barrel
+- **`fade.tsx`**: FadeIn, FadeOut, FadeInOut, FadeInSpring + default configs
+- **`slide.tsx`**: slide in/out variants, directional control, spring translate
+- **`scale.tsx`**: scale-in/out, axis-specific, spring scale
+- **`reveal.tsx`**: reveal/collapse from edges
+- **`spring.tsx`**: spring in/out/scale/translate/rotate
+- **`threeD.tsx`**: FlipX, FlipY, Rotate3D, Swing, ZoomPerspective, Glitch, Blur
+- **`index.ts`**: barrel export
 
-### Usage
+## Relations
 
-```tsx
-import { FadeIn, SlideInLeft, FlipX } from "./modules";
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: AnimatedContainer, animations
+- Consumed by: compositions, examples
 
-<FadeIn>...</FadeIn>
-<SlideInLeft>...</SlideInLeft>
-<FlipX>...</FlipX>
-```
+## Dependencies
 
-### Notes
-
-- Use modules to standardize motion across compositions and reduce prop repetition.
+- Internal: AnimatedContainer, animations
+- External: React

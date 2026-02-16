@@ -1,12 +1,19 @@
-## Header Variants
+# Folder Overview
 
-Concrete layout implementations for headers.
+Concrete header layout implementations. Vertical stack and two-column permutations for Title, Logo, Name.
 
-### Files
+## Files
 
-- `VerticalStack.tsx` — All permutations of `Title`, `Logo`, `Name` stacked vertically; includes single-element variants
-- `TwoColumnLayout.tsx` — Two-column arrangements including reversed permutations and singletons
+- **`VerticalStack.tsx`**: all permutations stacked vertically; single-element variants
+- **`TwoColumnLayout.tsx`**: two-column arrangements; reversed permutations; singletons
 
-### Notes
+## Relations
 
-- Props and alignment handling are defined in `../types.ts`.
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: ../types.ts
+- Consumed by: header index.tsx
+
+## Dependencies
+
+- Internal: ../types
+- External: React

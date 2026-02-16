@@ -1,18 +1,19 @@
-## Container Examples
+# Folder Overview
 
-A set of ready-made examples demonstrating `AnimatedContainer` usage and the animation system.
+Ready-made examples demonstrating AnimatedContainer and the animation system. For verification and quick-reference.
 
-### File
+## Files
 
-- `AnimatedContainerExamples.tsx`
-  - `BasicContainer`, `FadeInContainer`, `FadeInOutContainer`, `SlideInContainer`, `SlideInOutContainer`, `ScaleContainer`, `SpringContainer`, `FlipContainer`, `RevealContainer`
-  - `SequencedContainers` — multiple containers staggered via Remotion `Sequence`
-  - `AnimationShowcase` — renders all animation types in grouped sections
-  - `SpringConfigShowcase` — renders spring variants using each preset config
-- `index.ts` — Re-exports for ergonomic importing
+- **`AnimatedContainerExamples.tsx`**: BasicContainer, FadeInContainer, FadeInOutContainer, SlideInContainer, ScaleContainer, SpringContainer, FlipContainer, RevealContainer; SequencedContainers; AnimationShowcase; SpringConfigShowcase
+- **`index.ts`**: re-exports
 
-### Usage
+## Relations
 
-```tsx
-import { AnimationShowcase, SpringConfigShowcase } from "./examples";
-```
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: AnimatedContainer, modules, animations
+- Consumed by: development, documentation
+
+## Dependencies
+
+- Internal: AnimatedContainer, modules
+- External: React, Remotion

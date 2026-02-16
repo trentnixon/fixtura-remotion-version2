@@ -2,13 +2,17 @@
 
 Core system for theming, contexts, data types, and foundational utilities used across templates and compositions.
 
+## Skill
+
+- `.skills/architecture/core-folder-structure.md` – Directory layout; context/utils/types flow; when to add where
+
 ## Files
 
 - `DevelopmentRoadMap.md`: roadmap for this core module
 
 ## Relations
 
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../../README.md](../../README.md) (project root)
 - Key dependencies: provides context/providers and utilities to `src/templates/*` and `src/components/*`
 - Consumed by: templates, compositions, and UI components throughout the app
 

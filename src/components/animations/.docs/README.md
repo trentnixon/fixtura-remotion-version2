@@ -2,6 +2,10 @@
 
 Lightweight animation configuration utilities for generic usage across the component system. Provides declarative presets and config helpers without frame-accurate Remotion logic. Complements domain-specific animation systems in `containers/`, `images/`, and `typography/`.
 
+## Skill
+
+- `.skills/architecture/components-animations-folder.md` – Generic animation configs, getAnimationConfig; when to use vs domain-specific systems
+
 ## Files
 
 No root-level files; all exports live in `config/`.

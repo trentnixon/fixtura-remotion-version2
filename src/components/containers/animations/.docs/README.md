@@ -1,28 +1,27 @@
-## Container Animations
+# Folder Overview
 
-Unified animation system for `AnimatedContainer` built on Remotion interpolation and spring primitives.
+Unified animation system for AnimatedContainer. Normalize config, compute progress, map to CSS transforms/filters/clip-path. Uses Remotion interpolate and spring.
 
-### Files
+## Files
 
-- `animationTypes.ts` — `ContainerAnimationType` union, easing types (reuse of image easing types), config interfaces
-- `animationUtils.ts`
-  - `normalizeContainerAnimation(animation, delay, duration, easing)` → config object
-  - `calculateAnimationProgress(frame, start, duration, easing)` → normalized [0..1] progress using `interpolate`
-  - `createSpringAnimation(frame, start, fps, config, durationInFrames?)` → Remotion `spring` result
-  - `calculateAnimationStyles(type, progress)` → style transforms for all supported types (fade/slide/scale/reveal/spring/3D/glitch/blur)
-- `useAnimation.ts` — Hook to compute current animation style from config and start frame, with exit-handling
-- `springConfigs.ts` — Named presets
-- `utils/` — Category-specific calculators used internally by `useAnimation` or style generators
-- `index.ts` — Barrel export of the system (types, utils, hook, spring configs)
+- **`animationTypes.ts`**: ContainerAnimationType, easing types, config interfaces
+- **`animationUtils.ts`**: normalizeContainerAnimation, calculateAnimationProgress, createSpringAnimation, calculateAnimationStyles
+- **`useAnimation.ts`**: hook for frame-based entry/exit animation styles
+- **`springConfigs.ts`**: named presets
+- **`index.ts`**: barrel export
+- **`utils/`**: category-specific calculators (fade, slide, scale, perspective, spring, special)
 
-### Flow
+## Child Modules
 
-1. Normalize config (string → object)
-2. Compute progress based on frame/start/duration and easing
-3. Optionally compute spring value for spring-based animations
-4. Map to CSS transforms/filters/clip paths
+- **`utils/`**: fadeAnimations, slideAnimations, scaleAnimations, perspectiveAnimations, springAnimations, specialAnimations
 
-### Links
+## Relations
 
-- Parent: `../README.md`
-- Component: `../AnimatedContainer.tsx`
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: `../../easing`, Remotion (interpolate, spring)
+- Consumed by: AnimatedContainer.tsx
+
+## Dependencies
+
+- Internal: utils, ../easing
+- External: Remotion

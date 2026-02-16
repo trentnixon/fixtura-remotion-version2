@@ -1,16 +1,23 @@
-## Container Styles
+# Folder Overview
 
-Semantic-to-CSS mappers used by `AnimatedContainer`.
+Semantic-to-CSS mappers for AnimatedContainer. Produce React.CSSProperties from palette and token names.
 
-### Files
+## Files
 
-- `backgroundStyles.ts` — Map semantic background tokens (e.g., `primary`, `transparentSecondary`, gradient tokens) to palette colors/gradients
-- `typeStyles.ts` — Decorative styles per container type (e.g., borders, card shadow, gradient backgrounds)
-- `sizeStyles.ts` — Standardized widths/heights per size token (`xs`..`full`, `auto`)
-- `roundedStyles.ts` — Border-radius presets (`none`..`full`)
-- `shadowStyles.ts` — Shadow presets (`none`..`xl`, `inner`)
-- `index.ts` — Barrel export
+- **`backgroundStyles.ts`**: map semantic tokens (primary, transparentSecondary, gradients) to palette colors/gradients
+- **`typeStyles.ts`**: per-type decorations (borders, card shadow, gradients)
+- **`sizeStyles.ts`**: size tokens (xs..full, auto)
+- **`roundedStyles.ts`**: border-radius presets (none..full)
+- **`shadowStyles.ts`**: shadow presets (none..xl, inner)
+- **`index.ts`**: barrel export
 
-### Usage
+## Relations
 
-These functions produce plain `React.CSSProperties` objects and are composed in `AnimatedContainer`.
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: palette from ThemeContext
+- Consumed by: AnimatedContainer.tsx
+
+## Dependencies
+
+- Internal: none
+- External: React (CSSProperties)

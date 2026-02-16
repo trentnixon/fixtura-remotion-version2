@@ -2,6 +2,10 @@
 
 Centralized background rendering for compositions. Provides Solid, Gradient, Image, Video, Patterns, Particles, Noise, Animated, and Texture background variants. Integrates with ThemeContext and VideoDataContext via `video.templateVariation`.
 
+## Skill
+
+- `.skills/architecture/components-backgrounds-folder.md` – BackgroundComponents, SelectTemplateBackground; variants, TemplateVariationAdapter; overlay system
+
 ## Files
 
 - **`index.tsx`**: BackgroundComponents registry (Solid, Gradient, Image, Video, Graphics, Pattern, Particle, Texture, Noise sub-variants, Animated); SelectTemplateBackground() reads `video.templateVariation.useBackground` and renders the selected background; re-exports config

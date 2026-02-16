@@ -1,12 +1,19 @@
-## Title Screen Variants
+# Folder Overview
 
-Concrete implementations of title screen arrangements.
+Concrete title-screen layout implementations. Vertical stack and two-column permutations for Logo, Title, Name, PrimarySponsor.
 
-### Files
+## Files
 
-- `VerticalStack.tsx` — Stacked variants for `Logo`, `Title`, `Name`, and `PrimarySponsor`
-- `TwoColumnLayout.tsx` — Two-column arrangements including reversed variants
+- **`VerticalStack.tsx`**: stacked variants
+- **`TwoColumnLayout.tsx`**: two-column arrangements including reversed
 
-### Notes
+## Relations
 
-- Props are defined in `../types.ts`.
+- Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
+- Key dependencies: ../types.ts
+- Consumed by: titleScreen index.tsx
+
+## Dependencies
+
+- Internal: ../types
+- External: React

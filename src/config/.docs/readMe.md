@@ -2,6 +2,10 @@
 
 Application-level configuration for the Remotion video composition system. Intended for shared constants, layout defaults, routing mappings, and other cross-cutting config consumed by compositions, templates, and core utilities.
 
+## Skill
+
+- `.skills/architecture/config-folder.md` – Shared constants, layout defaults; when to add vs templates/types, routing, video data
+
 ## Files
 
 - (To be populated as config modules are added)

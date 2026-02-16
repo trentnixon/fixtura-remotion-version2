@@ -85,5 +85,6 @@ Constraints: no narrative, no implementation detail, no opinions. LLM-first.
 - README: `src/templates/.docs/readMe.md`
 - Roadmap: `src/templates/.docs/DevelopmentRoadMap.md`
 - How-to: `src/templates/.docs/HowToCreateANewVariation.md`
-- Base: `src/templates/base/.docs/readMe.md`
+- Workflow: `.skills/workflows/create-template-variant.md` – full step-by-step process
+- Base: `src/templates/base/.docs/readMe.md` (see `templates-base-folder.md`)
 - Variants: `src/templates/variants/.docs/readMe.md`

@@ -82,7 +82,7 @@ After creating the folder and files, add the variant to `src/templates/registry.
 
 ## Documentation
 
-- Add `readMe.md` to the new variant folder and its `components/` subfolder (follow project readMe template)
+- Add `.docs/readMe.md` to the new variant folder and its `components/.docs/` subfolder (follow project readMe template)
 - Update any relevant `DevelopmentRoadMap.md` items if expanding the feature
 
 ## Tips

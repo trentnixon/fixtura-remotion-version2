@@ -9,15 +9,15 @@ This document catalogs potential improvements and missing information for `how-t
 ### 1. Documentation Requirements
 
 **Missing:**
-- Step-by-step instructions for creating `readMe.md` files
-- Requirement to create `readMe.md` in variant folder root
-- Requirement to create `readMe.md` in `components/` subfolder
+- Step-by-step instructions for creating `.docs/readMe.md` files
+- Requirement to create `.docs/readMe.md` in variant folder root
+- Requirement to create `.docs/readMe.md` in `components/.docs/` subfolder
 - Instructions for updating parent documentation files
 
 **Should Include:**
-- Template for variant `readMe.md` (following folder contract pattern)
-- Template for `components/readMe.md`
-- When to update `src/templates/.docs/readMe.md` or `src/templates/variants/readMe.md`
+- Template for variant `.docs/readMe.md` (following folder contract pattern)
+- Template for `components/.docs/readMe.md`
+- When to update `src/templates/.docs/readMe.md` or `src/templates/variants/.docs/readMe.md`
 - Reference to `.cursorrules` documentation requirements
 
 **Example Structure:**
@@ -32,7 +32,7 @@ This document catalogs potential improvements and missing information for `how-t
 - `components/`: [description]
 
 ## Relations
-- Parent folder: [../readMe.md](../readMe.md)
+- Parent folder: [../.docs/readMe.md](../.docs/readMe.md)
 - Key dependencies: [list]
 - Consumed by: [list]
 
@@ -75,7 +75,7 @@ export const YourTemplateBackground: React.FC = () => {
 - Explanation that `SelectTemplateBackground()` reads `video.templateVariation.useBackground`
 - List of available background variants: Solid, Gradient, Image, Video, Graphics, Particle, Pattern, Texture
 - When you WOULD create a custom background (rare edge cases)
-- Reference to `src/components/backgrounds/README.md` for background system details
+- Reference to `src/components/backgrounds/.docs/README.md` for background system details
 
 ---
 
@@ -233,7 +233,7 @@ export const getSimplifiedTitle = (title: string): string => {
 **Current Checklist is Basic - Should Include:**
 
 - [ ] Created variant folder structure
-- [ ] Created `readMe.md` files (variant root + components/)
+- [ ] Created `.docs/readMe.md` files (variant root + components/)
 - [ ] Created `theme.ts` extending `baseTheme`
 - [ ] Created `animations.ts` with animation presets
 - [ ] Created all variant components (Intro, Outro, Main, MainHeader, Background)
@@ -243,7 +243,7 @@ export const getSimplifiedTitle = (title: string): string => {
 - [ ] Created composition implementations for each composition type
 - [ ] Added template to composition index files (lowercase key)
 - [ ] Added template to sport module exports
-- [ ] Updated parent documentation (`templates/.docs/readMe.md` or `variants/readMe.md`)
+- [ ] Updated parent documentation (`templates/.docs/readMe.md` or `variants/.docs/readMe.md`)
 - [ ] Tested in Remotion Studio
 - [ ] Verified template appears in sidebar (Template → Variant → Sport → Dataset)
 - [ ] Tested with all background variants (Solid, Gradient, Image, etc.)
@@ -313,7 +313,7 @@ export const getSimplifiedTitle = (title: string): string => {
 - Composition map key: lowercase (e.g., `yourtemplate`)
 - Background component pattern: `SelectTemplateBackground()`
 - File naming: PascalCase for components, camelCase for utilities
-- Documentation: `readMe.md` in variant root and `components/`
+- Documentation: `.docs/readMe.md` in variant root and `components/.docs/`
 
 ---
 
@@ -323,7 +323,7 @@ export const getSimplifiedTitle = (title: string): string => {
 - `src/templates/base/index.tsx` - Base template implementation
 - `src/templates/variants/basic/` - Minimal example variant
 - `src/templates/registry.tsx` - Template registry
-- `src/components/backgrounds/README.md` - Background system docs
+- `src/components/backgrounds/.docs/README.md` - Background system docs
 - `src/components/backgrounds/index.tsx` - `SelectTemplateBackground()` implementation
 - `src/core/context/ThemeContext.tsx` - Theme context
 - `src/core/context/VideoDataContext.tsx` - Video data context
