@@ -26,6 +26,9 @@ Displays weekly cricket performance highlights featuring:
 
 This folder contains comprehensive documentation for creating and understanding this asset:
 
+### 0. **Skill** (LLM-focused)
+- `.skills/architecture/cricket-team-of-the-week-folder.md` – Implementation guidance for this composition
+
 ### 1. **[readMe.md](./readMe.md)** (LLM-focused)
 - Technical overview of folder structure
 - File descriptions and relationships

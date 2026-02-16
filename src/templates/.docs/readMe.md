@@ -2,6 +2,10 @@
 
 Templates define composable video composition blueprints. Variants extend a base layout and theme to produce different branded looks while sharing a common contract for assets, settings, and animations.
 
+## Skill
+
+- `.skills/architecture/templates-folder-structure.md` – Implementation guidance for templates and variants
+
 ## Files
 
 - `registry.tsx`: registers available templates/variants for use by compositions

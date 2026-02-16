@@ -12,13 +12,13 @@ export const brickworkTheme: TemplateThemeConfig = {
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Roboto-Medium", //"Roboto-Medium",
+      family: "Climate Crisis",
     },
     subtitle: {
-      family: "Roboto-Medium",
+      family: "Climate Crisis",
     },
     copy: {
-      family: "Roboto-Medium", //"Roboto-Light",
+      family: "Roboto",
     },
   },
 

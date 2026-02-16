@@ -1,0 +1,76 @@
+---
+description: 
+alwaysApply: true
+---
+
+## Memory System (Repo Root)
+
+### Trigger
+- If the user message starts with the prefix `LOG:` then you MUST perform the memory workflow below.
+- If the user message does NOT start with `LOG:`, do not write or modify memory files unless the user explicitly asks.
+
+### Memory Files (authoritative locations)
+- `/.memory/state.md` = current priorities, active work, open tasks, blockers.
+- `/.memory/decisions.md` = durable architectural or product decisions with rationale.
+- `/.memory/episodes/YYYY-MM-DD.md` = daily work log (append-only).
+- `/.memory/summaries/week_YYYY-MM-DD.md` and `/.memory/summaries/month_YYYY-MM.md` = compressed rollups (only when explicitly asked).
+
+### Memory Workflow (when triggered)
+1. Determine today's date in Australia/Sydney timezone.
+2. Append to or create:
+   - `/.memory/episodes/YYYY-MM-DD.md`
+3. Update `/.memory/state.md` to reflect:
+   - Current focus
+   - Next actions (checklist)
+   - Blockers or risks (if any)
+4. If a durable decision was made, append it to `/.memory/decisions.md`.
+
+### Episode Format (required)
+
+# Episode — YYYY-MM-DD
+
+## Context
+- What we were trying to do and why
+
+## Work Done
+- Bullet list of concrete actions taken
+
+## Decisions
+- Bullet list (only if any decisions were made)
+
+## Results
+- What changed / outcomes / what was verified
+
+## Next
+- [ ] Actionable next steps
+
+## Links
+- Optional: PRs, tickets, files, URLs (if provided)
+
+### State File Rules
+- Keep `/.memory/state.md` concise (prefer <= 60 lines).
+- Only include current and actionable items.
+- Remove completed tasks or move them into the latest episode.
+
+### Decisions File Rules
+- Only store decisions that should still matter in 1–6 months.
+- Each entry must include:
+  - Date
+  - Decision
+  - Why
+  - Tradeoffs (short)
+- Do NOT log brainstorming or unresolved debates as decisions.
+
+### Safety & Accuracy
+- Do NOT invent details.
+- If uncertain, record it as an open item in `Next`.
+- Never store secrets (API keys, passwords, tokens, private keys).
+
+### Append vs Overwrite
+- Episodes are append-only.
+- `state.md` is rewritten as a current snapshot.
+- `decisions.md` is append-only.
+
+### When NOT to write memory
+- If the user is exploring ideas without committing to work.
+- If the user explicitly says not to log something.

@@ -9,6 +9,10 @@ Results compositions for cricket matches across multiple variants.
 - `types.tsx`: results-specific typing
 - `results.md`: human-facing notes
 
+## Skill
+
+- `.skills/architecture/cricket-results-folder.md` – Implementation guidance for this composition
+
 ## Relations
 
 - Parent folder: [../readMe.md](../readMe.md)

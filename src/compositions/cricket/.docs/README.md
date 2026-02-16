@@ -2,6 +2,10 @@
 
 Cricket feature compositions and modules. Contains multiple composition families (ladder, results, resultSingle, teamRoster, top5, upcoming) along with shared utils and primitives.
 
+## Skill
+
+- `.skills/architecture/cricket-compositions-feature.md` – Feature-level implementation guidance for cricket compositions
+
 ## Files
 
 - `index.tsx`: registers/exports cricket compositions

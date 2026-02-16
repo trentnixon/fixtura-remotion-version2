@@ -9,6 +9,10 @@ Single match result compositions across multiple variants.
 - `types.tsx`: typing for single result compositions
 - `resultSingle.md`: human-facing notes
 
+## Skill
+
+- `.skills/architecture/cricket-result-single-folder.md` – Implementation guidance for this composition
+
 ## Relations
 
 - Parent folder: [../readMe.md](../readMe.md)

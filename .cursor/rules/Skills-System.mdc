@@ -1,0 +1,76 @@
+---
+description: 
+alwaysApply: true
+---
+
+## Skills System (Repo Root)
+
+### Trigger
+- If the user message starts with `SKILL:` then you MUST follow the workflow below.
+- If the user message does NOT start with `SKILL:`, do not create or modify `/.skills/*` unless the user explicitly asks.
+
+### Authority (user-defined only)
+- Skills are defined by the user.
+- You may propose a draft skill file, but you MUST NOT save it to `/.skills/*` unless the user explicitly says to create it (e.g. “create that skill”, “save it”, “write it to /.skills”, “commit it”).
+
+### Skill Discovery Inputs
+When drafting a skill, you MUST use these repo files as primary context:
+- `README.md`
+- `Roadmap.md` (or `ROADMAP.md` / `DevelopmentRoadMap.md` if present)
+- Any feature-specific README/roadmap files inside the relevant feature directory (if they exist)
+
+If these files are missing, proceed with a generic draft and clearly mark assumptions.
+
+### Skill Workflow (when triggered)
+1. Identify the relevant feature area from the `SKILL:` message.
+2. Read `README.md` and the roadmap file(s) listed above.
+3. Extract:
+   - Terminology used in the repo
+   - Existing patterns/conventions relevant to the feature
+   - Any constraints or non-goals
+4. Draft a single skill file in Markdown (do not write it yet unless explicitly requested).
+5. Return:
+   - Proposed file path under `/.skills/` (choose: `/.skills/architecture`, `/.skills/patterns`, or `/.skills/workflows`)
+   - The full contents of the proposed `.md` skill file
+   - A short checklist of what repo-specific assumptions were made (if any)
+
+### Skill File Format (required)
+Each skill MUST follow this structure:
+
+# Skill: <Name>
+
+## Purpose
+<1–3 lines>
+
+## Applies To
+- <feature/module/area>
+
+## Inputs
+- <required inputs or prerequisites>
+
+## Process
+1. <step>
+2. <step>
+
+## Output
+- <what should exist after running the pattern/workflow>
+
+## Rules
+- <hard constraints>
+- <naming/structure requirements>
+
+## References
+- README: <file path>
+- Roadmap: <file path>
+- Related: <other skills or docs>
+
+### Naming & Placement
+- Use kebab-case filenames: `/.skills/<category>/<skill-name>.md`
+- Categories:
+  - `architecture` (system-wide structural rules)
+  - `patterns` (reusable conventions)
+  - `workflows` (step-by-step processes)
+
+### Safety
+- Do not invent repo-specific conventions: only use what is found in README/Roadmap or what the user states.
+- Never include secrets in skills.

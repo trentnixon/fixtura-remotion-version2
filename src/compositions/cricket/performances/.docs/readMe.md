@@ -14,6 +14,10 @@ Handles cricket player performances display with multi-screen transitions. Based
 - `utils/screenCalculator.ts`: Pagination logic (items per screen, screen calculation)
 - `.docs/`: Documentation files (readMe, DevelopmentRoadMap, Tickets, TEMPLATE_IMPLEMENTATION_GUIDE)
 
+## Skill
+
+- `.skills/architecture/cricket-performances-folder.md` – Implementation guidance for this composition
+
 ## Relations
 
 - Parent folder: [../readMe.md](../readMe.md)

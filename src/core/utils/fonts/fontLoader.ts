@@ -106,6 +106,10 @@ export const fontPathMap: Record<string, string> = {
 
   // ===== Google Fonts (Downloaded and Stored Locally) =====
   "Rubik Dirt": "fonts/Rubik_Dirt/RubikDirt-Regular.ttf",
+
+  // Climate Crisis (Variable font - YEAR axis)
+  "Climate Crisis":
+    "fonts/Climate_Crisis/ClimateCrisis-Regular-VariableFont_YEAR.ttf",
 };
 
 // System fonts that don't need to be loaded
@@ -151,6 +155,9 @@ const fontNameVariants: Record<string, string> = {
   RubikDirt: "Rubik Dirt",
   unbounded: "Unbounded",
   UNBOUNDED: "Unbounded",
+  "climate crisis": "Climate Crisis",
+  "CLIMATE CRISIS": "Climate Crisis",
+  ClimateCrisis: "Climate Crisis",
 };
 
 // Reverse lookup map for debugging (font string value to fontPathMap key)

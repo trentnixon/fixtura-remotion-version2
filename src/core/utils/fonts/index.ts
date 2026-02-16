@@ -14,6 +14,7 @@ const displayFonts = {
   anton: "Anton",
   bebas: "Bebas Neue",
   rubikDirt: "Rubik Dirt", // Google Font (downloaded and stored locally)
+  climateCrisis: "Climate Crisis", // Variable font (YEAR axis)
 };
 
 // Text fonts (for body text, paragraphs, and general reading)

@@ -8,6 +8,10 @@ Team roster compositions showing players, headers, sponsors, and metadata across
 - `basic.tsx`, `classic.tsx`, `classicTwoColumn.tsx`, `sixersThunder.tsx`: variant entries
 - `types.ts`: typing for team roster compositions
 
+## Skill
+
+- `.skills/architecture/cricket-team-roster-folder.md` – Implementation guidance for this composition
+
 ## Relations
 
 - Parent folder: [../readMe.md](../readMe.md)
