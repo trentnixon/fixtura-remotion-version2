@@ -53,6 +53,15 @@ export const fontPathMap: Record<string, string> = {
   "Tungsten-Bold": "fonts/Tungsten/Tungsten-Semibold.otf", // Using Semibold as Bold
   "Tungsten-Light": "fonts/Tungsten/Tungsten-Light.otf",
   Druk: "fonts/Druk/Druk_Medium.otf",
+  Unbounded: "fonts/Unbounded/Unbounded-VariableFont_wght.ttf",
+  "Unbounded-ExtraLight": "fonts/Unbounded/static/Unbounded-ExtraLight.ttf",
+  "Unbounded-Light": "fonts/Unbounded/static/Unbounded-Light.ttf",
+  "Unbounded-Regular": "fonts/Unbounded/static/Unbounded-Regular.ttf",
+  "Unbounded-Medium": "fonts/Unbounded/static/Unbounded-Medium.ttf",
+  "Unbounded-SemiBold": "fonts/Unbounded/static/Unbounded-SemiBold.ttf",
+  "Unbounded-Bold": "fonts/Unbounded/static/Unbounded-Bold.ttf",
+  "Unbounded-ExtraBold": "fonts/Unbounded/static/Unbounded-ExtraBold.ttf",
+  "Unbounded-Black": "fonts/Unbounded/static/Unbounded-Black.ttf",
   "Monument Extended": "fonts/MonumentExtended/MonumentExtended-Regular.otf",
   "Monument Extended-Ultrabold":
     "fonts/MonumentExtended/MonumentExtended-Ultrabold.otf",
@@ -140,6 +149,8 @@ const fontNameVariants: Record<string, string> = {
   "rubik dirt": "Rubik Dirt",
   "RUBIK DIRT": "Rubik Dirt",
   RubikDirt: "Rubik Dirt",
+  unbounded: "Unbounded",
+  UNBOUNDED: "Unbounded",
 };
 
 // Reverse lookup map for debugging (font string value to fontPathMap key)

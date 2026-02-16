@@ -41,10 +41,10 @@ export const MudgeerabaMainHeader = () => {
       alignment="center"
       Logo={null}
       Title={
-        <div className="mt-8">
+        <div className="mt-8 mb-4">
           <AnimatedText
             textAlign="center"
-            type="subtitle"
+            type="titleSmall"
             variant="onContainerTitle"
             letterAnimation="none"
             animation={TextAnimations.title}

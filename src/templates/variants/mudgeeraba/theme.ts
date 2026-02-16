@@ -12,10 +12,10 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Rubik Dirt",
+      family: "Unbounded",
     },
     subtitle: {
-      family: "Rubik Dirt",
+      family: "Unbounded",
     },
     copy: {
       family: "Heebo",
@@ -28,19 +28,19 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
     // Title component styles
     title: {
       className:
-        "text-9xl font-normal tracking-tight leading-none text-center m-0 px-4",
+        "text-[10em] uppercase font-black tracking-tight leading-none text-center m-0 px-4",
     },
 
     // Title small component styles
     titleSmall: {
       className:
-        "text-6xl font-normal tracking-tight leading-none text-center m-0 px-4",
+        "text-[4em] uppercase font-black tracking-tight leading-none text-center m-0 px-4",
     },
 
     // Subtitle component styles
     subtitle: {
       className:
-        "text-5xl font-normal tracking-normal leading-none text-center m-0 px-4",
+        "text-3xl uppercase font-semibold tracking-normal leading-none text-center m-0 px-4",
     },
 
     // Body text component styles

@@ -10,6 +10,7 @@ const displayFonts = {
   tungsten: "Tungsten",
   druk: "Druk",
   monumentExtended: "Monument Extended",
+  unbounded: "Unbounded",
   anton: "Anton",
   bebas: "Bebas Neue",
   rubikDirt: "Rubik Dirt", // Google Font (downloaded and stored locally)

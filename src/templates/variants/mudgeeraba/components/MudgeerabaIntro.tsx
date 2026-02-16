@@ -54,7 +54,7 @@ export const MudgeerabaIntro: React.FC = () => {
       Name={
         <div className="overflow-hidden">
           <AnimatedText
-            type="subtitle"
+            type="titleSmall"
             textAlign="center"
             variant="onContainerTitle"
             letterAnimation="word"
