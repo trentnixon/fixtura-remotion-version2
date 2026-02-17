@@ -16,7 +16,14 @@ Brickwork compositions complete (Results, Ladder, Upcoming, Top 5, Single Result
 
 ## Completed (2025-02-17)
 
-- Brickwork–Graphics–CricketResults: TeamsSectionLogoAndScore-BrickWork, MatchHeaderBrickWork, grade vs ground, copy font, scores styling
-- Brickwork–Graphics–CricketLadder: row-BrickWork, headerBrickWork, BalancedLadderRowBrickWork
-- Brickwork–Graphics–CricketUpcoming: game-card-brickWork (20/60/20 layout, cover logos, onContainerCopyNoBg)
-- Brickwork–Graphics–CricketTeamRoster: display-BrickWork, playerList-brickWork, compact logos, 60/40 split, stacked metadata at bottom, metadata font text-[26px], LargeTeamHeader compact prop
+- Brickwork compositions (Results, Ladder, Upcoming, Top 5, Single Result, Team Roster); font integration (Dhurjati, Allerta Stencil)
+- AGENT:CREATE: `src/templates/.llm/agent.md` — LLM bootstrap pack for templates feature
+- AGENT:CREATE: `src/compositions/cricket/.llm/agent.md` — LLM bootstrap pack for cricket compositions feature
+- AGENT:CREATE: `src/components/animations/.llm/agent.md` — LLM bootstrap pack for animations feature
+- AGENT:CREATE: `src/components/backgrounds/.llm/agent.md` — LLM bootstrap pack for backgrounds feature
+- AGENT:CREATE: `src/components/easing/.llm/agent.md` — LLM bootstrap pack for easing feature
+- AGENT:CREATE: `src/components/images/.llm/agent.md` — LLM bootstrap pack for images feature
+- AGENT:CREATE: `src/components/layout/.llm/agent.md` — LLM bootstrap pack for layout feature
+- AGENT:CREATE: `src/components/transitions/.llm/agent.md` — LLM bootstrap pack for transitions feature
+- AGENT:CREATE: `src/components/typography/.llm/agent.md` — LLM bootstrap pack for typography feature
+- AGENT:CREATE: `src/components/containers/.llm/agent.md` — LLM bootstrap pack for containers feature
