@@ -27,3 +27,4 @@ Brickwork compositions complete (Results, Ladder, Upcoming, Top 5, Single Result
 - AGENT:CREATE: `src/components/transitions/.llm/agent.md` — LLM bootstrap pack for transitions feature
 - AGENT:CREATE: `src/components/typography/.llm/agent.md` — LLM bootstrap pack for typography feature
 - AGENT:CREATE: `src/components/containers/.llm/agent.md` — LLM bootstrap pack for containers feature
+- AGENT:CREATE: `src/core/utils/colorSystem/.llm/agent.md`, `createThemeUtils/.llm/agent.md`, `designPalettes/.llm/agent.md`, `fonts/.llm/agent.md`, `utils/.llm/agent.md`, `context/.llm/agent.md`
