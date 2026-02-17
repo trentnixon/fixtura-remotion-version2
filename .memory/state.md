@@ -2,7 +2,7 @@
 
 ## Current Focus
 
-Brickwork Cricket Results and Ladder updates completed. Utils cleanup (TKT-2025-009 et al.) remains pending.
+Brickwork compositions complete (Results, Ladder, Upcoming, Top 5, Single Result, Team Roster). Utils cleanup (TKT-2025-009 et al.) remains pending.
 
 ## Next Actions
 
@@ -17,5 +17,6 @@ Brickwork Cricket Results and Ladder updates completed. Utils cleanup (TKT-2025-
 ## Completed (2025-02-17)
 
 - Brickwork–Graphics–CricketResults: TeamsSectionLogoAndScore-BrickWork, MatchHeaderBrickWork, grade vs ground, copy font, scores styling
-- Brickwork–Graphics–CricketLadder: row-BrickWork, headerBrickWork, BalancedLadderRowBrickWork (full-height logos, flush stats bg, aligned header, stronger row backgrounds)
-- Brickwork–Graphics–CricketUpcoming: game-card-brickWork (20/60/20 layout, cover logos 140px, onContainerCopyNoBg, no VS), TeamNameWrapped variant prop
+- Brickwork–Graphics–CricketLadder: row-BrickWork, headerBrickWork, BalancedLadderRowBrickWork
+- Brickwork–Graphics–CricketUpcoming: game-card-brickWork (20/60/20 layout, cover logos, onContainerCopyNoBg)
+- Brickwork–Graphics–CricketTeamRoster: display-BrickWork, playerList-brickWork, compact logos, 60/40 split, stacked metadata at bottom, metadata font text-[26px], LargeTeamHeader compact prop

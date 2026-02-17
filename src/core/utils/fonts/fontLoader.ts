@@ -110,6 +110,13 @@ export const fontPathMap: Record<string, string> = {
   // Climate Crisis (Variable font - YEAR axis)
   "Climate Crisis":
     "fonts/Climate_Crisis/ClimateCrisis-Regular-VariableFont_YEAR.ttf",
+
+  // Dhurjati (Google Font - downloaded and stored locally)
+  Dhurjati: "fonts/Dhurjati/Dhurjati-Regular.ttf",
+
+  // Allerta Stencil (Google Font - downloaded and stored locally)
+  "Allerta Stencil":
+    "fonts/Allerta_Stencil/AllertaStencil-Regular.ttf",
 };
 
 // System fonts that don't need to be loaded
@@ -158,6 +165,11 @@ const fontNameVariants: Record<string, string> = {
   "climate crisis": "Climate Crisis",
   "CLIMATE CRISIS": "Climate Crisis",
   ClimateCrisis: "Climate Crisis",
+  dhurjati: "Dhurjati",
+  DHURJATI: "Dhurjati",
+  "allerta stencil": "Allerta Stencil",
+  "ALLERTA STENCIL": "Allerta Stencil",
+  AllertaStencil: "Allerta Stencil",
 };
 
 // Reverse lookup map for debugging (font string value to fontPathMap key)

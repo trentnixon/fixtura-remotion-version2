@@ -12,10 +12,10 @@ export const brickworkTheme: TemplateThemeConfig = {
   // ===== FONT CONFIGURATION =====
   fonts: {
     title: {
-      family: "Climate Crisis",
+      family: "Allerta Stencil",
     },
     subtitle: {
-      family: "Climate Crisis",
+      family: "Allerta Stencil",
     },
     copy: {
       family: "Roboto",
@@ -28,13 +28,13 @@ export const brickworkTheme: TemplateThemeConfig = {
     // Title component styles
     title: {
       className:
-        "text-9xl font-black tracking-tight leading-none text-center m-0 px-4",
+        "text-[12em] font-black tracking-normal leading-[0.95em] text-center m-0 px-4",
     },
 
     // Subtitle component styles
     subtitle: {
       className:
-        "text-7xl font-semibold tracking-normal leading-none text-center m-0 px-4",
+        "text-7xl font-semibold tracking-normal leading-[0.98em] text-center m-0 px-4",
     },
 
     // Body text component styles
@@ -84,7 +84,7 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-2xl font-normal  tracking-wide leading-none",
     },
     ResultScore: {
-      className: "text-5xl font-thin  tracking-normal leading-tight ",
+      className: "text-6xl font-thin  tracking-normal leading-tight ",
     },
     ResultScoreFirstInnings: {
       className: "text-3xl font-bold  tracking-normal leading-tight ",

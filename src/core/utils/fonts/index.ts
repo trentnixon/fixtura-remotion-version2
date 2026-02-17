@@ -15,6 +15,8 @@ const displayFonts = {
   bebas: "Bebas Neue",
   rubikDirt: "Rubik Dirt", // Google Font (downloaded and stored locally)
   climateCrisis: "Climate Crisis", // Variable font (YEAR axis)
+  dhurjati: "Dhurjati", // Google Font (downloaded and stored locally)
+  allertaStencil: "Allerta Stencil", // Google Font (downloaded and stored locally)
 };
 
 // Text fonts (for body text, paragraphs, and general reading)
