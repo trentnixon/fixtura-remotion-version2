@@ -57,6 +57,7 @@ import {
   Classic as rosterClassic,
   ClassicTwoColumn as rosterClassicTwoColumn,
   mudgeeraba as rosterMudgeeraba,
+  brickwork as rosterBrickwork,
 } from "./teamRoster";
 import {
   basic as performancesBasic,
@@ -154,7 +155,7 @@ export const CricketResultSingle = {
 // Add CricketRoster export to match compositionId in test data
 export const CricketRoster = {
   basic: rosterBasic,
-  brickwork: rosterBasic,
+  brickwork: rosterBrickwork,
   sixers: rosterSixersThunder,
   thunder: rosterSixersThunder,
   classic: rosterClassic,

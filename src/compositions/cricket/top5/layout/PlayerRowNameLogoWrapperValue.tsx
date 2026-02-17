@@ -14,6 +14,7 @@ import {
   SMALL_LOGO_SIZE,
   PLAYER_NAME_DELAY_OFFSET,
   TEAM_NAME_DELAY_OFFSET,
+  LOGO_DELAY_OFFSET,
   STAT_DELAY_OFFSET,
   STAT_SUFFIX_DELAY_OFFSET,
 } from "./_utils/constants";
@@ -63,11 +64,10 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutPropsWithRes
 
   return (
     <div
-      className="grid grid-cols-12 p-2 items-center h-full overflow-hidden rounded-none"
+      className="grid grid-cols-12 items-center h-full overflow-hidden rounded-none"
       style={{
         height: `${rowHeight}px`,
         background: bgColor,
-        borderBottom: `2px solid ${selectedPalette.container.primary}`,
       }}
     >
       {/* Name & Team (col-span-4) */}

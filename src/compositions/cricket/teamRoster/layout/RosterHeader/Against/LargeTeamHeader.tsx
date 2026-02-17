@@ -21,6 +21,7 @@ export const LargeTeamHeader: React.FC<AccountTeamProps> = ({
   variant = DEFAULT_TEAM_HEADER_VARIANT,
   logoSize = DEFAULT_LARGE_TEAM_LOGO_SIZE,
   backgroundColor = "none",
+  compact = false,
 }) => {
   // Get against team details (this component shows against team as the main team)
   const { against } = getTeamPerspective(roster);
@@ -32,7 +33,7 @@ export const LargeTeamHeader: React.FC<AccountTeamProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className="w-full flex justify-center items-center p-2"
+      className={`w-full flex justify-center items-center ${compact ? "" : "p-2"}`}
       backgroundColor="none"
       style={{
         background: shouldApplyBackgroundColor(backgroundColor)
@@ -44,7 +45,7 @@ export const LargeTeamHeader: React.FC<AccountTeamProps> = ({
     >
       <div className="flex flex-col items-center">
         {/* Team logo */}
-        <div className={`${logoSizeClass} my-2 rounded-full p-4`}>
+        <div className={`${logoSizeClass} rounded-full ${compact ? "" : "my-2 p-4"}`}>
           <TeamLogo
             logo={{
               url: teamLogoUrl,

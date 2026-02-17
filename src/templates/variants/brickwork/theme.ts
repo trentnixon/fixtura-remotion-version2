@@ -84,7 +84,7 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-2xl font-normal  tracking-wide leading-none",
     },
     ResultScore: {
-      className: "text-7xl font-bold  tracking-normal leading-tight ",
+      className: "text-5xl font-thin  tracking-normal leading-tight ",
     },
     ResultScoreFirstInnings: {
       className: "text-3xl font-bold  tracking-normal leading-tight ",

@@ -1,6 +1,6 @@
 import React from "react";
-import { TableHeaderWrapped } from "../../modules/TableHeader/header";
-import { StandardRowWrapped } from "../TeamRows/StandardRow";
+import TableHeaderBrickWork from "../../modules/TableHeader/headerBrickWork";
+import RowBrickWork from "../TeamRows/row-BrickWork";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { SponsorFooter } from "../../../sponsorFooter";
@@ -14,7 +14,7 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { League, gradeName, bias, assignSponsors } = ladder;
-  const { layout, selectedPalette } = useThemeContext();
+  const { layout } = useThemeContext();
   const { heights } = layout;
   const { headerHeight, rowHeight } = calculateRowDimensions(
     heights.asset,
@@ -26,20 +26,17 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
       {/* <LadderHeader title={name} /> */}
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-8 p-4 rounded-none overflow-hidden"
-        backgroundColor={undefined}
-        style={{
-          background: selectedPalette.container.backgroundTransparent.medium,
-        }}
+        className="flex-1 flex flex-col mx-8 rounded-none overflow-hidden"
+        backgroundColor="none"
         animation={containerAnimation.containerIn}
         exitAnimation={containerAnimation.containerOut}
       >
         <div>
-          <TableHeaderWrapped title={gradeName} headerHeight={headerHeight} />
+          <TableHeaderBrickWork title={gradeName} headerHeight={headerHeight} />
 
           <div className="flex-1 overflow-hidden">
             {League.map((team, index) => (
-              <StandardRowWrapped
+              <RowBrickWork
                 key={team.position}
                 team={team}
                 index={index}

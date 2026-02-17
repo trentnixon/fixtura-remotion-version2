@@ -1,6 +1,6 @@
 import React from "react";
-import MatchHeader from "../Sections/MatchHeader/MatchHeader";
-import { TeamsSectionLogoAndScore } from "../Sections/TeamsSection/index";
+import MatchHeaderBrickWork from "../Sections/MatchHeader/MatchHeaderBrickWork";
+import { TeamsSectionLogoAndScoreBrickWork } from "../Sections/TeamsSection/index";
 import { ResultStatementShort } from "../Sections/ResultStatement/index";
 import MatchStatus from "../Sections/MatchStatus/MatchStatus";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -23,28 +23,28 @@ const MatchCardBrickWorkClubOnly: React.FC<MatchCardProps> = ({
 
   return (
     <div className="rounded-none w-auto mx-8 overflow-hidden h-full">
-      {/* Section 3: Match info footer */}
-      <MatchHeader
-        type={match.type}
-        round={match.round}
-        ground={match.ground}
-        height={headerHeight}
-        delay={headerDelay}
-        backgroundColor={"transparent"}
-      />
       {/* Section 1: Team scores and names */}
-      <TeamsSectionLogoAndScore
+      <TeamsSectionLogoAndScoreBrickWork
         type={match.type}
         homeTeam={match.homeTeam}
         awayTeam={match.awayTeam}
         homeTeamLogo={match.teamHomeLogo}
         awayTeamLogo={match.teamAwayLogo}
         delay={baseDelay}
+        height={teamsHeight}
+        backgroundColor={selectedPalette.container.backgroundTransparent.low}
         outerContainer={{
-          backgroundColor: selectedPalette.container.backgroundTransparent.low,
           height: `${teamsHeight}px`,
-          borderBottom: `2px solid ${selectedPalette.container.primary}`,
         }}
+      />
+
+      <MatchHeaderBrickWork
+        type={match.type}
+        round={match.round}
+        grade={match.gradeName}
+        height={headerHeight}
+        delay={headerDelay}
+        backgroundColor="transparent"
       />
 
       {match.status === "Abandoned" && (

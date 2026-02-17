@@ -12,4 +12,6 @@ export interface TeamNameWrappedProps {
   delay: number;
   outerStyles: object;
   innerStyles: object;
+  /** Text color variant (e.g. onContainerCopyNoBg) */
+  variant?: string;
 }

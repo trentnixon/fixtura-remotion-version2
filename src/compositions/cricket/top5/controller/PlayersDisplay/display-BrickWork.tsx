@@ -33,7 +33,7 @@ const PlayersDisplayBrickWork: React.FC<PlayersDisplayProps> = ({
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 grid grid-cols-1 gap-2">
+        <div className="flex-1 grid grid-cols-1 gap-1">
           {players.map((player, index) => (
             <PlayerRowBrickWork
               key={player.name}

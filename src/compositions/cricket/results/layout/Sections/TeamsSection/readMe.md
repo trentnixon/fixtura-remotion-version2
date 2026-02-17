@@ -8,6 +8,7 @@ Team section components for results layouts. Displays team information including
 - `TeamsSectionLogoAbove.tsx`: Logo above team name layout
 - `TeamsSectionLogoBelow.tsx`: Logo below team name layout
 - `TeamsSectionLogoAndScore.tsx`: Logo and score combined layout
+- `TeamsSectionLogoAndScore-BrickWork.tsx`: Brickwork-template-specific logo and score layout
 - `TeamsSectionScoreOverTeamNameOnly.tsx`: Score over team name only layout
 - `LogoWithScoreOverName.tsx`: Logo with score over name layout
 - `ScoreOverNameWithLogo.tsx`: Score over name with logo layout

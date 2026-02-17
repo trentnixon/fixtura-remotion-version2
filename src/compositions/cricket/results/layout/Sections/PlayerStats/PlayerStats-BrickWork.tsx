@@ -5,7 +5,7 @@ import { useAnimationContext } from "../../../../../../core/context/AnimationCon
 import { computePartialTwoDayVisibility } from "./_utils/visibility";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
-import { PlayerStatsProps, StatItemProps, StatSectionProps, TeamStatsProps, PlayerStat } from "./_types/PlayerStatsProps";
+import { PlayerStatsProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
 import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -57,7 +57,7 @@ const StatSection: React.FC<StatSectionProps> = ({
   if (players.length === 0) return null;
 
   return (
-    <div className={`${isBatting ? "mb-4" : "mb-1"} rounded-none  `}>
+    <div className={`flex flex-col gap-1 ${isBatting ? "mb-4" : "mb-1"} rounded-none`}>
       {players.map((player, i) => (
         <div key={`${isBatting ? "bat" : "bowl"}-${i}`}>
           <StatItem
@@ -96,7 +96,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
     : [];
 
   return (
-    <div className={`flex-1 px-0 py-0 flex flex-col  ${className}`}>
+    <div className={`flex-1 px-0 py-0 flex flex-col gap-1 ${className}`}>
       {showBatting && (
         <StatSection
           players={batters}
@@ -105,7 +105,6 @@ const TeamStats: React.FC<TeamStatsProps> = ({
           outerContainer={{
             backgroundColor:
               selectedPalette.container.backgroundTransparent.strong,
-            borderBottom: `2px solid ${selectedPalette.container.secondary}`,
           }}
           innerContainer={{
             backgroundColor:
@@ -123,7 +122,6 @@ const TeamStats: React.FC<TeamStatsProps> = ({
           outerContainer={{
             backgroundColor:
               selectedPalette.container.backgroundTransparent.strong,
-            borderBottom: `2px solid ${selectedPalette.container.secondary}`,
           }}
           innerContainer={{
             backgroundColor:

@@ -14,8 +14,10 @@ export const ResultScore = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
+  fontFamily: fontFamilyOverride,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
-  const fontFamily = useFontFamily();
+  const fontFamilyFromTheme = useFontFamily();
+  const fontFamily = fontFamilyOverride ?? fontFamilyFromTheme;
 
   if (value === "Yet to Bat") {
     return (
@@ -51,8 +53,10 @@ export const ResultScoreFirstInnings = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
+  fontFamily: fontFamilyOverride,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
-  const fontFamily = useFontFamily();
+  const fontFamilyFromTheme = useFontFamily();
+  const fontFamily = fontFamilyOverride ?? fontFamilyFromTheme;
 
   if (value === "1") return null;
 

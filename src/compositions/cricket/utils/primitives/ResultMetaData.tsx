@@ -14,8 +14,10 @@ export const ResultMetaData = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
+  fontFamily: fontFamilyOverride,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
-  const fontFamily = useFontFamily();
+  const fontFamilyFromTheme = useFontFamily();
+  const fontFamily = fontFamilyOverride ?? fontFamilyFromTheme;
 
   return (
     <AnimatedText

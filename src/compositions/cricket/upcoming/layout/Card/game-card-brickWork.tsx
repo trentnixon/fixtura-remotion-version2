@@ -13,8 +13,6 @@ import {
 } from "./_utils/calculations";
 import TeamLogo from "../../../utils/primitives/TeamLogo";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
-import { LOGO_SIZES } from "../Logos/variations/_utils/helpers";
-
 export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
@@ -23,7 +21,6 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
 
   const ContainerAnimations = animations.container;
 
-  // Animation delay based on card index
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
@@ -31,82 +28,75 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
     <div className="overflow-hidden my-2">
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className={`${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
         exitAnimation={ContainerAnimations.main.itemContainer.containerOut}
         exitFrame={animationOutFrame}
       >
-        <div className="rounded-none w-full overflow-hidden">
+        <div className={`${layout.borderRadius.container} w-full overflow-hidden`}>
           {/* Grade Section - Top */}
           <Ground
             ground={game.gradeName}
             delay={delay}
             backgroundColor="transparent"
           />
+
           {/* Team Names Section */}
           <TeamNameWrapped
             teamName={game.teamHome}
             delay={delay}
+            variant="onContainerCopyNoBg"
             outerStyles={{
-              background: selectedPalette.container.backgroundTransparent.low,
-              borderBottom: `3px solid ${selectedPalette.container.primary}`,
+              background: selectedPalette.container.backgroundTransparent.medium,
             }}
             innerStyles={{
-              background:
-                selectedPalette.container.backgroundTransparent.medium,
+              background: selectedPalette.container.backgroundTransparent.medium,
             }}
           />
 
-          {/* Teams Section - Middle */}
+          {/* Teams Section - Logos + Metadata */}
           <AnimatedContainer
             type="full"
-            className={`flex items-center justify-center w-full bg-black/20 p-0 ${layout.borderRadius.container}`}
+            className={`flex items-center justify-center w-full gap-2 p-0 ${layout.borderRadius.container}`}
             animation={ContainerAnimations.main.itemContainerSecondary.containerIn}
             animationDelay={delay + 10}
             style={{
-              background: selectedPalette.container.backgroundTransparent.subtle,
+              background: selectedPalette.container.backgroundTransparent.medium,
             }}
           >
-            {/* Home Team Logo */}
-            <div className="flex-1 flex flex-col items-center">
-              <div
-                className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
-              >
+            {/* Home Team Logo - 20% */}
+            <div
+              className="overflow-hidden"
+              style={{ flex: "2 0 0", height: 140 }}
+            >
+              <div className="w-full h-full">
                 <TeamLogo
                   logo={game.teamHomeLogo}
                   teamName={game.teamHome}
                   delay={delay + 15}
-                  size={LOGO_SIZES.large.size}
+                  fit="cover"
+                  imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
             </div>
 
-            {/* Middle Section: VS, Ground, Date, Time */}
-            <div className="mx-6 flex flex-col items-center">
-              {/* VS */}
-              <MetadataMedium
-                value="VS"
-                animation={{
-                  ...animations.text.main.copyIn,
-                  delay: delay + 20,
-                }}
-                className="text-center mb-1"
-                variant="onContainerCopy"
-              />
-              {/* Ground */}
+            {/* Middle: Ground, Date, Time - 60% */}
+            <div
+              className="flex flex-col items-center justify-center gap-1 px-2 min-w-0"
+              style={{ flex: "6 0 0" }}
+            >
               <MetadataMedium
                 value={game.ground}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 20,
                 }}
-                className="text-center my-0"
-                variant="onContainerCopy"
+                className="text-center"
+                variant="onContainerCopyNoBg"
               />
-              {/* Date and Time */}
-              <div className="flex items-center gap-2 mt-1">
+              <div className="flex items-center gap-2">
                 <MetadataMedium
                   value={game.date}
                   animation={{
@@ -114,7 +104,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                     delay: delay + 20,
                   }}
                   className="text-center"
-                  variant="onContainerCopy"
+                  variant="onContainerCopyNoBg"
                 />
                 <MetadataMedium
                   value={game.time}
@@ -123,34 +113,37 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                     delay: delay + 20,
                   }}
                   className="text-center"
-                  variant="onContainerCopy"
+                  variant="onContainerCopyNoBg"
                 />
               </div>
             </div>
 
-            {/* Away Team Logo */}
-            <div className="flex-1 flex flex-col items-center">
-              <div
-                className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
-              >
+            {/* Away Team Logo - 20% */}
+            <div
+              className="overflow-hidden"
+              style={{ flex: "2 0 0", height: 140 }}
+            >
+              <div className="w-full h-full">
                 <TeamLogo
                   logo={game.teamAwayLogo}
                   teamName={game.teamAway}
                   delay={delay + 20}
-                  size={LOGO_SIZES.large.size}
+                  fit="cover"
+                  imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
             </div>
           </AnimatedContainer>
+
           <TeamNameWrapped
             teamName={game.teamAway}
             delay={delay + 10}
+            variant="onContainerCopyNoBg"
             outerStyles={{
-              background: selectedPalette.container.backgroundTransparent.low,
-              borderBottom: `3px solid ${selectedPalette.container.secondary}`,
+              background: selectedPalette.container.backgroundTransparent.medium,
             }}
             innerStyles={{
-              background: selectedPalette.container.backgroundTransparent.low,
+              background: selectedPalette.container.backgroundTransparent.medium,
             }}
           />
         </div>

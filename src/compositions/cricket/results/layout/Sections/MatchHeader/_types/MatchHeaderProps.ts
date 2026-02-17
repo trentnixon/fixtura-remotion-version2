@@ -2,7 +2,8 @@ export interface MatchHeaderProps {
   date?: string;
   type?: string;
   round: string;
-  ground: string;
+  ground?: string;
+  grade?: string;
   height: number;
   delay: number;
   backgroundColor: string;

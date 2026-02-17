@@ -20,6 +20,7 @@ export interface AnimatedTextPrimitivePropsRequiredAnimation {
   animation: AnimationConfig;
   className?: string;
   variant?: string | ColorVariant;
+  fontFamily?: string;
 }
 
 /**

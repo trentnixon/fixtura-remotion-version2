@@ -9,4 +9,6 @@ export interface AccountTeamProps {
   variant?: ColorVariant;
   logoSize?: string;
   backgroundColor?: string;
+  /** When true, removes margin and padding from container and logo wrapper */
+  compact?: boolean;
 }

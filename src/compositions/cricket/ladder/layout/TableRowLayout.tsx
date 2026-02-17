@@ -263,6 +263,82 @@ export const CardLadderRow: React.FC<BaseLayoutProps> = ({
   );
 };
 
+// Brickwork layout – full-height logo, no row border
+export const BalancedLadderRowBrickWork: React.FC<BaseLayoutProps> = ({
+  team,
+  delay,
+  bgColorClass,
+  LadderRowHeight,
+}) => {
+  const { selectedPalette, layout } = useThemeContext();
+  const logoSize = LadderRowHeight;
+
+  return (
+    <div
+      className={`flex items-center ${layout.borderRadius.container} mb-1 ${bgColorClass}`}
+      style={{
+        height: `${LadderRowHeight}px`,
+        background: bgColorClass,
+      }}
+    >
+      <div
+        className="flex items-center justify-between pr-2"
+        style={{ width: "70%" }}
+      >
+        <div className="pl-2">
+          <LadderTeamName value={team.teamName} delay={delay} />
+        </div>
+        <div
+          className="overflow-hidden flex flex-shrink-0 items-center justify-center"
+          style={{ width: logoSize, height: logoSize }}
+        >
+          {team.clubLogo || team.playHQLogo ? (
+            <div className={`w-full h-full ${layout.borderRadius.container}`}>
+              <TeamLogo
+                logo={team.clubLogo || team.playHQLogo}
+                teamName={team.teamName}
+                delay={delay}
+                imgStyle={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          ) : (
+            <div
+              className={`w-8 h-8 bg-gray-300 ${layout.borderRadius.container}`}
+            />
+          )}
+        </div>
+      </div>
+
+      <div
+        className="flex flex-1 justify-evenly self-stretch items-center"
+        style={{
+          background: selectedPalette.container.backgroundTransparent.medium,
+        }}
+      >
+        <div className="w-10 mx-px text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.P || 0} delay={delay} />
+        </div>
+        <div className="w-10 mx-px text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.W || 0} delay={delay} />
+        </div>
+        <div className="w-10 mx-px text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.L || 0} delay={delay} />
+        </div>
+        <div className="w-10 mx-px text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.BYE || 0} delay={delay} />
+        </div>
+        <div className="w-20 mx-px text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.PTS || 0} delay={delay} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Centered logo layout
 export const CenteredLogoLadderRow: React.FC<BaseLayoutProps> = ({
   team,

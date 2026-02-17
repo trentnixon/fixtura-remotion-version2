@@ -26,8 +26,6 @@ export const ResultStatementBrickWork: React.FC<ResultStatementBrickWorkProps> =
                 className={`w-full flex flex-col items-center px-16 py-4 my-4 justify-center gap-2 rounded-none ${layout.borderRadius.container}`}
                 style={{
                     backgroundColor: backgroundColor,
-                    borderBottom: `5px solid ${selectedPalette.container.secondary}`,
-
                 }}
             >
                 {/* Home Team */}
@@ -63,7 +61,6 @@ export const ResultStatementBrickWork: React.FC<ResultStatementBrickWorkProps> =
                 className={`w-full flex justify-center items-center mb-4 rounded-none ${layout.borderRadius.container}`}
                 style={{
                     backgroundColor: backgroundColor,
-                    borderBottom: `2px solid ${selectedPalette.container.secondary}`,
                     height: `${height}px`,
                 }}
             >

@@ -1,6 +1,6 @@
 import React from "react";
-import MatchHeader from "../Sections/MatchHeader/index";
-import { TeamsSectionLogoAndScore } from "../../../results/layout/Sections/TeamsSection/index";
+import { MatchHeaderBrickWork } from "../../../results/layout/Sections/MatchHeader/MatchHeaderBrickWork";
+import { TeamsSectionLogoAndScoreBrickWork } from "../../../results/layout/Sections/TeamsSection/index";
 import { MatchStatus } from "../Sections/MatchStatus/index";
 import { ResultStatementBrickWork } from "../Sections/ResultStatement/index";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -35,29 +35,29 @@ const BrickWorkMatchCard: React.FC<MatchCardProps> = ({ match }) => {
         delay={headerDelay}
       />
 
-      {/* Section 3: Match info footer - placed first in Brickwork style */}
-      <MatchHeader
-        type={match.type}
-        round={match.round}
-        ground={match.ground}
-        height={headerHeight}
-        delay={headerDelay}
-        backgroundColor={"transparent"}
-      />
-
       {/* Section 1: Team scores and names */}
-      <TeamsSectionLogoAndScore
+      <TeamsSectionLogoAndScoreBrickWork
         type={match.type}
         homeTeam={match.homeTeam}
         awayTeam={match.awayTeam}
         homeTeamLogo={match.teamHomeLogo}
         awayTeamLogo={match.teamAwayLogo}
         delay={calculatedBaseDelay}
+        height={teamsHeight}
         outerContainer={{
-          backgroundColor: selectedPalette.container.backgroundTransparent.low,
           height: `${teamsHeight}px`,
-          borderBottom: `2px solid ${selectedPalette.container.primary}`,
         }}
+        backgroundColor={selectedPalette.container.backgroundTransparent.medium}
+      />
+
+      {/* Metadata under scores */}
+      <MatchHeaderBrickWork
+        type={match.type}
+        round={match.round}
+        grade={match.gradeName}
+        height={headerHeight}
+        delay={headerDelay}
+        backgroundColor="transparent"
       />
 
       {match.status === "Abandoned" && (
@@ -66,9 +66,8 @@ const BrickWorkMatchCard: React.FC<MatchCardProps> = ({ match }) => {
           result={match.result}
           delay={headerDelay}
           outerContainer={{
-            backgroundColor: selectedPalette.container.backgroundTransparent.low,
+            backgroundColor: selectedPalette.container.backgroundTransparent.medium,
             height: `${teamsHeight}px`,
-            borderBottom: `2px solid ${selectedPalette.container.primary}`,
           }}
         />
       )}

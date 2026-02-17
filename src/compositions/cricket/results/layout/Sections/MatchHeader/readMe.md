@@ -5,6 +5,7 @@ Match header components for results layouts. Displays match metadata including d
 ## Files
 
 - `MatchHeader.tsx`: Standard match header with date, type, round, and ground
+- `MatchHeaderBrickWork.tsx`: Brickwork variant – metadata with Climate Crisis font, no container background
 - `SingleDataPointHeader.tsx`: Single data point header variant for grade display
 
 ## Child Modules

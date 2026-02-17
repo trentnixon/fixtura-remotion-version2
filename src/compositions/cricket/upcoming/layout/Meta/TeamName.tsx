@@ -48,6 +48,7 @@ export const TeamNameWrapped: React.FC<TeamNameWrappedProps> = ({
   delay,
   outerStyles,
   innerStyles,
+  variant = "onContainerCopy",
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -56,7 +57,7 @@ export const TeamNameWrapped: React.FC<TeamNameWrappedProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className="w-full p-2 flex justify-start items-center"
+      className="w-full flex justify-start items-center"
       backgroundColor="none"
       style={outerStyles}
       animation={ContainerAnimations.main.itemContainer.containerIn}
@@ -73,6 +74,7 @@ export const TeamNameWrapped: React.FC<TeamNameWrappedProps> = ({
           value={`${teamName}`}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-center"
+          variant={variant}
         />
       </AnimatedContainer>
     </AnimatedContainer>
