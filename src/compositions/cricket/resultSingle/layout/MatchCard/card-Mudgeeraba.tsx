@@ -2,7 +2,7 @@ import React from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
-import MatchStatus from "../Sections/MatchStatus/index";
+import { MatchStatus } from "../Sections/MatchStatus/index";
 import { Type_Round_Ground_stacked } from "../Sections/MatchHeader/index";
 import { MatchCardProps } from "./_types/MatchCardProps";
 

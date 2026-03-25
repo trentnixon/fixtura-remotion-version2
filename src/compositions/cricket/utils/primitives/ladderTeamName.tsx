@@ -17,8 +17,12 @@ export const LadderTeamName: React.FC<AnimatedTextPrimitivePropsWithDelay> = ({
   textAlign = DEFAULT_TEXT_ALIGN,
   delay,
   style,
+  className,
+  fontFamily: fontFamilyProp,
+  letterAnimation,
 }) => {
-  const fontFamily = useFontFamily();
+  const defaultFont = useFontFamily();
+  const fontFamily = fontFamilyProp ?? defaultFont;
   const { animations } = useAnimationContext();
 
   return (
@@ -28,7 +32,9 @@ export const LadderTeamName: React.FC<AnimatedTextPrimitivePropsWithDelay> = ({
       textAlign={textAlign as TextAlign}
       fontFamily={fontFamily}
       animation={{ ...animations.text.main.copyIn, delay: delay }}
+      letterAnimation={letterAnimation}
       style={style}
+      className={className}
     >
       {value}
     </AnimatedText>

@@ -87,10 +87,12 @@ src/components/layout/
 
 - Layout is presentational; slots receive AnimatedContainer, AnimatedText, AnimatedImage
 - ThemeContext.layout.heights drives screen dimensions
+- **Variant theme**: structural spacing, padding, and breakpoints for composition chrome should flow from **`theme.layout`** (and variant `componentStyles` for slot shells), not unrelated magic numbers—see **`../workflows/create-component.md`**
 - RouteToComposition belongs in screen content area
 
 ## References
 
+- Workflow: `../workflows/create-component.md`
 - layout: `src/components/layout/.docs/README.md`
 - screen: `src/components/layout/screen/.docs/README.md`
 - header: `src/components/layout/main/header/.docs/README.md`

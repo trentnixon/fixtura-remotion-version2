@@ -1,16 +1,29 @@
 import React from "react";
 import { TitleScreenProps } from "../types";
 
-// Common function to get horizontal alignment
+// Cross-axis (horizontal) when flex-col
 const getHorizontalHeaderAlignment = (alignment: string = "center") => {
   switch (alignment) {
     case "start":
-      return "items-start"; // Left alignment
+      return "items-start";
     case "end":
-      return "items-end"; // Right alignment
+      return "items-end";
     case "center":
     default:
-      return "items-center"; // Center alignment
+      return "items-center";
+  }
+};
+
+// Main-axis (vertical) when flex-col — avoids content hugging the top of fixed-height headers
+const getVerticalHeaderJustify = (alignment: string = "center") => {
+  switch (alignment) {
+    case "start":
+      return "justify-start";
+    case "end":
+      return "justify-end";
+    case "center":
+    default:
+      return "justify-center";
   }
 };
 
@@ -24,13 +37,16 @@ const createVerticalStack = (order: Array<"Logo" | "Title" | "Name">) => {
     height = 100,
   }: TitleScreenProps) => {
     const horizontalHeaderAlignment = getHorizontalHeaderAlignment(alignment);
+    const verticalJustify = getVerticalHeaderJustify(alignment);
 
     return (
       <div
-        className={`flex flex-col ${horizontalHeaderAlignment} w-full px-1 py-0`}
+        className={`flex flex-col ${verticalJustify} ${horizontalHeaderAlignment} w-full px-1 py-0 min-h-0 overflow-visible`}
         style={{ height: `${height}px` }}
       >
-        <div className="flex flex-col">
+        <div
+          className={`flex flex-col w-full ${horizontalHeaderAlignment}`}
+        >
           {order.map((item, index) => {
             switch (item) {
               case "Logo":

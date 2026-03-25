@@ -29,21 +29,21 @@ Cricket compositions are Remotion video composition implementations for cricket-
 
 ## Where the Docs Are
 
-| Context | Path |
-|--------|------|
-| Cricket root | `src/compositions/cricket/.docs/README.md` |
-| Roadmap | `src/compositions/cricket/.docs/DevelopmentRoadMap.md` |
-| How-to (full variant) | `src/compositions/cricket/.docs/how-to-create-cricket-variant.md` |
-| Ladder | `src/compositions/cricket/ladder/.docs/how-to.md`, `readMe.md` |
-| Top 5 | `src/compositions/cricket/top5/.docs/how-to.md`, `readMe.md` |
-| Results | `src/compositions/cricket/results/.docs/how-to.md`, `readMe.md` |
-| Result Single | `src/compositions/cricket/resultSingle/.docs/how-to.md`, `readMe.md` |
-| Upcoming | `src/compositions/cricket/upcoming/.docs/how-to.md`, `readMe.md` |
-| Team Roster | `src/compositions/cricket/teamRoster/.docs/how-to.md`, `readMe.md` |
-| Performances | `src/compositions/cricket/performances/.docs/how-to.md`, `readMe.md` |
-| Team of the Week | `src/compositions/cricket/TeamOfTheWeek/.docs/how-to.md`, `readMe.md` |
-| Routing | `src/core/utils/routing.tsx` |
-| Template variants | `src/templates/variants/` |
+| Context               | Path                                                                  |
+| --------------------- | --------------------------------------------------------------------- |
+| Cricket root          | `src/compositions/cricket/.docs/README.md`                            |
+| Roadmap               | `src/compositions/cricket/.docs/DevelopmentRoadMap.md`                |
+| How-to (full variant) | `src/compositions/cricket/.docs/how-to-create-cricket-variant.md`     |
+| Ladder                | `src/compositions/cricket/ladder/.docs/how-to.md`, `readMe.md`        |
+| Top 5                 | `src/compositions/cricket/top5/.docs/how-to.md`, `readMe.md`          |
+| Results               | `src/compositions/cricket/results/.docs/how-to.md`, `readMe.md`       |
+| Result Single         | `src/compositions/cricket/resultSingle/.docs/how-to.md`, `readMe.md`  |
+| Upcoming              | `src/compositions/cricket/upcoming/.docs/how-to.md`, `readMe.md`      |
+| Team Roster           | `src/compositions/cricket/teamRoster/.docs/how-to.md`, `readMe.md`    |
+| Performances          | `src/compositions/cricket/performances/.docs/how-to.md`, `readMe.md`  |
+| Team of the Week      | `src/compositions/cricket/TeamOfTheWeek/.docs/how-to.md`, `readMe.md` |
+| Routing               | `src/core/utils/routing.tsx`                                          |
+| Template variants     | `src/templates/variants/`                                             |
 
 ## Roadmap
 
@@ -72,20 +72,20 @@ Cricket compositions are Remotion video composition implementations for cricket-
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|--------------|
-| `index.tsx` | Exports all composition objects (CricketLadder, CricketTop5, etc.); maps variant keys to components | `CricketLadder`, `CricketTop5`, `CricketResults`, etc. |
-| `ladder/` | Team standings table | `index.tsx`, `{variant}.tsx`, `controller/Display/`, `controller/TeamRows/` |
-| `top5/` | Top 5 batters/bowlers (union type) | `index.tsx`, `{variant}.tsx`, `controller/PlayersDisplay/`, `controller/PlayerRow/` |
-| `results/` | Multi-match results (2 per screen) | `index.tsx`, `{variant}.tsx`, `controller/ResultsDisplay/`, `layout/MatchCard/` |
-| `resultSingle/` | Single match detail | `index.tsx`, `{variant}.tsx`, `controller/ResultSingleDisplay/`, `layout/MatchCard/` |
-| `upcoming/` | Upcoming fixtures | `index.tsx`, `{variant}.tsx`, `controller/GamesDisplay/`, `controller/GamesList/`, `layout/Card/` |
-| `teamRoster/` | Team player lists | `index.tsx`, `{variant}.tsx`, `controller/Display/`, `layout/RosterHeader/`, `layout/RosterPlayerList/` |
-| `performances/` | Batting/bowling performances (union type) | `index.tsx`, `{variant}.tsx`, `controller/PerformancesDisplay/` |
-| `TeamOfTheWeek/` | Selected team of the week | `index.tsx`, `{variant}.tsx`, `controller/TeamOfTheWeekDisplay/`, `controller/PlayerRow/` |
-| `sponsorFooter/` | Shared sponsor branding | `index.tsx` |
-| `utils/primitives/` | Shared primitives (TeamLogo, Top5PlayerName, MetadataSmall, etc.) | Per-primitive components |
-| `placeholders/` | Placeholder components for missing compositions | `PlaceholderComposition` |
+| Module              | Responsibility                                                                                      | Entry Points                                                                                            |
+| ------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `index.tsx`         | Exports all composition objects (CricketLadder, CricketTop5, etc.); maps variant keys to components | `CricketLadder`, `CricketTop5`, `CricketResults`, etc.                                                  |
+| `ladder/`           | Team standings table                                                                                | `index.tsx`, `{variant}.tsx`, `controller/Display/`, `controller/TeamRows/`                             |
+| `top5/`             | Top 5 batters/bowlers (union type)                                                                  | `index.tsx`, `{variant}.tsx`, `controller/PlayersDisplay/`, `controller/PlayerRow/`                     |
+| `results/`          | Multi-match results (2 per screen)                                                                  | `index.tsx`, `{variant}.tsx`, `controller/ResultsDisplay/`, `layout/MatchCard/`                         |
+| `resultSingle/`     | Single match detail                                                                                 | `index.tsx`, `{variant}.tsx`, `controller/ResultSingleDisplay/`, `layout/MatchCard/`                    |
+| `upcoming/`         | Upcoming fixtures                                                                                   | `index.tsx`, `{variant}.tsx`, `controller/GamesDisplay/`, `controller/GamesList/`, `layout/Card/`       |
+| `teamRoster/`       | Team player lists                                                                                   | `index.tsx`, `{variant}.tsx`, `controller/Display/`, `layout/RosterHeader/`, `layout/RosterPlayerList/` |
+| `performances/`     | Batting/bowling performances (union type)                                                           | `index.tsx`, `{variant}.tsx`, `controller/PerformancesDisplay/`                                         |
+| `TeamOfTheWeek/`    | Selected team of the week                                                                           | `index.tsx`, `{variant}.tsx`, `controller/TeamOfTheWeekDisplay/`, `controller/PlayerRow/`               |
+| `sponsorFooter/`    | Shared sponsor branding                                                                             | `index.tsx`                                                                                             |
+| `utils/primitives/` | Shared primitives (TeamLogo, Top5PlayerName, MetadataSmall, etc.)                                   | Per-primitive components                                                                                |
+| `placeholders/`     | Placeholder components for missing compositions                                                     | `PlaceholderComposition`                                                                                |
 
 Variant naming: lowercase keys in composition objects (e.g. `basic`, `brickwork`, `mudgeeraba`); file names lowercase (e.g. `brickWork.tsx`, `mudgeeraba.tsx`). Some inconsistencies exist (e.g. `brickWork` vs `brickwork`).
 

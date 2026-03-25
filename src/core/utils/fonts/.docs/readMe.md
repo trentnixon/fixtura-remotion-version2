@@ -17,7 +17,7 @@ Font loading and configuration utilities for Remotion videos. Loads fonts from l
   - `getAllFontNames()`: keys of fontPathMap
   - Internal: systemFonts, fontNameVariants (case normalization)
 - **`index.ts`**: font categories (reference)
-  - `fonts`: display (Tungsten, Druk, Monument Extended, Unbounded, Anton, Bebas Neue, Rubik Dirt, Climate Crisis), text (Heebo, Roboto, Roboto Condensed, Inter, Open Sans, Lato), specialty (Score Board, JetBrains Mono, Caveat)
+  - `fonts`: display (Tungsten, Druk, Monument Extended, Unbounded, Anton, Bebas Neue, Rubik Dirt, Climate Crisis, Teko), text (Heebo, Roboto, Roboto Condensed, Inter, Open Sans, Lato, Rajdhani), specialty (Score Board, JetBrains Mono, Caveat)
   - Export: default fonts object
 
 ## Relations

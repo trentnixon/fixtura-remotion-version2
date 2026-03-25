@@ -6,11 +6,17 @@ import { VerticalStackLogoTitleName } from "../../../../components/layout/titleS
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
+const TITLE_LENGTH_THRESHOLD = 17;
+/** Long strings use text-9xl; shorter strings use text-[12em] */
+const getTitleSizeClass = (title: string) =>
+  title.length > TITLE_LENGTH_THRESHOLD ? "text-9xl" : "text-[12em]";
+
 /**
  * BrickworkIntro Component
  *
  * A brickwork introduction template that showcases enhanced container styling options.
- * This template demonstrates how to style containers with various layout, text, and positioning options.
+ * Title font size is dynamic: long strings (e.g. "Batting Performances") use text-9xl,
+ * shorter strings use text-[12em].
  */
 export const BrickworkIntro: React.FC = () => {
   const { club, metadata, sponsors } = useVideoDataContext();
@@ -18,6 +24,8 @@ export const BrickworkIntro: React.FC = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
+
+  const title = metadata.title ?? "";
 
   return (
     <VerticalStackLogoTitleName
@@ -37,7 +45,7 @@ export const BrickworkIntro: React.FC = () => {
         </div>
       }
       Title={
-        <div className="overflow-hidden mb-4">
+        <div className="overflow-hidden mb-4 w-full">
           <AnimatedText
             textAlign="center"
             type="title"
@@ -47,8 +55,9 @@ export const BrickworkIntro: React.FC = () => {
             exitAnimation={TextAnimations.introOut}
             exitFrame={TextAnimations.introExitFrame}
             fontFamily={fontClasses.title?.family}
+            className={getTitleSizeClass(title)}
           >
-            {metadata.title}
+            {title}
           </AnimatedText>
         </div>
       }

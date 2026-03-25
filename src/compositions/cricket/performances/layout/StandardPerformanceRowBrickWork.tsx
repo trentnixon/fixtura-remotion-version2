@@ -9,9 +9,17 @@ import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { PerformanceRowLayoutPropsWithRestrictions } from "./_types/PerformanceRowLayoutProps";
-import { truncateText, getScoreValues, formatPlayerName } from "./_utils/helpers";
+import { truncateText, getScoreValues } from "./_utils/helpers";
+import {
+  SMALL_LOGO_SIZE,
+  PLAYER_NAME_DELAY_OFFSET,
+  TEAM_NAME_DELAY_OFFSET,
+  LOGO_DELAY_OFFSET,
+  STAT_DELAY_OFFSET,
+  STAT_SUFFIX_DELAY_OFFSET,
+} from "./_utils/constants";
 
-// --- Layout: BrickWork (Name, Logo, Wrapper, Value) ---
+// --- Layout: BrickWork (Name, Logo, Wrapper, Value) - matches Top 5 ---
 export const StandardPerformanceRowBrickWork: React.FC<
   PerformanceRowLayoutPropsWithRestrictions
 > = ({ performance, index, rowHeight, delay, restrictions }) => {
@@ -34,9 +42,11 @@ export const StandardPerformanceRowBrickWork: React.FC<
 
   const contrastBG = selectedPalette.container.backgroundTransparent.strong;
 
-  // Format player name as "First Initial. Last Name"
-  const playerName = formatPlayerName(performance.name);
-  // Get truncated team name
+  // Match Top 5: truncated names in uppercase
+  const playerName = truncateText(
+    performance.name,
+    restrictions.nameLength,
+  ).toUpperCase();
   const teamName = truncateText(
     performance.playedFor,
     restrictions.teamLength,
@@ -47,37 +57,41 @@ export const StandardPerformanceRowBrickWork: React.FC<
 
   return (
     <div
-      className="grid grid-cols-12 p-0 px-2 items-center h-full overflow-hidden rounded-none"
+      className="grid grid-cols-12 items-center h-full overflow-hidden rounded-none"
       style={{
         background: bgColor,
         height: `${rowHeight}px`,
       }}
     >
-      {/* Name & Team (col-span-7) */}
-      <div className="col-span-7 flex flex-col justify-center px-1 ">
+      {/* Name & Team (col-span-7) - matches Top 5 layout */}
+      <div className="col-span-7 flex flex-col justify-center px-2 h-full">
         <Top5PlayerName
           value={playerName}
-          animation={{ ...largeTextAnimation, delay: delay + 2 }}
+          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
           className=""
+          variant="onContainerCopy"
         />
         <Top5PlayerTeam
           value={teamName}
-          animation={{ ...smallTextAnimation, delay: delay + 4 }}
+          animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
           className=""
+          variant="onContainerCopy"
         />
       </div>
 
-      {/* Logo (col-span-2) */}
+      {/* Logo (col-span-2) - matches Top 5: fill container, proper scaling */}
       <div
         className="col-span-2 flex items-center justify-center h-full"
         style={{ background: contrastBG }}
       >
-        <div className="w-30 h-30 overflow-hidden">
+        <div className="w-30 h-30 overflow-hidden flex items-center justify-center">
           <TeamLogo
             logo={performance.teamLogo as PerformanceTeamLogoType}
             teamName={performance.playedFor}
-            delay={delay + 20}
-            size={30} // smaller size to avoid pushing row height
+            delay={delay + LOGO_DELAY_OFFSET}
+            size={SMALL_LOGO_SIZE}
+            fit="contain"
+            imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
         </div>
       </div>
@@ -89,14 +103,14 @@ export const StandardPerformanceRowBrickWork: React.FC<
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + 20 }}
+          animation={{ ...largeTextAnimation, delay: delay + STAT_DELAY_OFFSET }}
           className=""
           variant="onContainerCopy"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + 30 }}
+            animation={{ ...smallTextAnimation, delay: delay + STAT_SUFFIX_DELAY_OFFSET }}
             className=""
             variant="onContainerCopy"
           />

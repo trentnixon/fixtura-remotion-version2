@@ -5,7 +5,12 @@ import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { BottomSectionProps } from "./_types/GroundProps";
 
-export const Ground: React.FC<BottomSectionProps> = ({ ground, delay, backgroundColor }) => {
+export const Ground: React.FC<BottomSectionProps> = ({
+  ground,
+  delay,
+  backgroundColor,
+  variant = "onContainerCopyNoBg",
+}) => {
   const { selectedPalette } = useThemeContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
@@ -30,7 +35,7 @@ export const Ground: React.FC<BottomSectionProps> = ({ ground, delay, background
           value={ground}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-center"
-          variant="onContainerCopyNoBg"
+          variant={variant}
         />
       </div>
     </AnimatedContainer>

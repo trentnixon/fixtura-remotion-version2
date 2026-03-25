@@ -56,6 +56,7 @@ src/components/
 3. Prefer AnimatedContainer/AnimatedText for animation; use easing from `easing/` for custom curves
 4. Add barrel export (`index.ts`) when adding a new module
 5. Update the folder readMe and DirectoryMap
+6. Follow **`../workflows/create-component.md`**: variant **theme** for copy and container sizing; **light/dark (and alts)** for surfaces and **`onContainer*` / `onBackground*`** text variants
 
 ### 5. When Choosing Animation Systems
 
@@ -81,12 +82,15 @@ src/components/
 ## Rules
 
 - Components are theme-aware via ThemeContext; data-driven via VideoDataContext
+- Composition and layout code must use the **active template variant’s theme** for **copy classes and container/layout sizing** (`componentStyles`, `layout`, fonts); see **`../workflows/create-component.md`**
+- **Mode** (light / dark / alts): container backgrounds and text tokens come from **`selectedPalette`**; use **`onContainer*`** for copy on cards/glass and **`onBackground*`** when text sits on the scene background
 - All animation is frame-driven using interpolate, spring, and easing mapping
 - Prefer shared easing from `easing/` over ad hoc curves
 - UI primitives (ui/) should stay stateless; theme-aware via ThemeContext
 
 ## References
 
+- Workflow: `../workflows/create-component.md`
 - Components root: `src/components/.docs/readMe.md`
 - Directory map: `src/components/.docs/DirectoryMap.md`
 - Child skills (all in `.skills/architecture/`):

@@ -1,0 +1,467 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ELITE CRICKET SERIES - Match Day Roster</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#c3f5ff",
+              surface: "#041329",
+              "surface-container": "#112036",
+              "surface-container-lowest": "#010e24",
+              "on-surface": "#d6e3ff",
+            },
+            fontFamily: {
+              teko: ["Teko"],
+              rajdhani: ["Rajdhani"],
+              manrope: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(4, 19, 41, 0.4) 0%,
+          rgba(4, 19, 41, 0.9) 100%
+        );
+      }
+      .social-canvas {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c3f5ff;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-black text-on-surface font-rajdhani flex items-center justify-center p-4"
+  >
+    <div class="social-canvas bg-surface shadow-2xl">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Professional cricket stadium"
+          class="w-full h-full object-cover scale-105"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdiLrwwbskCS0aKtpFPzek6DgcYDROX4QjZ6QvQvj_2z4qHFSiLYTXBK2VwLSiUNuul8udYiVOm4bZZKxIs1XZ5jn-LOcqFFRnAEIJVsabnQB5G0T-PYgGivgVbva4WKGfkgp_626njQ239OxwFJUAOPqT3JpbWIQCIxyUoVJa68c1ab_10Kl0xI0GyfAZfHbWoxqWUGYZ-m5JC6CSQZv045Ep0fwthPWVzfsNkGu0Tz_rDNOzRAUJJ2--dpTyvU2g786cmuSTr0k"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <header
+        class="relative z-10 w-full pt-12 px-14 flex flex-col items-center"
+      >
+        <div class="flex items-center gap-8 mb-4">
+          <div
+            class="w-20 h-20 glass-panel flex items-center justify-center p-2 rounded-full"
+          >
+            <span
+              class="material-symbols-outlined text-white text-5xl"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >groups</span
+            >
+          </div>
+          <h1
+            class="font-teko text-[90px] leading-none text-white uppercase tracking-tighter drop-shadow-2xl"
+          >
+            MATCH DAY ROSTER
+          </h1>
+        </div>
+        <div class="w-full flex justify-center items-center gap-6">
+          <div
+            class="h-[2px] flex-1 bg-gradient-to-r from-transparent to-primary/50"
+          ></div>
+          <p
+            class="font-teko text-white/90 text-4xl uppercase tracking-[0.1em]"
+          >
+            Round 15 • Premier League
+          </p>
+          <div
+            class="h-[2px] flex-1 bg-gradient-to-l from-transparent to-primary/50"
+          ></div>
+        </div>
+      </header>
+      <main
+        class="relative z-10 flex-1 px-14 py-8 grid grid-cols-12 gap-8 overflow-hidden"
+      >
+        <div class="col-span-7 flex flex-col h-full overflow-hidden">
+          <div class="glass-panel p-6 border-l-8 border-primary mb-6">
+            <div class="flex items-center gap-6">
+              <div
+                class="w-20 h-20 bg-white flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-surface text-5xl"
+                  >shield</span
+                >
+              </div>
+              <div>
+                <span
+                  class="text-primary font-bold uppercase tracking-widest text-sm"
+                  >HOME TEAM</span
+                >
+                <h2
+                  class="font-teko text-6xl text-white uppercase leading-none"
+                >
+                  Northern Stars
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 overflow-y-auto pr-4 space-y-2">
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-primary"
+              >
+                01
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  James Anderson (C)
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                22
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  David Warner
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                33
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Steve Smith (WK)
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                07
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Marnus Labuschagne
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                14
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Travis Head
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                45
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Cameron Green
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                09
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Alex Carey
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                18
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Pat Cummins
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                56
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Mitchell Starc
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                11
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Nathan Lyon
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                38
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Josh Hazlewood
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-stretch gap-2">
+              <div
+                class="w-16 glass-panel flex items-center justify-center font-teko text-3xl text-white/80"
+              >
+                12
+              </div>
+              <div class="flex-1 glass-panel px-6 py-3 flex items-center">
+                <h3
+                  class="font-teko text-3xl text-white uppercase tracking-wide"
+                >
+                  Scott Boland
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-5 flex flex-col gap-6">
+          <div class="glass-panel p-6 flex flex-col items-center text-center">
+            <div class="font-teko text-4xl text-white/40 mb-2 italic">
+              VERSUS
+            </div>
+            <div
+              class="w-32 h-32 bg-white/10 flex items-center justify-center mb-4"
+            >
+              <span class="material-symbols-outlined text-white text-7xl"
+                >pets</span
+              >
+            </div>
+            <h3 class="font-teko text-5xl text-white uppercase">
+              Westside Tigers
+            </h3>
+            <span
+              class="text-white/60 font-bold uppercase tracking-widest text-sm mt-1"
+              >AWAY TEAM</span
+            >
+          </div>
+          <div class="flex-1 flex flex-col gap-3">
+            <div class="glass-panel p-5 flex items-center gap-5">
+              <div
+                class="w-12 h-12 bg-primary/20 flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >location_on</span
+                >
+              </div>
+              <div>
+                <span
+                  class="text-white/40 font-bold uppercase text-xs block tracking-widest"
+                  >LOCATION</span
+                >
+                <span class="font-teko text-3xl text-white uppercase"
+                  >Riverside Cricket Ground</span
+                >
+              </div>
+            </div>
+            <div class="glass-panel p-5 flex items-center gap-5">
+              <div
+                class="w-12 h-12 bg-primary/20 flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >military_tech</span
+                >
+              </div>
+              <div>
+                <span
+                  class="text-white/40 font-bold uppercase text-xs block tracking-widest"
+                  >GRADE</span
+                >
+                <span class="font-teko text-3xl text-white uppercase"
+                  >A-Grade Premier</span
+                >
+              </div>
+            </div>
+            <div class="glass-panel p-5 flex items-center gap-5">
+              <div
+                class="w-12 h-12 bg-primary/20 flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >schedule</span
+                >
+              </div>
+              <div>
+                <span
+                  class="text-white/40 font-bold uppercase text-xs block tracking-widest"
+                  >TIME</span
+                >
+                <span class="font-teko text-3xl text-white uppercase"
+                  >10:30 AM</span
+                >
+              </div>
+            </div>
+            <div class="glass-panel p-5 flex items-center gap-5">
+              <div
+                class="w-12 h-12 bg-primary/20 flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >calendar_today</span
+                >
+              </div>
+              <div>
+                <span
+                  class="text-white/40 font-bold uppercase text-xs block tracking-widest"
+                  >DATE</span
+                >
+                <span class="font-teko text-3xl text-white uppercase"
+                  >SATURDAY, 15 JUNE 2024</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-primary flex items-center justify-center py-4 px-6">
+            <span
+              class="font-teko text-surface text-3xl uppercase font-bold tracking-widest"
+              >MATCH DAY LIVE</span
+            >
+          </div>
+        </div>
+      </main>
+      <footer
+        class="relative z-10 w-full h-28 bg-white flex items-center justify-between px-14 mt-auto"
+      >
+        <div class="flex items-center gap-12">
+          <div
+            class="w-20 h-20 bg-surface-container flex items-center justify-center p-2"
+          >
+            <span
+              class="material-symbols-outlined text-white text-4xl"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >eco</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="h-12 w-40 bg-surface-container flex items-center justify-center text-white font-teko text-3xl tracking-[0.2em]"
+            >
+              WESTERA
+            </div>
+            <div
+              class="text-[12px] text-surface font-black uppercase leading-none tracking-tighter"
+            >
+              Partners
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div
+            class="font-rajdhani text-surface font-bold text-base uppercase tracking-[0.2em]"
+          >
+            Official Series Partners
+          </div>
+          <div class="flex gap-8 mt-2 justify-end">
+            <span class="material-symbols-outlined text-surface text-4xl"
+              >rocket</span
+            >
+            <span class="material-symbols-outlined text-surface text-4xl"
+              >diamond</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

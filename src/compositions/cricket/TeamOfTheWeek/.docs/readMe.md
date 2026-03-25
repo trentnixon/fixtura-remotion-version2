@@ -9,7 +9,13 @@ Welcome to the TeamOfTheWeek asset documentation. This folder contains everythin
 **Asset Name:** TeamOfTheWeek
 **Composition ID:** `CricketTeamOfTheWeek`
 **Status:** 🚧 In Development
-**Test Data:** [testData/samples/Cricket/Cricket_TeamOfTheWeek.json](../../../../testData/samples/Cricket/Cricket_TeamOfTheWeek.json)
+**Test Data:** `testData/samples/Cricket/Cricket_TeamOfTheWeek.json`
+
+### LLM static design briefs (Figma / one page)
+
+- `llm-brief/llm-brief-cricket-team-of-the-week.md` — index (association vs club)
+- `llm-brief/llm-brief-cricket-team-of-the-week-association.md` — mixed clubs, per-player club marks
+- `llm-brief/llm-brief-cricket-team-of-the-week-club.md` — single org, de-emphasise repeated logos
 
 ### What This Asset Does
 

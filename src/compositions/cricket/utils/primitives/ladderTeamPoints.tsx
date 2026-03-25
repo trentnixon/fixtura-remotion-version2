@@ -13,8 +13,11 @@ export const LadderTeamPoints: React.FC<TeamStatTextProps> = ({
   variant = DEFAULT_VARIANT,
   textAlign = "center",
   delay,
+  className,
+  fontFamily: fontFamilyProp,
 }) => {
-  const fontFamily = useFontFamily();
+  const defaultFont = useFontFamily();
+  const fontFamily = fontFamilyProp ?? defaultFont;
   const { animations } = useAnimationContext();
 
   return (
@@ -24,6 +27,7 @@ export const LadderTeamPoints: React.FC<TeamStatTextProps> = ({
       textAlign={textAlign as TextAlign}
       fontFamily={fontFamily}
       animation={{ ...animations.text.main.copyIn, delay: delay }}
+      className={className}
     >
       {String(value)}
     </AnimatedText>

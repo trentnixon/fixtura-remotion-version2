@@ -105,7 +105,10 @@ export interface AnimationSettings {
   delay?: number;
   easing?: ImageEasingType;
   custom?: {
-    distance: number | string;
+    distance?: number | string;
+    /** Container scaleIn / scaleOut (see containers/animations/utils/scaleAnimations.ts) */
+    startScale?: number;
+    endScale?: number;
   };
 }
 

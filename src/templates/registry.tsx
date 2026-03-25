@@ -7,6 +7,7 @@ import { Thunder } from "./variants/thunder";
 import { TwoColumnClassic } from "./variants/twoColumnClassic";
 import { CNSWPrivate } from "./variants/cnsw-private";
 import { Mudgeeraba } from "./variants/mudgeeraba";
+import { BroadcastPro } from "./variants/broadcastPro";
 /**
  * Define template registry key type
  */
@@ -60,6 +61,10 @@ export const templateRegistry = {
   },
   Mudgeeraba: {
     component: Mudgeeraba,
+    variants: Variants,
+  },
+  BroadcastPro: {
+    component: BroadcastPro,
     variants: Variants,
   },
 };

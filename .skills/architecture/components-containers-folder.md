@@ -76,10 +76,12 @@ src/components/containers/
 
 - All animation uses Remotion interpolate/spring; easing from `../easing`
 - Styles come from ThemeContext; use getTypeStyles, getSizeStyles, etc.
+- **Surfaces and mode**: when `backgroundColor` or fills are semantic (card, glass, panel), derive from **`selectedPalette`** / variant theme—not raw hex—for light/dark and alts. Pair with typography **`onContainer*`** variants for copy inside the container. See **`../workflows/create-component.md`**
 - Modules are convenience wrappers; do not duplicate logic from animations
 
 ## References
 
+- Workflow: `../workflows/create-component.md`
 - containers: `src/components/containers/.docs/readMe.md`
 - animations: `src/components/containers/animations/.docs/readMe.md`
 - modules: `src/components/containers/modules/.docs/readMe.md`

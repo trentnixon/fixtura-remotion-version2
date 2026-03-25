@@ -24,17 +24,17 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
   const rowHeight = 115;
 
   return (
-    <div 
+    <div
       className="flex items-center justify-center"
-      style={{ 
+      style={{
         position: "absolute",
         inset: 0,
         width: "100%",
         height: "100%",
       }}>
-      <div 
-        className="flex flex-col flex-shrink-0"
-        style={{ width: "100%", paddingLeft: "2rem", paddingRight: "2rem" }}
+      <div
+        className="flex flex-col flex-shrink-0 mx-16 px-16"
+        style={{ width: "100%", paddingTop: "8rem", paddingBottom: "8rem" }}
       >
         <AnimatedContainer
           type="full"
@@ -45,7 +45,7 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
           animationDelay={0}
           exitAnimation={ContainerAnimations.main.parent.containerOut}
         >
-          <div className="flex flex-col items-center gap-1 w-full">
+          <div className="flex flex-col items-center gap-2 w-full">
             {displayedPerformances.map((performance, index) => (
               <div
                 key={`${performance.name}-${screenIndex}-${index}`}

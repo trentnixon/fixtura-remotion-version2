@@ -41,13 +41,14 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
             ground={game.gradeName}
             delay={delay}
             backgroundColor="transparent"
+            variant="onContainerCopyNoBg"
           />
 
           {/* Team Names Section */}
           <TeamNameWrapped
             teamName={game.teamHome}
             delay={delay}
-            variant="onContainerCopyNoBg"
+            variant="onContainerCopy"
             outerStyles={{
               background: selectedPalette.container.backgroundTransparent.medium,
             }}
@@ -94,7 +95,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                   delay: delay + 20,
                 }}
                 className="text-center"
-                variant="onContainerCopyNoBg"
+                variant="onContainerCopy"
               />
               <div className="flex items-center gap-2">
                 <MetadataMedium
@@ -104,7 +105,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                     delay: delay + 20,
                   }}
                   className="text-center"
-                  variant="onContainerCopyNoBg"
+                  variant="onContainerCopy"
                 />
                 <MetadataMedium
                   value={game.time}
@@ -113,7 +114,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                     delay: delay + 20,
                   }}
                   className="text-center"
-                  variant="onContainerCopyNoBg"
+                  variant="onContainerCopy"
                 />
               </div>
             </div>
@@ -138,7 +139,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
           <TeamNameWrapped
             teamName={game.teamAway}
             delay={delay + 10}
-            variant="onContainerCopyNoBg"
+            variant="onContainerCopy"
             outerStyles={{
               background: selectedPalette.container.backgroundTransparent.medium,
             }}

@@ -117,6 +117,20 @@ export const fontPathMap: Record<string, string> = {
   // Allerta Stencil (Google Font - downloaded and stored locally)
   "Allerta Stencil":
     "fonts/Allerta_Stencil/AllertaStencil-Regular.ttf",
+
+  // Rajdhani (Google Font - downloaded and stored locally)
+  Rajdhani: "fonts/Rajdhani/Rajdhani-Regular.ttf",
+  "Rajdhani-Light": "fonts/Rajdhani/Rajdhani-Light.ttf",
+  "Rajdhani-Medium": "fonts/Rajdhani/Rajdhani-Medium.ttf",
+  "Rajdhani-SemiBold": "fonts/Rajdhani/Rajdhani-SemiBold.ttf",
+  "Rajdhani-Bold": "fonts/Rajdhani/Rajdhani-Bold.ttf",
+
+  // Teko (Google Font - downloaded and stored locally)
+  Teko: "fonts/Teko/static/Teko-Regular.ttf",
+  "Teko-Light": "fonts/Teko/static/Teko-Light.ttf",
+  "Teko-Medium": "fonts/Teko/static/Teko-Medium.ttf",
+  "Teko-SemiBold": "fonts/Teko/static/Teko-SemiBold.ttf",
+  "Teko-Bold": "fonts/Teko/static/Teko-Bold.ttf",
 };
 
 // System fonts that don't need to be loaded
@@ -170,6 +184,10 @@ const fontNameVariants: Record<string, string> = {
   "allerta stencil": "Allerta Stencil",
   "ALLERTA STENCIL": "Allerta Stencil",
   AllertaStencil: "Allerta Stencil",
+  rajdhani: "Rajdhani",
+  RAJDHANI: "Rajdhani",
+  teko: "Teko",
+  TEKO: "Teko",
 };
 
 // Reverse lookup map for debugging (font string value to fontPathMap key)
@@ -392,6 +410,11 @@ export const loadFontsFromTheme = async (
     }
     if (theme.fonts.copy && theme.fonts.copy.family) {
       fontsToLoad.add(theme.fonts.copy.family);
+    }
+    const subtitle = (theme.fonts as { subtitle?: { family?: string } })
+      .subtitle;
+    if (subtitle?.family) {
+      fontsToLoad.add(subtitle.family);
     }
   }
 

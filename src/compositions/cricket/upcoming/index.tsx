@@ -7,6 +7,7 @@ import ClassicTwoColumn from "./classicTwoColumn";
 import CNSW from "./cnsw";
 import { CNSWPrivate } from "./cnsw-private";
 import { mudgeeraba as MudgeerabaUpcomingGames } from "./mudgeeraba";
+import { BroadcastPro as BroadcastProUpcomingGames } from "./broadcastPro";
 // Import other template implementations
 
 // Export all template implementations
@@ -19,4 +20,5 @@ export {
   CNSW as cnsw,
   CNSWPrivate as cnswprivate,
   MudgeerabaUpcomingGames as mudgeeraba,
+  BroadcastProUpcomingGames as broadcastpro,
 };

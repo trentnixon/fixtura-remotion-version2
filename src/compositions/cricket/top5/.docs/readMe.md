@@ -8,6 +8,7 @@ Top 5 ranked batters or bowlers compositions across multiple variants. Supports 
 
 ## Files
 
+- `llm-brief/llm-brief-cricket-top5.md`: static one-page design brief for design LLMs (general; no association/club split)
 - `index.tsx`: exports top 5 composition variants
 - `basic.tsx`, `classic.tsx`, `brickWork.tsx`, `sixersThunder.tsx`, `classicTwoColumn.tsx`, `cnsw.tsx`, `cnsw-private.tsx`, `mudgeeraba.tsx`: variant entries
 - `_types/types.ts`: PlayerData union, BatterData, BowlerData, type guards

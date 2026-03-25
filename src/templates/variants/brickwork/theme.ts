@@ -28,15 +28,21 @@ export const brickworkTheme: TemplateThemeConfig = {
     // Title component styles
     title: {
       className:
-        "text-[12em] font-black tracking-normal leading-[0.95em] text-center m-0 px-4",
+        " font-black tracking-normal leading-[0.95em] text-center m-0 px-4",
     },
 
     // Subtitle component styles
     subtitle: {
       className:
-        "text-7xl font-semibold tracking-normal leading-[0.98em] text-center m-0 px-4",
+        "text-5xl font-thin tracking-normal leading-[0.98em] text-center m-0 px-4",
     },
 
+    compositionName: {
+      className: "text-7xl font-semibold capitalize tracking-wider leading-[0.98em]",
+    },
+    compositionNameSmall: {
+      className: "text-4xl font-semibold capitalize tracking-wider leading-[0.98em]",
+    },
     // Body text component styles
     bodyText: {
       className: "text-xl font-normal tracking-normal leading-relaxed",

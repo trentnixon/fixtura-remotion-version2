@@ -12,8 +12,11 @@ export const RosterPlayerName = ({
   value,
   className,
   variant = DEFAULT_VARIANT,
+  fontFamily: fontFamilyProp,
+  style,
 }: RosterPlayerNameProps) => {
-  const fontFamily = useFontFamily();
+  const defaultCopyFont = useFontFamily();
+  const fontFamily = fontFamilyProp ?? defaultCopyFont;
 
   return (
     <AnimatedText
@@ -21,6 +24,7 @@ export const RosterPlayerName = ({
       variant={variant as ColorVariant}
       fontFamily={fontFamily}
       className={className}
+      style={style}
       animation={undefined}
       letterAnimation={DEFAULT_LETTER_ANIMATION}
     >

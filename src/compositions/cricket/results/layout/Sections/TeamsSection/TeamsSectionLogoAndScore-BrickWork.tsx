@@ -94,7 +94,7 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
               logo={homeTeamLogo || null}
               teamName={homeTeam.name}
               delay={delay + 15}
-              imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
+              imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
         </div>
@@ -110,7 +110,7 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
               logo={awayTeamLogo || null}
               teamName={awayTeam.name}
               delay={delay + 20}
-              imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
+              imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
           <div className="flex flex-1 flex-col items-center justify-center px-2 h-full">

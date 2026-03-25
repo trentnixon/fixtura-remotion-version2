@@ -1,5 +1,10 @@
 import { StandardizedPalettes } from "../../utils/colorSystem";
 import { DesignPalette } from "../../utils/designPalettes/types";
+import type { BroadcastProRosterListSizing } from "../../../templates/types/broadcast-pro/roster-list-sizing";
+import type {
+  BroadcastProGlassOpacityPreset,
+  BroadcastProTransparentLayers,
+} from "../../../templates/types/TemplateThemeConfig";
 
 export interface FontClass {
   family: string;
@@ -160,6 +165,15 @@ export interface ThemeContextProps {
 
   // Template-specific properties
   gradientDegree?: string;
+
+  /** Broadcast Pro: alpha stacks for glass / logo wells / fixture header (see TemplateThemeConfig). */
+  broadcastProTransparentLayers?: BroadcastProTransparentLayers;
+
+  /** Broadcast Pro: sm / md / lg glass strength; used when transparent layers are not overridden. */
+  broadcastProGlassOpacity?: BroadcastProGlassOpacityPreset;
+
+  /** Broadcast Pro team roster: name + index number scaling (see `variants/broadcastPro/theme/tokens.ts`). */
+  broadcastProRosterListSizing?: BroadcastProRosterListSizing;
 
   // Helper function to get active palette
   getActivePalette: (paletteName?: string) => DesignPalette;

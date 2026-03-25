@@ -4,7 +4,7 @@ Contains concrete template implementations (“variants”) that extend the base
 
 ## Files
 
-- One subfolder per variant: `basic/`, `brickwork/`, `classic/`, `sixers/`, `thunder/`, `twoColumnClassic/`
+- One subfolder per variant: `basic/`, `brickwork/`, `broadcastPro/`, `classic/`, `sixers/`, `thunder/`, `twoColumnClassic/`
 
 ## Relations
 

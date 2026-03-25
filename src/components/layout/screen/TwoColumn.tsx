@@ -51,7 +51,8 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
   const currentHeaderWidth = effectiveHeaderWidthPercent;
 
   const mainWidth = Math.max(0, 100 - currentHeaderWidth);
-  const contentHeightPx = (layout.heights.asset + layout.heights.footer) * 2;
+  const contentHeightPx =
+    (layout.heights.asset + layout.heights.footer) * 2;
 
   // Snap transforms and opacity (no slide/fade)
   const sideTranslatePx = 0;

@@ -1,0 +1,465 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ELITE CRICKET SERIES - Grade Ladder Export</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#690005",
+              "outline-variant": "#3b494c",
+              "on-surface": "#d6e3ff",
+              "on-surface-variant": "#bac9cc",
+              "tertiary-fixed": "#e0e0ff",
+              "secondary-fixed": "#ffdadc",
+              "surface-container": "#112036",
+              "on-secondary-container": "#fff6f6",
+              primary: "#c3f5ff",
+              error: "#ffb4ab",
+              "on-secondary-fixed": "#40000f",
+              "surface-variant": "#27354c",
+              "on-background": "#d6e3ff",
+              "surface-container-lowest": "#010e24",
+              "on-primary-fixed-variant": "#004f58",
+              "on-primary": "#00363d",
+              "on-primary-fixed": "#001f24",
+              "secondary-fixed-dim": "#ffb2b9",
+              tertiary: "#ecebff",
+              "inverse-on-surface": "#233148",
+              "on-primary-container": "#00626e",
+              "tertiary-fixed-dim": "#bdc2ff",
+              "surface-bright": "#2c3951",
+              "surface-container-high": "#1c2a41",
+              "surface-dim": "#041329",
+              "error-container": "#93000a",
+              "inverse-primary": "#006875",
+              outline: "#849396",
+              "on-tertiary": "#1b247f",
+              "on-tertiary-container": "#4750a9",
+              "inverse-surface": "#d6e3ff",
+              "tertiary-container": "#cacdff",
+              "secondary-container": "#e2044d",
+              "on-secondary": "#67001e",
+              "surface-container-highest": "#27354c",
+              background: "#041329",
+              secondary: "#ffb2b9",
+              "surface-container-low": "#0d1c32",
+              surface: "#041329",
+              "primary-fixed-dim": "#00daf3",
+              "on-tertiary-fixed-variant": "#343d96",
+              "primary-container": "#00e5ff",
+              "surface-tint": "#00daf3",
+              "on-tertiary-fixed": "#000767",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#91002e",
+              "primary-fixed": "#9cf0ff",
+            },
+            fontFamily: {
+              teko: ["Teko"],
+              rajdhani: ["Rajdhani"],
+              manrope: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(4, 19, 41, 0.5) 0%,
+          rgba(4, 19, 41, 0.85) 100%
+        );
+      }
+      .social-canvas {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .col-rank {
+        width: 80px;
+      }
+      .col-team {
+        flex-grow: 1;
+      }
+      .col-stat {
+        width: 90px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-black text-on-surface font-rajdhani flex items-center justify-center p-4"
+  >
+    <div class="social-canvas bg-surface shadow-2xl">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Professional cricket stadium"
+          class="w-full h-full object-cover scale-105"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdiLrwwbskCS0aKtpFPzek6DgcYDROX4QjZ6QvQvj_2z4qHFSiLYTXBK2VwLSiUNuul8udYiVOm4bZZKxIs1XZ5jn-LOcqFFRnAEIJVsabnQB5G0T-PYgGivgVbva4WKGfkgp_626njQ239OxwFJUAOPqT3JpbWIQCIxyUoVJa68c1ab_10Kl0xI0GyfAZfHbWoxqWUGYZ-m5JC6CSQZv045Ep0fwthPWVzfsNkGu0Tz_rDNOzRAUJJ2--dpTyvU2g786cmuSTr0k"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <header class="relative z-10 w-full pt-16 flex flex-col items-center">
+        <div
+          class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-xl mb-4"
+        >
+          <span
+            class="material-symbols-outlined text-surface text-6xl"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >leaderboard</span
+          >
+        </div>
+        <h1
+          class="font-teko text-[120px] leading-[0.8] text-white uppercase tracking-tight drop-shadow-2xl"
+        >
+          LADDER
+        </h1>
+        <p
+          class="font-rajdhani text-white/90 text-2xl font-bold mt-4 uppercase tracking-[0.2em] bg-white/10 px-8 py-2 backdrop-blur-md"
+        >
+          Elite Series Premier League - Grade 1
+        </p>
+      </header>
+      <main
+        class="relative z-10 flex-1 px-14 py-10 flex flex-col overflow-hidden"
+      >
+        <div
+          class="flex gap-2 mb-3 px-4 text-white/60 font-bold uppercase tracking-widest text-lg"
+        >
+          <div class="col-rank text-center">Pos</div>
+          <div class="col-team px-4">Team</div>
+          <div class="col-stat text-center">Pld</div>
+          <div class="col-stat text-center">W</div>
+          <div class="col-stat text-center">L</div>
+          <div class="col-stat text-center text-primary">Pts</div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-stretch gap-2">
+            <div
+              class="col-rank glass-panel flex items-center justify-center font-teko text-5xl text-white border-l-8 border-primary"
+            >
+              1
+            </div>
+            <div class="col-team glass-panel flex items-center gap-6 px-6 py-4">
+              <div
+                class="w-14 h-14 bg-white/20 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white text-3xl"
+                  >shield</span
+                >
+              </div>
+              <h3 class="font-teko text-4xl text-white uppercase tracking-wide">
+                Northern Stars
+              </h3>
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white"
+            >
+              14
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white"
+            >
+              11
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white"
+            >
+              3
+            </div>
+            <div
+              class="col-stat bg-surface-container-lowest flex items-center justify-center font-teko text-5xl text-primary font-bold"
+            >
+              44
+            </div>
+          </div>
+          <div class="flex items-stretch gap-2">
+            <div
+              class="col-rank glass-panel flex items-center justify-center font-teko text-5xl text-white/80 border-l-8 border-white/20"
+            >
+              2
+            </div>
+            <div class="col-team glass-panel flex items-center gap-6 px-6 py-4">
+              <div
+                class="w-14 h-14 bg-white/20 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white text-3xl"
+                  >pets</span
+                >
+              </div>
+              <h3 class="font-teko text-4xl text-white uppercase tracking-wide">
+                Westside Tigers
+              </h3>
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              14
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              9
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              5
+            </div>
+            <div
+              class="col-stat bg-surface-container-lowest flex items-center justify-center font-teko text-5xl text-white"
+            >
+              36
+            </div>
+          </div>
+          <div class="flex items-stretch gap-2">
+            <div
+              class="col-rank glass-panel flex items-center justify-center font-teko text-5xl text-white/80 border-l-8 border-white/20"
+            >
+              3
+            </div>
+            <div class="col-team glass-panel flex items-center gap-6 px-6 py-4">
+              <div
+                class="w-14 h-14 bg-white/20 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white text-3xl"
+                  >token</span
+                >
+              </div>
+              <h3 class="font-teko text-4xl text-white uppercase tracking-wide">
+                City United
+              </h3>
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              14
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              8
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              6
+            </div>
+            <div
+              class="col-stat bg-surface-container-lowest flex items-center justify-center font-teko text-5xl text-white"
+            >
+              32
+            </div>
+          </div>
+          <div class="flex items-stretch gap-2">
+            <div
+              class="col-rank glass-panel flex items-center justify-center font-teko text-5xl text-white/80 border-l-8 border-white/20"
+            >
+              4
+            </div>
+            <div class="col-team glass-panel flex items-center gap-6 px-6 py-4">
+              <div
+                class="w-14 h-14 bg-white/20 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white text-3xl"
+                  >bolt</span
+                >
+              </div>
+              <h3 class="font-teko text-4xl text-white uppercase tracking-wide">
+                River Raiders
+              </h3>
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              14
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              7
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/80"
+            >
+              7
+            </div>
+            <div
+              class="col-stat bg-surface-container-lowest flex items-center justify-center font-teko text-5xl text-white"
+            >
+              28
+            </div>
+          </div>
+          <div class="flex items-stretch gap-2 opacity-80">
+            <div
+              class="col-rank glass-panel flex items-center justify-center font-teko text-5xl text-white/60 border-l-8 border-white/10"
+            >
+              5
+            </div>
+            <div class="col-team glass-panel flex items-center gap-6 px-6 py-4">
+              <div
+                class="w-14 h-14 bg-white/10 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white/50 text-3xl"
+                  >groups</span
+                >
+              </div>
+              <h3
+                class="font-teko text-4xl text-white/60 uppercase tracking-wide"
+              >
+                Central Vikings
+              </h3>
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/60"
+            >
+              14
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/60"
+            >
+              5
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/60"
+            >
+              9
+            </div>
+            <div
+              class="col-stat bg-surface-container-lowest flex items-center justify-center font-teko text-5xl text-white/60"
+            >
+              20
+            </div>
+          </div>
+          <div class="flex items-stretch gap-2 opacity-60">
+            <div
+              class="col-rank glass-panel flex items-center justify-center font-teko text-5xl text-white/40 border-l-8 border-white/5"
+            >
+              6
+            </div>
+            <div class="col-team glass-panel flex items-center gap-6 px-6 py-4">
+              <div
+                class="w-14 h-14 bg-white/5 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white/40 text-3xl"
+                  >poker_chip</span
+                >
+              </div>
+              <h3
+                class="font-teko text-4xl text-white/40 uppercase tracking-wide"
+              >
+                South Coast Lions
+              </h3>
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/40"
+            >
+              14
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/40"
+            >
+              4
+            </div>
+            <div
+              class="col-stat glass-panel flex items-center justify-center font-teko text-4xl text-white/40"
+            >
+              10
+            </div>
+            <div
+              class="col-stat bg-surface-container-lowest flex items-center justify-center font-teko text-5xl text-white/40"
+            >
+              16
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-auto pt-6 flex justify-between items-end border-t border-white/10"
+        >
+          <div
+            class="text-white/40 text-sm font-bold uppercase tracking-[0.3em]"
+          >
+            Updated: 24 May 2024 • End of Round 14
+          </div>
+          <div
+            class="text-white font-teko text-3xl uppercase tracking-widest bg-primary/20 px-4 py-1"
+          >
+            Top 4 Qualify for Finals
+          </div>
+        </div>
+      </main>
+      <footer
+        class="relative z-10 w-full h-28 bg-white flex items-center justify-between px-14 mt-auto"
+      >
+        <div class="flex items-center gap-12">
+          <div
+            class="w-20 h-20 bg-surface-container flex items-center justify-center p-2"
+          >
+            <span
+              class="material-symbols-outlined text-white text-4xl"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >eco</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="h-12 w-40 bg-surface-container flex items-center justify-center text-white font-teko text-3xl tracking-[0.2em]"
+            >
+              WESTERA
+            </div>
+            <div
+              class="text-[12px] text-surface font-black uppercase leading-none tracking-tighter"
+            >
+              Partners
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div
+            class="font-rajdhani text-surface font-bold text-base uppercase tracking-[0.2em]"
+          >
+            Official Series Partners
+          </div>
+          <div class="flex gap-8 mt-2 justify-end">
+            <span class="material-symbols-outlined text-surface text-4xl"
+              >rocket</span
+            >
+            <span class="material-symbols-outlined text-surface text-4xl"
+              >diamond</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

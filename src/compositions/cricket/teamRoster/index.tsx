@@ -4,5 +4,14 @@ import { Classic } from "./classic";
 import { ClassicTwoColumn } from "./classicTwoColumn";
 import { mudgeeraba } from "./mudgeeraba";
 import { brickwork } from "./brickwork";
+import { broadcastpro } from "./broadcastPro";
 
-export { basic, SixersThunder, Classic, ClassicTwoColumn, mudgeeraba, brickwork };
+export {
+  basic,
+  SixersThunder,
+  Classic,
+  ClassicTwoColumn,
+  mudgeeraba,
+  brickwork,
+  broadcastpro,
+};

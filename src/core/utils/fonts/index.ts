@@ -17,6 +17,7 @@ const displayFonts = {
   climateCrisis: "Climate Crisis", // Variable font (YEAR axis)
   dhurjati: "Dhurjati", // Google Font (downloaded and stored locally)
   allertaStencil: "Allerta Stencil", // Google Font (downloaded and stored locally)
+  teko: "Teko", // Google Font (downloaded and stored locally)
 };
 
 // Text fonts (for body text, paragraphs, and general reading)
@@ -27,6 +28,7 @@ const textFonts = {
   inter: "Inter",
   openSans: "Open Sans",
   lato: "Lato",
+  rajdhani: "Rajdhani", // Google Font (downloaded and stored locally)
 };
 
 // Specialty fonts (for specific use cases)

@@ -4,6 +4,7 @@ Ladder compositions for cricket standings across multiple variants.
 
 ## Files
 
+- `llm-brief/llm-brief-cricket-ladder.md`: static one-page design brief for design LLMs (general)
 - `index.tsx`: exports ladder composition variants
 - `basic.tsx`, `brickWork.tsx`, `classic.tsx`, `classicTwoColumn.tsx`, `sixersThunder.tsx`: variant entries
 - `types.ts`: ladder-specific typing

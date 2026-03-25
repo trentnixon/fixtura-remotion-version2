@@ -8,6 +8,7 @@ import {
   cnsw as ladderCNSW,
   cnswprivate as ladderCNSWPrivate,
   mudgeeraba as ladderMudgeeraba,
+  broadcastpro as ladderBroadcastPro,
 } from "./ladder";
 import {
   basic as upcomingBasic,
@@ -18,6 +19,7 @@ import {
   cnsw as upcomingCNSW,
   cnswprivate as upcomingCNSWPrivate,
   mudgeeraba as upcomingMudgeeraba,
+  broadcastpro as upcomingBroadcastPro,
 } from "./upcoming";
 import {
   basic as top5Basic,
@@ -28,6 +30,7 @@ import {
   cnsw as top5CNSW,
   cnswprivate as top5CNSWPrivate,
   mudgeeraba as top5Mudgeeraba,
+  broadcastpro as top5BroadcastPro,
 } from "./top5";
 import {
   basic as resultsBasic,
@@ -58,6 +61,7 @@ import {
   ClassicTwoColumn as rosterClassicTwoColumn,
   mudgeeraba as rosterMudgeeraba,
   brickwork as rosterBrickwork,
+  broadcastpro as rosterBroadcastPro,
 } from "./teamRoster";
 import {
   basic as performancesBasic,
@@ -68,6 +72,7 @@ import {
   cnswPrivate as performancesCNSWPrivate,
   sixersThunder as performancesSixersThunder,
   mudgeeraba as performancesMudgeeraba,
+  broadcastpro as performancesBroadcastPro,
 } from "./performances";
 import {
   basic as teamOfTheWeekBasic,
@@ -102,6 +107,7 @@ export const CricketLadder = {
   cnsw: ladderCNSW,
   cnswprivate: ladderCNSWPrivate,
   mudgeeraba: ladderMudgeeraba,
+  broadcastpro: ladderBroadcastPro,
 };
 
 export const CricketTop5 = {
@@ -114,6 +120,7 @@ export const CricketTop5 = {
   cnsw: top5CNSW,
   cnswprivate: top5CNSWPrivate,
   mudgeeraba: top5Mudgeeraba,
+  broadcastpro: top5BroadcastPro,
 };
 
 export const CricketResults = {
@@ -138,6 +145,7 @@ export const CricketUpcoming = {
   cnsw: upcomingCNSW,
   cnswprivate: upcomingCNSWPrivate,
   mudgeeraba: upcomingMudgeeraba,
+  broadcastpro: upcomingBroadcastPro,
 };
 
 export const CricketResultSingle = {
@@ -162,6 +170,7 @@ export const CricketRoster = {
   twocolumnclassic: rosterClassicTwoColumn, // alias to classic
   cnsw: rosterClassic,
   mudgeeraba: rosterMudgeeraba,
+  broadcastpro: rosterBroadcastPro,
 };
 
 // Add CricketPerformances export for batting and bowling performances
@@ -175,6 +184,7 @@ export const CricketPerformances = {
   cnsw: performancesCNSW,
   cnswprivate: performancesCNSWPrivate,
   mudgeeraba: performancesMudgeeraba,
+  broadcastpro: performancesBroadcastPro,
 };
 
 // Add CricketTeamOfTheWeek export for Team of the Week

@@ -4,6 +4,9 @@ Team roster compositions showing players, headers, sponsors, and metadata across
 
 ## Files
 
+- `llm-brief/llm-brief-cricket-team-roster.md`: index to design LLM briefs (association vs club)
+- `llm-brief/llm-brief-cricket-team-roster-association.md`: static brief — balanced match context, both team identities
+- `llm-brief/llm-brief-cricket-team-roster-club.md`: static brief — club squad hero, opponent supporting
 - `index.tsx`: exports team roster composition variants
 - `basic.tsx`, `classic.tsx`, `classicTwoColumn.tsx`, `sixersThunder.tsx`: variant entries
 - `types.ts`: typing for team roster compositions

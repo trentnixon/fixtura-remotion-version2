@@ -4,6 +4,9 @@ Results compositions for cricket matches across multiple variants.
 
 ## Files
 
+- `llm-brief/llm-brief-cricket-results.md`: index to design LLM briefs (association vs club)
+- `llm-brief/llm-brief-cricket-results-association.md`: static brief — both teams, full stats
+- `llm-brief/llm-brief-cricket-results-club.md`: static brief — club stats only, opponent in score band
 - `index.tsx`: exports results composition variants
 - `basic.tsx`, `brickWork.tsx`, `classic.tsx`, `classicTwoColumn.tsx`, `sixersThunder.tsx`: variant entries
 - `types.tsx`: results-specific typing

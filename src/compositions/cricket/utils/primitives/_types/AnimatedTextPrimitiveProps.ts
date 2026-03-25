@@ -1,6 +1,9 @@
 import type { CSSProperties } from "react";
 import { AnimationConfig } from "../../../../../components/typography/config/animations";
-import { AnimationMode, ColorVariant } from "../../../../../components/typography/AnimatedText";
+import {
+  AnimationMode,
+  ColorVariant,
+} from "../../../../../components/typography/AnimatedText";
 
 /**
  * Base props interface for AnimatedText primitive components
@@ -46,6 +49,11 @@ export interface AnimatedTextPrimitivePropsWithDelay {
   delay: number;
   /** Optional style (e.g. fontSize for dynamic sizing) */
   style?: CSSProperties;
+  className?: string;
+  /** When set, overrides theme copy font (e.g. template heading on ladder) */
+  fontFamily?: string;
+  /** Per-letter/word stagger; `"none"` renders copy without letter animation */
+  letterAnimation?: AnimationMode;
 }
 
 /**
@@ -56,6 +64,9 @@ export interface TeamStatTextProps {
   variant?: string;
   textAlign?: TextAlign;
   delay: number;
+  className?: string;
+  /** When set, overrides theme copy font (e.g. template heading on ladder) */
+  fontFamily?: string;
 }
 
 /**
@@ -65,4 +76,8 @@ export interface RosterPlayerNameProps {
   value: string;
   className?: string;
   variant?: string | ColorVariant;
+  /** When set, overrides copy font (e.g. Teko title font on BroadcastPro roster). */
+  fontFamily?: string;
+  /** e.g. dynamic `fontSize` when roster row height scales with player count */
+  style?: CSSProperties;
 }

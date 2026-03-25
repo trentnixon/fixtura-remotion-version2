@@ -84,11 +84,14 @@ src/components/typography/
 ## Rules
 
 - Styles from ThemeContext; variants from palette
+- **Variant theme**: `type` → `componentStyles` / typography scale must come from the **active template variant theme**; do not invent one-off `text-*` scales in composition files—add a theme key instead. See **`../workflows/create-component.md`**
+- **Mode-aware copy**: pick **`variant`** (`onContainerTitle`, `onContainerCopy`, `onContainerMuted`, `onBackgroundMain`, …) so **`getVariantStyles`** resolves colors from **`selectedPalette.text`** for light/dark and alts
 - Use shared easing from `../easing`
 - Letter/word splitting lives in config/animations; keep tuned for text
 
 ## References
 
+- Workflow: `../workflows/create-component.md`
 - typography: `src/components/typography/.docs/readMe.md`
 - config: `src/components/typography/config/.docs/readMe.md`
 - config/animations: `src/components/typography/config/animations/.docs/readMe.md`

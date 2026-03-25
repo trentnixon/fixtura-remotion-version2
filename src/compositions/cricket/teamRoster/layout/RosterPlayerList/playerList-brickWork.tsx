@@ -27,7 +27,7 @@ const RosterPlayerListBrickWork: React.FC<RosterPlayerListProps> = ({
                 MAX_PLAYER_NAME_LENGTH,
               )}
               className="text-left"
-              variant="onContainerCopyNoBg"
+              variant="onContainerCopy"
             />
           </div>
         ))}

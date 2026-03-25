@@ -75,10 +75,12 @@ Step-by-step workflow for creating a new template variant that extends the base 
 - Variant ID: PascalCase in registry; lowercase in composition maps
 - Background: `SelectTemplateBackground()` for 99% of variants
 - Theme: extend `baseTheme`, override only what differs
+- Composition/display components for the variant must follow **`create-component.md`** (variant theme for copy and sizing; light/dark surfaces and `onContainer*` / `onBackground*` copy)
 - All documentation in `.docs/`; no stray markdown
 
 ## References
 
+- Compositions / display UI: `create-component.md`
 - README: `src/templates/.docs/readMe.md`
 - How-to: `src/templates/.docs/how-to.md`
 - Example (minimal): `src/templates/variants/basic/`

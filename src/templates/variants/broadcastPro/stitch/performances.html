@@ -1,0 +1,538 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ELITE CRICKET SERIES - Performance Rankings</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#690005",
+              "outline-variant": "#3b494c",
+              "on-surface": "#d6e3ff",
+              "on-surface-variant": "#bac9cc",
+              "tertiary-fixed": "#e0e0ff",
+              "secondary-fixed": "#ffdadc",
+              "surface-container": "#112036",
+              "on-secondary-container": "#fff6f6",
+              primary: "#c3f5ff",
+              error: "#ffb4ab",
+              "on-secondary-fixed": "#40000f",
+              "surface-variant": "#27354c",
+              "on-background": "#d6e3ff",
+              "surface-container-lowest": "#010e24",
+              "on-primary-fixed-variant": "#004f58",
+              "on-primary": "#00363d",
+              "on-primary-fixed": "#001f24",
+              "secondary-fixed-dim": "#ffb2b9",
+              tertiary: "#ecebff",
+              "inverse-on-surface": "#233148",
+              "on-primary-container": "#00626e",
+              "tertiary-fixed-dim": "#bdc2ff",
+              "surface-bright": "#2c3951",
+              "surface-container-high": "#1c2a41",
+              "surface-dim": "#041329",
+              "error-container": "#93000a",
+              "inverse-primary": "#006875",
+              outline: "#849396",
+              "on-tertiary": "#1b247f",
+              "on-tertiary-container": "#4750a9",
+              "inverse-surface": "#d6e3ff",
+              "tertiary-container": "#cacdff",
+              "secondary-container": "#e2044d",
+              "on-secondary": "#67001e",
+              "surface-container-highest": "#27354c",
+              background: "#041329",
+              secondary: "#ffb2b9",
+              "surface-container-low": "#0d1c32",
+              surface: "#041329",
+              "primary-fixed-dim": "#00daf3",
+              "on-tertiary-fixed-variant": "#343d96",
+              "primary-container": "#00e5ff",
+              "surface-tint": "#00daf3",
+              "on-tertiary-fixed": "#000767",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#91002e",
+              "primary-fixed": "#9cf0ff",
+              "premium-accent": "#5a6b73",
+            },
+            fontFamily: {
+              teko: ["Teko"],
+              rajdhani: ["Rajdhani"],
+              manrope: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 100%
+        );
+        backdrop-filter: blur(32px);
+        -webkit-backdrop-filter: blur(32px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(4, 19, 41, 0.4) 0%,
+          rgba(4, 19, 41, 0.98) 100%
+        );
+      }
+      .text-lift {
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+      }
+      .stat-grid-label {
+        @apply font-rajdhani text-premium-accent uppercase tracking-widest text-[9px] font-bold;
+      }
+      .stat-grid-value {
+        @apply font-teko text-white text-2xl leading-none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#050505] text-on-surface font-rajdhani selection:bg-primary-container selection:text-on-primary-container min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="relative w-[1080px] h-[1350px] overflow-hidden flex flex-col bg-surface shadow-[0_0_100px_rgba(0,0,0,0.9)]"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Professional cricket stadium at night with floodlights"
+          class="w-full h-full object-cover scale-105"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdiLrwwbskCS0aKtpFPzek6DgcYDROX4QjZ6QvQvj_2z4qHFSiLYTXBK2VwLSiUNuul8udYiVOm4bZZKxIs1XZ5jn-LOcqFFRnAEIJVsabnQB5G0T-PYgGivgVbva4WKGfkgp_626njQ239OxwFJUAOPqT3JpbWIQCIxyUoVJa68c1ab_10Kl0xI0GyfAZfHbWoxqWUGYZ-m5JC6CSQZv045Ep0fwthPWVzfsNkGu0Tz_rDNOzRAUJJ2--dpTyvU2g786cmuSTr0k"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <header class="relative z-10 w-full pt-16 flex flex-col items-center">
+        <div
+          class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-[0_0_40px_rgba(255,255,255,0.15)]"
+        >
+          <span
+            class="material-symbols-outlined text-surface text-4xl"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >sports_cricket</span
+          >
+        </div>
+        <h1
+          class="font-teko text-[100px] leading-[0.8] text-white uppercase tracking-tight text-center font-bold text-lift drop-shadow-2xl"
+        >
+          TOP PERFORMANCES
+        </h1>
+        <div class="mt-6 flex items-center gap-6">
+          <div
+            class="h-[1px] w-24 bg-gradient-to-r from-transparent to-white/20"
+          ></div>
+          <p
+            class="font-rajdhani text-white/70 text-lg font-medium uppercase tracking-[0.5em]"
+          >
+            WEEK 14 <span class="text-white/30 px-2">•</span> SEASON RECAP
+          </p>
+          <div
+            class="h-[1px] w-24 bg-gradient-to-l from-transparent to-white/20"
+          ></div>
+        </div>
+      </header>
+      <main class="relative z-10 flex-1 px-14 pt-10 pb-12">
+        <div class="grid grid-cols-2 grid-rows-4 gap-4 h-full">
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-primary-container px-3 py-1 font-teko text-surface-dim text-lg font-bold italic tracking-wide"
+            >
+              #1
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span
+                class="material-symbols-outlined text-white/80 text-4xl"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >shield</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                ADAM ZAMPA
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                Westside Tigers
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value">6/22</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">8.4</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">ECON</p>
+                  <p class="stat-grid-value">2.53</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #2
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >token</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                P. CUMMINS
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                City United
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">5/31</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">10.0</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">SR</p>
+                  <p class="stat-grid-value">12.0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #3
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >pets</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                M. WOOD
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                Northern Stars
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">4/28</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">9.0</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">ECON</p>
+                  <p class="stat-grid-value">3.11</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #4
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >bolt</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                J. HAZLEWOOD
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                River Raiders
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">4/45</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">10.0</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">SR</p>
+                  <p class="stat-grid-value">15.0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #5
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >star_half</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                R. KHAN
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                Coastal Kings
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">3/18</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">4.0</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">ECON</p>
+                  <p class="stat-grid-value">4.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #6
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >water_drop</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                M. STARC
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                Sydney Sharks
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">3/29</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">7.2</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">ECON</p>
+                  <p class="stat-grid-value">3.95</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #7
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >diamond</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                K. MAHARAJ
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                Durban Dawn
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">3/41</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">10.0</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">SR</p>
+                  <p class="stat-grid-value">20.0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel relative flex items-center p-6 gap-6">
+            <div
+              class="absolute top-0 right-0 bg-white/10 px-3 py-1 font-teko text-white/50 text-lg font-bold italic tracking-wide"
+            >
+              #8
+            </div>
+            <div
+              class="w-20 h-20 bg-white/5 flex items-center justify-center border border-white/10 shrink-0"
+            >
+              <span class="material-symbols-outlined text-white/60 text-4xl"
+                >rocket_launch</span
+              >
+            </div>
+            <div class="flex-1">
+              <h2
+                class="font-teko text-[38px] text-white uppercase leading-none font-semibold text-lift"
+              >
+                S. AFRIDI
+              </h2>
+              <p
+                class="font-rajdhani text-premium-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
+              >
+                Lahore Lads
+              </p>
+              <div class="grid grid-cols-3 border-t border-white/5 pt-3">
+                <div>
+                  <p class="stat-grid-label">FIGS</p>
+                  <p class="stat-grid-value text-primary">2/19</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">OV</p>
+                  <p class="stat-grid-value">6.0</p>
+                </div>
+                <div class="border-l border-white/5 pl-4">
+                  <p class="stat-grid-label">ECON</p>
+                  <p class="stat-grid-value">3.16</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="relative z-10 w-full h-28 bg-white flex items-center justify-between px-14"
+      >
+        <div class="flex items-center gap-12">
+          <div
+            class="w-14 h-14 bg-surface-container flex items-center justify-center p-2 shadow-lg"
+          >
+            <span
+              class="material-symbols-outlined text-white text-3xl"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >eco</span
+            >
+          </div>
+          <div class="flex items-center gap-5">
+            <div
+              class="h-10 w-40 bg-surface-container flex items-center justify-center text-white font-teko text-2xl tracking-[0.25em] font-medium"
+            >
+              WESTERA
+            </div>
+            <div
+              class="text-[9px] text-surface font-black uppercase leading-[1.1] tracking-widest w-6 opacity-60"
+            >
+              Major Series Sponsor
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div
+            class="font-rajdhani text-surface/60 font-bold text-xs uppercase tracking-[0.25em]"
+          >
+            Official Series Partners
+          </div>
+          <div class="flex gap-8 mt-3 justify-end items-center">
+            <span
+              class="material-symbols-outlined text-surface text-3xl opacity-80"
+              >rocket</span
+            >
+            <span
+              class="material-symbols-outlined text-surface text-3xl opacity-80"
+              >diamond</span
+            >
+            <span
+              class="material-symbols-outlined text-surface text-3xl opacity-80"
+              >trophy</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

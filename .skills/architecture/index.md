@@ -55,6 +55,15 @@ Quick lookup for all skills in `.skills/architecture/`. Use when navigating, ext
 
 ---
 
+## Workflows
+
+| Skill | Applies To | Use When |
+|-------|------------|----------|
+| [create-template-variant.md](../workflows/create-template-variant.md) | New `templates/variants/*` | Adding a template variant, registry, composition wiring |
+| [create-component.md](../workflows/create-component.md) | Compositions + shared components | New UI: variant theme for copy/sizing; light/dark on containers and copy |
+
+---
+
 ## Templates
 
 | Skill | Applies To | Use When |

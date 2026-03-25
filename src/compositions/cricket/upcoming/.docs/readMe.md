@@ -8,6 +8,7 @@ Upcoming fixtures compositions across multiple variants. Configurable games per 
 
 ## Files
 
+- `llm-brief/llm-brief-cricket-upcoming.md`: static one-page design brief for design LLMs (general)
 - `index.tsx`: exports upcoming composition variants
 - `basic.tsx`, `classic.tsx`, `brickWork.tsx`, `sixersThunder.tsx`, `classicTwoColumn.tsx`, `cnsw.tsx`, `cnsw-private.tsx`, `mudgeeraba.tsx`: variant entries
 - `_types/types.ts`: GameData, TeamLogo, animation constants

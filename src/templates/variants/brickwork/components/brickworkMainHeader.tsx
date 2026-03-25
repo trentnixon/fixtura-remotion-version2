@@ -1,7 +1,7 @@
 // BrickworkMainHeader.tsx
 
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
-import { TwoColumnHeaderTitle } from "../../../../components/layout/main/header";
+import { TwoColumnHeaderTitleName } from "../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
@@ -19,7 +19,7 @@ export const BrickworkMainHeader = () => {
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
   return (
-    <TwoColumnHeaderTitle
+    <TwoColumnHeaderTitleName
       height={heights.header}
       alignment="center"
       Logo={
@@ -40,8 +40,8 @@ export const BrickworkMainHeader = () => {
       }
       Title={
         <AnimatedText
-          textAlign="center"
-          type="subtitle"
+          textAlign="left"
+          type="compositionName"
           variant="onContainerTitle"
           letterAnimation="none"
           animation={TextAnimations.title}
@@ -55,8 +55,8 @@ export const BrickworkMainHeader = () => {
       Name={
         <AnimatedText
           fontFamily={fontClasses.subtitle?.family}
-          type="subtitle"
-          textAlign="right"
+          type="compositionNameSmall"
+          textAlign="left"
           variant="onContainerTitle"
           letterAnimation="word"
           animation={TextAnimations.title}

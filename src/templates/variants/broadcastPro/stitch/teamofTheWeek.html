@@ -1,0 +1,492 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ELITE CRICKET SERIES - Team of the Week</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#690005",
+              "outline-variant": "#3b494c",
+              "on-surface": "#d6e3ff",
+              "on-surface-variant": "#bac9cc",
+              "tertiary-fixed": "#e0e0ff",
+              "secondary-fixed": "#ffdadc",
+              "surface-container": "#112036",
+              "on-secondary-container": "#fff6f6",
+              primary: "#c3f5ff",
+              error: "#ffb4ab",
+              "on-secondary-fixed": "#40000f",
+              "surface-variant": "#27354c",
+              "on-background": "#d6e3ff",
+              "surface-container-lowest": "#010e24",
+              "on-primary-fixed-variant": "#004f58",
+              "on-primary": "#00363d",
+              "on-primary-fixed": "#001f24",
+              "secondary-fixed-dim": "#ffb2b9",
+              tertiary: "#ecebff",
+              "inverse-on-surface": "#233148",
+              "on-primary-container": "#00626e",
+              "tertiary-fixed-dim": "#bdc2ff",
+              "surface-bright": "#2c3951",
+              "surface-container-high": "#1c2a41",
+              "surface-dim": "#041329",
+              "error-container": "#93000a",
+              "inverse-primary": "#006875",
+              outline: "#849396",
+              "on-tertiary": "#1b247f",
+              "on-tertiary-container": "#4750a9",
+              "inverse-surface": "#d6e3ff",
+              "tertiary-container": "#cacdff",
+              "secondary-container": "#e2044d",
+              "on-secondary": "#67001e",
+              "surface-container-highest": "#27354c",
+              background: "#041329",
+              secondary: "#ffb2b9",
+              "surface-container-low": "#0d1c32",
+              surface: "#041329",
+              "primary-fixed-dim": "#00daf3",
+              "on-tertiary-fixed-variant": "#343d96",
+              "primary-container": "#00e5ff",
+              "surface-tint": "#00daf3",
+              "on-tertiary-fixed": "#000767",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#91002e",
+              "primary-fixed": "#9cf0ff",
+            },
+            fontFamily: {
+              teko: ["Teko"],
+              rajdhani: ["Rajdhani"],
+              manrope: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(4, 19, 41, 0.4) 0%,
+          rgba(4, 19, 41, 0.9) 100%
+        );
+      }
+      .social-canvas {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .role-section {
+        background: rgba(255, 255, 255, 0.03);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .player-card {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-black text-on-surface font-rajdhani flex items-center justify-center p-4"
+  >
+    <div class="social-canvas bg-surface shadow-2xl">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Cricket Stadium"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdiLrwwbskCS0aKtpFPzek6DgcYDROX4QjZ6QvQvj_2z4qHFSiLYTXBK2VwLSiUNuul8udYiVOm4bZZKxIs1XZ5jn-LOcqFFRnAEIJVsabnQB5G0T-PYgGivgVbva4WKGfkgp_626njQ239OxwFJUAOPqT3JpbWIQCIxyUoVJa68c1ab_10Kl0xI0GyfAZfHbWoxqWUGYZ-m5JC6CSQZv045Ep0fwthPWVzfsNkGu0Tz_rDNOzRAUJJ2--dpTyvU2g786cmuSTr0k"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <header class="relative z-10 w-full pt-12 flex flex-col items-center">
+        <div
+          class="w-20 h-20 bg-white rounded-full flex items-center justify-center p-3 shadow-xl mb-3"
+        >
+          <span
+            class="material-symbols-outlined text-surface text-5xl"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >groups</span
+          >
+        </div>
+        <h1
+          class="font-teko text-[100px] leading-[0.8] text-white uppercase tracking-tight drop-shadow-2xl"
+        >
+          TEAM OF THE WEEK
+        </h1>
+        <p
+          class="font-rajdhani text-white/90 text-xl font-bold mt-3 uppercase tracking-[0.2em] bg-white/10 px-8 py-1 backdrop-blur-md"
+        >
+          Premier Grade • Round 14 Top Performers
+        </p>
+      </header>
+      <main
+        class="relative z-10 flex-1 px-10 pt-8 pb-4 flex flex-col overflow-hidden"
+      >
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="material-symbols-outlined text-primary text-2xl"
+              >sports_cricket</span
+            >
+            <h2
+              class="font-teko text-3xl text-primary uppercase tracking-widest"
+            >
+              The Batters
+            </h2>
+            <div class="flex-1 h-[1px] bg-primary/20"></div>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >shield</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                J. Anderson
+              </h3>
+              <p
+                class="text-[10px] text-primary font-bold uppercase tracking-tighter"
+              >
+                Northern Stars
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >pets</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                M. Thompson
+              </h3>
+              <p
+                class="text-[10px] text-primary font-bold uppercase tracking-tighter"
+              >
+                Westside Tigers
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >bolt</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                S. Richards
+              </h3>
+              <p
+                class="text-[10px] text-primary font-bold uppercase tracking-tighter"
+              >
+                River Raiders
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >token</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                D. Warner
+              </h3>
+              <p
+                class="text-[10px] text-primary font-bold uppercase tracking-tighter"
+              >
+                City United
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="material-symbols-outlined text-secondary text-2xl"
+              >star</span
+            >
+            <h2
+              class="font-teko text-3xl text-secondary uppercase tracking-widest"
+            >
+              All-Rounders
+            </h2>
+            <div class="flex-1 h-[1px] bg-secondary/20"></div>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center bg-secondary/5"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >poker_chip</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                C. Miller
+              </h3>
+              <p
+                class="text-[10px] text-secondary font-bold uppercase tracking-tighter"
+              >
+                South Coast Lions
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center bg-secondary/5"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >groups</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                B. Stokes
+              </h3>
+              <p
+                class="text-[10px] text-secondary font-bold uppercase tracking-tighter"
+              >
+                Central Vikings
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center bg-secondary/5"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >shield</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                A. Patel
+              </h3>
+              <p
+                class="text-[10px] text-secondary font-bold uppercase tracking-tighter"
+              >
+                Northern Stars
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="material-symbols-outlined text-white text-2xl"
+              >sports_baseball</span
+            >
+            <h2 class="font-teko text-3xl text-white uppercase tracking-widest">
+              The Bowlers
+            </h2>
+            <div class="flex-1 h-[1px] bg-white/20"></div>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >bolt</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                P. Cummins
+              </h3>
+              <p
+                class="text-[10px] text-white/60 font-bold uppercase tracking-tighter"
+              >
+                River Raiders
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >pets</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                K. Rabada
+              </h3>
+              <p
+                class="text-[10px] text-white/60 font-bold uppercase tracking-tighter"
+              >
+                Westside Tigers
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >token</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                J. Bumrah
+              </h3>
+              <p
+                class="text-[10px] text-white/60 font-bold uppercase tracking-tighter"
+              >
+                City United
+              </p>
+            </div>
+            <div
+              class="player-card glass-panel p-4 flex flex-col items-center text-center"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 mb-2 flex items-center justify-center rounded-sm"
+              >
+                <span class="material-symbols-outlined text-white/60"
+                  >poker_chip</span
+                >
+              </div>
+              <h3 class="font-teko text-2xl text-white uppercase leading-tight">
+                R. Khan
+              </h3>
+              <p
+                class="text-[10px] text-white/60 font-bold uppercase tracking-tighter"
+              >
+                South Coast Lions
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto">
+          <div
+            class="glass-panel border-l-8 border-white/40 px-6 py-4 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-6">
+              <div class="flex flex-col">
+                <span
+                  class="font-teko text-lg text-white/40 uppercase tracking-widest leading-none"
+                  >12th Man</span
+                >
+                <h3
+                  class="font-teko text-4xl text-white uppercase leading-tight"
+                >
+                  Trent Boult
+                </h3>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="text-right">
+                <p
+                  class="text-xs font-bold text-white/40 uppercase tracking-widest"
+                >
+                  Northern Stars
+                </p>
+                <p
+                  class="text-xs text-white/20 uppercase tracking-tighter mt-1"
+                >
+                  Stand-by Player
+                </p>
+              </div>
+              <div
+                class="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white/30 text-3xl"
+                  >shield</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="relative z-10 w-full h-28 bg-white flex items-center justify-between px-14 mt-auto"
+      >
+        <div class="flex items-center gap-12">
+          <div
+            class="w-20 h-20 bg-surface-container flex items-center justify-center p-2"
+          >
+            <span
+              class="material-symbols-outlined text-white text-4xl"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >eco</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="h-12 w-40 bg-surface-container flex items-center justify-center text-white font-teko text-3xl tracking-[0.2em]"
+            >
+              WESTERA
+            </div>
+            <div
+              class="text-[12px] text-surface font-black uppercase leading-none tracking-tighter"
+            >
+              Partners
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div
+            class="font-rajdhani text-surface font-bold text-base uppercase tracking-[0.2em]"
+          >
+            Official Series Partners
+          </div>
+          <div class="flex gap-8 mt-2 justify-end">
+            <span class="material-symbols-outlined text-surface text-4xl"
+              >rocket</span
+            >
+            <span class="material-symbols-outlined text-surface text-4xl"
+              >diamond</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

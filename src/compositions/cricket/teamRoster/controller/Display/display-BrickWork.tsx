@@ -50,14 +50,14 @@ const RosterDisplayBrickWork: React.FC<RosterDisplayProps> = ({ roster }) => {
               <AccountTeamLarge
                 roster={roster}
                 logoSize={BRICKWORK_ACCOUNT_LOGO}
-                variant="onContainerCopyNoBg"
+                variant="onContainerCopy"
                 compact
               />
-              <VS variant="onContainerCopyNoBg" />
+              <VS variant="onContainerCopy" />
               <AgainstTeamLarge
                 roster={roster}
                 logoSize={BRICKWORK_AGAINST_LOGO}
-                variant="onContainerCopyNoBg"
+                variant="onContainerCopy"
                 compact
               />
             </div>
@@ -72,19 +72,19 @@ const RosterDisplayBrickWork: React.FC<RosterDisplayProps> = ({ roster }) => {
               value={roster.round + " - " + roster.gradeName}
               animation={{ ...textAnimations, delay: 0 }}
               className="text-center text-[26px]"
-              variant="onContainerCopyNoBg"
+              variant="onContainerCopy"
             />
             <MetadataLarge
               value={formatDate(roster.date)}
               animation={{ ...textAnimations, delay: 0 }}
               className="text-center text-[26px]"
-              variant="onContainerCopyNoBg"
+              variant="onContainerCopy"
             />
             <MetadataLarge
               value={truncateText(roster.ground, 150)}
               animation={{ ...textAnimations, delay: 1 }}
               className="text-center text-[26px]"
-              variant="onContainerCopyNoBg"
+              variant="onContainerCopy"
             />
 
           </div>

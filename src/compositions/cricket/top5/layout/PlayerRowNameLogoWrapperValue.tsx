@@ -89,12 +89,14 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutPropsWithRes
         className="col-span-2 flex items-center justify-center h-full"
         style={{ background: contrastBG }}
       >
-        <div className="w-30 h-30 overflow-hidden">
+        <div className="w-30 h-30 overflow-hidden flex items-center justify-center">
           <TeamLogo
             logo={player.teamLogo as Top5TeamLogoType}
             teamName={player.playedFor}
             delay={delay + LOGO_DELAY_OFFSET}
             size={SMALL_LOGO_SIZE}
+            fit="contain"
+            imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
         </div>
       </div>
