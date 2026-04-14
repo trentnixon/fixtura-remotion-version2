@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/core/context/AnimationContext.tsx
 import React, { createContext, useContext, ReactNode } from "react";
 

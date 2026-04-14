@@ -1,10 +1,24 @@
 {
-  "name": "Fixtura-Remotion-version2",
-  "version": "1.0.0",
+  "name": "@fixtura/remotion-assets",
+  "version": "0.1.0",
   "description": "My Remotion video",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trentnixon/fixtura-remotion-version2.git"
+  },
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
+  "files": ["dist"],
+  "main": "./dist/preview.js",
+  "module": "./dist/preview.mjs",
+  "types": "./dist/preview.d.ts",
+  "exports": {
+    "./preview": {
+      "types": "./dist/preview.d.ts",
+      "import": "./dist/preview.mjs",
+      "require": "./dist/preview.js"
+    }
+  },
   "dependencies": {
     "@remotion/animation-utils": "4.0.314",
     "@remotion/cli": "4.0.314",
@@ -31,17 +45,26 @@
     "tinycolor2": "^1.6.0",
     "zod": "3.22.3"
   },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.314",
+    "@remotion/player": "4.0.314"
+  },
   "devDependencies": {
     "@types/lodash": "^4.17.17",
     "@types/react": "19.0.0",
     "@types/tinycolor2": "^1.4.6",
     "@types/web": "0.0.166",
     "prettier": "3.3.3",
+    "tsup": "^8.5.1",
     "typescript": "5.5.4"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "build:package": "tsup && node scripts/copy-preview-dts.mjs",
+    "prepack": "npm run build:package",
     "upgrade": "remotion upgrade",
     "lint": "tsc",
     "lint:fix": "eslint . --fix",
