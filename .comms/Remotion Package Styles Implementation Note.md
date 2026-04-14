@@ -1,5 +1,7 @@
 # Remotion Package Styles Implementation Note
 
+> **Integration strategy (2026):** Relying on `styles.css` alone is **no longer the primary** way to match Remotion markup in host apps. The main approach is for the consuming app to **scan this package’s published source** in its Tailwind pipeline and align theme tokens (see [Remotion Tailwind Alignment Handoff.md](./Remotion%20Tailwind%20Alignment%20Handoff.md) and the **Consuming this package** section in the repository [README.md](../README.md)). The `./styles.css` export remains useful as a **supplementary** baseline. The document below is retained for history and for teams still wiring the CSS export.
+
 ## Goal
 
 Update `fixtura-remotion-version2` so the published package ships a compiled stylesheet that the consuming app can import.

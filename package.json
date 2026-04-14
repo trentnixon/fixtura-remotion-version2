@@ -1,6 +1,6 @@
 {
   "name": "@fixtura/remotion-assets",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "My Remotion video",
   "repository": {
     "type": "git",
@@ -9,6 +9,7 @@
   "license": "UNLICENSED",
   "private": false,
   "files": [
+    "CHANGELOG.md",
     "dist",
     "src/components",
     "src/compositions",
@@ -28,6 +29,7 @@
       "require": "./dist/preview.js"
     },
     "./styles.css": "./dist/preview.css",
+    "./tailwind-preset": "./src/package/tailwind-preset.cjs",
     "./src/*": "./src/*"
   },
   "dependencies": {
@@ -77,7 +79,8 @@
     "build": "remotion bundle",
     "build:package:js": "tsup && node scripts/copy-preview-dts.mjs",
     "build:package:css": "tailwindcss -i ./src/package/styles.css -o ./dist/preview.css --minify",
-    "build:package": "npm run build:package:js && npm run build:package:css",
+    "build:package": "npm run build:package:js && npm run build:package:css && npm run verify:pack",
+    "verify:pack": "node scripts/verify-pack.mjs",
     "prepack": "npm run build:package",
     "upgrade": "remotion upgrade",
     "lint": "tsc",
