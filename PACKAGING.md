@@ -1,5 +1,11 @@
 # Releasing `@fixtura/remotion-assets`
 
+Published package contents:
+
+- `dist/` for the built public preview entrypoints and CSS.
+- Selected runtime folders under `src/`: `components/`, `compositions/`, `config/`, `core/`, `package/`, `templates/`, and `types/`.
+- Root files directly under `src/` are not published.
+
 1. Run `npm run build:package` (or rely on `prepack` when using `npm pack` / `npm publish`).
 2. Commit `dist/` together with source changes (Strategy A — see `.comms/REMOTION_PACKAGE_HOWTO.md`).
 3. Tag: `git tag v0.1.x` and `git push origin v0.1.x`.

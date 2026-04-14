@@ -1,6 +1,6 @@
 {
   "name": "@fixtura/remotion-assets",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "My Remotion video",
   "repository": {
     "type": "git",
@@ -9,7 +9,14 @@
   "license": "UNLICENSED",
   "private": false,
   "files": [
-    "dist"
+    "dist",
+    "src/components",
+    "src/compositions",
+    "src/config",
+    "src/core",
+    "src/package",
+    "src/templates",
+    "src/types"
   ],
   "main": "./dist/preview.js",
   "module": "./dist/preview.mjs",
@@ -20,7 +27,8 @@
       "import": "./dist/preview.mjs",
       "require": "./dist/preview.js"
     },
-    "./styles.css": "./dist/preview.css"
+    "./styles.css": "./dist/preview.css",
+    "./src/*": "./src/*"
   },
   "dependencies": {
     "@remotion/animation-utils": "4.0.314",
