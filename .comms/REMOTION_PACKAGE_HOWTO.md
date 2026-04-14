@@ -64,6 +64,7 @@ Only allow imports like:
 ```ts
 @fixtura/remotion-assets
 @fixtura/remotion-assets/preview
+@fixtura/remotion-assets/styles.css
 @fixtura/remotion-assets/cricket
 ```
 
@@ -320,6 +321,7 @@ In this codebase, `ProductionRoot` registers a dynamic `<Composition />` for ren
 Typical usage:
 
 ```tsx
+import "@fixtura/remotion-assets/styles.css";
 import { Player } from "@remotion/player";
 import { CricketTemplatePreview } from "@fixtura/remotion-assets/preview";
 
@@ -361,7 +363,7 @@ The consumable package should list `"files": ["dist"]` (or equivalent) so only b
 
 **CSS**
 
-- If preview components **import** CSS (for example `import "./preview.css"` from an entry that `tsup` bundles), confirm whether `tsup` inlines styles, emits a separate `.css` file, or leaves imports as external paths. Document what the **Next.js app must import** (for example a single `import "@fixtura/remotion-assets/dist/preview.css"` if you add that file to `exports`).
+- The package build emits `dist/preview.css` and exports it as `@fixtura/remotion-assets/styles.css`. Import it once in the app (for example the preview layout or shell): `import "@fixtura/remotion-assets/styles.css";` so Tailwind utility classes from templates apply in the consuming app.
 - Root `package.json` may include `"sideEffects": ["*.css"]` so bundlers do not drop CSS imports. The app still needs a **real import** of that CSS somewhere in the client tree if styles are not inlined.
 
 **Fonts, images, video**

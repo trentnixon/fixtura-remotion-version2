@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Scan package preview sources (templates, core, etc.) for utility classes. */
+@source "../**/*.{js,ts,jsx,tsx,html}";
+
+.single-team-font,
+.single-team-font * {
+  font-size: 1.8rem !important;
+}
