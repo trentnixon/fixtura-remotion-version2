@@ -48,7 +48,7 @@ export const LargeTeamHeader: React.FC<AccountTeamProps> = ({
         <div className="flex flex-col items-center">
           <ResultTeamName
             value={truncateText(teamName, MAX_TEAM_NAME_LENGTH).toUpperCase()}
-            animation={undefined}
+            animation={null}
             variant={variant}
             className="text-center"
           />

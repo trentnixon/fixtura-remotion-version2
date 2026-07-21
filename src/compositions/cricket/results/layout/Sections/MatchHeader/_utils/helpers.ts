@@ -4,7 +4,10 @@
  * @param maxLength - Maximum length before truncation
  * @returns Truncated text with ellipsis if needed
  */
-export const truncateText = (text: string, maxLength: number): string => {
+export const truncateText = (
+  text: string | undefined,
+  maxLength: number,
+): string => {
   if (!text || text.length <= maxLength) return text || "";
   return text.substring(0, maxLength - 3) + "...";
 };

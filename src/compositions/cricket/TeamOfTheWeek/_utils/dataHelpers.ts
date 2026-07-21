@@ -1,4 +1,11 @@
+import { SponsorsData } from "../../../../core/types/data/sponsors";
+import { VideoMeta } from "../../../../core/types/data/videoData";
 import { TeamOfTheWeekPlayer } from "../types";
+
+const EMPTY_SPONSORS: SponsorsData = {
+  primary: [],
+  default: {},
+};
 
 /**
  * Check if team of the week data is valid
@@ -30,14 +37,10 @@ export const castToTeamOfTheWeekPlayers = (
 /**
  * Extract sponsors from video metadata
  * @param videoMeta - Video metadata from context
- * @returns Array of sponsors (empty array if not available)
+ * @returns SponsorsData (empty primary/default if not available)
  */
 export const extractSponsors = (
-  videoMeta:
-    | {
-        club?: { sponsors?: unknown[] };
-      }
-    | undefined,
-): unknown[] => {
-  return videoMeta?.club?.sponsors || [];
+  videoMeta: VideoMeta | undefined,
+): SponsorsData => {
+  return videoMeta?.club?.sponsors ?? EMPTY_SPONSORS;
 };

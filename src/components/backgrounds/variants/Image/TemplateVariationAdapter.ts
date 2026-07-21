@@ -131,7 +131,12 @@ function mapDirection(
     effectType === ImageEffectType.Pan ||
     effectType === ImageEffectType.KenBurns
   ) {
-    if (["left", "right", "up", "down"].includes(direction)) {
+    if (
+      direction === "left" ||
+      direction === "right" ||
+      direction === "up" ||
+      direction === "down"
+    ) {
       return { panDirection: direction };
     }
   }

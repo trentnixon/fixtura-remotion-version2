@@ -1,4 +1,4 @@
-import { MatchResult } from "../../../../../_types/types";
+import { MatchResult } from "../../../../_types/types";
 
 export interface MudgeerabaClubHeaderProps {
   match: MatchResult;

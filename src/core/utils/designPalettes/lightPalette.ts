@@ -1,35 +1,19 @@
 // designPalettes/lightPalette.ts
 import {
   DesignPalette,
-  GradientOptions,
   TextColors,
   ShadowOptions,
   UtilityColors,
   ContrastOptions,
 } from "./types";
 import tinycolor from "tinycolor2";
+import {
+  createBackgroundIdentity,
+  createContainerSurfaceFields,
+  createGradientOptions,
+  createOnContainerContentText,
+} from "./paletteHelpers";
 
-// Helper function to create gradient options
-const createGradientOptions = (
-  color1: string,
-  color2: string,
-  type: "linear" | "radial" = "linear",
-  direction: string = "to right",
-): GradientOptions => ({
-  direction,
-  type,
-  stops: [color1, color2],
-  css: {
-    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
-    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
-    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
-    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
-    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
-    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
-    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
-    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
-  },
-});
 // REVIEW: BUGS IN SECONDARY COLOR
 export const createLightPalette = (
   primary: string,
@@ -41,10 +25,12 @@ export const createLightPalette = (
   contrast: ContrastOptions,
 ): DesignPalette => {
   const lightBg = backgrounds.light || "#F9FAFB";
+  const onLight = textColors.onLight || "#111827";
 
   return {
     name: "Light",
     background: {
+      ...createBackgroundIdentity(primary, secondary),
       main: lightBg,
       light: "#FFFFFF",
       dark: "#E5E7EB",
@@ -89,33 +75,31 @@ export const createLightPalette = (
       transparentSecondary: tinycolor("#F3F4F6").setAlpha(0.7).toRgbString(),
       transparentPrimary: tinycolor("#FFFFFF").toRgbString(),
       muted: tinycolor("#FFFFFF").setAlpha(0.5).toRgbString(),
+      ...createContainerSurfaceFields(lightBg),
     },
     text: {
       onBackground: {
-        main: textColors.onLight || "#111827",
+        main: onLight,
         light: textColors.onLight || "#F3F4F6",
         dark: textColors.onLight || "#374151",
-        muted: tinycolor(textColors.onLight || "#111827")
-          .setAlpha(0.7)
-          .toRgbString(),
+        muted: tinycolor(onLight).setAlpha(0.7).toRgbString(),
         accent: primary,
       },
       onContainer: {
-        primary: textColors.onLight || "#111827",
+        primary: onLight,
         secondary: textColors.onLight || "#F3F4F6",
         light: textColors.onLight || "#F3F4F6",
         dark: textColors.onLight || "#374151",
-        muted: tinycolor(textColors.onLight || "#111827")
-          .setAlpha(0.7)
-          .toRgbString(),
+        muted: tinycolor(onLight).setAlpha(0.7).toRgbString(),
         accent: primary,
+        ...createOnContainerContentText(lightBg, onLight),
       },
       title: "#111827",
       body: "#374151",
       primary: "#111827",
       secondary: "#374151",
       accent: primary,
-      contrast: textColors.onLight || "#111827",
+      contrast: onLight,
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,

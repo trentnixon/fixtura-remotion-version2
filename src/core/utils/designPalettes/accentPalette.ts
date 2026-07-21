@@ -4,34 +4,17 @@ import {
   ContrastOptions,
   DesignPalette,
   ensureContrast,
-  GradientOptions,
   ShadowOptions,
   TextColors,
   UtilityColors,
 } from "./types";
 import tinycolor from "tinycolor2";
-
-// Helper function to create gradient options
-const createGradientOptions = (
-  color1: string,
-  color2: string,
-  type: "linear" | "radial" = "linear",
-  direction: string = "to right",
-): GradientOptions => ({
-  direction,
-  type,
-  stops: [color1, color2],
-  css: {
-    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
-    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
-    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
-    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
-    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
-    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
-    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
-    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
-  },
-});
+import {
+  createBackgroundIdentity,
+  createContainerSurfaceFields,
+  createGradientOptions,
+  createOnContainerContentText,
+} from "./paletteHelpers";
 
 export const createAccentPalette = (
   primary: string,
@@ -43,11 +26,15 @@ export const createAccentPalette = (
   contrast: ContrastOptions,
 ): DesignPalette => {
   const secondaryVariations = colorVariations.secondary;
+  const mainBg =
+    secondaryVariations.dark || secondaryVariations.base || "#000000";
+  const preferredOnSecondary = textColors.onSecondary || "#FFFFFF";
 
   return {
     name: "Accent",
     background: {
-      main: secondaryVariations.dark || secondaryVariations.base || "#000000",
+      ...createBackgroundIdentity(primary, secondary),
+      main: mainBg,
       light: secondaryVariations.base || "#FFFFFF",
       dark:
         secondaryVariations.darker ||
@@ -154,30 +141,25 @@ export const createAccentPalette = (
       muted: tinycolor(secondaryVariations.base || "#FFFFFF")
         .setAlpha(0.5)
         .toRgbString(),
+      ...createContainerSurfaceFields(
+        secondaryVariations.base || secondary || "#FFFFFF",
+      ),
     },
     text: {
       onBackground: {
-        main: ensureContrast(
-          secondaryVariations.dark || secondaryVariations.base || "#000000",
-          textColors.onSecondary || "#FFFFFF",
-        ),
+        main: ensureContrast(mainBg, preferredOnSecondary),
         light: ensureContrast(
           secondaryVariations.base || "#FFFFFF",
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
         dark: ensureContrast(
           secondaryVariations.darker ||
             secondaryVariations.dark ||
             secondaryVariations.base ||
             "#000000",
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
-        muted: tinycolor(
-          ensureContrast(
-            secondaryVariations.dark || secondaryVariations.base || "#000000",
-            textColors.onSecondary || "#FFFFFF",
-          ),
-        )
+        muted: tinycolor(ensureContrast(mainBg, preferredOnSecondary))
           .setAlpha(0.7)
           .toRgbString(),
         accent: colorVariations.primary.base || primary,
@@ -185,11 +167,11 @@ export const createAccentPalette = (
       onContainer: {
         primary: ensureContrast(
           secondaryVariations.base || "#FFFFFF",
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
         secondary: ensureContrast(
           secondaryVariations.light || secondaryVariations.base || "#FFFFFF",
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
         light: ensureContrast("#FFFFFF", "#111827"),
         dark: ensureContrast(
@@ -197,33 +179,23 @@ export const createAccentPalette = (
             secondaryVariations.dark ||
             secondaryVariations.base ||
             "#000000",
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
-        muted: tinycolor(
-          ensureContrast(
-            secondaryVariations.dark || secondaryVariations.base || "#000000",
-            textColors.onSecondary || "#FFFFFF",
-          ),
-        )
+        muted: tinycolor(ensureContrast(mainBg, preferredOnSecondary))
           .setAlpha(0.7)
           .toRgbString(),
         accent: colorVariations.primary.base || primary,
+        ...createOnContainerContentText(mainBg, preferredOnSecondary),
       },
-      title: ensureContrast(
-        secondaryVariations.dark || secondaryVariations.base || "#000000",
-        textColors.onSecondary || "#FFFFFF",
-      ),
-      body: ensureContrast(
-        secondaryVariations.dark || secondaryVariations.base || "#000000",
-        textColors.onSecondary || "#FFFFFF",
-      ),
+      title: ensureContrast(mainBg, preferredOnSecondary),
+      body: ensureContrast(mainBg, preferredOnSecondary),
       primary: colorVariations.primary.base || primary,
       secondary: colorVariations.secondary.base || secondary,
       accent:
         colorVariations.primary.accent ||
         colorVariations.primary.base ||
         primary,
-      contrast: textColors.onSecondary || "#FFFFFF",
+      contrast: preferredOnSecondary,
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,
@@ -235,11 +207,7 @@ export const createAccentPalette = (
       large: shadows.large,
       glow:
         shadows.glow ||
-        `0 0 15px ${tinycolor(
-          secondaryVariations.dark || secondaryVariations.base || "#000000",
-        )
-          .setAlpha(0.5)
-          .toRgbString()}`,
+        `0 0 15px ${tinycolor(mainBg).setAlpha(0.5).toRgbString()}`,
     },
   };
 };

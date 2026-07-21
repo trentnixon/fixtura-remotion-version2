@@ -1,4 +1,12 @@
-import { GradientOptions, CSSGradientOptions, TextOptions } from "./types";
+import tinycolor from "tinycolor2";
+import {
+  GradientOptions,
+  CSSGradientOptions,
+  TextOptions,
+  BackgroundOptions,
+  ContainerOptions,
+  ensureContrast,
+} from "./types";
 
 // Create a CSS gradient options object
 export const createCSSGradientOptions = (
@@ -28,6 +36,56 @@ export const createGradientOptions = (
   css: createCSSGradientOptions(color1, color2),
 });
 
+/** Brand identity fields required on every BackgroundOptions (matches primaryPalette). */
+export const createBackgroundIdentity = (
+  primary: string,
+  secondary: string,
+): Pick<
+  BackgroundOptions,
+  "primary" | "secondary" | "userPrimary" | "userSecondary"
+> => ({
+  primary,
+  secondary,
+  userPrimary: primary,
+  userSecondary: secondary,
+});
+
+/**
+ * Container surface fields required by ContainerOptions
+ * (background, backgroundAlt, backgroundTransparent) — mirrors primaryPalette.
+ */
+export const createContainerSurfaceFields = (
+  baseColor: string,
+): Pick<
+  ContainerOptions,
+  "background" | "backgroundAlt" | "backgroundTransparent"
+> => ({
+  background: tinycolor(baseColor).lighten(15).toString(),
+  backgroundAlt: tinycolor(baseColor).lighten(25).toString(),
+  backgroundTransparent: {
+    subtle: tinycolor(baseColor).setAlpha(0.1).toRgbString(),
+    low: tinycolor(baseColor).setAlpha(0.2).toRgbString(),
+    medium: tinycolor(baseColor).setAlpha(0.4).toRgbString(),
+    high: tinycolor(baseColor).setAlpha(0.6).toRgbString(),
+    strong: tinycolor(baseColor).setAlpha(0.8).toRgbString(),
+  },
+});
+
+/**
+ * onContainer title/copy/copyNoBg — same contrast pattern as primaryPalette.
+ */
+export const createOnContainerContentText = (
+  bgColor: string,
+  preferredTextColor: string,
+): Pick<TextOptions["onContainer"], "title" | "copy" | "copyNoBg"> => {
+  const text = ensureContrast(bgColor, preferredTextColor);
+  return {
+    title: text,
+    copy: text,
+    copyNoBg: text,
+  };
+};
+
 // Create text options with defaults
 export const createTextOptions = (
   onBackground: TextOptions["onBackground"],
@@ -43,6 +101,9 @@ export const createTextOptions = (
     ...onContainer,
     muted: onContainer.muted || `${onContainer.primary}CC`,
     accent: onContainer.accent || onContainer.primary,
+    title: onContainer.title || onContainer.primary,
+    copy: onContainer.copy || onContainer.primary,
+    copyNoBg: onContainer.copyNoBg || onContainer.primary,
   },
   ...additionalProps,
 });

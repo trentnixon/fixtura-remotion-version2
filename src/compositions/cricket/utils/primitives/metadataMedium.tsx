@@ -9,13 +9,20 @@ import { AnimatedTextPrimitivePropsWithLetterAnimation } from "./_types/Animated
 import { DEFAULT_VARIANT, DEFAULT_LETTER_ANIMATION } from "./_utils/constants";
 import { useFontFamily } from "./_utils/helpers";
 
+type MetadataMediumProps = Omit<
+  AnimatedTextPrimitivePropsWithLetterAnimation,
+  "animation"
+> & {
+  animation: AnimationConfig | null;
+};
+
 export const MetadataMedium = ({
   value,
   animation,
   className,
   variant = DEFAULT_VARIANT,
   letterAnimation = DEFAULT_LETTER_ANIMATION,
-}: AnimatedTextPrimitivePropsWithLetterAnimation) => {
+}: MetadataMediumProps) => {
   const fontFamily = useFontFamily();
 
   return (

@@ -2,7 +2,6 @@
 import {
   DesignPalette,
   ensureContrast,
-  GradientOptions,
   TextColors,
   ShadowOptions,
   UtilityColors,
@@ -10,28 +9,12 @@ import {
   ColorVariations,
 } from "./types";
 import tinycolor from "tinycolor2";
-
-// Helper function to create gradient options
-const createGradientOptions = (
-  color1: string,
-  color2: string,
-  type: "linear" | "radial" = "linear",
-  direction: string = "to right",
-): GradientOptions => ({
-  direction,
-  type,
-  stops: [color1, color2],
-  css: {
-    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
-    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
-    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
-    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
-    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
-    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
-    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
-    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
-  },
-});
+import {
+  createBackgroundIdentity,
+  createContainerSurfaceFields,
+  createGradientOptions,
+  createOnContainerContentText,
+} from "./paletteHelpers";
 
 export const createMonochromaticPalette = (
   primary: string,
@@ -44,10 +27,12 @@ export const createMonochromaticPalette = (
   const primaryVariations = colorVariations.primary;
   const accentColor =
     primaryVariations.accent || tinycolor(primary).spin(30).toString();
+  const preferredOnPrimary = textColors.onPrimary || "#FFFFFF";
 
   return {
     name: "Monochromatic",
     background: {
+      ...createBackgroundIdentity(primary, accentColor),
       main: primary,
       light: primaryVariations.lighter || primary,
       dark: primaryVariations.darker || primary,
@@ -130,21 +115,20 @@ export const createMonochromaticPalette = (
         .setAlpha(0.7)
         .toRgbString(),
       muted: tinycolor(primary).setAlpha(0.5).toRgbString(),
+      ...createContainerSurfaceFields(primary),
     },
     text: {
       onBackground: {
-        main: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+        main: ensureContrast(primary, preferredOnPrimary),
         light: ensureContrast(
           primaryVariations.lighter || primary,
-          textColors.onPrimary || "#FFFFFF",
+          preferredOnPrimary,
         ),
         dark: ensureContrast(
           primaryVariations.darker || primary,
-          textColors.onPrimary || "#FFFFFF",
+          preferredOnPrimary,
         ),
-        muted: tinycolor(
-          ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
-        )
+        muted: tinycolor(ensureContrast(primary, preferredOnPrimary))
           .setAlpha(0.7)
           .toRgbString(),
         accent: accentColor,
@@ -152,7 +136,7 @@ export const createMonochromaticPalette = (
       onContainer: {
         primary: ensureContrast(
           primaryVariations.light || primary,
-          textColors.onPrimary || "#FFFFFF",
+          preferredOnPrimary,
         ),
         secondary: ensureContrast(
           primaryVariations.lighter || primaryVariations.light || primary,
@@ -160,25 +144,24 @@ export const createMonochromaticPalette = (
         ),
         light: ensureContrast(
           primaryVariations.lighter || primaryVariations.light || primary,
-          textColors.onPrimary || "#FFFFFF",
+          preferredOnPrimary,
         ),
         dark: ensureContrast(
           primaryVariations.dark || primary,
-          textColors.onPrimary || "#FFFFFF",
+          preferredOnPrimary,
         ),
-        muted: tinycolor(
-          ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
-        )
+        muted: tinycolor(ensureContrast(primary, preferredOnPrimary))
           .setAlpha(0.7)
           .toRgbString(),
         accent: accentColor,
+        ...createOnContainerContentText(primary, preferredOnPrimary),
       },
-      title: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
-      body: ensureContrast(primary, textColors.onPrimary || "#FFFFFF"),
+      title: ensureContrast(primary, preferredOnPrimary),
+      body: ensureContrast(primary, preferredOnPrimary),
       primary: primaryVariations.base || primary,
       secondary: primaryVariations.light || primary,
       accent: accentColor,
-      contrast: textColors.onPrimary || "#FFFFFF",
+      contrast: preferredOnPrimary,
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,

@@ -2,7 +2,6 @@
 import {
   DesignPalette,
   ensureContrast,
-  GradientOptions,
   TextColors,
   ShadowOptions,
   UtilityColors,
@@ -10,28 +9,12 @@ import {
   ColorVariations,
 } from "./types";
 import tinycolor from "tinycolor2";
-
-// Helper function to create gradient options
-const createGradientOptions = (
-  color1: string,
-  color2: string,
-  type: "linear" | "radial" = "linear",
-  direction: string = "to right",
-): GradientOptions => ({
-  direction,
-  type,
-  stops: [color1, color2],
-  css: {
-    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
-    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
-    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
-    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
-    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
-    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
-    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
-    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
-  },
-});
+import {
+  createBackgroundIdentity,
+  createContainerSurfaceFields,
+  createGradientOptions,
+  createOnContainerContentText,
+} from "./paletteHelpers";
 
 export const createSecondaryPalette = (
   primary: string,
@@ -44,10 +27,12 @@ export const createSecondaryPalette = (
   contrast: ContrastOptions,
 ): DesignPalette => {
   const secondaryVariations = colorVariations.secondary;
+  const preferredOnSecondary = textColors.onSecondary || "#FFFFFF";
 
   return {
     name: "Secondary",
     background: {
+      ...createBackgroundIdentity(primary, secondary),
       main: secondary,
       light: secondaryVariations.light || secondary,
       dark: secondaryVariations.dark || secondary,
@@ -124,21 +109,20 @@ export const createSecondaryPalette = (
         .setAlpha(0.7)
         .toRgbString(),
       muted: tinycolor(secondary).setAlpha(0.5).toRgbString(),
+      ...createContainerSurfaceFields(secondary),
     },
     text: {
       onBackground: {
-        main: ensureContrast(secondary, textColors.onSecondary || "#FFFFFF"),
+        main: ensureContrast(secondary, preferredOnSecondary),
         light: ensureContrast(
           secondaryVariations.light || secondary,
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
         dark: ensureContrast(
           secondaryVariations.dark || secondary,
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
-        muted: tinycolor(
-          ensureContrast(secondary, textColors.onSecondary || "#FFFFFF"),
-        )
+        muted: tinycolor(ensureContrast(secondary, preferredOnSecondary))
           .setAlpha(0.7)
           .toRgbString(),
         accent: primary,
@@ -146,7 +130,7 @@ export const createSecondaryPalette = (
       onContainer: {
         primary: ensureContrast(
           secondaryVariations.light || secondary,
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
         secondary: ensureContrast(
           secondaryVariations.lighter || secondaryVariations.light || secondary,
@@ -155,20 +139,19 @@ export const createSecondaryPalette = (
         light: ensureContrast("#FFFFFF", "#111827"),
         dark: ensureContrast(
           secondaryVariations.darker || secondaryVariations.dark || secondary,
-          textColors.onSecondary || "#FFFFFF",
+          preferredOnSecondary,
         ),
-        muted: tinycolor(
-          ensureContrast(secondary, textColors.onSecondary || "#FFFFFF"),
-        )
+        muted: tinycolor(ensureContrast(secondary, preferredOnSecondary))
           .setAlpha(0.7)
           .toRgbString(),
         accent: primary,
+        ...createOnContainerContentText(secondary, preferredOnSecondary),
       },
       title: ensureContrast(secondary, textColors.title || "#FFFFFF"),
       body: ensureContrast(secondary, textColors.body || "#FFFFFF"),
       primary: colorVariations.primary.base || primary,
       secondary: colorVariations.secondary.base || secondary,
-      contrast: textColors.onSecondary || "#FFFFFF",
+      contrast: preferredOnSecondary,
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,

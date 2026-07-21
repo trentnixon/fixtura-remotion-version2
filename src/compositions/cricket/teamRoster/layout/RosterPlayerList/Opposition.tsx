@@ -1,6 +1,6 @@
 import React from "react";
 import TeamLogo from "../../../utils/primitives/TeamLogo";
-import AgainstTeam from "../RosterHeader/AgainstTeam";
+import AgainstTeam from "../RosterHeader/accountHolder/SmallOpponentCard";
 import { RosterSponsorsProps } from "./_types/RosterSponsorsProps";
 import {
   SPONSOR_LOGO_SIZE,

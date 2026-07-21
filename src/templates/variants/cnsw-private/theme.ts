@@ -86,6 +86,13 @@ export const cnswTheme: TemplateThemeConfig = {
       className:
         "text-4xl font-normal text-center tracking-wider leading-normal italic",
     },
+    ResultStatementShort: {
+      className:
+        "text-3xl font-semibold  tracking-wider leading-snug py-2 px-16",
+    },
+    ResultStatementText: {
+      className: "text-3xl font-semibold  tracking-wider leading-snug ",
+    },
     ResultMetaData: {
       className: "text-2xl font-semibold  tracking-wider leading-normal",
     },
@@ -106,6 +113,19 @@ export const cnswTheme: TemplateThemeConfig = {
     },
     titleSmall: {
       className: "text-4xl font-semibold tracking-normal leading-normal",
+    },
+    TeamOfTheWeekPlayerName: {
+      className: "text-3xl font-black tracking-normal leading-none",
+    },
+    TeamOfTheWeekTeam: {
+      className:
+        "text-2xl font-semibold opacity-80 tracking-wider leading-none",
+    },
+    TeamOfTheWeekType: {
+      className: "text-xl font-normal tracking-wider leading-none",
+    },
+    TeamOfTheWeekStat: {
+      className: "text-4xl font-bold tracking-normal leading-none mr-2",
     },
   },
   layout: {

@@ -115,6 +115,14 @@ export const basicTheme: TemplateThemeConfig = {
     ResultMetaData: {
       className: "text-2xl font-normal  tracking-tight leading-tight",
     },
+    ResultStatementShort: {
+      className:
+        "text-6xl font-normal tracking-tight leading-tight text-center",
+    },
+    ResultStatementText: {
+      className:
+        "text-5xl font-normal tracking-tight leading-tight text-center",
+    },
     ResultVS: {
       className: "text-3xl font-normal  tracking-tight leading-tight",
     },

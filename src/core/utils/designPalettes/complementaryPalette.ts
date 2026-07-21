@@ -2,7 +2,6 @@
 import {
   DesignPalette,
   ensureContrast,
-  GradientOptions,
   TextColors,
   ShadowOptions,
   UtilityColors,
@@ -10,28 +9,12 @@ import {
   ColorVariations,
 } from "./types";
 import tinycolor from "tinycolor2";
-
-// Helper function to create gradient options
-const createGradientOptions = (
-  color1: string,
-  color2: string,
-  type: "linear" | "radial" = "linear",
-  direction: string = "to right",
-): GradientOptions => ({
-  direction,
-  type,
-  stops: [color1, color2],
-  css: {
-    DEFAULT: `linear-gradient(to right, ${color1}, ${color2})`,
-    DIAGONAL: `linear-gradient(45deg, ${color1}, ${color2})`,
-    DIAGONAL_REVERSE: `linear-gradient(135deg, ${color1}, ${color2})`,
-    HORIZONTAL: `linear-gradient(90deg, ${color1}, ${color2})`,
-    HORIZONTAL_REVERSE: `linear-gradient(270deg, ${color1}, ${color2})`,
-    VERTICAL: `linear-gradient(180deg, ${color1}, ${color2})`,
-    VERTICAL_REVERSE: `linear-gradient(0deg, ${color1}, ${color2})`,
-    CONIC: `conic-gradient(${color1}, ${color2}, ${color1})`,
-  },
-});
+import {
+  createBackgroundIdentity,
+  createContainerSurfaceFields,
+  createGradientOptions,
+  createOnContainerContentText,
+} from "./paletteHelpers";
 
 export const createComplementaryPalette = (
   primary: string,
@@ -50,14 +33,16 @@ export const createComplementaryPalette = (
     .complement()
     .darken(15)
     .toHexString();
+  const preferredText = "#FFFFFF";
 
   return {
     name: "Complementary",
     background: {
+      ...createBackgroundIdentity(primary, complementaryColor),
       main: complementaryColor,
       light: tinycolor(primary).complement().lighten(10).toHexString(),
       dark: tinycolor(primary).complement().darken(10).toHexString(),
-      contrast: ensureContrast(complementaryColor, "#FFFFFF"),
+      contrast: ensureContrast(complementaryColor, preferredText),
       accent: primary,
       gradient: {
         primary: createGradientOptions(complementaryColor, lightComplementary),
@@ -128,13 +113,14 @@ export const createComplementaryPalette = (
         .setAlpha(0.7)
         .toRgbString(),
       muted: tinycolor(complementaryColor).setAlpha(0.5).toRgbString(),
+      ...createContainerSurfaceFields(complementaryColor),
     },
     text: {
       onBackground: {
-        main: ensureContrast(complementaryColor, "#FFFFFF"),
-        light: ensureContrast(lightComplementary, "#FFFFFF"),
-        dark: ensureContrast(darkComplementary, "#FFFFFF"),
-        muted: tinycolor(ensureContrast(complementaryColor, "#FFFFFF"))
+        main: ensureContrast(complementaryColor, preferredText),
+        light: ensureContrast(lightComplementary, preferredText),
+        dark: ensureContrast(darkComplementary, preferredText),
+        muted: tinycolor(ensureContrast(complementaryColor, preferredText))
           .setAlpha(0.7)
           .toRgbString(),
         accent: primary,
@@ -142,27 +128,28 @@ export const createComplementaryPalette = (
       onContainer: {
         primary: ensureContrast(
           tinycolor(primary).complement().lighten(10).toHexString(),
-          "#FFFFFF",
+          preferredText,
         ),
         secondary: ensureContrast(
           tinycolor(primary).complement().lighten(20).toHexString(),
-          "#FFFFFF",
+          preferredText,
         ),
         light: ensureContrast("#FFFFFF", "#111827"),
         dark: ensureContrast(
           tinycolor(primary).complement().darken(15).toHexString(),
-          "#FFFFFF",
+          preferredText,
         ),
-        muted: tinycolor(ensureContrast(complementaryColor, "#FFFFFF"))
+        muted: tinycolor(ensureContrast(complementaryColor, preferredText))
           .setAlpha(0.7)
           .toRgbString(),
         accent: primary,
+        ...createOnContainerContentText(complementaryColor, preferredText),
       },
-      title: ensureContrast(complementaryColor, "#FFFFFF"),
-      body: ensureContrast(complementaryColor, "#FFFFFF"),
+      title: ensureContrast(complementaryColor, preferredText),
+      body: ensureContrast(complementaryColor, preferredText),
       primary: colorVariations?.primary?.base || primary,
       secondary: complementaryColor,
-      contrast: ensureContrast(complementaryColor, "#FFFFFF"),
+      contrast: ensureContrast(complementaryColor, preferredText),
       safePrimary: contrast.primary.safeColor,
       safeSecondary: contrast.secondary.safeColor,
       highlight: utility.success,

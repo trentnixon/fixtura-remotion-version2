@@ -12,7 +12,8 @@ export interface TeamLogo {
  * Props interface for TeamLogo component
  */
 export interface TeamLogoProps {
-  logo: TeamLogo | null;
+  /** Object logo, legacy string URL, or missing logo. */
+  logo: TeamLogo | string | null;
   teamName: string;
   delay: number;
   size?: number;

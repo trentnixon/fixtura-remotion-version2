@@ -195,32 +195,33 @@ const StaticEffect: React.FC<BaseEffectProps> = ({
   );
 };
 
-// Factory function to create the appropriate effect component
+// effectType and props are separate args; assert the matching props shape per
+// branch (Zoom/Pan/FocusBlur share `direction` with incompatible unions).
 export const createImageEffect = (
   effectType: ImageEffectType,
   props: ImageEffectProps,
 ) => {
   switch (effectType) {
     case ImageEffectType.Zoom:
-      return <ZoomEffect {...props} />;
+      return <ZoomEffect {...(props as ZoomEffectProps)} />;
 
     case ImageEffectType.Pan:
-      return <PanEffect {...props} />;
+      return <PanEffect {...(props as PanEffectProps)} />;
 
     case ImageEffectType.KenBurns:
-      return <KenBurnsEffect {...props} />;
+      return <KenBurnsEffect {...(props as KenBurnsEffectProps)} />;
 
     case ImageEffectType.Breathing:
-      return <BreathingEffect {...props} />;
+      return <BreathingEffect {...(props as BreathingEffectProps)} />;
 
     case ImageEffectType.ColorOverlay:
-      return <ColorOverlayEffect {...props} />;
+      return <ColorOverlayEffect {...(props as ColorOverlayEffectProps)} />;
 
     case ImageEffectType.FocusBlur:
-      return <FocusBlurEffect {...props} />;
+      return <FocusBlurEffect {...(props as FocusBlurEffectProps)} />;
 
     case ImageEffectType.None:
     default:
-      return <StaticEffect {...props} />;
+      return <StaticEffect {...(props as BaseEffectProps)} />;
   }
 };

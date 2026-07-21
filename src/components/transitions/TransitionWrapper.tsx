@@ -50,12 +50,22 @@ interface TransitionWrapperProps {
   height?: number;
 }
 
+// TransitionPresentation is invariant in its props generic; keep factory returns
+// precise, then widen once for TransitionSeries.Transition.
+type SupportedTransitionPresentation =
+  | ReturnType<typeof slide>
+  | ReturnType<typeof fade>
+  | ReturnType<typeof wipe>
+  | ReturnType<typeof clockWipe>
+  | ReturnType<typeof flip>
+  | ReturnType<typeof none>;
+
 const getTransitionPresentation = (
   type: TransitionType,
   direction: TransitionDirection = "from-right",
   width: number = 1920,
   height: number = 1080,
-): TransitionPresentation<Record<string, unknown>> => {
+): SupportedTransitionPresentation => {
   switch (type) {
     case "slide":
       return slide({ direction });
@@ -72,6 +82,11 @@ const getTransitionPresentation = (
       return none();
   }
 };
+
+const toSeriesPresentation = (
+  presentation: SupportedTransitionPresentation,
+): TransitionPresentation<Record<string, unknown>> =>
+  presentation as TransitionPresentation<Record<string, unknown>>;
 
 const getTiming = (config: TimingConfig) => {
   const { type, durationInFrames = 30, easing, springConfig } = config;
@@ -100,11 +115,8 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
   width = 1920,
   height = 1080,
 }) => {
-  const presentation = getTransitionPresentation(
-    transitionType,
-    direction,
-    width,
-    height,
+  const presentation = toSeriesPresentation(
+    getTransitionPresentation(transitionType, direction, width, height),
   );
   const timingFn = getTiming(timing);
 
