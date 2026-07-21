@@ -22,7 +22,9 @@ const RosterSponsors: React.FC<RosterSponsorsProps> = ({ roster }) => {
               }}
               teamName={sponsor.name}
               key={index}
-              delay={DEFAULT_TEAM_HEADER_ANIMATION_DELAY + SPONSOR_LOGO_DELAY_OFFSET}
+              delay={
+                DEFAULT_TEAM_HEADER_ANIMATION_DELAY + SPONSOR_LOGO_DELAY_OFFSET
+              }
             />
           ),
       )}

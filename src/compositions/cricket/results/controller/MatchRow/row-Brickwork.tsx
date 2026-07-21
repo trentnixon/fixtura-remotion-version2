@@ -5,7 +5,10 @@ import { useVideoDataContext } from "../../../../../core/context/VideoDataContex
 import MatchCardBrickWork from "../../layout/MatchCard/card-BrickWork";
 import MatchCardBrickWorkClubOnly from "../../layout/MatchCard/card-BrickWork-clubOnly";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const MatchRowBrickWork: React.FC<MatchRowProps> = ({
   match,
@@ -24,30 +27,28 @@ const MatchRowBrickWork: React.FC<MatchRowProps> = ({
     <div className="h-full w-full">
       <AnimatedContainer
         type="full"
-        className="rounded-md h-full w-full" 
+        className="rounded-md h-full w-full"
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        {
-          isAccountClub ? (
-            <MatchCardBrickWorkClubOnly
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          ) : (
-            <MatchCardBrickWork
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          )
-        }
+        {isAccountClub ? (
+          <MatchCardBrickWorkClubOnly
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        ) : (
+          <MatchCardBrickWork
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        )}
       </AnimatedContainer>
     </div>
   );

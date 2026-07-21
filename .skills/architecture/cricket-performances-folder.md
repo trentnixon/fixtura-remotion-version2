@@ -52,14 +52,14 @@ src/compositions/cricket/performances/
 
 ### 2. Understand Performances vs Ladder
 
-| Aspect | Performances | Ladder |
-|--------|--------------|--------|
-| **Data Type** | `PerformanceData[]` (batting or bowling union) | `LadderData[]` |
-| **Composition IDs** | Two: CricketBattingPerformances, CricketBowlingPerformances → both map to CricketPerformances | Single: CricketLadder |
-| **Pagination** | Screen-based (items per screen, default 5) | Item-based (one ladder per screen) |
-| **Sponsors** | Merged from all performances | Per ladder |
-| **Row Height** | Static (115px basic, 110px CNSW) | Calculated dynamically |
-| **Primitives** | Top5PlayerName, Top5PlayerTeam, Top5PlayerScore, Top5PlayerScoreSuffix | LadderTeamName, LadderTeamPoints |
+| Aspect              | Performances                                                                                  | Ladder                             |
+| ------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------- |
+| **Data Type**       | `PerformanceData[]` (batting or bowling union)                                                | `LadderData[]`                     |
+| **Composition IDs** | Two: CricketBattingPerformances, CricketBowlingPerformances → both map to CricketPerformances | Single: CricketLadder              |
+| **Pagination**      | Screen-based (items per screen, default 5)                                                    | Item-based (one ladder per screen) |
+| **Sponsors**        | Merged from all performances                                                                  | Per ladder                         |
+| **Row Height**      | Static (115px basic, 110px CNSW)                                                              | Calculated dynamically             |
+| **Primitives**      | Top5PlayerName, Top5PlayerTeam, Top5PlayerScore, Top5PlayerScoreSuffix                        | LadderTeamName, LadderTeamPoints   |
 
 ### 3. Dual Composition Type Pattern
 
@@ -121,7 +121,7 @@ Each variant file does:
 - Display components receive `PerformancesDisplayProps`: `performances`, `itemsPerScreen`, `screenIndex` (Display filters with `getItemsForScreen()`)
 - Player rows receive `PerformanceRowProps`: `performance`, `index`, `rowHeight`
 - Layout receives `PerformanceRowLayoutProps`: `performance`, `index`, `rowHeight`, `delay`, `restrictions` (nameLength, teamLength)
-- Use `getScoreValues(performance)` for batting (runs*, balls) vs bowling (wickets/runs, overs)
+- Use `getScoreValues(performance)` for batting (runs\*, balls) vs bowling (wickets/runs, overs)
 - Use `formatPlayerName(name)` for "J. SMITH" style; preserve (C), (VC), (WK)
 - Duration: `FPS_PREFORMANCECARD` or metadata.frames[0]; default 300
 

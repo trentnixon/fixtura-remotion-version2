@@ -1,6 +1,7 @@
 # Cleanup Summary - TeamRows Folder
 
 ## Overview
+
 This cleanup extracted shared TypeScript interfaces, utility functions, and components from all row component files into centralized `_types`, `_utils`, and component files.
 
 ## Changes Made
@@ -8,7 +9,9 @@ This cleanup extracted shared TypeScript interfaces, utility functions, and comp
 ### Created Files
 
 #### `_types/TeamRowProps.ts`
+
 Extracted the shared `TeamRowProps` interface that was duplicated across all 5 row component files:
+
 ```typescript
 export interface TeamRowProps {
   team: TeamData;
@@ -21,18 +24,23 @@ export interface TeamRowProps {
 ```
 
 #### `_utils/calculations.ts`
+
 Extracted shared calculation functions:
+
 - `calculateAnimationDelay()` - Calculates animation delay based on index and multiplier (default: 5)
 - `calculateAnimationOutFrame()` - Calculates exit frame based on timings (FPS_LADDER - 20)
 - `parseTeamPosition()` - Parses team position string to number
 
 #### `_utils/components.tsx`
+
 Extracted shared component:
+
 - `OverflowHiddenWrapper` - Simple wrapper component for overflow hidden styling
 
 ### Modified Files
 
 All row component files were updated to:
+
 1. Import `TeamRowProps` from `./_types/TeamRowProps`
 2. Import calculation functions from `./_utils/calculations`
 3. Import `OverflowHiddenWrapper` from `./_utils/components` (where applicable)
@@ -41,6 +49,7 @@ All row component files were updated to:
 6. Remove inline component definitions
 
 **Files Updated:**
+
 - `StandardRow.tsx` (contains both `StandardRow` and `StandardRowWrapped` exports)
 - `row-Classic-two-column.tsx` (contains both `StandardRowClassicTwoColumn` and `StandardRowClassicTwoColumnWrapped` exports)
 - `row-CNSW.tsx` (contains both `StandardRowCNSW` and `StandardRowCNSWWrapped` exports)

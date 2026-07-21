@@ -21,28 +21,31 @@ The following folders were created to support the modularization pattern:
 ### 1. Utility Functions Extraction
 
 #### Created `_utils/dataHelpers.ts`
+
 - **Extracted functions:**
   - `hasValidPlayersData(playersData)` - Validates that players data exists and is a non-empty array
   - `castToPlayerDataArray(playersData)` - Casts unknown data to typed `PlayerData[]` array
   - `extractCompositionId(videoMeta)` - Extracts composition ID from video metadata
   - `extractPrimarySponsors(videoMeta)` - Extracts primary sponsors array from video metadata
 - **Purpose:** Centralizes data validation, casting, and extraction logic that was duplicated across all entry point files
-- **Dependencies:** 
+- **Dependencies:**
   - `PlayerData` from `../types`
   - `Sponsor` from `../../../../core/types/data/sponsors`
 
 #### Created `_utils/titleHelpers.ts`
+
 - **Extracted functions:**
   - `getCNSWTitle(videoMeta)` - Gets title for CNSW variant using grouping category
   - `getCNSWPrivateTitle(playersData)` - Gets title for CNSW-private variant using grade name from first player
   - `getStandardTitle(compositionId)` - Gets title for standard variants using composition ID
 - **Purpose:** Centralizes title extraction logic that was duplicated or had variant-specific implementations
-- **Dependencies:** 
+- **Dependencies:**
   - `getTitle` from `../utils/dataTransformer`
 
 ### 2. Entry Point File Updates
 
 #### Modified `basic.tsx`
+
 - **Removed:** Inline data validation logic (`!playersData || playersData.length === 0`)
 - **Removed:** Inline data casting logic (`playersData as PlayerData[]`)
 - **Removed:** Inline composition ID extraction (`videoMeta?.video?.metadata?.compositionId || ""`)
@@ -58,6 +61,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Title extraction to use `getStandardTitle()`
 
 #### Modified `classic.tsx`
+
 - **Removed:** Inline data validation, casting, and extraction logic
 - **Removed:** Unused `PlayerData` import
 - **Removed:** `getTitle` import
@@ -65,6 +69,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `brickWork.tsx`
+
 - **Removed:** Inline data validation, casting, and extraction logic
 - **Removed:** Unused `PlayerData` import
 - **Removed:** `getTitle` import
@@ -72,6 +77,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `classicTwoColumn.tsx`
+
 - **Removed:** Inline data validation, casting, and extraction logic
 - **Removed:** Unused `PlayerData` import
 - **Removed:** `getTitle` import
@@ -79,6 +85,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `sixersThunder.tsx`
+
 - **Removed:** Inline data validation, casting, and extraction logic
 - **Removed:** Unused `PlayerData` import
 - **Removed:** `getTitle` import
@@ -87,6 +94,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `cnsw.tsx`
+
 - **Removed:** Inline data validation, casting, and extraction logic
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline title extraction (`videoMeta?.video?.groupingCategory`)
@@ -97,6 +105,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Title extraction to use `getCNSWTitle()`
 
 #### Modified `cnsw-private.tsx`
+
 - **Removed:** Inline data validation, casting, and extraction logic
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline title extraction (`(playersData[0] as any).assignSponsors.grade.name`)

@@ -15,7 +15,8 @@ export const ResultStatementText: React.FC<ResultStatementTextProps> = ({
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
   const { selectedPalette } = useThemeContext();
-  const defaultClasses = "w-full flex flex-col text-center items-center justify-center";
+  const defaultClasses =
+    "w-full flex flex-col text-center items-center justify-center";
   return (
     <AnimatedContainer
       type="full"
@@ -32,18 +33,18 @@ export const ResultStatementText: React.FC<ResultStatementTextProps> = ({
         variant={CopyVariant}
       />
 
-      <div className="flex items-center justify-center p-4 my-2 shadow-lg"
+      <div
+        className="flex items-center justify-center p-4 my-2 shadow-lg"
         style={{
           backgroundColor: selectedPalette.container.background,
-          transform: 'rotate(-12.5deg)'
+          transform: "rotate(-12.5deg)",
         }}
       >
         <MetadataLarge
           value={swapResultWord(resultSummary.resultWord).toUpperCase()}
           animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
           className="text-center text-5xl font-bold "
-
-          variant={'onContainerCopy'}
+          variant={"onContainerCopy"}
         />
       </div>
       <MetadataLarge
@@ -52,8 +53,7 @@ export const ResultStatementText: React.FC<ResultStatementTextProps> = ({
         className="text-center text-5xl font-normal"
         variant={CopyVariant}
       />
-
-    </AnimatedContainer >
+    </AnimatedContainer>
   );
 };
 

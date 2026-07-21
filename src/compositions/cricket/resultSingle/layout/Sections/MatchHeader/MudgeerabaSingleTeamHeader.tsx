@@ -6,7 +6,10 @@ import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { Team } from "../../../types";
-import { STEEP_HERO_TOP_LEFT, LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
+import {
+  STEEP_HERO_TOP_LEFT,
+  LogoWell,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
 export interface MudgeerabaSingleTeamHeaderProps {
   team: Team;

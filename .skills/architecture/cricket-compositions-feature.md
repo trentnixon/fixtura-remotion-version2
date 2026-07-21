@@ -23,27 +23,27 @@ Guides working with `src/compositions/cricket` as a feature: understanding its c
 
 ### 1. Understand the Composition Types
 
-| Composition | Export Name | Composition IDs (routing) | Purpose |
-|-------------|-------------|---------------------------|---------|
-| **Ladder** | `CricketLadder` | CricketLadder | Team standings table |
-| **Top 5** | `CricketTop5` | CricketTop5Batting, CricketTop5Bowling | Ranked batters/bowlers |
-| **Results** | `CricketResults` | CricketResults | Multi-match results (2 per screen) |
-| **Result Single** | `CricketResultSingle` | CricketResultSingle | Single match detail |
-| **Upcoming** | `CricketUpcoming` | CricketUpcoming | Upcoming fixtures |
-| **Roster** | `CricketRoster` | CricketRoster | Team player lists |
-| **Performances** | `CricketPerformances` | CricketBattingPerformances, CricketBowlingPerformances | Player performances |
-| **Team of the Week** | `CricketTeamOfTheWeek` | CricketTeamOfTheWeek | Selected team of week |
+| Composition          | Export Name            | Composition IDs (routing)                              | Purpose                            |
+| -------------------- | ---------------------- | ------------------------------------------------------ | ---------------------------------- |
+| **Ladder**           | `CricketLadder`        | CricketLadder                                          | Team standings table               |
+| **Top 5**            | `CricketTop5`          | CricketTop5Batting, CricketTop5Bowling                 | Ranked batters/bowlers             |
+| **Results**          | `CricketResults`       | CricketResults                                         | Multi-match results (2 per screen) |
+| **Result Single**    | `CricketResultSingle`  | CricketResultSingle                                    | Single match detail                |
+| **Upcoming**         | `CricketUpcoming`      | CricketUpcoming                                        | Upcoming fixtures                  |
+| **Roster**           | `CricketRoster`        | CricketRoster                                          | Team player lists                  |
+| **Performances**     | `CricketPerformances`  | CricketBattingPerformances, CricketBowlingPerformances | Player performances                |
+| **Team of the Week** | `CricketTeamOfTheWeek` | CricketTeamOfTheWeek                                   | Selected team of week              |
 
 ### 2. Understand Cricket Variant vs Template Variant
 
-| Aspect | Template Variant | Cricket Variant |
-|--------|------------------|-----------------|
-| **What** | Visual style (theme, colors, fonts, animations) | Composition implementation |
-| **Location** | `src/templates/variants/{Name}/` | `src/compositions/cricket/{composition}/{variant}.tsx` |
-| **Scope** | Global (all sports) | Cricket-specific |
-| **Example** | Basic, Classic, Brickwork | basic, classic, brickwork implementations |
+| Aspect       | Template Variant                                | Cricket Variant                                        |
+| ------------ | ----------------------------------------------- | ------------------------------------------------------ |
+| **What**     | Visual style (theme, colors, fonts, animations) | Composition implementation                             |
+| **Location** | `src/templates/variants/{Name}/`                | `src/compositions/cricket/{composition}/{variant}.tsx` |
+| **Scope**    | Global (all sports)                             | Cricket-specific                                       |
+| **Example**  | Basic, Classic, Brickwork                       | basic, classic, brickwork implementations              |
 
-**Relationship:** Template defines *how* it looks; cricket composition implements *what* data is shown. Routing resolves `templateId` + `compositionId` → component.
+**Relationship:** Template defines _how_ it looks; cricket composition implements _what_ data is shown. Routing resolves `templateId` + `compositionId` → component.
 
 ### 3. Export Structure (cricket/index.tsx)
 
@@ -55,7 +55,7 @@ export const CricketLadder = {
   classic: ladderClassic,
   brickwork: ladderBrickWork,
   sixers: ladderSixersThunder,
-  thunder: ladderSixersThunder,  // alias
+  thunder: ladderSixersThunder, // alias
   twocolumnclassic: ladderClassicTwoColumn,
   cnsw: ladderCNSW,
   cnswprivate: ladderCNSWPrivate,

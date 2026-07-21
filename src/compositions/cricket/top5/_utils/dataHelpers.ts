@@ -20,9 +20,7 @@ export const hasValidPlayersData = (playersData: unknown): boolean => {
  * @param playersData - Data from video context
  * @returns Typed array of PlayerData
  */
-export const castToPlayerDataArray = (
-  playersData: unknown,
-): PlayerData[] => {
+export const castToPlayerDataArray = (playersData: unknown): PlayerData[] => {
   return playersData as unknown as PlayerData[];
 };
 
@@ -31,9 +29,13 @@ export const castToPlayerDataArray = (
  * @param videoMeta - Video metadata from context
  * @returns Composition ID string (empty string if not available)
  */
-export const extractCompositionId = (videoMeta: {
-  video?: { metadata?: { compositionId?: string } };
-} | undefined): string => {
+export const extractCompositionId = (
+  videoMeta:
+    | {
+        video?: { metadata?: { compositionId?: string } };
+      }
+    | undefined,
+): string => {
   return videoMeta?.video?.metadata?.compositionId || "";
 };
 
@@ -42,8 +44,12 @@ export const extractCompositionId = (videoMeta: {
  * @param videoMeta - Video metadata from context
  * @returns Array of Sponsor objects (empty array if not available)
  */
-export const extractPrimarySponsors = (videoMeta: {
-  club?: { sponsors?: { primary?: Sponsor[] } };
-} | undefined): Sponsor[] => {
+export const extractPrimarySponsors = (
+  videoMeta:
+    | {
+        club?: { sponsors?: { primary?: Sponsor[] } };
+      }
+    | undefined,
+): Sponsor[] => {
   return videoMeta?.club?.sponsors?.primary || [];
 };

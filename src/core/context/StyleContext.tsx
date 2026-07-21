@@ -5,8 +5,11 @@ import { DesignPalette } from "../utils/designPalettes/types";
 
 interface StyleContextProps {
   // Legacy properties for backward compatibility
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   theme: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fontConfig: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fontSizing: any;
 
   getActivePalette: (paletteName?: string) => DesignPalette;

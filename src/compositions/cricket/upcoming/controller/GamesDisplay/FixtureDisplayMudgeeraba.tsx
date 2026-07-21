@@ -30,10 +30,7 @@ export const GamesDisplayMudgeeraba: React.FC<GamesDisplayProps> = ({
   );
 
   // Calculate game card heights
-  const gameCardHeight = calculateGameCardHeight(
-    heights.asset,
-    gamesPerScreen,
-  );
+  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
 
   // Merge all assignSponsors objects from displayedGames into one object
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);

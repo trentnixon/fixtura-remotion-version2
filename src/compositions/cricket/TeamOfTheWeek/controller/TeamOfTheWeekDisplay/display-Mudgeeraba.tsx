@@ -34,13 +34,13 @@ const TeamOfTheWeekDisplayMudgeeraba: React.FC<TeamOfTheWeekDisplayProps> = ({
         <div className="flex-1 flex flex-col justify-center min-h-0">
           <div className="grid grid-cols-2 gap-4 mx-4">
             {players.map((player, index) => (
-            <PlayerRowMudgeeraba
-              key={player.player}
-              player={player}
-              index={index}
-              rowHeight={rowHeightMudgeeraba}
-            />
-          ))}
+              <PlayerRowMudgeeraba
+                key={player.player}
+                player={player}
+                index={index}
+                rowHeight={rowHeightMudgeeraba}
+              />
+            ))}
           </div>
         </div>
       </AnimatedContainer>

@@ -6,7 +6,10 @@ import { AssignSponsors } from "../../../_types/composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import PlayerRowClassicTwoColumn from "../PlayerRow/row-ClassicTwoCoulmn";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
-import { DEFAULT_CONTAINER_ANIMATION_DELAY, DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN } from "./_utils/constants";
+import {
+  DEFAULT_CONTAINER_ANIMATION_DELAY,
+  DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN,
+} from "./_utils/constants";
 
 const PlayersDisplayClassicTwoColumn: React.FC<PlayersDisplayProps> = ({
   players,

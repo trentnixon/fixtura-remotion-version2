@@ -29,15 +29,15 @@ Utilities to produce application themes from primary and secondary color inputs.
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| CreateThemeUtils root | `src/core/utils/createThemeUtils/.docs/readMe.md` |
-| Parent roadmap | `src/core/utils/.docs/DevelopmentRoadMap.md` |
-| Core roadmap | `src/core/.docs/DevelopmentRoadMap.md` |
-| Parent tickets | `src/core/utils/.docs/Tickets.md` |
-| Core (types, baseManipulation) | `src/core/utils/createThemeUtils/core/.docs/readMe.md` |
-| Generators | `src/core/utils/createThemeUtils/generators/.docs/readMe.md` |
-| designPalettes (downstream) | `src/core/utils/designPalettes/.docs/readMe.md` |
+| Context                        | Path                                                         |
+| ------------------------------ | ------------------------------------------------------------ |
+| CreateThemeUtils root          | `src/core/utils/createThemeUtils/.docs/readMe.md`            |
+| Parent roadmap                 | `src/core/utils/.docs/DevelopmentRoadMap.md`                 |
+| Core roadmap                   | `src/core/.docs/DevelopmentRoadMap.md`                       |
+| Parent tickets                 | `src/core/utils/.docs/Tickets.md`                            |
+| Core (types, baseManipulation) | `src/core/utils/createThemeUtils/core/.docs/readMe.md`       |
+| Generators                     | `src/core/utils/createThemeUtils/generators/.docs/readMe.md` |
+| designPalettes (downstream)    | `src/core/utils/designPalettes/.docs/readMe.md`              |
 
 ## Roadmap
 
@@ -64,18 +64,18 @@ Related (consumers and dependencies):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
-| `index.ts` | Main entry; createThemeColorUtils(primary, secondary); orchestrates generators, calls generateAllPalettes | `index.ts` |
-| `core/types.ts` | ThemeColorUtils, ColorVariations, GradientOptions, ColorPalettes, ContrastSafety | `core/types.ts` |
-| `core/baseManipulation.ts` | getContrastColor, lightenColor, darkenColor, setOpacity, saturateOrDesaturateColor | `core/baseManipulation.ts` |
-| `generators/utilityColors.ts` | generateColorVariations, generateUtilityColors, generateAlertColors | `generators/utilityColors.ts` |
-| `generators/gradientUtils.ts` | generateGradientOptions, generateGradientBackground | `generators/gradientUtils.ts` |
-| `generators/textUtils.ts` | generateTextColors | `generators/textUtils.ts` |
-| `generators/backgroundUtils.ts` | generateBackgroundColors, getBackgroundColor | `generators/backgroundUtils.ts` |
-| `generators/shadowUtils.ts` | generateShadows, generateThemedShadow | `generators/shadowUtils.ts` |
-| `generators/contrastUtils.ts` | generateContrastSafety, getTitleColorOverGradient, getForegroundColor, calculateContrastSafety | `generators/contrastUtils.ts` |
-| `generators/paletteGenerators.ts` | generateColorPalettes, generateGradientArray, getComplementaryColor, getSplitComplementaryColors, etc. | `generators/paletteGenerators.ts` |
+| Module                            | Responsibility                                                                                            | Entry Points                      |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `index.ts`                        | Main entry; createThemeColorUtils(primary, secondary); orchestrates generators, calls generateAllPalettes | `index.ts`                        |
+| `core/types.ts`                   | ThemeColorUtils, ColorVariations, GradientOptions, ColorPalettes, ContrastSafety                          | `core/types.ts`                   |
+| `core/baseManipulation.ts`        | getContrastColor, lightenColor, darkenColor, setOpacity, saturateOrDesaturateColor                        | `core/baseManipulation.ts`        |
+| `generators/utilityColors.ts`     | generateColorVariations, generateUtilityColors, generateAlertColors                                       | `generators/utilityColors.ts`     |
+| `generators/gradientUtils.ts`     | generateGradientOptions, generateGradientBackground                                                       | `generators/gradientUtils.ts`     |
+| `generators/textUtils.ts`         | generateTextColors                                                                                        | `generators/textUtils.ts`         |
+| `generators/backgroundUtils.ts`   | generateBackgroundColors, getBackgroundColor                                                              | `generators/backgroundUtils.ts`   |
+| `generators/shadowUtils.ts`       | generateShadows, generateThemedShadow                                                                     | `generators/shadowUtils.ts`       |
+| `generators/contrastUtils.ts`     | generateContrastSafety, getTitleColorOverGradient, getForegroundColor, calculateContrastSafety            | `generators/contrastUtils.ts`     |
+| `generators/paletteGenerators.ts` | generateColorPalettes, generateGradientArray, getComplementaryColor, getSplitComplementaryColors, etc.    | `generators/paletteGenerators.ts` |
 
 ## Implementation Guidelines
 

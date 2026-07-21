@@ -51,9 +51,15 @@ const RosterDisplaySixersThunder: React.FC<RosterDisplayProps> = ({
               gap="gap-4"
             />
             <div className="flex flex-col gap-4 p-4">
-              <AccountTeamLarge roster={roster} logoSize={ACCOUNT_TEAM_LOGO_SIZE} />
+              <AccountTeamLarge
+                roster={roster}
+                logoSize={ACCOUNT_TEAM_LOGO_SIZE}
+              />
               <VS variant="onContainerCopy" />
-              <AgainstTeamLarge roster={roster} logoSize={AGAINST_TEAM_LOGO_SIZE} />
+              <AgainstTeamLarge
+                roster={roster}
+                logoSize={AGAINST_TEAM_LOGO_SIZE}
+              />
             </div>
           </div>
           <TwoMetaValuesNoWrapper values={[roster.gradeName, roster.round]} />

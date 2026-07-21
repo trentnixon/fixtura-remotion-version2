@@ -29,12 +29,12 @@ The animations folder provides lightweight, generic animation configuration util
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Animations root | `src/components/animations/.docs/README.md` |
-| Config | `src/components/animations/config/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Context           | Path                                               |
+| ----------------- | -------------------------------------------------- |
+| Animations root   | `src/components/animations/.docs/README.md`        |
+| Config            | `src/components/animations/config/.docs/README.md` |
+| Parent roadmap    | `src/components/.docs/DevelopmentRoadMap.md`       |
+| Component tickets | `src/components/.docs/Tickets.md`                  |
 
 ## Roadmap
 
@@ -60,9 +60,9 @@ Related (for routing, not direct use in animations):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|-----------------|--------------|
-| `config/` | AnimationVariant union, AnimationConfig type, getAnimationConfig | `config/variants.ts` |
+| Module               | Responsibility                                                                                                                           | Entry Points                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `config/`            | AnimationVariant union, AnimationConfig type, getAnimationConfig                                                                         | `config/variants.ts`                                                |
 | `config/variants.ts` | Variant definitions (fadeIn, fadeOut, slideIn, slideOut, zoomIn, zoomOut, bounce, pulse); getAnimationConfig(variant, duration?, delay?) | Exports `AnimationVariant`, `AnimationConfig`, `getAnimationConfig` |
 
 No root-level files; all exports live in `config/`.

@@ -31,39 +31,46 @@ This roadmap tracks the creation and integration of the CricketTeamOfTheWeek ass
 ## ⏳ To Do (easy → hard)
 
 ### Template Implementation (Priority Order)
+
 **See [TEMPLATE_IMPLEMENTATION_PLAN.md](./TEMPLATE_IMPLEMENTATION_PLAN.md) for detailed steps**
 
 1. [ ] Implement Classic template variant
+
    - Theme updates
    - Component creation
    - Integration
    - Testing
 
 2. [ ] Implement Thunder template variant
+
    - Theme updates
    - Component creation
    - Integration
    - Testing
 
 3. [ ] Implement Brickwork template variant
+
    - Theme updates
    - Component creation
    - Integration
    - Testing
 
 4. [ ] Implement Sixers template variant
+
    - Theme updates
    - Component creation
    - Integration
    - Testing
 
 5. [ ] Implement Two Column Classic template variant
+
    - Theme updates
    - Component creation
    - Integration (consider two-column layout)
    - Testing
 
 6. [ ] Implement CNSW template variant
+
    - Theme updates
    - Component creation
    - Integration
@@ -76,6 +83,7 @@ This roadmap tracks the creation and integration of the CricketTeamOfTheWeek ass
    - Testing
 
 ### Additional Tasks
+
 8. [ ] Create NoData module for empty state handling
    - (see TKT-2025-010 for details)
 
@@ -90,6 +98,7 @@ This roadmap tracks the creation and integration of the CricketTeamOfTheWeek ass
 - **Layout Consistency**: Maintain the single-row layout `[Logo] [Type, Player, Team] [Stats]` across all templates for consistency.
 
 - **Stats Display**: The position-based stat display logic is shared and works correctly:
+
   - Batting positions → batting stats
   - Bowling positions → bowling stats
   - Top All-Rounder & 12th Man → both stats (two rows)

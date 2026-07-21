@@ -4,9 +4,15 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 import { Type_Round_Ground_stacked } from "../Sections/MatchHeader/index";
-import { ResultStatementShort, ResultStatementText } from "../Sections/ResultStatement/index";
+import {
+  ResultStatementShort,
+  ResultStatementText,
+} from "../Sections/ResultStatement/index";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 import MudgeerabaSingleTeamHeader from "../Sections/MatchHeader/MudgeerabaSingleTeamHeader";
 import { PlayerStatsMudgeeraba } from "../Sections/PlayerStats/index";
@@ -36,7 +42,9 @@ const MatchCardMudgeerabaClubOnly: React.FC<MatchCardProps> = ({ match }) => {
   const clubTeam = isHomeClub ? match.homeTeam : match.awayTeam;
   const oppositionTeam = isHomeClub ? match.awayTeam : match.homeTeam;
   const clubTeamLogo = isHomeClub ? match.teamHomeLogo : match.teamAwayLogo;
-  const oppositionTeamLogo = isHomeClub ? match.teamAwayLogo : match.teamHomeLogo;
+  const oppositionTeamLogo = isHomeClub
+    ? match.teamAwayLogo
+    : match.teamHomeLogo;
 
   const { resultShort, resultSummary } = match;
 
@@ -121,8 +129,6 @@ const MatchCardMudgeerabaClubOnly: React.FC<MatchCardProps> = ({ match }) => {
             />
           </div>
         </div>
-
-
       </div>
     </AnimatedContainer>
   );

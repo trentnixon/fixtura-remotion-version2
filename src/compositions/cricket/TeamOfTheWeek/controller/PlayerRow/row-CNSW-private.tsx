@@ -7,10 +7,7 @@ import { TeamOfTheWeekType } from "../../../utils/primitives/TeamOfTheWeekType";
 import { Top5PlayerScore } from "../../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../../utils/primitives/Top5PlayerScoreSuffix";
 import { truncateText } from "../../../utils/utils-text";
-import {
-  getCategoryPositionLabel,
-  getScoreValues,
-} from "../../utils/config";
+import { getCategoryPositionLabel, getScoreValues } from "../../utils/config";
 
 import { PlayerRowPropsWithDelay } from "./_types/PlayerRowPropsWithDelay";
 
@@ -103,4 +100,3 @@ const PlayerRowCNSWPrivate: React.FC<PlayerRowPropsWithDelay> = ({
 };
 
 export default PlayerRowCNSWPrivate;
-

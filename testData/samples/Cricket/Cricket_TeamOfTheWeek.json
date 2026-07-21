@@ -452,10 +452,7 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
-  "frames": [
-    45,
-    180
-  ],
+  "frames": [45, 180],
   "videoMeta": {
     "club": {
       "logo": {
@@ -477,9 +474,7 @@
       "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Team of the Week",
-        "titleSplit": [
-          "Team of the Week"
-        ],
+        "titleSplit": ["Team of the Week"],
         "videoTitle": "Team of the Week",
         "compositionId": "CricketTeamOfTheWeek",
         "assetId": 69,

@@ -15,7 +15,8 @@ export const ResultStatementText: React.FC<ResultStatementTextProps> = ({
 
   // Build the result statement text
   const statementText = buildResultStatementText(resultSummary);
-  const defaultClasses = "w-full flex flex-col text-center items-center justify-center";
+  const defaultClasses =
+    "w-full flex flex-col text-center items-center justify-center";
   return (
     <AnimatedContainer
       type="full"
@@ -30,7 +31,6 @@ export const ResultStatementText: React.FC<ResultStatementTextProps> = ({
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         variant="onContainerCopyNoBg"
         letterAnimation="word"
-
       >
         {statementText}
       </AnimatedText>

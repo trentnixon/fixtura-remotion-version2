@@ -6,7 +6,10 @@ import { MatchStatus } from "../Sections/MatchStatus/index";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerStatsClubOnlyBrickWork from "../../../results/layout/Sections/PlayerStats/PlayerStats-clubOnly-BrickWork";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 import { MatchResult as ResultsMatchResult } from "../../../results/_types/types";
 
 const BrickWorkMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
@@ -18,18 +21,21 @@ const BrickWorkMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
   const baseDelay = 0;
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const { baseDelay: calculatedBaseDelay, statsDelay, headerDelay } = calculateDelays(baseDelay);
+  const {
+    baseDelay: calculatedBaseDelay,
+    statsDelay,
+    headerDelay,
+  } = calculateDelays(baseDelay);
 
   // Extract optional result fields
   const { resultShort, resultSummary } = match;
 
   return (
     <div className="rounded-none w-auto mx-8 overflow-hidden h-full flex flex-col justify-center">
-
-
       {/* Section 1: Team scores and names */}
       <TeamsSectionLogoAndScoreBrickWork
         type={match.type}
@@ -61,7 +67,8 @@ const BrickWorkMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
           result={match.result}
           delay={headerDelay}
           outerContainer={{
-            backgroundColor: selectedPalette.container.backgroundTransparent.medium,
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.medium,
             height: `${teamsHeight}px`,
           }}
         />
@@ -76,7 +83,6 @@ const BrickWorkMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
         matchType={match.type}
         matchStatus={match.status}
       />
-
 
       {/* Result statement */}
       <ResultStatementBrickWork

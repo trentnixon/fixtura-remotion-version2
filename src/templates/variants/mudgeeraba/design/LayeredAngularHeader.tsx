@@ -51,7 +51,9 @@ export const getHeaderPanelContentWidth = (
   );
 };
 
-export const getHeaderTitlePanelBackground = (backgroundMain: string): string => {
+export const getHeaderTitlePanelBackground = (
+  backgroundMain: string,
+): string => {
   const base = tinycolor(backgroundMain);
   const top = base.clone().lighten(6).setAlpha(0.88).toRgbString();
   const mid = base.clone().setAlpha(0.76).toRgbString();
@@ -104,7 +106,11 @@ export const LayeredAngularHeader: React.FC<LayeredAngularHeaderProps> = ({
   return (
     <div
       className={`flex w-full flex-col items-center justify-center overflow-visible px-4 ${className}`}
-      style={{ height: `${height}px`, gap: `${HEADER_PANEL_GAP_PX}px`, ...style }}
+      style={{
+        height: `${height}px`,
+        gap: `${HEADER_PANEL_GAP_PX}px`,
+        ...style,
+      }}
     >
       <div
         className="relative z-0 w-full shrink-0"

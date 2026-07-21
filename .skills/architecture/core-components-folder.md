@@ -29,12 +29,12 @@ src/core/components/
 
 ### 2. Core Components vs src/components
 
-| core/components | src/components |
-|-----------------|----------------|
-| Dev-only, tooling | Composition UI primitives |
+| core/components                        | src/components                               |
+| -------------------------------------- | -------------------------------------------- |
+| Dev-only, tooling                      | Composition UI primitives                    |
 | CompositionEntry for isolation testing | AnimatedContainer, AnimatedText, backgrounds |
-| Used by preview roots | Used by templates, compositions |
-| Not shipped to production compositions | Shipped in video output |
+| Used by preview roots                  | Used by templates, compositions              |
+| Not shipped to production compositions | Shipped in video output                      |
 
 ### 3. CompositionEntry
 
@@ -45,11 +45,11 @@ src/core/components/
 
 ### 4. When to Add Here vs src/components
 
-| Add to core/components | Add to src/components |
-|------------------------|------------------------|
+| Add to core/components          | Add to src/components                          |
+| ------------------------------- | ---------------------------------------------- |
 | Dev wrappers, composition entry | AnimatedContainer, AnimatedText, AnimatedImage |
-| Testing/verification helpers | Layout, backgrounds, typography |
-| Shared rendering for dev roots | UI that appears in final video |
+| Testing/verification helpers    | Layout, backgrounds, typography                |
+| Shared rendering for dev roots  | UI that appears in final video                 |
 
 ### 5. When Adding a New Dev Component
 

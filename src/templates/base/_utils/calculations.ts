@@ -17,9 +17,7 @@ export const calculateIntroDuration = (
  * @param timings - Video data timings object
  * @returns Duration in frames (FPS_MAIN or default)
  */
-export const calculateMainDuration = (
-  timings: Timings | undefined,
-): number => {
+export const calculateMainDuration = (timings: Timings | undefined): number => {
   return timings?.FPS_MAIN ?? DEFAULT_SEQUENCE_DURATION;
 };
 

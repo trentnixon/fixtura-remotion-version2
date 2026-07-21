@@ -21,16 +21,18 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/BaseTemplateProps.ts`
+
 - **Extracted from:** `index.tsx`
 - **Content:** `BaseTemplateProps` interface
 - **Purpose:** Centralizes props type definition for the `BaseTemplate` component
-- **Dependencies:** 
+- **Dependencies:**
   - `React` (for `React.FC`)
   - `FixturaDataset` from `../../../core/types/data`
   - `UIConfig` from `../../types/settingsConfig`
   - `AnimationConfig` from `../../types/AnimationConfig `
 
 #### Created `_types/BaseTemplateLayoutProps.ts`
+
 - **Extracted from:** `BaseTemplateLayout.tsx`
 - **Content:** `BaseTemplateLayoutProps` interface
 - **Purpose:** Centralizes props type definition for the `BaseTemplateLayout` component
@@ -38,6 +40,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `CONTENT_Z_INDEX = 1000` - Z-index for the main content layer (above background and audio)
   - `DEFAULT_SEQUENCE_DURATION = 30` - Default duration in frames for timing sequences if not specified
@@ -45,6 +48,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/calculations.ts`
+
 - **Extracted functions:**
   - `calculateIntroDuration(timings)` - Calculates intro duration in frames (FPS_INTRO or default)
   - `calculateMainDuration(timings)` - Calculates main duration in frames (FPS_MAIN or default)
@@ -54,11 +58,13 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `index.tsx`
+
 - **Removed:** Inline `BaseTemplateProps` interface definition
 - **Removed:** Unused `FixturaDataset`, `UIConfig`, and `AnimationConfig` imports (now imported in the type file)
 - **Added:** Import of `BaseTemplateProps` from `./_types/BaseTemplateProps`
 
 #### Modified `BaseTemplateLayout.tsx`
+
 - **Removed:** Inline `BaseTemplateLayoutProps` interface definition
 - **Removed:** Hardcoded values:
   - `zIndex: 1000` → replaced with `CONTENT_Z_INDEX` constant

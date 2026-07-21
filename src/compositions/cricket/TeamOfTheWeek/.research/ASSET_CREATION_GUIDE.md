@@ -18,6 +18,7 @@ This document outlines the complete process for creating a new asset type in the
 ## Overview
 
 Creating a new asset type involves:
+
 1. **Folder Structure**: Creating organized folders and documentation
 2. **Data Modeling**: Defining TypeScript types
 3. **Component Development**: Building template variants and display components
@@ -39,6 +40,7 @@ src/compositions/cricket/[AssetName]/
 ```
 
 **Example for TeamOfTheWeek:**
+
 ```
 src/compositions/cricket/TeamOfTheWeek/
 ```
@@ -48,12 +50,14 @@ src/compositions/cricket/TeamOfTheWeek/
 Following the .cursorrules documentation requirements, create three files:
 
 #### A. `readMe.md`
+
 - Describes folder purpose
 - Lists files (initially placeholder, update as you create them)
 - Documents relations (parent folder, dependencies, consumers)
 - Lists internal and external dependencies
 
 **Template:**
+
 ```markdown
 # Folder Overview
 
@@ -61,7 +65,7 @@ Following the .cursorrules documentation requirements, create three files:
 
 ## Files
 
-*To be populated as files are created*
+_To be populated as files are created_
 
 - `index.tsx`: exports [AssetName] template variants
 - `types.ts`: TypeScript interfaces for data structure
@@ -82,6 +86,7 @@ Following the .cursorrules documentation requirements, create three files:
 ```
 
 #### B. `DevelopmentRoadMap.md`
+
 - Tracks completed tasks
 - Lists remaining work (easy → hard)
 - Provides recommendations
@@ -89,6 +94,7 @@ Following the .cursorrules documentation requirements, create three files:
 See the TeamOfTheWeek example for structure.
 
 #### C. `Tickets.md`
+
 - Detailed planning for each phase
 - Uses ticket format with metadata, phases, and tasks
 - Tracks completion and archives summaries
@@ -124,6 +130,7 @@ export const [ASSET]_COMPOSITION_ID = "Cricket[AssetName]";
 ```
 
 **Key Considerations:**
+
 - Match the JSON structure from your test data
 - Create union types or discriminated unions for conditional data
 - Add type guards for runtime type checking
@@ -137,40 +144,59 @@ export const [ASSET]_COMPOSITION_ID = "Cricket[AssetName]";
 **Location:** `testData/samples/Cricket/Cricket_[AssetName].json`
 
 Ensure your JSON includes all required fields:
+
 ```json
 {
-  "data": [ /* your asset data */ ],
-  "asset": { /* asset metadata */ },
-  "render": { /* render info */ },
-  "account": { /* account info */ },
+  "data": [
+    /* your asset data */
+  ],
+  "asset": {
+    /* asset metadata */
+  },
+  "render": {
+    /* render info */
+  },
+  "account": {
+    /* account info */
+  },
   "timings": {
     "FPS_MAIN": 1005,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 30,
     "FPS_[ASSET]": 180
   },
-  "frames": [/* frame markers */],
+  "frames": [
+    /* frame markers */
+  ],
   "videoMeta": {
-    "club": { /* club data */ },
+    "club": {
+      /* club data */
+    },
     "video": {
       "fixtureCategory": "Senior",
       "metadata": {
         "title": "Your Asset Title",
         "compositionId": "Cricket[AssetName]",
-        "assetId": 69,
+        "assetId": 69
         // ... other metadata
       },
       "appearance": {
-        "theme": { /* colors */ },
+        "theme": {
+          /* colors */
+        },
         "template": "Basic"
       },
-      "media": { /* media assets */ },
+      "media": {
+        /* media assets */
+      },
       "contentLayout": {
         "divideFixturesBy": {
-          "Cricket[AssetName]": 5  // items per screen
+          "Cricket[AssetName]": 5 // items per screen
         }
       },
-      "templateVariation": { /* template settings */ }
+      "templateVariation": {
+        /* template settings */
+      }
     }
   },
   "errors": []
@@ -178,6 +204,7 @@ Ensure your JSON includes all required fields:
 ```
 
 **Critical Fields:**
+
 - `videoMeta.video.metadata.compositionId`: Must match your export name (e.g., "CricketTeamOfTheWeek")
 - `timings`: Define frame counts for each section
 - `contentLayout.divideFixturesBy`: Set items per screen for pagination
@@ -187,11 +214,13 @@ Ensure your JSON includes all required fields:
 **File:** `testData/index.ts`
 
 1. **Import the JSON:**
+
 ```typescript
 import Cricket[AssetName] from "./samples/Cricket/Cricket_[AssetName].json";
 ```
 
 2. **Add to testDatasets:**
+
 ```typescript
 export const testDatasets: DatasetRecord = {
   // ... existing datasets
@@ -200,6 +229,7 @@ export const testDatasets: DatasetRecord = {
 ```
 
 3. **Add to datasetsByCategory:**
+
 ```typescript
 export const datasetsByCategory: DatasetCategories = {
   Cricket: [
@@ -215,6 +245,7 @@ export const datasetsByCategory: DatasetCategories = {
 Controllers handle data display and row rendering.
 
 #### Folder Structure:
+
 ```
 controller/
   ├── [AssetName]Display/
@@ -369,6 +400,7 @@ layout/
 Templates tie everything together and integrate with BaseTemplateLayout.
 
 #### Folder Structure:
+
 ```
 TeamOfTheWeek/
   ├── basic.tsx
@@ -463,6 +495,7 @@ export { sixersThunder } from "./sixersThunder";
 **File:** `src/compositions/cricket/index.tsx`
 
 1. **Import your asset:**
+
 ```typescript
 import {
   basic as teamOfTheWeekBasic,
@@ -476,6 +509,7 @@ import {
 ```
 
 2. **Export the composition object:**
+
 ```typescript
 export const CricketTeamOfTheWeek = {
   basic: teamOfTheWeekBasic,
@@ -542,17 +576,21 @@ export const NoTeamOfTheWeekData: React.FC = () => {
 ### System Components Your Asset Interacts With:
 
 1. **Template Registry** (`src/templates/registry.tsx`)
+
    - Your templates use BaseTemplateLayout which connects to this registry
 
 2. **Data Processing** (`src/core/utils/routing.tsx`)
+
    - Handles routing to the correct composition based on compositionId
 
 3. **Context Providers**
+
    - `ThemeContext`: Provides theme colors, layout dimensions
    - `AnimationContext`: Provides animation configurations
    - `FontContext`: Provides font settings
 
 4. **Development Root** (`src/DevelopmentRoot.tsx`)
+
    - Automatically picks up registered compositions for Studio preview
 
 5. **Production Root** (`src/ProductionRoot.tsx`)
@@ -606,6 +644,7 @@ npm run dev
 Use this checklist to ensure you've completed all steps:
 
 ### Documentation
+
 - [ ] Created `readMe.md` in asset folder
 - [ ] Created `DevelopmentRoadMap.md` in asset folder
 - [ ] Created `Tickets.md` in asset folder
@@ -614,6 +653,7 @@ Use this checklist to ensure you've completed all steps:
 - [ ] Created `readMe.md` in layout subfolders (if applicable)
 
 ### Data & Types
+
 - [ ] Created `types.ts` with comprehensive interfaces
 - [ ] Added type guards for conditional data
 - [ ] Defined animation constants
@@ -624,6 +664,7 @@ Use this checklist to ensure you've completed all steps:
 - [ ] Verified `compositionId` matches export name
 
 ### Components
+
 - [ ] Created Display component (Basic variant)
 - [ ] Created Row/Item component (Basic variant)
 - [ ] Created Display components for other variants
@@ -633,6 +674,7 @@ Use this checklist to ensure you've completed all steps:
 - [ ] Created utility functions (if needed)
 
 ### Templates
+
 - [ ] Created `basic.tsx` template
 - [ ] Created `brickWork.tsx` template
 - [ ] Created `classic.tsx` template
@@ -643,12 +685,14 @@ Use this checklist to ensure you've completed all steps:
 - [ ] Created asset `index.tsx` exporting all variants
 
 ### Integration
+
 - [ ] Imported asset in `cricket/index.tsx`
 - [ ] Created export object in `cricket/index.tsx`
 - [ ] Export name matches `compositionId` in JSON
 - [ ] Mapped all template variant aliases (sixers/thunder, twocolumnclassic)
 
 ### Testing
+
 - [ ] Asset appears in Development Studio
 - [ ] Basic template renders without errors
 - [ ] All template variants render correctly
@@ -663,22 +707,27 @@ Use this checklist to ensure you've completed all steps:
 ## Common Pitfalls
 
 ### 1. CompositionId Mismatch
+
 **Problem:** Composition doesn't render in production
 **Solution:** Ensure export name in `cricket/index.tsx` exactly matches `compositionId` in JSON
 
 ### 2. Missing Frame Calculations
+
 **Problem:** Timing is off or screens cut short
 **Solution:** Verify `timings` object and screen duration calculations
 
 ### 3. Data Type Mismatches
+
 **Problem:** Runtime errors when accessing data
 **Solution:** Use type guards and optional chaining
 
 ### 4. Animation Conflicts
+
 **Problem:** Animations don't play or overlap incorrectly
 **Solution:** Check `animationDelay` values and sequence timing
 
 ### 5. Missing Dependencies
+
 **Problem:** Components don't render or context is undefined
 **Solution:** Ensure all imports are correct and contexts are available
 
@@ -687,6 +736,7 @@ Use this checklist to ensure you've completed all steps:
 ## Additional Resources
 
 - **Similar Assets to Reference:**
+
   - `performances`: Multi-stat display with categories
   - `results`: Card-based layout with pagination
   - `ladder`: Table-based display
@@ -703,6 +753,7 @@ Use this checklist to ensure you've completed all steps:
 ## Questions?
 
 If you encounter issues or have questions:
+
 1. Review existing asset implementations
 2. Check console for errors and warnings
 3. Verify JSON structure matches types
@@ -714,4 +765,3 @@ If you encounter issues or have questions:
 **Created:** 2025-12-17
 **Last Updated:** 2025-12-17
 **Asset Example:** TeamOfTheWeek (CricketTeamOfTheWeek)
-

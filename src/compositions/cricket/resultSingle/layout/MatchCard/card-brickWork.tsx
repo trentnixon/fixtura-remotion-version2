@@ -6,7 +6,10 @@ import { ResultStatementBrickWork } from "../Sections/ResultStatement/index";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerStatsBrickWork from "../../../results/layout/Sections/PlayerStats/PlayerStats-BrickWork";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 const BrickWorkMatchCard: React.FC<MatchCardProps> = ({ match }) => {
   const { selectedPalette, layout } = useThemeContext();
@@ -17,10 +20,15 @@ const BrickWorkMatchCard: React.FC<MatchCardProps> = ({ match }) => {
   const baseDelay = 0;
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const { baseDelay: calculatedBaseDelay, statsDelay, headerDelay } = calculateDelays(baseDelay);
+  const {
+    baseDelay: calculatedBaseDelay,
+    statsDelay,
+    headerDelay,
+  } = calculateDelays(baseDelay);
 
   // Extract optional result fields
   const { resultShort, resultSummary } = match;
@@ -66,7 +74,8 @@ const BrickWorkMatchCard: React.FC<MatchCardProps> = ({ match }) => {
           result={match.result}
           delay={headerDelay}
           outerContainer={{
-            backgroundColor: selectedPalette.container.backgroundTransparent.medium,
+            backgroundColor:
+              selectedPalette.container.backgroundTransparent.medium,
             height: `${teamsHeight}px`,
           }}
         />

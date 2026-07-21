@@ -22,10 +22,7 @@ export const ResultStatementClassic: React.FC<ResultStatementClassicProps> = ({
   // Priority: resultSummary > resultShort
   if (resultSummary) {
     return (
-      <div
-        className="w-full flex flex-col items-center px-16 py-0 mb-16 justify-center gap-2"
-
-      >
+      <div className="w-full flex flex-col items-center px-16 py-0 mb-16 justify-center gap-2">
         {/* Home Team */}
         <ResultMetaData
           value={resultSummary.homeTeam}

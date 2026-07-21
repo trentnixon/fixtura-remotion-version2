@@ -199,4 +199,3 @@ Once implemented:
 4. notify app team of new tag
 
 The app team will then update the dependency and import the exported stylesheet.
-

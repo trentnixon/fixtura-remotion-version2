@@ -7,7 +7,6 @@ import { AssignSponsors } from "../../../_types/composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
-import { DEFAULT_CONTAINER_ANIMATION_DELAY } from "./_utils/constants";
 
 const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
   players,

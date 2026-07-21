@@ -1,8 +1,4 @@
-import {
-  PlayerData,
-  isBatter,
-  isBowler,
-} from "../../../_types/types";
+import { PlayerData, isBatter, isBowler } from "../../../_types/types";
 
 /** Cricket overs string → total legal balls (e.g. "8.4" → 8*6+4). */
 export const parseOversToBalls = (oversStr: string): number => {

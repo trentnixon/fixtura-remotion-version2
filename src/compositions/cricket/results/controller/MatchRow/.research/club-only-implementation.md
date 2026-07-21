@@ -25,7 +25,7 @@ The system uses a boolean flag `isAccountClub` from `VideoDataContext` to determ
 **Location**: `src/core/context/VideoDataContext.tsx`
 
 ```typescript
-isAccountClub: !!data.videoMeta?.club?.IsAccountClub
+isAccountClub: !!data.videoMeta?.club?.IsAccountClub;
 ```
 
 This flag is set based on the video metadata, specifically checking if the club associated with the video is marked as the account club.
@@ -49,6 +49,7 @@ return (
 ```
 
 **Key Points**:
+
 - The decision is made at the **controller/display level** (not deep in the component tree)
 - Both component variants receive the same props structure
 - The conditional logic is simple and explicit
@@ -64,11 +65,13 @@ return (
 **Location**: `src/compositions/cricket/results/controller/MatchRow/row-Basic.tsx`
 
 **Changes**:
+
 - Import both `MatchCardBasic` and `MatchCardBasicClubOnly`
 - Use `isAccountClub` from `VideoDataContext` to conditionally render
 - Pass the same props (`match`, `index`, `rowHeight`, `delay`) to both variants
 
 **Pattern**:
+
 ```typescript
 const { isAccountClub } = useVideoDataContext();
 
@@ -98,6 +101,7 @@ return (
 **Location**: `src/compositions/cricket/results/layout/MatchCard/card-Basic-clubOnly.tsx`
 
 **Key Differences from Standard Card**:
+
 - Uses `PlayerStatsClubOnlyBasic` instead of `PlayerStatsBasic`
 - Same structure otherwise (MatchHeader, ScoreOverNameWithLogo, ResultStatementShort, etc.)
 - Same height calculations and delay logic
@@ -107,6 +111,7 @@ return (
 **Location**: `src/compositions/cricket/results/layout/Sections/PlayerStats/PlayerStats-clubOnly-Basic.tsx`
 
 **Key Logic**:
+
 1. **Extract club team players**: Uses `getClubTeamPlayers(match)` utility
 2. **Identify club team**: Determines which team (`homeTeam` or `awayTeam`) has `isClubTeam: true`
 3. **Filter players**: Creates a new team object with only club team's batting and bowling performances
@@ -114,6 +119,7 @@ return (
 5. **Visibility calculation**: Uses `computePartialTwoDayVisibility` with only club team's batting status
 
 **Differences from Standard PlayerStats**:
+
 - **Standard**: Shows both teams side-by-side (home | away) with border separator
 - **Club-Only**: Shows only club team centered, with batting and bowling stats side-by-side
 - **Layout**: Standard uses `flex-row` with border, Club-Only uses `flex-row` centered without border
@@ -130,12 +136,14 @@ return (
 **Purpose**: Extracts only the club team's player performances from a match
 
 **Logic**:
+
 1. Checks `match.homeTeam.isClubTeam` first
 2. Falls back to `match.awayTeam.isClubTeam`
 3. Returns `null` if no club team found
 4. Returns object with `battingPerformances` and `bowlingPerformances` arrays
 
 **Returns**:
+
 ```typescript
 {
   battingPerformances: BattingPerformance[];
@@ -144,6 +152,7 @@ return (
 ```
 
 **Usage in Club-Only Components**:
+
 ```typescript
 const clubTeamPlayers = getClubTeamPlayers(match);
 const clubTeam = match.homeTeam.isClubTeam
@@ -164,6 +173,7 @@ if (!clubTeamPlayers || !clubTeam) {
 ### Match Object Must Have:
 
 1. **Team identification**:
+
    - `match.homeTeam.isClubTeam: boolean`
    - `match.awayTeam.isClubTeam: boolean`
 
@@ -193,13 +203,13 @@ Both compositions follow the same pattern:
 
 ### Differences
 
-| Aspect | resultSingle | results |
-|--------|-------------|---------|
-| **Card component location** | `resultSingle/layout/MatchCard/` | `results/layout/MatchCard/` |
-| **Player stats location** | `resultSingle/layout/Sections/PlayerStats/` | `results/layout/Sections/PlayerStats/` |
-| **Max players per stat** | 5 (more space available) | 3 (less space in rows) |
-| **Layout differences** | Full asset height available | Constrained row height |
-| **Result statement** | Uses `ResultStatementText` (full) | Uses `ResultStatementShort` |
+| Aspect                      | resultSingle                                | results                                |
+| --------------------------- | ------------------------------------------- | -------------------------------------- |
+| **Card component location** | `resultSingle/layout/MatchCard/`            | `results/layout/MatchCard/`            |
+| **Player stats location**   | `resultSingle/layout/Sections/PlayerStats/` | `results/layout/Sections/PlayerStats/` |
+| **Max players per stat**    | 5 (more space available)                    | 3 (less space in rows)                 |
+| **Layout differences**      | Full asset height available                 | Constrained row height                 |
+| **Result statement**        | Uses `ResultStatementText` (full)           | Uses `ResultStatementShort`            |
 
 ---
 
@@ -210,11 +220,13 @@ When adding club-only support to a new row variant or composition:
 ### Required Files
 
 - [ ] **MatchCard variant**: `card-[Variant]-clubOnly.tsx`
+
   - Copy from standard card
   - Replace `PlayerStats[Variant]` with `PlayerStats[Variant]ClubOnly`
   - Keep all other sections identical
 
 - [ ] **PlayerStats variant**: `PlayerStats-[Variant]-clubOnly.tsx`
+
   - Copy from standard PlayerStats
   - Import `getClubTeamPlayers` utility
   - Filter to club team only
@@ -222,9 +234,11 @@ When adding club-only support to a new row variant or composition:
   - Use `computePartialTwoDayVisibility` with club team only
 
 - [ ] **Utility function**: Ensure `getClubTeamPlayers` exists in `MatchCard/_utils/calculations.ts`
+
   - If not, copy from existing implementation
 
 - [ ] **Controller update**: Update row/display component
+
   - Import both card variants
   - Add `isAccountClub` check from `VideoDataContext`
   - Conditionally render appropriate card
@@ -252,6 +266,7 @@ When adding club-only support to a new row variant or composition:
 **Decision**: Create separate `-clubOnly` variants rather than conditional logic inside components.
 
 **Rationale**:
+
 - **Clarity**: Each component has a single, clear responsibility
 - **Maintainability**: Changes to club-only logic don't affect standard components
 - **Reusability**: Club-only components can be used independently
@@ -262,6 +277,7 @@ When adding club-only support to a new row variant or composition:
 **Decision**: Check `isAccountClub` at the controller/display level, not deep in the tree.
 
 **Rationale**:
+
 - **Performance**: Avoids unnecessary rendering of unused components
 - **Simplicity**: Single decision point, clear data flow
 - **Consistency**: Matches pattern used in `resultSingle`
@@ -271,6 +287,7 @@ When adding club-only support to a new row variant or composition:
 **Decision**: Extract `getClubTeamPlayers` as a shared utility.
 
 **Rationale**:
+
 - **DRY**: Used in multiple places (PlayerStats components)
 - **Testability**: Can be unit tested independently
 - **Consistency**: Same logic across all club-only components
@@ -280,6 +297,7 @@ When adding club-only support to a new row variant or composition:
 **Decision**: Return `null` if no club team found in match.
 
 **Rationale**:
+
 - **Defensive**: Handles edge cases gracefully
 - **User experience**: Prevents broken UI if data is incomplete
 - **Safety**: Avoids runtime errors from undefined team references
@@ -291,12 +309,14 @@ When adding club-only support to a new row variant or composition:
 When testing club-only implementations:
 
 1. **Data scenarios**:
+
    - Match with club team as home team
    - Match with club team as away team
    - Match with no club team (should return null)
    - Match with both teams as club (edge case)
 
 2. **Context scenarios**:
+
    - `isAccountClub: true` → should render club-only variant
    - `isAccountClub: false` → should render standard variant
 
@@ -310,21 +330,25 @@ When testing club-only implementations:
 ## Related Files Reference
 
 ### Results Composition
+
 - Controller: `results/controller/MatchRow/row-Basic.tsx`
 - Card: `results/layout/MatchCard/card-Basic-clubOnly.tsx`
 - PlayerStats: `results/layout/Sections/PlayerStats/PlayerStats-clubOnly-Basic.tsx`
 - Utils: `results/layout/MatchCard/_utils/calculations.ts`
 
 ### ResultSingle Composition (Reference)
+
 - Controller: `resultSingle/controller/ResultSingleDisplay/display.tsx`
 - Card: `resultSingle/layout/MatchCard/card-Basic-ClubOnly.tsx`
 - PlayerStats: `resultSingle/layout/Sections/PlayerStats/PlayerStats-clubOnly-Basic.tsx`
 - Utils: `resultSingle/layout/MatchCard/_utils/calculations.ts`
 
 ### Core Context
+
 - `src/core/context/VideoDataContext.tsx` - Provides `isAccountClub` flag
 
 ### Template Themes
+
 - `src/templates/variants/[variant]/theme.ts` - Theme configuration files
   - Must include color palette definitions for result styles
   - Required palette properties:
@@ -350,6 +374,7 @@ This pattern ensures consistency across compositions while maintaining clear sep
 ### Important Note on Theme Updates
 
 When implementing club-only support for a new template variant, **template theme updates are also required**. The theme configuration must include the necessary color palette properties for result styles, particularly:
+
 - Background colors for stat sections
 - Border colors (if borders are used)
 - Text colors for player names and scores

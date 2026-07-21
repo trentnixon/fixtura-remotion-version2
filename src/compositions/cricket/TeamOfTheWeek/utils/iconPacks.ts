@@ -41,10 +41,13 @@ export const getPositionIcon = (
   const packToUse = iconPackName || currentDefaultIconPack;
 
   // Get the icon pack (fallback to default if not found)
-  const iconPack = iconPackRegistry[packToUse] || iconPackRegistry[DEFAULT_ICON_PACK];
+  const iconPack =
+    iconPackRegistry[packToUse] || iconPackRegistry[DEFAULT_ICON_PACK];
 
   if (!iconPack) {
-    console.warn(`Icon pack "${packToUse}" not found, using default "${DEFAULT_ICON_PACK}"`);
+    console.warn(
+      `Icon pack "${packToUse}" not found, using default "${DEFAULT_ICON_PACK}"`,
+    );
     return null;
   }
 

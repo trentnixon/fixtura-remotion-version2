@@ -36,15 +36,15 @@ GlobalProvider (settings, data)
 
 ### 2. Understand Context Dependencies
 
-| Context | Depends On | Provides |
-|---------|------------|----------|
-| GlobalContext | — | settings, data |
-| VideoDataContext | GlobalContext | data, video, club, metadata, media, appearance, contentLayout, templateVariation, sponsors |
-| ThemeContext | GlobalContext, VideoDataContext | colors, colorSystem, palettes, typography, layout, fonts, getActivePalette |
-| StyleContext | ThemeContext | theme, fontConfig, fontSizing, getActivePalette, selectedPalette (legacy shape) |
-| FontContext | VideoDataContext, StyleContext, ThemeContext | fontsLoaded, loadFont, availableFonts |
-| LayoutContext | VideoDataContext | doesAccountHaveSponsors |
-| AnimationContext | — | animations (prop-in) |
+| Context          | Depends On                                   | Provides                                                                                   |
+| ---------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| GlobalContext    | —                                            | settings, data                                                                             |
+| VideoDataContext | GlobalContext                                | data, video, club, metadata, media, appearance, contentLayout, templateVariation, sponsors |
+| ThemeContext     | GlobalContext, VideoDataContext              | colors, colorSystem, palettes, typography, layout, fonts, getActivePalette                 |
+| StyleContext     | ThemeContext                                 | theme, fontConfig, fontSizing, getActivePalette, selectedPalette (legacy shape)            |
+| FontContext      | VideoDataContext, StyleContext, ThemeContext | fontsLoaded, loadFont, availableFonts                                                      |
+| LayoutContext    | VideoDataContext                             | doesAccountHaveSponsors                                                                    |
+| AnimationContext | —                                            | animations (prop-in)                                                                       |
 
 ### 3. Key Data Flows
 

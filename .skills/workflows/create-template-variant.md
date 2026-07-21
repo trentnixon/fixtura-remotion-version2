@@ -23,12 +23,14 @@ Step-by-step workflow for creating a new template variant that extends the base 
 ### Phase 1: Create Variant Structure
 
 1. Create folder `src/templates/variants/YourVariant/` with:
+
    - `index.tsx` — composes BaseTemplate, passes intro/outro/main/background/animations
    - `theme.ts` — extends `baseTheme`, overrides fonts, componentStyles, layout, color modes
    - `animations.ts` — AnimationConfig with image, text, container, transition presets
    - `.docs/readMe.md` — folder contract per repo rules
 
 2. Create `components/` with:
+
    - `YourVariantIntro.tsx`, `YourVariantOutro.tsx`, `YourVariantMain.tsx`, `YourVariantMainHeader.tsx`, `YourVariantBackground.tsx`
    - `.docs/readMe.md` for components folder
 
@@ -46,6 +48,7 @@ Step-by-step workflow for creating a new template variant that extends the base 
 ### Phase 3: Hook Up Compositions
 
 6. For each composition type (e.g., CricketLadder, CricketTop5):
+
    - Create `src/compositions/{sport}/{compositionType}/yourVariant.tsx` — composition implementation with transitions
    - Create `src/compositions/{sport}/{compositionType}/controller/Display/display-YourVariant.tsx` — display component that renders the data layout
 

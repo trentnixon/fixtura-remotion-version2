@@ -46,9 +46,15 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
           >
             <RosterPlayerList roster={roster} gap="gap-4" />
             <div className="flex flex-col gap-4 p-4">
-              <AccountTeamLarge roster={roster} logoSize={ACCOUNT_TEAM_LOGO_SIZE} />
+              <AccountTeamLarge
+                roster={roster}
+                logoSize={ACCOUNT_TEAM_LOGO_SIZE}
+              />
               <VS variant="onContainerCopy" />
-              <AgainstTeamLarge roster={roster} logoSize={AGAINST_TEAM_LOGO_SIZE} />
+              <AgainstTeamLarge
+                roster={roster}
+                logoSize={AGAINST_TEAM_LOGO_SIZE}
+              />
             </div>
           </div>
           <TwoMetaValuesSubtleWrapper

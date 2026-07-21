@@ -6,7 +6,10 @@ import MatchStatus from "../Sections/MatchStatus/MatchStatus";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerStatsClubOnlyBrickWork from "../Sections/PlayerStats/PlayerStats-clubOnly-BrickWork";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 const MatchCardBrickWorkClubOnly: React.FC<MatchCardProps> = ({
   match,
@@ -16,7 +19,8 @@ const MatchCardBrickWorkClubOnly: React.FC<MatchCardProps> = ({
   const { selectedPalette } = useThemeContext();
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
   const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);
@@ -61,8 +65,6 @@ const MatchCardBrickWorkClubOnly: React.FC<MatchCardProps> = ({
         />
       )}
 
-
-
       {/* Section 2: Player statistics */}
       <PlayerStatsClubOnlyBrickWork
         match={match}
@@ -72,18 +74,16 @@ const MatchCardBrickWorkClubOnly: React.FC<MatchCardProps> = ({
         matchType={match.type}
         matchStatus={match.status}
       />
-      {
-        match.resultShort && (
-          <ResultStatementShort
-            resultShort={match.resultShort}
-            delay={headerDelay}
-            outerContainer={{
-              height: headerHeight,
-            }}
-            variant="onContainerCopy"
-          />
-        )
-      }
+      {match.resultShort && (
+        <ResultStatementShort
+          resultShort={match.resultShort}
+          delay={headerDelay}
+          outerContainer={{
+            height: headerHeight,
+          }}
+          variant="onContainerCopy"
+        />
+      )}
     </div>
   );
 };

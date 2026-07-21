@@ -72,10 +72,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
 
   const glassPanelHeight =
     gameRowHeight != null
-      ? Math.max(
-          gameRowHeight - HEADER_STRIP_H - HEADER_GLASS_GAP,
-          96,
-        )
+      ? Math.max(gameRowHeight - HEADER_STRIP_H - HEADER_GLASS_GAP, 96)
       : null;
   const logoBox =
     glassPanelHeight != null
@@ -84,8 +81,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
           Math.max(72, Math.floor(glassPanelHeight * 0.42)),
         )
       : 80;
-  const compact =
-    glassPanelHeight != null ? glassPanelHeight < 140 : false;
+  const compact = glassPanelHeight != null ? glassPanelHeight < 140 : false;
   const teamNameClass = compact ? "text-4xl" : "text-5xl";
   const vsClass = compact ? "text-3xl" : "text-4xl";
 

@@ -11,6 +11,7 @@
 ## TKT-2025-017: Variants readMe Migration — .docs Layout
 
 ---
+
 ID: TKT-2025-017
 Status: Draft
 Priority: Medium
@@ -18,6 +19,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Feature Documentation System, TKT-2025-015 (core migration), templates/base audit
+
 ---
 
 ### Overview
@@ -31,31 +33,31 @@ Migrate template variant readMe files to .docs layout and ensure every variant f
 
 ### Current State (src/templates/variants)
 
-| Location | Has readMe | In .docs? | Action |
-|----------|-------------|-----------|--------|
-| `variants/` (root) | ✓ | ✓ | None |
-| `basic/` | ✓ | ✗ | Move |
-| `basic/components/` | ✓ | ✗ | Move |
-| `brickwork/` | ✓ | ✓ | None |
-| `brickwork/components/` | ✓ | ✓ | None |
-| `classic/` | ✓ | ✗ | Move |
-| `classic/components/` | ✓ | ✗ | Move |
-| `cnsw/` | ✓ | ✗ | Move |
-| `cnsw/components/` | ✓ | ✗ | Move |
-| `cnsw/utils/` | README.md | ✗ | Move → .docs/readMe.md |
-| `cnsw-private/` | ✓ | ✗ | Move |
-| `cnsw-private/components/` | ✓ | ✗ | Move |
-| `cnsw-private/utils/` | README.md | ✗ | Move → .docs/readMe.md |
-| `mudgeeraba/` | ✓ | ✓ | None |
-| `mudgeeraba/components/` | ✓ | ✗ | Move |
-| `sixers/` | ✓ | ✗ | Move |
-| `sixers/components/` | ✓ | ✗ | Move |
-| `thunder/` | ✓ | ✗ | Move |
-| `thunder/components/` | ✓ | ✗ | Move |
-| `thunder/utils/` | ✗ | — | Create |
-| `twoColumnClassic/` | ✓ | ✗ | Move |
-| `twoColumnClassic/components/` | ✓ | ✗ | Move |
-| `twoColumnClassic/utils/` | ✗ | — | Create |
+| Location                       | Has readMe | In .docs? | Action                 |
+| ------------------------------ | ---------- | --------- | ---------------------- |
+| `variants/` (root)             | ✓          | ✓         | None                   |
+| `basic/`                       | ✓          | ✗         | Move                   |
+| `basic/components/`            | ✓          | ✗         | Move                   |
+| `brickwork/`                   | ✓          | ✓         | None                   |
+| `brickwork/components/`        | ✓          | ✓         | None                   |
+| `classic/`                     | ✓          | ✗         | Move                   |
+| `classic/components/`          | ✓          | ✗         | Move                   |
+| `cnsw/`                        | ✓          | ✗         | Move                   |
+| `cnsw/components/`             | ✓          | ✗         | Move                   |
+| `cnsw/utils/`                  | README.md  | ✗         | Move → .docs/readMe.md |
+| `cnsw-private/`                | ✓          | ✗         | Move                   |
+| `cnsw-private/components/`     | ✓          | ✗         | Move                   |
+| `cnsw-private/utils/`          | README.md  | ✗         | Move → .docs/readMe.md |
+| `mudgeeraba/`                  | ✓          | ✓         | None                   |
+| `mudgeeraba/components/`       | ✓          | ✗         | Move                   |
+| `sixers/`                      | ✓          | ✗         | Move                   |
+| `sixers/components/`           | ✓          | ✗         | Move                   |
+| `thunder/`                     | ✓          | ✗         | Move                   |
+| `thunder/components/`          | ✓          | ✗         | Move                   |
+| `thunder/utils/`               | ✗          | —         | Create                 |
+| `twoColumnClassic/`            | ✓          | ✗         | Move                   |
+| `twoColumnClassic/components/` | ✓          | ✗         | Move                   |
+| `twoColumnClassic/utils/`      | ✗          | —         | Create                 |
 
 ### Phases & Tasks
 

@@ -98,10 +98,19 @@ function mapEffectType(legacyType?: string): ImageEffectType {
   }
 }
 
+type DirectionMapping = {
+  zoomDirection?: "in" | "out";
+  panDirection?: "left" | "right" | "up" | "down";
+  blurDirection?: "in" | "out";
+};
+
 /**
  * Map legacy direction to pan or zoom direction
  */
-function mapDirection(direction?: string, effectType?: ImageEffectType): any {
+function mapDirection(
+  direction?: string,
+  effectType?: ImageEffectType,
+): DirectionMapping {
   if (!direction) {
     return {
       zoomDirection: "in",
@@ -199,16 +208,23 @@ export function adaptImageConfig(
 /**
  * Updates the ImageBackground component configuration in a template variation
  */
-export function updatetemplateVariation(templateVariation: any): any {
+export function updatetemplateVariation(
+  templateVariation: Record<string, unknown> | null | undefined,
+): Record<string, unknown> | null | undefined {
   if (!templateVariation || !templateVariation.Image) {
     return templateVariation;
   }
 
   // Create a deep copy of the template variation
-  const newVariation = JSON.parse(JSON.stringify(templateVariation));
+  const newVariation = JSON.parse(JSON.stringify(templateVariation)) as Record<
+    string,
+    unknown
+  >;
 
   // Adapt the Image configuration
-  newVariation.Image = adaptImageConfig(templateVariation.Image);
+  newVariation.Image = adaptImageConfig(
+    templateVariation.Image as LegacyImageConfig,
+  );
 
   return newVariation;
 }

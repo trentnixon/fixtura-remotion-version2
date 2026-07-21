@@ -13,6 +13,7 @@ export interface PlayerRowLayoutProps {
 /**
  * Props interface for PlayerRow layout components that require restrictions
  */
-export interface PlayerRowLayoutPropsWithRestrictions extends PlayerRowLayoutProps {
+export interface PlayerRowLayoutPropsWithRestrictions
+  extends PlayerRowLayoutProps {
   restrictions: { nameLength: number; teamLength: number };
 }

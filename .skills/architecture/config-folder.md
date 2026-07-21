@@ -27,13 +27,13 @@ Guides working with `src/config`: application-level configuration for shared con
 
 ### 2. What Belongs in src/config vs Elsewhere
 
-| Belongs in src/config | Belongs elsewhere |
-|----------------------|-------------------|
-| Shared constants used by multiple compositions | templates/types (theme, animation, asset config) |
-| Layout defaults (e.g. fallback items-per-screen) | video data (contentLayout from API) |
-| Routing defaults or overrides | core/utils/routing |
-| Cross-cutting timings (e.g. global duration presets) | Per-composition or template variant |
-| Composition-agnostic defaults | Composition-specific config in composition folder |
+| Belongs in src/config                                | Belongs elsewhere                                 |
+| ---------------------------------------------------- | ------------------------------------------------- |
+| Shared constants used by multiple compositions       | templates/types (theme, animation, asset config)  |
+| Layout defaults (e.g. fallback items-per-screen)     | video data (contentLayout from API)               |
+| Routing defaults or overrides                        | core/utils/routing                                |
+| Cross-cutting timings (e.g. global duration presets) | Per-composition or template variant               |
+| Composition-agnostic defaults                        | Composition-specific config in composition folder |
 
 ### 3. When Adding Config Modules
 

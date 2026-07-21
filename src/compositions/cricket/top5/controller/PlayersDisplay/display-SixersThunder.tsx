@@ -10,9 +10,9 @@ import { PlayersDisplayPropsWithoutSponsors } from "./_types/PlayersDisplayProps
 import { calculateRowDimensions } from "./_utils/calculations";
 import { DEFAULT_CONTAINER_ANIMATION_DELAY } from "./_utils/constants";
 
-const PlayersDisplaySixersThunder: React.FC<PlayersDisplayPropsWithoutSponsors> = ({
-  players,
-}) => {
+const PlayersDisplaySixersThunder: React.FC<
+  PlayersDisplayPropsWithoutSponsors
+> = ({ players }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { club } = useVideoDataContext();

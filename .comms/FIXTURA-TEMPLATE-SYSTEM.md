@@ -6,11 +6,11 @@ Fixtura templates are **fixed-dimension design layouts used to automatically gen
 
 Templates are designed to be:
 
-* **automatically rendered**
-* **data-driven**
-* **brand configurable**
-* **consistent across clubs**
-* **stable regardless of content variations**
+- **automatically rendered**
+- **data-driven**
+- **brand configurable**
+- **consistent across clubs**
+- **stable regardless of content variations**
 
 Each template combines **structured sports data, club branding, and sponsor placements** into a single visual output.
 
@@ -56,10 +56,10 @@ Every Fixtura template follows the same high-level layout structure.
 
 Used for:
 
-* club logo
-* template title
-* background imagery
-* competition context
+- club logo
+- template title
+- background imagery
+- competition context
 
 ### Content Area
 
@@ -67,18 +67,18 @@ The main template layout where match data is rendered.
 
 Examples:
 
-* result match blocks
-* fixture listings
-* player performance cards
-* ladder tables
+- result match blocks
+- fixture listings
+- player performance cards
+- ladder tables
 
 ### Footer
 
 Reserved for:
 
-* sponsor logos
-* sponsor messaging
-* secondary branding
+- sponsor logos
+- sponsor messaging
+- secondary branding
 
 ---
 
@@ -127,10 +127,10 @@ Fixtura templates use a **constrained theme system** to ensure consistency.
 
 Templates use:
 
-* **2 fonts only**
-* **2 primary club colours**
-* **black**
-* **white**
+- **2 fonts only**
+- **2 primary club colours**
+- **black**
+- **white**
 
 No additional colours or font families are permitted.
 
@@ -144,14 +144,14 @@ Font usage is restricted to predefined text styles.
 
 Examples of text styles include:
 
-* Title
-* Subtitle
-* Team Name
-* Score
-* Player Name
-* Match Result
-* Metadata
-* Sponsor Text
+- Title
+- Subtitle
+- Team Name
+- Score
+- Player Name
+- Match Result
+- Metadata
+- Sponsor Text
 
 Each style defines:
 
@@ -292,9 +292,9 @@ Displays sponsor logos.
 
 Rules:
 
-* fixed height
-* controlled spacing
-* consistent scaling
+- fixed height
+- controlled spacing
+- consistent scaling
 
 ---
 
@@ -449,10 +449,10 @@ Fixtura templates are **structured, automated design systems** that convert spor
 
 The template system ensures:
 
-* consistent design
-* reliable automated rendering
-* scalable asset generation
-* clear communication of sports data
-* integrated sponsor exposure
+- consistent design
+- reliable automated rendering
+- scalable asset generation
+- clear communication of sports data
+- integrated sponsor exposure
 
 By combining **fixed layout rules, constrained themes, and structured data**, Fixtura can generate thousands of professional sports graphics automatically.

@@ -92,9 +92,7 @@ const PlayerRowSixersThunder: React.FC<PlayerRowProps> = ({
   const playerName = cleanPlayerName(player.player).toUpperCase();
 
   // All-rounders check
-  const isAllRounder = isAllRounderPosition(
-    player.categoryDetail.position,
-  );
+  const isAllRounder = isAllRounderPosition(player.categoryDetail.position);
   const hasBoth = hasBothStats(player);
 
   // Get score display values (only used for non-all-rounder positions)
@@ -138,7 +136,9 @@ const PlayerRowSixersThunder: React.FC<PlayerRowProps> = ({
           </div>
 
           {/* Player Info */}
-          <div className={`flex flex-row justify-start items-center px-2 h-full overflow-hidden gap-0 ${isAccountClub ? "col-span-11" : "col-span-10"}`}>
+          <div
+            className={`flex flex-row justify-start items-center px-2 h-full overflow-hidden gap-0 ${isAccountClub ? "col-span-11" : "col-span-10"}`}
+          >
             {/* Player Name */}
             <TeamOfTheWeekPlayerName
               value={playerName}

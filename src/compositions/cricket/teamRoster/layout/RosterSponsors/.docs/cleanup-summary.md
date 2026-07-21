@@ -21,6 +21,7 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/RosterSponsorsProps.ts`
+
 - **Extracted from:** `sponsors.tsx`
 - **Content:** `RosterSponsorsProps` interface
 - **Purpose:** Centralizes props type definition for RosterSponsors component
@@ -29,6 +30,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_SPONSOR_LIST_GAP = "gap-8"` - Default gap spacing for sponsor list
   - `MAX_SPONSOR_CONTAINER_HEIGHT = "max-h-[120px]"` - Maximum height for sponsor container
@@ -41,6 +43,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Component File Updates
 
 #### Modified `sponsors.tsx`
+
 - **Removed:** Inline `RosterSponsorsProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Hardcoded values:

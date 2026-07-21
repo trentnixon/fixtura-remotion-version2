@@ -35,7 +35,9 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
         exitAnimation={ContainerAnimations.main.itemContainer.containerOut}
         exitFrame={animationOutFrame}
       >
-        <div className={`${layout.borderRadius.container} w-full overflow-hidden`}>
+        <div
+          className={`${layout.borderRadius.container} w-full overflow-hidden`}
+        >
           {/* Grade Section - Top */}
           <Ground
             ground={game.gradeName}
@@ -50,10 +52,12 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
             delay={delay}
             variant="onContainerCopy"
             outerStyles={{
-              background: selectedPalette.container.backgroundTransparent.medium,
+              background:
+                selectedPalette.container.backgroundTransparent.medium,
             }}
             innerStyles={{
-              background: selectedPalette.container.backgroundTransparent.medium,
+              background:
+                selectedPalette.container.backgroundTransparent.medium,
             }}
           />
 
@@ -61,10 +65,13 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
           <AnimatedContainer
             type="full"
             className={`flex items-center justify-center w-full gap-2 p-0 ${layout.borderRadius.container}`}
-            animation={ContainerAnimations.main.itemContainerSecondary.containerIn}
+            animation={
+              ContainerAnimations.main.itemContainerSecondary.containerIn
+            }
             animationDelay={delay + 10}
             style={{
-              background: selectedPalette.container.backgroundTransparent.medium,
+              background:
+                selectedPalette.container.backgroundTransparent.medium,
             }}
           >
             {/* Home Team Logo - 20% */}
@@ -78,7 +85,11 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                   teamName={game.teamHome}
                   delay={delay + 15}
                   fit="cover"
-                  imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  imgStyle={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             </div>
@@ -130,7 +141,11 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
                   teamName={game.teamAway}
                   delay={delay + 20}
                   fit="cover"
-                  imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  imgStyle={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             </div>
@@ -141,10 +156,12 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
             delay={delay + 10}
             variant="onContainerCopy"
             outerStyles={{
-              background: selectedPalette.container.backgroundTransparent.medium,
+              background:
+                selectedPalette.container.backgroundTransparent.medium,
             }}
             innerStyles={{
-              background: selectedPalette.container.backgroundTransparent.medium,
+              background:
+                selectedPalette.container.backgroundTransparent.medium,
             }}
           />
         </div>

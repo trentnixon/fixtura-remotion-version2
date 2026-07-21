@@ -21,6 +21,7 @@ The following folders were created to support the modularization pattern:
 ### 1. Utility Functions Extraction
 
 #### Created `_utils/dataHelpers.ts`
+
 - **Extracted functions:**
   - `hasValidTeamOfTheWeekData(teamOfTheWeekData)` - Validates that team of the week data exists and is a non-empty array
   - `castToTeamOfTheWeekPlayers(teamOfTheWeekData)` - Casts unknown data to typed `TeamOfTheWeekPlayer[]` array
@@ -31,6 +32,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Shared Components Extraction
 
 #### Created `_utils/components.tsx`
+
 - **Extracted component:**
   - `NoDataPlaceholder` - Placeholder component shown when no team of the week data is available
 - **Purpose:** Centralizes the "No Team of the Week Data" placeholder UI that was duplicated across all entry point files
@@ -38,6 +40,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Entry Point File Updates
 
 #### Modified `basic.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic
@@ -50,6 +53,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Placeholder rendering to use `<NoDataPlaceholder />` component
 
 #### Modified `classic.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic
@@ -59,6 +63,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `brickWork.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic
@@ -68,6 +73,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `classicTwoColumn.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic
@@ -77,6 +83,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `sixersThunder.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic
@@ -86,6 +93,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `cnsw.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic
@@ -95,6 +103,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `cnswPrivate.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline sponsor extraction logic

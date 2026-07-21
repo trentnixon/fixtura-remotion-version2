@@ -5,7 +5,10 @@ import { ResultStatementShort } from "../Sections/ResultStatement/index";
 import PlayerStatsClubOnlyCNSW from "../Sections/PlayerStats/PlayerStats-clubOnly-CNSW";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 const MatchCardCNSWClubOnly: React.FC<MatchCardProps> = ({
   match,
@@ -15,7 +18,8 @@ const MatchCardCNSWClubOnly: React.FC<MatchCardProps> = ({
   const { layout } = useThemeContext();
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
   const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);
@@ -40,17 +44,15 @@ const MatchCardCNSWClubOnly: React.FC<MatchCardProps> = ({
         CopyVariant="onContainerCopyNoBg"
       />
 
-      {
-        match.resultShort && (
-          <ResultStatementShort
-            resultShort={match.resultShort}
-            delay={headerDelay}
-            outerContainer={{
-              height: headerHeight,
-            }}
-          />
-        )
-      }
+      {match.resultShort && (
+        <ResultStatementShort
+          resultShort={match.resultShort}
+          delay={headerDelay}
+          outerContainer={{
+            height: headerHeight,
+          }}
+        />
+      )}
 
       {/* Section 2: Player statistics */}
       <PlayerStatsClubOnlyCNSW

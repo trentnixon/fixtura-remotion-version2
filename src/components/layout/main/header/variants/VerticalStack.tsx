@@ -44,9 +44,7 @@ const createVerticalStack = (order: Array<"Logo" | "Title" | "Name">) => {
         className={`flex flex-col ${verticalJustify} ${horizontalHeaderAlignment} w-full px-1 py-0 min-h-0 overflow-visible`}
         style={{ height: `${height}px` }}
       >
-        <div
-          className={`flex flex-col w-full ${horizontalHeaderAlignment}`}
-        >
+        <div className={`flex flex-col w-full ${horizontalHeaderAlignment}`}>
           {order.map((item, index) => {
             switch (item) {
               case "Logo":

@@ -21,6 +21,7 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/PlayerRowLayoutProps.ts`
+
 - **Extracted interfaces:**
   - `PlayerRowLayoutProps` - Base props interface for PlayerRow layout components
     - `player: PlayerData`
@@ -36,6 +37,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_LOGO_SIZE = 24` - Default logo size for player rows
   - `SMALL_LOGO_SIZE = 20` - Small logo size for player rows (used in grid layouts)
@@ -53,11 +55,13 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted functions:**
   - `truncateText(text, maxLength)` - Truncates text to a maximum length, adding ellipsis if truncated
 - **Purpose:** Centralizes text truncation logic that was duplicated across all component files
 
 #### Created `_utils/scoreHelpers.ts`
+
 - **Extracted functions:**
   - `getScoreValues(player)` - Gets the appropriate score display values based on player type (batter or bowler)
     - Returns `{ mainValue: string, suffix: string }`
@@ -66,12 +70,13 @@ The following folders were created to support the modularization pattern:
 - **Extracted types:**
   - `ScoreValues` - Interface for score display values
 - **Purpose:** Centralizes score calculation logic that was duplicated across all component files
-- **Dependencies:** 
+- **Dependencies:**
   - `PlayerData`, `isBatter`, `isBowler` from `../../types`
 
 ### 4. Component File Updates
 
 #### Modified `StandardPlayerRow.tsx`
+
 - **Removed:** Inline `PlayerRowLayoutProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `isBatter`, `isBowler`)
 - **Removed:** Inline `truncateText` function
@@ -86,6 +91,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Score calculation to use `getScoreValues(player)`
 
 #### Modified `PlayerRowNameLogoWrapperValue.tsx`
+
 - **Removed:** Inline `PlayerRowLayoutProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `isBatter`, `isBowler`)
 - **Removed:** Inline `truncateText` function
@@ -97,6 +103,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations and delays to use shared utilities
 
 #### Modified `PlayerRowNameClassicTwoColumn.tsx`
+
 - **Removed:** Inline `PlayerRowLayoutProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `isBatter`, `isBowler`)
 - **Removed:** Inline `truncateText` function
@@ -109,6 +116,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations and delays to use shared utilities
 
 #### Modified `PlayerRowNameCNSW.tsx`
+
 - **Removed:** Inline `PlayerRowLayoutProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `isBatter`, `isBowler`)
 - **Removed:** Inline `truncateText` function
@@ -120,6 +128,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations and delays to use shared utilities
 
 #### Modified `PlayerRowNameCNSW-private.tsx`
+
 - **Removed:** Inline `PlayerRowLayoutProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `isBatter`, `isBowler`)
 - **Removed:** Inline `truncateText` function
@@ -132,6 +141,7 @@ The following folders were created to support the modularization pattern:
 - **Note:** Kept `console.log` statement as it appears to be intentional debugging code
 
 #### Modified `PlayerRowNameSixersThunder.tsx`
+
 - **Removed:** Inline `PlayerRowLayoutProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `isBatter`, `isBowler`)
 - **Removed:** Inline `truncateText` function

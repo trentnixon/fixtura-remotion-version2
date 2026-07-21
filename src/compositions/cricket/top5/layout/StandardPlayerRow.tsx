@@ -19,13 +19,9 @@ import {
 } from "./_utils/constants";
 
 // --- Layout 1: Standard (Existing) ---
-export const StandardPlayerRow: React.FC<PlayerRowLayoutPropsWithRestrictions> = ({
-  player,
-  index,
-  rowHeight,
-  delay,
-  restrictions,
-}) => {
+export const StandardPlayerRow: React.FC<
+  PlayerRowLayoutPropsWithRestrictions
+> = ({ player, index, rowHeight, delay, restrictions }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
   /*   const { data } = useVideoDataContext();
@@ -93,13 +89,19 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutPropsWithRestrictions> =
           {/* Player Name */}
           <Top5PlayerName
             value={playerName} // Truncated and uppercase name
-            animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
+            animation={{
+              ...largeTextAnimation,
+              delay: delay + PLAYER_NAME_DELAY_OFFSET,
+            }}
             className=""
           />
           {/* Team Name */}
           <Top5PlayerTeam
             value={teamName} // Truncated and uppercase team
-            animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
+            animation={{
+              ...smallTextAnimation,
+              delay: delay + TEAM_NAME_DELAY_OFFSET,
+            }}
             className=""
           />
         </div>
@@ -109,7 +111,10 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutPropsWithRestrictions> =
           {/* Main score value */}
           <Top5PlayerScore
             value={mainValue}
-            animation={{ ...largeTextAnimation, delay: delay + MAIN_SCORE_DELAY_OFFSET }}
+            animation={{
+              ...largeTextAnimation,
+              delay: delay + MAIN_SCORE_DELAY_OFFSET,
+            }}
             className=""
           />
 
@@ -117,7 +122,10 @@ export const StandardPlayerRow: React.FC<PlayerRowLayoutPropsWithRestrictions> =
           {suffix && (
             <Top5PlayerScoreSuffix
               value={suffix}
-              animation={{ ...smallTextAnimation, delay: delay + SCORE_SUFFIX_DELAY_OFFSET }}
+              animation={{
+                ...smallTextAnimation,
+                delay: delay + SCORE_SUFFIX_DELAY_OFFSET,
+              }}
               className=""
             />
           )}

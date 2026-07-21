@@ -11,6 +11,7 @@
 ## TKT-2025-009: Reorganize Utils Root Files into Category Folders
 
 ---
+
 ID: TKT-2025-009
 Status: Draft
 Priority: High
@@ -18,6 +19,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Roadmap-Utils-Cleanup
+
 ---
 
 ### Overview
@@ -88,6 +90,7 @@ Create category subfolders and relocate files according to their domain. Update 
 ## TKT-2025-010: Consolidate Color Utilities (colors.ts vs colorSystem)
 
 ---
+
 ID: TKT-2025-010
 Status: Draft
 Priority: Medium
@@ -95,6 +98,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Roadmap-Utils-Cleanup, Core Roadmap Item 3
+
 ---
 
 ### Overview
@@ -133,6 +137,7 @@ Audit colors.ts usage, migrate callers to colorSystem, deprecate or re-export fr
 ## TKT-2025-011: Consolidate themeColorUtils with colorSystem/designPalettes
 
 ---
+
 ID: TKT-2025-011
 Status: Draft
 Priority: Medium
@@ -140,6 +145,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Roadmap-Utils-Cleanup
+
 ---
 
 ### Overview
@@ -176,6 +182,7 @@ Relocate themeColorUtils to a coherent home and update the single consumer (them
 ## TKT-2025-012: Split general.ts and Relocate Sponsor Utils
 
 ---
+
 ID: TKT-2025-012
 Status: Draft
 Priority: Low
@@ -183,6 +190,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Roadmap-Utils-Cleanup
+
 ---
 
 ### Overview

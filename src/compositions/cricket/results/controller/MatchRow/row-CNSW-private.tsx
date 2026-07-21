@@ -5,7 +5,10 @@ import { useVideoDataContext } from "../../../../../core/context/VideoDataContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import MatchCardCNSWPrivate from "../../layout/MatchCard/card-CNSW-private";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const MatchRowCNSWPrivate: React.FC<MatchRowProps> = ({
   match,

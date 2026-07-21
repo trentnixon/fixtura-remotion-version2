@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/compositions/cricket/top5/cnsw-private.tsx
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";

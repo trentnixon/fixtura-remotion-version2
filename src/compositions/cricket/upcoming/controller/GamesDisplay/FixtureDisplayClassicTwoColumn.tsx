@@ -28,11 +28,15 @@ export const GamesDisplayClassicTwoColumn: React.FC<GamesDisplayProps> = ({
   );
 
   // Calculate game card heights with custom spacing for two-column layout
-  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen, {
-    headerHeight: 0,
-    contentPadding: 20,
-    cardSpacing: 10,
-  });
+  const gameCardHeight = calculateGameCardHeight(
+    heights.asset,
+    gamesPerScreen,
+    {
+      headerHeight: 0,
+      contentPadding: 20,
+      cardSpacing: 10,
+    },
+  );
 
   // Merge all assignSponsors objects from displayedGames into one object
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);

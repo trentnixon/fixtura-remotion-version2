@@ -57,16 +57,16 @@ src/compositions/cricket/TeamOfTheWeek/
 
 ### 2. Understand Team of the Week vs Other Compositions
 
-| Aspect | Team of the Week | Performances | Results |
-|--------|------------------|--------------|---------|
-| **Data Type** | `TeamOfTheWeekPlayer[]` | `PerformanceData[]` | `MatchResult[]` |
-| **Layout** | 2-column grid | Single column rows | Match cards |
-| **Categories** | Batter, Bowler, All-Rounder, Twelfth Man | Batting or Bowling | N/A |
-| **Positions** | topscorer, mostwickets, etc. | N/A | N/A |
-| **Row Height** | Fixed (70–130px per variant) | Static | Calculated (half height) |
-| **Sponsors** | From video metadata (club.sponsors) | Merged from data | Merged from displayed matches |
-| **Icons** | Position-based SVG icon packs | Primitives | N/A |
-| **Club Logo** | Conditional: hidden for club accounts | N/A | Club-only card variant |
+| Aspect         | Team of the Week                         | Performances        | Results                       |
+| -------------- | ---------------------------------------- | ------------------- | ----------------------------- |
+| **Data Type**  | `TeamOfTheWeekPlayer[]`                  | `PerformanceData[]` | `MatchResult[]`               |
+| **Layout**     | 2-column grid                            | Single column rows  | Match cards                   |
+| **Categories** | Batter, Bowler, All-Rounder, Twelfth Man | Batting or Bowling  | N/A                           |
+| **Positions**  | topscorer, mostwickets, etc.             | N/A                 | N/A                           |
+| **Row Height** | Fixed (70–130px per variant)             | Static              | Calculated (half height)      |
+| **Sponsors**   | From video metadata (club.sponsors)      | Merged from data    | Merged from displayed matches |
+| **Icons**      | Position-based SVG icon packs            | Primitives          | N/A                           |
+| **Club Logo**  | Conditional: hidden for club accounts    | N/A                 | Club-only card variant        |
 
 ### 3. Variant Entry Point Pattern
 
@@ -90,7 +90,7 @@ Each variant file (e.g. `basic.tsx`) does:
 
 ### 5. Player Categories and Positions
 
-- **Batter**: `topscorer`, `higheststrikerate` → batting stats (runs*, balls)
+- **Batter**: `topscorer`, `higheststrikerate` → batting stats (runs\*, balls)
 - **Bowler**: `mostwickets`, `besteconomy` → bowling stats (wickets/runs, overs)
 - **All-Rounder**: `topallrounder` → batting + bowling stats
 - **Twelfth Man**: `bestoftherest` → whatever stats available (batting, bowling, or all-rounder score)

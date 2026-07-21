@@ -43,11 +43,17 @@ export const DEFAULT_IMAGE_CONFIG = {
   effectEndFrame: undefined,
 };
 
+type EffectSettings = {
+  direction?: PanDirection | ZoomDirection | BlurDirection;
+  panDirection?: PanDirection;
+  [key: string]: unknown;
+};
+
 // Helper function to determine optimal effect settings based on image ratio
 export const getOptimizedEffectSettings = (
   imageRatio: number,
   effectType: ImageEffectType,
-  currentSettings: any,
+  currentSettings: EffectSettings,
 ) => {
   const isPortrait = imageRatio < 0.7;
   const isLandscape = imageRatio > 1.3;

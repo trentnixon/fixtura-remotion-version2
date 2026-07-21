@@ -21,12 +21,14 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/RosterPlayerListProps.ts`
+
 - **Extracted from:** `playerList.tsx`
 - **Content:** `RosterPlayerListProps` interface
 - **Purpose:** Centralizes props type definition for RosterPlayerList component
 - **Dependencies:** `RosterDataItem` from `../../../types`
 
 #### Created `_types/RosterSponsorsProps.ts`
+
 - **Extracted from:** `Opposition.tsx`
 - **Content:** `RosterSponsorsProps` interface
 - **Purpose:** Centralizes props type definition for RosterSponsors component
@@ -35,6 +37,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_PLAYER_LIST_CLASSNAME = "text-left font-bold"` - Default className for player list
   - `DEFAULT_PLAYER_LIST_GAP = "gap-2"` - Default gap spacing for player list
@@ -47,6 +50,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Component File Updates
 
 #### Modified `playerList.tsx`
+
 - **Removed:** Inline `RosterPlayerListProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Hardcoded default values (`"text-left font-bold"`, `"gap-2"`, `30`)
@@ -57,6 +61,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Player name truncation to use `MAX_PLAYER_NAME_LENGTH` constant
 
 #### Modified `Opposition.tsx`
+
 - **Removed:** Inline `RosterSponsorsProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Hardcoded logo size (`220`) and delay calculation (`0 + 5`)

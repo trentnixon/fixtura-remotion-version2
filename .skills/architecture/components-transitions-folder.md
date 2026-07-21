@@ -39,9 +39,9 @@ src/components/transitions/
 
 ### 4. When to Use Each Wrapper
 
-| Wrapper | Use |
-|---------|-----|
-| TransitionWrapper | Single child; wrap one scene/sequence |
+| Wrapper                 | Use                                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------------- |
+| TransitionWrapper       | Single child; wrap one scene/sequence                                                   |
 | TransitionSeriesWrapper | Multiple segments; array of { content, durationInFrames } with transitions between each |
 
 ### 5. When Adding a New Transition Type

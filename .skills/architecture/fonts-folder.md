@@ -64,6 +64,7 @@ Arial, Helvetica, Times New Roman, Verdana, etc. are in `systemFonts`; they are 
 ### 7. Theme Font Sources
 
 loadFontsFromTheme reads:
+
 - `theme.fonts.title.family`, `theme.fonts.copy.family`
 - Legacy: `theme.fontConfig`, `theme.defaultCopyFontFamily`, `theme.headingFontFamily`, `theme.subheadingFontFamily`
 

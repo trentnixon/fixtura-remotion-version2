@@ -54,13 +54,13 @@ src/core/utils/createThemeUtils/
 
 ### 3. createThemeUtils vs colorSystem
 
-| Aspect | createThemeUtils | colorSystem |
-|--------|------------------|-------------|
-| **Entry** | `createThemeColorUtils(primary, secondary)` | `createColorSystem(primary, secondary, useMode)` |
-| **ThemeMode** | No (always same structure) | Yes (drives container/background) |
-| **Palette assembly** | designPalettes.generateAllPalettes | createStandardizedPalettes + standardPaletteFactory |
-| **Output** | ThemeColorUtils (variations + designPalettes) | ColorSystem (variations + palettes + utils) |
-| **Recommendation** | Legacy/alternative path | Prefer for new work; centralize here |
+| Aspect               | createThemeUtils                              | colorSystem                                         |
+| -------------------- | --------------------------------------------- | --------------------------------------------------- |
+| **Entry**            | `createThemeColorUtils(primary, secondary)`   | `createColorSystem(primary, secondary, useMode)`    |
+| **ThemeMode**        | No (always same structure)                    | Yes (drives container/background)                   |
+| **Palette assembly** | designPalettes.generateAllPalettes            | createStandardizedPalettes + standardPaletteFactory |
+| **Output**           | ThemeColorUtils (variations + designPalettes) | ColorSystem (variations + palettes + utils)         |
+| **Recommendation**   | Legacy/alternative path                       | Prefer for new work; centralize here                |
 
 Per Core roadmap: prefer centralizing color logic in `colorSystem` and re-export via `createThemeUtils` when needed. Consider consolidating duplicate utilities.
 

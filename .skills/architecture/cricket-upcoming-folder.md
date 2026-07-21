@@ -55,14 +55,14 @@ src/compositions/cricket/upcoming/
 
 ### 2. Understand Upcoming vs Results
 
-| Aspect | Upcoming | Results |
-|--------|-----------|---------|
-| **Data Type** | `GameData[]` | `MatchResult[]` |
-| **Games Per Screen** | Configurable (contentLayout) | Fixed (2) |
-| **Layout** | Vertical list of game cards | Match cards stacked |
-| **Card Content** | Teams, logos, date/time, ground, grade | Teams, scores, player stats |
-| **Logo Layouts** | Multiple variations (LogoAndName, LogosOnly, etc.) | Section-based |
-| **Sponsors** | Merged from displayed games | Merged from displayed matches |
+| Aspect               | Upcoming                                           | Results                       |
+| -------------------- | -------------------------------------------------- | ----------------------------- |
+| **Data Type**        | `GameData[]`                                       | `MatchResult[]`               |
+| **Games Per Screen** | Configurable (contentLayout)                       | Fixed (2)                     |
+| **Layout**           | Vertical list of game cards                        | Match cards stacked           |
+| **Card Content**     | Teams, logos, date/time, ground, grade             | Teams, scores, player stats   |
+| **Logo Layouts**     | Multiple variations (LogoAndName, LogosOnly, etc.) | Section-based                 |
+| **Sponsors**         | Merged from displayed games                        | Merged from displayed matches |
 
 ### 3. Variant Entry Point Pattern
 

@@ -75,9 +75,7 @@ export const calculateDisplayDurationPerScreen = (
  * @param performancesData - The performances data to validate
  * @returns True if data is valid, false otherwise
  */
-export const hasValidPerformances = (
-  performancesData: unknown,
-): boolean => {
+export const hasValidPerformances = (performancesData: unknown): boolean => {
   return (
     performancesData !== null &&
     performancesData !== undefined &&

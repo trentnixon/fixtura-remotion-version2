@@ -25,7 +25,10 @@ const PerformanceRowSixersThunder: React.FC<PerformanceRowProps> = ({
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
-    <div className="overflow-hidden w-full flex-shrink-0" style={{ width: "100%" }}>
+    <div
+      className="overflow-hidden w-full flex-shrink-0"
+      style={{ width: "100%" }}
+    >
       <AnimatedContainer
         type="full"
         className={`${layout.borderRadius.container} flex-shrink-0`}

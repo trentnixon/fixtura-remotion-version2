@@ -24,12 +24,12 @@ Guides working with `src/core/hooks`: placeholder for shared React hooks that ac
 
 ### 2. When to Add a Hook Here
 
-| Add to core/hooks | Keep inline |
-|-------------------|-------------|
-| Wrapper used by 3+ consumers | One-off context usage |
-| Combines multiple contexts | Single context access |
-| Adds derived state or memoization | Direct context read |
-| Shared selector (e.g. useActivePalette) | Per-component logic |
+| Add to core/hooks                       | Keep inline           |
+| --------------------------------------- | --------------------- |
+| Wrapper used by 3+ consumers            | One-off context usage |
+| Combines multiple contexts              | Single context access |
+| Adds derived state or memoization       | Direct context read   |
+| Shared selector (e.g. useActivePalette) | Per-component logic   |
 
 ### 3. Guidelines for Adding Hooks
 

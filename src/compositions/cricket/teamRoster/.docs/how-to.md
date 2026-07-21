@@ -34,6 +34,7 @@ This guide explains how to create a new **team roster composition asset type** (
 ### What is a Team Roster Composition?
 
 A **team roster composition** is a sport-specific content type that displays:
+
 - **Team roster** (array of player names)
 - **Team logos** (account holder team and opponent team)
 - **Match metadata** (date, ground, grade, round)
@@ -43,18 +44,19 @@ A **team roster composition** is a sport-specific content type that displays:
 
 ### Key Characteristics
 
-| Aspect | Team Roster |
-|--------|-------------|
-| **Layout** | Player list + team headers side-by-side |
-| **Rosters Per Screen** | 1 roster per sequence |
-| **Transitions** | Series-based transitions between rosters |
-| **Player Names** | Truncated intelligently (first initial + last name) |
-| **Team Perspective** | Account holder vs against team |
-| **Metadata** | Date/ground (top), grade/round (bottom) |
+| Aspect                 | Team Roster                                         |
+| ---------------------- | --------------------------------------------------- |
+| **Layout**             | Player list + team headers side-by-side             |
+| **Rosters Per Screen** | 1 roster per sequence                               |
+| **Transitions**        | Series-based transitions between rosters            |
+| **Player Names**       | Truncated intelligently (first initial + last name) |
+| **Team Perspective**   | Account holder vs against team                      |
+| **Metadata**           | Date/ground (top), grade/round (bottom)             |
 
 ### Example: Cricket Team Roster Composition
 
 The `CricketTeamRoster` composition:
+
 - **Data Type**: `RosterDataItem[]` - array of roster items
 - **Structure**: Each roster has teams, player list, logos, metadata, sponsors
 - **Variants**: `basic`, `classic`, `classicTwoColumn`, `sixersThunder`
@@ -149,24 +151,28 @@ src/compositions/cricket/teamRoster/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation
    - Creates one sequence per roster item
    - Uses `Series` component for roster-to-roster transitions
    - Includes sponsor display (optional)
 
 2. **Display Components** (`controller/Display/display-*.tsx`):
+
    - Variant-specific layout and styling
    - Composes layout components (player list, headers, metadata)
    - Handles spacing and background colors
    - Uses fixed or calculated heights
 
 3. **Layout Components** (`layout/`):
+
    - **RosterPlayerList**: Displays list of player names
    - **RosterHeader**: Team logos and names (account holder vs against)
    - **Metadata**: Date/ground, grade/round, VS indicator
    - **RosterSponsors**: Sponsor logos (optional)
 
 4. **Types** (`_types/types.ts`):
+
    - `RosterDataItem`: Main roster data structure
    - `Sponsor`: Sponsor information
    - Team perspective interfaces
@@ -185,10 +191,12 @@ src/compositions/cricket/teamRoster/
 Before creating a new team roster composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of roster data structure**
+
    - Team names and logos
    - Player name array
    - Match metadata (date, ground, grade, round)
@@ -196,6 +204,7 @@ Before creating a new team roster composition, ensure you have:
    - Home/away team flags
 
 3. ✅ **Access to test data**
+
    - Sample roster data
    - Multiple rosters to test transitions
    - Different team configurations
@@ -248,6 +257,7 @@ export interface RosterDataItem {
 ```
 
 **Key Points:**
+
 - **Player names**: Array of strings (may include role indicators)
 - **Team flags**: `isHomeTeam` determines account holder team
 - **Sponsors**: Fixture-specific sponsors (not club sponsors)
@@ -304,6 +314,7 @@ export const calculateRosterDuration = (
 ```
 
 **Key Points:**
+
 - **Validation**: Checks if data is valid array with items
 - **Type casting**: Safely casts unknown data to RosterDataItem[]
 - **Duration**: Uses `FPS_SCORECARD` timing or default
@@ -478,6 +489,7 @@ export const getTeamPerspective = (roster: RosterDataItem): TeamPerspective => {
 ```
 
 **Key Points:**
+
 - **Name truncation**: Converts "John Smith" to "J. Smith"
 - **Role preservation**: Keeps captain/vice-captain/wicket-keeper suffixes
 - **Team perspective**: Determines account holder vs against team
@@ -513,6 +525,7 @@ export default NoRosterData;
 ```
 
 **Key Points:**
+
 - **AbsoluteFill**: Uses Remotion's AbsoluteFill for full-screen display
 - **Simple message**: No dynamic content needed
 
@@ -562,6 +575,7 @@ export default RosterPlayerList;
 ```
 
 **Key Points:**
+
 - **Flex column**: Vertical list of players
 - **Name truncation**: Uses `truncatePlayerName()` helper
 - **Configurable**: Accepts className and gap props
@@ -650,6 +664,7 @@ export default LargeTeamHeader;
 ```
 
 **Key Points:**
+
 - **Team perspective**: Uses `getTeamPerspective()` to get account holder team
 - **Logo and name**: Displays team logo and name
 - **Configurable**: Logo size, variant, background color
@@ -758,6 +773,7 @@ const TwoMetaValuesValues = ({
 ```
 
 **Key Points:**
+
 - **Two values**: Displays two metadata values side-by-side
 - **Variants**: `SubtleWrapper` (with background) and `NoWrapper` (without)
 - **Layout**: Left-aligned and right-aligned values
@@ -809,6 +825,7 @@ export const VS = ({
 ```
 
 **Key Points:**
+
 - **Simple text**: Displays "vs" between teams
 - **Centered**: Centered alignment
 - **Configurable variant**: Can change color variant
@@ -858,6 +875,7 @@ export default RosterSponsors;
 ```
 
 **Key Points:**
+
 - **Optional**: Some variants don't include sponsors
 - **Vertical list**: Displays sponsors vertically
 - **Animated images**: Uses AnimatedImage component
@@ -937,6 +955,7 @@ export default RosterDisplay;
 ```
 
 **Key Points:**
+
 - **Layout**: Player list on left, team headers on right
 - **Metadata**: Date/ground at top, grade/round at bottom
 - **VS indicator**: Between team headers
@@ -1002,6 +1021,7 @@ export default basic;
 ```
 
 **Key Points:**
+
 - **Series component**: Uses Remotion's Series for transitions
 - **One sequence per roster**: Maps over roster data, creates one sequence each
 - **Sponsor display**: Includes sponsor component (optional in some variants)
@@ -1061,6 +1081,7 @@ export const CricketTeamRoster = {
 ### How Transitions Work
 
 1. **One Roster Per Sequence**:
+
    ```typescript
    <Series>
      {rosterData.map((rosterItem: RosterDataItem, i) => (
@@ -1075,6 +1096,7 @@ export const CricketTeamRoster = {
    ```
 
 2. **Transition Between Rosters**:
+
    - Each roster is a separate sequence
    - `Series` component handles transitions between sequences
    - No explicit transition configuration needed
@@ -1097,6 +1119,7 @@ export const CricketTeamRoster = {
 ### Structure
 
 Display components (`controller/Display/display-*.tsx`):
+
 - Create main layout container
 - Compose layout components (player list, headers, metadata)
 - Handle spacing and background colors
@@ -1138,6 +1161,7 @@ Display components (`controller/Display/display-*.tsx`):
 **Location:** `layout/RosterPlayerList/playerList.tsx`
 
 Displays list of player names:
+
 - Vertical flex column
 - Truncated player names (first initial + last name)
 - Configurable gap and className
@@ -1148,10 +1172,12 @@ Displays list of player names:
 **Location:** `layout/RosterHeader/`
 
 Two perspectives:
+
 - **AccountHolder**: Shows account holder team as main team
 - **Against**: Shows against team as main team
 
 Components:
+
 - `LargeTeamHeader`: Large logo and name
 - `SmallOpponentCard`: Small opponent card (if needed)
 
@@ -1224,6 +1250,7 @@ const { accountHolder, against } = getTeamPerspective(roster);
 ### Concept
 
 Player names are truncated intelligently to show:
+
 - First initial + last name (e.g., "John Smith" → "J. Smith")
 - Role suffixes preserved (C, VC, (WK), etc.)
 
@@ -1232,6 +1259,7 @@ Player names are truncated intelligently to show:
 **Helper Function:** `truncatePlayerName(text, maxLength)`
 
 **Features:**
+
 - Handles role indicators (like "B. (WK) VC")
 - Extracts and preserves role suffixes
 - Falls back to normal truncation if needed
@@ -1254,10 +1282,12 @@ Player names are truncated intelligently to show:
 Displays two metadata values side-by-side:
 
 **Variants:**
+
 - `TwoMetaValuesSubtleWrapper`: With subtle background color
 - `TwoMetaValuesNoWrapper`: Without background
 
 **Usage:**
+
 ```typescript
 <TwoMetaValuesSubtleWrapper
   values={[formatDate(roster.date), truncateText(roster.ground, 50)]}
@@ -1265,6 +1295,7 @@ Displays two metadata values side-by-side:
 ```
 
 **Layout:**
+
 - Left value: Left-aligned
 - Right value: Right-aligned
 - Both values: Same variant, animated
@@ -1274,11 +1305,13 @@ Displays two metadata values side-by-side:
 Displays "vs" indicator between teams:
 
 **Usage:**
+
 ```typescript
 <VS variant="onContainerCopy" />
 ```
 
 **Features:**
+
 - Centered text
 - Configurable color variant
 - Animated text
@@ -1296,6 +1329,7 @@ Sponsors are fixture-specific (not club-level sponsors). They're displayed as a 
 **Component:** `RosterSponsors`
 
 **Features:**
+
 - Maps over `roster.sponsors` array
 - Displays sponsor logos using `AnimatedImage`
 - Vertical flex column layout
@@ -1344,7 +1378,7 @@ Main container animates in:
 Metadata components animate with delay:
 
 ```typescript
-animationDelay={DEFAULT_METADATA_ANIMATION_DELAY}
+animationDelay = { DEFAULT_METADATA_ANIMATION_DELAY };
 ```
 
 ### Team Header Animation
@@ -1352,7 +1386,7 @@ animationDelay={DEFAULT_METADATA_ANIMATION_DELAY}
 Team headers animate with delay:
 
 ```typescript
-animationDelay={DEFAULT_TEAM_HEADER_ANIMATION_DELAY}
+animationDelay = { DEFAULT_TEAM_HEADER_ANIMATION_DELAY };
 ```
 
 ---
@@ -1362,6 +1396,7 @@ animationDelay={DEFAULT_TEAM_HEADER_ANIMATION_DELAY}
 ### Composition ID
 
 The routing system recognizes:
+
 - `CricketTeamRoster`
 
 ### Routing Configuration
@@ -1503,6 +1538,7 @@ const testRoster: RosterDataItem = {
 **Error:** Account holder team not showing correctly
 
 **Solutions:**
+
 1. Check `isHomeTeam` flag is set correctly
 2. Verify `getTeamPerspective()` logic
 3. Check team header component uses correct perspective
@@ -1513,6 +1549,7 @@ const testRoster: RosterDataItem = {
 **Error:** Player names not truncating correctly
 
 **Solutions:**
+
 1. Check `truncatePlayerName()` function
 2. Verify `MAX_PLAYER_NAME_LENGTH` constant
 3. Check role suffix extraction logic
@@ -1523,6 +1560,7 @@ const testRoster: RosterDataItem = {
 **Error:** No transitions between rosters or transition errors
 
 **Solutions:**
+
 1. Check `Series` component usage
 2. Verify duration calculation returns valid number
 3. Check data array has multiple rosters
@@ -1533,6 +1571,7 @@ const testRoster: RosterDataItem = {
 **Error:** Date/ground or grade/round not showing
 
 **Solutions:**
+
 1. Check `TwoMetaValues` component usage
 2. Verify data exists in roster object
 3. Check `formatDate()` and `truncateText()` helpers
@@ -1543,6 +1582,7 @@ const testRoster: RosterDataItem = {
 **Error:** Sponsor logos not displaying
 
 **Solutions:**
+
 1. Check `roster.sponsors` array exists and has items
 2. Verify sponsor logo URLs are valid
 3. Check `RosterSponsors` component is included
@@ -1629,22 +1669,26 @@ Creating a team roster composition involves:
 ### Key Implementation Details
 
 **Layout Structure:**
+
 - Player list on left (vertical column)
 - Team headers on right (vertical column with VS)
 - Metadata at top and bottom
 - Sponsors optional (below or separate)
 
 **Team Perspective:**
+
 - Account holder team determined by `isHomeTeam` flag
 - Against team is the opponent
 - Headers use `getTeamPerspective()` helper
 
 **Player Name Truncation:**
+
 - Converts "John Smith" to "J. Smith"
 - Preserves role suffixes (C, VC, (WK))
 - Handles edge cases (single names, role indicators)
 
 **Transitions:**
+
 - Uses Remotion's `Series` component
 - One sequence per roster item
 - Automatic transitions between sequences

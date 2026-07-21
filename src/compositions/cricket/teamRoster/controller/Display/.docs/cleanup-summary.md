@@ -21,6 +21,7 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/RosterDisplayProps.ts`
+
 - **Extracted from:** All display component files (`display.tsx`, `display-classic.tsx`, `display-classic-two-column.tsx`, `display-sixers-thunder.tsx`)
 - **Content:** `RosterDisplayProps` interface
 - **Purpose:** Centralizes props type definition for all RosterDisplay components
@@ -29,6 +30,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `CLASSIC_TWO_COLUMN_MIN_HEIGHT = 1350` - Minimum height for classic two-column variant
   - `ACCOUNT_TEAM_LOGO_SIZE = "300"` - Logo size for account team
@@ -38,6 +40,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Animation Configuration Extraction
 
 #### Created `_utils/animations.ts`
+
 - **Extracted configurations:**
   - `DEFAULT_CONTAINER_ANIMATION` - Default container animation configuration
   - `DEFAULT_CONTAINER_EXIT_ANIMATION` - Default container exit animation configuration
@@ -46,6 +49,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Utility Functions Extraction
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted functions:**
   - `getAvailableHeight(heights)` - Extracts available height from theme layout heights
   - `getBackgroundColor(selectedPalette)` - Extracts background color from theme palette
@@ -54,6 +58,7 @@ The following folders were created to support the modularization pattern:
 ### 5. Component File Updates
 
 #### Modified `display.tsx`
+
 - **Removed:** Inline `RosterDisplayProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Inline animation configuration objects
@@ -66,6 +71,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Logo sizes to use constants
 
 #### Modified `display-classic.tsx`
+
 - **Removed:** Inline `RosterDisplayProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Inline animation configuration objects
@@ -75,6 +81,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All shared logic to use extracted utilities
 
 #### Modified `display-classic-two-column.tsx`
+
 - **Removed:** Inline `RosterDisplayProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Inline animation configuration objects
@@ -85,6 +92,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All shared logic to use extracted utilities
 
 #### Modified `display-sixers-thunder.tsx`
+
 - **Removed:** Inline `RosterDisplayProps` interface definition
 - **Removed:** Unused `RosterDataItem` import
 - **Removed:** Inline animation configuration objects

@@ -75,7 +75,10 @@ const StatsColumn: React.FC<{
   delay: number;
   isLeftColumn: boolean;
 }> = ({ players, isBatting, delay, isLeftColumn }) => {
-  const displayPlayers = [...players.slice(0, 2), ...Array(Math.max(0, 2 - players.length)).fill(null)].slice(0, 2) as (PlayerStat | null)[];
+  const displayPlayers = [
+    ...players.slice(0, 2),
+    ...Array(Math.max(0, 2 - players.length)).fill(null),
+  ].slice(0, 2) as (PlayerStat | null)[];
   const formatStat = isBatting ? formatBattingStat : formatBowlingStat;
 
   return (
@@ -102,7 +105,9 @@ const StatsColumn: React.FC<{
   );
 };
 
-export const PlayerStatsSingleTeamOnlyMudgeeraba: React.FC<PlayerStatsSingleTeamProps> = ({
+export const PlayerStatsSingleTeamOnlyMudgeeraba: React.FC<
+  PlayerStatsSingleTeamProps
+> = ({
   Team,
   delay,
   maxPlayersPerStat = 2,

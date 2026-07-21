@@ -21,12 +21,14 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/PlayerRowPropsWithDelay.ts`
+
 - **Extracted from:** `row-CNSW.tsx`, `row-CNSW-private.tsx`
 - **Content:** `PlayerRowPropsWithDelay` interface
 - **Purpose:** Centralizes props type definition for player row variants that require an explicit `delay` prop (CNSW variants calculate delay externally)
 - **Note:** Standard `PlayerRowProps` (without delay) remains in `../../types.ts` as it's used by most variants
 
 #### Created `_types/StatDisplayProps.ts`
+
 - **Content:** Type definitions for stat display component props
   - `BattingStatDisplayProps`
   - `BowlingStatDisplayProps`
@@ -36,6 +38,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_ICON_PACK = "icon1"` - Default icon pack configuration for player row variants
   - `STAT_DISPLAY_DELAY_OFFSET = 20` - Animation delay offset for stat displays
@@ -46,6 +49,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted functions:**
   - `isAllRounderPosition(position)` - Checks if player position is an all-rounder position (topallrounder or bestoftherest)
   - `hasBothStats(player)` - Checks if player has both batting and bowling stats
@@ -53,6 +57,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Shared Components Extraction
 
 #### Created `_utils/components.tsx`
+
 - **Extracted components:**
   - `BattingStatDisplay` - Component to display formatted batting stats (runs with not-out indicator and balls faced)
   - `BowlingStatDisplay` - Component to display formatted bowling stats (wickets/runs and overs)
@@ -63,6 +68,7 @@ The following folders were created to support the modularization pattern:
 ### 5. Component File Updates
 
 #### Modified `row-Basic.tsx`
+
 - **Removed:** Inline `BattingStatDisplay`, `BowlingStatDisplay`, and `StatItem` component definitions
 - **Removed:** Hardcoded `ICON_PACK` constant and inline `isAllRounderPosition`/`hasBothStats` logic
 - **Removed:** Hardcoded delay offsets (`delay + 20`, `delay + 30`, `delay + 2`)
@@ -70,6 +76,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All stat display calls to use shared components with constants for delay offsets
 
 #### Modified `row-Classic.tsx`
+
 - **Removed:** Inline `BattingStatDisplay`, `BowlingStatDisplay`, and `StatItem` component definitions
 - **Removed:** Hardcoded `ICON_PACK` constant and inline `isAllRounderPosition`/`hasBothStats` logic
 - **Removed:** Hardcoded delay offsets
@@ -77,6 +84,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All stat display calls to use shared components with constants for delay offsets
 
 #### Modified `row-BrickWork.tsx`
+
 - **Removed:** Inline `BattingStatDisplay`, `BowlingStatDisplay`, and `StatItem` component definitions
 - **Removed:** Hardcoded `ICON_PACK` constant and inline `isAllRounderPosition`/`hasBothStats` logic
 - **Removed:** Hardcoded delay offsets
@@ -84,6 +92,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All stat display calls to use shared components with constants for delay offsets
 
 #### Modified `row-ClassicTwoColumn.tsx`
+
 - **Removed:** Inline `BattingStatDisplay`, `BowlingStatDisplay`, and `StatItem` component definitions
 - **Removed:** Hardcoded `ICON_PACK` constant and inline `isAllRounderPosition`/`hasBothStats` logic
 - **Removed:** Hardcoded delay offsets
@@ -91,6 +100,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All stat display calls to use shared components with constants for delay offsets
 
 #### Modified `row-SixersThunder.tsx`
+
 - **Removed:** Inline `BowlingStatDisplay` component definition (kept `BattingStatDisplay` as variant)
 - **Removed:** Hardcoded `ICON_PACK` constant and inline `isAllRounderPosition`/`hasBothStats` logic
 - **Removed:** Hardcoded delay offsets
@@ -99,11 +109,13 @@ The following folders were created to support the modularization pattern:
 - **Note:** Kept local `BattingStatDisplay` because it uses `TeamOfTheWeekStat` instead of `MetadataSmall`
 
 #### Modified `row-CNSW.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Added:** Import of `PlayerRowPropsWithDelay` from `./_types/PlayerRowPropsWithDelay`
 - **Updated:** Component to use `PlayerRowPropsWithDelay` type
 
 #### Modified `row-CNSW-private.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `TeamOfTheWeekPlayer` import
 - **Added:** Import of `PlayerRowPropsWithDelay` from `./_types/PlayerRowPropsWithDelay`

@@ -22,7 +22,10 @@ export const TeamOfTheWeekListMudgeeraba: React.FC = () => {
   const players = castToTeamOfTheWeekPlayers(teamOfTheWeekData);
 
   return (
-    <TeamOfTheWeekDisplayMudgeeraba players={players} sponsors={sponsors.primary} />
+    <TeamOfTheWeekDisplayMudgeeraba
+      players={players}
+      sponsors={sponsors.primary}
+    />
   );
 };
 

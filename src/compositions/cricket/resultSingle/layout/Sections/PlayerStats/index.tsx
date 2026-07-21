@@ -65,10 +65,12 @@ const StatSection: React.FC<StatSectionProps> = ({
           playerName={player.player}
           statValue={
             isBatting
-              ? `${player.runs}${"notOut" in player && player.notOut ? "*" : ""
-              } (${"balls" in player ? player.balls : 0})`
-              : `${"wickets" in player ? player.wickets : 0}/${"runs" in player ? player.runs : 0
-              } (${"overs" in player ? player.overs : 0})`
+              ? `${player.runs}${
+                  "notOut" in player && player.notOut ? "*" : ""
+                } (${"balls" in player ? player.balls : 0})`
+              : `${"wickets" in player ? player.wickets : 0}/${
+                  "runs" in player ? player.runs : 0
+                } (${"overs" in player ? player.overs : 0})`
           }
           delay={delay}
           index={i}

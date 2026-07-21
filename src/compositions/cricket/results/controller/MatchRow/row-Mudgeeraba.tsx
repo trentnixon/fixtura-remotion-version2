@@ -4,7 +4,10 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import MatchCardMudgeeraba from "../../layout/MatchCard/card-Mudgeeraba";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 import MatchCardMudgeerabaClubOnly from "../../layout/MatchCard/card-Mudgeeraba-clubOnly";
 
 const MatchRowMudgeeraba: React.FC<MatchRowProps> = ({
@@ -20,7 +23,9 @@ const MatchRowMudgeeraba: React.FC<MatchRowProps> = ({
   const delay = calculateDelay(index);
   const animationOutFrame = calculateAnimationOutFrame(timings?.FPS_SCORECARD);
 
-  const Card = isAccountClub ? MatchCardMudgeerabaClubOnly : MatchCardMudgeeraba;
+  const Card = isAccountClub
+    ? MatchCardMudgeerabaClubOnly
+    : MatchCardMudgeeraba;
 
   return (
     <div className="w-full">
@@ -33,12 +38,7 @@ const MatchRowMudgeeraba: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <Card
-          match={match}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-        />
+        <Card match={match} index={index} rowHeight={rowHeight} delay={delay} />
       </AnimatedContainer>
     </div>
   );

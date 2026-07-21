@@ -8,17 +8,17 @@ import {
   SHALLOW_DIVIDER_RIGHT,
 } from "../../../../../../templates/variants/mudgeeraba/design";
 
-export const MudgeerabaAngularDivider: React.FC<MudgeerabaAngularDividerProps> = ({
-  delay,
-  outerContainer,
-}) => {
+export const MudgeerabaAngularDivider: React.FC<
+  MudgeerabaAngularDividerProps
+> = ({ delay, outerContainer }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
   const ContainerAnimations = animations.container.main.itemContainer;
-  
+
   // Theme colors for backgrounds
   const backgroundColorMain = selectedPalette.background.main;
-  const backgroundColorContainer = selectedPalette.container.backgroundTransparent.high;
+  const backgroundColorContainer =
+    selectedPalette.container.backgroundTransparent.high;
 
   // Height configuration for bands
   const bandHeight = 12; // pixels for each white band
@@ -54,9 +54,9 @@ export const MudgeerabaAngularDivider: React.FC<MudgeerabaAngularDividerProps> =
         />
 
         {/* Central Broken/Interrupted Band with Angular Cuts */}
-        <div 
-          className="w-full relative" 
-          style={{ 
+        <div
+          className="w-full relative"
+          style={{
             height: `${brokenBandHeight}px`,
             backgroundColor: backgroundColorMain,
           }}

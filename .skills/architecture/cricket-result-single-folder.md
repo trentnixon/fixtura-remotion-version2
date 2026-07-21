@@ -55,16 +55,16 @@ src/compositions/cricket/resultSingle/
 
 ### 2. Understand Result Single vs Results
 
-| Aspect | Result Single | Results |
-|--------|---------------|---------|
-| **Matches Per Screen** | 1 (full height) | 2 (split height) |
-| **Row Height** | Full asset height | `availableHeight / 2` |
-| **Section Heights** | Fixed pixels (e.g. 80, 240, 560) | Percent-based (40/50/10) |
-| **Max Players Per Stat** | 3–5 | 2 |
-| **Pagination** | Match-to-match (one sequence per match) | Screen-based (2 results per screen) |
-| **Structure** | No screen index; Display gets single match | Display gets results + screenIndex |
-| **Controller** | ResultSingleDisplay only | ResultsDisplay + MatchRow |
-| **Club-Only** | Optional result statements; different layout | Different card layout |
+| Aspect                   | Result Single                                | Results                             |
+| ------------------------ | -------------------------------------------- | ----------------------------------- |
+| **Matches Per Screen**   | 1 (full height)                              | 2 (split height)                    |
+| **Row Height**           | Full asset height                            | `availableHeight / 2`               |
+| **Section Heights**      | Fixed pixels (e.g. 80, 240, 560)             | Percent-based (40/50/10)            |
+| **Max Players Per Stat** | 3–5                                          | 2                                   |
+| **Pagination**           | Match-to-match (one sequence per match)      | Screen-based (2 results per screen) |
+| **Structure**            | No screen index; Display gets single match   | Display gets results + screenIndex  |
+| **Controller**           | ResultSingleDisplay only                     | ResultsDisplay + MatchRow           |
+| **Club-Only**            | Optional result statements; different layout | Different card layout               |
 
 ### 3. Variant Entry Point Pattern
 

@@ -171,4 +171,3 @@ The integration is functionally working.
 The remaining issue is:
 
 **the package needs to ship and export its compiled CSS for consumers**
-

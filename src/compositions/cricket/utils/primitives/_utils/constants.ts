@@ -23,5 +23,9 @@ export const DEFAULT_TEAM_LOGO_SIZE = 20;
 /**
  * Default team logo fit mode
  */
-export const DEFAULT_TEAM_LOGO_FIT: "contain" | "cover" | "fill" | "none" | "scale-down" =
-  "contain";
+export const DEFAULT_TEAM_LOGO_FIT:
+  | "contain"
+  | "cover"
+  | "fill"
+  | "none"
+  | "scale-down" = "contain";

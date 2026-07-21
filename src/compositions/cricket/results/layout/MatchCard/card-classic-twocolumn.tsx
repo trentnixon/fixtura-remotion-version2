@@ -3,7 +3,10 @@ import { Horizontal_SingleTeam_LogoWithName_Score } from "../Sections/TeamsSecti
 import SingleDataPointHeader from "../Sections/MatchHeader/SingleDataPointHeader";
 import { PlayerStatsSingleTeamOnly } from "../Sections/PlayerStats/PlayerStats-SingleTeamOnly";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 const MatchCardClassicTwoColumn: React.FC<MatchCardProps> = ({
   match,
@@ -11,7 +14,8 @@ const MatchCardClassicTwoColumn: React.FC<MatchCardProps> = ({
   delay,
 }) => {
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
   const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);

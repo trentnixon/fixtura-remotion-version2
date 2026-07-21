@@ -1,6 +1,7 @@
 # Cleanup Summary - Display Folder
 
 ## Overview
+
 This cleanup extracted shared TypeScript interfaces and utility functions from all display component files into centralized `_types` and `_utils` folders.
 
 ## Changes Made
@@ -8,7 +9,9 @@ This cleanup extracted shared TypeScript interfaces and utility functions from a
 ### Created Files
 
 #### `_types/LadderDisplayProps.ts`
+
 Extracted the shared `LadderDisplayProps` interface that was duplicated across all 7 display component files:
+
 ```typescript
 export interface LadderDisplayProps {
   ladder: LadderData;
@@ -16,19 +19,23 @@ export interface LadderDisplayProps {
 ```
 
 #### `_utils/calculations.ts`
+
 Extracted the shared `calculateRowDimensions` utility function that was duplicated across all 7 display component files:
+
 - Calculates header height and row height based on total height and team count
 - Uses constants: `headerHeight = 70`, `VERTICAL_GAP = 4`, `PADDING = 20`, `HEADER_MARGIN = 10`
 
 ### Modified Files
 
 All display component files were updated to:
+
 1. Import `LadderDisplayProps` from `./_types/LadderDisplayProps`
 2. Import `calculateRowDimensions` from `./_utils/calculations`
 3. Remove inline interface definitions
 4. Remove inline utility function definitions
 
 **Files Updated:**
+
 - `display-Basic.tsx`
 - `display-classic.tsx`
 - `display-BrickWork.tsx`

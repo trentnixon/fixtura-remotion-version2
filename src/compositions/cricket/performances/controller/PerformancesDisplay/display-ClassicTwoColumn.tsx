@@ -5,9 +5,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PerformanceRowClassicTwoColumn from "../PlayerRow/row-ClassicTwoColumn";
 import { SponsorFooter } from "../../../sponsorFooter";
-import {
-  PerformancesDisplayWithSponsorsProps,
-} from "./_types/PerformancesDisplayProps";
+import { PerformancesDisplayWithSponsorsProps } from "./_types/PerformancesDisplayProps";
 
 const PerformancesDisplayClassicTwoColumn: React.FC<
   PerformancesDisplayWithSponsorsProps
@@ -18,7 +16,10 @@ const PerformancesDisplayClassicTwoColumn: React.FC<
   const ContainerAnimations = animations.container;
 
   // Test: Log heights.asset to verify it's being used
-  console.log("[PerformancesDisplayClassicTwoColumn] heights.asset:", heights.asset);
+  console.log(
+    "[PerformancesDisplayClassicTwoColumn] heights.asset:",
+    heights.asset,
+  );
 
   // Get items for this specific screen
   const displayedPerformances = getItemsForScreen(

@@ -44,12 +44,12 @@ src/core/utils/colorSystem/
 
 ### 3. Module Responsibilities
 
-| Module | Responsibility |
-|--------|----------------|
-| **config** | WCAG constants, COLOR_AMOUNTS, COLOR_ANGLES, DEFAULT_COLORS, GRADIENT_DIRECTIONS, SHADOW_SIZES; palette presets; `createStandardPaletteStructure` |
-| **core** | Types (ColorVariations, GradientOptions, ContrastSafety, etc.); getContrastColor, lighten/darken/setOpacity, createColorVariations; color relationships (complementary, analogous, triadic); memoization |
-| **generators** | standardPaletteFactory orchestrates gradientGenerator, textGenerator, shadowGenerator, colorVariations; contrastGenerator, backgroundGenerator, utilityGenerator |
-| **utils** | WCAG contrast/accessibility, color spaces (RGB/HSL/HSV/Lab/LCH), validation, memoized tinycolor wrapper |
+| Module         | Responsibility                                                                                                                                                                                           |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **config**     | WCAG constants, COLOR_AMOUNTS, COLOR_ANGLES, DEFAULT_COLORS, GRADIENT_DIRECTIONS, SHADOW_SIZES; palette presets; `createStandardPaletteStructure`                                                        |
+| **core**       | Types (ColorVariations, GradientOptions, ContrastSafety, etc.); getContrastColor, lighten/darken/setOpacity, createColorVariations; color relationships (complementary, analogous, triadic); memoization |
+| **generators** | standardPaletteFactory orchestrates gradientGenerator, textGenerator, shadowGenerator, colorVariations; contrastGenerator, backgroundGenerator, utilityGenerator                                         |
+| **utils**      | WCAG contrast/accessibility, color spaces (RGB/HSL/HSV/Lab/LCH), validation, memoized tinycolor wrapper                                                                                                  |
 
 ### 4. When Adding a New Palette Configuration
 

@@ -10,7 +10,6 @@ import {
 export const TableHeaderMudgeeraba: React.FC<TableHeaderProps> = ({
   title,
   headerHeight,
-  compact = false,
 }) => {
   const { fontClasses, selectedPalette } = useThemeContext();
   const rowBg = selectedPalette.container.backgroundTransparent.high;

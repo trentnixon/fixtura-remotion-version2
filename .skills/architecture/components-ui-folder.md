@@ -32,11 +32,11 @@ Guides working with `src/components/ui`: placeholder for shared UI primitives (a
 
 ### 3. What Belongs Here vs Elsewhere
 
-| Belongs in ui/ | Belongs elsewhere |
-|----------------|-------------------|
-| Buttons, badges, loaders | Layout (screen, header, sponsors) |
-| Utility wrappers (non-animated) | AnimatedContainer, AnimatedText |
-| Theme-aware atoms | Backgrounds, images, typography |
+| Belongs in ui/                  | Belongs elsewhere                 |
+| ------------------------------- | --------------------------------- |
+| Buttons, badges, loaders        | Layout (screen, header, sponsors) |
+| Utility wrappers (non-animated) | AnimatedContainer, AnimatedText   |
+| Theme-aware atoms               | Backgrounds, images, typography   |
 
 ### 4. When Adding the First Component
 

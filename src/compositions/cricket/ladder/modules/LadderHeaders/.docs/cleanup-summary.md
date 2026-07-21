@@ -1,6 +1,7 @@
 # Cleanup Summary - LadderHeaders Folder
 
 ## Overview
+
 This cleanup extracted the `LadderHeaderProps` interface from the header component file into a centralized `_types` folder.
 
 ## Changes Made
@@ -8,7 +9,9 @@ This cleanup extracted the `LadderHeaderProps` interface from the header compone
 ### Created Files
 
 #### `_types/LadderHeaderProps.ts`
+
 Extracted the `LadderHeaderProps` interface from `header.tsx`:
+
 ```typescript
 export interface LadderHeaderProps {
   title: string;
@@ -18,6 +21,7 @@ export interface LadderHeaderProps {
 ### Modified Files
 
 **`header.tsx`** was updated to:
+
 1. Import `LadderHeaderProps` from `./_types/LadderHeaderProps`
 2. Remove inline interface definition
 

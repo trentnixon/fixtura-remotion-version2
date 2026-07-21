@@ -9,7 +9,7 @@ Guides working with `src/compositions/cricket/top5`: understanding its structure
 - `src/compositions/cricket/top5/` (root)
 - Variant entry points: `basic.tsx`, `classic.tsx`, `brickWork.tsx`, `sixersThunder.tsx`, `classicTwoColumn.tsx`, `cnsw.tsx`, `cnsw-private.tsx`, `mudgeeraba.tsx`
 - `controller/` – PlayersDisplay and PlayerRow
-- `layout/` – StandardPlayerRow, PlayerRowName* layout variants
+- `layout/` – StandardPlayerRow, PlayerRowName\* layout variants
 - `utils/` – dataTransformer
 - `modules/` – NoPlayersData
 
@@ -58,15 +58,15 @@ src/compositions/cricket/top5/
 
 ### 2. Understand Top 5 vs Performances vs Team of the Week
 
-| Aspect | Top 5 | Performances | Team of the Week |
-|--------|-------|--------------|------------------|
-| **Data Type** | `PlayerData[]` (batting or bowling union) | `PerformanceData[]` | `TeamOfTheWeekPlayer[]` |
-| **Layout** | Single column, vertical list | Single column rows | 2-column grid |
-| **Composition IDs** | CricketTop5 (batting/bowling via metadata) | CricketBattingPerformances, CricketBowlingPerformances | CricketTeamOfTheWeek |
-| **Data Transformation** | Adds `type` based on compositionId | transformPerformanceData | None |
-| **Row Height** | Dynamic (calculated from player count) | Static (e.g. 115px) | Fixed (70–130px) |
-| **Score Display** | getScoreValues (runs/balls vs wickets/runs/overs) | getScoreValues | Category-specific |
-| **Sponsors** | From video metadata (primary) | Merged from data | From video metadata |
+| Aspect                  | Top 5                                             | Performances                                           | Team of the Week        |
+| ----------------------- | ------------------------------------------------- | ------------------------------------------------------ | ----------------------- |
+| **Data Type**           | `PlayerData[]` (batting or bowling union)         | `PerformanceData[]`                                    | `TeamOfTheWeekPlayer[]` |
+| **Layout**              | Single column, vertical list                      | Single column rows                                     | 2-column grid           |
+| **Composition IDs**     | CricketTop5 (batting/bowling via metadata)        | CricketBattingPerformances, CricketBowlingPerformances | CricketTeamOfTheWeek    |
+| **Data Transformation** | Adds `type` based on compositionId                | transformPerformanceData                               | None                    |
+| **Row Height**          | Dynamic (calculated from player count)            | Static (e.g. 115px)                                    | Fixed (70–130px)        |
+| **Score Display**       | getScoreValues (runs/balls vs wickets/runs/overs) | getScoreValues                                         | Category-specific       |
+| **Sponsors**            | From video metadata (primary)                     | Merged from data                                       | From video metadata     |
 
 ### 3. Variant Entry Point Pattern
 

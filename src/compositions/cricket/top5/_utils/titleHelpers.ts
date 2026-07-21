@@ -5,9 +5,13 @@ import { getTitle } from "../utils/dataTransformer";
  * @param videoMeta - Video metadata from context
  * @returns Title string (grouping category or empty string)
  */
-export const getCNSWTitle = (videoMeta: {
-  video?: { groupingCategory?: string };
-} | undefined): string => {
+export const getCNSWTitle = (
+  videoMeta:
+    | {
+        video?: { groupingCategory?: string };
+      }
+    | undefined,
+): string => {
   return videoMeta?.video?.groupingCategory || "";
 };
 
@@ -16,9 +20,7 @@ export const getCNSWTitle = (videoMeta: {
  * @param playersData - Players data array
  * @returns Title string (grade name or empty string)
  */
-export const getCNSWPrivateTitle = (
-  playersData: unknown[],
-): string => {
+export const getCNSWPrivateTitle = (playersData: unknown[]): string => {
   if (!playersData || playersData.length === 0) {
     return "";
   }

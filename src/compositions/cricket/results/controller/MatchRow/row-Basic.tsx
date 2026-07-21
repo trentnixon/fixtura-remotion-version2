@@ -5,7 +5,10 @@ import { useVideoDataContext } from "../../../../../core/context/VideoDataContex
 import MatchCardBasic from "../../layout/MatchCard/card-Basic";
 import MatchCardBasicClubOnly from "../../layout/MatchCard/card-Basic-clubOnly";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const MatchRowBasic: React.FC<MatchRowProps> = ({
   match,
@@ -31,26 +34,21 @@ const MatchRowBasic: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-
-        {
-          isAccountClub ? (
-            <MatchCardBasicClubOnly
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          ) : (
-            <MatchCardBasic
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          )
-        }
-
-
+        {isAccountClub ? (
+          <MatchCardBasicClubOnly
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        ) : (
+          <MatchCardBasic
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        )}
       </AnimatedContainer>
     </div>
   );

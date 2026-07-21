@@ -29,16 +29,16 @@ Foundational utilities used app-wide: color systems, theme creation, data proces
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Utils root | `src/core/utils/.docs/readMe.md` |
-| Roadmap | `src/core/utils/.docs/DevelopmentRoadMap.md` |
-| Tickets | `src/core/utils/.docs/Tickets.md` |
-| Core roadmap | `src/core/.docs/DevelopmentRoadMap.md` |
-| colorSystem | `src/core/utils/colorSystem/.docs/readMe.md`, `.llm/agent.md` |
+| Context          | Path                                                               |
+| ---------------- | ------------------------------------------------------------------ |
+| Utils root       | `src/core/utils/.docs/readMe.md`                                   |
+| Roadmap          | `src/core/utils/.docs/DevelopmentRoadMap.md`                       |
+| Tickets          | `src/core/utils/.docs/Tickets.md`                                  |
+| Core roadmap     | `src/core/.docs/DevelopmentRoadMap.md`                             |
+| colorSystem      | `src/core/utils/colorSystem/.docs/readMe.md`, `.llm/agent.md`      |
 | createThemeUtils | `src/core/utils/createThemeUtils/.docs/readMe.md`, `.llm/agent.md` |
-| designPalettes | `src/core/utils/designPalettes/.docs/readMe.md`, `.llm/agent.md` |
-| fonts | `src/core/utils/fonts/.docs/readMe.md`, `.llm/agent.md` |
+| designPalettes   | `src/core/utils/designPalettes/.docs/readMe.md`, `.llm/agent.md`   |
+| fonts            | `src/core/utils/fonts/.docs/readMe.md`, `.llm/agent.md`            |
 
 ## Roadmap
 
@@ -65,13 +65,13 @@ Related (subfolder agents for deep work):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
-| Root files | classNames, copy, general, helpers, objectUtils, colors, themeColorUtils, compositionMapping, dataProcessing, datasetProcessing, environment, routing, PlaceholderComponent | Various |
-| `colorSystem/` | createColorSystem, palettes, gradients, shadows, baseManipulation | `colorSystem/index.ts` |
-| `createThemeUtils/` | createThemeColorUtils, generators, designPalettes delegation | `createThemeUtils/index.ts` |
-| `designPalettes/` | DesignPalette, generateAllPalettes, palette creators | `designPalettes/index.ts` |
-| `fonts/` | fontLoader, fontPathMap, loadFontByName, loadFontsFromTheme | `fonts/fontLoader.ts` |
+| Module              | Responsibility                                                                                                                                                              | Entry Points                |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| Root files          | classNames, copy, general, helpers, objectUtils, colors, themeColorUtils, compositionMapping, dataProcessing, datasetProcessing, environment, routing, PlaceholderComponent | Various                     |
+| `colorSystem/`      | createColorSystem, palettes, gradients, shadows, baseManipulation                                                                                                           | `colorSystem/index.ts`      |
+| `createThemeUtils/` | createThemeColorUtils, generators, designPalettes delegation                                                                                                                | `createThemeUtils/index.ts` |
+| `designPalettes/`   | DesignPalette, generateAllPalettes, palette creators                                                                                                                        | `designPalettes/index.ts`   |
+| `fonts/`            | fontLoader, fontPathMap, loadFontByName, loadFontsFromTheme                                                                                                                 | `fonts/fontLoader.ts`       |
 
 ### Root File Summary
 

@@ -9,7 +9,11 @@ import { Top5PlayerScore } from "../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../utils/primitives/Top5PlayerScoreSuffix";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { PerformanceRowLayoutProps } from "./_types/PerformanceRowLayoutProps";
-import { truncateText, getScoreValues, formatPlayerName } from "./_utils/helpers";
+import {
+  truncateText,
+  getScoreValues,
+  formatPlayerName,
+} from "./_utils/helpers";
 
 // --- Layout: Classic (SixersThunder style) ---
 export const StandardPerformanceRowClassic: React.FC<

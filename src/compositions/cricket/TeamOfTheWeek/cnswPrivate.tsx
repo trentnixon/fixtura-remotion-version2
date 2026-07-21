@@ -35,4 +35,3 @@ export const CNSWPrivate: React.FC = () => {
 };
 
 export default CNSWPrivate;
-

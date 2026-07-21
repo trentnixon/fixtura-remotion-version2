@@ -44,8 +44,14 @@ const TripleStatsRow: React.FC<{
     variant === "featured"
       ? `${headingFont} text-5xl font-semibold leading-none text-white md:text-6xl`
       : `${headingFont} text-2xl font-semibold leading-none text-white sm:text-3xl`;
-  const gapClass = variant === "featured" ? "mt-8 flex flex-wrap gap-10 md:gap-14" : "mt-2 flex flex-wrap gap-3 sm:gap-5";
-  const borderPad = variant === "featured" ? "border-l border-white/10 pl-10 md:pl-14" : "border-l border-white/10 pl-3 sm:pl-5";
+  const gapClass =
+    variant === "featured"
+      ? "mt-8 flex flex-wrap gap-10 md:gap-14"
+      : "mt-2 flex flex-wrap gap-3 sm:gap-5";
+  const borderPad =
+    variant === "featured"
+      ? "border-l border-white/10 pl-10 md:pl-14"
+      : "border-l border-white/10 pl-3 sm:pl-5";
 
   return (
     <div className={gapClass}>
@@ -94,7 +100,9 @@ const FeaturedCard: React.FC<{
         exitAnimation={containerAnimation.containerOut}
         exitFrame={exitFrame}
       >
-        <div className={`relative flex flex-col overflow-hidden ${glassPanelClass}`}>
+        <div
+          className={`relative flex flex-col overflow-hidden ${glassPanelClass}`}
+        >
           <div className="absolute left-0 top-0 bg-white/5 px-3 py-1">
             <span className={`${headingFont} text-2xl italic text-white/40`}>
               #1
@@ -108,7 +116,11 @@ const FeaturedCard: React.FC<{
                 delay={delay + 5}
                 size={DEFAULT_LOGO_SIZE}
                 fit="contain"
-                imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
+                imgStyle={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                }}
               />
             </div>
             <div className="min-w-0 flex-1">
@@ -121,7 +133,11 @@ const FeaturedCard: React.FC<{
               <p className="font-rajdhani mt-1 text-xl font-semibold uppercase tracking-[0.2em] text-white/70">
                 {team}
               </p>
-              <TripleStatsRow triple={triple} headingFont={headingFont} variant="featured" />
+              <TripleStatsRow
+                triple={triple}
+                headingFont={headingFont}
+                variant="featured"
+              />
             </div>
           </div>
         </div>
@@ -145,7 +161,10 @@ const GridCard: React.FC<{
   const headingFont = fontClasses.heading?.family ?? "font-teko";
 
   const name = truncateText(player.name, restrictions.nameLength).toUpperCase();
-  const team = truncateText(player.playedFor, restrictions.teamLength).toUpperCase();
+  const team = truncateText(
+    player.playedFor,
+    restrictions.teamLength,
+  ).toUpperCase();
 
   return (
     <div className="overflow-hidden">
@@ -167,9 +186,7 @@ const GridCard: React.FC<{
           }}
         >
           <div className="absolute left-0 top-0 bg-white/5 px-3 py-1">
-            <span
-              className={`${headingFont} text-2xl italic text-white/40`}
-            >
+            <span className={`${headingFont} text-2xl italic text-white/40`}>
               #{rank}
             </span>
           </div>
@@ -193,7 +210,11 @@ const GridCard: React.FC<{
             <p className="font-rajdhani mt-0.5 text-[11px] font-bold uppercase leading-tight tracking-[0.15em] text-white/60 sm:text-xs">
               {team}
             </p>
-            <TripleStatsRow triple={triple} headingFont={headingFont} variant="grid" />
+            <TripleStatsRow
+              triple={triple}
+              headingFont={headingFont}
+              variant="grid"
+            />
           </div>
         </div>
       </AnimatedContainer>

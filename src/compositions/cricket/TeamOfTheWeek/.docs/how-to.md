@@ -33,6 +33,7 @@ This guide explains how to create a new **team of the week composition asset typ
 ### What is a Team of the Week Composition?
 
 A **team of the week composition** is a sport-specific content type that displays:
+
 - **List of selected players** (typically 10 players)
 - **Player categories** (Batter, Bowler, All-Rounder, Twelfth Man)
 - **Position-specific stats** (batting stats for batters, bowling stats for bowlers, etc.)
@@ -42,19 +43,20 @@ A **team of the week composition** is a sport-specific content type that display
 
 ### Key Characteristics
 
-| Aspect | Team of the Week |
-|--------|-----------------|
-| **Layout** | 2-column grid |
+| Aspect                 | Team of the Week                                    |
+| ---------------------- | --------------------------------------------------- |
+| **Layout**             | 2-column grid                                       |
 | **Players Per Screen** | All players (or configurable via screen pagination) |
-| **Row Height** | Fixed (varies by variant: 70-130px) |
-| **Categories** | Batter, Bowler, All-Rounder, Twelfth Man |
-| **Stats Display** | Category-specific (batting/bowling/all-rounder) |
-| **Icons** | Position-based SVG icons |
-| **Club Support** | Conditional logo display |
+| **Row Height**         | Fixed (varies by variant: 70-130px)                 |
+| **Categories**         | Batter, Bowler, All-Rounder, Twelfth Man            |
+| **Stats Display**      | Category-specific (batting/bowling/all-rounder)     |
+| **Icons**              | Position-based SVG icons                            |
+| **Club Support**       | Conditional logo display                            |
 
 ### Example: Cricket Team of the Week Composition
 
 The `CricketTeamOfTheWeek` composition:
+
 - **Data Type**: `TeamOfTheWeekPlayer[]` - array of player objects
 - **Structure**: Each player has category, stats, club info, rankings
 - **Variants**: `basic`, `classic`, `brickwork`, `classicTwoColumn`, `cnsw`, `cnswPrivate`, `sixersThunder`
@@ -119,12 +121,14 @@ src/compositions/cricket/TeamOfTheWeek/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation
    - Extracts sponsors from video metadata
    - Passes data to display component
    - No screen pagination (shows all players in one screen)
 
 2. **Display Components** (`controller/TeamOfTheWeekDisplay/display-*.tsx`):
+
    - Variant-specific layout and styling
    - Creates 2-column grid
    - Maps over players array
@@ -132,6 +136,7 @@ src/compositions/cricket/TeamOfTheWeek/
    - Uses fixed row heights
 
 3. **Player Row Components** (`controller/PlayerRow/row-*.tsx`):
+
    - Variant-specific player card rendering
    - Displays position icon, stats, player name, club logo
    - Handles category-specific stat display
@@ -139,11 +144,13 @@ src/compositions/cricket/TeamOfTheWeek/
    - Staggered animations
 
 4. **Types** (`types.ts`):
+
    - Union type: `TeamOfTheWeekPlayer` (BatterPlayer | BowlerPlayer | AllRounderPlayer | TwelfthManPlayer)
    - Type guards: `isBatterPlayer`, `isBowlerPlayer`, etc.
    - Helper functions: `hasBattingStats`, `hasBowlingStats`, etc.
 
 5. **Icon System** (`utils/iconPacks.ts`, `svg/icon1/`):
+
    - Position-based SVG icons
    - Icon pack registration system
    - Multiple icon packs supported
@@ -164,10 +171,12 @@ src/compositions/cricket/TeamOfTheWeek/
 Before creating a new team of the week composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of player data structure**
+
    - Player categories (Batter, Bowler, All-Rounder, Twelfth Man)
    - Batting stats (runs, balls, strike rate, fours, sixes)
    - Bowling stats (wickets, overs, runs, economy, maidens)
@@ -175,6 +184,7 @@ Before creating a new team of the week composition, ensure you have:
    - Club information (name, logo)
 
 3. ✅ **Access to test data**
+
    - Sample team of the week player data
    - Multiple players to test layout
    - Different categories to test stat display
@@ -385,6 +395,7 @@ export interface PlayerRowProps {
 ```
 
 **Key Points:**
+
 - **Union type**: `TeamOfTheWeekPlayer` combines all player categories
 - **Type guards**: Helper functions to check player category
 - **Optional stats**: Some players may have optional batting/bowling stats
@@ -433,9 +444,13 @@ export const castToTeamOfTheWeekPlayers = (
  * @param videoMeta - Video metadata from context
  * @returns Object with primary sponsors array
  */
-export const extractSponsors = (videoMeta: {
-  club?: { sponsors?: unknown[] };
-} | undefined): { primary: unknown[] } => {
+export const extractSponsors = (
+  videoMeta:
+    | {
+        club?: { sponsors?: unknown[] };
+      }
+    | undefined,
+): { primary: unknown[] } => {
   return {
     primary: videoMeta?.club?.sponsors || [],
   };
@@ -443,6 +458,7 @@ export const extractSponsors = (videoMeta: {
 ```
 
 **Key Points:**
+
 - **Validation**: Checks if data is valid array with items
 - **Type casting**: Safely casts unknown data to TeamOfTheWeekPlayer[]
 - **Sponsor extraction**: Extracts sponsors from video metadata
@@ -474,6 +490,7 @@ export const NoDataPlaceholder: React.FC = () => {
 ```
 
 **Key Points:**
+
 - **Simple message**: No dynamic content needed
 - **Full height**: Uses full available height
 - **Centered**: Centered layout for better UX
@@ -541,6 +558,7 @@ export const calculateScreens = (
 ```
 
 **Key Points:**
+
 - **Screen pagination**: Divides players into multiple screens
 - **Helper function**: `getItemsForScreen` for easy access
 - **Note**: Current implementations show all players on one screen
@@ -637,6 +655,7 @@ export const getScoreValues = (
 ```
 
 **Key Points:**
+
 - **Name cleaning**: Removes captain/vice-captain/wicket-keeper suffixes
 - **Score formatting**: Formats stats for display
 - **Icon pack exports**: Re-exports icon pack functions
@@ -704,6 +723,7 @@ export default TeamOfTheWeekDisplayBasic;
 ```
 
 **Key Points:**
+
 - **2-column grid**: Uses `grid grid-cols-2`
 - **Fixed row height**: Uses constant from `_utils/constants.ts`
 - **Sponsor footer**: Includes footer at bottom
@@ -920,6 +940,7 @@ export default PlayerRowBasic;
 ```
 
 **Key Points:**
+
 - **Three sections**: Icon, stats/name, logo
 - **Category-specific stats**: Shows batting/bowling/all-rounder stats based on position
 - **Club logo conditional**: Hidden for club accounts
@@ -1057,6 +1078,7 @@ export const StatItem: React.FC<StatItemProps> = ({
 ```
 
 **Key Points:**
+
 - **Batting stats**: Shows runs with not-out indicator and balls
 - **Bowling stats**: Shows wickets/runs and overs
 - **All-rounder stats**: Shows label and value
@@ -1108,6 +1130,7 @@ export default Basic;
 ```
 
 **Key Points:**
+
 - **Data validation**: Checks if data is valid before rendering
 - **Sponsor extraction**: Extracts sponsors from video metadata
 - **Display component**: Passes data to variant-specific display component
@@ -1170,17 +1193,20 @@ export const CricketTeamOfTheWeek = {
 ### Category Types
 
 1. **Batter** (`category: "Batter"`):
+
    - **Required**: `batting: BattingStats`
    - **Positions**: `topscorer`, `higheststrikerate`
    - **Stats Display**: Runs (with not-out indicator), balls faced
 
 2. **Bowler** (`category: "Bowler"`):
+
    - **Required**: `bowling: BowlingStats`
    - **Optional**: `batting?: BattingStats`
    - **Positions**: `mostwickets`, `besteconomy`
    - **Stats Display**: Wickets/runs, overs
 
 3. **All-Rounder** (`category: "All-Rounder"`):
+
    - **Required**: `batting: BattingStats`, `bowling: BowlingStats`, `allRounder: AllRounderStats`
    - **Position**: `topallrounder`
    - **Stats Display**: Both batting and bowling stats, plus all-rounder score
@@ -1206,6 +1232,7 @@ export const CricketTeamOfTheWeek = {
 ### Structure
 
 Display components (`controller/TeamOfTheWeekDisplay/display-*.tsx`):
+
 - Create 2-column grid layout
 - Map over players array
 - Render player row components
@@ -1233,6 +1260,7 @@ export const DEFAULT_ROW_HEIGHT_CNSW_PRIVATE = 70;
 ### Structure
 
 Player row components (`controller/PlayerRow/row-*.tsx`):
+
 - Three sections: Icon, Stats/Name, Logo
 - Category-specific stat display
 - Position icon from icon pack
@@ -1253,12 +1281,15 @@ Player row components (`controller/PlayerRow/row-*.tsx`):
 ### Stat Display Logic
 
 1. **All-Rounder with Both Stats**:
+
    - Shows batting stats + "&" + bowling stats
 
 2. **Batting Positions** (`topscorer`, `higheststrikerate`):
+
    - Shows batting stats only
 
 3. **Bowling Positions** (`mostwickets`, `besteconomy`):
+
    - Shows bowling stats only
 
 4. **Best of Rest** (`bestoftherest`):
@@ -1272,6 +1303,7 @@ Player row components (`controller/PlayerRow/row-*.tsx`):
 ### Icon Pack Structure
 
 Icons are organized in icon packs (`svg/icon1/`):
+
 - `Batter1.tsx` - Batter icon variant 1
 - `Batter2.tsx` - Batter icon variant 2
 - `Bowler1.tsx` - Bowler icon variant 1
@@ -1282,6 +1314,7 @@ Icons are organized in icon packs (`svg/icon1/`):
 ### Icon Pack Registration
 
 Icons are registered in `utils/iconPacks.ts`:
+
 - `registerIconPack()` - Register a new icon pack
 - `getPositionIcon()` - Get icon component for a position
 - `setDefaultIconPack()` - Set default icon pack
@@ -1290,6 +1323,7 @@ Icons are registered in `utils/iconPacks.ts`:
 ### Position to Icon Mapping
 
 Icons are mapped based on `categoryDetail.position`:
+
 - `topscorer` → `Batter1` or `Batter2`
 - `higheststrikerate` → `Batter1` or `Batter2`
 - `mostwickets` → `Bowler1` or `Bowler2`
@@ -1308,20 +1342,23 @@ Icons are mapped based on `categoryDetail.position`:
 ### If Implementing Screen Pagination
 
 1. **Read items per screen** from video metadata:
+
    ```typescript
    const itemsPerScreen =
      videoMeta.video.contentLayout.divideFixturesBy.CricketTeamOfTheWeek || 5;
    ```
 
 2. **Calculate screens**:
+
    ```typescript
    const { totalScreens, getItemsForScreen } = calculateScreens(
      players,
-     itemsPerScreen
+     itemsPerScreen,
    );
    ```
 
 3. **Get items for current screen**:
+
    ```typescript
    const displayedPlayers = getItemsForScreen(screenIndex);
    ```
@@ -1335,12 +1372,14 @@ Icons are mapped based on `categoryDetail.position`:
 ### Concept
 
 Club-only support hides club logos for club-level accounts:
+
 - **Association-level**: Shows club logos
 - **Club-level**: Hides club logos
 
 ### Implementation
 
 1. **Check account type**:
+
    ```typescript
    const { club } = useVideoDataContext();
    const isAccountClub = club.IsAccountClub || false;
@@ -1372,9 +1411,9 @@ const delay = index * PLAYER_STAGGER_DELAY; // PLAYER_STAGGER_DELAY = 5
 Stats animate after player container:
 
 ```typescript
-delay + STAT_DISPLAY_DELAY_OFFSET // 20 frames
-delay + BOWLING_STAT_DELAY_OFFSET // 30 frames (for bowling in all-rounder)
-delay + STAT_SUFFIX_DELAY_OFFSET  // 10 frames (for suffix like balls/overs)
+delay + STAT_DISPLAY_DELAY_OFFSET; // 20 frames
+delay + BOWLING_STAT_DELAY_OFFSET; // 30 frames (for bowling in all-rounder)
+delay + STAT_SUFFIX_DELAY_OFFSET; // 10 frames (for suffix like balls/overs)
 ```
 
 ### Player Name Delay
@@ -1382,7 +1421,7 @@ delay + STAT_SUFFIX_DELAY_OFFSET  // 10 frames (for suffix like balls/overs)
 Player name animates after stats:
 
 ```typescript
-delay + PLAYER_NAME_DELAY_OFFSET // 2 frames
+delay + PLAYER_NAME_DELAY_OFFSET; // 2 frames
 ```
 
 ### Animation Sequence
@@ -1418,6 +1457,7 @@ Once you have the Basic variant working, create additional variants:
 ### Composition ID
 
 The routing system recognizes:
+
 - `CricketTeamOfTheWeek`
 
 ### Routing Configuration
@@ -1550,6 +1590,7 @@ const testPlayer: TeamOfTheWeekPlayer = {
 **Error:** Stats don't match player category
 
 **Solutions:**
+
 1. Check `categoryDetail.position` matches expected position
 2. Verify type guards (`isBatterPlayer`, etc.)
 3. Check stat display logic matches position type
@@ -1560,6 +1601,7 @@ const testPlayer: TeamOfTheWeekPlayer = {
 **Error:** Club logo visibility incorrect
 
 **Solutions:**
+
 1. Check `isAccountClub` flag is set correctly
 2. Verify conditional rendering logic (`{!isAccountClub && ...}`)
 3. Check club logo URL is valid
@@ -1570,6 +1612,7 @@ const testPlayer: TeamOfTheWeekPlayer = {
 **Error:** Icon not displaying
 
 **Solutions:**
+
 1. Check icon pack is registered
 2. Verify `getPositionIcon()` returns valid component
 3. Check position string matches icon pack mapping
@@ -1580,6 +1623,7 @@ const testPlayer: TeamOfTheWeekPlayer = {
 **Error:** Animations not staggered or not animating
 
 **Solutions:**
+
 1. Check delay calculation (`index * PLAYER_STAGGER_DELAY`)
 2. Verify animation context is available
 3. Check animation delay offsets are correct
@@ -1590,6 +1634,7 @@ const testPlayer: TeamOfTheWeekPlayer = {
 **Error:** Players not displaying in 2-column grid
 
 **Solutions:**
+
 1. Check `grid grid-cols-2` classes are applied
 2. Verify row height is set correctly
 3. Check gap spacing (`gap-2`, `gap-4`, etc.)
@@ -1687,18 +1732,21 @@ Creating a team of the week composition involves:
 ### Key Implementation Details
 
 **Player Row Structure:**
+
 - Icon section (position-based SVG)
 - Stats section (category-specific)
 - Player name section
 - Logo section (conditional for club accounts)
 
 **Stat Display Logic:**
+
 - All-rounders with both stats show batting + bowling
 - Batting positions show batting stats only
 - Bowling positions show bowling stats only
 - Best of rest shows whatever is available
 
 **Animation Pattern:**
+
 - Staggered player entry (5 frames per player)
 - Stats animate after container (20 frames offset)
 - Player name animates after stats (2 frames offset)

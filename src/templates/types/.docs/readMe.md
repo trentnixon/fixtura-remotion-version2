@@ -20,19 +20,19 @@ TypeScript contracts for template configuration: shared theme tokens, per-templa
 
 ## Files (this folder)
 
-| Path | Purpose |
-|------|---------|
-| `TemplateThemeConfig.ts` | `TemplateThemeConfig`, `ThemeComponentStyles` merge, re-exports |
-| `global/component-style.ts` | `ComponentStyle` (`className` shell) |
-| `global/theme-component-styles.ts` | `GlobalThemeComponentStyles` |
-| `global/theme-shared.ts` | `ThemeFonts`, `ThemeLayout`, palette types, `ThemeModes`, `ThemeAnimation`, `ThemeMedia`, etc. |
-| `global/index.ts` | Re-exports global types |
-| `broadcast-pro/component-styles.ts` | `BroadcastProThemeComponentStyles` |
-| `broadcast-pro/transparent-layers.ts` | `BroadcastProTransparentLayers`, presets, `resolveBroadcastProTransparentLayers` |
-| `broadcast-pro/index.ts` | Re-exports Broadcast Pro types |
-| `AnimationConfig .ts` | Animation configuration hooks |
-| `AssetConfig.ts` | External assets required by a template |
-| `settingsConfig.ts` | Runtime settings / controls per template |
+| Path                                  | Purpose                                                                                        |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `TemplateThemeConfig.ts`              | `TemplateThemeConfig`, `ThemeComponentStyles` merge, re-exports                                |
+| `global/component-style.ts`           | `ComponentStyle` (`className` shell)                                                           |
+| `global/theme-component-styles.ts`    | `GlobalThemeComponentStyles`                                                                   |
+| `global/theme-shared.ts`              | `ThemeFonts`, `ThemeLayout`, palette types, `ThemeModes`, `ThemeAnimation`, `ThemeMedia`, etc. |
+| `global/index.ts`                     | Re-exports global types                                                                        |
+| `broadcast-pro/component-styles.ts`   | `BroadcastProThemeComponentStyles`                                                             |
+| `broadcast-pro/transparent-layers.ts` | `BroadcastProTransparentLayers`, presets, `resolveBroadcastProTransparentLayers`               |
+| `broadcast-pro/index.ts`              | Re-exports Broadcast Pro types                                                                 |
+| `AnimationConfig .ts`                 | Animation configuration hooks                                                                  |
+| `AssetConfig.ts`                      | External assets required by a template                                                         |
+| `settingsConfig.ts`                   | Runtime settings / controls per template                                                       |
 
 ## Relations
 

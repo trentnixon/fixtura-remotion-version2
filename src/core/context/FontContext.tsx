@@ -7,7 +7,6 @@ import React, {
 } from "react";
 //import { useGlobalContext } from "./GlobalContext";
 import { useVideoDataContext } from "./VideoDataContext";
-import { useStylesContext } from "./StyleContext";
 import { useThemeContext } from "./ThemeContext";
 import {
   loadFontByName,
@@ -34,13 +33,9 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   //const { settings } = useGlobalContext();
   const { video } = useVideoDataContext();
-  const { theme } = useStylesContext();
   const createdTheme = useThemeContext();
 
   const [fontsLoaded, setFontsLoaded] = useState(false);
-  const [fontLoadingHandle, setFontLoadingHandle] = useState<number | null>(
-    null,
-  );
 
   // Get all available fonts
   const availableFonts = getAllFontNames();
@@ -54,23 +49,19 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
     await loadFontByName(fontName, weight, style);
   };
 
-  // Load fonts when the component mounts
+  // Load fonts when the component mounts / theme or metadata changes
   useEffect(() => {
-    const loadFonts = async () => {
-      //console.log("FontContext: Starting font loading process");
+    let handle: number | null = null;
+    let cancelled = false;
 
-      // Create a delay render handle
-      const handle = delayRender("Loading fonts");
-      setFontLoadingHandle(handle);
+    const loadFonts = async () => {
+      handle = delayRender("Loading fonts");
 
       try {
-        // Load fonts from theme
         await loadFontsFromTheme(
           createdTheme as unknown as TemplateThemeConfig,
         );
 
-        // Check if there are font testing metadata in the appearance or metadata
-        // Use type assertion since these are custom properties
         const metadata = video.metadata as {
           fontTestMode?: boolean;
           fontTestList?: string[];
@@ -78,37 +69,41 @@ export const FontProvider: React.FC<{ children: ReactNode }> = ({
         const fontTestMode = metadata?.fontTestMode || false;
         const fontTestList = metadata?.fontTestList || [];
 
-        // If in font test mode, load additional fonts
-        if (fontTestMode) {
-          // Load specific test fonts if specified
-          if (Array.isArray(fontTestList) && fontTestList.length > 0) {
-            for (const fontName of fontTestList) {
-              await loadFontByName(fontName);
-            }
+        if (
+          fontTestMode &&
+          Array.isArray(fontTestList) &&
+          fontTestList.length > 0
+        ) {
+          for (const fontName of fontTestList) {
+            await loadFontByName(fontName);
           }
         }
 
-        //console.log("FontContext: All fonts loaded successfully");
-        setFontsLoaded(true);
+        if (!cancelled) {
+          setFontsLoaded(true);
+        }
       } catch (error) {
         console.error("FontContext: Error loading fonts:", error);
-        // Even if there's an error, we should continue rendering
-        setFontsLoaded(true);
+        if (!cancelled) {
+          setFontsLoaded(true);
+        }
       } finally {
-        // Continue rendering using the local handle variable
-        continueRender(handle);
+        if (handle !== null) {
+          continueRender(handle);
+          handle = null;
+        }
       }
     };
 
     loadFonts();
 
-    // Cleanup function
     return () => {
-      if (fontLoadingHandle !== null) {
-        continueRender(fontLoadingHandle);
+      cancelled = true;
+      if (handle !== null) {
+        continueRender(handle);
       }
     };
-  }, [theme, video.metadata]);
+  }, [createdTheme, video.metadata]);
 
   const contextValue: FontContextProps = {
     fontsLoaded,

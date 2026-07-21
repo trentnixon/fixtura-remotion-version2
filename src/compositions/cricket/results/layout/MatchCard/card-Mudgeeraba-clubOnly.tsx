@@ -19,16 +19,29 @@ const MatchCardMudgeerabaClubOnly: React.FC<MatchCardProps> = ({
   rowHeight,
   delay,
 }) => {
-  const clubTeam = match.homeTeam.isClubTeam ? match.homeTeam : match.awayTeam.isClubTeam ? match.awayTeam : null;
-  const oppositionTeam = match.homeTeam.isClubTeam ? match.awayTeam : match.awayTeam.isClubTeam ? match.homeTeam : null;
-  const clubLogo = match.homeTeam.isClubTeam ? match.teamHomeLogo : match.teamAwayLogo;
-  const oppositionLogo = match.homeTeam.isClubTeam ? match.teamAwayLogo : match.teamHomeLogo;
+  const clubTeam = match.homeTeam.isClubTeam
+    ? match.homeTeam
+    : match.awayTeam.isClubTeam
+      ? match.awayTeam
+      : null;
+  const oppositionTeam = match.homeTeam.isClubTeam
+    ? match.awayTeam
+    : match.awayTeam.isClubTeam
+      ? match.homeTeam
+      : null;
+  const clubLogo = match.homeTeam.isClubTeam
+    ? match.teamHomeLogo
+    : match.teamAwayLogo;
+  const oppositionLogo = match.homeTeam.isClubTeam
+    ? match.teamAwayLogo
+    : match.teamHomeLogo;
 
   if (!clubTeam || !oppositionTeam) {
     return null;
   }
 
-  const teamStatsHeight = (rowHeight - TEAM_HEADER_HEIGHT * 2 - RESULT_FOOTER_MIN_HEIGHT) / 2;
+  const teamStatsHeight =
+    (rowHeight - TEAM_HEADER_HEIGHT * 2 - RESULT_FOOTER_MIN_HEIGHT) / 2;
   const { baseDelay } = calculateDelays(delay);
   const clubHeaderDelay = baseDelay;
   const clubStatsDelay = baseDelay + 10;

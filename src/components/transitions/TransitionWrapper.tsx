@@ -55,7 +55,7 @@ const getTransitionPresentation = (
   direction: TransitionDirection = "from-right",
   width: number = 1920,
   height: number = 1080,
-): TransitionPresentation<any> => {
+): TransitionPresentation<Record<string, unknown>> => {
   switch (type) {
     case "slide":
       return slide({ direction });

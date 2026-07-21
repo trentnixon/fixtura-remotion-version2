@@ -12,7 +12,7 @@ export const BaseAudioTrack: React.FC = () => {
   return (
     <Audio
       src={video.media.audio.audioOption || video.media.audio.url}
-      volume={DEFAULT_AUDIO_VOLUME}
+      volume={() => DEFAULT_AUDIO_VOLUME}
     />
   );
 };

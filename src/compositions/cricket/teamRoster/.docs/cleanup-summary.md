@@ -21,12 +21,13 @@ The following folders were created to support the modularization pattern:
 ### 1. Utility Functions Extraction
 
 #### Created `_utils/dataHelpers.ts`
+
 - **Extracted functions:**
   - `hasValidRosterData(rosterData)` - Validates that roster data exists and is a non-empty array
   - `castToRosterDataArray(compositionData)` - Casts unknown data to typed `RosterDataItem[]` array
   - `calculateRosterDuration(timings)` - Calculates duration in frames for roster sequences (FPS_SCORECARD or default)
 - **Purpose:** Centralizes data validation, casting, and duration calculation logic that was duplicated across all entry point files
-- **Dependencies:** 
+- **Dependencies:**
   - `RosterDataItem` from `../types`
   - `Timings` from `../../../../core/types/data/common`
   - `DEFAULT_ROSTER_DURATION` from `./constants`
@@ -34,6 +35,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_ROSTER_DURATION = 60` - Default duration in frames for roster sequences if not specified
 - **Purpose:** Centralizes default duration value that was hardcoded in all entry point files
@@ -41,6 +43,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Entry Point File Updates
 
 #### Modified `basic.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline duration calculation (`timings?.FPS_SCORECARD || 60`)
@@ -51,6 +54,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Duration calculation to use `calculateRosterDuration()`
 
 #### Modified `classic.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline duration calculation
@@ -59,6 +63,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `classicTwoColumn.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline duration calculation
@@ -67,6 +72,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All data handling to use shared utilities
 
 #### Modified `sixersThunder.tsx`
+
 - **Removed:** Inline data validation logic
 - **Removed:** Inline data casting logic
 - **Removed:** Inline duration calculation

@@ -18,7 +18,6 @@ export const MatchHeaderBrickWork: React.FC<MatchHeaderProps> = ({
   height,
   delay,
   className,
-  backgroundColor: _backgroundColor, // Not used - Brickwork has no container bg
 }) => {
   const { animations } = useAnimationContext();
   const { fontClasses, fonts } = useThemeContext();

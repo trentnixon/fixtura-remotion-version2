@@ -66,25 +66,42 @@ Detailed directory map, component deep-dives, and usage examples. For the standa
 Select a background: `<SelectTemplateBackground />`
 
 Animated container:
+
 ```tsx
-<AnimatedContainer type="card" backgroundColor="light" rounded="lg" shadow="md"
-  animation="slideInRight" animationDuration={30}
-  exitAnimation="slideOutRight" exitFrame={120}>
+<AnimatedContainer
+  type="card"
+  backgroundColor="light"
+  rounded="lg"
+  shadow="md"
+  animation="slideInRight"
+  animationDuration={30}
+  exitAnimation="slideOutRight"
+  exitFrame={120}
+>
   <Typography>Slide Animated Container</Typography>
 </AnimatedContainer>
 ```
 
 Animated image:
+
 ```tsx
-<AnimatedImage src={logoUrl} animation={{ type: "fadeIn", duration: 30 }}
-  exitAnimation={{ type: "fadeOut", duration: 30 }} exitFrame={90}
-  width={200} height={200} />
+<AnimatedImage
+  src={logoUrl}
+  animation={{ type: "fadeIn", duration: 30 }}
+  exitAnimation={{ type: "fadeOut", duration: 30 }}
+  exitFrame={90}
+  width={200}
+  height={200}
+/>
 ```
 
 Header variant:
+
 ```tsx
-<VerticalHeaderTitleLogoName alignment="center"
+<VerticalHeaderTitleLogoName
+  alignment="center"
   Title={<AnimatedText type="title">Grand Final</AnimatedText>}
   Logo={<img src={logo} />}
-  Name={<AnimatedText type="subtitle">Premier League</AnimatedText>} />
+  Name={<AnimatedText type="subtitle">Premier League</AnimatedText>}
+/>
 ```

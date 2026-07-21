@@ -19,31 +19,28 @@ export const BasicMainHeader = () => {
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
 
-
-  const OrgLogo = () => (<div className="w-full h-full flex justify-center items-center ">
-    <div className="w-full h-full flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
-      <AnimatedImage
-        src={club.logo?.url}
-        width={"auto"}
-        height={"auto"}
-        fit="contain"
-        className="rounded-none"
-        animation={LogoAnimations.introIn}
-        exitAnimation={LogoAnimations.introOut}
-        exitFrame={exitFrame}
-      />
+  const OrgLogo = () => (
+    <div className="w-full h-full flex justify-center items-center ">
+      <div className="w-full h-full flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
+        <AnimatedImage
+          src={club.logo?.url}
+          width={"auto"}
+          height={"auto"}
+          fit="contain"
+          className="rounded-none"
+          animation={LogoAnimations.introIn}
+          exitAnimation={LogoAnimations.introOut}
+          exitFrame={exitFrame}
+        />
+      </div>
     </div>
-  </div>)
-
-
+  );
 
   return (
     <TwoColumnHeaderTitle
       height={heights.header}
       alignment="start"
-      Logo={
-        isAccountClub ? null : <OrgLogo />
-      }
+      Logo={isAccountClub ? null : <OrgLogo />}
       Title={
         <AnimatedText
           textAlign="center"

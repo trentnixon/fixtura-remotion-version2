@@ -1,6 +1,6 @@
 // ImageBackground.variants.tsx
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import {
   ImageEffectType,
   ZoomDirection,
@@ -67,137 +67,86 @@ interface FocusBlurEffectProps extends BaseEffectProps {
   maxBlur?: number;
 }
 
+type ImageEffectProps =
+  | ZoomEffectProps
+  | PanEffectProps
+  | KenBurnsEffectProps
+  | BreathingEffectProps
+  | ColorOverlayEffectProps
+  | FocusBlurEffectProps
+  | BaseEffectProps;
+
+const coverImageStyle = (
+  style: React.CSSProperties = {},
+): React.CSSProperties => ({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  ...style,
+});
+
 // Component implementations for each effect type
 const ZoomEffect: React.FC<ZoomEffectProps> = ({
-  src,
-  direction = ZoomDirection.In,
-  intensity = 1.15,
+  src = "",
   className = "",
   style = {},
-  startTime = 0,
-  endTime,
 }) => {
-  // Implementation would use Remotion's interpolate, useCurrentFrame, etc.
   return (
     <AbsoluteFill className={`zoom-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-          ...style,
-        }}
-      />
+      <Img src={src} style={coverImageStyle(style)} />
     </AbsoluteFill>
   );
 };
 
 const PanEffect: React.FC<PanEffectProps> = ({
-  src,
-  direction = PanDirection.Left,
-  intensity = 15,
+  src = "",
   className = "",
   style = {},
-  startTime = 0,
-  endTime,
 }) => {
-  // Implementation would use Remotion's interpolate, useCurrentFrame, etc.
   return (
     <AbsoluteFill className={`pan-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-          ...style,
-        }}
-      />
+      <Img src={src} style={coverImageStyle(style)} />
     </AbsoluteFill>
   );
 };
 
 const KenBurnsEffect: React.FC<KenBurnsEffectProps> = ({
-  src,
-  zoomDirection = ZoomDirection.In,
-  panDirection = PanDirection.Left,
-  zoomIntensity = 1.15,
-  panIntensity = 15,
+  src = "",
   className = "",
   style = {},
-  startTime = 0,
-  endTime,
 }) => {
-  // Implementation would use Remotion's interpolate, useCurrentFrame, etc.
   return (
     <AbsoluteFill className={`kenburns-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-          ...style,
-        }}
-      />
+      <Img src={src} style={coverImageStyle(style)} />
     </AbsoluteFill>
   );
 };
 
 const BreathingEffect: React.FC<BreathingEffectProps> = ({
-  src,
-  intensity = 1.05,
+  src = "",
   className = "",
   style = {},
-  startTime = 0,
-  endTime,
 }) => {
-  // Implementation would use Remotion's interpolate, useCurrentFrame, etc.
   return (
     <AbsoluteFill className={`breathing-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-          ...style,
-        }}
-      />
+      <Img src={src} style={coverImageStyle(style)} />
     </AbsoluteFill>
   );
 };
 
 const ColorOverlayEffect: React.FC<ColorOverlayEffectProps> = ({
-  src,
-  overlayType = OverlayType.Solid,
+  src = "",
   color = "rgba(0, 0, 0, 0.3)",
-  secondaryColor = "rgba(0, 0, 0, 0)",
   opacity = 0.3,
-  animateOpacity = false,
   className = "",
   style = {},
-  startTime = 0,
-  endTime,
 }) => {
-  // Implementation would use Remotion's interpolate, useCurrentFrame, etc.
   return (
     <AbsoluteFill className={`color-overlay-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-          ...style,
-        }}
-      />
+      <Img src={src} style={coverImageStyle(style)} />
       <div
         style={{
           position: "absolute",
@@ -214,27 +163,20 @@ const ColorOverlayEffect: React.FC<ColorOverlayEffectProps> = ({
 };
 
 const FocusBlurEffect: React.FC<FocusBlurEffectProps> = ({
-  src,
+  src = "",
   direction = BlurDirection.In,
   maxBlur = 8,
   className = "",
   style = {},
-  startTime = 0,
-  endTime,
 }) => {
-  // Implementation would use Remotion's interpolate, useCurrentFrame, etc.
   return (
     <AbsoluteFill className={`focus-blur-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
+      <Img
+        src={src}
+        style={coverImageStyle({
           filter: `blur(${direction === BlurDirection.In ? maxBlur / 2 : 0}px)`,
           ...style,
-        }}
+        })}
       />
     </AbsoluteFill>
   );
@@ -242,28 +184,22 @@ const FocusBlurEffect: React.FC<FocusBlurEffectProps> = ({
 
 // Simple effect with no animation
 const StaticEffect: React.FC<BaseEffectProps> = ({
-  src,
+  src = "",
   className = "",
   style = {},
 }) => {
   return (
     <AbsoluteFill className={`static-effect ${className}`}>
-      <div
-        style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-          ...style,
-        }}
-      />
+      <Img src={src} style={coverImageStyle(style)} />
     </AbsoluteFill>
   );
 };
 
 // Factory function to create the appropriate effect component
-export const createImageEffect = (effectType: ImageEffectType, props: any) => {
+export const createImageEffect = (
+  effectType: ImageEffectType,
+  props: ImageEffectProps,
+) => {
   switch (effectType) {
     case ImageEffectType.Zoom:
       return <ZoomEffect {...props} />;

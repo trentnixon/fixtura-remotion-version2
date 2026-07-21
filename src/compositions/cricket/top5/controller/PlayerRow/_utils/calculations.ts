@@ -19,8 +19,6 @@ export const calculatePlayerDelay = (index: number): number => {
  * @param timings - Video data timings object
  * @returns Exit frame value (FPS_MAIN - offset or default - offset)
  */
-export const calculateExitFrame = (
-  timings: Timings | undefined,
-): number => {
+export const calculateExitFrame = (timings: Timings | undefined): number => {
   return (timings?.FPS_MAIN || DEFAULT_MAIN_DURATION) - EXIT_ANIMATION_OFFSET;
 };

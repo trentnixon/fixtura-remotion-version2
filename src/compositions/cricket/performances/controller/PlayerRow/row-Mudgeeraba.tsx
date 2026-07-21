@@ -13,7 +13,11 @@ import {
   calculateAnimationDelay,
   calculateAnimationOutFrame,
 } from "./_utils/calculations";
-import { truncateText, getScoreValues, formatPlayerName } from "../../layout/_utils/helpers";
+import {
+  truncateText,
+  getScoreValues,
+  formatPlayerName,
+} from "../../layout/_utils/helpers";
 import {
   LayeredAngularPanel,
   LogoWell,
@@ -41,7 +45,10 @@ const PerformanceRowMudgeeraba: React.FC<PerformanceRowProps> = ({
 
   const rowBg = selectedPalette.container.backgroundTransparent.high;
   const playerName = formatPlayerName(performance.name);
-  const teamName = truncateText(performance.playedFor, TEAM_LENGTH).toUpperCase();
+  const teamName = truncateText(
+    performance.playedFor,
+    TEAM_LENGTH,
+  ).toUpperCase();
   const { mainValue, suffix } = getScoreValues(performance);
 
   const largeTextAnimation = animations.text.main.copyIn;
@@ -51,48 +58,48 @@ const PerformanceRowMudgeeraba: React.FC<PerformanceRowProps> = ({
 
   const rowContent = (
     <>
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundColor: colors.primary,
-              clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-            }}
-            aria-hidden
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundColor: colors.primary,
+          clipPath: SHALLOW_EDGE_STRIP_RIGHT,
+        }}
+        aria-hidden
+      />
+      <LogoWell variant="steepLeft" size={rowHeight} className="mr-2">
+        <TeamLogo
+          logo={performance.teamLogo}
+          teamName={performance.playedFor}
+          delay={delay}
+          size={32}
+        />
+      </LogoWell>
+      <div className="flex flex-col justify-center flex-1 min-w-0 ml-2">
+        <Top5PlayerName
+          value={playerName}
+          animation={{ ...largeTextAnimation, delay: delay + 2 }}
+          className="truncate"
+        />
+        <Top5PlayerTeam
+          value={teamName}
+          animation={{ ...smallTextAnimation, delay: delay + 4 }}
+          className="truncate"
+        />
+      </div>
+      <div className="flex items-center justify-center shrink-0 whitespace-nowrap leading-none mr-8 ">
+        <Top5PlayerScore
+          value={mainValue}
+          animation={{ ...largeTextAnimation, delay: delay + 6 }}
+          className=""
+        />
+        {suffix && (
+          <Top5PlayerScoreSuffix
+            value={suffix}
+            animation={{ ...smallTextAnimation, delay: delay + 7 }}
+            className=""
           />
-          <LogoWell variant="steepLeft" size={rowHeight} className="mr-2">
-            <TeamLogo
-              logo={performance.teamLogo}
-              teamName={performance.playedFor}
-              delay={delay}
-              size={32}
-            />
-          </LogoWell>
-          <div className="flex flex-col justify-center flex-1 min-w-0 ml-2">
-            <Top5PlayerName
-              value={playerName}
-              animation={{ ...largeTextAnimation, delay: delay + 2 }}
-              className="truncate"
-            />
-            <Top5PlayerTeam
-              value={teamName}
-              animation={{ ...smallTextAnimation, delay: delay + 4 }}
-              className="truncate"
-            />
-          </div>
-          <div className="flex items-center justify-center shrink-0 whitespace-nowrap leading-none mr-8 ">
-            <Top5PlayerScore
-              value={mainValue}
-              animation={{ ...largeTextAnimation, delay: delay + 6 }}
-              className=""
-            />
-            {suffix && (
-              <Top5PlayerScoreSuffix
-                value={suffix}
-                animation={{ ...smallTextAnimation, delay: delay + 7 }}
-                className=""
-              />
-            )}
-          </div>
+        )}
+      </div>
     </>
   );
 

@@ -118,9 +118,17 @@ export const PerformancesListMudgeeraba: React.FC = () => {
   });
 
   return (
-    <div className="flex flex-col w-full" style={{ height: `${heights.asset + heights.footer}px` }}>
+    <div
+      className="flex flex-col w-full"
+      style={{ height: `${heights.asset + heights.footer}px` }}
+    >
       <div
-        style={{ height: `${contentHeight}px`, overflow: "visible", position: "relative" }}>
+        style={{
+          height: `${contentHeight}px`,
+          overflow: "visible",
+          position: "relative",
+        }}
+      >
         <TransitionSeriesWrapper
           sequences={sequences}
           transitionType={transitionConfig.type as TransitionType}

@@ -31,7 +31,8 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
         inset: 0,
         width: "100%",
         height: "100%",
-      }}>
+      }}
+    >
       <div
         className="flex flex-col flex-shrink-0 mx-16 px-16"
         style={{ width: "100%", paddingTop: "8rem", paddingBottom: "8rem" }}

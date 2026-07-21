@@ -21,7 +21,7 @@ const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({
   // Calculate section heights
   // Split height between two teams (header + stats for each)
   const teamHeaderHeight = 60; // Height for each team header
-  const teamStatsHeight = (rowHeight - (teamHeaderHeight * 2)) / 2; // Split remaining height between two teams' stats
+  const teamStatsHeight = (rowHeight - teamHeaderHeight * 2) / 2; // Split remaining height between two teams' stats
 
   // Calculate delays
   const { baseDelay } = calculateDelays(delay);

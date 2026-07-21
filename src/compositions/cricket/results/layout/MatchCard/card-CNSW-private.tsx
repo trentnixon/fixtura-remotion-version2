@@ -4,7 +4,10 @@ import { TeamsSectionScoreOverTeamNameOnly } from "../Sections/TeamsSection/inde
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerStatsCNSWPrivate from "../Sections/PlayerStats/PlayerStats-CNSW-private";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 const MatchCardCNSWPrivate: React.FC<MatchCardProps> = ({
   match,
@@ -14,7 +17,8 @@ const MatchCardCNSWPrivate: React.FC<MatchCardProps> = ({
   const { layout } = useThemeContext();
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
   const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);

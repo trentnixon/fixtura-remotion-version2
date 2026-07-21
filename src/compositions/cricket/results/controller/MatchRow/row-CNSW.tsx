@@ -6,7 +6,10 @@ import MatchCardCNSW from "../../layout/MatchCard/card-CNSW";
 import MatchCardCNSWClubOnly from "../../layout/MatchCard/card-CNSW-clubOnly";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const MatchRowCNSW: React.FC<MatchRowProps> = ({ match, index, rowHeight }) => {
   const { animations } = useAnimationContext();
@@ -29,23 +32,21 @@ const MatchRowCNSW: React.FC<MatchRowProps> = ({ match, index, rowHeight }) => {
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        {
-          isAccountClub ? (
-            <MatchCardCNSWClubOnly
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          ) : (
-            <MatchCardCNSW
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          )
-        }
+        {isAccountClub ? (
+          <MatchCardCNSWClubOnly
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        ) : (
+          <MatchCardCNSW
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        )}
       </AnimatedContainer>
     </div>
   );

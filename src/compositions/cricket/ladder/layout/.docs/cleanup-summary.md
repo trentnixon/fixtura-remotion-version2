@@ -1,6 +1,7 @@
 # Cleanup Summary - Layout Folder
 
 ## Overview
+
 This cleanup extracted the shared `BaseLayoutProps` interface from all layout component files into a centralized `_types` folder.
 
 ## Changes Made
@@ -8,7 +9,9 @@ This cleanup extracted the shared `BaseLayoutProps` interface from all layout co
 ### Created Files
 
 #### `_types/BaseLayoutProps.ts`
+
 Extracted the shared `BaseLayoutProps` interface that was duplicated across all 4 layout component files:
+
 ```typescript
 export interface BaseLayoutProps {
   team: TeamData;
@@ -24,11 +27,13 @@ export interface BaseLayoutProps {
 ### Modified Files
 
 All layout component files were updated to:
+
 1. Import `BaseLayoutProps` from `./_types/BaseLayoutProps`
 2. Remove inline interface definitions
 3. Remove unused `TeamData` imports (where applicable)
 
 **Files Updated:**
+
 - `TableRowLayout.tsx` - Contains multiple layout variants (StandardLadderRow, ModernLadderRow, BalancedLadderRow, CardLadderRow, CenteredLogoLadderRow)
 - `TableCNSWRow.tsx` - Contains CNSWLadderRow component
 - `TableSixersRow.tsx` - Contains SixersLadderRow component

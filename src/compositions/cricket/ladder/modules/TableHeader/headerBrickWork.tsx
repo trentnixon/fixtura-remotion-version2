@@ -18,10 +18,7 @@ export const TableHeaderBrickWork: React.FC<TableHeaderProps> = ({
       className={`flex items-center ${layout.borderRadius.container}`}
       style={{ height: `${headerHeight}px` }}
     >
-      <div
-        className="flex items-center pr-2"
-        style={{ width: "70%" }}
-      >
+      <div className="flex items-center pr-2" style={{ width: "70%" }}>
         <AnimatedText
           type="ladderGradeLabel"
           variant="onContainerCopyNoBg"

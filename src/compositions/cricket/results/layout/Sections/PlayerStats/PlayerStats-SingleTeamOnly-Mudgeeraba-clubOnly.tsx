@@ -75,7 +75,10 @@ const StatsRow: React.FC<{
   isBatting: boolean;
   delay: number;
 }> = ({ players, isBatting, delay }) => {
-  const displayPlayers = [...players.slice(0, 2), ...Array(Math.max(0, 2 - players.length)).fill(null)].slice(0, 2) as (PlayerStat | null)[];
+  const displayPlayers = [
+    ...players.slice(0, 2),
+    ...Array(Math.max(0, 2 - players.length)).fill(null),
+  ].slice(0, 2) as (PlayerStat | null)[];
   const formatStat = isBatting ? formatBattingStat : formatBowlingStat;
 
   return (
@@ -102,7 +105,9 @@ const StatsRow: React.FC<{
   );
 };
 
-export const PlayerStatsSingleTeamOnlyMudgeerabaClubOnly: React.FC<PlayerStatsSingleTeamProps> = ({
+export const PlayerStatsSingleTeamOnlyMudgeerabaClubOnly: React.FC<
+  PlayerStatsSingleTeamProps
+> = ({
   Team,
   delay,
   maxPlayersPerStat = 2,
@@ -122,9 +127,7 @@ export const PlayerStatsSingleTeamOnlyMudgeerabaClubOnly: React.FC<PlayerStatsSi
       animationDelay={delay}
     >
       <div className="flex w-full h-full relative flex-col gap-4">
-        {showBatting && (
-          <StatsRow players={batters} isBatting delay={delay} />
-        )}
+        {showBatting && <StatsRow players={batters} isBatting delay={delay} />}
         {showBowling && (
           <StatsRow players={bowlers} isBatting={false} delay={delay + 5} />
         )}

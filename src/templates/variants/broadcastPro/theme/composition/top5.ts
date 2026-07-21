@@ -5,8 +5,7 @@ export const broadcastProCompositionComponentStylesTop5 = {
     className: "text-5xl font-black  tracking-wide leading-snug",
   },
   Top5PlayerTeam: {
-    className:
-      "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
+    className: "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
   },
   Top5PlayerScore: {
     className: "text-7xl font-black  tracking-normal leading-tight mr-4",

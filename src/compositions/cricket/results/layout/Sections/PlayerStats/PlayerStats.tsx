@@ -4,7 +4,12 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
-import { PlayerStatsProps, StatItemProps, StatSectionProps, TeamStatsProps, PlayerStat } from "./_types/PlayerStatsProps";
+import {
+  PlayerStatsProps,
+  StatItemProps,
+  StatSectionProps,
+  TeamStatsProps,
+} from "./_types/PlayerStatsProps";
 import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({

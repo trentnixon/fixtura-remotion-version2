@@ -51,8 +51,7 @@ const rosterCellTextStyle = (fontSizePx: number): React.CSSProperties => ({
   padding: 0,
 });
 
-const formatRosterIndex = (i: number): string =>
-  String(i + 1).padStart(2, "0");
+const formatRosterIndex = (i: number): string => String(i + 1).padStart(2, "0");
 
 /** Resolve Broadcast Pro `componentStyles` by key (falls back to empty). */
 const rosterClass = (styles: ComponentStyles, key: string): string =>
@@ -96,7 +95,9 @@ const MetaRow: React.FC<{
   </div>
 );
 
-const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({ roster }) => {
+const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
+  roster,
+}) => {
   const {
     layout,
     selectedPalette,
@@ -127,8 +128,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({ roster }) => 
   const textOnContainer = {
     title:
       getVariantStyles("onContainerTitle", selectedPalette).color ?? oc.title,
-    copy:
-      getVariantStyles("onContainerCopy", selectedPalette).color ?? oc.copy,
+    copy: getVariantStyles("onContainerCopy", selectedPalette).color ?? oc.copy,
     muted:
       getVariantStyles("onContainerMuted", selectedPalette).color ?? oc.muted,
     secondary:
@@ -149,11 +149,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({ roster }) => 
         roster.teamRoster.length,
         broadcastProRosterListSizing,
       ),
-    [
-      availableHeight,
-      roster.teamRoster.length,
-      broadcastProRosterListSizing,
-    ],
+    [availableHeight, roster.teamRoster.length, broadcastProRosterListSizing],
   );
 
   return (
@@ -192,7 +188,10 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({ roster }) => 
                         key={index}
                         className={cs("broadcastProRosterRow")}
                         style={{
-                          minHeight: Math.max(1, Math.round(playerListMetrics.rowPx)),
+                          minHeight: Math.max(
+                            1,
+                            Math.round(playerListMetrics.rowPx),
+                          ),
                         }}
                       >
                         <div
@@ -219,7 +218,9 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({ roster }) => 
                           >
                             <span
                               style={{
-                                ...rosterCellTextStyle(playerListMetrics.numFontPx),
+                                ...rosterCellTextStyle(
+                                  playerListMetrics.numFontPx,
+                                ),
                                 ...rosterTekoOpticalNudge,
                                 color: numColor,
                                 fontFamily: titleFontFamily,

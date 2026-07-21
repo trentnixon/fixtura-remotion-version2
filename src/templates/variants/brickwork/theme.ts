@@ -38,10 +38,12 @@ export const brickworkTheme: TemplateThemeConfig = {
     },
 
     compositionName: {
-      className: "text-7xl font-semibold capitalize tracking-wider leading-[0.98em]",
+      className:
+        "text-7xl font-semibold capitalize tracking-wider leading-[0.98em]",
     },
     compositionNameSmall: {
-      className: "text-4xl font-semibold capitalize tracking-wider leading-[0.98em]",
+      className:
+        "text-4xl font-semibold capitalize tracking-wider leading-[0.98em]",
     },
     // Body text component styles
     bodyText: {

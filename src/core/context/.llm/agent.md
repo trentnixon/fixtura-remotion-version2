@@ -29,14 +29,14 @@ React contexts that provide global data and configuration for templates and comp
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Context root | `src/core/context/.docs/readMe.md` |
-| Types | `src/core/context/types/.docs/readMe.md` |
-| Core roadmap | `src/core/.docs/DevelopmentRoadMap.md` |
-| Provider hierarchy (templates/base) | `src/templates/base/index.tsx` |
-| colorSystem (ThemeContext dependency) | `src/core/utils/colorSystem/` |
-| fonts (FontContext dependency) | `src/core/utils/fonts/` |
+| Context                               | Path                                     |
+| ------------------------------------- | ---------------------------------------- |
+| Context root                          | `src/core/context/.docs/readMe.md`       |
+| Types                                 | `src/core/context/types/.docs/readMe.md` |
+| Core roadmap                          | `src/core/.docs/DevelopmentRoadMap.md`   |
+| Provider hierarchy (templates/base)   | `src/templates/base/index.tsx`           |
+| colorSystem (ThemeContext dependency) | `src/core/utils/colorSystem/`            |
+| fonts (FontContext dependency)        | `src/core/utils/fonts/`                  |
 
 ## Roadmap
 
@@ -63,16 +63,16 @@ Related (dependencies and consumers):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
-| `GlobalContext.tsx` | settings, data; entry point for render config | `GlobalContext.tsx` |
-| `VideoDataContext.tsx` | data, video, club, metadata, media, appearance, contentLayout, templateVariation, sponsors, isAccountClub | `VideoDataContext.tsx` |
-| `ThemeContext.tsx` | resolved theme (fonts, colors, layout, typography, getActivePalette, selectedPalette); uses createColorSystem | `ThemeContext.tsx` |
-| `StyleContext.tsx` | legacy-compat theme, fontConfig, fontSizing, getActivePalette, selectedPalette; wraps ThemeContext | `StyleContext.tsx` |
-| `FontContext.tsx` | fontsLoaded, loadFont, availableFonts; uses fontLoader | `FontContext.tsx` |
-| `LayoutContext.tsx` | doesAccountHaveSponsors; consumes VideoDataContext sponsors | `LayoutContext.tsx` |
-| `AnimationContext.tsx` | animations object (timing/easing); passed as prop to AnimationProvider | `AnimationContext.tsx` |
-| `types/ThemeContextTypes.ts` | ThemeContextProps, ThemeFonts, ThemeTypography, ThemeLayout, ThemeSports, ThemeColors, etc. | `types/ThemeContextTypes.ts` |
+| Module                       | Responsibility                                                                                                | Entry Points                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| `GlobalContext.tsx`          | settings, data; entry point for render config                                                                 | `GlobalContext.tsx`          |
+| `VideoDataContext.tsx`       | data, video, club, metadata, media, appearance, contentLayout, templateVariation, sponsors, isAccountClub     | `VideoDataContext.tsx`       |
+| `ThemeContext.tsx`           | resolved theme (fonts, colors, layout, typography, getActivePalette, selectedPalette); uses createColorSystem | `ThemeContext.tsx`           |
+| `StyleContext.tsx`           | legacy-compat theme, fontConfig, fontSizing, getActivePalette, selectedPalette; wraps ThemeContext            | `StyleContext.tsx`           |
+| `FontContext.tsx`            | fontsLoaded, loadFont, availableFonts; uses fontLoader                                                        | `FontContext.tsx`            |
+| `LayoutContext.tsx`          | doesAccountHaveSponsors; consumes VideoDataContext sponsors                                                   | `LayoutContext.tsx`          |
+| `AnimationContext.tsx`       | animations object (timing/easing); passed as prop to AnimationProvider                                        | `AnimationContext.tsx`       |
+| `types/ThemeContextTypes.ts` | ThemeContextProps, ThemeFonts, ThemeTypography, ThemeLayout, ThemeSports, ThemeColors, etc.                   | `types/ThemeContextTypes.ts` |
 
 ### Provider Hierarchy (templates/base/index.tsx)
 

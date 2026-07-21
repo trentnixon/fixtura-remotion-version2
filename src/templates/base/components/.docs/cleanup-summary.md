@@ -1,6 +1,7 @@
 # Cleanup Summary - Base Components Folder
 
 ## Overview
+
 This cleanup extracted hardcoded constants from component files into a centralized `_utils` folder.
 
 ## Changes Made
@@ -8,17 +9,21 @@ This cleanup extracted hardcoded constants from component files into a centraliz
 ### Created Files
 
 #### `_utils/constants.ts`
+
 Extracted hardcoded constants used in component files:
+
 - `DEFAULT_AUDIO_VOLUME` - Default audio volume value (0.5) used in BaseAudioTrack
 - `BACKGROUND_Z_INDEX` - Z-index value (-1) for background layer used in BaseBackground
 
 ### Modified Files
 
 Both component files were updated to:
+
 1. Import constants from `./_utils/constants`
 2. Replace hardcoded values with named constants
 
 **Files Updated:**
+
 - `BaseAudioTrack.tsx` - Replaced hardcoded `volume={0.5}` with `DEFAULT_AUDIO_VOLUME`
 - `BaseBackground.tsx` - Replaced hardcoded `zIndex: -1` with `BACKGROUND_Z_INDEX`
 

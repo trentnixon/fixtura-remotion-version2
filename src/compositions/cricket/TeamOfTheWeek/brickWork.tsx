@@ -22,7 +22,10 @@ export const TeamOfTheWeekList: React.FC = () => {
   const players = castToTeamOfTheWeekPlayers(teamOfTheWeekData);
 
   return (
-    <TeamOfTheWeekDisplayBrickWork players={players} sponsors={sponsors.primary} />
+    <TeamOfTheWeekDisplayBrickWork
+      players={players}
+      sponsors={sponsors.primary}
+    />
   );
 };
 
@@ -32,4 +35,3 @@ export const BrickWork: React.FC = () => {
 };
 
 export default BrickWork;
-

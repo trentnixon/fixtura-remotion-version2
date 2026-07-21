@@ -20,15 +20,11 @@ const ResultSingleDisplay: React.FC<ResultSingleDisplayProps> = ({ match }) => {
         className="w-full flex flex-col justify-center"
         style={{ height: `${availableHeight}px` }}
       >
-
-        {
-          isAccountClub ? (
-            <MatchCardClubOnlyBasic match={match} />
-          ) : (
-            <MatchCard match={match} />
-          )
-        }
-
+        {isAccountClub ? (
+          <MatchCardClubOnlyBasic match={match} />
+        ) : (
+          <MatchCard match={match} />
+        )}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
         <SponsorFooter assignSponsors={match.assignSponsors} />

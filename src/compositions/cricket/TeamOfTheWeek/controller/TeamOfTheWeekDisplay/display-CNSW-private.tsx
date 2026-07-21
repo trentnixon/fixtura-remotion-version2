@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
@@ -52,4 +51,3 @@ const TeamOfTheWeekDisplayCNSWPrivate: React.FC<TeamOfTheWeekDisplayProps> = ({
 };
 
 export default TeamOfTheWeekDisplayCNSWPrivate;
-

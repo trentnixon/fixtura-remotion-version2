@@ -5,7 +5,10 @@ import MatchStatus from "../Sections/MatchStatus/MatchStatus";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import PlayerStatsBrickWork from "../Sections/PlayerStats/PlayerStats-BrickWork";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+} from "./_utils/calculations";
 
 const MatchCardBrickWork: React.FC<MatchCardProps> = ({
   match,
@@ -15,7 +18,8 @@ const MatchCardBrickWork: React.FC<MatchCardProps> = ({
   const { selectedPalette } = useThemeContext();
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
   const { baseDelay, statsDelay, headerDelay } = calculateDelays(delay);

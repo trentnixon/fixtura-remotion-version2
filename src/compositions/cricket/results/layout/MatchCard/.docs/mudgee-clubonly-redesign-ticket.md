@@ -1,6 +1,7 @@
 # 📁 Ticket – Mudgeeraba Club-Only Match Card Redesign
 
 ---
+
 ID: TKT-2026-002
 Status: Draft
 Priority: High
@@ -8,6 +9,7 @@ Owner: Development Team
 Created: 2026-02-08
 Updated: 2026-02-08
 Related: Roadmap-Mudgeeraba-Compositions, Variant-mudgeeraba
+
 ---
 
 ## Overview
@@ -15,6 +17,7 @@ Related: Roadmap-Mudgeeraba-Compositions, Variant-mudgeeraba
 Redesign the `card-Mudgeeraba-clubOnly.tsx` component to match a custom angular, high-contrast design featuring white bands, green angled score bars, broken divider elements, and a distinctive footer. This design emphasizes sharp angles, bold typography, and a "dirty, rough, raw" aesthetic aligned with the Mudgeeraba variant.
 
 **File Organization:** All new components are placed in their appropriate parent folders (see `file-organization-rule.md`):
+
 - Header components → `MatchHeader/` folder
 - Status components → `MatchStatus/` folder
 - Common/shared components → `_common/` folder (if truly shared)
@@ -22,6 +25,7 @@ Redesign the `card-Mudgeeraba-clubOnly.tsx` component to match a custom angular,
 ## What We Need to Do
 
 Transform the current club-only match card layout into a custom design with three main sections:
+
 1. **Header Section**: White band with club name, circular logo with green border, and green angled score bar
 2. **Middle Section**: Angular divider elements with broken/interrupted white bars
 3. **Footer Section**: Green bar with match status
@@ -29,6 +33,7 @@ Transform the current club-only match card layout into a custom design with thre
 ## Design Analysis
 
 ### Current Component Structure
+
 - Uses `ResultStatementShort` for result statement
 - Uses `TeamsSectionLogoAndScore` for team display (horizontal layout with logos and scores)
 - Uses `MatchStatus` for abandoned matches
@@ -38,7 +43,9 @@ Transform the current club-only match card layout into a custom design with thre
 ### Target Design Breakdown
 
 #### Section 1: Header (Top Section)
+
 **Visual Elements:**
+
 - Grade name displayed in white text (top right, black background)
 - Wide white horizontal band spanning most of card width
   - Club name on left side (black text on white)
@@ -48,6 +55,7 @@ Transform the current club-only match card layout into a custom design with thre
     - Right edge has diagonal cut (sloping down from right to left)
 
 **Data Needed:**
+
 - `match.gradeName` - for grade display
 - `match.homeTeam.name` or `match.awayTeam.name` (club team) - for club name
 - `match.teamHomeLogo` or `match.teamAwayLogo` (club team logo)
@@ -55,12 +63,14 @@ Transform the current club-only match card layout into a custom design with thre
 - `match.homeTeam.overs` or `match.awayTeam.overs` (for overs display)
 
 **What Exists:**
+
 - `ResultStatementShort` - can be adapted for grade name display
 - `TeamLogo` primitive - can be used for logo rendering
 - `ResultScore` primitive - can be used for score display
 - Score normalization utilities in `TeamsSection/_utils/helpers.ts`
 
 **What Needs to be Created:**
+
 - New `MudgeerabaClubHeader` component
   - White band container with club name positioning
   - Circular logo container with green border
@@ -68,19 +78,24 @@ Transform the current club-only match card layout into a custom design with thre
   - Score formatting with overs display
 
 #### Section 2: Middle Section (Dividers)
+
 **Visual Elements:**
+
 - Multiple horizontal white bands separated by thin black lines
 - Central white band is "broken" with angular cuts creating chevron/hourglass negative space
 - Creates distinctive visual separation between header and content
 
 **Data Needed:**
+
 - No data required - purely decorative
 
 **What Exists:**
+
 - `AnimatedContainer` - can be used for container structure
 - Standard Tailwind CSS classes for backgrounds and borders
 
 **What Needs to be Created:**
+
 - New `MudgeerabaAngularDivider` component
   - Multiple white band layers
   - Central broken/interrupted band with angular cuts
@@ -88,20 +103,25 @@ Transform the current club-only match card layout into a custom design with thre
   - Thin black separator lines
 
 #### Section 3: Footer (Bottom Section)
+
 **Visual Elements:**
+
 - Wide solid bright green horizontal bar spanning full width
 - Match status text centered in white (bold)
 - Straight edges (top may have subtle angle)
 
 **Data Needed:**
+
 - `match.status` - for match status text
 - `match.result` - potentially for additional status info
 
 **What Exists:**
+
 - `MatchStatus` component - can be adapted but needs major redesign
 - `AnimatedText` for text rendering
 
 **What Needs to be Created:**
+
 - New `MudgeerabaStatusFooter` component
   - Green background bar
   - Centered white text
@@ -112,6 +132,7 @@ Transform the current club-only match card layout into a custom design with thre
 ### Phase 1: Header Section Implementation
 
 #### Tasks
+
 - [x] Create `src/compositions/cricket/results/layout/Sections/MatchHeader/MudgeerabaClubHeader.tsx`
 - [x] Design white band container with proper spacing and layout
 - [x] Implement club name display on left side (black text on white)
@@ -130,6 +151,7 @@ Transform the current club-only match card layout into a custom design with thre
 ### Phase 2: Angular Divider Section Implementation
 
 #### Tasks
+
 - [x] Create `src/compositions/cricket/results/layout/Sections/MatchHeader/MudgeerabaAngularDivider.tsx`
 - [x] Design multiple white band layers with black separators
 - [x] Implement central broken/interrupted band
@@ -143,6 +165,7 @@ Transform the current club-only match card layout into a custom design with thre
 ### Phase 3: Footer Section Implementation
 
 #### Tasks
+
 - [x] Create `src/compositions/cricket/results/layout/Sections/MatchStatus/MudgeerabaStatusFooter.tsx`
 - [x] Design green background bar (full width)
 - [x] Implement centered match status text (white, bold)
@@ -157,6 +180,7 @@ Transform the current club-only match card layout into a custom design with thre
 ### Phase 4: Integration & Layout Assembly
 
 #### Tasks
+
 - [x] Update `card-Mudgeeraba-clubOnly.tsx` to use new components
 - [x] Remove or conditionally hide old components (`TeamsSectionLogoAndScore`, `MatchStatus`, `MatchHeader`, `ResultStatementShort`)
 - [x] Integrate `PlayerStatsClubOnlyBasic` appropriately (positioned between divider and footer)
@@ -168,6 +192,7 @@ Transform the current club-only match card layout into a custom design with thre
 ### Phase 5: Styling Refinement & Theme Integration
 
 #### Tasks
+
 - [x] Ensure all colors match Mudgeeraba theme palette
   - Bright green (#22c55e / Tailwind green-500) for score bars and footer ✅
   - White (#ffffff) for bands and text backgrounds ✅
@@ -195,6 +220,7 @@ Transform the current club-only match card layout into a custom design with thre
 ### Phase 6: Testing & Edge Cases
 
 #### Tasks
+
 - [ ] Test with long club names (truncation/ellipsis)
 - [ ] Test with various score formats (including "Yet to Bat")
 - [ ] Test with missing logos (fallback display)
@@ -207,18 +233,21 @@ Transform the current club-only match card layout into a custom design with thre
 ## Constraints, Risks, Assumptions
 
 ### Constraints
+
 - Must maintain compatibility with existing `MatchCardProps` interface
 - Must work with existing animation system and theme context
 - Angular cuts require CSS clip-path or SVG (may have browser compatibility considerations)
 - Design assumes club-only context (single team focus)
 
 ### Risks
+
 - CSS clip-path for angular elements may not render consistently across all browsers
 - Complex layout may require significant height calculation adjustments
 - Integration with existing player stats component may require layout modifications
 - Angular divider design may be difficult to achieve with pure CSS
 
 ### Assumptions
+
 - Club team can be identified via `isClubTeam` flag on team objects
 - Score format follows standard cricket notation (runs/wickets (overs))
 - Match data structure includes all required fields (`gradeName`, `status`, `overs`, etc.)
@@ -228,19 +257,24 @@ Transform the current club-only match card layout into a custom design with thre
 ## Technical Notes
 
 ### CSS Clip-Path for Angular Cuts
+
 The green angled bar and broken divider will likely require CSS `clip-path` property:
+
 ```css
 clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
 ```
+
 This creates a diagonal cut on the right edge. Values will need to be adjusted based on design requirements.
 
 ### Color Values (from design description)
+
 - Bright green: Likely `#00FF00` or theme primary color
 - White: `#FFFFFF`
 - Black: `#000000`
 - These should be verified against Mudgeeraba theme palette
 
 ### Component Structure
+
 ```
 card-Mudgeeraba-clubOnly.tsx
 ├── MudgeerabaClubHeader
@@ -263,15 +297,18 @@ card-Mudgeeraba-clubOnly.tsx
 ## Related Files
 
 ### Components to Create
+
 - `src/compositions/cricket/results/layout/Sections/MatchHeader/MudgeerabaClubHeader.tsx` ✅
 - `src/compositions/cricket/results/layout/Sections/MatchHeader/MudgeerabaAngularDivider.tsx` ✅
 - `src/compositions/cricket/results/layout/Sections/MatchStatus/MudgeerabaStatusFooter.tsx`
 
 ### Components to Modify
+
 - `src/compositions/cricket/results/layout/MatchCard/card-Mudgeeraba-clubOnly.tsx`
 - Potentially `src/compositions/cricket/results/layout/MatchCard/_utils/calculations.ts`
 
 ### Components to Reference
+
 - `src/compositions/cricket/results/layout/Sections/TeamsSection/TeamsSectionLogoAndScore.tsx` (for score formatting logic)
 - `src/compositions/cricket/utils/primitives/TeamLogo.tsx`
 - `src/compositions/cricket/utils/primitives/ResultScore.tsx`

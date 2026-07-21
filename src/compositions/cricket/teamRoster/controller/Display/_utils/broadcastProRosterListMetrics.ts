@@ -36,8 +36,7 @@ export function computeBroadcastProRosterPlayerListMetrics(
     availableHeightPx - s.leftColumnHeaderReservePx,
   );
 
-  const gapPx =
-    n <= 11 ? 8 : n <= 16 ? 6 : n <= 22 ? 4 : n <= 28 ? 3 : 2;
+  const gapPx = n <= 11 ? 8 : n <= 16 ? 6 : n <= 22 ? 4 : n <= 28 ? 3 : 2;
 
   const totalGaps = (n - 1) * gapPx;
   const rowPx = Math.max(s.minRowPx, (listHeightPx - totalGaps) / n);
@@ -56,10 +55,7 @@ export function computeBroadcastProRosterPlayerListMetrics(
   const numFontPx = Math.round(
     Math.max(
       s.minNumberFontPx,
-      Math.min(
-        s.maxNumberFontPx,
-        rowPx * s.numberRowHeightMultiplier,
-      ),
+      Math.min(s.maxNumberFontPx, rowPx * s.numberRowHeightMultiplier),
     ),
   );
 

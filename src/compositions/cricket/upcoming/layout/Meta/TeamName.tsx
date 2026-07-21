@@ -3,10 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import {
-  TopSectionProps,
-  TeamNameWrappedProps,
-} from "./_types/TeamNameProps";
+import { TopSectionProps, TeamNameWrappedProps } from "./_types/TeamNameProps";
 
 export const TeamName: React.FC<TopSectionProps> = ({
   teamName,

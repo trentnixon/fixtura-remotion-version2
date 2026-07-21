@@ -29,17 +29,17 @@ Theme-aware, animation-first container system. AnimatedContainer combines palett
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Containers root | `src/components/containers/.docs/README.md` |
-| Roadmap | `src/components/containers/.docs/DevelopmentRoadMap.md` |
-| Animations | `src/components/containers/animations/.docs/README.md` |
-| Animations utils | `src/components/containers/animations/utils/.docs/README.md` |
-| Styles | `src/components/containers/styles/.docs/README.md` |
-| Modules | `src/components/containers/modules/.docs/README.md` |
-| Examples | `src/components/containers/examples/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Context           | Path                                                         |
+| ----------------- | ------------------------------------------------------------ |
+| Containers root   | `src/components/containers/.docs/README.md`                  |
+| Roadmap           | `src/components/containers/.docs/DevelopmentRoadMap.md`      |
+| Animations        | `src/components/containers/animations/.docs/README.md`       |
+| Animations utils  | `src/components/containers/animations/utils/.docs/README.md` |
+| Styles            | `src/components/containers/styles/.docs/README.md`           |
+| Modules           | `src/components/containers/modules/.docs/README.md`          |
+| Examples          | `src/components/containers/examples/.docs/README.md`         |
+| Parent roadmap    | `src/components/.docs/DevelopmentRoadMap.md`                 |
+| Component tickets | `src/components/.docs/Tickets.md`                            |
 
 ## Roadmap
 
@@ -67,16 +67,16 @@ Related (for shared dependencies and consumers):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|--------------|
-| `AnimatedContainer.tsx` | Main component; props: type, size, rounded, shadow, backgroundColor, animation, exitAnimation, exitFrame | `AnimatedContainer.tsx` |
-| `types.ts` | ContainerType, ContainerSize, ContainerRounded, ContainerShadow, ContainerBackgroundColor, ContainerProps | `types.ts` |
-| `index.ts` | Barrel export (AnimatedContainer, types, animations, styles, modules, examples) | `index.ts` |
-| `animations/` | animationTypes, animationUtils, useAnimation, springConfigs; normalizeContainerAnimation, calculateAnimationProgress, calculateAnimationStyles | `animations/animationUtils.ts`, `animations/useAnimation.ts` |
-| `animations/utils/` | fade, slide, scale, perspective, spring, special — category-specific calculators | `animations/utils/*.ts` |
-| `styles/` | backgroundStyles, typeStyles, sizeStyles, roundedStyles, shadowStyles | `styles/*.ts` |
-| `modules/` | FadeIn, SlideIn, ScaleIn, reveal, spring, threeD (FlipX, FlipY, Rotate3D, etc.) | `modules/*.tsx` |
-| `examples/` | AnimatedContainerExamples; BasicContainer, FadeInContainer, SlideInContainer, etc. | `examples/AnimatedContainerExamples.tsx` |
+| Module                  | Responsibility                                                                                                                                 | Entry Points                                                 |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `AnimatedContainer.tsx` | Main component; props: type, size, rounded, shadow, backgroundColor, animation, exitAnimation, exitFrame                                       | `AnimatedContainer.tsx`                                      |
+| `types.ts`              | ContainerType, ContainerSize, ContainerRounded, ContainerShadow, ContainerBackgroundColor, ContainerProps                                      | `types.ts`                                                   |
+| `index.ts`              | Barrel export (AnimatedContainer, types, animations, styles, modules, examples)                                                                | `index.ts`                                                   |
+| `animations/`           | animationTypes, animationUtils, useAnimation, springConfigs; normalizeContainerAnimation, calculateAnimationProgress, calculateAnimationStyles | `animations/animationUtils.ts`, `animations/useAnimation.ts` |
+| `animations/utils/`     | fade, slide, scale, perspective, spring, special — category-specific calculators                                                               | `animations/utils/*.ts`                                      |
+| `styles/`               | backgroundStyles, typeStyles, sizeStyles, roundedStyles, shadowStyles                                                                          | `styles/*.ts`                                                |
+| `modules/`              | FadeIn, SlideIn, ScaleIn, reveal, spring, threeD (FlipX, FlipY, Rotate3D, etc.)                                                                | `modules/*.tsx`                                              |
+| `examples/`             | AnimatedContainerExamples; BasicContainer, FadeInContainer, SlideInContainer, etc.                                                             | `examples/AnimatedContainerExamples.tsx`                     |
 
 ## Implementation Guidelines
 

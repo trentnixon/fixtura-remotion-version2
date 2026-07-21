@@ -60,7 +60,9 @@ export const LogoWell: React.FC<LogoWellProps> = ({
   const surfaceColor = selectedPalette.container.backgroundTransparent.strong;
   const borderColor = emphasisBorder
     ? colors.primary
-    : tinycolor(selectedPalette.text.onContainer.copy).setAlpha(0.22).toRgbString();
+    : tinycolor(selectedPalette.text.onContainer.copy)
+        .setAlpha(0.22)
+        .toRgbString();
   const borderWidth = emphasisBorder ? 4 : LOGO_WELL_BORDER_WIDTH_PX;
   const accentClip = getAccentClip(variant);
 

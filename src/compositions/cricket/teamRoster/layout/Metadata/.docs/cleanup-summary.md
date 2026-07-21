@@ -21,12 +21,14 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/TwoMetaValuesProps.ts`
+
 - **Extracted from:** `TwoMetaValues.tsx`
 - **Content:** `TwoMetaValuesProps` interface
 - **Purpose:** Centralizes props type definition for TwoMetaValues components
 - **Note:** Renamed from `RosterHeaderProps` to `TwoMetaValuesProps` for better clarity
 
 #### Created `_types/VSProps.ts`
+
 - **Extracted from:** `VS.tsx`
 - **Content:** `VSProps` interface
 - **Purpose:** Centralizes props type definition for VS component
@@ -35,6 +37,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_METADATA_VARIANT = "onContainerCopy"` - Default color variant for metadata components
   - `DEFAULT_METADATA_ANIMATION_DELAY = 0` - Default animation delay for metadata components
@@ -43,6 +46,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted function:**
   - `getSubtleBackgroundColor(selectedPalette)` - Extracts subtle background color from theme palette
 - **Purpose:** Centralizes background color extraction logic used by `TwoMetaValuesSubtleWrapper`
@@ -50,6 +54,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `TwoMetaValues.tsx`
+
 - **Removed:** Inline `RosterHeaderProps` interface definition
 - **Removed:** Hardcoded background color extraction logic
 - **Removed:** Hardcoded animation delay values (`0`)
@@ -70,6 +75,7 @@ The following folders were created to support the modularization pattern:
   - `DEFAULT_METADATA_ANIMATION_DELAY` constant
 
 #### Modified `VS.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** Hardcoded default variant (`"onContainerCopy"`)
 - **Removed:** Hardcoded animation delay (`0`)

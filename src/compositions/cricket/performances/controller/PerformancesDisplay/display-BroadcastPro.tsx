@@ -7,10 +7,7 @@ import { TeamLogo } from "../../../utils/primitives/TeamLogo";
 import { getItemsForScreen } from "../../utils/screenCalculator";
 import { PerformancesDisplayProps } from "./_types/PerformancesDisplayProps";
 import { PerformanceData } from "../../_types/types";
-import {
-  formatPlayerName,
-  truncateText,
-} from "../../layout/_utils/helpers";
+import { formatPlayerName, truncateText } from "../../layout/_utils/helpers";
 import { SMALL_LOGO_SIZE } from "../../../top5/layout/_utils/constants";
 import { getDefaultRestrictions } from "../../../top5/controller/PlayerRow/_utils/helpers";
 import {
@@ -70,7 +67,10 @@ const PerformanceGridCard: React.FC<{
 
   const formatted = formatPlayerName(performance.name);
   const name = truncateText(formatted, restrictions.nameLength).toUpperCase();
-  const team = truncateText(performance.playedFor, restrictions.teamLength).toUpperCase();
+  const team = truncateText(
+    performance.playedFor,
+    restrictions.teamLength,
+  ).toUpperCase();
 
   const isFirstOverall = globalRank === 1;
   const rankBadgeClass = isFirstOverall

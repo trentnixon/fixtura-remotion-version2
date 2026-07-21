@@ -53,7 +53,9 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
                 <LayeredAngularPanel
                   key={index}
                   clipPath={SHALLOW_ROW_LEFT}
-                  surfaceColor={selectedPalette.container.backgroundTransparent.medium}
+                  surfaceColor={
+                    selectedPalette.container.backgroundTransparent.medium
+                  }
                   underlayColor={getLayeredUnderlayColor(colors.primary)}
                   className="w-full relative"
                   style={{ height: `${ROSTER_ROW_HEIGHT}px` }}
@@ -68,7 +70,10 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
                     aria-hidden
                   />
                   <RosterPlayerName
-                    value={truncatePlayerName(player.toUpperCase(), MAX_PLAYER_NAME_LENGTH)}
+                    value={truncatePlayerName(
+                      player.toUpperCase(),
+                      MAX_PLAYER_NAME_LENGTH,
+                    )}
                     className="text-left font-bold relative z-0"
                     variant="onContainerCopy"
                   />

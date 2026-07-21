@@ -33,6 +33,7 @@ This guide explains how to create a new **upcoming games composition asset type*
 ### What is an Upcoming Games Composition?
 
 An **upcoming games composition** is a sport-specific content type that displays:
+
 - **Upcoming match fixtures** (array of game data)
 - **Team logos** (home and away teams)
 - **Match metadata** (date, time, ground, grade, round)
@@ -42,18 +43,19 @@ An **upcoming games composition** is a sport-specific content type that displays
 
 ### Key Characteristics
 
-| Aspect | Upcoming Games |
-|--------|----------------|
-| **Layout** | Vertical list of game cards |
-| **Games Per Screen** | Configurable (default: 2) |
-| **Card Height** | Calculated dynamically based on games per screen |
-| **Transitions** | Screen-to-screen transitions |
-| **Logo Layouts** | Multiple variations (LogoAndName, LogosOnly, etc.) |
-| **Metadata** | Date, time, ground, grade, round |
+| Aspect               | Upcoming Games                                     |
+| -------------------- | -------------------------------------------------- |
+| **Layout**           | Vertical list of game cards                        |
+| **Games Per Screen** | Configurable (default: 2)                          |
+| **Card Height**      | Calculated dynamically based on games per screen   |
+| **Transitions**      | Screen-to-screen transitions                       |
+| **Logo Layouts**     | Multiple variations (LogoAndName, LogosOnly, etc.) |
+| **Metadata**         | Date, time, ground, grade, round                   |
 
 ### Example: Cricket Upcoming Games Composition
 
 The `CricketUpcoming` composition:
+
 - **Data Type**: `GameData[]` - array of game objects
 - **Structure**: Each game has teams, logos, date/time, ground, grade
 - **Variants**: `basic`, `classic`, `brickwork`, `classicTwoColumn`, `cnsw`, `cnswPrivate`, `sixersThunder`
@@ -143,12 +145,14 @@ src/compositions/cricket/upcoming/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation
    - Calculates screen pagination
    - Creates sequences for each screen
    - Uses `TransitionSeriesWrapper` for screen-to-screen transitions
 
 2. **Display Components** (`controller/GamesDisplay/FixtureDisplay-*.tsx`):
+
    - Variant-specific layout and styling
    - Calculates which games to display for current screen
    - Calculates game card heights dynamically
@@ -156,17 +160,20 @@ src/compositions/cricket/upcoming/
    - Includes sponsor footer
 
 3. **Games List Components** (`controller/GamesList/games-list-*.tsx`):
+
    - Variant-specific list rendering
    - Maps over displayed games
    - Renders game card components
 
 4. **Game Card Components** (`layout/Card/game-card-*.tsx`):
+
    - Variant-specific card layout
    - Composes metadata and logo components
    - Handles staggered animations
    - Uses calculated card height
 
 5. **Logo Layout Variations** (`layout/Logos/variations/`):
+
    - Multiple layout options for team logos
    - **LogoAndName**: Logo with name below
    - **LogosOnly**: Logos only (no names)
@@ -177,6 +184,7 @@ src/compositions/cricket/upcoming/
    - **ReversedMirrored**: Reversed mirrored
 
 6. **Metadata Components** (`layout/Meta/`):
+
    - **Grade**: Grade/age group display
    - **Ground**: Ground name display
    - **TeamName**: Team name display
@@ -186,6 +194,7 @@ src/compositions/cricket/upcoming/
    - **SingleDataPointHeader**: Single value header
 
 7. **Types** (`_types/types.ts`):
+
    - `GameData`: Main game data structure
    - `TeamLogo`: Team logo interface
    - Animation constants
@@ -203,10 +212,12 @@ src/compositions/cricket/upcoming/
 Before creating a new upcoming games composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of game data structure**
+
    - Team names and logos
    - Date and time
    - Ground name
@@ -215,6 +226,7 @@ Before creating a new upcoming games composition, ensure you have:
    - Sponsor information
 
 3. ✅ **Access to test data**
+
    - Sample upcoming games data
    - Multiple games to test pagination
    - Different game configurations
@@ -284,6 +296,7 @@ export const CARD_ANIMATION_DURATION = 30; // 1 second for card animation
 ```
 
 **Key Points:**
+
 - **Game data**: Contains all match fixture information
 - **Team logos**: Can be null (optional)
 - **Sponsors**: Each game has assignSponsors (merged for footer)
@@ -313,13 +326,10 @@ export const DEFAULT_GAMES_PER_SCREEN = 2;
  * @param fixturesLayout - Layout configuration object
  * @returns Number of games to display per screen
  */
-export const getGamesPerScreen = (
-  fixturesLayout?: { CricketUpcoming?: number },
-): number => {
-  if (
-    fixturesLayout &&
-    typeof fixturesLayout.CricketUpcoming === "number"
-  ) {
+export const getGamesPerScreen = (fixturesLayout?: {
+  CricketUpcoming?: number;
+}): number => {
+  if (fixturesLayout && typeof fixturesLayout.CricketUpcoming === "number") {
     return fixturesLayout.CricketUpcoming;
   }
   return fixturesLayout?.CricketUpcoming || DEFAULT_GAMES_PER_SCREEN;
@@ -369,6 +379,7 @@ export const calculateTotalScreens = (
 ```
 
 **Key Points:**
+
 - **Games per screen**: Read from `contentLayout.divideFixturesBy.CricketUpcoming`
 - **Duration**: Uses `FPS_SCORECARD` timing or metadata frames
 - **Validation**: Checks if data is valid array with items
@@ -443,9 +454,7 @@ export const calculateGameCardHeight = (
  * @param games - Array of games with assignSponsors properties
  * @returns Merged AssignSponsors object
  */
-export const mergeAssignSponsors = (
-  games: GameData[],
-): AssignSponsors => {
+export const mergeAssignSponsors = (games: GameData[]): AssignSponsors => {
   return games.reduce(
     (acc, game) => ({ ...acc, ...game.assignSponsors }),
     {} as AssignSponsors,
@@ -454,6 +463,7 @@ export const mergeAssignSponsors = (
 ```
 
 **Key Points:**
+
 - **Displayed games**: Slices games array based on screen index
 - **Card height**: Calculates dynamically based on games per screen
 - **Sponsor merging**: Merges sponsors from all displayed games
@@ -513,7 +523,8 @@ export const calculateAnimationOutFrame = (timings?: {
 ```
 
 **Key Points:**
-- **Delay calculation**: Uses index * multiplier for staggered animations
+
+- **Delay calculation**: Uses index \* multiplier for staggered animations
 - **Multipliers**: Different multipliers for different variants (15 vs 5)
 - **Exit frame**: Calculates when exit animation should start
 
@@ -572,6 +583,7 @@ export default NoGamesData;
 ```
 
 **Key Points:**
+
 - **AbsoluteFill**: Uses Remotion's AbsoluteFill for full-screen display
 - **Animated text**: Uses AnimatedText component with fade-in animation
 - **Theme-aware**: Uses theme context for font classes
@@ -683,6 +695,7 @@ export default TimeDateGround;
 ```
 
 **Key Points:**
+
 - **Single value**: Ground displays single value (centered)
 - **Multiple values**: TimeDateGround displays 3 values (left, center, right)
 - **Configurable background**: Can override background color
@@ -744,6 +757,7 @@ export default TeamName;
 ```
 
 **Key Points:**
+
 - **Configurable**: Accepts style, variant, className props
 - **Separate delays**: Container and text can have different delays
 - **Theme-aware**: Uses theme context for border radius
@@ -848,6 +862,7 @@ export const LogoAndName: React.FC<TeamLayoutProps> = ({
 ```
 
 **Key Points:**
+
 - **Three sections**: Home team, VS, Away team
 - **Logo and name**: Logo above team name
 - **VS section**: Can include additional info
@@ -1024,6 +1039,7 @@ export default GameCardBasic;
 ```
 
 **Key Points:**
+
 - **Card structure**: Grade → Home Team Name → Logos/Metadata → Away Team Name
 - **Logo section**: Home logo, VS/Ground/Date/Time, Away logo
 - **Staggered animations**: Different delays for different elements
@@ -1056,6 +1072,7 @@ export default GamesListBasic;
 ```
 
 **Key Points:**
+
 - **Simple mapping**: Maps over games array
 - **Key prop**: Uses `game.gameID` as key
 - **Index prop**: Passes index to game card for animation delays
@@ -1106,7 +1123,7 @@ export const GamesDisplayBasic: React.FC<GamesDisplayProps> = ({
 
   // Merge all assignSponsors objects from displayedGames into one object
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
-  
+
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">
       <AnimatedContainer
@@ -1137,6 +1154,7 @@ export default GamesDisplayBasic;
 ```
 
 **Key Points:**
+
 - **Screen calculation**: Calculates which games to display for current screen
 - **Card height**: Calculates card height based on games per screen
 - **Sponsor merging**: Merges sponsors from all displayed games
@@ -1234,6 +1252,7 @@ export default Basic;
 ```
 
 **Key Points:**
+
 - **Screen pagination**: Calculates total screens based on games per screen
 - **Sequence creation**: Creates one sequence per screen
 - **Transitions**: Uses `TransitionSeriesWrapper` for screen-to-screen transitions
@@ -1297,6 +1316,7 @@ export const CricketUpcoming = {
 ### How Pagination Works
 
 1. **Games Per Screen Configuration**:
+
    ```typescript
    const fixturesLayout = contentLayout.divideFixturesBy || {};
    const gamesPerScreen = getGamesPerScreen(fixturesLayout);
@@ -1304,6 +1324,7 @@ export const CricketUpcoming = {
    ```
 
 2. **Total Screens Calculation**:
+
    ```typescript
    const totalScreens = calculateTotalScreens(
      CompositionData.length,
@@ -1313,6 +1334,7 @@ export const CricketUpcoming = {
    ```
 
 3. **Screen-to-Screen Transitions**:
+
    ```typescript
    const sequences = Array.from({ length: totalScreens }, (_, index) => ({
      content: (
@@ -1351,6 +1373,7 @@ export const CricketUpcoming = {
 ### Structure
 
 Display components (`controller/GamesDisplay/FixtureDisplay-*.tsx`):
+
 - Calculate which games to display for current screen
 - Calculate game card heights dynamically
 - Merge sponsors from displayed games
@@ -1360,6 +1383,7 @@ Display components (`controller/GamesDisplay/FixtureDisplay-*.tsx`):
 ### Card Height Calculation
 
 Card heights are calculated dynamically based on:
+
 - Total asset height
 - Games per screen
 - Header height
@@ -1367,9 +1391,12 @@ Card heights are calculated dynamically based on:
 - Card spacing
 
 **Formula:**
+
 ```typescript
 const availableHeight = assetHeight - headerHeight - contentPadding;
-const gameCardHeight = Math.floor(availableHeight / gamesPerScreen - cardSpacing);
+const gameCardHeight = Math.floor(
+  availableHeight / gamesPerScreen - cardSpacing,
+);
 ```
 
 ---
@@ -1379,6 +1406,7 @@ const gameCardHeight = Math.floor(availableHeight / gamesPerScreen - cardSpacing
 ### Structure
 
 Game card components (`layout/Card/game-card-*.tsx`):
+
 - Composes metadata components (Grade, Ground, TeamName)
 - Composes logo layout variations
 - Handles staggered animations
@@ -1404,6 +1432,7 @@ Game card components (`layout/Card/game-card-*.tsx`):
 ### Card Layout Variations
 
 Different variants use different layouts:
+
 - **Basic**: Grade → Home Name → Logos/Metadata → Away Name
 - **Classic**: Similar structure with different styling
 - **ClassicTwoColumn**: Two-column layout
@@ -1417,24 +1446,30 @@ Different variants use different layouts:
 ### Available Variations
 
 1. **LogoAndName** (`LogoAndName.tsx`):
+
    - Logo above team name
    - VS in middle with optional additional info
    - Used in many variants
 
 2. **LogosOnly** (`LogosOnly.tsx`):
+
    - Logos only (no team names)
    - Multiple positioning options (center, split, together)
 
 3. **MirroredAlignment** (`MirroredAlignment.tsx`):
+
    - Mirrored alignment for logos
 
 4. **OppositeAlignment** (`OppositeAlignment.tsx`):
+
    - Opposite alignment for logos
 
 5. **CenteredVerticalStack** (`CenteredVerticalStack.tsx`):
+
    - Centered vertical stack layout
 
 6. **NameAboveLogo** (`NameAboveLogo.tsx`):
+
    - Team name above logo
 
 7. **ReversedMirrored** (`ReversedMirrored.tsx`):
@@ -1459,28 +1494,34 @@ export const LOGO_SIZES = {
 ### Available Components
 
 1. **Grade** (`Grade.tsx`):
+
    - Displays age group and grade name
    - Single centered value
 
 2. **Ground** (`Ground.tsx`):
+
    - Displays ground name
    - Single centered value
    - Configurable background color
 
 3. **TeamName** (`TeamName.tsx`):
+
    - Displays team name
    - Configurable style, variant, className
    - Separate delays for container and text
 
 4. **TimeDateGround** (`TimeDateGround.tsx`):
+
    - Displays time, date, ground (3-column grid)
    - Left, center, right alignment
 
 5. **TimeGround** (`TimeGround.tsx`):
+
    - Displays time and ground (2-column grid)
    - Left and right alignment
 
 6. **GradeDate** (`GradeDate.tsx`):
+
    - Displays grade and date
    - Two-column layout
 
@@ -1501,9 +1542,7 @@ Each game has its own `assignSponsors` object. For the sponsor footer, all spons
 **Helper Function:** `mergeAssignSponsors(games)`
 
 ```typescript
-export const mergeAssignSponsors = (
-  games: GameData[],
-): AssignSponsors => {
+export const mergeAssignSponsors = (games: GameData[]): AssignSponsors => {
   return games.reduce(
     (acc, game) => ({ ...acc, ...game.assignSponsors }),
     {} as AssignSponsors,
@@ -1512,6 +1551,7 @@ export const mergeAssignSponsors = (
 ```
 
 **Usage:**
+
 ```typescript
 const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
 
@@ -1558,9 +1598,9 @@ const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
 Within each card, elements animate with increasing delays:
 
 ```typescript
-delay + 10  // Ground, metadata
-delay + 15  // Logos
-delay + 20  // VS, text elements
+delay + 10; // Ground, metadata
+delay + 15; // Logos
+delay + 20; // VS, text elements
 ```
 
 ### Exit Animation
@@ -1579,6 +1619,7 @@ const exitFrame = calculateAnimationOutFrame(timings);
 ### Composition ID
 
 The routing system recognizes:
+
 - `CricketUpcoming`
 
 ### Routing Configuration
@@ -1633,10 +1674,7 @@ const displayedGames = calculateDisplayedGames(
 ### Pattern 3: Card Height Calculation
 
 ```typescript
-const gameCardHeight = calculateGameCardHeight(
-  heights.asset,
-  gamesPerScreen,
-);
+const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
 ```
 
 ### Pattern 4: Sponsor Merging
@@ -1689,7 +1727,9 @@ const testGame: GameData = {
     width: 100,
     height: 100,
   },
-  assignSponsors: { /* ... */ },
+  assignSponsors: {
+    /* ... */
+  },
 };
 ```
 
@@ -1711,6 +1751,7 @@ const testGame: GameData = {
 **Error:** Wrong games showing on a screen
 
 **Solutions:**
+
 1. Check `calculateDisplayedGames()` logic
 2. Verify `screenIndex` is passed correctly
 3. Check `gamesPerScreen` value is correct
@@ -1721,6 +1762,7 @@ const testGame: GameData = {
 **Error:** Cards overflow or don't fill available space
 
 **Solutions:**
+
 1. Check `calculateGameCardHeight()` calculation
 2. Verify `DEFAULT_SPACING` values are appropriate
 3. Check `headerHeight`, `contentPadding`, `cardSpacing` constants
@@ -1731,6 +1773,7 @@ const testGame: GameData = {
 **Error:** Sponsor footer not displaying
 
 **Solutions:**
+
 1. Check `mergeAssignSponsors()` function
 2. Verify `assignSponsors` exists in game data
 3. Check sponsor footer component is included
@@ -1741,6 +1784,7 @@ const testGame: GameData = {
 **Error:** No transitions between screens or transition errors
 
 **Solutions:**
+
 1. Check `TransitionSeriesWrapper` usage
 2. Verify animation config is available
 3. Check duration calculation returns valid number
@@ -1751,6 +1795,7 @@ const testGame: GameData = {
 **Error:** Logo variation not displaying correctly
 
 **Solutions:**
+
 1. Check logo variation component is imported correctly
 2. Verify logo props are passed correctly
 3. Check logo sizes are appropriate
@@ -1843,20 +1888,24 @@ Creating an upcoming games composition involves:
 ### Key Implementation Details
 
 **Screen Pagination:**
+
 - Games per screen read from `contentLayout.divideFixturesBy.CricketUpcoming`
 - Total screens calculated: `Math.ceil(gamesCount / gamesPerScreen)`
 - Displayed games sliced: `games.slice(startIndex, endIndex)`
 
 **Card Height Calculation:**
+
 - Dynamic calculation based on games per screen
 - Formula: `(assetHeight - headerHeight - contentPadding) / gamesPerScreen - cardSpacing`
 
 **Sponsor Merging:**
+
 - Merges `assignSponsors` from all displayed games
 - Uses `reduce()` to combine objects
 - Passed to SponsorFooter component
 
 **Card Layout:**
+
 - Grade → Home Team Name → Logos/Metadata → Away Team Name
 - Middle section: Home Logo | VS/Ground/Date/Time | Away Logo
 - Variant-specific styling and layout

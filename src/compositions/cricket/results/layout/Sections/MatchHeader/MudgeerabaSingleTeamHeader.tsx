@@ -7,7 +7,10 @@ import { AnimatedText } from "../../../../../../components/typography/AnimatedTe
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { TeamLogo as TeamLogoType } from "../../../../utils/primitives/_types/TeamLogoProps";
 import { Team } from "../../../_types/types";
-import { STEEP_HERO_TOP_LEFT, LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
+import {
+  STEEP_HERO_TOP_LEFT,
+  LogoWell,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
 export interface MudgeerabaSingleTeamHeaderProps {
   team: Team;
@@ -16,12 +19,9 @@ export interface MudgeerabaSingleTeamHeaderProps {
   outerContainer?: React.CSSProperties;
 }
 
-export const MudgeerabaSingleTeamHeader: React.FC<MudgeerabaSingleTeamHeaderProps> = ({
-  team,
-  teamLogo,
-  delay,
-  outerContainer,
-}) => {
+export const MudgeerabaSingleTeamHeader: React.FC<
+  MudgeerabaSingleTeamHeaderProps
+> = ({ team, teamLogo, delay, outerContainer }) => {
   const { animations } = useAnimationContext();
   const { fontClasses, colors, selectedPalette } = useThemeContext();
   const TextAnimations = animations.text.main;
@@ -30,7 +30,8 @@ export const MudgeerabaSingleTeamHeader: React.FC<MudgeerabaSingleTeamHeaderProp
 
   // Theme colors for backgrounds
   const backgroundColorMain = selectedPalette.background.main;
-  const backgroundColorContainer = selectedPalette.container.backgroundTransparent.strong;
+  const backgroundColorContainer =
+    selectedPalette.container.backgroundTransparent.strong;
 
   // Format score with overs
   const scoreDisplay = formatScoreWithOvers(team.score, team.overs);
@@ -75,7 +76,10 @@ export const MudgeerabaSingleTeamHeader: React.FC<MudgeerabaSingleTeamHeaderProp
         </div>
 
         {/* Logo and Score Section - Right Side */}
-        <div className="flex items-center relative h-full" style={{ paddingRight: "12px" }}>
+        <div
+          className="flex items-center relative h-full"
+          style={{ paddingRight: "12px" }}
+        >
           <LogoWell
             variant="circle"
             size={logoSize}

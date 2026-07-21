@@ -9,7 +9,11 @@ import {
 } from "../../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "../_types/TeamsSectionProps";
-import { truncateText, normalizeScore, getFirstInningsDisplay } from "../_utils/helpers";
+import {
+  truncateText,
+  normalizeScore,
+  getFirstInningsDisplay,
+} from "../_utils/helpers";
 
 export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
   type,
@@ -60,7 +64,6 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
             )}
             <div className="flex flex-row items-center space-x-8 justify-start">
               <div className={`${logoSize}`}>
-
                 <TeamLogo
                   logo={homeTeamLogo || null}
                   teamName={homeTeam.name}
@@ -72,7 +75,6 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
                 animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
                 variant="onContainerCopyNoBg"
               />
-
             </div>
           </div>
           <ResultTeamName
@@ -93,7 +95,6 @@ export const ScoreOverNameWithLogo: React.FC<TeamsSectionProps> = ({
             />
           )}
           <div className="flex flex-row items-center space-x-8 justify-end">
-
             <ResultScore
               value={awayNormalizedScore}
               animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}

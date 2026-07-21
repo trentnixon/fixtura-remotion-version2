@@ -3,9 +3,7 @@ import {
   isBattingPerformance,
   isBowlingPerformance,
 } from "../../../_types/types";
-import {
-  getBowlingEconomyDisplay,
-} from "../../../../top5/controller/PlayersDisplay/_utils/broadcastProStats";
+import { getBowlingEconomyDisplay } from "../../../../top5/controller/PlayersDisplay/_utils/broadcastProStats";
 
 export interface BroadcastProPerformanceTripleStat {
   label1: string;

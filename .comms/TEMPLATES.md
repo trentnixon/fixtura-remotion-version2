@@ -57,15 +57,15 @@ In production:
 The final Remotion composition id is built like this:
 
 ```ts
-`${templateId}-${useBackground}-${compositionId}`
+`${templateId}-${useBackground}-${compositionId}`;
 ```
 
 Example:
 
 ```ts
-Basic-Solid-CricketResults
-BroadcastPro-Image-CricketTop5Batting
-Brickwork-Video-AFLLadder
+Basic - Solid - CricketResults;
+BroadcastPro - Image - CricketTop5Batting;
+Brickwork - Video - AFLLadder;
 ```
 
 ## How to select a new template
@@ -124,7 +124,7 @@ These are declared in `src/templates/registry.tsx`.
 If no background is provided in production, the resolver falls back to:
 
 ```ts
-Solid
+Solid;
 ```
 
 ## Important note about `appearance.type`
@@ -132,7 +132,7 @@ Solid
 `src/core/utils/datasetProcessing.ts` also writes:
 
 ```ts
-videoMeta.video.appearance.type = variant
+videoMeta.video.appearance.type = variant;
 ```
 
 At the moment, production resolution does not use `appearance.type` to choose the template. The important values are:
@@ -271,13 +271,31 @@ Important:
 If you want to switch an existing render to another template today, the main change is:
 
 ```ts
-data.videoMeta.video.appearance.template = "Basic" | "Brickwork" | "Classic" | "CNSW" | "CNSWPrivate" | "Sixers" | "Thunder" | "TwoColumnClassic" | "Mudgeeraba" | "BroadcastPro";
+data.videoMeta.video.appearance.template =
+  "Basic" |
+  "Brickwork" |
+  "Classic" |
+  "CNSW" |
+  "CNSWPrivate" |
+  "Sixers" |
+  "Thunder" |
+  "TwoColumnClassic" |
+  "Mudgeeraba" |
+  "BroadcastPro";
 ```
 
 If you want to switch the background treatment, change:
 
 ```ts
-data.videoMeta.video.templateVariation.useBackground = "Graphics" | "Solid" | "Image" | "Gradient" | "Video" | "Particle" | "Pattern" | "Texture";
+data.videoMeta.video.templateVariation.useBackground =
+  "Graphics" |
+  "Solid" |
+  "Image" |
+  "Gradient" |
+  "Video" |
+  "Particle" |
+  "Pattern" |
+  "Texture";
 ```
 
 If you want the broadest real coverage today, use cricket assets. AFL and netball are mapped and named, but their current composition implementations are still basic placeholders.

@@ -82,73 +82,73 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
 
   const rowContent = (
     <>
-          {/* Colored edge strip: second polygon, animates in after row */}
-          <AnimatedContainer
-            type="full"
-            className="absolute inset-0 pointer-events-none"
-            backgroundColor="none"
-            animation={containerAnimation.containerIn}
-            animationDelay={delay + EDGE_STRIP_DELAY_OFFSET}
-            exitAnimation={containerAnimation.containerOut}
-            exitFrame={animationOutFrame}
-          >
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundColor: edgeStripColor,
-                clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-              }}
-              aria-hidden
+      {/* Colored edge strip: second polygon, animates in after row */}
+      <AnimatedContainer
+        type="full"
+        className="absolute inset-0 pointer-events-none"
+        backgroundColor="none"
+        animation={containerAnimation.containerIn}
+        animationDelay={delay + EDGE_STRIP_DELAY_OFFSET}
+        exitAnimation={containerAnimation.containerOut}
+        exitFrame={animationOutFrame}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: edgeStripColor,
+            clipPath: SHALLOW_EDGE_STRIP_RIGHT,
+          }}
+          aria-hidden
+        />
+      </AnimatedContainer>
+      {/* Team info - logo + name */}
+      <div
+        className={`flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`}
+        style={{ width: "70%", minWidth: 0 }}
+      >
+        <LogoWell
+          variant="circle"
+          size={compact ? 36 : 56}
+          className={compact ? "mr-2" : "mr-3"}
+        >
+          {(team.clubLogo ?? team.playHQLogo) ? (
+            <TeamLogo
+              logo={team.clubLogo ?? team.playHQLogo ?? null}
+              teamName={team.teamName}
+              delay={delay}
+              size={compact ? 9 : 14}
             />
-          </AnimatedContainer>
-          {/* Team info - logo + name */}
-          <div
-            className={`flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`}
-            style={{ width: "70%", minWidth: 0 }}
-          >
-            <LogoWell
-              variant="circle"
-              size={compact ? 36 : 56}
-              className={compact ? "mr-2" : "mr-3"}
-            >
-              {team.clubLogo ?? team.playHQLogo ? (
-                <TeamLogo
-                  logo={team.clubLogo ?? team.playHQLogo ?? null}
-                  teamName={team.teamName}
-                  delay={delay}
-                  size={compact ? 9 : 14}
-                />
-              ) : (
-                <div className="w-full h-full bg-gray-300/20 rounded-full" />
-              )}
-            </LogoWell>
-            <div className="flex-1 truncate min-w-0">
-              <LadderTeamName
-                value={team.teamName}
-                delay={delay}
-                style={teamNameStyle}
-              />
-            </div>
-          </div>
+          ) : (
+            <div className="w-full h-full bg-gray-300/20 rounded-full" />
+          )}
+        </LogoWell>
+        <div className="flex-1 truncate min-w-0">
+          <LadderTeamName
+            value={team.teamName}
+            delay={delay}
+            style={teamNameStyle}
+          />
+        </div>
+      </div>
 
-          {/* Stats */}
-          <div className="flex flex-1 justify-evenly shrink-0" style={statsStyle}>
-            <div className="w-10 text-center whitespace-nowrap">
-              <LadderTeamPoints value={team?.P ?? 0} delay={delay} />
-            </div>
-            <div className="w-10 text-center whitespace-nowrap">
-              <LadderTeamPoints value={team?.W ?? 0} delay={delay} />
-            </div>
-            <div className="w-10 text-center whitespace-nowrap">
-              <LadderTeamPoints value={team?.L ?? 0} delay={delay} />
-            </div>
-            <div className="w-10 text-center whitespace-nowrap">
-              <LadderTeamPoints value={team?.BYE ?? 0} delay={delay} />
-            </div>
-            <div className="w-16 text-center whitespace-nowrap">
-              <LadderTeamPoints value={team?.PTS ?? 0} delay={delay} />
-            </div>
-          </div>
+      {/* Stats */}
+      <div className="flex flex-1 justify-evenly shrink-0" style={statsStyle}>
+        <div className="w-10 text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.P ?? 0} delay={delay} />
+        </div>
+        <div className="w-10 text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.W ?? 0} delay={delay} />
+        </div>
+        <div className="w-10 text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.L ?? 0} delay={delay} />
+        </div>
+        <div className="w-10 text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.BYE ?? 0} delay={delay} />
+        </div>
+        <div className="w-16 text-center whitespace-nowrap">
+          <LadderTeamPoints value={team?.PTS ?? 0} delay={delay} />
+        </div>
+      </div>
     </>
   );
 

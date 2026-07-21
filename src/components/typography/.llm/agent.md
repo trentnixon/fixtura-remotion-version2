@@ -29,15 +29,15 @@ Animated, theme-aware typography primitives. AnimatedText supports type-based st
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Typography root | `src/components/typography/.docs/readMe.md` |
-| Roadmap | `src/components/typography/.docs/DevelopmentRoadMap.md` |
-| Config | `src/components/typography/config/.docs/README.md` |
+| Context           | Path                                                          |
+| ----------------- | ------------------------------------------------------------- |
+| Typography root   | `src/components/typography/.docs/readMe.md`                   |
+| Roadmap           | `src/components/typography/.docs/DevelopmentRoadMap.md`       |
+| Config            | `src/components/typography/config/.docs/README.md`            |
 | Config animations | `src/components/typography/config/animations/.docs/README.md` |
-| Utils | `src/components/typography/utils/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Utils             | `src/components/typography/utils/.docs/README.md`             |
+| Parent roadmap    | `src/components/.docs/DevelopmentRoadMap.md`                  |
+| Component tickets | `src/components/.docs/Tickets.md`                             |
 
 ## Roadmap
 
@@ -63,14 +63,14 @@ Related (for consumers and shared dependencies):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
-| `AnimatedText.tsx` | Main component; props: type, variant, contrastSafe, animation, exitAnimation, exitFrame, letterAnimation | `AnimatedText.tsx` |
-| `types.ts` | TypographyType, ColorVariant, AnimationMode, AnimationConfig | `types.ts` |
-| `index.tsx` | Barrel export (AnimatedText) | `index.tsx` |
-| `config/` | animations.ts (normalizeAnimation, useAnimation), styles.ts (getTypographyStyles), variants.ts (getVariantStyles, applyContrastSafety) | `config/animations.ts`, `config/styles.ts`, `config/variants.ts` |
-| `config/animations/` | fade, scale, slide, spring, special; types, useAnimation, springConfigs | `config/animations/useAnimation.ts`, `config/animations/*.ts` |
-| `utils/` | Placeholder for typography utilities | `utils/` |
+| Module               | Responsibility                                                                                                                         | Entry Points                                                     |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `AnimatedText.tsx`   | Main component; props: type, variant, contrastSafe, animation, exitAnimation, exitFrame, letterAnimation                               | `AnimatedText.tsx`                                               |
+| `types.ts`           | TypographyType, ColorVariant, AnimationMode, AnimationConfig                                                                           | `types.ts`                                                       |
+| `index.tsx`          | Barrel export (AnimatedText)                                                                                                           | `index.tsx`                                                      |
+| `config/`            | animations.ts (normalizeAnimation, useAnimation), styles.ts (getTypographyStyles), variants.ts (getVariantStyles, applyContrastSafety) | `config/animations.ts`, `config/styles.ts`, `config/variants.ts` |
+| `config/animations/` | fade, scale, slide, spring, special; types, useAnimation, springConfigs                                                                | `config/animations/useAnimation.ts`, `config/animations/*.ts`    |
+| `utils/`             | Placeholder for typography utilities                                                                                                   | `utils/`                                                         |
 
 ## Implementation Guidelines
 

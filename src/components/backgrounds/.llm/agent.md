@@ -29,17 +29,17 @@ Centralized background rendering for compositions. Provides Solid, Gradient, Ima
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Backgrounds root | `src/components/backgrounds/.docs/README.md` |
-| Roadmap | `src/components/backgrounds/.docs/DevelopmentRoadMap.md` |
-| Config | `src/components/backgrounds/config/.docs/README.md` |
-| Hooks | `src/components/backgrounds/hooks/.docs/README.md` |
-| Variants root | `src/components/backgrounds/variants/.docs/README.md` |
+| Context                         | Path                                                                                                                   |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Backgrounds root                | `src/components/backgrounds/.docs/README.md`                                                                           |
+| Roadmap                         | `src/components/backgrounds/.docs/DevelopmentRoadMap.md`                                                               |
+| Config                          | `src/components/backgrounds/config/.docs/README.md`                                                                    |
+| Hooks                           | `src/components/backgrounds/hooks/.docs/README.md`                                                                     |
+| Variants root                   | `src/components/backgrounds/variants/.docs/README.md`                                                                  |
 | Image (incl. overlays/variants) | `variants/Image/.docs/readMe.md`, `variants/Image/overlays/.docs/readMe.md`, `variants/Image/variants/.docs/README.md` |
-| NoiseBackground | `variants/NoiseBackground/.docs/README.md`, `variants/NoiseBackground/variants/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| NoiseBackground                 | `variants/NoiseBackground/.docs/README.md`, `variants/NoiseBackground/variants/.docs/README.md`                        |
+| Parent roadmap                  | `src/components/.docs/DevelopmentRoadMap.md`                                                                           |
+| Component tickets               | `src/components/.docs/Tickets.md`                                                                                      |
 
 ## Roadmap
 
@@ -66,20 +66,20 @@ Related (for routing, not direct use in backgrounds):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|-----------------|--------------|
-| `index.tsx` | BackgroundComponents registry; SelectTemplateBackground(); re-exports config | `BackgroundComponents`, `SelectTemplateBackground`, `NoiseVariants` |
-| `config/` | constants, types, animations | `types.ts`, `constants.ts`; `getBackgroundAnimation()` for fade/zoom/pan/kenBurns/parallax/slide |
-| `hooks/` | Placeholder for future shared hooks | (none yet) |
-| `variants/Solid/` | SolidBackground — theme palette fill | `SolidBackground.tsx` |
-| `variants/Gradient/` | GradientBackground — palette gradients | `GradientBackground.tsx` |
-| `variants/Image/` | ImageBackground — effects, overlays, presets, TemplateVariationAdapter | `index.tsx`; `overlays/`, `variants/` |
-| `variants/Video/` | VideoBackground — video with overlay support | `VideoBackground.tsx` |
-| `variants/Patterns/` | PatternBackground — SVG patterns | `index.tsx`; `variants/` (dots, lines, grid, crosshatch, triangles, chevron) |
-| `variants/Particles/` | ParticleBackground — particle fields | `index.tsx`; `variants/` (dots, lines, bubbles, snow, confetti) |
-| `variants/NoiseBackground/` | Procedural noise and graphics | `config.ts`, `NOISE_VARIANTS`; sub-variants (GridNoise, SubtleNoise, GrainNoise, WaveNoise, FogNoise, StaticNoise, FloatingParticles, etc.) |
-| `variants/AnimatedBackground.tsx` | Pure CSS/SVG animated backgrounds | `AnimatedBackground.tsx` |
-| `variants/Textures/` | TextureBackground — tiled image with overlay | `TextureBackground.tsx` |
+| Module                            | Responsibility                                                               | Entry Points                                                                                                                                |
+| --------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `index.tsx`                       | BackgroundComponents registry; SelectTemplateBackground(); re-exports config | `BackgroundComponents`, `SelectTemplateBackground`, `NoiseVariants`                                                                         |
+| `config/`                         | constants, types, animations                                                 | `types.ts`, `constants.ts`; `getBackgroundAnimation()` for fade/zoom/pan/kenBurns/parallax/slide                                            |
+| `hooks/`                          | Placeholder for future shared hooks                                          | (none yet)                                                                                                                                  |
+| `variants/Solid/`                 | SolidBackground — theme palette fill                                         | `SolidBackground.tsx`                                                                                                                       |
+| `variants/Gradient/`              | GradientBackground — palette gradients                                       | `GradientBackground.tsx`                                                                                                                    |
+| `variants/Image/`                 | ImageBackground — effects, overlays, presets, TemplateVariationAdapter       | `index.tsx`; `overlays/`, `variants/`                                                                                                       |
+| `variants/Video/`                 | VideoBackground — video with overlay support                                 | `VideoBackground.tsx`                                                                                                                       |
+| `variants/Patterns/`              | PatternBackground — SVG patterns                                             | `index.tsx`; `variants/` (dots, lines, grid, crosshatch, triangles, chevron)                                                                |
+| `variants/Particles/`             | ParticleBackground — particle fields                                         | `index.tsx`; `variants/` (dots, lines, bubbles, snow, confetti)                                                                             |
+| `variants/NoiseBackground/`       | Procedural noise and graphics                                                | `config.ts`, `NOISE_VARIANTS`; sub-variants (GridNoise, SubtleNoise, GrainNoise, WaveNoise, FogNoise, StaticNoise, FloatingParticles, etc.) |
+| `variants/AnimatedBackground.tsx` | Pure CSS/SVG animated backgrounds                                            | `AnimatedBackground.tsx`                                                                                                                    |
+| `variants/Textures/`              | TextureBackground — tiled image with overlay                                 | `TextureBackground.tsx`                                                                                                                     |
 
 ## Implementation Guidelines
 

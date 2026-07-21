@@ -29,12 +29,12 @@ Font loading and registration utilities for Remotion videos. Loads fonts from lo
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Fonts root | `src/core/utils/fonts/.docs/readMe.md` |
-| Parent roadmap | `src/core/utils/.docs/DevelopmentRoadMap.md` |
-| Parent tickets | `src/core/utils/.docs/Tickets.md` |
-| FontContext (consumer) | `src/core/context/FontContext.tsx` |
+| Context                           | Path                                         |
+| --------------------------------- | -------------------------------------------- |
+| Fonts root                        | `src/core/utils/fonts/.docs/readMe.md`       |
+| Parent roadmap                    | `src/core/utils/.docs/DevelopmentRoadMap.md` |
+| Parent tickets                    | `src/core/utils/.docs/Tickets.md`            |
+| FontContext (consumer)            | `src/core/context/FontContext.tsx`           |
 | TemplateThemeConfig (theme shape) | `src/templates/types/TemplateThemeConfig.ts` |
 
 ## Roadmap
@@ -62,10 +62,10 @@ Related (consumers and dependencies):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
+| Module          | Responsibility                                                                                                                              | Entry Points    |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | `fontLoader.ts` | FontConfig, fontPathMap, createFontConfig, loadFontFile, loadFontByName, loadFontsFromTheme, getAllFontNames; systemFonts, fontNameVariants | `fontLoader.ts` |
-| `index.ts` | fonts object (display, text, specialty categories); reference for available fonts | `index.ts` |
+| `index.ts`      | fonts object (display, text, specialty categories); reference for available fonts                                                           | `index.ts`      |
 
 ## Implementation Guidelines
 

@@ -6,7 +6,10 @@ import MatchCardSixersThunder from "../../layout/MatchCard/card-Sixers-thunder";
 import MatchCardSixersThunderClubOnly from "../../layout/MatchCard/card-Sixers-thunder-clubOnly";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const MatchRowSixersThunder: React.FC<MatchRowProps> = ({
   match,
@@ -32,23 +35,21 @@ const MatchRowSixersThunder: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        {
-          isAccountClub ? (
-            <MatchCardSixersThunderClubOnly
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          ) : (
-            <MatchCardSixersThunder
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          )
-        }
+        {isAccountClub ? (
+          <MatchCardSixersThunderClubOnly
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        ) : (
+          <MatchCardSixersThunder
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        )}
       </AnimatedContainer>
     </div>
   );

@@ -22,6 +22,7 @@
 ## ⏳ To Do (easy → hard)
 
 1. **Documentation — readMe Standard Format** (see TKT-2025-013 in Tickets.md)
+
    - Update containers, easing, images, layout, transitions, typography, ui to standard folder contract
    - Parent folders left: containers, easing, images, layout, transitions, typography, ui; plus components root
 

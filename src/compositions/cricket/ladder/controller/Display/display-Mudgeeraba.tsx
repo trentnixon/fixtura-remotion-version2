@@ -37,9 +37,15 @@ export const LadderDisplayMudgeeraba: React.FC<LadderDisplayProps> = ({
         exitAnimation={containerAnimation.containerOut}
       >
         <div className={`${containerMargin} flex flex-col ${headerGap}`}>
-          <TableHeaderMudgeeraba title={gradeName} headerHeight={headerHeight} compact={compact} />
+          <TableHeaderMudgeeraba
+            title={gradeName}
+            headerHeight={headerHeight}
+            compact={compact}
+          />
 
-          <div className={`flex-1 flex flex-col ${rowGap} overflow-hidden min-h-0`}>
+          <div
+            className={`flex-1 flex flex-col ${rowGap} overflow-hidden min-h-0`}
+          >
             {League.map((team, index) => (
               <RowMudgeeraba
                 key={team.position}

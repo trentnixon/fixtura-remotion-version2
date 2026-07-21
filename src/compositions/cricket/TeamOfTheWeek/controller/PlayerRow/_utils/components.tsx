@@ -7,9 +7,7 @@ import {
   BowlingStatDisplayProps,
   StatItemProps,
 } from "../_types/StatDisplayProps";
-import {
-  STAT_SUFFIX_DELAY_OFFSET,
-} from "./constants";
+import { STAT_SUFFIX_DELAY_OFFSET } from "./constants";
 
 /**
  * Component to display formatted batting stats
@@ -86,11 +84,7 @@ export const BowlingStatDisplay: React.FC<BowlingStatDisplayProps> = ({
 /**
  * Helper component for stat items (used for all-rounder score)
  */
-export const StatItem: React.FC<StatItemProps> = ({
-  label,
-  value,
-  delay,
-}) => {
+export const StatItem: React.FC<StatItemProps> = ({ label, value, delay }) => {
   const { animations } = useAnimationContext();
   const smallTextAnimation = animations.text.main.copyIn;
   const largeTextAnimation = animations.text.main.copyIn;

@@ -13,13 +13,10 @@ export const DEFAULT_GAMES_PER_SCREEN = 2;
  * @param fixturesLayout - Layout configuration object
  * @returns Number of games to display per screen
  */
-export const getGamesPerScreen = (
-  fixturesLayout?: { CricketUpcoming?: number },
-): number => {
-  if (
-    fixturesLayout &&
-    typeof fixturesLayout.CricketUpcoming === "number"
-  ) {
+export const getGamesPerScreen = (fixturesLayout?: {
+  CricketUpcoming?: number;
+}): number => {
+  if (fixturesLayout && typeof fixturesLayout.CricketUpcoming === "number") {
     return fixturesLayout.CricketUpcoming;
   }
   return fixturesLayout?.CricketUpcoming || DEFAULT_GAMES_PER_SCREEN;

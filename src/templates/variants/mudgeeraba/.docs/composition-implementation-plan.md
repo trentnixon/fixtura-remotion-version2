@@ -53,6 +53,7 @@ Implement all 8 cricket composition types for the Mudgeeraba template variant:
 ### Template Variant Status
 
 ✅ **Template Variant Created**
+
 - Location: `src/templates/variants/mudgeeraba/`
 - Theme: Configured with Rubik Dirt font
 - Animations: Configured
@@ -87,30 +88,37 @@ Implement all 8 cricket composition types for the Mudgeeraba template variant:
 Following the guide's recommended order for efficient implementation:
 
 1. **Team Roster** (Simplest - ~1-2 hours)
+
    - Just player names and logos
    - Minimal complexity
 
 2. **Top 5** (Straightforward - ~2-3 hours)
+
    - Single column list
    - Handles both batting and bowling
 
 3. **Team of the Week** (Similar to Top 5 - ~2-3 hours)
+
    - 2-column grid layout
    - Similar patterns to Top 5
 
 4. **Upcoming** (More complex - ~2-4 hours)
+
    - Game cards with metadata
    - Logo layout variations
 
 5. **Ladder** (Table structure - ~2-4 hours)
+
    - Screen pagination
    - Table layout with headers
 
 6. **Performances** (Union types - ~2-4 hours)
+
    - Data transformation
    - Handles both batting and bowling
 
 7. **Results** (Complex nested structure - ~3-5 hours)
+
    - 2 results per screen
    - Club-only variants
    - Complex match card structure
@@ -131,6 +139,7 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** High (Start here - simplest)
 
 **Files to Create:**
+
 - `src/compositions/cricket/teamRoster/mudgeeraba.tsx`
 - `src/compositions/cricket/teamRoster/controller/Display/display-Mudgeeraba.tsx`
 - Use existing layout components:
@@ -139,6 +148,7 @@ Following the guide's recommended order for efficient implementation:
   - `layout/Metadata/`
 
 **Key Features:**
+
 - Player name list
 - Team logos and names
 - Match metadata
@@ -146,6 +156,7 @@ Following the guide's recommended order for efficient implementation:
 - Sponsor merging
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/teamRoster/basic.tsx`
 
 **Estimated Time:** 1-2 hours
@@ -157,18 +168,21 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** High
 
 **Files to Create:**
+
 - `src/compositions/cricket/top5/mudgeeraba.tsx`
 - `src/compositions/cricket/top5/controller/PlayersDisplay/display-Mudgeeraba.tsx`
 - `src/compositions/cricket/top5/controller/PlayerRow/row-Mudgeeraba.tsx`
 - Use or create layout component
 
 **Key Features:**
+
 - Union type system (BatterData | BowlerData)
 - Dynamic title generation
 - Score display (batting: runs/balls, bowling: wickets/runs/overs)
 - Dynamic row height calculation
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/top5/basic.tsx`
 
 **Note:** Handles both `CricketTop5Batting` and `CricketTop5Bowling` composition IDs
@@ -182,11 +196,13 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** Medium
 
 **Files to Create:**
+
 - `src/compositions/cricket/TeamOfTheWeek/mudgeeraba.tsx`
 - `src/compositions/cricket/TeamOfTheWeek/controller/TeamOfTheWeekDisplay/display-Mudgeeraba.tsx`
 - `src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Mudgeeraba.tsx`
 
 **Key Features:**
+
 - 2-column grid layout
 - Player categories (Batter, Bowler, All-Rounder, Twelfth Man)
 - Position-based icons
@@ -194,6 +210,7 @@ Following the guide's recommended order for efficient implementation:
 - Club-only support
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/TeamOfTheWeek/basic.tsx`
 
 **Estimated Time:** 2-3 hours
@@ -205,18 +222,21 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** Medium
 
 **Files to Create:**
+
 - `src/compositions/cricket/upcoming/mudgeeraba.tsx`
 - `src/compositions/cricket/upcoming/controller/GamesDisplay/FixtureDisplayMudgeeraba.tsx`
 - `src/compositions/cricket/upcoming/controller/GamesList/games-list-Mudgeeraba.tsx`
 - `src/compositions/cricket/upcoming/layout/Card/game-card-Mudgeeraba.tsx`
 
 **Key Features:**
+
 - Configurable games per screen
 - Screen pagination
 - Multiple logo layout variations
 - Metadata components (date, time, ground, grade)
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/upcoming/basic.tsx`
 
 **Estimated Time:** 2-4 hours
@@ -228,17 +248,20 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** Medium
 
 **Files to Create:**
+
 - `src/compositions/cricket/ladder/mudgeeraba.tsx`
 - `src/compositions/cricket/ladder/controller/Display/display-Mudgeeraba.tsx`
 - `src/compositions/cricket/ladder/controller/TeamRows/row-Mudgeeraba.tsx`
 
 **Key Features:**
+
 - Team rankings with points
 - Screen pagination (configurable teams per screen)
 - Table layout with headers
 - Club-only variants
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/ladder/basic.tsx`
 
 **Estimated Time:** 2-4 hours
@@ -250,17 +273,20 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** Medium
 
 **Files to Create:**
+
 - `src/compositions/cricket/performances/mudgeeraba.tsx`
 - `src/compositions/cricket/performances/controller/PerformancesDisplay/display-Mudgeeraba.tsx`
 - `src/compositions/cricket/performances/layout/StandardPerformanceRow.tsx` or variant-specific row
 
 **Key Features:**
+
 - Union type system (BattingPerformanceData | BowlingPerformanceData)
 - Screen pagination
 - Data transformation
 - Club-only variants
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/performances/basic.tsx`
 
 **Note:** Handles both `CricketBattingPerformances` and `CricketBowlingPerformances` composition IDs
@@ -274,18 +300,21 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** Low (More complex)
 
 **Files to Create:**
+
 - `src/compositions/cricket/results/mudgeeraba.tsx`
 - `src/compositions/cricket/results/controller/ResultsDisplay/display-Mudgeeraba.tsx`
 - `src/compositions/cricket/results/layout/MatchCard/card-Mudgeeraba.tsx`
 - `src/compositions/cricket/results/layout/MatchCard/card-Mudgeeraba-ClubOnly.tsx` (optional)
 
 **Key Features:**
+
 - Fixed 2 results per screen
 - Complex nested match card structure
 - Club-only variants
 - Screen pagination
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/results/basic.tsx`
 
 **Estimated Time:** 3-5 hours
@@ -297,6 +326,7 @@ Following the guide's recommended order for efficient implementation:
 **Priority:** Low (Most complex)
 
 **Files to Create:**
+
 - `src/compositions/cricket/resultSingle/mudgeeraba.tsx`
 - `src/compositions/cricket/resultSingle/controller/ResultSingleDisplay/display-Mudgeeraba.tsx`
 - `src/compositions/cricket/resultSingle/layout/MatchCard/card-Mudgeeraba.tsx`
@@ -304,12 +334,14 @@ Following the guide's recommended order for efficient implementation:
 - `src/compositions/cricket/resultSingle/layout/Sections/ResultStatement/ResultStatementMudgeeraba.tsx` (optional)
 
 **Key Features:**
+
 - One match per screen (full height)
 - Match-to-match transitions
 - Fixed section heights
 - Club-only variants with result statements
 
 **Reference Implementation:**
+
 - `src/compositions/cricket/resultSingle/basic.tsx`
 
 **Estimated Time:** 3-5 hours
@@ -383,18 +415,19 @@ For each composition, verify:
 
 ### Implementation Status
 
-| Composition | Status | Files Created | Exported | Tested | Notes |
-|-------------|--------|--------------|----------|--------|-------|
-| **Team Roster** | ⬜ Not Started | - | - | - | Start here |
-| **Top 5** | ⬜ Not Started | - | - | - | - |
-| **Team of the Week** | ⬜ Not Started | - | - | - | - |
-| **Upcoming** | ⬜ Not Started | - | - | - | - |
-| **Ladder** | ⬜ Not Started | - | - | - | - |
-| **Performances** | ⬜ Not Started | - | - | - | - |
-| **Results** | ⬜ Not Started | - | - | - | - |
-| **Result Single** | ⬜ Not Started | - | - | - | - |
+| Composition          | Status         | Files Created | Exported | Tested | Notes      |
+| -------------------- | -------------- | ------------- | -------- | ------ | ---------- |
+| **Team Roster**      | ⬜ Not Started | -             | -        | -      | Start here |
+| **Top 5**            | ⬜ Not Started | -             | -        | -      | -          |
+| **Team of the Week** | ⬜ Not Started | -             | -        | -      | -          |
+| **Upcoming**         | ⬜ Not Started | -             | -        | -      | -          |
+| **Ladder**           | ⬜ Not Started | -             | -        | -      | -          |
+| **Performances**     | ⬜ Not Started | -             | -        | -      | -          |
+| **Results**          | ⬜ Not Started | -             | -        | -      | -          |
+| **Result Single**    | ⬜ Not Started | -             | -        | -      | -          |
 
 **Legend:**
+
 - ⬜ Not Started
 - 🟡 In Progress
 - ✅ Completed
@@ -402,17 +435,17 @@ For each composition, verify:
 
 ### Export Status
 
-| File | Status | Notes |
-|------|--------|-------|
-| `ladder/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `top5/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `results/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `resultSingle/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `upcoming/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `teamRoster/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `performances/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `TeamOfTheWeek/index.tsx` | ⬜ | Add `mudgeeraba` export |
-| `cricket/index.tsx` | ⬜ | Add all `mudgeeraba` exports |
+| File                      | Status | Notes                        |
+| ------------------------- | ------ | ---------------------------- |
+| `ladder/index.tsx`        | ⬜     | Add `mudgeeraba` export      |
+| `top5/index.tsx`          | ⬜     | Add `mudgeeraba` export      |
+| `results/index.tsx`       | ⬜     | Add `mudgeeraba` export      |
+| `resultSingle/index.tsx`  | ⬜     | Add `mudgeeraba` export      |
+| `upcoming/index.tsx`      | ⬜     | Add `mudgeeraba` export      |
+| `teamRoster/index.tsx`    | ⬜     | Add `mudgeeraba` export      |
+| `performances/index.tsx`  | ⬜     | Add `mudgeeraba` export      |
+| `TeamOfTheWeek/index.tsx` | ⬜     | Add `mudgeeraba` export      |
+| `cricket/index.tsx`       | ⬜     | Add all `mudgeeraba` exports |
 
 ---
 
@@ -430,6 +463,7 @@ For each composition, verify:
 All compositions must:
 
 1. **Use Mudgeeraba theme:**
+
    ```typescript
    const { selectedPalette, layout } = useThemeContext();
    // Use selectedPalette for colors
@@ -437,6 +471,7 @@ All compositions must:
    ```
 
 2. **Use Mudgeeraba animations:**
+
    ```typescript
    const { animations } = useAnimationContext();
    // Use animations.container, animations.text, etc.

@@ -58,9 +58,7 @@ export const calculateGameCardHeight = (
  * @param games - Array of games with assignSponsors properties
  * @returns Merged AssignSponsors object
  */
-export const mergeAssignSponsors = (
-  games: GameData[],
-): AssignSponsors => {
+export const mergeAssignSponsors = (games: GameData[]): AssignSponsors => {
   return games.reduce(
     (acc, game) => ({ ...acc, ...game.assignSponsors }),
     {} as AssignSponsors,

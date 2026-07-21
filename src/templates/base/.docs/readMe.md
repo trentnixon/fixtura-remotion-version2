@@ -24,8 +24,8 @@ Provides the foundational layout, shared components, and theme contract that all
   - `calculations.ts`: Duration calculation utilities for intro/main/outro sequences
 - `components/`: [components/.docs/readMe.md](./components/.docs/readMe.md)
 - `layouts/`: [layouts/.docs/readMe.md](./layouts/.docs/readMe.md)
-- `_types/`: [_types/.docs/readMe.md](./_types/.docs/readMe.md)
-- `_utils/`: [_utils/.docs/readMe.md](./_utils/.docs/readMe.md)
+- `_types/`: [\_types/.docs/readMe.md](./_types/.docs/readMe.md)
+- `_utils/`: [\_utils/.docs/readMe.md](./_utils/.docs/readMe.md)
 
 ## Relations
 

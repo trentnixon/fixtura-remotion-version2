@@ -6,7 +6,9 @@ import BrickWorkMatchCard from "../../layout/MatchCard/card-brickWork";
 import BrickWorkMatchCardClubOnly from "../../layout/MatchCard/card-brickWork-ClubOnly";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
-const BrickWorkSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
+const BrickWorkSingleResult: React.FC<ResultSingleDisplayProps> = ({
+  match,
+}) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { isAccountClub } = useVideoDataContext();

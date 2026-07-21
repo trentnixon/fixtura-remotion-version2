@@ -23,5 +23,5 @@ Data type definitions for normalized inputs to compositions and utilities. Expor
 
 ## Dependencies
 
-- Internal: compositions/cricket/_types (match.ts only)
+- Internal: compositions/cricket/\_types (match.ts only)
 - External: TypeScript

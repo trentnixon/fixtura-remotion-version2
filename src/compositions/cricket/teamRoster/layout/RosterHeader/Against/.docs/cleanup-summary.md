@@ -21,15 +21,17 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/AccountTeamProps.ts`
+
 - **Extracted from:** `LargeTeamHeader.tsx`
 - **Content:** `AccountTeamProps` interface
 - **Purpose:** Centralizes props type definition for account team header components
 - **Note:** Used by `LargeTeamHeader` which displays the against team as the main team (inverse perspective from accountHolder folder)
-- **Dependencies:** 
+- **Dependencies:**
   - `RosterDataItem` from `../../../../types`
   - `ColorVariant` from `../../../../../../../components/typography/AnimatedText`
 
 #### Created `_types/AgainstTeamProps.ts`
+
 - **Extracted from:** `SmallOpponentCard.tsx`
 - **Content:** `AgainstTeamProps` interface
 - **Purpose:** Centralizes props type definition for against team (opponent) components
@@ -39,6 +41,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_TEAM_HEADER_VARIANT = "onContainerCopy"` - Default color variant for team header components
   - `DEFAULT_LARGE_TEAM_LOGO_SIZE = "150"` - Default logo size for large team header
@@ -50,6 +53,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted functions:**
   - `parseLogoSize(logoSize)` - Parses logo size string to number
   - `getLogoSizeClass(logoSize)` - Generates Tailwind CSS class for logo size
@@ -59,6 +63,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `LargeTeamHeader.tsx`
+
 - **Removed:** Inline `AccountTeamProps` interface definition
 - **Removed:** Unused imports (`RosterDataItem`, `ColorVariant`)
 - **Removed:** Hardcoded default values (`"onContainerCopy"`, `"150"`, `0`)
@@ -76,6 +81,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Team name truncation to use `MAX_TEAM_NAME_LENGTH` constant
 
 #### Modified `SmallOpponentCard.tsx`
+
 - **Removed:** Inline `AgainstTeamProps` interface definition
 - **Removed:** Unused imports (`RosterDataItem`, `ColorVariant`)
 - **Removed:** Hardcoded default values (`"onContainerCopy"`, `"80"`, `0`)

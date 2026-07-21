@@ -1,6 +1,7 @@
 # Cleanup Summary - Ladder Root Folder
 
 ## Overview
+
 This cleanup extracted shared validation logic, data casting, and duration calculation functions from all entry point files into a centralized `_utils` folder.
 
 ## Changes Made
@@ -8,17 +9,21 @@ This cleanup extracted shared validation logic, data casting, and duration calcu
 ### Created Files
 
 #### `_utils/helpers.ts`
+
 Extracted the following shared utility functions:
+
 - `hasValidLadderData()` - Validates ladder data structure
 - `castToLadderDataArray()` - Casts composition data to LadderData array
 - `calculateLadderDuration()` - Calculates duration in frames based on timings (FPS_LADDER or default 300)
 
 Also includes constants:
+
 - `DEFAULT_LADDER_DURATION` - Default value of 300 frames
 
 ### Modified Files
 
 All entry point files were updated to:
+
 1. Import shared utilities from `./_utils/helpers`
 2. Replace inline validation logic with `hasValidLadderData()` function call
 3. Replace inline casting with `castToLadderDataArray()` function call
@@ -26,6 +31,7 @@ All entry point files were updated to:
 5. Remove duplicate code blocks (approximately 10+ lines per file)
 
 **Files Updated:**
+
 - `basic.tsx`
 - `classic.tsx`
 - `brickWork.tsx`

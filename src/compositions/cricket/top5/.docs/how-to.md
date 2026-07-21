@@ -33,6 +33,7 @@ This guide explains how to create a new **top 5 composition asset type** (like `
 ### What is a Top 5 Composition?
 
 A **top 5 composition** is a sport-specific content type that displays:
+
 - **Ranked list of top 5 players** (batters or bowlers)
 - **Player statistics** (runs/balls for batters, wickets/runs/overs for bowlers)
 - **Team logos** (for each player's team)
@@ -42,19 +43,20 @@ A **top 5 composition** is a sport-specific content type that displays:
 
 ### Key Characteristics
 
-| Aspect | Top 5 |
-|--------|-------|
-| **Layout** | Single column, vertical list |
-| **Players Per Screen** | Up to 5 players (typically) |
-| **Row Height** | Calculated dynamically based on player count |
-| **Player Types** | Batter or Bowler (union type) |
-| **Score Display** | Type-specific (runs/balls vs wickets/runs/overs) |
-| **Title** | Dynamic based on composition ID |
-| **Background Colors** | Top player uses different color |
+| Aspect                 | Top 5                                            |
+| ---------------------- | ------------------------------------------------ |
+| **Layout**             | Single column, vertical list                     |
+| **Players Per Screen** | Up to 5 players (typically)                      |
+| **Row Height**         | Calculated dynamically based on player count     |
+| **Player Types**       | Batter or Bowler (union type)                    |
+| **Score Display**      | Type-specific (runs/balls vs wickets/runs/overs) |
+| **Title**              | Dynamic based on composition ID                  |
+| **Background Colors**  | Top player uses different color                  |
 
 ### Example: Cricket Top 5 Composition
 
 The `CricketTop5Batting` and `CricketTop5Bowling` compositions:
+
 - **Data Type**: `PlayerData[]` - array of player objects (union type)
 - **Structure**: Each player has name, team, logo, stats (batting or bowling)
 - **Variants**: `basic`, `classic`, `brickwork`, `classicTwoColumn`, `cnsw`, `cnswPrivate`, `sixersThunder`
@@ -125,6 +127,7 @@ src/compositions/cricket/top5/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation
    - Transforms data based on composition ID
    - Extracts title and sponsors
@@ -132,6 +135,7 @@ src/compositions/cricket/top5/
    - No screen pagination (shows all players on one screen)
 
 2. **Display Components** (`controller/PlayersDisplay/display-*.tsx`):
+
    - Variant-specific layout and styling
    - Creates single-column grid
    - Maps over players array
@@ -139,12 +143,14 @@ src/compositions/cricket/top5/
    - Includes sponsor footer
 
 3. **Player Row Components** (`controller/PlayerRow/row-*.tsx`):
+
    - Variant-specific player row wrapper
    - Handles animation delays and exit frames
    - Uses layout components for rendering
    - Applies restrictions (name/team length limits)
 
 4. **Layout Components** (`layout/`):
+
    - **StandardPlayerRow**: Standard layout (logo, name/team, score)
    - **PlayerRowNameLogoWrapperValue**: Grid-based layout
    - **PlayerRowNameClassicTwoColumn**: Two-column layout
@@ -153,6 +159,7 @@ src/compositions/cricket/top5/
    - **PlayerRowNameSixersThunder**: Sixers/Thunder layout
 
 5. **Types** (`_types/types.ts`):
+
    - Union type: `PlayerData` (BatterData | BowlerData)
    - Type guards: `isBatter()`, `isBowler()`
    - Composition constants: `TOP5_COMPOSITIONS`
@@ -174,16 +181,19 @@ src/compositions/cricket/top5/
 Before creating a new top 5 composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of player data structure**
+
    - Batting stats (runs, balls, strike rate, not-out flag)
    - Bowling stats (wickets, overs, runs)
    - Team information (name, logo)
    - Player information (name, team played for)
 
 3. ✅ **Access to test data**
+
    - Sample top 5 player data
    - Both batting and bowling data
    - Different composition IDs
@@ -280,6 +290,7 @@ export const TOP5_COMPOSITIONS = {
 ```
 
 **Key Points:**
+
 - **Union type**: `PlayerData` combines BatterData and BowlerData
 - **Type guards**: Helper functions to check player type
 - **Composition constants**: Defines composition ID strings
@@ -316,9 +327,7 @@ export const hasValidPlayersData = (playersData: unknown): boolean => {
  * @param playersData - Data from video context
  * @returns Typed array of PlayerData
  */
-export const castToPlayerDataArray = (
-  playersData: unknown,
-): PlayerData[] => {
+export const castToPlayerDataArray = (playersData: unknown): PlayerData[] => {
   return playersData as unknown as PlayerData[];
 };
 
@@ -327,9 +336,13 @@ export const castToPlayerDataArray = (
  * @param videoMeta - Video metadata from context
  * @returns Composition ID string (empty string if not available)
  */
-export const extractCompositionId = (videoMeta: {
-  video?: { metadata?: { compositionId?: string } };
-} | undefined): string => {
+export const extractCompositionId = (
+  videoMeta:
+    | {
+        video?: { metadata?: { compositionId?: string } };
+      }
+    | undefined,
+): string => {
   return videoMeta?.video?.metadata?.compositionId || "";
 };
 
@@ -338,14 +351,19 @@ export const extractCompositionId = (videoMeta: {
  * @param videoMeta - Video metadata from context
  * @returns Array of Sponsor objects (empty array if not available)
  */
-export const extractPrimarySponsors = (videoMeta: {
-  club?: { sponsors?: { primary?: Sponsor[] } };
-} | undefined): Sponsor[] => {
+export const extractPrimarySponsors = (
+  videoMeta:
+    | {
+        club?: { sponsors?: { primary?: Sponsor[] } };
+      }
+    | undefined,
+): Sponsor[] => {
   return videoMeta?.club?.sponsors?.primary || [];
 };
 ```
 
 **Key Points:**
+
 - **Validation**: Checks if data is valid array with items
 - **Type casting**: Safely casts unknown data to PlayerData[]
 - **Composition ID**: Extracts from video metadata
@@ -423,6 +441,7 @@ export const getTitle = (compositionId: string): string => {
 ```
 
 **Key Points:**
+
 - **Type transformation**: Adds `type` field based on composition ID
 - **Composition detection**: Checks composition ID to determine type
 - **Title generation**: Returns appropriate title for composition
@@ -443,9 +462,13 @@ import { getTitle } from "../utils/dataTransformer";
  * @param videoMeta - Video metadata from context
  * @returns Title string (grouping category or empty string)
  */
-export const getCNSWTitle = (videoMeta: {
-  video?: { groupingCategory?: string };
-} | undefined): string => {
+export const getCNSWTitle = (
+  videoMeta:
+    | {
+        video?: { groupingCategory?: string };
+      }
+    | undefined,
+): string => {
   return videoMeta?.video?.groupingCategory || "";
 };
 
@@ -454,9 +477,7 @@ export const getCNSWTitle = (videoMeta: {
  * @param playersData - Players data array
  * @returns Title string (grade name or empty string)
  */
-export const getCNSWPrivateTitle = (
-  playersData: unknown[],
-): string => {
+export const getCNSWPrivateTitle = (playersData: unknown[]): string => {
   if (!playersData || playersData.length === 0) {
     return "";
   }
@@ -477,6 +498,7 @@ export const getStandardTitle = (compositionId: string): string => {
 ```
 
 **Key Points:**
+
 - **Standard title**: Uses composition ID
 - **CNSW title**: Uses grouping category from metadata
 - **CNSW private title**: Uses grade name from first player
@@ -524,6 +546,7 @@ export const getScoreValues = (player: PlayerData): ScoreValues => {
 ```
 
 **Key Points:**
+
 - **Batting scores**: Runs with not-out indicator, balls in suffix
 - **Bowling scores**: Wickets/runs, overs in suffix
 - **Type guards**: Uses `isBatter()` and `isBowler()` to check type
@@ -567,6 +590,7 @@ export default NoPlayersData;
 ```
 
 **Key Points:**
+
 - **AbsoluteFill**: Uses Remotion's AbsoluteFill for full-screen display
 - **Dynamic title**: Uses composition ID to determine title
 - **Context-aware**: Gets composition ID from video context
@@ -703,6 +727,7 @@ export default StandardPlayerRow;
 ```
 
 **Key Points:**
+
 - **Three sections**: Logo, name/team, score
 - **Top player styling**: Different background color for index 0
 - **Score display**: Uses `getScoreValues()` helper
@@ -769,6 +794,7 @@ export default PlayerRowBasic;
 ```
 
 **Key Points:**
+
 - **Animation wrapper**: Wraps layout component with AnimatedContainer
 - **Delay calculation**: Uses `calculatePlayerDelay()` for staggered animations
 - **Exit frame**: Calculates exit animation frame
@@ -840,6 +866,7 @@ export default PlayersDisplayBasic;
 ```
 
 **Key Points:**
+
 - **Single column**: Uses `grid grid-cols-1`
 - **Dynamic row height**: Calculates based on player count
 - **Sponsor footer**: Includes footer at bottom
@@ -872,7 +899,7 @@ export const Top5Players: React.FC = () => {
   const { data: playersData, videoMeta } = data;
   const compositionId = extractCompositionId(videoMeta);
   const sponsors = extractPrimarySponsors(videoMeta);
-  
+
   // If no data is available, show a placeholder
   if (!hasValidPlayersData(playersData)) {
     return <NoPlayersData />;
@@ -905,6 +932,7 @@ export default Basic;
 ```
 
 **Key Points:**
+
 - **Data validation**: Checks if data is valid before rendering
 - **Data transformation**: Transforms data based on composition ID
 - **Title extraction**: Gets title based on composition ID
@@ -976,8 +1004,9 @@ export const CricketTop5Bowling = {
 Top 5 compositions support two player types:
 
 1. **Batter** (`type: "batting"`):
+
    - **Required fields**: `runs`, `balls`, `SR`, `notOut`
-   - **Score display**: Runs (with * for not-out), balls in suffix
+   - **Score display**: Runs (with \* for not-out), balls in suffix
    - **Composition IDs**: `CricketTop5Batting`, `CricketBattingPerformances`
 
 2. **Bowler** (`type: "bowling"`):
@@ -997,6 +1026,7 @@ const transformedData = transformPlayerData(
 ```
 
 **Transformation Logic:**
+
 - If composition ID is batting-related → adds `type: "batting"`
 - If composition ID is bowling-related → adds `type: "bowling"`
 - Preserves all other player data
@@ -1008,6 +1038,7 @@ const transformedData = transformPlayerData(
 ### Structure
 
 Display components (`controller/PlayersDisplay/display-*.tsx`):
+
 - Create single-column grid layout
 - Map over players array
 - Calculate row heights dynamically
@@ -1017,15 +1048,18 @@ Display components (`controller/PlayersDisplay/display-*.tsx`):
 ### Row Height Calculation
 
 Row heights are calculated dynamically based on:
+
 - Total available height
 - Number of players
 - Vertical gaps between rows
 - Padding and title height
 
 **Formula:**
+
 ```typescript
 const totalVerticalGaps = (playerCount - 1) * VERTICAL_GAP;
-const availableHeight = totalHeight / HEIGHT_DIVISOR - PADDING * 2 - TITLE_HEIGHT;
+const availableHeight =
+  totalHeight / HEIGHT_DIVISOR - PADDING * 2 - TITLE_HEIGHT;
 const rowHeight = (availableHeight - totalVerticalGaps) / playerCount;
 ```
 
@@ -1036,6 +1070,7 @@ const rowHeight = (availableHeight - totalVerticalGaps) / playerCount;
 ### Structure
 
 Player row components (`controller/PlayerRow/row-*.tsx`):
+
 - Wrap layout components with animation containers
 - Handle animation delays and exit frames
 - Apply restrictions (name/team length limits)
@@ -1044,6 +1079,7 @@ Player row components (`controller/PlayerRow/row-*.tsx`):
 ### Layout Components
 
 Layout components (`layout/`):
+
 - **StandardPlayerRow**: Standard layout (logo left, name/team center-left, score right)
 - **PlayerRowNameLogoWrapperValue**: Grid-based layout (12-column grid)
 - **PlayerRowNameClassicTwoColumn**: Two-column layout
@@ -1058,6 +1094,7 @@ Layout components (`layout/`):
 ### StandardPlayerRow Layout
 
 **Structure:**
+
 ```
 ┌─────────────────────────────────────────┐
 │ [Logo] │ Player Name    │ Score         │
@@ -1066,6 +1103,7 @@ Layout components (`layout/`):
 ```
 
 **Sections:**
+
 1. **Logo Section** (fixed width): Team logo
 2. **Content Section** (flex-grow):
    - **Left**: Player name and team name (stacked)
@@ -1074,6 +1112,7 @@ Layout components (`layout/`):
 ### PlayerRowNameLogoWrapperValue Layout
 
 **Structure:**
+
 ```
 ┌─────────────────────────────────────────┐
 │ Name & Team │ Logo │ Score              │
@@ -1082,6 +1121,7 @@ Layout components (`layout/`):
 ```
 
 **Grid Layout:**
+
 - 12-column grid
 - Name/team: 7 columns
 - Logo: 2 columns
@@ -1096,11 +1136,13 @@ Layout components (`layout/`):
 Scores are displayed differently based on player type:
 
 **Batting Scores:**
+
 - **Main value**: Runs (with `*` for not-out)
 - **Suffix**: Balls faced in parentheses `(balls)`
 - **Example**: `150* (120)` or `150 (120)`
 
 **Bowling Scores:**
+
 - **Main value**: Wickets/runs
 - **Suffix**: Overs in parentheses `(overs)`
 - **Example**: `5/45 (10.0)`
@@ -1112,6 +1154,7 @@ const { mainValue, suffix } = getScoreValues(player);
 ```
 
 **Returns:**
+
 - `mainValue`: Main score display (runs or wickets/runs)
 - `suffix`: Suffix display (balls or overs, or empty string)
 
@@ -1124,15 +1167,18 @@ const { mainValue, suffix } = getScoreValues(player);
 Titles are generated based on composition ID:
 
 **Standard Titles:**
+
 - `CricketTop5Batting` → "Top 5 Batters"
 - `CricketTop5Bowling` → "Top 5 Bowlers"
 - `CricketBattingPerformances` → "Batting Performances"
 - `CricketBowlingPerformances` → "Bowling Performances"
 
 **CNSW Titles:**
+
 - Uses `groupingCategory` from video metadata
 
 **CNSW Private Titles:**
+
 - Uses grade name from first player's `assignSponsors.grade.name`
 
 ---
@@ -1154,10 +1200,10 @@ const delay = calculatePlayerDelay(index); // index * STAGGER_DELAY_MULTIPLIER
 Within each player row, elements animate with increasing delays:
 
 ```typescript
-delay + PLAYER_NAME_DELAY_OFFSET      // 2 frames
-delay + TEAM_NAME_DELAY_OFFSET        // 4 frames
-delay + MAIN_SCORE_DELAY_OFFSET       // 6 frames
-delay + SCORE_SUFFIX_DELAY_OFFSET     // 7 frames
+delay + PLAYER_NAME_DELAY_OFFSET; // 2 frames
+delay + TEAM_NAME_DELAY_OFFSET; // 4 frames
+delay + MAIN_SCORE_DELAY_OFFSET; // 6 frames
+delay + SCORE_SUFFIX_DELAY_OFFSET; // 7 frames
 ```
 
 ### Exit Animation
@@ -1197,6 +1243,7 @@ Once you have the Basic variant working, create additional variants:
 ### Composition IDs
 
 The routing system recognizes:
+
 - `CricketTop5Batting`
 - `CricketTop5Bowling`
 - `CricketBattingPerformances`
@@ -1290,7 +1337,9 @@ const testBatter: BatterData = {
     height: 100,
   },
   playedFor: "Team A",
-  assignSponsors: { /* ... */ },
+  assignSponsors: {
+    /* ... */
+  },
   prompt: "",
   runs: 150,
   balls: 120,
@@ -1307,7 +1356,9 @@ const testBowler: BowlerData = {
     height: 100,
   },
   playedFor: "Team B",
-  assignSponsors: { /* ... */ },
+  assignSponsors: {
+    /* ... */
+  },
   prompt: "",
   wickets: 5,
   overs: "10.0",
@@ -1333,6 +1384,7 @@ const testBowler: BowlerData = {
 **Error:** Player type not matching composition ID
 
 **Solutions:**
+
 1. Check `transformPlayerData()` logic
 2. Verify composition ID extraction
 3. Check composition ID matches `TOP5_COMPOSITIONS` constants
@@ -1343,6 +1395,7 @@ const testBowler: BowlerData = {
 **Error:** Wrong score format displayed
 
 **Solutions:**
+
 1. Check `getScoreValues()` function
 2. Verify type guards (`isBatter()`, `isBowler()`)
 3. Check player data has required fields
@@ -1353,6 +1406,7 @@ const testBowler: BowlerData = {
 **Error:** Rows overflow or don't fill available space
 
 **Solutions:**
+
 1. Check `calculateRowDimensions()` calculation
 2. Verify `VERTICAL_GAP`, `PADDING`, `TITLE_HEIGHT` constants
 3. Check `HEIGHT_DIVISOR` is appropriate
@@ -1363,6 +1417,7 @@ const testBowler: BowlerData = {
 **Error:** Title not displaying correctly
 
 **Solutions:**
+
 1. Check composition ID extraction
 2. Verify title helper function matches composition ID
 3. Check title is passed to display component
@@ -1373,6 +1428,7 @@ const testBowler: BowlerData = {
 **Error:** Animations not staggered or not animating
 
 **Solutions:**
+
 1. Check delay calculation (`calculatePlayerDelay()`)
 2. Verify animation delay offsets are correct
 3. Check animation context is available
@@ -1475,20 +1531,24 @@ Creating a top 5 composition involves:
 ### Key Implementation Details
 
 **Player Row Structure:**
+
 - Logo section (fixed width)
 - Content section (flex-grow)
   - Left: Player name and team name (stacked)
   - Right: Score value and suffix
 
 **Score Display Logic:**
-- Batting: Runs (with * for not-out) + balls in suffix
+
+- Batting: Runs (with \* for not-out) + balls in suffix
 - Bowling: Wickets/runs + overs in suffix
 
 **Data Transformation:**
+
 - Adds `type` field based on composition ID
 - Preserves all other player data
 
 **Title Generation:**
+
 - Standard: Based on composition ID
 - CNSW: Based on grouping category
 - CNSW Private: Based on grade name

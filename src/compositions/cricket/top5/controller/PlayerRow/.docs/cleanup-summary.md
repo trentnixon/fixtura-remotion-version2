@@ -21,6 +21,7 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/PlayerRowProps.ts`
+
 - **Extracted interface:**
   - `PlayerRowProps` - Props interface for all PlayerRow components
     - `player: PlayerData`
@@ -32,6 +33,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `STAGGER_DELAY_MULTIPLIER = 5` - Multiplier for calculating animation delay based on index
   - `DEFAULT_MAIN_DURATION = 30` - Default duration in frames for main sequence if not specified
@@ -43,15 +45,17 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/calculations.ts`
+
 - **Extracted functions:**
-  - `calculatePlayerDelay(index)` - Calculates animation delay for player rows based on index (index * STAGGER_DELAY_MULTIPLIER)
+  - `calculatePlayerDelay(index)` - Calculates animation delay for player rows based on index (index \* STAGGER_DELAY_MULTIPLIER)
   - `calculateExitFrame(timings)` - Calculates exit frame for container animations ((timings?.FPS_MAIN || DEFAULT_MAIN_DURATION) - EXIT_ANIMATION_OFFSET)
 - **Purpose:** Centralizes calculation logic that was duplicated across all component files
-- **Dependencies:** 
+- **Dependencies:**
   - `Timings` from `../../../../../../core/types/data/common`
   - Constants from `./constants`
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted functions:**
   - `getDefaultRestrictions()` - Returns default restrictions object with nameLength: 20 and teamLength: 35
 - **Purpose:** Centralizes the restrictions object creation that was duplicated in Basic and BrickWork variants
@@ -60,6 +64,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `row-Basic.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline delay calculation (`index * 5`)
@@ -73,6 +78,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Restrictions prop to use `getDefaultRestrictions()`
 
 #### Modified `row-ClassicTwoCoulmn.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline delay calculation (`index * 5`)
@@ -83,6 +89,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations to use shared utilities
 
 #### Modified `row-CNSW.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline delay calculation (`index * 5`)
@@ -93,6 +100,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations to use shared utilities
 
 #### Modified `row-CNSW-private.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline delay calculation (`index * 5`)
@@ -103,6 +111,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations to use shared utilities
 
 #### Modified `row-BrickWork.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline delay calculation (`index * 5`)
@@ -115,6 +124,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Restrictions prop to use `getDefaultRestrictions()`
 
 #### Modified `row-SixersThunder.tsx`
+
 - **Removed:** Inline `PlayerRowProps` interface definition
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline delay calculation (`index * 5`)

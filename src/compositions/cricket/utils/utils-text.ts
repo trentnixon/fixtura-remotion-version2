@@ -57,17 +57,12 @@ function isRoleIndicator(text: string): boolean {
 }
 
 /** Role suffixes to strip from names; matched case-insensitively so " (c)" and " (C)" both strip */
-const ROLE_SUFFIXES = [
-  " (WK)",
-  " VC",
-  " C",
-  " (VC)",
-  " (C)",
-];
+const ROLE_SUFFIXES = [" (WK)", " VC", " C", " (VC)", " (C)"];
 
-function extractAllRoleSuffixes(
-  text: string,
-): { cleanedName: string; roleSuffixes: string[] } {
+function extractAllRoleSuffixes(text: string): {
+  cleanedName: string;
+  roleSuffixes: string[];
+} {
   let cleaned = text;
   const extractedSuffixes: string[] = [];
 

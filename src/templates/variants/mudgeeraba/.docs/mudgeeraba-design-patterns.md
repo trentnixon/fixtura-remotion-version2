@@ -74,12 +74,13 @@ src/compositions/cricket/results/layout/Sections/
 
 All Mudgeeraba clip-path values must use the shared tokens below. Do not define local `CLIP_*` polygons in composition files.
 
-| Angle | Cut | Use cases |
-| --- | --- | --- |
-| **Shallow** | 5% | List rows, status bars, mirrored columns, supporting panels |
-| **Steep** | 30% | Logo wells, dividers, hero score wedges |
+| Angle       | Cut | Use cases                                                   |
+| ----------- | --- | ----------------------------------------------------------- |
+| **Shallow** | 5%  | List rows, status bars, mirrored columns, supporting panels |
+| **Steep**   | 30% | Logo wells, dividers, hero score wedges                     |
 
 **Shallow tokens:**
+
 ```typescript
 import {
   SHALLOW_ROW_LEFT,
@@ -98,6 +99,7 @@ import {
 ```
 
 **Steep tokens:**
+
 ```typescript
 import {
   STEEP_LOGO_WELL_LEFT,
@@ -108,6 +110,7 @@ import {
 ```
 
 **Approved polygons:**
+
 - Shallow row/column left: `polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)`
 - Shallow row/column right (mirrored): `polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%)`
 - Steep logo well left: `polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%)`
@@ -115,6 +118,7 @@ import {
 - Steep hero score wedge: `polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%)`
 
 **Implementation:**
+
 ```tsx
 <div
   style={{
@@ -153,7 +157,7 @@ import {
   surfaceClassName="flex items-stretch w-full overflow-hidden pl-0 pr-10 relative"
 >
   {children}
-</LayeredAngularPanel>
+</LayeredAngularPanel>;
 ```
 
 ### 4. Standard Logo Wells
@@ -170,11 +174,13 @@ Use `LogoWell` for every team/club logo frame in Mudgeeraba compositions. Do not
 | `circle` | Rounded well with subtle border | Ladder, fixtures, match headers |
 
 **Props:**
+
 - `size` — outer width/height in px (usually row height or fixed header size)
 - `emphasisBorder` — 4px club primary border (match headers only)
 - `showCornerAccent` — small primary wedge on the **flush** bottom corner: bottom-left for `steepLeft`, bottom-right for `steepRight` (default `true`)
 
 **Example:**
+
 ```tsx
 import { LogoWell } from "templates/variants/mudgeeraba/design";
 
@@ -197,10 +203,10 @@ Position icon blocks (primary-coloured stat wells) are **not** logo wells — ke
 
 Main header uses two stacked clipped panels (no overlap) aligned with list-row styling:
 
-| Layer | Shape | Surface | Content |
-| --- | --- | --- | --- |
+| Layer           | Shape                | Surface                                | Content                                                              |
+| --------------- | -------------------- | -------------------------------------- | -------------------------------------------------------------------- |
 | **Title panel** | `SHALLOW_HEADER_TOP` | Vertical 3-stop gradient (no underlay) | Competition title — `useFittedFontSize` capped at `titleSmall` (4em) |
-| **Name panel** | `SHALLOW_STATUS_BAR` | Vertical primary gradient | Association/club name — fitted + `text-balance` |
+| **Name panel**  | `SHALLOW_STATUS_BAR` | Vertical primary gradient              | Association/club name — fitted + `text-balance`                      |
 
 Both panels animate via `AnimatedContainer` using `animations.container.main.header` (staggered slide-in from right). No `LayeredAngularPanel` underlay on the header.
 
@@ -217,6 +223,7 @@ import { LayeredAngularHeader } from "templates/variants/mudgeeraba/design";
 **Pattern:** Outer edges get more padding, inner edges get less to create visual balance.
 
 **Token helpers:**
+
 - `PADDING_SHALLOW_LEFT` → `pl-4 pr-10`
 - `PADDING_SHALLOW_RIGHT` → `pl-12 pr-3`
 - `PADDING_SHALLOW_LEFT_COMPACT` → `pl-2 pr-6`
@@ -224,6 +231,7 @@ import { LayeredAngularHeader } from "templates/variants/mudgeeraba/design";
 - `getShallowColumnPadding(isLeftColumn)` → left or right class string
 
 **Example:**
+
 ```tsx
 className={`... ${getShallowColumnPadding(isLeftColumn)}`}
 ```
@@ -235,14 +243,10 @@ className={`... ${getShallowColumnPadding(isLeftColumn)}`}
 ```tsx
 <div className="flex w-full relative">
   {/* Left Column */}
-  <div className="flex flex-col flex-1">
-    {/* Content */}
-  </div>
-  
+  <div className="flex flex-col flex-1">{/* Content */}</div>
+
   {/* Right Column */}
-  <div className="flex flex-col flex-1">
-    {/* Content */}
-  </div>
+  <div className="flex flex-col flex-1">{/* Content */}</div>
 </div>
 ```
 
@@ -290,12 +294,14 @@ PlayerStatsSingleTeamOnlyMudgeeraba
 **Location:** `PlayerStats-SingleTeamOnly-Mudgeeraba.tsx`
 
 **Features:**
+
 - Angled edge based on column position
 - Mirrored padding
 - White background (`selectedPalette.container.backgroundTransparent.high`)
 - Uses `truncatePlayerName()` for name formatting (not `truncateText()`)
 
 **Code Pattern:**
+
 ```tsx
 const PlayerStatRow: React.FC<{
   playerName: string;
@@ -330,11 +336,13 @@ const PlayerStatRow: React.FC<{
 #### 2. Stats Column
 
 **Features:**
+
 - Displays exactly 2 players (pads with null if needed)
 - Uses `gap-4` for vertical spacing
 - Formats stats based on batting/bowling type
 
 **Code Pattern:**
+
 ```tsx
 const StatsColumn: React.FC<{
   players: PlayerStat[];
@@ -344,7 +352,7 @@ const StatsColumn: React.FC<{
 }> = ({ players, isBatting, delay, isLeftColumn }) => {
   const displayPlayers = [
     ...players.slice(0, 2),
-    ...Array(Math.max(0, 2 - players.length)).fill(null)
+    ...Array(Math.max(0, 2 - players.length)).fill(null),
   ].slice(0, 2);
 
   return (
@@ -375,6 +383,7 @@ const StatsColumn: React.FC<{
 #### 3. Stat Formatting
 
 **Batting Stats:**
+
 ```typescript
 function formatBattingStat(p: PlayerStat): string {
   return `${p.runs}${p.notOut ? "*" : ""} (${p.balls ?? 0})`;
@@ -382,6 +391,7 @@ function formatBattingStat(p: PlayerStat): string {
 ```
 
 **Bowling Stats:**
+
 ```typescript
 function formatBowlingStat(p: PlayerStat): string {
   return `${p.wickets ?? 0}/${p.runs} (${p.overs ?? 0})`;
@@ -411,14 +421,17 @@ value={truncateText(playerName, MAX_NAME_LENGTH)}
 ### Color Usage
 
 **Backgrounds:**
+
 - **Main background:** `selectedPalette.background.main` (dark blue)
 - **Content containers:** `selectedPalette.container.backgroundTransparent.high` (white/light)
 
 **Text Colors:**
+
 - **On containers:** `variant="onContainerCopy"` (black/dark)
 - **On backgrounds:** `variant="onBackground"` (light)
 
 **Primary Accent:**
+
 - Use `colors.primary` from `useThemeContext()` for accent elements
 
 ### Spacing Scale
@@ -442,12 +455,14 @@ value={truncateText(playerName, MAX_NAME_LENGTH)}
 ### Rule: No New Root-Level Folders
 
 **DO:**
+
 ```
 Sections/MatchHeader/MudgeerabaSingleTeamHeader.tsx
 Sections/PlayerStats/PlayerStats-SingleTeamOnly-Mudgeeraba.tsx
 ```
 
 **DON'T:**
+
 ```
 Mudgeeraba/MatchHeader.tsx
 Mudgeeraba/PlayerStats.tsx
@@ -486,23 +501,26 @@ Sections/PlayerStats/_utils/helpers.ts
 ### Accessing Theme Values
 
 ```tsx
-const { 
-  selectedPalette,  // Color palettes
-  colors,           // Primary colors
-  fontClasses       // Font families
+const {
+  selectedPalette, // Color palettes
+  colors, // Primary colors
+  fontClasses, // Font families
 } = useThemeContext();
 ```
 
 ### Common Theme Patterns
 
 **Background Colors:**
+
 ```tsx
 const backgroundColorMain = selectedPalette.background.main;
-const backgroundColorContainer = selectedPalette.container.backgroundTransparent.high;
+const backgroundColorContainer =
+  selectedPalette.container.backgroundTransparent.high;
 const primaryColor = colors.primary;
 ```
 
 **Font Families:**
+
 ```tsx
 style={{ fontFamily: fontClasses.title?.family }}  // Rubik Dirt
 style={{ fontFamily: fontClasses.copy?.family }}   // Heebo

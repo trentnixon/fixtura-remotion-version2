@@ -7,7 +7,12 @@ import { computePartialTwoDayVisibility } from "./_utils/visibility";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { getClubTeamPlayers } from "../../MatchCard/_utils/calculations";
-import { PlayerStatsClubOnlyProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
+import {
+  PlayerStatsClubOnlyProps,
+  StatItemProps,
+  StatSectionProps,
+  TeamStatsProps,
+} from "./_types/PlayerStatsProps";
 import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -145,7 +150,11 @@ export const PlayerStatsClubOnlyCNSW: React.FC<PlayerStatsClubOnlyProps> = ({
   const clubTeamPlayers = getClubTeamPlayers(match);
 
   // Determine which team is the club team
-  const clubTeam = match.homeTeam.isClubTeam ? match.homeTeam : match.awayTeam.isClubTeam ? match.awayTeam : null;
+  const clubTeam = match.homeTeam.isClubTeam
+    ? match.homeTeam
+    : match.awayTeam.isClubTeam
+      ? match.awayTeam
+      : null;
 
   if (!clubTeamPlayers || !clubTeam) {
     return null; // Don't render if no club team found

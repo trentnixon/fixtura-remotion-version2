@@ -46,7 +46,10 @@ const RosterDisplayBrickWork: React.FC<RosterDisplayProps> = ({ roster }) => {
             <div className="min-w-0" style={{ flex: "6 0 0" }}>
               <RosterPlayerListBrickWork roster={roster} />
             </div>
-            <div className="flex flex-col gap-2 justify-center min-w-0" style={{ flex: "4 0 0" }}>
+            <div
+              className="flex flex-col gap-2 justify-center min-w-0"
+              style={{ flex: "4 0 0" }}
+            >
               <AccountTeamLarge
                 roster={roster}
                 logoSize={BRICKWORK_ACCOUNT_LOGO}
@@ -86,7 +89,6 @@ const RosterDisplayBrickWork: React.FC<RosterDisplayProps> = ({ roster }) => {
               className="text-center text-[26px]"
               variant="onContainerCopy"
             />
-
           </div>
         </div>
       </AnimatedContainer>

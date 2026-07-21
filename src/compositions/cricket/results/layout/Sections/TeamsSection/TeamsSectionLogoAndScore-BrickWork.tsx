@@ -38,9 +38,7 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
     "Climate Crisis";
 
   // Logo fits container height (square, capped at container)
-  const logoSize = containerHeight
-    ? Math.min(containerHeight, 120)
-    : 90;
+  const logoSize = containerHeight ? Math.min(containerHeight, 120) : 90;
 
   const homeFirstInnings = getFirstInningsDisplay(
     type,

@@ -6,7 +6,10 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import MatchCardClassicTwoColumn from "../../layout/MatchCard/card-classic-twocolumn";
 import MatchCardClassicTwoColumnClubOnly from "../../layout/MatchCard/card-classic-twocolumn-clubOnly";
 import { MatchRowProps } from "./_types/MatchRowProps";
-import { calculateDelay, calculateAnimationOutFrame } from "./_utils/calculations";
+import {
+  calculateDelay,
+  calculateAnimationOutFrame,
+} from "./_utils/calculations";
 
 const MatchRowClassicTwoColumn: React.FC<MatchRowProps> = ({
   match,
@@ -33,23 +36,21 @@ const MatchRowClassicTwoColumn: React.FC<MatchRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        {
-          isAccountClub ? (
-            <MatchCardClassicTwoColumnClubOnly
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          ) : (
-            <MatchCardClassicTwoColumn
-              match={match}
-              index={index}
-              rowHeight={rowHeight}
-              delay={delay}
-            />
-          )
-        }
+        {isAccountClub ? (
+          <MatchCardClassicTwoColumnClubOnly
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        ) : (
+          <MatchCardClassicTwoColumn
+            match={match}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+          />
+        )}
       </AnimatedContainer>
     </div>
   );

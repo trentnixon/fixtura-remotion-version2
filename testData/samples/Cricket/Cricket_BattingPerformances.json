@@ -521,13 +521,7 @@
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [
-    45,
-    180,
-    345,
-    510,
-    645
-  ],
+  "frames": [45, 180, 345, 510, 645],
   "render": {
     "renderId": 23107,
     "schedulerId": 1097
@@ -630,9 +624,7 @@
         "title": "Batting Performances",
         "frames": [],
         "assetId": 65,
-        "titleSplit": [
-          "Performances"
-        ],
+        "titleSplit": ["Performances"],
         "videoTitle": "Batting Performances",
         "assetTypeId": 3,
         "compositionId": "CricketBattingPerformances",

@@ -13,14 +13,14 @@ Broadcast Pro variant: template extending the base layout with Teko and Rajdhani
 
 The Broadcast Pro theme is split by responsibility. The **public export** is `broadcastProTheme` from **`theme/index.ts`**. **`index.tsx`** imports it via **`import { broadcastProTheme } from "./theme"`** (the `theme/` directory; there is no `theme.ts` file at the variant root—avoids a name clash where `./theme` would resolve to a file instead of the folder).
 
-| File / folder | Responsibility |
-|---------------|------------------|
-| `theme/index.ts` | Assembles `baseTheme` + tokens + layout + mode + merged `componentStyles`; **`satisfies TemplateThemeConfig`**. |
-| `theme/tokens.ts` | `fonts`, `fontClasses`, `broadcastProGlassOpacity`, **`broadcastProRosterListSizing`** (roster name/index pixel scaling consumed by `computeBroadcastProRosterPlayerListMetrics`). |
-| `theme/componentStyles.shared.ts` | Cross-cutting `componentStyles` keys: titles, body, player/team/label, `metadata*`. |
-| `theme/composition/` | One file per **cricket composition** surface: `ladder.ts`, `upcoming.ts`, `top5.ts`, `teamOfTheWeek.ts`, `results.ts`, `roster.ts`. Merged in `composition/index.ts` as `broadcastProCompositionComponentStyles`. |
-| `theme/layout.ts` | `layout` (heights, spacing, padding, border radius). |
-| `theme/mode.ts` | `mode` (light / lightAlt / dark / darkAlt palettes). |
+| File / folder                     | Responsibility                                                                                                                                                                                                    |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `theme/index.ts`                  | Assembles `baseTheme` + tokens + layout + mode + merged `componentStyles`; **`satisfies TemplateThemeConfig`**.                                                                                                   |
+| `theme/tokens.ts`                 | `fonts`, `fontClasses`, `broadcastProGlassOpacity`, **`broadcastProRosterListSizing`** (roster name/index pixel scaling consumed by `computeBroadcastProRosterPlayerListMetrics`).                                |
+| `theme/componentStyles.shared.ts` | Cross-cutting `componentStyles` keys: titles, body, player/team/label, `metadata*`.                                                                                                                               |
+| `theme/composition/`              | One file per **cricket composition** surface: `ladder.ts`, `upcoming.ts`, `top5.ts`, `teamOfTheWeek.ts`, `results.ts`, `roster.ts`. Merged in `composition/index.ts` as `broadcastProCompositionComponentStyles`. |
+| `theme/layout.ts`                 | `layout` (heights, spacing, padding, border radius).                                                                                                                                                              |
+| `theme/mode.ts`                   | `mode` (light / lightAlt / dark / darkAlt palettes).                                                                                                                                                              |
 
 **Editing guidance:** tune glass and roster list math in **`tokens.ts`**; tune shared typography in **`componentStyles.shared.ts`**; tune a single composition’s Tailwind classes in the matching file under **`theme/composition/`**.
 

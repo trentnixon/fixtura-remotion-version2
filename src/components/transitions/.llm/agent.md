@@ -29,11 +29,11 @@ Thin wrappers around `@remotion/transitions` for applying transitions between se
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Transitions root | `src/components/transitions/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Context           | Path                                         |
+| ----------------- | -------------------------------------------- |
+| Transitions root  | `src/components/transitions/.docs/README.md` |
+| Parent roadmap    | `src/components/.docs/DevelopmentRoadMap.md` |
+| Component tickets | `src/components/.docs/Tickets.md`            |
 
 ## Roadmap
 
@@ -60,11 +60,11 @@ Related (for consumers, not direct use in transitions):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|--------------|
-| `TransitionWrapper.tsx` | Single child in TransitionSeries.Sequence + Transition; getTransitionPresentation, getTiming | `TransitionWrapper.tsx` |
+| Module                        | Responsibility                                                                                                                             | Entry Points                  |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| `TransitionWrapper.tsx`       | Single child in TransitionSeries.Sequence + Transition; getTransitionPresentation, getTiming                                               | `TransitionWrapper.tsx`       |
 | `TransitionSeriesWrapper.tsx` | Array of sequences; renders TransitionSeries.Sequence per item with Transition between each; same presentation/timing as TransitionWrapper | `TransitionSeriesWrapper.tsx` |
-| `index.ts` | Barrel export (TransitionWrapper, TransitionSeriesWrapper, types) | `index.ts` |
+| `index.ts`                    | Barrel export (TransitionWrapper, TransitionSeriesWrapper, types)                                                                          | `index.ts`                    |
 
 ## Implementation Guidelines
 

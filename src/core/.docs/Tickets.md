@@ -12,6 +12,7 @@
 ## TKT-2025-015: Core readMe Migration — .docs Layout
 
 ---
+
 ID: TKT-2025-015
 Status: Completed
 Priority: Medium
@@ -19,6 +20,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Feature Documentation System, TKT-2025-013 (components migration)
+
 ---
 
 ### Overview
@@ -39,6 +41,7 @@ Moved hooks, components, and components/dev readMes into .docs; created readMe f
 ## TKT-2025-016: Core Skill Tree — .skills/architecture
 
 ---
+
 ID: TKT-2025-016
 Status: Completed
 Priority: Medium
@@ -46,6 +49,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: TKT-2025-015, TKT-2025-014 (components skill pattern), Feature Documentation System
+
 ---
 
 ### Overview

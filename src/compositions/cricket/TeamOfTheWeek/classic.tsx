@@ -22,7 +22,10 @@ export const TeamOfTheWeekList: React.FC = () => {
   const players = castToTeamOfTheWeekPlayers(teamOfTheWeekData);
 
   return (
-    <TeamOfTheWeekDisplayClassic players={players} sponsors={sponsors.primary} />
+    <TeamOfTheWeekDisplayClassic
+      players={players}
+      sponsors={sponsors.primary}
+    />
   );
 };
 
@@ -32,6 +35,3 @@ export const Classic: React.FC = () => {
 };
 
 export default Classic;
-
-
-

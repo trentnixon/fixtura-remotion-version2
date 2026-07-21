@@ -61,7 +61,9 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
           <AnimatedContainer
             type="full"
             className={`flex items-center justify-center w-full bg-black/20 p-1 ${layout.borderRadius.container}`}
-            animation={ContainerAnimations.main.itemContainerSecondary.containerIn}
+            animation={
+              ContainerAnimations.main.itemContainerSecondary.containerIn
+            }
             animationDelay={delay}
             style={{
               background: selectedPalette.container.backgroundTransparent.low,

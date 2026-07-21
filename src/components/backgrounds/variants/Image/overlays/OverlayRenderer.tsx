@@ -244,6 +244,8 @@ const renderPatternOverlay = (
           left: 0,
           right: 0,
           bottom: 0,
+          // Pattern tiling requires CSS repeat; preload via <link> / ensure asset is local.
+          // eslint-disable-next-line @remotion/no-background-image -- tiled pattern overlay
           backgroundImage: `url(${config.patternUrl})`,
           backgroundRepeat: "repeat",
           backgroundSize: `${scale * 100}%`,

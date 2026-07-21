@@ -64,11 +64,11 @@ src/core/types/
 
 ### 5. Key Type Flows
 
-| Type Source | Consumed By |
-|-------------|-------------|
-| data/* | VideoDataContext, datasetProcessing, compositionMapping |
-| sport/cricket/* | cricket compositions (results, top5, ladder, bowling) |
-| FixturaDataset | All dataset consumers expecting normalized structure |
+| Type Source      | Consumed By                                             |
+| ---------------- | ------------------------------------------------------- |
+| data/\*          | VideoDataContext, datasetProcessing, compositionMapping |
+| sport/cricket/\* | cricket compositions (results, top5, ladder, bowling)   |
+| FixturaDataset   | All dataset consumers expecting normalized structure    |
 
 ### 6. Rules for Cross-Dependencies
 

@@ -38,16 +38,16 @@ Variants do not create providers; they receive context from this stack via hooks
 
 Variants pass these props to BaseTemplate:
 
-| Prop | Purpose |
-|------|---------|
-| `data` | FixturaDataset |
-| `settings` | UIConfig (from theme or separate) |
-| `introComponent` | FC for intro sequence |
-| `outroComponent` | FC with `{ doesAccountHaveSponsors }` |
-| `backgroundComponent` | FC (default: BaseBackground; variants typically use SelectTemplateBackground) |
-| `customAudioComponent` | FC (default: BaseAudioTrack) |
-| `mainComponentLayout` | FC for main content (typically RouteToComposition or variant Main) |
-| `animations` | AnimationConfig from variant's animations.ts |
+| Prop                   | Purpose                                                                       |
+| ---------------------- | ----------------------------------------------------------------------------- |
+| `data`                 | FixturaDataset                                                                |
+| `settings`             | UIConfig (from theme or separate)                                             |
+| `introComponent`       | FC for intro sequence                                                         |
+| `outroComponent`       | FC with `{ doesAccountHaveSponsors }`                                         |
+| `backgroundComponent`  | FC (default: BaseBackground; variants typically use SelectTemplateBackground) |
+| `customAudioComponent` | FC (default: BaseAudioTrack)                                                  |
+| `mainComponentLayout`  | FC for main content (typically RouteToComposition or variant Main)            |
+| `animations`           | AnimationConfig from variant's animations.ts                                  |
 
 ### 3. Understand BaseTemplateLayout Sequencing
 
@@ -62,6 +62,7 @@ Durations come from `data.timings` (FPS_INTRO, FPS_MAIN, FPS_OUTRO) or `_utils/c
 ### 4. Theme Extension
 
 Variants import `baseTheme` from `base/theme.ts` and merge overrides. Base defines:
+
 - Fonts, componentStyles (Tailwind), layout (heights, spacing, padding)
 - Color modes (light, dark, lightAlt, darkAlt)
 
@@ -78,8 +79,8 @@ Do not modify base theme for variant-specific overrides; variants provide their 
 
 - **components/**: BaseAudioTrack, BaseBackground — see components/.docs/readMe.md
 - **layouts/**: Reserved — see layouts/.docs/readMe.md
-- **_types/**: Props interfaces — see _types/.docs/readMe.md
-- **_utils/**: constants, calculations — see _utils/.docs/readMe.md
+- **\_types/**: Props interfaces — see \_types/.docs/readMe.md
+- **\_utils/**: constants, calculations — see \_utils/.docs/readMe.md
 
 ## Output
 

@@ -7,6 +7,7 @@ This guide explains how to add and hook test data samples into the Fixtura Remot
 ## Overview
 
 Test data serves two purposes:
+
 1. **Development**: Enables preview and testing in Remotion Studio
 2. **Reference**: Defines the expected data structure for production renders
 
@@ -19,11 +20,13 @@ The system uses JSON files that follow a specific structure and must be register
 ### Location
 
 Test data files are stored in:
+
 ```
 testData/samples/[Sport]/[Sport]_[AssetName].json
 ```
 
 **Example:**
+
 ```
 testData/samples/Cricket/Cricket_TeamOfTheWeek.json
 ```
@@ -34,14 +37,14 @@ Every test data file must include these top-level keys:
 
 ```json
 {
-  "data": [],              // Your asset-specific data
-  "asset": {},             // Asset metadata
-  "render": {},            // Render information
-  "account": {},           // Account information
-  "timings": {},           // Frame timing configuration
-  "frames": [],            // Frame markers (optional)
-  "videoMeta": {},         // Video metadata and configuration
-  "errors": []             // Error tracking
+  "data": [], // Your asset-specific data
+  "asset": {}, // Asset metadata
+  "render": {}, // Render information
+  "account": {}, // Account information
+  "timings": {}, // Frame timing configuration
+  "frames": [], // Frame markers (optional)
+  "videoMeta": {}, // Video metadata and configuration
+  "errors": [] // Error tracking
 }
 ```
 
@@ -54,6 +57,7 @@ Every test data file must include these top-level keys:
 Your asset's main data. Structure varies by asset type.
 
 **TeamOfTheWeek Example:**
+
 ```json
 "data": [
   {
@@ -141,6 +145,7 @@ Defines frame durations for each section. These control the video timing.
 ```
 
 **Key Points:**
+
 - At 30 FPS: 30 frames = 1 second
 - `FPS_MAIN` should accommodate all screens/items
 - Total duration = FPS_INTRO + FPS_MAIN + (FPS_OUTRO if sponsors included)
@@ -200,6 +205,7 @@ Club/organization information:
 `compositionId` MUST EXACTLY MATCH the export name in `src/compositions/cricket/index.tsx`
 
 Example:
+
 - JSON: `"compositionId": "CricketTeamOfTheWeek"`
 - Export: `export const CricketTeamOfTheWeek = { ... }`
 
@@ -382,7 +388,7 @@ export const testDatasets: DatasetRecord = {
   CricketBattingPerformances: CricketBattingPerformances,
   CricketBowlingPerformances: CricketBowlingPerformances,
   CricketRoster: CricketRoster,
-  CricketTeamOfTheWeek: CricketTeamOfTheWeek,  // ADD THIS
+  CricketTeamOfTheWeek: CricketTeamOfTheWeek, // ADD THIS
 
   // AFL
   AFLLadder: AFLLadder,
@@ -406,7 +412,7 @@ export const datasetsByCategory: DatasetCategories = {
     { id: "CricketBattingPerformances", name: "Batting Performances" },
     { id: "CricketBowlingPerformances", name: "Bowling Performances" },
     { id: "CricketRoster", name: "Team Roster" },
-    { id: "CricketTeamOfTheWeek", name: "Team of the Week" },  // ADD THIS
+    { id: "CricketTeamOfTheWeek", name: "Team of the Week" }, // ADD THIS
   ],
   AFL: [
     // ... AFL datasets
@@ -429,6 +435,7 @@ export const datasetsByCategory: DatasetCategories = {
    - Registers a Remotion composition with ID: `${templateId}-${variant}-${datasetID}`
 
 **Example Generated Composition IDs:**
+
 - `Basic-Solid-CricketTeamOfTheWeek`
 - `Basic-Texture-CricketTeamOfTheWeek`
 - `BrickWork-Solid-CricketTeamOfTheWeek`
@@ -441,6 +448,7 @@ export const datasetsByCategory: DatasetCategories = {
 4. Renders with provided data
 
 **Flow:**
+
 ```
 JSON data.videoMeta.video.metadata.compositionId: "CricketTeamOfTheWeek"
         ↓
@@ -460,11 +468,13 @@ Renders: CricketTeamOfTheWeek.basic (or other variant)
 **Symptom:** Composition doesn't appear in Studio or fails to render
 
 **Causes:**
+
 1. `compositionId` in JSON doesn't match export name
 2. Export not added to cricket/index.tsx
 3. Test data not imported/registered in testData/index.ts
 
 **Solution:**
+
 - Verify: JSON `compositionId` === Export name (case-sensitive)
 - Check both testData/index.ts and cricket/index.tsx
 
@@ -473,11 +483,13 @@ Renders: CricketTeamOfTheWeek.basic (or other variant)
 **Symptom:** Video is too short/long, cuts off, or has awkward pauses
 
 **Causes:**
+
 1. `FPS_MAIN` doesn't account for all screens
 2. Missing calculation for multi-screen content
 3. Incorrect frame calculations in template
 
 **Solution:**
+
 - Calculate: `FPS_MAIN = totalScreens × framesPerScreen`
 - Ensure template Sequence durations add up correctly
 - At 30 FPS: 30 frames = 1 second
@@ -487,10 +499,12 @@ Renders: CricketTeamOfTheWeek.basic (or other variant)
 **Symptom:** Too many or too few items displayed at once
 
 **Causes:**
+
 1. Not reading `contentLayout.divideFixturesBy` correctly
 2. Hardcoded item counts in components
 
 **Solution:**
+
 ```typescript
 const itemsPerScreen =
   videoMeta.video.contentLayout.divideFixturesBy.CricketTeamOfTheWeek || 5;
@@ -501,11 +515,13 @@ const itemsPerScreen =
 **Symptom:** Runtime errors when accessing data properties
 
 **Causes:**
+
 1. JSON structure doesn't match TypeScript types
 2. Missing optional chaining for nullable fields
 3. Incorrect type assertions
 
 **Solution:**
+
 - Use type guards: `if (player.batting) { ... }`
 - Add optional chaining: `player.club?.logo?.url`
 - Validate JSON against types
@@ -515,11 +531,13 @@ const itemsPerScreen =
 **Symptom:** Broken images, no audio, console errors
 
 **Causes:**
+
 1. Invalid or missing URLs in JSON
 2. CORS issues with external URLs
 3. Network connectivity problems
 
 **Solution:**
+
 - Use valid, accessible URLs
 - Test URLs in browser first
 - Provide fallback/placeholder assets
@@ -546,21 +564,25 @@ const itemsPerScreen =
 ### Manual Testing Steps
 
 1. **Validate JSON:**
+
    ```bash
    # Use a JSON validator or:
    node -e "JSON.parse(require('fs').readFileSync('path/to/file.json'))"
    ```
 
 2. **Start Studio:**
+
    ```bash
    npm run dev
    ```
 
 3. **Find Your Composition:**
+
    - Look for: `Basic-Solid-Cricket[AssetName]`
    - Should appear in composition list
 
 4. **Test Rendering:**
+
    - Click composition
    - Check console for errors
    - Verify data displays correctly
@@ -586,6 +608,7 @@ const itemsPerScreen =
 ### 2. Real-ish Data
 
 Use realistic data in test files:
+
 - Actual player/team names
 - Reasonable stats/numbers
 - Valid image URLs
@@ -594,6 +617,7 @@ Use realistic data in test files:
 ### 3. Comments in JSON
 
 While JSON doesn't support comments, you can use a `_comments` field:
+
 ```json
 {
   "_comments": "TeamOfTheWeek test data - 10 players across 4 categories",
@@ -610,6 +634,7 @@ While JSON doesn't support comments, you can use a `_comments` field:
 ### 5. Multiple Test Files (Optional)
 
 For complex assets, create multiple test files:
+
 ```
 Cricket_TeamOfTheWeek.json          // Standard case
 Cricket_TeamOfTheWeek_Empty.json    // Edge case: no data
@@ -627,7 +652,9 @@ Register each separately for comprehensive testing.
 
 ```json
 {
-  "data": [ /* your data */ ],
+  "data": [
+    /* your data */
+  ],
   "asset": {
     "assetID": 1,
     "assetTypeID": 1,
@@ -689,16 +716,19 @@ Register each separately for comprehensive testing.
 **Key Takeaways:**
 
 1. **Three-Step Registration:**
+
    - Create JSON file in `testData/samples/[Sport]/`
    - Import in `testData/index.ts`
    - Add to both `testDatasets` and `datasetsByCategory`
 
 2. **Critical Fields:**
+
    - `videoMeta.video.metadata.compositionId` (must match export)
    - `timings.FPS_MAIN` (must accommodate all content)
    - `contentLayout.divideFixturesBy.[AssetName]` (items per screen)
 
 3. **Naming Convention:**
+
    - `compositionId` must EXACTLY match export name
    - Case-sensitive, no typos allowed
 
@@ -712,4 +742,3 @@ Register each separately for comprehensive testing.
 **Created:** 2025-12-17
 **Last Updated:** 2025-12-17
 **Example Asset:** TeamOfTheWeek (CricketTeamOfTheWeek)
-

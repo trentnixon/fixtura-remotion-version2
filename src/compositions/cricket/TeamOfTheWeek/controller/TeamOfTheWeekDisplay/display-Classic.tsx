@@ -49,6 +49,3 @@ const TeamOfTheWeekDisplayClassic: React.FC<TeamOfTheWeekDisplayProps> = ({
 };
 
 export default TeamOfTheWeekDisplayClassic;
-
-
-

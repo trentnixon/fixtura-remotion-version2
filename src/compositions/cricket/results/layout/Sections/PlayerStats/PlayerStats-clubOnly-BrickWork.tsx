@@ -7,7 +7,12 @@ import { computePartialTwoDayVisibility } from "./_utils/visibility";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { getClubTeamPlayers } from "../../MatchCard/_utils/calculations";
-import { PlayerStatsClubOnlyProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
+import {
+  PlayerStatsClubOnlyProps,
+  StatItemProps,
+  StatSectionProps,
+  TeamStatsProps,
+} from "./_types/PlayerStatsProps";
 import { truncatePlayerName } from "../../../../utils/utils-text";
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -100,10 +105,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   return (
     <div className={`w-full px-0 py-0 flex flex-row gap-4 ${className}`}>
       {showBatting && (
-        <div
-          className="w-1/2"
-
-        >
+        <div className="w-1/2">
           <StatSection
             players={batters}
             isBatting={true}
@@ -122,10 +124,7 @@ const TeamStats: React.FC<TeamStatsProps> = ({
       )}
 
       {showBowling && (
-        <div
-          className="w-1/2"
-
-        >
+        <div className="w-1/2">
           <StatSection
             players={bowlers}
             isBatting={false}
@@ -146,7 +145,9 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   );
 };
 
-export const PlayerStatsClubOnlyBrickWork: React.FC<PlayerStatsClubOnlyProps> = ({
+export const PlayerStatsClubOnlyBrickWork: React.FC<
+  PlayerStatsClubOnlyProps
+> = ({
   match,
   height,
   delay,
@@ -160,7 +161,11 @@ export const PlayerStatsClubOnlyBrickWork: React.FC<PlayerStatsClubOnlyProps> = 
   const clubTeamPlayers = getClubTeamPlayers(match);
 
   // Determine which team is the club team
-  const clubTeam = match.homeTeam.isClubTeam ? match.homeTeam : match.awayTeam.isClubTeam ? match.awayTeam : null;
+  const clubTeam = match.homeTeam.isClubTeam
+    ? match.homeTeam
+    : match.awayTeam.isClubTeam
+      ? match.awayTeam
+      : null;
 
   if (!clubTeamPlayers || !clubTeam) {
     return null; // Don't render if no club team found

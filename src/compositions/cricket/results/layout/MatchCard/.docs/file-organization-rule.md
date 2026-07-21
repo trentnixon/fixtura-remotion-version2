@@ -11,15 +11,19 @@ When creating new variant-specific components for match cards, place them in the
 ### Structure Rules
 
 1. **Header Components** → Place in `MatchHeader/` folder
+
    - Example: `MudgeerabaClubHeader` → `MatchHeader/MudgeerabaClubHeader.tsx`
 
 2. **Status Components** → Place in `MatchStatus/` folder
+
    - Example: `MudgeerabaStatusFooter` → `MatchStatus/MudgeerabaStatusFooter.tsx`
 
 3. **Team Section Components** → Place in `TeamsSection/` folder
+
    - Example: `MudgeerabaTeamsSection` → `TeamsSection/MudgeerabaTeamsSection.tsx`
 
 4. **Common/Shared Components** → Place in `_common/` folder
+
    - Only create `_common/` if components are used by multiple sections
    - Example: Shared utilities, dividers used across multiple card types
 
@@ -36,6 +40,7 @@ When creating new variant-specific components for match cards, place them in the
 ### Examples
 
 **Correct:**
+
 ```
 MatchHeader/
   ├── MatchHeader.tsx (base)
@@ -45,6 +50,7 @@ MatchHeader/
 ```
 
 **Incorrect:**
+
 ```
 Sections/
   ├── MatchHeader/

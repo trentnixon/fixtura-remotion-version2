@@ -4,7 +4,7 @@ This guide explains how to create a new **composition asset type** (like `Cricke
 
 ---
 
-## Table of Contents 
+## Table of Contents
 
 1. [Overview](#overview)
 2. [Architecture](#architecture)
@@ -31,6 +31,7 @@ This guide explains how to create a new **composition asset type** (like `Cricke
 ### What is a Composition?
 
 A **composition** is a sport-specific content type that defines:
+
 - **What data** it displays (e.g., ladder standings, top 5 players, upcoming fixtures)
 - **How the data is structured** (TypeScript interfaces)
 - **How multiple items are sequenced** (transitions between multiple ladders, games, etc.)
@@ -38,18 +39,19 @@ A **composition** is a sport-specific content type that defines:
 
 ### Composition vs Template Variant
 
-| Aspect | Composition | Template Variant |
-|--------|------------|------------------|
-| **Purpose** | Defines content type (what data) | Defines visual style (how it looks) |
-| **Location** | `src/compositions/{sport}/{compositionType}/` | `src/templates/variants/{variantName}/` |
-| **Scope** | Sport-specific | Global (works across all compositions) |
-| **Example** | `CricketLadder`, `CricketTop5` | `Basic`, `Classic`, `Brickwork` |
-| **Data Structure** | Defines its own types | Uses composition's data structure |
-| **Variants** | Has multiple template variant implementations | Extends base template |
+| Aspect             | Composition                                   | Template Variant                        |
+| ------------------ | --------------------------------------------- | --------------------------------------- |
+| **Purpose**        | Defines content type (what data)              | Defines visual style (how it looks)     |
+| **Location**       | `src/compositions/{sport}/{compositionType}/` | `src/templates/variants/{variantName}/` |
+| **Scope**          | Sport-specific                                | Global (works across all compositions)  |
+| **Example**        | `CricketLadder`, `CricketTop5`                | `Basic`, `Classic`, `Brickwork`         |
+| **Data Structure** | Defines its own types                         | Uses composition's data structure       |
+| **Variants**       | Has multiple template variant implementations | Extends base template                   |
 
 ### Example: Cricket Ladder Composition
 
 The `CricketLadder` composition:
+
 - **Data Type**: `LadderData[]` - array of ladder standings
 - **Structure**: Each ladder has teams with positions, stats (P, W, L, PTS), logos
 - **Variants**: `basic`, `classic`, `brickwork`, `sixersThunder`, etc.
@@ -112,24 +114,29 @@ src/compositions/cricket/ladder/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation, transitions
    - Maps over data array and renders Display components
    - Uses `TransitionSeriesWrapper` for sequencing multiple items
 
 2. **Display Components** (`controller/Display/display-*.tsx`):
+
    - Variant-specific rendering logic
    - Receives a single data item (e.g., one ladder)
    - Composes modules, layouts, and shared components
 
 3. **Modules** (`modules/`):
+
    - Reusable UI components (headers, empty states, etc.)
    - Can have variant-specific versions if needed
 
 4. **Layouts** (`layout/`):
+
    - Structural components (table rows, card layouts, etc.)
    - Handle positioning and spacing
 
 5. **Types** (`types.ts`):
+
    - TypeScript interfaces defining the data structure
    - Shared across all variants
 
@@ -144,15 +151,18 @@ src/compositions/cricket/ladder/
 Before creating a new composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of the data structure**
+
    - What fields does your composition need?
    - Is it a single item or an array?
    - What relationships exist (e.g., teams → players → stats)?
 
 3. ✅ **Access to test data**
+
    - Sample data matching your expected structure
    - Multiple items if you need transitions
 
@@ -213,6 +223,7 @@ export const TABLE_ANIMATION_DURATION = 90;
 ```
 
 **Key Points:**
+
 - Define interfaces for your data structure
 - Include all fields your composition needs
 - Consider optional fields (use `| null` or `?`)
@@ -273,6 +284,7 @@ export const calculateLadderDuration = (
 ```
 
 **Key Points:**
+
 - **Validation**: Check if data exists and is valid
 - **Type casting**: Safely cast unknown data to your types
 - **Calculations**: Duration, dimensions, etc.
@@ -302,6 +314,7 @@ export default NoLadderData;
 ```
 
 **Key Points:**
+
 - **Use `AbsoluteFill`**: Remotion-specific component that fills the entire composition
 - **Simple styling**: Plain HTML elements are sufficient for empty states
 - **Handles the case** when `data` is empty or invalid
@@ -378,6 +391,7 @@ export default LadderDisplayBasic;
 ```
 
 **Key Points:**
+
 - **Props Interface**: Create `_types/LadderDisplayProps.ts` first
 - **Context Usage**: Use `useThemeContext()`, `useAnimationContext()`
 - **Layout Calculations**: Calculate dimensions based on data (e.g., row heights)
@@ -642,6 +656,7 @@ export const Basic: React.FC = () => {
 ```
 
 **Key Points:**
+
 - **Data Access**: Use `useVideoDataContext()` to get `data`
 - **Data Path**: Access via `data.data` (composition-specific data)
 - **Validation**: Check if data exists before rendering
@@ -672,6 +687,7 @@ export { ladderBasic as basic };
 ```
 
 **Key Points:**
+
 - **Import**: Import each variant component
 - **Export**: Export with lowercase key matching variant ID
 - **Naming**: Use descriptive names (e.g., `ladderBasic` to avoid conflicts)
@@ -703,6 +719,7 @@ export const CricketLadder = {
 ```
 
 **Key Points:**
+
 - **Export Name**: Must match the composition ID in routing (e.g., `CricketLadder`)
 - **Keys**: Lowercase variant IDs (e.g., `basic`, `classic`, `brickwork`)
 - **Structure**: Object mapping variant IDs to components
@@ -738,6 +755,7 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
 ```
 
 **Key Points:**
+
 - **Composition ID**: Must match the key in your sport module export
 - **Type Mapping**: Maps the composition ID to the export name
 - **Routing**: The system uses this to find the right composition module
@@ -751,15 +769,18 @@ Once you have the Basic variant working, create additional variants for other te
 ### Pattern for Additional Variants
 
 1. **Create Display Component** (`controller/Display/display-{Variant}.tsx`):
+
    - Copy from Basic or create variant-specific layout
    - Use variant-specific modules if needed
 
 2. **Create Variant Entry Point** (`{variant}.tsx`):
+
    - Copy from `basic.tsx`
    - Change import to your new Display component
    - Change export name to match variant ID
 
 3. **Export from Index** (`index.tsx`):
+
    - Add import and export
 
 4. **Export from Sport Module** (`src/compositions/cricket/index.tsx`):
@@ -811,11 +832,13 @@ export const Classic: React.FC = () => {
 ### How Routing Works
 
 1. **Data Flow**:
+
    ```
    VideoData → RouteToComposition → Sport Module → Composition Type → Variant Component
    ```
 
 2. **Key Data Points**:
+
    - `data.videoMeta.video.metadata.compositionId` → Composition ID (e.g., `"CricketLadder"`)
    - `data.videoMeta.video.appearance.template` → Variant ID (e.g., `"basic"`, `"classic"`)
    - `data.videoMeta.club.sport` → Sport (e.g., `"cricket"`)
@@ -830,6 +853,7 @@ export const Classic: React.FC = () => {
 ### Testing Routing
 
 1. **Check Composition ID**:
+
    ```typescript
    // In your test data
    metadata: {
@@ -838,6 +862,7 @@ export const Classic: React.FC = () => {
    ```
 
 2. **Check Template ID**:
+
    ```typescript
    appearance: {
      template: "basic", // Must match key in CricketLadder export
@@ -905,6 +930,7 @@ const position = parseTeamPosition(team.position);
 ```
 
 **Key Points:**
+
 - **Staggered delays**: Each row animates with a delay based on its index
 - **Exit timing**: Exit animations start 20 frames before composition ends
 - **Position parsing**: Converts string positions to numbers for calculations
@@ -970,6 +996,7 @@ import StandardLadderRow, {
 ```
 
 **All layouts accept `BaseLayoutProps`:**
+
 - `team: TeamData`
 - `delay: number`
 - `LadderRowHeight: number`
@@ -1005,6 +1032,7 @@ import TeamLogo from "../../utils/primitives/TeamLogo";
 ```
 
 **Props:**
+
 - `logo: TeamLogo | null` - Logo object with url, width, height
 - `teamName: string` - Team name for alt text/fallback
 - `delay: number` - Animation delay in frames
@@ -1029,6 +1057,7 @@ import LadderTeamName from "../../utils/primitives/ladderTeamName";
 ```
 
 **Props:**
+
 - `value: string` - Team name to display
 - `variant?: string` - Text variant (default: "onContainerCopy")
 - `textAlign?: "left" | "right" | "center"` - Text alignment (default: "left")
@@ -1052,6 +1081,7 @@ import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 ```
 
 **Props:**
+
 - `value: string | number` - Stat value to display
 - `variant?: string` - Text variant (default: "onContainerCopy")
 - `textAlign?: "left" | "right" | "center"` - Text alignment (default: "center")
@@ -1071,6 +1101,7 @@ import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 ```
 
 **Key Points:**
+
 - **Consistent styling**: All primitives use theme-aware styling
 - **Animation support**: All accept `delay` for staggered animations
 - **Reusable**: Shared across all cricket compositions
@@ -1095,9 +1126,11 @@ import { SponsorFooter } from "../../../sponsorFooter";
 ```
 
 **Props:**
+
 - `assignSponsors: AssignSponsors` - Sponsor assignment data
 
 **Key Points:**
+
 - **Shared component**: Used by all cricket compositions
 - **Height-aware**: Uses theme heights for footer spacing
 - **Requires data**: Needs `AssignSponsors` from composition data
@@ -1152,6 +1185,7 @@ export interface LadderData {
 ```
 
 **Key Points:**
+
 - **Shared types**: Used across all cricket compositions
 - **Sponsor structure**: Defines team, grade, and competition sponsors
 - **Logo support**: Includes logo URLs and dimensions
@@ -1203,6 +1237,7 @@ bgColorClass =
 ```
 
 **Key Points:**
+
 - **Visual hierarchy**: Colors help users identify important positions
 - **Bias highlighting**: Makes the club's team stand out
 - **Accessibility**: Alternating colors improve readability
@@ -1235,9 +1270,9 @@ export const StandardRowWrapped: React.FC<TeamRowProps> = ({
   const delay = calculateAnimationDelay(index, 9); // Different multiplier
   const animationOutFrame = calculateAnimationOutFrame(timings);
   const position = parseTeamPosition(team.position);
-  
+
   const { selectedPalette } = useThemeContext();
-  
+
   // Theme-aware colors
   bgColorClass =
     index % 2 === 0
@@ -1269,26 +1304,31 @@ Multiple header variants are available for different template styles:
 #### Available Variants:
 
 1. **TableHeader** (default)
+
    - Location: `modules/TableHeader/header.tsx`
    - Used by Basic variant
    - Simple header with grade name and stat columns
 
 2. **TableHeaderWrapped**
+
    - Location: `modules/TableHeader/header.tsx` (exported)
    - Has border and background styling
    - More prominent visual separation
 
 3. **headerSixers**
+
    - Location: `modules/TableHeader/headerSixers.tsx`
    - Sixers Thunder variant
    - Branded styling
 
 4. **headerCNSW**
+
    - Location: `modules/TableHeader/headerCNSW.tsx`
    - CNSW variant
    - Custom styling
 
 5. **headerCNSW-private**
+
    - Location: `modules/TableHeader/headerCNSW-private.tsx`
    - CNSW Private variant
    - Private branding
@@ -1310,6 +1350,7 @@ import TableHeaderSixers from "../../modules/TableHeader/headerSixers";
 ```
 
 **Key Points:**
+
 - **Variant-specific**: Each template variant can have its own header
 - **Consistent props**: All headers accept `title` and `headerHeight`
 - **Reusable**: Can mix and match headers with different layouts
@@ -1346,6 +1387,7 @@ const delay = calculateAnimationDelay(index, multiplier);
 ```
 
 **Key Points:**
+
 - **Visual flow**: Creates a cascading animation effect
 - **Configurable**: Multiplier controls animation speed
 - **Frame-based**: Delays are in Remotion frames, not seconds
@@ -1377,6 +1419,7 @@ const animationOutFrame = calculateAnimationOutFrame(timings);
 ```
 
 **Key Points:**
+
 - **Smooth transitions**: Prevents abrupt endings
 - **Timing-aware**: Uses composition duration from timings
 - **Fallback**: Handles missing timing data gracefully
@@ -1527,7 +1570,9 @@ const testData: LadderData[] = [
     ],
     bias: "Team A",
     prompt: "Test prompt",
-    assignSponsors: { /* ... */ },
+    assignSponsors: {
+      /* ... */
+    },
   },
 ];
 ```
@@ -1535,6 +1580,7 @@ const testData: LadderData[] = [
 ### 2. Test in Remotion Studio
 
 1. **Set up test data** in your Remotion root:
+
    ```typescript
    // In DevelopmentRoot.tsx or test file
    const testVideoData = {
@@ -1565,6 +1611,7 @@ const testData: LadderData[] = [
 ### 3. Test Multiple Variants
 
 Test each variant you create:
+
 - `basic`
 - `classic`
 - `brickwork`
@@ -1587,6 +1634,7 @@ Test each variant you create:
 **Error:** `Missing compositionType` or `Unknown composition ID`
 
 **Solutions:**
+
 1. Check `SPORT_COMPOSITION_TYPES` in `routing.tsx` - ensure your composition ID is registered
 2. Check export name in sport module (`src/compositions/cricket/index.tsx`) - must match exactly
 3. Check `compositionId` in test data - must match the key in `SPORT_COMPOSITION_TYPES`
@@ -1596,6 +1644,7 @@ Test each variant you create:
 **Error:** `Missing template implementation` or `Missing TemplateComponent`
 
 **Solutions:**
+
 1. Check variant export in composition index (`ladder/index.tsx`) - key must be lowercase
 2. Check variant export in sport module (`cricket/index.tsx`) - key must match
 3. Check `template` value in test data - must match the key in composition export
@@ -1606,6 +1655,7 @@ Test each variant you create:
 **Error:** TypeScript errors about missing properties or wrong types
 
 **Solutions:**
+
 1. Check `types.ts` - ensure all required fields are defined
 2. Check data structure - ensure test data matches types
 3. Use type assertions carefully - prefer proper typing over `as unknown as`
@@ -1616,6 +1666,7 @@ Test each variant you create:
 **Error:** Component renders but shows empty state or no data
 
 **Solutions:**
+
 1. Check `hasValidData()` function - ensure it correctly validates your data
 2. Check data path - `data.data` is correct for composition data
 3. Check data structure - ensure it matches your types
@@ -1626,6 +1677,7 @@ Test each variant you create:
 **Error:** No transitions between items or transition errors
 
 **Solutions:**
+
 1. Check `TransitionSeriesWrapper` usage - ensure sequences array is correct
 2. Check animation config - ensure `transitionConfig` is available
 3. Check duration calculation - ensure it returns a valid number
@@ -1636,6 +1688,7 @@ Test each variant you create:
 **Error:** Components don't match theme or look wrong
 
 **Solutions:**
+
 1. Check theme context usage - ensure `useThemeContext()` is called
 2. Check layout calculations - ensure heights/dimensions are calculated correctly
 3. Check responsive design - ensure components adapt to different screen sizes
@@ -1666,17 +1719,20 @@ When creating a new composition, ensure you have:
 Ensure the export chain is correct:
 
 1. **Variant Component** (`basic.tsx`):
+
    ```typescript
    export const Basic: React.FC = () => { ... };
    ```
 
 2. **Composition Index** (`ladder/index.tsx`):
+
    ```typescript
    import { Basic as ladderBasic } from "./basic";
    export { ladderBasic as basic };
    ```
 
 3. **Sport Module** (`cricket/index.tsx`):
+
    ```typescript
    import { basic as ladderBasic } from "./ladder";
    export const CricketLadder = { basic: ladderBasic };

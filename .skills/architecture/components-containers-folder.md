@@ -42,11 +42,11 @@ src/components/containers/
 
 ### 3. When to Use Modules vs Raw AnimatedContainer
 
-| Use | Choose |
-|-----|--------|
-| Common pattern with defaults (fade, slide, scale) | `modules/` (FadeIn, SlideIn, ScaleIn, etc.) |
-| Custom animation or composite needs | Raw `AnimatedContainer` with animation prop |
-| Predefined 3D effects | `modules/threeD` (FlipX, FlipY, Rotate3D, Swing, etc.) |
+| Use                                               | Choose                                                 |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| Common pattern with defaults (fade, slide, scale) | `modules/` (FadeIn, SlideIn, ScaleIn, etc.)            |
+| Custom animation or composite needs               | Raw `AnimatedContainer` with animation prop            |
+| Predefined 3D effects                             | `modules/threeD` (FlipX, FlipY, Rotate3D, Swing, etc.) |
 
 ### 4. When Adding a New Animation Type
 

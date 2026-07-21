@@ -27,7 +27,10 @@ import {
 const EDGE_COLOR_HOME = "rgb(34, 197, 94)"; // green
 const EDGE_COLOR_AWAY = "rgb(239, 68, 68)"; // red
 
-export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => {
+export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
+  game,
+  index,
+}) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
@@ -108,7 +111,10 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => 
               />
               <MetadataMedium
                 value={game.teamHome}
-                animation={{ ...animations.text.main.copyIn, delay: delay + 15 }}
+                animation={{
+                  ...animations.text.main.copyIn,
+                  delay: delay + 15,
+                }}
                 className="block text-center truncate w-full max-w-full relative z-10"
                 variant="onContainerCopy"
               />
@@ -142,7 +148,10 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => 
               />
               <MetadataMedium
                 value={game.teamAway}
-                animation={{ ...animations.text.main.copyIn, delay: delay + 30 }}
+                animation={{
+                  ...animations.text.main.copyIn,
+                  delay: delay + 30,
+                }}
                 className="block text-center truncate w-full max-w-full relative z-10"
                 variant="onContainerCopy"
               />

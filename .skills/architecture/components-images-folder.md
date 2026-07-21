@@ -40,7 +40,7 @@ src/components/images/
 1. **normalizeImageAnimation**: shorthand (e.g. "fadeIn") → full ImageAnimationConfig
 2. **useImageAnimation** (single): entry animation styles
 3. **useDualImageAnimation**: entry + exit with dual images (e.g. logo swap); crossfade or sequenced
-4. **getAnimationStyles**: dispatched to config/animations/* by type
+4. **getAnimationStyles**: dispatched to config/animations/\* by type
 
 ### 3. When to Use useDualImageAnimation
 
@@ -57,20 +57,20 @@ src/components/images/
 
 ### 5. Animation Categories (config/animations)
 
-| Category | Examples |
-|----------|----------|
-| fade | fade in/out |
-| zoom | zoom in/out |
-| slide | slide from edges |
-| special | kenBurns, pulse |
-| rotate | rotate |
-| spring | physics-based |
-| camera | focus, exposure |
-| cinematic | wipes, splits |
-| effects | glitch, ripple, tint |
-| perspective | flips, swings |
-| broadcast | lower thirds, scoreboards |
-| composite | composed multi-step |
+| Category    | Examples                  |
+| ----------- | ------------------------- |
+| fade        | fade in/out               |
+| zoom        | zoom in/out               |
+| slide       | slide from edges          |
+| special     | kenBurns, pulse           |
+| rotate      | rotate                    |
+| spring      | physics-based             |
+| camera      | focus, exposure           |
+| cinematic   | wipes, splits             |
+| effects     | glitch, ripple, tint      |
+| perspective | flips, swings             |
+| broadcast   | lower thirds, scoreboards |
+| composite   | composed multi-step       |
 
 ### 6. Placeholders
 

@@ -11,7 +11,9 @@ import PlayerStatsSingleTeamOnly from "../../../results/layout/Sections/PlayerSt
 import { MatchCardProps } from "./_types/MatchCardProps";
 import { getClubTeamPlayers } from "./_utils/calculations";
 
-const ClassicTwoColumnsMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
+const ClassicTwoColumnsMatchCardClubOnly: React.FC<MatchCardProps> = ({
+  match,
+}) => {
   const { animations } = useAnimationContext();
   const { layout } = useThemeContext();
 
@@ -50,7 +52,6 @@ const ClassicTwoColumnsMatchCardClubOnly: React.FC<MatchCardProps> = ({ match })
       exitAnimation={containerAnimation.containerOut}
       exitFrame={250}
     >
-
       <SingleDataPointHeader
         grade={match.gradeName}
         height={headerHeight}
@@ -64,9 +65,11 @@ const ClassicTwoColumnsMatchCardClubOnly: React.FC<MatchCardProps> = ({ match })
         type={match.type}
         Team={clubTeam}
         TeamLogo={isHomeTeam ? match.teamHomeLogo : match.teamAwayLogo}
-        firstInningsScore={isHomeTeam
-          ? (match.homeTeam.homeScoresFirstInnings || "")
-          : (match.awayTeam.awayScoresFirstInnings || "")}
+        firstInningsScore={
+          isHomeTeam
+            ? match.homeTeam.homeScoresFirstInnings || ""
+            : match.awayTeam.awayScoresFirstInnings || ""
+        }
         delay={baseDelay}
         outerContainer={{
           height: teamsHeight,
@@ -88,9 +91,11 @@ const ClassicTwoColumnsMatchCardClubOnly: React.FC<MatchCardProps> = ({ match })
         type={match.type}
         Team={oppositionTeam}
         TeamLogo={isHomeTeam ? match.teamAwayLogo : match.teamHomeLogo}
-        firstInningsScore={isHomeTeam
-          ? (match.awayTeam.awayScoresFirstInnings || "")
-          : (match.homeTeam.homeScoresFirstInnings || "")}
+        firstInningsScore={
+          isHomeTeam
+            ? match.awayTeam.awayScoresFirstInnings || ""
+            : match.homeTeam.homeScoresFirstInnings || ""
+        }
         delay={baseDelay}
         outerContainer={{
           height: teamsHeight,

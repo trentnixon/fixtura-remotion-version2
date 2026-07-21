@@ -47,7 +47,11 @@ const ResultsDisplayMudgeeraba: React.FC<ResultsDisplayProps> = ({
               marginBottom: index === 0 ? "10px" : 0,
             }}
           >
-            <MatchRowMudgeeraba match={match} index={index} rowHeight={rowHeight} />
+            <MatchRowMudgeeraba
+              match={match}
+              index={index}
+              rowHeight={rowHeight}
+            />
           </div>
         ))}
       </div>

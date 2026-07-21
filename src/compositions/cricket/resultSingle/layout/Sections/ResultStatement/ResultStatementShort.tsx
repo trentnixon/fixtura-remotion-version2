@@ -11,7 +11,8 @@ export const ResultStatementShort: React.FC<ResultStatementShortProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const defaultClasses = "w-full flex text-center flex-col items-center justify-center";
+  const defaultClasses =
+    "w-full flex text-center flex-col items-center justify-center";
   return (
     <AnimatedContainer
       type="full"
@@ -27,7 +28,6 @@ export const ResultStatementShort: React.FC<ResultStatementShortProps> = ({
         variant="onContainerCopyNoBg"
         letterAnimation="none"
         className="text-6xl "
-
       >
         {resultShort}
       </AnimatedText>

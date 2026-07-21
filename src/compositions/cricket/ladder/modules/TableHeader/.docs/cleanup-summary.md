@@ -1,6 +1,7 @@
 # Cleanup Summary - TableHeader Folder
 
 ## Overview
+
 This cleanup extracted the shared `TableHeaderProps` interface and calculation utility from all header component files into centralized `_types` and `_utils` folders.
 
 ## Changes Made
@@ -8,7 +9,9 @@ This cleanup extracted the shared `TableHeaderProps` interface and calculation u
 ### Created Files
 
 #### `_types/TableHeaderProps.ts`
+
 Extracted the shared `TableHeaderProps` interface that was duplicated across all 5 header component files:
+
 ```typescript
 export interface TableHeaderProps {
   title: string;
@@ -17,17 +20,21 @@ export interface TableHeaderProps {
 ```
 
 #### `_utils/calculations.ts`
+
 Extracted the shared `calculateActualHeight` utility function used in CNSW header components:
+
 - `calculateActualHeight()` - Calculates actual height with max constraint (default: 120px)
 
 ### Modified Files
 
 All header component files were updated to:
+
 1. Import `TableHeaderProps` from `./_types/TableHeaderProps`
 2. Remove inline interface definitions
 3. Import and use `calculateActualHeight` from `./_utils/calculations` (where applicable)
 
 **Files Updated:**
+
 - `header.tsx` - Contains `TableHeader` and `TableHeaderWrapped` components
 - `headerSixers.tsx` - Contains `TableHeaderSixersThunder` component
 - `headerCNSW.tsx` - Contains `TableHeaderCNSW` component (uses `calculateActualHeight`)

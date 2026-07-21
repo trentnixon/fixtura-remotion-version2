@@ -29,16 +29,16 @@ Templates define composable video composition blueprints for the Fixtura Remotio
 
 ## Where the Docs Are
 
-| Context    | Path |
-|-----------|------|
-| Templates root | `src/templates/.docs/readMe.md` |
-| Base layout    | `src/templates/base/.docs/readMe.md` |
-| Types          | `src/templates/types/.docs/readMe.md` |
-| Variants       | `src/templates/variants/.docs/readMe.md` |
-| Roadmap        | `src/templates/.docs/DevelopmentRoadMap.md` |
+| Context        | Path                                              |
+| -------------- | ------------------------------------------------- |
+| Templates root | `src/templates/.docs/readMe.md`                   |
+| Base layout    | `src/templates/base/.docs/readMe.md`              |
+| Types          | `src/templates/types/.docs/readMe.md`             |
+| Variants       | `src/templates/variants/.docs/readMe.md`          |
+| Roadmap        | `src/templates/.docs/DevelopmentRoadMap.md`       |
 | How-to (short) | `src/templates/.docs/HowToCreateANewVariation.md` |
-| How-to (full)  | `src/templates/.docs/how-to.md` |
-| Tickets        | `src/templates/variants/.docs/Tickets.md` |
+| How-to (full)  | `src/templates/.docs/how-to.md`                   |
+| Tickets        | `src/templates/variants/.docs/Tickets.md`         |
 
 ## Roadmap
 
@@ -59,12 +59,12 @@ Templates define composable video composition blueprints for the Fixtura Remotio
 
 ## Module Map
 
-| Module    | Responsibility                          | Entry Points |
-|----------|------------------------------------------|--------------|
-| `registry.tsx` | Maps template IDs to components and variants | `getTemplate`, `templateRegistry`, `TemplateId` |
-| `base/`       | Shared layout, theme contract, providers | `index.tsx`, `BaseTemplateLayout.tsx`, `theme.ts` |
-| `types/`      | Theme, settings, assets, animations contracts | `TemplateThemeConfig.ts`, `settingsConfig`, `AssetConfig`, `AnimationConfig` |
-| `variants/`   | Per-variant implementations             | One folder per variant: `index.tsx`, `theme.ts`, `animations.ts`, `components/` |
+| Module         | Responsibility                                | Entry Points                                                                    |
+| -------------- | --------------------------------------------- | ------------------------------------------------------------------------------- |
+| `registry.tsx` | Maps template IDs to components and variants  | `getTemplate`, `templateRegistry`, `TemplateId`                                 |
+| `base/`        | Shared layout, theme contract, providers      | `index.tsx`, `BaseTemplateLayout.tsx`, `theme.ts`                               |
+| `types/`       | Theme, settings, assets, animations contracts | `TemplateThemeConfig.ts`, `settingsConfig`, `AssetConfig`, `AnimationConfig`    |
+| `variants/`    | Per-variant implementations                   | One folder per variant: `index.tsx`, `theme.ts`, `animations.ts`, `components/` |
 
 Variant naming: PascalCase for registry keys and components (e.g., `Brickwork`, `BasicMainHeader`). Folders use camelCase (e.g., `twoColumnClassic`, `brickwork`).
 

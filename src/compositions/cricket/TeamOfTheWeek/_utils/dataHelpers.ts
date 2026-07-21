@@ -32,8 +32,12 @@ export const castToTeamOfTheWeekPlayers = (
  * @param videoMeta - Video metadata from context
  * @returns Array of sponsors (empty array if not available)
  */
-export const extractSponsors = (videoMeta: {
-  club?: { sponsors?: unknown[] };
-} | undefined): unknown[] => {
+export const extractSponsors = (
+  videoMeta:
+    | {
+        club?: { sponsors?: unknown[] };
+      }
+    | undefined,
+): unknown[] => {
   return videoMeta?.club?.sponsors || [];
 };

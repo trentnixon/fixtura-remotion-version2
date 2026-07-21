@@ -29,14 +29,14 @@ Curated design palettes assembled from color variations, text, background, utili
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| DesignPalettes root | `src/core/utils/designPalettes/.docs/readMe.md` |
-| Design guidance | `src/core/utils/designPalettes/.docs/README.txt` |
-| Parent roadmap | `src/core/utils/.docs/DevelopmentRoadMap.md` |
-| Parent tickets | `src/core/utils/.docs/Tickets.md` |
-| createThemeUtils (upstream) | `src/core/utils/createThemeUtils/.docs/readMe.md` |
-| colorSystem (DesignPalette user) | `src/core/utils/colorSystem/.docs/readMe.md` |
+| Context                          | Path                                              |
+| -------------------------------- | ------------------------------------------------- |
+| DesignPalettes root              | `src/core/utils/designPalettes/.docs/readMe.md`   |
+| Design guidance                  | `src/core/utils/designPalettes/.docs/README.txt`  |
+| Parent roadmap                   | `src/core/utils/.docs/DevelopmentRoadMap.md`      |
+| Parent tickets                   | `src/core/utils/.docs/Tickets.md`                 |
+| createThemeUtils (upstream)      | `src/core/utils/createThemeUtils/.docs/readMe.md` |
+| colorSystem (DesignPalette user) | `src/core/utils/colorSystem/.docs/readMe.md`      |
 
 ## Roadmap
 
@@ -64,19 +64,19 @@ Related (consumers and upstream):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
-| `index.ts` | generateAllPalettes; exports types, palette creators | `index.ts` |
-| `types.ts` | DesignPalette, BackgroundOptions, ContainerOptions, TextOptions, ShadowOptions, ColorVariations, GradientOptions, ensureContrast, processUserColor | `types.ts` |
-| `paletteHelpers.ts` | createCSSGradientOptions, createGradientOptions, createTextOptions, createContainerOptions | `paletteHelpers.ts` |
-| `primaryPalette.ts` | createPrimaryPalette | `primaryPalette.ts` |
-| `secondaryPalette.ts` | createSecondaryPalette | `secondaryPalette.ts` |
-| `darkPalette.ts` | createDarkPalette | `darkPalette.ts` |
-| `lightPalette.ts` | createLightPalette | `lightPalette.ts` |
-| `accentPalette.ts` | createAccentPalette | `accentPalette.ts` |
-| `complementaryPalette.ts` | createComplementaryPalette | `complementaryPalette.ts` |
-| `triadicPalette.ts` | createTriadicPalette | `triadicPalette.ts` |
-| `monochromaticPalette.ts` | createMonochromaticPalette | `monochromaticPalette.ts` |
+| Module                    | Responsibility                                                                                                                                     | Entry Points              |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| `index.ts`                | generateAllPalettes; exports types, palette creators                                                                                               | `index.ts`                |
+| `types.ts`                | DesignPalette, BackgroundOptions, ContainerOptions, TextOptions, ShadowOptions, ColorVariations, GradientOptions, ensureContrast, processUserColor | `types.ts`                |
+| `paletteHelpers.ts`       | createCSSGradientOptions, createGradientOptions, createTextOptions, createContainerOptions                                                         | `paletteHelpers.ts`       |
+| `primaryPalette.ts`       | createPrimaryPalette                                                                                                                               | `primaryPalette.ts`       |
+| `secondaryPalette.ts`     | createSecondaryPalette                                                                                                                             | `secondaryPalette.ts`     |
+| `darkPalette.ts`          | createDarkPalette                                                                                                                                  | `darkPalette.ts`          |
+| `lightPalette.ts`         | createLightPalette                                                                                                                                 | `lightPalette.ts`         |
+| `accentPalette.ts`        | createAccentPalette                                                                                                                                | `accentPalette.ts`        |
+| `complementaryPalette.ts` | createComplementaryPalette                                                                                                                         | `complementaryPalette.ts` |
+| `triadicPalette.ts`       | createTriadicPalette                                                                                                                               | `triadicPalette.ts`       |
+| `monochromaticPalette.ts` | createMonochromaticPalette                                                                                                                         | `monochromaticPalette.ts` |
 
 ## Implementation Guidelines
 

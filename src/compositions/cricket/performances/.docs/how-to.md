@@ -29,6 +29,7 @@ This guide explains how to create a new **performances composition asset type** 
 ### What is a Performances Composition?
 
 A **performances composition** is a sport-specific content type that displays:
+
 - **Player performance data** (batting or bowling statistics)
 - **Multiple screens** when items exceed the per-screen limit (default: 5)
 - **Transitions between screens** using `TransitionSeriesWrapper`
@@ -36,19 +37,20 @@ A **performances composition** is a sport-specific content type that displays:
 
 ### Key Differences from Ladder Composition
 
-| Aspect | Performances | Ladder |
-|--------|-------------|--------|
-| **Data Type** | `PerformanceData[]` (batting or bowling) | `LadderData[]` |
-| **Pagination** | Screen-based (items per screen) | Item-based (one ladder per screen) |
-| **Composition Types** | Two types (batting, bowling) | Single type |
-| **Row Height** | Static (115px) | Calculated dynamically |
-| **Sponsors** | Merged from all performances | Per ladder |
-| **Primitives** | Top5PlayerName, Top5PlayerScore | LadderTeamName, LadderTeamPoints |
-| **Stats Display** | Performance-specific (runs/balls or wickets/overs) | Standard ladder stats |
+| Aspect                | Performances                                       | Ladder                             |
+| --------------------- | -------------------------------------------------- | ---------------------------------- |
+| **Data Type**         | `PerformanceData[]` (batting or bowling)           | `LadderData[]`                     |
+| **Pagination**        | Screen-based (items per screen)                    | Item-based (one ladder per screen) |
+| **Composition Types** | Two types (batting, bowling)                       | Single type                        |
+| **Row Height**        | Static (115px)                                     | Calculated dynamically             |
+| **Sponsors**          | Merged from all performances                       | Per ladder                         |
+| **Primitives**        | Top5PlayerName, Top5PlayerScore                    | LadderTeamName, LadderTeamPoints   |
+| **Stats Display**     | Performance-specific (runs/balls or wickets/overs) | Standard ladder stats              |
 
 ### Example: Cricket Performances Composition
 
 The `CricketPerformances` composition:
+
 - **Data Type**: `PerformanceData[]` - array of batting or bowling performances
 - **Structure**: Each performance has player name, team logo, stats (runs/balls or wickets/overs)
 - **Variants**: `basic`, `classic`, `brickwork`, `sixersThunder`, etc.
@@ -107,28 +109,33 @@ src/compositions/cricket/performances/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, transformation, screen calculation
    - Creates sequences for each screen
    - Uses `TransitionSeriesWrapper` for screen transitions
    - Merges sponsor data from all performances
 
 2. **Display Components** (`controller/PerformancesDisplay/display-*.tsx`):
+
    - Variant-specific rendering logic for a single screen
    - Receives all performances, items per screen, and screen index
    - Filters items for current screen using `getItemsForScreen()`
    - Composes player rows
 
 3. **Player Row Components** (`controller/PlayerRow/row-*.tsx`):
+
    - Variant-specific row wrapper with animations
    - Receives a single performance
    - Wraps layout component with `AnimatedContainer`
 
 4. **Layout Components** (`layout/StandardPerformanceRow*.tsx`):
+
    - Variant-specific structural components
    - Handle positioning, spacing, and visual styling
    - Use primitive components for text/logo display
 
 5. **Types** (`_types/types.ts`):
+
    - Union type: `PerformanceData = BattingPerformanceData | BowlingPerformanceData`
    - Type guards: `isBattingPerformance()`, `isBowlingPerformance()`
    - Composition constants: `PERFORMANCES_COMPOSITIONS`
@@ -147,15 +154,18 @@ src/compositions/cricket/performances/
 Before creating a new performances composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of performance data structure**
+
    - Batting: runs, balls, strike rate, not out
    - Bowling: wickets, overs, runs conceded
    - Common fields: name, teamLogo, playedFor, assignSponsors
 
 3. ✅ **Access to test data**
+
    - Sample batting or bowling performance data
    - Multiple items to test pagination (more than 5)
 
@@ -269,6 +279,7 @@ export interface ScreenConfig {
 ```
 
 **Key Points:**
+
 - **Union type**: `PerformanceData` can be either batting or bowling
 - **Type guards**: Use `isBattingPerformance()` and `isBowlingPerformance()` for type narrowing
 - **Composition constants**: Define composition IDs for routing
@@ -360,9 +371,7 @@ export const calculateDisplayDurationPerScreen = (
  * @param performancesData - The performances data to validate
  * @returns True if data is valid, false otherwise
  */
-export const hasValidPerformances = (
-  performancesData: unknown,
-): boolean => {
+export const hasValidPerformances = (performancesData: unknown): boolean => {
   return (
     performancesData !== null &&
     performancesData !== undefined &&
@@ -456,6 +465,7 @@ export const mergeAssignSponsors = (
 ```
 
 **Key Points:**
+
 - **Screen configuration**: Gets items per screen from `contentLayout.divideFixturesBy`
 - **Duration calculation**: Uses `FPS_PREFORMANCECARD` timing or metadata frames
 - **Validation**: Checks if data is valid array with items
@@ -527,6 +537,7 @@ export const getTitle = (compositionId: string): string => {
 ```
 
 **Key Points:**
+
 - **Type transformation**: Adds `type` field based on composition ID
 - **Data validation**: Handles empty or invalid data
 - **Title generation**: Returns appropriate title for empty state
@@ -614,6 +625,7 @@ export const getItemsForScreen = (
 ```
 
 **Key Points:**
+
 - **Screen calculation**: Calculates total screens needed
 - **Item slicing**: Gets items for a specific screen index
 - **Bounds checking**: Handles invalid screen indices gracefully
@@ -657,6 +669,7 @@ export default NoPlayersData;
 ```
 
 **Key Points:**
+
 - **Use `AbsoluteFill`**: Remotion-specific component for full-screen display
 - **Dynamic title**: Gets title based on composition type (batting/bowling)
 - **Context usage**: Accesses composition ID from video data
@@ -695,39 +708,46 @@ export const truncateText = (text: string, maxLength: number): string => {
  */
 export const formatPlayerName = (name: string): string => {
   if (!name) return "";
-  
-  const nameParts = name.trim().split(" ").filter(part => part.length > 0);
-  
+
+  const nameParts = name
+    .trim()
+    .split(" ")
+    .filter((part) => part.length > 0);
+
   if (nameParts.length < 2) {
     return name.toUpperCase();
   }
-  
+
   // Check if the last part is a position indicator
   const lastPart = nameParts[nameParts.length - 1];
   const isPosition = /^\((C|VC|WK)\)$/i.test(lastPart);
-  
+
   const minRequiredParts = isPosition ? 3 : 2;
-  
+
   if (nameParts.length < minRequiredParts) {
     return name.toUpperCase();
   }
-  
-  const lastNameIndex = isPosition ? nameParts.length - 2 : nameParts.length - 1;
-  
+
+  const lastNameIndex = isPosition
+    ? nameParts.length - 2
+    : nameParts.length - 1;
+
   if (lastNameIndex <= 0) {
     return name.toUpperCase();
   }
-  
+
   const firstName = nameParts[0];
   const lastName = nameParts[lastNameIndex];
-  
+
   if (!lastName || lastName === firstName) {
     return name.toUpperCase();
   }
-  
+
   const formattedName = `${firstName.charAt(0).toUpperCase()}. ${lastName.toUpperCase()}`;
-  
-  return isPosition ? `${formattedName} ${lastPart.toUpperCase()}` : formattedName;
+
+  return isPosition
+    ? `${formattedName} ${lastPart.toUpperCase()}`
+    : formattedName;
 };
 
 /**
@@ -758,6 +778,7 @@ export const getScoreValues = (
 ```
 
 **Key Points:**
+
 - **Name formatting**: Converts "John Smith" to "J. SMITH"
 - **Position handling**: Preserves (C), (VC), (WK) indicators
 - **Score formatting**: Different format for batting vs bowling
@@ -865,6 +886,7 @@ export default StandardPerformanceRow;
 ```
 
 **Key Points:**
+
 - **Fixed logo section**: Logo on left, fixed width
 - **Variable content section**: Name, team, and score on right
 - **Top performance highlighting**: First item uses different background color
@@ -932,6 +954,7 @@ export default PerformanceRowBasic;
 ```
 
 **Key Points:**
+
 - **Animation wrapper**: Wraps layout component with `AnimatedContainer`
 - **Staggered delays**: Each row animates with increasing delay
 - **Exit animation**: Starts before composition ends
@@ -975,15 +998,15 @@ const PerformancesDisplayBasic: React.FC<PerformancesDisplayProps> = ({
   const rowHeight = 115;
 
   return (
-    <div 
+    <div
       className="flex items-center justify-center"
-      style={{ 
+      style={{
         position: "absolute",
         inset: 0,
         width: "100%",
         height: "100%",
       }}>
-      <div 
+      <div
         className="flex flex-col flex-shrink-0"
         style={{ width: "100%", paddingLeft: "2rem", paddingRight: "2rem" }}
       >
@@ -1020,6 +1043,7 @@ export default PerformancesDisplayBasic;
 ```
 
 **Key Points:**
+
 - **Screen filtering**: Uses `getItemsForScreen()` to get items for current screen
 - **Static row height**: Uses fixed 115px height
 - **Absolute positioning**: Fills parent container
@@ -1153,6 +1177,7 @@ export default Basic;
 ```
 
 **Key Points:**
+
 - **Data transformation**: Transforms raw data based on composition type
 - **Screen calculation**: Calculates total screens needed
 - **Sequence creation**: Creates one sequence per screen
@@ -1216,16 +1241,19 @@ export const CricketPerformances = {
 ### How Pagination Works
 
 1. **Items Per Screen Configuration**:
+
    - Read from `contentLayout.divideFixturesBy.CricketBattingPerformances` or `CricketBowlingPerformances`
    - Default: 5 items per screen
    - Configurable per composition type
 
 2. **Screen Calculation**:
+
    ```typescript
    const totalScreens = Math.ceil(totalItems / itemsPerScreen);
    ```
 
 3. **Item Filtering**:
+
    ```typescript
    const startIndex = screenIndex * itemsPerScreen;
    const endIndex = Math.min(startIndex + itemsPerScreen, items.length);
@@ -1391,6 +1419,7 @@ import { TeamLogo } from "../../utils/primitives/TeamLogo";
 ### Variant-Specific Layouts
 
 Each variant can have its own layout:
+
 - `StandardPerformanceRowClassic.tsx`
 - `StandardPerformanceRowBrickWork.tsx`
 - `StandardPerformanceRowSixersThunder.tsx`
@@ -1437,6 +1466,7 @@ Within each row, elements animate with increasing delays:
 ### Composition IDs
 
 The routing system recognizes:
+
 - `CricketBattingPerformances`
 - `CricketBowlingPerformances`
 
@@ -1515,7 +1545,9 @@ const testBattingData: BattingPerformanceData[] = [
     balls: 120,
     SR: 125.0,
     notOut: true,
-    assignSponsors: { /* ... */ },
+    assignSponsors: {
+      /* ... */
+    },
     prompt: "",
   },
 ];
@@ -1529,7 +1561,9 @@ const testBowlingData: BowlingPerformanceData[] = [
     wickets: 5,
     overs: "5.0",
     runs: 30,
-    assignSponsors: { /* ... */ },
+    assignSponsors: {
+      /* ... */
+    },
     prompt: "",
   },
 ];
@@ -1538,6 +1572,7 @@ const testBowlingData: BowlingPerformanceData[] = [
 ### Test Pagination
 
 Test with different numbers of items:
+
 - 3 items (1 screen)
 - 5 items (1 screen, exact)
 - 7 items (2 screens)
@@ -1552,6 +1587,7 @@ Test with different numbers of items:
 **Error:** Type errors when accessing performance properties
 
 **Solutions:**
+
 1. Use type guards: `isBattingPerformance()` or `isBowlingPerformance()`
 2. Check `compositionId` matches `PERFORMANCES_COMPOSITIONS` constants
 3. Verify data transformation adds `type` field
@@ -1561,6 +1597,7 @@ Test with different numbers of items:
 **Error:** All items on one screen or wrong items per screen
 
 **Solutions:**
+
 1. Check `contentLayout.divideFixturesBy` configuration
 2. Verify `getItemsPerScreen()` returns correct value
 3. Check `calculateTotalScreens()` calculation
@@ -1571,6 +1608,7 @@ Test with different numbers of items:
 **Error:** No sponsors displayed or wrong sponsors
 
 **Solutions:**
+
 1. Check `mergeAssignSponsors()` logic
 2. Verify `assignSponsors` exists in performance data
 3. Check sponsor data structure matches `AssignSponsors` type

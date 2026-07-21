@@ -53,8 +53,7 @@ export const useFittedFontSize = ({
     }
 
     const fitWidth =
-      withinWidth ??
-      getTitleScreenContentWidth(width, horizontalPadding);
+      withinWidth ?? getTitleScreenContentWidth(width, horizontalPadding);
 
     try {
       const { fontSize } = fitText({
@@ -70,7 +69,10 @@ export const useFittedFontSize = ({
       const capped = Math.min(maxFontSize, fontSize);
       return minFontSize > 0 ? Math.max(minFontSize, capped) : capped;
     } catch (error) {
-      console.warn("useFittedFontSize: measurement failed, using max cap", error);
+      console.warn(
+        "useFittedFontSize: measurement failed, using max cap",
+        error,
+      );
       return maxFontSize;
     }
   }, [

@@ -6,9 +6,10 @@
 
 **Artboard** — e.g. **1080×1350** portrait; other sizes OK.
 
-**Content model** — Data is an array of players; **length is usually five** but may vary—design should tolerate **N rows**. Each item is either **`batting`** or **`bowling`** (`type`); the whole list is normally **one kind** per graphic (top batters *or* top bowlers).
+**Content model** — Data is an array of players; **length is usually five** but may vary—design should tolerate **N rows**. Each item is either **`batting`** or **`bowling`** (`type`); the whole list is normally **one kind** per graphic (top batters _or_ top bowlers).
 
 **Typical row (all optional layout)** — **`teamLogo`** (club mark, varying aspect ratio) → **`name`** → **`playedFor`** (team / grade side name) → **score block**:
+
 - **Batting** — main **runs** (asterisk or similar if **`notOut`**), suffix **balls** (e.g. in parentheses); **`SR`** (strike rate) available for an extra figure or subline.
 - **Bowling** — main **`wickets` / `runs`** conceded, suffix **`overs`** (e.g. in parentheses).
 

@@ -103,8 +103,6 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
     })),
   });
 
-
-
   return (
     <div className="flex flex-col h-full w-full">
       <div className="flex-1">

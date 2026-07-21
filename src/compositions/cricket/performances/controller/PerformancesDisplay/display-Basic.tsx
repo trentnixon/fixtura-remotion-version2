@@ -32,15 +32,16 @@ const PerformancesDisplayBasic: React.FC<PerformancesDisplayProps> = ({
   const rowHeight = 115;
 
   return (
-    <div 
+    <div
       className="flex items-center justify-center"
-      style={{ 
+      style={{
         position: "absolute",
         inset: 0,
         width: "100%",
         height: "100%",
-      }}>
-      <div 
+      }}
+    >
+      <div
         className="flex flex-col flex-shrink-0"
         style={{ width: "100%", paddingLeft: "2rem", paddingRight: "2rem" }}
       >

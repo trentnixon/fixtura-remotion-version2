@@ -8,7 +8,10 @@ import { SponsorFooter } from "../../../sponsorFooter";
 import PlayerRowCNSW from "../PlayerRow/row-CNSW";
 import { Top5PlayerName } from "../../../utils/primitives/Top5PlayerName";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
-import { DEFAULT_CONTAINER_ANIMATION_DELAY, DEFAULT_ROW_HEIGHT_CNSW } from "./_utils/constants";
+import {
+  DEFAULT_CONTAINER_ANIMATION_DELAY,
+  DEFAULT_ROW_HEIGHT_CNSW,
+} from "./_utils/constants";
 
 const PlayersDisplayCNSW: React.FC<PlayersDisplayProps> = ({
   players,

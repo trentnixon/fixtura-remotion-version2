@@ -11,6 +11,7 @@
 ## TKT-2025-014: Components Skill Tree — .skills/architecture
 
 ---
+
 ID: TKT-2025-014
 Status: Draft
 Priority: Medium
@@ -18,6 +19,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: TKT-2025-013, Skills System, cricket-compositions-feature pattern
+
 ---
 
 ### Overview
@@ -101,6 +103,7 @@ Create a skill tree in `.skills/architecture/` for the components folder and its
 ## TKT-2025-013: [Completed] Component readMe Updates — Standard Format Migration
 
 ---
+
 ID: TKT-2025-013
 Status: Completed
 Priority: Medium
@@ -108,6 +111,7 @@ Owner: Development Team
 Created: 2025-02-16
 Updated: 2025-02-16
 Related: Roadmap-Components-Docs, Feature Documentation System
+
 ---
 
 ### Overview

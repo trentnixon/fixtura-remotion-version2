@@ -53,9 +53,7 @@ const PlayerRowClassic: React.FC<PlayerRowProps> = ({
   const iconColor = selectedPalette.text.onContainer.title;
 
   // All-rounders use same height as other players
-  const isAllRounder = isAllRounderPosition(
-    player.categoryDetail.position,
-  );
+  const isAllRounder = isAllRounderPosition(player.categoryDetail.position);
   const hasBoth = hasBothStats(player);
 
   // Get the appropriate SVG icon component for the position
@@ -94,9 +92,9 @@ const PlayerRowClassic: React.FC<PlayerRowProps> = ({
           )}
         </div>
         {/* Player Info Section: Player, Team, Stats - col-span-7 (left) */}
-        <div className={` flex flex-col justify-center px-4 h-full ${isAccountClub ? "col-span-10" : "col-span-8"}`}>
-
-
+        <div
+          className={` flex flex-col justify-center px-4 h-full ${isAccountClub ? "col-span-10" : "col-span-8"}`}
+        >
           {/* Stats Display */}
           <div className="mt-1">
             {isAllRounder && hasBoth && player.batting && player.bowling ? (
@@ -194,8 +192,6 @@ const PlayerRowClassic: React.FC<PlayerRowProps> = ({
             </div>
           </div>
         )}
-
-
       </div>
     </AnimatedContainer>
   );

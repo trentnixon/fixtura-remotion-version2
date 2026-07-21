@@ -7,7 +7,6 @@ import { AssignSponsors } from "../../../_types/composition-types";
 import PlayerRowBrickWork from "../PlayerRow/row-BrickWork";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
-import { DEFAULT_CONTAINER_ANIMATION_DELAY } from "./_utils/constants";
 
 const PlayersDisplayBrickWork: React.FC<PlayersDisplayProps> = ({
   players,

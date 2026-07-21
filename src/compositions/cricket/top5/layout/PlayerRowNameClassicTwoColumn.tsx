@@ -45,8 +45,14 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
   const contrastBG = selectedPalette.container.backgroundTransparent.strong;
 
   // Get truncated player name and team name
-  const playerName = truncateText(player.name, DEFAULT_NAME_LENGTH).toUpperCase();
-  const teamName = truncateText(player.playedFor, DEFAULT_TEAM_LENGTH).toUpperCase();
+  const playerName = truncateText(
+    player.name,
+    DEFAULT_NAME_LENGTH,
+  ).toUpperCase();
+  const teamName = truncateText(
+    player.playedFor,
+    DEFAULT_TEAM_LENGTH,
+  ).toUpperCase();
 
   // Get score display values
   const { mainValue, suffix } = getScoreValues(player);
@@ -63,12 +69,18 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
       <div className="col-span-7 flex flex-col justify-center px-2 h-full">
         <Top5PlayerName
           value={playerName}
-          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + PLAYER_NAME_DELAY_OFFSET,
+          }}
           className=""
         />
         <Top5PlayerTeam
           value={teamName}
-          animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
+          animation={{
+            ...smallTextAnimation,
+            delay: delay + TEAM_NAME_DELAY_OFFSET,
+          }}
           className=""
         />
       </div>
@@ -95,14 +107,20 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + STAT_DELAY_OFFSET }}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + STAT_DELAY_OFFSET,
+          }}
           className=""
           variant="onContainerTitle"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + STAT_SUFFIX_DELAY_OFFSET }}
+            animation={{
+              ...smallTextAnimation,
+              delay: delay + STAT_SUFFIX_DELAY_OFFSET,
+            }}
             className=""
             variant="onContainerTitle"
           />

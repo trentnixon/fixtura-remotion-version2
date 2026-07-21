@@ -4,7 +4,10 @@ import {
   ColorVariant,
 } from "../../../../components/typography/AnimatedText";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
-import { TeamStatTextProps, TextAlign } from "./_types/AnimatedTextPrimitiveProps";
+import {
+  TeamStatTextProps,
+  TextAlign,
+} from "./_types/AnimatedTextPrimitiveProps";
 import { DEFAULT_VARIANT } from "./_utils/constants";
 import { useFontFamily } from "./_utils/helpers";
 

@@ -45,7 +45,9 @@ export const LargeTeamHeader: React.FC<AccountTeamProps> = ({
     >
       <div className="flex flex-col items-center">
         {/* Team logo */}
-        <div className={`${logoSizeClass} rounded-full ${compact ? "" : "my-2 p-4"}`}>
+        <div
+          className={`${logoSizeClass} rounded-full ${compact ? "" : "my-2 p-4"}`}
+        >
           <TeamLogo
             logo={{
               url: teamLogoUrl,

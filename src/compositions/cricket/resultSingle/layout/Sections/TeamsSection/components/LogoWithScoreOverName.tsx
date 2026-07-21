@@ -67,16 +67,16 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
               <div className="flex flex-col items-end">
                 {getFirstInningsDisplay(type, homeTeam.homeScoresFirstInnings)
                   .show && (
-                    <ResultScoreFirstInnings
-                      value={
-                        getFirstInningsDisplay(
-                          type,
-                          homeTeam.homeScoresFirstInnings,
-                        ).value
-                      }
-                      animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                    />
-                  )}
+                  <ResultScoreFirstInnings
+                    value={
+                      getFirstInningsDisplay(
+                        type,
+                        homeTeam.homeScoresFirstInnings,
+                      ).value
+                    }
+                    animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                  />
+                )}
                 <ResultScore
                   value={normalizeScore(homeTeam.score)}
                   animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
@@ -122,16 +122,16 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
               <div className="flex flex-col items-end">
                 {getFirstInningsDisplay(type, awayTeam.awayScoresFirstInnings)
                   .show && (
-                    <ResultScoreFirstInnings
-                      value={
-                        getFirstInningsDisplay(
-                          type,
-                          awayTeam.awayScoresFirstInnings,
-                        ).value
-                      }
-                      animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                    />
-                  )}
+                  <ResultScoreFirstInnings
+                    value={
+                      getFirstInningsDisplay(
+                        type,
+                        awayTeam.awayScoresFirstInnings,
+                      ).value
+                    }
+                    animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+                  />
+                )}
                 <ResultScore
                   value={normalizeScore(awayTeam.score)}
                   animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}

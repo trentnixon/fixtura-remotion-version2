@@ -30,6 +30,7 @@ This guide explains how to create a new **results composition asset type** (like
 ### What is a Results Composition?
 
 A **results composition** is a sport-specific content type that displays:
+
 - **Match result data** (teams, scores, player performances)
 - **Multiple screens** when results exceed the per-screen limit (default: 2)
 - **Transitions between screens** using `TransitionSeriesWrapper`
@@ -37,18 +38,19 @@ A **results composition** is a sport-specific content type that displays:
 
 ### Key Differences from Other Compositions
 
-| Aspect | Results | Ladder | Performances |
-|--------|---------|--------|--------------|
-| **Data Type** | `MatchResult[]` | `LadderData[]` | `PerformanceData[]` |
-| **Items Per Screen** | 2 (fixed) | 1 per screen | 5 (configurable) |
-| **Row Height** | Calculated (height / 2) | Calculated dynamically | Static (115px) |
-| **Structure** | Complex nested (teams → performances) | Simple (teams array) | Simple (performance array) |
-| **Sections** | Multiple (teams, stats, header, status) | Single (table) | Single (rows) |
-| **Club Variants** | Yes (club-only cards) | No | No |
+| Aspect               | Results                                 | Ladder                 | Performances               |
+| -------------------- | --------------------------------------- | ---------------------- | -------------------------- |
+| **Data Type**        | `MatchResult[]`                         | `LadderData[]`         | `PerformanceData[]`        |
+| **Items Per Screen** | 2 (fixed)                               | 1 per screen           | 5 (configurable)           |
+| **Row Height**       | Calculated (height / 2)                 | Calculated dynamically | Static (115px)             |
+| **Structure**        | Complex nested (teams → performances)   | Simple (teams array)   | Simple (performance array) |
+| **Sections**         | Multiple (teams, stats, header, status) | Single (table)         | Single (rows)              |
+| **Club Variants**    | Yes (club-only cards)                   | No                     | No                         |
 
 ### Example: Cricket Results Composition
 
 The `CricketResults` composition:
+
 - **Data Type**: `MatchResult[]` - array of match results
 - **Structure**: Each result has teams with logos, scores, batting/bowling performances
 - **Variants**: `basic`, `classic`, `brickwork`, `sixersThunder`, etc.
@@ -121,11 +123,13 @@ src/compositions/cricket/results/
 ### Key Concepts
 
 1. **Variant Entry Points** (`basic.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation, screen calculation
    - Creates sequences for each screen
    - Uses `TransitionSeriesWrapper` for screen transitions
 
 2. **Display Components** (`controller/ResultsDisplay/display-*.tsx`):
+
    - Variant-specific rendering logic for a single screen
    - Receives all results, results per screen, and screen index
    - Filters results for current screen
@@ -133,18 +137,21 @@ src/compositions/cricket/results/
    - Merges sponsor data
 
 3. **Match Row Components** (`controller/MatchRow/row-*.tsx`):
+
    - Variant-specific row wrapper with animations
    - Receives a single match result
    - Checks `isAccountClub` to determine card variant
    - Wraps match card with `AnimatedContainer`
 
 4. **Match Card Components** (`layout/MatchCard/card-*.tsx`):
+
    - Variant-specific card layout
    - Composes section components (teams, stats, header, status)
    - Calculates section heights (40% teams, 50% stats, 10% header)
    - Handles staggered animations
 
 5. **Section Components** (`layout/Sections/`):
+
    - **TeamsSection**: Team logos, names, scores (multiple layout variants)
    - **PlayerStats**: Batting/bowling performances (variant-specific)
    - **MatchHeader**: Match info (type, round, ground)
@@ -152,6 +159,7 @@ src/compositions/cricket/results/
    - **ResultStatement**: Result text statements
 
 6. **Types** (`_types/types.tsx`):
+
    - `MatchResult`: Complete match data
    - `Team`: Team with logo, score, performances
    - `BattingPerformance`: Player batting stats
@@ -171,16 +179,19 @@ src/compositions/cricket/results/
 Before creating a new results composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of match result data structure**
+
    - Teams with logos, names, scores
    - Batting performances (runs, balls, strike rate)
    - Bowling performances (wickets, overs, runs)
    - Match metadata (date, type, round, ground, status)
 
 3. ✅ **Access to test data**
+
    - Sample match result data
    - Multiple matches to test pagination (more than 2)
 
@@ -278,6 +289,7 @@ export const RESULT_ANIMATION_DURATION = 30;
 ```
 
 **Key Points:**
+
 - **Nested structure**: Teams contain arrays of performances
 - **Club team flag**: `isClubTeam` determines club-only variants
 - **First innings**: Optional first innings scores for two-day matches
@@ -357,6 +369,7 @@ export const hasValidResults = (resultsData: unknown): boolean => {
 ```
 
 **Key Points:**
+
 - **Fixed results per screen**: Default is 2 (not configurable like performances)
 - **Duration calculation**: Uses `FPS_SCORECARD` timing
 - **Validation**: Checks if data is valid array with items
@@ -427,6 +440,7 @@ export const mergeAssignSponsors = (
 ```
 
 **Key Points:**
+
 - **Row height**: Each row gets half of available height (for 2 results per screen)
 - **Result filtering**: Gets results for current screen index
 - **Sponsor merging**: Simple object spread (unlike performances which deduplicates)
@@ -460,6 +474,7 @@ export default NoResultsData;
 ```
 
 **Key Points:**
+
 - **Use `AbsoluteFill`**: Remotion-specific component for full-screen display
 - **Simple message**: No dynamic title needed (unlike performances)
 
@@ -492,7 +507,8 @@ export const calculateAnimationOutFrame = (fpsScorecard?: number): number => {
 ```
 
 **Key Points:**
-- **Simple delay**: Index * 5 frames
+
+- **Simple delay**: Index \* 5 frames
 - **Exit frame**: Starts 20 frames before composition ends
 
 ---
@@ -573,6 +589,7 @@ export const getClubTeamPlayers = (
 ```
 
 **Key Points:**
+
 - **Section height split**: 40% teams, 50% stats, 10% header
 - **Staggered delays**: Teams animate first, then stats, then header
 - **Club team detection**: Finds club team by `isClubTeam` flag
@@ -643,6 +660,7 @@ export default MatchRowBasic;
 ```
 
 **Key Points:**
+
 - **Club check**: Uses `isAccountClub` from context to determine card variant
 - **Animation wrapper**: Wraps card with `AnimatedContainer`
 - **Conditional rendering**: Renders club-only or standard card
@@ -735,6 +753,7 @@ export default MatchCardBasic;
 ```
 
 **Key Points:**
+
 - **Section composition**: Teams → Status (conditional) → Stats → Header
 - **Height distribution**: Uses calculated section heights
 - **Staggered animations**: Each section animates with increasing delay
@@ -813,6 +832,7 @@ export default ResultsDisplayBasic;
 ```
 
 **Key Points:**
+
 - **Result filtering**: Gets results for current screen index
 - **Row height calculation**: Each row gets half of available height
 - **Spacing**: First row has bottom margin for visual separation
@@ -909,6 +929,7 @@ export default Basic;
 ```
 
 **Key Points:**
+
 - **Fixed results per screen**: Always 2 (not configurable)
 - **Screen calculation**: Calculates total screens needed
 - **Sequence creation**: Creates one sequence per screen
@@ -969,15 +990,18 @@ export const CricketResults = {
 ### How Pagination Works
 
 1. **Results Per Screen**:
+
    - Fixed at 2 results per screen (`DEFAULT_RESULTS_PER_SCREEN = 2`)
    - Not configurable (unlike performances)
 
 2. **Screen Calculation**:
+
    ```typescript
    const totalScreens = Math.ceil(totalResults / 2);
    ```
 
 3. **Result Filtering**:
+
    ```typescript
    const startIndex = screenIndex * 2;
    const endIndex = Math.min(startIndex + 2, results.length);
@@ -1006,15 +1030,18 @@ export const CricketResults = {
 The match card is divided into sections:
 
 1. **Teams Section** (40% of row height)
+
    - Team logos
    - Team names
    - Scores
    - First innings scores (if applicable)
 
 2. **Match Status** (10% of row height, conditional)
+
    - Only shown if `match.status === "Abandoned"`
 
 3. **Player Stats Section** (50% of row height)
+
    - Batting performances (top performers)
    - Bowling performances (top performers)
    - Max players per stat (default: 2)
@@ -1027,9 +1054,9 @@ The match card is divided into sections:
 ### Height Calculation
 
 ```typescript
-const teamsHeight = Math.floor(rowHeight * 0.4);  // 40%
-const statsHeight = Math.floor(rowHeight * 0.5);  // 50%
-const headerHeight = Math.floor(rowHeight * 0.1);  // 10%
+const teamsHeight = Math.floor(rowHeight * 0.4); // 40%
+const statsHeight = Math.floor(rowHeight * 0.5); // 50%
+const headerHeight = Math.floor(rowHeight * 0.1); // 10%
 ```
 
 ---
@@ -1041,6 +1068,7 @@ const headerHeight = Math.floor(rowHeight * 0.1);  // 10%
 **Location:** `layout/Sections/TeamsSection/`
 
 Multiple layout variants available:
+
 - `ScoreOverNameWithLogo` - Score above name with logo
 - `LogoWithScoreOverName` - Logo with score above name
 - `TeamsSectionLogoAbove` - Logo above team name
@@ -1070,6 +1098,7 @@ import { ScoreOverNameWithLogo } from "../Sections/TeamsSection/index";
 **Location:** `layout/Sections/PlayerStats/`
 
 Variant-specific components:
+
 - `PlayerStats-Basic.tsx`
 - `PlayerStats-BrickWork.tsx`
 - `PlayerStats-CNSW.tsx`
@@ -1145,11 +1174,13 @@ Club-only variants show only the club team's players, hiding the opponent's play
 ### Implementation
 
 1. **Check `isAccountClub`**:
+
    ```typescript
    const { isAccountClub } = useVideoDataContext();
    ```
 
 2. **Conditional Card Rendering**:
+
    ```typescript
    {isAccountClub ? (
      <MatchCardBasicClubOnly match={match} ... />
@@ -1166,6 +1197,7 @@ Club-only variants show only the club team's players, hiding the opponent's play
 ### File Naming
 
 Club-only cards use `-clubOnly` suffix:
+
 - `card-Basic.tsx` → `card-Basic-clubOnly.tsx`
 - `card-BrickWork.tsx` → `card-BrickWork-clubOnly.tsx`
 
@@ -1191,6 +1223,7 @@ Once you have the Basic variant working, create additional variants:
 ### MatchCard Structure
 
 Each match card variant:
+
 - Composes section components
 - Calculates section heights
 - Handles staggered animations
@@ -1247,6 +1280,7 @@ Within each card, sections animate with increasing delays:
 ### Composition ID
 
 The routing system recognizes:
+
 - `CricketResults`
 
 ### Routing Configuration
@@ -1344,8 +1378,12 @@ const testMatchResult: MatchResult = {
     score: "150/5",
     isHome: true,
     isClubTeam: true,
-    battingPerformances: [/* ... */],
-    bowlingPerformances: [/* ... */],
+    battingPerformances: [
+      /* ... */
+    ],
+    bowlingPerformances: [
+      /* ... */
+    ],
   },
   awayTeam: {
     logo: { url: "...", width: 100, height: 100 },
@@ -1354,19 +1392,26 @@ const testMatchResult: MatchResult = {
     score: "145/8",
     isHome: false,
     isClubTeam: false,
-    battingPerformances: [/* ... */],
-    bowlingPerformances: [/* ... */],
+    battingPerformances: [
+      /* ... */
+    ],
+    bowlingPerformances: [
+      /* ... */
+    ],
   },
   gradeName: "Grade A",
   teamHomeLogo: { url: "...", width: 100, height: 100 },
   teamAwayLogo: { url: "...", width: 100, height: 100 },
-  assignSponsors: { /* ... */ },
+  assignSponsors: {
+    /* ... */
+  },
 };
 ```
 
 ### Test Pagination
 
 Test with different numbers of results:
+
 - 1 result (1 screen)
 - 2 results (1 screen, exact)
 - 3 results (2 screens)
@@ -1375,6 +1420,7 @@ Test with different numbers of results:
 ### Test Club-Only Variant
 
 Test with `isAccountClub` set to `true`:
+
 - Should render club-only card
 - Should show only club team's players
 - Should hide opponent's players
@@ -1388,6 +1434,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Rows don't fit or overlap
 
 **Solutions:**
+
 1. Check `calculateRowHeight()` returns `Math.floor(availableHeight / 2)`
 2. Verify `availableHeight` is `heights.asset` (not including footer)
 3. Check section heights sum correctly (40% + 50% + 10% = 100%)
@@ -1397,6 +1444,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Club-only card not rendering
 
 **Solutions:**
+
 1. Check `isAccountClub` is set correctly in context
 2. Verify `isClubTeam` flag exists in team data
 3. Check club-only card component exists
@@ -1407,6 +1455,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Sections don't fit or overflow
 
 **Solutions:**
+
 1. Check `calculateSectionHeights()` uses correct percentages
 2. Verify `rowHeight` is passed correctly
 3. Check section components use `height` prop correctly
@@ -1416,6 +1465,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** No sponsors displayed
 
 **Solutions:**
+
 1. Check `mergeAssignSponsors()` logic
 2. Verify `assignSponsors` exists in match data
 3. Check sponsor data structure matches `AssignSponsors` type

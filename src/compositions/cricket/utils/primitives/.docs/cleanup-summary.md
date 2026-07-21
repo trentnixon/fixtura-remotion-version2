@@ -21,6 +21,7 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/AnimatedTextPrimitiveProps.ts`
+
 - **Extracted interfaces:**
   - `AnimatedTextPrimitiveProps` - Base props interface for AnimatedText primitives with nullable animation
     - `value: string`
@@ -38,11 +39,12 @@ The following folders were created to support the modularization pattern:
     - `textAlign?: "left" | "right" | "center"`
     - `delay: number`
 - **Purpose:** Centralizes prop interfaces that were duplicated across 20+ component files
-- **Dependencies:** 
+- **Dependencies:**
   - `AnimationConfig` from `../../../../../components/typography/config/animations`
   - `ColorVariant` from `../../../../../components/typography/AnimatedText`
 
 #### Created `_types/TeamLogoProps.ts`
+
 - **Extracted interfaces:**
   - `TeamLogo` - Team logo data structure
     - `url: string`
@@ -62,6 +64,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `DEFAULT_VARIANT: ColorVariant = "onContainerCopy"` - Default color variant for primitive components
   - `DEFAULT_LETTER_ANIMATION = "none"` - Default letter animation mode
@@ -74,6 +77,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/helpers.ts`
+
 - **Extracted functions:**
   - `useFontFamily()` - Custom hook to get font family from theme context
     - Returns `fontClasses.copy?.family`
@@ -83,6 +87,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `metadataSmall.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant (`"onContainerCopy"`)
@@ -93,6 +98,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Font family extraction to use `useFontFamily()`
 
 #### Modified `metadataMedium.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** Unused `AnimationMode` import
 - **Removed:** `useThemeContext()` hook call
@@ -102,6 +108,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `metadataLarge.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
@@ -110,6 +117,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `Top5PlayerName.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
@@ -118,6 +126,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `Top5PlayerTeam.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -126,6 +135,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `Top5PlayerScore.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
@@ -134,6 +144,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `Top5PlayerScoreSuffix.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
@@ -142,6 +153,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `TeamOfTheWeekPlayerName.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
@@ -150,6 +162,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `TeamOfTheWeekTeam.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -158,6 +171,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `TeamOfTheWeekStat.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -166,6 +180,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `TeamOfTheWeekType.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -174,6 +189,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultPlayerName.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -182,6 +198,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultPlayerScore.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -190,6 +207,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultTeamName.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -199,6 +217,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultMetaData.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -207,6 +226,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultFixtureResult.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -215,6 +235,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultSyntax.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
@@ -224,6 +245,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ResultScore.tsx`
+
 - **Removed:** Inline props type definitions (for both `ResultScore` and `ResultScoreFirstInnings`)
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -234,6 +256,7 @@ The following folders were created to support the modularization pattern:
 - **Note:** Kept conditional logic for "Yet to Bat" as it's component-specific behavior
 
 #### Modified `RosterPlayerName.tsx`
+
 - **Removed:** Inline props type definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and letter animation
@@ -243,6 +266,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ladderTeamName.tsx`
+
 - **Removed:** Inline `LadderTeamNameProps` interface definition
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant and text alignment
@@ -252,6 +276,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Defaults to use constants
 
 #### Modified `ladderTeamPoints.tsx`
+
 - **Removed:** `useThemeContext()` hook call
 - **Removed:** Hardcoded default variant
 - **Removed:** Redundant `TextAlign` type definition
@@ -260,6 +285,7 @@ The following folders were created to support the modularization pattern:
 - **Note:** Kept `TeamStatTextProps` interface as it has `value: string | number` which is unique
 
 #### Modified `TeamLogo.tsx`
+
 - **Removed:** Inline `TeamLogo` interface definition (moved to `_types/TeamLogoProps.ts`)
 - **Removed:** Inline `TeamLogoProps` interface definition
 - **Removed:** Hardcoded default size (`20`) and fit (`"contain"`)

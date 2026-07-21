@@ -6,7 +6,6 @@ import { generateParticles, updateParticlePositions } from "../utils";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 
 const LinesParticles: React.FC<ParticleBackgroundProps> = ({
-  particleColor = "#ffffff",
   particleSize = 2,
   particleCount = 100,
   speed = 1,
@@ -27,7 +26,13 @@ const LinesParticles: React.FC<ParticleBackgroundProps> = ({
       speed,
       direction,
     });
-  }, [particleCount, particleSize, particleColor, direction, speed]);
+  }, [
+    particleCount,
+    particleSize,
+    selectedPalette.text.onContainer.light,
+    direction,
+    speed,
+  ]);
 
   // Update particle positions based on frame
   const updatedParticles = React.useMemo(() => {

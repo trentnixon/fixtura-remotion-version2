@@ -4,7 +4,12 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName";
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
-import { PlayerStatsSingleTeamProps, StatItemProps, StatSectionProps, TeamStatsProps } from "./_types/PlayerStatsProps";
+import {
+  PlayerStatsSingleTeamProps,
+  StatItemProps,
+  StatSectionProps,
+  TeamStatsProps,
+} from "./_types/PlayerStatsProps";
 import { truncateText } from "./_utils/helpers";
 
 const StatItem: React.FC<StatItemProps> = ({
@@ -128,7 +133,9 @@ const TeamStats: React.FC<TeamStatsProps> = ({
   );
 };
 
-export const PlayerStatsSingleTeamOnly: React.FC<PlayerStatsSingleTeamProps> = ({
+export const PlayerStatsSingleTeamOnly: React.FC<
+  PlayerStatsSingleTeamProps
+> = ({
   Team,
   height,
   delay,

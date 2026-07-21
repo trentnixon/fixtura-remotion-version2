@@ -56,15 +56,15 @@ src/compositions/cricket/teamRoster/
 
 ### 2. Understand Team Roster vs Other Compositions
 
-| Aspect | Team Roster | Results | Performances |
-|--------|-------------|---------|--------------|
-| **Data Type** | `RosterDataItem[]` | `MatchResult[]` | `PerformanceData[]` |
-| **Transitions** | Remotion `Series` (one per roster) | `TransitionSeriesWrapper` | `TransitionSeriesWrapper` |
-| **Layout** | Player list left, team headers right | Match cards stacked | Player rows |
-| **Player Data** | Names only (`teamRoster: string[]`) | Full performances | Batting/bowling stats |
-| **Sponsors** | Fixture-specific (`roster.sponsors`) | Merged from matches | Merged from data |
-| **Metadata** | Date/ground, grade/round | Match type, round, ground | N/A |
-| **Team Perspective** | Account holder vs against | Club-only card | N/A |
+| Aspect               | Team Roster                          | Results                   | Performances              |
+| -------------------- | ------------------------------------ | ------------------------- | ------------------------- |
+| **Data Type**        | `RosterDataItem[]`                   | `MatchResult[]`           | `PerformanceData[]`       |
+| **Transitions**      | Remotion `Series` (one per roster)   | `TransitionSeriesWrapper` | `TransitionSeriesWrapper` |
+| **Layout**           | Player list left, team headers right | Match cards stacked       | Player rows               |
+| **Player Data**      | Names only (`teamRoster: string[]`)  | Full performances         | Batting/bowling stats     |
+| **Sponsors**         | Fixture-specific (`roster.sponsors`) | Merged from matches       | Merged from data          |
+| **Metadata**         | Date/ground, grade/round             | Match type, round, ground | N/A                       |
+| **Team Perspective** | Account holder vs against            | Club-only card            | N/A                       |
 
 ### 3. Variant Entry Point Pattern
 

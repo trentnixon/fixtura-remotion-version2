@@ -29,15 +29,15 @@ Animated image component system with entry/exit animations, aspect-ratio control
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Images root | `src/components/images/.docs/README.md` |
-| Roadmap | `src/components/images/.docs/DevelopmentRoadMap.md` |
-| Config | `src/components/images/config/.docs/README.md` |
+| Context           | Path                                                      |
+| ----------------- | --------------------------------------------------------- |
+| Images root       | `src/components/images/.docs/README.md`                   |
+| Roadmap           | `src/components/images/.docs/DevelopmentRoadMap.md`       |
+| Config            | `src/components/images/config/.docs/README.md`            |
 | Config animations | `src/components/images/config/animations/.docs/README.md` |
-| Animation options | `src/components/images/.docs/animationOptions.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Animation options | `src/components/images/.docs/animationOptions.md`         |
+| Parent roadmap    | `src/components/.docs/DevelopmentRoadMap.md`              |
+| Component tickets | `src/components/.docs/Tickets.md`                         |
 
 ## Roadmap
 
@@ -64,13 +64,13 @@ Related (for routing, not direct use in images):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|-----------------|--------------|
-| `AnimatedImage.tsx` | Main component; animation, exitAnimation, exitFrame, aspect ratio; normalizeImageAnimation, useDualImageAnimation; preloadImage(s), getImageDimensions | `AnimatedImage.tsx` |
-| `placeholders.ts` | GENERIC_PLACEHOLDER, LOGO_PLACEHOLDER, PLAYER_PLACEHOLDER, SPORT_PLACEHOLDERS | `placeholders.ts` |
-| `index.ts` | Barrel export (AnimatedImage, preloadImage, preloadImages, getImageDimensions, placeholders, types) | `index.ts` |
-| `config/` | animationUtils (normalizeImageAnimation), useImageAnimation, useDualImageAnimation; springConfigs; imageAnimations dispatcher | `config/index.ts`, `config/useImageAnimation.ts`, `config/animationUtils.ts` |
-| `config/animations/` | Per-category functions: fade, zoom, slide, special, rotate, spring, camera, cinematic, effects, perspective, broadcast, composite | `config/animations/*.ts`, `config/animations/index.ts` |
+| Module               | Responsibility                                                                                                                                         | Entry Points                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| `AnimatedImage.tsx`  | Main component; animation, exitAnimation, exitFrame, aspect ratio; normalizeImageAnimation, useDualImageAnimation; preloadImage(s), getImageDimensions | `AnimatedImage.tsx`                                                          |
+| `placeholders.ts`    | GENERIC_PLACEHOLDER, LOGO_PLACEHOLDER, PLAYER_PLACEHOLDER, SPORT_PLACEHOLDERS                                                                          | `placeholders.ts`                                                            |
+| `index.ts`           | Barrel export (AnimatedImage, preloadImage, preloadImages, getImageDimensions, placeholders, types)                                                    | `index.ts`                                                                   |
+| `config/`            | animationUtils (normalizeImageAnimation), useImageAnimation, useDualImageAnimation; springConfigs; imageAnimations dispatcher                          | `config/index.ts`, `config/useImageAnimation.ts`, `config/animationUtils.ts` |
+| `config/animations/` | Per-category functions: fade, zoom, slide, special, rotate, spring, camera, cinematic, effects, perspective, broadcast, composite                      | `config/animations/*.ts`, `config/animations/index.ts`                       |
 
 ## Implementation Guidelines
 

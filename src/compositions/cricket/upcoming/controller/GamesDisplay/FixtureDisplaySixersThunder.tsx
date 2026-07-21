@@ -30,10 +30,7 @@ export const GamesDisplaySixersThunder: React.FC<GamesDisplayProps> = ({
   );
 
   // Calculate game card heights
-  const gameCardHeight = calculateGameCardHeight(
-    heights.asset,
-    gamesPerScreen,
-  );
+  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
 
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">

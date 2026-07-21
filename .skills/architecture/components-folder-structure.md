@@ -36,11 +36,11 @@ src/components/
 
 ### 2. Understand Cross-Cutting Concerns
 
-| Concern | Source | Used By |
-|---------|--------|---------|
-| Theme | ThemeContext (palette, typography, layout) | backgrounds, containers, typography, layout, ui |
-| Data | VideoDataContext (templateVariation, video data) | All components that need variation or media |
-| Animation | useCurrentFrame, interpolate, spring; easing from easing/ | images, containers, typography, transitions |
+| Concern   | Source                                                    | Used By                                         |
+| --------- | --------------------------------------------------------- | ----------------------------------------------- |
+| Theme     | ThemeContext (palette, typography, layout)                | backgrounds, containers, typography, layout, ui |
+| Data      | VideoDataContext (templateVariation, video data)          | All components that need variation or media     |
+| Animation | useCurrentFrame, interpolate, spring; easing from easing/ | images, containers, typography, transitions     |
 
 ### 3. How Parts Compose
 
@@ -60,13 +60,13 @@ src/components/
 
 ### 5. When Choosing Animation Systems
 
-| Need | Use |
-|------|-----|
-| Simple initial/final presets | `animations/` (getAnimationConfig) |
-| Frame-accurate container animation | `containers/animations/` |
-| Image entry/exit | `images/config/`, `images/config/animations/` |
-| Typography animation | `typography/config/animations/` |
-| Between-scene transitions | `transitions/` |
+| Need                               | Use                                           |
+| ---------------------------------- | --------------------------------------------- |
+| Simple initial/final presets       | `animations/` (getAnimationConfig)            |
+| Frame-accurate container animation | `containers/animations/`                      |
+| Image entry/exit                   | `images/config/`, `images/config/animations/` |
+| Typography animation               | `typography/config/animations/`               |
+| Between-scene transitions          | `transitions/`                                |
 
 ### 6. Key Dependencies
 

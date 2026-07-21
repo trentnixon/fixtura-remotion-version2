@@ -68,8 +68,7 @@ export const broadcastProCompositionComponentStylesRoster = {
     className: "font-teko text-3xl uppercase sm:text-4xl",
   },
   broadcastProRosterTeamLabelHome: {
-    className:
-      "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest",
+    className: "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest",
   },
   broadcastProRosterTeamLabelAway: {
     className:

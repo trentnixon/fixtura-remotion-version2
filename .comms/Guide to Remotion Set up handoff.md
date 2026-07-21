@@ -50,10 +50,7 @@ These are the base settings used across the preview/render system:
 Total duration is calculated from the dataset:
 
 ```ts
-durationInFrames =
-  FPS_INTRO +
-  FPS_MAIN +
-  (includeSponsors ? FPS_OUTRO : 30);
+durationInFrames = FPS_INTRO + FPS_MAIN + (includeSponsors ? FPS_OUTRO : 30);
 ```
 
 That means:
@@ -74,7 +71,7 @@ Production compositions are resolved from:
 The final Remotion composition id is:
 
 ```ts
-`${templateId}-${useBackground}-${compositionId}`
+`${templateId}-${useBackground}-${compositionId}`;
 ```
 
 Example:
@@ -153,8 +150,8 @@ videoMeta.video = {
   contentLayout,
   templateVariation,
   fixtureCategory,
-  groupingCategory
-}
+  groupingCategory,
+};
 ```
 
 ### 4.3 Most important metadata fields
@@ -260,7 +257,9 @@ Typical shape:
 The consuming app should treat the whole preview as a single-scene component with one prop:
 
 ```ts
-{ data: FixturaDataset }
+{
+  data: FixturaDataset;
+}
 ```
 
 ### Delivery rule
@@ -285,7 +284,7 @@ The runtime reads from context providers that expect the full dataset. Splitting
 Use:
 
 ```ts
-getProductionCompositionFromData(data)
+getProductionCompositionFromData(data);
 ```
 
 This gives:

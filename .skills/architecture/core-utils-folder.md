@@ -46,15 +46,15 @@ src/core/utils/
 
 ### 3. When to Add vs Child Modules
 
-| Need | Use |
-|------|-----|
-| Palette, gradient, color logic | colorSystem/ |
-| Theme from primary/secondary | createThemeUtils/ |
-| Curated design palettes | designPalettes/ |
-| Font loading | fonts/ |
-| New sport/composition routing | routing.tsx + compositionMapping.ts |
-| Data normalization | datasetProcessing.ts, dataProcessing.ts |
-| Generic helpers | root (classNames, helpers, etc.) |
+| Need                           | Use                                     |
+| ------------------------------ | --------------------------------------- |
+| Palette, gradient, color logic | colorSystem/                            |
+| Theme from primary/secondary   | createThemeUtils/                       |
+| Curated design palettes        | designPalettes/                         |
+| Font loading                   | fonts/                                  |
+| New sport/composition routing  | routing.tsx + compositionMapping.ts     |
+| Data normalization             | datasetProcessing.ts, dataProcessing.ts |
+| Generic helpers                | root (classNames, helpers, etc.)        |
 
 ### 4. When Adding a New Composition to Routing
 

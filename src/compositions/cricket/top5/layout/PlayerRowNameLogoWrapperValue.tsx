@@ -20,13 +20,9 @@ import {
 } from "./_utils/constants";
 
 // --- Layout 1: Standard (Existing) ---
-export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutPropsWithRestrictions> = ({
-  player,
-  index,
-  rowHeight,
-  delay,
-  restrictions,
-}) => {
+export const PlayerRowNameLogoWrapperValue: React.FC<
+  PlayerRowLayoutPropsWithRestrictions
+> = ({ player, index, rowHeight, delay, restrictions }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
   /*   const { data } = useVideoDataContext();
@@ -74,12 +70,18 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutPropsWithRes
       <div className="col-span-7 flex flex-col justify-center px-2 h-full">
         <Top5PlayerName
           value={playerName}
-          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + PLAYER_NAME_DELAY_OFFSET,
+          }}
           className=""
         />
         <Top5PlayerTeam
           value={teamName}
-          animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
+          animation={{
+            ...smallTextAnimation,
+            delay: delay + TEAM_NAME_DELAY_OFFSET,
+          }}
           className=""
         />
       </div>
@@ -108,14 +110,20 @@ export const PlayerRowNameLogoWrapperValue: React.FC<PlayerRowLayoutPropsWithRes
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + STAT_DELAY_OFFSET }}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + STAT_DELAY_OFFSET,
+          }}
           className=""
           variant="onContainerCopy"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + STAT_SUFFIX_DELAY_OFFSET }}
+            animation={{
+              ...smallTextAnimation,
+              delay: delay + STAT_SUFFIX_DELAY_OFFSET,
+            }}
             className=""
             variant="onContainerCopy"
           />

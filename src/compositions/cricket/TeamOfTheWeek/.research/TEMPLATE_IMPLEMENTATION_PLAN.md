@@ -15,6 +15,7 @@ The TeamOfTheWeek asset has been successfully implemented for the **basic** temp
 ### What Was Implemented
 
 #### 1. **Core Components**
+
 - ✅ **Types** (`types.ts`): Complete TypeScript interfaces for TeamOfTheWeek data structure
 - ✅ **Display Component** (`controller/TeamOfTheWeekDisplay/display-Basic.tsx`): Main display component with 2-column grid layout
 - ✅ **Player Row Component** (`controller/PlayerRow/row-Basic.tsx`): Single-row layout with logo, player info, and stats
@@ -22,30 +23,36 @@ The TeamOfTheWeek asset has been successfully implemented for the **basic** temp
 - ✅ **Index Export** (`index.tsx`): Template export structure
 
 #### 2. **Typography Components**
+
 - ✅ `TeamOfTheWeekPlayerName`: Player name display
 - ✅ `TeamOfTheWeekTeam`: Team name display
 - ✅ `TeamOfTheWeekType`: Position label (Top Scorer, Highest Strike Rate, etc.)
 - ✅ `TeamOfTheWeekStat`: Stat values display
 
 #### 3. **Theme Integration**
+
 - ✅ Added to `src/templates/variants/basic/theme.ts`:
+
   - `TeamOfTheWeekPlayerName`: `text-xl font-normal tracking-wide leading-snug`
   - `TeamOfTheWeekTeam`: `text-xs font-normal tracking-wider leading-tight`
   - `TeamOfTheWeekType`: `text-xs font-bold uppercase tracking-wider leading-none`
   - `TeamOfTheWeekStat`: `text-3xl font-bold tracking-tight leading-tight`
 
 - ✅ Added to `src/templates/types/TemplateThemeConfig.ts`:
+
   - Added all four TeamOfTheWeek typography types to `ThemeComponentStyles` interface
 
 - ✅ Added to `src/components/typography/AnimatedText.tsx`:
   - Added all four types to `TypographyType` union
 
 #### 4. **System Integration**
+
 - ✅ Registered in `src/compositions/cricket/index.tsx` as `CricketTeamOfTheWeek`
 - ✅ Registered in `src/core/utils/routing.tsx` for composition routing
 - ✅ Test data registered in `testData/index.ts`
 
 #### 5. **Layout Features**
+
 - ✅ Single-row layout: `[Logo] [Type, Player, Team] [Stats]`
 - ✅ Logo: Full height, fixed width (w-20), covers entire area
 - ✅ Stats display:
@@ -62,6 +69,7 @@ The TeamOfTheWeek asset has been successfully implemented for the **basic** temp
 ## 🎯 Remaining Templates to Implement
 
 ### Template List
+
 1. **classic** - Impact font for titles, Heebo for copy
 2. **thunder** - Monument Extended for titles, Tungsten for copy
 3. **brickwork** - Roboto-Medium throughout
@@ -79,6 +87,7 @@ For each template, the following steps must be completed:
 ### Phase 1: Theme Updates
 
 #### Step 1.1: Add Typography Styles to Theme
+
 **File:** `src/templates/variants/{template}/theme.ts`
 
 Add the following to `componentStyles` object:
@@ -99,6 +108,7 @@ TeamOfTheWeekStat: {
 ```
 
 **Template-Specific Adjustments:**
+
 - **classic**: Use Impact font family for titles, adjust tracking
 - **thunder**: Use Monument Extended/Tungsten fonts, wider tracking
 - **brickwork**: Use Roboto-Medium, adjust weights
@@ -108,11 +118,13 @@ TeamOfTheWeekStat: {
 - **cnsw-private**: Match cnsw styles
 
 #### Step 1.2: Verify Type Definitions
+
 **File:** `src/templates/types/TemplateThemeConfig.ts`
 
 ✅ Already completed - no changes needed (types are already in the interface)
 
 #### Step 1.3: Verify AnimatedText Types
+
 **File:** `src/components/typography/AnimatedText.tsx`
 
 ✅ Already completed - no changes needed (types are already in the union)
@@ -122,15 +134,18 @@ TeamOfTheWeekStat: {
 ### Phase 2: Component Creation
 
 #### Step 2.1: Create Template-Specific Display Component
+
 **File:** `src/compositions/cricket/TeamOfTheWeek/controller/TeamOfTheWeekDisplay/display-{template}.tsx`
 
 **Base Structure:**
+
 - Copy from `display-Basic.tsx`
 - Adjust styling to match template aesthetic
 - Maintain same grid layout (2 columns, 6 players per column)
 - Update background colors, spacing, padding per template
 
 **Template-Specific Considerations:**
+
 - **classic**: May need different background treatments
 - **thunder**: Bold, high-contrast styling
 - **brickwork**: Clean, structured layout
@@ -140,9 +155,11 @@ TeamOfTheWeekStat: {
 - **cnsw-private**: Match cnsw but with private branding
 
 #### Step 2.2: Create Template-Specific Player Row Component
+
 **File:** `src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-{template}.tsx`
 
 **Base Structure:**
+
 - Copy from `row-Basic.tsx`
 - Maintain single-row layout: `[Logo] [Type, Player, Team] [Stats]`
 - Adjust:
@@ -152,6 +169,7 @@ TeamOfTheWeekStat: {
   - Logo sizing if needed
 
 **Template-Specific Considerations:**
+
 - **classic**: Classic styling, may need different background treatments
 - **thunder**: Bold, high-contrast colors
 - **brickwork**: Structured, clean appearance
@@ -161,9 +179,11 @@ TeamOfTheWeekStat: {
 - **cnsw-private**: Match cnsw styling
 
 #### Step 2.3: Create Template Entry Point
+
 **File:** `src/compositions/cricket/TeamOfTheWeek/{template}.tsx`
 
 **Structure:**
+
 ```typescript
 import React from "react";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
@@ -190,18 +210,22 @@ export default TeamOfTheWeek{Template};
 ### Phase 3: Integration
 
 #### Step 3.1: Export from Index
+
 **File:** `src/compositions/cricket/TeamOfTheWeek/index.tsx`
 
 Add export:
+
 ```typescript
 import {Template}TeamOfTheWeek from "./{template}";
 export const {template} = {Template}TeamOfTheWeek;
 ```
 
 #### Step 3.2: Register in Cricket Index
+
 **File:** `src/compositions/cricket/index.tsx`
 
 Update the `CricketTeamOfTheWeek` export:
+
 ```typescript
 export const CricketTeamOfTheWeek = {
   basic: teamOfTheWeekBasic,
@@ -215,42 +239,49 @@ export const CricketTeamOfTheWeek = {
 ## 🎨 Template-Specific Styling Guidelines
 
 ### Classic Template
+
 - **Fonts**: Impact (titles), Heebo (copy)
 - **Style**: Clean, professional
 - **Colors**: Standard palette
 - **Tracking**: Normal to tight
 
 ### Thunder Template
+
 - **Fonts**: Monument Extended (titles), Tungsten (copy)
 - **Style**: Bold, high-contrast, dramatic
 - **Colors**: High contrast
 - **Tracking**: Wider tracking
 
 ### Brickwork Template
+
 - **Fonts**: Roboto-Medium throughout
 - **Style**: Structured, clean, organized
 - **Colors**: Standard palette
 - **Tracking**: Normal
 
 ### Sixers Template
+
 - **Fonts**: Slightly Marker (titles), Resolve (copy)
 - **Style**: Playful, bold, energetic
 - **Colors**: Vibrant
 - **Tracking**: Normal to wider
 
 ### Two Column Classic Template
+
 - **Fonts**: Same as classic
 - **Style**: Classic but adapted for two-column layout
 - **Layout**: Ensure player rows work with two-column header
 - **Considerations**: May need width adjustments
 
 ### CNSW Template
+
 - **Fonts**: Match existing CNSW typography
 - **Style**: Match CNSW design system
 - **Colors**: CNSW palette
 - **Layout**: Follow CNSW patterns
 
 ### CNSW Private Template
+
 - **Fonts**: Same as CNSW
 - **Style**: Same as CNSW with private branding
 - **Colors**: CNSW palette
@@ -261,15 +292,18 @@ export const CricketTeamOfTheWeek = {
 ## 📊 Implementation Priority
 
 ### High Priority (Most Used)
+
 1. **classic** - Commonly used template
 2. **thunder** - Popular template
 3. **brickwork** - Frequently used
 
 ### Medium Priority
+
 4. **sixers** - Used for specific clients
 5. **twoColumnClassic** - Specialized layout
 
 ### Lower Priority (Specialized)
+
 6. **cnsw** - Regional template
 7. **cnsw-private** - Private variant
 
@@ -303,21 +337,25 @@ For each template implementation, verify:
 ## 📚 Reference Files
 
 ### Core Implementation Files (Basic Template)
+
 - `src/compositions/cricket/TeamOfTheWeek/types.ts`
 - `src/compositions/cricket/TeamOfTheWeek/basic.tsx`
 - `src/compositions/cricket/TeamOfTheWeek/controller/TeamOfTheWeekDisplay/display-Basic.tsx`
 - `src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Basic.tsx`
 
 ### Typography Components (Shared)
+
 - `src/compositions/cricket/utils/primitives/TeamOfTheWeekPlayerName.tsx`
 - `src/compositions/cricket/utils/primitives/TeamOfTheWeekTeam.tsx`
 - `src/compositions/cricket/utils/primitives/TeamOfTheWeekType.tsx`
 - `src/compositions/cricket/utils/primitives/TeamOfTheWeekStat.tsx`
 
 ### Theme Files (Per Template)
+
 - `src/templates/variants/{template}/theme.ts`
 
 ### Integration Files
+
 - `src/compositions/cricket/TeamOfTheWeek/index.tsx`
 - `src/compositions/cricket/index.tsx`
 - `src/core/utils/routing.tsx`
@@ -329,6 +367,7 @@ For each template implementation, verify:
 ### For Each New Template:
 
 1. **Copy Basic Template Files:**
+
    ```bash
    # Display component
    cp display-Basic.tsx display-{template}.tsx
@@ -341,16 +380,19 @@ For each template implementation, verify:
    ```
 
 2. **Update Theme:**
+
    - Open `src/templates/variants/{template}/theme.ts`
    - Add TeamOfTheWeek typography styles
    - Adjust to match template aesthetic
 
 3. **Update Components:**
+
    - Update imports in new component files
    - Adjust styling to match template
    - Update component names
 
 4. **Register:**
+
    - Export from `index.tsx`
    - Register in `cricket/index.tsx`
 
@@ -386,4 +428,3 @@ For each template implementation, verify:
 
 **Last Updated:** 2025-01-XX
 **Status:** Basic template complete, planning for remaining templates
-

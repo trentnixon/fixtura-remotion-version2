@@ -21,17 +21,19 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/TeamOfTheWeekDisplayProps.ts`
+
 - **Extracted from:** All display component files (`display-*.tsx`)
 - **Content:** `TeamOfTheWeekDisplayProps` interface
 - **Purpose:** Centralizes props type definition for all TeamOfTheWeekDisplay components
 - **Features:** Includes optional `title` prop for CNSW variants
-- **Dependencies:** 
+- **Dependencies:**
   - `TeamOfTheWeekPlayer` from `../../../types`
   - `Sponsor` from `../../../../../../core/types/data/sponsors`
 
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:** Default row heights for each display variant
   - `DEFAULT_ROW_HEIGHT_BASIC = 110`
   - `DEFAULT_ROW_HEIGHT_CLASSIC = 110`
@@ -45,6 +47,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/calculations.ts`
+
 - **Extracted function:**
   - `calculatePlayerDelay(index)` - Calculates animation delay for player rows based on index
 - **Purpose:** Centralizes delay calculation logic used by CNSW variants
@@ -53,6 +56,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `display-Basic.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`)
 - **Removed:** Hardcoded `rowHeight={110}`
@@ -60,6 +64,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** `rowHeight` prop to use `DEFAULT_ROW_HEIGHT_BASIC` constant
 
 #### Modified `display-Classic.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`)
 - **Removed:** Hardcoded `rowHeight={110}`
@@ -67,6 +72,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** `rowHeight` prop to use `DEFAULT_ROW_HEIGHT_CLASSIC` constant
 
 #### Modified `display-BrickWork.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`)
 - **Removed:** Hardcoded `rowHeight={130}`
@@ -74,6 +80,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** `rowHeight` prop to use `DEFAULT_ROW_HEIGHT_BRICKWORK` constant
 
 #### Modified `display-ClassicTwoColumn.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`)
 - **Removed:** Local `rowHeight` variable declaration (`const rowHeight = 85`)
@@ -81,6 +88,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Simplified map function to use `DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN` constant directly
 
 #### Modified `display-SixersThunder.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`)
 - **Removed:** Hardcoded `rowHeight={80}`
@@ -88,6 +96,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** `rowHeight` prop to use `DEFAULT_ROW_HEIGHT_SIXERS_THUNDER` constant
 
 #### Modified `display-CNSW.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`, `PLAYER_STAGGER_DELAY`)
 - **Removed:** Hardcoded `rowHeight={70}` and `delay={index * PLAYER_STAGGER_DELAY}`
@@ -96,6 +105,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** `delay` prop to use `calculatePlayerDelay(index)` function
 
 #### Modified `display-CNSW-private.tsx`
+
 - **Removed:** Inline `TeamOfTheWeekDisplayProps` interface definition
 - **Removed:** Unused imports (`TeamOfTheWeekPlayer`, `Sponsor`, `PLAYER_STAGGER_DELAY`)
 - **Removed:** Hardcoded `rowHeight={70}` and `delay={index * PLAYER_STAGGER_DELAY}`

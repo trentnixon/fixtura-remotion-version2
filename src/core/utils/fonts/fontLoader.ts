@@ -115,8 +115,7 @@ export const fontPathMap: Record<string, string> = {
   Dhurjati: "fonts/Dhurjati/Dhurjati-Regular.ttf",
 
   // Allerta Stencil (Google Font - downloaded and stored locally)
-  "Allerta Stencil":
-    "fonts/Allerta_Stencil/AllertaStencil-Regular.ttf",
+  "Allerta Stencil": "fonts/Allerta_Stencil/AllertaStencil-Regular.ttf",
 
   // Rajdhani (Google Font - downloaded and stored locally)
   Rajdhani: "fonts/Rajdhani/Rajdhani-Regular.ttf",

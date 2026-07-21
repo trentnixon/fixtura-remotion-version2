@@ -32,6 +32,7 @@ This comprehensive guide explains how to create a new **result single compositio
 ### What is a Result Single Composition?
 
 A **result single composition** is a sport-specific content type that displays:
+
 - **Single match result data** (one match per screen)
 - **Full-height display** (entire asset height for one match)
 - **Transitions between matches** using `TransitionSeriesWrapper`
@@ -40,19 +41,20 @@ A **result single composition** is a sport-specific content type that displays:
 
 ### Key Differences from Results Composition
 
-| Aspect | Result Single | Results |
-|--------|--------------|---------|
-| **Matches Per Screen** | 1 (full height) | 2 (split height) |
-| **Row Height** | Full asset height | Half asset height |
-| **Section Heights** | Fixed pixel values | Percentage-based (40/50/10) |
-| **Max Players Per Stat** | 3-5 (more detail) | 2 (less detail) |
-| **Pagination** | Match-to-match transitions | Screen-based pagination |
-| **Structure** | Simpler (no screen calculation) | More complex (screen calculation) |
-| **Club-Only Support** | Yes (optional result statements) | Yes (different layout) |
+| Aspect                   | Result Single                    | Results                           |
+| ------------------------ | -------------------------------- | --------------------------------- |
+| **Matches Per Screen**   | 1 (full height)                  | 2 (split height)                  |
+| **Row Height**           | Full asset height                | Half asset height                 |
+| **Section Heights**      | Fixed pixel values               | Percentage-based (40/50/10)       |
+| **Max Players Per Stat** | 3-5 (more detail)                | 2 (less detail)                   |
+| **Pagination**           | Match-to-match transitions       | Screen-based pagination           |
+| **Structure**            | Simpler (no screen calculation)  | More complex (screen calculation) |
+| **Club-Only Support**    | Yes (optional result statements) | Yes (different layout)            |
 
 ### Example: Cricket Result Single Composition
 
 The `CricketResultSingle` composition:
+
 - **Data Type**: `MatchResult[]` - array of match results
 - **Structure**: Each result has teams with logos, scores, batting/bowling performances
 - **Variants**: `basic`, `classic`, `brickwork`, `sixersThunder`, etc.
@@ -125,12 +127,14 @@ src/compositions/cricket/resultSingle/
 ### Key Concepts
 
 1. **Variant Entry Points** (`BasicTemplate.tsx`, `classic.tsx`, etc.):
+
    - Main component that handles data fetching, validation
    - Creates one sequence per match result
    - Uses `TransitionSeriesWrapper` for match-to-match transitions
    - No screen pagination (one match per sequence)
 
 2. **Display Components** (`controller/ResultSingleDisplay/display-*.tsx`):
+
    - Variant-specific rendering logic for a single match
    - Receives a single match result
    - Uses full asset height
@@ -138,6 +142,7 @@ src/compositions/cricket/resultSingle/
    - Includes sponsor footer
 
 3. **Match Card Components** (`layout/MatchCard/card-*.tsx`):
+
    - Variant-specific card layout
    - Composes section components (status, teams, stats, header)
    - Uses fixed pixel heights (not percentages)
@@ -145,6 +150,7 @@ src/compositions/cricket/resultSingle/
    - May have club-only variant (`card-{Variant}-ClubOnly.tsx`)
 
 4. **Section Components** (`layout/Sections/`):
+
    - **MatchStatus**: Match result status (always shown)
    - **TeamsSection**: Team logos, names, scores
    - **PlayerStats**: Batting/bowling performances (more players shown)
@@ -152,6 +158,7 @@ src/compositions/cricket/resultSingle/
    - **ResultStatement**: Result text (optional, club-only)
 
 5. **Types** (`types.tsx`):
+
    - Same as results: `MatchResult`, `Team`, `BattingPerformance`, `BowlingPerformance`
    - Shared with results composition
 
@@ -169,10 +176,12 @@ src/compositions/cricket/resultSingle/
 Before creating a new result single composition, ensure you have:
 
 1. ✅ **Template variants created** (if you need custom styling)
+
    - See `src/templates/.docs/how-to.md` for creating template variants
    - At minimum, you need `Basic` variant
 
 2. ✅ **Understanding of match result data structure**
+
    - Same as results composition
    - Teams with logos, names, scores
    - Batting performances (runs, balls, strike rate)
@@ -180,6 +189,7 @@ Before creating a new result single composition, ensure you have:
    - Match metadata (date, type, round, ground, status)
 
 3. ✅ **Access to test data**
+
    - Sample match result data
    - Multiple matches to test transitions
    - Club team data for club-only testing
@@ -277,6 +287,7 @@ export const RESULT_ANIMATION_DURATION = 30;
 ```
 
 **Key Points:**
+
 - **Same types as results**: Shared structure with results composition
 - **Optional fields**: `resultShort` and `resultSummary` for result statements
 - **Club team flag**: `isClubTeam` determines club-only variants
@@ -337,6 +348,7 @@ export const hasValidResults = (resultsData: unknown): boolean => {
 ```
 
 **Key Points:**
+
 - **Duration calculation**: Uses `FPS_SCORECARD` timing
 - **No screen calculation**: Each match gets its own sequence
 - **Validation**: Checks if data is valid array with items
@@ -374,6 +386,7 @@ export default NoResultData;
 ```
 
 **Key Points:**
+
 - **Theme-aware**: Uses theme context for styling
 - **Full height**: Uses full asset height
 - **Simple message**: No dynamic content needed
@@ -457,6 +470,7 @@ export const getClubTeamPlayers = (
 ```
 
 **Key Points:**
+
 - **Percentage-based**: Default calculation uses percentages
 - **Often overridden**: Many match cards use fixed pixel values instead
 - **Club team detection**: Finds club team by `isClubTeam` flag
@@ -515,7 +529,7 @@ const MatchCard: React.FC<MatchCardProps> = ({ match }) => {
         height={statusHeight}
         delay={baseDelay}
       />
-      
+
       {/* Teams section with logos, names and scores */}
       <LogoWithScoreOverName
         type={match.type}
@@ -554,6 +568,7 @@ export default MatchCard;
 ```
 
 **Key Points:**
+
 - **Fixed heights**: Uses fixed pixel values (not percentages)
 - **More space**: More height allocated to teams and stats
 - **Status first**: MatchStatus shown at top (always visible)
@@ -581,7 +596,7 @@ const ResultSingleDisplay: React.FC<ResultSingleDisplayProps> = ({ match }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { isAccountClub } = useVideoDataContext();
-  
+
   // Full height is available for a single match
   const availableHeight = heights.asset;
 
@@ -609,6 +624,7 @@ export default ResultSingleDisplay;
 ```
 
 **Key Points:**
+
 - **Single match**: Receives one match result
 - **Full height**: Uses entire asset height
 - **Club check**: Uses `isAccountClub` to determine card variant
@@ -688,6 +704,7 @@ export default Basic;
 ```
 
 **Key Points:**
+
 - **One sequence per match**: Maps over match results, creates one sequence each
 - **No screen calculation**: Each match gets full screen
 - **Transitions**: Uses `TransitionSeriesWrapper` for match-to-match transitions
@@ -768,6 +785,7 @@ Creating a new template variant involves:
 ### Concept
 
 Club-only variants show:
+
 - Only the club team's players
 - Optional result statement at top
 - Different section ordering
@@ -777,11 +795,13 @@ Club-only variants show:
 ### Implementation Overview
 
 1. **Check `isAccountClub`**:
+
    ```typescript
    const { isAccountClub } = useVideoDataContext();
    ```
 
 2. **Conditional Card Rendering**:
+
    ```typescript
    {isAccountClub ? (
      <MatchCardClubOnly match={match} />
@@ -802,6 +822,7 @@ Club-only variants show:
 ### File Naming
 
 Club-only cards use `-ClubOnly` suffix:
+
 - `card.tsx` → `card-Basic-ClubOnly.tsx`
 - `card-sixers.tsx` → `card-sixers-ClubOnly.tsx`
 
@@ -1227,6 +1248,7 @@ const {Template}SingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) =
 ### How Transitions Work
 
 1. **One Match Per Sequence**:
+
    ```typescript
    const sequences = matchResults.map((match) => ({
      content: <ResultSingleDisplay match={match} />,
@@ -1235,6 +1257,7 @@ const {Template}SingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) =
    ```
 
 2. **Transition Between Matches**:
+
    - Each match is a separate sequence
    - `TransitionSeriesWrapper` handles transitions between sequences
    - Transition type and direction from animation context
@@ -1259,16 +1282,19 @@ const {Template}SingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) =
 The match card is divided into sections:
 
 1. **Match Status** (80px fixed)
+
    - Match result status
    - Always shown at top
 
 2. **Teams Section** (240px fixed)
+
    - Team logos
    - Team names
    - Scores
    - More space than results (240px vs ~200px)
 
 3. **Player Stats Section** (560px fixed)
+
    - Batting performances (top 3)
    - Bowling performances (top 3)
    - More space than results (560px vs ~500px)
@@ -1282,6 +1308,7 @@ The match card is divided into sections:
 ### Height Distribution
 
 **Fixed pixel values** (not percentages):
+
 - **Status**: 80px
 - **Teams**: 240px
 - **Stats**: 560px
@@ -1316,6 +1343,7 @@ import { MatchStatus } from "../Sections/MatchStatus/index";
 **Location:** `layout/Sections/TeamsSection/`
 
 Multiple layout variants available:
+
 - `LogoWithScoreOverName` - Logo with score above name
 - `ScoreOverNameWithLogo` - Score above name with logo
 - `Horizontal_SingleTeam_LogoWithName_Score` - Single team display (club-only)
@@ -1377,6 +1405,7 @@ import PlayerStatsSingleTeamOnly from "../../../results/layout/Sections/PlayerSt
 **Location:** `layout/Sections/MatchHeader/`
 
 Multiple header variants:
+
 - `Type_Round_Ground` - Horizontal layout
 - `Type_Round_Ground_stacked` - Stacked layout
 - `Round_Ground` - Round and ground only
@@ -1483,6 +1512,7 @@ exitFrame={250} // Fixed or calculated based on duration
 ### Composition ID
 
 The routing system recognizes:
+
 - `CricketResultSingle`
 
 ### Routing Configuration
@@ -1605,8 +1635,12 @@ const testMatchResult: MatchResult = {
     score: "150/5",
     isHome: true,
     isClubTeam: true,
-    battingPerformances: [/* ... */],
-    bowlingPerformances: [/* ... */],
+    battingPerformances: [
+      /* ... */
+    ],
+    bowlingPerformances: [
+      /* ... */
+    ],
   },
   awayTeam: {
     logo: { url: "...", width: 100, height: 100 },
@@ -1615,13 +1649,19 @@ const testMatchResult: MatchResult = {
     score: "145/8",
     isHome: false,
     isClubTeam: false,
-    battingPerformances: [/* ... */],
-    bowlingPerformances: [/* ... */],
+    battingPerformances: [
+      /* ... */
+    ],
+    bowlingPerformances: [
+      /* ... */
+    ],
   },
   gradeName: "Grade A",
   teamHomeLogo: { url: "...", width: 100, height: 100 },
   teamAwayLogo: { url: "...", width: 100, height: 100 },
-  assignSponsors: { /* ... */ },
+  assignSponsors: {
+    /* ... */
+  },
   resultShort: "Team A won",
   resultSummary: {
     homeTeam: "Team A",
@@ -1635,6 +1675,7 @@ const testMatchResult: MatchResult = {
 ### Test Transitions
 
 Test with multiple matches:
+
 - 1 match (no transitions)
 - 2 matches (1 transition)
 - 3+ matches (multiple transitions)
@@ -1642,6 +1683,7 @@ Test with multiple matches:
 ### Test Club-Only Variant
 
 Test with `isAccountClub` set to `true`:
+
 - Should render club-only card
 - Should show only club team's players
 - Should show result statement if available
@@ -1657,6 +1699,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Sections overflow or don't fill available space
 
 **Solutions:**
+
 1. Check fixed heights sum correctly
 2. Verify `availableHeight` is `heights.asset` (not including footer)
 3. Adjust fixed heights to fit within asset height
@@ -1667,6 +1710,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Club-only card not rendering
 
 **Solutions:**
+
 1. Check `isAccountClub` is set correctly in context
 2. Verify `isClubTeam` flag exists in team data
 3. Check club-only card component exists
@@ -1677,6 +1721,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** No transitions between matches or transition errors
 
 **Solutions:**
+
 1. Check `TransitionSeriesWrapper` usage
 2. Verify animation config is available
 3. Check duration calculation returns valid number
@@ -1687,6 +1732,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Wrong number of players in stats
 
 **Solutions:**
+
 1. Check `maxPlayersPerStat` prop (should be 3-5 for single match)
 2. Verify PlayerStats component uses this prop
 3. Check player data exists in match
@@ -1696,6 +1742,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** Result statement not displaying in club-only view
 
 **Solutions:**
+
 1. Check `resultSummary` or `resultShort` exists in match data
 2. Verify result statement component is imported correctly
 3. Check priority logic (resultSummary > resultShort)
@@ -1706,6 +1753,7 @@ Test with `isAccountClub` set to `true`:
 **Error:** First innings scores not displayed for Two Day+ matches
 
 **Solutions:**
+
 1. Check `homeScoresFirstInnings` and `awayScoresFirstInnings` exist in team data
 2. Verify `firstInningsScore` prop is passed correctly
 3. Check `isHomeTeam` logic is correct
@@ -1959,11 +2007,13 @@ Creating a result single composition with club-only support involves:
 1. **Creating the basic structure** (types, utilities, empty state, match card, display component, entry point)
 
 2. **Creating template variants** with:
+
    - Variant-specific match cards
    - Variant-specific display components
    - Variant-specific sections (if needed)
 
 3. **Adding club-only support**:
+
    - Creating club-only card components
    - Creating result statement components (if needed)
    - Updating display controllers with conditional rendering

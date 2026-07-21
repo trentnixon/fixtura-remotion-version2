@@ -24,7 +24,10 @@ export const calculateRowDimensions = (
   const totalVerticalGaps = (teamCount - 1) * VERTICAL_GAP;
   const availableHeight =
     ladderHeight - PADDING * 2 - HEADER_MARGIN - extraReserved;
-  const rowHeight = Math.max(0, (availableHeight - totalVerticalGaps) / teamCount);
+  const rowHeight = Math.max(
+    0,
+    (availableHeight - totalVerticalGaps) / teamCount,
+  );
 
   return {
     headerHeight,

@@ -1,8 +1,14 @@
 import React from "react";
 import { AnimatedImage } from "../../../../components/images/AnimatedImage";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
-import { TeamLogo as TeamLogoType, TeamLogoProps } from "./_types/TeamLogoProps";
-import { DEFAULT_TEAM_LOGO_SIZE, DEFAULT_TEAM_LOGO_FIT } from "./_utils/constants";
+import {
+  TeamLogo as TeamLogoType,
+  TeamLogoProps,
+} from "./_types/TeamLogoProps";
+import {
+  DEFAULT_TEAM_LOGO_SIZE,
+  DEFAULT_TEAM_LOGO_FIT,
+} from "./_utils/constants";
 
 export type { TeamLogoType };
 

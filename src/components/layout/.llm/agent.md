@@ -29,18 +29,18 @@ Reusable layout primitives for assembling video scenes: screen containers (OneCo
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Layout root | `src/components/layout/.docs/README.md` |
-| Roadmap | `src/components/layout/.docs/DevelopmentRoadMap.md` |
-| Screen | `src/components/layout/screen/.docs/README.md` |
-| Header | `src/components/layout/main/header/.docs/README.md` |
-| Header variants | `src/components/layout/main/header/variants/.docs/README.md` |
-| Title screen | `src/components/layout/titleScreen/.docs/README.md` |
+| Context               | Path                                                         |
+| --------------------- | ------------------------------------------------------------ |
+| Layout root           | `src/components/layout/.docs/README.md`                      |
+| Roadmap               | `src/components/layout/.docs/DevelopmentRoadMap.md`          |
+| Screen                | `src/components/layout/screen/.docs/README.md`               |
+| Header                | `src/components/layout/main/header/.docs/README.md`          |
+| Header variants       | `src/components/layout/main/header/variants/.docs/README.md` |
+| Title screen          | `src/components/layout/titleScreen/.docs/README.md`          |
 | Title screen variants | `src/components/layout/titleScreen/variants/.docs/README.md` |
-| Sponsors | `src/components/layout/sponsors/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Sponsors              | `src/components/layout/sponsors/.docs/README.md`             |
+| Parent roadmap        | `src/components/.docs/DevelopmentRoadMap.md`                 |
+| Component tickets     | `src/components/.docs/Tickets.md`                            |
 
 ## Roadmap
 
@@ -66,15 +66,15 @@ Related (for routing, not direct use in layout):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|--------------|
-| `screen/` | OneColumn, TwoColumn; ThemeContext.layout.heights; RouteToComposition; ProgressTimer | `screen/OneColumn.tsx`, `screen/TwoColumn.tsx` |
-| `main/header/` | Header variants; slots: Title, Logo, Name; getAlignmentClasses; VerticalStack, TwoColumnLayout | `main/header/index.tsx`, `main/header/types.ts` |
-| `main/header/variants/` | VerticalStack.tsx, TwoColumnLayout.tsx — concrete permutations | `variants/VerticalStack.tsx`, `variants/TwoColumnLayout.tsx` |
-| `main/Timer/` | ProgressTimer for timer layouts | `main/Timer/ProgressTimer.tsx` |
-| `titleScreen/` | Title-screen variants; Logo, Title, Name, PrimarySponsor slots | `titleScreen/index.tsx`, `titleScreen/types.ts` |
-| `titleScreen/variants/` | VerticalStack, TwoColumnLayout for title screens | `titleScreen/variants/*.tsx` |
-| `sponsors/` | Sponsor layout components | `sponsors/` |
+| Module                  | Responsibility                                                                                 | Entry Points                                                 |
+| ----------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `screen/`               | OneColumn, TwoColumn; ThemeContext.layout.heights; RouteToComposition; ProgressTimer           | `screen/OneColumn.tsx`, `screen/TwoColumn.tsx`               |
+| `main/header/`          | Header variants; slots: Title, Logo, Name; getAlignmentClasses; VerticalStack, TwoColumnLayout | `main/header/index.tsx`, `main/header/types.ts`              |
+| `main/header/variants/` | VerticalStack.tsx, TwoColumnLayout.tsx — concrete permutations                                 | `variants/VerticalStack.tsx`, `variants/TwoColumnLayout.tsx` |
+| `main/Timer/`           | ProgressTimer for timer layouts                                                                | `main/Timer/ProgressTimer.tsx`                               |
+| `titleScreen/`          | Title-screen variants; Logo, Title, Name, PrimarySponsor slots                                 | `titleScreen/index.tsx`, `titleScreen/types.ts`              |
+| `titleScreen/variants/` | VerticalStack, TwoColumnLayout for title screens                                               | `titleScreen/variants/*.tsx`                                 |
+| `sponsors/`             | Sponsor layout components                                                                      | `sponsors/`                                                  |
 
 ## Implementation Guidelines
 

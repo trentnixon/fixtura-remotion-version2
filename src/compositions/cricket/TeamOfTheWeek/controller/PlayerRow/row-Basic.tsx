@@ -53,9 +53,7 @@ const PlayerRowBasic: React.FC<PlayerRowProps> = ({
   const iconColor = selectedPalette.text.onContainer.title;
 
   // All-rounders use same height as other players
-  const isAllRounder = isAllRounderPosition(
-    player.categoryDetail.position,
-  );
+  const isAllRounder = isAllRounderPosition(player.categoryDetail.position);
   const hasBoth = hasBothStats(player);
 
   // Get the appropriate SVG icon component for the position

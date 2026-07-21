@@ -81,8 +81,7 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
       className: "text-5xl font-normal  tracking-wide leading-snug",
     },
     Top5PlayerTeam: {
-      className:
-        "text-2xl font-normal opacity-80 tracking-wider leading-tight",
+      className: "text-2xl font-normal opacity-80 tracking-wider leading-tight",
     },
     Top5PlayerScore: {
       className: "text-7xl font-bold tracking-normal leading-tight mr-4",
@@ -121,8 +120,7 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
       className: "text-2xl font-bold  tracking-wider leading-snug",
     },
     ResultSyntax: {
-      className:
-        "text-2xl font-normal  tracking-wider leading-snug py-4 ml-4",
+      className: "text-2xl font-normal  tracking-wider leading-snug py-4 ml-4",
     },
     ResultFixtureResult: {
       className:
@@ -132,8 +130,7 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
       className: "text-xl font-normal  tracking-wider leading-snug",
     },
     ResultStatementShort: {
-      className:
-        "text-3xl font-normal  tracking-wider leading-snug py-2 px-16",
+      className: "text-3xl font-normal  tracking-wider leading-snug py-2 px-16",
     },
     ResultStatementText: {
       className: "text-3xl font-normal  tracking-wider leading-snug ",

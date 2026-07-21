@@ -18,12 +18,13 @@ export const SingleDataPointHeader: React.FC<SingleDataPointHeaderProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className={`w-full flex items-center px-4 py-0 ${align === "right"
+      className={`w-full flex items-center px-4 py-0 ${
+        align === "right"
           ? "justify-end"
           : align === "center"
             ? "justify-center"
             : "justify-start"
-        }`}
+      }`}
       backgroundColor="none"
       style={{
         background: backgroundColor,

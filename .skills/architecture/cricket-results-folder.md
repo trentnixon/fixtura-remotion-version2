@@ -56,14 +56,14 @@ src/compositions/cricket/results/
 
 ### 2. Understand Results vs Ladder vs Performances
 
-| Aspect | Results | Ladder | Performances |
-|--------|---------|--------|--------------|
-| **Data Type** | `MatchResult[]` | `LadderData[]` | `PerformanceData[]` |
-| **Items Per Screen** | 2 (fixed) | 1 per screen | 5 (configurable) |
-| **Row Height** | `availableHeight / 2` | Calculated dynamically | Static (e.g. 115px) |
-| **Structure** | Nested (teams → performances) | Simple (teams array) | Simple (performance array) |
-| **Club Variants** | Yes (`card-*-clubOnly`, `isAccountClub`) | No | No |
-| **Sections** | Multiple (teams, stats, header, status) | Single (table) | Single (rows) |
+| Aspect               | Results                                  | Ladder                 | Performances               |
+| -------------------- | ---------------------------------------- | ---------------------- | -------------------------- |
+| **Data Type**        | `MatchResult[]`                          | `LadderData[]`         | `PerformanceData[]`        |
+| **Items Per Screen** | 2 (fixed)                                | 1 per screen           | 5 (configurable)           |
+| **Row Height**       | `availableHeight / 2`                    | Calculated dynamically | Static (e.g. 115px)        |
+| **Structure**        | Nested (teams → performances)            | Simple (teams array)   | Simple (performance array) |
+| **Club Variants**    | Yes (`card-*-clubOnly`, `isAccountClub`) | No                     | No                         |
+| **Sections**         | Multiple (teams, stats, header, status)  | Single (table)         | Single (rows)              |
 
 ### 3. Variant Entry Point Pattern
 
@@ -91,7 +91,7 @@ Each variant file (e.g. `basic.tsx`) does:
 ### 5. Section Height Distribution (Match Card)
 
 - **Teams Section**: 40% of row height
-- **Stats Section**: 50% of row height  
+- **Stats Section**: 50% of row height
 - **Header Section**: 10% of row height
 
 ### 6. Club-Only Variant Pattern
@@ -127,7 +127,7 @@ Each variant file (e.g. `basic.tsx`) does:
 - Row height: `calculateRowHeight(availableHeight)` = `Math.floor(availableHeight / 2)`
 - Section heights: 40% teams, 50% stats, 10% header (use `calculateSectionHeights`)
 - Club-only conditional: `isAccountClub ? card-clubOnly : card`
-- Animation: `calculateDelay(index)` = index * 5; `calculateAnimationOutFrame(fpsScorecard)` = fpsScorecard - 20 or 280
+- Animation: `calculateDelay(index)` = index \* 5; `calculateAnimationOutFrame(fpsScorecard)` = fpsScorecard - 20 or 280
 - Sponsor merging: `mergeAssignSponsors(displayedResults)` in Display
 - MatchStatus only when `match.status === "Abandoned"`
 

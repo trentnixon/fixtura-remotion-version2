@@ -50,12 +50,12 @@ src/compositions/cricket/ladder/
 
 ### 2. Understand Composition vs Template Variant
 
-| Aspect | Composition (ladder) | Template Variant |
-|--------|----------------------|------------------|
-| **Purpose** | Content type: ladder standings | Visual style: Basic, Classic, Brickwork |
-| **Location** | `compositions/cricket/ladder/` | `templates/variants/` |
-| **Data** | LadderData[] – teams, positions, stats | Uses composition's data |
-| **Variants** | basic, classic, brickwork, etc. per template | Extends base template |
+| Aspect       | Composition (ladder)                         | Template Variant                        |
+| ------------ | -------------------------------------------- | --------------------------------------- |
+| **Purpose**  | Content type: ladder standings               | Visual style: Basic, Classic, Brickwork |
+| **Location** | `compositions/cricket/ladder/`               | `templates/variants/`                   |
+| **Data**     | LadderData[] – teams, positions, stats       | Uses composition's data                 |
+| **Variants** | basic, classic, brickwork, etc. per template | Extends base template                   |
 
 ### 3. Variant Entry Point Pattern
 

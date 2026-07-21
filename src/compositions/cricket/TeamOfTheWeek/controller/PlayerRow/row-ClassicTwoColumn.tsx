@@ -45,9 +45,7 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
   const iconColor = selectedPalette.text.onContainer.title;
 
   // All-rounders use same height as other players
-  const isAllRounder = isAllRounderPosition(
-    player.categoryDetail.position,
-  );
+  const isAllRounder = isAllRounderPosition(player.categoryDetail.position);
   const hasBoth = hasBothStats(player);
 
   // Get the appropriate SVG icon component for the position
@@ -103,14 +101,13 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
               style={{ color: iconColor }}
             />
           )}
-
         </div>
         {/* [name and stats] Player Name and Stats Section */}
         <div
-          className={`ml-4 flex flex-col justify-center px-2 h-full ${isAccountClub ? "col-span-10" : "col-span-9"
-            }`}
+          className={`ml-4 flex flex-col justify-center px-2 h-full ${
+            isAccountClub ? "col-span-10" : "col-span-9"
+          }`}
         >
-
           {/* Player Name */}
           <TeamOfTheWeekPlayerName
             value={cleanPlayerName(player.player).toUpperCase()}
@@ -185,7 +182,6 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
             </>
           )}
         </div>
-
       </div>
     </AnimatedContainer>
   );

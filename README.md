@@ -13,11 +13,11 @@ Fixtura Remotion Version 2 — published as **`@fixtura/remotion-assets`**.
 
 ## Commands
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Remotion Studio |
-| `npm run build:package` | Build JS/CSS for npm (`dist/`) and run pack verification |
-| `npm run verify:pack` | Assert publish `files` and critical paths (e.g. `src/templates/variants`) |
+| Script                  | Description                                                               |
+| ----------------------- | ------------------------------------------------------------------------- |
+| `npm run dev`           | Remotion Studio                                                           |
+| `npm run build:package` | Build JS/CSS for npm (`dist/`) and run pack verification                  |
+| `npm run verify:pack`   | Assert publish `files` and critical paths (e.g. `src/templates/variants`) |
 
 ---
 
@@ -25,11 +25,11 @@ Fixtura Remotion Version 2 — published as **`@fixtura/remotion-assets`**.
 
 Treat these as **stable contracts** unless noted in changelog:
 
-| Export | Purpose |
-|--------|---------|
-| `./preview` | Preview bundle (`FixturaTemplateScene`, composition helpers) |
-| `./src/*` | Published source subpaths for deep imports and **Tailwind content scanning** |
-| `./styles.css` | Compiled CSS from the package build — **supplementary**; not sufficient alone for full utility parity in host apps |
+| Export              | Purpose                                                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `./preview`         | Preview bundle (`FixturaTemplateScene`, composition helpers)                                                            |
+| `./src/*`           | Published source subpaths for deep imports and **Tailwind content scanning**                                            |
+| `./styles.css`      | Compiled CSS from the package build — **supplementary**; not sufficient alone for full utility parity in host apps      |
 | `./tailwind-preset` | Shared `theme.extend.fontFamily` (`font-teko`, `font-rajdhani`) so hosts generate the same named utilities as this repo |
 
 **Shipped source trees** (from `package.json` `files`): `src/components`, `src/compositions`, `src/config`, `src/core`, `src/package`, `src/templates` (includes **`src/templates/variants/**`**), `src/types`, plus `dist/`.
@@ -64,7 +64,7 @@ module.exports = {
 ```js
 const path = require("path");
 const remotionRoot = path.dirname(
-  require.resolve("@fixtura/remotion-assets/package.json")
+  require.resolve("@fixtura/remotion-assets/package.json"),
 );
 
 module.exports = {

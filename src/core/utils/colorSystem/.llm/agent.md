@@ -29,15 +29,15 @@ Color system for generating standardized palettes, gradients, shadows, and color
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Color system root | `src/core/utils/colorSystem/.docs/readMe.md` |
-| Parent roadmap | `src/core/utils/.docs/DevelopmentRoadMap.md` |
-| Parent tickets | `src/core/utils/.docs/Tickets.md` |
-| Core (types, baseManipulation, colorRelationships, memoization) | `src/core/utils/colorSystem/core/.docs/readMe.md` |
-| Config (constants, defaults, paletteConfigurations, standardPaletteStructure) | `src/core/utils/colorSystem/config/.docs/readMe.md` |
-| Generators (gradients, shadows, contrast, text, color variations, utility) | `src/core/utils/colorSystem/generators/.docs/readMe.md` |
-| Utils (accessibility, colorMath, colorSpaces, validation, tinycolorWrapper) | `src/core/utils/colorSystem/utils/.docs/readMe.md` |
+| Context                                                                       | Path                                                    |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Color system root                                                             | `src/core/utils/colorSystem/.docs/readMe.md`            |
+| Parent roadmap                                                                | `src/core/utils/.docs/DevelopmentRoadMap.md`            |
+| Parent tickets                                                                | `src/core/utils/.docs/Tickets.md`                       |
+| Core (types, baseManipulation, colorRelationships, memoization)               | `src/core/utils/colorSystem/core/.docs/readMe.md`       |
+| Config (constants, defaults, paletteConfigurations, standardPaletteStructure) | `src/core/utils/colorSystem/config/.docs/readMe.md`     |
+| Generators (gradients, shadows, contrast, text, color variations, utility)    | `src/core/utils/colorSystem/generators/.docs/readMe.md` |
+| Utils (accessibility, colorMath, colorSpaces, validation, tinycolorWrapper)   | `src/core/utils/colorSystem/utils/.docs/readMe.md`      |
 
 ## Roadmap
 
@@ -64,15 +64,15 @@ Related (consumers and dependencies):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|----------------|---------------|
-| `index.ts` | Main entry; createColorSystem, exports types, baseManipulation, colorRelationships, config helpers, DEFAULT_COLORS, DEFAULT_PALETTE_PRESETS | `index.ts` |
-| `createStandardizedPalettes.ts` | Orchestrates palette generation from configurations; calls standardPaletteFactory per config | `createStandardizedPalettes.ts` |
-| `gradientResolver.ts` | Resolves CSS gradient strings from palettes; determineGradientTypeForPalette, resolvePaletteGradient | `gradientResolver.ts` |
-| `core/` | types, baseManipulation, colorRelationships, memoization | `core/types.ts`, `core/baseManipulation.ts`, `core/colorRelationships.ts`, `core/memoization.ts` |
-| `config/` | constants, defaultColors, paletteConfigurations, standardPaletteStructure | `config/constants.ts`, `config/defaultColors.ts`, `config/paletteConfigurations.ts`, `config/standardPaletteStructure.ts` |
-| `generators/` | standardPaletteFactory, gradientGenerator, backgroundGenerator, contrastGenerator, colorVariations, shadowGenerator, textGenerator, utilityGenerator | `generators/standardPaletteFactory.ts` |
-| `utils/` | accessibilityUtils, colorMath, colorSpaces, tinycolorWrapper, validationUtils | `utils/*.ts` |
+| Module                          | Responsibility                                                                                                                                       | Entry Points                                                                                                              |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `index.ts`                      | Main entry; createColorSystem, exports types, baseManipulation, colorRelationships, config helpers, DEFAULT_COLORS, DEFAULT_PALETTE_PRESETS          | `index.ts`                                                                                                                |
+| `createStandardizedPalettes.ts` | Orchestrates palette generation from configurations; calls standardPaletteFactory per config                                                         | `createStandardizedPalettes.ts`                                                                                           |
+| `gradientResolver.ts`           | Resolves CSS gradient strings from palettes; determineGradientTypeForPalette, resolvePaletteGradient                                                 | `gradientResolver.ts`                                                                                                     |
+| `core/`                         | types, baseManipulation, colorRelationships, memoization                                                                                             | `core/types.ts`, `core/baseManipulation.ts`, `core/colorRelationships.ts`, `core/memoization.ts`                          |
+| `config/`                       | constants, defaultColors, paletteConfigurations, standardPaletteStructure                                                                            | `config/constants.ts`, `config/defaultColors.ts`, `config/paletteConfigurations.ts`, `config/standardPaletteStructure.ts` |
+| `generators/`                   | standardPaletteFactory, gradientGenerator, backgroundGenerator, contrastGenerator, colorVariations, shadowGenerator, textGenerator, utilityGenerator | `generators/standardPaletteFactory.ts`                                                                                    |
+| `utils/`                        | accessibilityUtils, colorMath, colorSpaces, tinycolorWrapper, validationUtils                                                                        | `utils/*.ts`                                                                                                              |
 
 ## Implementation Guidelines
 

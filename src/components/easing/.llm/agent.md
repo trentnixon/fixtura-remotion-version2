@@ -29,11 +29,11 @@ Shared easing types and utilities for mapping declarative easing descriptors to 
 
 ## Where the Docs Are
 
-| Context | Path |
-|---------|------|
-| Easing root | `src/components/easing/.docs/README.md` |
-| Parent roadmap | `src/components/.docs/DevelopmentRoadMap.md` |
-| Component tickets | `src/components/.docs/Tickets.md` |
+| Context           | Path                                         |
+| ----------------- | -------------------------------------------- |
+| Easing root       | `src/components/easing/.docs/README.md`      |
+| Parent roadmap    | `src/components/.docs/DevelopmentRoadMap.md` |
+| Component tickets | `src/components/.docs/Tickets.md`            |
 
 ## Roadmap
 
@@ -59,10 +59,10 @@ Related (for routing, not direct use in easing):
 
 ## Module Map
 
-| Module | Responsibility | Entry Points |
-|--------|-----------------|--------------|
-| `types.ts` | ImageEasingType, ImageAnimationType, ImageSpringConfig, ImageAnimationConfig, ImageAnimationProps, AnimationFunction | Exports shared cross-domain animation types |
-| `easingFunctions.ts` | getImageEasingFunction(easing?) → (t: number) => number | Maps declarative descriptors to Remotion Easing; supports strings, poly, elastic, back, bezier, in/out/inOut |
+| Module               | Responsibility                                                                                                       | Entry Points                                                                                                 |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `types.ts`           | ImageEasingType, ImageAnimationType, ImageSpringConfig, ImageAnimationConfig, ImageAnimationProps, AnimationFunction | Exports shared cross-domain animation types                                                                  |
+| `easingFunctions.ts` | getImageEasingFunction(easing?) → (t: number) => number                                                              | Maps declarative descriptors to Remotion Easing; supports strings, poly, elastic, back, bezier, in/out/inOut |
 
 No root-level index; consumers import directly from `types.ts` and `easingFunctions.ts`.
 

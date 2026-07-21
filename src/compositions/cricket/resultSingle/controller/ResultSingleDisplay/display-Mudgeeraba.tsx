@@ -6,7 +6,9 @@ import { useVideoDataContext } from "../../../../../core/context/VideoDataContex
 import MatchCardMudgeerabaClubOnly from "../../layout/MatchCard/card-Mudgeeraba-clubOnly";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 
-const ResultSingleDisplayMudgeeraba: React.FC<ResultSingleDisplayProps> = ({ match }) => {
+const ResultSingleDisplayMudgeeraba: React.FC<ResultSingleDisplayProps> = ({
+  match,
+}) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { isAccountClub } = useVideoDataContext();

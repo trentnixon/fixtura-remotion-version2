@@ -7,7 +7,7 @@ Generators for palette variants, gradients, contrast, shadows, text, color varia
 - **`standardPaletteFactory.ts`**: main factory
   - `standardPaletteFactory(name, colors, options, useMode)`: produces standardized palette; uses gradientGenerator, textGenerator, shadowGenerator, createStandardPaletteStructure
 - **`gradientGenerator.ts`**: gradient creation
-  - `GRADIENT_TYPES`: LINEAR, RADIAL, CONIC, REPEATING_*
+  - `GRADIENT_TYPES`: LINEAR, RADIAL, CONIC, REPEATING\_\*
   - `generateGradientBackground`, `generateAllDirectionalGradients`, `generateGradientOptions`
   - `createAdvancedGradient`, `generateMeshGradient`, `generateHardStopGradient`
 - **`backgroundGenerator.ts`**: background/surface colors

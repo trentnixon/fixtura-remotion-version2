@@ -2,8 +2,7 @@ import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig
 
 export const broadcastProCompositionComponentStylesLadder = {
   ladderGradeLabel: {
-    className:
-      "text-2xl font-bold uppercase tracking-[0.2em] leading-snug",
+    className: "text-2xl font-bold uppercase tracking-[0.2em] leading-snug",
   },
   ladderTeamName: {
     className: "text-4xl font-normal uppercase tracking-wide leading-none",

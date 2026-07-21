@@ -7,7 +7,10 @@ import { AnimatedText } from "../../../../../../components/typography/AnimatedTe
 import { MudgeerabaClubHeaderProps } from "./_types/MudgeerabaClubHeaderProps";
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { TeamLogo as TeamLogoType } from "../../../../utils/primitives/_types/TeamLogoProps";
-import { STEEP_HERO_TOP_LEFT, LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
+import {
+  STEEP_HERO_TOP_LEFT,
+  LogoWell,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
   match,
@@ -22,11 +25,18 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
 
   // Theme colors for backgrounds
   const backgroundColorMain = selectedPalette.background.main;
-  const backgroundColorContainer = selectedPalette.container.backgroundTransparent.high;
+  const backgroundColorContainer =
+    selectedPalette.container.backgroundTransparent.high;
 
   // Format scores with overs for both teams
-  const homeScoreDisplay = formatScoreWithOvers(match.homeTeam.score, match.homeTeam.overs);
-  const awayScoreDisplay = formatScoreWithOvers(match.awayTeam.score, match.awayTeam.overs);
+  const homeScoreDisplay = formatScoreWithOvers(
+    match.homeTeam.score,
+    match.homeTeam.overs,
+  );
+  const awayScoreDisplay = formatScoreWithOvers(
+    match.awayTeam.score,
+    match.awayTeam.overs,
+  );
 
   // Logo size - circular container
   const logoSize = 70; // pixels
@@ -71,7 +81,10 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
       </div>
 
       {/* Logo and Score Section - Right Side */}
-      <div className="flex items-center relative h-full" style={{ paddingRight: "12px" }}>
+      <div
+        className="flex items-center relative h-full"
+        style={{ paddingRight: "12px" }}
+      >
         <LogoWell
           variant="circle"
           size={logoSize}
@@ -111,7 +124,6 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
       </div>
     </div>
   );
-
 
   return (
     <AnimatedContainer
@@ -157,8 +169,6 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
         backgroundColorContainer={backgroundColorContainer}
       />
 
-
-
       {/* Away Team Row (Name, Logo, Score) */}
       <TeamRow
         teamName={match.awayTeam.name}
@@ -168,8 +178,6 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
         primaryColor={primaryColor}
         backgroundColorContainer={backgroundColorContainer}
       />
-
-
     </AnimatedContainer>
   );
 };

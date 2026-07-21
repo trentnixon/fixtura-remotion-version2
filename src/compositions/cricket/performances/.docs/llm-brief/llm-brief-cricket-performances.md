@@ -9,6 +9,7 @@
 **Content model** — Data is an array of performances; **length varies** (often **five per “page”** in video, but lists can be longer—design should tolerate **N rows** or a **truncated teaser**). Each item is either **`batting`** or **`bowling`**; a given graphic is normally **one discipline** (batting **or** bowling).
 
 **Typical row (all optional layout)** — **`teamLogo`** (club mark, varying aspect ratio) → **`name`** → **`playedFor`** (team / grade side name) → **score block**:
+
 - **Batting** — main **runs** (asterisk or similar if **`notOut`**), suffix **balls** (e.g. in parentheses); **`SR`** (strike rate) for an extra figure or subline.
 - **Bowling** — main **`wickets` / `runs`** conceded, suffix **`overs`** (e.g. in parentheses; may include decimals like `0.2`).
 

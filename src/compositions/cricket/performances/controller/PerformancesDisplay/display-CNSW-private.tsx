@@ -27,7 +27,7 @@ const PerformancesDisplayCNSWPrivate: React.FC<PerformancesDisplayProps> = ({
   // Get title from first performance's assignSponsors.grade.name (matching top5)
   const title =
     displayedPerformances.length > 0 &&
-      displayedPerformances[0].assignSponsors?.grade?.name
+    displayedPerformances[0].assignSponsors?.grade?.name
       ? displayedPerformances[0].assignSponsors.grade.name
       : "";
 

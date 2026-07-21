@@ -21,17 +21,19 @@ The following folders were created to support the modularization pattern:
 ### 1. Type Extraction
 
 #### Created `_types/PlayersDisplayProps.ts`
+
 - **Extracted interface:**
   - `PlayersDisplayProps` - Props interface for PlayersDisplay components
     - `players: PlayerData[]`
     - `title?: string` - Optional title to display
     - `sponsors: Sponsor[]`
 - **Purpose:** Centralizes the props interface that was duplicated across 6 component files
-- **Dependencies:** 
+- **Dependencies:**
   - `PlayerData` from `../../../types`
   - `Sponsor` from `../../../../../../core/types/data/sponsors`
 
 #### Created `_types/PlayersDisplayPropsWithoutSponsors.ts`
+
 - **Extracted interface:**
   - `PlayersDisplayPropsWithoutSponsors` - Props interface for PlayersDisplay components that don't use sponsors
     - `players: PlayerData[]`
@@ -42,6 +44,7 @@ The following folders were created to support the modularization pattern:
 ### 2. Constants Extraction
 
 #### Created `_utils/constants.ts`
+
 - **Extracted constants:**
   - `VERTICAL_GAP = 8` - Vertical gap between player rows in rem
   - `PADDING = 8` - Padding top and bottom in rem
@@ -55,6 +58,7 @@ The following folders were created to support the modularization pattern:
 ### 3. Utility Functions Extraction
 
 #### Created `_utils/calculations.ts`
+
 - **Extracted functions:**
   - `calculateRowDimensions(totalHeight, playerCount)` - Calculates row dimensions based on total height and player count
     - Returns object containing `rowHeight`
@@ -65,6 +69,7 @@ The following folders were created to support the modularization pattern:
 ### 4. Component File Updates
 
 #### Modified `display-Basic.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `Sponsor`)
 - **Removed:** Inline `calculateRowDimensions` function
@@ -75,6 +80,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Row dimensions calculation to use shared `calculateRowDimensions` function
 
 #### Modified `display-Classic.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `Sponsor`)
 - **Removed:** Inline `calculateRowDimensions` function
@@ -83,6 +89,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations and delays to use shared utilities
 
 #### Modified `display-BrickWork.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `Sponsor`)
 - **Removed:** Inline `calculateRowDimensions` function
@@ -91,6 +98,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** All calculations and delays to use shared utilities
 
 #### Modified `display-CNSW.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `Sponsor`)
 - **Removed:** Commented-out `calculateRowDimensions` function
@@ -101,6 +109,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Row height to use `DEFAULT_ROW_HEIGHT_CNSW`
 
 #### Modified `display-CNSW-private.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `Sponsor`)
 - **Removed:** Commented-out `calculateRowDimensions` function
@@ -111,6 +120,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Row height to use `DEFAULT_ROW_HEIGHT_CNSW`
 
 #### Modified `display-ClassicTwoColumn.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition
 - **Removed:** Unused imports (`PlayerData`, `Sponsor`)
 - **Removed:** Hardcoded animation delay (`0`)
@@ -120,6 +130,7 @@ The following folders were created to support the modularization pattern:
 - **Updated:** Row height to use `DEFAULT_ROW_HEIGHT_CLASSIC_TWO_COLUMN`
 
 #### Modified `display-SixersThunder.tsx`
+
 - **Removed:** Inline `PlayersDisplayProps` interface definition (replaced with `PlayersDisplayPropsWithoutSponsors`)
 - **Removed:** Unused `PlayerData` import
 - **Removed:** Inline `calculateRowDimensions` function

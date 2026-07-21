@@ -33,12 +33,12 @@ src/components/animations/
 
 ### 3. When to Use vs Domain-Specific
 
-| Use Case | Use |
-|----------|-----|
-| Simple initial/final CSS presets | `animations/` (getAnimationConfig) |
-| Frame-accurate container sequences | `containers/animations/` |
-| Image entry/exit in compositions | `images/config/`, `images/config/animations/` |
-| Typography letter/word splitting | `typography/config/animations/` |
+| Use Case                           | Use                                           |
+| ---------------------------------- | --------------------------------------------- |
+| Simple initial/final CSS presets   | `animations/` (getAnimationConfig)            |
+| Frame-accurate container sequences | `containers/animations/`                      |
+| Image entry/exit in compositions   | `images/config/`, `images/config/animations/` |
+| Typography letter/word splitting   | `typography/config/animations/`               |
 
 ### 4. When Adding a New Animation Variant
 

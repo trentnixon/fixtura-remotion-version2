@@ -20,8 +20,7 @@ export const broadcastProCompositionComponentStylesResults = {
     className: "text-2xl font-semibold  tracking-wider leading-snug",
   },
   ResultSyntax: {
-    className:
-      "text-2xl font-semibold  tracking-wider leading-snug py-4 ml-4",
+    className: "text-2xl font-semibold  tracking-wider leading-snug py-4 ml-4",
   },
   ResultFixtureResult: {
     className:
@@ -31,8 +30,7 @@ export const broadcastProCompositionComponentStylesResults = {
     className: "text-xl font-semibold  tracking-wider leading-snug",
   },
   ResultStatementShort: {
-    className:
-      "text-3xl font-semibold  tracking-wider leading-snug py-2 px-16",
+    className: "text-3xl font-semibold  tracking-wider leading-snug py-2 px-16",
   },
   ResultStatementText: {
     className: "text-3xl font-semibold  tracking-wider leading-snug ",

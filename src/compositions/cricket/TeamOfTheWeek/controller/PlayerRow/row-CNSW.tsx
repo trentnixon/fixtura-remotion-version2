@@ -1,5 +1,4 @@
 import React from "react";
-import { TeamOfTheWeekPlayer } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -11,10 +10,7 @@ import { Top5PlayerScore } from "../../../utils/primitives/Top5PlayerScore";
 import { Top5PlayerScoreSuffix } from "../../../utils/primitives/Top5PlayerScoreSuffix";
 //import { stripGradeNumberFromTeamName } from "../../../utils/utils-text";
 import { truncateText } from "../../../utils/utils-text";
-import {
-  getCategoryPositionLabel,
-  getScoreValues,
-} from "../../utils/config";
+import { getCategoryPositionLabel, getScoreValues } from "../../utils/config";
 
 import { PlayerRowPropsWithDelay } from "./_types/PlayerRowPropsWithDelay";
 

@@ -46,6 +46,7 @@ src/core/utils/designPalettes/
 ### 3. DesignPalette Structure
 
 Each palette implements:
+
 - **name**: string (e.g. "Primary", "Secondary")
 - **background**: BackgroundOptions (main, light, dark, contrast, accent, gradient)
 - **container**: ContainerOptions (primary, secondary, main, transparent, gradient strings, backgroundTransparent)
@@ -54,16 +55,16 @@ Each palette implements:
 
 ### 4. Token Usage by Palette
 
-| Palette | Tokens Used |
-|---------|-------------|
-| primary | colorVariations, textColors, shadows |
-| secondary | colorVariations, textColors, shadows, gradients, utility, contrast |
-| dark | backgrounds, textColors, shadows, utility, contrast, primary |
-| light | primary, secondary, backgrounds, textColors, shadows, utility, contrast |
-| accent | primary, secondary, colorVariations, textColors, shadows, utility, contrast |
-| complementary | primary, textColors, shadows, utility, contrast, colorVariations |
-| triadic | primary, textColors, shadows, utility, contrast |
-| monochromatic | primary, colorVariations, textColors, shadows, utility, contrast |
+| Palette       | Tokens Used                                                                 |
+| ------------- | --------------------------------------------------------------------------- |
+| primary       | colorVariations, textColors, shadows                                        |
+| secondary     | colorVariations, textColors, shadows, gradients, utility, contrast          |
+| dark          | backgrounds, textColors, shadows, utility, contrast, primary                |
+| light         | primary, secondary, backgrounds, textColors, shadows, utility, contrast     |
+| accent        | primary, secondary, colorVariations, textColors, shadows, utility, contrast |
+| complementary | primary, textColors, shadows, utility, contrast, colorVariations            |
+| triadic       | primary, textColors, shadows, utility, contrast                             |
+| monochromatic | primary, colorVariations, textColors, shadows, utility, contrast            |
 
 ### 5. When Adding a New Palette
 

@@ -20,7 +20,7 @@ Procedural noise and SVG graphics backgrounds. GridNoise, ShapeNoise, ParticleNo
 
 - Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
 - Key dependencies: `core/context/VideoDataContext` (SpokesGraphics timings), `core/context/ThemeContext`
-- Consumed by: BackgroundComponents.Noise.*, SelectTemplateBackground
+- Consumed by: BackgroundComponents.Noise.\*, SelectTemplateBackground
 
 ## Dependencies
 

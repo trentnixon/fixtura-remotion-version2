@@ -67,13 +67,19 @@ export const StandardPerformanceRowBrickWork: React.FC<
       <div className="col-span-7 flex flex-col justify-center px-2 h-full">
         <Top5PlayerName
           value={playerName}
-          animation={{ ...largeTextAnimation, delay: delay + PLAYER_NAME_DELAY_OFFSET }}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + PLAYER_NAME_DELAY_OFFSET,
+          }}
           className=""
           variant="onContainerCopy"
         />
         <Top5PlayerTeam
           value={teamName}
-          animation={{ ...smallTextAnimation, delay: delay + TEAM_NAME_DELAY_OFFSET }}
+          animation={{
+            ...smallTextAnimation,
+            delay: delay + TEAM_NAME_DELAY_OFFSET,
+          }}
           className=""
           variant="onContainerCopy"
         />
@@ -103,14 +109,20 @@ export const StandardPerformanceRowBrickWork: React.FC<
       >
         <Top5PlayerScore
           value={mainValue}
-          animation={{ ...largeTextAnimation, delay: delay + STAT_DELAY_OFFSET }}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + STAT_DELAY_OFFSET,
+          }}
           className=""
           variant="onContainerCopy"
         />
         {suffix && (
           <Top5PlayerScoreSuffix
             value={suffix}
-            animation={{ ...smallTextAnimation, delay: delay + STAT_SUFFIX_DELAY_OFFSET }}
+            animation={{
+              ...smallTextAnimation,
+              delay: delay + STAT_SUFFIX_DELAY_OFFSET,
+            }}
             className=""
             variant="onContainerCopy"
           />

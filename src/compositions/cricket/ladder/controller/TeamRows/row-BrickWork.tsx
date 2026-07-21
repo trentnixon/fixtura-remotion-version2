@@ -64,7 +64,7 @@ export const RowBrickWork: React.FC<TeamRowProps> = ({
           LadderRowHeight={LadderRowHeight}
           place={position}
         />
-        </AnimatedContainer>
+      </AnimatedContainer>
     </div>
   );
 };

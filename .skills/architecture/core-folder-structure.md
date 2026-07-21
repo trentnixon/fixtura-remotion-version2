@@ -31,11 +31,11 @@ src/core/
 
 ### 2. Cross-Dependencies
 
-| Module | Depends On | Provides |
-|--------|------------|----------|
-| context | types, utils (colorSystem, designPalettes, fonts) | ThemeContext, VideoDataContext, etc. |
-| utils | types | colorSystem, routing, datasetProcessing |
-| templates/compositions | context, types, utils | — |
+| Module                 | Depends On                                        | Provides                                |
+| ---------------------- | ------------------------------------------------- | --------------------------------------- |
+| context                | types, utils (colorSystem, designPalettes, fonts) | ThemeContext, VideoDataContext, etc.    |
+| utils                  | types                                             | colorSystem, routing, datasetProcessing |
+| templates/compositions | context, types, utils                             | —                                       |
 
 ### 3. Key Flows
 

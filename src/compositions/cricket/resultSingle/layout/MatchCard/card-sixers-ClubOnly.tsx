@@ -6,7 +6,11 @@ import { Horizontal_SingleTeam_LogoWithName_Score } from "../../../results/layou
 import { ResultStatementClassic } from "../Sections/ResultStatement/index";
 import PlayerStatsSingleTeamOnly from "../../../results/layout/Sections/PlayerStats/PlayerStats-SingleTeamOnly";
 import { MatchCardProps } from "./_types/MatchCardProps";
-import { calculateSectionHeights, calculateDelays, getClubTeamPlayers } from "./_utils/calculations";
+import {
+  calculateSectionHeights,
+  calculateDelays,
+  getClubTeamPlayers,
+} from "./_utils/calculations";
 
 const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
   const { layout } = useThemeContext();
@@ -16,8 +20,16 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
   const clubTeamPlayers = getClubTeamPlayers(match);
 
   // Determine which team is the club team
-  const clubTeam = match.homeTeam.isClubTeam ? match.homeTeam : match.awayTeam.isClubTeam ? match.awayTeam : null;
-  const oppositionTeam = match.homeTeam.isClubTeam ? match.awayTeam : match.awayTeam.isClubTeam ? match.homeTeam : null;
+  const clubTeam = match.homeTeam.isClubTeam
+    ? match.homeTeam
+    : match.awayTeam.isClubTeam
+      ? match.awayTeam
+      : null;
+  const oppositionTeam = match.homeTeam.isClubTeam
+    ? match.awayTeam
+    : match.awayTeam.isClubTeam
+      ? match.homeTeam
+      : null;
 
   if (!clubTeamPlayers || !clubTeam || !oppositionTeam) {
     return null; // Don't render if no club team found
@@ -28,10 +40,15 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
   const baseDelay = 0;
 
   // Calculate section heights
-  const { teamsHeight, statsHeight, headerHeight } = calculateSectionHeights(rowHeight);
+  const { teamsHeight, statsHeight, headerHeight } =
+    calculateSectionHeights(rowHeight);
 
   // Calculate delays
-  const { baseDelay: calculatedBaseDelay, statsDelay, headerDelay } = calculateDelays(baseDelay);
+  const {
+    baseDelay: calculatedBaseDelay,
+    statsDelay,
+    headerDelay,
+  } = calculateDelays(baseDelay);
 
   // Determine if club team is home or away
   const isHomeTeam = match.homeTeam.isClubTeam;
@@ -40,9 +57,9 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
   const { resultShort, resultSummary } = match;
 
   return (
-    <div className={`${layout.borderRadius.container} w-auto mx-8 overflow-hidden h-full flex flex-col justify-center`}>
-
-
+    <div
+      className={`${layout.borderRadius.container} w-auto mx-8 overflow-hidden h-full flex flex-col justify-center`}
+    >
       {/* Match result and grade headers */}
       {/* Result statement - priority: resultSummary > resultShort */}
       <ResultStatementClassic
@@ -59,17 +76,17 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
         align="right"
       />
 
-
-
       {/* Section 1: Team scores and names */}
       {/* Club team */}
       <Horizontal_SingleTeam_LogoWithName_Score
         type={match.type}
         Team={clubTeam}
         TeamLogo={isHomeTeam ? match.teamHomeLogo : match.teamAwayLogo}
-        firstInningsScore={isHomeTeam
-          ? (match.homeTeam.homeScoresFirstInnings || "")
-          : (match.awayTeam.awayScoresFirstInnings || "")}
+        firstInningsScore={
+          isHomeTeam
+            ? match.homeTeam.homeScoresFirstInnings || ""
+            : match.awayTeam.awayScoresFirstInnings || ""
+        }
         delay={calculatedBaseDelay}
         outerContainer={{
           height: teamsHeight,
@@ -93,9 +110,11 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
         type={match.type}
         Team={oppositionTeam}
         TeamLogo={isHomeTeam ? match.teamAwayLogo : match.teamHomeLogo}
-        firstInningsScore={isHomeTeam
-          ? (match.awayTeam.awayScoresFirstInnings || "")
-          : (match.homeTeam.homeScoresFirstInnings || "")}
+        firstInningsScore={
+          isHomeTeam
+            ? match.awayTeam.awayScoresFirstInnings || ""
+            : match.homeTeam.homeScoresFirstInnings || ""
+        }
         delay={calculatedBaseDelay}
         outerContainer={{
           height: teamsHeight,
@@ -115,8 +134,6 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
         />
       </div>
 
-
-
       {/* Match info footer */}
       <MatchHeader
         type={match.type}
@@ -125,9 +142,6 @@ const SixersMatchCardClubOnly: React.FC<MatchCardProps> = ({ match }) => {
         height={headerHeight}
         delay={headerDelay}
       />
-
-
-
     </div>
   );
 };

@@ -35,4 +35,3 @@ export const SixersThunder: React.FC = () => {
 };
 
 export default SixersThunder;
-

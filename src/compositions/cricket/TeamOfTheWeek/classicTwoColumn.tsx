@@ -35,4 +35,3 @@ export const ClassicTwoColumn: React.FC = () => {
 };
 
 export default ClassicTwoColumn;
-
