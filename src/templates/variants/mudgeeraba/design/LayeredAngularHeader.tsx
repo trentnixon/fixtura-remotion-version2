@@ -105,7 +105,7 @@ export const LayeredAngularHeader: React.FC<LayeredAngularHeaderProps> = ({
 
   return (
     <div
-      className={`flex w-full flex-col items-center justify-center overflow-visible px-4 ${className}`}
+      className={`flex w-full flex-col items-center justify-end overflow-visible px-4 ${className}`}
       style={{
         height: `${height}px`,
         gap: `${HEADER_PANEL_GAP_PX}px`,
@@ -133,7 +133,7 @@ export const LayeredAngularHeader: React.FC<LayeredAngularHeaderProps> = ({
             ...clipPathStyle(SHALLOW_HEADER_TOP),
           }}
         >
-          <div className="flex h-full w-full items-center justify-center overflow-hidden px-6 py-3">
+          <div className="flex h-full w-full items-end justify-center overflow-hidden px-6 pb-3 pt-2">
             {title}
           </div>
         </AnimatedContainer>

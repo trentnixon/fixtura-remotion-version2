@@ -157,8 +157,8 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
   layout: {
     heights: {
       asset: 1010,
-      header: 190,
-      footer: 150,
+      header: 240,
+      footer: 100,
     },
     spacing: {
       section: "space-y-8",
