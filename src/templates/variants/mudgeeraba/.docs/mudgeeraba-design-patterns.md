@@ -68,49 +68,167 @@ src/compositions/cricket/results/layout/Sections/
 
 ## 🔑 Key Design Patterns
 
-### 1. Angled Edges with Clip-Path
+### 1. Official Two-Angle System
 
-**Pattern:** Use CSS `clip-path` to create trapezoidal shapes with angled edges.
+**Source:** [`design/angles.ts`](../design/angles.ts) — import from `templates/variants/mudgeeraba/design`.
 
-**Left Column Pattern:**
+All Mudgeeraba clip-path values must use the shared tokens below. Do not define local `CLIP_*` polygons in composition files.
+
+| Angle | Cut | Use cases |
+| --- | --- | --- |
+| **Shallow** | 5% | List rows, status bars, mirrored columns, supporting panels |
+| **Steep** | 30% | Logo wells, dividers, hero score wedges |
+
+**Shallow tokens:**
 ```typescript
-const CLIP_LEFT_COLUMN = "polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%)";
-// Straight left edge, angled right edge (bottom-right pointed)
+import {
+  SHALLOW_ROW_LEFT,
+  SHALLOW_ROW_RIGHT,
+  SHALLOW_COLUMN_LEFT,
+  SHALLOW_COLUMN_RIGHT,
+  SHALLOW_STATUS_BAR,
+  SHALLOW_HEADER_TOP,
+  SHALLOW_EDGE_STRIP_RIGHT,
+  SHALLOW_EDGE_STRIP_LEFT,
+  SHALLOW_DIVIDER_LEFT,
+  SHALLOW_DIVIDER_RIGHT,
+  getShallowColumnPadding,
+  getShallowEdgeStrip,
+} from "templates/variants/mudgeeraba/design";
 ```
 
-**Right Column Pattern (Mirrored):**
+**Steep tokens:**
 ```typescript
-const CLIP_RIGHT_COLUMN = "polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)";
-// Angled left edge (top-left pointed), straight right edge
+import {
+  STEEP_LOGO_WELL_LEFT,
+  STEEP_LOGO_WELL_RIGHT,
+  STEEP_HERO_TOP_LEFT,
+  clipPathStyle,
+} from "templates/variants/mudgeeraba/design";
 ```
+
+**Approved polygons:**
+- Shallow row/column left: `polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)`
+- Shallow row/column right (mirrored): `polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%)`
+- Steep logo well left: `polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%)`
+- Steep logo well right (mirrored): `polygon(30% 0%, 0% 100%, 100% 100%, 100% 0%)`
+- Steep hero score wedge: `polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%)`
 
 **Implementation:**
 ```tsx
 <div
   style={{
-    clipPath: isLeftColumn ? CLIP_LEFT_COLUMN : CLIP_RIGHT_COLUMN,
+    clipPath: isLeftColumn ? SHALLOW_COLUMN_LEFT : SHALLOW_COLUMN_RIGHT,
   }}
 >
 ```
 
-### 2. Mirrored Padding
+Use `clipPathStyle(token)` when both `clipPath` and `WebkitClipPath` are required.
 
-**Pattern:** Outer edges get more padding, inner edges get less to create visual balance.
+### 3. Layered Angular Panels
 
-**Left Column:**
-- `pl-4` or `pl-8` (more padding on left/outer edge)
-- `pr-10` or `pr-2` (less padding on right/inner edge)
+**Source:** [`design/LayeredAngularPanel.tsx`](../design/LayeredAngularPanel.tsx)
 
-**Right Column (Mirrored):**
-- `pl-12` or `pl-2` (less padding on left/inner edge)
-- `pr-3` or `pr-8` (more padding on right/outer edge)
+Adds structural depth with an inset underlay polygon (club primary at ~28% opacity) offset down-right — no box shadows or CSS transforms (transforms skew clip-path edges).
+
+Apply to all angular list rows, result cards, fixture team panels, and player stat rows.
+
+**Surface texture (Item 04):** `LayeredAngularPanel` applies a faint diagonal hatch by default (`showSurfaceTexture`, on by default). Angle 168° (shallow diagonal family), 6px spacing, ~2.2% opacity. Set `showSurfaceTexture={false}` to disable per panel. Header panels excluded.
+
+**Important:** Put flex/layout/padding on `surfaceClassName`, not `className`. Children render inside the clipped surface layer; the outer wrapper only sizes the underlay offset. Parent row wrappers should use `overflow-visible` so the underlay peek is not clipped.
+
+```tsx
+import {
+  LayeredAngularPanel,
+  getLayeredUnderlayColor,
+  SHALLOW_ROW_LEFT,
+} from "templates/variants/mudgeeraba/design";
+
+<LayeredAngularPanel
+  clipPath={SHALLOW_ROW_LEFT}
+  surfaceColor={rowBg}
+  underlayColor={getLayeredUnderlayColor(colors.primary)}
+  className="w-full relative"
+  style={{ height: `${rowHeight}px` }}
+  surfaceClassName="flex items-stretch w-full overflow-hidden pl-0 pr-10 relative"
+>
+  {children}
+</LayeredAngularPanel>
+```
+
+### 4. Standard Logo Wells
+
+**Source:** [`design/LogoWell.tsx`](../design/LogoWell.tsx)
+
+Use `LogoWell` for every team/club logo frame in Mudgeeraba compositions. Do not hand-roll steep clip-path or circular logo containers.
+
+**Variants:**
+| Variant | Shape | Typical use |
+| --- | --- | --- |
+| `steepLeft` | 30% steep cut, bottom-right | Top 5, Performances player rows |
+| `steepRight` | Mirrored steep cut | Team of the Week club logo (right side) |
+| `circle` | Rounded well with subtle border | Ladder, fixtures, match headers |
+
+**Props:**
+- `size` — outer width/height in px (usually row height or fixed header size)
+- `emphasisBorder` — 4px club primary border (match headers only)
+- `showCornerAccent` — small primary wedge on the **flush** bottom corner: bottom-left for `steepLeft`, bottom-right for `steepRight` (default `true`)
 
 **Example:**
 ```tsx
-className={`... ${isLeftColumn ? 'pl-4 pr-10' : 'pl-12 pr-3'}`}
+import { LogoWell } from "templates/variants/mudgeeraba/design";
+
+<LogoWell variant="steepLeft" size={rowHeight} className="mr-4">
+  <TeamLogo logo={...} teamName={...} delay={delay} size={32} />
+</LogoWell>
+
+<LogoWell variant="circle" size={70} emphasisBorder style={{ marginRight: "-10px" }}>
+  <TeamLogo logo={...} teamName={...} delay={delay} size={20} fit="cover" />
+</LogoWell>
 ```
 
-### 3. Two-Column Layout
+Surface uses `backgroundTransparent.strong`. Inner logo area is capped at 72% of outer size with 8px padding constants (`LOGO_WELL_MAX_LOGO_RATIO`, `LOGO_WELL_PADDING_PX`).
+
+Position icon blocks (primary-coloured stat wells) are **not** logo wells — keep those as inline steep panels.
+
+### 6. Layered Angular Header
+
+**Source:** [`design/LayeredAngularHeader.tsx`](../design/LayeredAngularHeader.tsx)
+
+Main header uses two stacked clipped panels (no overlap) aligned with list-row styling:
+
+| Layer | Shape | Surface | Content |
+| --- | --- | --- | --- |
+| **Title panel** | `SHALLOW_HEADER_TOP` | Vertical 3-stop gradient (no underlay) | Competition title — `useFittedFontSize` capped at `titleSmall` (4em) |
+| **Name panel** | `SHALLOW_STATUS_BAR` | Vertical primary gradient | Association/club name — fitted + `text-balance` |
+
+Both panels animate via `AnimatedContainer` using `animations.container.main.header` (staggered slide-in from right). No `LayeredAngularPanel` underlay on the header.
+
+Panels are separated by `HEADER_PANEL_GAP_PX` (10px). Gradient helpers: `getHeaderTitlePanelBackground`, `getHeaderNamePanelBackground`.
+
+Mounted in `MudgeerabaMainHeader.tsx` only. Text uses `variant="onBackground"` on both panels.
+
+```tsx
+import { LayeredAngularHeader } from "templates/variants/mudgeeraba/design";
+```
+
+### 5. Mirrored Padding
+
+**Pattern:** Outer edges get more padding, inner edges get less to create visual balance.
+
+**Token helpers:**
+- `PADDING_SHALLOW_LEFT` → `pl-4 pr-10`
+- `PADDING_SHALLOW_RIGHT` → `pl-12 pr-3`
+- `PADDING_SHALLOW_LEFT_COMPACT` → `pl-2 pr-6`
+- `PADDING_SHALLOW_ROW_LOGO_FLUSH` → `pl-0 pr-10`
+- `getShallowColumnPadding(isLeftColumn)` → left or right class string
+
+**Example:**
+```tsx
+className={`... ${getShallowColumnPadding(isLeftColumn)}`}
+```
+
+### 5. Two-Column Layout
 
 **Pattern:** Split content into two equal columns with minimal gap.
 

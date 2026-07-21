@@ -7,6 +7,7 @@ import { AnimatedText } from "../../../../../../components/typography/AnimatedTe
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { TeamLogo as TeamLogoType } from "../../../../utils/primitives/_types/TeamLogoProps";
 import { Team } from "../../../_types/types";
+import { STEEP_HERO_TOP_LEFT, LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export interface MudgeerabaSingleTeamHeaderProps {
   team: Team;
@@ -75,44 +76,29 @@ export const MudgeerabaSingleTeamHeader: React.FC<MudgeerabaSingleTeamHeaderProp
 
         {/* Logo and Score Section - Right Side */}
         <div className="flex items-center relative h-full" style={{ paddingRight: "12px" }}>
-          {/* Circular Logo Container with Primary Color Border */}
-          <div
-            className="flex rounded-full items-center justify-center overflow-visible z-30 relative self-center shrink-0"
-            style={{
-              width: `${logoSize}px`,
-              height: `${logoSize}px`,
-              backgroundColor: backgroundColorContainer,
-              border: `4px solid ${primaryColor}`,
-              marginRight: "-10px",
-            }}
+          <LogoWell
+            variant="circle"
+            size={logoSize}
+            emphasisBorder
+            className="z-30 relative self-center shrink-0"
+            style={{ marginRight: "-10px" }}
           >
-            {/* Logo image clipped to circle - fill container so overflow-hidden yields round shape */}
-            <div
-              className="rounded-full overflow-hidden w-full h-full flex items-center justify-center"
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: `${logoSize}px`,
-                maxHeight: `${logoSize}px`,
-              }}
-            >
-              <TeamLogo
-                logo={teamLogo || null}
-                teamName={team.name}
-                delay={delay + 20}
-                size={20}
-                fit="cover"
-              />
-            </div>
-          </div>
+            <TeamLogo
+              logo={teamLogo || null}
+              teamName={team.name}
+              delay={delay + 20}
+              size={20}
+              fit="cover"
+            />
+          </LogoWell>
 
           {/* Solid primary angled score bar - angle matches PlayerStats (10% slope) */}
           <div
             className="font-bold relative z-20 overflow-hidden h-full flex items-center"
             style={{
               backgroundColor: primaryColor,
-              // Match player stats angle: right edge 90% at top, 100% at bottom (same as stats rows)
-              clipPath: "polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)",
+              // Steep hero wedge aligned to official angle system
+              clipPath: STEEP_HERO_TOP_LEFT,
               marginLeft: "-8px", // Overlap with logo border
               paddingLeft: "32px",
               paddingRight: "64px",

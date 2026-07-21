@@ -12,12 +12,15 @@ import {
   calculateAnimationOutFrame,
   parseTeamPosition,
 } from "./_utils/calculations";
-
-/** Mudgeeraba design: uniform row - left edge straight, right edge angled */
-const CLIP_ROW = "polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)";
-/** Second polygon: thin strip along the angled right edge (outer edge 100%,0 → 95%,100%; inner edge 99%,0 → 94%,100%) */
-const CLIP_EDGE_STRIP =
-  "polygon(100% 0%, 95% 100%, 94% 100%, 99% 0%)";
+import {
+  PADDING_SHALLOW_LEFT,
+  PADDING_SHALLOW_LEFT_COMPACT,
+  SHALLOW_EDGE_STRIP_RIGHT,
+  SHALLOW_ROW_LEFT,
+  LogoWell,
+  LayeredAngularPanel,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 /** Frames to wait after row animates in before edge strip animates in */
 const EDGE_STRIP_DELAY_OFFSET = 12;
 
@@ -60,13 +63,8 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   const statsStyle = { fontSize: `${statsFontSizePx}px` };
 
   let rowStyle: React.CSSProperties = {
-    backgroundColor: rowBg,
-    clipPath: CLIP_ROW,
     height: `${LadderRowHeight}px`,
     minHeight: `${LadderRowHeight}px`,
-    paddingTop: paddingY,
-    paddingBottom: paddingY,
-    boxSizing: "border-box",
   };
 
   if (isBiasTeam) {
@@ -76,21 +74,14 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
     };
   }
 
-  return (
-    <div className="overflow-hidden">
-      <AnimatedContainer
-        type="full"
-        className="rounded-none"
-        backgroundColor="none"
-        animation={containerAnimation.containerIn}
-        animationDelay={delay}
-        exitAnimation={containerAnimation.containerOut}
-        exitFrame={animationOutFrame}
-      >
-        <div
-          className={`flex items-center relative overflow-hidden ${compact ? "pl-2 pr-6" : "pl-4 pr-10"}`}
-          style={rowStyle}
-        >
+  const surfaceStyle: React.CSSProperties = {
+    paddingTop: paddingY,
+    paddingBottom: paddingY,
+    boxSizing: "border-box",
+  };
+
+  const rowContent = (
+    <>
           {/* Colored edge strip: second polygon, animates in after row */}
           <AnimatedContainer
             type="full"
@@ -105,7 +96,7 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
               className="absolute inset-0"
               style={{
                 backgroundColor: edgeStripColor,
-                clipPath: CLIP_EDGE_STRIP,
+                clipPath: SHALLOW_EDGE_STRIP_RIGHT,
               }}
               aria-hidden
             />
@@ -115,17 +106,22 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
             className={`flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`}
             style={{ width: "70%", minWidth: 0 }}
           >
-            <div className={`flex-shrink-0 overflow-hidden rounded-full ${compact ? "w-9 h-9 mr-2" : "w-14 h-14 mr-3"}`}>
+            <LogoWell
+              variant="circle"
+              size={compact ? 36 : 56}
+              className={compact ? "mr-2" : "mr-3"}
+            >
               {team.clubLogo ?? team.playHQLogo ? (
                 <TeamLogo
                   logo={team.clubLogo ?? team.playHQLogo ?? null}
                   teamName={team.teamName}
                   delay={delay}
+                  size={compact ? 9 : 14}
                 />
               ) : (
                 <div className="w-full h-full bg-gray-300/20 rounded-full" />
               )}
-            </div>
+            </LogoWell>
             <div className="flex-1 truncate min-w-0">
               <LadderTeamName
                 value={team.teamName}
@@ -153,7 +149,31 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
               <LadderTeamPoints value={team?.PTS ?? 0} delay={delay} />
             </div>
           </div>
-        </div>
+    </>
+  );
+
+  return (
+    <div className="overflow-visible">
+      <AnimatedContainer
+        type="full"
+        className="rounded-none"
+        backgroundColor="none"
+        animation={containerAnimation.containerIn}
+        animationDelay={delay}
+        exitAnimation={containerAnimation.containerOut}
+        exitFrame={animationOutFrame}
+      >
+        <LayeredAngularPanel
+          clipPath={SHALLOW_ROW_LEFT}
+          surfaceColor={rowBg}
+          underlayColor={getLayeredUnderlayColor(colors.primary)}
+          className="w-full relative"
+          style={rowStyle}
+          surfaceClassName={`flex items-center relative overflow-hidden ${compact ? PADDING_SHALLOW_LEFT_COMPACT : PADDING_SHALLOW_LEFT}`}
+          surfaceStyle={surfaceStyle}
+        >
+          {rowContent}
+        </LayeredAngularPanel>
       </AnimatedContainer>
     </div>
   );

@@ -13,13 +13,11 @@ const PerformancesDisplayMudgeeraba: React.FC<PerformancesDisplayProps> = ({
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
 
-  // Get items for this specific screen
   const displayedPerformances = getItemsForScreen(
     performances,
     screenIndex,
     itemsPerScreen,
   );
-  // Static row height for mudgeeraba template
   const rowHeight = 115;
 
   return (
@@ -34,14 +32,14 @@ const PerformancesDisplayMudgeeraba: React.FC<PerformancesDisplayProps> = ({
     >
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col overflow-hidden rounded-none mx-8"
+        className="flex-1 flex flex-col overflow-visible rounded-none mx-8"
         style={{ width: "100%" }}
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 flex flex-col gap-4 my-4 mx-4 min-h-0 justify-center">
+        <div className="flex-1 flex flex-col gap-4 my-4 mx-4 min-h-0 justify-center overflow-visible pr-1 pb-1">
           {displayedPerformances.map((performance, index) => (
             <PerformanceRowMudgeeraba
               key={`${performance.name}-${screenIndex}-${index}`}

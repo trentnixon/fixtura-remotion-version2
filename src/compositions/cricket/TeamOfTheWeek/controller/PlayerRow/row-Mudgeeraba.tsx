@@ -19,11 +19,14 @@ import {
   BowlingStatDisplay,
   StatItem,
 } from "./_utils/components";
-
-/** Icon block (left): straight left, angled right edge */
-const CLIP_ICON = "polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%)";
-/** Logo block (right): mirrored – angled left edge, straight right (flush to row edge) */
-const CLIP_LOGO = "polygon(30% 0%, 0% 100%, 100% 100%, 100% 0%)";
+import {
+  LayeredAngularPanel,
+  LogoWell,
+  SHALLOW_ROW_LEFT,
+  STEEP_LOGO_WELL_LEFT,
+  clipPathStyle,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 /** Width of icon/logo containers as fraction of row height (thinner than square) */
 const ICON_LOGO_WIDTH_RATIO = 0.72;
 
@@ -33,7 +36,7 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, colors } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { club } = useVideoDataContext();
   const isAccountClub = club.IsAccountClub || false;
@@ -42,17 +45,11 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
   // Text animations
   const largeTextAnimation = animations.text.main.copyIn;
 
-  // Determine background color like Top5
   const isTopPlayer = index === 0;
   const bgColor = isTopPlayer
     ? selectedPalette.container.backgroundTransparent.high
     : selectedPalette.container.backgroundTransparent.medium;
 
-  const logoBG = isTopPlayer
-    ? selectedPalette.container.transparentSecondary
-    : selectedPalette.container.backgroundTransparent.strong;
-
-  // Icon section uses primary color (matching Classic)
   const statsBG = selectedPalette.container.primary;
 
   // Get the color for onContainerTitle variant to match the text
@@ -70,8 +67,120 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
     DEFAULT_ICON_PACK,
   );
 
+  const rowInner = (
+    <>
+      <div
+        className="flex shrink-0 mr-2 overflow-hidden items-center justify-center"
+        style={{
+          width: `${rowHeight * ICON_LOGO_WIDTH_RATIO}px`,
+          height: `${rowHeight}px`,
+          background: statsBG,
+          ...clipPathStyle(STEEP_LOGO_WELL_LEFT),
+          filter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
+          WebkitFilter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
+        }}
+      >
+        {PositionIcon && (
+          <PositionIcon
+            className="w-20 h-20 flex-shrink-0"
+            style={{ color: iconColor }}
+          />
+        )}
+      </div>
+
+      <div className="flex-1 flex flex-col justify-center min-w-0 ml-2">
+        <div className="mt-1">
+          {isAllRounder && hasBoth && player.batting && player.bowling ? (
+            <div className="flex flex-row gap-4 items-baseline">
+              <BattingStatDisplay
+                batting={player.batting}
+                delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+              />
+              <span>&amp;</span>
+              <BowlingStatDisplay
+                bowling={player.bowling}
+                delay={delay + BOWLING_STAT_DELAY_OFFSET}
+              />
+            </div>
+          ) : (
+            <>
+              {(player.categoryDetail.position === "topscorer" ||
+                player.categoryDetail.position === "higheststrikerate") &&
+                player.batting && (
+                  <BattingStatDisplay
+                    batting={player.batting}
+                    delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                  />
+                )}
+              {(player.categoryDetail.position === "mostwickets" ||
+                player.categoryDetail.position === "besteconomy") &&
+                player.bowling && (
+                  <BowlingStatDisplay
+                    bowling={player.bowling}
+                    delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                  />
+                )}
+              {player.categoryDetail.position === "bestoftherest" &&
+                (!player.batting || !player.bowling) && (
+                  <>
+                    {player.batting && (
+                      <BattingStatDisplay
+                        batting={player.batting}
+                        delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                      />
+                    )}
+                    {player.bowling && (
+                      <BowlingStatDisplay
+                        bowling={player.bowling}
+                        delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                      />
+                    )}
+                    {player.allRounder && (
+                      <StatItem
+                        label="AR SCORE"
+                        value={player.allRounder.score}
+                        delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                        highlight
+                      />
+                    )}
+                  </>
+                )}
+            </>
+          )}
+        </div>
+
+        <TeamOfTheWeekPlayerName
+          value={cleanPlayerName(player.player).toUpperCase()}
+          animation={{
+            ...largeTextAnimation,
+            delay: delay + PLAYER_NAME_DELAY_OFFSET,
+          }}
+          className=""
+        />
+      </div>
+
+      {!isAccountClub && (
+        <LogoWell
+          variant="steepRight"
+          size={Math.round(rowHeight * ICON_LOGO_WIDTH_RATIO)}
+          className="ml-2"
+        >
+          <Img
+            src={player.club.logo.url}
+            alt={player.club.name}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        </LogoWell>
+      )}
+    </>
+  );
+
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-visible">
       <AnimatedContainer
         type="full"
         className="rounded-none"
@@ -81,141 +190,16 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
         animationDelay={delay}
         exitAnimation={containerAnimation.containerOut}
       >
-        <div
-          className="flex items-center w-full overflow-hidden pl-0 pr-0"
-          style={{
-            height: `${rowHeight}px`,
-            backgroundColor: bgColor,
-          }}
+        <LayeredAngularPanel
+          clipPath={SHALLOW_ROW_LEFT}
+          surfaceColor={bgColor}
+          underlayColor={getLayeredUnderlayColor(colors.primary)}
+          className="w-full relative"
+          style={{ height: `${rowHeight}px` }}
+          surfaceClassName="flex items-center w-full overflow-hidden pl-0 pr-0"
         >
-          {/* Icon Section – angled right edge, drop shadow */}
-          <div
-            className="flex shrink-0 mr-2 overflow-hidden items-center justify-center"
-            style={{
-              width: `${rowHeight * ICON_LOGO_WIDTH_RATIO}px`,
-              height: `${rowHeight}px`,
-              background: statsBG,
-              clipPath: CLIP_ICON,
-              WebkitClipPath: CLIP_ICON,
-              filter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
-              WebkitFilter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
-            }}
-          >
-            {PositionIcon && (
-              <PositionIcon
-                className="w-20 h-20 flex-shrink-0"
-                style={{ color: iconColor }}
-              />
-            )}
-          </div>
-
-          {/* Player Info Section: Stats, Player Name */}
-          <div className="flex-1 flex flex-col justify-center min-w-0 ml-2">
-          {/* Stats Display */}
-          <div className="mt-1">
-            {isAllRounder && hasBoth && player.batting && player.bowling ? (
-              <div className="flex flex-row gap-4 items-baseline">
-                {/* Batting Stats */}
-                <BattingStatDisplay
-                  batting={player.batting}
-                  delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                />
-                <span>&amp;</span>
-                {/* Bowling Stats */}
-                <BowlingStatDisplay
-                  bowling={player.bowling}
-                  delay={delay + BOWLING_STAT_DELAY_OFFSET}
-                />
-              </div>
-            ) : (
-              <>
-                {/* Batting positions: topscorer, higheststrikerate */}
-                {(player.categoryDetail.position === "topscorer" ||
-                  player.categoryDetail.position === "higheststrikerate") &&
-                  player.batting && (
-                    <BattingStatDisplay
-                      batting={player.batting}
-                      delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                    />
-                  )}
-
-                {/* Bowling positions: mostwickets, besteconomy */}
-                {(player.categoryDetail.position === "mostwickets" ||
-                  player.categoryDetail.position === "besteconomy") &&
-                  player.bowling && (
-                    <BowlingStatDisplay
-                      bowling={player.bowling}
-                      delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                    />
-                  )}
-
-                {/* Best of Rest fallback: show whatever is available if not both stats */}
-                {player.categoryDetail.position === "bestoftherest" &&
-                  (!player.batting || !player.bowling) && (
-                    <>
-                      {player.batting && (
-                        <BattingStatDisplay
-                          batting={player.batting}
-                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                        />
-                      )}
-                      {player.bowling && (
-                        <BowlingStatDisplay
-                          bowling={player.bowling}
-                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                        />
-                      )}
-                      {player.allRounder && (
-                        <StatItem
-                          label="AR SCORE"
-                          value={player.allRounder.score}
-                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                          highlight
-                        />
-                      )}
-                    </>
-                  )}
-              </>
-            )}
-          </div>
-
-          {/* Player Name */}
-          <TeamOfTheWeekPlayerName
-            value={cleanPlayerName(player.player).toUpperCase()}
-            animation={{
-              ...largeTextAnimation,
-              delay: delay + PLAYER_NAME_DELAY_OFFSET,
-            }}
-            className=""
-          />
-        </div>
-
-        {/* Logo Section – flush right, mirrored angle (angled left edge) */}
-        {!isAccountClub && (
-          <div
-            className="flex shrink-0 overflow-hidden items-center justify-center ml-2"
-            style={{
-              width: `${rowHeight * ICON_LOGO_WIDTH_RATIO}px`,
-              height: `${rowHeight}px`,
-              background: logoBG,
-              clipPath: CLIP_LOGO,
-              WebkitClipPath: CLIP_LOGO,
-              filter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
-              WebkitFilter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
-            }}
-          >
-            <Img
-              src={player.club.logo.url}
-              alt={player.club.name}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        )}
-        </div>
+          {rowInner}
+        </LayeredAngularPanel>
       </AnimatedContainer>
     </div>
   );

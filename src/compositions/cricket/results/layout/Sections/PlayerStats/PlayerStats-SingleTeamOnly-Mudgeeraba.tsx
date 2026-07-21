@@ -6,9 +6,14 @@ import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName"
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { PlayerStatsSingleTeamProps } from "./_types/PlayerStatsProps";
 import { truncatePlayerName } from "../../../../utils/utils-text";
+import {
+  getShallowColumnPadding,
+  SHALLOW_COLUMN_LEFT,
+  SHALLOW_COLUMN_RIGHT,
+  LayeredAngularPanel,
+  getLayeredUnderlayColor,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
-const CLIP_LEFT_COLUMN = "polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%)";
-const CLIP_RIGHT_COLUMN = "polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)";
 const MAX_NAME_LENGTH = 20;
 
 type PlayerStat = {
@@ -36,17 +41,17 @@ const PlayerStatRow: React.FC<{
   isLeftColumn: boolean;
 }> = ({ playerName, statValue, delay, index, isLeftColumn }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, colors } = useThemeContext();
   const textAnimations = animations.text.main;
   const rowBg = selectedPalette.container.backgroundTransparent.high;
 
   return (
-    <div
-      className={`flex justify-between items-center py-2 relative overflow-hidden ${isLeftColumn ? "pl-4 pr-10" : "pl-12 pr-3"}`}
-      style={{
-        backgroundColor: rowBg,
-        clipPath: isLeftColumn ? CLIP_LEFT_COLUMN : CLIP_RIGHT_COLUMN,
-      }}
+    <LayeredAngularPanel
+      clipPath={isLeftColumn ? SHALLOW_COLUMN_LEFT : SHALLOW_COLUMN_RIGHT}
+      surfaceColor={rowBg}
+      underlayColor={getLayeredUnderlayColor(colors.primary)}
+      className="w-full relative"
+      surfaceClassName={`flex justify-between items-center py-2 relative overflow-hidden ${getShallowColumnPadding(isLeftColumn)}`}
     >
       <ResultPlayerName
         className="whitespace-nowrap"
@@ -60,7 +65,7 @@ const PlayerStatRow: React.FC<{
         variant="onContainerCopy"
         animation={{ ...textAnimations.copyIn, delay: delay + 10 + index * 5 }}
       />
-    </div>
+    </LayeredAngularPanel>
   );
 };
 

@@ -201,6 +201,38 @@ export const templateAnimations: AnimationConfig = {
           custom: { distance: "500%" },
         },
       },
+      header: {
+        titlePanel: {
+          containerIn: {
+            type: "slideInRight",
+            easing: { type: "out", base: "cubic" },
+            duration: 22,
+            delay: 0,
+            custom: { distance: 360 },
+          },
+          containerOut: {
+            type: "slideOutLeft",
+            easing: { type: "in", base: "cubic" },
+            duration: 10,
+            custom: { distance: 140 },
+          },
+        },
+        namePanel: {
+          containerIn: {
+            type: "slideInRight",
+            easing: { type: "out", base: "cubic" },
+            duration: 20,
+            delay: 8,
+            custom: { distance: 280 },
+          },
+          containerOut: {
+            type: "slideOutLeft",
+            easing: { type: "in", base: "cubic" },
+            duration: 10,
+            custom: { distance: 120 },
+          },
+        },
+      },
     },
   },
   transition: {

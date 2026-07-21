@@ -14,12 +14,14 @@ import {
   calculateAnimationOutFrame,
 } from "./_utils/calculations";
 import { truncateText, getScoreValues, formatPlayerName } from "../../layout/_utils/helpers";
-
-/** Mudgeeraba design: uniform row - left edge straight, right edge angled */
-const CLIP_ROW = "polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)";
-/** Thin strip along the angled right edge */
-const CLIP_EDGE_STRIP =
-  "polygon(100% 0%, 95% 100%, 94% 100%, 99% 0%)";
+import {
+  LayeredAngularPanel,
+  LogoWell,
+  PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT,
+  SHALLOW_EDGE_STRIP_RIGHT,
+  SHALLOW_ROW_LEFT,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 
 // const NAME_LENGTH = 30;
 const TEAM_LENGTH = 35;
@@ -44,58 +46,27 @@ const PerformanceRowMudgeeraba: React.FC<PerformanceRowProps> = ({
 
   const largeTextAnimation = animations.text.main.copyIn;
   const smallTextAnimation = animations.text.main.copyIn;
+  const rowPanelClass = `flex items-stretch w-full overflow-hidden ${PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT} relative`;
+  const rowPanelStyle: React.CSSProperties = { height: `${rowHeight}px` };
 
-  return (
-    <div className="overflow-hidden">
-      <AnimatedContainer
-        type="full"
-        className="rounded-none"
-        backgroundColor="none"
-        animation={containerAnimation.containerIn}
-        animationDelay={delay}
-        exitAnimation={containerAnimation.containerOut}
-        exitFrame={animationOutFrame}
-      >
-        <div
-          className="flex items-stretch w-full overflow-hidden pl-0 pr-6 relative"
-          style={{
-            height: `${rowHeight}px`,
-            backgroundColor: rowBg,
-            clipPath: CLIP_ROW,
-          }}
-        >
-          {/* Colored edge strip along angled border */}
+  const rowContent = (
+    <>
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               backgroundColor: colors.primary,
-              clipPath: CLIP_EDGE_STRIP,
+              clipPath: SHALLOW_EDGE_STRIP_RIGHT,
             }}
             aria-hidden
           />
-
-          {/* Logo - flush left, full height, angled right to match row */}
-          <div
-            className="flex shrink-0 mr-2 overflow-hidden items-center justify-center"
-            style={{
-              width: `${rowHeight}px`,
-              height: `${rowHeight}px`,
-              background: selectedPalette.container.backgroundTransparent.strong,
-              clipPath: "polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%)",
-              WebkitClipPath: "polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%)",
-              filter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
-              WebkitFilter: "drop-shadow(3px 2px 6px rgba(0, 0, 0, 0.25))",
-            }}
-          >
+          <LogoWell variant="steepLeft" size={rowHeight} className="mr-2">
             <TeamLogo
               logo={performance.teamLogo}
               teamName={performance.playedFor}
               delay={delay}
               size={32}
             />
-          </div>
-
-          {/* Name & team */}
+          </LogoWell>
           <div className="flex flex-col justify-center flex-1 min-w-0 ml-2">
             <Top5PlayerName
               value={playerName}
@@ -108,8 +79,6 @@ const PerformanceRowMudgeeraba: React.FC<PerformanceRowProps> = ({
               className="truncate"
             />
           </div>
-
-          {/* Score */}
           <div className="flex items-center justify-center shrink-0 whitespace-nowrap leading-none mr-8 ">
             <Top5PlayerScore
               value={mainValue}
@@ -124,7 +93,30 @@ const PerformanceRowMudgeeraba: React.FC<PerformanceRowProps> = ({
               />
             )}
           </div>
-        </div>
+    </>
+  );
+
+  return (
+    <div className="overflow-visible">
+      <AnimatedContainer
+        type="full"
+        className="rounded-none"
+        backgroundColor="none"
+        animation={containerAnimation.containerIn}
+        animationDelay={delay}
+        exitAnimation={containerAnimation.containerOut}
+        exitFrame={animationOutFrame}
+      >
+        <LayeredAngularPanel
+          clipPath={SHALLOW_ROW_LEFT}
+          surfaceColor={rowBg}
+          underlayColor={getLayeredUnderlayColor(colors.primary)}
+          className="w-full relative"
+          style={rowPanelStyle}
+          surfaceClassName={rowPanelClass}
+        >
+          {rowContent}
+        </LayeredAngularPanel>
       </AnimatedContainer>
     </div>
   );

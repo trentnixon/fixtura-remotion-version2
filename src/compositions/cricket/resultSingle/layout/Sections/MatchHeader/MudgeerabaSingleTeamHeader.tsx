@@ -6,6 +6,7 @@ import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { Team } from "../../../types";
+import { STEEP_HERO_TOP_LEFT, LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export interface MudgeerabaSingleTeamHeaderProps {
   team: Team;
@@ -69,40 +70,27 @@ export const MudgeerabaSingleTeamHeader: React.FC<
           className="flex items-center relative h-full"
           style={{ paddingRight: "12px" }}
         >
-          <div
-            className="flex rounded-full items-center justify-center overflow-visible z-30 relative self-center shrink-0"
-            style={{
-              width: `${logoSize}px`,
-              height: `${logoSize}px`,
-              backgroundColor: backgroundColorContainer,
-              border: `4px solid ${primaryColor}`,
-              marginRight: "-10px",
-            }}
+          <LogoWell
+            variant="circle"
+            size={logoSize}
+            emphasisBorder
+            className="z-30 relative self-center shrink-0"
+            style={{ marginRight: "-10px" }}
           >
-            <div
-              className="rounded-full overflow-hidden w-full h-full flex items-center justify-center"
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: `${logoSize}px`,
-                maxHeight: `${logoSize}px`,
-              }}
-            >
-              <TeamLogo
-                logo={teamLogo || null}
-                teamName={team.name}
-                delay={delay + 20}
-                size={20}
-                fit="cover"
-              />
-            </div>
-          </div>
+            <TeamLogo
+              logo={teamLogo || null}
+              teamName={team.name}
+              delay={delay + 20}
+              size={20}
+              fit="cover"
+            />
+          </LogoWell>
 
           <div
             className="font-bold relative z-20 overflow-hidden h-full flex items-center"
             style={{
               backgroundColor: primaryColor,
-              clipPath: "polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)",
+              clipPath: STEEP_HERO_TOP_LEFT,
               marginLeft: "-8px",
               paddingLeft: "32px",
               paddingRight: "64px",

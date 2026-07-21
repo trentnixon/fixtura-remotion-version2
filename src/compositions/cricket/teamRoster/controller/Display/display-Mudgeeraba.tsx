@@ -14,11 +14,13 @@ import {
   AGAINST_TEAM_LOGO_SIZE,
 } from "./_utils/constants";
 import { MAX_PLAYER_NAME_LENGTH } from "../../layout/RosterPlayerList/_utils/constants";
-
-/** Mudgeeraba design: row with straight left, angled right edge */
-const CLIP_ROW = "polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)";
-/** Thin strip along the angled right edge */
-const CLIP_EDGE_STRIP = "polygon(100% 0%, 95% 100%, 94% 100%, 99% 0%)";
+import {
+  PADDING_SHALLOW_LEFT,
+  SHALLOW_EDGE_STRIP_RIGHT,
+  SHALLOW_ROW_LEFT,
+  LayeredAngularPanel,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 const ROSTER_ROW_HEIGHT = 58;
 
 const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
@@ -46,22 +48,22 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
         >
           <div className="flex flex-row gap-4 justify-between items-stretch my-4 mx-4">
             {/* Player list – Mudgeeraba angled rows; take most of the width */}
-            <div className="flex-1 min-w-0 flex flex-col gap-2 p-4">
+            <div className="flex-1 min-w-0 flex flex-col gap-2 p-4 overflow-visible">
               {roster.teamRoster.map((player, index) => (
-                <div
+                <LayeredAngularPanel
                   key={index}
-                  className="flex items-center w-full overflow-hidden pl-4 pr-10 relative"
-                  style={{
-                    height: `${ROSTER_ROW_HEIGHT}px`,
-                    backgroundColor: selectedPalette.container.backgroundTransparent.medium,
-                    clipPath: CLIP_ROW,
-                  }}
+                  clipPath={SHALLOW_ROW_LEFT}
+                  surfaceColor={selectedPalette.container.backgroundTransparent.medium}
+                  underlayColor={getLayeredUnderlayColor(colors.primary)}
+                  className="w-full relative"
+                  style={{ height: `${ROSTER_ROW_HEIGHT}px` }}
+                  surfaceClassName={`flex items-center w-full overflow-hidden ${PADDING_SHALLOW_LEFT} relative`}
                 >
                   <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
                       backgroundColor: colors.primary,
-                      clipPath: CLIP_EDGE_STRIP,
+                      clipPath: SHALLOW_EDGE_STRIP_RIGHT,
                     }}
                     aria-hidden
                   />
@@ -70,7 +72,7 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
                     className="text-left font-bold relative z-0"
                     variant="onContainerCopy"
                   />
-                </div>
+                </LayeredAngularPanel>
               ))}
             </div>
 

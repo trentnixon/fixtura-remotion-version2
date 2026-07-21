@@ -78,6 +78,16 @@ export interface ContainerConfig {
       containerIn: AnimationSettings;
       containerOut: AnimationSettings;
     };
+    header?: {
+      titlePanel: {
+        containerIn: AnimationSettings;
+        containerOut: AnimationSettings;
+      };
+      namePanel: {
+        containerIn: AnimationSettings;
+        containerOut: AnimationSettings;
+      };
+    };
   };
   twoColumn?: {
     sidePane?: {

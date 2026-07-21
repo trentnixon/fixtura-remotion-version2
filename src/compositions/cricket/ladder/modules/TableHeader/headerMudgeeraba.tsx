@@ -2,9 +2,10 @@ import React from "react";
 import { AnimatedText } from "../../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { TableHeaderProps } from "./_types/TableHeaderProps";
-
-/** Header bar with softened angled top edge - Mudgeeraba design (gentler 2% inset) */
-const CLIP_HEADER = "polygon(2% 0%, 98% 0%, 100% 100%, 0% 100%)";
+import {
+  PADDING_SHALLOW_LEFT,
+  SHALLOW_HEADER_TOP,
+} from "../../../../../templates/variants/mudgeeraba/design";
 
 export const TableHeaderMudgeeraba: React.FC<TableHeaderProps> = ({
   title,
@@ -17,11 +18,11 @@ export const TableHeaderMudgeeraba: React.FC<TableHeaderProps> = ({
   // Header stays fixed: same text size and padding regardless of compact (only table rows resize)
   return (
     <div
-      className="flex items-center overflow-hidden pl-4 pr-10"
+      className={`flex items-center overflow-hidden ${PADDING_SHALLOW_LEFT}`}
       style={{
         height: `${headerHeight}px`,
         backgroundColor: rowBg,
-        clipPath: CLIP_HEADER,
+        clipPath: SHALLOW_HEADER_TOP,
       }}
     >
       <div

@@ -3,6 +3,10 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { MudgeerabaAngularDividerProps } from "./_types/MudgeerabaAngularDividerProps";
+import {
+  SHALLOW_DIVIDER_LEFT,
+  SHALLOW_DIVIDER_RIGHT,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaAngularDivider: React.FC<MudgeerabaAngularDividerProps> = ({
   delay,
@@ -66,7 +70,7 @@ export const MudgeerabaAngularDivider: React.FC<MudgeerabaAngularDividerProps> =
               width: "45%",
               height: "100%",
               backgroundColor: backgroundColorContainer,
-              clipPath: "polygon(0% 0%, 100% 0%, 95% 50%, 100% 100%, 0% 100%)",
+              clipPath: SHALLOW_DIVIDER_LEFT,
             }}
           />
 
@@ -79,7 +83,7 @@ export const MudgeerabaAngularDivider: React.FC<MudgeerabaAngularDividerProps> =
               width: "45%",
               height: "100%",
               backgroundColor: backgroundColorContainer,
-              clipPath: "polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%, 5% 50%)",
+              clipPath: SHALLOW_DIVIDER_RIGHT,
             }}
           />
 

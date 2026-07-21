@@ -5,12 +5,19 @@ import MudgeerabaSingleTeamHeader from "../Sections/MatchHeader/MudgeerabaSingle
 import { computePartialTwoDayVisibility } from "../Sections/PlayerStats/_utils/visibility";
 import PlayerStatsSingleTeamOnlyMudgeeraba from "../Sections/PlayerStats/PlayerStats-SingleTeamOnly-Mudgeeraba";
 import MudgeerabaStatusFooter from "../Sections/MatchStatus/MudgeerabaStatusFooter";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import {
+  LayeredAngularPanel,
+  SHALLOW_ROW_LEFT,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 
 const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({
   match,
   rowHeight,
   delay,
 }) => {
+  const { colors } = useThemeContext();
   // Calculate section heights
   // Split height between two teams (header + stats for each)
   const teamHeaderHeight = 60; // Height for each team header
@@ -37,7 +44,14 @@ const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({
   });
 
   return (
-    <div className="w-auto mx-0 overflow-hidden h-full">
+    <LayeredAngularPanel
+      clipPath={SHALLOW_ROW_LEFT}
+      surfaceColor="transparent"
+      underlayColor={getLayeredUnderlayColor(colors.primary)}
+      className="w-auto mx-0 overflow-hidden h-full"
+      surfaceClassName="h-full"
+      surfaceStyle={{ backgroundColor: "transparent" }}
+    >
       {/* Home Team Header */}
       <MudgeerabaSingleTeamHeader
         team={match.homeTeam}
@@ -84,7 +98,7 @@ const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({
         delay={resultSectionDelay}
         outerContainer={{ minHeight: 52 }}
       />
-    </div>
+    </LayeredAngularPanel>
   );
 };
 

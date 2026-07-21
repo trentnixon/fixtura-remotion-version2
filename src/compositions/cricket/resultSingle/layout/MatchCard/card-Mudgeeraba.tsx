@@ -1,5 +1,6 @@
 import React from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 
 import { MatchStatus } from "../Sections/MatchStatus/index";
@@ -9,9 +10,15 @@ import { MatchCardProps } from "./_types/MatchCardProps";
 import MudgeerabaSingleTeamHeader from "../Sections/MatchHeader/MudgeerabaSingleTeamHeader";
 import PlayerStatsMudgeeraba from "../Sections/PlayerStats/PlayerStats-Mudgeeraba";
 import { computePartialTwoDayVisibility } from "../Sections/PlayerStats/_utils/visibility";
+import {
+  LayeredAngularPanel,
+  SHALLOW_ROW_LEFT,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 
 const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({ match }) => {
   const { animations } = useAnimationContext();
+  const { colors } = useThemeContext();
 
   const containerAnimation = animations.container.main.itemContainer;
   const baseDelay = 0;
@@ -45,6 +52,14 @@ const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({ match }) => {
       exitAnimation={containerAnimation.containerOut}
       exitFrame={250}
     >
+      <LayeredAngularPanel
+        clipPath={SHALLOW_ROW_LEFT}
+        surfaceColor="transparent"
+        underlayColor={getLayeredUnderlayColor(colors.primary)}
+        className="h-full flex flex-col"
+        surfaceClassName="h-full flex flex-col"
+        surfaceStyle={{ backgroundColor: "transparent" }}
+      >
       {/* Result at top – unchanged */}
       <MatchStatus
         status={match.status}
@@ -100,6 +115,7 @@ const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({ match }) => {
         delay={headerDelay}
         backgroundColor="transparent"
       />
+      </LayeredAngularPanel>
     </AnimatedContainer>
   );
 };

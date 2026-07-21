@@ -12,16 +12,17 @@ import {
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
-import { LOGO_SIZES } from "../Logos/variations/_utils/helpers";
-
-/** Left team container: straight left edge, angled right edge */
-const CLIP_LEFT_COLUMN = "polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%)";
-/** Right team container: angled left edge, straight right edge (mirrored) */
-const CLIP_RIGHT_COLUMN = "polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)";
-/** Edge strip along home (left) container's angled right edge */
-const CLIP_EDGE_STRIP_HOME = "polygon(100% 0%, 90% 100%, 89% 100%, 99% 0%)";
-/** Edge strip along away (right) container's angled left edge: outer (10%,0)-(0%,100%), inner (11%,0)-(1%,100%) */
-const CLIP_EDGE_STRIP_AWAY = "polygon(10% 0%, 0% 100%, 1% 100%, 11% 0%)";
+import {
+  LayeredAngularPanel,
+  LogoWell,
+  PADDING_SHALLOW_LEFT,
+  PADDING_SHALLOW_RIGHT,
+  SHALLOW_COLUMN_LEFT,
+  SHALLOW_COLUMN_RIGHT,
+  SHALLOW_EDGE_STRIP_LEFT,
+  SHALLOW_EDGE_STRIP_RIGHT,
+  getLayeredUnderlayColor,
+} from "../../../../../templates/variants/mudgeeraba/design";
 
 const EDGE_COLOR_HOME = "rgb(34, 197, 94)"; // green
 const EDGE_COLOR_AWAY = "rgb(239, 68, 68)"; // red
@@ -30,18 +31,19 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => 
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
-  const { selectedPalette } = useThemeContext();
+  const { selectedPalette, colors } = useThemeContext();
 
   const ContainerAnimations = animations.container;
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
   const animationOutFrame = calculateAnimationOutFrame(timings);
   const teamBg = selectedPalette.container.backgroundTransparent.high;
+  const underlayColor = getLayeredUnderlayColor(colors.primary);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-visible">
       <AnimatedContainer
         type="full"
-        className="rounded-none w-full overflow-hidden"
+        className="rounded-none w-full overflow-visible"
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
@@ -78,29 +80,29 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => 
         </div>
 
         {/* Two team columns: logo above, angled container with team name below */}
-        <div className="flex w-full relative">
+        <div className="flex w-full relative overflow-visible">
           {/* Home: logo above, then angled polygon with team name only */}
           <div className="flex flex-1 flex-col items-center min-w-0">
-            <div className="w-28 h-28 overflow-hidden rounded-full shrink-0 mb-2">
+            <LogoWell variant="circle" size={112} className="shrink-0 mb-2">
               <TeamLogo
                 logo={game.teamHomeLogo}
                 teamName={game.teamHome}
                 delay={delay + 10}
                 size={28}
               />
-            </div>
-            <div
-              className="flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden pl-4 pr-10 relative"
-              style={{
-                backgroundColor: teamBg,
-                clipPath: CLIP_LEFT_COLUMN,
-              }}
+            </LogoWell>
+            <LayeredAngularPanel
+              clipPath={SHALLOW_COLUMN_LEFT}
+              surfaceColor={teamBg}
+              underlayColor={underlayColor}
+              className="flex flex-1 w-full min-w-0 relative"
+              surfaceClassName={`flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_LEFT}`}
             >
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
                   backgroundColor: EDGE_COLOR_HOME,
-                  clipPath: CLIP_EDGE_STRIP_HOME,
+                  clipPath: SHALLOW_EDGE_STRIP_RIGHT,
                 }}
                 aria-hidden
               />
@@ -110,31 +112,31 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => 
                 className="block text-center truncate w-full max-w-full relative z-10"
                 variant="onContainerCopy"
               />
-            </div>
+            </LayeredAngularPanel>
           </div>
 
           {/* Away: logo above, then angled polygon with team name only */}
           <div className="flex flex-1 flex-col items-center min-w-0">
-            <div className="w-28 h-28 overflow-hidden rounded-full shrink-0 mb-2">
+            <LogoWell variant="circle" size={112} className="shrink-0 mb-2">
               <TeamLogo
                 logo={game.teamAwayLogo}
                 teamName={game.teamAway}
                 delay={delay + 25}
                 size={28}
               />
-            </div>
-            <div
-              className="flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden pl-12 pr-3 relative"
-              style={{
-                backgroundColor: teamBg,
-                clipPath: CLIP_RIGHT_COLUMN,
-              }}
+            </LogoWell>
+            <LayeredAngularPanel
+              clipPath={SHALLOW_COLUMN_RIGHT}
+              surfaceColor={teamBg}
+              underlayColor={underlayColor}
+              className="flex flex-1 w-full min-w-0 relative"
+              surfaceClassName={`flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_RIGHT}`}
             >
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
                   backgroundColor: EDGE_COLOR_AWAY,
-                  clipPath: CLIP_EDGE_STRIP_AWAY,
+                  clipPath: SHALLOW_EDGE_STRIP_LEFT,
                 }}
                 aria-hidden
               />
@@ -144,7 +146,7 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({ game, index }) => 
                 className="block text-center truncate w-full max-w-full relative z-10"
                 variant="onContainerCopy"
               />
-            </div>
+            </LayeredAngularPanel>
           </div>
         </div>
       </AnimatedContainer>

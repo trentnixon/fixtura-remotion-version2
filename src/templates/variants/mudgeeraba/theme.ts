@@ -85,10 +85,10 @@ export const mudgeerabaTheme: TemplateThemeConfig = {
         "text-2xl font-normal opacity-80 tracking-wider leading-tight",
     },
     Top5PlayerScore: {
-      className: "text-7xl font-normal  tracking-normal leading-tight mr-4",
+      className: "text-7xl font-bold tracking-normal leading-tight mr-4",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-2xl font-normal  tracking-wide leading-none",
+      className: "text-2xl font-bold tracking-wide leading-none",
     },
     TeamOfTheWeekPlayerName: {
       className: "text-3xl font-normal tracking-tighter leading-none",

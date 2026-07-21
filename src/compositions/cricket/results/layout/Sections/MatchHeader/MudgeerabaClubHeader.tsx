@@ -7,6 +7,7 @@ import { AnimatedText } from "../../../../../../components/typography/AnimatedTe
 import { MudgeerabaClubHeaderProps } from "./_types/MudgeerabaClubHeaderProps";
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { TeamLogo as TeamLogoType } from "../../../../utils/primitives/_types/TeamLogoProps";
+import { STEEP_HERO_TOP_LEFT, LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
   match,
@@ -71,37 +72,27 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
 
       {/* Logo and Score Section - Right Side */}
       <div className="flex items-center relative h-full" style={{ paddingRight: "12px" }}>
-        {/* Circular Logo Container with Primary Color Border */}
-        <div
-          className="flex rounded-full items-center justify-center overflow-hidden z-30 relative self-center"
-          style={{
-            width: `${logoSize}px`,
-            height: `${logoSize}px`,
-            backgroundColor: backgroundColorContainer,
-            border: `4px solid ${primaryColor}`,
-            marginRight: "-10px",
-          }}
+        <LogoWell
+          variant="circle"
+          size={logoSize}
+          emphasisBorder
+          className="z-30 relative self-center shrink-0"
+          style={{ marginRight: "-10px" }}
         >
-          {/* Rounded wrapper for the logo image */}
-          <div className="rounded-full overflow-hidden">
-            <TeamLogo
-              logo={teamLogo || null}
-              teamName={teamName}
-              delay={rowDelay + 20}
-              size={18} // Tailwind size
-            />
-          </div>
-        </div>
+          <TeamLogo
+            logo={teamLogo || null}
+            teamName={teamName}
+            delay={rowDelay + 20}
+            size={18}
+          />
+        </LogoWell>
 
         {/* Primary Color Angled Score Bar - Trapezoid shape */}
         <div
           className="font-bold relative z-20 overflow-hidden h-full flex items-center"
           style={{
             backgroundColor: primaryColor,
-            // Trapezoid: straight left edge, angled right edge
-            // Right edge angles from top-right (85% 0%) to bottom-right (100% 100%)
-            // Bottom is wider (leading edge)
-            clipPath: "polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%)",
+            clipPath: STEEP_HERO_TOP_LEFT,
             marginLeft: "-8px", // Overlap with logo border
             paddingLeft: "32px", // Increased horizontal padding for text
             paddingRight: "64px",

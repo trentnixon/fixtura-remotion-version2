@@ -6,13 +6,14 @@ import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName"
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { PlayerStatsSingleTeamProps } from "./_types/PlayerStatsProps";
 import { truncatePlayerName } from "../../../../utils/utils-text";
+import {
+  getShallowEdgeStrip,
+  SHALLOW_COLUMN_LEFT,
+  SHALLOW_COLUMN_RIGHT,
+  LayeredAngularPanel,
+  getLayeredUnderlayColor,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
-const CLIP_LEFT_COLUMN = "polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)";
-const CLIP_RIGHT_COLUMN = "polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%)";
-/** Thin strip along left column's angled right edge (like Top5/Performance Mudgeeraba) */
-const CLIP_EDGE_STRIP_LEFT = "polygon(100% 0%, 95% 100%, 94% 100%, 99% 0%)";
-/** Thin strip along right column's angled left edge (outer 5%,0→0%,100%; inner 6%,0→1%,100%) */
-const CLIP_EDGE_STRIP_RIGHT = "polygon(5% 0%, 0% 100%, 1% 100%, 6% 0%)";
 const MAX_NAME_LENGTH = 20;
 
 type PlayerStat = {
@@ -43,17 +44,16 @@ const PlayerStatRow: React.FC<{
   const { selectedPalette, colors } = useThemeContext();
   const textAnimations = animations.text.main;
   const rowBg = selectedPalette.container.backgroundTransparent.high;
-  const edgeStripClip = isLeftColumn ? CLIP_EDGE_STRIP_LEFT : CLIP_EDGE_STRIP_RIGHT;
+  const edgeStripClip = getShallowEdgeStrip(isLeftColumn);
 
   return (
-    <div
-      className={`flex justify-between items-center py-2 relative overflow-hidden ${isLeftColumn ? "pl-8 pr-16" : "pl-16 pr-8"}`}
-      style={{
-        backgroundColor: rowBg,
-        clipPath: isLeftColumn ? CLIP_LEFT_COLUMN : CLIP_RIGHT_COLUMN,
-      }}
+    <LayeredAngularPanel
+      clipPath={isLeftColumn ? SHALLOW_COLUMN_LEFT : SHALLOW_COLUMN_RIGHT}
+      surfaceColor={rowBg}
+      underlayColor={getLayeredUnderlayColor(colors.primary)}
+      className="w-full relative"
+      surfaceClassName={`flex justify-between items-center py-2 relative overflow-hidden ${isLeftColumn ? "pl-8 pr-16" : "pl-16 pr-8"}`}
     >
-      {/* Colored edge strip along angled border (like Top5/Performance Mudgeeraba) */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -63,18 +63,18 @@ const PlayerStatRow: React.FC<{
         aria-hidden
       />
       <ResultPlayerName
-        className="whitespace-nowrap"
+        className="whitespace-nowrap relative z-10"
         value={truncatePlayerName(playerName, MAX_NAME_LENGTH)}
         variant="onContainerCopy"
         animation={{ ...textAnimations.copyIn, delay: delay + 10 + index * 5 }}
       />
       <ResultPlayerScore
-        className="whitespace-nowrap"
+        className="whitespace-nowrap relative z-10"
         value={statValue}
         variant="onContainerCopy"
         animation={{ ...textAnimations.copyIn, delay: delay + 10 + index * 5 }}
       />
-    </div>
+    </LayeredAngularPanel>
   );
 };
 

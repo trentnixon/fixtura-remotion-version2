@@ -1,16 +1,16 @@
 # Folder Overview
 
-Placeholder for typography-specific helpers (text measurement, layout, splitting logic). Currently empty.
+Typography helpers for dynamic text sizing in compositions.
 
 ## Files
 
-None.
+- `useFittedFontSize.ts`: Hook using `@remotion/layout-utils` `fitText()`; waits for `FontContext.fontsLoaded`, measures with font family/weight/transform, caps at a max px size, derives width from `useVideoConfig()`
 
 ## Relations
 
 - Parent folder: [../../.docs/readMe.md](../../.docs/readMe.md)
 - Key dependencies: none
-- Consumed by: intended for AnimatedText when implemented
+- Consumed by: `MudgeerabaIntro` (scoped); reusable by other template intros
 
 ## Dependencies
 

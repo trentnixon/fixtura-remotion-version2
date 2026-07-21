@@ -5,6 +5,7 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { MudgeerabaStatusFooterProps } from "./_types/MudgeerabaStatusFooterProps";
 import { truncateText } from "./_utils/helpers";
+import { SHALLOW_STATUS_BAR } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaStatusFooter: React.FC<MudgeerabaStatusFooterProps> = ({
   result,
@@ -34,8 +35,7 @@ export const MudgeerabaStatusFooter: React.FC<MudgeerabaStatusFooterProps> = ({
         className="w-full px-4 py-2 font-bold flex items-center justify-center relative overflow-hidden"
         style={{
           backgroundColor: primaryColor,
-          // Symmetric angles: both sides slope inward top-to-bottom (10% match)
-          clipPath: "polygon(0% 0%, 100% 0%, 96% 100%, 4% 100%)",
+          clipPath: SHALLOW_STATUS_BAR,
         }}
       >
         <AnimatedText
