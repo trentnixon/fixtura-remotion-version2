@@ -1,6 +1,7 @@
 import React from "react";
 
 import TeamLogo from "../../utils/primitives/TeamLogo";
+import { LogoPlate } from "../../../../templates/variants/brickwork/design";
 import LadderTeamName from "../../utils/primitives/ladderTeamName";
 import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
@@ -275,7 +276,7 @@ export const BalancedLadderRowBrickWork: React.FC<BaseLayoutProps> = ({
 
   return (
     <div
-      className={`flex items-center ${layout.borderRadius.container} mb-1 ${bgColorClass}`}
+      className={`flex items-center ${layout.borderRadius.container}`}
       style={{
         height: `${LadderRowHeight}px`,
         background: bgColorClass,
@@ -293,18 +294,13 @@ export const BalancedLadderRowBrickWork: React.FC<BaseLayoutProps> = ({
           style={{ width: logoSize, height: logoSize }}
         >
           {team.clubLogo || team.playHQLogo ? (
-            <div className={`w-full h-full ${layout.borderRadius.container}`}>
-              <TeamLogo
-                logo={team.clubLogo || team.playHQLogo}
-                teamName={team.teamName}
-                delay={delay}
-                imgStyle={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                }}
-              />
-            </div>
+            <LogoPlate
+              mode="preserve"
+              size={logoSize}
+              logo={team.clubLogo || team.playHQLogo}
+              teamName={team.teamName}
+              delay={delay}
+            />
           ) : (
             <div
               className={`w-8 h-8 bg-gray-300 ${layout.borderRadius.container}`}

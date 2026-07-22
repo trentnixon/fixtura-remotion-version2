@@ -415,6 +415,16 @@ export const loadFontsFromTheme = async (
     if (subtitle?.family) {
       fontsToLoad.add(subtitle.family);
     }
+    const additional = (
+      theme.fonts as { additional?: string[] | undefined }
+    ).additional;
+    if (additional?.length) {
+      additional.forEach((fontName) => {
+        if (fontName) {
+          fontsToLoad.add(fontName);
+        }
+      });
+    }
   }
 
   // Add legacy font configurations

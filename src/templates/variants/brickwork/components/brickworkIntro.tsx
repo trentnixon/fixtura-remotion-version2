@@ -1,3 +1,5 @@
+// BrickworkIntro.tsx
+
 import React from "react";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
@@ -5,18 +7,17 @@ import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackLogoTitleName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
-
-const TITLE_LENGTH_THRESHOLD = 17;
-/** Long strings use text-9xl; shorter strings use text-[12em] */
-const getTitleSizeClass = (title: string) =>
-  title.length > TITLE_LENGTH_THRESHOLD ? "text-9xl" : "text-[12em]";
+import {
+  BRICKWORK_TITLE_BASE_CLASS,
+  useBrickworkTypography,
+} from "../design";
+import { useFitTitleFontSize } from "../utils/useFitTitleFontSize";
 
 /**
  * BrickworkIntro Component
  *
- * A brickwork introduction template that showcases enhanced container styling options.
- * Title font size is dynamic: long strings (e.g. "Batting Performances") use text-9xl,
- * shorter strings use text-[12em].
+ * Display title uses Allerta Stencil with measured fitting when text overflows.
+ * Club name uses Roboto copy role.
  */
 export const BrickworkIntro: React.FC = () => {
   const { club, metadata, sponsors } = useVideoDataContext();
@@ -24,8 +25,10 @@ export const BrickworkIntro: React.FC = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
+  const { displayFont, copyFont } = useBrickworkTypography();
 
   const title = metadata.title ?? "";
+  const { containerRef, textRef, fontSizeStyle } = useFitTitleFontSize(title);
 
   return (
     <VerticalStackLogoTitleName
@@ -45,20 +48,28 @@ export const BrickworkIntro: React.FC = () => {
         </div>
       }
       Title={
-        <div className="overflow-hidden mb-4 w-full">
-          <AnimatedText
-            textAlign="center"
-            type="title"
-            variant="onContainerTitle"
-            letterAnimation="none"
-            animation={TextAnimations.mainTitle}
-            exitAnimation={TextAnimations.introOut}
-            exitFrame={TextAnimations.introExitFrame}
-            fontFamily={fontClasses.title?.family}
-            className={getTitleSizeClass(title)}
-          >
-            {title}
-          </AnimatedText>
+        <div
+          ref={containerRef}
+          className="overflow-hidden mb-4 w-full"
+        >
+          <div ref={textRef}>
+            <AnimatedText
+              textAlign="center"
+              type="title"
+              variant="onContainerTitle"
+              letterAnimation="none"
+              animation={TextAnimations.mainTitle}
+              exitAnimation={TextAnimations.introOut}
+              exitFrame={TextAnimations.introExitFrame}
+              fontFamily={
+                fontClasses.heading?.family ?? displayFont
+              }
+              className={BRICKWORK_TITLE_BASE_CLASS}
+              style={fontSizeStyle}
+            >
+              {title}
+            </AnimatedText>
+          </div>
         </div>
       }
       Name={
@@ -71,7 +82,7 @@ export const BrickworkIntro: React.FC = () => {
             animation={TextAnimations.clubName}
             exitAnimation={TextAnimations.introOut}
             exitFrame={TextAnimations.introExitFrame}
-            fontFamily={fontClasses.subtitle?.family}
+            fontFamily={fontClasses.subheading?.family ?? copyFont}
           >
             {club.name}
           </AnimatedText>

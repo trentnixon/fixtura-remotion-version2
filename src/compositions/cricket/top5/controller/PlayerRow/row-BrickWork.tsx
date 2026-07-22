@@ -2,6 +2,11 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
+import {
+  DiagonalEnergyAccent,
+  isFeaturedRow,
+  MasonryRow,
+} from "../../../../../templates/variants/brickwork/design";
 import PlayerRowNameLogoWrapperValue from "../../layout/PlayerRowNameLogoWrapperValue";
 import { PlayerRowProps } from "./_types/PlayerRowProps";
 import {
@@ -24,25 +29,30 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
   const animationOutFrame = calculateExitFrame(timings);
 
   return (
-    <div className="overflow-hidden">
+    <MasonryRow index={index} className="overflow-hidden">
       <AnimatedContainer
         type="full"
-        className="rounded-lg"
+        className="relative rounded-lg"
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <PlayerRowNameLogoWrapperValue
+        {isFeaturedRow(index) && (
+          <DiagonalEnergyAccent edge="trailing" shape="diagonalBand" />
+        )}
+        <div className="relative z-10">
+          <PlayerRowNameLogoWrapperValue
           player={player}
           index={index}
           rowHeight={rowHeight}
           delay={delay}
           restrictions={getDefaultRestrictions()}
         />
+        </div>
       </AnimatedContainer>
-    </div>
+    </MasonryRow>
   );
 };
 

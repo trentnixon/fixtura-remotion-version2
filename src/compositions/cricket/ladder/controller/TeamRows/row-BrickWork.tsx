@@ -10,6 +10,7 @@ import {
   calculateAnimationOutFrame,
   parseTeamPosition,
 } from "./_utils/calculations";
+import { getBrickworkColourRoles } from "../../../../../templates/variants/brickwork/design";
 
 /**
  * Brickwork ladder row – stronger transparent backgrounds on each row.
@@ -30,20 +31,21 @@ export const RowBrickWork: React.FC<TeamRowProps> = ({
   const delay = calculateAnimationDelay(index, 9);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
-  let bgColorClass = "";
+  const roles = getBrickworkColourRoles(selectedPalette);
   const position = parseTeamPosition(team.position);
 
+  let rowBackground: string;
   if (isBiasTeam) {
-    bgColorClass = "bg-blue-900/70";
+    rowBackground = roles.status.accountBias;
   } else if (position <= 1) {
-    bgColorClass = "bg-green-500/80";
+    rowBackground = roles.status.ladderTop;
   } else if (position > totalTeams - 1) {
-    bgColorClass = "bg-red-500/80";
+    rowBackground = roles.status.ladderBottom;
   } else {
-    bgColorClass =
+    rowBackground =
       index % 2 === 0
-        ? selectedPalette.container.backgroundTransparent.strong
-        : selectedPalette.container.backgroundTransparent.medium;
+        ? roles.neutral.surfaceFeatured
+        : roles.neutral.surface;
   }
 
   return (
@@ -60,7 +62,7 @@ export const RowBrickWork: React.FC<TeamRowProps> = ({
         <BalancedLadderRowBrickWork
           team={team}
           delay={delay}
-          bgColorClass={bgColorClass}
+          bgColorClass={rowBackground}
           LadderRowHeight={LadderRowHeight}
           place={position}
         />

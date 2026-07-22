@@ -3,6 +3,10 @@ import { getItemsForScreen } from "../../utils/screenCalculator";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PerformanceRowBrickWork from "../PlayerRow/row-BrickWork";
+import {
+  getFeaturedRowHeight,
+  BRICKWORK_ROW_STACK_CLASS,
+} from "../../../../../templates/variants/brickwork/design";
 import { PerformancesDisplayProps } from "./_types/PerformancesDisplayProps";
 
 const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
@@ -13,14 +17,12 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
 
-  // Get items for this specific screen
   const displayedPerformances = getItemsForScreen(
     performances,
     screenIndex,
     itemsPerScreen,
   );
 
-  // Static row height for brickWork template
   const rowHeight = 115;
 
   return (
@@ -46,7 +48,7 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
           animationDelay={0}
           exitAnimation={ContainerAnimations.main.parent.containerOut}
         >
-          <div className="flex flex-col items-center gap-2 w-full">
+          <div className={`${BRICKWORK_ROW_STACK_CLASS} items-center`}>
             {displayedPerformances.map((performance, index) => (
               <div
                 key={`${performance.name}-${screenIndex}-${index}`}
@@ -55,7 +57,11 @@ const PerformancesDisplayBrickWork: React.FC<PerformancesDisplayProps> = ({
                 <PerformanceRowBrickWork
                   performance={performance}
                   index={index}
-                  rowHeight={rowHeight}
+                  rowHeight={getFeaturedRowHeight(
+                    rowHeight,
+                    index,
+                    displayedPerformances.length,
+                  )}
                 />
               </div>
             ))}

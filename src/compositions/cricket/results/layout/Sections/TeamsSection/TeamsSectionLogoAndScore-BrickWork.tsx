@@ -2,13 +2,12 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
-import { TeamLogo } from "../../../../utils/primitives/TeamLogo";
+import { LogoPlate, useBrickworkTypography } from "../../../../../../templates/variants/brickwork/design";
 import {
   ResultScore,
   ResultScoreFirstInnings,
 } from "../../../../utils/primitives/ResultScore";
 
-import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { TeamsSectionProps } from "./_types/TeamsSectionProps";
 import { getFirstInningsDisplay, normalizeScore } from "./_utils/helpers";
 
@@ -28,14 +27,9 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
   backgroundColor,
 }) => {
   const { animations } = useAnimationContext();
-  const { fontClasses, fonts } = useThemeContext();
+  const { displayFont } = useBrickworkTypography();
   const TextAnimations = animations.text.main;
-  // Use Brickwork title font (Climate Crisis) - from theme.ts fonts.title.family
-  const scoreFontFamily =
-    fontClasses?.title?.family ??
-    fontClasses?.heading?.family ??
-    fonts?.title?.family ??
-    "Climate Crisis";
+  const scoreFontFamily = displayFont;
 
   // Logo fits container height (square, capped at container)
   const logoSize = containerHeight ? Math.min(containerHeight, 120) : 90;
@@ -84,33 +78,25 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
               className="font-normal"
             />
           </div>
-          <div
-            className="shrink-0 overflow-hidden flex items-center justify-center"
-            style={{ width: logoSize, height: logoSize }}
-          >
-            <TeamLogo
-              logo={homeTeamLogo || null}
-              teamName={homeTeam.name}
-              delay={delay + 15}
-              imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
+          <LogoPlate
+            mode="preserve"
+            size={logoSize}
+            logo={homeTeamLogo || null}
+            teamName={homeTeam.name}
+            delay={delay + 15}
+          />
         </div>
         <div
           className="flex flex-row items-center justify-between flex-2 rounded h-full"
           style={backgroundColor ? { backgroundColor } : undefined}
         >
-          <div
-            className="shrink-0 overflow-hidden flex items-center justify-center"
-            style={{ width: logoSize, height: logoSize }}
-          >
-            <TeamLogo
-              logo={awayTeamLogo || null}
-              teamName={awayTeam.name}
-              delay={delay + 20}
-              imgStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
+          <LogoPlate
+            mode="preserve"
+            size={logoSize}
+            logo={awayTeamLogo || null}
+            teamName={awayTeam.name}
+            delay={delay + 20}
+          />
           <div className="flex flex-1 flex-col items-center justify-center px-2 h-full">
             {awayFirstInnings.show && (
               <ResultScoreFirstInnings

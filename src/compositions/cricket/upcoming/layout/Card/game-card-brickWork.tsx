@@ -11,7 +11,7 @@ import {
   calculateAnimationOutFrame,
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
-import TeamLogo from "../../../utils/primitives/TeamLogo";
+import { LogoPlate, BRICKWORK_ROW_GAP_CLASS, BRICKWORK_ROW_GAP_STYLE } from "../../../../../templates/variants/brickwork/design";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();
@@ -25,7 +25,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
-    <div className="overflow-hidden my-2">
+    <div className="overflow-hidden">
       <AnimatedContainer
         type="full"
         className={`${layout.borderRadius.container}`}
@@ -36,7 +36,8 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
         exitFrame={animationOutFrame}
       >
         <div
-          className={`${layout.borderRadius.container} w-full overflow-hidden`}
+          className={`${layout.borderRadius.container} w-full overflow-hidden flex flex-col ${BRICKWORK_ROW_GAP_CLASS}`}
+          style={BRICKWORK_ROW_GAP_STYLE}
         >
           {/* Grade Section - Top */}
           <Ground
@@ -76,22 +77,16 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
           >
             {/* Home Team Logo - 20% */}
             <div
-              className="overflow-hidden"
+              className="flex items-center justify-center overflow-hidden"
               style={{ flex: "2 0 0", height: 140 }}
             >
-              <div className="w-full h-full">
-                <TeamLogo
-                  logo={game.teamHomeLogo}
-                  teamName={game.teamHome}
-                  delay={delay + 15}
-                  fit="cover"
-                  imgStyle={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </div>
+              <LogoPlate
+                mode="preserve"
+                logo={game.teamHomeLogo}
+                teamName={game.teamHome}
+                delay={delay + 15}
+                className="h-full w-full"
+              />
             </div>
 
             {/* Middle: Ground, Date, Time - 60% */}
@@ -132,22 +127,16 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
 
             {/* Away Team Logo - 20% */}
             <div
-              className="overflow-hidden"
+              className="flex items-center justify-center overflow-hidden"
               style={{ flex: "2 0 0", height: 140 }}
             >
-              <div className="w-full h-full">
-                <TeamLogo
-                  logo={game.teamAwayLogo}
-                  teamName={game.teamAway}
-                  delay={delay + 20}
-                  fit="cover"
-                  imgStyle={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </div>
+              <LogoPlate
+                mode="preserve"
+                logo={game.teamAwayLogo}
+                teamName={game.teamAway}
+                delay={delay + 20}
+                className="h-full w-full"
+              />
             </div>
           </AnimatedContainer>
 

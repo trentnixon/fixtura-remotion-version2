@@ -3,7 +3,8 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import RosterPlayerListBrickWork from "../../layout/RosterPlayerList/playerList-brickWork";
-import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
+import { AccountTeamHeaderBrickWork } from "../../layout/RosterHeader/brickWork/AccountTeamHeader";
+import { AgainstTeamHeaderBrickWork } from "../../layout/RosterHeader/brickWork/AgainstTeamHeader";
 import { MetadataLarge } from "../../../utils/primitives/metadataLarge";
 import { formatDate, truncateText } from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
@@ -50,14 +51,14 @@ const RosterDisplayBrickWork: React.FC<RosterDisplayProps> = ({ roster }) => {
               className="flex flex-col gap-2 justify-center min-w-0"
               style={{ flex: "4 0 0" }}
             >
-              <AccountTeamLarge
+              <AccountTeamHeaderBrickWork
                 roster={roster}
                 logoSize={BRICKWORK_ACCOUNT_LOGO}
                 variant="onContainerCopy"
                 compact
               />
               <VS variant="onContainerCopy" />
-              <AgainstTeamLarge
+              <AgainstTeamHeaderBrickWork
                 roster={roster}
                 logoSize={BRICKWORK_AGAINST_LOGO}
                 variant="onContainerCopy"

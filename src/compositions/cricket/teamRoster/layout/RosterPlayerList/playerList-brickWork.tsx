@@ -1,5 +1,6 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { BRICKWORK_ROW_STACK_CLASS } from "../../../../../templates/variants/brickwork/design";
 import { RosterPlayerName } from "../../../utils/primitives/RosterPlayerName";
 import { truncatePlayerName } from "../utils";
 import { RosterPlayerListProps } from "./_types/RosterPlayerListProps";
@@ -14,7 +15,7 @@ const RosterPlayerListBrickWork: React.FC<RosterPlayerListProps> = ({
 
   return (
     <div className="flex-grow min-w-0">
-      <div className="flex flex-col gap-1">
+      <div className={BRICKWORK_ROW_STACK_CLASS}>
         {roster.teamRoster.map((player, index) => (
           <div
             key={index}

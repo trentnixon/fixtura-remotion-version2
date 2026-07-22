@@ -2,6 +2,7 @@ import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { BRICKWORK_GRID_STACK_CLASS } from "../../../../../templates/variants/brickwork/design";
 import PlayerRowBrickWork from "../PlayerRow/row-BrickWork";
 import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../_types/composition-types";
@@ -30,7 +31,7 @@ const TeamOfTheWeekDisplayBrickWork: React.FC<TeamOfTheWeekDisplayProps> = ({
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="grid grid-cols-2 gap-2">
+        <div className={BRICKWORK_GRID_STACK_CLASS}>
           {players.map((player, index) => (
             <PlayerRowBrickWork
               key={player.player}

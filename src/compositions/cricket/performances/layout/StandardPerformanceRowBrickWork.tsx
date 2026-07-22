@@ -1,6 +1,12 @@
 import React from "react";
 import { TeamLogo as PerformanceTeamLogoType } from "../_types/types";
-import { TeamLogo } from "../../utils/primitives/TeamLogo";
+import {
+  getBrickworkColourRoles,
+  getFeaturedRowSurfaces,
+  isFeaturedRow,
+  LogoPlate,
+  useBrickworkTypography,
+} from "../../../../templates/variants/brickwork/design";
 
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { Top5PlayerName } from "../../utils/primitives/Top5PlayerName";
@@ -11,7 +17,6 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { PerformanceRowLayoutPropsWithRestrictions } from "./_types/PerformanceRowLayoutProps";
 import { truncateText, getScoreValues } from "./_utils/helpers";
 import {
-  SMALL_LOGO_SIZE,
   PLAYER_NAME_DELAY_OFFSET,
   TEAM_NAME_DELAY_OFFSET,
   LOGO_DELAY_OFFSET,
@@ -19,30 +24,19 @@ import {
   STAT_SUFFIX_DELAY_OFFSET,
 } from "./_utils/constants";
 
-// --- Layout: BrickWork (Name, Logo, Wrapper, Value) - matches Top 5 ---
 export const StandardPerformanceRowBrickWork: React.FC<
   PerformanceRowLayoutPropsWithRestrictions
 > = ({ performance, index, rowHeight, delay, restrictions }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
+  const { displayFont, copyFont } = useBrickworkTypography();
+  const roles = getBrickworkColourRoles(selectedPalette);
+  const featured = isFeaturedRow(index);
+  const surfaces = getFeaturedRowSurfaces(roles, featured);
 
-  // Assuming text animations exist in context
   const largeTextAnimation = animations.text.main.copyIn;
   const smallTextAnimation = animations.text.main.copyIn;
 
-  // Determine background color
-  const isTopPlayer = index === 0;
-  const bgColor = isTopPlayer
-    ? selectedPalette.container.backgroundTransparent.strong
-    : selectedPalette.container.backgroundTransparent.medium;
-
-  const LogoBG = isTopPlayer
-    ? selectedPalette.container.backgroundTransparent.strong
-    : selectedPalette.container.backgroundTransparent.medium;
-
-  const contrastBG = selectedPalette.container.backgroundTransparent.strong;
-
-  // Match Top 5: truncated names in uppercase
   const playerName = truncateText(
     performance.name,
     restrictions.nameLength,
@@ -52,19 +46,17 @@ export const StandardPerformanceRowBrickWork: React.FC<
     restrictions.teamLength,
   ).toUpperCase();
 
-  // Get score display values
   const { mainValue, suffix } = getScoreValues(performance);
 
   return (
     <div
       className="grid grid-cols-12 items-center h-full overflow-hidden rounded-none"
       style={{
-        background: bgColor,
+        background: surfaces.rowSurface,
         height: `${rowHeight}px`,
       }}
     >
-      {/* Name & Team (col-span-7) - matches Top 5 layout */}
-      <div className="col-span-7 flex flex-col justify-center px-2 h-full">
+      <div className="col-span-7 flex flex-col justify-center px-4 h-full">
         <Top5PlayerName
           value={playerName}
           animation={{
@@ -73,6 +65,7 @@ export const StandardPerformanceRowBrickWork: React.FC<
           }}
           className=""
           variant="onContainerCopy"
+          fontFamily={copyFont}
         />
         <Top5PlayerTeam
           value={teamName}
@@ -82,30 +75,28 @@ export const StandardPerformanceRowBrickWork: React.FC<
           }}
           className=""
           variant="onContainerCopy"
+          fontFamily={copyFont}
         />
       </div>
 
-      {/* Logo (col-span-2) - matches Top 5: fill container, proper scaling */}
       <div
         className="col-span-2 flex items-center justify-center h-full"
-        style={{ background: contrastBG }}
+        style={{ background: surfaces.logoColumnSurface }}
       >
         <div className="w-30 h-30 overflow-hidden flex items-center justify-center">
-          <TeamLogo
+          <LogoPlate
+            mode="preserve"
             logo={performance.teamLogo as PerformanceTeamLogoType}
             teamName={performance.playedFor}
             delay={delay + LOGO_DELAY_OFFSET}
-            size={SMALL_LOGO_SIZE}
-            fit="contain"
-            imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
+            className="h-full w-full"
           />
         </div>
       </div>
 
-      {/* Stat (col-span-3) */}
       <div
         className="col-span-3 flex items-center justify-center whitespace-nowrap leading-none px-4 h-full"
-        style={{ background: LogoBG }}
+        style={{ background: surfaces.statSurface }}
       >
         <Top5PlayerScore
           value={mainValue}
@@ -114,7 +105,8 @@ export const StandardPerformanceRowBrickWork: React.FC<
             delay: delay + STAT_DELAY_OFFSET,
           }}
           className=""
-          variant="onContainerCopy"
+          variant={surfaces.statTextVariant}
+          fontFamily={displayFont}
         />
         {suffix && (
           <Top5PlayerScoreSuffix
@@ -124,7 +116,7 @@ export const StandardPerformanceRowBrickWork: React.FC<
               delay: delay + STAT_SUFFIX_DELAY_OFFSET,
             }}
             className=""
-            variant="onContainerCopy"
+            variant={surfaces.statTextVariant}
           />
         )}
       </div>

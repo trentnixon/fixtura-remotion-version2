@@ -14,8 +14,10 @@ export const Top5PlayerTeam = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
+  fontFamily: fontFamilyProp,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
-  const fontFamily = useFontFamily();
+  const copyFont = useFontFamily();
+  const fontFamily = fontFamilyProp ?? copyFont;
 
   return (
     <AnimatedText

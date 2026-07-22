@@ -2,6 +2,11 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
+import {
+  DiagonalEnergyAccent,
+  isFeaturedRow,
+  MasonryRow,
+} from "../../../../../templates/variants/brickwork/design";
 import StandardPerformanceRowBrickWork from "../../layout/StandardPerformanceRowBrickWork";
 import { PerformanceRowProps } from "./_types/PerformanceRowProps";
 import {
@@ -23,13 +28,13 @@ const PerformanceRowBrickWork: React.FC<PerformanceRowProps> = ({
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
-    <div
-      className="overflow-hidden w-full flex-shrink-0"
-      style={{ width: "100%" }}
+    <MasonryRow
+      index={index}
+      className="overflow-hidden flex-shrink-0"
     >
       <AnimatedContainer
         type="full"
-        className="rounded-lg flex-shrink-0"
+        className="relative rounded-lg flex-shrink-0"
         style={{ width: "100%" }}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
@@ -37,6 +42,10 @@ const PerformanceRowBrickWork: React.FC<PerformanceRowProps> = ({
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
+        {isFeaturedRow(index) && (
+          <DiagonalEnergyAccent edge="trailing" shape="diagonalBand" />
+        )}
+        <div className="relative z-10">
         <StandardPerformanceRowBrickWork
           performance={performance}
           index={index}
@@ -44,8 +53,9 @@ const PerformanceRowBrickWork: React.FC<PerformanceRowProps> = ({
           delay={delay}
           restrictions={{ nameLength: 20, teamLength: 35 }}
         />
+        </div>
       </AnimatedContainer>
-    </div>
+    </MasonryRow>
   );
 };
 

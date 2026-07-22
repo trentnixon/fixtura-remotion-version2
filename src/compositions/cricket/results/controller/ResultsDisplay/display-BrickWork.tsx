@@ -5,9 +5,12 @@ import MatchRowBrickWork from "../MatchRow/row-Brickwork";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
   calculateDisplayedResults,
-  calculateRowHeight,
   mergeAssignSponsors,
 } from "./_utils/calculations";
+import {
+  BRICKWORK_ROW_STACK_CLASS,
+  calculateBrickworkStackItemHeight,
+} from "../../../../../templates/variants/brickwork/design";
 
 const ResultsDisplayBrickWork: React.FC<ResultsDisplayProps> = ({
   results,
@@ -17,7 +20,6 @@ const ResultsDisplayBrickWork: React.FC<ResultsDisplayProps> = ({
   const { layout } = useThemeContext();
   const { heights } = layout;
 
-  // Calculate which results to show on this screen
   const { displayedResults } = calculateDisplayedResults(
     results,
     resultsPerScreen,
@@ -25,28 +27,24 @@ const ResultsDisplayBrickWork: React.FC<ResultsDisplayProps> = ({
   );
 
   const availableHeight = heights.asset;
+  const rowHeight = calculateBrickworkStackItemHeight(
+    availableHeight,
+    displayedResults.length,
+  );
 
-  // Calculate exactly half of the available height for each row
-  const rowHeight = calculateRowHeight(availableHeight);
-
-  // Merge all assignSponsors objects from displayedResults into one object
   const mergedAssignSponsors = mergeAssignSponsors(displayedResults);
 
   return (
     <div className="flex flex-col h-full w-full">
-      {/* Results container */}
       <div
-        className="w-full flex flex-col justify-between"
+        className={BRICKWORK_ROW_STACK_CLASS}
         style={{ height: `${availableHeight}px` }}
       >
         {displayedResults.map((match, index) => (
           <div
             key={match.gameID}
-            className="w-full"
-            style={{
-              height: `${rowHeight}px`,
-              marginBottom: index === 0 ? "10px" : 0,
-            }}
+            className="w-full flex-shrink-0"
+            style={{ height: `${rowHeight}px` }}
           >
             <MatchRowBrickWork
               match={match}

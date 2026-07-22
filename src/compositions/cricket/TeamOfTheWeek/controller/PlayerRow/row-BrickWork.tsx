@@ -3,7 +3,7 @@ import { PLAYER_STAGGER_DELAY, PlayerRowProps } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { Img } from "remotion";
+import { LogoPlate } from "../../../../../templates/variants/brickwork/design";
 import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { cleanPlayerName, getPositionIcon } from "../../utils/config";
@@ -184,15 +184,17 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
               style={{ background: logoBG }}
             >
               <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
-                <Img
-                  src={player.club.logo.url}
-                  alt={player.club.name}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <LogoPlate
+                mode="preserve"
+                size={80}
+                logo={{
+                  url: player.club.logo.url,
+                  width: player.club.logo.width,
+                  height: player.club.logo.height,
+                }}
+                teamName={player.club.name}
+                delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+              />
               </div>
             </div>
           )}

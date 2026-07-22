@@ -1,4 +1,5 @@
 import React from "react";
+import { BRICKWORK_ROW_STACK_CLASS } from "../../../../../templates/variants/brickwork/design";
 import TableHeaderBrickWork from "../../modules/TableHeader/headerBrickWork";
 import RowBrickWork from "../TeamRows/row-BrickWork";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
@@ -34,7 +35,7 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
         <div>
           <TableHeaderBrickWork title={gradeName} headerHeight={headerHeight} />
 
-          <div className="flex-1 overflow-hidden">
+          <div className={`flex-1 overflow-hidden ${BRICKWORK_ROW_STACK_CLASS}`}>
             {League.map((team, index) => (
               <RowBrickWork
                 key={team.position}

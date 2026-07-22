@@ -7,7 +7,6 @@ import GamesListBrickWork from "../GamesList/games-list-brickWork";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
-  calculateGameCardHeight,
   mergeAssignSponsors,
 } from "./_utils/calculations";
 
@@ -27,9 +26,6 @@ export const GamesDisplayBrickWork: React.FC<GamesDisplayProps> = ({
     screenIndex,
   );
 
-  // Calculate game card heights
-  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
-
   // Merge all assignSponsors objects from displayedGames into one object
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
 
@@ -44,10 +40,7 @@ export const GamesDisplayBrickWork: React.FC<GamesDisplayProps> = ({
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
         <div className="flex-1 overflow-hidden">
-          <GamesListBrickWork
-            games={displayedGames}
-            gameRowHeight={gameCardHeight}
-          />
+          <GamesListBrickWork games={displayedGames} />
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>

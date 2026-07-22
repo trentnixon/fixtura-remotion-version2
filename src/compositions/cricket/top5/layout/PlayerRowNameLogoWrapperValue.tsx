@@ -1,6 +1,12 @@
 import React from "react";
 import { TeamLogo as Top5TeamLogoType } from "../_types/types";
-import { TeamLogo } from "../../utils/primitives/TeamLogo";
+import {
+  getBrickworkColourRoles,
+  getFeaturedRowSurfaces,
+  isFeaturedRow,
+  LogoPlate,
+  useBrickworkTypography,
+} from "../../../../templates/variants/brickwork/design";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { Top5PlayerName } from "../../utils/primitives/Top5PlayerName";
 import { Top5PlayerTeam } from "../../utils/primitives/Top5PlayerTeam";
@@ -11,7 +17,6 @@ import { PlayerRowLayoutPropsWithRestrictions } from "./_types/PlayerRowLayoutPr
 import { truncateText } from "./_utils/helpers";
 import { getScoreValues } from "./_utils/scoreHelpers";
 import {
-  SMALL_LOGO_SIZE,
   PLAYER_NAME_DELAY_OFFSET,
   TEAM_NAME_DELAY_OFFSET,
   LOGO_DELAY_OFFSET,
@@ -19,33 +24,19 @@ import {
   STAT_SUFFIX_DELAY_OFFSET,
 } from "./_utils/constants";
 
-// --- Layout 1: Standard (Existing) ---
 export const PlayerRowNameLogoWrapperValue: React.FC<
   PlayerRowLayoutPropsWithRestrictions
 > = ({ player, index, rowHeight, delay, restrictions }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette } = useThemeContext();
-  /*   const { data } = useVideoDataContext();
-  const { videoMeta } = data;
-  const compositionId = videoMeta?.video?.metadata?.compositionId; */
+  const { displayFont, copyFont } = useBrickworkTypography();
+  const roles = getBrickworkColourRoles(selectedPalette);
+  const featured = isFeaturedRow(index);
+  const surfaces = getFeaturedRowSurfaces(roles, featured);
 
-  // Assuming text animations exist in context
   const largeTextAnimation = animations.text.main.copyIn;
   const smallTextAnimation = animations.text.main.copyIn;
 
-  // Determine background color
-  const isTopPlayer = index === 0;
-  const bgColor = isTopPlayer
-    ? selectedPalette.container.backgroundTransparent.strong
-    : selectedPalette.container.backgroundTransparent.medium;
-
-  const LogoBG = isTopPlayer
-    ? selectedPalette.container.backgroundTransparent.strong
-    : selectedPalette.container.backgroundTransparent.medium;
-
-  const contrastBG = selectedPalette.container.backgroundTransparent.strong;
-
-  // Get truncated player name and team name
   const playerName = truncateText(
     player.name,
     restrictions.nameLength,
@@ -55,7 +46,6 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
     restrictions.teamLength,
   ).toUpperCase();
 
-  // Get score display values
   const { mainValue, suffix } = getScoreValues(player);
 
   return (
@@ -63,11 +53,10 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
       className="grid grid-cols-12 items-center h-full overflow-hidden rounded-none"
       style={{
         height: `${rowHeight}px`,
-        background: bgColor,
+        background: surfaces.rowSurface,
       }}
     >
-      {/* Name & Team (col-span-4) */}
-      <div className="col-span-7 flex flex-col justify-center px-2 h-full">
+      <div className="col-span-7 flex flex-col justify-center px-4 h-full">
         <Top5PlayerName
           value={playerName}
           animation={{
@@ -75,6 +64,7 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
             delay: delay + PLAYER_NAME_DELAY_OFFSET,
           }}
           className=""
+          fontFamily={copyFont}
         />
         <Top5PlayerTeam
           value={teamName}
@@ -83,30 +73,28 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
             delay: delay + TEAM_NAME_DELAY_OFFSET,
           }}
           className=""
+          fontFamily={copyFont}
         />
       </div>
 
-      {/* Logo (col-span-2) */}
       <div
         className="col-span-2 flex items-center justify-center h-full"
-        style={{ background: contrastBG }}
+        style={{ background: surfaces.logoColumnSurface }}
       >
         <div className="w-30 h-30 overflow-hidden flex items-center justify-center">
-          <TeamLogo
+          <LogoPlate
+            mode="preserve"
             logo={player.teamLogo as Top5TeamLogoType}
             teamName={player.playedFor}
             delay={delay + LOGO_DELAY_OFFSET}
-            size={SMALL_LOGO_SIZE}
-            fit="contain"
-            imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
+            className="h-full w-full"
           />
         </div>
       </div>
 
-      {/* Stat (col-span-2) */}
       <div
-        className="col-span-3 flex items-center justify-center whitespace-nowrap leading-none px-4  h-full"
-        style={{ background: LogoBG }}
+        className="col-span-3 flex items-center justify-center whitespace-nowrap leading-none px-4 h-full"
+        style={{ background: surfaces.statSurface }}
       >
         <Top5PlayerScore
           value={mainValue}
@@ -115,7 +103,8 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
             delay: delay + STAT_DELAY_OFFSET,
           }}
           className=""
-          variant="onContainerCopy"
+          variant={surfaces.statTextVariant}
+          fontFamily={displayFont}
         />
         {suffix && (
           <Top5PlayerScoreSuffix
@@ -125,7 +114,7 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
               delay: delay + STAT_SUFFIX_DELAY_OFFSET,
             }}
             className=""
-            variant="onContainerCopy"
+            variant={surfaces.statTextVariant}
           />
         )}
       </div>
@@ -133,4 +122,4 @@ export const PlayerRowNameLogoWrapperValue: React.FC<
   );
 };
 
-export default PlayerRowNameLogoWrapperValue; // Keep default export for compatibility if needed
+export default PlayerRowNameLogoWrapperValue;

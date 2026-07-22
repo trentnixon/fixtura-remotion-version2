@@ -5,6 +5,10 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../_types/composition-types";
 import PlayerRowBrickWork from "../PlayerRow/row-BrickWork";
+import {
+  getFeaturedRowHeight,
+  BRICKWORK_SINGLE_COLUMN_GRID_CLASS,
+} from "../../../../../templates/variants/brickwork/design";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
 
@@ -32,13 +36,13 @@ const PlayersDisplayBrickWork: React.FC<PlayersDisplayProps> = ({
         animationDelay={0}
         exitAnimation={ContainerAnimations.main.parent.containerOut}
       >
-        <div className="flex-1 grid grid-cols-1 gap-1">
+        <div className={`flex-1 ${BRICKWORK_SINGLE_COLUMN_GRID_CLASS}`}>
           {players.map((player, index) => (
             <PlayerRowBrickWork
               key={player.name}
               player={player}
               index={index}
-              rowHeight={rowHeight}
+              rowHeight={getFeaturedRowHeight(rowHeight, index, players.length)}
             />
           ))}
         </div>
