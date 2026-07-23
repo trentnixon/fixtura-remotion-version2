@@ -1,53 +1,52 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { StandardPerformanceRowClassic } from "../../layout/StandardPerformanceRowClassic";
-import { PerformanceRowProps } from "./_types/PerformanceRowProps";
+import LadderRowClassic from "../../layout/LadderRowClassic";
+import { TeamRowProps } from "./_types/TeamRowProps";
 import {
   calculateAnimationDelay,
   calculateAnimationOutFrame,
+  parseTeamPosition,
 } from "./_utils/calculations";
 
-const PerformanceRowClassic: React.FC<PerformanceRowProps> = ({
-  performance,
+export const StandardRowClassic: React.FC<TeamRowProps> = ({
+  team,
   index,
-  rowHeight,
+  LadderRowHeight,
 }) => {
-  const { animations } = useAnimationContext();
   const { data } = useVideoDataContext();
+  const { animations } = useAnimationContext();
   const { layout } = useThemeContext();
+  const containerAnimation = animations.container.main.itemContainer;
   const { timings } = data;
 
-  const containerAnimation = animations.container.main.itemContainer;
   const delay = calculateAnimationDelay(index, 5);
   const animationOutFrame = calculateAnimationOutFrame(timings);
+  const position = parseTeamPosition(team.position);
 
   return (
-    <div
-      className="overflow-visible w-full flex-shrink-0"
-      style={{ width: "100%" }}
-    >
+    <div className="overflow-visible w-full">
       <AnimatedContainer
         type="full"
-        className={`${layout.borderRadius.container} flex-shrink-0`}
-        style={{ width: "100%" }}
+        className={`${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
         animationDelay={delay}
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
-        <StandardPerformanceRowClassic
-          performance={performance}
-          index={index}
-          rowHeight={rowHeight}
+        <LadderRowClassic
+          team={team}
           delay={delay}
+          bgColorClass=""
+          LadderRowHeight={LadderRowHeight}
+          place={position}
         />
       </AnimatedContainer>
     </div>
   );
 };
 
-export default PerformanceRowClassic;
+export default StandardRowClassic;

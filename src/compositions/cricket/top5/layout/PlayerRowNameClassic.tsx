@@ -21,26 +21,20 @@ import {
   LOGO_DELAY_OFFSET,
 } from "./_utils/constants";
 import {
+  ClassicForegroundShell,
   ClassicStatWell,
-  ClassicTexturedSurface,
-  getClassicSurfaceRoles,
 } from "../../../../templates/variants/classic/design";
 
-export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
+export const PlayerRowNameClassic: React.FC<PlayerRowLayoutProps> = ({
   player,
   rowHeight,
   delay,
 }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, layout, colors } = useThemeContext();
+  const { layout } = useThemeContext();
 
   const largeTextAnimation = animations.text.main.copyIn;
   const smallTextAnimation = animations.text.main.copyIn;
-
-  const surfaceRoles = getClassicSurfaceRoles(selectedPalette, {
-    primary: colors.primary,
-    secondary: colors.secondary,
-  });
 
   const playerName = truncateText(
     player.name,
@@ -53,13 +47,15 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
   const { mainValue, suffix } = getScoreValues(player);
 
   return (
-    <ClassicTexturedSurface
-      className={`${layout.borderRadius.container}`}
-      backgroundColor={surfaceRoles.content.surface}
-      style={{ height: `${rowHeight}px` }}
+    <ClassicForegroundShell
+      height={rowHeight}
+      delay={delay}
+      depth="compact"
     >
-      <div className="grid h-full grid-cols-12 items-center">
-        <div className="col-span-7 flex h-full flex-col justify-center px-2">
+      <div
+        className={`grid grid-cols-12 items-center overflow-hidden h-full ${layout.borderRadius.container}`}
+      >
+        <div className="relative z-10 col-span-7 flex flex-col justify-center px-2 h-full">
           <Top5PlayerName
             value={playerName}
             animation={{
@@ -114,8 +110,8 @@ export const PlayerRowNameClassicTwoColumn: React.FC<PlayerRowLayoutProps> = ({
           )}
         </ClassicStatWell>
       </div>
-    </ClassicTexturedSurface>
+    </ClassicForegroundShell>
   );
 };
 
-export default PlayerRowNameClassicTwoColumn;
+export default PlayerRowNameClassic;

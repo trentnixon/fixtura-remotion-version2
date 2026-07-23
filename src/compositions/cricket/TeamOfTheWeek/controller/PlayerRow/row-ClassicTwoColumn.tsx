@@ -19,6 +19,11 @@ import {
   BowlingStatDisplay,
   StatItem,
 } from "./_utils/components";
+import {
+  ClassicStatWell,
+  ClassicTexturedSurface,
+  getClassicSurfaceRoles,
+} from "../../../../../templates/variants/classic/design";
 
 const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
   player,
@@ -26,29 +31,22 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, layout } = useThemeContext();
+  const { selectedPalette, layout, colors } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { club } = useVideoDataContext();
   const isAccountClub = club.IsAccountClub || false;
   const delay = index * PLAYER_STAGGER_DELAY;
 
-  // Text animations
   const largeTextAnimation = animations.text.main.copyIn;
-  // const smallTextAnimation = animations.text.main.copyIn;
+  const surfaceRoles = getClassicSurfaceRoles(selectedPalette, {
+    primary: colors.primary,
+    secondary: colors.secondary,
+  });
+  const iconColor = surfaceRoles.text.onStat;
 
-  // Background colors matching Top5 ClassicTwoColumn
-  const bgColor = selectedPalette.container.backgroundTransparent.strong;
-  const logoBG = selectedPalette.container.primary;
-  const contrastBG = selectedPalette.container.backgroundTransparent.strong;
-
-  // Get the color for onContainerTitle variant to match the text
-  const iconColor = selectedPalette.text.onContainer.title;
-
-  // All-rounders use same height as other players
   const isAllRounder = isAllRounderPosition(player.categoryDetail.position);
   const hasBoth = hasBothStats(player);
 
-  // Get the appropriate SVG icon component for the position
   const PositionIcon = getPositionIcon(
     player.categoryDetail.position,
     DEFAULT_ICON_PACK,
@@ -63,126 +61,115 @@ const PlayerRowClassicTwoColumn: React.FC<PlayerRowProps> = ({
       animationDelay={delay}
       exitAnimation={containerAnimation.containerOut}
     >
-      <div
-        className={`grid grid-cols-12 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
-        style={{
-          height: `${rowHeight}px`,
-          background: bgColor,
-        }}
+      <ClassicTexturedSurface
+        className={`${layout.borderRadius.container}`}
+        backgroundColor={surfaceRoles.content.surface}
+        style={{ height: `${rowHeight}px` }}
       >
-        {/* [img] Logo Section - shown only when account is NOT a club (association) */}
-        {!isAccountClub && (
-          <div
-            className="col-span-2 flex items-center justify-center h-full overflow-hidden"
-            style={{ background: contrastBG }}
-          >
-            <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
+        <div className="grid h-full grid-cols-12 items-center">
+          {!isAccountClub && (
+            <div className="col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2">
               <Img
                 src={player.club.logo.url}
                 alt={player.club.name}
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
+                  objectFit: "contain",
                 }}
               />
             </div>
-          </div>
-        )}
-
-        {/* [position] Position Label Section */}
-        <div
-          className="col-span-1 flex whitespace-nowrap leading-none px-0 h-full items-center justify-center gap-2"
-          style={{ background: logoBG }}
-        >
-          {PositionIcon && (
-            <PositionIcon
-              className="w-20 h-20 flex-shrink-0"
-              style={{ color: iconColor }}
-            />
           )}
-        </div>
-        {/* [name and stats] Player Name and Stats Section */}
-        <div
-          className={`ml-4 flex flex-col justify-center px-2 h-full ${
-            isAccountClub ? "col-span-10" : "col-span-9"
-          }`}
-        >
-          {/* Player Name */}
-          <TeamOfTheWeekPlayerName
-            value={cleanPlayerName(player.player).toUpperCase()}
-            animation={{
-              ...largeTextAnimation,
-              delay: delay + PLAYER_NAME_DELAY_OFFSET,
-            }}
-            className=""
-          />
 
-          {/* Stats Display */}
-          {isAllRounder && hasBoth && player.batting && player.bowling ? (
-            <div className="flex flex-row gap-4 mt-1">
-              <BattingStatDisplay
-                batting={player.batting}
-                delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-              />{" "}
-              &amp;
-              <BowlingStatDisplay
-                bowling={player.bowling}
-                delay={delay + BOWLING_STAT_DELAY_OFFSET}
+          <ClassicStatWell
+            variant="contrast"
+            width="compact"
+            className="col-span-1"
+          >
+            {PositionIcon && (
+              <PositionIcon
+                className="h-20 w-20 flex-shrink-0"
+                style={{ color: iconColor }}
               />
-            </div>
-          ) : (
-            <>
-              {/* Batting positions: topscorer, higheststrikerate */}
-              {(player.categoryDetail.position === "topscorer" ||
-                player.categoryDetail.position === "higheststrikerate") &&
-                player.batting && (
-                  <BattingStatDisplay
-                    batting={player.batting}
-                    delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                  />
-                )}
+            )}
+          </ClassicStatWell>
 
-              {/* Bowling positions: mostwickets, besteconomy */}
-              {(player.categoryDetail.position === "mostwickets" ||
-                player.categoryDetail.position === "besteconomy") &&
-                player.bowling && (
-                  <BowlingStatDisplay
-                    bowling={player.bowling}
-                    delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                  />
-                )}
+          <div
+            className={`ml-4 flex h-full flex-col justify-center px-2 ${
+              isAccountClub ? "col-span-10" : "col-span-9"
+            }`}
+          >
+            <TeamOfTheWeekPlayerName
+              value={cleanPlayerName(player.player).toUpperCase()}
+              animation={{
+                ...largeTextAnimation,
+                delay: delay + PLAYER_NAME_DELAY_OFFSET,
+              }}
+              className=""
+            />
 
-              {/* Best of Rest fallback */}
-              {player.categoryDetail.position === "bestoftherest" &&
-                (!player.batting || !player.bowling) && (
-                  <>
-                    {player.batting && (
-                      <BattingStatDisplay
-                        batting={player.batting}
-                        delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                      />
-                    )}
-                    {player.bowling && (
-                      <BowlingStatDisplay
-                        bowling={player.bowling}
-                        delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                      />
-                    )}
-                    {player.allRounder && (
-                      <StatItem
-                        label="AR SCORE"
-                        value={player.allRounder.score}
-                        delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                        highlight
-                      />
-                    )}
-                  </>
-                )}
-            </>
-          )}
+            {isAllRounder && hasBoth && player.batting && player.bowling ? (
+              <div className="mt-1 flex flex-row gap-4">
+                <BattingStatDisplay
+                  batting={player.batting}
+                  delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                />
+                &amp;
+                <BowlingStatDisplay
+                  bowling={player.bowling}
+                  delay={delay + BOWLING_STAT_DELAY_OFFSET}
+                />
+              </div>
+            ) : (
+              <>
+                {(player.categoryDetail.position === "topscorer" ||
+                  player.categoryDetail.position === "higheststrikerate") &&
+                  player.batting && (
+                    <BattingStatDisplay
+                      batting={player.batting}
+                      delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                    />
+                  )}
+
+                {(player.categoryDetail.position === "mostwickets" ||
+                  player.categoryDetail.position === "besteconomy") &&
+                  player.bowling && (
+                    <BowlingStatDisplay
+                      bowling={player.bowling}
+                      delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                    />
+                  )}
+
+                {player.categoryDetail.position === "bestoftherest" &&
+                  (!player.batting || !player.bowling) && (
+                    <>
+                      {player.batting && (
+                        <BattingStatDisplay
+                          batting={player.batting}
+                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                        />
+                      )}
+                      {player.bowling && (
+                        <BowlingStatDisplay
+                          bowling={player.bowling}
+                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                        />
+                      )}
+                      {player.allRounder && (
+                        <StatItem
+                          label="AR SCORE"
+                          value={player.allRounder.score}
+                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                          highlight
+                        />
+                      )}
+                    </>
+                  )}
+              </>
+            )}
+          </div>
         </div>
-      </div>
+      </ClassicTexturedSurface>
     </AnimatedContainer>
   );
 };

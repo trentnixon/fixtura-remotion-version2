@@ -20,6 +20,11 @@ import {
   BowlingStatDisplay,
   StatItem,
 } from "./_utils/components";
+import {
+  ClassicForegroundShell,
+  ClassicStatWell,
+  getClassicSurfaceRoles,
+} from "../../../../../templates/variants/classic/design";
 
 const PlayerRowClassic: React.FC<PlayerRowProps> = ({
   player,
@@ -27,173 +32,156 @@ const PlayerRowClassic: React.FC<PlayerRowProps> = ({
   rowHeight,
 }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, layout } = useThemeContext();
+  const { selectedPalette, layout, colors } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const { club } = useVideoDataContext();
   const isAccountClub = club.IsAccountClub || false;
   const delay = index * PLAYER_STAGGER_DELAY;
 
-  // Text animations
   const largeTextAnimation = animations.text.main.copyIn;
-  //const smallTextAnimation = animations.text.main.copyIn;
-
-  // Icon animation (using container animation)
   const iconAnimation = animations.container.main.itemContainer;
   const iconAnimationStyles = useAnimation(
     { ...iconAnimation, delay: delay },
     delay,
   );
 
-  // Background colors matching Top5 Classic
-  const bgColor = selectedPalette.container.backgroundTransparent.strong;
-  const logoBG = selectedPalette.container.backgroundTransparent.strong;
-  const statsBG = selectedPalette.container.primary;
+  const surfaceRoles = getClassicSurfaceRoles(selectedPalette, {
+    primary: colors.primary,
+    secondary: colors.secondary,
+  });
+  const iconColor = surfaceRoles.text.onStat;
 
-  // Get the color for onContainerTitle variant to match the text
-  const iconColor = selectedPalette.text.onContainer.title;
-
-  // All-rounders use same height as other players
   const isAllRounder = isAllRounderPosition(player.categoryDetail.position);
   const hasBoth = hasBothStats(player);
 
-  // Get the appropriate SVG icon component for the position
   const PositionIcon = getPositionIcon(
     player.categoryDetail.position,
     DEFAULT_ICON_PACK,
   );
 
   return (
-    <AnimatedContainer
-      type="full"
-      className="overflow-hidden"
-      backgroundColor="none"
-      animation={containerAnimation.containerIn}
-      animationDelay={delay}
-      exitAnimation={containerAnimation.containerOut}
-    >
-      <div
-        className={`grid grid-cols-12 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
-        style={{
-          height: `${rowHeight}px`,
-          background: bgColor,
-        }}
+    <div className="overflow-visible w-full">
+      <AnimatedContainer
+        type="full"
+        className="overflow-visible"
+        backgroundColor="none"
+        animation={containerAnimation.containerIn}
+        animationDelay={delay}
+        exitAnimation={containerAnimation.containerOut}
       >
-        {/* Icon Section - col-span-3 or col-span-5 (right, adjusts based on logo visibility) */}
-        <div
-          className={`flex whitespace-nowrap leading-none px-4 h-full items-center justify-center col-span-2`}
-          style={{ background: statsBG, ...iconAnimationStyles }}
+        <ClassicForegroundShell
+          height={rowHeight}
+          delay={delay}
+          depth="compact"
         >
-          {/* Position Icon */}
-          {PositionIcon && (
-            <PositionIcon
-              className="w-20 h-20 flex-shrink-0"
-              style={{ color: iconColor }}
-            />
-          )}
-        </div>
-        {/* Player Info Section: Player, Team, Stats - col-span-7 (left) */}
-        <div
-          className={` flex flex-col justify-center px-4 h-full ${isAccountClub ? "col-span-10" : "col-span-8"}`}
-        >
-          {/* Stats Display */}
-          <div className="mt-1">
-            {isAllRounder && hasBoth && player.batting && player.bowling ? (
-              <div className="flex flex-row gap-4 items-baseline">
-                {/* Batting Stats */}
-                <BattingStatDisplay
-                  batting={player.batting}
-                  delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+          <div
+            className={`grid grid-cols-12 items-center h-full overflow-hidden ${layout.borderRadius.container}`}
+          >
+            <ClassicStatWell
+              variant="contrast"
+              width="compact"
+              className="col-span-2 px-4"
+              style={iconAnimationStyles}
+            >
+              {PositionIcon && (
+                <PositionIcon
+                  className="w-20 h-20 flex-shrink-0"
+                  style={{ color: iconColor }}
                 />
-                <span>&amp;</span>
-                {/* Bowling Stats */}
-                <BowlingStatDisplay
-                  bowling={player.bowling}
-                  delay={delay + BOWLING_STAT_DELAY_OFFSET}
-                />
-              </div>
-            ) : (
-              <>
-                {/* Batting positions: topscorer, higheststrikerate */}
-                {(player.categoryDetail.position === "topscorer" ||
-                  player.categoryDetail.position === "higheststrikerate") &&
-                  player.batting && (
+              )}
+            </ClassicStatWell>
+
+            <div
+              className={`relative z-10 flex flex-col justify-center px-4 h-full ${isAccountClub ? "col-span-10" : "col-span-8"}`}
+            >
+              <div className="mt-1">
+                {isAllRounder && hasBoth && player.batting && player.bowling ? (
+                  <div className="flex flex-row gap-4 items-baseline">
                     <BattingStatDisplay
                       batting={player.batting}
                       delay={delay + STAT_DISPLAY_DELAY_OFFSET}
                     />
-                  )}
-
-                {/* Bowling positions: mostwickets, besteconomy */}
-                {(player.categoryDetail.position === "mostwickets" ||
-                  player.categoryDetail.position === "besteconomy") &&
-                  player.bowling && (
+                    <span>&amp;</span>
                     <BowlingStatDisplay
                       bowling={player.bowling}
-                      delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                      delay={delay + BOWLING_STAT_DELAY_OFFSET}
                     />
-                  )}
-
-                {/* Best of Rest fallback: show whatever is available if not both stats */}
-                {player.categoryDetail.position === "bestoftherest" &&
-                  (!player.batting || !player.bowling) && (
-                    <>
-                      {player.batting && (
+                  </div>
+                ) : (
+                  <>
+                    {(player.categoryDetail.position === "topscorer" ||
+                      player.categoryDetail.position === "higheststrikerate") &&
+                      player.batting && (
                         <BattingStatDisplay
                           batting={player.batting}
                           delay={delay + STAT_DISPLAY_DELAY_OFFSET}
                         />
                       )}
-                      {player.bowling && (
+
+                    {(player.categoryDetail.position === "mostwickets" ||
+                      player.categoryDetail.position === "besteconomy") &&
+                      player.bowling && (
                         <BowlingStatDisplay
                           bowling={player.bowling}
                           delay={delay + STAT_DISPLAY_DELAY_OFFSET}
                         />
                       )}
-                      {player.allRounder && (
-                        <StatItem
-                          label="AR SCORE"
-                          value={player.allRounder.score}
-                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-                          highlight
-                        />
-                      )}
-                    </>
-                  )}
-              </>
-            )}
-          </div>
-          {/* Player Name */}
-          <TeamOfTheWeekPlayerName
-            value={cleanPlayerName(player.player).toUpperCase()}
-            animation={{
-              ...largeTextAnimation,
-              delay: delay + PLAYER_NAME_DELAY_OFFSET,
-            }}
-            className=""
-          />
-        </div>
 
-        {/* Logo Section - col-span-2 (middle) */}
-        {!isAccountClub && (
-          <div
-            className="col-span-2 flex items-center justify-center h-full overflow-hidden"
-            style={{ background: logoBG }}
-          >
-            <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
-              <Img
-                src={player.club.logo.url}
-                alt={player.club.name}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
+                    {player.categoryDetail.position === "bestoftherest" &&
+                      (!player.batting || !player.bowling) && (
+                        <>
+                          {player.batting && (
+                            <BattingStatDisplay
+                              batting={player.batting}
+                              delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                            />
+                          )}
+                          {player.bowling && (
+                            <BowlingStatDisplay
+                              bowling={player.bowling}
+                              delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                            />
+                          )}
+                          {player.allRounder && (
+                            <StatItem
+                              label="AR SCORE"
+                              value={player.allRounder.score}
+                              delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                              highlight
+                            />
+                          )}
+                        </>
+                      )}
+                  </>
+                )}
+              </div>
+              <TeamOfTheWeekPlayerName
+                value={cleanPlayerName(player.player).toUpperCase()}
+                animation={{
+                  ...largeTextAnimation,
+                  delay: delay + PLAYER_NAME_DELAY_OFFSET,
                 }}
+                className=""
               />
             </div>
+
+            {!isAccountClub && (
+              <div className="col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2">
+                <Img
+                  src={player.club.logo.url}
+                  alt={player.club.name}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            )}
           </div>
-        )}
-      </div>
-    </AnimatedContainer>
+        </ClassicForegroundShell>
+      </AnimatedContainer>
+    </div>
   );
 };
 

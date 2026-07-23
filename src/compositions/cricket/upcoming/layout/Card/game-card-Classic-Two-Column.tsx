@@ -25,7 +25,6 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
 
   const ContainerAnimations = animations.container;
 
-  // Animation delay based on card index
   const delay = calculateAnimationDelay(index);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
@@ -43,13 +42,11 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
         <div
           className={`${layout.borderRadius.container} w-full overflow-hidden`}
         >
-          {/* Grade Section - Top */}
           <Ground
             ground={game.gradeName}
             delay={delay}
             backgroundColor="transparent"
           />
-          {/* Team Names Section */}
           <TeamName
             teamName={game.teamHome}
             delay={delay + 10}
@@ -61,7 +58,6 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
             }}
           />
 
-          {/* Teams Section - Middle */}
           <AnimatedContainer
             type="full"
             className={`flex items-center justify-center w-full bg-black/20 p-1 ${layout.borderRadius.container}`}
@@ -74,7 +70,6 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
                 selectedPalette.container.backgroundTransparent.medium,
             }}
           >
-            {/* Home Team Logo */}
             <div className="flex-1 flex flex-col items-center">
               <div
                 className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}
@@ -88,9 +83,7 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
               </div>
             </div>
 
-            {/* Middle Section: VS, Ground, Date, Time */}
             <div className="mx-6 flex flex-col items-center">
-              {/* VS */}
               <MetadataMedium
                 value="VS"
                 animation={{
@@ -100,7 +93,6 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
                 className="text-center mb-1"
                 variant="onContainerCopy"
               />
-              {/* Ground */}
               <MetadataMedium
                 value={game.ground}
                 animation={{
@@ -110,7 +102,6 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
                 className="text-center my-0"
                 variant="onContainerCopy"
               />
-              {/* Date and Time */}
               <div className="flex items-center gap-2 mt-1">
                 <MetadataMedium
                   value={game.date}
@@ -133,7 +124,6 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
               </div>
             </div>
 
-            {/* Away Team Logo */}
             <div className="flex-1 flex flex-col items-center">
               <div
                 className={`${LOGO_SIZES.large.container} overflow-hidden rounded-full p-1`}

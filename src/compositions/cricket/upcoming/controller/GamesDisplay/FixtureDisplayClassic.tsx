@@ -20,17 +20,14 @@ export const GamesDisplayClassic: React.FC<GamesDisplayProps> = ({
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
 
-  // Calculate which games to show on this screen
   const displayedGames = calculateDisplayedGames(
     games,
     gamesPerScreen,
     screenIndex,
   );
 
-  // Calculate game card heights
   const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
 
-  // Merge all assignSponsors objects from displayedGames into one object
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">

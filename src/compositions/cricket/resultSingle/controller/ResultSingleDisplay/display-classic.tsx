@@ -11,12 +11,10 @@ const ClassicSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
   const { heights } = layout;
   const { isAccountClub } = useVideoDataContext();
 
-  // Full height is available for a single match
   const availableHeight = heights.asset;
 
   return (
     <div className="flex flex-col h-full w-full">
-      {/* Match result container */}
       <div
         className="w-full flex flex-col justify-center"
         style={{ height: `${availableHeight}px` }}

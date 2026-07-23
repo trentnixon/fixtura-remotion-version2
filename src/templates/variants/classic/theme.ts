@@ -1,6 +1,19 @@
 import { baseTheme } from "../../base/theme";
 import { TemplateThemeConfig } from "../../types/TemplateThemeConfig";
 
+/** Depth / opacity defaults for Classic foreground panels — consumed by `design/`. */
+export const classicForegroundSurfaces = {
+  backplaneOpacity: 0.14,
+  backplaneBlurPx: 6,
+  offsetX: 5,
+  offsetY: 4,
+  /** Soft ambient drop shadow — wide blur, low opacity (no hard edge). */
+  contentShadow:
+    "0 4px 20px rgba(0, 0, 0, 0.035), 0 12px 40px rgba(0, 0, 0, 0.05), 0 24px 56px rgba(0, 0, 0, 0.04)",
+  contentShadowCompact:
+    "0 2px 14px rgba(0, 0, 0, 0.03), 0 8px 28px rgba(0, 0, 0, 0.045), 0 16px 40px rgba(0, 0, 0, 0.035)",
+} as const;
+
 /**
  * Basic template theme - simplified approach
  *
@@ -72,7 +85,8 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-medium tracking-tight leading-tight",
     },
     ladderTeamPoints: {
-      className: "text-3xl font-normal tracking-tight leading-tight",
+      className:
+        "text-3xl font-normal tracking-tight leading-none tabular-nums",
     },
     Top5PlayerName: {
       className: "text-5xl font-black tracking-tight leading-tight",
@@ -81,19 +95,35 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-2xl font-normal tracking-tight leading-tight",
     },
     Top5PlayerScore: {
-      className: "text-6xl font-black  tracking-tight leading-tight mr-2",
+      className:
+        "text-6xl font-black tracking-tight leading-none tabular-nums mr-2",
     },
     Top5PlayerScoreSuffix: {
-      className: "text-2xl font-black  tracking-tight leading-loose",
+      className:
+        "text-2xl font-normal tracking-tight leading-none tabular-nums",
+    },
+    classicHeroNumber: {
+      className:
+        "text-6xl font-black tracking-tight leading-none tabular-nums",
+    },
+    classicStatSuffix: {
+      className:
+        "text-2xl font-normal tracking-tight leading-none tabular-nums",
+    },
+    classicMicroLabel: {
+      className:
+        "text-3xl font-medium tracking-tight leading-none tabular-nums uppercase",
     },
     ResultScore: {
-      className: "text-4xl font-black  tracking-tight leading-tight ",
+      className:
+        "text-4xl font-black tracking-tight leading-none tabular-nums",
     },
     ResultScoreFirstInnings: {
-      className: "text-4xl font-black  tracking-tight leading-tight ",
+      className:
+        "text-4xl font-black tracking-tight leading-none tabular-nums",
     },
     ResultScoreYetToBat: {
-      className: "text-4xl font-bold  tracking-tight py-6",
+      className: "text-4xl font-bold tracking-tight leading-none tabular-nums py-6",
     },
     ResultTeamName: {
       className: "text-3xl font-normal  tracking-tight leading-tight",
@@ -102,7 +132,8 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-normal  tracking-tight leading-tight",
     },
     ResultPlayerScore: {
-      className: "text-3xl font-bold  tracking-tight leading-tight",
+      className:
+        "text-3xl font-bold tracking-tight leading-none tabular-nums",
     },
     ResultSyntax: {
       className:
@@ -150,7 +181,8 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-xs font-bold uppercase tracking-tight leading-none",
     },
     TeamOfTheWeekStat: {
-      className: "text-4xl font-bold tracking-tight leading-tight",
+      className:
+        "text-4xl font-bold tracking-tight leading-none tabular-nums",
     },
   },
 

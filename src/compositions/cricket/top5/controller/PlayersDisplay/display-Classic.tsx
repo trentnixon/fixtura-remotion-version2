@@ -1,5 +1,5 @@
 import React from "react";
-import PlayerRowSixersThunder from "../PlayerRow/row-SixersThunder";
+import PlayerRowClassic from "../PlayerRow/row-Classic";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
@@ -23,7 +23,7 @@ const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
     <div className="flex flex-col h-full ">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-4 overflow-hidden py-32 "
+        className="flex-1 flex flex-col mx-4 overflow-visible py-32 "
         style={{
           height: heights.asset,
         }}
@@ -34,7 +34,7 @@ const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
       >
         <div className="flex-1 grid grid-cols-1 gap-2">
           {players.map((player, index) => (
-            <PlayerRowSixersThunder
+            <PlayerRowClassic
               key={player.name}
               player={player}
               index={index}

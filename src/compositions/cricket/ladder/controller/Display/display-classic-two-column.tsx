@@ -9,16 +9,20 @@ import { StandardRowClassicTwoColumnWrapped } from "../TeamRows/row-Classic-two-
 import { LadderDisplayProps } from "./_types/LadderDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
 
+/** Match Sixers/CNSW — stop rows ballooning when the league is short. */
+const CLASSIC_MAX_ROW_HEIGHT = 120;
+
 export const LadderDisplayClassicTwoColumn: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { League, gradeName, bias, assignSponsors } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
-  const { headerHeight, rowHeight } = calculateRowDimensions(
+  const { headerHeight, rowHeight: rawRowHeight } = calculateRowDimensions(
     heights.asset,
     League.length,
   );
+  const rowHeight = Math.min(rawRowHeight, CLASSIC_MAX_ROW_HEIGHT);
   const { animations } = useAnimationContext();
   const ParentContainerAnimation = animations.container.main.parent.containerIn;
   const ParentContainerExitAnimation =

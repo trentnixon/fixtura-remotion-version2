@@ -1,7 +1,7 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { StandardRowSixersThunderWrapped } from "../TeamRows/row-Sixers-thunder";
+import { StandardRowClassic } from "../TeamRows/row-Classic";
 import TableHeaderSixersThunder from "../../modules/TableHeader/headerSixers";
 
 import { SponsorFooter } from "../../../sponsorFooter";
@@ -9,16 +9,20 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { LadderDisplayProps } from "./_types/LadderDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
 
+/** Match Sixers/CNSW — stop rows ballooning when the league is short. */
+const CLASSIC_MAX_ROW_HEIGHT = 120;
+
 export const LadderDisplayClassic: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { League, gradeName, bias, assignSponsors } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
-  const { headerHeight, rowHeight } = calculateRowDimensions(
+  const { headerHeight, rowHeight: rawRowHeight } = calculateRowDimensions(
     heights.asset,
     League.length,
   );
+  const rowHeight = Math.min(rawRowHeight, CLASSIC_MAX_ROW_HEIGHT);
   const { animations } = useAnimationContext();
   const ParentContainerAnimation = animations.container.main.parent.containerIn;
   const ParentContainerExitAnimation =
@@ -26,10 +30,9 @@ export const LadderDisplayClassic: React.FC<LadderDisplayProps> = ({
 
   return (
     <div className="p-0 flex flex-col w-full h-full">
-      {/* <LadderHeader title={name} /> */}
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-8 p-4 rounded-none overflow-hidden"
+        className="flex-1 flex flex-col mx-8 p-4 rounded-none overflow-visible"
         backgroundColor="none"
         animation={ParentContainerAnimation}
         animationDelay={0}
@@ -41,9 +44,9 @@ export const LadderDisplayClassic: React.FC<LadderDisplayProps> = ({
             headerHeight={headerHeight}
           />
 
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 overflow-visible">
             {League.map((team, index) => (
-              <StandardRowSixersThunderWrapped
+              <StandardRowClassic
                 key={team.position}
                 team={team}
                 index={index}

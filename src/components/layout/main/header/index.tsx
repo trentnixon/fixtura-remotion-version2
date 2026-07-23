@@ -35,6 +35,7 @@ import {
   TwoColumnVerticalHeaderTitleOnly,
   TwoColumnVerticalHeaderLogoTitle,
 } from "./variants/TwoColumnLayout";
+import { InlineHeaderLogoTitle, InlineHeaderLogoColonTitle } from "./variants/InlineRowLayout";
 
 // Re-export the types
 export * from "./types";
@@ -78,4 +79,8 @@ export {
   // Vertical narrow side-pane variants
   TwoColumnVerticalHeaderTitleOnly,
   TwoColumnVerticalHeaderLogoTitle,
+
+  // Inline row
+  InlineHeaderLogoTitle,
+  InlineHeaderLogoColonTitle,
 };

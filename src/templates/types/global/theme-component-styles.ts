@@ -43,4 +43,10 @@ export interface GlobalThemeComponentStyles {
   metadataSmall: ComponentStyle;
   metadataMedium: ComponentStyle;
   metadataLarge: ComponentStyle;
+  /** Classic template — hero numerals in recessed wells */
+  classicHeroNumber?: ComponentStyle;
+  /** Classic template — subordinate stat suffixes */
+  classicStatSuffix?: ComponentStyle;
+  /** Classic template — column micro-labels (e.g. ladder header) */
+  classicMicroLabel?: ComponentStyle;
 }

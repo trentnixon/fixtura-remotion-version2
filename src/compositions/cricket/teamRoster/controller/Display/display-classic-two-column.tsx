@@ -16,6 +16,7 @@ import {
   ACCOUNT_TEAM_LOGO_SIZE,
   AGAINST_TEAM_LOGO_SIZE,
 } from "./_utils/constants";
+import { ClassicTexturedSurface } from "../../../../../templates/variants/classic/design";
 
 const RosterDisplayClassicTwoColumn: React.FC<RosterDisplayProps> = ({
   roster,
@@ -25,10 +26,10 @@ const RosterDisplayClassicTwoColumn: React.FC<RosterDisplayProps> = ({
   const { selectedPalette } = useThemeContext();
   const backgroundColor = selectedPalette.container.backgroundTransparent.high;
   return (
-    <div className="p-0 flex flex-col w-full h-full">
+    <div className="flex h-full w-full flex-col p-0">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-16 rounded-lg overflow-hidden"
+        className="mx-16 flex flex-1 flex-col overflow-hidden rounded-lg"
         backgroundColor="none"
         animation={DEFAULT_CONTAINER_ANIMATION}
         animationDelay={0}
@@ -38,34 +39,36 @@ const RosterDisplayClassicTwoColumn: React.FC<RosterDisplayProps> = ({
         }}
       >
         <div
-          className="w-full flex flex-col justify-center"
+          className="flex w-full flex-col justify-center"
           style={{ minHeight: `${CLASSIC_TWO_COLUMN_MIN_HEIGHT}px` }}
         >
           <TwoMetaValuesNoWrapper
             values={[formatDate(roster.date), truncateText(roster.ground, 50)]}
           />
 
-          <div
-            className={`flex flex-row gap-2 justify-between items-center rounded-lg ${layout.borderRadius.container}  force-p-4`}
-            style={{ backgroundColor: backgroundColor }}
+          <ClassicTexturedSurface
+            className={`force-p-4 rounded-lg ${layout.borderRadius.container}`}
+            backgroundColor={backgroundColor}
           >
-            <RosterPlayerList
-              roster={roster}
-              className="text-left whitespace-nowrap"
-              gap="gap-4"
-            />
-            <div className="flex flex-col gap-4 p-4">
-              <AccountTeamLarge
+            <div className="flex flex-row items-center justify-between gap-2">
+              <RosterPlayerList
                 roster={roster}
-                logoSize={ACCOUNT_TEAM_LOGO_SIZE}
+                className="whitespace-nowrap text-left"
+                gap="gap-4"
               />
-              <VS variant="onContainerCopy" />
-              <AgainstTeamLarge
-                roster={roster}
-                logoSize={AGAINST_TEAM_LOGO_SIZE}
-              />
+              <div className="flex flex-col gap-4 p-4">
+                <AccountTeamLarge
+                  roster={roster}
+                  logoSize={ACCOUNT_TEAM_LOGO_SIZE}
+                />
+                <VS variant="onContainerCopy" />
+                <AgainstTeamLarge
+                  roster={roster}
+                  logoSize={AGAINST_TEAM_LOGO_SIZE}
+                />
+              </div>
             </div>
-          </div>
+          </ClassicTexturedSurface>
           <TwoMetaValuesNoWrapper values={[roster.gradeName, roster.round]} />
         </div>
       </AnimatedContainer>

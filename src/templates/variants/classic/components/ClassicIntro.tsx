@@ -6,12 +6,6 @@ import { VerticalStackLogoTitleName } from "../../../../components/layout/titleS
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 
-/**
- * BasicIntro Component
- *
- * A basic introduction template that showcases enhanced container styling options.
- * This template demonstrates how to style containers with various layout, text, and positioning options.
- */
 export const ClassicIntro: React.FC = () => {
   const { club, metadata, sponsors } = useVideoDataContext();
   const { animations } = useAnimationContext();

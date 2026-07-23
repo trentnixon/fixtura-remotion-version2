@@ -1,6 +1,6 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import MatchRowSixersThunder from "../MatchRow/row-Sixers-thunder";
+import MatchRowClassic from "../MatchRow/row-Classic";
 import { SponsorFooter } from "../../../sponsorFooter";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
@@ -48,7 +48,7 @@ const ResultsDisplayClassic: React.FC<ResultsDisplayProps> = ({
               marginBottom: index === 0 ? "10px" : 0,
             }}
           >
-            <MatchRowSixersThunder
+            <MatchRowClassic
               match={match}
               index={index}
               rowHeight={rowHeight}

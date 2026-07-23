@@ -21,7 +21,7 @@ const TeamOfTheWeekDisplayClassic: React.FC<TeamOfTheWeekDisplayProps> = ({
     <div className="flex flex-col h-full">
       <AnimatedContainer
         type="full"
-        className="flex-1 flex flex-col mx-4 overflow-hidden py-8 justify-center"
+        className="flex-1 flex flex-col mx-4 overflow-visible py-8 justify-center"
         style={{
           height: heights.asset,
         }}
