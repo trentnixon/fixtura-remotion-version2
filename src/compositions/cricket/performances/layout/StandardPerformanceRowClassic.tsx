@@ -54,20 +54,14 @@ export const StandardPerformanceRowClassic: React.FC<
           />
         </div>
 
-        <ClassicStatWell
-          variant="contrast"
-          width="compact"
-          className="col-span-2"
-        >
-          <div className="w-30 h-30 overflow-hidden">
-            <TeamLogo
-              logo={performance.teamLogo as PerformanceTeamLogoType}
-              teamName={performance.playedFor}
-              delay={delay + 20}
-              size={20}
-            />
-          </div>
-        </ClassicStatWell>
+        <div className="col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2">
+          <TeamLogo
+            logo={performance.teamLogo as PerformanceTeamLogoType}
+            teamName={performance.playedFor}
+            delay={delay + 20}
+            size={20}
+          />
+        </div>
 
         <ClassicStatWell
           variant="recessed"
