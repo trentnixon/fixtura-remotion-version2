@@ -1,4 +1,7 @@
-import { VerticalHeaderLogoTitleName } from "../../../../components/layout/main/header";
+import {
+  VerticalHeaderLogoTitle,
+  VerticalHeaderLogoTitleName,
+} from "../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
@@ -8,6 +11,11 @@ import {
   BroadcastProHeadlineTitle,
   getBroadcastProHeaderSecondaryLine,
 } from "./headline";
+
+const COMPOSITIONS_WITHOUT_HEADER_SECONDARY = new Set([
+  "CricketResultSingle",
+  "CricketUpcoming",
+]);
 
 export const BroadcastProMainHeader = () => {
   const { layout } = useThemeContext();
@@ -21,7 +29,12 @@ export const BroadcastProMainHeader = () => {
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
 
-  const secondaryLine = getBroadcastProHeaderSecondaryLine(metadata, club.name);
+  const hideSecondaryLine = COMPOSITIONS_WITHOUT_HEADER_SECONDARY.has(
+    metadata.compositionId,
+  );
+  const secondaryLine = hideSecondaryLine
+    ? ""
+    : getBroadcastProHeaderSecondaryLine(metadata, club.name);
 
   const OrgLogo = () => (
     <div className="mx-auto mb-5 size-[104px] shrink-0 overflow-hidden rounded-full bg-white p-2.5 shadow-xl">
@@ -44,21 +57,31 @@ export const BroadcastProMainHeader = () => {
     </div>
   );
 
+  const titleBlock = (
+    <BroadcastProHeadlineTitle
+      text={metadata.title}
+      variant="mainHeader"
+      letterAnimation="none"
+      animation={TextAnimations.title}
+      exitAnimation={TextAnimations.copyOut}
+      exitFrame={exitFrame}
+    />
+  );
+
+  const headerProps = {
+    height: heights.header,
+    alignment: "center" as const,
+    Logo: <OrgLogo />,
+    Title: titleBlock,
+  };
+
+  if (hideSecondaryLine) {
+    return <VerticalHeaderLogoTitle {...headerProps} />;
+  }
+
   return (
     <VerticalHeaderLogoTitleName
-      height={heights.header}
-      alignment="center"
-      Logo={<OrgLogo />}
-      Title={
-        <BroadcastProHeadlineTitle
-          text={metadata.title}
-          variant="mainHeader"
-          letterAnimation="none"
-          animation={TextAnimations.title}
-          exitAnimation={TextAnimations.copyOut}
-          exitFrame={exitFrame}
-        />
-      }
+      {...headerProps}
       Name={
         <BroadcastProHeadlineSecondary
           text={secondaryLine}

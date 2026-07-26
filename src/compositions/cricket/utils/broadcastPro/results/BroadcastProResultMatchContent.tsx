@@ -42,6 +42,10 @@ export interface BroadcastProResultMatchContentProps {
   statementPosition?: "top" | "bottom";
   className?: string;
   style?: React.CSSProperties;
+  /** Hide ground from the meta strip (Result Single). */
+  showGround?: boolean;
+  /** Larger player stat typography for single-result hero layout. */
+  playerStatsTier?: "list" | "single";
 }
 
 export const BroadcastProResultMatchContent: React.FC<
@@ -53,6 +57,8 @@ export const BroadcastProResultMatchContent: React.FC<
   statementPosition = "bottom",
   className = "",
   style,
+  showGround = true,
+  playerStatsTier = "list",
 }) => {
   const { animations } = useAnimationContext();
   const { isAccountClub } = useVideoDataContext();
@@ -169,6 +175,7 @@ export const BroadcastProResultMatchContent: React.FC<
         gradeLabel={buildGradeLabel(match)}
         ground={match.ground}
         delay={metaDelay}
+        showGround={showGround}
       />
 
       <BroadcastProMatchup
@@ -204,6 +211,7 @@ export const BroadcastProResultMatchContent: React.FC<
                   delay={statsDelay}
                   accentColor={teamAccents.home}
                   glass={glass}
+                  tier={playerStatsTier}
                 />
               </>
             );
@@ -228,6 +236,7 @@ export const BroadcastProResultMatchContent: React.FC<
                 delay={statsDelay + 8}
                 accentColor={teamAccents.away}
                 glass={glass}
+                tier={playerStatsTier}
               />
             </>
           );

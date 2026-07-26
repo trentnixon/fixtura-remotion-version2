@@ -5,8 +5,9 @@ export const broadcastProCompositionComponentStylesUpcoming = {
   upcomingFixtureHeader: {
     className: "text-2xl font-bold uppercase tracking-wider leading-tight",
   },
-  upcomingTeamName:
-    broadcastProComponentStylesShared.broadcastProMatchupFixtureTeamName,
+  upcomingTeamName: {
+    className: "font-normal uppercase !leading-[0.92] tracking-wide",
+  },
   upcomingVs: broadcastProComponentStylesShared.broadcastProMatchupDividerVs,
 } satisfies Pick<
   ThemeComponentStyles,

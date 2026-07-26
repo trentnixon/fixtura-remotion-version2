@@ -10,6 +10,8 @@ const MatchCardBroadcastPro: React.FC<MatchCardProps> = ({ match }) => {
       maxStatItems={5}
       statementPosition="top"
       className="!h-auto shrink-0"
+      showGround={false}
+      playerStatsTier="single"
     />
   );
 };

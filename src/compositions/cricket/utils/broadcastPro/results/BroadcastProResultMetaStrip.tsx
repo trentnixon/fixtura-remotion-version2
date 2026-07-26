@@ -10,11 +10,13 @@ export interface BroadcastProResultMetaStripProps {
   ground: string;
   delay?: number;
   className?: string;
+  /** When false, only the grade/round label is shown (e.g. Result Single). */
+  showGround?: boolean;
 }
 
 export const BroadcastProResultMetaStrip: React.FC<
   BroadcastProResultMetaStripProps
-> = ({ gradeLabel, ground, delay = 0, className = "" }) => {
+> = ({ gradeLabel, ground, delay = 0, className = "", showGround = true }) => {
   const { animations } = useAnimationContext();
   const {
     componentStyles,
@@ -55,12 +57,14 @@ export const BroadcastProResultMetaStrip: React.FC<
         className="truncate font-bold uppercase tracking-widest"
         variant="onContainerCopy"
       />
-      <MetadataMedium
-        value={ground}
-        animation={{ ...copyIn, delay: delay + 2 }}
-        className="ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider"
-        variant="onContainerCopy"
-      />
+      {showGround && ground ? (
+        <MetadataMedium
+          value={ground}
+          animation={{ ...copyIn, delay: delay + 2 }}
+          className="ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider"
+          variant="onContainerCopy"
+        />
+      ) : null}
     </div>
   );
 };

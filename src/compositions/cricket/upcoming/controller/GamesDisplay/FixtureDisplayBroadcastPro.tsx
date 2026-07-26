@@ -44,7 +44,7 @@ export const FixtureDisplayBroadcastPro: React.FC<GamesDisplayProps> = ({
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
       >
-        <div className="flex min-h-0 flex-1 flex-col justify-start overflow-hidden">
+        <div className="flex min-h-0 flex-1 flex-col justify-center overflow-hidden">
           <GamesListBroadcastPro
             games={displayedGames}
             gameRowHeight={gameCardHeight}

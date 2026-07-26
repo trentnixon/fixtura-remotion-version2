@@ -47,7 +47,7 @@ export const BroadcastProMatchupSide: React.FC<BroadcastProMatchupSideProps> = (
   );
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
   const teamNameClass =
-    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 leading-tight ${compact ? "text-3xl" : "text-4xl"}`.trim();
+    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${compact ? "!text-5xl" : "!text-6xl"}`.trim();
 
   const isHome = side === "home";
   const crestDelay = delay + 6;

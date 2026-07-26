@@ -9,6 +9,7 @@ export interface BroadcastProResultPlayerStatsGridProps {
   accentColor: string;
   glass?: BroadcastProGlassStyle;
   className?: string;
+  tier?: "list" | "single";
 }
 
 /** @deprecated Use `BroadcastProStatMatrixResultGrid` from template stat components. */

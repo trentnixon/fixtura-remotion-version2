@@ -88,13 +88,17 @@ export const BroadcastProStructuredScore: React.FC<
       <BroadcastProScoreText
         value={parsed.primary}
         role="playerStatPrimary"
-        themeType={className ? "TeamOfTheWeekStat" : undefined}
+        themeType={
+          className && !className.includes("!text-")
+            ? "TeamOfTheWeekStat"
+            : undefined
+        }
         variant={resolvedPrimaryVariant}
         animation={animation}
         exitAnimation={exitAnimation}
         exitFrame={exitFrame}
         fontFamily={fontFamily}
-        className="inline"
+        className={[className, "inline"].filter(Boolean).join(" ")}
       />
       {suffix ? (
         <>
@@ -103,14 +107,16 @@ export const BroadcastProStructuredScore: React.FC<
             value={suffix}
             role="playerStatSuffix"
             themeType={
-              suffixClassName ? "broadcastProTeamOfTheWeekStatSuffix" : undefined
+              suffixClassName && !suffixClassName.includes("!text-")
+                ? "broadcastProTeamOfTheWeekStatSuffix"
+                : undefined
             }
             variant={suffixVariant}
             animation={animation}
             exitAnimation={exitAnimation}
             exitFrame={exitFrame}
             fontFamily={fontFamily}
-            className="inline"
+            className={[suffixClassName, "inline"].filter(Boolean).join(" ")}
           />
         </>
       ) : null}
