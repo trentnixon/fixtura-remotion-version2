@@ -5,83 +5,37 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../_types/composition-types";
-import { TeamLogo } from "../../../utils/primitives/TeamLogo";
+import { BroadcastProCrestWell } from "../../../../../templates/variants/broadcastPro/components/crest";
+import { BroadcastProStatMatrixTriple } from "../../../../../templates/variants/broadcastPro/components/stat";
+import {
+  BroadcastProGlassPanel,
+  BroadcastProPlayerRankBadge,
+  useBroadcastProPlayerRankingTheme,
+  buildBroadcastProTop5StatMatrixCells,
+} from "../../../utils/broadcastPro";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
 import { PlayerData } from "../../_types/types";
 import { truncateText } from "../../layout/_utils/helpers";
-import {
-  DEFAULT_LOGO_SIZE,
-  SMALL_LOGO_SIZE,
-} from "../../layout/_utils/constants";
 import { getDefaultRestrictions } from "../PlayerRow/_utils/helpers";
 import {
   calculatePlayerDelay,
   calculateExitFrame,
 } from "../PlayerRow/_utils/calculations";
-import {
-  getBroadcastProTripleStats,
-  type BroadcastProTripleStat,
-} from "./_utils/broadcastProStats";
 
-const glassPanelClass =
-  "border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl";
-
-/** Fixed height so grid slots #2–#5 stay visually uniform (fits triple stat row). */
-const GRID_CARD_HEIGHT_PX = 220;
-
-/** #1 card has more horizontal room — allow longer club/team names before ellipsis. */
+const GRID_CARD_HEIGHT_PX = 215;
 const FEATURED_TEAM_NAME_LENGTH_EXTRA = 10;
-
-const statLabelClass =
-  "font-rajdhani mb-0.5 text-[10px] font-bold uppercase tracking-widest text-white/55";
-
-const TripleStatsRow: React.FC<{
-  triple: BroadcastProTripleStat;
-  headingFont: string;
-  variant: "featured" | "grid";
-}> = ({ triple, headingFont, variant }) => {
-  const valueClass =
-    variant === "featured"
-      ? `${headingFont} text-5xl font-semibold leading-none text-white md:text-6xl`
-      : `${headingFont} text-2xl font-semibold leading-none text-white sm:text-3xl`;
-  const gapClass =
-    variant === "featured"
-      ? "mt-8 flex flex-wrap gap-10 md:gap-14"
-      : "mt-2 flex flex-wrap gap-3 sm:gap-5";
-  const borderPad =
-    variant === "featured"
-      ? "border-l border-white/10 pl-10 md:pl-14"
-      : "border-l border-white/10 pl-3 sm:pl-5";
-
-  return (
-    <div className={gapClass}>
-      <div>
-        <p className={statLabelClass}>{triple.label1}</p>
-        <p className={valueClass}>{triple.value1}</p>
-      </div>
-      <div className={borderPad}>
-        <p className={statLabelClass}>{triple.label2}</p>
-        <p className={valueClass}>{triple.value2}</p>
-      </div>
-      <div className={borderPad}>
-        <p className={statLabelClass}>{triple.label3}</p>
-        <p className={valueClass}>{triple.value3}</p>
-      </div>
-    </div>
-  );
-};
 
 const FeaturedCard: React.FC<{
   player: PlayerData;
   delay: number;
   exitFrame: number;
 }> = ({ player, delay, exitFrame }) => {
-  const { fontClasses } = useThemeContext();
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
+  const { glass, text, accent, headingFont, cs, selectedPalette } =
+    useBroadcastProPlayerRankingTheme();
   const restrictions = getDefaultRestrictions();
-  const triple = getBroadcastProTripleStats(player);
-  const headingFont = fontClasses.heading?.family ?? "font-teko";
+  const statCells = buildBroadcastProTop5StatMatrixCells(player);
 
   const name = truncateText(player.name, restrictions.nameLength).toUpperCase();
   const team = truncateText(
@@ -100,47 +54,57 @@ const FeaturedCard: React.FC<{
         exitAnimation={containerAnimation.containerOut}
         exitFrame={exitFrame}
       >
-        <div
-          className={`relative flex flex-col overflow-hidden ${glassPanelClass}`}
+        <BroadcastProGlassPanel
+          glass={glass}
+          className={cs("broadcastProPlayerRankingFeaturedInner")}
         >
-          <div className="absolute left-0 top-0 bg-white/5 px-3 py-1">
-            <span className={`${headingFont} text-2xl italic text-white/40`}>
-              #1
-            </span>
-          </div>
-          <div className="flex items-center gap-8 px-8 pb-8 pt-14 pr-4">
-            <div className="flex h-44 w-44 shrink-0 items-center justify-center border border-white/10 bg-white/5 shadow-inner">
-              <TeamLogo
-                logo={player.teamLogo}
-                teamName={player.playedFor}
-                delay={delay + 5}
-                size={DEFAULT_LOGO_SIZE}
-                fit="contain"
-                imgStyle={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                }}
-              />
-            </div>
+          <BroadcastProPlayerRankBadge
+            rank={1}
+            placement="left"
+            isFeatured
+            className={cs("broadcastProPlayerRankingRankBadgeFeaturedLeft")}
+            glass={glass}
+            text={text}
+            accent={accent}
+            selectedPalette={selectedPalette}
+            headingFont={headingFont}
+          />
+          <div className={cs("broadcastProPlayerRankingFeaturedBody")}>
+            <BroadcastProCrestWell
+              tier="featured"
+              logo={player.teamLogo}
+              teamName={player.playedFor}
+              delay={delay + 5}
+              glass={glass}
+              showBorder
+            />
             <div className="min-w-0 flex-1">
               <h2
-                className={`${headingFont} text-lift text-6xl font-semibold uppercase leading-none tracking-normal text-white md:text-7xl`}
-                style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
+                className={`${headingFont} ${cs("broadcastProPlayerRankingNameFeatured")}`}
+                style={{
+                  color: text.copy,
+                  textShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                }}
               >
                 {name}
               </h2>
-              <p className="font-rajdhani mt-1 text-xl font-semibold uppercase tracking-[0.2em] text-white/70">
+              <p
+                className={cs("broadcastProPlayerRankingTeamFeatured")}
+                style={{ color: text.secondary }}
+              >
                 {team}
               </p>
-              <TripleStatsRow
-                triple={triple}
+              <BroadcastProStatMatrixTriple
+                cells={statCells}
+                tier="featuredTriple"
                 headingFont={headingFont}
-                variant="featured"
+                text={text}
+                glass={glass}
+                accent={accent}
               />
             </div>
           </div>
-        </div>
+        </BroadcastProGlassPanel>
       </AnimatedContainer>
     </div>
   );
@@ -152,13 +116,13 @@ const GridCard: React.FC<{
   index: number;
   exitFrame: number;
 }> = ({ player, rank, index, exitFrame }) => {
-  const { fontClasses } = useThemeContext();
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
   const delay = calculatePlayerDelay(index);
+  const { glass, text, accent, headingFont, cs, selectedPalette } =
+    useBroadcastProPlayerRankingTheme();
   const restrictions = getDefaultRestrictions();
-  const triple = getBroadcastProTripleStats(player);
-  const headingFont = fontClasses.heading?.family ?? "font-teko";
+  const statCells = buildBroadcastProTop5StatMatrixCells(player);
 
   const name = truncateText(player.name, restrictions.nameLength).toUpperCase();
   const team = truncateText(
@@ -177,46 +141,60 @@ const GridCard: React.FC<{
         exitAnimation={containerAnimation.containerOut}
         exitFrame={exitFrame}
       >
-        <div
-          className={`relative flex shrink-0 items-stretch gap-3 overflow-hidden p-4 pt-9 sm:gap-4 sm:p-5 sm:pt-10 ${glassPanelClass}`}
+        <BroadcastProGlassPanel
+          glass={glass}
+          className={cs("broadcastProPlayerRankingGridCard")}
           style={{
             height: GRID_CARD_HEIGHT_PX,
             minHeight: GRID_CARD_HEIGHT_PX,
             maxHeight: GRID_CARD_HEIGHT_PX,
           }}
         >
-          <div className="absolute left-0 top-0 bg-white/5 px-3 py-1">
-            <span className={`${headingFont} text-2xl italic text-white/40`}>
-              #{rank}
-            </span>
-          </div>
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center self-center border border-white/5 bg-white/5 sm:h-24 sm:w-24">
-            <TeamLogo
-              logo={player.teamLogo}
-              teamName={player.playedFor}
-              delay={delay + 5}
-              size={SMALL_LOGO_SIZE}
-              fit="contain"
-              imgStyle={{ width: "100%", height: "100%", objectFit: "contain" }}
-            />
-          </div>
-          <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center">
+          <BroadcastProPlayerRankBadge
+            rank={rank}
+            placement="left"
+            isFeatured={false}
+            className={cs("broadcastProPlayerRankingRankBadgeGridLeft")}
+            glass={glass}
+            text={text}
+            accent={accent}
+            selectedPalette={selectedPalette}
+            headingFont={headingFont}
+          />
+          <BroadcastProCrestWell
+            tier="grid"
+            logo={player.teamLogo}
+            teamName={player.playedFor}
+            delay={delay + 5}
+            glass={glass}
+            showBorder
+          />
+          <div className="flex min-w-0 flex-1 flex-col justify-center overflow-visible">
             <h3
-              className={`${headingFont} text-lift line-clamp-2 text-2xl font-medium uppercase leading-tight text-white sm:text-3xl`}
-              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
+              className={`${headingFont} ${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0`}
+              style={{
+                color: text.copy,
+                textShadow: "0 2px 4px rgba(0,0,0,0.5)",
+              }}
             >
               {name}
             </h3>
-            <p className="font-rajdhani mt-0.5 text-[11px] font-bold uppercase leading-tight tracking-[0.15em] text-white/60 sm:text-xs">
+            <p
+              className={cs("broadcastProPlayerRankingTeamGridTop5")}
+              style={{ color: text.muted }}
+            >
               {team}
             </p>
-            <TripleStatsRow
-              triple={triple}
+            <BroadcastProStatMatrixTriple
+              cells={statCells}
+              tier="gridTriple"
               headingFont={headingFont}
-              variant="grid"
+              text={text}
+              glass={glass}
+              accent={accent}
             />
           </div>
-        </div>
+        </BroadcastProGlassPanel>
       </AnimatedContainer>
     </div>
   );
@@ -232,9 +210,9 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
   const panelAnimation = animations.container.main.itemContainerOuter;
   const { layout } = useThemeContext();
   const { heights } = layout;
+  const { cs } = useBroadcastProPlayerRankingTheme();
 
   const exitFrame = calculateExitFrame(timings);
-
   const [featured, ...rest] = players;
   const gridPlayers = rest.slice(0, 4);
 
@@ -242,20 +220,13 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
     <div className="flex h-full w-full flex-col p-0">
       <AnimatedContainer
         type="full"
-        className="mx-6 flex flex-1 flex-col overflow-hidden rounded-none md:mx-10"
+        className={cs("broadcastProPlayerRankingAnimatedContainer")}
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
       >
-        <div
-          className="flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden py-2"
-          style={{
-            height: heights.asset,
-            maxHeight: heights.asset,
-            minHeight: heights.asset,
-          }}
-        >
-          <div className="flex min-h-full w-full flex-col justify-center gap-4">
+        <div className={cs("broadcastProPlayerRankingScrollShell")}>
+          <div className={cs("broadcastProPlayerRankingContentStack")}>
             {featured ? (
               <FeaturedCard
                 player={featured}
@@ -265,7 +236,7 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
             ) : null}
 
             {gridPlayers.length > 0 ? (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className={cs("broadcastProPlayerRankingGridTop5")}>
                 {gridPlayers.map((player, i) => (
                   <GridCard
                     key={`${player.name}-${i + 2}`}
@@ -280,7 +251,10 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
           </div>
         </div>
       </AnimatedContainer>
-      <div style={{ height: `${heights.footer}px` }}>
+      <div
+        className="flex-shrink-0"
+        style={{ height: `${heights.footer}px` }}
+      >
         <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
       </div>
     </div>

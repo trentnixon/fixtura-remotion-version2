@@ -152,7 +152,10 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [390, 45],
+  "frames": [
+    390,
+    45
+  ],
   "videoMeta": {
     "club": {
       "logo": {
@@ -164,8 +167,106 @@
       "name": "Sydney Shires Competition",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "default": {}
+        "default": {
+          "general_sponsor_1": [
+            {
+              "id": 200,
+              "url": null,
+              "logo": {
+                "id": 23213,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+              },
+              "name": "test",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 201,
+              "url": null,
+              "logo": {
+                "id": 23214,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              },
+              "name": "edit this",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_3": [
+            {
+              "id": 203,
+              "url": null,
+              "logo": {
+                "id": 23216,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              },
+              "name": "New sponsor",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ]
+        },
+        "primary": [
+          {
+            "id": 200,
+            "url": null,
+            "logo": {
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            },
+            "name": "test",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          },
+          {
+            "id": 201,
+            "url": null,
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            },
+            "name": "edit this",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          },
+          {
+            "id": 203,
+            "url": null,
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            },
+            "name": "New sponsor",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          }
+        ]
       },
       "IsAccountClub": false
     },
@@ -174,13 +275,16 @@
       "groupingCategory": "Sydney Shires Competition",
       "metadata": {
         "title": "Top 5",
-        "titleSplit": ["Bowlers", ""],
+        "titleSplit": [
+          "Bowlers",
+          ""
+        ],
         "videoTitle": "Top 5 Bowlers",
         "compositionId": "CricketTop5Bowling",
         "assetId": 7,
         "assetTypeId": 3,
         "frames": [],
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {

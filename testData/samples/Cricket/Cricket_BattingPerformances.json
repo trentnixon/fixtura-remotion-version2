@@ -521,7 +521,13 @@
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [45, 180, 345, 510, 645],
+  "frames": [
+    45,
+    180,
+    345,
+    510,
+    645
+  ],
   "render": {
     "renderId": 23107,
     "schedulerId": 1097
@@ -549,36 +555,53 @@
       "sport": "Cricket",
       "sponsors": {
         "default": {
-          "primary_sponsor": [
+          "general_sponsor_1": [
             {
-              "id": 1390,
-              "url": "https://goulburnsoldiers.com.au/",
+              "id": 200,
+              "url": null,
               "logo": {
-                "id": 8796,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Glbn_Soldiers_Club_Logo_4b1eb2cade.jpg"
+                "id": 23213,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
               },
-              "name": "Goulburn Soldiers Club",
-              "isVideo": true,
+              "name": "test",
+              "isVideo": null,
               "tagline": null,
               "isActive": true,
-              "isArticle": true,
-              "isPrimary": true,
+              "isArticle": null,
+              "isPrimary": false,
               "description": null
             }
           ],
-          "general_sponsor_1": [
+          "general_sponsor_2": [
             {
-              "id": 1391,
-              "url": "https://gpubg.com/",
+              "id": 201,
+              "url": null,
               "logo": {
-                "id": 8797,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/GPG_8c147ac418.jpg"
+                "id": 23214,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
               },
-              "name": "Goulburn Pub Group",
-              "isVideo": true,
+              "name": "edit this",
+              "isVideo": null,
               "tagline": null,
               "isActive": true,
-              "isArticle": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_3": [
+            {
+              "id": 203,
+              "url": null,
+              "logo": {
+                "id": 23216,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              },
+              "name": "New sponsor",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
               "isPrimary": false,
               "description": null
             }
@@ -586,18 +609,48 @@
         },
         "primary": [
           {
-            "id": 1390,
-            "url": "https://goulburnsoldiers.com.au/",
+            "id": 200,
+            "url": null,
             "logo": {
-              "id": 8796,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Glbn_Soldiers_Club_Logo_4b1eb2cade.jpg"
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
             },
-            "name": "Goulburn Soldiers Club",
-            "isVideo": true,
+            "name": "test",
+            "isVideo": null,
             "tagline": null,
             "isActive": true,
-            "isArticle": true,
-            "isPrimary": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          },
+          {
+            "id": 201,
+            "url": null,
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            },
+            "name": "edit this",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          },
+          {
+            "id": 203,
+            "url": null,
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            },
+            "name": "New sponsor",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
             "description": null
           }
         ]
@@ -624,7 +677,9 @@
         "title": "Batting Performances",
         "frames": [],
         "assetId": 65,
-        "titleSplit": ["Performances"],
+        "titleSplit": [
+          "Performances"
+        ],
         "videoTitle": "Batting Performances",
         "assetTypeId": 3,
         "compositionId": "CricketBattingPerformances",

@@ -1,4 +1,5 @@
 import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig";
+import { broadcastProComponentStylesShared } from "../componentStyles.shared";
 
 /**
  * Team roster (Broadcast Pro): grid, glass cells, meta — Teko/Rajdhani via classes.
@@ -16,7 +17,7 @@ export const broadcastProCompositionComponentStylesRoster = {
   },
   broadcastProRosterPlayerNumber: {
     className:
-      "font-teko flex min-h-0 min-w-0 flex-shrink-0 items-stretch justify-center self-stretch p-0 font-normal leading-none",
+      "flex min-h-0 min-w-0 flex-shrink-0 items-stretch justify-center self-stretch p-0",
   },
   broadcastProRosterGrid: {
     className: "grid min-h-0 flex-1 grid-cols-12 gap-6 overflow-hidden",
@@ -36,11 +37,12 @@ export const broadcastProCompositionComponentStylesRoster = {
     className: "mx-6 flex flex-1 flex-col overflow-hidden",
   },
   broadcastProRosterPlayerList: {
-    className: "flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden pr-1",
+    className:
+      "flex min-h-0 min-w-0 flex-1 flex-col justify-start overflow-hidden pr-1",
   },
   broadcastProRosterRow: {
     className:
-      "flex min-h-0 min-w-0 flex-[1_1_0] items-stretch gap-2 overflow-hidden",
+      "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2 overflow-hidden",
   },
   broadcastProRosterNameCell: {
     className:
@@ -55,12 +57,10 @@ export const broadcastProCompositionComponentStylesRoster = {
   broadcastProRosterTeamCardAway: {
     className: "flex flex-col items-center p-4 text-center",
   },
-  broadcastProRosterTeamLogoWellHome: {
-    className: "mb-4 flex h-32 w-32 items-center justify-center",
-  },
-  broadcastProRosterTeamLogoWellAway: {
-    className: "mb-3 flex h-24 w-24 items-center justify-center",
-  },
+  broadcastProRosterTeamLogoWellHome:
+    broadcastProComponentStylesShared.broadcastProCrestWellRosterHome,
+  broadcastProRosterTeamLogoWellAway:
+    broadcastProComponentStylesShared.broadcastProCrestWellRosterAway,
   broadcastProRosterTeamTitleHome: {
     className: "font-teko text-4xl uppercase sm:text-5xl",
   },
@@ -74,9 +74,8 @@ export const broadcastProCompositionComponentStylesRoster = {
     className:
       "font-rajdhani mt-0.5 text-xs font-bold uppercase tracking-widest",
   },
-  broadcastProRosterVersus: {
-    className: "font-teko mb-1.5 text-2xl italic sm:text-3xl",
-  },
+  broadcastProRosterVersus:
+    broadcastProComponentStylesShared.broadcastProMatchupDividerVersus,
   broadcastProRosterMetaRow: {
     className: "p-4",
   },
@@ -85,7 +84,7 @@ export const broadcastProCompositionComponentStylesRoster = {
       "font-rajdhani block text-xs font-bold uppercase tracking-widest",
   },
   broadcastProRosterMetaValue: {
-    className: "font-teko block truncate text-2xl uppercase sm:text-3xl",
+    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-3xl",
   },
   broadcastProRosterAccentStrip: {
     className: "w-1.5 shrink-0 self-stretch rounded-sm",

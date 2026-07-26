@@ -42,7 +42,9 @@
       "teamHome": "Western Suburbs Cricket Club",
       "gradeName": "Met Vets",
       "isHomeTeam": true,
-      "teamRoster": ["No players allocated to line-up"],
+      "teamRoster": [
+        "No players allocated to line-up"
+      ],
       "teamAwayLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
       "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/WSCC_Logo_transparent_background_be7675da07.png"
     },
@@ -104,7 +106,9 @@
       "teamHome": "WSCC One Day 4's",
       "gradeName": "One Day Grade 4",
       "isHomeTeam": true,
-      "teamRoster": ["No players allocated to line-up"],
+      "teamRoster": [
+        "No players allocated to line-up"
+      ],
       "teamAwayLogo": "https://res.cloudinary.com/playhq/image/upload/v1/production/ca/83d2cecd-2ed8-435a-9bde-64811a7fff3b/1687665303070/logo.jpg",
       "teamHomeLogo": "https://fixtura.s3.ap-southeast-2.amazonaws.com/WSCC_Logo_transparent_background_be7675da07.png"
     },
@@ -366,7 +370,19 @@
     "assetCategoryID": 2
   },
   "errors": [],
-  "frames": [120, 180, 240, 300, 360, 420, 480, 540, 600, 660, 720],
+  "frames": [
+    120,
+    180,
+    240,
+    300,
+    360,
+    420,
+    480,
+    540,
+    600,
+    660,
+    720
+  ],
   "render": {
     "renderId": 17393,
     "schedulerId": 470
@@ -390,7 +406,109 @@
       },
       "name": "Western Suburbs Cricket Club",
       "sport": "Cricket",
-      "IsAccountClub": true
+      "IsAccountClub": true,
+      "sponsors": {
+        "default": {
+          "general_sponsor_1": [
+            {
+              "id": 200,
+              "url": null,
+              "logo": {
+                "id": 23213,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+              },
+              "name": "test",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_2": [
+            {
+              "id": 201,
+              "url": null,
+              "logo": {
+                "id": 23214,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              },
+              "name": "edit this",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
+          "general_sponsor_3": [
+            {
+              "id": 203,
+              "url": null,
+              "logo": {
+                "id": 23216,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              },
+              "name": "New sponsor",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ]
+        },
+        "primary": [
+          {
+            "id": 200,
+            "url": null,
+            "logo": {
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            },
+            "name": "test",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          },
+          {
+            "id": 201,
+            "url": null,
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            },
+            "name": "edit this",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          },
+          {
+            "id": 203,
+            "url": null,
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            },
+            "name": "New sponsor",
+            "isVideo": null,
+            "tagline": null,
+            "isActive": true,
+            "isArticle": null,
+            "isPrimary": false,
+            "description": null
+          }
+        ]
+      }
     },
     "video": {
       "media": {
@@ -409,13 +527,28 @@
       },
       "metadata": {
         "title": "Team List",
-        "frames": [120, 180, 240, 300, 360, 420, 480, 540, 600, 660, 720],
+        "frames": [
+          120,
+          180,
+          240,
+          300,
+          360,
+          420,
+          480,
+          540,
+          600,
+          660,
+          720
+        ],
         "assetId": 32,
-        "titleSplit": ["Team", "List"],
+        "titleSplit": [
+          "Team",
+          "List"
+        ],
         "videoTitle": "Western Suburbs Cricket Club CricketRoster",
         "assetTypeId": 1,
         "compositionId": "CricketRoster",
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {

@@ -1,14 +1,36 @@
+import { DEFAULT_BROADCAST_PRO_CREST_SIZING } from "../../../types/broadcast-pro/crest-well";
+import { DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING } from "../../../types/broadcast-pro/ladder-zone";
+import { DEFAULT_BROADCAST_PRO_HEADLINE_SIZING } from "../../../types/broadcast-pro/headline-lockup";
 import { DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING } from "../../../types/broadcast-pro/roster-list-sizing";
+import { DEFAULT_BROADCAST_PRO_SCORE_SIZING } from "../../../types/broadcast-pro/score-typography";
 import type { TemplateThemeConfig } from "../../../types/TemplateThemeConfig";
 
 /**
- * Fonts, fontClasses, and Broadcast Pro–only tuning keys (glass + roster list sizing).
+ * Fonts, fontClasses, and Broadcast Pro–only tuning keys (glass + roster + headline sizing).
  */
 export const broadcastProTokens = {
   broadcastProGlassOpacity: "md" as const,
 
+  broadcastProHeadlineSizing: {
+    ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING,
+  },
+
+  broadcastProScoreSizing: {
+    ...DEFAULT_BROADCAST_PRO_SCORE_SIZING,
+  },
+
+  broadcastProCrestSizing: {
+    ...DEFAULT_BROADCAST_PRO_CREST_SIZING,
+  },
+
+  broadcastProLadderZoneSizing: {
+    ...DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING,
+  },
+
   broadcastProRosterListSizing: {
     ...DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING,
+    /** Home team card lives in sidebar (13); list uses full column height. */
+    leftColumnHeaderReservePx: 0,
     /** Larger index + name type on glass rows (still capped by row height + player count). */
     minNameFontPx: 15,
     maxNameFontPx: 48,
@@ -45,5 +67,9 @@ export const broadcastProTokens = {
   | "fonts"
   | "fontClasses"
   | "broadcastProGlassOpacity"
+  | "broadcastProHeadlineSizing"
+  | "broadcastProScoreSizing"
+  | "broadcastProCrestSizing"
+  | "broadcastProLadderZoneSizing"
   | "broadcastProRosterListSizing"
 >;

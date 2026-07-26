@@ -1,4 +1,5 @@
 import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig";
+import { broadcastProComponentStylesShared } from "../componentStyles.shared";
 
 export const broadcastProCompositionComponentStylesLadder = {
   ladderGradeLabel: {
@@ -7,10 +8,16 @@ export const broadcastProCompositionComponentStylesLadder = {
   ladderTeamName: {
     className: "text-4xl font-normal uppercase tracking-wide leading-none",
   },
-  ladderTeamPoints: {
-    className: "text-4xl font-bold tracking-tight leading-none text-center",
-  },
+  ladderTeamPoints: broadcastProComponentStylesShared.broadcastProScoreTablePoints,
+  broadcastProLadderZoneRankLeader:
+    broadcastProComponentStylesShared.broadcastProLadderZoneRankLeader,
+  broadcastProLadderZoneRankDefault:
+    broadcastProComponentStylesShared.broadcastProLadderZoneRankDefault,
 } satisfies Pick<
   ThemeComponentStyles,
-  "ladderGradeLabel" | "ladderTeamName" | "ladderTeamPoints"
+  | "ladderGradeLabel"
+  | "ladderTeamName"
+  | "ladderTeamPoints"
+  | "broadcastProLadderZoneRankLeader"
+  | "broadcastProLadderZoneRankDefault"
 >;

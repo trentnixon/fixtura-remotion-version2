@@ -1,29 +1,16 @@
-import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { VerticalHeaderLogoTitleName } from "../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
-import { VideoMetadata } from "../../../../core/types/data/videoData";
-
-/**
- * Secondary line under main title: videoTitle, else titleSplit joined, else club name.
- */
-const getHeaderSecondaryLine = (
-  metadata: VideoMetadata,
-  clubName: string,
-): string => {
-  const videoTitle = metadata.videoTitle?.trim();
-  if (videoTitle) return videoTitle;
-
-  const parts = metadata.titleSplit?.filter(Boolean) ?? [];
-  if (parts.length > 0) return parts.join(" · ");
-
-  return clubName;
-};
+import {
+  BroadcastProHeadlineSecondary,
+  BroadcastProHeadlineTitle,
+  getBroadcastProHeaderSecondaryLine,
+} from "./headline";
 
 export const BroadcastProMainHeader = () => {
-  const { layout, fontClasses, fonts } = useThemeContext();
+  const { layout } = useThemeContext();
   const { heights } = layout;
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
@@ -34,16 +21,7 @@ export const BroadcastProMainHeader = () => {
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
 
-  const secondaryLine = getHeaderSecondaryLine(metadata, club.name);
-
-  /** Teko / Rajdhani must match loaded theme fonts; weight normal avoids fallback when only Regular TTF is loaded. */
-  const titleFontFamily =
-    fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
-  const subtitleFontFamily =
-    fontClasses?.subheading?.family ??
-    fonts?.subtitle?.family ??
-    fonts?.copy?.family ??
-    "Rajdhani";
+  const secondaryLine = getBroadcastProHeaderSecondaryLine(metadata, club.name);
 
   const OrgLogo = () => (
     <div className="mx-auto mb-5 size-[104px] shrink-0 overflow-hidden rounded-full bg-white p-2.5 shadow-xl">
@@ -72,46 +50,23 @@ export const BroadcastProMainHeader = () => {
       alignment="center"
       Logo={<OrgLogo />}
       Title={
-        <AnimatedText
-          textAlign="center"
-          type="title"
-          variant="onContainerTitle"
+        <BroadcastProHeadlineTitle
+          text={metadata.title}
+          variant="mainHeader"
           letterAnimation="none"
           animation={TextAnimations.title}
           exitAnimation={TextAnimations.copyOut}
           exitFrame={exitFrame}
-          fontFamily={titleFontFamily}
-          style={{
-            fontFamily: `${titleFontFamily}, sans-serif`,
-            fontWeight: 400,
-          }}
-          className="!font-normal font-teko !text-[124px] !leading-[0.82] uppercase tracking-tight drop-shadow-2xl"
-        >
-          {metadata.title}
-        </AnimatedText>
+        />
       }
       Name={
-        <div className="mt-4 flex justify-center w-full">
-          <div className="inline-flex bg-white/10 px-6 py-2 backdrop-blur-md max-w-[95%]">
-            <AnimatedText
-              textAlign="center"
-              fontFamily={subtitleFontFamily}
-              type="metadataMedium"
-              variant="onContainerCopy"
-              letterAnimation="none"
-              animation={TextAnimations.title}
-              exitAnimation={TextAnimations.copyOut}
-              exitFrame={exitFrame}
-              style={{
-                fontFamily: `${subtitleFontFamily}, sans-serif`,
-                fontWeight: 600,
-              }}
-              className="font-rajdhani whitespace-nowrap uppercase tracking-[0.2em] font-semibold"
-            >
-              {secondaryLine}
-            </AnimatedText>
-          </div>
-        </div>
+        <BroadcastProHeadlineSecondary
+          text={secondaryLine}
+          variant="mainHeader"
+          animation={TextAnimations.title}
+          exitAnimation={TextAnimations.copyOut}
+          exitFrame={exitFrame}
+        />
       }
     />
   );

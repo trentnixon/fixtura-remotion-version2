@@ -36,10 +36,13 @@ export function computeBroadcastProRosterPlayerListMetrics(
     availableHeightPx - s.leftColumnHeaderReservePx,
   );
 
-  const gapPx = n <= 11 ? 8 : n <= 16 ? 6 : n <= 22 ? 4 : n <= 28 ? 3 : 2;
+  const gapPx = n <= 15 ? 8 : n <= 22 ? 6 : n <= 28 ? 4 : 2;
 
   const totalGaps = (n - 1) * gapPx;
-  const rowPx = Math.max(s.minRowPx, (listHeightPx - totalGaps) / n);
+  const rowPx = Math.max(
+    s.minRowPx,
+    Math.floor((listHeightPx - totalGaps) / n),
+  );
 
   const nameInnerMax = Math.min(
     s.maxNameFontPx - s.nameInnerClampMaxOffsetPx,
@@ -59,9 +62,10 @@ export function computeBroadcastProRosterPlayerListMetrics(
     ),
   );
 
-  const cellPaddingYPx = Math.max(2, Math.min(14, Math.floor(rowPx * 0.18)));
-  const cellPaddingXPx = Math.max(8, Math.min(24, Math.floor(rowPx * 0.3)));
-  const numColWidthPx = Math.max(44, Math.min(72, Math.floor(rowPx * 1.15)));
+  const cellPaddingYPx = Math.max(4, Math.min(14, Math.floor(rowPx * 0.2)));
+  const cellPaddingXPx = Math.max(12, Math.min(24, Math.floor(rowPx * 0.35)));
+  /** Stitch index column: w-16 (64px). */
+  const numColWidthPx = 64;
 
   return {
     rowPx,

@@ -118,10 +118,12 @@ export const createStandardPaletteStructure = (
         accent: secondaryColor,
       },
       onContainer: {
-        title: useMode.text.title,
-        copy: useMode.text.copy,
-        copyNoBg: useMode.text.title,
-        // Optionally, add a "safe" field if you want to ensure contrast:
+        title: ensureContrast(useMode.container.background, useMode.text.title),
+        copy: ensureContrast(useMode.container.background, useMode.text.copy),
+        copyNoBg: ensureContrast(
+          useMode.container.background,
+          useMode.text.title,
+        ),
         safeCopy: ensureContrast(
           useMode.container.background,
           useMode.text.copy,
@@ -133,7 +135,10 @@ export const createStandardPaletteStructure = (
         ),
         light: ensureContrast("#FFFFFF", "#111827"),
         dark: ensureContrast(colorVariations.darker, textColors.onPrimary),
-        muted: tinycolor(ensureContrast(mainColor, textColors.onPrimary))
+        muted: tinycolor(
+          ensureContrast(useMode.container.background, useMode.text.copy),
+        )
+          .clone()
           .setAlpha(0.7)
           .toRgbString(),
         accent: secondaryColor,

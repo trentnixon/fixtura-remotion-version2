@@ -7,7 +7,7 @@ export const GamesListBroadcastPro: React.FC<GamesListProps> = ({
   gameRowHeight,
 }) => {
   return (
-    <div className="flex w-full flex-shrink-0 flex-col gap-4">
+    <div className="flex w-full flex-shrink-0 flex-col gap-1">
       {games.map((game, index) => (
         <div
           key={game.gameID}

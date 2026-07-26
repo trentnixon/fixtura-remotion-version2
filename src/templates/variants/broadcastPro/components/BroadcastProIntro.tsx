@@ -1,10 +1,13 @@
 import React from "react";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
-import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackTitleLogoName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import {
+  BroadcastProHeadlineSecondary,
+  BroadcastProHeadlineTitle,
+} from "./headline";
 
 export const BroadcastProIntro: React.FC = () => {
   const { club, metadata, sponsors } = useVideoDataContext();
@@ -31,36 +34,25 @@ export const BroadcastProIntro: React.FC = () => {
         </div>
       }
       Title={
-        <div className="overflow-hidden mb-4">
-          <AnimatedText
-            textAlign="center"
-            type="title"
-            variant="onContainerTitle"
-            letterAnimation="word"
-            animation={TextAnimations.mainTitle}
-            exitAnimation={TextAnimations.introOut}
-            exitFrame={TextAnimations.introExitFrame}
-            fontFamily={fontClasses.heading?.family}
-          >
-            {metadata.title}
-          </AnimatedText>
-        </div>
+        <BroadcastProHeadlineTitle
+          text={metadata.title}
+          variant="intro"
+          letterAnimation="word"
+          animation={TextAnimations.mainTitle}
+          exitAnimation={TextAnimations.introOut}
+          exitFrame={TextAnimations.introExitFrame}
+          fontFamily={fontClasses.heading?.family}
+        />
       }
       Name={
-        <div className="overflow-hidden">
-          <AnimatedText
-            type="subtitle"
-            textAlign="center"
-            variant="onContainerTitle"
-            letterAnimation="word"
-            animation={TextAnimations.clubName}
-            exitAnimation={TextAnimations.introOut}
-            exitFrame={TextAnimations.introExitFrame}
-            fontFamily={fontClasses.subheading?.family}
-          >
-            {club.name}
-          </AnimatedText>
-        </div>
+        <BroadcastProHeadlineSecondary
+          text={club.name}
+          variant="intro"
+          animation={TextAnimations.clubName}
+          exitAnimation={TextAnimations.introOut}
+          exitFrame={TextAnimations.introExitFrame}
+          fontFamily={fontClasses.subheading?.family}
+        />
       }
       PrimarySponsor={
         sponsors?.primary[0]?.logo?.url && (

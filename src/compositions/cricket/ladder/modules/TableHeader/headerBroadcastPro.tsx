@@ -1,6 +1,7 @@
 import React from "react";
 import { AnimatedText } from "../../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { BroadcastProMetadataChip } from "../../../utils/broadcastPro";
 import { TableHeaderProps } from "./_types/TableHeaderProps";
 
 const GAP = "gap-2";
@@ -17,13 +18,13 @@ export const TableHeaderBroadcastPro: React.FC<TableHeaderProps> = ({
   headerHeight,
   compact,
 }) => {
-  const { fontClasses } = useThemeContext();
+  const { fontClasses, componentStyles } = useThemeContext();
   const labelSize = compact ? "text-base" : "text-lg";
   const headerClass = `${labelSize} ${COLUMN_LABEL_CLASS}`;
   const subheading = fontClasses.subheading?.family;
-  const gradeTitleClass = compact
-    ? "text-xl font-bold uppercase tracking-[0.2em] leading-tight"
-    : "text-2xl font-bold uppercase tracking-[0.2em] leading-tight";
+  const gradeTitleClass =
+    componentStyles.ladderGradeLabel?.className ??
+    "text-2xl font-bold uppercase tracking-[0.2em] leading-snug";
 
   return (
     <div
@@ -32,7 +33,7 @@ export const TableHeaderBroadcastPro: React.FC<TableHeaderProps> = ({
     >
       {title ? (
         <div className="mb-3 mt-2 flex w-full justify-center px-1">
-          <div className="inline-flex max-w-[95%] bg-white/10 px-6 py-2 backdrop-blur-md">
+          <BroadcastProMetadataChip className="max-w-[95%] px-6 py-2">
             <AnimatedText
               type="ladderGradeLabel"
               variant="onContainerTitle"
@@ -51,7 +52,7 @@ export const TableHeaderBroadcastPro: React.FC<TableHeaderProps> = ({
             >
               {title}
             </AnimatedText>
-          </div>
+          </BroadcastProMetadataChip>
         </div>
       ) : null}
 

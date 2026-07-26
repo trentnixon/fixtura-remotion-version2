@@ -8,7 +8,11 @@
  */
 
 import type { BroadcastProThemeComponentStyles } from "./broadcast-pro/component-styles";
+import type { BroadcastProHeadlineSizing } from "./broadcast-pro/headline-lockup";
 import type { BroadcastProRosterListSizing } from "./broadcast-pro/roster-list-sizing";
+import type { BroadcastProCrestSizing } from "./broadcast-pro/crest-well";
+import type { BroadcastProLadderZoneSizing } from "./broadcast-pro/ladder-zone";
+import type { BroadcastProScoreSizing } from "./broadcast-pro/score-typography";
 import type {
   BroadcastProGlassOpacityPreset,
   BroadcastProTransparentLayers,
@@ -66,6 +70,26 @@ export interface TemplateThemeConfig {
    * See `variants/broadcastPro/theme/tokens.ts` — consumed by `computeBroadcastProRosterPlayerListMetrics`.
    */
   broadcastProRosterListSizing?: BroadcastProRosterListSizing;
+  /**
+   * Broadcast Pro hero headline: fitText caps and Teko display parameters.
+   * See `variants/broadcastPro/theme/tokens.ts`.
+   */
+  broadcastProHeadlineSizing?: BroadcastProHeadlineSizing;
+  /**
+   * Broadcast Pro score typography: compact-tier class overrides for ladder/upcoming.
+   * See `variants/broadcastPro/theme/tokens.ts`.
+   */
+  broadcastProScoreSizing?: BroadcastProScoreSizing;
+  /**
+   * Broadcast Pro crest well: tier sizes and content inset ratios.
+   * See `variants/broadcastPro/theme/tokens.ts`.
+   */
+  broadcastProCrestSizing?: BroadcastProCrestSizing;
+  /**
+   * Broadcast Pro ladder: finals zone size and tail row opacity.
+   * See `variants/broadcastPro/theme/tokens.ts`.
+   */
+  broadcastProLadderZoneSizing?: BroadcastProLadderZoneSizing;
 }
 
 export * from "./broadcast-pro";

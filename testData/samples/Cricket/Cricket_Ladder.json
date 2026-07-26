@@ -4165,7 +4165,17 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [45, 240, 525, 810, 1095, 1380, 1665, 1950, 2235],
+  "frames": [
+    45,
+    240,
+    525,
+    810,
+    1095,
+    1380,
+    1665,
+    1950,
+    2235
+  ],
   "videoMeta": {
     "club": {
       "logo": {
@@ -4178,58 +4188,7 @@
       "sport": "Cricket",
       "sponsors": {
         "default": {
-          "general_sponsor_2": [
-            {
-              "id": 205,
-              "url": null,
-              "logo": {
-                "id": 23218,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Top5_Batting_SENIOR_45_b1f692465993_cropped_de5e574c0f.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": null,
-              "description": null
-            }
-          ],
-          "general_sponsor_4": [
-            {
-              "id": 206,
-              "url": null,
-              "logo": {
-                "id": 23219,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Body_cropped_38eb3ed171.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": null,
-              "description": null
-            }
-          ],
-          "general_sponsor_5": [
-            {
-              "id": 208,
-              "url": null,
-              "logo": {
-                "id": 23221,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_2026_03_25_112652_cropped_ad05c44a67.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": null,
-              "description": null
-            }
-          ],
-          "primary_sponsor": [
+          "general_sponsor_1": [
             {
               "id": 200,
               "url": null,
@@ -4246,75 +4205,24 @@
               "description": null
             }
           ],
+          "general_sponsor_2": [
+            {
+              "id": 201,
+              "url": null,
+              "logo": {
+                "id": 23214,
+                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              },
+              "name": "edit this",
+              "isVideo": null,
+              "tagline": null,
+              "isActive": true,
+              "isArticle": null,
+              "isPrimary": false,
+              "description": null
+            }
+          ],
           "general_sponsor_3": [
-            {
-              "id": 207,
-              "url": null,
-              "logo": {
-                "id": 23220,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Upcoming_Metro_Youth_Championships_Male_195_9975f2827523_cropped_674d7e1d3c.png"
-              },
-              "name": "wide",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": null,
-              "description": null
-            }
-          ],
-          "general_sponsor_1": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "primary_sponsor_2": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "primary_sponsor_4": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "primary_sponsor_3": [
             {
               "id": 203,
               "url": null,
@@ -4377,21 +4285,6 @@
             "isArticle": null,
             "isPrimary": false,
             "description": null
-          },
-          {
-            "id": 201,
-            "url": null,
-            "logo": {
-              "id": 23214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            },
-            "name": "edit this",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
           }
         ]
       },
@@ -4402,13 +4295,16 @@
       "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Ladder",
-        "titleSplit": ["Ladder", ""],
+        "titleSplit": [
+          "Ladder",
+          ""
+        ],
         "videoTitle": "League Tables",
         "compositionId": "CricketLadder",
         "assetId": 12,
         "assetTypeId": 3,
         "frames": [],
-        "includeSponsors": false
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {

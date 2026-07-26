@@ -14,4 +14,13 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-lift": {
+          textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
+        },
+      });
+    },
+  ],
 };

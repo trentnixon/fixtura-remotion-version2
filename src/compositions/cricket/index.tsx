@@ -41,6 +41,7 @@ import {
   cnsw as resultsCNSW,
   cnswPrivate as resultsCNSWPrivate,
   mudgeeraba as resultsMudgeeraba,
+  broadcastpro as resultsBroadcastPro,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -52,6 +53,7 @@ import {
   cnswPrivate as resultSingleCNSWPrivate,
   brickWork as resultSingleBrickWork,
   mudgeeraba as resultSingleMudgeeraba,
+  broadcastpro as resultSingleBroadcastPro,
 } from "./resultSingle";
 
 import {
@@ -83,6 +85,7 @@ import {
   sixersThunder as teamOfTheWeekSixersThunder,
   classicTwoColumn as teamOfTheWeekClassicTwoColumn,
   mudgeeraba as teamOfTheWeekMudgeeraba,
+  broadcastpro as teamOfTheWeekBroadcastPro,
 } from "./TeamOfTheWeek";
 
 /* export * as ladder from './ladder';
@@ -133,6 +136,7 @@ export const CricketResults = {
   cnsw: resultsCNSW,
   cnswprivate: resultsCNSWPrivate,
   mudgeeraba: resultsMudgeeraba,
+  broadcastpro: resultsBroadcastPro,
 };
 
 export const CricketUpcoming = {
@@ -158,6 +162,7 @@ export const CricketResultSingle = {
   cnsw: resultSingleCNSW,
   cnswprivate: resultSingleCNSWPrivate,
   mudgeeraba: resultSingleMudgeeraba,
+  broadcastpro: resultSingleBroadcastPro,
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -198,6 +203,7 @@ export const CricketTeamOfTheWeek = {
   thunder: teamOfTheWeekSixersThunder,
   twocolumnclassic: teamOfTheWeekClassicTwoColumn,
   mudgeeraba: teamOfTheWeekMudgeeraba,
+  broadcastpro: teamOfTheWeekBroadcastPro,
 };
 
 export const singleGameResult = {

@@ -1,11 +1,18 @@
 import React from "react";
 import tinycolor from "tinycolor2";
+import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-import TeamLogo from "../../utils/primitives/TeamLogo";
+import { BroadcastProScoreText } from "../../../../templates/variants/broadcastPro/components/score";
+import { BroadcastProCrestWell } from "../../../../templates/variants/broadcastPro/components/crest";
 import LadderTeamName from "../../utils/primitives/ladderTeamName";
-import LadderTeamPoints from "../../utils/primitives/ladderTeamPoints";
 import { TeamData } from "../types";
 import type { ColorVariant } from "../../../../components/typography/AnimatedText";
+import { cellBlur, useBroadcastProTheme } from "../../utils/broadcastPro";
+import { resolveBroadcastProLadderZone } from "../../utils/broadcastPro/ladder";
+import { resolveBroadcastProEdgeMarkerStyle } from "../../utils/broadcastPro/marker";
+import { resolveBroadcastProLadderRowTypography } from "../../utils/broadcastPro/ladder/resolveBroadcastProLadderRowTypography";
+import { BROADCAST_PRO_LADDER_ZONE_RANK_THEME_KEY } from "../../../../templates/types/broadcast-pro/ladder-zone";
+import { csClass } from "../../utils/broadcastPro/componentStyles";
 
 export interface BroadcastProRowLayoutProps {
   team: TeamData;
@@ -20,16 +27,31 @@ export interface BroadcastProRowLayoutProps {
 
 const GAP = "gap-2";
 
-const rowOpacity = (index: number, total: number): number => {
-  if (total < 2) return 1;
-  if (index === total - 1) return 0.6;
-  if (index === total - 2) return 0.8;
-  return 1;
+/** Teko sits high in the em box; nudge copy toward optical vertical center beside the crest. */
+const TEKO_LADDER_NAME_NUDGE_EM = 0.06;
+
+const ladderCellTextStyle = (
+  fontSizePx: number,
+  fontWeight?: number,
+): React.CSSProperties => ({
+  fontSize: fontSizePx,
+  lineHeight: 1,
+  ...(fontWeight != null ? { fontWeight } : {}),
+});
+
+/** Team cell horizontal inset + crest/name gap (no Y padding — crest fills row height). */
+const resolveLadderTeamCellSpacing = (rowHeight: number) => {
+  if (rowHeight >= 80) {
+    return { paddingX: 24, gap: 24 };
+  }
+  if (rowHeight >= 56) {
+    return { paddingX: 16, gap: 16 };
+  }
+  return { paddingX: 12, gap: 8 };
 };
 
 /**
- * Broadcast Pro ladder row — glass panels, rank accent, P/W/L/Pts (no BYE).
- * All row copy uses onContainerCopy; last two rows are de-emphasised via row opacity only.
+ * Broadcast Pro ladder row — glass panels, zone rank accent, P/W/L/Pts (no BYE).
  */
 export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
   team,
@@ -39,34 +61,47 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
   totalTeams,
   LadderRowHeight,
   isBiasTeam,
-  compact,
 }) => {
-  const { fontClasses, selectedPalette, colors } = useThemeContext();
+  const { fontClasses, selectedPalette, colors, componentStyles, broadcastProLadderZoneSizing } =
+    useThemeContext();
+  const { animations } = useAnimationContext();
+  const { glass } = useBroadcastProTheme();
   const accent = colors?.primary ?? selectedPalette.container.accent;
-  const glass = selectedPalette.container.backgroundTransparent;
-  const isLeader = place <= 1;
-  const opacity = rowOpacity(index, totalTeams);
-  const nameSize = compact ? "text-3xl" : "text-4xl";
-  const statSize = compact ? "text-2xl" : "text-4xl";
-  const rankSize = compact ? "text-4xl" : "text-5xl";
-  const ptsSize = compact ? "text-3xl" : "text-5xl";
-  const logoBox = Math.min(Math.max(LadderRowHeight - 16, 36), 56);
+  const copyIn = animations.text.main.copyIn;
 
+  const zone = resolveBroadcastProLadderZone({
+    position: place,
+    index,
+    totalTeams,
+    sizing: broadcastProLadderZoneSizing,
+  });
+
+  const showRankAccent = zone.rankAccent || isBiasTeam;
+  const typography = resolveBroadcastProLadderRowTypography(LadderRowHeight);
+  const teamCell = resolveLadderTeamCellSpacing(LadderRowHeight);
+  const crestContainerHeight = LadderRowHeight;
   const statVariant: ColorVariant = "onContainerCopy";
   const nameVariant: ColorVariant = "onContainerCopy";
+  const pointsVariant: ColorVariant = zone.pointsAccent
+    ? "onContainerAccent"
+    : "onContainerCopy";
 
   const headingFont = fontClasses.heading?.family;
 
   const defaultRankBorder = tinycolor(selectedPalette.text.onBackground.main)
-    .setAlpha(0.22)
+    .setAlpha(showRankAccent ? 1 : 0.22)
     .toRgbString();
 
-  const rankBorderStyle =
-    isLeader || isBiasTeam
-      ? { borderLeftColor: accent, borderLeftWidth: 8 }
-      : { borderLeftColor: defaultRankBorder, borderLeftWidth: 8 };
+  const rankBorderStyle = resolveBroadcastProEdgeMarkerStyle(
+    "standard",
+    showRankAccent ? "primary" : "muted",
+    { accentColor: accent, mutedColor: defaultRankBorder },
+  );
 
-  const cellBlur = { backdropFilter: "blur(12px)" as const };
+  const rankThemeKey = showRankAccent
+    ? BROADCAST_PRO_LADDER_ZONE_RANK_THEME_KEY.leader
+    : BROADCAST_PRO_LADDER_ZONE_RANK_THEME_KEY.default;
+  const rankCellClass = csClass(componentStyles, rankThemeKey);
 
   const rowFixedHeight = {
     height: LadderRowHeight,
@@ -77,72 +112,62 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
   return (
     <div
       className={`flex min-h-0 w-full items-stretch overflow-hidden ${GAP}`}
-      style={{ opacity, ...rowFixedHeight }}
+      style={{ opacity: zone.rowOpacity, ...rowFixedHeight }}
     >
       <div
-        className={`flex w-20 flex-shrink-0 items-center justify-center ${rankSize} font-bold uppercase tracking-tight`}
+        className={rankCellClass}
         style={{
           ...rowFixedHeight,
-          background: glass.medium,
+          background: glass.dataCell,
           ...cellBlur,
           ...rankBorderStyle,
           fontFamily: headingFont,
         }}
       >
-        <LadderTeamPoints
-          value={place}
+        <BroadcastProScoreText
+          value={String(place)}
+          role="tableRank"
           variant={statVariant}
-          delay={delay}
-          className={`${rankSize} leading-none !font-bold uppercase tracking-tight`}
+          animation={{ ...copyIn, delay }}
           fontFamily={headingFont}
+          compact={typography.scoreCompact}
+          style={ladderCellTextStyle(typography.rankFontPx)}
         />
       </div>
 
       <div
-        className="flex min-w-0 flex-1 items-center gap-4 px-4 py-2"
+        className="box-border flex min-h-0 min-w-0 flex-1 items-center overflow-hidden"
         style={{
           ...rowFixedHeight,
-          background: glass.medium,
+          background: glass.dataCell,
           ...cellBlur,
+          paddingLeft: teamCell.paddingX,
+          paddingRight: teamCell.paddingX,
+          gap: teamCell.gap,
         }}
       >
-        <div
-          className="flex flex-shrink-0 items-center justify-center"
-          style={{
-            width: logoBox,
-            height: logoBox,
-            background: glass.high,
-          }}
-        >
-          {team.clubLogo || team.playHQLogo ? (
-            <TeamLogo
-              logo={team.clubLogo || team.playHQLogo}
-              teamName={team.teamName}
-              delay={delay}
-              imgStyle={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-              }}
-            />
-          ) : (
-            <div
-              style={{
-                width: logoBox * 0.65,
-                height: logoBox * 0.65,
-                background: glass.low,
-              }}
-            />
-          )}
-        </div>
-        <div className="min-w-0 flex-1 truncate">
+        <BroadcastProCrestWell
+          tier="row"
+          logo={team.clubLogo || team.teamLogo || team.playHQLogo || null}
+          teamName={team.teamName}
+          delay={delay}
+          glass={glass}
+          containerHeight={crestContainerHeight}
+          className="shrink-0 self-center overflow-hidden"
+        />
+        <div className="flex min-h-0 min-w-0 flex-1 items-center overflow-hidden">
           <LadderTeamName
             value={team.teamName}
             variant={nameVariant}
             textAlign="left"
             delay={delay}
-            className={`${nameSize} font-normal uppercase tracking-wide leading-none`}
+            letterAnimation="none"
+            className="truncate font-normal uppercase tracking-wide leading-none"
             fontFamily={headingFont}
+            style={{
+              ...ladderCellTextStyle(typography.nameFontPx),
+              transform: `translateY(${TEKO_LADDER_NAME_NUDGE_EM}em)`,
+            }}
           />
         </div>
       </div>
@@ -150,39 +175,43 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
       {[team.P, team.W, team.L].map((val, i) => (
         <div
           key={i}
-          className={`flex w-[90px] flex-shrink-0 items-center justify-center ${statSize} font-normal`}
+          className="flex w-[90px] flex-shrink-0 items-center justify-center"
           style={{
             ...rowFixedHeight,
-            background: glass.medium,
+            background: glass.dataCell,
             ...cellBlur,
             fontFamily: headingFont,
           }}
         >
-          <LadderTeamPoints
-            value={val ?? 0}
+          <BroadcastProScoreText
+            value={String(val ?? 0)}
+            role="tableStat"
             variant={statVariant}
-            delay={delay}
-            className={`${statSize} leading-none !font-normal`}
+            animation={{ ...copyIn, delay }}
             fontFamily={headingFont}
+            compact={typography.scoreCompact}
+            style={ladderCellTextStyle(typography.statFontPx)}
           />
         </div>
       ))}
 
       <div
-        className={`flex w-[100px] flex-shrink-0 items-center justify-center ${statSize} font-bold`}
+        className="flex w-[100px] flex-shrink-0 items-center justify-center"
         style={{
           ...rowFixedHeight,
-          background: glass.strong,
+          background: glass.dataCellStrong,
           ...cellBlur,
           fontFamily: headingFont,
         }}
       >
-        <LadderTeamPoints
-          value={team.PTS ?? 0}
-          variant={statVariant}
-          delay={delay}
-          className={`${ptsSize} leading-none !font-bold`}
+        <BroadcastProScoreText
+          value={String(team.PTS ?? 0)}
+          role="tablePoints"
+          variant={pointsVariant}
+          animation={{ ...copyIn, delay }}
           fontFamily={headingFont}
+          compact={typography.scoreCompact}
+          style={ladderCellTextStyle(typography.pointsFontPx, 700)}
         />
       </div>
     </div>

@@ -86,6 +86,7 @@
     "upgrade": "remotion upgrade",
     "lint": "tsc",
     "lint:fix": "eslint . --fix",
+    "visual-regression:broadcastpro": "node scripts/broadcastpro-visual-regression.mjs",
     "format": "prettier --write .",
     "deploy": "npx remotion lambda sites create src/index.ts --site-name=fixtura-remotion-v2 --region=ap-southeast-2"
   },

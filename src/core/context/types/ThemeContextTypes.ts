@@ -1,6 +1,10 @@
 import { StandardizedPalettes } from "../../utils/colorSystem";
 import { DesignPalette } from "../../utils/designPalettes/types";
+import type { BroadcastProHeadlineSizing } from "../../../templates/types/broadcast-pro/headline-lockup";
 import type { BroadcastProRosterListSizing } from "../../../templates/types/broadcast-pro/roster-list-sizing";
+import type { BroadcastProCrestSizing } from "../../../templates/types/broadcast-pro/crest-well";
+import type { BroadcastProLadderZoneSizing } from "../../../templates/types/broadcast-pro/ladder-zone";
+import type { BroadcastProScoreSizing } from "../../../templates/types/broadcast-pro/score-typography";
 import type {
   BroadcastProGlassOpacityPreset,
   BroadcastProTransparentLayers,
@@ -174,6 +178,18 @@ export interface ThemeContextProps {
 
   /** Broadcast Pro team roster: name + index number scaling (see `variants/broadcastPro/theme/tokens.ts`). */
   broadcastProRosterListSizing?: BroadcastProRosterListSizing;
+
+  /** Broadcast Pro hero headline fitText caps (see `variants/broadcastPro/theme/tokens.ts`). */
+  broadcastProHeadlineSizing?: BroadcastProHeadlineSizing;
+
+  /** Broadcast Pro score typography compact tiers (see `variants/broadcastPro/theme/tokens.ts`). */
+  broadcastProScoreSizing?: BroadcastProScoreSizing;
+
+  /** Broadcast Pro crest well tier sizing (see `variants/broadcastPro/theme/tokens.ts`). */
+  broadcastProCrestSizing?: BroadcastProCrestSizing;
+
+  /** Broadcast Pro ladder zone sizing (see `variants/broadcastPro/theme/tokens.ts`). */
+  broadcastProLadderZoneSizing?: BroadcastProLadderZoneSizing;
 
   // Helper function to get active palette
   getActivePalette: (paletteName?: string) => DesignPalette;

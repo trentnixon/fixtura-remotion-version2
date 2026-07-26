@@ -1,4 +1,8 @@
-import { PlayerData, isBatter, isBowler } from "../../../_types/types";
+import { PlayerData } from "../../../_types/types";
+import type { BroadcastProTripleStat } from "../../../../utils/broadcastPro/playerRanking/types";
+import { buildBroadcastProTop5StatMatrixCells } from "../../../../utils/broadcastPro/stat/buildBroadcastProStatMatrixCells";
+
+export type { BroadcastProTripleStat };
 
 /** Cricket overs string → total legal balls (e.g. "8.4" → 8*6+4). */
 export const parseOversToBalls = (oversStr: string): number => {
@@ -25,45 +29,16 @@ export const getBowlingEconomyDisplay = (
   return (runs / decimalOvers).toFixed(2);
 };
 
-export interface BroadcastProTripleStat {
-  label1: string;
-  value1: string;
-  label2: string;
-  value2: string;
-  label3: string;
-  value3: string;
-}
-
 export const getBroadcastProTripleStats = (
   player: PlayerData,
 ): BroadcastProTripleStat => {
-  if (isBatter(player)) {
-    const runs = player.notOut ? `${player.runs}*` : `${player.runs}`;
-    return {
-      label1: "Runs",
-      value1: runs,
-      label2: "Balls",
-      value2: `${player.balls}`,
-      label3: "SR",
-      value3: Number.isFinite(player.SR) ? player.SR.toFixed(2) : "—",
-    };
-  }
-  if (isBowler(player)) {
-    return {
-      label1: "Figures",
-      value1: `${player.wickets}/${player.runs}`,
-      label2: "Overs",
-      value2: `${player.overs}`,
-      label3: "Economy",
-      value3: getBowlingEconomyDisplay(player.runs, player.overs),
-    };
-  }
+  const cells = buildBroadcastProTop5StatMatrixCells(player);
   return {
-    label1: "",
-    value1: "—",
-    label2: "",
-    value2: "",
-    label3: "",
-    value3: "",
+    label1: cells[0]?.label ?? "",
+    value1: cells[0]?.value ?? "—",
+    label2: cells[1]?.label ?? "",
+    value2: cells[1]?.value ?? "",
+    label3: cells[2]?.label ?? "",
+    value3: cells[2]?.value ?? "",
   };
 };

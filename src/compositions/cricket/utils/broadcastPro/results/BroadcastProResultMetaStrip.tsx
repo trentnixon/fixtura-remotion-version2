@@ -1,0 +1,66 @@
+import React from "react";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { MetadataMedium } from "../../primitives/metadataMedium";
+import { cellBlur, csClass, resolveBroadcastProGlass } from "../index";
+import { resolveBroadcastProEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro/marker-notch";
+
+export interface BroadcastProResultMetaStripProps {
+  gradeLabel: string;
+  ground: string;
+  delay?: number;
+  className?: string;
+}
+
+export const BroadcastProResultMetaStrip: React.FC<
+  BroadcastProResultMetaStripProps
+> = ({ gradeLabel, ground, delay = 0, className = "" }) => {
+  const { animations } = useAnimationContext();
+  const {
+    componentStyles,
+    selectedPalette,
+    colors,
+    broadcastProGlassOpacity,
+    broadcastProTransparentLayers,
+  } = useThemeContext();
+
+  const accent = colors?.primary ?? selectedPalette.container.accent;
+  const glass = resolveBroadcastProGlass({
+    surfaceBase: selectedPalette.container.background,
+    broadcastProGlassOpacity,
+    broadcastProTransparentLayers,
+  });
+  const copyIn = animations.text.main.copyIn;
+
+  const stripClass = csClass(
+    componentStyles,
+    "broadcastProResultsMetaStrip",
+  );
+
+  return (
+    <div
+      className={`${stripClass} ${className}`.trim()}
+      style={{
+        background: glass.headerGradient,
+        ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
+          accentColor: accent,
+          mutedColor: accent,
+        }),
+        ...cellBlur,
+      }}
+    >
+      <MetadataMedium
+        value={gradeLabel}
+        animation={{ ...copyIn, delay }}
+        className="truncate font-bold uppercase tracking-widest"
+        variant="onContainerCopy"
+      />
+      <MetadataMedium
+        value={ground}
+        animation={{ ...copyIn, delay: delay + 2 }}
+        className="ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider"
+        variant="onContainerCopy"
+      />
+    </div>
+  );
+};

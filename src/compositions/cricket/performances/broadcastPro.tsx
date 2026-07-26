@@ -7,11 +7,11 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
+import PerformancesDisplayBroadcastPro from "./controller/PerformancesDisplay/display-BroadcastPro";
 import { SponsorFooter } from "../sponsorFooter/index";
 import { AssignSponsors } from "../_types/composition-types";
-import { useThemeContext } from "../../../core/context/ThemeContext";
-import PerformancesDisplayBroadcastPro from "./controller/PerformancesDisplay/display-BroadcastPro";
 import {
   calculateDisplayDurationPerScreen,
   hasValidPerformances,
@@ -19,7 +19,7 @@ import {
   mergeAssignSponsors,
 } from "./_utils/calculations";
 
-/** 2×3 grid per screen (6 cards) — fits available asset height. */
+/** 2×3 grid — six performance cards per screen. */
 const BROADCAST_PRO_ITEMS_PER_SCREEN = 6;
 
 export const PerformancesListBroadcastPro: React.FC = () => {
@@ -73,20 +73,9 @@ export const PerformancesListBroadcastPro: React.FC = () => {
 
   const mergedAssignSponsors = mergeAssignSponsors(transformedData);
 
-  const contentHeight = heights.asset;
-
   return (
-    <div
-      className="flex w-full flex-col"
-      style={{ height: `${heights.asset + heights.footer}px` }}
-    >
-      <div
-        style={{
-          height: `${contentHeight}px`,
-          overflow: "hidden",
-          position: "relative",
-        }}
-      >
+    <div className="flex h-full w-full flex-col">
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
         <TransitionSeriesWrapper
           sequences={sequences}
           transitionType={transitionConfig.type as TransitionType}
@@ -97,7 +86,10 @@ export const PerformancesListBroadcastPro: React.FC = () => {
           }}
         />
       </div>
-      <div style={{ height: `${heights.footer}px` }}>
+      <div
+        className="flex-shrink-0"
+        style={{ height: `${heights.footer}px` }}
+      >
         <SponsorFooter
           assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
         />

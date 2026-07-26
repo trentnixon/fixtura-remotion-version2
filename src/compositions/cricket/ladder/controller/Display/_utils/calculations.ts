@@ -1,5 +1,10 @@
 const LARGE_LEAGUE_THRESHOLD = 14;
 
+export interface CalculateRowDimensionsOptions {
+  /** Actual CSS gap between rows in px (overrides default 2/4). */
+  rowGapPx?: number;
+}
+
 /**
  * Calculate row dimensions for ladder display (dynamic to fit all teams).
  * Uses tighter spacing when teamCount exceeds LARGE_LEAGUE_THRESHOLD so all teams fit.
@@ -12,16 +17,18 @@ export const calculateRowDimensions = (
   totalHeight: number,
   teamCount: number,
   extraReserved: number = 0,
+  options: CalculateRowDimensionsOptions = {},
 ): { headerHeight: number; rowHeight: number; compact: boolean } => {
   const isLargeLeague = teamCount > LARGE_LEAGUE_THRESHOLD;
 
   const headerHeight = isLargeLeague ? 52 : 70;
-  const VERTICAL_GAP = isLargeLeague ? 2 : 4;
+  const defaultVerticalGap = isLargeLeague ? 2 : 4;
   const PADDING = isLargeLeague ? 12 : 20;
   const HEADER_MARGIN = isLargeLeague ? 6 : 10;
+  const verticalGap = options.rowGapPx ?? defaultVerticalGap;
 
   const ladderHeight = totalHeight - headerHeight;
-  const totalVerticalGaps = (teamCount - 1) * VERTICAL_GAP;
+  const totalVerticalGaps = (teamCount - 1) * verticalGap;
   const availableHeight =
     ladderHeight - PADDING * 2 - HEADER_MARGIN - extraReserved;
   const rowHeight = Math.max(

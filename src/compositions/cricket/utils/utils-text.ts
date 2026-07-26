@@ -94,7 +94,6 @@ export const formatDate = (date: string): string => {
 };
 
 export const stripGradeNumberFromTeamName = (teamName: string) => {
-  console.log("teamName", teamName);
   const GradeLookUp = [
     "1st",
     "2nd",

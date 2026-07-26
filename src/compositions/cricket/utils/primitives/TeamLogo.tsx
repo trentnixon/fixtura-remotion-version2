@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { AnimatedImage } from "../../../../components/images/AnimatedImage";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import {
@@ -12,6 +12,18 @@ import {
 
 export type { TeamLogoType };
 
+const resolveTeamLogoSrc = (
+  logo: TeamLogoProps["logo"],
+): { srcUrl?: string; width?: number; height?: number } => {
+  if (logo && typeof logo === "object" && logo.url) {
+    return { srcUrl: logo.url, width: logo.width, height: logo.height };
+  }
+  if (typeof logo === "string" && logo.length > 0) {
+    return { srcUrl: logo };
+  }
+  return {};
+};
+
 export const TeamLogo: React.FC<TeamLogoProps> = ({
   logo,
   teamName,
@@ -20,51 +32,37 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
   fit = DEFAULT_TEAM_LOGO_FIT,
   imgStyle,
 }) => {
-  const sizeClass = `w-${size} h-${size}`;
   const { animations } = useAnimationContext();
   const logoAnimation = animations.image.main.item;
+  const [loadFailed, setLoadFailed] = useState(false);
 
-  // Determine the source URL and dimensions based on logo type
-  let srcUrl: string | undefined = undefined;
-  let imgWidth: number | undefined = undefined;
-  let imgHeight: number | undefined = undefined;
+  const { srcUrl, width: imgWidth, height: imgHeight } = resolveTeamLogoSrc(logo);
 
-  if (logo && typeof logo === "object" && logo.url) {
-    // It's the object type { url, width, height }
-    srcUrl = logo.url;
-    imgWidth = logo.width;
-    imgHeight = logo.height;
-  } else if (typeof logo === "string" && logo.length > 0) {
-    // It's a direct string URL (handle legacy/inconsistent data)
+  const handleError = useCallback(() => {
+    setLoadFailed(true);
+  }, []);
+
+  if (!srcUrl || loadFailed) {
+    return null;
+  }
+
+  if (typeof logo === "string") {
     console.warn(
       `[TeamLogo] Received string URL for ${teamName}. Consider standardizing data to { url, width, height }.`,
     );
-    srcUrl = logo;
-    // We don't have width/height in this case
   }
 
-  // If no valid srcUrl, render placeholder
-  if (!srcUrl) {
-    return (
-      <div
-        className={`${sizeClass} bg-gray-300/20 flex items-center justify-center rounded-full`}
-      >
-        <span className="text-xs text-gray-400">No Logo</span>
-      </div>
-    );
-  }
-
-  // Render the image
   return (
     <AnimatedImage
-      src={srcUrl} // Use the determined srcUrl
+      src={srcUrl}
       alt={teamName}
-      width={imgWidth} // Pass dimensions if available
+      width={imgWidth}
       height={imgHeight}
-      className={`object-contain`}
+      className="object-contain"
       fit={fit}
       style={imgStyle}
       animation={{ ...logoAnimation.logo.itemIn, delay: delay }}
+      onError={handleError}
     />
   );
 };

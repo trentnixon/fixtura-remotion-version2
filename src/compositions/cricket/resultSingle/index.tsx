@@ -6,6 +6,7 @@ import { CNSW } from "./CNSW";
 import { CNSWPrivate } from "./CNSW-private";
 import { BrickWork } from "./brickWork";
 import { mudgeeraba as MudgeerabaResultSingle } from "./mudgeeraba";
+import { broadcastpro as BroadcastProResultSingle } from "./broadcastPro";
 
 // Export all template implementations
 export {
@@ -17,4 +18,5 @@ export {
   CNSWPrivate as cnswPrivate,
   BrickWork as brickWork,
   MudgeerabaResultSingle as mudgeeraba,
+  BroadcastProResultSingle as broadcastpro,
 };
