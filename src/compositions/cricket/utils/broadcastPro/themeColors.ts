@@ -43,7 +43,8 @@ export const resolveBroadcastProTextOnContainer = (
   const bg = selectedPalette.container.background;
   const oc = selectedPalette.text.onContainer;
 
-  const title = ensureContrast(bg, oc.title);
+  // Preserve mode-authored title (lightAlt/darkAlt flip title only, not copy).
+  const title = oc.title;
   const copy = ensureContrast(bg, oc.copy);
   const secondary = ensureContrast(bg, oc.secondary ?? oc.copy);
   const accent = oc.accent ?? selectedPalette.container.accent;
@@ -63,7 +64,7 @@ export const resolveBroadcastProTextOnGlass = (
 ): BroadcastProTextOnContainer => {
   const bg = compositeSurfaceColor(surfaceBase, glassPanel);
 
-  const title = ensureContrast(bg, preferred.title);
+  const title = preferred.title;
   const copy = ensureContrast(bg, preferred.copy);
   const secondary = ensureContrast(bg, preferred.secondary);
   const muted = resolveMutedCopy(bg, preferred.copy);

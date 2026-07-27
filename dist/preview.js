@@ -828,12 +828,11 @@ var createStandardPaletteStructure = (name, mainColor, secondaryColor, colorVari
         accent: secondaryColor
       },
       onContainer: {
-        title: ensureContrast3(useMode.container.background, useMode.text.title),
+        // Title tokens are mode-authored (incl. lightAlt/darkAlt inversions) and
+        // must not be contrast-normalized against container.background.
+        title: useMode.text.title,
         copy: ensureContrast3(useMode.container.background, useMode.text.copy),
-        copyNoBg: ensureContrast3(
-          useMode.container.background,
-          useMode.text.title
-        ),
+        copyNoBg: useMode.text.title,
         safeCopy: ensureContrast3(
           useMode.container.background,
           useMode.text.copy
@@ -4960,7 +4959,7 @@ var TransitionSeriesWrapper = ({
     height
   );
   const timingFn = getTiming(timing);
-  return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_transitions.TransitionSeries, { children: sequences.map((sequence, index) => /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(import_react10.default.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_transitions.TransitionSeries, { from: 17, children: sequences.map((sequence, index) => /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(import_react10.default.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
       import_transitions.TransitionSeries.Sequence,
       {
@@ -14721,7 +14720,7 @@ var resolveBroadcastProTextOnContainer = (selectedPalette) => {
   var _a, _b;
   const bg = selectedPalette.container.background;
   const oc = selectedPalette.text.onContainer;
-  const title = ensureContrast2(bg, oc.title);
+  const title = oc.title;
   const copy = ensureContrast2(bg, oc.copy);
   const secondary = ensureContrast2(bg, (_a = oc.secondary) != null ? _a : oc.copy);
   const accent = (_b = oc.accent) != null ? _b : selectedPalette.container.accent;
@@ -14730,7 +14729,7 @@ var resolveBroadcastProTextOnContainer = (selectedPalette) => {
 };
 var resolveBroadcastProTextOnGlass = (surfaceBase, glassPanel, preferred) => {
   const bg = compositeSurfaceColor(surfaceBase, glassPanel);
-  const title = ensureContrast2(bg, preferred.title);
+  const title = preferred.title;
   const copy = ensureContrast2(bg, preferred.copy);
   const secondary = ensureContrast2(bg, preferred.secondary);
   const muted = resolveMutedCopy(bg, preferred.copy);

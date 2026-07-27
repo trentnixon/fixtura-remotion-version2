@@ -118,12 +118,11 @@ export const createStandardPaletteStructure = (
         accent: secondaryColor,
       },
       onContainer: {
-        title: ensureContrast(useMode.container.background, useMode.text.title),
+        // Title tokens are mode-authored (incl. lightAlt/darkAlt inversions) and
+        // must not be contrast-normalized against container.background.
+        title: useMode.text.title,
         copy: ensureContrast(useMode.container.background, useMode.text.copy),
-        copyNoBg: ensureContrast(
-          useMode.container.background,
-          useMode.text.title,
-        ),
+        copyNoBg: useMode.text.title,
         safeCopy: ensureContrast(
           useMode.container.background,
           useMode.text.copy,

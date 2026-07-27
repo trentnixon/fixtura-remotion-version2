@@ -182,11 +182,7 @@
     "assetCategoryID": 2
   },
   "errors": [],
-  "frames": [
-    45,
-    195,
-    390
-  ],
+  "frames": [45, 195, 390],
   "render": {
     "renderId": 22593,
     "schedulerId": 1097
@@ -335,10 +331,7 @@
         "title": "Fixtures",
         "frames": [],
         "assetId": 2,
-        "titleSplit": [
-          "Fixtures",
-          ""
-        ],
+        "titleSplit": ["Fixtures", ""],
         "videoTitle": "Upcoming Fixtures",
         "assetTypeId": 1,
         "compositionId": "CricketUpcoming",
@@ -365,7 +358,7 @@
       "fixtureCategory": "Goulburn District Cricket Association",
       "groupingCategory": "Goulburn District Cricket Association",
       "templateVariation": {
-        "mode": "lightAlt",
+        "mode": "darkAlt",
         "image": {
           "url": null,
           "type": "pan",
