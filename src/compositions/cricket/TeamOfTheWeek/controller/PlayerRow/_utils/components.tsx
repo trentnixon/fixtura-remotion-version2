@@ -5,9 +5,11 @@ import { TeamOfTheWeekStat } from "../../../../utils/primitives/TeamOfTheWeekSta
 import {
   BattingStatDisplayProps,
   BowlingStatDisplayProps,
+  FieldingStatDisplayProps,
   StatItemProps,
 } from "../_types/StatDisplayProps";
 import { STAT_SUFFIX_DELAY_OFFSET } from "./constants";
+import { formatFieldingStat } from "../../../utils/config";
 
 /**
  * Component to display formatted batting stats
@@ -76,6 +78,29 @@ export const BowlingStatDisplay: React.FC<BowlingStatDisplayProps> = ({
         }}
         variant="onContainerCopy"
         className="text-base"
+      />
+    </div>
+  );
+};
+
+/**
+ * Component to display formatted fielding stats (wicket-keeper)
+ * Shows catches and stumpings
+ */
+export const FieldingStatDisplay: React.FC<FieldingStatDisplayProps> = ({
+  fielding,
+  delay,
+}) => {
+  const { animations } = useAnimationContext();
+  const largeTextAnimation = animations.text.main.copyIn;
+
+  return (
+    <div className="flex items-baseline gap-1">
+      <TeamOfTheWeekStat
+        value={formatFieldingStat(fielding)}
+        animation={{ ...largeTextAnimation, delay: delay }}
+        variant="onContainerCopy"
+        className=""
       />
     </div>
   );

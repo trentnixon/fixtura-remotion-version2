@@ -4,6 +4,7 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import {
   formatBroadcastProCompactBattingStat,
   formatBroadcastProCompactBowlingStat,
+  formatBroadcastProCompactFieldingStat,
 } from "./buildBroadcastProStatMatrixCells";
 import {
   hasBothStats,
@@ -85,6 +86,21 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
     return (
       <div className={statRowClass}>
         {renderCompact(formatBroadcastProCompactBowlingStat(player.bowling), delay)}
+      </div>
+    );
+  }
+
+  if (
+    player.categoryDetail.position === "wicketKeeper" &&
+    "fielding" in player &&
+    player.fielding
+  ) {
+    return (
+      <div className={statRowClass}>
+        {renderCompact(
+          formatBroadcastProCompactFieldingStat(player.fielding),
+          delay,
+        )}
       </div>
     );
   }

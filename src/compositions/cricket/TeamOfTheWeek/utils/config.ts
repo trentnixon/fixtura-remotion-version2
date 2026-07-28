@@ -1,4 +1,4 @@
-import { TeamOfTheWeekPlayer } from "../types";
+import { FieldingStats, TeamOfTheWeekPlayer } from "../types";
 
 // Re-export icon pack functions for backward compatibility
 export {
@@ -18,8 +18,13 @@ export const getCategoryPositionLabel = (position: string): string => {
     besteconomy: "Best Economy",
     topallrounder: "Top All-Rounder",
     bestoftherest: "12th Man",
+    wicketKeeper: "Wicket-Keeper",
   };
   return labels[position] || position;
+};
+
+export const formatFieldingStat = (fielding: FieldingStats): string => {
+  return `${fielding.catches} ct · ${fielding.stumpings} st`;
 };
 
 // Helper function to clean player names by removing captain/vice-captain/wicket-keeper suffixes
@@ -73,6 +78,15 @@ export const getScoreValues = (
     const mainValue = `${player.bowling.wickets}/${player.bowling.runs}`;
     const suffix = `(${player.bowling.overs})`;
     return { mainValue, suffix };
+  }
+
+  // Wicket-keeper position
+  if (
+    player.categoryDetail.position === "wicketKeeper" &&
+    "fielding" in player &&
+    player.fielding
+  ) {
+    return { mainValue: formatFieldingStat(player.fielding), suffix: "" };
   }
 
   // Fallback

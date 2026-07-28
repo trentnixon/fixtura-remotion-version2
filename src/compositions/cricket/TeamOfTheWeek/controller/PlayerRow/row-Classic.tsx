@@ -18,6 +18,7 @@ import { isAllRounderPosition, hasBothStats } from "./_utils/helpers";
 import {
   BattingStatDisplay,
   BowlingStatDisplay,
+  FieldingStatDisplay,
   StatItem,
 } from "./_utils/components";
 import {
@@ -123,6 +124,15 @@ const PlayerRowClassic: React.FC<PlayerRowProps> = ({
                       player.bowling && (
                         <BowlingStatDisplay
                           bowling={player.bowling}
+                          delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                        />
+                      )}
+
+                    {player.categoryDetail.position === "wicketKeeper" &&
+                      "fielding" in player &&
+                      player.fielding && (
+                        <FieldingStatDisplay
+                          fielding={player.fielding}
                           delay={delay + STAT_DISPLAY_DELAY_OFFSET}
                         />
                       )}

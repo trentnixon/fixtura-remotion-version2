@@ -15,7 +15,7 @@ import {
   isBattingPerformance,
   isBowlingPerformance,
 } from "../../../performances/_types/types";
-import type { BattingStats, BowlingStats } from "../../../TeamOfTheWeek/types";
+import type { BattingStats, BowlingStats, FieldingStats } from "../../../TeamOfTheWeek/types";
 
 const battingTripleCells = (
   runs: number,
@@ -109,3 +109,7 @@ export const formatBroadcastProCompactBattingStat = (
 export const formatBroadcastProCompactBowlingStat = (
   bowling: BowlingStats,
 ): string => `${bowling.wickets}/${bowling.runs} (${bowling.overs})`;
+
+export const formatBroadcastProCompactFieldingStat = (
+  fielding: FieldingStats,
+): string => `${fielding.catches} ct · ${fielding.stumpings} st`;

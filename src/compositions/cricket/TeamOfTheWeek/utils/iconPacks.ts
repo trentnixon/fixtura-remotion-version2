@@ -9,6 +9,7 @@ export type IconPack = {
   Bowler2: React.FC<React.SVGProps<SVGSVGElement>>;
   AllRounder: React.FC<React.SVGProps<SVGSVGElement>>;
   Man12th: React.FC<React.SVGProps<SVGSVGElement>>;
+  WicketKeeper: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 
 // Icon pack registry - add new packs here
@@ -30,6 +31,7 @@ const positionToIconMap: Record<string, keyof IconPack> = {
   besteconomy: "Bowler2",
   topallrounder: "AllRounder",
   bestoftherest: "Man12th",
+  wicketKeeper: "WicketKeeper",
 };
 
 // Helper function to get the appropriate SVG icon component for the position

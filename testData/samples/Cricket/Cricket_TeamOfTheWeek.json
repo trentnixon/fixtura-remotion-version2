@@ -429,6 +429,30 @@
         "highestStrikeRate": 5
       },
       "prompt": "harrison rachow from Runaway Bay Orange Community Div 1. has been selected as the top twelfth man in the Team of the Week. Batting: scored 50 runs, from 43 balls, with a strike rate of 116.3, including 7 fours, and 1 sixes. Overall rankings: ranked #4 in runs scored, ranked #5 in strike rate."
+    },
+    {
+      "category": "Wicket-Keeper",
+      "categoryDetail": {
+        "type": "Wicket-Keeper",
+        "position": "wicketKeeper"
+      },
+      "rank": 1,
+      "player": "test keeper",
+      "primaryTeam": "Nightcliff Cricket Club",
+      "club": {
+        "name": "Nightcliff Cricket Club",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3_cropped_e0dc3161c6.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "fielding": {
+        "catches": 2,
+        "stumpings": 3
+      },
+      "rankings": {},
+      "prompt": "test keeper from Nightcliff Cricket Club. has been selected as the wicket-keeper in the Team of the Week. Fielding: 2 catches and 3 stumpings."
     }
   ],
   "asset": {

@@ -1,4 +1,4 @@
-import { BattingStats, BowlingStats } from "../../../types";
+import { BattingStats, BowlingStats, FieldingStats } from "../../../types";
 
 export interface BattingStatDisplayProps {
   batting: BattingStats;
@@ -7,6 +7,11 @@ export interface BattingStatDisplayProps {
 
 export interface BowlingStatDisplayProps {
   bowling: BowlingStats;
+  delay: number;
+}
+
+export interface FieldingStatDisplayProps {
+  fielding: FieldingStats;
   delay: number;
 }
 

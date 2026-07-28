@@ -9,6 +9,10 @@ export const isAllRounderPosition = (position: string): boolean => {
   return position === "topallrounder" || position === "bestoftherest";
 };
 
+export const isWicketKeeperPosition = (position: string): boolean => {
+  return position === "wicketKeeper";
+};
+
 /**
  * Check if player has both batting and bowling stats
  * @param player - TeamOfTheWeekPlayer object

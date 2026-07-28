@@ -15,14 +15,21 @@ export interface Club {
 
 // Category detail information
 export interface CategoryDetail {
-  type: "Batter" | "Bowler" | "All-Rounder" | "Twelfth Man";
+  type: "Batter" | "Bowler" | "All-Rounder" | "Twelfth Man" | "Wicket-Keeper";
   position:
     | "topscorer"
     | "higheststrikerate"
     | "mostwickets"
     | "besteconomy"
     | "topallrounder"
-    | "bestoftherest";
+    | "bestoftherest"
+    | "wicketKeeper";
+}
+
+// Fielding statistics (wicket-keeper)
+export interface FieldingStats {
+  catches: number;
+  stumpings: number;
 }
 
 // Batting statistics
@@ -65,7 +72,7 @@ export interface Rankings {
 
 // Base player data common to all categories
 export interface BaseTeamOfTheWeekPlayer {
-  category: "Batter" | "Bowler" | "All-Rounder" | "Twelfth Man";
+  category: "Batter" | "Bowler" | "All-Rounder" | "Twelfth Man" | "Wicket-Keeper";
   categoryDetail: CategoryDetail;
   rank: number;
   player: string; // May include (c) or (vc) suffixes
@@ -106,12 +113,22 @@ export interface TwelfthManPlayer extends BaseTeamOfTheWeekPlayer {
   allRounder?: AllRounderStats;
 }
 
+// Wicket-Keeper player (fielding stats)
+export interface WicketKeeperPlayer extends BaseTeamOfTheWeekPlayer {
+  category: "Wicket-Keeper";
+  fielding: FieldingStats;
+  batting?: never;
+  bowling?: never;
+  allRounder?: never;
+}
+
 // Union type for any Team of the Week player
 export type TeamOfTheWeekPlayer =
   | BatterPlayer
   | BowlerPlayer
   | AllRounderPlayer
-  | TwelfthManPlayer;
+  | TwelfthManPlayer
+  | WicketKeeperPlayer;
 
 // Type guards for distinguishing player categories
 export const isBatterPlayer = (
@@ -138,6 +155,12 @@ export const isTwelfthManPlayer = (
   return player.category === "Twelfth Man";
 };
 
+export const isWicketKeeperPlayer = (
+  player: TeamOfTheWeekPlayer,
+): player is WicketKeeperPlayer => {
+  return player.category === "Wicket-Keeper";
+};
+
 // Helper function to check if player has batting stats
 export const hasBattingStats = (
   player: TeamOfTheWeekPlayer,
@@ -157,6 +180,12 @@ export const hasAllRounderStats = (
   player: TeamOfTheWeekPlayer,
 ): player is AllRounderPlayer | TwelfthManPlayer => {
   return "allRounder" in player && player.allRounder !== undefined;
+};
+
+export const hasFieldingStats = (
+  player: TeamOfTheWeekPlayer,
+): player is WicketKeeperPlayer => {
+  return "fielding" in player && player.fielding !== undefined;
 };
 
 // Animation constants

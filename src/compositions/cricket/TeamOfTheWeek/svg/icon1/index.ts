@@ -4,3 +4,4 @@ export { Bowler1 } from "./Bowler1";
 export { Bowler2 } from "./Bowler2";
 export { AllRounder } from "./AllRounder";
 export { Man12th } from "./12thMan";
+export { WicketKeeper } from "./WicketKeeper";
