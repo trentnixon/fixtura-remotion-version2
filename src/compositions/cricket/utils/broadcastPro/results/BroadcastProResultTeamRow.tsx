@@ -37,8 +37,12 @@ export const BroadcastProResultTeamRow: React.FC<
   className = "",
 }) => {
   const { animations } = useAnimationContext();
-  const { componentStyles, broadcastProGlassOpacity, broadcastProTransparentLayers, selectedPalette } =
-    useThemeContext();
+  const {
+    componentStyles,
+    broadcastProGlassOpacity,
+    broadcastProTransparentLayers,
+    selectedPalette,
+  } = useThemeContext();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass(componentStyles, "broadcastProResultsTeamRow");
   const nameClass = csClass(componentStyles, "broadcastProResultsTeamName");
@@ -54,7 +58,10 @@ export const BroadcastProResultTeamRow: React.FC<
   const displayName = truncateText(teamName, MAX_TEAM_NAME).toUpperCase();
 
   return (
-    <BroadcastProGlassPanel glass={resolvedGlass} className={`${rowClass} ${className}`.trim()}>
+    <BroadcastProGlassPanel
+      glass={resolvedGlass}
+      className={`${rowClass} ${className}`.trim()}
+    >
       <div className="flex min-w-0 flex-1 items-center gap-4">
         <BroadcastProCrestWell
           tier="compact"

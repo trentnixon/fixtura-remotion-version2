@@ -60,7 +60,10 @@ const buildBroadcastProVerdictModel = (match) => {
     return {
       kind: "hero",
       winner: match.resultSummary.winner,
-      contextLine: buildVerdictContextLine(match.resultShort, match.resultSummary),
+      contextLine: buildVerdictContextLine(
+        match.resultShort,
+        match.resultSummary,
+      ),
     };
   }
 
@@ -139,9 +142,6 @@ describe("buildBroadcastProVerdictModel", () => {
   });
 
   it("returns null when no verdict data", () => {
-    assert.equal(
-      buildBroadcastProVerdictModel({ status: "Final" }),
-      null,
-    );
+    assert.equal(buildBroadcastProVerdictModel({ status: "Final" }), null);
   });
 });

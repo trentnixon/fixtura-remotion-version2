@@ -20,7 +20,8 @@ export const useBroadcastProHeadlineFit = (
   const { width } = useVideoConfig();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
 
-  const sizing = broadcastProHeadlineSizing ?? DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
+  const sizing =
+    broadcastProHeadlineSizing ?? DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
 
@@ -28,7 +29,10 @@ export const useBroadcastProHeadlineFit = (
     variant === "intro" ? sizing.introMaxPx : sizing.mainHeaderMaxPx;
 
   const withinWidth = useMemo(() => {
-    const base = getTitleScreenContentWidth(width, MAIN_HEADER_TITLE_PADDING_PX);
+    const base = getTitleScreenContentWidth(
+      width,
+      MAIN_HEADER_TITLE_PADDING_PX,
+    );
     return variant === "mainHeader" ? Math.floor(base * 0.95) : base;
   }, [width, variant]);
 

@@ -30,14 +30,9 @@ export { SplitColourEdge } from "./SplitColourEdgeView";
 
 export type { SplitColourEdgeProps } from "./SplitColourEdgeView";
 
-export {
-  getClassicSurfaceRoles,
-} from "./colours";
+export { getClassicSurfaceRoles } from "./colours";
 
-export type {
-  ClassicSurfaceRoles,
-  ClassicThemeColours,
-} from "./colours";
+export type { ClassicSurfaceRoles, ClassicThemeColours } from "./colours";
 
 export {
   getOffsetPanelDepthTokens,

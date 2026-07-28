@@ -7,6 +7,7 @@
 ## TKT-2026-BP-015
 
 ---
+
 ID: TKT-2026-BP-015
 Status: Completed
 Priority: High
@@ -14,6 +15,7 @@ Owner: Development Team
 Created: 2026-07-25
 Updated: 2026-07-25
 Related: Monday-pulse-2803178022, BroadcastPro-15-indexed-roster
+
 ---
 
 ## Overview

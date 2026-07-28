@@ -251,10 +251,7 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
           </div>
         </div>
       </AnimatedContainer>
-      <div
-        className="flex-shrink-0"
-        style={{ height: `${heights.footer}px` }}
-      >
+      <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
         <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
       </div>
     </div>

@@ -84,7 +84,8 @@ export const broadcastProCompositionComponentStylesRoster = {
       "font-rajdhani block text-xs font-bold uppercase tracking-widest",
   },
   broadcastProRosterMetaValue: {
-    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-3xl",
+    className:
+      "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-3xl",
   },
   broadcastProRosterAccentStrip: {
     className: "w-1.5 shrink-0 self-stretch rounded-sm",

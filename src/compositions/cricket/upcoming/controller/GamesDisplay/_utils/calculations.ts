@@ -26,7 +26,9 @@ export const BROADCAST_PRO_UPCOMING_SPACING: GameCardSpacing = {
   cardSpacing: 4,
 };
 
-const getBroadcastProUpcomingCardHeightCap = (gamesOnScreen: number): number => {
+const getBroadcastProUpcomingCardHeightCap = (
+  gamesOnScreen: number,
+): number => {
   if (gamesOnScreen >= 3) {
     return 210;
   }
@@ -51,7 +53,10 @@ export const calculateBroadcastProGameCardHeight = (
 
   const gapTotal = spacing.cardSpacing * Math.max(0, gamesOnScreen - 1);
   const evenSplit = Math.floor((assetHeight - gapTotal) / gamesOnScreen);
-  return Math.min(evenSplit, getBroadcastProUpcomingCardHeightCap(gamesOnScreen));
+  return Math.min(
+    evenSplit,
+    getBroadcastProUpcomingCardHeightCap(gamesOnScreen),
+  );
 };
 
 /**

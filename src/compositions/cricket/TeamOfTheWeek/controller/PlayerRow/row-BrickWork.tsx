@@ -194,17 +194,17 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
               style={{ background: logoBG }}
             >
               <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
-              <LogoPlate
-                mode="preserve"
-                size={80}
-                logo={{
-                  url: player.club.logo.url,
-                  width: player.club.logo.width,
-                  height: player.club.logo.height,
-                }}
-                teamName={player.club.name}
-                delay={delay + STAT_DISPLAY_DELAY_OFFSET}
-              />
+                <LogoPlate
+                  mode="preserve"
+                  size={80}
+                  logo={{
+                    url: player.club.logo.url,
+                    width: player.club.logo.width,
+                    height: player.club.logo.height,
+                  }}
+                  teamName={player.club.name}
+                  delay={delay + STAT_DISPLAY_DELAY_OFFSET}
+                />
               </div>
             </div>
           )}

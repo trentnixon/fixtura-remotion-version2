@@ -103,8 +103,7 @@ export const basicTheme: TemplateThemeConfig = {
         "text-2xl font-normal tracking-tight leading-none tabular-nums",
     },
     classicHeroNumber: {
-      className:
-        "text-6xl font-black tracking-tight leading-none tabular-nums",
+      className: "text-6xl font-black tracking-tight leading-none tabular-nums",
     },
     classicStatSuffix: {
       className:
@@ -115,15 +114,14 @@ export const basicTheme: TemplateThemeConfig = {
         "text-3xl font-medium tracking-tight leading-none tabular-nums uppercase",
     },
     ResultScore: {
-      className:
-        "text-4xl font-black tracking-tight leading-none tabular-nums",
+      className: "text-4xl font-black tracking-tight leading-none tabular-nums",
     },
     ResultScoreFirstInnings: {
-      className:
-        "text-4xl font-black tracking-tight leading-none tabular-nums",
+      className: "text-4xl font-black tracking-tight leading-none tabular-nums",
     },
     ResultScoreYetToBat: {
-      className: "text-4xl font-bold tracking-tight leading-none tabular-nums py-6",
+      className:
+        "text-4xl font-bold tracking-tight leading-none tabular-nums py-6",
     },
     ResultTeamName: {
       className: "text-3xl font-normal  tracking-tight leading-tight",
@@ -132,8 +130,7 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-3xl font-normal  tracking-tight leading-tight",
     },
     ResultPlayerScore: {
-      className:
-        "text-3xl font-bold tracking-tight leading-none tabular-nums",
+      className: "text-3xl font-bold tracking-tight leading-none tabular-nums",
     },
     ResultSyntax: {
       className:
@@ -181,8 +178,7 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-xs font-bold uppercase tracking-tight leading-none",
     },
     TeamOfTheWeekStat: {
-      className:
-        "text-4xl font-bold tracking-tight leading-none tabular-nums",
+      className: "text-4xl font-bold tracking-tight leading-none tabular-nums",
     },
   },
 

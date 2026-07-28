@@ -90,10 +90,12 @@ export const resolveSplitEdgeColours = (
   const primaryTiny = tinycolor(primary);
   let adjusted = tinycolor(secondary);
 
-  for (let i = 0; i < 40 && tinycolor.readability(primary, adjusted) < minContrast; i++) {
-    adjusted = primaryTiny.isDark()
-      ? adjusted.lighten(4)
-      : adjusted.darken(4);
+  for (
+    let i = 0;
+    i < 40 && tinycolor.readability(primary, adjusted) < minContrast;
+    i++
+  ) {
+    adjusted = primaryTiny.isDark() ? adjusted.lighten(4) : adjusted.darken(4);
   }
 
   if (tinycolor.readability(primary, adjusted) < minContrast) {
@@ -134,7 +136,11 @@ export const getVerticalSplitEdgeStyle = (
   edge: "leading" | "trailing",
   colours: SplitEdgeColours,
   tokens: SplitColourEdgeTokens = DEFAULT_SPLIT_EDGE_TOKENS,
-): { container: CSSProperties; primary: CSSProperties; secondary: CSSProperties } => {
+): {
+  container: CSSProperties;
+  primary: CSSProperties;
+  secondary: CSSProperties;
+} => {
   const {
     primaryThicknessPx,
     secondaryThicknessPx,
@@ -176,9 +182,10 @@ export const getVerticalSplitEdgeStyle = (
   return {
     container,
     primary,
-    secondary: edge === "leading"
-      ? secondary
-      : { ...secondary, marginBottom: 0, marginTop: terminalStepPx },
+    secondary:
+      edge === "leading"
+        ? secondary
+        : { ...secondary, marginBottom: 0, marginTop: terminalStepPx },
   };
 };
 
@@ -187,7 +194,11 @@ export const getHorizontalSplitEdgeStyle = (
   edge: "top" | "bottom",
   colours: SplitEdgeColours,
   tokens: SplitColourEdgeTokens = DEFAULT_SPLIT_EDGE_TOKENS,
-): { container: CSSProperties; primary: CSSProperties; secondary: CSSProperties } => {
+): {
+  container: CSSProperties;
+  primary: CSSProperties;
+  secondary: CSSProperties;
+} => {
   const {
     primaryThicknessPx,
     secondaryThicknessPx,
@@ -245,7 +256,11 @@ export const getCornerSplitEdgeStyle = (
   const verticalEdge = corner.endsWith("Leading") ? "leading" : "trailing";
   const horizontalEdge = corner.startsWith("bottom") ? "bottom" : "top";
   const vertical = getVerticalSplitEdgeStyle(verticalEdge, colours, tokens);
-  const horizontal = getHorizontalSplitEdgeStyle(horizontalEdge, colours, tokens);
+  const horizontal = getHorizontalSplitEdgeStyle(
+    horizontalEdge,
+    colours,
+    tokens,
+  );
 
   const armLength = 72;
 

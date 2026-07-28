@@ -64,7 +64,6 @@ export const ZoomEffect: React.FC<ZoomEffectProps> = ({
           height: "100%",
           objectFit: "cover",
           transform: `scale(${scale})`,
-          transition: "transform 0.1s linear",
           ...style,
         }}
       />

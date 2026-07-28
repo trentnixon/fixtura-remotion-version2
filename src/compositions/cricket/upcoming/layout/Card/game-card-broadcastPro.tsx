@@ -49,10 +49,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   const glassPanelHeight =
     gameRowHeight != null
       ? Math.max(
-          gameRowHeight -
-            HEADER_STRIP_H -
-            GROUND_STRIP_H -
-            STRIP_GLASS_GAP,
+          gameRowHeight - HEADER_STRIP_H - GROUND_STRIP_H - STRIP_GLASS_GAP,
           96,
         )
       : null;
@@ -155,7 +152,9 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             height: GROUND_STRIP_H,
             minHeight: GROUND_STRIP_H,
             background: glass.muted,
-            borderTop: glass.border ? "1px solid rgba(255,255,255,0.08)" : undefined,
+            borderTop: glass.border
+              ? "1px solid rgba(255,255,255,0.08)"
+              : undefined,
             ...cellBlur,
           }}
         >

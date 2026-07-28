@@ -12,11 +12,9 @@ export interface BroadcastProRosterSheetProps {
   className?: string;
 }
 
-export const BroadcastProRosterSheet: React.FC<BroadcastProRosterSheetProps> = ({
-  players,
-  availableHeightPx,
-  className = "",
-}) => {
+export const BroadcastProRosterSheet: React.FC<
+  BroadcastProRosterSheetProps
+> = ({ players, availableHeightPx, className = "" }) => {
   const { componentStyles, broadcastProRosterListSizing } = useThemeContext();
   const { accent } = useBroadcastProTheme();
 

@@ -39,7 +39,10 @@ const formatBroadcastProQualificationLabel = (n) =>
 
 describe("resolveBroadcastProEdgeMarkerStyle", () => {
   it("uses 8px standard and 4px compact widths", () => {
-    const colors = { accentColor: "#00e5ff", mutedColor: "rgba(255,255,255,0.2)" };
+    const colors = {
+      accentColor: "#00e5ff",
+      mutedColor: "rgba(255,255,255,0.2)",
+    };
     assert.equal(
       resolveBroadcastProEdgeMarkerStyle("standard", "primary", colors)
         .borderLeftWidth,
@@ -74,6 +77,9 @@ describe("shouldShowBroadcastProLadderZoneDivider", () => {
 
 describe("formatBroadcastProQualificationLabel", () => {
   it("matches stitch copy", () => {
-    assert.equal(formatBroadcastProQualificationLabel(4), "Top 4 Qualify for Finals");
+    assert.equal(
+      formatBroadcastProQualificationLabel(4),
+      "Top 4 Qualify for Finals",
+    );
   });
 });

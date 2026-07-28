@@ -27,10 +27,22 @@ const resolveBroadcastProStatMatrixHighlight = (tier, cellIndex, cell = {}) => {
 
 describe("resolveBroadcastProStatMatrixScoreRole", () => {
   it("maps tiers to score roles", () => {
-    assert.equal(resolveBroadcastProStatMatrixScoreRole("featuredTriple"), "featuredStat");
-    assert.equal(resolveBroadcastProStatMatrixScoreRole("gridTriple"), "gridStat");
-    assert.equal(resolveBroadcastProStatMatrixScoreRole("compact"), "compactStat");
-    assert.equal(resolveBroadcastProStatMatrixScoreRole("resultRow"), "playerStatPrimary");
+    assert.equal(
+      resolveBroadcastProStatMatrixScoreRole("featuredTriple"),
+      "featuredStat",
+    );
+    assert.equal(
+      resolveBroadcastProStatMatrixScoreRole("gridTriple"),
+      "gridStat",
+    );
+    assert.equal(
+      resolveBroadcastProStatMatrixScoreRole("compact"),
+      "compactStat",
+    );
+    assert.equal(
+      resolveBroadcastProStatMatrixScoreRole("resultRow"),
+      "playerStatPrimary",
+    );
   });
 });
 
@@ -52,7 +64,9 @@ describe("resolveBroadcastProStatMatrixHighlight", () => {
 
   it("respects explicit highlight on result rows", () => {
     assert.equal(
-      resolveBroadcastProStatMatrixHighlight("resultRow", 2, { highlight: true }),
+      resolveBroadcastProStatMatrixHighlight("resultRow", 2, {
+        highlight: true,
+      }),
       true,
     );
   });

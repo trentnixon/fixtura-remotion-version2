@@ -67,10 +67,7 @@ export const buildVerdictContextLine = (
 };
 
 export const buildCompactVerdictLine = (
-  match: Pick<
-    BroadcastProResultMatchData,
-    "resultShort" | "resultSummary"
-  >,
+  match: Pick<BroadcastProResultMatchData, "resultShort" | "resultSummary">,
 ): string | null => {
   const short = match.resultShort?.trim();
   if (short) {
@@ -100,7 +97,10 @@ export const buildBroadcastProVerdictModel = (
     return {
       kind: "hero",
       winner: match.resultSummary.winner,
-      contextLine: buildVerdictContextLine(match.resultShort, match.resultSummary),
+      contextLine: buildVerdictContextLine(
+        match.resultShort,
+        match.resultSummary,
+      ),
     };
   }
 

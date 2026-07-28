@@ -16,6 +16,7 @@
 ## TKT-2026-BW-001
 
 ---
+
 ID: TKT-2026-BW-001
 Status: Completed
 Priority: High
@@ -23,6 +24,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797404916, Brickwork-01-masonry
+
 ---
 
 ## Overview
@@ -42,6 +44,7 @@ Added `design/masonry.ts`, `MasonryRow.tsx`, and wired even/odd 16px horizontal 
 ## TKT-2026-BW-002
 
 ---
+
 ID: TKT-2026-BW-002
 Status: Completed
 Priority: High
@@ -49,6 +52,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797269746, Brickwork-02-grid-layer, TKT-2026-BW-001
+
 ---
 
 ## Overview
@@ -68,6 +72,7 @@ Piloted `GridLayer` on Top 5 + Performances; reverted after Studio review — gr
 ## TKT-2026-BW-003
 
 ---
+
 ID: TKT-2026-BW-003
 Status: Completed
 Priority: High
@@ -75,6 +80,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797324157, Brickwork-03-panel-depth, TKT-2026-BW-001
+
 ---
 
 ## Overview
@@ -94,6 +100,7 @@ Piloted nested `BrickworkPanel` on Top 5 + Performances; reverted after Studio r
 ## TKT-2026-BW-007
 
 ---
+
 ID: TKT-2026-BW-007
 Status: Completed
 Priority: High
@@ -101,6 +108,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797324202, Brickwork-07-colour-spine
+
 ---
 
 ## Overview
@@ -120,6 +128,7 @@ Piloted left-edge `ColourSpine` via `BaseTemplate` overlayComponent; full revert
 ## TKT-2026-BW-006
 
 ---
+
 ID: TKT-2026-BW-006
 Status: Completed
 Priority: High
@@ -127,6 +136,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797324161, Brickwork-06-colour-roles
+
 ---
 
 ## Overview
@@ -146,6 +156,7 @@ Added `design/colours.ts` with named roles and status tokens. Wired Top 5, Perfo
 ## TKT-2026-BW-008
 
 ---
+
 ID: TKT-2026-BW-008
 Status: Completed
 Priority: High
@@ -153,6 +164,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-08, Brickwork-08-logo-plates
+
 ---
 
 ## Overview
@@ -172,6 +184,7 @@ Added `logoPlateTokens.ts`, `LogoPlateView.tsx`, and wired `LogoPlate mode="pres
 ## TKT-2026-BW-009
 
 ---
+
 ID: TKT-2026-BW-009
 Status: Completed
 Priority: High
@@ -179,6 +192,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797404949, Brickwork-09-diagonal-energy
+
 ---
 
 ## Overview
@@ -198,6 +212,7 @@ Added `diagonalAccents.ts` and `DiagonalEnergyAccentView.tsx`; piloted trailing 
 ## TKT-2026-BW-010
 
 ---
+
 ID: TKT-2026-BW-010
 Status: Completed
 Priority: High
@@ -205,6 +220,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797269609, Brickwork-10-texture-vocabulary
+
 ---
 
 ## Overview
@@ -224,6 +240,7 @@ Added `textureVocabulary.ts`, `TextureOverlayView.tsx`, and `BrickworkAssetAtmos
 ## TKT-2026-BW-011
 
 ---
+
 ID: TKT-2026-BW-011
 Status: Completed
 Priority: High
@@ -231,6 +248,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797324305, Brickwork-11-featured-row
+
 ---
 
 ## Overview
@@ -250,6 +268,7 @@ Added `featuredRow.ts` with height bonus and surface roles; piloted on Top 5 + P
 ## TKT-2026-BW-013
 
 ---
+
 ID: TKT-2026-BW-013
 Status: Completed
 Priority: High
@@ -257,6 +276,7 @@ Owner: Development Team
 Created: 2026-07-22
 Updated: 2026-07-22
 Related: Monday-pulse-2797323952, Brickwork-13-typography
+
 ---
 
 ## Overview

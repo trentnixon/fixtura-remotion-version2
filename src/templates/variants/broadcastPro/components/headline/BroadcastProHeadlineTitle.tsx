@@ -35,7 +35,8 @@ export const BroadcastProHeadlineTitle: React.FC<
   const { componentStyles, fontClasses, fonts, broadcastProHeadlineSizing } =
     useThemeContext();
 
-  const sizing = broadcastProHeadlineSizing ?? DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
+  const sizing =
+    broadcastProHeadlineSizing ?? DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fittedSize = useBroadcastProHeadlineFit(text, variant);
   const fontFamily =
     fontFamilyOverride ??

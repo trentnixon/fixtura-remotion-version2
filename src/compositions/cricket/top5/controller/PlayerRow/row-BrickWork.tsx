@@ -44,12 +44,12 @@ const PlayerRowBrickWork: React.FC<PlayerRowProps> = ({
         )}
         <div className="relative z-10">
           <PlayerRowNameLogoWrapperValue
-          player={player}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-          restrictions={getDefaultRestrictions()}
-        />
+            player={player}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+            restrictions={getDefaultRestrictions()}
+          />
         </div>
       </AnimatedContainer>
     </MasonryRow>

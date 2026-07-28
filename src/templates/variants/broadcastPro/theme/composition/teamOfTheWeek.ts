@@ -33,7 +33,8 @@ export const broadcastProCompositionComponentStylesTeamOfTheWeek = {
     className: "flex items-center gap-3",
   },
   broadcastProTeamOfTheWeekSectionTitle: {
-    className: "font-teko text-3xl font-normal uppercase tracking-tight leading-none",
+    className:
+      "font-teko text-3xl font-normal uppercase tracking-tight leading-none",
   },
   broadcastProTeamOfTheWeekSectionRule: {
     className: "h-px flex-1 opacity-20",

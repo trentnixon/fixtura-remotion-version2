@@ -36,7 +36,13 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
   const logoAnimation = animations.image.main.item;
   const [loadFailed, setLoadFailed] = useState(false);
 
-  const { srcUrl, width: imgWidth, height: imgHeight } = resolveTeamLogoSrc(logo);
+  const {
+    srcUrl,
+    width: imgWidth,
+    height: imgHeight,
+  } = resolveTeamLogoSrc(logo);
+  const width = imgWidth ?? size;
+  const height = imgHeight ?? size;
 
   const handleError = useCallback(() => {
     setLoadFailed(true);
@@ -56,8 +62,8 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
     <AnimatedImage
       src={srcUrl}
       alt={teamName}
-      width={imgWidth}
-      height={imgHeight}
+      width={width}
+      height={height}
       className="object-contain"
       fit={fit}
       style={imgStyle}

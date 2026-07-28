@@ -37,7 +37,10 @@ const PerformanceGridCard: React.FC<{
   const restrictions = getDefaultRestrictions();
   const statCells = buildBroadcastProPerformanceStatMatrixCells(performance);
 
-  const name = truncateText(performance.name, restrictions.nameLength).toUpperCase();
+  const name = truncateText(
+    performance.name,
+    restrictions.nameLength,
+  ).toUpperCase();
   const team = truncateText(
     performance.playedFor,
     restrictions.teamLength,

@@ -14,12 +14,12 @@ import { BroadcastProCrestWell } from "../../../../../templates/variants/broadca
 import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
 import { TeamOfTheWeekTeam } from "../../../utils/primitives/TeamOfTheWeekTeam";
 import { truncateText } from "../../../utils/utils-text";
-import {
-  PLAYER_STAGGER_DELAY,
-  TeamOfTheWeekPlayer,
-} from "../../types";
+import { PLAYER_STAGGER_DELAY, TeamOfTheWeekPlayer } from "../../types";
 import { cleanPlayerName } from "../../utils/config";
-import { PLAYER_NAME_DELAY_OFFSET, STAT_DISPLAY_DELAY_OFFSET } from "../PlayerRow/_utils/constants";
+import {
+  PLAYER_NAME_DELAY_OFFSET,
+  STAT_DISPLAY_DELAY_OFFSET,
+} from "../PlayerRow/_utils/constants";
 
 const MAX_NAME_LENGTH = 28;
 const MAX_TEAM_LENGTH = 36;
@@ -50,9 +50,18 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
   const copyAnimation = animations.text.main.copyIn;
 
   const cardClass = csClass(componentStyles, "broadcastProTeamOfTheWeekCard");
-  const bodyClass = csClass(componentStyles, "broadcastProTeamOfTheWeekCardBody");
-  const topRowClass = csClass(componentStyles, "broadcastProTeamOfTheWeekCardUpper");
-  const copyClass = csClass(componentStyles, "broadcastProTeamOfTheWeekCardCopy");
+  const bodyClass = csClass(
+    componentStyles,
+    "broadcastProTeamOfTheWeekCardBody",
+  );
+  const topRowClass = csClass(
+    componentStyles,
+    "broadcastProTeamOfTheWeekCardUpper",
+  );
+  const copyClass = csClass(
+    componentStyles,
+    "broadcastProTeamOfTheWeekCardCopy",
+  );
   const statsClass = csClass(
     componentStyles,
     "broadcastProTeamOfTheWeekCardStats",
@@ -210,7 +219,10 @@ export const TwelfthManBandBroadcastPro: React.FC<
     cleanPlayerName(player.player),
     MAX_NAME_LENGTH + 6,
   ).toUpperCase();
-  const teamName = truncateText(player.primaryTeam, MAX_TEAM_LENGTH).toUpperCase();
+  const teamName = truncateText(
+    player.primaryTeam,
+    MAX_TEAM_LENGTH,
+  ).toUpperCase();
 
   return (
     <AnimatedContainer

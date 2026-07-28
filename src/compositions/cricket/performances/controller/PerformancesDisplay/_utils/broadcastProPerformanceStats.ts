@@ -1,6 +1,4 @@
-import {
-  PerformanceData,
-} from "../../../_types/types";
+import { PerformanceData } from "../../../_types/types";
 import { buildBroadcastProPerformanceStatMatrixCells } from "../../../../utils/broadcastPro/stat/buildBroadcastProStatMatrixCells";
 import type { BroadcastProTripleStat } from "../../../../utils/broadcastPro/playerRanking/types";
 

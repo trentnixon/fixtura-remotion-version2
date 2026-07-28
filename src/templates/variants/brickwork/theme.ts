@@ -144,8 +144,7 @@ export const brickworkTheme: TemplateThemeConfig = {
         "text-2xl font-medium tracking-normal leading-snug tabular-nums",
     },
     ResultSyntax: {
-      className:
-        "text-2xl font-medium tracking-wider leading-snug py-4 ml-4",
+      className: "text-2xl font-medium tracking-wider leading-snug py-4 ml-4",
     },
     ResultFixtureResult: {
       className:
@@ -155,8 +154,7 @@ export const brickworkTheme: TemplateThemeConfig = {
       className: "text-2xl font-normal tracking-wider leading-snug",
     },
     ResultStatementShort: {
-      className:
-        "text-3xl font-medium tracking-wider leading-snug py-2 px-16",
+      className: "text-3xl font-medium tracking-wider leading-snug py-2 px-16",
     },
     ResultStatementText: {
       className: "text-3xl font-medium tracking-wider leading-snug ",

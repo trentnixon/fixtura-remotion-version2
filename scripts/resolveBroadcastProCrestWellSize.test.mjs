@@ -106,13 +106,7 @@ describe("resolveBroadcastProCrestWellSize", () => {
   });
 
   it("returns roster home and away sizes", () => {
-    assert.equal(
-      resolveBroadcastProCrestWellSize("rosterHome").sizePx,
-      128,
-    );
-    assert.equal(
-      resolveBroadcastProCrestWellSize("rosterAway").sizePx,
-      96,
-    );
+    assert.equal(resolveBroadcastProCrestWellSize("rosterHome").sizePx, 128);
+    assert.equal(resolveBroadcastProCrestWellSize("rosterAway").sizePx, 96);
   });
 });

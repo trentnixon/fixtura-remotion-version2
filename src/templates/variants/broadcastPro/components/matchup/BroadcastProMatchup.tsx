@@ -98,12 +98,30 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
     );
   }
 
-  const homeCardClass = csClass(componentStyles, "broadcastProRosterTeamCardHome");
-  const awayCardClass = csClass(componentStyles, "broadcastProRosterTeamCardAway");
-  const homeTitleClass = csClass(componentStyles, "broadcastProRosterTeamTitleHome");
-  const awayTitleClass = csClass(componentStyles, "broadcastProRosterTeamTitleAway");
-  const homeLabelClass = csClass(componentStyles, "broadcastProRosterTeamLabelHome");
-  const awayLabelClass = csClass(componentStyles, "broadcastProRosterTeamLabelAway");
+  const homeCardClass = csClass(
+    componentStyles,
+    "broadcastProRosterTeamCardHome",
+  );
+  const awayCardClass = csClass(
+    componentStyles,
+    "broadcastProRosterTeamCardAway",
+  );
+  const homeTitleClass = csClass(
+    componentStyles,
+    "broadcastProRosterTeamTitleHome",
+  );
+  const awayTitleClass = csClass(
+    componentStyles,
+    "broadcastProRosterTeamTitleAway",
+  );
+  const homeLabelClass = csClass(
+    componentStyles,
+    "broadcastProRosterTeamLabelHome",
+  );
+  const awayLabelClass = csClass(
+    componentStyles,
+    "broadcastProRosterTeamLabelAway",
+  );
 
   const panelStyle: CSSProperties = {
     ...cellBlur,

@@ -72,7 +72,12 @@ export interface Rankings {
 
 // Base player data common to all categories
 export interface BaseTeamOfTheWeekPlayer {
-  category: "Batter" | "Bowler" | "All-Rounder" | "Twelfth Man" | "Wicket-Keeper";
+  category:
+    | "Batter"
+    | "Bowler"
+    | "All-Rounder"
+    | "Twelfth Man"
+    | "Wicket-Keeper";
   categoryDetail: CategoryDetail;
   rank: number;
   player: string; // May include (c) or (vc) suffixes

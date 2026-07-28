@@ -4165,17 +4165,7 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [
-    45,
-    240,
-    525,
-    810,
-    1095,
-    1380,
-    1665,
-    1950,
-    2235
-  ],
+  "frames": [45, 240, 525, 810, 1095, 1380, 1665, 1950, 2235],
   "videoMeta": {
     "club": {
       "logo": {
@@ -4295,10 +4285,7 @@
       "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Ladder",
-        "titleSplit": [
-          "Ladder",
-          ""
-        ],
+        "titleSplit": ["Ladder", ""],
         "videoTitle": "League Tables",
         "compositionId": "CricketLadder",
         "assetId": 12,

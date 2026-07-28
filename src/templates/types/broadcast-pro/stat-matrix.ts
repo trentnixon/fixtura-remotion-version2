@@ -28,10 +28,7 @@ export const BROADCAST_PRO_BOWLING_STAT_LABELS = {
 
 /** Theme `componentStyles` keys for triple-matrix layout by tier. */
 export const BROADCAST_PRO_STAT_MATRIX_TRIPLE_TIER_KEYS: Record<
-  Exclude<
-    BroadcastProStatMatrixTier,
-    "compact" | "resultRow"
-  >,
+  Exclude<BroadcastProStatMatrixTier, "compact" | "resultRow">,
   {
     row: string;
     divider: string;

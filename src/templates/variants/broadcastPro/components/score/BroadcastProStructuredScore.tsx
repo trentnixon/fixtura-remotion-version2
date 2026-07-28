@@ -10,7 +10,10 @@ import {
 } from "../../../../../compositions/cricket/utils/broadcastPro/score/parseCricketScore";
 import { BroadcastProScoreText } from "./BroadcastProScoreText";
 
-export type BroadcastProStructuredScoreVariant = "match" | "playerStat" | "plain";
+export type BroadcastProStructuredScoreVariant =
+  | "match"
+  | "playerStat"
+  | "plain";
 
 export interface BroadcastProStructuredScoreProps {
   value: string;
@@ -60,8 +63,7 @@ export const BroadcastProStructuredScore: React.FC<
 
   if (variant === "match") {
     const parsed = parseMatchScore(value);
-    const role =
-      parsed.kind === "yetToBat" ? "matchYetToBat" : "matchTotal";
+    const role = parsed.kind === "yetToBat" ? "matchYetToBat" : "matchTotal";
 
     return (
       <BroadcastProScoreText

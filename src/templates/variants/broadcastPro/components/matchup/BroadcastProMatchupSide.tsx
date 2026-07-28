@@ -20,7 +20,9 @@ export interface BroadcastProMatchupSideProps {
   labelVariant?: ColorVariant;
 }
 
-export const BroadcastProMatchupSide: React.FC<BroadcastProMatchupSideProps> = ({
+export const BroadcastProMatchupSide: React.FC<
+  BroadcastProMatchupSideProps
+> = ({
   side,
   input,
   delay = 0,
@@ -40,7 +42,10 @@ export const BroadcastProMatchupSide: React.FC<BroadcastProMatchupSideProps> = (
       ? "broadcastProMatchupSideFixtureHome"
       : "broadcastProMatchupSideFixtureAway",
   );
-  const roleLabelClass = csClass(componentStyles, "broadcastProMatchupRoleLabel");
+  const roleLabelClass = csClass(
+    componentStyles,
+    "broadcastProMatchupRoleLabel",
+  );
   const teamNameBaseClass = csClass(
     componentStyles,
     "broadcastProMatchupFixtureTeamName",

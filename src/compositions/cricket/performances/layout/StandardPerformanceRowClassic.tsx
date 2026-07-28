@@ -33,11 +33,7 @@ export const StandardPerformanceRowClassic: React.FC<
   const { mainValue, suffix } = getScoreValues(performance);
 
   return (
-    <ClassicForegroundShell
-      height={rowHeight}
-      delay={delay}
-      depth="compact"
-    >
+    <ClassicForegroundShell height={rowHeight} delay={delay} depth="compact">
       <div
         className={`grid grid-cols-12 items-center overflow-hidden h-full ${layout.borderRadius.container}`}
       >

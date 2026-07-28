@@ -96,11 +96,7 @@ export const resolveBroadcastProTeamAccentColors = (
   }
 
   if (resultSummary?.winner) {
-    const homeWon = isHomeWinner(
-      resultSummary,
-      homeTeam.name,
-      awayTeam.name,
-    );
+    const homeWon = isHomeWinner(resultSummary, homeTeam.name, awayTeam.name);
     return assignBySide(homeWon ? "home" : "away", primary, secondary);
   }
 

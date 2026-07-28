@@ -20,7 +20,10 @@ import { BroadcastProResultTeamRow } from "./BroadcastProResultTeamRow";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
 import { csClass } from "../componentStyles";
 import { resolveBroadcastProGlass } from "../glass";
-import { buildGradeLabel, calculateBroadcastProResultDelays } from "./matchContentHelpers";
+import {
+  buildGradeLabel,
+  calculateBroadcastProResultDelays,
+} from "./matchContentHelpers";
 import { resolveBroadcastProTeamAccentColors } from "./resolveBroadcastProTeamAccentColors";
 import type { BroadcastProResultMatchData } from "./types";
 
@@ -152,7 +155,9 @@ export const BroadcastProResultMatchContent: React.FC<
   );
 
   const compactVerdictModel =
-    compactLine != null ? { kind: "compact" as const, line: compactLine } : null;
+    compactLine != null
+      ? { kind: "compact" as const, line: compactLine }
+      : null;
 
   return (
     <div

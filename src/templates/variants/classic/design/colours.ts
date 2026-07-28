@@ -37,7 +37,9 @@ export const getClassicSurfaceRoles = (
   const contentSurface = transparent.strong;
   const statRecessed = palette.container.primary;
   const backplaneBase =
-    colours?.secondary ?? palette.container.secondary ?? palette.container.primary;
+    colours?.secondary ??
+    palette.container.secondary ??
+    palette.container.primary;
 
   const edgeBase = tinycolor(contentSurface);
   const edgeHighlight = edgeBase.isDark()
@@ -65,10 +67,7 @@ export const getClassicSurfaceRoles = (
       insetBorder,
     },
     text: {
-      onContent: ensureContrast(
-        contentSurface,
-        palette.text.onContainer.copy,
-      ),
+      onContent: ensureContrast(contentSurface, palette.text.onContainer.copy),
       onStat: ensureContrast(statRecessed, palette.text.onContainer.title),
     },
   };

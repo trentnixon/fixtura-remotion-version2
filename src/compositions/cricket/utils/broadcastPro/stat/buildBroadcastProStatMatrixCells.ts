@@ -5,17 +5,17 @@ import {
   type BroadcastProStatMatrixCell,
 } from "../../../../../templates/types/broadcast-pro/stat-matrix";
 import { getBowlingEconomyDisplay } from "../../../top5/controller/PlayersDisplay/_utils/broadcastProStats";
-import {
-  PlayerData,
-  isBatter,
-  isBowler,
-} from "../../../top5/_types/types";
+import { PlayerData, isBatter, isBowler } from "../../../top5/_types/types";
 import {
   PerformanceData,
   isBattingPerformance,
   isBowlingPerformance,
 } from "../../../performances/_types/types";
-import type { BattingStats, BowlingStats, FieldingStats } from "../../../TeamOfTheWeek/types";
+import type {
+  BattingStats,
+  BowlingStats,
+  FieldingStats,
+} from "../../../TeamOfTheWeek/types";
 
 const battingTripleCells = (
   runs: number,

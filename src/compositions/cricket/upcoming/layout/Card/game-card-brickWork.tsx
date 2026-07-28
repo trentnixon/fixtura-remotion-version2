@@ -11,7 +11,11 @@ import {
   calculateAnimationOutFrame,
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
-import { LogoPlate, BRICKWORK_ROW_GAP_CLASS, BRICKWORK_ROW_GAP_STYLE } from "../../../../../templates/variants/brickwork/design";
+import {
+  LogoPlate,
+  BRICKWORK_ROW_GAP_CLASS,
+  BRICKWORK_ROW_GAP_STYLE,
+} from "../../../../../templates/variants/brickwork/design";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();

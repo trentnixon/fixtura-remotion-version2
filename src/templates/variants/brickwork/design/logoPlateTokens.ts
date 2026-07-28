@@ -5,9 +5,7 @@ export const LOGO_PLATE_PADDING_PX = 8;
 
 export const LOGO_PLATE_HERO_PADDING_PX = 12;
 
-export const getLogoPlateFit = (
-  mode: LogoPlateMode,
-): "contain" | "cover" => {
+export const getLogoPlateFit = (mode: LogoPlateMode): "contain" | "cover" => {
   if (mode === "graphicCrop") {
     return "cover";
   }

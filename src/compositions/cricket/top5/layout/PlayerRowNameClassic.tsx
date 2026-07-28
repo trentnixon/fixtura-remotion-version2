@@ -47,11 +47,7 @@ export const PlayerRowNameClassic: React.FC<PlayerRowLayoutProps> = ({
   const { mainValue, suffix } = getScoreValues(player);
 
   return (
-    <ClassicForegroundShell
-      height={rowHeight}
-      delay={delay}
-      depth="compact"
-    >
+    <ClassicForegroundShell height={rowHeight} delay={delay} depth="compact">
       <div
         className={`grid grid-cols-12 items-center overflow-hidden h-full ${layout.borderRadius.container}`}
       >

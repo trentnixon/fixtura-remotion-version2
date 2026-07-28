@@ -63,5 +63,6 @@ export const resolveBroadcastProEdgeMarkerStyle = (
 };
 
 /** Stitch qualification chip copy. */
-export const formatBroadcastProQualificationLabel = (finalsCount: number): string =>
-  `Top ${finalsCount} Qualify for Finals`;
+export const formatBroadcastProQualificationLabel = (
+  finalsCount: number,
+): string => `Top ${finalsCount} Qualify for Finals`;

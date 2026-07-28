@@ -35,7 +35,9 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
         <div>
           <TableHeaderBrickWork title={gradeName} headerHeight={headerHeight} />
 
-          <div className={`flex-1 overflow-hidden ${BRICKWORK_ROW_STACK_CLASS}`}>
+          <div
+            className={`flex-1 overflow-hidden ${BRICKWORK_ROW_STACK_CLASS}`}
+          >
             {League.map((team, index) => (
               <RowBrickWork
                 key={team.position}

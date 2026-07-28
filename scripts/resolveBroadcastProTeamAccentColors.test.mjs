@@ -62,11 +62,7 @@ const resolveBroadcastProTeamAccentColors = (input) => {
   }
 
   if (resultSummary?.winner) {
-    const homeWon = isHomeWinner(
-      resultSummary,
-      homeTeam.name,
-      awayTeam.name,
-    );
+    const homeWon = isHomeWinner(resultSummary, homeTeam.name, awayTeam.name);
     return assignBySide(homeWon ? "home" : "away", primary, secondary);
   }
 
@@ -81,7 +77,10 @@ describe("resolveBroadcastProTeamAccentColors", () => {
       secondary: SECONDARY,
       match: {
         status: "Final",
-        homeTeam: { name: "Strathmore Heights PVHCC Falcons", isClubTeam: true },
+        homeTeam: {
+          name: "Strathmore Heights PVHCC Falcons",
+          isClubTeam: true,
+        },
         awayTeam: { name: "Sydenham Hillside U14 Girls", isClubTeam: false },
         resultSummary: {
           winner: "Strathmore Heights PVHCC Falcons",
@@ -128,7 +127,10 @@ describe("resolveBroadcastProTeamAccentColors", () => {
       match: {
         status: "Final",
         homeTeam: { name: "Jacana CUBS U14", isClubTeam: false },
-        awayTeam: { name: "Strathmore Heights U14 Mixed (Fri)", isClubTeam: true },
+        awayTeam: {
+          name: "Strathmore Heights U14 Mixed (Fri)",
+          isClubTeam: true,
+        },
         resultSummary: {
           winner: "Jacana CUBS U14",
           homeTeam: "Jacana CUBS U14",
@@ -150,7 +152,10 @@ describe("resolveBroadcastProTeamAccentColors", () => {
       match: {
         status: "Final",
         homeTeam: { name: "Jacana CUBS U14", isClubTeam: false },
-        awayTeam: { name: "Strathmore Heights U14 Mixed (Fri)", isClubTeam: false },
+        awayTeam: {
+          name: "Strathmore Heights U14 Mixed (Fri)",
+          isClubTeam: false,
+        },
         resultSummary: {
           winner: "Jacana CUBS U14",
           homeTeam: "Jacana CUBS U14",

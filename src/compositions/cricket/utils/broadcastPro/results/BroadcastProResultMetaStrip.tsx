@@ -34,10 +34,7 @@ export const BroadcastProResultMetaStrip: React.FC<
   });
   const copyIn = animations.text.main.copyIn;
 
-  const stripClass = csClass(
-    componentStyles,
-    "broadcastProResultsMetaStrip",
-  );
+  const stripClass = csClass(componentStyles, "broadcastProResultsMetaStrip");
 
   return (
     <div

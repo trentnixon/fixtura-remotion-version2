@@ -18,8 +18,7 @@ export const broadcastProCompositionComponentStylesPlayerRanking = {
       "mx-4 flex min-h-0 flex-1 flex-col overflow-hidden rounded-none md:mx-6",
   },
   broadcastProPlayerRankingScrollShell: {
-    className:
-      "flex min-h-0 flex-1 flex-col overflow-hidden py-0",
+    className: "flex min-h-0 flex-1 flex-col overflow-hidden py-0",
   },
   broadcastProPlayerRankingContentStack: {
     className: "flex w-full flex-col justify-start gap-2",
@@ -86,7 +85,8 @@ export const broadcastProCompositionComponentStylesPlayerRanking = {
   },
   broadcastProPlayerRankingStatValueFeatured:
     broadcastProPlayerRankingStatScoreFeatured,
-  broadcastProPlayerRankingStatValueGrid: broadcastProPlayerRankingStatScoreGrid,
+  broadcastProPlayerRankingStatValueGrid:
+    broadcastProPlayerRankingStatScoreGrid,
   broadcastProScoreFeatured: broadcastProPlayerRankingStatScoreFeatured,
   broadcastProScoreGrid: broadcastProPlayerRankingStatScoreGrid,
   broadcastProPlayerRankingTripleStatsFeatured: {

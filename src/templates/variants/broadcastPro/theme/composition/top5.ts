@@ -1,8 +1,6 @@
 import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig";
 import { broadcastProComponentStylesShared } from "../componentStyles.shared";
-import {
-  broadcastProCompositionComponentStylesPlayerRanking,
-} from "./playerRanking";
+import { broadcastProCompositionComponentStylesPlayerRanking } from "./playerRanking";
 
 export const broadcastProCompositionComponentStylesTop5 = {
   ...broadcastProCompositionComponentStylesPlayerRanking,

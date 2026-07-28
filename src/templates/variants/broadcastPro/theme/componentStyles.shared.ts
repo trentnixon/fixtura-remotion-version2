@@ -5,7 +5,8 @@ const broadcastProScoreMatchTotal = {
 };
 
 const broadcastProScoreMatchInnings = {
-  className: "font-teko text-xl font-normal tracking-tight leading-none opacity-80",
+  className:
+    "font-teko text-xl font-normal tracking-tight leading-none opacity-80",
 };
 
 const broadcastProScoreMatchYetToBat = {
@@ -17,11 +18,13 @@ const broadcastProScorePlayerPrimary = {
 };
 
 const broadcastProScorePlayerSuffix = {
-  className: "font-teko text-sm font-normal tracking-tight leading-tight opacity-70",
+  className:
+    "font-teko text-sm font-normal tracking-tight leading-tight opacity-70",
 };
 
 const broadcastProScoreTableRank = {
-  className: "font-teko text-5xl font-normal tracking-tight leading-none uppercase",
+  className:
+    "font-teko text-5xl font-normal tracking-tight leading-none uppercase",
 };
 
 const broadcastProScoreTableStat = {
@@ -29,7 +32,8 @@ const broadcastProScoreTableStat = {
 };
 
 const broadcastProScoreTablePoints = {
-  className: "font-teko text-5xl font-bold tracking-tight leading-none text-center",
+  className:
+    "font-teko text-5xl font-bold tracking-tight leading-none text-center",
 };
 
 const broadcastProScoreFeatured = {
@@ -45,7 +49,8 @@ const broadcastProScoreCompact = {
 };
 
 const broadcastProScoreDivider = {
-  className: "font-teko text-4xl font-bold italic uppercase tracking-tight leading-none",
+  className:
+    "font-teko text-4xl font-bold italic uppercase tracking-tight leading-none",
 };
 
 const broadcastProScoreRosterIndex = {
@@ -138,8 +143,7 @@ const broadcastProMatchupSideFixtureHome = {
 };
 
 const broadcastProMatchupSideFixtureAway = {
-  className:
-    "flex min-w-0 flex-1 items-center justify-end gap-8 text-right",
+  className: "flex min-w-0 flex-1 items-center justify-end gap-8 text-right",
 };
 
 const broadcastProMatchupRoleLabel = {

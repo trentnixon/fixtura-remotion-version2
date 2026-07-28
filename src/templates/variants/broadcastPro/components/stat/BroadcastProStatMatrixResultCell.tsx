@@ -42,8 +42,14 @@ export const BroadcastProStatMatrixResultCell: React.FC<
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
   const copyIn = animations.text.main.copyIn;
-  const cellClass = csClass(componentStyles, "broadcastProStatMatrixResultCell");
-  const nameClass = csClass(componentStyles, "broadcastProStatMatrixResultName");
+  const cellClass = csClass(
+    componentStyles,
+    "broadcastProStatMatrixResultCell",
+  );
+  const nameClass = csClass(
+    componentStyles,
+    "broadcastProStatMatrixResultName",
+  );
   const valueClass = csClass(
     componentStyles,
     "broadcastProStatMatrixResultValue",

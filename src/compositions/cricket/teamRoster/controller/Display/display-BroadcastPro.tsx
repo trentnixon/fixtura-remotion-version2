@@ -64,8 +64,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
   const { glass, textOnGlass: textOnContainer } = useBroadcastProTheme();
   const availableHeight = getAvailableHeightReservingFooter(layout.heights);
   const cs = (key: string) => rosterClass(componentStyles, key);
-  const titleFontFamily =
-    fontClasses?.heading?.family ?? "Teko";
+  const titleFontFamily = fontClasses?.heading?.family ?? "Teko";
 
   const { accountHolder, against } = getTeamPerspective(roster);
   const accountLabel = roster.isHomeTeam ? "HOME TEAM" : "AWAY TEAM";

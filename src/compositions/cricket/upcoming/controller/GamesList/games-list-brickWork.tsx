@@ -8,10 +8,7 @@ import { GamesListProps } from "./_types/GamesListProps";
 
 export const GamesListBrickWork: React.FC<GamesListProps> = ({ games }) => {
   return (
-    <div
-      className={BRICKWORK_ROW_STACK_CLASS}
-      style={BRICKWORK_ROW_GAP_STYLE}
-    >
+    <div className={BRICKWORK_ROW_STACK_CLASS} style={BRICKWORK_ROW_GAP_STYLE}>
       {games.map((game, index) => (
         <GameCardBrickWork key={game.gameID} game={game} index={index} />
       ))}

@@ -23,7 +23,10 @@ export const BroadcastProStatMatrixResultGrid: React.FC<
   BroadcastProStatMatrixResultGridProps
 > = ({ items, delay, accentColor, glass, className = "", tier = "list" }) => {
   const { componentStyles } = useThemeContext();
-  const gridClass = csClass(componentStyles, "broadcastProStatMatrixResultGrid");
+  const gridClass = csClass(
+    componentStyles,
+    "broadcastProStatMatrixResultGrid",
+  );
   const resolvedGridClass =
     tier === "single" ? `${gridClass} gap-2` : gridClass;
 

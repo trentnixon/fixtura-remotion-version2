@@ -12,7 +12,12 @@ export interface BroadcastProVerticalStripMarkerProps {
 /** Vertical primary gradient strip — roster list edge, sidebar accents. */
 export const BroadcastProVerticalStripMarker: React.FC<
   BroadcastProVerticalStripMarkerProps
-> = ({ accentColor, className = "", style, "aria-hidden": ariaHidden = true }) => (
+> = ({
+  accentColor,
+  className = "",
+  style,
+  "aria-hidden": ariaHidden = true,
+}) => (
   <div
     className={className.trim() || undefined}
     style={{

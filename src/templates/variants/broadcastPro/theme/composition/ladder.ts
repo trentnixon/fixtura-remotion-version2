@@ -8,7 +8,8 @@ export const broadcastProCompositionComponentStylesLadder = {
   ladderTeamName: {
     className: "text-4xl font-normal uppercase tracking-wide leading-none",
   },
-  ladderTeamPoints: broadcastProComponentStylesShared.broadcastProScoreTablePoints,
+  ladderTeamPoints:
+    broadcastProComponentStylesShared.broadcastProScoreTablePoints,
   broadcastProLadderZoneRankLeader:
     broadcastProComponentStylesShared.broadcastProLadderZoneRankLeader,
   broadcastProLadderZoneRankDefault:

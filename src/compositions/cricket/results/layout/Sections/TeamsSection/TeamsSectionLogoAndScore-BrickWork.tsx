@@ -2,7 +2,10 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
-import { LogoPlate, useBrickworkTypography } from "../../../../../../templates/variants/brickwork/design";
+import {
+  LogoPlate,
+  useBrickworkTypography,
+} from "../../../../../../templates/variants/brickwork/design";
 import {
   ResultScore,
   ResultScoreFirstInnings,

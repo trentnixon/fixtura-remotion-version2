@@ -48,7 +48,10 @@ export {
   getEnergyAccentColor,
 } from "./diagonalAccents";
 
-export type { DiagonalEnergyEdge, DiagonalEnergyShape } from "./diagonalAccents";
+export type {
+  DiagonalEnergyEdge,
+  DiagonalEnergyShape,
+} from "./diagonalAccents";
 
 export { DiagonalEnergyAccent } from "./DiagonalEnergyAccentView";
 

@@ -16,13 +16,7 @@ export interface BroadcastProMatchupDividerProps {
 
 export const BroadcastProMatchupDivider: React.FC<
   BroadcastProMatchupDividerProps
-> = ({
-  variant,
-  delay = 0,
-  compact = false,
-  fontFamily,
-  className = "",
-}) => {
+> = ({ variant, delay = 0, compact = false, fontFamily, className = "" }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProTheme();
@@ -30,7 +24,10 @@ export const BroadcastProMatchupDivider: React.FC<
   const resolvedFont = fontFamily ?? headingFont;
 
   if (variant === "vs") {
-    const slotClass = csClass(componentStyles, "broadcastProMatchupDividerSlot");
+    const slotClass = csClass(
+      componentStyles,
+      "broadcastProMatchupDividerSlot",
+    );
     return (
       <div
         className={`${slotClass} ${className}`.trim()}

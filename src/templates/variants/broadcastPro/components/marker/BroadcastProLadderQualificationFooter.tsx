@@ -2,9 +2,7 @@ import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
-import {
-  DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING,
-} from "../../../../../templates/types/broadcast-pro/ladder-zone";
+import { DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING } from "../../../../../templates/types/broadcast-pro/ladder-zone";
 import { formatBroadcastProQualificationLabel } from "../../../../../templates/types/broadcast-pro/marker-notch";
 import { BroadcastProMarkerChip } from "./BroadcastProMarkerChip";
 

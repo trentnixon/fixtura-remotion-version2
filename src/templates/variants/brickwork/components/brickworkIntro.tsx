@@ -7,10 +7,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackLogoTitleName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
-import {
-  BRICKWORK_TITLE_BASE_CLASS,
-  useBrickworkTypography,
-} from "../design";
+import { BRICKWORK_TITLE_BASE_CLASS, useBrickworkTypography } from "../design";
 import { useFitTitleFontSize } from "../utils/useFitTitleFontSize";
 
 /**
@@ -48,10 +45,7 @@ export const BrickworkIntro: React.FC = () => {
         </div>
       }
       Title={
-        <div
-          ref={containerRef}
-          className="overflow-hidden mb-4 w-full"
-        >
+        <div ref={containerRef} className="overflow-hidden mb-4 w-full">
           <div ref={textRef}>
             <AnimatedText
               textAlign="center"
@@ -61,9 +55,7 @@ export const BrickworkIntro: React.FC = () => {
               animation={TextAnimations.mainTitle}
               exitAnimation={TextAnimations.introOut}
               exitFrame={TextAnimations.introExitFrame}
-              fontFamily={
-                fontClasses.heading?.family ?? displayFont
-              }
+              fontFamily={fontClasses.heading?.family ?? displayFont}
               className={BRICKWORK_TITLE_BASE_CLASS}
               style={fontSizeStyle}
             >

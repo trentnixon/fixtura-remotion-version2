@@ -152,10 +152,7 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [
-    390,
-    45
-  ],
+  "frames": [390, 45],
   "videoMeta": {
     "club": {
       "logo": {
@@ -275,10 +272,7 @@
       "groupingCategory": "Sydney Shires Competition",
       "metadata": {
         "title": "Top 5",
-        "titleSplit": [
-          "Bowlers",
-          ""
-        ],
+        "titleSplit": ["Bowlers", ""],
         "videoTitle": "Top 5 Bowlers",
         "compositionId": "CricketTop5Bowling",
         "assetId": 7,

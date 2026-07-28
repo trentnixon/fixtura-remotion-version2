@@ -24,7 +24,8 @@ export const broadcastProCompositionComponentStylesResults = {
   ResultMetaData: {
     className: "text-sm font-bold uppercase tracking-widest leading-snug",
   },
-  ResultStatementShort: broadcastProComponentStylesShared.broadcastProVerdictLine,
+  ResultStatementShort:
+    broadcastProComponentStylesShared.broadcastProVerdictLine,
   ResultStatementText: {
     className: "text-2xl font-semibold tracking-wider leading-snug",
   },

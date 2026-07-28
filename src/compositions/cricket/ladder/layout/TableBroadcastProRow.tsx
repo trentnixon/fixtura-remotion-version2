@@ -62,8 +62,13 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
   LadderRowHeight,
   isBiasTeam,
 }) => {
-  const { fontClasses, selectedPalette, colors, componentStyles, broadcastProLadderZoneSizing } =
-    useThemeContext();
+  const {
+    fontClasses,
+    selectedPalette,
+    colors,
+    componentStyles,
+    broadcastProLadderZoneSizing,
+  } = useThemeContext();
   const { animations } = useAnimationContext();
   const { glass } = useBroadcastProTheme();
   const accent = colors?.primary ?? selectedPalette.container.accent;

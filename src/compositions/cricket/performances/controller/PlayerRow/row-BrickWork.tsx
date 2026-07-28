@@ -28,10 +28,7 @@ const PerformanceRowBrickWork: React.FC<PerformanceRowProps> = ({
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
-    <MasonryRow
-      index={index}
-      className="overflow-hidden flex-shrink-0"
-    >
+    <MasonryRow index={index} className="overflow-hidden flex-shrink-0">
       <AnimatedContainer
         type="full"
         className="relative rounded-lg flex-shrink-0"
@@ -46,13 +43,13 @@ const PerformanceRowBrickWork: React.FC<PerformanceRowProps> = ({
           <DiagonalEnergyAccent edge="trailing" shape="diagonalBand" />
         )}
         <div className="relative z-10">
-        <StandardPerformanceRowBrickWork
-          performance={performance}
-          index={index}
-          rowHeight={rowHeight}
-          delay={delay}
-          restrictions={{ nameLength: 20, teamLength: 35 }}
-        />
+          <StandardPerformanceRowBrickWork
+            performance={performance}
+            index={index}
+            rowHeight={rowHeight}
+            delay={delay}
+            restrictions={{ nameLength: 20, teamLength: 35 }}
+          />
         </div>
       </AnimatedContainer>
     </MasonryRow>

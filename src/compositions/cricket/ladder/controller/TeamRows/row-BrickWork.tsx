@@ -43,9 +43,7 @@ export const RowBrickWork: React.FC<TeamRowProps> = ({
     rowBackground = roles.status.ladderBottom;
   } else {
     rowBackground =
-      index % 2 === 0
-        ? roles.neutral.surfaceFeatured
-        : roles.neutral.surface;
+      index % 2 === 0 ? roles.neutral.surfaceFeatured : roles.neutral.surface;
   }
 
   return (

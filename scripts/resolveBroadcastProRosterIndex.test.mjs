@@ -7,8 +7,10 @@ import { describe, it } from "node:test";
 
 const BROADCAST_PRO_ROSTER_INDEX_PAD_WIDTH = 2;
 
-const formatBroadcastProRosterIndex = (index, padWidth = BROADCAST_PRO_ROSTER_INDEX_PAD_WIDTH) =>
-  String(index + 1).padStart(padWidth, "0");
+const formatBroadcastProRosterIndex = (
+  index,
+  padWidth = BROADCAST_PRO_ROSTER_INDEX_PAD_WIDTH,
+) => String(index + 1).padStart(padWidth, "0");
 
 const resolveBroadcastProRosterIndex = (index) => {
   if (index === 0) {

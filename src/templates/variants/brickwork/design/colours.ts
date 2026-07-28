@@ -85,10 +85,7 @@ export const getBrickworkColourRoles = (
       accountBias: BRICKWORK_STATUS_ACCOUNT_BIAS,
     },
     text: {
-      onNeutral: ensureContrast(
-        neutralSurface,
-        palette.text.onContainer.copy,
-      ),
+      onNeutral: ensureContrast(neutralSurface, palette.text.onContainer.copy),
       onPrimary: ensureContrast(primaryBlock, palette.text.onContainer.copy),
       onStatus: ensureContrast(
         BRICKWORK_STATUS_LADDER_TOP,

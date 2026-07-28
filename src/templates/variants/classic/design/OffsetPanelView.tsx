@@ -37,10 +37,8 @@ export const ClassicOffsetPanel: React.FC<ClassicOffsetPanelProps> = ({
   });
   const depthTokens = getOffsetPanelDepthTokens(depth);
   const { offsetX, offsetY, shadow } = depthTokens;
-  const layerWidth =
-    offsetX > 0 ? `calc(100% - ${offsetX}px)` : "100%";
-  const layerHeight =
-    offsetY > 0 ? `calc(100% - ${offsetY}px)` : "100%";
+  const layerWidth = offsetX > 0 ? `calc(100% - ${offsetX}px)` : "100%";
+  const layerHeight = offsetY > 0 ? `calc(100% - ${offsetY}px)` : "100%";
 
   return (
     <div

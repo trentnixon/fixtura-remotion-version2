@@ -23,10 +23,7 @@ export const BroadcastProZoneDividerNotch: React.FC<
   const ruleColor = tinycolor(accentColor).setAlpha(0.12).toRgbString();
 
   return (
-    <div
-      className={`${notchClass} ${className}`.trim()}
-      aria-hidden
-    >
+    <div className={`${notchClass} ${className}`.trim()} aria-hidden>
       <div className="h-px flex-1" style={{ backgroundColor: ruleColor }} />
       <div
         className="mx-2 h-1 w-6 shrink-0"

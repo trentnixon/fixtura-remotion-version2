@@ -739,12 +739,7 @@
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [
-    45,
-    240,
-    525,
-    705
-  ],
+  "frames": [45, 240, 525, 705],
   "render": {
     "renderId": 29050,
     "schedulerId": 195
@@ -894,9 +889,7 @@
         "title": "Results",
         "frames": [],
         "assetId": 4,
-        "titleSplit": [
-          "Results"
-        ],
+        "titleSplit": ["Results"],
         "videoTitle": "Weekend Results",
         "assetTypeId": 2,
         "compositionId": "CricketResults",

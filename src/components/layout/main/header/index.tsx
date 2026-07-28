@@ -35,7 +35,10 @@ import {
   TwoColumnVerticalHeaderTitleOnly,
   TwoColumnVerticalHeaderLogoTitle,
 } from "./variants/TwoColumnLayout";
-import { InlineHeaderLogoTitle, InlineHeaderLogoColonTitle } from "./variants/InlineRowLayout";
+import {
+  InlineHeaderLogoTitle,
+  InlineHeaderLogoColonTitle,
+} from "./variants/InlineRowLayout";
 
 // Re-export the types
 export * from "./types";

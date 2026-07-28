@@ -82,5 +82,4 @@ export const resolveBroadcastProTextOnGlass = (
 export const resolveBroadcastProCopyOnBackground = (
   background: string,
   selectedPalette: DesignPalette,
-): string =>
-  ensureContrast(background, selectedPalette.text.onContainer.copy);
+): string => ensureContrast(background, selectedPalette.text.onContainer.copy);

@@ -44,10 +44,14 @@ export const BroadcastProResultVerdict: React.FC<
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY[tier];
   const bandClass = csClass(componentStyles, bandKey);
 
-  const edgeMarkerStyle = resolveBroadcastProEdgeMarkerStyle("standard", "primary", {
-    accentColor,
-    mutedColor: accentColor,
-  });
+  const edgeMarkerStyle = resolveBroadcastProEdgeMarkerStyle(
+    "standard",
+    "primary",
+    {
+      accentColor,
+      mutedColor: accentColor,
+    },
+  );
 
   if (tier === "hero" && model.kind === "hero") {
     return (

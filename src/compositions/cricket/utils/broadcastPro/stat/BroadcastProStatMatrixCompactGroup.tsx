@@ -12,9 +12,7 @@ import {
 } from "../../../TeamOfTheWeek/controller/PlayerRow/_utils/helpers";
 import type { TeamOfTheWeekPlayer } from "../../../TeamOfTheWeek/types";
 import { BroadcastProStatMatrixCompact } from "../../../../../templates/variants/broadcastPro/components/stat";
-import {
-  BOWLING_STAT_DELAY_OFFSET,
-} from "../../../TeamOfTheWeek/controller/PlayerRow/_utils/constants";
+import { BOWLING_STAT_DELAY_OFFSET } from "../../../TeamOfTheWeek/controller/PlayerRow/_utils/constants";
 
 export interface BroadcastProStatMatrixCompactGroupProps {
   player: TeamOfTheWeekPlayer;
@@ -26,7 +24,13 @@ export interface BroadcastProStatMatrixCompactGroupProps {
 
 export const BroadcastProStatMatrixCompactGroup: React.FC<
   BroadcastProStatMatrixCompactGroupProps
-> = ({ player, delay, className = "", statClassName = "", statSuffixClassName = "" }) => {
+> = ({
+  player,
+  delay,
+  className = "",
+  statClassName = "",
+  statSuffixClassName = "",
+}) => {
   const { animations } = useAnimationContext();
   const { fontClasses, fonts } = useThemeContext();
   const copyIn = animations.text.main.copyIn;
@@ -73,7 +77,10 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
   ) {
     return (
       <div className={statRowClass}>
-        {renderCompact(formatBroadcastProCompactBattingStat(player.batting), delay)}
+        {renderCompact(
+          formatBroadcastProCompactBattingStat(player.batting),
+          delay,
+        )}
       </div>
     );
   }
@@ -85,7 +92,10 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
   ) {
     return (
       <div className={statRowClass}>
-        {renderCompact(formatBroadcastProCompactBowlingStat(player.bowling), delay)}
+        {renderCompact(
+          formatBroadcastProCompactBowlingStat(player.bowling),
+          delay,
+        )}
       </div>
     );
   }
@@ -109,14 +119,20 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
     if (player.batting) {
       return (
         <div className={statRowClass}>
-          {renderCompact(formatBroadcastProCompactBattingStat(player.batting), delay)}
+          {renderCompact(
+            formatBroadcastProCompactBattingStat(player.batting),
+            delay,
+          )}
         </div>
       );
     }
     if (player.bowling) {
       return (
         <div className={statRowClass}>
-          {renderCompact(formatBroadcastProCompactBowlingStat(player.bowling), delay)}
+          {renderCompact(
+            formatBroadcastProCompactBowlingStat(player.bowling),
+            delay,
+          )}
         </div>
       );
     }
@@ -126,7 +142,10 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
   if (player.batting) {
     return (
       <div className={statRowClass}>
-        {renderCompact(formatBroadcastProCompactBattingStat(player.batting), delay)}
+        {renderCompact(
+          formatBroadcastProCompactBattingStat(player.batting),
+          delay,
+        )}
       </div>
     );
   }
@@ -134,7 +153,10 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
   if (player.bowling) {
     return (
       <div className={statRowClass}>
-        {renderCompact(formatBroadcastProCompactBowlingStat(player.bowling), delay)}
+        {renderCompact(
+          formatBroadcastProCompactBowlingStat(player.bowling),
+          delay,
+        )}
       </div>
     );
   }

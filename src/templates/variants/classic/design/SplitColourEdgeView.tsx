@@ -40,7 +40,10 @@ const AnimatedRail: React.FC<{
   startFrame: number;
   animate: boolean;
 }> = ({ style, animation, startFrame, animate }) => {
-  const animStyle = useAnimation(animate ? animation : { type: "none" }, startFrame);
+  const animStyle = useAnimation(
+    animate ? animation : { type: "none" },
+    startFrame,
+  );
   return <div style={{ ...style, ...animStyle }} />;
 };
 
@@ -67,8 +70,7 @@ export const SplitColourEdge: React.FC<SplitColourEdgeProps> = ({
     secondaryColor ?? colors.secondary ?? selectedPalette.container.secondary;
   const edgeColours = resolveSplitEdgeColours(rawPrimary, rawSecondary);
   const baseTokens = tokensProp ?? DEFAULT_SPLIT_EDGE_TOKENS;
-  const motionOrientation =
-    orientation === "corner" ? "vertical" : orientation;
+  const motionOrientation = orientation === "corner" ? "vertical" : orientation;
   const railAnimations = getSplitEdgeRailAnimations(motionOrientation);
   const secondaryStartFrame = animationDelay + SPLIT_EDGE_ANIMATION_STAGGER;
 
@@ -104,7 +106,11 @@ export const SplitColourEdge: React.FC<SplitColourEdgeProps> = ({
         : placement === "trailing"
           ? "topTrailing"
           : "topLeading";
-    const cornerStyles = getCornerSplitEdgeStyle(corner, edgeColours, baseTokens);
+    const cornerStyles = getCornerSplitEdgeStyle(
+      corner,
+      edgeColours,
+      baseTokens,
+    );
 
     return (
       <div

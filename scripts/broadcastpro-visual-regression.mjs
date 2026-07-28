@@ -21,8 +21,14 @@ const DATASETS = [
   { id: "CricketUpcoming", file: "Cricket_upcoming.json" },
   { id: "CricketTop5Batting", file: "Cricket_Top5Batters.json" },
   { id: "CricketTop5Bowling", file: "Cricket_Top5Bowlers.json" },
-  { id: "CricketBattingPerformances", file: "Cricket_BattingPerformances.json" },
-  { id: "CricketBowlingPerformances", file: "Cricket_BowlingPerformances.json" },
+  {
+    id: "CricketBattingPerformances",
+    file: "Cricket_BattingPerformances.json",
+  },
+  {
+    id: "CricketBowlingPerformances",
+    file: "Cricket_BowlingPerformances.json",
+  },
   { id: "CricketResults", file: "Cricket_Results.json" },
   { id: "CricketRoster", file: "Cricket_Roster.json" },
   { id: "CricketResultSingle", file: "Cricket_WeekendResultsSingle.json" },
