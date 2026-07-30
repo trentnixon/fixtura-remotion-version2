@@ -27,7 +27,7 @@ export const BroadcastProStatMatrixTriple: React.FC<
   const tierKeys = BROADCAST_PRO_STAT_MATRIX_TRIPLE_TIER_KEYS[tier];
   const rowClass = csClass(componentStyles, tierKeys.row);
   const dividerClass = csClass(componentStyles, tierKeys.divider);
-  const labelClass = csClass(componentStyles, "broadcastProStatMatrixLabel");
+  const labelClass = csClass(componentStyles, tierKeys.label);
 
   const performancesBorderStyle =
     tier === "performancesTriple" ? { borderTop: glass.border } : undefined;

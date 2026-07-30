@@ -11,7 +11,7 @@ import {
   DEFAULT_CONTAINER_ANIMATION,
   DEFAULT_CONTAINER_EXIT_ANIMATION,
 } from "./_utils/animations";
-import { getAvailableHeightReservingFooter } from "./_utils/helpers";
+import { getMainContentHeightReservingFooter } from "../../../../../core/utils/layoutHeights";
 import type { ComponentStyles } from "../../../../../core/context/types/ThemeContextTypes";
 import type { BroadcastProGlassStyle } from "../../../utils/broadcastPro/glass";
 
@@ -62,7 +62,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
 }) => {
   const { layout, fontClasses, componentStyles } = useThemeContext();
   const { glass, textOnGlass: textOnContainer } = useBroadcastProTheme();
-  const availableHeight = getAvailableHeightReservingFooter(layout.heights);
+  const availableHeight = getMainContentHeightReservingFooter(layout.heights);
   const cs = (key: string) => rosterClass(componentStyles, key);
   const titleFontFamily = fontClasses?.heading?.family ?? "Teko";
 
@@ -71,7 +71,10 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
   const opponentLabel = roster.isHomeTeam ? "AWAY TEAM" : "HOME TEAM";
 
   return (
-    <div className={cs("broadcastProRosterRoot")}>
+    <div
+      className={cs("broadcastProRosterRoot")}
+      style={{ height: `${availableHeight}px` }}
+    >
       <AnimatedContainer
         type="full"
         className={`${cs("broadcastProRosterAnimatedContainer")} ${layout.borderRadius.container}`}
@@ -92,6 +95,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
               <BroadcastProRosterSheet
                 players={roster.teamRoster}
                 availableHeightPx={availableHeight}
+                nameColor={textOnContainer.copy}
               />
             </div>
 

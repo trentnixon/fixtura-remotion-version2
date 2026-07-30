@@ -11,6 +11,7 @@ import {
   isAllRounderPosition,
 } from "../../../TeamOfTheWeek/controller/PlayerRow/_utils/helpers";
 import type { TeamOfTheWeekPlayer } from "../../../TeamOfTheWeek/types";
+import type { BroadcastProTextOnContainer } from "../themeColors";
 import { BroadcastProStatMatrixCompact } from "../../../../../templates/variants/broadcastPro/components/stat";
 import { BOWLING_STAT_DELAY_OFFSET } from "../../../TeamOfTheWeek/controller/PlayerRow/_utils/constants";
 
@@ -20,6 +21,7 @@ export interface BroadcastProStatMatrixCompactGroupProps {
   className?: string;
   statClassName?: string;
   statSuffixClassName?: string;
+  text?: BroadcastProTextOnContainer;
 }
 
 export const BroadcastProStatMatrixCompactGroup: React.FC<
@@ -30,12 +32,16 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
   className = "",
   statClassName = "",
   statSuffixClassName = "",
+  text,
 }) => {
   const { animations } = useAnimationContext();
   const { fontClasses, fonts } = useThemeContext();
   const copyIn = animations.text.main.copyIn;
   const headingFont =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
+
+  const statPrimaryStyle = text ? { color: text.copy } : undefined;
+  const statSuffixStyle = text ? { color: text.muted } : undefined;
 
   const renderCompact = (value: string, statDelay: number) => (
     <BroadcastProStatMatrixCompact
@@ -44,6 +50,8 @@ export const BroadcastProStatMatrixCompactGroup: React.FC<
       fontFamily={headingFont}
       className={statClassName}
       suffixClassName={statSuffixClassName}
+      primaryStyle={statPrimaryStyle}
+      suffixStyle={statSuffixStyle}
     />
   );
 

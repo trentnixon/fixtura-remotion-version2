@@ -13,6 +13,7 @@ export interface AnimatedTextPrimitiveProps {
   animation: AnimationConfig | null;
   className?: string;
   variant?: string | ColorVariant;
+  style?: CSSProperties;
 }
 
 /**
@@ -24,6 +25,7 @@ export interface AnimatedTextPrimitivePropsRequiredAnimation {
   className?: string;
   variant?: string | ColorVariant;
   fontFamily?: string;
+  style?: CSSProperties;
 }
 
 /**

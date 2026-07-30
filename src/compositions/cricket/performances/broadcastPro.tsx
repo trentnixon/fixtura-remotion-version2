@@ -13,6 +13,10 @@ import PerformancesDisplayBroadcastPro from "./controller/PerformancesDisplay/di
 import { SponsorFooter } from "../sponsorFooter/index";
 import { AssignSponsors } from "../_types/composition-types";
 import {
+  getCompositionSectionHeight,
+  getMainContentSectionHeight,
+} from "../../../core/utils/layoutHeights";
+import {
   calculateDisplayDurationPerScreen,
   hasValidPerformances,
   calculateTotalScreens,
@@ -73,9 +77,18 @@ export const PerformancesListBroadcastPro: React.FC = () => {
 
   const mergedAssignSponsors = mergeAssignSponsors(transformedData);
 
+  const mainContentHeight = getMainContentSectionHeight(heights);
+  const compositionHeight = getCompositionSectionHeight(heights);
+
   return (
-    <div className="flex h-full w-full flex-col">
-      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+    <div
+      className="flex w-full flex-col"
+      style={{ height: `${compositionHeight}px` }}
+    >
+      <div
+        className="relative overflow-hidden"
+        style={{ height: `${mainContentHeight}px` }}
+      >
         <TransitionSeriesWrapper
           sequences={sequences}
           transitionType={transitionConfig.type as TransitionType}

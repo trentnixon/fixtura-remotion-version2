@@ -33,23 +33,35 @@ export function computeBroadcastProRosterPlayerListMetrics(
   const n = Math.max(1, playerCount);
   const listHeightPx = Math.max(
     s.minRowPx * n,
-    availableHeightPx - s.leftColumnHeaderReservePx,
+    availableHeightPx -
+      s.leftColumnHeaderReservePx -
+      s.listChromeReservePx,
   );
 
   const gapPx = n <= 15 ? 8 : n <= 22 ? 6 : n <= 28 ? 4 : 2;
-
   const totalGaps = (n - 1) * gapPx;
-  const rowPx = Math.max(
+
+  let rowPx = Math.max(
     s.minRowPx,
     Math.floor((listHeightPx - totalGaps) / n),
   );
 
+  while (n * rowPx + totalGaps > listHeightPx && rowPx > s.minRowPx) {
+    rowPx -= 1;
+  }
+
+  const cellPaddingYPx = Math.max(4, Math.min(14, Math.floor(rowPx * 0.2)));
+  const cellPaddingXPx = Math.max(12, Math.min(24, Math.floor(rowPx * 0.35)));
+  const innerNamePx = Math.max(12, rowPx - 2 * cellPaddingYPx);
+
   const nameInnerMax = Math.min(
     s.maxNameFontPx - s.nameInnerClampMaxOffsetPx,
     rowPx * s.nameRowHeightMultiplier,
+    innerNamePx - 2,
   );
   const nameFontPx = Math.min(
     s.maxNameFontPx,
+    innerNamePx,
     Math.max(
       s.minNameFontPx,
       Math.round(Math.max(s.minNameFontPx, nameInnerMax)) + s.nameFontBonusPx,
@@ -58,12 +70,14 @@ export function computeBroadcastProRosterPlayerListMetrics(
   const numFontPx = Math.round(
     Math.max(
       s.minNumberFontPx,
-      Math.min(s.maxNumberFontPx, rowPx * s.numberRowHeightMultiplier),
+      Math.min(
+        s.maxNumberFontPx,
+        innerNamePx,
+        rowPx * s.numberRowHeightMultiplier,
+      ),
     ),
   );
 
-  const cellPaddingYPx = Math.max(4, Math.min(14, Math.floor(rowPx * 0.2)));
-  const cellPaddingXPx = Math.max(12, Math.min(24, Math.floor(rowPx * 0.35)));
   /** Stitch index column: w-16 (64px). */
   const numColWidthPx = 64;
 

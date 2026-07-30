@@ -31,6 +31,8 @@ export interface BroadcastProThemeComponentStyles {
   broadcastProScoreFeatured?: ComponentStyle;
   /** Top5 / Performances grid stat. */
   broadcastProScoreGrid?: ComponentStyle;
+  /** Performances grid stat (larger than Top 5 grid). */
+  broadcastProScorePerformances?: ComponentStyle;
   /** TotW compact card stat. */
   broadcastProScoreCompact?: ComponentStyle;
   /** VS / matchup divider. */
@@ -261,6 +263,7 @@ export interface BroadcastProThemeComponentStyles {
   broadcastProPlayerRankingTeamGridPerformances?: ComponentStyle;
   /** Top 5 / Performances: stat micro-label. */
   broadcastProPlayerRankingStatLabel?: ComponentStyle;
+  broadcastProPlayerRankingStatLabelPerformances?: ComponentStyle;
   /** Top 5: #1 stat value. */
   broadcastProPlayerRankingStatValueFeatured?: ComponentStyle;
   /** Top 5 / Performances: grid stat value. */
@@ -279,6 +282,7 @@ export interface BroadcastProThemeComponentStyles {
   broadcastProPlayerRankingStatDividerPerformances?: ComponentStyle;
   /** Stat matrix: Rajdhani micro-label (Top 5 / Performances). */
   broadcastProStatMatrixLabel?: ComponentStyle;
+  broadcastProStatMatrixLabelPerformances?: ComponentStyle;
   /** Stat matrix: featured triple row (#1 Top 5). */
   broadcastProStatMatrixTripleFeatured?: ComponentStyle;
   /** Stat matrix: grid triple row (Top 5 #2–5). */

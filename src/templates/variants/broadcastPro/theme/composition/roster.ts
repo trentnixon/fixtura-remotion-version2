@@ -7,13 +7,13 @@ import { broadcastProComponentStylesShared } from "../componentStyles.shared";
  */
 export const broadcastProCompositionComponentStylesRoster = {
   RosterPlayerName: {
-    /** `block` + `leading-none`: avoid `flex` on AnimatedText root (extra line-box vs glyphs; breaks vertical center in row cells). */
+    /** `block` + relaxed leading: Teko caps need room inside fixed row cells. */
     className:
-      "font-teko block min-w-0 truncate font-normal uppercase leading-none tracking-wide",
+      "font-teko block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide",
   },
 
   broadcastProRosterRoot: {
-    className: "mt-8 flex h-full min-h-0 w-full flex-col p-0",
+    className: "flex h-full min-h-0 w-full flex-col p-0 pt-6",
   },
   broadcastProRosterPlayerNumber: {
     className:
@@ -42,7 +42,7 @@ export const broadcastProCompositionComponentStylesRoster = {
   },
   broadcastProRosterRow: {
     className:
-      "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2 overflow-hidden",
+      "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2",
   },
   broadcastProRosterNameCell: {
     className:

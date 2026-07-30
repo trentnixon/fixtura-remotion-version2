@@ -5,6 +5,7 @@ import type { ColorVariant } from "../../../../../components/typography/Animated
 import LadderTeamName from "../../../../../compositions/cricket/utils/primitives/ladderTeamName";
 import { MetadataMedium } from "../../../../../compositions/cricket/utils/primitives/metadataMedium";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
+import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
 import type { BroadcastProMatchupSideInput } from "../../../../../templates/types/broadcast-pro/matchup";
 import { BroadcastProCrestWell } from "../crest/BroadcastProCrestWell";
@@ -34,6 +35,7 @@ export const BroadcastProMatchupSide: React.FC<
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
+  const { text } = useBroadcastProTheme();
   const copyIn = animations.text.main.copyIn;
 
   const sideClass = csClass(
@@ -80,6 +82,7 @@ export const BroadcastProMatchupSide: React.FC<
             animation={{ ...copyIn, delay: labelDelay }}
             className={roleLabelClass}
             variant={labelVariant}
+            style={{ color: text.secondary }}
           />
         )}
         <LadderTeamName
@@ -90,6 +93,7 @@ export const BroadcastProMatchupSide: React.FC<
           letterAnimation="none"
           className={teamNameClass}
           fontFamily={fontFamily}
+          style={{ color: text.copy }}
         />
       </div>
       {!isHome && (

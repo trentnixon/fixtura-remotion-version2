@@ -11,10 +11,10 @@ export const broadcastProCompositionComponentStylesResults = {
     className: "text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "text-lg font-semibold leading-tight opacity-70",
+    className: "text-2xl font-semibold leading-tight opacity-70",
   },
   ResultPlayerScore: {
-    className: "font-teko text-xl font-bold tracking-tight leading-tight",
+    className: "font-teko text-4xl font-bold tracking-tight leading-tight",
   },
   ResultSyntax: {
     className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4",

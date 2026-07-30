@@ -5,6 +5,7 @@ import type {
   AnimationType,
 } from "../../../../../components/typography/config/animations";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import { BROADCAST_PRO_VERDICT_ROLE_THEME_KEY } from "../../../../../templates/types/broadcast-pro/verdict-typography";
 
 export interface BroadcastProVerdictHeroLockupProps {
@@ -29,6 +30,7 @@ export const BroadcastProVerdictHeroLockup: React.FC<
   accentColor,
 }) => {
   const { componentStyles, fontClasses, fonts } = useThemeContext();
+  const { text } = useBroadcastProTheme();
   const copyIn = animation;
   const headingFont =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
@@ -73,6 +75,7 @@ export const BroadcastProVerdictHeroLockup: React.FC<
         exitAnimation={exitAnimation}
         exitFrame={exitFrame}
         letterAnimation="word"
+        style={{ color: text.copy }}
       >
         {contextLine}
       </AnimatedText>

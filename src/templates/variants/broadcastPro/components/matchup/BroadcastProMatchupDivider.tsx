@@ -40,6 +40,7 @@ export const BroadcastProMatchupDivider: React.FC<
           animation={{ ...copyIn, delay: delay + 9 }}
           fontFamily={resolvedFont}
           compact={compact}
+          style={{ color: textOnGlass.copy }}
         />
       </div>
     );

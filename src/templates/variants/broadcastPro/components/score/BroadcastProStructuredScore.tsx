@@ -27,6 +27,8 @@ export interface BroadcastProStructuredScoreProps {
   className?: string;
   suffixClassName?: string;
   fontFamily?: string;
+  primaryStyle?: React.CSSProperties;
+  suffixStyle?: React.CSSProperties;
 }
 
 export const BroadcastProStructuredScore: React.FC<
@@ -43,6 +45,8 @@ export const BroadcastProStructuredScore: React.FC<
   className = "",
   suffixClassName = "",
   fontFamily,
+  primaryStyle,
+  suffixStyle,
 }) => {
   const resolvedPrimaryVariant = primaryVariant ?? colorVariant;
 
@@ -57,6 +61,7 @@ export const BroadcastProStructuredScore: React.FC<
         exitFrame={exitFrame}
         className={className}
         fontFamily={fontFamily}
+        style={primaryStyle}
       />
     );
   }
@@ -75,6 +80,7 @@ export const BroadcastProStructuredScore: React.FC<
         exitFrame={exitFrame}
         className={className}
         fontFamily={fontFamily}
+        style={primaryStyle}
       />
     );
   }
@@ -101,6 +107,7 @@ export const BroadcastProStructuredScore: React.FC<
         exitFrame={exitFrame}
         fontFamily={fontFamily}
         className={[className, "inline"].filter(Boolean).join(" ")}
+        style={primaryStyle}
       />
       {suffix ? (
         <>
@@ -119,6 +126,7 @@ export const BroadcastProStructuredScore: React.FC<
             exitFrame={exitFrame}
             fontFamily={fontFamily}
             className={[suffixClassName, "inline"].filter(Boolean).join(" ")}
+            style={suffixStyle}
           />
         </>
       ) : null}

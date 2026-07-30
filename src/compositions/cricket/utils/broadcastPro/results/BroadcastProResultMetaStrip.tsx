@@ -2,7 +2,7 @@ import React from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataMedium } from "../../primitives/metadataMedium";
-import { cellBlur, csClass, resolveBroadcastProGlass } from "../index";
+import { cellBlur, csClass, useBroadcastProTheme } from "../index";
 import { resolveBroadcastProEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro/marker-notch";
 
 export interface BroadcastProResultMetaStripProps {
@@ -18,20 +18,8 @@ export const BroadcastProResultMetaStrip: React.FC<
   BroadcastProResultMetaStripProps
 > = ({ gradeLabel, ground, delay = 0, className = "", showGround = true }) => {
   const { animations } = useAnimationContext();
-  const {
-    componentStyles,
-    selectedPalette,
-    colors,
-    broadcastProGlassOpacity,
-    broadcastProTransparentLayers,
-  } = useThemeContext();
-
-  const accent = colors?.primary ?? selectedPalette.container.accent;
-  const glass = resolveBroadcastProGlass({
-    surfaceBase: selectedPalette.container.background,
-    broadcastProGlassOpacity,
-    broadcastProTransparentLayers,
-  });
+  const { componentStyles } = useThemeContext();
+  const { glass, text, accent } = useBroadcastProTheme();
   const copyIn = animations.text.main.copyIn;
 
   const stripClass = csClass(componentStyles, "broadcastProResultsMetaStrip");
@@ -53,6 +41,7 @@ export const BroadcastProResultMetaStrip: React.FC<
         animation={{ ...copyIn, delay }}
         className="truncate font-bold uppercase tracking-widest"
         variant="onContainerCopy"
+        style={{ color: text.copy }}
       />
       {showGround && ground ? (
         <MetadataMedium
@@ -60,6 +49,7 @@ export const BroadcastProResultMetaStrip: React.FC<
           animation={{ ...copyIn, delay: delay + 2 }}
           className="ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider"
           variant="onContainerCopy"
+          style={{ color: text.muted }}
         />
       ) : null}
     </div>

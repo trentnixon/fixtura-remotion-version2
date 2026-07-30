@@ -83,6 +83,10 @@ export const broadcastProCompositionComponentStylesPlayerRanking = {
     className:
       "font-rajdhani mb-0.5 text-base font-bold uppercase tracking-widest",
   },
+  broadcastProPlayerRankingStatLabelPerformances: {
+    className:
+      "font-rajdhani mb-0.5 text-xl font-bold uppercase tracking-widest",
+  },
   broadcastProPlayerRankingStatValueFeatured:
     broadcastProPlayerRankingStatScoreFeatured,
   broadcastProPlayerRankingStatValueGrid:
@@ -129,6 +133,7 @@ export const broadcastProCompositionComponentStylesPlayerRanking = {
   | "broadcastProPlayerRankingTeamGridTop5"
   | "broadcastProPlayerRankingTeamGridPerformances"
   | "broadcastProPlayerRankingStatLabel"
+  | "broadcastProPlayerRankingStatLabelPerformances"
   | "broadcastProPlayerRankingStatValueFeatured"
   | "broadcastProPlayerRankingStatValueGrid"
   | "broadcastProScoreFeatured"

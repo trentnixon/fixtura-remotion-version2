@@ -108,7 +108,7 @@ export const TransitionSeriesWrapper: React.FC<
   const timingFn = getTiming(timing);
 
   return (
-    <TransitionSeries from={17}>
+    <TransitionSeries from={29}>
       {sequences.map((sequence, index) => (
         <React.Fragment key={index}>
           <TransitionSeries.Sequence

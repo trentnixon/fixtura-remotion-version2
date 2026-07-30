@@ -4,6 +4,7 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { ResultPlayerName } from "../../../../../compositions/cricket/utils/primitives/ResultPlayerName";
 import { BroadcastProGlassPanel } from "../../../../../compositions/cricket/utils/broadcastPro/results/BroadcastProGlassPanel";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
+import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
 import { BroadcastProStatMatrixCompact } from "./BroadcastProStatMatrixCompact";
 
@@ -26,6 +27,10 @@ const SINGLE_STAT_PRIMARY_CLASS =
   "font-teko !text-6xl font-bold !tracking-wide !leading-none";
 const SINGLE_STAT_SUFFIX_CLASS =
   "font-teko !text-3xl font-normal !tracking-wider !leading-none opacity-70";
+const LIST_STAT_PRIMARY_CLASS =
+  "font-teko !text-3xl font-bold !tracking-tight !leading-tight";
+const LIST_STAT_SUFFIX_CLASS =
+  "font-teko !text-2xl font-normal !tracking-tight !leading-tight opacity-70";
 
 export const BroadcastProStatMatrixResultCell: React.FC<
   BroadcastProStatMatrixResultCellProps
@@ -41,6 +46,7 @@ export const BroadcastProStatMatrixResultCell: React.FC<
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
+  const { text, accent: themeAccent } = useBroadcastProTheme();
   const copyIn = animations.text.main.copyIn;
   const cellClass = csClass(
     componentStyles,
@@ -65,17 +71,22 @@ export const BroadcastProStatMatrixResultCell: React.FC<
     .join(" ");
 
   const statBlock = (
-    <div
-      className={isSingle ? "w-full" : valueClass}
-      style={highlight ? { color: accentColor } : undefined}
-    >
+    <div className={isSingle ? "w-full" : valueClass}>
       <BroadcastProStatMatrixCompact
         value={statValue}
         animation={{ ...copyIn, delay: delay + 2 }}
         colorVariant={highlight ? "onContainerTitle" : "onContainerCopy"}
         fontFamily={headingFont}
-        className={isSingle ? SINGLE_STAT_PRIMARY_CLASS : undefined}
-        suffixClassName={isSingle ? SINGLE_STAT_SUFFIX_CLASS : undefined}
+        className={
+          isSingle ? SINGLE_STAT_PRIMARY_CLASS : LIST_STAT_PRIMARY_CLASS
+        }
+        suffixClassName={
+          isSingle ? SINGLE_STAT_SUFFIX_CLASS : LIST_STAT_SUFFIX_CLASS
+        }
+        primaryStyle={{
+          color: highlight ? accentColor || themeAccent : text.copy,
+        }}
+        suffixStyle={{ color: highlight ? accentColor || themeAccent : text.muted }}
       />
     </div>
   );
@@ -86,6 +97,7 @@ export const BroadcastProStatMatrixResultCell: React.FC<
       animation={{ ...copyIn, delay }}
       variant="onContainerCopy"
       className={resolvedNameClass}
+      style={{ color: text.copy }}
     />
   );
 

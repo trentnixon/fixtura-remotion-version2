@@ -26,53 +26,31 @@ const formatUpcomingTeamName = (teamName: string): string =>
 
 const HEADER_STRIP_H = 40;
 const GROUND_STRIP_H = 36;
-/** Flush strips + glass; list gap handles separation between fixtures */
-const STRIP_GLASS_GAP = 0;
 
 export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   game,
   index,
-  gameRowHeight,
 }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
   const { fontClasses } = useThemeContext();
-  const { glass, accent } = useBroadcastProTheme();
+  const { glass, accent, text } = useBroadcastProTheme();
   const ContainerAnimations = animations.container;
 
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   const headingFont = fontClasses.heading?.family;
-
-  const glassPanelHeight =
-    gameRowHeight != null
-      ? Math.max(
-          gameRowHeight - HEADER_STRIP_H - GROUND_STRIP_H - STRIP_GLASS_GAP,
-          96,
-        )
-      : null;
-  const compact = glassPanelHeight != null ? glassPanelHeight < 140 : false;
-
   const metaVariant: ColorVariant = "onContainerCopy";
+  const metaCopyStyle = { color: text.copy };
+  const metaMutedStyle = { color: text.muted };
 
   return (
-    <div
-      className="flex w-full flex-shrink-0 flex-col overflow-hidden"
-      style={
-        gameRowHeight != null
-          ? {
-              height: `${gameRowHeight}px`,
-              minHeight: `${gameRowHeight}px`,
-              maxHeight: `${gameRowHeight}px`,
-            }
-          : undefined
-      }
-    >
+    <div className="flex w-full flex-col">
       <AnimatedContainer
         type="full"
-        className="flex h-full w-full flex-shrink-0 flex-col gap-0 overflow-hidden rounded-none"
+        className="flex w-full flex-col gap-0 rounded-none"
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
@@ -83,7 +61,6 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
         <div
           className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 px-5 py-2 md:px-6"
           style={{
-            height: HEADER_STRIP_H,
             minHeight: HEADER_STRIP_H,
             background: glass.headerGradient,
             ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
@@ -98,12 +75,14 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             animation={{ ...animations.text.main.copyIn, delay }}
             className="min-w-0 truncate font-bold uppercase tracking-wider"
             variant={metaVariant}
+            style={metaCopyStyle}
           />
           <MetadataMedium
             value={game.time}
             animation={{ ...animations.text.main.copyIn, delay: delay + 2 }}
             className="min-w-0 truncate font-medium"
             variant={metaVariant}
+            style={metaCopyStyle}
           />
           <MetadataMedium
             value={game.gradeName ?? ""}
@@ -113,12 +92,13 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             }}
             className="min-w-0 truncate font-bold uppercase tracking-wider"
             variant={metaVariant}
+            style={metaCopyStyle}
           />
         </div>
 
         {/* Glass panel: teams + VS */}
         <div
-          className="flex min-h-0 w-full flex-1 flex-shrink-0 px-5 py-3 md:px-6"
+          className="flex w-full px-5 py-3 md:px-6"
           style={{
             background: glass.panel,
             border: glass.border,
@@ -139,8 +119,6 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             }}
             glass={glass}
             delay={delay}
-            compact={compact}
-            containerHeight={glassPanelHeight ?? undefined}
             fontFamily={headingFont}
           />
         </div>
@@ -149,7 +127,6 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
         <div
           className="flex w-full flex-shrink-0 items-center px-5 py-1.5 md:px-6"
           style={{
-            height: GROUND_STRIP_H,
             minHeight: GROUND_STRIP_H,
             background: glass.muted,
             borderTop: glass.border
@@ -163,6 +140,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
             className="truncate font-semibold uppercase tracking-widest"
             variant={metaVariant}
+            style={metaMutedStyle}
           />
         </div>
       </AnimatedContainer>

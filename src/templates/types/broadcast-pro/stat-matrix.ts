@@ -32,23 +32,30 @@ export const BROADCAST_PRO_STAT_MATRIX_TRIPLE_TIER_KEYS: Record<
   {
     row: string;
     divider: string;
-    scoreRole: Extract<BroadcastProScoreRole, "featuredStat" | "gridStat">;
+    label: string;
+    scoreRole: Extract<
+      BroadcastProScoreRole,
+      "featuredStat" | "gridStat" | "performancesStat"
+    >;
   }
 > = {
   featuredTriple: {
     row: "broadcastProStatMatrixTripleFeatured",
     divider: "broadcastProStatMatrixDividerFeatured",
+    label: "broadcastProStatMatrixLabel",
     scoreRole: "featuredStat",
   },
   gridTriple: {
     row: "broadcastProStatMatrixTripleGrid",
     divider: "broadcastProStatMatrixDividerGrid",
+    label: "broadcastProStatMatrixLabel",
     scoreRole: "gridStat",
   },
   performancesTriple: {
     row: "broadcastProStatMatrixTriplePerformances",
     divider: "broadcastProStatMatrixDividerPerformances",
-    scoreRole: "gridStat",
+    label: "broadcastProStatMatrixLabelPerformances",
+    scoreRole: "performancesStat",
   },
 };
 

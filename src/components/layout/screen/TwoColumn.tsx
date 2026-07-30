@@ -6,6 +6,7 @@ import { RouteToComposition } from "../../../core/utils/routing";
 import { AnimatedContainer } from "../../containers";
 import { VerticalProgressTimer } from "../main/Timer/ProgressTimer";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { getCompositionSectionHeight } from "../../../core/utils/layoutHeights";
 
 export type TwoColumnProps = {
   // Header component to render in the side pane
@@ -51,7 +52,7 @@ export const TwoColumn: React.FC<TwoColumnProps> = ({
   const currentHeaderWidth = effectiveHeaderWidthPercent;
 
   const mainWidth = Math.max(0, 100 - currentHeaderWidth);
-  const contentHeightPx = (layout.heights.asset + layout.heights.footer) * 2;
+  const contentHeightPx = getCompositionSectionHeight(layout.heights);
 
   // Snap transforms and opacity (no slide/fade)
   const sideTranslatePx = 0;

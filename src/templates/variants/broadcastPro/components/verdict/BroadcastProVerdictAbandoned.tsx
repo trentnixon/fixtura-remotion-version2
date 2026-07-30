@@ -5,6 +5,7 @@ import type {
   AnimationType,
 } from "../../../../../components/typography/config/animations";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import { BROADCAST_PRO_VERDICT_ROLE_THEME_KEY } from "../../../../../templates/types/broadcast-pro/verdict-typography";
 
 export interface BroadcastProVerdictAbandonedProps {
@@ -20,6 +21,7 @@ export const BroadcastProVerdictAbandoned: React.FC<
   BroadcastProVerdictAbandonedProps
 > = ({ status, result, animation, exitAnimation, exitFrame, delay = 0 }) => {
   const { componentStyles, fontClasses, fonts } = useThemeContext();
+  const { text } = useBroadcastProTheme();
   const bodyFont =
     fontClasses?.subheading?.family ??
     fonts?.subtitle?.family ??
@@ -48,6 +50,7 @@ export const BroadcastProVerdictAbandoned: React.FC<
           animationDelay={delay}
           exitAnimation={exitAnimation}
           exitFrame={exitFrame}
+          style={{ color: text.muted }}
         >
           {status}
         </AnimatedText>
@@ -62,6 +65,7 @@ export const BroadcastProVerdictAbandoned: React.FC<
           animationDelay={delay + 2}
           exitAnimation={exitAnimation}
           exitFrame={exitFrame}
+          style={{ color: text.copy }}
         >
           {result}
         </AnimatedText>

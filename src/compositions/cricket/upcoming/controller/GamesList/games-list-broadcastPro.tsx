@@ -1,24 +1,16 @@
 import React from "react";
 import GameCardBroadcastPro from "../../layout/Card/game-card-broadcastPro";
+import { BROADCAST_PRO_UPCOMING_LIST_GAP_PX } from "../GamesDisplay/_utils/calculations";
 import { GamesListProps } from "./_types/GamesListProps";
 
-export const GamesListBroadcastPro: React.FC<GamesListProps> = ({
-  games,
-  gameRowHeight,
-}) => {
+export const GamesListBroadcastPro: React.FC<GamesListProps> = ({ games }) => {
   return (
-    <div className="flex w-full flex-shrink-0 flex-col gap-1">
+    <div
+      className="flex w-full max-w-full flex-col"
+      style={{ gap: `${BROADCAST_PRO_UPCOMING_LIST_GAP_PX}px` }}
+    >
       {games.map((game, index) => (
-        <div
-          key={game.gameID}
-          className="flex w-full flex-shrink-0 flex-col overflow-hidden"
-        >
-          <GameCardBroadcastPro
-            game={game}
-            index={index}
-            gameRowHeight={gameRowHeight}
-          />
-        </div>
+        <GameCardBroadcastPro key={game.gameID} game={game} index={index} />
       ))}
     </div>
   );

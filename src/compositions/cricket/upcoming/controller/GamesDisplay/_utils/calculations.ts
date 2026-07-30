@@ -23,41 +23,12 @@ export const DEFAULT_SPACING: GameCardSpacing = {
 export const BROADCAST_PRO_UPCOMING_SPACING: GameCardSpacing = {
   headerHeight: 0,
   contentPadding: 0,
-  cardSpacing: 4,
+  cardSpacing: 6,
 };
 
-const getBroadcastProUpcomingCardHeightCap = (
-  gamesOnScreen: number,
-): number => {
-  if (gamesOnScreen >= 3) {
-    return 210;
-  }
-  if (gamesOnScreen === 2) {
-    return 260;
-  }
-  return 320;
-};
-
-/**
- * Fixed row height for Broadcast Pro upcoming cards so fixtures + sponsors fit the frame.
- * Capped below even-split height so multiple fixtures group toward the top of the asset.
- */
-export const calculateBroadcastProGameCardHeight = (
-  assetHeight: number,
-  gamesOnScreen: number,
-  spacing: GameCardSpacing = BROADCAST_PRO_UPCOMING_SPACING,
-): number => {
-  if (gamesOnScreen <= 0) {
-    return 0;
-  }
-
-  const gapTotal = spacing.cardSpacing * Math.max(0, gamesOnScreen - 1);
-  const evenSplit = Math.floor((assetHeight - gapTotal) / gamesOnScreen);
-  return Math.min(
-    evenSplit,
-    getBroadcastProUpcomingCardHeightCap(gamesOnScreen),
-  );
-};
+/** List gap between fixture cards — keep in sync with `games-list-broadcastPro`. */
+export const BROADCAST_PRO_UPCOMING_LIST_GAP_PX =
+  BROADCAST_PRO_UPCOMING_SPACING.cardSpacing;
 
 /**
  * Calculates which games should be displayed on the current screen

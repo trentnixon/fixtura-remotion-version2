@@ -14,6 +14,7 @@ export type BroadcastProScoreRole =
   | "tablePoints"
   | "featuredStat"
   | "gridStat"
+  | "performancesStat"
   | "compactStat"
   | "matchDivider"
   | "rosterIndex";
@@ -57,6 +58,7 @@ export const BROADCAST_PRO_SCORE_ROLE_THEME_KEY: Record<
   tablePoints: "broadcastProScoreTablePoints",
   featuredStat: "broadcastProScoreFeatured",
   gridStat: "broadcastProScoreGrid",
+  performancesStat: "broadcastProScorePerformances",
   compactStat: "broadcastProScoreCompact",
   matchDivider: "broadcastProScoreDivider",
   rosterIndex: "broadcastProScoreRosterIndex",
@@ -77,6 +79,7 @@ export const BROADCAST_PRO_SCORE_ROLE_ANIMATED_TYPE: Record<
   tablePoints: "ladderTeamPoints",
   featuredStat: "broadcastProScoreFeatured",
   gridStat: "broadcastProScoreGrid",
+  performancesStat: "broadcastProScorePerformances",
   compactStat: "TeamOfTheWeekStat",
   matchDivider: "ResultVS",
   rosterIndex: "bodyText",

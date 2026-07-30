@@ -1,6 +1,4 @@
-import { loadFont } from "@remotion/fonts";
-import { staticFile } from "remotion";
-import { continueRender, delayRender } from "remotion";
+import { staticFile, continueRender, delayRender } from "remotion";
 import { TemplateThemeConfig } from "../../../templates/types/TemplateThemeConfig";
 
 /**
@@ -316,35 +314,58 @@ export const createFontConfig = (
   };
 };
 
+const getFontFormat = (url: string): string => {
+  const ext = url.split(".").pop()?.toLowerCase();
+  switch (ext) {
+    case "woff2":
+      return "woff2";
+    case "woff":
+      return "woff";
+    case "otf":
+      return "opentype";
+    case "ttf":
+      return "truetype";
+    default:
+      throw new Error(
+        `Could not derive font format from extension: ${ext ?? "unknown"}`,
+      );
+  }
+};
+
 /**
- * Loads a font using the provided font configuration
- *
- * @param fontConfig - The font configuration object
+ * Loads a font using the provided font configuration.
+ * Uses FontFace directly so a failed fetch does not cancel the render
+ * (unlike @remotion/fonts loadFont, which calls cancelRender on error).
  */
 export const loadFontFile = async (fontConfig: FontConfig): Promise<void> => {
   if (!fontConfig.url) {
-    //console.log(`Skipping font with no URL: ${fontConfig.family}`);
     return;
   }
 
+  const handle = delayRender(
+    `Loading font ${fontConfig.family} (${fontConfig.url})`,
+  );
+
   try {
-    //console.log(
-    //  `Loading font: ${fontConfig.family} (${fontConfig.weight} ${fontConfig.style})`,
-    //);
+    const fontFormat = getFontFormat(fontConfig.url);
+    const font = new FontFace(
+      fontConfig.family,
+      `url('${fontConfig.url}') format('${fontFormat}')`,
+      {
+        weight: fontConfig.weight || "400",
+        style: fontConfig.style || "normal",
+      },
+    );
 
-    await loadFont({
-      family: fontConfig.family,
-      url: fontConfig.url,
-      weight: fontConfig.weight || "400",
-      style: fontConfig.style || "normal",
-    });
-
-    //console.log(`Successfully loaded font: ${fontConfig.family}`);
+    await font.load();
+    document.fonts.add(font);
   } catch (error) {
-    console.error(`Error loading font ${fontConfig.family}:`, error);
-    //console.error(`Font URL was: ${fontConfig.url}`);
-    // Don't throw the error - we'll handle the failure gracefully
-    // by falling back to system fonts later in the rendering process
+    console.error(
+      `Error loading font ${fontConfig.family} from ${fontConfig.url}:`,
+      error,
+    );
+  } finally {
+    continueRender(handle);
   }
 };
 

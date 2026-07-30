@@ -147,6 +147,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           delay={delay}
           textAlign="center"
           className={homeTitleClass}
+          style={{ color: textOnGlass.copy }}
         />
         {home.roleLabel != null && home.roleLabel !== "" && (
           <span
@@ -175,6 +176,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           delay={delay}
           textAlign="center"
           className={awayTitleClass}
+          style={{ color: textOnGlass.copy }}
         />
         {away.roleLabel != null && away.roleLabel !== "" && (
           <span

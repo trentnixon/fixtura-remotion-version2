@@ -14,6 +14,7 @@ export const TeamOfTheWeekTeam = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
+  style,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
   const fontFamily = useFontFamily();
 
@@ -23,6 +24,7 @@ export const TeamOfTheWeekTeam = ({
       variant={variant as ColorVariant}
       fontFamily={fontFamily}
       className={className}
+      style={style}
       animation={animation as AnimationConfig}
       letterAnimation={DEFAULT_LETTER_ANIMATION}
     >

@@ -21,6 +21,7 @@ import {
   calculateExitFrame,
 } from "../../../top5/controller/PlayerRow/_utils/calculations";
 import { calculateBroadcastProPerformanceGridLayout } from "./_utils/calculations";
+import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
 const PerformanceGridCard: React.FC<{
   performance: PerformanceData;
@@ -110,7 +111,7 @@ const PerformanceGridCard: React.FC<{
             </p>
             <BroadcastProStatMatrixTriple
               cells={statCells}
-              tier="gridTriple"
+              tier="performancesTriple"
               headingFont={headingFont}
               text={text}
               glass={glass}
@@ -143,13 +144,17 @@ const PerformancesDisplayBroadcastPro: React.FC<PerformancesDisplayProps> = ({
     itemsPerScreen,
   );
   const offset = screenIndex * itemsPerScreen;
+  const mainContentHeight = getMainContentSectionHeight(heights);
   const { cardHeight, rows } = calculateBroadcastProPerformanceGridLayout(
-    heights.asset,
+    mainContentHeight,
     itemsPerScreen,
   );
 
   return (
-    <div className="flex h-full w-full flex-col overflow-hidden p-0">
+    <div
+      className="flex w-full flex-col overflow-hidden p-0"
+      style={{ height: `${mainContentHeight}px` }}
+    >
       <AnimatedContainer
         type="full"
         className={cs("broadcastProPlayerRankingAnimatedContainer")}
@@ -157,9 +162,11 @@ const PerformancesDisplayBroadcastPro: React.FC<PerformancesDisplayProps> = ({
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
       >
-        <div className={cs("broadcastProPlayerRankingScrollShell")}>
+        <div
+          className={`${cs("broadcastProPlayerRankingScrollShell")} justify-center`}
+        >
           <div
-            className={`${cs("broadcastProPlayerRankingGridPerformances")} min-h-0 shrink-0 content-start overflow-hidden`}
+            className={`${cs("broadcastProPlayerRankingGridPerformances")} min-h-0 shrink-0 overflow-hidden`}
             style={{
               gridTemplateRows:
                 rows > 0 ? `repeat(${rows}, ${cardHeight}px)` : undefined,

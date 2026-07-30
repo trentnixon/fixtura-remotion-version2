@@ -21,6 +21,10 @@ import {
   calculatePlayerDelay,
   calculateExitFrame,
 } from "../PlayerRow/_utils/calculations";
+import {
+  getCompositionSectionHeight,
+  getMainContentSectionHeight,
+} from "../../../../../core/utils/layoutHeights";
 
 const GRID_CARD_HEIGHT_PX = 215;
 const FEATURED_TEAM_NAME_LENGTH_EXTRA = 10;
@@ -211,19 +215,25 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { cs } = useBroadcastProPlayerRankingTheme();
+  const mainContentHeight = getMainContentSectionHeight(heights);
+  const compositionHeight = getCompositionSectionHeight(heights);
 
   const exitFrame = calculateExitFrame(timings);
   const [featured, ...rest] = players;
   const gridPlayers = rest.slice(0, 4);
 
   return (
-    <div className="flex h-full w-full flex-col p-0">
+    <div
+      className="flex w-full flex-col p-0"
+      style={{ height: `${compositionHeight}px` }}
+    >
       <AnimatedContainer
         type="full"
         className={cs("broadcastProPlayerRankingAnimatedContainer")}
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
+        style={{ height: `${mainContentHeight}px` }}
       >
         <div className={cs("broadcastProPlayerRankingScrollShell")}>
           <div className={cs("broadcastProPlayerRankingContentStack")}>

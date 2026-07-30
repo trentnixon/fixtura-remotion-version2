@@ -1,5 +1,6 @@
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
 import NoResultData from "./modules/NoResultData/no-data";
 import ResultSingleDisplayBroadcastPro from "./controller/ResultSingleDisplay/display-BroadcastPro";
 import {
@@ -8,6 +9,7 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
+import { getCompositionSectionHeight } from "../../../core/utils/layoutHeights";
 import {
   calculateDisplayDurationPerMatch,
   castToMatchResults,
@@ -17,8 +19,11 @@ import {
 export const ResultSingleBroadcastPro: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: resultData, videoMeta, timings } = data;
+  const { layout } = useThemeContext();
+  const { heights } = layout;
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
+  const compositionHeight = getCompositionSectionHeight(heights);
 
   if (!hasValidResults(resultData)) {
     return <NoResultData />;
@@ -33,20 +38,29 @@ export const ResultSingleBroadcastPro: React.FC = () => {
   const matchResults = castToMatchResults(resultData);
 
   const sequences = matchResults.map((match) => ({
-    content: <ResultSingleDisplayBroadcastPro match={match} />,
+    content: (
+      <div
+        className="h-full w-full"
+        style={{ height: `${compositionHeight}px` }}
+      >
+        <ResultSingleDisplayBroadcastPro match={match} />
+      </div>
+    ),
     durationInFrames: displayDurationPerMatch,
   }));
 
   return (
-    <TransitionSeriesWrapper
-      sequences={sequences}
-      transitionType={transitionConfig.type as TransitionType}
-      direction={transitionConfig.direction as TransitionDirection}
-      timing={{
-        type: "linear",
-        durationInFrames: transitionConfig.durationInFrames,
-      }}
-    />
+    <div className="w-full" style={{ height: `${compositionHeight}px` }}>
+      <TransitionSeriesWrapper
+        sequences={sequences}
+        transitionType={transitionConfig.type as TransitionType}
+        direction={transitionConfig.direction as TransitionDirection}
+        timing={{
+          type: "linear",
+          durationInFrames: transitionConfig.durationInFrames,
+        }}
+      />
+    </div>
   );
 };
 

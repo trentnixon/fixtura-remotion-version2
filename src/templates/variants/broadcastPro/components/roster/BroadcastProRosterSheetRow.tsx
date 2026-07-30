@@ -12,7 +12,6 @@ import {
 import { BroadcastProScoreText } from "../score/BroadcastProScoreText";
 import { RosterPlayerName } from "../../../../../compositions/cricket/utils/primitives/RosterPlayerName";
 import { truncatePlayerName } from "../../../../../compositions/cricket/teamRoster/layout/utils";
-import { MAX_PLAYER_NAME_LENGTH } from "../../../../../compositions/cricket/teamRoster/layout/RosterPlayerList/_utils/constants";
 import type { BroadcastProRosterListMetrics } from "../../../../../compositions/cricket/teamRoster/controller/Display/_utils/broadcastProRosterListMetrics";
 
 /** Teko caps sit high in the em box; nudge copy toward optical vertical center. */
@@ -22,9 +21,18 @@ const rosterTekoOpticalNudge: React.CSSProperties = {
   transform: `translateY(${TEKO_ROSTER_TEXT_NUDGE_EM}em)`,
 };
 
-const rosterCellTextStyle = (fontSizePx: number): React.CSSProperties => ({
+/** Broadcast Pro roster — longer names than default list truncation. */
+const BROADCAST_PRO_ROSTER_NAME_MAX_LENGTH = 42;
+
+const normalizeRosterPlayerName = (playerName: string): string =>
+  playerName.replace(/\s+/g, " ").trim();
+
+const rosterCellTextStyle = (
+  fontSizePx: number,
+  lineHeight = 1,
+): React.CSSProperties => ({
   fontSize: fontSizePx,
-  lineHeight: 1,
+  lineHeight,
   margin: 0,
   padding: 0,
 });
@@ -33,16 +41,20 @@ export interface BroadcastProRosterSheetRowProps {
   index: number;
   playerName: string;
   metrics: BroadcastProRosterListMetrics;
+  nameColor?: string;
 }
 
 export const BroadcastProRosterSheetRow: React.FC<
   BroadcastProRosterSheetRowProps
-> = ({ index, playerName, metrics }) => {
+> = ({ index, playerName, metrics, nameColor }) => {
   const { componentStyles, fontClasses, fonts } = useThemeContext();
-  const { glass } = useBroadcastProTheme();
+  const { glass, text, accent } = useBroadcastProTheme();
   const indexResult = resolveBroadcastProRosterIndex(index);
   const titleFontFamily =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
+
+  const indexColor =
+    indexResult.variant === "leader" ? accent : text.muted;
 
   const rowHeightPx = Math.max(1, Math.round(metrics.rowPx));
 
@@ -68,7 +80,10 @@ export const BroadcastProRosterSheetRow: React.FC<
               role="rosterIndex"
               variant={indexResult.colorVariant}
               fontFamily={titleFontFamily}
-              style={rosterCellTextStyle(metrics.numFontPx)}
+              style={{
+                ...rosterCellTextStyle(metrics.numFontPx),
+                color: indexColor,
+              }}
             />
           </div>
         </div>
@@ -87,20 +102,18 @@ export const BroadcastProRosterSheetRow: React.FC<
           paddingBottom: metrics.cellPaddingYPx,
         }}
       >
-        <div
-          className="flex min-h-0 w-full flex-1 items-center justify-start"
-          style={rosterTekoOpticalNudge}
-        >
+        <div className="flex min-h-0 w-full flex-1 items-center justify-start overflow-visible">
           <RosterPlayerName
             value={truncatePlayerName(
-              playerName.toUpperCase(),
-              MAX_PLAYER_NAME_LENGTH,
+              normalizeRosterPlayerName(playerName).toUpperCase(),
+              BROADCAST_PRO_ROSTER_NAME_MAX_LENGTH,
             )}
             fontFamily={titleFontFamily}
             style={{
-              ...rosterCellTextStyle(metrics.nameFontPx),
+              ...rosterCellTextStyle(metrics.nameFontPx, 1.1),
               fontWeight: 400,
               display: "block",
+              ...(nameColor != null ? { color: nameColor } : {}),
             }}
             variant="onContainerCopy"
           />

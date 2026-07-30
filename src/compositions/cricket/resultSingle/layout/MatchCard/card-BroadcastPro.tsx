@@ -2,7 +2,10 @@ import React from "react";
 import { BroadcastProResultMatchContent } from "../../../utils/broadcastPro";
 import { MatchCardProps } from "./_types/MatchCardProps";
 
-const MatchCardBroadcastPro: React.FC<MatchCardProps> = ({ match }) => {
+const MatchCardBroadcastPro: React.FC<MatchCardProps> = ({
+  match,
+  contentHeight,
+}) => {
   return (
     <BroadcastProResultMatchContent
       match={match}
@@ -10,6 +13,7 @@ const MatchCardBroadcastPro: React.FC<MatchCardProps> = ({ match }) => {
       maxStatItems={5}
       statementPosition="top"
       className="!h-auto shrink-0"
+      style={contentHeight != null ? { maxHeight: contentHeight } : undefined}
       showGround={false}
       playerStatsTier="single"
     />

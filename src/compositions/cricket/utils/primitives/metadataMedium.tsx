@@ -22,6 +22,7 @@ export const MetadataMedium = ({
   className,
   variant = DEFAULT_VARIANT,
   letterAnimation = DEFAULT_LETTER_ANIMATION,
+  style,
 }: MetadataMediumProps) => {
   const fontFamily = useFontFamily();
 
@@ -31,6 +32,7 @@ export const MetadataMedium = ({
       variant={variant as ColorVariant}
       fontFamily={fontFamily}
       className={className}
+      style={style}
       animation={animation as AnimationConfig}
       letterAnimation={letterAnimation}
     >

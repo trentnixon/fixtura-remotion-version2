@@ -3,24 +3,22 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-import { resolveBroadcastProGlass, csClass } from "../../../utils/broadcastPro";
+import { csClass, useBroadcastProTheme } from "../../../utils/broadcastPro";
 import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../_types/composition-types";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { CardBroadcastPro } from "../PlayerRow/card-BroadcastPro";
+import {
+  getCompositionSectionHeight,
+  getMainContentSectionHeight,
+} from "../../../../../core/utils/layoutHeights";
 
 const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
   players,
   sponsors,
 }) => {
-  const {
-    layout,
-    selectedPalette,
-    colors,
-    componentStyles,
-    broadcastProGlassOpacity,
-    broadcastProTransparentLayers,
-  } = useThemeContext();
+  const { layout, componentStyles } = useThemeContext();
+  const { glass, text } = useBroadcastProTheme();
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const { club } = useVideoDataContext();
@@ -29,27 +27,24 @@ const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
 
   const compact = players.length >= 11;
 
-  const accent = colors?.primary ?? selectedPalette.container.accent;
-  const surfaceBase = selectedPalette.container.background;
-  const glass = resolveBroadcastProGlass({
-    surfaceBase,
-    broadcastProGlassOpacity,
-    broadcastProTransparentLayers,
-  });
-
   const rootClass = csClass(componentStyles, "broadcastProTeamOfTheWeekRoot");
   const animatedClass = csClass(
     componentStyles,
     "broadcastProTeamOfTheWeekAnimatedContainer",
   );
   const gridClass = csClass(componentStyles, "broadcastProTeamOfTheWeekGrid");
+  const mainContentHeight = getMainContentSectionHeight(heights);
+  const compositionHeight = getCompositionSectionHeight(heights);
 
   return (
-    <div className="flex h-full flex-col">
+    <div
+      className="flex flex-col"
+      style={{ height: `${compositionHeight}px` }}
+    >
       <AnimatedContainer
         type="full"
         className={animatedClass}
-        style={{ height: heights.asset }}
+        style={{ height: mainContentHeight }}
         backgroundColor="none"
         animation={ContainerAnimations.main.parent.containerIn}
         animationDelay={0}
@@ -64,7 +59,7 @@ const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
                 staggerIndex={index}
                 isAccountClub={isAccountClub}
                 glass={glass}
-                accent={accent}
+                text={text}
                 compact={compact}
               />
             ))}

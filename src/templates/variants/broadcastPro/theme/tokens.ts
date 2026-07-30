@@ -38,7 +38,8 @@ export const broadcastProTokens = {
     maxNumberFontPx: 44,
     nameRowHeightMultiplier: 0.52,
     numberRowHeightMultiplier: 0.48,
-    nameFontBonusPx: 4,
+    nameFontBonusPx: 2,
+    listChromeReservePx: 24,
   },
 
   fonts: {

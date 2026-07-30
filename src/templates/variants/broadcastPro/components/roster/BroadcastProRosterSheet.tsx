@@ -9,12 +9,13 @@ import { BroadcastProRosterSheetRow } from "./BroadcastProRosterSheetRow";
 export interface BroadcastProRosterSheetProps {
   players: string[];
   availableHeightPx: number;
+  nameColor?: string;
   className?: string;
 }
 
 export const BroadcastProRosterSheet: React.FC<
   BroadcastProRosterSheetProps
-> = ({ players, availableHeightPx, className = "" }) => {
+> = ({ players, availableHeightPx, nameColor, className = "" }) => {
   const { componentStyles, broadcastProRosterListSizing } = useThemeContext();
   const { accent } = useBroadcastProTheme();
 
@@ -29,7 +30,7 @@ export const BroadcastProRosterSheet: React.FC<
   );
 
   return (
-    <div className={`flex min-h-0 flex-1 flex-col gap-2 ${className}`.trim()}>
+    <div className={`flex min-h-0 min-w-0 flex-1 gap-2 ${className}`.trim()}>
       <div
         className={csClass(componentStyles, "broadcastProRosterPlayerList")}
         style={{ gap: metrics.gapPx }}
@@ -40,6 +41,7 @@ export const BroadcastProRosterSheet: React.FC<
             index={index}
             playerName={player}
             metrics={metrics}
+            nameColor={nameColor}
           />
         ))}
       </div>

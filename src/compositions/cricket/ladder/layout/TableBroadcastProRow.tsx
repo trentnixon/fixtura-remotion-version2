@@ -70,8 +70,8 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
     broadcastProLadderZoneSizing,
   } = useThemeContext();
   const { animations } = useAnimationContext();
-  const { glass } = useBroadcastProTheme();
-  const accent = colors?.primary ?? selectedPalette.container.accent;
+  const { glass, text, accent: themeAccent } = useBroadcastProTheme();
+  const accent = colors?.primary ?? selectedPalette.container.accent ?? themeAccent;
   const copyIn = animations.text.main.copyIn;
 
   const zone = resolveBroadcastProLadderZone({
@@ -87,9 +87,9 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
   const crestContainerHeight = LadderRowHeight;
   const statVariant: ColorVariant = "onContainerCopy";
   const nameVariant: ColorVariant = "onContainerCopy";
-  const pointsVariant: ColorVariant = zone.pointsAccent
-    ? "onContainerAccent"
-    : "onContainerCopy";
+  const copyColor = text.copy;
+  const mutedColor = text.muted;
+  const accentColor = accent;
 
   const headingFont = fontClasses.heading?.family;
 
@@ -136,7 +136,10 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
           animation={{ ...copyIn, delay }}
           fontFamily={headingFont}
           compact={typography.scoreCompact}
-          style={ladderCellTextStyle(typography.rankFontPx)}
+          style={{
+            ...ladderCellTextStyle(typography.rankFontPx),
+            color: showRankAccent ? accentColor : mutedColor,
+          }}
         />
       </div>
 
@@ -172,6 +175,7 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
             style={{
               ...ladderCellTextStyle(typography.nameFontPx),
               transform: `translateY(${TEKO_LADDER_NAME_NUDGE_EM}em)`,
+              color: copyColor,
             }}
           />
         </div>
@@ -195,7 +199,10 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
             animation={{ ...copyIn, delay }}
             fontFamily={headingFont}
             compact={typography.scoreCompact}
-            style={ladderCellTextStyle(typography.statFontPx)}
+            style={{
+              ...ladderCellTextStyle(typography.statFontPx),
+              color: copyColor,
+            }}
           />
         </div>
       ))}
@@ -212,11 +219,14 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
         <BroadcastProScoreText
           value={String(team.PTS ?? 0)}
           role="tablePoints"
-          variant={pointsVariant}
+          variant="onContainerCopy"
           animation={{ ...copyIn, delay }}
           fontFamily={headingFont}
           compact={typography.scoreCompact}
-          style={ladderCellTextStyle(typography.pointsFontPx, 700)}
+          style={{
+            ...ladderCellTextStyle(typography.pointsFontPx, 700),
+            color: zone.pointsAccent ? accentColor : copyColor,
+          }}
         />
       </div>
     </div>

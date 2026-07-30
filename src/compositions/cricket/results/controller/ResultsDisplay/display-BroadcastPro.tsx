@@ -10,6 +10,10 @@ import {
   calculateRowHeight,
   mergeAssignSponsors,
 } from "./_utils/calculations";
+import {
+  getCompositionSectionHeight,
+  getMainContentSectionHeight,
+} from "../../../../../core/utils/layoutHeights";
 
 const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
   results,
@@ -26,23 +30,27 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
     resultsPerScreen,
     screenIndex,
   );
-  const availableHeight = heights.asset;
-  const rowHeight = calculateRowHeight(availableHeight);
+  const mainContentHeight = getMainContentSectionHeight(heights);
+  const compositionHeight = getCompositionSectionHeight(heights);
+  const rowHeight = calculateRowHeight(mainContentHeight);
   const mergedAssignSponsors = mergeAssignSponsors(displayedResults);
 
   return (
-    <div className="flex h-full w-full flex-col">
+    <div
+      className="flex w-full flex-col"
+      style={{ height: `${compositionHeight}px` }}
+    >
       <AnimatedContainer
         type="full"
-        className="flex flex-1 flex-col overflow-hidden rounded-none"
+        className="flex flex-col overflow-hidden rounded-none"
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
-        style={{ height: availableHeight }}
+        style={{ height: mainContentHeight }}
       >
         <div
           className="flex w-full flex-col gap-0"
-          style={{ height: `${availableHeight}px` }}
+          style={{ height: `${mainContentHeight}px` }}
         >
           {displayedResults.map((match, index) => (
             <div

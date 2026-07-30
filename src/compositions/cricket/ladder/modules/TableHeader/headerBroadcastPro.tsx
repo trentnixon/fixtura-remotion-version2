@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatedText } from "../../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { BroadcastProMetadataChip } from "../../../utils/broadcastPro";
+import { BroadcastProMetadataChip, useBroadcastProTheme } from "../../../utils/broadcastPro";
 import { TableHeaderProps } from "./_types/TableHeaderProps";
 
 const GAP = "gap-2";
@@ -19,6 +19,7 @@ export const TableHeaderBroadcastPro: React.FC<TableHeaderProps> = ({
   compact,
 }) => {
   const { fontClasses, componentStyles } = useThemeContext();
+  const { text } = useBroadcastProTheme();
   const labelSize = compact ? "text-base" : "text-lg";
   const headerClass = `${labelSize} ${COLUMN_LABEL_CLASS}`;
   const subheading = fontClasses.subheading?.family;
@@ -49,6 +50,7 @@ export const TableHeaderBroadcastPro: React.FC<TableHeaderProps> = ({
               }}
               fontFamily={subheading}
               className={`${gradeTitleClass} text-center`}
+              style={{ color: text.copy }}
             >
               {title}
             </AnimatedText>

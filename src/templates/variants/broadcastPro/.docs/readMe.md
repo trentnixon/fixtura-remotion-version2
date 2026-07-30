@@ -28,7 +28,7 @@ The Broadcast Pro theme is split by responsibility. The **public export** is `br
 
 ## Main header (BroadcastProMainHeader)
 
-- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **300px**; logo badge always shown (image when `club.logo.url` exists).
+- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **310px**; logo badge always shown (image when `club.logo.url` exists).
 - Title uses **`BroadcastProHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProHeadlineSizing.mainHeaderMaxPx`**, default 124px).
 - Secondary line text: `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProHeaderSecondaryLine`**).
 
@@ -229,8 +229,16 @@ Unified player performance figures across Top 5, Performances, Results, and Team
 
 ## Mode: `text.copy` vs `text.title` (light / dark / alts)
 
-- `theme.mode.*.text.copy` drives **`onContainerCopy`** in the color system (`palette.text.onContainer.copy`). Body copy on glass-style surfaces (e.g. upcoming fixtures, ladder rows) uses that token.
-- **`text.copy` is the same for `light` and `lightAlt`, and the same for `dark` and `darkAlt`.** Alt modes only change **`text.title`** (e.g. for header/hero contrast). No separate alt body-copy token unless product adds it to `theme/mode.ts`.
+- `theme.mode.*.text.copy` drives **`onContainerCopy`** in the color system (`palette.text.onContainer.copy`). **`text.title`** drives **`onContainerTitle`** and flips in alt modes (`lightAlt` / `darkAlt`).
+- **`text.copy` is the same for `light` and `lightAlt`, and the same for `dark` and `darkAlt`.** Alt modes only change **`text.title`** unless product adds separate alt copy tokens in `theme/mode.ts`.
+
+### Glass-surface copy (required pattern)
+
+Text on glass panels must use **`useBroadcastProTheme().text`** (`textOnGlass`) via inline `style.color`, not `onContainerCopy` / `onContainerTitle` variants alone. Variants resolve contrast against solid `container.background`; `text` recomposites the glass panel over the mode surface.
+
+**Phase 1 aligned:** CricketTeamOfTheWeek cards (player name, team, stats), CricketRoster player list + meta rows. **Reference:** Performances / Top 5 (`useBroadcastProPlayerRankingTheme`), roster meta in `display-BroadcastPro.tsx`.
+
+**Full Broadcast Pro coverage (glass surfaces):** Results / Result Single (meta strip, team rows, score badges, stat cells, verdict bands), Upcoming fixture cards (header, matchup, ground strip), Ladder (grade chip, row cells), Roster matchup team titles + lineup indices, main-header secondary chip (`BroadcastProHeadlineSecondary` `mainHeader` variant).
 
 ## Glass opacity: `broadcastProGlassOpacity` (sm / md / lg)
 

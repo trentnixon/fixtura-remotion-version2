@@ -15,6 +15,8 @@ export interface BroadcastProStatMatrixCompactProps {
   className?: string;
   suffixClassName?: string;
   fontFamily?: string;
+  primaryStyle?: React.CSSProperties;
+  suffixStyle?: React.CSSProperties;
 }
 
 /** Inline primary + suffix figures for TotW cards (`33* (14)`, `4/32 (10)`). */
@@ -29,6 +31,8 @@ export const BroadcastProStatMatrixCompact: React.FC<
   className = "",
   suffixClassName = "",
   fontFamily,
+  primaryStyle,
+  suffixStyle,
 }) => (
   <BroadcastProStructuredScore
     value={value}
@@ -42,5 +46,7 @@ export const BroadcastProStatMatrixCompact: React.FC<
     className={className}
     suffixClassName={suffixClassName}
     fontFamily={fontFamily}
+    primaryStyle={primaryStyle}
+    suffixStyle={suffixStyle}
   />
 );

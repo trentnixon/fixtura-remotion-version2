@@ -64,7 +64,7 @@ export const resolveBroadcastProTextOnGlass = (
 ): BroadcastProTextOnContainer => {
   const bg = compositeSurfaceColor(surfaceBase, glassPanel);
 
-  const title = preferred.title;
+  const title = ensureContrast(bg, preferred.title);
   const copy = ensureContrast(bg, preferred.copy);
   const secondary = ensureContrast(bg, preferred.secondary);
   const muted = resolveMutedCopy(bg, preferred.copy);

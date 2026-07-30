@@ -13,6 +13,7 @@ import {
   useBroadcastProTheme,
 } from "../../../utils/broadcastPro";
 import { parseTeamPosition } from "../TeamRows/_utils/calculations";
+import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
 const HEADER_EXTRA_FOR_GRADE = 44;
 
@@ -42,13 +43,14 @@ export const LadderDisplayBroadcastPro: React.FC<LadderDisplayProps> = ({
   const { accent } = useBroadcastProTheme();
 
   const { gapPx, gapClass } = getBroadcastProRowGap(League.length);
+  const mainContentHeight = getMainContentSectionHeight(heights);
 
   const {
     headerHeight,
     rowHeight: rawRowHeight,
     compact: compactFromCount,
   } = calculateRowDimensions(
-    heights.asset,
+    mainContentHeight,
     League.length,
     HEADER_EXTRA_FOR_GRADE,
     { rowGapPx: gapPx },
@@ -62,7 +64,7 @@ export const LadderDisplayBroadcastPro: React.FC<LadderDisplayProps> = ({
     <div className="flex h-full w-full flex-col p-0">
       <AnimatedContainer
         type="full"
-        className="mx-6 flex flex-1 flex-col overflow-hidden rounded-none"
+        className="mx-6 flex min-h-0 flex-1 flex-col overflow-hidden rounded-none"
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}

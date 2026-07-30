@@ -287,6 +287,8 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     ...(typeFontFamily && { fontFamily: typeFontFamily }),
   };
 
+  const inlineColor = style?.color;
+
   return (
     <div
       className={`${componentStyle.className} ${className}`.trim()}
@@ -297,6 +299,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
         ...overrideStyles,
         ...style,
         ...(animStyles as React.CSSProperties),
+        ...(inlineColor !== undefined ? { color: inlineColor } : {}),
       }}
     >
       {animationMode === "none"

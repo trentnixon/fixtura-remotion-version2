@@ -21,6 +21,8 @@ export interface BroadcastProRosterListSizing {
    * Inner clamp: `min(maxNameFontPx - nameInnerClampMaxOffsetPx, rowPx * nameRowHeightMultiplier)`.
    */
   nameInnerClampMaxOffsetPx: number;
+  /** Top padding / shell gaps reserved before the scrollable player list. */
+  listChromeReservePx: number;
 }
 
 /** Defaults; override per template in `broadcastPro/theme/tokens.ts`. */
@@ -36,4 +38,5 @@ export const DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING: BroadcastProRosterListSiz
     numberRowHeightMultiplier: 0.41,
     nameFontBonusPx: 2,
     nameInnerClampMaxOffsetPx: 2,
+    listChromeReservePx: 24,
   };

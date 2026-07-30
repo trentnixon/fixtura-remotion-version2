@@ -27,7 +27,7 @@ export const BroadcastProResultScoreBadge: React.FC<
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
-  const { glass } = useBroadcastProTheme();
+  const { glass, text } = useBroadcastProTheme();
   const badgeClass = csClass(componentStyles, "broadcastProResultsScoreBadge");
   const copyIn = animations.text.main.copyIn;
   const headingFont =
@@ -56,12 +56,14 @@ export const BroadcastProResultScoreBadge: React.FC<
         animation={{ ...copyIn, delay }}
         colorVariant="onContainerTitle"
         fontFamily={headingFont}
+        primaryStyle={{ color: text.copy }}
       />
       {showFirstInnings && (
         <ResultScoreFirstInnings
           value={firstInnings}
           animation={{ ...copyIn, delay: delay + 2 }}
           variant="onContainerCopy"
+          style={{ color: text.muted }}
         />
       )}
     </div>

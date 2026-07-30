@@ -9,11 +9,12 @@ import {
   BroadcastProStatMatrixCompactGroup,
   resolveBroadcastProEdgeMarkerStyle,
   type BroadcastProGlassStyle,
+  type BroadcastProTextOnContainer,
 } from "../../../utils/broadcastPro";
 import { BroadcastProCrestWell } from "../../../../../templates/variants/broadcastPro/components/crest";
 import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
 import { TeamOfTheWeekTeam } from "../../../utils/primitives/TeamOfTheWeekTeam";
-import { truncateText } from "../../../utils/utils-text";
+import { truncatePlayerName, truncateText } from "../../../utils/utils-text";
 import { PLAYER_STAGGER_DELAY, TeamOfTheWeekPlayer } from "../../types";
 import { cleanPlayerName } from "../../utils/config";
 import {
@@ -21,15 +22,19 @@ import {
   STAT_DISPLAY_DELAY_OFFSET,
 } from "../PlayerRow/_utils/constants";
 
-const MAX_NAME_LENGTH = 28;
+/** Character watch — over this length, first name becomes initial (see `truncatePlayerName`). */
+const MAX_NAME_LENGTH = 19;
 const MAX_TEAM_LENGTH = 36;
+
+const formatTotwPlayerName = (rawName: string, maxLength: number): string =>
+  truncatePlayerName(cleanPlayerName(rawName), maxLength).toUpperCase();
 
 export interface CardBroadcastProProps {
   player: TeamOfTheWeekPlayer;
   staggerIndex: number;
   isAccountClub: boolean;
   glass: BroadcastProGlassStyle;
-  accent: string;
+  text: BroadcastProTextOnContainer;
   compact?: boolean;
 }
 
@@ -38,7 +43,7 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
   staggerIndex,
   isAccountClub,
   glass,
-  accent,
+  text,
   compact = false,
 }) => {
   const { animations } = useAnimationContext();
@@ -87,13 +92,12 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
     componentStyles,
     "broadcastProTeamOfTheWeekStatSuffix",
   );
-  const playerNameClass = csClass(componentStyles, "TeamOfTheWeekPlayerName");
   const teamClass = csClass(componentStyles, "TeamOfTheWeekTeam");
 
-  const playerName = truncateText(
-    cleanPlayerName(player.player),
+  const playerName = formatTotwPlayerName(
+    player.player,
     compact ? MAX_NAME_LENGTH - 4 : MAX_NAME_LENGTH,
-  ).toUpperCase();
+  );
   const teamName = truncateText(
     player.primaryTeam,
     compact ? MAX_TEAM_LENGTH - 6 : MAX_TEAM_LENGTH,
@@ -127,17 +131,17 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
                   delay={statDelay}
                   statClassName={statClass}
                   statSuffixClassName={statSuffixClass}
+                  text={text}
                 />
               </div>
 
-              <div style={{ color: accent }}>
-                <TeamOfTheWeekTeam
-                  value={teamName}
-                  animation={{ ...copyAnimation, delay: nameDelay + 2 }}
-                  variant="onContainerCopy"
-                  className={teamClass}
-                />
-              </div>
+              <TeamOfTheWeekTeam
+                value={teamName}
+                animation={{ ...copyAnimation, delay: nameDelay + 2 }}
+                variant="onContainerCopy"
+                className={teamClass}
+                style={{ color: text.secondary }}
+              />
             </div>
 
             {!isAccountClub ? (
@@ -168,7 +172,8 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
               value={playerName}
               animation={{ ...copyAnimation, delay: nameDelay }}
               variant="onContainerTitle"
-              className={`${playerNameClass} ${nameCellClass}`.trim()}
+              className={nameCellClass}
+              style={{ color: text.copy }}
             />
           </div>
         </div>
@@ -182,17 +187,18 @@ export interface TwelfthManBandBroadcastProProps {
   staggerIndex: number;
   isAccountClub: boolean;
   glass: BroadcastProGlassStyle;
+  text: BroadcastProTextOnContainer;
+  accent: string;
 }
 
 export const TwelfthManBandBroadcastPro: React.FC<
   TwelfthManBandBroadcastProProps
-> = ({ player, staggerIndex, isAccountClub, glass }) => {
+> = ({ player, staggerIndex, isAccountClub, glass, text, accent }) => {
   const { animations } = useAnimationContext();
-  const { componentStyles, colors, selectedPalette } = useThemeContext();
+  const { componentStyles } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
   const delay = staggerIndex * PLAYER_STAGGER_DELAY;
   const copyAnimation = animations.text.main.copyIn;
-  const accent = colors?.primary ?? selectedPalette.container.accent;
 
   const bandClass = csClass(
     componentStyles,
@@ -215,10 +221,10 @@ export const TwelfthManBandBroadcastPro: React.FC<
     "broadcastProTeamOfTheWeekTwelfthRole",
   );
 
-  const playerName = truncateText(
-    cleanPlayerName(player.player),
+  const playerName = formatTotwPlayerName(
+    player.player,
     MAX_NAME_LENGTH + 6,
-  ).toUpperCase();
+  );
   const teamName = truncateText(
     player.primaryTeam,
     MAX_TEAM_LENGTH,
@@ -246,12 +252,15 @@ export const TwelfthManBandBroadcastPro: React.FC<
         }}
       >
         <div className="flex min-w-0 flex-col gap-1">
-          <span className={labelClass}>12th Man</span>
+          <span className={labelClass} style={{ color: text.muted }}>
+            12th Man
+          </span>
           <TeamOfTheWeekPlayerName
             value={playerName}
             animation={{ ...copyAnimation, delay: delay + 2 }}
             variant="onContainerTitle"
             className={nameClass}
+            style={{ color: text.copy }}
           />
         </div>
 
@@ -262,8 +271,11 @@ export const TwelfthManBandBroadcastPro: React.FC<
               animation={{ ...copyAnimation, delay: delay + 4 }}
               variant="onContainerCopy"
               className={teamClass}
+              style={{ color: text.secondary }}
             />
-            <p className={roleClass}>Stand-by Player</p>
+            <p className={roleClass} style={{ color: text.muted }}>
+              Stand-by Player
+            </p>
           </div>
           {!isAccountClub && (
             <BroadcastProCrestWell

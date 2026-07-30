@@ -1,6 +1,9 @@
 import React from "react";
 import { AnimatedText } from "../../../../../components/typography/AnimatedText";
-import { BroadcastProMetadataChip } from "../../../../../compositions/cricket/utils/broadcastPro";
+import {
+  BroadcastProMetadataChip,
+  useBroadcastProTheme,
+} from "../../../../../compositions/cricket/utils/broadcastPro";
 import type {
   AnimationConfig,
   AnimationType,
@@ -28,6 +31,7 @@ export const BroadcastProHeadlineSecondary: React.FC<
   fontFamily: fontFamilyOverride,
 }) => {
   const { componentStyles, fontClasses, fonts } = useThemeContext();
+  const { text: textOnGlass } = useBroadcastProTheme();
 
   const secondaryClass =
     componentStyles.broadcastProHeadlineSecondary?.className ??
@@ -73,6 +77,7 @@ export const BroadcastProHeadlineSecondary: React.FC<
         style={{
           fontFamily: `${subtitleFontFamily}, sans-serif`,
           fontWeight: 600,
+          color: textOnGlass.copy,
         }}
       >
         {text}

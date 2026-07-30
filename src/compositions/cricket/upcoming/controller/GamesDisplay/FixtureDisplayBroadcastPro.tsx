@@ -7,10 +7,10 @@ import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../_types/composition-types";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
-  calculateBroadcastProGameCardHeight,
   calculateDisplayedGames,
   mergeAssignSponsors,
 } from "./_utils/calculations";
+import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
 export const FixtureDisplayBroadcastPro: React.FC<GamesDisplayProps> = ({
   games,
@@ -28,29 +28,28 @@ export const FixtureDisplayBroadcastPro: React.FC<GamesDisplayProps> = ({
     screenIndex,
   );
 
-  const gameCardHeight = calculateBroadcastProGameCardHeight(
-    heights.asset,
-    displayedGames.length,
-  );
-
+  const mainContentHeight = getMainContentSectionHeight(heights);
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
 
   return (
     <div className="flex h-full w-full flex-col">
-      <AnimatedContainer
-        type="full"
-        className="mx-4 flex min-h-0 flex-1 flex-col overflow-hidden rounded-none md:mx-6"
-        backgroundColor="none"
-        animation={panelAnimation.containerIn}
-        exitAnimation={panelAnimation.containerOut}
+      <div
+        className="flex min-h-0 flex-col justify-center overflow-hidden"
+        style={{
+          height: `${mainContentHeight}px`,
+          maxHeight: `${mainContentHeight}px`,
+        }}
       >
-        <div className="flex min-h-0 flex-1 flex-col justify-center overflow-hidden">
-          <GamesListBroadcastPro
-            games={displayedGames}
-            gameRowHeight={gameCardHeight}
-          />
-        </div>
-      </AnimatedContainer>
+        <AnimatedContainer
+          type="full"
+          className="mx-4 flex w-full flex-shrink-0 flex-col rounded-none md:mx-6"
+          backgroundColor="none"
+          animation={panelAnimation.containerIn}
+          exitAnimation={panelAnimation.containerOut}
+        >
+          <GamesListBroadcastPro games={displayedGames} />
+        </AnimatedContainer>
+      </div>
       <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
         <SponsorFooter
           assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}

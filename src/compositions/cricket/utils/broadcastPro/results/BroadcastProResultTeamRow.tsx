@@ -6,7 +6,7 @@ import { ResultTeamName } from "../../primitives/ResultTeamName";
 import { truncateText } from "../../../results/layout/Sections/PlayerStats/_utils/helpers";
 import { BroadcastProGlassPanel } from "./BroadcastProGlassPanel";
 import { BroadcastProResultScoreBadge } from "./BroadcastProResultScoreBadge";
-import { csClass, resolveBroadcastProGlass } from "../index";
+import { csClass, useBroadcastProTheme } from "../index";
 import type { BroadcastProGlassStyle } from "../glass";
 
 export interface BroadcastProResultTeamRowProps {
@@ -37,23 +37,15 @@ export const BroadcastProResultTeamRow: React.FC<
   className = "",
 }) => {
   const { animations } = useAnimationContext();
-  const {
-    componentStyles,
-    broadcastProGlassOpacity,
-    broadcastProTransparentLayers,
-    selectedPalette,
-  } = useThemeContext();
+  const { componentStyles } = useThemeContext();
+  const { glass: themeGlass, text } = useBroadcastProTheme();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass(componentStyles, "broadcastProResultsTeamRow");
   const nameClass = csClass(componentStyles, "broadcastProResultsTeamName");
 
   const resolvedGlass =
     glass ??
-    resolveBroadcastProGlass({
-      surfaceBase: selectedPalette.container.background,
-      broadcastProGlassOpacity,
-      broadcastProTransparentLayers,
-    });
+    themeGlass;
 
   const displayName = truncateText(teamName, MAX_TEAM_NAME).toUpperCase();
 
@@ -75,6 +67,7 @@ export const BroadcastProResultTeamRow: React.FC<
           animation={{ ...copyIn, delay: delay + 4 }}
           variant="onContainerTitle"
           className={nameClass}
+          style={{ color: text.copy }}
         />
       </div>
       <BroadcastProResultScoreBadge

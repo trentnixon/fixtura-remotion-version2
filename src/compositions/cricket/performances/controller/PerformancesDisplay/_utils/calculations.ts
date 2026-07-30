@@ -11,7 +11,8 @@ export interface BroadcastProPerformanceGridLayout {
 }
 
 /**
- * Sizes the 2-column performance grid to fit the main area (between header and footer).
+ * Sizes the 2-column performance grid to fit the theme asset height
+ * (main content section below the template header).
  */
 export const calculateBroadcastProPerformanceGridLayout = (
   mainHeight: number,

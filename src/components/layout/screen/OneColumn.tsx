@@ -4,11 +4,12 @@ import { RouteToComposition } from "../../../core/utils/routing";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import { ProgressTimer } from "../main/Timer/ProgressTimer";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { getCompositionSectionHeight } from "../../../core/utils/layoutHeights";
 
 export const OneColumn: React.FC<{ Header: React.FC }> = ({ Header }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
-  const compositionRouteHeight = (heights.asset + heights.footer) * 2;
+  const compositionRouteHeight = getCompositionSectionHeight(heights);
   const headerPx = heights.header;
   const { data } = useVideoDataContext();
   const { timings } = data;

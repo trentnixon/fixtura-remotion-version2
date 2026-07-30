@@ -11,12 +11,7 @@ export const getAvailableHeight = (heights: { asset: number }): number => {
  * Height for the main roster body when a sponsor/footer strip (`layout.heights.footer`)
  * is stacked below the content (same pattern as ladder/top5 BroadcastPro).
  */
-export const getAvailableHeightReservingFooter = (heights: {
-  asset: number;
-  footer: number;
-}): number => {
-  return Math.max(1, heights.asset - heights.footer);
-};
+export { getMainContentHeightReservingFooter as getAvailableHeightReservingFooter } from "../../../../../../core/utils/layoutHeights";
 
 /**
  * Get background color from theme palette

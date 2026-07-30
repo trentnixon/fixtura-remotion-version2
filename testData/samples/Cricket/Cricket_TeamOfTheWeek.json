@@ -258,6 +258,30 @@
       "prompt": "chris schultz  (c) from Runaway Bay Orange Community Div 3. has been selected as rank 2 all-rounder in the Team of the Week. Batting: scored 40 runs, from 37 balls, with a strike rate of 108.1, including 4 fours. Bowling: took 1 wicket, from 4 overs, conceding 14 runs, with an economy rate of 3.50, including 1 maiden. All-rounder score: 40.0. Overall rankings: ranked #10 in runs scored, ranked #8 in strike rate, ranked #13 in wickets taken, ranked #2 in all-rounder performance."
     },
     {
+      "category": "Wicket-Keeper",
+      "categoryDetail": {
+        "type": "Wicket-Keeper",
+        "position": "wicketKeeper"
+      },
+      "rank": 1,
+      "player": "dylan harper",
+      "primaryTeam": "Runaway Bay Navy Community Div 1",
+      "club": {
+        "name": "Runaway Bay Navy Community Div 1",
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
+          "width": 500,
+          "height": 500
+        }
+      },
+      "fielding": {
+        "catches": 4,
+        "stumpings": 1
+      },
+      "rankings": {},
+      "prompt": "dylan harper from Runaway Bay Navy Community Div 1. has been selected as the wicket-keeper in the Team of the Week. Fielding: 4 catches and 1 stumping."
+    },
+    {
       "category": "Bowler",
       "categoryDetail": {
         "type": "Bowler",
@@ -429,30 +453,6 @@
         "highestStrikeRate": 5
       },
       "prompt": "harrison rachow from Runaway Bay Orange Community Div 1. has been selected as the top twelfth man in the Team of the Week. Batting: scored 50 runs, from 43 balls, with a strike rate of 116.3, including 7 fours, and 1 sixes. Overall rankings: ranked #4 in runs scored, ranked #5 in strike rate."
-    },
-    {
-      "category": "Wicket-Keeper",
-      "categoryDetail": {
-        "type": "Wicket-Keeper",
-        "position": "wicketKeeper"
-      },
-      "rank": 1,
-      "player": "test keeper",
-      "primaryTeam": "Nightcliff Cricket Club",
-      "club": {
-        "name": "Nightcliff Cricket Club",
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3_cropped_e0dc3161c6.png",
-          "width": 500,
-          "height": 500
-        }
-      },
-      "fielding": {
-        "catches": 2,
-        "stumpings": 3
-      },
-      "rankings": {},
-      "prompt": "test keeper from Nightcliff Cricket Club. has been selected as the wicket-keeper in the Team of the Week. Fielding: 2 catches and 3 stumpings."
     }
   ],
   "asset": {

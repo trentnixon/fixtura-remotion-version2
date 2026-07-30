@@ -11,6 +11,8 @@ const results = broadcastProCompositionComponentStylesResults;
  */
 export const broadcastProCompositionComponentStylesStatMatrix = {
   broadcastProStatMatrixLabel: ranking.broadcastProPlayerRankingStatLabel,
+  broadcastProStatMatrixLabelPerformances:
+    ranking.broadcastProPlayerRankingStatLabelPerformances,
   broadcastProStatMatrixTripleFeatured:
     ranking.broadcastProPlayerRankingTripleStatsFeatured,
   broadcastProStatMatrixTripleGrid:
@@ -30,6 +32,7 @@ export const broadcastProCompositionComponentStylesStatMatrix = {
 } satisfies Pick<
   ThemeComponentStyles,
   | "broadcastProStatMatrixLabel"
+  | "broadcastProStatMatrixLabelPerformances"
   | "broadcastProStatMatrixTripleFeatured"
   | "broadcastProStatMatrixTripleGrid"
   | "broadcastProStatMatrixTriplePerformances"

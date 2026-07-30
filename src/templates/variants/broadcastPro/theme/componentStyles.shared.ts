@@ -44,6 +44,10 @@ const broadcastProScoreGrid = {
   className: "font-teko text-4xl font-semibold tracking-tight leading-none",
 };
 
+const broadcastProScorePerformances = {
+  className: "font-teko text-6xl font-semibold tracking-tight leading-none",
+};
+
 const broadcastProScoreCompact = {
   className: "font-teko text-xl font-semibold tracking-tight leading-none",
 };
@@ -225,6 +229,7 @@ export const broadcastProComponentStylesShared = {
   broadcastProScoreTablePoints,
   broadcastProScoreFeatured,
   broadcastProScoreGrid,
+  broadcastProScorePerformances,
   broadcastProScoreCompact,
   broadcastProScoreDivider,
   broadcastProScoreRosterIndex,
@@ -298,6 +303,7 @@ export const broadcastProComponentStylesShared = {
   | "broadcastProScoreTablePoints"
   | "broadcastProScoreFeatured"
   | "broadcastProScoreGrid"
+  | "broadcastProScorePerformances"
   | "broadcastProScoreCompact"
   | "broadcastProScoreDivider"
   | "broadcastProScoreRosterIndex"
