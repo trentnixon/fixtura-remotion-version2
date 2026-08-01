@@ -53,8 +53,7 @@ export const BroadcastProRosterSheetRow: React.FC<
   const titleFontFamily =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
 
-  const indexColor =
-    indexResult.variant === "leader" ? accent : text.muted;
+  const indexColor = indexResult.variant === "leader" ? accent : text.muted;
 
   const rowHeightPx = Math.max(1, Math.round(metrics.rowPx));
 

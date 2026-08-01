@@ -1,7 +1,10 @@
 import React from "react";
 import { AnimatedText } from "../../../../../components/typography/AnimatedText";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { BroadcastProMetadataChip, useBroadcastProTheme } from "../../../utils/broadcastPro";
+import {
+  BroadcastProMetadataChip,
+  useBroadcastProTheme,
+} from "../../../utils/broadcastPro";
 import { TableHeaderProps } from "./_types/TableHeaderProps";
 
 const GAP = "gap-2";

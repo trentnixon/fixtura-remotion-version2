@@ -43,10 +43,8 @@ const loadEnvFile = (filePath) => {
 
 loadEnvFile(join(root, ".env"));
 
-const bucket =
-  process.env.REMOTION_BUCKET ?? "remotionlambda-69q0up4r9e";
-const siteName =
-  process.env.REMOTION_SITE_NAME ?? "fixtura-remotion-v2";
+const bucket = process.env.REMOTION_BUCKET ?? "remotionlambda-69q0up4r9e";
+const siteName = process.env.REMOTION_SITE_NAME ?? "fixtura-remotion-v2";
 const region = process.env.AWS_REGION ?? "ap-southeast-2";
 const keyPrefix = `sites/${siteName}/public`;
 

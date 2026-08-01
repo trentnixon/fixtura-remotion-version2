@@ -71,7 +71,8 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
   } = useThemeContext();
   const { animations } = useAnimationContext();
   const { glass, text, accent: themeAccent } = useBroadcastProTheme();
-  const accent = colors?.primary ?? selectedPalette.container.accent ?? themeAccent;
+  const accent =
+    colors?.primary ?? selectedPalette.container.accent ?? themeAccent;
   const copyIn = animations.text.main.copyIn;
 
   const zone = resolveBroadcastProLadderZone({

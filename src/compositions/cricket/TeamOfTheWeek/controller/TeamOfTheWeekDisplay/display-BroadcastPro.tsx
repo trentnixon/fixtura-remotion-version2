@@ -37,10 +37,7 @@ const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
   const compositionHeight = getCompositionSectionHeight(heights);
 
   return (
-    <div
-      className="flex flex-col"
-      style={{ height: `${compositionHeight}px` }}
-    >
+    <div className="flex flex-col" style={{ height: `${compositionHeight}px` }}>
       <AnimatedContainer
         type="full"
         className={animatedClass}

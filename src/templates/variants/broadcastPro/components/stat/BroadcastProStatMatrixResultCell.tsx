@@ -86,7 +86,9 @@ export const BroadcastProStatMatrixResultCell: React.FC<
         primaryStyle={{
           color: highlight ? accentColor || themeAccent : text.copy,
         }}
-        suffixStyle={{ color: highlight ? accentColor || themeAccent : text.muted }}
+        suffixStyle={{
+          color: highlight ? accentColor || themeAccent : text.muted,
+        }}
       />
     </div>
   );

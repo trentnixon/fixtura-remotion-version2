@@ -63,10 +63,7 @@ export const CricketUpcomingWithTransitionsBroadcastPro: React.FC = () => {
   }));
 
   return (
-    <div
-      className="w-full"
-      style={{ height: `${compositionHeight}px` }}
-    >
+    <div className="w-full" style={{ height: `${compositionHeight}px` }}>
       <TransitionSeriesWrapper
         sequences={sequences}
         transitionType={transitionConfig.type as TransitionType}

@@ -41,8 +41,7 @@ export const broadcastProCompositionComponentStylesRoster = {
       "flex min-h-0 min-w-0 flex-1 flex-col justify-start overflow-hidden pr-1",
   },
   broadcastProRosterRow: {
-    className:
-      "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2",
+    className: "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2",
   },
   broadcastProRosterNameCell: {
     className:

@@ -221,10 +221,7 @@ export const TwelfthManBandBroadcastPro: React.FC<
     "broadcastProTeamOfTheWeekTwelfthRole",
   );
 
-  const playerName = formatTotwPlayerName(
-    player.player,
-    MAX_NAME_LENGTH + 6,
-  );
+  const playerName = formatTotwPlayerName(player.player, MAX_NAME_LENGTH + 6);
   const teamName = truncateText(
     player.primaryTeam,
     MAX_TEAM_LENGTH,

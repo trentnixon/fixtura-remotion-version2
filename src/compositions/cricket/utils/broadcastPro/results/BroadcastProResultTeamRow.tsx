@@ -43,9 +43,7 @@ export const BroadcastProResultTeamRow: React.FC<
   const rowClass = csClass(componentStyles, "broadcastProResultsTeamRow");
   const nameClass = csClass(componentStyles, "broadcastProResultsTeamName");
 
-  const resolvedGlass =
-    glass ??
-    themeGlass;
+  const resolvedGlass = glass ?? themeGlass;
 
   const displayName = truncateText(teamName, MAX_TEAM_NAME).toUpperCase();
 

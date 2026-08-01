@@ -33,18 +33,13 @@ export function computeBroadcastProRosterPlayerListMetrics(
   const n = Math.max(1, playerCount);
   const listHeightPx = Math.max(
     s.minRowPx * n,
-    availableHeightPx -
-      s.leftColumnHeaderReservePx -
-      s.listChromeReservePx,
+    availableHeightPx - s.leftColumnHeaderReservePx - s.listChromeReservePx,
   );
 
   const gapPx = n <= 15 ? 8 : n <= 22 ? 6 : n <= 28 ? 4 : 2;
   const totalGaps = (n - 1) * gapPx;
 
-  let rowPx = Math.max(
-    s.minRowPx,
-    Math.floor((listHeightPx - totalGaps) / n),
-  );
+  let rowPx = Math.max(s.minRowPx, Math.floor((listHeightPx - totalGaps) / n));
 
   while (n * rowPx + totalGaps > listHeightPx && rowPx > s.minRowPx) {
     rowPx -= 1;
