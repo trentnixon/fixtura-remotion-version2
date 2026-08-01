@@ -8,49 +8,51 @@ import GamesListMudgeeraba from "../GamesList/games-list-Mudgeeraba";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
-  calculateGameCardHeight,
   mergeAssignSponsors,
 } from "./_utils/calculations";
+import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
 export const GamesDisplayMudgeeraba: React.FC<GamesDisplayProps> = ({
   games,
   gamesPerScreen,
   screenIndex,
-  heights = { asset: 1080 },
 }) => {
   const { animations } = useAnimationContext();
   const { layout } = useThemeContext();
+  const { heights } = layout;
   const ContainerAnimations = animations.container;
 
-  // Calculate which games to show on this screen
   const displayedGames = calculateDisplayedGames(
     games,
     gamesPerScreen,
     screenIndex,
   );
 
-  // Calculate game card heights
-  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
-
-  // Merge all assignSponsors objects from displayedGames into one object
+  const mainContentHeight = getMainContentSectionHeight(heights);
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
+
   return (
-    <div className="p-0 flex flex-col w-full h-full justify-center">
-      <AnimatedContainer
-        type="full"
-        className={`flex flex-col mx-8 overflow-hidden ${layout.borderRadius.container}`}
-        backgroundColor="none"
-        animation={ContainerAnimations.main.parent.containerIn}
-        animationDelay={0}
-        exitAnimation={ContainerAnimations.main.parent.containerOut}
+    <div className="flex h-full w-full flex-col p-0">
+      <div
+        className="flex w-full flex-col justify-center overflow-hidden"
+        style={{
+          height: `${mainContentHeight}px`,
+          maxHeight: `${mainContentHeight}px`,
+        }}
       >
-        <div className="flex-1 overflow-hidden">
-          <GamesListMudgeeraba
-            games={displayedGames}
-            gameRowHeight={gameCardHeight}
-          />
-        </div>
-      </AnimatedContainer>
+        <AnimatedContainer
+          type="full"
+          className={`flex flex-col mx-8 overflow-hidden ${layout.borderRadius.container}`}
+          backgroundColor="none"
+          animation={ContainerAnimations.main.parent.containerIn}
+          animationDelay={0}
+          exitAnimation={ContainerAnimations.main.parent.containerOut}
+        >
+          <div className="flex-1 overflow-hidden">
+            <GamesListMudgeeraba games={displayedGames} />
+          </div>
+        </AnimatedContainer>
+      </div>
       <div style={{ height: `${heights.footer}px` }}>
         <SponsorFooter
           assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}

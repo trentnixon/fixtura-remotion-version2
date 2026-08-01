@@ -22,6 +22,9 @@ export {
   getShallowColumnPadding,
   getShallowEdgeStrip,
   clipPathStyle,
+  CORNER_SOFTEN_PERCENT,
+  CORNER_ARC_SEGMENTS,
+  showAngularEdgeAccents,
 } from "./angles";
 
 export {

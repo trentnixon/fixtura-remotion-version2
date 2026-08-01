@@ -29,6 +29,8 @@ import {
   SHALLOW_EDGE_STRIP_RIGHT,
   SHALLOW_ROW_LEFT,
   getLayeredUnderlayColor,
+  showAngularEdgeAccents,
+  clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 
 const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
@@ -63,14 +65,16 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
 
   const rowContent = (
     <>
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundColor: colors.primary,
-          clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-        }}
-        aria-hidden
-      />
+      {showAngularEdgeAccents() && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundColor: colors.primary,
+            ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
+          }}
+          aria-hidden
+        />
+      )}
 
       {/* Logo - flush left, full height, clip on container so content gets angled shape */}
       <LogoWell variant="steepLeft" size={rowHeight} className="mr-4">

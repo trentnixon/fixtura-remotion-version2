@@ -22,6 +22,8 @@ import {
   SHALLOW_EDGE_STRIP_LEFT,
   SHALLOW_EDGE_STRIP_RIGHT,
   getLayeredUnderlayColor,
+  showAngularEdgeAccents,
+  clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 
 const EDGE_COLOR_HOME = "rgb(34, 197, 94)"; // green
@@ -46,7 +48,7 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
     <div className="overflow-visible">
       <AnimatedContainer
         type="full"
-        className="rounded-none w-full overflow-visible"
+        className="w-full overflow-visible rounded-none"
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
@@ -101,14 +103,16 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
               className="flex flex-1 w-full min-w-0 relative"
               surfaceClassName={`flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_LEFT}`}
             >
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  backgroundColor: EDGE_COLOR_HOME,
-                  clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-                }}
-                aria-hidden
-              />
+              {showAngularEdgeAccents() && (
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    backgroundColor: EDGE_COLOR_HOME,
+                    ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
+                  }}
+                  aria-hidden
+                />
+              )}
               <MetadataMedium
                 value={game.teamHome}
                 animation={{
@@ -138,14 +142,16 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
               className="flex flex-1 w-full min-w-0 relative"
               surfaceClassName={`flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_RIGHT}`}
             >
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  backgroundColor: EDGE_COLOR_AWAY,
-                  clipPath: SHALLOW_EDGE_STRIP_LEFT,
-                }}
-                aria-hidden
-              />
+              {showAngularEdgeAccents() && (
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    backgroundColor: EDGE_COLOR_AWAY,
+                    ...clipPathStyle(SHALLOW_EDGE_STRIP_LEFT),
+                  }}
+                  aria-hidden
+                />
+              )}
               <MetadataMedium
                 value={game.teamAway}
                 animation={{

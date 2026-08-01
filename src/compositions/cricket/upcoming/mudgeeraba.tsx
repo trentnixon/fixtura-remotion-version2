@@ -1,10 +1,12 @@
 import React from "react";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
 import {
   TransitionDirection,
   TransitionSeriesWrapper,
   TransitionType,
 } from "../../../components/transitions";
+import { getCompositionSectionHeight } from "../../../core/utils/layoutHeights";
 import GamesDisplayMudgeeraba from "./controller/GamesDisplay/FixtureDisplayMudgeeraba";
 import NoGamesData from "./modules/NoGamesData/no-data";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
@@ -19,6 +21,9 @@ import {
 export const UpcomingGamesWithTransitionsMudgeeraba: React.FC = () => {
   const { data, contentLayout, metadata } = useVideoDataContext();
   const { data: CompositionData, timings } = data;
+  const { layout } = useThemeContext();
+  const { heights } = layout;
+  const compositionHeight = getCompositionSectionHeight(heights);
 
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
@@ -50,25 +55,32 @@ export const UpcomingGamesWithTransitionsMudgeeraba: React.FC = () => {
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <GamesDisplayMudgeeraba
-        games={CompositionData as GameData[]}
-        gamesPerScreen={gamesPerScreen}
-        screenIndex={index}
-      />
+      <div
+        className="h-full w-full"
+        style={{ height: `${compositionHeight}px` }}
+      >
+        <GamesDisplayMudgeeraba
+          games={CompositionData as GameData[]}
+          gamesPerScreen={gamesPerScreen}
+          screenIndex={index}
+        />
+      </div>
     ),
     durationInFrames: displayDurationPerScreen,
   }));
 
   return (
-    <TransitionSeriesWrapper
-      sequences={sequences}
-      transitionType={transitionConfig.type as TransitionType}
-      direction={transitionConfig.direction as TransitionDirection}
-      timing={{
-        type: "linear",
-        durationInFrames: transitionConfig.durationInFrames,
-      }}
-    />
+    <div className="w-full" style={{ height: `${compositionHeight}px` }}>
+      <TransitionSeriesWrapper
+        sequences={sequences}
+        transitionType={transitionConfig.type as TransitionType}
+        direction={transitionConfig.direction as TransitionDirection}
+        timing={{
+          type: "linear",
+          durationInFrames: transitionConfig.durationInFrames,
+        }}
+      />
+    </div>
   );
 };
 

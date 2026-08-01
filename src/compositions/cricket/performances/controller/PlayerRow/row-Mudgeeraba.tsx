@@ -25,6 +25,8 @@ import {
   SHALLOW_EDGE_STRIP_RIGHT,
   SHALLOW_ROW_LEFT,
   getLayeredUnderlayColor,
+  showAngularEdgeAccents,
+  clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 
 // const NAME_LENGTH = 30;
@@ -58,14 +60,16 @@ const PerformanceRowMudgeeraba: React.FC<PerformanceRowProps> = ({
 
   const rowContent = (
     <>
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundColor: colors.primary,
-          clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-        }}
-        aria-hidden
-      />
+      {showAngularEdgeAccents() && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundColor: colors.primary,
+            ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
+          }}
+          aria-hidden
+        />
+      )}
       <LogoWell variant="steepLeft" size={rowHeight} className="mr-2">
         <TeamLogo
           logo={performance.teamLogo}

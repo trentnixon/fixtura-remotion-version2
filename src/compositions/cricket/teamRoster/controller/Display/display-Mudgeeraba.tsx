@@ -20,6 +20,8 @@ import {
   SHALLOW_ROW_LEFT,
   LayeredAngularPanel,
   getLayeredUnderlayColor,
+  showAngularEdgeAccents,
+  clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 const ROSTER_ROW_HEIGHT = 58;
 
@@ -61,14 +63,16 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
                   style={{ height: `${ROSTER_ROW_HEIGHT}px` }}
                   surfaceClassName={`flex items-center w-full overflow-hidden ${PADDING_SHALLOW_LEFT} relative`}
                 >
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      backgroundColor: colors.primary,
-                      clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-                    }}
-                    aria-hidden
-                  />
+                  {showAngularEdgeAccents() && (
+                    <div
+                      className="absolute inset-0 pointer-events-none"
+                      style={{
+                        backgroundColor: colors.primary,
+                        ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
+                      }}
+                      aria-hidden
+                    />
+                  )}
                   <RosterPlayerName
                     value={truncatePlayerName(
                       player.toUpperCase(),

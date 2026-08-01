@@ -5,6 +5,7 @@ import { TableHeaderProps } from "./_types/TableHeaderProps";
 import {
   PADDING_SHALLOW_LEFT,
   SHALLOW_HEADER_TOP,
+  clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 
 export const TableHeaderMudgeeraba: React.FC<TableHeaderProps> = ({
@@ -21,7 +22,7 @@ export const TableHeaderMudgeeraba: React.FC<TableHeaderProps> = ({
       style={{
         height: `${headerHeight}px`,
         backgroundColor: rowBg,
-        clipPath: SHALLOW_HEADER_TOP,
+        ...clipPathStyle(SHALLOW_HEADER_TOP),
       }}
     >
       <div

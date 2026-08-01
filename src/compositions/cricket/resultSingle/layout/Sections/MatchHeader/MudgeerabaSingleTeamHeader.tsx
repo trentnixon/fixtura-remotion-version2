@@ -9,6 +9,7 @@ import { Team } from "../../../types";
 import {
   STEEP_HERO_TOP_LEFT,
   LogoWell,
+  clipPathStyle,
 } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export interface MudgeerabaSingleTeamHeaderProps {
@@ -93,7 +94,7 @@ export const MudgeerabaSingleTeamHeader: React.FC<
             className="font-bold relative z-20 overflow-hidden h-full flex items-center"
             style={{
               backgroundColor: primaryColor,
-              clipPath: STEEP_HERO_TOP_LEFT,
+              ...clipPathStyle(STEEP_HERO_TOP_LEFT),
               marginLeft: "-8px",
               paddingLeft: "32px",
               paddingRight: "64px",

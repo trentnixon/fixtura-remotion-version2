@@ -12,6 +12,8 @@ import {
   SHALLOW_COLUMN_RIGHT,
   LayeredAngularPanel,
   getLayeredUnderlayColor,
+  showAngularEdgeAccents,
+  clipPathStyle,
 } from "../../../../../../templates/variants/mudgeeraba/design";
 
 const MAX_NAME_LENGTH = 20;
@@ -54,14 +56,16 @@ const PlayerStatRow: React.FC<{
       className="w-full relative"
       surfaceClassName={`flex justify-between items-center py-2 relative overflow-hidden ${isLeftColumn ? "pl-8 pr-16" : "pl-16 pr-8"}`}
     >
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundColor: colors.primary,
-          clipPath: edgeStripClip,
-        }}
-        aria-hidden
-      />
+      {showAngularEdgeAccents() && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundColor: colors.primary,
+            ...clipPathStyle(edgeStripClip),
+          }}
+          aria-hidden
+        />
+      )}
       <ResultPlayerName
         className="whitespace-nowrap relative z-10"
         value={truncatePlayerName(playerName, MAX_NAME_LENGTH)}

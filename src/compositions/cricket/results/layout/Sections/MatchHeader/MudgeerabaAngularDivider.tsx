@@ -6,6 +6,7 @@ import { MudgeerabaAngularDividerProps } from "./_types/MudgeerabaAngularDivider
 import {
   SHALLOW_DIVIDER_LEFT,
   SHALLOW_DIVIDER_RIGHT,
+  clipPathStyle,
 } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaAngularDivider: React.FC<
@@ -70,7 +71,7 @@ export const MudgeerabaAngularDivider: React.FC<
               width: "45%",
               height: "100%",
               backgroundColor: backgroundColorContainer,
-              clipPath: SHALLOW_DIVIDER_LEFT,
+              ...clipPathStyle(SHALLOW_DIVIDER_LEFT),
             }}
           />
 
@@ -83,7 +84,7 @@ export const MudgeerabaAngularDivider: React.FC<
               width: "45%",
               height: "100%",
               backgroundColor: backgroundColorContainer,
-              clipPath: SHALLOW_DIVIDER_RIGHT,
+              ...clipPathStyle(SHALLOW_DIVIDER_RIGHT),
             }}
           />
 

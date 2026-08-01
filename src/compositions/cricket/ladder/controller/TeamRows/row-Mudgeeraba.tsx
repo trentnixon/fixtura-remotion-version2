@@ -20,6 +20,8 @@ import {
   LogoWell,
   LayeredAngularPanel,
   getLayeredUnderlayColor,
+  showAngularEdgeAccents,
+  clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 /** Frames to wait after row animates in before edge strip animates in */
 const EDGE_STRIP_DELAY_OFFSET = 12;
@@ -82,25 +84,26 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
 
   const rowContent = (
     <>
-      {/* Colored edge strip: second polygon, animates in after row */}
-      <AnimatedContainer
-        type="full"
-        className="absolute inset-0 pointer-events-none"
-        backgroundColor="none"
-        animation={containerAnimation.containerIn}
-        animationDelay={delay + EDGE_STRIP_DELAY_OFFSET}
-        exitAnimation={containerAnimation.containerOut}
-        exitFrame={animationOutFrame}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: edgeStripColor,
-            clipPath: SHALLOW_EDGE_STRIP_RIGHT,
-          }}
-          aria-hidden
-        />
-      </AnimatedContainer>
+      {showAngularEdgeAccents() && (
+        <AnimatedContainer
+          type="full"
+          className="absolute inset-0 pointer-events-none"
+          backgroundColor="none"
+          animation={containerAnimation.containerIn}
+          animationDelay={delay + EDGE_STRIP_DELAY_OFFSET}
+          exitAnimation={containerAnimation.containerOut}
+          exitFrame={animationOutFrame}
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundColor: edgeStripColor,
+              ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
+            }}
+            aria-hidden
+          />
+        </AnimatedContainer>
+      )}
       {/* Team info - logo + name */}
       <div
         className={`flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`}

@@ -10,6 +10,7 @@ import { TeamLogo as TeamLogoType } from "../../../../utils/primitives/_types/Te
 import {
   STEEP_HERO_TOP_LEFT,
   LogoWell,
+  clipPathStyle,
 } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
@@ -105,7 +106,7 @@ export const MudgeerabaClubHeader: React.FC<MudgeerabaClubHeaderProps> = ({
           className="font-bold relative z-20 overflow-hidden h-full flex items-center"
           style={{
             backgroundColor: primaryColor,
-            clipPath: STEEP_HERO_TOP_LEFT,
+            ...clipPathStyle(STEEP_HERO_TOP_LEFT),
             marginLeft: "-8px", // Overlap with logo border
             paddingLeft: "32px", // Increased horizontal padding for text
             paddingRight: "64px",
