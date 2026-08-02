@@ -2352,8 +2352,8 @@ var fadeInUp = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
-  const translateY = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [distance, 0], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const translateY = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [distance2, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2371,11 +2371,11 @@ var fadeInDown = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
   const translateY = (0, import_remotion7.interpolate)(
     frame,
     [startFrame, endFrame],
-    [-distance, 0],
+    [-distance2, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2395,8 +2395,8 @@ var fadeInLeft = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
-  const translateX = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [distance, 0], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const translateX = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [distance2, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2414,11 +2414,11 @@ var fadeInRight = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
   const translateX = (0, import_remotion7.interpolate)(
     frame,
     [startFrame, endFrame],
-    [-distance, 0],
+    [-distance2, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2449,11 +2449,11 @@ var fadeOutUp = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
   const translateY = (0, import_remotion7.interpolate)(
     frame,
     [startFrame, endFrame],
-    [0, -distance],
+    [0, -distance2],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2473,8 +2473,8 @@ var fadeOutDown = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
-  const translateY = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [0, distance], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const translateY = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [0, distance2], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2492,11 +2492,11 @@ var fadeOutLeft = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
   const translateX = (0, import_remotion7.interpolate)(
     frame,
     [startFrame, endFrame],
-    [0, -distance],
+    [0, -distance2],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2516,8 +2516,8 @@ var fadeOutRight = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
-  const translateX = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [0, distance], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const translateX = (0, import_remotion7.interpolate)(frame, [startFrame, endFrame], [0, distance2], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2538,8 +2538,8 @@ var slideInLeft = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
-  const translateX = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [distance, 0], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const translateX = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [distance2, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2557,11 +2557,11 @@ var slideInRight = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
   const translateX = (0, import_remotion8.interpolate)(
     frame,
     [startFrame, endFrame],
-    [-distance, 0],
+    [-distance2, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2581,8 +2581,8 @@ var slideInUp = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
-  const translateY = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [distance, 0], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const translateY = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [distance2, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2600,11 +2600,11 @@ var slideInDown = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
   const translateY = (0, import_remotion8.interpolate)(
     frame,
     [startFrame, endFrame],
-    [-distance, 0],
+    [-distance2, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2624,11 +2624,11 @@ var slideOutLeft = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
   const translateX = (0, import_remotion8.interpolate)(
     frame,
     [startFrame, endFrame],
-    [0, -distance],
+    [0, -distance2],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -2648,8 +2648,8 @@ var slideOutRight = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
-  const translateX = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [0, distance], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 30;
+  const translateX = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [0, distance2], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2667,8 +2667,8 @@ var slideOutUp = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
-  const translateY = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [0, distance], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const translateY = (0, import_remotion8.interpolate)(frame, [startFrame, endFrame], [0, distance2], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -2686,11 +2686,11 @@ var slideOutDown = (frame, startFrame, endFrame, config) => {
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 20;
   const translateY = (0, import_remotion8.interpolate)(
     frame,
     [startFrame, endFrame],
-    [0, -distance],
+    [0, -distance2],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -3307,11 +3307,11 @@ var import_remotion16 = require("remotion");
 var slideInLeft2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
   const translateX = (0, import_remotion16.interpolate)(
     frame,
     [startFrame, endFrame],
-    [-distance, 0],
+    [-distance2, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -3331,8 +3331,8 @@ var slideInLeft2 = (frame, startFrame, endFrame, config) => {
 var slideInRight2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
-  const translateX = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [distance, 0], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const translateX = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [distance2, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -3350,11 +3350,11 @@ var slideInRight2 = (frame, startFrame, endFrame, config) => {
 var slideInTop = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
   const translateY = (0, import_remotion16.interpolate)(
     frame,
     [startFrame, endFrame],
-    [-distance, 0],
+    [-distance2, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -3374,8 +3374,8 @@ var slideInTop = (frame, startFrame, endFrame, config) => {
 var slideInBottom = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
-  const translateY = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [distance, 0], {
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const translateY = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [distance2, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -3393,13 +3393,13 @@ var slideInBottom = (frame, startFrame, endFrame, config) => {
 var slideOutLeft2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
   const duration = endFrame - startFrame;
   const midFrame = startFrame + duration * 0.7;
   const translateX = (0, import_remotion16.interpolate)(
     frame,
     [startFrame, endFrame],
-    [0, -distance],
+    [0, -distance2],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -3426,10 +3426,10 @@ var slideOutLeft2 = (frame, startFrame, endFrame, config) => {
 var slideOutRight2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
   const duration = endFrame - startFrame;
   const midFrame = startFrame + duration * 0.7;
-  const translateX = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [0, distance], {
+  const translateX = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [0, distance2], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -3454,13 +3454,13 @@ var slideOutRight2 = (frame, startFrame, endFrame, config) => {
 var slideOutTop = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
   const duration = endFrame - startFrame;
   const midFrame = startFrame + duration * 0.7;
   const translateY = (0, import_remotion16.interpolate)(
     frame,
     [startFrame, endFrame],
-    [0, -distance],
+    [0, -distance2],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -3487,10 +3487,10 @@ var slideOutTop = (frame, startFrame, endFrame, config) => {
 var slideOutBottom = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_a = config.custom) == null ? void 0 : _a.distance) === "number" ? config.custom.distance : 100;
   const duration = endFrame - startFrame;
   const midFrame = startFrame + duration * 0.7;
-  const translateY = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [0, distance], {
+  const translateY = (0, import_remotion16.interpolate)(frame, [startFrame, endFrame], [0, distance2], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -8768,7 +8768,7 @@ var import_remotion65 = require("remotion");
 var slideInLeft3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8783,7 +8783,7 @@ var slideInLeft3 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateX(${-distance * (1 - progress)}px)` : `translateX(calc(-${distance} * ${1 - progress}))`;
+  const transform = typeof distance2 === "number" ? `translateX(${-distance2 * (1 - progress)}px)` : `translateX(calc(-${distance2} * ${1 - progress}))`;
   return {
     transform,
     opacity
@@ -8792,7 +8792,7 @@ var slideInLeft3 = (frame, startFrame, endFrame, config) => {
 var slideInRight3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8807,7 +8807,7 @@ var slideInRight3 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateX(${distance * (1 - progress)}px)` : `translateX(calc(${distance} * ${1 - progress}))`;
+  const transform = typeof distance2 === "number" ? `translateX(${distance2 * (1 - progress)}px)` : `translateX(calc(${distance2} * ${1 - progress}))`;
   return {
     transform,
     opacity
@@ -8816,7 +8816,7 @@ var slideInRight3 = (frame, startFrame, endFrame, config) => {
 var slideInTop2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8831,7 +8831,7 @@ var slideInTop2 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateY(${-distance * (1 - progress)}px)` : `translateY(calc(-${distance} * ${1 - progress}))`;
+  const transform = typeof distance2 === "number" ? `translateY(${-distance2 * (1 - progress)}px)` : `translateY(calc(-${distance2} * ${1 - progress}))`;
   return {
     transform,
     opacity
@@ -8840,7 +8840,7 @@ var slideInTop2 = (frame, startFrame, endFrame, config) => {
 var slideInBottom2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8855,7 +8855,7 @@ var slideInBottom2 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateY(${distance * (1 - progress)}px)` : `translateY(calc(${distance} * ${1 - progress}))`;
+  const transform = typeof distance2 === "number" ? `translateY(${distance2 * (1 - progress)}px)` : `translateY(calc(${distance2} * ${1 - progress}))`;
   return {
     transform,
     opacity
@@ -8864,7 +8864,7 @@ var slideInBottom2 = (frame, startFrame, endFrame, config) => {
 var slideOutLeft3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8879,7 +8879,7 @@ var slideOutLeft3 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateX(${-distance * progress}px)` : `translateX(calc(-${distance} * ${progress}))`;
+  const transform = typeof distance2 === "number" ? `translateX(${-distance2 * progress}px)` : `translateX(calc(-${distance2} * ${progress}))`;
   return {
     transform,
     opacity
@@ -8888,7 +8888,7 @@ var slideOutLeft3 = (frame, startFrame, endFrame, config) => {
 var slideOutRight3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8903,7 +8903,7 @@ var slideOutRight3 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateX(${distance * progress}px)` : `translateX(calc(${distance} * ${progress}))`;
+  const transform = typeof distance2 === "number" ? `translateX(${distance2 * progress}px)` : `translateX(calc(${distance2} * ${progress}))`;
   return {
     transform,
     opacity
@@ -8912,7 +8912,7 @@ var slideOutRight3 = (frame, startFrame, endFrame, config) => {
 var slideOutTop2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8927,7 +8927,7 @@ var slideOutTop2 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateY(${-distance * progress}px)` : `translateY(calc(-${distance} * ${progress}))`;
+  const transform = typeof distance2 === "number" ? `translateY(${-distance2 * progress}px)` : `translateY(calc(-${distance2} * ${progress}))`;
   return {
     transform,
     opacity
@@ -8936,7 +8936,7 @@ var slideOutTop2 = (frame, startFrame, endFrame, config) => {
 var slideOutBottom2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const distance = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
+  const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
   const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -8951,7 +8951,7 @@ var slideOutBottom2 = (frame, startFrame, endFrame, config) => {
       extrapolateRight: "clamp"
     }
   );
-  const transform = typeof distance === "number" ? `translateY(${distance * progress}px)` : `translateY(calc(${distance} * ${progress}))`;
+  const transform = typeof distance2 === "number" ? `translateY(${distance2 * progress}px)` : `translateY(calc(${distance2} * ${progress}))`;
   return {
     transform,
     opacity
@@ -9226,7 +9226,7 @@ var springIn = (frame, startFrame, endFrame, config, fps = 30) => {
   const transformProperty = typeof ((_d = config.custom) == null ? void 0 : _d.transformProperty) === "string" ? config.custom.transformProperty : "scale";
   const transformOrigin = typeof ((_e = config.custom) == null ? void 0 : _e.transformOrigin) === "string" ? config.custom.transformOrigin : "center";
   const includeOpacity = typeof ((_f = config.custom) == null ? void 0 : _f.includeOpacity) === "boolean" ? config.custom.includeOpacity : true;
-  const distance = typeof ((_g = config.custom) == null ? void 0 : _g.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_g = config.custom) == null ? void 0 : _g.distance) === "number" ? config.custom.distance : 100;
   const startAngle = typeof ((_h = config.custom) == null ? void 0 : _h.startAngle) === "number" ? config.custom.startAngle : -45;
   const springValue = (0, import_remotion68.spring)({
     frame: frame - startFrame,
@@ -9258,11 +9258,11 @@ var springIn = (frame, startFrame, endFrame, config, fps = 30) => {
       transform = `scaleY(${scaleY})`;
       break;
     case "translateX":
-      translateX = (0, import_remotion68.interpolate)(springValue, [from, to], [distance, 0]);
+      translateX = (0, import_remotion68.interpolate)(springValue, [from, to], [distance2, 0]);
       transform = `translateX(${translateX}px)`;
       break;
     case "translateY":
-      translateY = (0, import_remotion68.interpolate)(springValue, [from, to], [distance, 0]);
+      translateY = (0, import_remotion68.interpolate)(springValue, [from, to], [distance2, 0]);
       transform = `translateY(${translateY}px)`;
       break;
     case "rotate":
@@ -9312,7 +9312,7 @@ var springOut = (frame, startFrame, endFrame, config, fps = 30) => {
     durationRestThreshold: typeof ((_h = config.custom) == null ? void 0 : _h.durationRestThreshold) === "number" ? config.custom.durationRestThreshold : void 0
   });
   const exitSpringValue = reverse ? springValue : 1 - springValue;
-  const distance = typeof ((_i = config.custom) == null ? void 0 : _i.distance) === "number" ? config.custom.distance : 100;
+  const distance2 = typeof ((_i = config.custom) == null ? void 0 : _i.distance) === "number" ? config.custom.distance : 100;
   let transform = "";
   let scale, scaleX, scaleY, translateX, translateY, rotate2, defaultScale;
   switch (transformProperty) {
@@ -9329,11 +9329,11 @@ var springOut = (frame, startFrame, endFrame, config, fps = 30) => {
       transform = `scaleY(${scaleY})`;
       break;
     case "translateX":
-      translateX = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [0, distance]);
+      translateX = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [0, distance2]);
       transform = `translateX(${translateX}px)`;
       break;
     case "translateY":
-      translateY = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [0, distance]);
+      translateY = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [0, distance2]);
       transform = `translateY(${translateY}px)`;
       break;
     case "rotate":
@@ -13811,23 +13811,140 @@ var CNSWPrivate = () => {
 // src/templates/variants/mudgeeraba/design/angles.ts
 var SHALLOW_CUT_PERCENT = 5;
 var STEEP_CUT_PERCENT = 30;
+var CORNER_SOFTEN_PERCENT = 2;
+var CORNER_ARC_SEGMENTS = 2;
+var polygon = (points) => `polygon(${points.map(([x, y]) => `${x}% ${y}%`).join(", ")})`;
+var distance = (a, b) => Math.hypot(b[0] - a[0], b[1] - a[1]);
+var quadraticBezier = (start, control, end, t) => {
+  const u = 1 - t;
+  return [
+    u * u * start[0] + 2 * u * t * control[0] + t * t * end[0],
+    u * u * start[1] + 2 * u * t * control[1] + t * t * end[1]
+  ];
+};
+var roundVertex = (prev, corner, next, radius) => {
+  const inLen = distance(prev, corner);
+  const outLen = distance(corner, next);
+  const r2 = Math.min(radius, inLen * 0.48, outLen * 0.48);
+  const inX = (corner[0] - prev[0]) / inLen;
+  const inY = (corner[1] - prev[1]) / inLen;
+  const outX = (next[0] - corner[0]) / outLen;
+  const outY = (next[1] - corner[1]) / outLen;
+  return {
+    start: [corner[0] - inX * r2, corner[1] - inY * r2],
+    end: [corner[0] + outX * r2, corner[1] + outY * r2]
+  };
+};
+var softenPolygon = (corners, radius, segments = CORNER_ARC_SEGMENTS) => {
+  if (radius <= 0) {
+    return polygon(corners);
+  }
+  const rounded = [];
+  const count = corners.length;
+  for (let i = 0; i < count; i++) {
+    const prev = corners[(i - 1 + count) % count];
+    const corner = corners[i];
+    const next = corners[(i + 1) % count];
+    const { start, end } = roundVertex(prev, corner, next, radius);
+    rounded.push(start);
+    for (let s = 1; s <= segments; s++) {
+      rounded.push(quadraticBezier(start, corner, end, s / segments));
+    }
+  }
+  return polygon(rounded);
+};
+var r = CORNER_SOFTEN_PERCENT;
 var shallowBottomRight = 100 - SHALLOW_CUT_PERCENT;
 var shallowTopLeft = SHALLOW_CUT_PERCENT;
 var steepBottomRight = 100 - STEEP_CUT_PERCENT;
 var steepTopRight = 100 - STEEP_CUT_PERCENT;
-var SHALLOW_ROW_LEFT = `polygon(0% 0%, 100% 0%, ${shallowBottomRight}% 100%, 0% 100%)`;
-var SHALLOW_ROW_RIGHT = `polygon(${shallowTopLeft}% 0%, 100% 0%, 100% 100%, 0% 100%)`;
+var SHALLOW_ROW_LEFT = softenPolygon(
+  [
+    [0, 0],
+    [100, 0],
+    [shallowBottomRight, 100],
+    [0, 100]
+  ],
+  r
+);
+var SHALLOW_ROW_RIGHT = softenPolygon(
+  [
+    [shallowTopLeft, 0],
+    [100, 0],
+    [100, 100],
+    [0, 100]
+  ],
+  r
+);
 var SHALLOW_COLUMN_LEFT = SHALLOW_ROW_LEFT;
 var SHALLOW_COLUMN_RIGHT = SHALLOW_ROW_RIGHT;
-var SHALLOW_STATUS_BAR = `polygon(0% 0%, 100% 0%, ${shallowBottomRight}% 100%, ${shallowTopLeft}% 100%)`;
-var SHALLOW_HEADER_TOP = "polygon(2% 0%, 98% 0%, 100% 100%, 0% 100%)";
+var SHALLOW_STATUS_BAR = softenPolygon(
+  [
+    [0, 0],
+    [100, 0],
+    [shallowBottomRight, 100],
+    [shallowTopLeft, 100]
+  ],
+  r
+);
+var SHALLOW_HEADER_TOP = softenPolygon(
+  [
+    [2, 0],
+    [98, 0],
+    [100, 100],
+    [0, 100]
+  ],
+  r
+);
 var SHALLOW_EDGE_STRIP_RIGHT = `polygon(100% 0%, ${shallowBottomRight}% 100%, ${shallowBottomRight - 1}% 100%, 99% 0%)`;
 var SHALLOW_EDGE_STRIP_LEFT = `polygon(${shallowTopLeft}% 0%, 0% 100%, 1% 100%, ${shallowTopLeft + 1}% 0%)`;
-var STEEP_LOGO_WELL_LEFT = `polygon(0% 0%, 100% 0%, ${steepBottomRight}% 100%, 0% 100%)`;
-var STEEP_LOGO_WELL_RIGHT = `polygon(${STEEP_CUT_PERCENT}% 0%, 0% 100%, 100% 100%, 100% 0%)`;
-var STEEP_HERO_TOP_LEFT = `polygon(0% 0%, ${steepTopRight}% 0%, 100% 100%, 0% 100%)`;
-var SHALLOW_DIVIDER_LEFT = `polygon(0% 0%, 100% 0%, ${shallowBottomRight}% 50%, 100% 100%, 0% 100%)`;
-var SHALLOW_DIVIDER_RIGHT = `polygon(${shallowTopLeft}% 0%, 100% 0%, 100% 100%, 0% 100%, ${shallowTopLeft}% 50%)`;
+var STEEP_LOGO_WELL_LEFT = softenPolygon(
+  [
+    [0, 0],
+    [100, 0],
+    [steepBottomRight, 100],
+    [0, 100]
+  ],
+  r
+);
+var STEEP_LOGO_WELL_RIGHT = softenPolygon(
+  [
+    [STEEP_CUT_PERCENT, 0],
+    [0, 100],
+    [100, 100],
+    [100, 0]
+  ],
+  r
+);
+var STEEP_HERO_TOP_LEFT = softenPolygon(
+  [
+    [0, 0],
+    [steepTopRight, 0],
+    [100, 100],
+    [0, 100]
+  ],
+  r
+);
+var SHALLOW_DIVIDER_LEFT = softenPolygon(
+  [
+    [0, 0],
+    [100, 0],
+    [shallowBottomRight, 50],
+    [100, 100],
+    [0, 100]
+  ],
+  r
+);
+var SHALLOW_DIVIDER_RIGHT = softenPolygon(
+  [
+    [shallowTopLeft, 0],
+    [100, 0],
+    [100, 100],
+    [0, 100],
+    [shallowTopLeft, 50]
+  ],
+  r
+);
 var PADDING_SHALLOW_LEFT = "pl-4 pr-10";
 var PADDING_SHALLOW_RIGHT = "pl-12 pr-3";
 var PADDING_SHALLOW_LEFT_COMPACT = "pl-2 pr-6";
@@ -13835,6 +13952,7 @@ var PADDING_SHALLOW_ROW_LOGO_FLUSH = "pl-0 pr-10";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT = "pl-0 pr-6";
 var getShallowColumnPadding = (isLeftColumn) => isLeftColumn ? PADDING_SHALLOW_LEFT : PADDING_SHALLOW_RIGHT;
 var getShallowEdgeStrip = (isLeftColumn) => isLeftColumn ? SHALLOW_EDGE_STRIP_RIGHT : SHALLOW_EDGE_STRIP_LEFT;
+var showAngularEdgeAccents = () => true;
 var clipPathStyle2 = (clipPath) => ({
   clipPath,
   WebkitClipPath: clipPath
@@ -14151,7 +14269,7 @@ var TableHeaderMudgeeraba = ({
       style: {
         height: `${headerHeight}px`,
         backgroundColor: rowBg,
-        clipPath: SHALLOW_HEADER_TOP
+        ...clipPathStyle2(SHALLOW_HEADER_TOP)
       },
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(
@@ -14283,7 +14401,7 @@ var RowMudgeeraba = ({
     boxSizing: "border-box"
   };
   const rowContent = /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)(import_jsx_runtime121.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
+    showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
       AnimatedContainer,
       {
         type: "full",
@@ -14299,7 +14417,7 @@ var RowMudgeeraba = ({
             className: "absolute inset-0",
             style: {
               backgroundColor: edgeStripColor,
-              clipPath: SHALLOW_EDGE_STRIP_RIGHT
+              ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
             },
             "aria-hidden": true
           }
@@ -19754,7 +19872,7 @@ var GameCardMudgeeraba = ({
     AnimatedContainer,
     {
       type: "full",
-      className: "rounded-none w-full overflow-visible",
+      className: "w-full overflow-visible rounded-none",
       backgroundColor: "none",
       animation: ContainerAnimations.main.itemContainer.containerIn,
       animationDelay: delay,
@@ -19818,13 +19936,13 @@ var GameCardMudgeeraba = ({
                 className: "flex flex-1 w-full min-w-0 relative",
                 surfaceClassName: `flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_LEFT}`,
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(
+                  showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(
                     "div",
                     {
                       className: "absolute inset-0 pointer-events-none",
                       style: {
                         backgroundColor: EDGE_COLOR_HOME,
-                        clipPath: SHALLOW_EDGE_STRIP_RIGHT
+                        ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
                       },
                       "aria-hidden": true
                     }
@@ -19864,13 +19982,13 @@ var GameCardMudgeeraba = ({
                 className: "flex flex-1 w-full min-w-0 relative",
                 surfaceClassName: `flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_RIGHT}`,
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(
+                  showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(
                     "div",
                     {
                       className: "absolute inset-0 pointer-events-none",
                       style: {
                         backgroundColor: EDGE_COLOR_AWAY,
-                        clipPath: SHALLOW_EDGE_STRIP_LEFT
+                        ...clipPathStyle2(SHALLOW_EDGE_STRIP_LEFT)
                       },
                       "aria-hidden": true
                     }
@@ -19901,7 +20019,7 @@ var game_card_Mudgeeraba_default = GameCardMudgeeraba;
 // src/compositions/cricket/upcoming/controller/GamesList/games-list-Mudgeeraba.tsx
 var import_jsx_runtime192 = require("react/jsx-runtime");
 var GamesListMudgeeraba = ({ games }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "flex flex-col w-full space-y-16", children: games.map((game, index) => /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(game_card_Mudgeeraba_default, { game, index }, game.gameID)) });
+  return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "flex w-full flex-col space-y-16", children: games.map((game, index) => /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(game_card_Mudgeeraba_default, { game, index }, game.gameID)) });
 };
 var games_list_Mudgeeraba_default = GamesListMudgeeraba;
 
@@ -19910,36 +20028,40 @@ var import_jsx_runtime193 = require("react/jsx-runtime");
 var GamesDisplayMudgeeraba = ({
   games,
   gamesPerScreen,
-  screenIndex,
-  heights = { asset: 1080 }
+  screenIndex
 }) => {
   const { animations } = useAnimationContext();
   const { layout } = useThemeContext();
+  const { heights } = layout;
   const ContainerAnimations = animations.container;
   const displayedGames = calculateDisplayedGames(
     games,
     gamesPerScreen,
     screenIndex
   );
-  const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
+  const mainContentHeight = getMainContentSectionHeight(heights);
   const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
-  return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)("div", { className: "p-0 flex flex-col w-full h-full justify-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)("div", { className: "flex h-full w-full flex-col p-0", children: [
     /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
-      AnimatedContainer,
+      "div",
       {
-        type: "full",
-        className: `flex flex-col mx-8 overflow-hidden ${layout.borderRadius.container}`,
-        backgroundColor: "none",
-        animation: ContainerAnimations.main.parent.containerIn,
-        animationDelay: 0,
-        exitAnimation: ContainerAnimations.main.parent.containerOut,
-        children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { className: "flex-1 overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
-          games_list_Mudgeeraba_default,
+        className: "flex w-full flex-col justify-center overflow-hidden",
+        style: {
+          height: `${mainContentHeight}px`,
+          maxHeight: `${mainContentHeight}px`
+        },
+        children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
+          AnimatedContainer,
           {
-            games: displayedGames,
-            gameRowHeight: gameCardHeight
+            type: "full",
+            className: `flex flex-col mx-8 overflow-hidden ${layout.borderRadius.container}`,
+            backgroundColor: "none",
+            animation: ContainerAnimations.main.parent.containerIn,
+            animationDelay: 0,
+            exitAnimation: ContainerAnimations.main.parent.containerOut,
+            children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { className: "flex-1 overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(games_list_Mudgeeraba_default, { games: displayedGames }) })
           }
-        ) })
+        )
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { style: { height: `${heights.footer}px` }, children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
@@ -19957,6 +20079,9 @@ var import_jsx_runtime194 = require("react/jsx-runtime");
 var UpcomingGamesWithTransitionsMudgeeraba = () => {
   const { data, contentLayout, metadata } = useVideoDataContext();
   const { data: CompositionData, timings } = data;
+  const { layout } = useThemeContext();
+  const { heights } = layout;
+  const compositionHeight = getCompositionSectionHeight(heights);
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
   const fixturesLayout = contentLayout.divideFixturesBy || {};
@@ -19975,16 +20100,23 @@ var UpcomingGamesWithTransitionsMudgeeraba = () => {
   );
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
-      FixtureDisplayMudgeeraba_default,
+      "div",
       {
-        games: CompositionData,
-        gamesPerScreen,
-        screenIndex: index
+        className: "h-full w-full",
+        style: { height: `${compositionHeight}px` },
+        children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+          FixtureDisplayMudgeeraba_default,
+          {
+            games: CompositionData,
+            gamesPerScreen,
+            screenIndex: index
+          }
+        )
       }
     ),
     durationInFrames: displayDurationPerScreen
   }));
-  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("div", { className: "w-full", style: { height: `${compositionHeight}px` }, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
     TransitionSeriesWrapper,
     {
       sequences,
@@ -19995,7 +20127,7 @@ var UpcomingGamesWithTransitionsMudgeeraba = () => {
         durationInFrames: transitionConfig.durationInFrames
       }
     }
-  );
+  ) });
 };
 var mudgeeraba2 = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(UpcomingGamesWithTransitionsMudgeeraba, {});
@@ -22101,13 +22233,13 @@ var PlayerRowMudgeeraba = ({
   const rowPanelClass = `flex items-stretch w-full overflow-hidden ${PADDING_SHALLOW_ROW_LOGO_FLUSH} relative`;
   const rowPanelStyle = { height: `${rowHeight}px` };
   const rowContent = /* @__PURE__ */ (0, import_jsx_runtime233.jsxs)(import_jsx_runtime233.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime233.jsx)(
+    showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime233.jsx)(
       "div",
       {
         className: "absolute inset-0 pointer-events-none",
         style: {
           backgroundColor: colors.primary,
-          clipPath: SHALLOW_EDGE_STRIP_RIGHT
+          ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
         },
         "aria-hidden": true
       }
@@ -27008,8 +27140,7 @@ var MudgeerabaSingleTeamHeader = ({ team, teamLogo, delay, outerContainer }) => 
                       className: "font-bold relative z-20 overflow-hidden h-full flex items-center",
                       style: {
                         backgroundColor: primaryColor,
-                        // Steep hero wedge aligned to official angle system
-                        clipPath: STEEP_HERO_TOP_LEFT,
+                        ...clipPathStyle2(STEEP_HERO_TOP_LEFT),
                         marginLeft: "-8px",
                         // Overlap with logo border
                         paddingLeft: "32px",
@@ -27188,7 +27319,7 @@ var MudgeerabaStatusFooter = ({
           className: "w-full px-4 py-2 font-bold flex items-center justify-center relative overflow-hidden",
           style: {
             backgroundColor: primaryColor,
-            clipPath: SHALLOW_STATUS_BAR
+            ...clipPathStyle2(SHALLOW_STATUS_BAR)
           },
           children: /* @__PURE__ */ (0, import_jsx_runtime295.jsx)(
             AnimatedText,
@@ -28048,13 +28179,13 @@ var PlayerStatRow2 = ({ playerName, statValue, delay, index, isLeftColumn }) => 
       className: "w-full relative",
       surfaceClassName: `flex justify-between items-center py-2 relative overflow-hidden ${isLeftColumn ? "pl-8 pr-16" : "pl-16 pr-8"}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime308.jsx)(
+        showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime308.jsx)(
           "div",
           {
             className: "absolute inset-0 pointer-events-none",
             style: {
               backgroundColor: colors.primary,
-              clipPath: edgeStripClip
+              ...clipPathStyle2(edgeStripClip)
             },
             "aria-hidden": true
           }
@@ -30890,7 +31021,7 @@ var MudgeerabaSingleTeamHeader2 = ({ team, teamLogo, delay, outerContainer }) =>
                       className: "font-bold relative z-20 overflow-hidden h-full flex items-center",
                       style: {
                         backgroundColor: primaryColor,
-                        clipPath: STEEP_HERO_TOP_LEFT,
+                        ...clipPathStyle2(STEEP_HERO_TOP_LEFT),
                         marginLeft: "-8px",
                         paddingLeft: "32px",
                         paddingRight: "64px"
@@ -32177,13 +32308,13 @@ var RosterDisplayMudgeeraba = ({ roster }) => {
                   style: { height: `${ROSTER_ROW_HEIGHT}px` },
                   surfaceClassName: `flex items-center w-full overflow-hidden ${PADDING_SHALLOW_LEFT} relative`,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime373.jsx)(
+                    showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime373.jsx)(
                       "div",
                       {
                         className: "absolute inset-0 pointer-events-none",
                         style: {
                           backgroundColor: colors.primary,
-                          clipPath: SHALLOW_EDGE_STRIP_RIGHT
+                          ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
                         },
                         "aria-hidden": true
                       }
@@ -35213,13 +35344,13 @@ var PerformanceRowMudgeeraba = ({
   const rowPanelClass = `flex items-stretch w-full overflow-hidden ${PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT} relative`;
   const rowPanelStyle = { height: `${rowHeight}px` };
   const rowContent = /* @__PURE__ */ (0, import_jsx_runtime413.jsxs)(import_jsx_runtime413.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(
+    showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(
       "div",
       {
         className: "absolute inset-0 pointer-events-none",
         style: {
           backgroundColor: colors.primary,
-          clipPath: SHALLOW_EDGE_STRIP_RIGHT
+          ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
         },
         "aria-hidden": true
       }

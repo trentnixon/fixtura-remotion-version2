@@ -5,6 +5,7 @@ import { ClassicTwoColumn } from "./classicTwoColumn";
 import { mudgeeraba } from "./mudgeeraba";
 import { brickwork } from "./brickwork";
 import { broadcastpro } from "./broadcastPro";
+import { broadcastprorounded } from "./broadcastProRounded";
 
 export {
   basic,
@@ -14,4 +15,5 @@ export {
   mudgeeraba,
   brickwork,
   broadcastpro,
+  broadcastprorounded,
 };

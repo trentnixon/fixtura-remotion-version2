@@ -76,7 +76,7 @@ export const BroadcastProMainHeader = () => {
   };
 
   if (hideSecondaryLine) {
-    return <VerticalHeaderLogoTitle {...headerProps} />;
+    return <VerticalHeaderLogoTitle {...headerProps} Name={null} />;
   }
 
   return (

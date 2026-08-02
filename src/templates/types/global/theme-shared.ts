@@ -40,6 +40,8 @@ export interface ThemeLayout {
   spacing: {
     section: string;
     item: string;
+    /** Optional stack-level gap between sibling panels/rows (e.g. Broadcast Pro Rounded). */
+    stack?: string;
   };
   padding: {
     container: string;
@@ -48,6 +50,8 @@ export interface ThemeLayout {
   };
   borderRadius: {
     container: string;
+    /** Optional corner radius for logos and crest images. */
+    image?: string;
   };
 }
 

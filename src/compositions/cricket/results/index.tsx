@@ -7,6 +7,7 @@ import CNSW from "./cnsw";
 import CNSWPrivate from "./cnsw-private";
 import { mudgeeraba as MudgeerabaResults } from "./mudgeeraba";
 import BroadcastProResults from "./broadcastPro";
+import BroadcastProRoundedResults from "./broadcastProRounded";
 
 // Export all template implementations
 export { BasicResults as basic };
@@ -18,3 +19,4 @@ export { CNSW as cnsw };
 export { CNSWPrivate as cnswPrivate };
 export { MudgeerabaResults as mudgeeraba };
 export { BroadcastProResults as broadcastpro };
+export { BroadcastProRoundedResults as broadcastprorounded };

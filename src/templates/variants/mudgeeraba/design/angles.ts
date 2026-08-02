@@ -28,7 +28,12 @@ const polygon = (points: Point[]): string =>
 const distance = (a: Point, b: Point): number =>
   Math.hypot(b[0] - a[0], b[1] - a[1]);
 
-const quadraticBezier = (start: Point, control: Point, end: Point, t: number): Point => {
+const quadraticBezier = (
+  start: Point,
+  control: Point,
+  end: Point,
+  t: number,
+): Point => {
   const u = 1 - t;
   return [
     u * u * start[0] + 2 * u * t * control[0] + t * t * end[0],

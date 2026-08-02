@@ -8,6 +8,7 @@ import { TwoColumnClassic } from "./variants/twoColumnClassic";
 import { CNSWPrivate } from "./variants/cnsw-private";
 import { Mudgeeraba } from "./variants/mudgeeraba";
 import { BroadcastPro } from "./variants/broadcastPro";
+import { BroadcastProRounded } from "./variants/broadcastProRounded";
 /**
  * Define template registry key type
  */
@@ -65,6 +66,10 @@ export const templateRegistry = {
   },
   BroadcastPro: {
     component: BroadcastPro,
+    variants: Variants,
+  },
+  BroadcastProRounded: {
+    component: BroadcastProRounded,
     variants: Variants,
   },
 };

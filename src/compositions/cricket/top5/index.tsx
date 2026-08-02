@@ -8,6 +8,7 @@ import { CNSW as CNSWTop5 } from "./cnsw";
 import { CNSWPrivate as CNSWPrivateTop5 } from "./cnsw-private";
 import { mudgeeraba as mudgeerabaTop5 } from "./mudgeeraba";
 import { BroadcastPro as BroadcastProTop5 } from "./broadcastPro";
+import { BroadcastProRounded as BroadcastProRoundedTop5 } from "./broadcastProRounded";
 // Import other template implementations
 
 // Export all template implementations
@@ -20,3 +21,4 @@ export { CNSWTop5 as cnsw };
 export { CNSWPrivateTop5 as cnswprivate };
 export { mudgeerabaTop5 as mudgeeraba };
 export { BroadcastProTop5 as broadcastpro };
+export { BroadcastProRoundedTop5 as broadcastprorounded };

@@ -8,6 +8,7 @@ import { CNSWPrivate as CNSWPrivatePerformances } from "./cnsw-private";
 import { SixersThunder as SixersThunderPerformances } from "./sixersThunder";
 import { mudgeeraba as MudgeerabaPerformances } from "./mudgeeraba";
 import { BroadcastPro as BroadcastProPerformances } from "./broadcastPro";
+import { BroadcastProRounded as BroadcastProRoundedPerformances } from "./broadcastProRounded";
 
 // Export all template implementations
 export { BasicPerformances as basic };
@@ -19,3 +20,4 @@ export { CNSWPrivatePerformances as cnswPrivate };
 export { SixersThunderPerformances as sixersThunder };
 export { MudgeerabaPerformances as mudgeeraba };
 export { BroadcastProPerformances as broadcastpro };
+export { BroadcastProRoundedPerformances as broadcastprorounded };

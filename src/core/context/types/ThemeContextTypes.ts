@@ -5,10 +5,19 @@ import type { BroadcastProRosterListSizing } from "../../../templates/types/broa
 import type { BroadcastProCrestSizing } from "../../../templates/types/broadcast-pro/crest-well";
 import type { BroadcastProLadderZoneSizing } from "../../../templates/types/broadcast-pro/ladder-zone";
 import type { BroadcastProScoreSizing } from "../../../templates/types/broadcast-pro/score-typography";
+import type { BroadcastProRoundedHeadlineSizing } from "../../../templates/types/broadcast-pro-rounded/headline-lockup";
+import type { BroadcastProRoundedRosterListSizing } from "../../../templates/types/broadcast-pro-rounded/roster-list-sizing";
+import type { BroadcastProRoundedCrestSizing } from "../../../templates/types/broadcast-pro-rounded/crest-well";
+import type { BroadcastProRoundedLadderZoneSizing } from "../../../templates/types/broadcast-pro-rounded/ladder-zone";
+import type { BroadcastProRoundedScoreSizing } from "../../../templates/types/broadcast-pro-rounded/score-typography";
 import type {
   BroadcastProGlassOpacityPreset,
   BroadcastProTransparentLayers,
-} from "../../../templates/types/TemplateThemeConfig";
+} from "../../../templates/types/broadcast-pro/transparent-layers";
+import type {
+  BroadcastProRoundedGlassOpacityPreset,
+  BroadcastProRoundedTransparentLayers,
+} from "../../../templates/types/broadcast-pro-rounded/transparent-layers";
 
 export interface FontClass {
   family: string;
@@ -110,6 +119,7 @@ export interface ThemeLayout {
   };
   borderRadius: {
     container: string;
+    image?: string;
   };
 }
 
@@ -190,6 +200,27 @@ export interface ThemeContextProps {
 
   /** Broadcast Pro ladder zone sizing (see `variants/broadcastPro/theme/tokens.ts`). */
   broadcastProLadderZoneSizing?: BroadcastProLadderZoneSizing;
+
+  /** Broadcast Pro Rounded: alpha stacks for glass / logo wells / fixture header. */
+  broadcastProRoundedTransparentLayers?: BroadcastProRoundedTransparentLayers;
+
+  /** Broadcast Pro Rounded: sm / md / lg glass strength. */
+  broadcastProRoundedGlassOpacity?: BroadcastProRoundedGlassOpacityPreset;
+
+  /** Broadcast Pro Rounded team roster list sizing (see `variants/broadcastProRounded/theme/tokens.ts`). */
+  broadcastProRoundedRosterListSizing?: BroadcastProRoundedRosterListSizing;
+
+  /** Broadcast Pro Rounded hero headline fitText caps (see `variants/broadcastProRounded/theme/tokens.ts`). */
+  broadcastProRoundedHeadlineSizing?: BroadcastProRoundedHeadlineSizing;
+
+  /** Broadcast Pro Rounded score typography compact tiers (see `variants/broadcastProRounded/theme/tokens.ts`). */
+  broadcastProRoundedScoreSizing?: BroadcastProRoundedScoreSizing;
+
+  /** Broadcast Pro Rounded crest well tier sizing (see `variants/broadcastProRounded/theme/tokens.ts`). */
+  broadcastProRoundedCrestSizing?: BroadcastProRoundedCrestSizing;
+
+  /** Broadcast Pro Rounded ladder zone sizing (see `variants/broadcastProRounded/theme/tokens.ts`). */
+  broadcastProRoundedLadderZoneSizing?: BroadcastProRoundedLadderZoneSizing;
 
   // Helper function to get active palette
   getActivePalette: (paletteName?: string) => DesignPalette;

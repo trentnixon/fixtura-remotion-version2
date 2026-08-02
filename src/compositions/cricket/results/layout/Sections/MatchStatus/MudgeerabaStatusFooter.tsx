@@ -5,7 +5,10 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { MudgeerabaStatusFooterProps } from "./_types/MudgeerabaStatusFooterProps";
 import { truncateText } from "./_utils/helpers";
-import { SHALLOW_STATUS_BAR, clipPathStyle } from "../../../../../../templates/variants/mudgeeraba/design";
+import {
+  SHALLOW_STATUS_BAR,
+  clipPathStyle,
+} from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaStatusFooter: React.FC<MudgeerabaStatusFooterProps> = ({
   result,
