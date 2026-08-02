@@ -18,7 +18,9 @@ export interface BroadcastProRoundedEdgeMarkerProps {
 }
 
 /** Left-edge accent bar wrapper — ladder rank, verdict, score badge, fixture header. */
-export const BroadcastProRoundedEdgeMarker: React.FC<BroadcastProRoundedEdgeMarkerProps> = ({
+export const BroadcastProRoundedEdgeMarker: React.FC<
+  BroadcastProRoundedEdgeMarkerProps
+> = ({
   tier = "standard",
   variant = "primary",
   accentColor,

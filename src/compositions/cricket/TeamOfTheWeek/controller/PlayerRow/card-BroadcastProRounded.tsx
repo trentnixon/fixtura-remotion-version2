@@ -38,14 +38,9 @@ export interface CardBroadcastProRoundedProps {
   compact?: boolean;
 }
 
-export const CardBroadcastProRounded: React.FC<CardBroadcastProRoundedProps> = ({
-  player,
-  staggerIndex,
-  isAccountClub,
-  glass,
-  text,
-  compact = false,
-}) => {
+export const CardBroadcastProRounded: React.FC<
+  CardBroadcastProRoundedProps
+> = ({ player, staggerIndex, isAccountClub, glass, text, compact = false }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, layout } = useThemeContext();
   const containerAnimation = animations.container.main.itemContainer;
@@ -54,7 +49,10 @@ export const CardBroadcastProRounded: React.FC<CardBroadcastProRoundedProps> = (
   const statDelay = delay + STAT_DISPLAY_DELAY_OFFSET;
   const copyAnimation = animations.text.main.copyIn;
 
-  const cardClass = csClass(componentStyles, "broadcastProRoundedTeamOfTheWeekCard");
+  const cardClass = csClass(
+    componentStyles,
+    "broadcastProRoundedTeamOfTheWeekCard",
+  );
   const bodyClass = csClass(
     componentStyles,
     "broadcastProRoundedTeamOfTheWeekCardBody",

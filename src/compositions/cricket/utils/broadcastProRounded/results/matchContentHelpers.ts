@@ -1,7 +1,9 @@
 import type { BroadcastProRoundedResultMatchData } from "./types";
 import { buildCompactVerdictLine } from "./buildBroadcastProRoundedVerdictModel";
 
-export const buildGradeLabel = (match: BroadcastProRoundedResultMatchData): string => {
+export const buildGradeLabel = (
+  match: BroadcastProRoundedResultMatchData,
+): string => {
   const parts = [match.gradeName || match.type, match.round].filter(Boolean);
   return parts.join(" • ");
 };

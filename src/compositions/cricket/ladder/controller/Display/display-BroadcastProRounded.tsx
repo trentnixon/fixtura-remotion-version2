@@ -20,7 +20,10 @@ const HEADER_EXTRA_FOR_GRADE = 44;
 /** Cap row height to ~stat column width so cells stay square; extra asset height stays empty below. */
 const BROADCAST_PRO_MAX_ROW_HEIGHT = 96;
 
-const getBroadcastProRoundedRowGap = (): { gapPx: number; gapClass: string } => ({
+const getBroadcastProRoundedRowGap = (): {
+  gapPx: number;
+  gapClass: string;
+} => ({
   gapPx: 4,
   gapClass: "gap-1",
 });

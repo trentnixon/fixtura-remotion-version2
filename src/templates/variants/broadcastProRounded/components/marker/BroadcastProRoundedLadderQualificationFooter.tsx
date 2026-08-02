@@ -15,7 +15,8 @@ export interface BroadcastProRoundedLadderQualificationFooterProps {
 export const BroadcastProRoundedLadderQualificationFooter: React.FC<
   BroadcastProRoundedLadderQualificationFooterProps
 > = ({ finalsCount, className = "" }) => {
-  const { componentStyles, broadcastProRoundedLadderZoneSizing } = useThemeContext();
+  const { componentStyles, broadcastProRoundedLadderZoneSizing } =
+    useThemeContext();
   const { accent } = useBroadcastProRoundedTheme();
   const footerClass = csClass(
     componentStyles,

@@ -17,7 +17,10 @@ import {
   stripGradeNumberFromTeamName,
   truncateText,
 } from "../../../utils/utils-text";
-import { cellBlur, useBroadcastProRoundedTheme } from "../../../utils/broadcastProRounded";
+import {
+  cellBlur,
+  useBroadcastProRoundedTheme,
+} from "../../../utils/broadcastProRounded";
 
 const UPCOMING_TEAM_NAME_MAX = 34;
 

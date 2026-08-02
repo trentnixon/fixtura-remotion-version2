@@ -29,7 +29,10 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
   const { componentStyles, fontClasses, fonts, layout } = useThemeContext();
   const { glass, text } = useBroadcastProRoundedTheme();
   const cellRadius = layout.borderRadius.container;
-  const badgeClass = csClass(componentStyles, "broadcastProRoundedResultsScoreBadge");
+  const badgeClass = csClass(
+    componentStyles,
+    "broadcastProRoundedResultsScoreBadge",
+  );
   const copyIn = animations.text.main.copyIn;
   const headingFont =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";

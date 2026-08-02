@@ -2,7 +2,8 @@ import { PerformanceData } from "../../../_types/types";
 import { buildBroadcastProRoundedPerformanceStatMatrixCells } from "../../../../utils/broadcastProRounded/stat/buildBroadcastProRoundedStatMatrixCells";
 import type { BroadcastProRoundedTripleStat } from "../../../../utils/broadcastProRounded/playerRanking/types";
 
-export type BroadcastProRoundedPerformanceTripleStat = BroadcastProRoundedTripleStat;
+export type BroadcastProRoundedPerformanceTripleStat =
+  BroadcastProRoundedTripleStat;
 
 export const getPerformanceBroadcastProRoundedTripleStats = (
   performance: PerformanceData,

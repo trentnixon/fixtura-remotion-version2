@@ -10,7 +10,8 @@ const results = broadcastProRoundedCompositionComponentStylesResults;
  * Aliases existing player-ranking + results stat surfaces.
  */
 export const broadcastProRoundedCompositionComponentStylesStatMatrix = {
-  broadcastProRoundedStatMatrixLabel: ranking.broadcastProRoundedPlayerRankingStatLabel,
+  broadcastProRoundedStatMatrixLabel:
+    ranking.broadcastProRoundedPlayerRankingStatLabel,
   broadcastProRoundedStatMatrixLabelPerformances:
     ranking.broadcastProRoundedPlayerRankingStatLabelPerformances,
   broadcastProRoundedStatMatrixTripleFeatured:
@@ -25,10 +26,14 @@ export const broadcastProRoundedCompositionComponentStylesStatMatrix = {
     ranking.broadcastProRoundedPlayerRankingStatDividerGridTop5,
   broadcastProRoundedStatMatrixDividerPerformances:
     ranking.broadcastProRoundedPlayerRankingStatDividerPerformances,
-  broadcastProRoundedStatMatrixResultGrid: results.broadcastProRoundedResultsPlayerStatsGrid,
-  broadcastProRoundedStatMatrixResultCell: results.broadcastProRoundedResultsPlayerStatCell,
-  broadcastProRoundedStatMatrixResultName: results.broadcastProRoundedResultsPlayerStatName,
-  broadcastProRoundedStatMatrixResultValue: results.broadcastProRoundedResultsPlayerStatValue,
+  broadcastProRoundedStatMatrixResultGrid:
+    results.broadcastProRoundedResultsPlayerStatsGrid,
+  broadcastProRoundedStatMatrixResultCell:
+    results.broadcastProRoundedResultsPlayerStatCell,
+  broadcastProRoundedStatMatrixResultName:
+    results.broadcastProRoundedResultsPlayerStatName,
+  broadcastProRoundedStatMatrixResultValue:
+    results.broadcastProRoundedResultsPlayerStatValue,
 } satisfies Pick<
   ThemeComponentStyles,
   | "broadcastProRoundedStatMatrixLabel"

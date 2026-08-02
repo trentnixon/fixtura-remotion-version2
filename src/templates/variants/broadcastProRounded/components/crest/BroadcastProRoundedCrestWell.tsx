@@ -25,7 +25,9 @@ export interface BroadcastProRoundedCrestWellProps {
   showBorder?: boolean;
 }
 
-export const BroadcastProRoundedCrestWell: React.FC<BroadcastProRoundedCrestWellProps> = ({
+export const BroadcastProRoundedCrestWell: React.FC<
+  BroadcastProRoundedCrestWellProps
+> = ({
   tier,
   logo,
   teamName,

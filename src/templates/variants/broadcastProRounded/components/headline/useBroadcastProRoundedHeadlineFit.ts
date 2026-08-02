@@ -18,7 +18,8 @@ export const useBroadcastProRoundedHeadlineFit = (
   variant: BroadcastProRoundedHeadlineVariant,
 ): number | undefined => {
   const { width } = useVideoConfig();
-  const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
+  const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } =
+    useThemeContext();
 
   const sizing =
     broadcastProRoundedHeadlineSizing ?? DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;

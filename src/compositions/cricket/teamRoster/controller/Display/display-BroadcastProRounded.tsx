@@ -1,6 +1,9 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { cellBlur, useBroadcastProRoundedTheme } from "../../../utils/broadcastProRounded";
+import {
+  cellBlur,
+  useBroadcastProRoundedTheme,
+} from "../../../utils/broadcastProRounded";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { BroadcastProRoundedMatchup } from "../../../../../templates/variants/broadcastProRounded/components/matchup";
 import { BroadcastProRoundedRosterSheet } from "../../../../../templates/variants/broadcastProRounded/components/roster";

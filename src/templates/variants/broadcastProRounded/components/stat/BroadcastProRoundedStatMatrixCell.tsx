@@ -36,7 +36,11 @@ export const BroadcastProRoundedStatMatrixCellView: React.FC<
   glass,
   accent,
 }) => {
-  const highlight = resolveBroadcastProRoundedStatMatrixHighlight(tier, index, cell);
+  const highlight = resolveBroadcastProRoundedStatMatrixHighlight(
+    tier,
+    index,
+    cell,
+  );
   const scoreRole = resolveBroadcastProRoundedStatMatrixScoreRole(tier);
   const dividerStyle = withDivider ? { borderLeft: glass.border } : undefined;
 

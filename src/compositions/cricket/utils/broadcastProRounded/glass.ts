@@ -77,6 +77,7 @@ export const resolveBroadcastProRoundedGlass = (opts: {
     opts.surfaceBase,
     resolveBroadcastProRoundedTransparentLayers({
       broadcastProRoundedGlassOpacity: opts.broadcastProRoundedGlassOpacity,
-      broadcastProRoundedTransparentLayers: opts.broadcastProRoundedTransparentLayers,
+      broadcastProRoundedTransparentLayers:
+        opts.broadcastProRoundedTransparentLayers,
     }),
   );

@@ -31,17 +31,18 @@ export interface BroadcastProRoundedScoreSizing {
   compact: BroadcastProRoundedScoreCompactClasses;
 }
 
-export const DEFAULT_BROADCAST_PRO_SCORE_SIZING: BroadcastProRoundedScoreSizing = {
-  compact: {
-    tableRank:
-      "font-teko text-5xl font-normal tracking-tight leading-none uppercase",
-    tableStat: "font-teko text-3xl font-normal tracking-tight leading-none",
-    tablePoints:
-      "font-teko text-4xl font-bold tracking-tight leading-none text-center",
-    matchDivider:
-      "font-teko text-3xl font-bold italic uppercase tracking-tight leading-none",
-  },
-};
+export const DEFAULT_BROADCAST_PRO_SCORE_SIZING: BroadcastProRoundedScoreSizing =
+  {
+    compact: {
+      tableRank:
+        "font-teko text-5xl font-normal tracking-tight leading-none uppercase",
+      tableStat: "font-teko text-3xl font-normal tracking-tight leading-none",
+      tablePoints:
+        "font-teko text-4xl font-bold tracking-tight leading-none text-center",
+      matchDivider:
+        "font-teko text-3xl font-bold italic uppercase tracking-tight leading-none",
+    },
+  };
 
 /** Maps semantic score roles to `componentStyles` keys. */
 export const BROADCAST_PRO_SCORE_ROLE_THEME_KEY: Record<

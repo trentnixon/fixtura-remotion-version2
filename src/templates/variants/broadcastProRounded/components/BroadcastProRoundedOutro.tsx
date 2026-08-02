@@ -101,9 +101,9 @@ const SponsorGrid: React.FC<{
   </div>
 );
 
-export const BroadcastProRoundedOutro: React.FC<BroadcastProRoundedOutroProps> = ({
-  doesAccountHaveSponsors,
-}) => {
+export const BroadcastProRoundedOutro: React.FC<
+  BroadcastProRoundedOutroProps
+> = ({ doesAccountHaveSponsors }) => {
   const { sponsors } = useVideoDataContext();
   const { default: defaultSponsors = {} } = sponsors || {};
   const { animations } = useAnimationContext();

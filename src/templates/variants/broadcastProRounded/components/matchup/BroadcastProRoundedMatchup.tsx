@@ -35,7 +35,9 @@ export interface BroadcastProRoundedMatchupProps {
   ) => React.ReactNode;
 }
 
-export const BroadcastProRoundedMatchup: React.FC<BroadcastProRoundedMatchupProps> = ({
+export const BroadcastProRoundedMatchup: React.FC<
+  BroadcastProRoundedMatchupProps
+> = ({
   tier,
   home,
   away,
@@ -132,7 +134,10 @@ export const BroadcastProRoundedMatchup: React.FC<BroadcastProRoundedMatchupProp
 
   return (
     <div className={`${layoutClass} ${className}`.trim()} style={style}>
-      <div className={`overflow-hidden ${cellRadius} ${homeCardClass}`.trim()} style={panelStyle}>
+      <div
+        className={`overflow-hidden ${cellRadius} ${homeCardClass}`.trim()}
+        style={panelStyle}
+      >
         <BroadcastProRoundedCrestWell
           tier="rosterHome"
           logo={home.logo}
@@ -160,7 +165,10 @@ export const BroadcastProRoundedMatchup: React.FC<BroadcastProRoundedMatchupProp
         )}
       </div>
 
-      <div className={`overflow-hidden ${cellRadius} ${awayCardClass}`.trim()} style={panelStyle}>
+      <div
+        className={`overflow-hidden ${cellRadius} ${awayCardClass}`.trim()}
+        style={panelStyle}
+      >
         <BroadcastProRoundedMatchupDivider variant="versus" delay={delay} />
         <BroadcastProRoundedCrestWell
           tier="rosterAway"

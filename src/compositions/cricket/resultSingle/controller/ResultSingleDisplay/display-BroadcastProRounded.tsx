@@ -7,9 +7,9 @@ import MatchCardBroadcastProRounded from "../../layout/MatchCard/card-BroadcastP
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
-const ResultSingleDisplayBroadcastProRounded: React.FC<ResultSingleDisplayProps> = ({
-  match,
-}) => {
+const ResultSingleDisplayBroadcastProRounded: React.FC<
+  ResultSingleDisplayProps
+> = ({ match }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const { heights } = layout;

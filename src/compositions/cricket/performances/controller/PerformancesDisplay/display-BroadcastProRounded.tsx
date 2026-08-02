@@ -37,7 +37,8 @@ const PerformanceGridCard: React.FC<{
   const { glass, text, accent, headingFont, cs, selectedPalette } =
     useBroadcastProRoundedPlayerRankingTheme();
   const restrictions = getDefaultRestrictions();
-  const statCells = buildBroadcastProRoundedPerformanceStatMatrixCells(performance);
+  const statCells =
+    buildBroadcastProRoundedPerformanceStatMatrixCells(performance);
 
   const name = truncateText(
     performance.name,
@@ -125,11 +126,9 @@ const PerformanceGridCard: React.FC<{
   );
 };
 
-const PerformancesDisplayBroadcastProRounded: React.FC<PerformancesDisplayProps> = ({
-  performances,
-  itemsPerScreen,
-  screenIndex,
-}) => {
+const PerformancesDisplayBroadcastProRounded: React.FC<
+  PerformancesDisplayProps
+> = ({ performances, itemsPerScreen, screenIndex }) => {
   const { animations } = useAnimationContext();
   const { data } = useVideoDataContext();
   const { timings } = data;
@@ -146,10 +145,11 @@ const PerformancesDisplayBroadcastProRounded: React.FC<PerformancesDisplayProps>
   );
   const offset = screenIndex * itemsPerScreen;
   const mainContentHeight = getMainContentSectionHeight(heights);
-  const { cardHeight, rows } = calculateBroadcastProRoundedPerformanceGridLayout(
-    mainContentHeight,
-    itemsPerScreen,
-  );
+  const { cardHeight, rows } =
+    calculateBroadcastProRoundedPerformanceGridLayout(
+      mainContentHeight,
+      itemsPerScreen,
+    );
 
   return (
     <div

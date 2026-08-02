@@ -29,7 +29,11 @@ export const useBroadcastProRoundedTheme = () => {
         broadcastProRoundedGlassOpacity,
         broadcastProRoundedTransparentLayers,
       }),
-    [surfaceBase, broadcastProRoundedGlassOpacity, broadcastProRoundedTransparentLayers],
+    [
+      surfaceBase,
+      broadcastProRoundedGlassOpacity,
+      broadcastProRoundedTransparentLayers,
+    ],
   );
 
   const textOnContainer = useMemo(
@@ -39,7 +43,11 @@ export const useBroadcastProRoundedTheme = () => {
 
   const textOnGlass = useMemo(
     () =>
-      resolveBroadcastProRoundedTextOnGlass(surfaceBase, glass.panel, textOnContainer),
+      resolveBroadcastProRoundedTextOnGlass(
+        surfaceBase,
+        glass.panel,
+        textOnContainer,
+      ),
     [surfaceBase, glass.panel, textOnContainer],
   );
 

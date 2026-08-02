@@ -40,8 +40,14 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
   const { componentStyles } = useThemeContext();
   const { glass: themeGlass, text } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
-  const rowClass = csClass(componentStyles, "broadcastProRoundedResultsTeamRow");
-  const nameClass = csClass(componentStyles, "broadcastProRoundedResultsTeamName");
+  const rowClass = csClass(
+    componentStyles,
+    "broadcastProRoundedResultsTeamRow",
+  );
+  const nameClass = csClass(
+    componentStyles,
+    "broadcastProRoundedResultsTeamName",
+  );
 
   const resolvedGlass = glass ?? themeGlass;
 

@@ -3,7 +3,10 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-import { csClass, useBroadcastProRoundedTheme } from "../../../utils/broadcastProRounded";
+import {
+  csClass,
+  useBroadcastProRoundedTheme,
+} from "../../../utils/broadcastProRounded";
 import { SponsorFooter } from "../../../sponsorFooter";
 import { AssignSponsors } from "../../../_types/composition-types";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
@@ -13,10 +16,9 @@ import {
   getMainContentSectionHeight,
 } from "../../../../../core/utils/layoutHeights";
 
-const TeamOfTheWeekDisplayBroadcastProRounded: React.FC<TeamOfTheWeekDisplayProps> = ({
-  players,
-  sponsors,
-}) => {
+const TeamOfTheWeekDisplayBroadcastProRounded: React.FC<
+  TeamOfTheWeekDisplayProps
+> = ({ players, sponsors }) => {
   const { layout, componentStyles } = useThemeContext();
   const { glass, text } = useBroadcastProRoundedTheme();
   const { heights } = layout;
@@ -27,12 +29,18 @@ const TeamOfTheWeekDisplayBroadcastProRounded: React.FC<TeamOfTheWeekDisplayProp
 
   const compact = players.length >= 11;
 
-  const rootClass = csClass(componentStyles, "broadcastProRoundedTeamOfTheWeekRoot");
+  const rootClass = csClass(
+    componentStyles,
+    "broadcastProRoundedTeamOfTheWeekRoot",
+  );
   const animatedClass = csClass(
     componentStyles,
     "broadcastProRoundedTeamOfTheWeekAnimatedContainer",
   );
-  const gridClass = csClass(componentStyles, "broadcastProRoundedTeamOfTheWeekGrid");
+  const gridClass = csClass(
+    componentStyles,
+    "broadcastProRoundedTeamOfTheWeekGrid",
+  );
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);
 

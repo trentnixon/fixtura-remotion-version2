@@ -38,7 +38,9 @@ const COMPACT_ROLES: BroadcastProRoundedScoreRole[] = [
   "matchDivider",
 ];
 
-export const BroadcastProRoundedScoreText: React.FC<BroadcastProRoundedScoreTextProps> = ({
+export const BroadcastProRoundedScoreText: React.FC<
+  BroadcastProRoundedScoreTextProps
+> = ({
   value,
   role,
   variant = "onContainerCopy",
@@ -52,15 +54,24 @@ export const BroadcastProRoundedScoreText: React.FC<BroadcastProRoundedScoreText
   letterAnimation = "none",
   themeType,
 }) => {
-  const { componentStyles, fontClasses, fonts, broadcastProRoundedScoreSizing } =
-    useThemeContext();
+  const {
+    componentStyles,
+    fontClasses,
+    fonts,
+    broadcastProRoundedScoreSizing,
+  } = useThemeContext();
 
-  const sizing = broadcastProRoundedScoreSizing ?? DEFAULT_BROADCAST_PRO_SCORE_SIZING;
+  const sizing =
+    broadcastProRoundedScoreSizing ?? DEFAULT_BROADCAST_PRO_SCORE_SIZING;
   const useCompactTier = compact && COMPACT_ROLES.includes(role);
-  const roleClass = getBroadcastProRoundedScoreRoleClass(componentStyles, role, {
-    compact: useCompactTier,
-    sizing,
-  });
+  const roleClass = getBroadcastProRoundedScoreRoleClass(
+    componentStyles,
+    role,
+    {
+      compact: useCompactTier,
+      sizing,
+    },
+  );
   const fontFamily =
     fontFamilyOverride ??
     fontClasses?.heading?.family ??

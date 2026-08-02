@@ -67,7 +67,9 @@ const FeaturedCard: React.FC<{
             rank={1}
             placement="left"
             isFeatured
-            className={cs("broadcastProRoundedPlayerRankingRankBadgeFeaturedLeft")}
+            className={cs(
+              "broadcastProRoundedPlayerRankingRankBadgeFeaturedLeft",
+            )}
             glass={glass}
             text={text}
             accent={accent}

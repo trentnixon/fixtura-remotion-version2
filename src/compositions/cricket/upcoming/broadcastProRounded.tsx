@@ -18,64 +18,65 @@ import {
   calculateTotalScreens,
 } from "./_utils/calculations";
 
-export const CricketUpcomingWithTransitionsBroadcastProRounded: React.FC = () => {
-  const { data, contentLayout, metadata } = useVideoDataContext();
-  const { data: CompositionData, timings } = data;
-  const { layout } = useThemeContext();
-  const { heights } = layout;
-  const compositionHeight = getCompositionSectionHeight(heights);
+export const CricketUpcomingWithTransitionsBroadcastProRounded: React.FC =
+  () => {
+    const { data, contentLayout, metadata } = useVideoDataContext();
+    const { data: CompositionData, timings } = data;
+    const { layout } = useThemeContext();
+    const { heights } = layout;
+    const compositionHeight = getCompositionSectionHeight(heights);
 
-  const { animations } = useAnimationContext();
-  const transitionConfig = animations.transition.Main;
+    const { animations } = useAnimationContext();
+    const transitionConfig = animations.transition.Main;
 
-  const fixturesLayout = contentLayout.divideFixturesBy || {};
-  const gamesPerScreen = getGamesPerScreen(fixturesLayout);
+    const fixturesLayout = contentLayout.divideFixturesBy || {};
+    const gamesPerScreen = getGamesPerScreen(fixturesLayout);
 
-  const frameOptions = metadata.frames || [300];
-  const displayDurationPerScreen = calculateDisplayDurationPerScreen(
-    timings,
-    frameOptions,
-  );
+    const frameOptions = metadata.frames || [300];
+    const displayDurationPerScreen = calculateDisplayDurationPerScreen(
+      timings,
+      frameOptions,
+    );
 
-  if (!hasValidGames(CompositionData)) {
-    return <NoGamesData />;
-  }
+    if (!hasValidGames(CompositionData)) {
+      return <NoGamesData />;
+    }
 
-  const totalScreens = calculateTotalScreens(
-    CompositionData.length,
-    gamesPerScreen,
-  );
+    const totalScreens = calculateTotalScreens(
+      CompositionData.length,
+      gamesPerScreen,
+    );
 
-  const sequences = Array.from({ length: totalScreens }, (_, index) => ({
-    content: (
-      <div
-        className="h-full w-full"
-        style={{ height: `${compositionHeight}px` }}
-      >
-        <FixtureDisplayBroadcastProRounded
-          games={CompositionData as GameData[]}
-          gamesPerScreen={gamesPerScreen}
-          screenIndex={index}
+    const sequences = Array.from({ length: totalScreens }, (_, index) => ({
+      content: (
+        <div
+          className="h-full w-full"
+          style={{ height: `${compositionHeight}px` }}
+        >
+          <FixtureDisplayBroadcastProRounded
+            games={CompositionData as GameData[]}
+            gamesPerScreen={gamesPerScreen}
+            screenIndex={index}
+          />
+        </div>
+      ),
+      durationInFrames: displayDurationPerScreen,
+    }));
+
+    return (
+      <div className="w-full" style={{ height: `${compositionHeight}px` }}>
+        <TransitionSeriesWrapper
+          sequences={sequences}
+          transitionType={transitionConfig.type as TransitionType}
+          direction={transitionConfig.direction as TransitionDirection}
+          timing={{
+            type: "linear",
+            durationInFrames: transitionConfig.durationInFrames,
+          }}
         />
       </div>
-    ),
-    durationInFrames: displayDurationPerScreen,
-  }));
-
-  return (
-    <div className="w-full" style={{ height: `${compositionHeight}px` }}>
-      <TransitionSeriesWrapper
-        sequences={sequences}
-        transitionType={transitionConfig.type as TransitionType}
-        direction={transitionConfig.direction as TransitionDirection}
-        timing={{
-          type: "linear",
-          durationInFrames: transitionConfig.durationInFrames,
-        }}
-      />
-    </div>
-  );
-};
+    );
+  };
 
 export const BroadcastProRounded: React.FC = () => {
   return <CricketUpcomingWithTransitionsBroadcastProRounded />;

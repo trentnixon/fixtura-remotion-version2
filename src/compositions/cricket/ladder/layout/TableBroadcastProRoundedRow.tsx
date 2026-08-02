@@ -7,7 +7,10 @@ import { BroadcastProRoundedCrestWell } from "../../../../templates/variants/bro
 import LadderTeamName from "../../utils/primitives/ladderTeamName";
 import { TeamData } from "../types";
 import type { ColorVariant } from "../../../../components/typography/AnimatedText";
-import { cellBlur, useBroadcastProRoundedTheme } from "../../utils/broadcastProRounded";
+import {
+  cellBlur,
+  useBroadcastProRoundedTheme,
+} from "../../utils/broadcastProRounded";
 import { resolveBroadcastProRoundedLadderZone } from "../../utils/broadcastProRounded/ladder";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../utils/broadcastProRounded/marker";
 import { resolveBroadcastProRoundedLadderRowTypography } from "../../utils/broadcastProRounded/ladder/resolveBroadcastProRoundedLadderRowTypography";
@@ -53,7 +56,9 @@ const resolveLadderTeamCellSpacing = (rowHeight: number) => {
 /**
  * Broadcast Pro ladder row — glass panels, zone rank accent, P/W/L/Pts (no BYE).
  */
-export const BroadcastProRoundedLadderRow: React.FC<BroadcastProRoundedRowLayoutProps> = ({
+export const BroadcastProRoundedLadderRow: React.FC<
+  BroadcastProRoundedRowLayoutProps
+> = ({
   team,
   delay,
   place,
@@ -85,7 +90,8 @@ export const BroadcastProRoundedLadderRow: React.FC<BroadcastProRoundedRowLayout
   });
 
   const showRankAccent = zone.rankAccent || isBiasTeam;
-  const typography = resolveBroadcastProRoundedLadderRowTypography(LadderRowHeight);
+  const typography =
+    resolveBroadcastProRoundedLadderRowTypography(LadderRowHeight);
   const teamCell = resolveLadderTeamCellSpacing(LadderRowHeight);
   const crestContainerHeight = LadderRowHeight;
   const statVariant: ColorVariant = "onContainerCopy";

@@ -19,7 +19,9 @@ export interface BroadcastProRoundedGlassPanelProps {
   surface?: Exclude<BroadcastProRoundedGlassSurfaceRole, "logoWell">;
 }
 
-export const BroadcastProRoundedGlassPanel: React.FC<BroadcastProRoundedGlassPanelProps> = ({
+export const BroadcastProRoundedGlassPanel: React.FC<
+  BroadcastProRoundedGlassPanelProps
+> = ({
   children,
   className = "",
   style,

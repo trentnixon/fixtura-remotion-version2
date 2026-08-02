@@ -32,8 +32,12 @@ export const BroadcastProRoundedHeadlineTitle: React.FC<
   exitFrame,
   fontFamily: fontFamilyOverride,
 }) => {
-  const { componentStyles, fontClasses, fonts, broadcastProRoundedHeadlineSizing } =
-    useThemeContext();
+  const {
+    componentStyles,
+    fontClasses,
+    fonts,
+    broadcastProRoundedHeadlineSizing,
+  } = useThemeContext();
 
   const sizing =
     broadcastProRoundedHeadlineSizing ?? DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;

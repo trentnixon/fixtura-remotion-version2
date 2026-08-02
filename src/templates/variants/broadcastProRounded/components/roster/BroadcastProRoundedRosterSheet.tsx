@@ -16,7 +16,8 @@ export interface BroadcastProRoundedRosterSheetProps {
 export const BroadcastProRoundedRosterSheet: React.FC<
   BroadcastProRoundedRosterSheetProps
 > = ({ players, availableHeightPx, nameColor, className = "" }) => {
-  const { componentStyles, broadcastProRoundedRosterListSizing } = useThemeContext();
+  const { componentStyles, broadcastProRoundedRosterListSizing } =
+    useThemeContext();
   const { accent } = useBroadcastProRoundedTheme();
 
   const metrics = useMemo(
@@ -30,9 +31,14 @@ export const BroadcastProRoundedRosterSheet: React.FC<
   );
 
   return (
-    <div className={`flex h-full min-h-0 min-w-0 flex-1 gap-2 ${className}`.trim()}>
+    <div
+      className={`flex h-full min-h-0 min-w-0 flex-1 gap-2 ${className}`.trim()}
+    >
       <div
-        className={csClass(componentStyles, "broadcastProRoundedRosterPlayerList")}
+        className={csClass(
+          componentStyles,
+          "broadcastProRoundedRosterPlayerList",
+        )}
         style={{ gap: metrics.gapPx }}
       >
         {players.map((player, index) => (
@@ -47,7 +53,10 @@ export const BroadcastProRoundedRosterSheet: React.FC<
       </div>
       <BroadcastProRoundedVerticalStripMarker
         accentColor={accent}
-        className={csClass(componentStyles, "broadcastProRoundedRosterAccentStrip")}
+        className={csClass(
+          componentStyles,
+          "broadcastProRoundedRosterAccentStrip",
+        )}
       />
     </div>
   );

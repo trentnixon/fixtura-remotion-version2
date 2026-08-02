@@ -25,17 +25,18 @@ export interface BroadcastProRoundedCrestSizing {
   rosterAwayPx: number;
 }
 
-export const DEFAULT_BROADCAST_PRO_CREST_SIZING: BroadcastProRoundedCrestSizing = {
-  contentInsetRatio: 0.85,
-  fullBleedInsetRatio: 1,
-  compactPx: 48,
-  fixtureDefaultPx: 80,
-  rowDefaultPx: 48,
-  gridPx: 80,
-  featuredPx: 176,
-  rosterHomePx: 128,
-  rosterAwayPx: 96,
-};
+export const DEFAULT_BROADCAST_PRO_CREST_SIZING: BroadcastProRoundedCrestSizing =
+  {
+    contentInsetRatio: 0.85,
+    fullBleedInsetRatio: 1,
+    compactPx: 48,
+    fixtureDefaultPx: 80,
+    rowDefaultPx: 48,
+    gridPx: 80,
+    featuredPx: 176,
+    rosterHomePx: 128,
+    rosterAwayPx: 96,
+  };
 
 export const BROADCAST_PRO_CREST_TIER_THEME_KEY: Record<
   BroadcastProRoundedCrestTier,

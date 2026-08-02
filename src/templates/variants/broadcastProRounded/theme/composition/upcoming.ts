@@ -8,7 +8,8 @@ export const broadcastProRoundedCompositionComponentStylesUpcoming = {
   upcomingTeamName: {
     className: "font-normal uppercase !leading-[0.92] tracking-wide",
   },
-  upcomingVs: broadcastProRoundedComponentStylesShared.broadcastProRoundedMatchupDividerVs,
+  upcomingVs:
+    broadcastProRoundedComponentStylesShared.broadcastProRoundedMatchupDividerVs,
 } satisfies Pick<
   ThemeComponentStyles,
   "upcomingFixtureHeader" | "upcomingTeamName" | "upcomingVs"

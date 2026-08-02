@@ -2,7 +2,8 @@ import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig
 import { broadcastProRoundedComponentStylesShared } from "../componentStyles.shared";
 
 export const broadcastProRoundedCompositionComponentStylesResults = {
-  ResultScore: broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchTotal,
+  ResultScore:
+    broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchTotal,
   ResultScoreFirstInnings:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchInnings,
   ResultScoreYetToBat:
@@ -29,7 +30,8 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
   ResultStatementText: {
     className: "text-2xl font-semibold tracking-wider leading-snug",
   },
-  ResultVS: broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreDivider,
+  ResultVS:
+    broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreDivider,
   broadcastProRoundedResultsMetaStrip: {
     className:
       "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5",

@@ -67,7 +67,10 @@ export const buildVerdictContextLine = (
 };
 
 export const buildCompactVerdictLine = (
-  match: Pick<BroadcastProRoundedResultMatchData, "resultShort" | "resultSummary">,
+  match: Pick<
+    BroadcastProRoundedResultMatchData,
+    "resultShort" | "resultSummary"
+  >,
 ): string | null => {
   const short = match.resultShort?.trim();
   if (short) {

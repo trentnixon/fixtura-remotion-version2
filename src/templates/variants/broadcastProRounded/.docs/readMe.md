@@ -5,6 +5,7 @@ Broadcast Pro Rounded variant: fully independent fork of Broadcast Pro with **`r
 **Independence:** This variant does not import from `broadcastPro` or `templates/types/broadcast-pro/`. All primitives live under `variants/broadcastProRounded/`, `types/broadcast-pro-rounded/`, and `compositions/cricket/utils/broadcastProRounded/`.
 
 **Visual deltas vs Broadcast Pro:**
+
 - `theme/layout.ts`: `borderRadius.container = rounded-2xl`, `borderRadius.image = rounded-2xl`, `spacing.stack = gap-1`
 - Crest wells, intro/outro/header logos, and sponsor images use `borderRadius.image`
 - Stack gaps on results, upcoming fixture lists, ladder rows
@@ -21,14 +22,14 @@ Broadcast Pro Rounded variant: fully independent fork of Broadcast Pro with **`r
 
 The Broadcast Pro theme is split by responsibility. The **public export** is `broadcastProRoundedTheme` from **`theme/index.ts`**. **`index.tsx`** imports it via **`import { broadcastProRoundedTheme } from "./theme"`** (the `theme/` directory; there is no `theme.ts` file at the variant root—avoids a name clash where `./theme` would resolve to a file instead of the folder).
 
-| File / folder                     | Responsibility                                                                                                                                                                                                    |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `theme/index.ts`                  | Assembles `baseTheme` + tokens + layout + mode + merged `componentStyles`; **`satisfies TemplateThemeConfig`**.                                                                                                   |
-| `theme/tokens.ts`                 | `fonts`, `fontClasses`, `broadcastProRoundedGlassOpacity`, **`broadcastProRoundedHeadlineSizing`**, **`broadcastProRoundedScoreSizing`**, **`broadcastProRoundedRosterListSizing`**.                                                          |
-| `theme/componentStyles.shared.ts` | Cross-cutting `componentStyles` keys: titles, body, player/team/label, `metadata*`.                                                                                                                               |
+| File / folder                     | Responsibility                                                                                                                                                                                                           |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `theme/index.ts`                  | Assembles `baseTheme` + tokens + layout + mode + merged `componentStyles`; **`satisfies TemplateThemeConfig`**.                                                                                                          |
+| `theme/tokens.ts`                 | `fonts`, `fontClasses`, `broadcastProRoundedGlassOpacity`, **`broadcastProRoundedHeadlineSizing`**, **`broadcastProRoundedScoreSizing`**, **`broadcastProRoundedRosterListSizing`**.                                     |
+| `theme/componentStyles.shared.ts` | Cross-cutting `componentStyles` keys: titles, body, player/team/label, `metadata*`.                                                                                                                                      |
 | `theme/composition/`              | One file per **cricket composition** surface: `ladder.ts`, `upcoming.ts`, `top5.ts`, `teamOfTheWeek.ts`, `results.ts`, `roster.ts`. Merged in `composition/index.ts` as `broadcastProRoundedCompositionComponentStyles`. |
-| `theme/layout.ts`                 | `layout` (heights, spacing, padding, border radius).                                                                                                                                                              |
-| `theme/mode.ts`                   | `mode` (light / lightAlt / dark / darkAlt palettes).                                                                                                                                                              |
+| `theme/layout.ts`                 | `layout` (heights, spacing, padding, border radius).                                                                                                                                                                     |
+| `theme/mode.ts`                   | `mode` (light / lightAlt / dark / darkAlt palettes).                                                                                                                                                                     |
 
 **Editing guidance:** tune glass and roster list math in **`tokens.ts`**; tune shared typography in **`componentStyles.shared.ts`**; tune a single composition’s Tailwind classes in the matching file under **`theme/composition/`**.
 
@@ -44,8 +45,8 @@ The Broadcast Pro theme is split by responsibility. The **public export** is `br
 
 Hero lockup primitives live in **`components/headline/`**:
 
-| Component                            | Role                                                                   |
-| ------------------------------------ | ---------------------------------------------------------------------- |
+| Component                                   | Role                                                                   |
+| ------------------------------------------- | ---------------------------------------------------------------------- |
 | **`BroadcastProRoundedHeadlineTitle`**      | Fitted Teko primary asset title                                        |
 | **`BroadcastProRoundedHeadlineSecondary`**  | Rajdhani secondary line (metadata chip on main header; plain on intro) |
 | **`BroadcastProRoundedHeroHeadlineLockup`** | Composed logo + title + secondary (optional bundle)                    |
@@ -64,8 +65,8 @@ Utility **`text-lift`** (subtle text shadow for player names) is defined in the 
 
 Structured Teko numeral roles live in **`componentStyles.shared.ts`** (`broadcastProRoundedScore*`) and are aliased from composition theme files (e.g. `ResultScore` → `broadcastProRoundedScoreMatchTotal`).
 
-| Role key                                                               | Use                                                          |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Role key                                                                      | Use                                                          |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | **`broadcastProRoundedScoreMatchTotal`**                                      | Team innings score (`8/284`, `171`)                          |
 | **`broadcastProRoundedScoreMatchInnings`**                                    | Two-day first innings sub-line                               |
 | **`broadcastProRoundedScorePlayerPrimary`** / **`Suffix`**                    | Player stat figures (`33*`, `(14)`)                          |
@@ -139,11 +140,11 @@ Home-vs-away opposition layout — how two team sides are arranged relative to a
 
 **Primitive:** [`BroadcastProRoundedMatchup`](../components/matchup/BroadcastProRoundedMatchup.tsx) — tier-driven entry with sub-primitives [`BroadcastProRoundedMatchupSide`](../components/matchup/BroadcastProRoundedMatchupSide.tsx) and [`BroadcastProRoundedMatchupDivider`](../components/matchup/BroadcastProRoundedMatchupDivider.tsx).
 
-| Tier        | Layout                                           | Divider                                              | Surfaces               |
-| ----------- | ------------------------------------------------ | ---------------------------------------------------- | ---------------------- |
+| Tier        | Layout                                           | Divider                                                     | Surfaces               |
+| ----------- | ------------------------------------------------ | ----------------------------------------------------------- | ---------------------- |
 | **fixture** | Horizontal opposed (mirrored crest + name slots) | **VS** (`matchDivider` → `broadcastProRoundedScoreDivider`) | Upcoming               |
-| **result**  | Vertical stack                                   | **none** (stitch-correct — no VS on results)         | Results, Result Single |
-| **roster**  | Vertical sidebar cards                           | **VERSUS** (muted italic, not primary VS)            | Roster                 |
+| **result**  | Vertical stack                                   | **none** (stitch-correct — no VS on results)                | Results, Result Single |
+| **roster**  | Vertical sidebar cards                           | **VERSUS** (muted italic, not primary VS)                   | Roster                 |
 
 **Stitch alignment:** Upcoming central **`VS`** ([`stitch/upcoming.html`](../stitch/upcoming.html)); Results stacked rows without divider ([`stitch/index.html`](../stitch/index.html)); Roster **`VERSUS`** above opponent crest ([`stitch/teamRoster.html`](../stitch/teamRoster.html)).
 
@@ -194,12 +195,12 @@ Match-day **numbered player list** (left column) — separate from matchup sideb
 
 **Primitive:** [`BroadcastProRoundedRosterSheet`](../components/roster/BroadcastProRoundedRosterSheet.tsx) + [`BroadcastProRoundedRosterSheetRow`](../components/roster/BroadcastProRoundedRosterSheetRow.tsx).
 
-| Concern          | Implementation                                                                                                          |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Index format** | Padded lineup order `01`, `02`, … via **`formatBroadcastProRoundedRosterIndex`**                                               |
-| **Index accent** | Row 1 (`index === 0`) → `onContainerAccent`; others → `onContainerMuted`                                                |
+| Concern          | Implementation                                                                                                                        |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Index format** | Padded lineup order `01`, `02`, … via **`formatBroadcastProRoundedRosterIndex`**                                                      |
+| **Index accent** | Row 1 (`index === 0`) → `onContainerAccent`; others → `onContainerMuted`                                                              |
 | **Typography**   | **`rosterIndex`** score role → `broadcastProRoundedScoreRosterIndex`; size from **`broadcastProRoundedRosterListSizing`** row metrics |
-| **Layout**       | Glass index cell + name cell; primary **accent strip** on list edge                                                     |
+| **Layout**       | Glass index cell + name cell; primary **accent strip** on list edge                                                                   |
 
 **Types:** **`roster-index.ts`** in `src/templates/types/broadcast-pro-rounded/` — **`resolveBroadcastProRoundedRosterIndex`**, **`formatBroadcastProRoundedRosterIndex`**.
 

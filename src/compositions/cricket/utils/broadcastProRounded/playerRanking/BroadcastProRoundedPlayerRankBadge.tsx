@@ -34,7 +34,10 @@ export const BroadcastProRoundedPlayerRankBadge: React.FC<
   const style: React.CSSProperties = isFeatured
     ? {
         backgroundColor: accent,
-        color: resolveBroadcastProRoundedCopyOnBackground(accent, selectedPalette),
+        color: resolveBroadcastProRoundedCopyOnBackground(
+          accent,
+          selectedPalette,
+        ),
       }
     : {
         backgroundColor: glass.muted,

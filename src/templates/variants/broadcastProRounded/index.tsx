@@ -10,7 +10,9 @@ import { BroadcastProRoundedMain } from "./components/BroadcastProRoundedMain";
 import { templateAnimations } from "./animations";
 import { UIConfig } from "../../types/settingsConfig";
 
-export const BroadcastProRounded: React.FC<{ data: FixturaDataset }> = ({ data }) => {
+export const BroadcastProRounded: React.FC<{ data: FixturaDataset }> = ({
+  data,
+}) => {
   return (
     <BaseTemplate
       data={data}

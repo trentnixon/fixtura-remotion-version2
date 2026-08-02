@@ -4,7 +4,10 @@ import type { CSSProperties } from "react";
 export type BroadcastProRoundedEdgeMarkerTier = "standard" | "compact";
 
 /** Semantic colour role for edge markers. */
-export type BroadcastProRoundedEdgeMarkerVariant = "primary" | "muted" | "secondary";
+export type BroadcastProRoundedEdgeMarkerVariant =
+  | "primary"
+  | "muted"
+  | "secondary";
 
 /** Marker chip / label surfaces (qualification copy, rank badges). */
 export type BroadcastProRoundedMarkerChipTier = "qualification" | "rank";

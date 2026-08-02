@@ -23,7 +23,10 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
   const copyIn = animations.text.main.copyIn;
   const cellRadius = layout.borderRadius.container;
 
-  const stripClass = csClass(componentStyles, "broadcastProRoundedResultsMetaStrip");
+  const stripClass = csClass(
+    componentStyles,
+    "broadcastProRoundedResultsMetaStrip",
+  );
 
   return (
     <div

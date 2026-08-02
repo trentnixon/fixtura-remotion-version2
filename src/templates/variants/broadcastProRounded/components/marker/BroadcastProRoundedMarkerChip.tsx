@@ -15,12 +15,9 @@ export interface BroadcastProRoundedMarkerChipProps {
 }
 
 /** Teko uppercase label chip — qualification footer, rank callouts. */
-export const BroadcastProRoundedMarkerChip: React.FC<BroadcastProRoundedMarkerChipProps> = ({
-  label,
-  tier = "qualification",
-  accentColor,
-  className = "",
-}) => {
+export const BroadcastProRoundedMarkerChip: React.FC<
+  BroadcastProRoundedMarkerChipProps
+> = ({ label, tier = "qualification", accentColor, className = "" }) => {
   const { componentStyles, fontClasses, fonts } = useThemeContext();
   const chipClass = csClass(
     componentStyles,

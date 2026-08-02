@@ -91,7 +91,8 @@ export const broadcastProRoundedCompositionComponentStylesPlayerRanking = {
     broadcastProRoundedPlayerRankingStatScoreFeatured,
   broadcastProRoundedPlayerRankingStatValueGrid:
     broadcastProRoundedPlayerRankingStatScoreGrid,
-  broadcastProRoundedScoreFeatured: broadcastProRoundedPlayerRankingStatScoreFeatured,
+  broadcastProRoundedScoreFeatured:
+    broadcastProRoundedPlayerRankingStatScoreFeatured,
   broadcastProRoundedScoreGrid: broadcastProRoundedPlayerRankingStatScoreGrid,
   broadcastProRoundedPlayerRankingTripleStatsFeatured: {
     className: "mt-4 grid w-full grid-cols-3",
