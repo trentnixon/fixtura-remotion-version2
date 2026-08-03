@@ -1,5 +1,8 @@
 # Cricket Ladder — static design brief (general)
 
+**Component anatomy:** `../../.docs/component-anatomy/ladder-component-anatomy.md`  
+**Stitch brief:** `../../.docs/stitch-briefs/ladder-stitch-component-brief.md`
+
 **Audience** — Design LLM or designer producing **one portrait static** for a **competition ladder / standings table** (one grade). No motion or implementation detail.
 
 **Goal** — **Order** and **points** are obvious: each row is a **team** with **logo + name** and **columns of stats**, capped by a **grade title**. Optional **highlight** for a **focus team** (`bias` matches `teamName` on one row). Brand-neutral unless the brief says otherwise.

@@ -1,5 +1,8 @@
 # Cricket Top 5 — static design brief (general)
 
+**Component anatomy:** `../../../.docs/component-anatomy/top-performers-component-anatomy.md`  
+**Stitch brief:** `../../../.docs/stitch-briefs/top-performers-stitch-component-brief.md`
+
 **Audience** — Design LLM or designer producing **one portrait static** for a **ranked list** of top performers (**batting** or **bowling** leaderboard). No motion or implementation detail.
 
 **Goal** — **Order and identity** are obvious: **who**, **which team** (`playedFor`), and the **headline number** (runs or bowling figures). **#1** can read as the **featured** row if the brief allows. Brand-neutral unless art direction says otherwise.

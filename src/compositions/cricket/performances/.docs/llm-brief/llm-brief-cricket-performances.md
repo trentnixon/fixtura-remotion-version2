@@ -1,5 +1,8 @@
 # Cricket Performances — static design brief (general)
 
+**Component anatomy:** `../../../.docs/component-anatomy/performances-component-anatomy.md`  
+**Stitch brief:** `../../../.docs/stitch-briefs/performances-stitch-component-brief.md`
+
 **Audience** — Design LLM or designer producing **one portrait static** for a **list of standout match performances** (**batting** or **bowling**). Typically a **round / weekend / period** snapshot, not necessarily labeled “Top N”. No motion or implementation detail.
 
 **Goal** — **Identity and numbers** read instantly: **who**, **which side** (`playedFor`), and the **headline stat line** (runs with balls/SR for batting; wickets / runs conceded / overs for bowling). Order is usually **sorted by performance** (e.g. runs or wickets); **first row** may read as the **lead** performance if the brief allows. Brand-neutral unless art direction says otherwise.

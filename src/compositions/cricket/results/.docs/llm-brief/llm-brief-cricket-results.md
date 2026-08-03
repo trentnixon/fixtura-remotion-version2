@@ -1,5 +1,9 @@
 # Cricket Results — LLM design briefs (index)
 
+**Component anatomy** (building blocks, data, states): `../../component-anatomy/results-component-anatomy.md`  
+**Stitch brief:** `../../stitch-briefs/results-stitch-component-brief.md`  
+**Shared terminology:** `../../component-anatomy/component-anatomy-overview.md`
+
 Two static one-page briefs for design LLMs (no motion or implementation):
 
 - **Association — both teams** — file `llm-brief-cricket-results-association.md` — Show **full results and player stats for home and away**.

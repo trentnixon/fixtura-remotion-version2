@@ -6,6 +6,11 @@ Cricket feature compositions and modules. Contains multiple composition families
 
 - `.skills/architecture/cricket-compositions-feature.md` – Feature-level implementation guidance for cricket compositions
 
+## Design system docs
+
+- `component-anatomy/` — abstract component trees and data (design-first)
+- `stitch-briefs/` — one focused Stitch prompt per asset family (do not combine)
+
 ## Files
 
 - `index.tsx`: registers/exports cricket compositions

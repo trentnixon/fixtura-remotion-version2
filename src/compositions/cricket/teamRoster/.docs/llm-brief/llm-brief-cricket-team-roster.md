@@ -1,5 +1,8 @@
 # Cricket Team Roster — LLM design briefs (index)
 
+**Component anatomy:** `../../.docs/component-anatomy/team-roster-component-anatomy.md`  
+**Stitch brief:** `../../.docs/stitch-briefs/team-roster-stitch-component-brief.md`
+
 Two static one-page briefs for design LLMs (no motion or implementation):
 
 - **Association / neutral** — file `llm-brief-cricket-team-roster-association.md` — **Balanced** home vs away presentation; fixture context and **named lineup** for the rostered side.

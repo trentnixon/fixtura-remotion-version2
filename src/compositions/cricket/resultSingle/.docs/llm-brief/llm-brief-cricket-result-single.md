@@ -1,5 +1,9 @@
 # Cricket Result Single — LLM design briefs (index)
 
+**Component anatomy:** `../../.docs/component-anatomy/result-single-component-anatomy.md`  
+**Stitch brief:** `../../.docs/stitch-briefs/result-single-stitch-component-brief.md`  
+**Shared match parts:** `../../.docs/component-anatomy/results-component-anatomy.md`
+
 Two static one-page briefs for design LLMs (no motion or implementation):
 
 - **Association — both teams** — file `llm-brief-cricket-result-single-association.md` — **One match** on screen; **full player stats for home and away**.

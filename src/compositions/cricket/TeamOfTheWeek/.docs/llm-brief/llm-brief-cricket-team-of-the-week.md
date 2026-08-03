@@ -1,5 +1,8 @@
 # Cricket Team of the Week — LLM design briefs (index)
 
+**Component anatomy:** `../../.docs/component-anatomy/team-of-the-week-component-anatomy.md`  
+**Stitch brief:** `../../.docs/stitch-briefs/team-of-the-week-stitch-component-brief.md`
+
 Two static briefs for design LLMs (no motion or implementation):
 
 - **Association / competition** — file `llm-brief-cricket-team-of-the-week-association.md` — **Mixed clubs** in the lineup—each pick needs **clear club / team identity** alongside the player.
