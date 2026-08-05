@@ -4918,6 +4918,7 @@ import { wipe } from "@remotion/transitions/wipe";
 import { clockWipe } from "@remotion/transitions/clock-wipe";
 import { flip } from "@remotion/transitions/flip";
 import { none } from "@remotion/transitions/none";
+import { Easing as Easing3 } from "remotion";
 import { jsx as jsx16, jsxs as jsxs3 } from "react/jsx-runtime";
 var getTransitionPresentation = (type, direction = "from-right", width = 1920, height = 1080) => {
   switch (type) {
@@ -4949,8 +4950,7 @@ var getTiming = (config) => {
   }
   return linearTiming({
     durationInFrames,
-    easing: easing || ((t) => t)
-    // Default to linear easing if none provided
+    easing: easing || Easing3.inOut(Easing3.ease)
   });
 };
 var TransitionSeriesWrapper = ({
@@ -4968,7 +4968,7 @@ var TransitionSeriesWrapper = ({
     height
   );
   const timingFn = getTiming(timing);
-  return /* @__PURE__ */ jsx16(TransitionSeries, { from: 29, children: sequences.map((sequence, index) => /* @__PURE__ */ jsxs3(React10.Fragment, { children: [
+  return /* @__PURE__ */ jsx16(TransitionSeries, { children: sequences.map((sequence, index) => /* @__PURE__ */ jsxs3(React10.Fragment, { children: [
     /* @__PURE__ */ jsx16(
       TransitionSeries.Sequence,
       {
@@ -5473,7 +5473,7 @@ import {
   useCurrentFrame as useCurrentFrame6,
   useVideoConfig as useVideoConfig6,
   interpolate as interpolate18,
-  Easing as Easing3
+  Easing as Easing4
 } from "remotion";
 import { jsx as jsx22 } from "react/jsx-runtime";
 var Pan = ({
@@ -5517,7 +5517,7 @@ var Pan = ({
       [animationStartFrame, animationEndFrame],
       [-translateXRange, translateXRange],
       {
-        easing: Easing3.ease,
+        easing: Easing4.ease,
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp"
       }
@@ -5529,7 +5529,7 @@ var Pan = ({
       [animationStartFrame, animationEndFrame],
       [-translateYRange, translateYRange],
       {
-        easing: Easing3.ease,
+        easing: Easing4.ease,
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp"
       }
@@ -10590,12 +10590,15 @@ var ladderTeamPoints_default = LadderTeamPoints;
 
 // src/compositions/cricket/ladder/layout/TableRowLayout.tsx
 import { jsx as jsx74, jsxs as jsxs22 } from "react/jsx-runtime";
+var STANDARD_LADDER_LOGO_MAX = 64;
 var StandardLadderRow = ({
   team,
   delay,
   bgColorClass,
   LadderRowHeight
 }) => {
+  const logoSize = Math.min(LadderRowHeight - 8, STANDARD_LADDER_LOGO_MAX);
+  const teamLogo = team.clubLogo || team.playHQLogo;
   return /* @__PURE__ */ jsxs22(
     "div",
     {
@@ -10606,14 +10609,27 @@ var StandardLadderRow = ({
       },
       children: [
         /* @__PURE__ */ jsxs22("div", { className: "flex items-center mr-3 p-1", style: { width: "70%" }, children: [
-          /* @__PURE__ */ jsx74("div", { className: "w-16 flex-shrink-0 mr-4 overflow-hidden", children: team.clubLogo ? /* @__PURE__ */ jsx74("div", { className: "rounded-full", children: /* @__PURE__ */ jsx74(
-            TeamLogo_default,
+          /* @__PURE__ */ jsx74(
+            "div",
             {
-              logo: team.clubLogo || team.playHQLogo,
-              teamName: team.teamName,
-              delay
+              className: "mr-4 flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full",
+              style: { width: logoSize, height: logoSize },
+              children: teamLogo ? /* @__PURE__ */ jsx74(
+                TeamLogo_default,
+                {
+                  logo: teamLogo,
+                  teamName: team.teamName,
+                  delay,
+                  size: logoSize,
+                  imgStyle: {
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain"
+                  }
+                }
+              ) : /* @__PURE__ */ jsx74("div", { className: "h-full w-full rounded-full bg-gray-300/10" })
             }
-          ) }) : /* @__PURE__ */ jsx74("div", { className: "w-16 h-16 bg-gray-300/10 rounded-full" }) }),
+          ),
           /* @__PURE__ */ jsx74("div", { className: "flex-1 truncate", children: /* @__PURE__ */ jsx74(ladderTeamName_default, { value: team.teamName, delay }) })
         ] }),
         /* @__PURE__ */ jsxs22("div", { className: "flex flex-1 justify-evenly", children: [
@@ -13214,7 +13230,9 @@ var MetadataMedium = ({
   className,
   variant = DEFAULT_VARIANT,
   letterAnimation = DEFAULT_LETTER_ANIMATION,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamily = useFontFamily();
   return /* @__PURE__ */ jsx105(
@@ -13227,6 +13245,8 @@ var MetadataMedium = ({
       style,
       animation,
       letterAnimation,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -15535,7 +15555,9 @@ var ResultPlayerName = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamily = useFontFamily();
   return /* @__PURE__ */ jsx130(
@@ -15548,6 +15570,8 @@ var ResultPlayerName = ({
       style,
       animation,
       letterAnimation: DEFAULT_LETTER_ANIMATION,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -16444,7 +16468,9 @@ var ResultTeamName = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamily = useFontFamily();
   return /* @__PURE__ */ jsx142(
@@ -16457,6 +16483,8 @@ var ResultTeamName = ({
       style,
       animation,
       letterAnimation: DEFAULT_LETTER_ANIMATION,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -16506,7 +16534,9 @@ var ResultScoreFirstInnings = ({
   className,
   variant = DEFAULT_VARIANT,
   fontFamily: fontFamilyOverride,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamilyFromTheme = useFontFamily();
   const fontFamily = fontFamilyOverride != null ? fontFamilyOverride : fontFamilyFromTheme;
@@ -16521,6 +16551,8 @@ var ResultScoreFirstInnings = ({
       style,
       animation,
       letterAnimation: DEFAULT_LETTER_ANIMATION,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -18581,8 +18613,11 @@ var BroadcastProRoundedGlassPanel = ({
   className = "",
   style,
   glass: glassOverride,
-  surface = "panel"
+  surface = "panel",
+  animationDelay,
+  exitFrame
 }) => {
+  const { animations } = useAnimationContext();
   const {
     selectedPalette,
     layout,
@@ -18594,7 +18629,9 @@ var BroadcastProRoundedGlassPanel = ({
     broadcastProRoundedGlassOpacity,
     broadcastProRoundedTransparentLayers
   });
-  return /* @__PURE__ */ jsx163(
+  const containerAnimation = animations.container.main.itemContainerInner;
+  const shouldAnimate = animationDelay !== void 0 || exitFrame !== void 0;
+  const panel = /* @__PURE__ */ jsx163(
     "div",
     {
       className: `overflow-hidden ${layout.borderRadius.container} ${className}`.trim(),
@@ -18607,16 +18644,139 @@ var BroadcastProRoundedGlassPanel = ({
       children
     }
   );
+  if (!shouldAnimate) {
+    return panel;
+  }
+  return /* @__PURE__ */ jsx163(
+    AnimatedContainer,
+    {
+      type: "full",
+      className: "h-full w-full",
+      backgroundColor: "none",
+      animation: containerAnimation.containerIn,
+      animationDelay: animationDelay != null ? animationDelay : 0,
+      exitAnimation: containerAnimation.containerOut,
+      exitFrame,
+      children: panel
+    }
+  );
 };
+
+// src/compositions/cricket/utils/broadcastProRounded/results/buildBroadcastProRoundedVerdictModel.ts
+var swapResultWord2 = (resultWord, lostReplacement = "Lost to", wonReplacement = "defeated") => {
+  const normalizedWord = resultWord.toLowerCase().trim();
+  if (normalizedWord === "lost") {
+    return lostReplacement;
+  }
+  if (normalizedWord === "won") {
+    return wonReplacement;
+  }
+  return resultWord;
+};
+var getLoserTeam2 = (summary) => summary.winner === summary.homeTeam ? summary.awayTeam : summary.homeTeam;
+var buildVerdictContextLine2 = (resultShort, summary) => {
+  const short = resultShort == null ? void 0 : resultShort.trim();
+  if (short) {
+    const wonByMatch = /won by (.+)$/i.exec(short);
+    if (wonByMatch) {
+      return `won by ${wonByMatch[1].trim()}`;
+    }
+    const defIndex = short.toLowerCase().indexOf(" def ");
+    if (defIndex >= 0) {
+      return short.slice(defIndex + 1).trim();
+    }
+  }
+  const loser = getLoserTeam2(summary);
+  const word = swapResultWord2(summary.resultWord);
+  return `${word} ${loser}`;
+};
+var buildCompactVerdictLine2 = (match) => {
+  var _a;
+  const short = (_a = match.resultShort) == null ? void 0 : _a.trim();
+  if (short) {
+    return short;
+  }
+  if (match.resultSummary) {
+    const { homeTeam, resultWord, winner } = match.resultSummary;
+    return `${homeTeam} ${resultWord} to ${winner}`;
+  }
+  return null;
+};
+var buildBroadcastProRoundedVerdictModel = (match) => {
+  var _a;
+  if (match.status === "Abandoned") {
+    return {
+      kind: "abandoned",
+      status: match.status,
+      result: ((_a = match.result) == null ? void 0 : _a.trim()) || void 0
+    };
+  }
+  if (match.resultSummary) {
+    return {
+      kind: "hero",
+      winner: match.resultSummary.winner,
+      contextLine: buildVerdictContextLine2(
+        match.resultShort,
+        match.resultSummary
+      )
+    };
+  }
+  const compactLine = buildCompactVerdictLine2(match);
+  if (compactLine) {
+    return {
+      kind: "compact",
+      line: compactLine
+    };
+  }
+  return null;
+};
+
+// src/compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers.ts
+var buildGradeLabel2 = (match) => {
+  const parts = [match.gradeName || match.type, match.round].filter(Boolean);
+  return parts.join(" \u2022 ");
+};
+var calculateBroadcastProRoundedResultDelays = (delay) => {
+  const baseDelay = delay;
+  const metaDelay = baseDelay + 4;
+  const homeTeamDelay = metaDelay + 6;
+  const homeStatsDelay = homeTeamDelay + 8;
+  const awayTeamDelay = homeStatsDelay + 8;
+  const awayStatsDelay = awayTeamDelay + 8;
+  const verdictDelay = awayStatsDelay + 6;
+  return {
+    baseDelay,
+    metaDelay,
+    /** @deprecated Prefer homeStatsDelay / awayStatsDelay */
+    statsDelay: homeStatsDelay,
+    /** @deprecated Prefer verdictDelay */
+    headerDelay: verdictDelay,
+    homeTeamDelay,
+    homeStatsDelay,
+    awayTeamDelay,
+    awayStatsDelay,
+    verdictDelay
+  };
+};
+var RESULT_STAT_CELL_STAGGER = 5;
+var RESULT_TEAM_ROW_NESTED = {
+  crest: 3,
+  name: 6,
+  score: 9
+};
+var RESULT_CONTAINER_COPY_LEAD = 3;
+var RESULT_PANEL_CONTAINER_DELAY = 2;
+var resultContainerDelay = (copyDelay) => Math.max(0, copyDelay - RESULT_CONTAINER_COPY_LEAD);
+var calculateBroadcastProRoundedResultExitFrame = (fpsScorecard) => fpsScorecard ? fpsScorecard - 20 : 280;
 
 // src/templates/variants/broadcastProRounded/components/stat/BroadcastProRoundedStatMatrixResultCell.tsx
 import { Fragment as Fragment8, jsx as jsx164, jsxs as jsxs68 } from "react/jsx-runtime";
 var SINGLE_CELL_CLASS2 = "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
-var SINGLE_PLAYER_NAME_CLASS2 = "!text-4xl font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
-var SINGLE_STAT_PRIMARY_CLASS2 = "font-teko !text-6xl font-bold !tracking-wide !leading-none";
-var SINGLE_STAT_SUFFIX_CLASS2 = "font-teko !text-3xl font-normal !tracking-wider !leading-none opacity-70";
-var LIST_STAT_PRIMARY_CLASS2 = "font-teko !text-3xl font-bold !tracking-tight !leading-tight";
-var LIST_STAT_SUFFIX_CLASS2 = "font-teko !text-2xl font-normal !tracking-tight !leading-tight opacity-70";
+var SINGLE_PLAYER_NAME_CLASS2 = "!text-[38px] font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
+var SINGLE_STAT_PRIMARY_CLASS2 = "font-teko !text-[62px] !font-normal !tracking-wide !leading-none";
+var SINGLE_STAT_SUFFIX_CLASS2 = "font-teko !text-[32px] font-normal !tracking-wider !leading-none opacity-70";
+var LIST_STAT_PRIMARY_CLASS2 = "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
+var LIST_STAT_SUFFIX_CLASS2 = "font-teko !text-[26px] font-normal !tracking-tight !leading-tight opacity-70";
 var BroadcastProRoundedStatMatrixResultCell = ({
   playerName,
   statValue,
@@ -18625,7 +18785,9 @@ var BroadcastProRoundedStatMatrixResultCell = ({
   accentColor,
   glass,
   className = "",
-  tier = "list"
+  tier = "list",
+  exitAnimation,
+  exitFrame
 }) => {
   var _a, _b, _c, _d;
   const { animations } = useAnimationContext();
@@ -18654,7 +18816,9 @@ var BroadcastProRoundedStatMatrixResultCell = ({
     BroadcastProRoundedStatMatrixCompact,
     {
       value: statValue,
-      animation: { ...copyIn, delay: delay + 2 },
+      animation: { ...copyIn, delay: delay + 3 },
+      exitAnimation,
+      exitFrame,
       colorVariant: highlight ? "onContainerTitle" : "onContainerCopy",
       fontFamily: headingFont,
       className: isSingle ? SINGLE_STAT_PRIMARY_CLASS2 : LIST_STAT_PRIMARY_CLASS2,
@@ -18672,6 +18836,8 @@ var BroadcastProRoundedStatMatrixResultCell = ({
     {
       value: playerName,
       animation: { ...copyIn, delay },
+      exitAnimation,
+      exitFrame,
       variant: "onContainerCopy",
       className: resolvedNameClass,
       style: { color: text.copy }
@@ -18682,6 +18848,8 @@ var BroadcastProRoundedStatMatrixResultCell = ({
     {
       glass,
       className: `${cellClass} ${isSingle ? SINGLE_CELL_CLASS2 : ""} ${className}`.trim(),
+      animationDelay: resultContainerDelay(delay),
+      exitFrame,
       children: isSingle ? /* @__PURE__ */ jsxs68(Fragment8, { children: [
         statBlock,
         nameBlock
@@ -18695,7 +18863,16 @@ var BroadcastProRoundedStatMatrixResultCell = ({
 
 // src/templates/variants/broadcastProRounded/components/stat/BroadcastProRoundedStatMatrixResultGrid.tsx
 import { jsx as jsx165 } from "react/jsx-runtime";
-var BroadcastProRoundedStatMatrixResultGrid = ({ items, delay, accentColor, glass, className = "", tier = "list" }) => {
+var BroadcastProRoundedStatMatrixResultGrid = ({
+  items,
+  delay,
+  accentColor,
+  glass,
+  className = "",
+  tier = "list",
+  exitAnimation,
+  exitFrame
+}) => {
   const { componentStyles } = useThemeContext();
   const gridClass = csClass2(
     componentStyles,
@@ -18709,10 +18886,12 @@ var BroadcastProRoundedStatMatrixResultGrid = ({ items, delay, accentColor, glas
     BroadcastProRoundedStatMatrixResultCell,
     {
       ...item,
-      delay: delay + index * 2,
+      delay: delay + index * RESULT_STAT_CELL_STAGGER,
       accentColor,
       glass,
-      tier
+      tier,
+      exitAnimation,
+      exitFrame
     },
     `${item.playerName}-${item.statValue}-${index}`
   )) });
@@ -18921,91 +19100,6 @@ var buildBroadcastProRoundedResultStatItems = (team, maxItems = 3) => {
     });
   }
   return items;
-};
-
-// src/compositions/cricket/utils/broadcastProRounded/results/buildBroadcastProRoundedVerdictModel.ts
-var swapResultWord2 = (resultWord, lostReplacement = "Lost to", wonReplacement = "defeated") => {
-  const normalizedWord = resultWord.toLowerCase().trim();
-  if (normalizedWord === "lost") {
-    return lostReplacement;
-  }
-  if (normalizedWord === "won") {
-    return wonReplacement;
-  }
-  return resultWord;
-};
-var getLoserTeam2 = (summary) => summary.winner === summary.homeTeam ? summary.awayTeam : summary.homeTeam;
-var buildVerdictContextLine2 = (resultShort, summary) => {
-  const short = resultShort == null ? void 0 : resultShort.trim();
-  if (short) {
-    const wonByMatch = /won by (.+)$/i.exec(short);
-    if (wonByMatch) {
-      return `won by ${wonByMatch[1].trim()}`;
-    }
-    const defIndex = short.toLowerCase().indexOf(" def ");
-    if (defIndex >= 0) {
-      return short.slice(defIndex + 1).trim();
-    }
-  }
-  const loser = getLoserTeam2(summary);
-  const word = swapResultWord2(summary.resultWord);
-  return `${word} ${loser}`;
-};
-var buildCompactVerdictLine2 = (match) => {
-  var _a;
-  const short = (_a = match.resultShort) == null ? void 0 : _a.trim();
-  if (short) {
-    return short;
-  }
-  if (match.resultSummary) {
-    const { homeTeam, resultWord, winner } = match.resultSummary;
-    return `${homeTeam} ${resultWord} to ${winner}`;
-  }
-  return null;
-};
-var buildBroadcastProRoundedVerdictModel = (match) => {
-  var _a;
-  if (match.status === "Abandoned") {
-    return {
-      kind: "abandoned",
-      status: match.status,
-      result: ((_a = match.result) == null ? void 0 : _a.trim()) || void 0
-    };
-  }
-  if (match.resultSummary) {
-    return {
-      kind: "hero",
-      winner: match.resultSummary.winner,
-      contextLine: buildVerdictContextLine2(
-        match.resultShort,
-        match.resultSummary
-      )
-    };
-  }
-  const compactLine = buildCompactVerdictLine2(match);
-  if (compactLine) {
-    return {
-      kind: "compact",
-      line: compactLine
-    };
-  }
-  return null;
-};
-
-// src/compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers.ts
-var buildGradeLabel2 = (match) => {
-  const parts = [match.gradeName || match.type, match.round].filter(Boolean);
-  return parts.join(" \u2022 ");
-};
-var calculateBroadcastProRoundedResultDelays = (delay) => {
-  const baseDelay = delay;
-  const statsDelay = baseDelay + 4;
-  const headerDelay = statsDelay + 5;
-  return {
-    baseDelay,
-    statsDelay,
-    headerDelay
-  };
 };
 
 // src/compositions/cricket/utils/broadcastProRounded/results/resolveBroadcastProRoundedTeamAccentColors.ts
@@ -19224,6 +19318,7 @@ var BroadcastProRoundedResultVerdict = ({
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY2[tier];
   const bandClass = csClass2(componentStyles, bandKey);
+  const containerDelay = resultContainerDelay(delay);
   const edgeMarkerStyle = resolveBroadcastProRoundedEdgeMarkerStyle(
     "standard",
     "primary",
@@ -19240,6 +19335,8 @@ var BroadcastProRoundedResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        animationDelay: containerDelay,
+        exitFrame,
         children: /* @__PURE__ */ jsx170(
           BroadcastProRoundedVerdictHeroLockup,
           {
@@ -19263,6 +19360,8 @@ var BroadcastProRoundedResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        animationDelay: containerDelay,
+        exitFrame,
         children: /* @__PURE__ */ jsx170(
           BroadcastProRoundedVerdictCompactLine,
           {
@@ -19284,6 +19383,8 @@ var BroadcastProRoundedResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        animationDelay: containerDelay,
+        exitFrame,
         children: /* @__PURE__ */ jsx170(
           BroadcastProRoundedVerdictAbandoned,
           {
@@ -19303,50 +19404,75 @@ var BroadcastProRoundedResultVerdict = ({
 
 // src/compositions/cricket/utils/broadcastProRounded/results/BroadcastProRoundedResultMetaStrip.tsx
 import { jsx as jsx171, jsxs as jsxs73 } from "react/jsx-runtime";
-var BroadcastProRoundedResultMetaStrip = ({ gradeLabel, ground, delay = 0, className = "", showGround = true }) => {
+var BroadcastProRoundedResultMetaStrip = ({
+  gradeLabel,
+  ground,
+  delay = 0,
+  className = "",
+  showGround = true,
+  exitAnimation,
+  exitFrame
+}) => {
   const { animations } = useAnimationContext();
   const { componentStyles, layout } = useThemeContext();
   const { glass, text, accent } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
+  const containerAnimation = animations.container.main.itemContainerInner;
   const cellRadius = layout.borderRadius.container;
   const stripClass = csClass2(
     componentStyles,
     "broadcastProRoundedResultsMetaStrip"
   );
-  return /* @__PURE__ */ jsxs73(
-    "div",
+  return /* @__PURE__ */ jsx171(
+    AnimatedContainer,
     {
-      className: `overflow-hidden ${cellRadius} ${stripClass} ${className}`.trim(),
-      style: {
-        background: glass.headerGradient,
-        ...resolveBroadcastProRoundedEdgeMarkerStyle("compact", "primary", {
-          accentColor: accent,
-          mutedColor: accent
-        }),
-        ...cellBlur2
-      },
-      children: [
-        /* @__PURE__ */ jsx171(
-          MetadataMedium,
-          {
-            value: gradeLabel,
-            animation: { ...copyIn, delay },
-            className: "truncate font-bold uppercase tracking-widest",
-            variant: "onContainerCopy",
-            style: { color: text.copy }
-          }
-        ),
-        showGround && ground ? /* @__PURE__ */ jsx171(
-          MetadataMedium,
-          {
-            value: ground,
-            animation: { ...copyIn, delay: delay + 2 },
-            className: "ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider",
-            variant: "onContainerCopy",
-            style: { color: text.muted }
-          }
-        ) : null
-      ]
+      type: "full",
+      className: "w-full",
+      backgroundColor: "none",
+      animation: containerAnimation.containerIn,
+      animationDelay: resultContainerDelay(delay),
+      exitAnimation: containerAnimation.containerOut,
+      exitFrame,
+      children: /* @__PURE__ */ jsxs73(
+        "div",
+        {
+          className: `overflow-hidden ${cellRadius} ${stripClass} ${className}`.trim(),
+          style: {
+            background: glass.headerGradient,
+            ...resolveBroadcastProRoundedEdgeMarkerStyle("compact", "primary", {
+              accentColor: accent,
+              mutedColor: accent
+            }),
+            ...cellBlur2
+          },
+          children: [
+            /* @__PURE__ */ jsx171(
+              MetadataMedium,
+              {
+                value: gradeLabel,
+                animation: { ...copyIn, delay },
+                exitAnimation,
+                exitFrame,
+                className: "truncate font-bold uppercase tracking-widest",
+                variant: "onContainerCopy",
+                style: { color: text.copy }
+              }
+            ),
+            showGround && ground ? /* @__PURE__ */ jsx171(
+              MetadataMedium,
+              {
+                value: ground,
+                animation: { ...copyIn, delay: delay + 4 },
+                exitAnimation,
+                exitFrame,
+                className: "ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider",
+                variant: "onContainerCopy",
+                style: { color: text.muted }
+              }
+            ) : null
+          ]
+        }
+      )
     }
   );
 };
@@ -19417,7 +19543,9 @@ var BroadcastProRoundedResultScoreBadge = ({
   accentColor,
   delay,
   matchType = "",
-  className = ""
+  className = "",
+  exitAnimation,
+  exitFrame
 }) => {
   var _a, _b, _c, _d;
   const { animations } = useAnimationContext();
@@ -19449,6 +19577,8 @@ var BroadcastProRoundedResultScoreBadge = ({
             value: score,
             variant: "match",
             animation: { ...copyIn, delay },
+            exitAnimation,
+            exitFrame,
             colorVariant: "onContainerTitle",
             fontFamily: headingFont,
             primaryStyle: { color: text.copy }
@@ -19458,7 +19588,9 @@ var BroadcastProRoundedResultScoreBadge = ({
           ResultScoreFirstInnings,
           {
             value: firstInnings,
-            animation: { ...copyIn, delay: delay + 2 },
+            animation: { ...copyIn, delay: delay + 4 },
+            exitAnimation,
+            exitFrame,
             variant: "onContainerCopy",
             style: { color: text.muted }
           }
@@ -19480,7 +19612,9 @@ var BroadcastProRoundedResultTeamRow = ({
   delay,
   matchType,
   glass,
-  className = ""
+  className = "",
+  exitAnimation,
+  exitFrame
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -19501,6 +19635,8 @@ var BroadcastProRoundedResultTeamRow = ({
     {
       glass: resolvedGlass,
       className: `${rowClass} ${className}`.trim(),
+      animationDelay: resultContainerDelay(delay),
+      exitFrame,
       children: [
         /* @__PURE__ */ jsxs75("div", { className: "flex min-w-0 flex-1 items-center gap-4", children: [
           /* @__PURE__ */ jsx175(
@@ -19509,7 +19645,7 @@ var BroadcastProRoundedResultTeamRow = ({
               tier: "compact",
               logo: logo != null ? logo : null,
               teamName,
-              delay: delay + 2,
+              delay: delay + RESULT_TEAM_ROW_NESTED.crest,
               glass: resolvedGlass
             }
           ),
@@ -19517,7 +19653,9 @@ var BroadcastProRoundedResultTeamRow = ({
             ResultTeamName,
             {
               value: displayName,
-              animation: { ...copyIn, delay: delay + 4 },
+              animation: { ...copyIn, delay: delay + RESULT_TEAM_ROW_NESTED.name },
+              exitAnimation,
+              exitFrame,
               variant: "onContainerTitle",
               className: nameClass,
               style: { color: text.copy }
@@ -19530,8 +19668,10 @@ var BroadcastProRoundedResultTeamRow = ({
             score,
             firstInnings,
             accentColor,
-            delay: delay + 6,
-            matchType
+            delay: delay + RESULT_TEAM_ROW_NESTED.score,
+            matchType,
+            exitAnimation,
+            exitFrame
           }
         )
       ]
@@ -19878,11 +20018,12 @@ var BroadcastProRoundedResultMatchContent = ({
   className = "",
   style,
   showGround = true,
-  playerStatsTier = "list"
+  playerStatsTier = "list",
+  exitFrame: exitFrameProp
 }) => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e;
   const { animations } = useAnimationContext();
-  const { isAccountClub } = useVideoDataContext();
+  const { isAccountClub, data } = useVideoDataContext();
   const {
     colors,
     selectedPalette,
@@ -19890,7 +20031,15 @@ var BroadcastProRoundedResultMatchContent = ({
     broadcastProRoundedGlassOpacity,
     broadcastProRoundedTransparentLayers
   } = useThemeContext();
-  const { baseDelay, statsDelay, headerDelay } = calculateBroadcastProRoundedResultDelays(delay);
+  const {
+    baseDelay,
+    metaDelay: calculatedMetaDelay,
+    homeTeamDelay,
+    homeStatsDelay,
+    awayTeamDelay,
+    awayStatsDelay,
+    verdictDelay
+  } = calculateBroadcastProRoundedResultDelays(delay);
   const primaryAccent = (_a = colors == null ? void 0 : colors.primary) != null ? _a : selectedPalette.container.accent;
   const secondaryAccent = (_b = colors == null ? void 0 : colors.secondary) != null ? _b : primaryAccent;
   const teamAccents = resolveBroadcastProRoundedTeamAccentColors({
@@ -19902,10 +20051,12 @@ var BroadcastProRoundedResultMatchContent = ({
   const verdict = buildBroadcastProRoundedVerdictModel(match);
   const compactLine = buildCompactVerdictLine2(match);
   const copyIn = animations.text.main.copyIn;
+  const copyOut = animations.text.main.copyOut;
+  const exitFrame = exitFrameProp != null ? exitFrameProp : calculateBroadcastProRoundedResultExitFrame((_c = data.timings) == null ? void 0 : _c.FPS_SCORECARD);
   const showHeroVerdict = statementPosition === "top" && (verdict == null ? void 0 : verdict.kind) === "hero";
   const showCompactVerdict = statementPosition === "bottom" && (verdict == null ? void 0 : verdict.kind) !== "abandoned" && compactLine != null;
   const showAbandonedVerdict = (verdict == null ? void 0 : verdict.kind) === "abandoned";
-  const metaDelay = showHeroVerdict ? baseDelay + 2 : baseDelay;
+  const metaDelay = showHeroVerdict ? baseDelay + 8 : calculatedMetaDelay;
   const glass = useMemo9(
     () => resolveBroadcastProRoundedGlass({
       surfaceBase: selectedPalette.container.background,
@@ -19973,6 +20124,8 @@ var BroadcastProRoundedResultMatchContent = ({
             delay: baseDelay,
             glass,
             animation: copyIn,
+            exitAnimation: copyOut,
+            exitFrame,
             className: "mb-2"
           }
         ),
@@ -19982,7 +20135,9 @@ var BroadcastProRoundedResultMatchContent = ({
             gradeLabel: buildGradeLabel2(match),
             ground: match.ground,
             delay: metaDelay,
-            showGround
+            showGround,
+            exitAnimation: copyOut,
+            exitFrame
           }
         ),
         /* @__PURE__ */ jsx179(
@@ -19991,11 +20146,11 @@ var BroadcastProRoundedResultMatchContent = ({
             tier: "result",
             home: {
               teamName: match.homeTeam.name,
-              logo: (_c = match.teamHomeLogo) != null ? _c : null
+              logo: (_d = match.teamHomeLogo) != null ? _d : null
             },
             away: {
               teamName: match.awayTeam.name,
-              logo: (_d = match.teamAwayLogo) != null ? _d : null
+              logo: (_e = match.teamAwayLogo) != null ? _e : null
             },
             glass,
             className: matchBlockClass,
@@ -20010,19 +20165,23 @@ var BroadcastProRoundedResultMatchContent = ({
                       logo: match.teamHomeLogo,
                       firstInnings: homeFirstInnings.show ? homeFirstInnings.value : null,
                       accentColor: teamAccents.home,
-                      delay: metaDelay,
+                      delay: homeTeamDelay,
                       matchType: match.type,
-                      glass
+                      glass,
+                      exitAnimation: copyOut,
+                      exitFrame
                     }
                   ),
                   /* @__PURE__ */ jsx179(
                     BroadcastProRoundedResultPlayerStatsGrid,
                     {
                       items: homeStats,
-                      delay: statsDelay,
+                      delay: homeStatsDelay,
                       accentColor: teamAccents.home,
                       glass,
-                      tier: playerStatsTier
+                      tier: playerStatsTier,
+                      exitAnimation: copyOut,
+                      exitFrame
                     }
                   )
                 ] });
@@ -20036,20 +20195,24 @@ var BroadcastProRoundedResultMatchContent = ({
                     logo: match.teamAwayLogo,
                     firstInnings: awayFirstInnings.show ? awayFirstInnings.value : null,
                     accentColor: teamAccents.away,
-                    delay: statsDelay + 4,
+                    delay: awayTeamDelay,
                     matchType: match.type,
                     glass,
-                    className: "mt-2"
+                    className: "mt-2",
+                    exitAnimation: copyOut,
+                    exitFrame
                   }
                 ),
                 /* @__PURE__ */ jsx179(
                   BroadcastProRoundedResultPlayerStatsGrid,
                   {
                     items: awayStats,
-                    delay: statsDelay + 8,
+                    delay: awayStatsDelay,
                     accentColor: teamAccents.away,
                     glass,
-                    tier: playerStatsTier
+                    tier: playerStatsTier,
+                    exitAnimation: copyOut,
+                    exitFrame
                   }
                 )
               ] });
@@ -20062,9 +20225,11 @@ var BroadcastProRoundedResultMatchContent = ({
             model: verdict,
             tier: "abandoned",
             accentColor: primaryAccent,
-            delay: headerDelay,
+            delay: verdictDelay,
             glass,
-            animation: copyIn
+            animation: copyIn,
+            exitAnimation: copyOut,
+            exitFrame
           }
         ),
         showCompactVerdict && compactVerdictModel && /* @__PURE__ */ jsx179(
@@ -20073,9 +20238,11 @@ var BroadcastProRoundedResultMatchContent = ({
             model: compactVerdictModel,
             tier: "compact",
             accentColor: primaryAccent,
-            delay: headerDelay + 2,
+            delay: verdictDelay + 4,
             glass,
-            animation: copyIn
+            animation: copyIn,
+            exitAnimation: copyOut,
+            exitFrame
           }
         )
       ]
@@ -31375,13 +31542,15 @@ import { jsx as jsx341 } from "react/jsx-runtime";
 var MatchCardBroadcastProRounded = ({
   match,
   rowHeight,
-  delay
+  delay,
+  exitFrame
 }) => {
   return /* @__PURE__ */ jsx341(
     BroadcastProRoundedResultMatchContent,
     {
       match,
       delay,
+      exitFrame,
       style: { maxHeight: rowHeight }
     }
   );
@@ -31399,7 +31568,7 @@ var MatchRowBroadcastProRounded = ({
   const { data } = useVideoDataContext();
   const { timings } = data;
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = calculateDelay(index);
+  const delay = calculateDelay(index) + index * 4;
   const animationOutFrame = calculateAnimationOutFrame3(timings == null ? void 0 : timings.FPS_SCORECARD);
   return /* @__PURE__ */ jsx342("div", { className: "h-full w-full", children: /* @__PURE__ */ jsx342(
     AnimatedContainer,
@@ -31408,7 +31577,9 @@ var MatchRowBroadcastProRounded = ({
       className: "h-full w-full",
       backgroundColor: "none",
       animation: containerAnimation.containerIn,
-      animationDelay: delay,
+      animationDelay: resultContainerDelay(
+        delay + RESULT_PANEL_CONTAINER_DELAY
+      ),
       exitAnimation: containerAnimation.containerOut,
       exitFrame: animationOutFrame,
       children: /* @__PURE__ */ jsx342(
@@ -31417,7 +31588,8 @@ var MatchRowBroadcastProRounded = ({
           match,
           index,
           rowHeight,
-          delay
+          delay: delay + RESULT_PANEL_CONTAINER_DELAY,
+          exitFrame: animationOutFrame
         }
       )
     }
@@ -31432,11 +31604,15 @@ var ResultsDisplayBroadcastProRounded = ({
   resultsPerScreen,
   screenIndex
 }) => {
-  var _a, _b;
+  var _a, _b, _c;
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
+  const { data } = useVideoDataContext();
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
+  const panelExitFrame = calculateAnimationOutFrame3(
+    (_a = data.timings) == null ? void 0 : _a.FPS_SCORECARD
+  );
   const { displayedResults } = calculateDisplayedResults(
     results5,
     resultsPerScreen,
@@ -31459,12 +31635,14 @@ var ResultsDisplayBroadcastProRounded = ({
             className: "flex flex-col overflow-hidden",
             backgroundColor: "none",
             animation: panelAnimation.containerIn,
+            animationDelay: RESULT_PANEL_CONTAINER_DELAY,
             exitAnimation: panelAnimation.containerOut,
+            exitFrame: panelExitFrame,
             style: { height: mainContentHeight },
             children: /* @__PURE__ */ jsx343(
               "div",
               {
-                className: `flex w-full flex-col ${(_b = (_a = layout.spacing) == null ? void 0 : _a.stack) != null ? _b : "gap-1"}`,
+                className: `flex w-full flex-col ${(_c = (_b = layout.spacing) == null ? void 0 : _b.stack) != null ? _c : "gap-1"}`,
                 style: { height: `${mainContentHeight}px` },
                 children: displayedResults.map((match, index) => /* @__PURE__ */ jsx343(
                   "div",
@@ -50283,7 +50461,7 @@ var MudgeerabaMainHeader = () => {
             {
               textAlign: "center",
               type: "titleSmall",
-              variant: "onBackgroundMain",
+              variant: "onContainerTitle",
               letterAnimation: "none",
               animation: TextAnimations.title,
               exitAnimation: TextAnimations.copyOut,
@@ -50307,7 +50485,7 @@ var MudgeerabaMainHeader = () => {
               fontFamily: nameFontFamily,
               type: "subtitle",
               textAlign: "center",
-              variant: "onBackgroundMain",
+              variant: "onContainerTitle",
               letterAnimation: "none",
               animation: TextAnimations.title,
               exitAnimation: TextAnimations.copyOut,
@@ -51273,7 +51451,7 @@ var broadcastProMode = {
 
 // src/templates/variants/broadcastPro/theme/tokens.ts
 var broadcastProTokens = {
-  broadcastProGlassOpacity: "md",
+  broadcastProGlassOpacity: "lg",
   broadcastProHeadlineSizing: {
     ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING
   },
@@ -52183,10 +52361,10 @@ var broadcastProRoundedCompositionComponentStylesResults = {
     className: "text-4xl font-normal uppercase tracking-wide leading-none"
   },
   ResultPlayerName: {
-    className: "text-2xl font-semibold leading-tight opacity-70"
+    className: "text-[26px] font-semibold leading-tight opacity-70"
   },
   ResultPlayerScore: {
-    className: "font-teko text-4xl font-bold tracking-tight leading-tight"
+    className: "font-teko text-[38px] font-normal tracking-tight leading-tight"
   },
   ResultSyntax: {
     className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4"
@@ -52649,7 +52827,7 @@ var DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2 = {
 
 // src/templates/variants/broadcastProRounded/theme/tokens.ts
 var broadcastProRoundedTokens = {
-  broadcastProRoundedGlassOpacity: "md",
+  broadcastProRoundedGlassOpacity: "lg",
   broadcastProRoundedHeadlineSizing: {
     ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2
   },
@@ -53149,20 +53327,20 @@ var BroadcastProRoundedMain = () => {
 };
 
 // src/templates/variants/broadcastProRounded/animations.ts
-var broadcastSnapAnimations2 = {
+var broadcastGlassAnimations = {
   image: {
     intro: {
       logo: {
         introIn: {
           type: "slideInBottom",
-          duration: 10,
+          duration: 18,
           delay: 0,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 72 }
+          custom: { distance: 56 }
         },
         introOut: {
           type: "fadeOut",
-          duration: 9,
+          duration: 14,
           easing: { type: "out", base: "ease" }
         },
         introExitFrame: 60
@@ -53173,33 +53351,30 @@ var broadcastSnapAnimations2 = {
         logo: {
           introIn: {
             type: "slideInLeft",
-            duration: 16,
+            duration: 20,
             delay: 0,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 90 }
+            custom: { distance: 64 }
           },
           introOut: {
-            type: "slideOutRight",
-            duration: 9,
-            easing: { type: "out", base: "ease" },
-            custom: { distance: 90 }
+            type: "fadeOut",
+            duration: 14,
+            easing: { type: "out", base: "ease" }
           }
         }
       },
       item: {
         logo: {
           itemIn: {
-            type: "slideInLeft",
-            duration: 15,
+            type: "fadeIn",
+            duration: 16,
             delay: 0,
-            easing: { type: "inOut", base: "ease" },
-            custom: { distance: 80 }
+            easing: { type: "inOut", base: "ease" }
           },
           itemOut: {
-            type: "slideOutRight",
-            duration: 9,
-            easing: { type: "out", base: "ease" },
-            custom: { distance: 80 }
+            type: "fadeOut",
+            duration: 12,
+            easing: { type: "out", base: "ease" }
           }
         }
       }
@@ -53207,17 +53382,15 @@ var broadcastSnapAnimations2 = {
     sponsor: {
       logo: {
         introIn: {
-          type: "slideInLeft",
-          duration: 6,
+          type: "fadeIn",
+          duration: 14,
           delay: 0,
-          easing: { type: "inOut", base: "ease" },
-          custom: { distance: 72 }
+          easing: { type: "inOut", base: "ease" }
         },
         introOut: {
-          type: "slideOutLeft",
-          duration: 5,
-          easing: { type: "out", base: "ease" },
-          custom: { distance: 60 }
+          type: "fadeOut",
+          duration: 10,
+          easing: { type: "out", base: "ease" }
         }
       }
     }
@@ -53225,58 +53398,59 @@ var broadcastSnapAnimations2 = {
   text: {
     intro: {
       mainTitle: {
-        type: "slideInRight",
-        duration: 15,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 280 }
+        custom: { distance: 28 }
       },
       clubName: {
-        type: "slideInRight",
-        duration: 15,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
-        delay: 3,
-        custom: { distance: 280 }
+        delay: 6,
+        custom: { distance: 28 }
       },
       introOut: {
-        type: "slideOutRight",
-        duration: 9,
-        easing: { type: "out", base: "ease" },
-        custom: { distance: 200 }
+        type: "fadeOut",
+        duration: 14,
+        easing: { type: "out", base: "ease" }
       },
       introExitFrame: 60
     },
     main: {
       title: {
         type: "fadeInDown",
-        duration: 16,
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 120 }
+        custom: { distance: 28 }
       },
       copyIn: {
-        type: "fadeIn",
-        duration: 14,
+        type: "fadeInUp",
+        duration: 18,
         easing: { type: "inOut", base: "ease" },
-        delay: 8
+        delay: 4,
+        custom: { distance: 16 }
       },
       copyOut: {
         type: "fadeOut",
-        duration: 9,
+        duration: 14,
         easing: { type: "out", base: "ease" },
         delay: 0
       }
     },
     outro: {
       copyIn: {
-        type: "fadeIn",
-        duration: 18,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
-        delay: 6
+        delay: 6,
+        custom: { distance: 20 }
       },
       copyOut: {
         type: "fadeOut",
-        duration: 10,
+        duration: 14,
         easing: { type: "out", base: "ease" },
         delay: 0
       }
@@ -53292,70 +53466,69 @@ var broadcastSnapAnimations2 = {
           type: "none"
         }
       },
-      // Ladder rows (and similar list items): pop-in. Panel wrapper uses itemContainerOuter slide-in.
+      // Match rows / list items: soft rise + mild scale (no hard pop).
       itemContainer: {
         containerIn: {
           type: "scaleIn",
           easing: { type: "out", base: "ease" },
-          duration: 10,
+          duration: 20,
           custom: {
-            startScale: 0.86
+            startScale: 0.96
           }
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14
         }
       },
       itemContainerOuter: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%"
-          }
+          duration: 22
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 16
         }
       },
       itemContainerInner: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%"
-          }
+          duration: 18
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14
         }
       },
       itemContainerSecondary: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%"
-          }
+          duration: 18
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14
         }
       }
     }
   },
   transition: {
     Main: {
-      type: "slide",
+      type: "fade",
       direction: "from-right",
-      durationInFrames: 12
+      durationInFrames: 20
     }
   }
 };
-var templateAnimations11 = broadcastSnapAnimations2;
+var templateAnimations11 = broadcastGlassAnimations;
 
 // src/templates/variants/broadcastProRounded/index.tsx
 import { jsx as jsx582 } from "react/jsx-runtime";

@@ -8,6 +8,14 @@ import { BroadcastProRoundedGlassPanel } from "./BroadcastProRoundedGlassPanel";
 import { BroadcastProRoundedResultScoreBadge } from "./BroadcastProRoundedResultScoreBadge";
 import { csClass, useBroadcastProRoundedTheme } from "../index";
 import type { BroadcastProRoundedGlassStyle } from "../glass";
+import type {
+  AnimationConfig,
+  AnimationType,
+} from "../../../../../components/typography/config/animations";
+import {
+  RESULT_TEAM_ROW_NESTED,
+  resultContainerDelay,
+} from "./matchContentHelpers";
 
 export interface BroadcastProRoundedResultTeamRowProps {
   teamName: string;
@@ -19,6 +27,8 @@ export interface BroadcastProRoundedResultTeamRowProps {
   matchType?: string;
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
+  exitAnimation?: AnimationType | AnimationConfig;
+  exitFrame?: number;
 }
 
 const MAX_TEAM_NAME = 32;
@@ -35,6 +45,8 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
   matchType,
   glass,
   className = "",
+  exitAnimation,
+  exitFrame,
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -57,18 +69,22 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
     <BroadcastProRoundedGlassPanel
       glass={resolvedGlass}
       className={`${rowClass} ${className}`.trim()}
+      animationDelay={resultContainerDelay(delay)}
+      exitFrame={exitFrame}
     >
       <div className="flex min-w-0 flex-1 items-center gap-4">
         <BroadcastProRoundedCrestWell
           tier="compact"
           logo={logo ?? null}
           teamName={teamName}
-          delay={delay + 2}
+          delay={delay + RESULT_TEAM_ROW_NESTED.crest}
           glass={resolvedGlass}
         />
         <ResultTeamName
           value={displayName}
-          animation={{ ...copyIn, delay: delay + 4 }}
+          animation={{ ...copyIn, delay: delay + RESULT_TEAM_ROW_NESTED.name }}
+          exitAnimation={exitAnimation}
+          exitFrame={exitFrame}
           variant="onContainerTitle"
           className={nameClass}
           style={{ color: text.copy }}
@@ -78,8 +94,10 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
         score={score}
         firstInnings={firstInnings}
         accentColor={accentColor}
-        delay={delay + 6}
+        delay={delay + RESULT_TEAM_ROW_NESTED.score}
         matchType={matchType}
+        exitAnimation={exitAnimation}
+        exitFrame={exitFrame}
       />
     </BroadcastProRoundedGlassPanel>
   );

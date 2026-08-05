@@ -10,12 +10,12 @@ Design-first building blocks for **Cricket Top 5 Batting** and **Cricket Top 5 B
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Artboard** | 1080 × 1350 portrait |
-| **List length** | Usually **5**; tolerate **N rows** |
-| **Discipline** | One list per graphic — **batting** or **bowling** (not mixed) |
-| **Modes** | Single mode |
+| Attribute       | Value                                                         |
+| --------------- | ------------------------------------------------------------- |
+| **Artboard**    | 1080 × 1350 portrait                                          |
+| **List length** | Usually **5**; tolerate **N rows**                            |
+| **Discipline**  | One list per graphic — **batting** or **bowling** (not mixed) |
+| **Modes**       | Single mode                                                   |
 
 **Goal:** Order and identity obvious — who, which team, headline number. Rank 1 may be featured.
 
@@ -48,14 +48,14 @@ Full Asset Frame
 
 ### Per player (`PlayerData`)
 
-| Field | Required | Use |
-| ----- | -------- | --- |
-| `name` | Yes | Player name |
-| `playedFor` | Yes | Team Context |
-| `teamLogo` | Yes | Team crest |
-| `type` | Yes | `"batting"` or `"bowling"` |
-| `assignSponsors` | Optional | Asset Footer |
-| `prompt` | Optional | Hidden |
+| Field            | Required | Use                        |
+| ---------------- | -------- | -------------------------- |
+| `name`           | Yes      | Player name                |
+| `playedFor`      | Yes      | Team Context               |
+| `teamLogo`       | Yes      | Team crest                 |
+| `type`           | Yes      | `"batting"` or `"bowling"` |
+| `assignSponsors` | Optional | Asset Footer               |
+| `prompt`         | Optional | Hidden                     |
 
 **Batting (`type: "batting"`):** `runs`, `balls`, `SR`, `notOut`
 
@@ -125,25 +125,25 @@ Full Asset Frame
 
 ## Edge case catalogue
 
-| Scenario | Response |
-| -------- | -------- |
-| Fewer than 5 players | Empty slots or collapsed list |
-| `notOut: true` | Asterisk, badge, or suffix on runs |
-| Decimal overs (bowling) | Stat cell fits fractional overs |
-| Mixed types in data | Design batting OR bowling — not both in one asset |
+| Scenario                | Response                                          |
+| ----------------------- | ------------------------------------------------- |
+| Fewer than 5 players    | Empty slots or collapsed list                     |
+| `notOut: true`          | Asterisk, badge, or suffix on runs                |
+| Decimal overs (bowling) | Stat cell fits fractional overs                   |
+| Mixed types in data     | Design batting OR bowling — not both in one asset |
 
 ---
 
 ## Approved style mapping (Stadium Signal)
 
-| Component | Status |
-| --------- | ------ |
-| Category Header | TBD |
-| Ranked Player Row | TBD |
-| Rank | TBD |
-| Player Identity | TBD |
-| Team Context | TBD |
-| Primary Performance Stat | TBD |
+| Component                | Status |
+| ------------------------ | ------ |
+| Category Header          | TBD    |
+| Ranked Player Row        | TBD    |
+| Rank                     | TBD    |
+| Player Identity          | TBD    |
+| Team Context             | TBD    |
+| Primary Performance Stat | TBD    |
 
 ---
 

@@ -8,12 +8,12 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives | `../component-anatomy/component-anatomy-overview.md` |
-| Component anatomy | `../component-anatomy/performances-component-anatomy.md` |
-| Design brief | `../../performances/.docs/llm-brief/llm-brief-cricket-performances.md` |
-| Sample data | `Cricket_BattingPerformances.json`, `Cricket_BowlingPerformances.json` |
+| Document          | Path                                                                   |
+| ----------------- | ---------------------------------------------------------------------- |
+| Shared primitives | `../component-anatomy/component-anatomy-overview.md`                   |
+| Component anatomy | `../component-anatomy/performances-component-anatomy.md`               |
+| Design brief      | `../../performances/.docs/llm-brief/llm-brief-cricket-performances.md` |
+| Sample data       | `Cricket_BattingPerformances.json`, `Cricket_BowlingPerformances.json` |
 
 **Prerequisite:** Top Performers row components approved — **reuse Performance Row** styling; document only deltas.
 
@@ -44,11 +44,11 @@ Design **Performances-specific** chrome. Rows should match Top Performers unless
 
 ## Deltas from Top Performers
 
-| Aspect | Performances |
-| ------ | ------------ |
-| Header | Period Header (not "Top 5" category) |
-| Featured row | Lead performance (sorted list) |
-| Row count | Variable N — compact state required |
+| Aspect       | Performances                         |
+| ------------ | ------------------------------------ |
+| Header       | Period Header (not "Top 5" category) |
+| Featured row | Lead performance (sorted list)       |
+| Row count    | Variable N — compact state required  |
 
 ---
 

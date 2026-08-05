@@ -1,14 +1,25 @@
 import type { CSSProperties } from "react";
-import { AnimationConfig } from "../../../../../components/typography/config/animations";
+import {
+  AnimationConfig,
+  AnimationType,
+} from "../../../../../components/typography/config/animations";
 import {
   AnimationMode,
   ColorVariant,
 } from "../../../../../components/typography/AnimatedText";
 
 /**
+ * Optional exit wiring shared by AnimatedText primitives.
+ */
+export interface AnimatedTextExitProps {
+  exitAnimation?: AnimationType | AnimationConfig;
+  exitFrame?: number;
+}
+
+/**
  * Base props interface for AnimatedText primitive components
  */
-export interface AnimatedTextPrimitiveProps {
+export interface AnimatedTextPrimitiveProps extends AnimatedTextExitProps {
   value: string;
   animation: AnimationConfig | null;
   className?: string;
@@ -19,7 +30,8 @@ export interface AnimatedTextPrimitiveProps {
 /**
  * Props interface for AnimatedText primitives with required animation
  */
-export interface AnimatedTextPrimitivePropsRequiredAnimation {
+export interface AnimatedTextPrimitivePropsRequiredAnimation
+  extends AnimatedTextExitProps {
   value: string;
   animation: AnimationConfig;
   className?: string;

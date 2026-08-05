@@ -55,6 +55,8 @@ export const ResultScoreFirstInnings = ({
   variant = DEFAULT_VARIANT,
   fontFamily: fontFamilyOverride,
   style,
+  exitAnimation,
+  exitFrame,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
   const fontFamilyFromTheme = useFontFamily();
   const fontFamily = fontFamilyOverride ?? fontFamilyFromTheme;
@@ -70,6 +72,8 @@ export const ResultScoreFirstInnings = ({
       style={style}
       animation={animation as AnimationConfig}
       letterAnimation={DEFAULT_LETTER_ANIMATION}
+      exitAnimation={exitAnimation}
+      exitFrame={exitFrame}
     >
       {value}
     </AnimatedText>

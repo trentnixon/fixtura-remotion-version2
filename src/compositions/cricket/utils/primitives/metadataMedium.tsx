@@ -23,6 +23,8 @@ export const MetadataMedium = ({
   variant = DEFAULT_VARIANT,
   letterAnimation = DEFAULT_LETTER_ANIMATION,
   style,
+  exitAnimation,
+  exitFrame,
 }: MetadataMediumProps) => {
   const fontFamily = useFontFamily();
 
@@ -35,6 +37,8 @@ export const MetadataMedium = ({
       style={style}
       animation={animation as AnimationConfig}
       letterAnimation={letterAnimation}
+      exitAnimation={exitAnimation}
+      exitFrame={exitFrame}
     >
       {value}
     </AnimatedText>

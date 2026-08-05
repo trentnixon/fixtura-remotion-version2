@@ -4,30 +4,28 @@ import { AnimationConfig } from "../../types/AnimationConfig ";
  * BroadcastProRounded animation presets (see `.skills`: components-easing-folder,
  * components-transitions-folder, create-template-variant).
  *
- * - **BroadcastSnap** (active): Snappy frame counts with slow `ease` curves (inOut/out),
- *   horizontal motion on rows/titles,
- *   unified full-bleed container slides, crisp sequence handoffs.
- * - **BroadcastGlass**: Softer variant — keep fadeInUp / fadeInDown, slightly longer
- *   container duration (18–24f), same easing family with `ease` base.
- * - **BroadcastData**: Favor fade over typewriter on dense main copy — blended into
- *   the active export via `text.main.copyIn` and `text.outro.copyIn`.
+ * - **BroadcastSnap**: Snappy frame counts — used by BroadcastPro (square).
+ * - **BroadcastGlass** (active): Softer fadeInUp / fadeInDown, longer container
+ *   durations (18–24f), gentle scale, real exit fades — suits rounded glass UI.
+ * - **BroadcastData**: Favor fade motion over typewriter on dense main copy —
+ *   blended via `text.main.copyIn` / `text.outro.copyIn`.
  *
- * Active export: `broadcastSnapAnimations` (BroadcastSnap + BroadcastData copy).
+ * Active export: `broadcastGlassAnimations` (BroadcastGlass + BroadcastData copy).
  */
-export const broadcastSnapAnimations: AnimationConfig = {
+export const broadcastGlassAnimations: AnimationConfig = {
   image: {
     intro: {
       logo: {
         introIn: {
           type: "slideInBottom",
-          duration: 10,
+          duration: 18,
           delay: 0,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 72 },
+          custom: { distance: 56 },
         },
         introOut: {
           type: "fadeOut",
-          duration: 9,
+          duration: 14,
           easing: { type: "out", base: "ease" },
         },
         introExitFrame: 60,
@@ -38,33 +36,30 @@ export const broadcastSnapAnimations: AnimationConfig = {
         logo: {
           introIn: {
             type: "slideInLeft",
-            duration: 16,
+            duration: 20,
             delay: 0,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 90 },
+            custom: { distance: 64 },
           },
           introOut: {
-            type: "slideOutRight",
-            duration: 9,
+            type: "fadeOut",
+            duration: 14,
             easing: { type: "out", base: "ease" },
-            custom: { distance: 90 },
           },
         },
       },
       item: {
         logo: {
           itemIn: {
-            type: "slideInLeft",
-            duration: 15,
+            type: "fadeIn",
+            duration: 16,
             delay: 0,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 80 },
           },
           itemOut: {
-            type: "slideOutRight",
-            duration: 9,
+            type: "fadeOut",
+            duration: 12,
             easing: { type: "out", base: "ease" },
-            custom: { distance: 80 },
           },
         },
       },
@@ -72,17 +67,15 @@ export const broadcastSnapAnimations: AnimationConfig = {
     sponsor: {
       logo: {
         introIn: {
-          type: "slideInLeft",
-          duration: 6,
+          type: "fadeIn",
+          duration: 14,
           delay: 0,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 72 },
         },
         introOut: {
-          type: "slideOutLeft",
-          duration: 5,
+          type: "fadeOut",
+          duration: 10,
           easing: { type: "out", base: "ease" },
-          custom: { distance: 60 },
         },
       },
     },
@@ -90,58 +83,59 @@ export const broadcastSnapAnimations: AnimationConfig = {
   text: {
     intro: {
       mainTitle: {
-        type: "slideInRight",
-        duration: 15,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 280 },
+        custom: { distance: 28 },
       },
       clubName: {
-        type: "slideInRight",
-        duration: 15,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
-        delay: 3,
-        custom: { distance: 280 },
+        delay: 6,
+        custom: { distance: 28 },
       },
       introOut: {
-        type: "slideOutRight",
-        duration: 9,
+        type: "fadeOut",
+        duration: 14,
         easing: { type: "out", base: "ease" },
-        custom: { distance: 200 },
       },
       introExitFrame: 60,
     },
     main: {
       title: {
         type: "fadeInDown",
-        duration: 16,
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 120 },
+        custom: { distance: 28 },
       },
       copyIn: {
-        type: "fadeIn",
-        duration: 14,
+        type: "fadeInUp",
+        duration: 18,
         easing: { type: "inOut", base: "ease" },
-        delay: 8,
+        delay: 4,
+        custom: { distance: 16 },
       },
       copyOut: {
         type: "fadeOut",
-        duration: 9,
+        duration: 14,
         easing: { type: "out", base: "ease" },
         delay: 0,
       },
     },
     outro: {
       copyIn: {
-        type: "fadeIn",
-        duration: 18,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 6,
+        custom: { distance: 20 },
       },
       copyOut: {
         type: "fadeOut",
-        duration: 10,
+        duration: 14,
         easing: { type: "out", base: "ease" },
         delay: 0,
       },
@@ -157,68 +151,67 @@ export const broadcastSnapAnimations: AnimationConfig = {
           type: "none",
         },
       },
-      // Ladder rows (and similar list items): pop-in. Panel wrapper uses itemContainerOuter slide-in.
+      // Match rows / list items: soft rise + mild scale (no hard pop).
       itemContainer: {
         containerIn: {
           type: "scaleIn",
           easing: { type: "out", base: "ease" },
-          duration: 10,
+          duration: 20,
           custom: {
-            startScale: 0.86,
+            startScale: 0.96,
           },
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14,
         },
       },
       itemContainerOuter: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%",
-          },
+          duration: 22,
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 16,
         },
       },
       itemContainerInner: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%",
-          },
+          duration: 18,
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14,
         },
       },
       itemContainerSecondary: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%",
-          },
+          duration: 18,
         },
         containerOut: {
-          type: "none",
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14,
         },
       },
     },
   },
   transition: {
     Main: {
-      type: "slide",
+      type: "fade",
       direction: "from-right",
-      durationInFrames: 12,
+      durationInFrames: 20,
     },
   },
 };
 
-export const templateAnimations: AnimationConfig = broadcastSnapAnimations;
+export const templateAnimations: AnimationConfig = broadcastGlassAnimations;

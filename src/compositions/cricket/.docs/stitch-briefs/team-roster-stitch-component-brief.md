@@ -8,13 +8,13 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives | `../component-anatomy/component-anatomy-overview.md` |
-| Component anatomy | `../component-anatomy/team-roster-component-anatomy.md` |
-| Design brief | `../../teamRoster/.docs/llm-brief/llm-brief-cricket-team-roster.md` |
-| Club mode | `../../teamRoster/.docs/llm-brief/llm-brief-cricket-team-roster-club.md` |
-| Sample data | `testData/samples/Cricket/Cricket_Roster.json` |
+| Document          | Path                                                                     |
+| ----------------- | ------------------------------------------------------------------------ |
+| Shared primitives | `../component-anatomy/component-anatomy-overview.md`                     |
+| Component anatomy | `../component-anatomy/team-roster-component-anatomy.md`                  |
+| Design brief      | `../../teamRoster/.docs/llm-brief/llm-brief-cricket-team-roster.md`      |
+| Club mode         | `../../teamRoster/.docs/llm-brief/llm-brief-cricket-team-roster-club.md` |
+| Sample data       | `testData/samples/Cricket/Cricket_Roster.json`                           |
 
 ---
 

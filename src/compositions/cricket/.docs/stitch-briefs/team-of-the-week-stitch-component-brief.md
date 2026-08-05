@@ -8,14 +8,14 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives | `../component-anatomy/component-anatomy-overview.md` |
-| Component anatomy | `../component-anatomy/team-of-the-week-component-anatomy.md` |
-| Design brief | `../../TeamOfTheWeek/.docs/llm-brief/llm-brief-cricket-team-of-the-week.md` |
-| Association mode | `../../TeamOfTheWeek/.docs/llm-brief/llm-brief-cricket-team-of-the-week-association.md` |
-| Club mode | `../../TeamOfTheWeek/.docs/llm-brief/llm-brief-cricket-team-of-the-week-club.md` |
-| Sample data | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json` |
+| Document          | Path                                                                                    |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| Shared primitives | `../component-anatomy/component-anatomy-overview.md`                                    |
+| Component anatomy | `../component-anatomy/team-of-the-week-component-anatomy.md`                            |
+| Design brief      | `../../TeamOfTheWeek/.docs/llm-brief/llm-brief-cricket-team-of-the-week.md`             |
+| Association mode  | `../../TeamOfTheWeek/.docs/llm-brief/llm-brief-cricket-team-of-the-week-association.md` |
+| Club mode         | `../../TeamOfTheWeek/.docs/llm-brief/llm-brief-cricket-team-of-the-week-club.md`        |
+| Sample data       | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json`                                   |
 
 ---
 

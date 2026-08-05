@@ -10,11 +10,11 @@ Design-first building blocks for the **Cricket Upcoming** composition. Shared fr
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Artboard** | 1080 × 1350 portrait |
+| Attribute         | Value                                            |
+| ----------------- | ------------------------------------------------ |
+| **Artboard**      | 1080 × 1350 portrait                             |
 | **Fixture cards** | Typically **2–3** per frame; equal visual weight |
-| **Modes** | Single mode |
+| **Modes**         | Single mode                                      |
 
 **Goal:** Each fixture reads as a small poster — who plays whom, when, where, grade context.
 
@@ -49,23 +49,23 @@ Full Asset Frame
 
 ### Per fixture (`GameData`)
 
-| Field | Required | Use |
-| ----- | -------- | --- |
-| `teamHome` | Yes | Home Team Block |
-| `teamAway` | Yes | Away Team Block |
-| `teamHomeLogo` | Optional | Home crest |
-| `teamAwayLogo` | Optional | Away crest |
-| `date` | Yes | Fixture Centre |
-| `time` | Yes | Fixture Centre |
-| `ground` | Yes | Fixture Centre |
-| `gradeName` | Yes | Fixture Metadata Strip |
-| `type` | Yes | Metadata strip |
-| `round` | Optional | Metadata strip |
-| `gender` | Optional | Metadata strip |
-| `ageGroup` | Optional | Metadata strip |
-| `assignSponsors` | Optional | Asset Footer |
-| `prompt` | Optional | Hidden |
-| `gameID` | Optional | Hidden |
+| Field            | Required | Use                    |
+| ---------------- | -------- | ---------------------- |
+| `teamHome`       | Yes      | Home Team Block        |
+| `teamAway`       | Yes      | Away Team Block        |
+| `teamHomeLogo`   | Optional | Home crest             |
+| `teamAwayLogo`   | Optional | Away crest             |
+| `date`           | Yes      | Fixture Centre         |
+| `time`           | Yes      | Fixture Centre         |
+| `ground`         | Yes      | Fixture Centre         |
+| `gradeName`      | Yes      | Fixture Metadata Strip |
+| `type`           | Yes      | Metadata strip         |
+| `round`          | Optional | Metadata strip         |
+| `gender`         | Optional | Metadata strip         |
+| `ageGroup`       | Optional | Metadata strip         |
+| `assignSponsors` | Optional | Asset Footer           |
+| `prompt`         | Optional | Hidden                 |
+| `gameID`         | Optional | Hidden                 |
 
 ---
 
@@ -115,23 +115,23 @@ Full Asset Frame
 
 ## Edge case catalogue
 
-| Scenario | Response |
-| -------- | -------- |
-| Both logos null | Placeholder both sides |
-| Null `round` | Omit round chip |
-| 4+ fixtures | Engineering paginates; design compact card |
+| Scenario        | Response                                   |
+| --------------- | ------------------------------------------ |
+| Both logos null | Placeholder both sides                     |
+| Null `round`    | Omit round chip                            |
+| 4+ fixtures     | Engineering paginates; design compact card |
 
 ---
 
 ## Approved style mapping (Stadium Signal)
 
-| Component | Status |
-| --------- | ------ |
-| Fixture Card | TBD |
-| Fixture Metadata Strip | TBD |
-| Home / Away Team Block | TBD |
-| Fixture Centre | TBD |
-| Versus label | TBD |
+| Component              | Status |
+| ---------------------- | ------ |
+| Fixture Card           | TBD    |
+| Fixture Metadata Strip | TBD    |
+| Home / Away Team Block | TBD    |
+| Fixture Centre         | TBD    |
+| Versus label           | TBD    |
 
 ---
 

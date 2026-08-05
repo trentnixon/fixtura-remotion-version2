@@ -8,14 +8,14 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives | `../component-anatomy/component-anatomy-overview.md` |
-| Component anatomy | `../component-anatomy/result-single-component-anatomy.md` |
-| Results anatomy (shared parts) | `../component-anatomy/results-component-anatomy.md` |
-| Design brief | `../../resultSingle/.docs/llm-brief/llm-brief-cricket-result-single.md` |
-| Association mode | `../../resultSingle/.docs/llm-brief/llm-brief-cricket-result-single-association.md` |
-| Sample data | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` |
+| Document                       | Path                                                                                |
+| ------------------------------ | ----------------------------------------------------------------------------------- |
+| Shared primitives              | `../component-anatomy/component-anatomy-overview.md`                                |
+| Component anatomy              | `../component-anatomy/result-single-component-anatomy.md`                           |
+| Results anatomy (shared parts) | `../component-anatomy/results-component-anatomy.md`                                 |
+| Design brief                   | `../../resultSingle/.docs/llm-brief/llm-brief-cricket-result-single.md`             |
+| Association mode               | `../../resultSingle/.docs/llm-brief/llm-brief-cricket-result-single-association.md` |
+| Sample data                    | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json`                        |
 
 **Prerequisite:** Results component family approved — **reuse** Team Identity, Score Display, Result Statement, stat rows, etc.
 

@@ -8,13 +8,13 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives and frame | `../component-anatomy/component-anatomy-overview.md` |
-| Full component anatomy | `../component-anatomy/results-component-anatomy.md` |
-| Asset communication goals | `../../results/.docs/llm-brief/llm-brief-cricket-results-association.md` |
-| Club mode differences | `../../results/.docs/llm-brief/llm-brief-cricket-results-club.md` |
-| Sample data | `testData/samples/Cricket/Cricket_Results.json` |
+| Document                    | Path                                                                     |
+| --------------------------- | ------------------------------------------------------------------------ |
+| Shared primitives and frame | `../component-anatomy/component-anatomy-overview.md`                     |
+| Full component anatomy      | `../component-anatomy/results-component-anatomy.md`                      |
+| Asset communication goals   | `../../results/.docs/llm-brief/llm-brief-cricket-results-association.md` |
+| Club mode differences       | `../../results/.docs/llm-brief/llm-brief-cricket-results-club.md`        |
+| Sample data                 | `testData/samples/Cricket/Cricket_Results.json`                          |
 
 ---
 
@@ -84,9 +84,9 @@ See mode matrix in `results-component-anatomy.md`.
 
 ## Hierarchy reminder
 
-1. Scores + Result Statement  
-2. Performance Summary  
-3. Match Metadata  
+1. Scores + Result Statement
+2. Performance Summary
+3. Match Metadata
 4. Sponsors (quietest)
 
 ---

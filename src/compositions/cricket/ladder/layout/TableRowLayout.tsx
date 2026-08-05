@@ -8,12 +8,17 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { BaseLayoutProps } from "./_types/BaseLayoutProps";
 
 // Standard layout - exactly as you had it
+const STANDARD_LADDER_LOGO_MAX = 64;
+
 export const StandardLadderRow: React.FC<BaseLayoutProps> = ({
   team,
   delay,
   bgColorClass,
   LadderRowHeight,
 }) => {
+  const logoSize = Math.min(LadderRowHeight - 8, STANDARD_LADDER_LOGO_MAX);
+  const teamLogo = team.clubLogo || team.playHQLogo;
+
   return (
     <div
       className={`flex items-center p-2 rounded mb-1 ${bgColorClass} overflow-hidden`}
@@ -26,17 +31,24 @@ export const StandardLadderRow: React.FC<BaseLayoutProps> = ({
 
       {/* Team info section */}
       <div className="flex items-center mr-3 p-1" style={{ width: "70%" }}>
-        <div className="w-16 flex-shrink-0 mr-4 overflow-hidden">
-          {team.clubLogo ? (
-            <div className="rounded-full">
-              <TeamLogo
-                logo={team.clubLogo || team.playHQLogo}
-                teamName={team.teamName}
-                delay={delay}
-              />
-            </div>
+        <div
+          className="mr-4 flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full"
+          style={{ width: logoSize, height: logoSize }}
+        >
+          {teamLogo ? (
+            <TeamLogo
+              logo={teamLogo}
+              teamName={team.teamName}
+              delay={delay}
+              size={logoSize}
+              imgStyle={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
           ) : (
-            <div className="w-16 h-16 bg-gray-300/10 rounded-full" />
+            <div className="h-full w-full rounded-full bg-gray-300/10" />
           )}
         </div>
         <div className="flex-1 truncate">

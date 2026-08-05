@@ -8,12 +8,12 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives and frame | `../component-anatomy/component-anatomy-overview.md` |
-| Component anatomy | `../component-anatomy/ladder-component-anatomy.md` |
-| Design brief | `../../ladder/.docs/llm-brief/llm-brief-cricket-ladder.md` |
-| Sample data | `testData/samples/Cricket/Cricket_Ladder.json` |
+| Document                    | Path                                                       |
+| --------------------------- | ---------------------------------------------------------- |
+| Shared primitives and frame | `../component-anatomy/component-anatomy-overview.md`       |
+| Component anatomy           | `../component-anatomy/ladder-component-anatomy.md`         |
+| Design brief                | `../../ladder/.docs/llm-brief/llm-brief-cricket-ladder.md` |
+| Sample data                 | `testData/samples/Cricket/Cricket_Ladder.json`             |
 
 **Prerequisite:** Results Stadium Signal components approved or in progress — reuse Team crest, Stat cell, Metadata strip, Asset Header/Footer treatments.
 
@@ -49,9 +49,9 @@ Design the **Ladder component family**. Not a full 16-team assembled table with 
 
 ## Hierarchy
 
-1. PTS + Rank  
-2. Team name  
-3. Other stat columns  
+1. PTS + Rank
+2. Team name
+3. Other stat columns
 4. Quotient / N/R (tertiary)
 
 ---

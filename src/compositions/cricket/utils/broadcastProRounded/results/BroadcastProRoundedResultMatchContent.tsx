@@ -23,6 +23,7 @@ import { resolveBroadcastProRoundedGlass } from "../glass";
 import {
   buildGradeLabel,
   calculateBroadcastProRoundedResultDelays,
+  calculateBroadcastProRoundedResultExitFrame,
 } from "./matchContentHelpers";
 import { resolveBroadcastProRoundedTeamAccentColors } from "./resolveBroadcastProRoundedTeamAccentColors";
 import type { BroadcastProRoundedResultMatchData } from "./types";
@@ -49,6 +50,8 @@ export interface BroadcastProRoundedResultMatchContentProps {
   showGround?: boolean;
   /** Larger player stat typography for single-result hero layout. */
   playerStatsTier?: "list" | "single";
+  /** Frame to begin exit animations; defaults from scorecard timing. */
+  exitFrame?: number;
 }
 
 export const BroadcastProRoundedResultMatchContent: React.FC<
@@ -62,9 +65,10 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
   style,
   showGround = true,
   playerStatsTier = "list",
+  exitFrame: exitFrameProp,
 }) => {
   const { animations } = useAnimationContext();
-  const { isAccountClub } = useVideoDataContext();
+  const { isAccountClub, data } = useVideoDataContext();
   const {
     colors,
     selectedPalette,
@@ -73,8 +77,15 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
     broadcastProRoundedTransparentLayers,
   } = useThemeContext();
 
-  const { baseDelay, statsDelay, headerDelay } =
-    calculateBroadcastProRoundedResultDelays(delay);
+  const {
+    baseDelay,
+    metaDelay: calculatedMetaDelay,
+    homeTeamDelay,
+    homeStatsDelay,
+    awayTeamDelay,
+    awayStatsDelay,
+    verdictDelay,
+  } = calculateBroadcastProRoundedResultDelays(delay);
   const primaryAccent = colors?.primary ?? selectedPalette.container.accent;
   const secondaryAccent = colors?.secondary ?? primaryAccent;
   const teamAccents = resolveBroadcastProRoundedTeamAccentColors({
@@ -86,6 +97,10 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
   const verdict = buildBroadcastProRoundedVerdictModel(match);
   const compactLine = buildCompactVerdictLine(match);
   const copyIn = animations.text.main.copyIn;
+  const copyOut = animations.text.main.copyOut;
+  const exitFrame =
+    exitFrameProp ??
+    calculateBroadcastProRoundedResultExitFrame(data.timings?.FPS_SCORECARD);
 
   const showHeroVerdict =
     statementPosition === "top" && verdict?.kind === "hero";
@@ -95,7 +110,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
     compactLine != null;
   const showAbandonedVerdict = verdict?.kind === "abandoned";
 
-  const metaDelay = showHeroVerdict ? baseDelay + 2 : baseDelay;
+  const metaDelay = showHeroVerdict ? baseDelay + 8 : calculatedMetaDelay;
 
   const glass = useMemo(
     () =>
@@ -172,6 +187,8 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
           delay={baseDelay}
           glass={glass}
           animation={copyIn}
+          exitAnimation={copyOut}
+          exitFrame={exitFrame}
           className="mb-2"
         />
       )}
@@ -181,6 +198,8 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
         ground={match.ground}
         delay={metaDelay}
         showGround={showGround}
+        exitAnimation={copyOut}
+        exitFrame={exitFrame}
       />
 
       <BroadcastProRoundedMatchup
@@ -207,16 +226,20 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                     homeFirstInnings.show ? homeFirstInnings.value : null
                   }
                   accentColor={teamAccents.home}
-                  delay={metaDelay}
+                  delay={homeTeamDelay}
                   matchType={match.type}
                   glass={glass}
+                  exitAnimation={copyOut}
+                  exitFrame={exitFrame}
                 />
                 <BroadcastProRoundedResultPlayerStatsGrid
                   items={homeStats}
-                  delay={statsDelay}
+                  delay={homeStatsDelay}
                   accentColor={teamAccents.home}
                   glass={glass}
                   tier={playerStatsTier}
+                  exitAnimation={copyOut}
+                  exitFrame={exitFrame}
                 />
               </>
             );
@@ -231,17 +254,21 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                   awayFirstInnings.show ? awayFirstInnings.value : null
                 }
                 accentColor={teamAccents.away}
-                delay={statsDelay + 4}
+                delay={awayTeamDelay}
                 matchType={match.type}
                 glass={glass}
                 className="mt-2"
+                exitAnimation={copyOut}
+                exitFrame={exitFrame}
               />
               <BroadcastProRoundedResultPlayerStatsGrid
                 items={awayStats}
-                delay={statsDelay + 8}
+                delay={awayStatsDelay}
                 accentColor={teamAccents.away}
                 glass={glass}
                 tier={playerStatsTier}
+                exitAnimation={copyOut}
+                exitFrame={exitFrame}
               />
             </>
           );
@@ -253,9 +280,11 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
           model={verdict}
           tier="abandoned"
           accentColor={primaryAccent}
-          delay={headerDelay}
+          delay={verdictDelay}
           glass={glass}
           animation={copyIn}
+          exitAnimation={copyOut}
+          exitFrame={exitFrame}
         />
       )}
 
@@ -264,9 +293,11 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
           model={compactVerdictModel}
           tier="compact"
           accentColor={primaryAccent}
-          delay={headerDelay + 2}
+          delay={verdictDelay + 4}
           glass={glass}
           animation={copyIn}
+          exitAnimation={copyOut}
+          exitFrame={exitFrame}
         />
       )}
     </div>

@@ -5,6 +5,10 @@ import { BroadcastProRoundedStructuredScore } from "../../../../../templates/var
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
 import { ResultScoreFirstInnings } from "../../primitives/ResultScore";
 import { csClass, useBroadcastProRoundedTheme } from "../index";
+import type {
+  AnimationConfig,
+  AnimationType,
+} from "../../../../../components/typography/config/animations";
 
 export interface BroadcastProRoundedResultScoreBadgeProps {
   score: string;
@@ -13,6 +17,8 @@ export interface BroadcastProRoundedResultScoreBadgeProps {
   delay: number;
   matchType?: string;
   className?: string;
+  exitAnimation?: AnimationType | AnimationConfig;
+  exitFrame?: number;
 }
 
 export const BroadcastProRoundedResultScoreBadge: React.FC<
@@ -24,6 +30,8 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
   delay,
   matchType = "",
   className = "",
+  exitAnimation,
+  exitFrame,
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts, layout } = useThemeContext();
@@ -58,6 +66,8 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
         value={score}
         variant="match"
         animation={{ ...copyIn, delay }}
+        exitAnimation={exitAnimation}
+        exitFrame={exitFrame}
         colorVariant="onContainerTitle"
         fontFamily={headingFont}
         primaryStyle={{ color: text.copy }}
@@ -65,7 +75,9 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
       {showFirstInnings && (
         <ResultScoreFirstInnings
           value={firstInnings}
-          animation={{ ...copyIn, delay: delay + 2 }}
+          animation={{ ...copyIn, delay: delay + 4 }}
+          exitAnimation={exitAnimation}
+          exitFrame={exitFrame}
           variant="onContainerCopy"
           style={{ color: text.muted }}
         />

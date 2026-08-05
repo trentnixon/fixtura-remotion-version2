@@ -10,11 +10,11 @@ Design-first building blocks for the **Cricket Team of the Week** composition. S
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Artboard** | 1080 × 1350 portrait |
-| **Row count** | Variable — design for **5–12** rows |
-| **Modes** | Association (mixed clubs) and Club (single org) |
+| Attribute     | Value                                           |
+| ------------- | ----------------------------------------------- |
+| **Artboard**  | 1080 × 1350 portrait                            |
+| **Row count** | Variable — design for **5–12** rows             |
+| **Modes**     | Association (mixed clubs) and Club (single org) |
 
 **Goal:** Scan picks quickly — who, why (role/achievement), stats, which club.
 
@@ -48,12 +48,12 @@ Full Asset Frame
 
 ## Mode matrix
 
-| Component | Association | Club |
-| --------- | ----------- | ---- |
-| **Club Identity** | **Required** on every row — mixed clubs | De-emphasise repeated club logo; shared brand implied |
-| **Role / Achievement Label** | Show | Show |
-| **Stat Block** | Per `category` | Same |
-| **Page Title** | Optional | Optional |
+| Component                    | Association                             | Club                                                  |
+| ---------------------------- | --------------------------------------- | ----------------------------------------------------- |
+| **Club Identity**            | **Required** on every row — mixed clubs | De-emphasise repeated club logo; shared brand implied |
+| **Role / Achievement Label** | Show                                    | Show                                                  |
+| **Stat Block**               | Per `category`                          | Same                                                  |
+| **Page Title**               | Optional                                | Optional                                              |
 
 ---
 
@@ -61,20 +61,20 @@ Full Asset Frame
 
 ### Per player (`TeamOfTheWeekPlayer`)
 
-| Field | Required | Use |
-| ----- | -------- | --- |
-| `player` | Yes | Player name (may include (c)/(vc)) |
-| `rank` | Yes | Optional display in row |
-| `category` | Yes | Batter, Bowler, All-Rounder, Twelfth Man, Wicket-Keeper |
-| `categoryDetail` | Yes | Role / Achievement Label (`type`, `position`) |
-| `primaryTeam` | Yes | Team name |
-| `club` | Yes | Club Identity (`name`, `logo`) |
-| `rankings` | Optional | Ranking Annotation |
-| `prompt` | Optional | Hidden |
-| `batting` | Category-dependent | Stat Block |
-| `bowling` | Category-dependent | Stat Block |
-| `allRounder` | All-Rounder only | Combined readout |
-| `fielding` | Wicket-Keeper only | Catches, stumpings |
+| Field            | Required           | Use                                                     |
+| ---------------- | ------------------ | ------------------------------------------------------- |
+| `player`         | Yes                | Player name (may include (c)/(vc))                      |
+| `rank`           | Yes                | Optional display in row                                 |
+| `category`       | Yes                | Batter, Bowler, All-Rounder, Twelfth Man, Wicket-Keeper |
+| `categoryDetail` | Yes                | Role / Achievement Label (`type`, `position`)           |
+| `primaryTeam`    | Yes                | Team name                                               |
+| `club`           | Yes                | Club Identity (`name`, `logo`)                          |
+| `rankings`       | Optional           | Ranking Annotation                                      |
+| `prompt`         | Optional           | Hidden                                                  |
+| `batting`        | Category-dependent | Stat Block                                              |
+| `bowling`        | Category-dependent | Stat Block                                              |
+| `allRounder`     | All-Rounder only   | Combined readout                                        |
+| `fielding`       | Wicket-Keeper only | Catches, stumpings                                      |
 
 ---
 
@@ -112,13 +112,13 @@ Full Asset Frame
 
 **Purpose:** Category-appropriate figures.
 
-| Category | Typical fields |
-| -------- | -------------- |
-| Batter | runs, balls, SR, fours, sixes, notOut |
-| Bowler | wickets, overs, economy, maidens, runs conceded |
-| All-Rounder | batting + bowling + combined score |
-| Twelfth Man | sparse — show what exists |
-| Wicket-Keeper | catches, stumpings |
+| Category      | Typical fields                                  |
+| ------------- | ----------------------------------------------- |
+| Batter        | runs, balls, SR, fours, sixes, notOut           |
+| Bowler        | wickets, overs, economy, maidens, runs conceded |
+| All-Rounder   | batting + bowling + combined score              |
+| Twelfth Man   | sparse — show what exists                       |
+| Wicket-Keeper | catches, stumpings                              |
 
 ---
 
@@ -132,24 +132,24 @@ Full Asset Frame
 
 ## Edge case catalogue
 
-| Scenario | Response |
-| -------- | -------- |
-| Twelfth Man sparse stats | Minimal stat line |
-| All-rounder dual stats | Batting + bowling + combined without clutter |
-| 12 rows | Compact row; grid layout |
-| Captain suffix in `player` | Preserve (c) / (vc) in Player name |
+| Scenario                   | Response                                     |
+| -------------------------- | -------------------------------------------- |
+| Twelfth Man sparse stats   | Minimal stat line                            |
+| All-rounder dual stats     | Batting + bowling + combined without clutter |
+| 12 rows                    | Compact row; grid layout                     |
+| Captain suffix in `player` | Preserve (c) / (vc) in Player name           |
 
 ---
 
 ## Approved style mapping (Stadium Signal)
 
-| Component | Status |
-| --------- | ------ |
-| Page Title | TBD |
-| Selection Row | TBD |
-| Role / Achievement Label | TBD |
-| Club Identity | TBD |
-| Stat Block | TBD |
+| Component                | Status |
+| ------------------------ | ------ |
+| Page Title               | TBD    |
+| Selection Row            | TBD    |
+| Role / Achievement Label | TBD    |
+| Club Identity            | TBD    |
+| Stat Block               | TBD    |
 
 ---
 

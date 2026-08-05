@@ -85,7 +85,7 @@ const getTiming = (config: TimingConfig) => {
 
   return linearTiming({
     durationInFrames,
-    easing: (easing as (input: number) => number) || ((t) => t), // Default to linear easing if none provided
+    easing: (easing as (input: number) => number) || Easing.inOut(Easing.ease),
   });
 };
 
@@ -108,7 +108,7 @@ export const TransitionSeriesWrapper: React.FC<
   const timingFn = getTiming(timing);
 
   return (
-    <TransitionSeries from={29}>
+    <TransitionSeries>
       {sequences.map((sequence, index) => (
         <React.Fragment key={index}>
           <TransitionSeries.Sequence

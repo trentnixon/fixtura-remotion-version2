@@ -8,12 +8,12 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives | `../component-anatomy/component-anatomy-overview.md` |
+| Document          | Path                                                       |
+| ----------------- | ---------------------------------------------------------- |
+| Shared primitives | `../component-anatomy/component-anatomy-overview.md`       |
 | Component anatomy | `../component-anatomy/top-performers-component-anatomy.md` |
-| Design brief | `../../top5/.docs/llm-brief/llm-brief-cricket-top5.md` |
-| Sample data | `Cricket_Top5Batters.json`, `Cricket_Top5Bowlers.json` |
+| Design brief      | `../../top5/.docs/llm-brief/llm-brief-cricket-top5.md`     |
+| Sample data       | `Cricket_Top5Batters.json`, `Cricket_Top5Bowlers.json`     |
 
 ---
 

@@ -15,6 +15,8 @@ export const ResultPlayerName = ({
   className,
   variant = DEFAULT_VARIANT,
   style,
+  exitAnimation,
+  exitFrame,
 }: AnimatedTextPrimitivePropsRequiredAnimation) => {
   const fontFamily = useFontFamily();
 
@@ -27,6 +29,8 @@ export const ResultPlayerName = ({
       style={style}
       animation={animation as AnimationConfig}
       letterAnimation={DEFAULT_LETTER_ANIMATION}
+      exitAnimation={exitAnimation}
+      exitFrame={exitFrame}
     >
       {value}
     </AnimatedText>

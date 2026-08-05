@@ -6,7 +6,12 @@ import { BroadcastProRoundedGlassPanel } from "../../../../../compositions/crick
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
 import { useBroadcastProRoundedTheme } from "../../../../../compositions/cricket/utils/broadcastProRounded";
 import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type {
+  AnimationConfig,
+  AnimationType,
+} from "../../../../../components/typography/config/animations";
 import { BroadcastProRoundedStatMatrixCompact } from "./BroadcastProRoundedStatMatrixCompact";
+import { resultContainerDelay } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
 
 export interface BroadcastProRoundedStatMatrixResultCellProps {
   playerName: string;
@@ -17,20 +22,22 @@ export interface BroadcastProRoundedStatMatrixResultCellProps {
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
   tier?: "list" | "single";
+  exitAnimation?: AnimationType | AnimationConfig;
+  exitFrame?: number;
 }
 
 const SINGLE_CELL_CLASS =
   "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
 const SINGLE_PLAYER_NAME_CLASS =
-  "!text-4xl font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
+  "!text-[38px] font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =
-  "font-teko !text-6xl font-bold !tracking-wide !leading-none";
+  "font-teko !text-[62px] !font-normal !tracking-wide !leading-none";
 const SINGLE_STAT_SUFFIX_CLASS =
-  "font-teko !text-3xl font-normal !tracking-wider !leading-none opacity-70";
+  "font-teko !text-[32px] font-normal !tracking-wider !leading-none opacity-70";
 const LIST_STAT_PRIMARY_CLASS =
-  "font-teko !text-3xl font-bold !tracking-tight !leading-tight";
+  "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
 const LIST_STAT_SUFFIX_CLASS =
-  "font-teko !text-2xl font-normal !tracking-tight !leading-tight opacity-70";
+  "font-teko !text-[26px] font-normal !tracking-tight !leading-tight opacity-70";
 
 export const BroadcastProRoundedStatMatrixResultCell: React.FC<
   BroadcastProRoundedStatMatrixResultCellProps
@@ -43,6 +50,8 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
   glass,
   className = "",
   tier = "list",
+  exitAnimation,
+  exitFrame,
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
@@ -74,7 +83,9 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
     <div className={isSingle ? "w-full" : valueClass}>
       <BroadcastProRoundedStatMatrixCompact
         value={statValue}
-        animation={{ ...copyIn, delay: delay + 2 }}
+        animation={{ ...copyIn, delay: delay + 3 }}
+        exitAnimation={exitAnimation}
+        exitFrame={exitFrame}
         colorVariant={highlight ? "onContainerTitle" : "onContainerCopy"}
         fontFamily={headingFont}
         className={
@@ -97,6 +108,8 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
     <ResultPlayerName
       value={playerName}
       animation={{ ...copyIn, delay }}
+      exitAnimation={exitAnimation}
+      exitFrame={exitFrame}
       variant="onContainerCopy"
       className={resolvedNameClass}
       style={{ color: text.copy }}
@@ -107,6 +120,8 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
     <BroadcastProRoundedGlassPanel
       glass={glass}
       className={`${cellClass} ${isSingle ? SINGLE_CELL_CLASS : ""} ${className}`.trim()}
+      animationDelay={resultContainerDelay(delay)}
+      exitFrame={exitFrame}
     >
       {isSingle ? (
         <>

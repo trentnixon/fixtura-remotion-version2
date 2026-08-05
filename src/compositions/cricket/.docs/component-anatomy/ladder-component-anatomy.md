@@ -10,12 +10,12 @@ Design-first building blocks for the **Cricket Ladder** composition. Shared fram
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Artboard** | 1080 × 1350 portrait |
-| **Content unit** | One `LadderData` = one grade table per frame (or paginated) |
-| **Row count** | `League.length` — typically **8–16**; design for dense typography |
-| **Modes** | Single mode; optional **bias highlight** for focus team |
+| Attribute        | Value                                                             |
+| ---------------- | ----------------------------------------------------------------- |
+| **Artboard**     | 1080 × 1350 portrait                                              |
+| **Content unit** | One `LadderData` = one grade table per frame (or paginated)       |
+| **Row count**    | `League.length` — typically **8–16**; design for dense typography |
+| **Modes**        | Single mode; optional **bias highlight** for focus team           |
 
 **Goal:** Order and points are obvious; rank and PTS read strongest.
 
@@ -47,31 +47,31 @@ Full Asset Frame
 
 ### Ladder table (`LadderData`)
 
-| Field | Required | Use |
-| ----- | -------- | --- |
-| `gradeName` | Yes | Ladder Metadata |
-| `League` | Yes | Ladder Row[] |
-| `bias` | Yes | Highlight State — matches `teamName` on one row |
-| `assignSponsors` | Optional | Asset Footer |
-| `prompt` | Optional | Copy tone — usually hidden |
-| `ID` | Optional | Automation — hidden |
+| Field            | Required | Use                                             |
+| ---------------- | -------- | ----------------------------------------------- |
+| `gradeName`      | Yes      | Ladder Metadata                                 |
+| `League`         | Yes      | Ladder Row[]                                    |
+| `bias`           | Yes      | Highlight State — matches `teamName` on one row |
+| `assignSponsors` | Optional | Asset Footer                                    |
+| `prompt`         | Optional | Copy tone — usually hidden                      |
+| `ID`             | Optional | Automation — hidden                             |
 
 ### Ladder Row (`TeamData`)
 
-| Field | Required | Column |
-| ----- | -------- | ------ |
-| `position` | Yes | Rank |
-| `teamName` | Yes | Team name |
+| Field                                  | Required | Column                       |
+| -------------------------------------- | -------- | ---------------------------- |
+| `position`                             | Yes      | Rank                         |
+| `teamName`                             | Yes      | Team name                    |
 | `clubLogo` / `teamLogo` / `playHQLogo` | Optional | Team crest (first available) |
-| `P` | Yes | Played |
-| `W` | Yes | Won |
-| `L` | Yes | Lost |
-| `BYE` | Yes | Byes |
-| `PTS` | Yes | Points |
-| `N/R` | Optional | No result |
-| `TIE` | Optional | Tie |
-| `Q` | Optional | Quotient |
-| `prompt` | Optional | Hidden |
+| `P`                                    | Yes      | Played                       |
+| `W`                                    | Yes      | Won                          |
+| `L`                                    | Yes      | Lost                         |
+| `BYE`                                  | Yes      | Byes                         |
+| `PTS`                                  | Yes      | Points                       |
+| `N/R`                                  | Optional | No result                    |
+| `TIE`                                  | Optional | Tie                          |
+| `Q`                                    | Optional | Quotient                     |
+| `prompt`                               | Optional | Hidden                       |
 
 **Minimal column set:** P, W, L, BYE, PTS. Full set may add N/R, TIE, Q.
 
@@ -176,26 +176,26 @@ Full Asset Frame
 
 ## Edge case catalogue
 
-| Scenario | Response |
-| -------- | -------- |
-| All logos null | Placeholder crest every row |
-| 16+ teams | Compact row state; engineering reduces density |
-| Bias team is rank 1 | Highlight + top-rank styling must coexist |
-| Quotient only in full layout | Q column tertiary or hidden in minimal layout |
+| Scenario                     | Response                                       |
+| ---------------------------- | ---------------------------------------------- |
+| All logos null               | Placeholder crest every row                    |
+| 16+ teams                    | Compact row state; engineering reduces density |
+| Bias team is rank 1          | Highlight + top-rank styling must coexist      |
+| Quotient only in full layout | Q column tertiary or hidden in minimal layout  |
 
 ---
 
 ## Approved style mapping (Stadium Signal)
 
-| Component | Status |
-| --------- | ------ |
-| Ladder Metadata | TBD |
-| Column Header | TBD |
-| Ladder Row | TBD |
-| Rank | TBD |
-| Team Identity | TBD |
-| Stat Cells | TBD |
-| Highlight State | TBD |
+| Component       | Status |
+| --------------- | ------ |
+| Ladder Metadata | TBD    |
+| Column Header   | TBD    |
+| Ladder Row      | TBD    |
+| Rank            | TBD    |
+| Team Identity   | TBD    |
+| Stat Cells      | TBD    |
+| Highlight State | TBD    |
 
 ---
 

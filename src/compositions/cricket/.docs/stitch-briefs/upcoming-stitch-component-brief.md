@@ -8,12 +8,12 @@
 
 ## Read first
 
-| Document | Path |
-| -------- | ---- |
-| Shared primitives | `../component-anatomy/component-anatomy-overview.md` |
-| Component anatomy | `../component-anatomy/upcoming-component-anatomy.md` |
-| Design brief | `../../upcoming/.docs/llm-brief/llm-brief-cricket-upcoming.md` |
-| Sample data | `testData/samples/Cricket/Cricket_upcoming.json` |
+| Document          | Path                                                           |
+| ----------------- | -------------------------------------------------------------- |
+| Shared primitives | `../component-anatomy/component-anatomy-overview.md`           |
+| Component anatomy | `../component-anatomy/upcoming-component-anatomy.md`           |
+| Design brief      | `../../upcoming/.docs/llm-brief/llm-brief-cricket-upcoming.md` |
+| Sample data       | `testData/samples/Cricket/Cricket_upcoming.json`               |
 
 ---
 
@@ -46,9 +46,9 @@ Design **fixture card components** — small match posters for upcoming games.
 
 ## Hierarchy
 
-1. Team names + crests  
-2. Date / time / ground  
-3. Grade framing  
+1. Team names + crests
+2. Date / time / ground
+3. Grade framing
 4. VS (legible, narrow)
 
 ---

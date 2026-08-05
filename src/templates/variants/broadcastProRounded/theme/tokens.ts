@@ -9,7 +9,7 @@ import type { TemplateThemeConfig } from "../../../types/TemplateThemeConfig";
  * Fonts, fontClasses, and Broadcast Pro–only tuning keys (glass + roster + headline sizing).
  */
 export const broadcastProRoundedTokens = {
-  broadcastProRoundedGlassOpacity: "md" as const,
+  broadcastProRoundedGlassOpacity: "lg" as const,
 
   broadcastProRoundedHeadlineSizing: {
     ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING,

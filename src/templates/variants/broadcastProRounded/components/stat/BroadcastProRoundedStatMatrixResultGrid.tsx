@@ -2,6 +2,11 @@ import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
 import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type {
+  AnimationConfig,
+  AnimationType,
+} from "../../../../../components/typography/config/animations";
+import { RESULT_STAT_CELL_STAGGER } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
 import { BroadcastProRoundedStatMatrixResultCell } from "./BroadcastProRoundedStatMatrixResultCell";
 
 export interface BroadcastProRoundedStatMatrixResultItem {
@@ -17,11 +22,22 @@ export interface BroadcastProRoundedStatMatrixResultGridProps {
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
   tier?: "list" | "single";
+  exitAnimation?: AnimationType | AnimationConfig;
+  exitFrame?: number;
 }
 
 export const BroadcastProRoundedStatMatrixResultGrid: React.FC<
   BroadcastProRoundedStatMatrixResultGridProps
-> = ({ items, delay, accentColor, glass, className = "", tier = "list" }) => {
+> = ({
+  items,
+  delay,
+  accentColor,
+  glass,
+  className = "",
+  tier = "list",
+  exitAnimation,
+  exitFrame,
+}) => {
   const { componentStyles } = useThemeContext();
   const gridClass = csClass(
     componentStyles,
@@ -40,10 +56,12 @@ export const BroadcastProRoundedStatMatrixResultGrid: React.FC<
         <BroadcastProRoundedStatMatrixResultCell
           key={`${item.playerName}-${item.statValue}-${index}`}
           {...item}
-          delay={delay + index * 2}
+          delay={delay + index * RESULT_STAT_CELL_STAGGER}
           accentColor={accentColor}
           glass={glass}
           tier={tier}
+          exitAnimation={exitAnimation}
+          exitFrame={exitFrame}
         />
       ))}
     </div>

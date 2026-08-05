@@ -14,6 +14,7 @@ import { BroadcastProRoundedVerdictHeroLockup } from "./BroadcastProRoundedVerdi
 import { BroadcastProRoundedVerdictCompactLine } from "./BroadcastProRoundedVerdictCompactLine";
 import { BroadcastProRoundedVerdictAbandoned } from "./BroadcastProRoundedVerdictAbandoned";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
+import { resultContainerDelay } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
 
 export interface BroadcastProRoundedResultVerdictProps {
   model: BroadcastProRoundedVerdictModel;
@@ -43,6 +44,7 @@ export const BroadcastProRoundedResultVerdict: React.FC<
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY[tier];
   const bandClass = csClass(componentStyles, bandKey);
+  const containerDelay = resultContainerDelay(delay);
 
   const edgeMarkerStyle = resolveBroadcastProRoundedEdgeMarkerStyle(
     "standard",
@@ -60,6 +62,8 @@ export const BroadcastProRoundedResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
+        animationDelay={containerDelay}
+        exitFrame={exitFrame}
       >
         <BroadcastProRoundedVerdictHeroLockup
           winner={model.winner}
@@ -81,6 +85,8 @@ export const BroadcastProRoundedResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
+        animationDelay={containerDelay}
+        exitFrame={exitFrame}
       >
         <BroadcastProRoundedVerdictCompactLine
           line={model.line}
@@ -100,6 +106,8 @@ export const BroadcastProRoundedResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
+        animationDelay={containerDelay}
+        exitFrame={exitFrame}
       >
         <BroadcastProRoundedVerdictAbandoned
           status={model.status}

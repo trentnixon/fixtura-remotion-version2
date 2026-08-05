@@ -4929,7 +4929,7 @@ var BasicIntro = () => {
 };
 
 // src/templates/variants/basic/components/BasicOutro.tsx
-var import_remotion29 = require("remotion");
+var import_remotion30 = require("remotion");
 
 // src/components/transitions/TransitionSeriesWrapper.tsx
 var import_react10 = __toESM(require("react"));
@@ -4940,6 +4940,7 @@ var import_wipe = require("@remotion/transitions/wipe");
 var import_clock_wipe = require("@remotion/transitions/clock-wipe");
 var import_flip = require("@remotion/transitions/flip");
 var import_none = require("@remotion/transitions/none");
+var import_remotion29 = require("remotion");
 var import_jsx_runtime16 = require("react/jsx-runtime");
 var getTransitionPresentation = (type, direction = "from-right", width = 1920, height = 1080) => {
   switch (type) {
@@ -4971,8 +4972,7 @@ var getTiming = (config) => {
   }
   return (0, import_transitions.linearTiming)({
     durationInFrames,
-    easing: easing || ((t) => t)
-    // Default to linear easing if none provided
+    easing: easing || import_remotion29.Easing.inOut(import_remotion29.Easing.ease)
   });
 };
 var TransitionSeriesWrapper = ({
@@ -4990,7 +4990,7 @@ var TransitionSeriesWrapper = ({
     height
   );
   const timingFn = getTiming(timing);
-  return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_transitions.TransitionSeries, { from: 29, children: sequences.map((sequence, index) => /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(import_react10.default.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_transitions.TransitionSeries, { children: sequences.map((sequence, index) => /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(import_react10.default.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
       import_transitions.TransitionSeries.Sequence,
       {
@@ -5094,7 +5094,7 @@ var BasicOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray(sponsorsArray, GRID_SETTINGS.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_remotion29.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(SponsorGrid, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_remotion30.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(SponsorGrid, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
@@ -5106,11 +5106,11 @@ var BasicOutro = ({
     }
   );
 };
-var AlternativeOutro = () => /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_remotion29.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro = () => /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_remotion30.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray = (sponsors) => Object.values(sponsors).flat();
 
 // src/components/backgrounds/variants/Solid/SolidBackground.tsx
-var import_remotion30 = require("remotion");
+var import_remotion31 = require("remotion");
 var import_jsx_runtime18 = require("react/jsx-runtime");
 var SolidBackground = ({
   className = "",
@@ -5119,7 +5119,7 @@ var SolidBackground = ({
   const { selectedPalette } = useThemeContext();
   const backgroundColor = selectedPalette.background.main;
   return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
-    import_remotion30.AbsoluteFill,
+    import_remotion31.AbsoluteFill,
     {
       className: `bg-background ${className} ${backgroundColor}`,
       style: {
@@ -5133,7 +5133,7 @@ var SolidBackground = ({
 
 // src/components/backgrounds/variants/Gradient/GradientBackground.tsx
 var import_react11 = __toESM(require("react"));
-var import_remotion31 = require("remotion");
+var import_remotion32 = require("remotion");
 
 // src/core/utils/colorSystem/gradientResolver.ts
 var determineGradientTypeForPalette = (paletteName, baseType) => {
@@ -5201,7 +5201,7 @@ var GradientBackground = ({
     return DEFAULT_GRADIENT;
   }, [selectedPalette, gradientType, gradientDirection]);
   return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
-    import_remotion31.AbsoluteFill,
+    import_remotion32.AbsoluteFill,
     {
       className: ` ${className}`,
       style: {
@@ -5214,11 +5214,11 @@ var GradientBackground = ({
 };
 
 // src/components/backgrounds/variants/Image/index.tsx
-var import_remotion40 = require("remotion");
+var import_remotion41 = require("remotion");
 
 // src/components/backgrounds/variants/Image/variants/zoom.tsx
-var import_remotion32 = require("remotion");
 var import_remotion33 = require("remotion");
+var import_remotion34 = require("remotion");
 var import_jsx_runtime20 = require("react/jsx-runtime");
 var ZoomEffect = ({
   src,
@@ -5230,8 +5230,8 @@ var ZoomEffect = ({
   style = {},
   className = ""
 }) => {
-  const frame = (0, import_remotion32.useCurrentFrame)();
-  const { durationInFrames } = (0, import_remotion32.useVideoConfig)();
+  const frame = (0, import_remotion33.useCurrentFrame)();
+  const { durationInFrames } = (0, import_remotion33.useVideoConfig)();
   const effectEndTime = endTime != null ? endTime : durationInFrames;
   const effectDuration = effectEndTime - startTime;
   const progress = Math.max(
@@ -5244,8 +5244,8 @@ var ZoomEffect = ({
   } else {
     scale = intensity - (intensity - 1) * progress;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_remotion33.AbsoluteFill, { className: `zoom-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
-    import_remotion33.Img,
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_remotion34.AbsoluteFill, { className: `zoom-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+    import_remotion34.Img,
     {
       src,
       style: {
@@ -5263,11 +5263,11 @@ var ZoomEffect = ({
 };
 
 // src/components/backgrounds/variants/Image/overlays/OverlayRenderer.tsx
-var import_remotion34 = require("remotion");
+var import_remotion35 = require("remotion");
 var import_jsx_runtime21 = require("react/jsx-runtime");
 var OverlayRenderer = ({ config }) => {
-  const frame = (0, import_remotion34.useCurrentFrame)();
-  const { fps } = (0, import_remotion34.useVideoConfig)();
+  const frame = (0, import_remotion35.useCurrentFrame)();
+  const { fps } = (0, import_remotion35.useVideoConfig)();
   if (config.style === "none" /* None */) {
     return null;
   }
@@ -5490,7 +5490,7 @@ var renderColorFilterOverlay = (config, calculateOpacity) => {
 };
 
 // src/components/backgrounds/variants/Image/variants/pan.tsx
-var import_remotion35 = require("remotion");
+var import_remotion36 = require("remotion");
 var import_jsx_runtime22 = require("react/jsx-runtime");
 var Pan = ({
   src,
@@ -5499,12 +5499,12 @@ var Pan = ({
   style = {},
   className = ""
 }) => {
-  const frame = (0, import_remotion35.useCurrentFrame)();
+  const frame = (0, import_remotion36.useCurrentFrame)();
   const {
     width: videoWidth,
     height: videoHeight,
     durationInFrames
-  } = (0, import_remotion35.useVideoConfig)();
+  } = (0, import_remotion36.useVideoConfig)();
   const imageAspectRatio = width / height;
   const videoAspectRatio = videoWidth / videoHeight;
   const isImageLandscape = imageAspectRatio > 1;
@@ -5528,24 +5528,24 @@ var Pan = ({
   );
   let transformStyle;
   if (isImageLandscape) {
-    const translateX = (0, import_remotion35.interpolate)(
+    const translateX = (0, import_remotion36.interpolate)(
       frame,
       [animationStartFrame, animationEndFrame],
       [-translateXRange, translateXRange],
       {
-        easing: import_remotion35.Easing.ease,
+        easing: import_remotion36.Easing.ease,
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp"
       }
     );
     transformStyle = `translateX(${translateX}%)`;
   } else {
-    const translateY = (0, import_remotion35.interpolate)(
+    const translateY = (0, import_remotion36.interpolate)(
       frame,
       [animationStartFrame, animationEndFrame],
       [-translateYRange, translateYRange],
       {
-        easing: import_remotion35.Easing.ease,
+        easing: import_remotion36.Easing.ease,
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp"
       }
@@ -5579,7 +5579,7 @@ var Pan = ({
             alignItems: "center"
           },
           children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
-            import_remotion35.Img,
+            import_remotion36.Img,
             {
               src,
               style: {
@@ -5597,8 +5597,8 @@ var Pan = ({
 };
 
 // src/components/backgrounds/variants/Image/variants/breath.tsx
-var import_remotion36 = require("remotion");
 var import_remotion37 = require("remotion");
+var import_remotion38 = require("remotion");
 var import_jsx_runtime23 = require("react/jsx-runtime");
 var BreathingEffect = ({
   src,
@@ -5611,13 +5611,13 @@ var BreathingEffect = ({
   style = {},
   className = ""
 }) => {
-  const frame = (0, import_remotion36.useCurrentFrame)();
-  const { durationInFrames } = (0, import_remotion36.useVideoConfig)();
+  const frame = (0, import_remotion37.useCurrentFrame)();
+  const { durationInFrames } = (0, import_remotion37.useVideoConfig)();
   const effectEndTime = endTime != null ? endTime : durationInFrames;
   const effectDuration = effectEndTime - startTime;
   if (frame < startTime || frame > effectEndTime) {
-    return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_remotion37.AbsoluteFill, { className: `breathing-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
-      import_remotion37.Img,
+    return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_remotion38.AbsoluteFill, { className: `breathing-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
+      import_remotion38.Img,
       {
         src,
         style: {
@@ -5636,8 +5636,8 @@ var BreathingEffect = ({
   const phase = relativeFrame / effectDuration * Math.PI * 2 * frequency;
   const sineValue = Math.sin(phase);
   const scale = 1 + (intensity - 1) / 2 * (sineValue + 1);
-  return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_remotion37.AbsoluteFill, { className: `breathing-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
-    import_remotion37.Img,
+  return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_remotion38.AbsoluteFill, { className: `breathing-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
+    import_remotion38.Img,
     {
       src,
       style: {
@@ -5655,8 +5655,8 @@ var BreathingEffect = ({
 };
 
 // src/components/backgrounds/variants/Image/variants/blur.tsx
-var import_remotion38 = require("remotion");
 var import_remotion39 = require("remotion");
+var import_remotion40 = require("remotion");
 var import_jsx_runtime24 = require("react/jsx-runtime");
 var FocusBlurEffect = ({
   src,
@@ -5668,8 +5668,8 @@ var FocusBlurEffect = ({
   style = {},
   className = ""
 }) => {
-  const frame = (0, import_remotion38.useCurrentFrame)();
-  const { durationInFrames } = (0, import_remotion38.useVideoConfig)();
+  const frame = (0, import_remotion39.useCurrentFrame)();
+  const { durationInFrames } = (0, import_remotion39.useVideoConfig)();
   const effectEndTime = endTime != null ? endTime : durationInFrames;
   const effectDuration = effectEndTime - startTime;
   const progress = Math.max(
@@ -5691,8 +5691,8 @@ var FocusBlurEffect = ({
       break;
     }
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_remotion39.AbsoluteFill, { className: `focus-blur-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(
-    import_remotion39.Img,
+  return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_remotion40.AbsoluteFill, { className: `focus-blur-effect ${className}`, children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(
+    import_remotion40.Img,
     {
       src: src || "",
       style: {
@@ -5954,7 +5954,7 @@ var ImageBackground = ({
       case "none" /* None */:
       default:
         return /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(
-          import_remotion40.Img,
+          import_remotion41.Img,
           {
             src: imageUrl,
             style: {
@@ -5967,7 +5967,7 @@ var ImageBackground = ({
         );
     }
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_remotion40.AbsoluteFill, { className: `image-background-container ${className} `, children: /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_remotion41.AbsoluteFill, { className: `image-background-container ${className} `, children: /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)(
     "div",
     {
       style: {
@@ -5985,7 +5985,7 @@ var ImageBackground = ({
 };
 
 // src/components/backgrounds/variants/Video/VideoBackground.tsx
-var import_remotion41 = require("remotion");
+var import_remotion42 = require("remotion");
 var import_jsx_runtime26 = require("react/jsx-runtime");
 var DEFAULT_VIDEO_URL = "https://fixtura.s3.ap-southeast-2.amazonaws.com/1943483_uhd_3840_2160_25fps_1238f00c5a.mp4";
 var DEFAULT_OVERLAY = { color: "rgba(0,0,0,0.5)", opacity: 0.35 };
@@ -6036,7 +6036,7 @@ var VideoBackground = ({
   introSrc: introSrcProp,
   introFrames: introFramesProp
 }) => {
-  const { durationInFrames } = (0, import_remotion41.useVideoConfig)();
+  const { durationInFrames } = (0, import_remotion42.useVideoConfig)();
   const {
     actualSrc,
     actualPosition,
@@ -6071,8 +6071,8 @@ var VideoBackground = ({
     objectPosition: actualPosition,
     ...style
   };
-  const VideoComponent = useOffthreadVideo ? import_remotion41.OffthreadVideo : import_remotion41.Video;
-  return /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(import_remotion41.AbsoluteFill, { className: `bg-video ${className}`, children: [
+  const VideoComponent = useOffthreadVideo ? import_remotion42.OffthreadVideo : import_remotion42.Video;
+  return /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(import_remotion42.AbsoluteFill, { className: `bg-video ${className}`, children: [
     /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(
       "div",
       {
@@ -6089,7 +6089,7 @@ var VideoBackground = ({
           alignItems: "center"
         },
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_remotion41.Sequence, { durationInFrames: INTRO_FRAMES, children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_remotion42.Sequence, { durationInFrames: INTRO_FRAMES, children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
             VideoComponent,
             {
               src: introSrc,
@@ -6100,7 +6100,7 @@ var VideoBackground = ({
               ...!actualMuted ? { volume: actualVolume } : {}
             }
           ) }),
-          backgroundDuration > 0 && /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_remotion41.Sequence, { from: INTRO_FRAMES, durationInFrames: backgroundDuration, children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+          backgroundDuration > 0 && /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_remotion42.Sequence, { from: INTRO_FRAMES, durationInFrames: backgroundDuration, children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
             VideoComponent,
             {
               src: srcToUse,
@@ -6133,7 +6133,7 @@ var VideoBackground = ({
 };
 
 // src/components/backgrounds/variants/NoiseBackground/GridNoise.tsx
-var import_remotion42 = require("remotion");
+var import_remotion43 = require("remotion");
 var import_noise = require("@remotion/noise");
 var import_jsx_runtime27 = require("react/jsx-runtime");
 var GridNoise = ({
@@ -6153,7 +6153,7 @@ var GridNoise = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion42.useCurrentFrame)();
+  const frame = (0, import_remotion43.useCurrentFrame)();
   const time = frame * noiseSpeed;
   const cells = [];
   for (let y = 0; y < gridSize; y++) {
@@ -6169,7 +6169,7 @@ var GridNoise = ({
       let cellColor = noiseColor || "#ffffff";
       if (startColor && endColor) {
         const interpolationPoint = gradientDirection === "horizontal" ? x / gridSize : y / gridSize;
-        cellColor = (0, import_remotion42.interpolateColors)(
+        cellColor = (0, import_remotion43.interpolateColors)(
           interpolationPoint,
           [0, 1],
           [startColor, endColor]
@@ -6189,7 +6189,7 @@ var GridNoise = ({
     }
   }
   return /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(
-    import_remotion42.AbsoluteFill,
+    import_remotion43.AbsoluteFill,
     {
       className: `bg-noise ${className}`,
       style: {
@@ -6306,7 +6306,7 @@ var StaticNoise_default = StaticNoise;
 
 // src/components/backgrounds/variants/NoiseBackground/ParticleNoise.tsx
 var import_noise2 = require("@remotion/noise");
-var import_remotion43 = require("remotion");
+var import_remotion44 = require("remotion");
 
 // src/components/backgrounds/variants/NoiseBackground/ShapeNoise.tsx
 var import_jsx_runtime33 = require("react/jsx-runtime");
@@ -6365,13 +6365,13 @@ var ParticleNoise = ({
   noiseSeed = "particle-noise-seed",
   particleShape = "circle"
 }) => {
-  const frame = (0, import_remotion43.useCurrentFrame)();
-  const { height, width } = (0, import_remotion43.useVideoConfig)();
+  const frame = (0, import_remotion44.useCurrentFrame)();
+  const { height, width } = (0, import_remotion44.useVideoConfig)();
   const OVERSCAN_MARGIN = 50;
   const { selectedPalette } = useThemeContext();
   const bgOptions = selectedPalette.container.gradientPrimaryToSecondaryVertical;
   return /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(
-    import_remotion43.AbsoluteFill,
+    import_remotion44.AbsoluteFill,
     {
       style: {
         background: bgOptions
@@ -6384,7 +6384,7 @@ var ParticleNoise = ({
           const py = j / particleCount.rows;
           const dx = (0, import_noise2.noise3D)(noiseSeed + "x", px, py, frame * speed) * maxOffset;
           const dy = (0, import_noise2.noise3D)(noiseSeed + "y", px, py, frame * speed) * maxOffset;
-          const opacity = (0, import_remotion43.interpolate)(
+          const opacity = (0, import_remotion44.interpolate)(
             (0, import_noise2.noise3D)(noiseSeed + "opacity", i, j, frame * speed),
             [-1, 1],
             [0, 0.5]
@@ -6528,7 +6528,7 @@ var GradientGrid = (props) => {
 var GradientGrid_default = GradientGrid;
 
 // src/components/backgrounds/variants/NoiseBackground/GraphicsBackground.tsx
-var import_remotion44 = require("remotion");
+var import_remotion45 = require("remotion");
 var import_jsx_runtime41 = require("react/jsx-runtime");
 var GraphicsBackground = ({
   baseColor = "#000021",
@@ -6542,9 +6542,9 @@ var GraphicsBackground = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion44.useCurrentFrame)();
-  const rotation = (0, import_remotion44.interpolate)(frame * animationSpeed, [0, 360], [0, 360]);
-  const scale = (0, import_remotion44.interpolate)(frame * animationSpeed * 0.1, [0, 1], [0.8, 1.2]);
+  const frame = (0, import_remotion45.useCurrentFrame)();
+  const rotation = (0, import_remotion45.interpolate)(frame * animationSpeed, [0, 360], [0, 360]);
+  const scale = (0, import_remotion45.interpolate)(frame * animationSpeed * 0.1, [0, 1], [0.8, 1.2]);
   const densityMultiplier = {
     low: 0.5,
     medium: 1,
@@ -6629,7 +6629,7 @@ var GraphicsBackground = ({
     }
   };
   return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
-    import_remotion44.AbsoluteFill,
+    import_remotion45.AbsoluteFill,
     {
       className: `bg-graphics bg-graphics-${variant} ${className}`,
       style: {
@@ -6660,17 +6660,17 @@ var GeometricGraphics_default = GeometricGraphics;
 
 // src/components/backgrounds/variants/NoiseBackground/variants/SpokesGraphics.tsx
 var import_react12 = __toESM(require("react"));
-var import_remotion47 = require("remotion");
+var import_remotion48 = require("remotion");
 
 // src/components/backgrounds/variants/NoiseBackground/variants/svg/spokes/intro.tsx
-var import_remotion45 = require("remotion");
+var import_remotion46 = require("remotion");
 var import_jsx_runtime43 = require("react/jsx-runtime");
 var CNSWSpokesIntro = () => {
-  const frame = (0, import_remotion45.useCurrentFrame)();
+  const frame = (0, import_remotion46.useCurrentFrame)();
   const rect1Height = 1522.53;
   const rect2Height = 1522.53;
   const rect3Height = 1522.53;
-  const animatedRect1Height = (0, import_remotion45.interpolate)(
+  const animatedRect1Height = (0, import_remotion46.interpolate)(
     frame,
     [0, 15, 75, 90],
     [0, rect1Height, rect1Height, 0],
@@ -6679,7 +6679,7 @@ var CNSWSpokesIntro = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect2Height = (0, import_remotion45.interpolate)(
+  const animatedRect2Height = (0, import_remotion46.interpolate)(
     frame,
     [0, 20, 75, 90],
     [0, rect2Height, rect2Height, 0],
@@ -6688,7 +6688,7 @@ var CNSWSpokesIntro = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect3Height = (0, import_remotion45.interpolate)(
+  const animatedRect3Height = (0, import_remotion46.interpolate)(
     frame,
     [0, 25, 75, 90],
     [0, rect3Height, rect3Height, 0],
@@ -6697,7 +6697,7 @@ var CNSWSpokesIntro = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect1Y = (0, import_remotion45.interpolate)(
+  const animatedRect1Y = (0, import_remotion46.interpolate)(
     frame,
     [0, 15, 75, 90],
     [-355.895, -355.895, -355.895, -355.895 + rect1Height],
@@ -6706,7 +6706,7 @@ var CNSWSpokesIntro = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect2Y = (0, import_remotion45.interpolate)(
+  const animatedRect2Y = (0, import_remotion46.interpolate)(
     frame,
     [0, 20, 75, 90],
     [-129.411, -129.411, -129.411, -129.411 + rect2Height],
@@ -6715,7 +6715,7 @@ var CNSWSpokesIntro = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect3Y = (0, import_remotion45.interpolate)(
+  const animatedRect3Y = (0, import_remotion46.interpolate)(
     frame,
     [0, 25, 75, 90],
     [-525.002, -525.002, -525.002, -525.002 + rect3Height],
@@ -6787,18 +6787,18 @@ var CNSWSpokesIntro = () => {
 };
 
 // src/components/backgrounds/variants/NoiseBackground/variants/svg/spokes/content.tsx
-var import_remotion46 = require("remotion");
+var import_remotion47 = require("remotion");
 var import_jsx_runtime44 = require("react/jsx-runtime");
 var CNSWSpokesContent = () => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
-  const frame = (0, import_remotion46.useCurrentFrame)();
+  const frame = (0, import_remotion47.useCurrentFrame)();
   const { data } = useVideoDataContext();
   const { timings } = data;
   const AssetLength = ((_a = timings.FPS_INTRO) != null ? _a : 30) + ((_b = timings.FPS_MAIN) != null ? _b : 30);
   const rect1Height = 1522.53;
   const rect2Height = 1522.53;
   const rect3Height = 1522.53;
-  const animatedRect1Height = (0, import_remotion46.interpolate)(
+  const animatedRect1Height = (0, import_remotion47.interpolate)(
     frame,
     [
       (_c = timings.FPS_INTRO) != null ? _c : 0,
@@ -6812,7 +6812,7 @@ var CNSWSpokesContent = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect2Height = (0, import_remotion46.interpolate)(
+  const animatedRect2Height = (0, import_remotion47.interpolate)(
     frame,
     [
       (_e = timings.FPS_INTRO) != null ? _e : 0,
@@ -6826,7 +6826,7 @@ var CNSWSpokesContent = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect3Height = (0, import_remotion46.interpolate)(
+  const animatedRect3Height = (0, import_remotion47.interpolate)(
     frame,
     [
       (_g = timings.FPS_INTRO) != null ? _g : 0,
@@ -6840,7 +6840,7 @@ var CNSWSpokesContent = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect1Y = (0, import_remotion46.interpolate)(
+  const animatedRect1Y = (0, import_remotion47.interpolate)(
     frame,
     [
       (_i = timings.FPS_INTRO) != null ? _i : 0,
@@ -6854,7 +6854,7 @@ var CNSWSpokesContent = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect2Y = (0, import_remotion46.interpolate)(
+  const animatedRect2Y = (0, import_remotion47.interpolate)(
     frame,
     [
       (_k = timings.FPS_INTRO) != null ? _k : 0,
@@ -6868,7 +6868,7 @@ var CNSWSpokesContent = () => {
       extrapolateLeft: "clamp"
     }
   );
-  const animatedRect3Y = (0, import_remotion46.interpolate)(
+  const animatedRect3Y = (0, import_remotion47.interpolate)(
     frame,
     [
       (_m = timings.FPS_INTRO) != null ? _m : 0,
@@ -6979,7 +6979,7 @@ var SpokesGraphics = ({
   style = {}
 }) => {
   var _a, _b, _c, _d;
-  const frame = (0, import_remotion47.useCurrentFrame)();
+  const frame = (0, import_remotion48.useCurrentFrame)();
   const { selectedPalette } = useThemeContext();
   const { video } = useVideoDataContext();
   const DEFAULT_GRADIENT = "linear-gradient(0deg, #000021 0%, #4a90e2 50%, #7b68ee 100%)";
@@ -6999,16 +6999,16 @@ var SpokesGraphics = ({
     if (fallbackCSS) return fallbackCSS;
     return DEFAULT_GRADIENT;
   }, [selectedPalette, gradientType, gradientDirection]);
-  const introOpacity = (0, import_remotion47.interpolate)(frame, [0, 30, 60, 90], [0, 1, 1, 0], {
+  const introOpacity = (0, import_remotion48.interpolate)(frame, [0, 30, 60, 90], [0, 1, 1, 0], {
     extrapolateRight: "clamp",
     extrapolateLeft: "clamp"
   });
-  const contentOpacity = (0, import_remotion47.interpolate)(frame, [90, 120, 150, 180], [0, 1, 1, 1], {
+  const contentOpacity = (0, import_remotion48.interpolate)(frame, [90, 120, 150, 180], [0, 1, 1, 1], {
     extrapolateRight: "clamp",
     extrapolateLeft: "clamp"
   });
   return /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)(
-    import_remotion47.AbsoluteFill,
+    import_remotion48.AbsoluteFill,
     {
       className: `bg-spokes-graphics ${className}`,
       style: {
@@ -7054,7 +7054,7 @@ var SpokesGraphics = ({
 var SpokesGraphics_default = SpokesGraphics;
 
 // src/components/backgrounds/variants/AnimatedBackground.tsx
-var import_remotion48 = require("remotion");
+var import_remotion49 = require("remotion");
 var import_jsx_runtime46 = require("react/jsx-runtime");
 var AnimatedBackground = ({
   type = "pulsingGradient",
@@ -7066,15 +7066,15 @@ var AnimatedBackground = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion48.useCurrentFrame)();
+  const frame = (0, import_remotion49.useCurrentFrame)();
   const progress = frame % duration / duration;
   switch (type) {
     case "pulsingGradient": {
-      const scale = (0, import_remotion48.interpolate)(progress, [0, 0.5, 1], [1, 1 + intensity, 1], {
+      const scale = (0, import_remotion49.interpolate)(progress, [0, 0.5, 1], [1, 1 + intensity, 1], {
         extrapolateRight: "clamp"
       });
       return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
-        import_remotion48.AbsoluteFill,
+        import_remotion49.AbsoluteFill,
         {
           className: `bg-animated bg-pulsing-gradient ${className}`,
           style: {
@@ -7087,11 +7087,11 @@ var AnimatedBackground = ({
       );
     }
     case "movingGradient": {
-      const position = (0, import_remotion48.interpolate)(progress, [0, 1], [0, 100], {
+      const position = (0, import_remotion49.interpolate)(progress, [0, 1], [0, 100], {
         extrapolateRight: "clamp"
       });
       return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
-        import_remotion48.AbsoluteFill,
+        import_remotion49.AbsoluteFill,
         {
           className: `bg-animated bg-moving-gradient ${className}`,
           style: {
@@ -7105,14 +7105,14 @@ var AnimatedBackground = ({
       );
     }
     case "breathingColor": {
-      const opacity = (0, import_remotion48.interpolate)(
+      const opacity = (0, import_remotion49.interpolate)(
         progress,
         [0, 0.5, 1],
         [1, 1 - intensity, 1],
         { extrapolateRight: "clamp" }
       );
       return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
-        import_remotion48.AbsoluteFill,
+        import_remotion49.AbsoluteFill,
         {
           className: `bg-animated bg-breathing-color ${className}`,
           style: {
@@ -7121,7 +7121,7 @@ var AnimatedBackground = ({
             ...style
           },
           children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
-            import_remotion48.AbsoluteFill,
+            import_remotion49.AbsoluteFill,
             {
               style: {
                 backgroundColor: colors[0],
@@ -7134,11 +7134,11 @@ var AnimatedBackground = ({
     }
     case "waveEffect": {
       const waveHeight = 20 * intensity;
-      const wavePosition = (0, import_remotion48.interpolate)(progress, [0, 1], [0, 100], {
+      const wavePosition = (0, import_remotion49.interpolate)(progress, [0, 1], [0, 100], {
         extrapolateRight: "clamp"
       });
       return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
-        import_remotion48.AbsoluteFill,
+        import_remotion49.AbsoluteFill,
         {
           className: `bg-animated bg-wave-effect ${className}`,
           style: {
@@ -7218,7 +7218,7 @@ var AnimatedBackground = ({
     }
     default:
       return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
-        import_remotion48.AbsoluteFill,
+        import_remotion49.AbsoluteFill,
         {
           className: `bg-animated ${className}`,
           style: {
@@ -7232,7 +7232,7 @@ var AnimatedBackground = ({
 };
 
 // src/components/backgrounds/variants/Patterns/index.tsx
-var import_remotion55 = require("remotion");
+var import_remotion56 = require("remotion");
 
 // src/components/backgrounds/variants/Patterns/variants/config.ts
 var PATTERN_TYPES = {
@@ -7254,7 +7254,7 @@ var ANIMATION_TYPES = {
 };
 
 // src/components/backgrounds/variants/Patterns/variants/dots.tsx
-var import_remotion49 = require("remotion");
+var import_remotion50 = require("remotion");
 var import_jsx_runtime47 = require("react/jsx-runtime");
 var DotsPattern = ({
   primaryColor,
@@ -7267,7 +7267,7 @@ var DotsPattern = ({
   // 20 seconds at 30fps
   animationSpeed = 1
 }) => {
-  const frame = (0, import_remotion49.useCurrentFrame)();
+  const frame = (0, import_remotion50.useCurrentFrame)();
   const patternSvg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
       <circle cx="10" cy="10" r="2" fill="${primaryColor}" />
@@ -7331,7 +7331,7 @@ var DotsPattern = ({
     default:
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(import_remotion49.AbsoluteFill, { style: { zIndex: -1 }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(import_remotion50.AbsoluteFill, { style: { zIndex: -1 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { style: backgroundStyle }),
     /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { style: { ...patternStyle, ...animatedStyle } })
   ] });
@@ -7339,7 +7339,7 @@ var DotsPattern = ({
 var dots_default = DotsPattern;
 
 // src/components/backgrounds/variants/Patterns/variants/lines.tsx
-var import_remotion50 = require("remotion");
+var import_remotion51 = require("remotion");
 var import_jsx_runtime48 = require("react/jsx-runtime");
 var LinesPattern = ({
   primaryColor,
@@ -7352,7 +7352,7 @@ var LinesPattern = ({
   // 20 seconds at 30fps
   animationSpeed = 1
 }) => {
-  const frame = (0, import_remotion50.useCurrentFrame)();
+  const frame = (0, import_remotion51.useCurrentFrame)();
   const patternSvg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
       <line x1="0" y1="0" x2="20" y2="20" stroke="${primaryColor}" stroke-width="1" />
@@ -7416,7 +7416,7 @@ var LinesPattern = ({
     default:
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_remotion50.AbsoluteFill, { style: { zIndex: -1 }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_remotion51.AbsoluteFill, { style: { zIndex: -1 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { style: backgroundStyle }),
     /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { style: { ...patternStyle, ...animatedStyle } })
   ] });
@@ -7424,7 +7424,7 @@ var LinesPattern = ({
 var lines_default = LinesPattern;
 
 // src/components/backgrounds/variants/Patterns/variants/grid.tsx
-var import_remotion51 = require("remotion");
+var import_remotion52 = require("remotion");
 var import_jsx_runtime49 = require("react/jsx-runtime");
 var GridPattern = ({
   primaryColor,
@@ -7437,7 +7437,7 @@ var GridPattern = ({
   // 20 seconds at 30fps
   animationSpeed = 1
 }) => {
-  const frame = (0, import_remotion51.useCurrentFrame)();
+  const frame = (0, import_remotion52.useCurrentFrame)();
   const patternSvg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
       <rect width="20" height="20" fill="none" stroke="${primaryColor}" stroke-width="1" />
@@ -7501,7 +7501,7 @@ var GridPattern = ({
     default:
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_remotion51.AbsoluteFill, { style: { zIndex: -1 }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_remotion52.AbsoluteFill, { style: { zIndex: -1 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", { style: backgroundStyle }),
     /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", { style: { ...patternStyle, ...animatedStyle } })
   ] });
@@ -7509,7 +7509,7 @@ var GridPattern = ({
 var grid_default = GridPattern;
 
 // src/components/backgrounds/variants/Patterns/variants/CrosshatchPattern.tsx
-var import_remotion52 = require("remotion");
+var import_remotion53 = require("remotion");
 var import_jsx_runtime50 = require("react/jsx-runtime");
 var CrosshatchPattern = ({
   primaryColor,
@@ -7522,7 +7522,7 @@ var CrosshatchPattern = ({
   // 20 seconds at 30fps
   animationSpeed = 1
 }) => {
-  const frame = (0, import_remotion52.useCurrentFrame)();
+  const frame = (0, import_remotion53.useCurrentFrame)();
   const patternSvg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
       <line x1="0" y1="0" x2="20" y2="20" stroke="${primaryColor}" stroke-width="1" />
@@ -7587,7 +7587,7 @@ var CrosshatchPattern = ({
     default:
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(import_remotion52.AbsoluteFill, { style: { zIndex: -1 }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(import_remotion53.AbsoluteFill, { style: { zIndex: -1 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { style: backgroundStyle }),
     /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { style: { ...patternStyle, ...animatedStyle } })
   ] });
@@ -7595,7 +7595,7 @@ var CrosshatchPattern = ({
 var CrosshatchPattern_default = CrosshatchPattern;
 
 // src/components/backgrounds/variants/Patterns/variants/TrianglesPattern.tsx
-var import_remotion53 = require("remotion");
+var import_remotion54 = require("remotion");
 var import_jsx_runtime51 = require("react/jsx-runtime");
 var TrianglesPattern = ({
   primaryColor,
@@ -7608,7 +7608,7 @@ var TrianglesPattern = ({
   // 20 seconds at 30fps
   animationSpeed = 1
 }) => {
-  const frame = (0, import_remotion53.useCurrentFrame)();
+  const frame = (0, import_remotion54.useCurrentFrame)();
   const patternSvg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
       <polygon points="15,0 30,30 0,30" fill="none" stroke="${primaryColor}" stroke-width="1" />
@@ -7672,7 +7672,7 @@ var TrianglesPattern = ({
     default:
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_remotion53.AbsoluteFill, { style: { zIndex: -1 }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_remotion54.AbsoluteFill, { style: { zIndex: -1 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", { style: backgroundStyle }),
     /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", { style: { ...patternStyle, ...animatedStyle } })
   ] });
@@ -7680,7 +7680,7 @@ var TrianglesPattern = ({
 var TrianglesPattern_default = TrianglesPattern;
 
 // src/components/backgrounds/variants/Patterns/variants/ChevronPattern.tsx
-var import_remotion54 = require("remotion");
+var import_remotion55 = require("remotion");
 var import_jsx_runtime52 = require("react/jsx-runtime");
 var ChevronPattern = ({
   primaryColor,
@@ -7693,7 +7693,7 @@ var ChevronPattern = ({
   // 20 seconds at 30fps
   animationSpeed = 1
 }) => {
-  const frame = (0, import_remotion54.useCurrentFrame)();
+  const frame = (0, import_remotion55.useCurrentFrame)();
   const patternSvg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
       <path d="M0,20 L20,0 L40,20 L20,40 Z" fill="none" stroke="${primaryColor}" stroke-width="1" />
@@ -7757,7 +7757,7 @@ var ChevronPattern = ({
     default:
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(import_remotion54.AbsoluteFill, { style: { zIndex: -1 }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(import_remotion55.AbsoluteFill, { style: { zIndex: -1 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { style: backgroundStyle }),
     /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { style: { ...patternStyle, ...animatedStyle } })
   ] });
@@ -7810,7 +7810,7 @@ var PatternBackground = ({
     }
   };
   return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
-    import_remotion55.AbsoluteFill,
+    import_remotion56.AbsoluteFill,
     {
       className: `pattern-background pattern-${patternType} ${className}`,
       style: {
@@ -7823,10 +7823,10 @@ var PatternBackground = ({
 
 // src/components/backgrounds/variants/Particles/variants/DotsRenderer.tsx
 var import_react13 = __toESM(require("react"));
-var import_remotion57 = require("remotion");
+var import_remotion58 = require("remotion");
 
 // src/components/backgrounds/variants/Particles/utils.ts
-var import_remotion56 = require("remotion");
+var import_remotion57 = require("remotion");
 function generateParticles({
   count,
   size,
@@ -7839,13 +7839,13 @@ function generateParticles({
     let particleSize;
     if (Array.isArray(size)) {
       const [min, max] = size;
-      particleSize = min + (0, import_remotion56.random)(`size-${i}`) * (max - min);
+      particleSize = min + (0, import_remotion57.random)(`size-${i}`) * (max - min);
     } else {
       particleSize = size;
     }
     let particleColor;
     if (Array.isArray(color)) {
-      const index = Math.floor((0, import_remotion56.random)(`color-index-${i}`) * color.length);
+      const index = Math.floor((0, import_remotion57.random)(`color-index-${i}`) * color.length);
       particleColor = color[index];
     } else {
       particleColor = color;
@@ -7866,18 +7866,18 @@ function generateParticles({
         break;
       case "random":
       default:
-        angle = (0, import_remotion56.random)(`angle-${i}`) * Math.PI * 2;
+        angle = (0, import_remotion57.random)(`angle-${i}`) * Math.PI * 2;
         break;
     }
     particles.push({
       id: i,
-      x: (0, import_remotion56.random)(`x-pos-${i}`) * 100,
+      x: (0, import_remotion57.random)(`x-pos-${i}`) * 100,
       // Position as percentage of container width
-      y: (0, import_remotion56.random)(`y-pos-${i}`) * 100,
+      y: (0, import_remotion57.random)(`y-pos-${i}`) * 100,
       // Position as percentage of container height
       size: particleSize,
       color: particleColor,
-      speed: speed * (0.5 + (0, import_remotion56.random)(`speed-offset-${i}`)),
+      speed: speed * (0.5 + (0, import_remotion57.random)(`speed-offset-${i}`)),
       // Add some randomness to speed
       angle
     });
@@ -7912,7 +7912,7 @@ var DotsParticles = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion57.useCurrentFrame)();
+  const frame = (0, import_remotion58.useCurrentFrame)();
   const particles = import_react13.default.useMemo(() => {
     return generateParticles({
       count: particleCount,
@@ -7926,7 +7926,7 @@ var DotsParticles = ({
     return updateParticlePositions(particles, frame);
   }, [particles, frame]);
   return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-    import_remotion57.AbsoluteFill,
+    import_remotion58.AbsoluteFill,
     {
       className: `bg-particle bg-particle-dots ${className}`,
       style: {
@@ -7957,7 +7957,7 @@ var DotsRenderer_default = DotsParticles;
 
 // src/components/backgrounds/variants/Particles/variants/LinesRenderer.tsx
 var import_react14 = __toESM(require("react"));
-var import_remotion58 = require("remotion");
+var import_remotion59 = require("remotion");
 var import_jsx_runtime55 = require("react/jsx-runtime");
 var LinesParticles = ({
   particleSize = 2,
@@ -7968,7 +7968,7 @@ var LinesParticles = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion58.useCurrentFrame)();
+  const frame = (0, import_remotion59.useCurrentFrame)();
   const { selectedPalette } = useThemeContext();
   const particles = import_react14.default.useMemo(() => {
     return generateParticles({
@@ -7989,7 +7989,7 @@ var LinesParticles = ({
     return updateParticlePositions(particles, frame);
   }, [particles, frame]);
   return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
-    import_remotion58.AbsoluteFill,
+    import_remotion59.AbsoluteFill,
     {
       className: `bg-particle bg-particle-lines ${className}`,
       style: {
@@ -8029,7 +8029,7 @@ var LinesRenderer_default = LinesParticles;
 
 // src/components/backgrounds/variants/Particles/variants/BubblesRenderer.tsx
 var import_react15 = __toESM(require("react"));
-var import_remotion59 = require("remotion");
+var import_remotion60 = require("remotion");
 var import_jsx_runtime56 = require("react/jsx-runtime");
 var BubblesParticles = ({
   particleColor = "#ffffff",
@@ -8041,7 +8041,7 @@ var BubblesParticles = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion59.useCurrentFrame)();
+  const frame = (0, import_remotion60.useCurrentFrame)();
   const particles = import_react15.default.useMemo(() => {
     return generateParticles({
       count: particleCount,
@@ -8055,7 +8055,7 @@ var BubblesParticles = ({
     return updateParticlePositions(particles, frame);
   }, [particles, frame]);
   return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-    import_remotion59.AbsoluteFill,
+    import_remotion60.AbsoluteFill,
     {
       className: `bg-particle bg-particle-bubbles ${className}`,
       style: {
@@ -8088,7 +8088,7 @@ var BubblesRenderer_default = BubblesParticles;
 
 // src/components/backgrounds/variants/Particles/variants/SnowRenderer.tsx
 var import_react16 = __toESM(require("react"));
-var import_remotion60 = require("remotion");
+var import_remotion61 = require("remotion");
 var import_jsx_runtime57 = require("react/jsx-runtime");
 var SnowParticles = ({
   particleColor = "#ffffff",
@@ -8100,7 +8100,7 @@ var SnowParticles = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion60.useCurrentFrame)();
+  const frame = (0, import_remotion61.useCurrentFrame)();
   const particles = import_react16.default.useMemo(() => {
     return generateParticles({
       count: particleCount,
@@ -8114,7 +8114,7 @@ var SnowParticles = ({
     return updateParticlePositions(particles, frame);
   }, [particles, frame]);
   return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
-    import_remotion60.AbsoluteFill,
+    import_remotion61.AbsoluteFill,
     {
       className: `bg-particle bg-particle-snow ${className}`,
       style: {
@@ -8147,7 +8147,7 @@ var SnowRenderer_default = SnowParticles;
 
 // src/components/backgrounds/variants/Particles/variants/ConfettiRenderer.tsx
 var import_react17 = __toESM(require("react"));
-var import_remotion61 = require("remotion");
+var import_remotion62 = require("remotion");
 var import_jsx_runtime58 = require("react/jsx-runtime");
 var ConfettiParticles = ({
   particleColor = ["#ff4d4d", "#4dff4d", "#4d4dff", "#ffff4d", "#ff4dff"],
@@ -8159,7 +8159,7 @@ var ConfettiParticles = ({
   className = "",
   style = {}
 }) => {
-  const frame = (0, import_remotion61.useCurrentFrame)();
+  const frame = (0, import_remotion62.useCurrentFrame)();
   const particles = import_react17.default.useMemo(() => {
     return generateParticles({
       count: particleCount,
@@ -8173,7 +8173,7 @@ var ConfettiParticles = ({
     return updateParticlePositions(particles, frame);
   }, [particles, frame]);
   return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
-    import_remotion61.AbsoluteFill,
+    import_remotion62.AbsoluteFill,
     {
       className: `bg-particle bg-particle-confetti ${className}`,
       style: {
@@ -8236,7 +8236,7 @@ var ParticleBackground = () => {
 var Particles_default = ParticleBackground;
 
 // src/components/backgrounds/variants/Textures/TextureBackground.tsx
-var import_remotion62 = require("remotion");
+var import_remotion63 = require("remotion");
 var import_jsx_runtime60 = require("react/jsx-runtime");
 var isUrlLike = (val) => !!val && /^(https?:)?\/\//i.test(val);
 var resolveTextureSrc = ({
@@ -8248,7 +8248,7 @@ var resolveTextureSrc = ({
   if (src && src.length > 0) return src;
   if (!name || name.length === 0) return "";
   if (isUrlLike(name) || name.startsWith("/")) return name;
-  return (0, import_remotion62.staticFile)(`/textures/${name}`);
+  return (0, import_remotion63.staticFile)(`/textures/${name}`);
 };
 var mapDirection2 = (dir) => {
   if (!dir) return "to right";
@@ -8318,8 +8318,8 @@ var TextureBackground = ({
     opacity: overlayOpacity,
     mixBlendMode: overlayBlend
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(import_remotion62.AbsoluteFill, { className: `bg-texture ${className}`, children: [
-    resolvedSrc ? /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(import_remotion62.AbsoluteFill, { style: { opacity: 0, pointerEvents: "none" }, children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(import_remotion62.Img, { src: resolvedSrc, style: { width: "100%", height: "100%" } }) }) : null,
+  return /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(import_remotion63.AbsoluteFill, { className: `bg-texture ${className}`, children: [
+    resolvedSrc ? /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(import_remotion63.AbsoluteFill, { style: { opacity: 0, pointerEvents: "none" }, children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(import_remotion63.Img, { src: resolvedSrc, style: { width: "100%", height: "100%" } }) }) : null,
     /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
       "div",
       {
@@ -8484,7 +8484,7 @@ var BasicBackground = () => {
 };
 
 // src/components/layout/screen/OneColumn.tsx
-var import_remotion94 = require("remotion");
+var import_remotion95 = require("remotion");
 
 // src/core/utils/compositionMapping.ts
 var datasetToCompositionMap = {
@@ -8674,7 +8674,7 @@ var header_default = TableHeader;
 
 // src/components/containers/AnimatedContainer.tsx
 var import_react18 = require("react");
-var import_remotion71 = require("remotion");
+var import_remotion72 = require("remotion");
 
 // src/core/utils/classNames.ts
 function classNames(...classes) {
@@ -8719,7 +8719,7 @@ function mergeWithPriority(defaultClasses, priorityClasses) {
 }
 
 // src/components/containers/animations/animationUtils.ts
-var import_remotion63 = require("remotion");
+var import_remotion64 = require("remotion");
 var normalizeContainerAnimation = (animation, delay = 0, duration = 30, easing = { type: "inOut", base: "ease" }) => {
   var _a, _b, _c;
   if (typeof animation === "string") {
@@ -8739,10 +8739,10 @@ var normalizeContainerAnimation = (animation, delay = 0, duration = 30, easing =
 };
 
 // src/components/containers/animations/utils/fadeAnimations.ts
-var import_remotion64 = require("remotion");
+var import_remotion65 = require("remotion");
 var fadeIn3 = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const opacity = (0, import_remotion64.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const opacity = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -8753,7 +8753,7 @@ var fadeIn3 = (frame, startFrame, endFrame, config) => {
 };
 var fadeOut3 = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const opacity = (0, import_remotion64.interpolate)(frame, [startFrame, endFrame], [1, 0], {
+  const opacity = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -8764,17 +8764,17 @@ var fadeOut3 = (frame, startFrame, endFrame, config) => {
 };
 
 // src/components/containers/animations/utils/slideAnimations.ts
-var import_remotion65 = require("remotion");
+var import_remotion66 = require("remotion");
 var slideInLeft3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -8793,12 +8793,12 @@ var slideInRight3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -8817,12 +8817,12 @@ var slideInTop2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -8841,12 +8841,12 @@ var slideInBottom2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -8865,12 +8865,12 @@ var slideOutLeft3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -8889,12 +8889,12 @@ var slideOutRight3 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -8913,12 +8913,12 @@ var slideOutTop2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -8937,12 +8937,12 @@ var slideOutBottom2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const distance2 = ((_a = config.custom) == null ? void 0 : _a.distance) || "100%";
-  const progress = (0, import_remotion65.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion65.interpolate)(
+  const opacity = (0, import_remotion66.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -8959,17 +8959,17 @@ var slideOutBottom2 = (frame, startFrame, endFrame, config) => {
 };
 
 // src/components/containers/animations/utils/scaleAnimations.ts
-var import_remotion66 = require("remotion");
+var import_remotion67 = require("remotion");
 var scaleIn2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const startScale = typeof ((_a = config.custom) == null ? void 0 : _a.startScale) === "number" ? config.custom.startScale : 0;
-  const scale = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [startScale, 1], {
+  const scale = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [startScale, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion66.interpolate)(
+  const opacity = (0, import_remotion67.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -8987,12 +8987,12 @@ var scaleOut = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const endScale = typeof ((_a = config.custom) == null ? void 0 : _a.endScale) === "number" ? config.custom.endScale : 0;
-  const scale = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [1, endScale], {
+  const scale = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, endScale], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion66.interpolate)(
+  const opacity = (0, import_remotion67.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -9010,12 +9010,12 @@ var scaleInX = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const startScale = typeof ((_a = config.custom) == null ? void 0 : _a.startScale) === "number" ? config.custom.startScale : 0;
-  const scaleX = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [startScale, 1], {
+  const scaleX = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [startScale, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion66.interpolate)(
+  const opacity = (0, import_remotion67.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -9033,12 +9033,12 @@ var scaleInY = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const startScale = typeof ((_a = config.custom) == null ? void 0 : _a.startScale) === "number" ? config.custom.startScale : 0;
-  const scaleY = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [startScale, 1], {
+  const scaleY = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [startScale, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion66.interpolate)(
+  const opacity = (0, import_remotion67.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -9056,12 +9056,12 @@ var scaleOutX = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const endScale = typeof ((_a = config.custom) == null ? void 0 : _a.endScale) === "number" ? config.custom.endScale : 0;
-  const scaleX = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [1, endScale], {
+  const scaleX = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, endScale], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion66.interpolate)(
+  const opacity = (0, import_remotion67.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -9079,12 +9079,12 @@ var scaleOutY2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
   const endScale = typeof ((_a = config.custom) == null ? void 0 : _a.endScale) === "number" ? config.custom.endScale : 0;
-  const scaleY = (0, import_remotion66.interpolate)(frame, [startFrame, endFrame], [1, endScale], {
+  const scaleY = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, endScale], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
   });
-  const opacity = (0, import_remotion66.interpolate)(
+  const opacity = (0, import_remotion67.interpolate)(
     frame,
     [startFrame + (endFrame - startFrame) * 0.5, endFrame],
     [1, 0],
@@ -9100,10 +9100,10 @@ var scaleOutY2 = (frame, startFrame, endFrame, config) => {
 };
 
 // src/components/containers/animations/utils/specialAnimations.ts
-var import_remotion67 = require("remotion");
+var import_remotion68 = require("remotion");
 var revealLeft = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleX = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const scaleX = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9116,7 +9116,7 @@ var revealLeft = (frame, startFrame, endFrame, config) => {
 };
 var revealRight = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleX = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const scaleX = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9129,7 +9129,7 @@ var revealRight = (frame, startFrame, endFrame, config) => {
 };
 var revealTop = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleY = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const scaleY = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9142,7 +9142,7 @@ var revealTop = (frame, startFrame, endFrame, config) => {
 };
 var revealBottom = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleY = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const scaleY = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9155,7 +9155,7 @@ var revealBottom = (frame, startFrame, endFrame, config) => {
 };
 var collapseLeft = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleX = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, 0], {
+  const scaleX = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9169,7 +9169,7 @@ var collapseLeft = (frame, startFrame, endFrame, config) => {
 };
 var collapseRight = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleX = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, 0], {
+  const scaleX = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9183,7 +9183,7 @@ var collapseRight = (frame, startFrame, endFrame, config) => {
 };
 var collapseTop = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleY = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, 0], {
+  const scaleY = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9197,7 +9197,7 @@ var collapseTop = (frame, startFrame, endFrame, config) => {
 };
 var collapseBottom = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
-  const scaleY = (0, import_remotion67.interpolate)(frame, [startFrame, endFrame], [1, 0], {
+  const scaleY = (0, import_remotion68.interpolate)(frame, [startFrame, endFrame], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9211,7 +9211,7 @@ var collapseBottom = (frame, startFrame, endFrame, config) => {
 };
 
 // src/components/containers/animations/utils/springAnimations.ts
-var import_remotion68 = require("remotion");
+var import_remotion69 = require("remotion");
 var springIn = (frame, startFrame, endFrame, config, fps = 30) => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const springConfig = config.springConfig || {
@@ -9228,7 +9228,7 @@ var springIn = (frame, startFrame, endFrame, config, fps = 30) => {
   const includeOpacity = typeof ((_f = config.custom) == null ? void 0 : _f.includeOpacity) === "boolean" ? config.custom.includeOpacity : true;
   const distance2 = typeof ((_g = config.custom) == null ? void 0 : _g.distance) === "number" ? config.custom.distance : 100;
   const startAngle = typeof ((_h = config.custom) == null ? void 0 : _h.startAngle) === "number" ? config.custom.startAngle : -45;
-  const springValue = (0, import_remotion68.spring)({
+  const springValue = (0, import_remotion69.spring)({
     frame: frame - startFrame,
     fps,
     from,
@@ -9246,31 +9246,31 @@ var springIn = (frame, startFrame, endFrame, config, fps = 30) => {
   let scale, scaleX, scaleY, translateX, translateY, rotate2, defaultScale;
   switch (transformProperty) {
     case "scale":
-      scale = (0, import_remotion68.interpolate)(springValue, [from, to], [startScale, 1]);
+      scale = (0, import_remotion69.interpolate)(springValue, [from, to], [startScale, 1]);
       transform = `scale(${scale})`;
       break;
     case "scaleX":
-      scaleX = (0, import_remotion68.interpolate)(springValue, [from, to], [startScale, 1]);
+      scaleX = (0, import_remotion69.interpolate)(springValue, [from, to], [startScale, 1]);
       transform = `scaleX(${scaleX})`;
       break;
     case "scaleY":
-      scaleY = (0, import_remotion68.interpolate)(springValue, [from, to], [startScale, 1]);
+      scaleY = (0, import_remotion69.interpolate)(springValue, [from, to], [startScale, 1]);
       transform = `scaleY(${scaleY})`;
       break;
     case "translateX":
-      translateX = (0, import_remotion68.interpolate)(springValue, [from, to], [distance2, 0]);
+      translateX = (0, import_remotion69.interpolate)(springValue, [from, to], [distance2, 0]);
       transform = `translateX(${translateX}px)`;
       break;
     case "translateY":
-      translateY = (0, import_remotion68.interpolate)(springValue, [from, to], [distance2, 0]);
+      translateY = (0, import_remotion69.interpolate)(springValue, [from, to], [distance2, 0]);
       transform = `translateY(${translateY}px)`;
       break;
     case "rotate":
-      rotate2 = (0, import_remotion68.interpolate)(springValue, [from, to], [startAngle, 0]);
+      rotate2 = (0, import_remotion69.interpolate)(springValue, [from, to], [startAngle, 0]);
       transform = `rotate(${rotate2}deg)`;
       break;
     default:
-      defaultScale = (0, import_remotion68.interpolate)(springValue, [from, to], [startScale, 1]);
+      defaultScale = (0, import_remotion69.interpolate)(springValue, [from, to], [startScale, 1]);
       transform = `scale(${defaultScale})`;
   }
   const style = {
@@ -9297,7 +9297,7 @@ var springOut = (frame, startFrame, endFrame, config, fps = 30) => {
   const transformOrigin = typeof ((_e = config.custom) == null ? void 0 : _e.transformOrigin) === "string" ? config.custom.transformOrigin : "center";
   const includeOpacity = typeof ((_f = config.custom) == null ? void 0 : _f.includeOpacity) === "boolean" ? config.custom.includeOpacity : true;
   const reverse = typeof ((_g = config.custom) == null ? void 0 : _g.reverse) === "boolean" ? config.custom.reverse : false;
-  const springValue = (0, import_remotion68.spring)({
+  const springValue = (0, import_remotion69.spring)({
     frame: frame - startFrame,
     fps,
     from: reverse ? to : from,
@@ -9317,27 +9317,27 @@ var springOut = (frame, startFrame, endFrame, config, fps = 30) => {
   let scale, scaleX, scaleY, translateX, translateY, rotate2, defaultScale;
   switch (transformProperty) {
     case "scale":
-      scale = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
+      scale = (0, import_remotion69.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
       transform = `scale(${scale})`;
       break;
     case "scaleX":
-      scaleX = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
+      scaleX = (0, import_remotion69.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
       transform = `scaleX(${scaleX})`;
       break;
     case "scaleY":
-      scaleY = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
+      scaleY = (0, import_remotion69.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
       transform = `scaleY(${scaleY})`;
       break;
     case "translateX":
-      translateX = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [0, distance2]);
+      translateX = (0, import_remotion69.interpolate)(exitSpringValue, [0, 1], [0, distance2]);
       transform = `translateX(${translateX}px)`;
       break;
     case "translateY":
-      translateY = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [0, distance2]);
+      translateY = (0, import_remotion69.interpolate)(exitSpringValue, [0, 1], [0, distance2]);
       transform = `translateY(${translateY}px)`;
       break;
     case "rotate":
-      rotate2 = (0, import_remotion68.interpolate)(
+      rotate2 = (0, import_remotion69.interpolate)(
         exitSpringValue,
         [0, 1],
         [
@@ -9348,7 +9348,7 @@ var springOut = (frame, startFrame, endFrame, config, fps = 30) => {
       transform = `rotate(${rotate2}deg)`;
       break;
     default:
-      defaultScale = (0, import_remotion68.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
+      defaultScale = (0, import_remotion69.interpolate)(exitSpringValue, [0, 1], [1, endScale]);
       transform = `scale(${defaultScale})`;
   }
   const style = {
@@ -9422,13 +9422,13 @@ var springRotate = (frame, startFrame, endFrame, config, fps = 30) => {
 };
 
 // src/components/containers/animations/utils/perspectiveAnimations.ts
-var import_remotion69 = require("remotion");
+var import_remotion70 = require("remotion");
 var flipX2 = (frame, startFrame, endFrame, config) => {
   var _a, _b, _c;
   const easingFn = getImageEasingFunction(config.easing);
   const startRotation = typeof ((_a = config.custom) == null ? void 0 : _a.startRotation) === "number" ? config.custom.startRotation : -90;
   const endRotation = typeof ((_b = config.custom) == null ? void 0 : _b.endRotation) === "number" ? config.custom.endRotation : 0;
-  const rotation = (0, import_remotion69.interpolate)(
+  const rotation = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startRotation, endRotation],
@@ -9438,7 +9438,7 @@ var flipX2 = (frame, startFrame, endFrame, config) => {
       easing: easingFn
     }
   );
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -9459,7 +9459,7 @@ var flipY2 = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
   const startRotation = typeof ((_a = config.custom) == null ? void 0 : _a.startRotation) === "number" ? config.custom.startRotation : -90;
   const endRotation = typeof ((_b = config.custom) == null ? void 0 : _b.endRotation) === "number" ? config.custom.endRotation : 0;
-  const rotation = (0, import_remotion69.interpolate)(
+  const rotation = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startRotation, endRotation],
@@ -9469,7 +9469,7 @@ var flipY2 = (frame, startFrame, endFrame, config) => {
       easing: easingFn
     }
   );
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -9493,7 +9493,7 @@ var rotate3D = (frame, startFrame, endFrame, config) => {
   const xAxis = typeof ((_c = config.custom) == null ? void 0 : _c.xAxis) === "number" ? config.custom.xAxis : 1;
   const yAxis = typeof ((_d = config.custom) == null ? void 0 : _d.yAxis) === "number" ? config.custom.yAxis : 1;
   const zAxis = typeof ((_e = config.custom) == null ? void 0 : _e.zAxis) === "number" ? config.custom.zAxis : 0;
-  const angle = (0, import_remotion69.interpolate)(
+  const angle = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startAngle, endAngle],
@@ -9503,7 +9503,7 @@ var rotate3D = (frame, startFrame, endFrame, config) => {
       easing: easingFn
     }
   );
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -9521,13 +9521,13 @@ var rotate3D = (frame, startFrame, endFrame, config) => {
 };
 var swing2 = (frame, startFrame, endFrame, config) => {
   var _a, _b;
-  const progress = (0, import_remotion69.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion70.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp"
   });
   const amplitude = typeof ((_a = config.custom) == null ? void 0 : _a.amplitude) === "number" ? config.custom.amplitude : 30;
   const swingAngle = Math.sin(progress * Math.PI * 2) * amplitude * Math.exp(-progress * 3);
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.2],
     [0, 1],
@@ -9547,7 +9547,7 @@ var zoomPerspective2 = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
   const startScale = typeof ((_a = config.custom) == null ? void 0 : _a.startScale) === "number" ? config.custom.startScale : 0.5;
   const endScale = typeof ((_b = config.custom) == null ? void 0 : _b.endScale) === "number" ? config.custom.endScale : 1;
-  const scale = (0, import_remotion69.interpolate)(
+  const scale = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startScale, endScale],
@@ -9559,7 +9559,7 @@ var zoomPerspective2 = (frame, startFrame, endFrame, config) => {
   );
   const startPerspective = typeof ((_c = config.custom) == null ? void 0 : _c.startPerspective) === "number" ? config.custom.startPerspective : 500;
   const endPerspective = typeof ((_d = config.custom) == null ? void 0 : _d.endPerspective) === "number" ? config.custom.endPerspective : 1e3;
-  const perspective = (0, import_remotion69.interpolate)(
+  const perspective = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startPerspective, endPerspective],
@@ -9569,7 +9569,7 @@ var zoomPerspective2 = (frame, startFrame, endFrame, config) => {
       easing: easingFn
     }
   );
-  const zTranslation = (0, import_remotion69.interpolate)(
+  const zTranslation = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [(1 - startScale) * -100, 0],
@@ -9579,7 +9579,7 @@ var zoomPerspective2 = (frame, startFrame, endFrame, config) => {
       easing: easingFn
     }
   );
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.3],
     [0, 1],
@@ -9596,7 +9596,7 @@ var zoomPerspective2 = (frame, startFrame, endFrame, config) => {
 var glitch2 = (frame, startFrame, endFrame, config) => {
   var _a;
   const easingFn = getImageEasingFunction(config.easing);
-  const progress = (0, import_remotion69.interpolate)(frame, [startFrame, endFrame], [0, 1], {
+  const progress = (0, import_remotion70.interpolate)(frame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: easingFn
@@ -9605,7 +9605,7 @@ var glitch2 = (frame, startFrame, endFrame, config) => {
   const xOffset = Math.sin(frame * 0.1) * intensity * (1 - progress);
   const yOffset = Math.sin(frame * 0.2) * intensity * (1 - progress);
   const skewX = Math.sin(frame * 0.3) * 5 * (1 - progress);
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.3],
     [0, 1],
@@ -9626,7 +9626,7 @@ var blur = (frame, startFrame, endFrame, config) => {
   const easingFn = getImageEasingFunction(config.easing);
   const startBlur = typeof ((_a = config.custom) == null ? void 0 : _a.startBlur) === "number" ? config.custom.startBlur : 20;
   const endBlur = typeof ((_b = config.custom) == null ? void 0 : _b.endBlur) === "number" ? config.custom.endBlur : 0;
-  const blurAmount = (0, import_remotion69.interpolate)(
+  const blurAmount = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startBlur, endBlur],
@@ -9638,7 +9638,7 @@ var blur = (frame, startFrame, endFrame, config) => {
   );
   const startScale = typeof ((_c = config.custom) == null ? void 0 : _c.startScale) === "number" ? config.custom.startScale : 1.05;
   const endScale = typeof ((_d = config.custom) == null ? void 0 : _d.endScale) === "number" ? config.custom.endScale : 1;
-  const scale = (0, import_remotion69.interpolate)(
+  const scale = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, endFrame],
     [startScale, endScale],
@@ -9648,7 +9648,7 @@ var blur = (frame, startFrame, endFrame, config) => {
       easing: easingFn
     }
   );
-  const opacity = (0, import_remotion69.interpolate)(
+  const opacity = (0, import_remotion70.interpolate)(
     frame,
     [startFrame, startFrame + (endFrame - startFrame) * 0.5],
     [0, 1],
@@ -9665,10 +9665,10 @@ var blur = (frame, startFrame, endFrame, config) => {
 };
 
 // src/components/containers/animations/useAnimation.ts
-var import_remotion70 = require("remotion");
+var import_remotion71 = require("remotion");
 var useAnimation2 = (config, startFrame = 0) => {
-  const frame = (0, import_remotion70.useCurrentFrame)();
-  const { fps } = (0, import_remotion70.useVideoConfig)();
+  const frame = (0, import_remotion71.useCurrentFrame)();
+  const { fps } = (0, import_remotion71.useVideoConfig)();
   const defaultStyle = {};
   if (!config || config.type === "none") {
     return defaultStyle;
@@ -9957,8 +9957,8 @@ var AnimatedContainer = ({
   tabIndex
 }) => {
   const { selectedPalette } = useThemeContext();
-  const frame = (0, import_remotion71.useCurrentFrame)();
-  const { durationInFrames } = (0, import_remotion71.useVideoConfig)();
+  const frame = (0, import_remotion72.useCurrentFrame)();
+  const { durationInFrames } = (0, import_remotion72.useVideoConfig)();
   const animationConfig = (0, import_react18.useMemo)(
     () => normalizeContainerAnimation(
       animation,
@@ -10595,12 +10595,15 @@ var ladderTeamPoints_default = LadderTeamPoints;
 
 // src/compositions/cricket/ladder/layout/TableRowLayout.tsx
 var import_jsx_runtime74 = require("react/jsx-runtime");
+var STANDARD_LADDER_LOGO_MAX = 64;
 var StandardLadderRow = ({
   team,
   delay,
   bgColorClass,
   LadderRowHeight
 }) => {
+  const logoSize = Math.min(LadderRowHeight - 8, STANDARD_LADDER_LOGO_MAX);
+  const teamLogo = team.clubLogo || team.playHQLogo;
   return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)(
     "div",
     {
@@ -10611,14 +10614,27 @@ var StandardLadderRow = ({
       },
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "flex items-center mr-3 p-1", style: { width: "70%" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "w-16 flex-shrink-0 mr-4 overflow-hidden", children: team.clubLogo ? /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "rounded-full", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
-            TeamLogo_default,
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
+            "div",
             {
-              logo: team.clubLogo || team.playHQLogo,
-              teamName: team.teamName,
-              delay
+              className: "mr-4 flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full",
+              style: { width: logoSize, height: logoSize },
+              children: teamLogo ? /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
+                TeamLogo_default,
+                {
+                  logo: teamLogo,
+                  teamName: team.teamName,
+                  delay,
+                  size: logoSize,
+                  imgStyle: {
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain"
+                  }
+                }
+              ) : /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "h-full w-full rounded-full bg-gray-300/10" })
             }
-          ) }) : /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "w-16 h-16 bg-gray-300/10 rounded-full" }) }),
+          ),
           /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "flex-1 truncate", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(ladderTeamName_default, { value: team.teamName, delay }) })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "flex flex-1 justify-evenly", children: [
@@ -10978,10 +10994,10 @@ var LadderDisplayBasic = ({
 var display_Basic_default = LadderDisplayBasic;
 
 // src/compositions/cricket/ladder/modules/NoLadderData/no-data.tsx
-var import_remotion72 = require("remotion");
+var import_remotion73 = require("remotion");
 var import_jsx_runtime78 = require("react/jsx-runtime");
 var NoLadderData = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_remotion72.AbsoluteFill, { className: "flex justify-center items-center text-white font-sans", children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("h1", { className: "text-3xl", children: "No ladder data available" }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_remotion73.AbsoluteFill, { className: "flex justify-center items-center text-white font-sans", children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("h1", { className: "text-3xl", children: "No ladder data available" }) });
 };
 var no_data_default = NoLadderData;
 
@@ -13219,7 +13235,9 @@ var MetadataMedium = ({
   className,
   variant = DEFAULT_VARIANT,
   letterAnimation = DEFAULT_LETTER_ANIMATION,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamily = useFontFamily();
   return /* @__PURE__ */ (0, import_jsx_runtime105.jsx)(
@@ -13232,6 +13250,8 @@ var MetadataMedium = ({
       style,
       animation,
       letterAnimation,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -15540,7 +15560,9 @@ var ResultPlayerName = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamily = useFontFamily();
   return /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(
@@ -15553,6 +15575,8 @@ var ResultPlayerName = ({
       style,
       animation,
       letterAnimation: DEFAULT_LETTER_ANIMATION,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -16449,7 +16473,9 @@ var ResultTeamName = ({
   animation,
   className,
   variant = DEFAULT_VARIANT,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamily = useFontFamily();
   return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
@@ -16462,6 +16488,8 @@ var ResultTeamName = ({
       style,
       animation,
       letterAnimation: DEFAULT_LETTER_ANIMATION,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -16511,7 +16539,9 @@ var ResultScoreFirstInnings = ({
   className,
   variant = DEFAULT_VARIANT,
   fontFamily: fontFamilyOverride,
-  style
+  style,
+  exitAnimation,
+  exitFrame
 }) => {
   const fontFamilyFromTheme = useFontFamily();
   const fontFamily = fontFamilyOverride != null ? fontFamilyOverride : fontFamilyFromTheme;
@@ -16526,6 +16556,8 @@ var ResultScoreFirstInnings = ({
       style,
       animation,
       letterAnimation: DEFAULT_LETTER_ANIMATION,
+      exitAnimation,
+      exitFrame,
       children: value
     }
   );
@@ -18586,8 +18618,11 @@ var BroadcastProRoundedGlassPanel = ({
   className = "",
   style,
   glass: glassOverride,
-  surface = "panel"
+  surface = "panel",
+  animationDelay,
+  exitFrame
 }) => {
+  const { animations } = useAnimationContext();
   const {
     selectedPalette,
     layout,
@@ -18599,7 +18634,9 @@ var BroadcastProRoundedGlassPanel = ({
     broadcastProRoundedGlassOpacity,
     broadcastProRoundedTransparentLayers
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
+  const containerAnimation = animations.container.main.itemContainerInner;
+  const shouldAnimate = animationDelay !== void 0 || exitFrame !== void 0;
+  const panel = /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
     "div",
     {
       className: `overflow-hidden ${layout.borderRadius.container} ${className}`.trim(),
@@ -18612,16 +18649,139 @@ var BroadcastProRoundedGlassPanel = ({
       children
     }
   );
+  if (!shouldAnimate) {
+    return panel;
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
+    AnimatedContainer,
+    {
+      type: "full",
+      className: "h-full w-full",
+      backgroundColor: "none",
+      animation: containerAnimation.containerIn,
+      animationDelay: animationDelay != null ? animationDelay : 0,
+      exitAnimation: containerAnimation.containerOut,
+      exitFrame,
+      children: panel
+    }
+  );
 };
+
+// src/compositions/cricket/utils/broadcastProRounded/results/buildBroadcastProRoundedVerdictModel.ts
+var swapResultWord2 = (resultWord, lostReplacement = "Lost to", wonReplacement = "defeated") => {
+  const normalizedWord = resultWord.toLowerCase().trim();
+  if (normalizedWord === "lost") {
+    return lostReplacement;
+  }
+  if (normalizedWord === "won") {
+    return wonReplacement;
+  }
+  return resultWord;
+};
+var getLoserTeam2 = (summary) => summary.winner === summary.homeTeam ? summary.awayTeam : summary.homeTeam;
+var buildVerdictContextLine2 = (resultShort, summary) => {
+  const short = resultShort == null ? void 0 : resultShort.trim();
+  if (short) {
+    const wonByMatch = /won by (.+)$/i.exec(short);
+    if (wonByMatch) {
+      return `won by ${wonByMatch[1].trim()}`;
+    }
+    const defIndex = short.toLowerCase().indexOf(" def ");
+    if (defIndex >= 0) {
+      return short.slice(defIndex + 1).trim();
+    }
+  }
+  const loser = getLoserTeam2(summary);
+  const word = swapResultWord2(summary.resultWord);
+  return `${word} ${loser}`;
+};
+var buildCompactVerdictLine2 = (match) => {
+  var _a;
+  const short = (_a = match.resultShort) == null ? void 0 : _a.trim();
+  if (short) {
+    return short;
+  }
+  if (match.resultSummary) {
+    const { homeTeam, resultWord, winner } = match.resultSummary;
+    return `${homeTeam} ${resultWord} to ${winner}`;
+  }
+  return null;
+};
+var buildBroadcastProRoundedVerdictModel = (match) => {
+  var _a;
+  if (match.status === "Abandoned") {
+    return {
+      kind: "abandoned",
+      status: match.status,
+      result: ((_a = match.result) == null ? void 0 : _a.trim()) || void 0
+    };
+  }
+  if (match.resultSummary) {
+    return {
+      kind: "hero",
+      winner: match.resultSummary.winner,
+      contextLine: buildVerdictContextLine2(
+        match.resultShort,
+        match.resultSummary
+      )
+    };
+  }
+  const compactLine = buildCompactVerdictLine2(match);
+  if (compactLine) {
+    return {
+      kind: "compact",
+      line: compactLine
+    };
+  }
+  return null;
+};
+
+// src/compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers.ts
+var buildGradeLabel2 = (match) => {
+  const parts = [match.gradeName || match.type, match.round].filter(Boolean);
+  return parts.join(" \u2022 ");
+};
+var calculateBroadcastProRoundedResultDelays = (delay) => {
+  const baseDelay = delay;
+  const metaDelay = baseDelay + 4;
+  const homeTeamDelay = metaDelay + 6;
+  const homeStatsDelay = homeTeamDelay + 8;
+  const awayTeamDelay = homeStatsDelay + 8;
+  const awayStatsDelay = awayTeamDelay + 8;
+  const verdictDelay = awayStatsDelay + 6;
+  return {
+    baseDelay,
+    metaDelay,
+    /** @deprecated Prefer homeStatsDelay / awayStatsDelay */
+    statsDelay: homeStatsDelay,
+    /** @deprecated Prefer verdictDelay */
+    headerDelay: verdictDelay,
+    homeTeamDelay,
+    homeStatsDelay,
+    awayTeamDelay,
+    awayStatsDelay,
+    verdictDelay
+  };
+};
+var RESULT_STAT_CELL_STAGGER = 5;
+var RESULT_TEAM_ROW_NESTED = {
+  crest: 3,
+  name: 6,
+  score: 9
+};
+var RESULT_CONTAINER_COPY_LEAD = 3;
+var RESULT_PANEL_CONTAINER_DELAY = 2;
+var resultContainerDelay = (copyDelay) => Math.max(0, copyDelay - RESULT_CONTAINER_COPY_LEAD);
+var calculateBroadcastProRoundedResultExitFrame = (fpsScorecard) => fpsScorecard ? fpsScorecard - 20 : 280;
 
 // src/templates/variants/broadcastProRounded/components/stat/BroadcastProRoundedStatMatrixResultCell.tsx
 var import_jsx_runtime165 = require("react/jsx-runtime");
 var SINGLE_CELL_CLASS2 = "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
-var SINGLE_PLAYER_NAME_CLASS2 = "!text-4xl font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
-var SINGLE_STAT_PRIMARY_CLASS2 = "font-teko !text-6xl font-bold !tracking-wide !leading-none";
-var SINGLE_STAT_SUFFIX_CLASS2 = "font-teko !text-3xl font-normal !tracking-wider !leading-none opacity-70";
-var LIST_STAT_PRIMARY_CLASS2 = "font-teko !text-3xl font-bold !tracking-tight !leading-tight";
-var LIST_STAT_SUFFIX_CLASS2 = "font-teko !text-2xl font-normal !tracking-tight !leading-tight opacity-70";
+var SINGLE_PLAYER_NAME_CLASS2 = "!text-[38px] font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
+var SINGLE_STAT_PRIMARY_CLASS2 = "font-teko !text-[62px] !font-normal !tracking-wide !leading-none";
+var SINGLE_STAT_SUFFIX_CLASS2 = "font-teko !text-[32px] font-normal !tracking-wider !leading-none opacity-70";
+var LIST_STAT_PRIMARY_CLASS2 = "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
+var LIST_STAT_SUFFIX_CLASS2 = "font-teko !text-[26px] font-normal !tracking-tight !leading-tight opacity-70";
 var BroadcastProRoundedStatMatrixResultCell = ({
   playerName,
   statValue,
@@ -18630,7 +18790,9 @@ var BroadcastProRoundedStatMatrixResultCell = ({
   accentColor,
   glass,
   className = "",
-  tier = "list"
+  tier = "list",
+  exitAnimation,
+  exitFrame
 }) => {
   var _a, _b, _c, _d;
   const { animations } = useAnimationContext();
@@ -18659,7 +18821,9 @@ var BroadcastProRoundedStatMatrixResultCell = ({
     BroadcastProRoundedStatMatrixCompact,
     {
       value: statValue,
-      animation: { ...copyIn, delay: delay + 2 },
+      animation: { ...copyIn, delay: delay + 3 },
+      exitAnimation,
+      exitFrame,
       colorVariant: highlight ? "onContainerTitle" : "onContainerCopy",
       fontFamily: headingFont,
       className: isSingle ? SINGLE_STAT_PRIMARY_CLASS2 : LIST_STAT_PRIMARY_CLASS2,
@@ -18677,6 +18841,8 @@ var BroadcastProRoundedStatMatrixResultCell = ({
     {
       value: playerName,
       animation: { ...copyIn, delay },
+      exitAnimation,
+      exitFrame,
       variant: "onContainerCopy",
       className: resolvedNameClass,
       style: { color: text.copy }
@@ -18687,6 +18853,8 @@ var BroadcastProRoundedStatMatrixResultCell = ({
     {
       glass,
       className: `${cellClass} ${isSingle ? SINGLE_CELL_CLASS2 : ""} ${className}`.trim(),
+      animationDelay: resultContainerDelay(delay),
+      exitFrame,
       children: isSingle ? /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)(import_jsx_runtime165.Fragment, { children: [
         statBlock,
         nameBlock
@@ -18700,7 +18868,16 @@ var BroadcastProRoundedStatMatrixResultCell = ({
 
 // src/templates/variants/broadcastProRounded/components/stat/BroadcastProRoundedStatMatrixResultGrid.tsx
 var import_jsx_runtime166 = require("react/jsx-runtime");
-var BroadcastProRoundedStatMatrixResultGrid = ({ items, delay, accentColor, glass, className = "", tier = "list" }) => {
+var BroadcastProRoundedStatMatrixResultGrid = ({
+  items,
+  delay,
+  accentColor,
+  glass,
+  className = "",
+  tier = "list",
+  exitAnimation,
+  exitFrame
+}) => {
   const { componentStyles } = useThemeContext();
   const gridClass = csClass2(
     componentStyles,
@@ -18714,10 +18891,12 @@ var BroadcastProRoundedStatMatrixResultGrid = ({ items, delay, accentColor, glas
     BroadcastProRoundedStatMatrixResultCell,
     {
       ...item,
-      delay: delay + index * 2,
+      delay: delay + index * RESULT_STAT_CELL_STAGGER,
       accentColor,
       glass,
-      tier
+      tier,
+      exitAnimation,
+      exitFrame
     },
     `${item.playerName}-${item.statValue}-${index}`
   )) });
@@ -18926,91 +19105,6 @@ var buildBroadcastProRoundedResultStatItems = (team, maxItems = 3) => {
     });
   }
   return items;
-};
-
-// src/compositions/cricket/utils/broadcastProRounded/results/buildBroadcastProRoundedVerdictModel.ts
-var swapResultWord2 = (resultWord, lostReplacement = "Lost to", wonReplacement = "defeated") => {
-  const normalizedWord = resultWord.toLowerCase().trim();
-  if (normalizedWord === "lost") {
-    return lostReplacement;
-  }
-  if (normalizedWord === "won") {
-    return wonReplacement;
-  }
-  return resultWord;
-};
-var getLoserTeam2 = (summary) => summary.winner === summary.homeTeam ? summary.awayTeam : summary.homeTeam;
-var buildVerdictContextLine2 = (resultShort, summary) => {
-  const short = resultShort == null ? void 0 : resultShort.trim();
-  if (short) {
-    const wonByMatch = /won by (.+)$/i.exec(short);
-    if (wonByMatch) {
-      return `won by ${wonByMatch[1].trim()}`;
-    }
-    const defIndex = short.toLowerCase().indexOf(" def ");
-    if (defIndex >= 0) {
-      return short.slice(defIndex + 1).trim();
-    }
-  }
-  const loser = getLoserTeam2(summary);
-  const word = swapResultWord2(summary.resultWord);
-  return `${word} ${loser}`;
-};
-var buildCompactVerdictLine2 = (match) => {
-  var _a;
-  const short = (_a = match.resultShort) == null ? void 0 : _a.trim();
-  if (short) {
-    return short;
-  }
-  if (match.resultSummary) {
-    const { homeTeam, resultWord, winner } = match.resultSummary;
-    return `${homeTeam} ${resultWord} to ${winner}`;
-  }
-  return null;
-};
-var buildBroadcastProRoundedVerdictModel = (match) => {
-  var _a;
-  if (match.status === "Abandoned") {
-    return {
-      kind: "abandoned",
-      status: match.status,
-      result: ((_a = match.result) == null ? void 0 : _a.trim()) || void 0
-    };
-  }
-  if (match.resultSummary) {
-    return {
-      kind: "hero",
-      winner: match.resultSummary.winner,
-      contextLine: buildVerdictContextLine2(
-        match.resultShort,
-        match.resultSummary
-      )
-    };
-  }
-  const compactLine = buildCompactVerdictLine2(match);
-  if (compactLine) {
-    return {
-      kind: "compact",
-      line: compactLine
-    };
-  }
-  return null;
-};
-
-// src/compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers.ts
-var buildGradeLabel2 = (match) => {
-  const parts = [match.gradeName || match.type, match.round].filter(Boolean);
-  return parts.join(" \u2022 ");
-};
-var calculateBroadcastProRoundedResultDelays = (delay) => {
-  const baseDelay = delay;
-  const statsDelay = baseDelay + 4;
-  const headerDelay = statsDelay + 5;
-  return {
-    baseDelay,
-    statsDelay,
-    headerDelay
-  };
 };
 
 // src/compositions/cricket/utils/broadcastProRounded/results/resolveBroadcastProRoundedTeamAccentColors.ts
@@ -19229,6 +19323,7 @@ var BroadcastProRoundedResultVerdict = ({
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY2[tier];
   const bandClass = csClass2(componentStyles, bandKey);
+  const containerDelay = resultContainerDelay(delay);
   const edgeMarkerStyle = resolveBroadcastProRoundedEdgeMarkerStyle(
     "standard",
     "primary",
@@ -19245,6 +19340,8 @@ var BroadcastProRoundedResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        animationDelay: containerDelay,
+        exitFrame,
         children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
           BroadcastProRoundedVerdictHeroLockup,
           {
@@ -19268,6 +19365,8 @@ var BroadcastProRoundedResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        animationDelay: containerDelay,
+        exitFrame,
         children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
           BroadcastProRoundedVerdictCompactLine,
           {
@@ -19289,6 +19388,8 @@ var BroadcastProRoundedResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        animationDelay: containerDelay,
+        exitFrame,
         children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
           BroadcastProRoundedVerdictAbandoned,
           {
@@ -19308,50 +19409,75 @@ var BroadcastProRoundedResultVerdict = ({
 
 // src/compositions/cricket/utils/broadcastProRounded/results/BroadcastProRoundedResultMetaStrip.tsx
 var import_jsx_runtime173 = require("react/jsx-runtime");
-var BroadcastProRoundedResultMetaStrip = ({ gradeLabel, ground, delay = 0, className = "", showGround = true }) => {
+var BroadcastProRoundedResultMetaStrip = ({
+  gradeLabel,
+  ground,
+  delay = 0,
+  className = "",
+  showGround = true,
+  exitAnimation,
+  exitFrame
+}) => {
   const { animations } = useAnimationContext();
   const { componentStyles, layout } = useThemeContext();
   const { glass, text, accent } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
+  const containerAnimation = animations.container.main.itemContainerInner;
   const cellRadius = layout.borderRadius.container;
   const stripClass = csClass2(
     componentStyles,
     "broadcastProRoundedResultsMetaStrip"
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)(
-    "div",
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+    AnimatedContainer,
     {
-      className: `overflow-hidden ${cellRadius} ${stripClass} ${className}`.trim(),
-      style: {
-        background: glass.headerGradient,
-        ...resolveBroadcastProRoundedEdgeMarkerStyle("compact", "primary", {
-          accentColor: accent,
-          mutedColor: accent
-        }),
-        ...cellBlur2
-      },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
-          MetadataMedium,
-          {
-            value: gradeLabel,
-            animation: { ...copyIn, delay },
-            className: "truncate font-bold uppercase tracking-widest",
-            variant: "onContainerCopy",
-            style: { color: text.copy }
-          }
-        ),
-        showGround && ground ? /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
-          MetadataMedium,
-          {
-            value: ground,
-            animation: { ...copyIn, delay: delay + 2 },
-            className: "ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider",
-            variant: "onContainerCopy",
-            style: { color: text.muted }
-          }
-        ) : null
-      ]
+      type: "full",
+      className: "w-full",
+      backgroundColor: "none",
+      animation: containerAnimation.containerIn,
+      animationDelay: resultContainerDelay(delay),
+      exitAnimation: containerAnimation.containerOut,
+      exitFrame,
+      children: /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)(
+        "div",
+        {
+          className: `overflow-hidden ${cellRadius} ${stripClass} ${className}`.trim(),
+          style: {
+            background: glass.headerGradient,
+            ...resolveBroadcastProRoundedEdgeMarkerStyle("compact", "primary", {
+              accentColor: accent,
+              mutedColor: accent
+            }),
+            ...cellBlur2
+          },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+              MetadataMedium,
+              {
+                value: gradeLabel,
+                animation: { ...copyIn, delay },
+                exitAnimation,
+                exitFrame,
+                className: "truncate font-bold uppercase tracking-widest",
+                variant: "onContainerCopy",
+                style: { color: text.copy }
+              }
+            ),
+            showGround && ground ? /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+              MetadataMedium,
+              {
+                value: ground,
+                animation: { ...copyIn, delay: delay + 4 },
+                exitAnimation,
+                exitFrame,
+                className: "ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider",
+                variant: "onContainerCopy",
+                style: { color: text.muted }
+              }
+            ) : null
+          ]
+        }
+      )
     }
   );
 };
@@ -19422,7 +19548,9 @@ var BroadcastProRoundedResultScoreBadge = ({
   accentColor,
   delay,
   matchType = "",
-  className = ""
+  className = "",
+  exitAnimation,
+  exitFrame
 }) => {
   var _a, _b, _c, _d;
   const { animations } = useAnimationContext();
@@ -19454,6 +19582,8 @@ var BroadcastProRoundedResultScoreBadge = ({
             value: score,
             variant: "match",
             animation: { ...copyIn, delay },
+            exitAnimation,
+            exitFrame,
             colorVariant: "onContainerTitle",
             fontFamily: headingFont,
             primaryStyle: { color: text.copy }
@@ -19463,7 +19593,9 @@ var BroadcastProRoundedResultScoreBadge = ({
           ResultScoreFirstInnings,
           {
             value: firstInnings,
-            animation: { ...copyIn, delay: delay + 2 },
+            animation: { ...copyIn, delay: delay + 4 },
+            exitAnimation,
+            exitFrame,
             variant: "onContainerCopy",
             style: { color: text.muted }
           }
@@ -19485,7 +19617,9 @@ var BroadcastProRoundedResultTeamRow = ({
   delay,
   matchType,
   glass,
-  className = ""
+  className = "",
+  exitAnimation,
+  exitFrame
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -19506,6 +19640,8 @@ var BroadcastProRoundedResultTeamRow = ({
     {
       glass: resolvedGlass,
       className: `${rowClass} ${className}`.trim(),
+      animationDelay: resultContainerDelay(delay),
+      exitFrame,
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "flex min-w-0 flex-1 items-center gap-4", children: [
           /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(
@@ -19514,7 +19650,7 @@ var BroadcastProRoundedResultTeamRow = ({
               tier: "compact",
               logo: logo != null ? logo : null,
               teamName,
-              delay: delay + 2,
+              delay: delay + RESULT_TEAM_ROW_NESTED.crest,
               glass: resolvedGlass
             }
           ),
@@ -19522,7 +19658,9 @@ var BroadcastProRoundedResultTeamRow = ({
             ResultTeamName,
             {
               value: displayName,
-              animation: { ...copyIn, delay: delay + 4 },
+              animation: { ...copyIn, delay: delay + RESULT_TEAM_ROW_NESTED.name },
+              exitAnimation,
+              exitFrame,
               variant: "onContainerTitle",
               className: nameClass,
               style: { color: text.copy }
@@ -19535,8 +19673,10 @@ var BroadcastProRoundedResultTeamRow = ({
             score,
             firstInnings,
             accentColor,
-            delay: delay + 6,
-            matchType
+            delay: delay + RESULT_TEAM_ROW_NESTED.score,
+            matchType,
+            exitAnimation,
+            exitFrame
           }
         )
       ]
@@ -19883,11 +20023,12 @@ var BroadcastProRoundedResultMatchContent = ({
   className = "",
   style,
   showGround = true,
-  playerStatsTier = "list"
+  playerStatsTier = "list",
+  exitFrame: exitFrameProp
 }) => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e;
   const { animations } = useAnimationContext();
-  const { isAccountClub } = useVideoDataContext();
+  const { isAccountClub, data } = useVideoDataContext();
   const {
     colors,
     selectedPalette,
@@ -19895,7 +20036,15 @@ var BroadcastProRoundedResultMatchContent = ({
     broadcastProRoundedGlassOpacity,
     broadcastProRoundedTransparentLayers
   } = useThemeContext();
-  const { baseDelay, statsDelay, headerDelay } = calculateBroadcastProRoundedResultDelays(delay);
+  const {
+    baseDelay,
+    metaDelay: calculatedMetaDelay,
+    homeTeamDelay,
+    homeStatsDelay,
+    awayTeamDelay,
+    awayStatsDelay,
+    verdictDelay
+  } = calculateBroadcastProRoundedResultDelays(delay);
   const primaryAccent = (_a = colors == null ? void 0 : colors.primary) != null ? _a : selectedPalette.container.accent;
   const secondaryAccent = (_b = colors == null ? void 0 : colors.secondary) != null ? _b : primaryAccent;
   const teamAccents = resolveBroadcastProRoundedTeamAccentColors({
@@ -19907,10 +20056,12 @@ var BroadcastProRoundedResultMatchContent = ({
   const verdict = buildBroadcastProRoundedVerdictModel(match);
   const compactLine = buildCompactVerdictLine2(match);
   const copyIn = animations.text.main.copyIn;
+  const copyOut = animations.text.main.copyOut;
+  const exitFrame = exitFrameProp != null ? exitFrameProp : calculateBroadcastProRoundedResultExitFrame((_c = data.timings) == null ? void 0 : _c.FPS_SCORECARD);
   const showHeroVerdict = statementPosition === "top" && (verdict == null ? void 0 : verdict.kind) === "hero";
   const showCompactVerdict = statementPosition === "bottom" && (verdict == null ? void 0 : verdict.kind) !== "abandoned" && compactLine != null;
   const showAbandonedVerdict = (verdict == null ? void 0 : verdict.kind) === "abandoned";
-  const metaDelay = showHeroVerdict ? baseDelay + 2 : baseDelay;
+  const metaDelay = showHeroVerdict ? baseDelay + 8 : calculatedMetaDelay;
   const glass = (0, import_react26.useMemo)(
     () => resolveBroadcastProRoundedGlass({
       surfaceBase: selectedPalette.container.background,
@@ -19978,6 +20129,8 @@ var BroadcastProRoundedResultMatchContent = ({
             delay: baseDelay,
             glass,
             animation: copyIn,
+            exitAnimation: copyOut,
+            exitFrame,
             className: "mb-2"
           }
         ),
@@ -19987,7 +20140,9 @@ var BroadcastProRoundedResultMatchContent = ({
             gradeLabel: buildGradeLabel2(match),
             ground: match.ground,
             delay: metaDelay,
-            showGround
+            showGround,
+            exitAnimation: copyOut,
+            exitFrame
           }
         ),
         /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
@@ -19996,11 +20151,11 @@ var BroadcastProRoundedResultMatchContent = ({
             tier: "result",
             home: {
               teamName: match.homeTeam.name,
-              logo: (_c = match.teamHomeLogo) != null ? _c : null
+              logo: (_d = match.teamHomeLogo) != null ? _d : null
             },
             away: {
               teamName: match.awayTeam.name,
-              logo: (_d = match.teamAwayLogo) != null ? _d : null
+              logo: (_e = match.teamAwayLogo) != null ? _e : null
             },
             glass,
             className: matchBlockClass,
@@ -20015,19 +20170,23 @@ var BroadcastProRoundedResultMatchContent = ({
                       logo: match.teamHomeLogo,
                       firstInnings: homeFirstInnings.show ? homeFirstInnings.value : null,
                       accentColor: teamAccents.home,
-                      delay: metaDelay,
+                      delay: homeTeamDelay,
                       matchType: match.type,
-                      glass
+                      glass,
+                      exitAnimation: copyOut,
+                      exitFrame
                     }
                   ),
                   /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
                     BroadcastProRoundedResultPlayerStatsGrid,
                     {
                       items: homeStats,
-                      delay: statsDelay,
+                      delay: homeStatsDelay,
                       accentColor: teamAccents.home,
                       glass,
-                      tier: playerStatsTier
+                      tier: playerStatsTier,
+                      exitAnimation: copyOut,
+                      exitFrame
                     }
                   )
                 ] });
@@ -20041,20 +20200,24 @@ var BroadcastProRoundedResultMatchContent = ({
                     logo: match.teamAwayLogo,
                     firstInnings: awayFirstInnings.show ? awayFirstInnings.value : null,
                     accentColor: teamAccents.away,
-                    delay: statsDelay + 4,
+                    delay: awayTeamDelay,
                     matchType: match.type,
                     glass,
-                    className: "mt-2"
+                    className: "mt-2",
+                    exitAnimation: copyOut,
+                    exitFrame
                   }
                 ),
                 /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
                   BroadcastProRoundedResultPlayerStatsGrid,
                   {
                     items: awayStats,
-                    delay: statsDelay + 8,
+                    delay: awayStatsDelay,
                     accentColor: teamAccents.away,
                     glass,
-                    tier: playerStatsTier
+                    tier: playerStatsTier,
+                    exitAnimation: copyOut,
+                    exitFrame
                   }
                 )
               ] });
@@ -20067,9 +20230,11 @@ var BroadcastProRoundedResultMatchContent = ({
             model: verdict,
             tier: "abandoned",
             accentColor: primaryAccent,
-            delay: headerDelay,
+            delay: verdictDelay,
             glass,
-            animation: copyIn
+            animation: copyIn,
+            exitAnimation: copyOut,
+            exitFrame
           }
         ),
         showCompactVerdict && compactVerdictModel && /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
@@ -20078,9 +20243,11 @@ var BroadcastProRoundedResultMatchContent = ({
             model: compactVerdictModel,
             tier: "compact",
             accentColor: primaryAccent,
-            delay: headerDelay + 2,
+            delay: verdictDelay + 4,
             glass,
-            animation: copyIn
+            animation: copyIn,
+            exitAnimation: copyOut,
+            exitFrame
           }
         )
       ]
@@ -20989,12 +21156,12 @@ var GamesDisplayBasic = ({
 var FixtureDisplayBasic_default = GamesDisplayBasic;
 
 // src/compositions/cricket/upcoming/modules/NoGamesData/no-data.tsx
-var import_remotion73 = require("remotion");
+var import_remotion74 = require("remotion");
 var import_jsx_runtime194 = require("react/jsx-runtime");
 var NoGamesData = () => {
   var _a, _b;
   const { fontClasses } = useThemeContext();
-  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_remotion73.AbsoluteFill, { className: "flex justify-center items-center text-white font-sans", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_remotion74.AbsoluteFill, { className: "flex justify-center items-center text-white font-sans", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
       AnimatedText,
       {
@@ -23922,7 +24089,7 @@ var PlayersDisplayBasic = ({
 var display_Basic_default2 = PlayersDisplayBasic;
 
 // src/compositions/cricket/top5/modules/NoPlayersData/no-data.tsx
-var import_remotion74 = require("remotion");
+var import_remotion75 = require("remotion");
 
 // src/compositions/cricket/top5/utils/dataTransformer.ts
 var transformPlayerData = (rawData, compositionId) => {
@@ -23966,7 +24133,7 @@ var NoPlayersData = () => {
   const { videoMeta } = data;
   const compositionId = ((_b = (_a = videoMeta == null ? void 0 : videoMeta.video) == null ? void 0 : _a.metadata) == null ? void 0 : _b.compositionId) || "";
   const title = getTitle(compositionId);
-  return /* @__PURE__ */ (0, import_jsx_runtime241.jsx)(import_remotion74.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime241.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime241.jsx)(import_remotion75.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime241.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime241.jsxs)("h2", { className: "text-2xl font-bold mb-4", children: [
       "No ",
       title,
@@ -26127,10 +26294,10 @@ var BroadcastProRounded3 = () => {
 };
 
 // src/compositions/cricket/results/modules/NoResultsData/no-data.tsx
-var import_remotion75 = require("remotion");
+var import_remotion76 = require("remotion");
 var import_jsx_runtime275 = require("react/jsx-runtime");
 var NoResultsData = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime275.jsx)(import_remotion75.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime275.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime275.jsx)(import_remotion76.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime275.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime275.jsx)("h2", { className: "text-2xl font-bold mb-4", children: "No Results Data Available" }),
     /* @__PURE__ */ (0, import_jsx_runtime275.jsx)("p", { className: "text-gray-400", children: "Please check your data source and try again." })
   ] }) });
@@ -31380,13 +31547,15 @@ var import_jsx_runtime343 = require("react/jsx-runtime");
 var MatchCardBroadcastProRounded = ({
   match,
   rowHeight,
-  delay
+  delay,
+  exitFrame
 }) => {
   return /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(
     BroadcastProRoundedResultMatchContent,
     {
       match,
       delay,
+      exitFrame,
       style: { maxHeight: rowHeight }
     }
   );
@@ -31404,7 +31573,7 @@ var MatchRowBroadcastProRounded = ({
   const { data } = useVideoDataContext();
   const { timings } = data;
   const containerAnimation = animations.container.main.itemContainer;
-  const delay = calculateDelay(index);
+  const delay = calculateDelay(index) + index * 4;
   const animationOutFrame = calculateAnimationOutFrame3(timings == null ? void 0 : timings.FPS_SCORECARD);
   return /* @__PURE__ */ (0, import_jsx_runtime344.jsx)("div", { className: "h-full w-full", children: /* @__PURE__ */ (0, import_jsx_runtime344.jsx)(
     AnimatedContainer,
@@ -31413,7 +31582,9 @@ var MatchRowBroadcastProRounded = ({
       className: "h-full w-full",
       backgroundColor: "none",
       animation: containerAnimation.containerIn,
-      animationDelay: delay,
+      animationDelay: resultContainerDelay(
+        delay + RESULT_PANEL_CONTAINER_DELAY
+      ),
       exitAnimation: containerAnimation.containerOut,
       exitFrame: animationOutFrame,
       children: /* @__PURE__ */ (0, import_jsx_runtime344.jsx)(
@@ -31422,7 +31593,8 @@ var MatchRowBroadcastProRounded = ({
           match,
           index,
           rowHeight,
-          delay
+          delay: delay + RESULT_PANEL_CONTAINER_DELAY,
+          exitFrame: animationOutFrame
         }
       )
     }
@@ -31437,11 +31609,15 @@ var ResultsDisplayBroadcastProRounded = ({
   resultsPerScreen,
   screenIndex
 }) => {
-  var _a, _b;
+  var _a, _b, _c;
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
+  const { data } = useVideoDataContext();
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
+  const panelExitFrame = calculateAnimationOutFrame3(
+    (_a = data.timings) == null ? void 0 : _a.FPS_SCORECARD
+  );
   const { displayedResults } = calculateDisplayedResults(
     results5,
     resultsPerScreen,
@@ -31464,12 +31640,14 @@ var ResultsDisplayBroadcastProRounded = ({
             className: "flex flex-col overflow-hidden",
             backgroundColor: "none",
             animation: panelAnimation.containerIn,
+            animationDelay: RESULT_PANEL_CONTAINER_DELAY,
             exitAnimation: panelAnimation.containerOut,
+            exitFrame: panelExitFrame,
             style: { height: mainContentHeight },
             children: /* @__PURE__ */ (0, import_jsx_runtime345.jsx)(
               "div",
               {
-                className: `flex w-full flex-col ${(_b = (_a = layout.spacing) == null ? void 0 : _a.stack) != null ? _b : "gap-1"}`,
+                className: `flex w-full flex-col ${(_c = (_b = layout.spacing) == null ? void 0 : _b.stack) != null ? _c : "gap-1"}`,
                 style: { height: `${mainContentHeight}px` },
                 children: displayedResults.map((match, index) => /* @__PURE__ */ (0, import_jsx_runtime345.jsx)(
                   "div",
@@ -35187,7 +35365,7 @@ var broadcastprorounded2 = () => {
 };
 
 // src/compositions/cricket/teamRoster/basic.tsx
-var import_remotion77 = require("remotion");
+var import_remotion78 = require("remotion");
 
 // src/compositions/cricket/utils/primitives/RosterPlayerName.tsx
 var import_jsx_runtime401 = require("react/jsx-runtime");
@@ -35620,11 +35798,11 @@ var RosterDisplay = ({ roster }) => {
 var display_default2 = RosterDisplay;
 
 // src/compositions/cricket/teamRoster/modules/NoData/no-data.tsx
-var import_remotion76 = require("remotion");
+var import_remotion77 = require("remotion");
 var import_jsx_runtime408 = require("react/jsx-runtime");
 var NoRosterData = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime408.jsx)(
-    import_remotion76.AbsoluteFill,
+    import_remotion77.AbsoluteFill,
     {
       style: {
         backgroundColor: "grey",
@@ -35696,8 +35874,8 @@ var CricketRosterWithTransitions = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime410.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime410.jsx)(import_remotion77.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime410.jsxs)(
-    import_remotion77.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime410.jsx)(import_remotion78.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime410.jsxs)(
+    import_remotion78.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -35714,7 +35892,7 @@ var basic = () => {
 };
 
 // src/compositions/cricket/teamRoster/sixersThunder.tsx
-var import_remotion78 = require("remotion");
+var import_remotion79 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-sixers-thunder.tsx
 var import_jsx_runtime411 = require("react/jsx-runtime");
@@ -35797,8 +35975,8 @@ var CricketRosterWithTransitions2 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(import_remotion78.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(
-    import_remotion78.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(import_remotion79.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(
+    import_remotion79.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -35812,7 +35990,7 @@ var SixersThunder4 = () => {
 };
 
 // src/compositions/cricket/teamRoster/classic.tsx
-var import_remotion79 = require("remotion");
+var import_remotion80 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-classic.tsx
 var import_jsx_runtime413 = require("react/jsx-runtime");
@@ -35892,8 +36070,8 @@ var CricketRosterWithTransitions3 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(import_remotion79.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(
-    import_remotion79.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(import_remotion80.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(
+    import_remotion80.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -35907,7 +36085,7 @@ var Classic6 = () => {
 };
 
 // src/compositions/cricket/teamRoster/classicTwoColumn.tsx
-var import_remotion80 = require("remotion");
+var import_remotion81 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-classic-two-column.tsx
 var import_jsx_runtime415 = require("react/jsx-runtime");
@@ -35993,8 +36171,8 @@ var CricketRosterWithTransitions4 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(import_remotion80.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(
-    import_remotion80.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(import_remotion81.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(
+    import_remotion81.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36008,7 +36186,7 @@ var ClassicTwoColumn4 = () => {
 };
 
 // src/compositions/cricket/teamRoster/mudgeeraba.tsx
-var import_remotion81 = require("remotion");
+var import_remotion82 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-Mudgeeraba.tsx
 var import_jsx_runtime417 = require("react/jsx-runtime");
@@ -36138,8 +36316,8 @@ var CricketRosterWithTransitionsMudgeeraba = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(import_remotion81.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime418.jsxs)(
-    import_remotion81.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(import_remotion82.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime418.jsxs)(
+    import_remotion82.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36156,7 +36334,7 @@ var mudgeeraba6 = () => {
 };
 
 // src/compositions/cricket/teamRoster/brickwork.tsx
-var import_remotion82 = require("remotion");
+var import_remotion83 = require("remotion");
 
 // src/compositions/cricket/teamRoster/layout/RosterPlayerList/playerList-brickWork.tsx
 var import_jsx_runtime419 = require("react/jsx-runtime");
@@ -36407,8 +36585,8 @@ var CricketRosterBrickWork = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime423.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime423.jsx)(import_remotion82.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime423.jsxs)(
-    import_remotion82.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime423.jsx)(import_remotion83.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime423.jsxs)(
+    import_remotion83.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36425,7 +36603,7 @@ var brickwork = () => {
 };
 
 // src/compositions/cricket/teamRoster/broadcastPro.tsx
-var import_remotion83 = require("remotion");
+var import_remotion84 = require("remotion");
 
 // src/templates/variants/broadcastPro/components/roster/BroadcastProRosterSheet.tsx
 var import_react28 = require("react");
@@ -36779,8 +36957,8 @@ var CricketRosterBroadcastPro = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime427.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime427.jsx)(import_remotion83.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime427.jsxs)(
-    import_remotion83.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime427.jsx)(import_remotion84.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime427.jsxs)(
+    import_remotion84.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col",
@@ -36805,7 +36983,7 @@ var broadcastpro3 = () => {
 };
 
 // src/compositions/cricket/teamRoster/broadcastProRounded.tsx
-var import_remotion84 = require("remotion");
+var import_remotion85 = require("remotion");
 
 // src/templates/variants/broadcastProRounded/components/roster/BroadcastProRoundedRosterSheet.tsx
 var import_react29 = require("react");
@@ -37187,8 +37365,8 @@ var CricketRosterBroadcastProRounded = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime431.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime431.jsx)(import_remotion84.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime431.jsxs)(
-    import_remotion84.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime431.jsx)(import_remotion85.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime431.jsxs)(
+    import_remotion85.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col",
@@ -37213,7 +37391,7 @@ var broadcastprorounded3 = () => {
 };
 
 // src/compositions/cricket/performances/modules/NoPlayersData/no-data.tsx
-var import_remotion85 = require("remotion");
+var import_remotion86 = require("remotion");
 
 // src/compositions/cricket/performances/utils/dataTransformer.ts
 var transformPerformanceData = (rawData, compositionId) => {
@@ -37255,7 +37433,7 @@ var NoPlayersData2 = () => {
   const { videoMeta } = data;
   const compositionId = ((_b = (_a = videoMeta == null ? void 0 : videoMeta.video) == null ? void 0 : _a.metadata) == null ? void 0 : _b.compositionId) || "";
   const title = getTitle2(compositionId);
-  return /* @__PURE__ */ (0, import_jsx_runtime432.jsx)(import_remotion85.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime432.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime432.jsx)(import_remotion86.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime432.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime432.jsxs)("h2", { className: "text-2xl font-bold mb-4", children: [
       "No ",
       title,
@@ -40326,7 +40504,7 @@ var BroadcastProRounded4 = () => {
 var PLAYER_STAGGER_DELAY = 5;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Basic.tsx
-var import_remotion86 = require("remotion");
+var import_remotion87 = require("remotion");
 
 // src/compositions/cricket/utils/primitives/TeamOfTheWeekPlayerName.tsx
 var import_jsx_runtime468 = require("react/jsx-runtime");
@@ -41241,7 +41419,7 @@ var PlayerRowBasic2 = ({
                   background: logoBG
                 },
                 children: /* @__PURE__ */ (0, import_jsx_runtime478.jsx)(
-                  import_remotion86.Img,
+                  import_remotion87.Img,
                   {
                     src: player.club.logo.url,
                     alt: player.club.name,
@@ -41353,7 +41531,7 @@ var Basic7 = () => {
 var basic_default = Basic7;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Classic.tsx
-var import_remotion87 = require("remotion");
+var import_remotion88 = require("remotion");
 var import_jsx_runtime482 = require("react/jsx-runtime");
 var PlayerRowClassic2 = ({
   player,
@@ -41503,7 +41681,7 @@ var PlayerRowClassic2 = ({
                   }
                 ),
                 !isAccountClub && /* @__PURE__ */ (0, import_jsx_runtime482.jsx)("div", { className: "col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2", children: /* @__PURE__ */ (0, import_jsx_runtime482.jsx)(
-                  import_remotion87.Img,
+                  import_remotion88.Img,
                   {
                     src: player.club.logo.url,
                     alt: player.club.name,
@@ -42381,7 +42559,7 @@ var SixersThunder6 = () => {
 var sixersThunder_default3 = SixersThunder6;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-ClassicTwoColumn.tsx
-var import_remotion88 = require("remotion");
+var import_remotion89 = require("remotion");
 var import_jsx_runtime498 = require("react/jsx-runtime");
 var PlayerRowClassicTwoColumn2 = ({
   player,
@@ -42423,7 +42601,7 @@ var PlayerRowClassicTwoColumn2 = ({
           style: { height: `${rowHeight}px` },
           children: /* @__PURE__ */ (0, import_jsx_runtime498.jsxs)("div", { className: "grid h-full grid-cols-12 items-center", children: [
             !isAccountClub && /* @__PURE__ */ (0, import_jsx_runtime498.jsx)("div", { className: "col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2", children: /* @__PURE__ */ (0, import_jsx_runtime498.jsx)(
-              import_remotion88.Img,
+              import_remotion89.Img,
               {
                 src: player.club.logo.url,
                 alt: player.club.name,
@@ -42600,7 +42778,7 @@ var ClassicTwoColumn6 = () => {
 var classicTwoColumn_default3 = ClassicTwoColumn6;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Mudgeeraba.tsx
-var import_remotion89 = require("remotion");
+var import_remotion90 = require("remotion");
 var import_jsx_runtime501 = require("react/jsx-runtime");
 var ICON_LOGO_WIDTH_RATIO = 0.72;
 var PlayerRowMudgeeraba2 = ({
@@ -42731,7 +42909,7 @@ var PlayerRowMudgeeraba2 = ({
         size: Math.round(rowHeight * ICON_LOGO_WIDTH_RATIO),
         className: "ml-2",
         children: /* @__PURE__ */ (0, import_jsx_runtime501.jsx)(
-          import_remotion89.Img,
+          import_remotion90.Img,
           {
             src: player.club.logo.url,
             alt: player.club.name,
@@ -43326,14 +43504,14 @@ var broadcastpro5 = broadcastPro_default2;
 var broadcastprorounded5 = broadcastProRounded_default2;
 
 // src/compositions/cricket/placeholders.tsx
-var import_remotion90 = require("remotion");
+var import_remotion91 = require("remotion");
 var import_jsx_runtime511 = require("react/jsx-runtime");
 var PlaceholderComposition = ({
   data
 }) => {
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
-  return /* @__PURE__ */ (0, import_jsx_runtime511.jsxs)(import_remotion90.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime511.jsxs)(import_remotion91.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
     /* @__PURE__ */ (0, import_jsx_runtime511.jsx)("h1", { className: "text-3xl mb-0.5", children: data.videoMeta.video.metadata.title || "Composition" }),
     /* @__PURE__ */ (0, import_jsx_runtime511.jsxs)("h2", { className: "text-2xl mb-4", children: [
       template,
@@ -43476,7 +43654,7 @@ __export(afl_exports, {
   top5: () => top5,
   upcoming: () => upcoming
 });
-var import_remotion91 = require("remotion");
+var import_remotion92 = require("remotion");
 var import_jsx_runtime512 = require("react/jsx-runtime");
 var PlaceholderComposition2 = ({
   data
@@ -43484,7 +43662,7 @@ var PlaceholderComposition2 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime512.jsxs)(
-    import_remotion91.AbsoluteFill,
+    import_remotion92.AbsoluteFill,
     {
       style: {
         backgroundColor: "#222",
@@ -43546,7 +43724,7 @@ __export(netball_exports, {
   top5: () => top52,
   upcoming: () => upcoming2
 });
-var import_remotion92 = require("remotion");
+var import_remotion93 = require("remotion");
 var import_jsx_runtime513 = require("react/jsx-runtime");
 var PlaceholderComposition3 = ({
   data
@@ -43554,7 +43732,7 @@ var PlaceholderComposition3 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime513.jsxs)(
-    import_remotion92.AbsoluteFill,
+    import_remotion93.AbsoluteFill,
     {
       style: {
         backgroundColor: "#103",
@@ -43737,10 +43915,10 @@ var RouteToComposition = () => {
 };
 
 // src/components/layout/main/Timer/ProgressTimer.tsx
-var import_remotion93 = require("remotion");
+var import_remotion94 = require("remotion");
 var import_jsx_runtime515 = require("react/jsx-runtime");
 var ProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion93.useCurrentFrame)();
+  const frame = (0, import_remotion94.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -43764,7 +43942,7 @@ var ProgressTimer = ({ FRAMES }) => {
   );
 };
 var VerticalProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion93.useCurrentFrame)();
+  const frame = (0, import_remotion94.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -43802,7 +43980,7 @@ var OneColumn = ({ Header }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { FPS_MAIN } = timings;
-  return /* @__PURE__ */ (0, import_jsx_runtime516.jsx)(import_remotion94.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime516.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime516.jsx)(import_remotion95.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime516.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
     /* @__PURE__ */ (0, import_jsx_runtime516.jsx)(
       "div",
       {
@@ -44472,7 +44650,7 @@ var BrickworkIntro = () => {
 };
 
 // src/templates/variants/brickwork/components/brickworkOutro.tsx
-var import_remotion95 = require("remotion");
+var import_remotion96 = require("remotion");
 var import_jsx_runtime521 = require("react/jsx-runtime");
 var GRID_SETTINGS2 = {
   columns: 2,
@@ -44556,7 +44734,7 @@ var BrickworkOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray2(sponsorsArray, GRID_SETTINGS2.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion95.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS2.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(
@@ -44568,7 +44746,7 @@ var BrickworkOutro = ({
     }
   );
 };
-var AlternativeOutro2 = () => /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion95.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)("h2", { className: "text-5xl font-bold text-center" }) });
+var AlternativeOutro2 = () => /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)("h2", { className: "text-5xl font-bold text-center" }) });
 var convertToArray2 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/brickwork/components/brickworkBackground.tsx
@@ -44953,7 +45131,7 @@ var ClassicIntro = () => {
 };
 
 // src/templates/variants/classic/components/ClassicOutro.tsx
-var import_remotion96 = require("remotion");
+var import_remotion97 = require("remotion");
 var import_jsx_runtime527 = require("react/jsx-runtime");
 var GRID_SETTINGS3 = {
   columns: 2,
@@ -45037,7 +45215,7 @@ var ClassicOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray3(sponsorsArray, GRID_SETTINGS3.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS3.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(
@@ -45049,7 +45227,7 @@ var ClassicOutro = ({
     }
   );
 };
-var AlternativeOutro3 = () => /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro3 = () => /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray3 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/classic/components/ClassicBackground.tsx
@@ -45625,7 +45803,7 @@ var SixersIntro = () => {
 };
 
 // src/templates/variants/sixers/components/SixersOutro.tsx
-var import_remotion97 = require("remotion");
+var import_remotion98 = require("remotion");
 var import_jsx_runtime533 = require("react/jsx-runtime");
 var GRID_SETTINGS4 = {
   columns: 2,
@@ -45709,7 +45887,7 @@ var SixersOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray4(sponsorsArray, GRID_SETTINGS4.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion98.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS4.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(
@@ -45721,7 +45899,7 @@ var SixersOutro = ({
     }
   );
 };
-var AlternativeOutro4 = () => /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro4 = () => /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion98.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray4 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/sixers/components/SixersBackground.tsx
@@ -46202,7 +46380,7 @@ var cnswTheme = {
 };
 
 // src/templates/variants/cnsw/components/CNSWIntro.tsx
-var import_remotion98 = require("remotion");
+var import_remotion99 = require("remotion");
 
 // src/templates/variants/cnsw/utils/compositionConfig.ts
 var compositionConfig = {
@@ -46517,8 +46695,8 @@ var CNSWIntro = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime538.jsxs)(import_jsx_runtime538.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(import_remotion98.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(
-      import_remotion98.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(import_remotion99.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(
+      import_remotion99.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -46631,7 +46809,7 @@ var CNSWIntro = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWOutro.tsx
-var import_remotion99 = require("remotion");
+var import_remotion100 = require("remotion");
 var import_jsx_runtime539 = require("react/jsx-runtime");
 var GRID_SETTINGS5 = {
   columns: 2,
@@ -46715,7 +46893,7 @@ var CNSWOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray5(sponsorsArray, GRID_SETTINGS5.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion99.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion100.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS5.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(
@@ -46727,7 +46905,7 @@ var CNSWOutro = ({
     }
   );
 };
-var AlternativeOutro5 = () => /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion99.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro5 = () => /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion100.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray5 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/cnsw/components/CNSWBackground.tsx
@@ -46737,7 +46915,7 @@ var CNSWBackground = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWMainHeader.tsx
-var import_remotion100 = require("remotion");
+var import_remotion101 = require("remotion");
 var import_jsx_runtime541 = require("react/jsx-runtime");
 var CNSWMainHeader = () => {
   var _a, _b, _c;
@@ -46788,8 +46966,8 @@ var CNSWMainHeader = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(import_remotion100.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(
-          import_remotion100.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(import_remotion101.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(
+          import_remotion101.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -47395,7 +47573,7 @@ var ThunderIntro = () => {
 };
 
 // src/templates/variants/thunder/components/ThunderOutro.tsx
-var import_remotion101 = require("remotion");
+var import_remotion102 = require("remotion");
 var import_jsx_runtime545 = require("react/jsx-runtime");
 var GRID_SETTINGS6 = {
   columns: 2,
@@ -47479,7 +47657,7 @@ var ThunderOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray6(sponsorsArray, GRID_SETTINGS6.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion101.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS6.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(
@@ -47491,7 +47669,7 @@ var ThunderOutro = ({
     }
   );
 };
-var AlternativeOutro6 = () => /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion101.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro6 = () => /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray6 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/thunder/components/ThunderBackground.tsx
@@ -48055,7 +48233,7 @@ var ClassicIntro2 = () => {
 };
 
 // src/templates/variants/twoColumnClassic/components/ClassicOutro.tsx
-var import_remotion102 = require("remotion");
+var import_remotion103 = require("remotion");
 var import_jsx_runtime551 = require("react/jsx-runtime");
 var GRID_SETTINGS7 = {
   columns: 2,
@@ -48139,7 +48317,7 @@ var ClassicOutro2 = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray7(sponsorsArray, GRID_SETTINGS7.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion103.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS7.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(
@@ -48151,7 +48329,7 @@ var ClassicOutro2 = ({
     }
   );
 };
-var AlternativeOutro7 = () => /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro7 = () => /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion103.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray7 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/twoColumnClassic/components/ClassicBackground.tsx
@@ -48161,7 +48339,7 @@ var ClassicBackground2 = () => {
 };
 
 // src/components/layout/screen/TwoColumn.tsx
-var import_remotion103 = require("remotion");
+var import_remotion104 = require("remotion");
 var import_jsx_runtime553 = require("react/jsx-runtime");
 var TwoColumn2 = ({
   Header,
@@ -48244,7 +48422,7 @@ var TwoColumn2 = ({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(import_remotion103.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(import_remotion104.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(
     "div",
     {
       className: `flex flex-col h-full w-full ${className}`.trim(),
@@ -48869,7 +49047,7 @@ var cnswTheme2 = {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWIntro.tsx
-var import_remotion104 = require("remotion");
+var import_remotion105 = require("remotion");
 
 // src/templates/variants/cnsw-private/utils/compositionConfig.ts
 var compositionConfig2 = {
@@ -49184,8 +49362,8 @@ var CNSWIntro2 = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing2(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing2(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime557.jsxs)(import_jsx_runtime557.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(import_remotion104.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(
-      import_remotion104.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(import_remotion105.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(
+      import_remotion105.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -49298,7 +49476,7 @@ var CNSWIntro2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWOutro.tsx
-var import_remotion105 = require("remotion");
+var import_remotion106 = require("remotion");
 var import_jsx_runtime558 = require("react/jsx-runtime");
 var chunkArray8 = (arr, size) => {
   const normalized = arr.map((item) => {
@@ -49348,7 +49526,7 @@ var CNSWOutro2 = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray8(sponsorsArray, 6);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion105.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion106.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
     durationInFrames: 90
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(
@@ -49360,7 +49538,7 @@ var CNSWOutro2 = ({
     }
   );
 };
-var AlternativeOutro8 = () => /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion105.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro8 = () => /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion106.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray8 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/cnsw-private/components/CNSWBackground.tsx
@@ -49370,7 +49548,7 @@ var CNSWBackground2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWMainHeader.tsx
-var import_remotion106 = require("remotion");
+var import_remotion107 = require("remotion");
 var import_jsx_runtime560 = require("react/jsx-runtime");
 var CNSWMainHeader2 = () => {
   var _a, _b, _c;
@@ -49421,8 +49599,8 @@ var CNSWMainHeader2 = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(import_remotion106.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(
-          import_remotion106.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(import_remotion107.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(
+          import_remotion107.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -49951,11 +50129,11 @@ var mudgeerabaTheme = {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
-var import_remotion108 = require("remotion");
+var import_remotion109 = require("remotion");
 
 // src/components/typography/utils/useFittedFontSize.ts
 var import_react32 = require("react");
-var import_remotion107 = require("remotion");
+var import_remotion108 = require("remotion");
 var import_layout_utils = require("@remotion/layout-utils");
 var TITLE_SCREEN_BASE_FONT_PX = 16;
 var TITLE_SCREEN_HORIZONTAL_PADDING_PX = 128;
@@ -49971,7 +50149,7 @@ var useFittedFontSize = ({
   horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX,
   withinWidth
 }) => {
-  const { width } = (0, import_remotion107.useVideoConfig)();
+  const { width } = (0, import_remotion108.useVideoConfig)();
   const { fontsLoaded } = useFontContext();
   return (0, import_react32.useMemo)(() => {
     if (!fontsLoaded || !text.trim() || !fontFamily) {
@@ -50022,7 +50200,7 @@ var MudgeerabaIntro = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  const { width } = (0, import_remotion108.useVideoConfig)();
+  const { width } = (0, import_remotion109.useVideoConfig)();
   const title = (_a = metadata.title) != null ? _a : "";
   const titleFontFamily = (_c = (_b = fontClasses.title) == null ? void 0 : _b.family) != null ? _c : "Unbounded";
   const nameFontFamily = (_e = (_d = fontClasses.subtitle) == null ? void 0 : _d.family) != null ? _e : "Unbounded";
@@ -50115,7 +50293,7 @@ var MudgeerabaIntro = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaOutro.tsx
-var import_remotion109 = require("remotion");
+var import_remotion110 = require("remotion");
 var import_jsx_runtime564 = require("react/jsx-runtime");
 var GRID_SETTINGS8 = {
   columns: 2,
@@ -50201,7 +50379,7 @@ var MudgeerabaOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray9(sponsorsArray, GRID_SETTINGS8.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion110.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS8.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(
@@ -50213,7 +50391,7 @@ var MudgeerabaOutro = ({
     }
   );
 };
-var AlternativeOutro9 = () => /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro9 = () => /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion110.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray9 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaBackground.tsx
@@ -50223,7 +50401,7 @@ var MudgeerabaBackground = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaMainHeader.tsx
-var import_remotion110 = require("remotion");
+var import_remotion111 = require("remotion");
 var import_jsx_runtime566 = require("react/jsx-runtime");
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
 var HEADER_TEXT_CLASS = "!m-0 !px-0 w-full max-w-full leading-tight whitespace-normal break-words";
@@ -50233,7 +50411,7 @@ var MudgeerabaMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const { width } = (0, import_remotion110.useVideoConfig)();
+  const { width } = (0, import_remotion111.useVideoConfig)();
   const { heights } = layout;
   const timings = data == null ? void 0 : data.timings;
   const exitFrame = (timings == null ? void 0 : timings.FPS_MAIN) ? timings.FPS_MAIN - 30 : 0;
@@ -50288,7 +50466,7 @@ var MudgeerabaMainHeader = () => {
             {
               textAlign: "center",
               type: "titleSmall",
-              variant: "onBackgroundMain",
+              variant: "onContainerTitle",
               letterAnimation: "none",
               animation: TextAnimations.title,
               exitAnimation: TextAnimations.copyOut,
@@ -50312,7 +50490,7 @@ var MudgeerabaMainHeader = () => {
               fontFamily: nameFontFamily,
               type: "subtitle",
               textAlign: "center",
-              variant: "onBackgroundMain",
+              variant: "onContainerTitle",
               letterAnimation: "none",
               animation: TextAnimations.title,
               exitAnimation: TextAnimations.copyOut,
@@ -51278,7 +51456,7 @@ var broadcastProMode = {
 
 // src/templates/variants/broadcastPro/theme/tokens.ts
 var broadcastProTokens = {
-  broadcastProGlassOpacity: "md",
+  broadcastProGlassOpacity: "lg",
   broadcastProHeadlineSizing: {
     ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING
   },
@@ -51351,11 +51529,11 @@ var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
 var import_react33 = require("react");
-var import_remotion111 = require("remotion");
+var import_remotion112 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion111.useVideoConfig)();
+  const { width } = (0, import_remotion112.useVideoConfig)();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
   const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -51548,7 +51726,7 @@ var BroadcastProIntro = () => {
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProOutro.tsx
-var import_remotion112 = require("remotion");
+var import_remotion113 = require("remotion");
 var import_jsx_runtime572 = require("react/jsx-runtime");
 var GRID_SETTINGS9 = {
   columns: 2,
@@ -51632,7 +51810,7 @@ var BroadcastProOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray10(sponsorsArray, GRID_SETTINGS9.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion113.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS9.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(
@@ -51644,7 +51822,7 @@ var BroadcastProOutro = ({
     }
   );
 };
-var AlternativeOutro10 = () => /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro10 = () => /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion113.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray10 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/broadcastPro/components/BroadcastProBackground.tsx
@@ -52188,10 +52366,10 @@ var broadcastProRoundedCompositionComponentStylesResults = {
     className: "text-4xl font-normal uppercase tracking-wide leading-none"
   },
   ResultPlayerName: {
-    className: "text-2xl font-semibold leading-tight opacity-70"
+    className: "text-[26px] font-semibold leading-tight opacity-70"
   },
   ResultPlayerScore: {
-    className: "font-teko text-4xl font-bold tracking-tight leading-tight"
+    className: "font-teko text-[38px] font-normal tracking-tight leading-tight"
   },
   ResultSyntax: {
     className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4"
@@ -52654,7 +52832,7 @@ var DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2 = {
 
 // src/templates/variants/broadcastProRounded/theme/tokens.ts
 var broadcastProRoundedTokens = {
-  broadcastProRoundedGlassOpacity: "md",
+  broadcastProRoundedGlassOpacity: "lg",
   broadcastProRoundedHeadlineSizing: {
     ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2
   },
@@ -52727,11 +52905,11 @@ var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastProRounded/components/headline/useBroadcastProRoundedHeadlineFit.ts
 var import_react34 = require("react");
-var import_remotion113 = require("remotion");
+var import_remotion114 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX2 = 32;
 var useBroadcastProRoundedHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion113.useVideoConfig)();
+  const { width } = (0, import_remotion114.useVideoConfig)();
   const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
   const sizing = broadcastProRoundedHeadlineSizing != null ? broadcastProRoundedHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -52944,7 +53122,7 @@ var BroadcastProRoundedIntro = () => {
 };
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedOutro.tsx
-var import_remotion114 = require("remotion");
+var import_remotion115 = require("remotion");
 var import_jsx_runtime580 = require("react/jsx-runtime");
 var GRID_SETTINGS10 = {
   columns: 2,
@@ -53030,7 +53208,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray11(sponsorsArray, GRID_SETTINGS10.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion115.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(
       SponsorGrid11,
       {
         sponsors: group,
@@ -53049,7 +53227,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
     }
   );
 };
-var AlternativeOutro11 = () => /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro11 = () => /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion115.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray11 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedBackground.tsx
@@ -53154,20 +53332,20 @@ var BroadcastProRoundedMain = () => {
 };
 
 // src/templates/variants/broadcastProRounded/animations.ts
-var broadcastSnapAnimations2 = {
+var broadcastGlassAnimations = {
   image: {
     intro: {
       logo: {
         introIn: {
           type: "slideInBottom",
-          duration: 10,
+          duration: 18,
           delay: 0,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 72 }
+          custom: { distance: 56 }
         },
         introOut: {
           type: "fadeOut",
-          duration: 9,
+          duration: 14,
           easing: { type: "out", base: "ease" }
         },
         introExitFrame: 60
@@ -53178,33 +53356,30 @@ var broadcastSnapAnimations2 = {
         logo: {
           introIn: {
             type: "slideInLeft",
-            duration: 16,
+            duration: 20,
             delay: 0,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 90 }
+            custom: { distance: 64 }
           },
           introOut: {
-            type: "slideOutRight",
-            duration: 9,
-            easing: { type: "out", base: "ease" },
-            custom: { distance: 90 }
+            type: "fadeOut",
+            duration: 14,
+            easing: { type: "out", base: "ease" }
           }
         }
       },
       item: {
         logo: {
           itemIn: {
-            type: "slideInLeft",
-            duration: 15,
+            type: "fadeIn",
+            duration: 16,
             delay: 0,
-            easing: { type: "inOut", base: "ease" },
-            custom: { distance: 80 }
+            easing: { type: "inOut", base: "ease" }
           },
           itemOut: {
-            type: "slideOutRight",
-            duration: 9,
-            easing: { type: "out", base: "ease" },
-            custom: { distance: 80 }
+            type: "fadeOut",
+            duration: 12,
+            easing: { type: "out", base: "ease" }
           }
         }
       }
@@ -53212,17 +53387,15 @@ var broadcastSnapAnimations2 = {
     sponsor: {
       logo: {
         introIn: {
-          type: "slideInLeft",
-          duration: 6,
+          type: "fadeIn",
+          duration: 14,
           delay: 0,
-          easing: { type: "inOut", base: "ease" },
-          custom: { distance: 72 }
+          easing: { type: "inOut", base: "ease" }
         },
         introOut: {
-          type: "slideOutLeft",
-          duration: 5,
-          easing: { type: "out", base: "ease" },
-          custom: { distance: 60 }
+          type: "fadeOut",
+          duration: 10,
+          easing: { type: "out", base: "ease" }
         }
       }
     }
@@ -53230,58 +53403,59 @@ var broadcastSnapAnimations2 = {
   text: {
     intro: {
       mainTitle: {
-        type: "slideInRight",
-        duration: 15,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 280 }
+        custom: { distance: 28 }
       },
       clubName: {
-        type: "slideInRight",
-        duration: 15,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
-        delay: 3,
-        custom: { distance: 280 }
+        delay: 6,
+        custom: { distance: 28 }
       },
       introOut: {
-        type: "slideOutRight",
-        duration: 9,
-        easing: { type: "out", base: "ease" },
-        custom: { distance: 200 }
+        type: "fadeOut",
+        duration: 14,
+        easing: { type: "out", base: "ease" }
       },
       introExitFrame: 60
     },
     main: {
       title: {
         type: "fadeInDown",
-        duration: 16,
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 120 }
+        custom: { distance: 28 }
       },
       copyIn: {
-        type: "fadeIn",
-        duration: 14,
+        type: "fadeInUp",
+        duration: 18,
         easing: { type: "inOut", base: "ease" },
-        delay: 8
+        delay: 4,
+        custom: { distance: 16 }
       },
       copyOut: {
         type: "fadeOut",
-        duration: 9,
+        duration: 14,
         easing: { type: "out", base: "ease" },
         delay: 0
       }
     },
     outro: {
       copyIn: {
-        type: "fadeIn",
-        duration: 18,
+        type: "fadeInUp",
+        duration: 20,
         easing: { type: "inOut", base: "ease" },
-        delay: 6
+        delay: 6,
+        custom: { distance: 20 }
       },
       copyOut: {
         type: "fadeOut",
-        duration: 10,
+        duration: 14,
         easing: { type: "out", base: "ease" },
         delay: 0
       }
@@ -53297,70 +53471,69 @@ var broadcastSnapAnimations2 = {
           type: "none"
         }
       },
-      // Ladder rows (and similar list items): pop-in. Panel wrapper uses itemContainerOuter slide-in.
+      // Match rows / list items: soft rise + mild scale (no hard pop).
       itemContainer: {
         containerIn: {
           type: "scaleIn",
           easing: { type: "out", base: "ease" },
-          duration: 10,
+          duration: 20,
           custom: {
-            startScale: 0.86
+            startScale: 0.96
           }
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14
         }
       },
       itemContainerOuter: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%"
-          }
+          duration: 22
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 16
         }
       },
       itemContainerInner: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%"
-          }
+          duration: 18
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14
         }
       },
       itemContainerSecondary: {
         containerIn: {
-          type: "slideInBottom",
+          type: "fadeIn",
           easing: { type: "inOut", base: "ease" },
-          duration: 10,
-          custom: {
-            distance: "105%"
-          }
+          duration: 18
         },
         containerOut: {
-          type: "none"
+          type: "fadeOut",
+          easing: { type: "out", base: "ease" },
+          duration: 14
         }
       }
     }
   },
   transition: {
     Main: {
-      type: "slide",
+      type: "fade",
       direction: "from-right",
-      durationInFrames: 12
+      durationInFrames: 20
     }
   }
 };
-var templateAnimations11 = broadcastSnapAnimations2;
+var templateAnimations11 = broadcastGlassAnimations;
 
 // src/templates/variants/broadcastProRounded/index.tsx
 var import_jsx_runtime584 = require("react/jsx-runtime");

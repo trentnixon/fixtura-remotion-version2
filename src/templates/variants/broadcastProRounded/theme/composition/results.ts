@@ -12,10 +12,10 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
     className: "text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "text-2xl font-semibold leading-tight opacity-70",
+    className: "text-[26px] font-semibold leading-tight opacity-70",
   },
   ResultPlayerScore: {
-    className: "font-teko text-4xl font-bold tracking-tight leading-tight",
+    className: "font-teko text-[38px] font-normal tracking-tight leading-tight",
   },
   ResultSyntax: {
     className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4",

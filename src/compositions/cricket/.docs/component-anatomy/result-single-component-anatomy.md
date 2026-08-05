@@ -12,11 +12,11 @@ Shared frame components and most match-module parts align with `results-componen
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Artboard** | 1080 × 1350 portrait |
-| **Match modules** | **Exactly 1** per frame |
-| **Modes** | Association (both teams' stats) and Club (club stats only) |
+| Attribute         | Value                                                      |
+| ----------------- | ---------------------------------------------------------- |
+| **Artboard**      | 1080 × 1350 portrait                                       |
+| **Match modules** | **Exactly 1** per frame                                    |
+| **Modes**         | Association (both teams' stats) and Club (club stats only) |
 
 **Goal:** Outcome and scores immediately; **both teams' player contributions** as the hero depth block.
 
@@ -49,12 +49,12 @@ Full Asset Frame
 
 Same rules as **Results** — see `results-component-anatomy.md` mode matrix.
 
-| Delta | Single Result |
-| ----- | ------------- |
-| **Match Module count** | 1 — uses full content area height |
+| Delta                   | Single Result                                   |
+| ----------------------- | ----------------------------------------------- |
+| **Match Module count**  | 1 — uses full content area height               |
 | **Performance Summary** | Hero block — more visible rows; less truncation |
-| **Vertical order** | Result / status may sit **above** team band |
-| **Match Metadata** | Often quieter / lower in stack |
+| **Vertical order**      | Result / status may sit **above** team band     |
+| **Match Metadata**      | Often quieter / lower in stack                  |
 
 ---
 
@@ -105,10 +105,10 @@ These components are **identical** to Results anatomy — refer to `results-comp
 
 Inherits Results edge cases. Additional:
 
-| Scenario | Response |
-| -------- | -------- |
-| Very large stat lists | Still may truncate — design compact row early |
-| Single module full height | Do not design as half-height card |
+| Scenario                  | Response                                      |
+| ------------------------- | --------------------------------------------- |
+| Very large stat lists     | Still may truncate — design compact row early |
+| Single module full height | Do not design as half-height card             |
 
 ---
 
@@ -116,10 +116,10 @@ Inherits Results edge cases. Additional:
 
 Extend Results components. Document deltas:
 
-| Component | Status |
-| --------- | ------ |
-| Expanded Match Module | TBD |
-| Hero Performance Summary | TBD |
+| Component                | Status |
+| ------------------------ | ------ |
+| Expanded Match Module    | TBD    |
+| Hero Performance Summary | TBD    |
 
 ---
 

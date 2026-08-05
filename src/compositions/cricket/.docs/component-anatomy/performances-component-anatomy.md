@@ -12,12 +12,12 @@ Shared frame components: `component-anatomy-overview.md`.
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Artboard** | 1080 × 1350 portrait |
+| Attribute       | Value                                                      |
+| --------------- | ---------------------------------------------------------- |
+| **Artboard**    | 1080 × 1350 portrait                                       |
 | **List length** | **Variable N** — often 5 per screen in video; may paginate |
-| **Discipline** | Batting **or** bowling per graphic |
-| **Modes** | Single mode |
+| **Discipline**  | Batting **or** bowling per graphic                         |
+| **Modes**       | Single mode                                                |
 
 **Goal:** Identity and numbers read instantly; first row may read as lead performance.
 
@@ -50,18 +50,18 @@ Full Asset Frame
 
 Same field model as Top Performers (`PerformanceData`):
 
-| Field | Batting | Bowling |
-| ----- | ------- | ------- |
-| `name` | Yes | Yes |
-| `playedFor` | Yes | Yes |
-| `teamLogo` | Yes | Yes |
-| `type` | `"batting"` | `"bowling"` |
-| `runs` | Yes (scored) | Yes (conceded) |
-| `balls` | Yes | — |
-| `SR` | Yes | — |
-| `notOut` | Yes | — |
-| `wickets` | — | Yes |
-| `overs` | — | Yes |
+| Field       | Batting      | Bowling        |
+| ----------- | ------------ | -------------- |
+| `name`      | Yes          | Yes            |
+| `playedFor` | Yes          | Yes            |
+| `teamLogo`  | Yes          | Yes            |
+| `type`      | `"batting"`  | `"bowling"`    |
+| `runs`      | Yes (scored) | Yes (conceded) |
+| `balls`     | Yes          | —              |
+| `SR`        | Yes          | —              |
+| `notOut`    | Yes          | —              |
+| `wickets`   | —            | Yes            |
+| `overs`     | —            | Yes            |
 
 Also: `assignSponsors`, `prompt` (hidden).
 
@@ -69,12 +69,12 @@ Also: `assignSponsors`, `prompt` (hidden).
 
 ## Differences from Top Performers
 
-| Aspect | Top Performers | Performances |
-| ------ | -------------- | ------------ |
-| **Naming** | "Top 5" — rank explicit | Sorted list — lead row, not always labelled "Top 5" |
-| **Row count** | Usually exactly 5 | Variable; may represent one page of longer list |
-| **Header** | Category Header (leaderboard title) | Period Header (round/weekend — optional) |
-| **Featured row** | Rank 1 | First row (lead performance) |
+| Aspect           | Top Performers                      | Performances                                        |
+| ---------------- | ----------------------------------- | --------------------------------------------------- |
+| **Naming**       | "Top 5" — rank explicit             | Sorted list — lead row, not always labelled "Top 5" |
+| **Row count**    | Usually exactly 5                   | Variable; may represent one page of longer list     |
+| **Header**       | Category Header (leaderboard title) | Period Header (round/weekend — optional)            |
+| **Featured row** | Rank 1                              | First row (lead performance)                        |
 
 Row component structure is **the same** — reuse Stadium Signal row treatment from Top Performers where possible.
 
@@ -106,11 +106,11 @@ Row component structure is **the same** — reuse Stadium Signal row treatment f
 
 ## Edge case catalogue
 
-| Scenario | Response |
-| -------- | -------- |
-| Empty list | Empty state or collapse content area |
-| 10+ performances | Compact row; pagination |
-| Same player twice | Rare — treat as separate rows |
+| Scenario          | Response                             |
+| ----------------- | ------------------------------------ |
+| Empty list        | Empty state or collapse content area |
+| 10+ performances  | Compact row; pagination              |
+| Same player twice | Rare — treat as separate rows        |
 
 ---
 
@@ -118,11 +118,11 @@ Row component structure is **the same** — reuse Stadium Signal row treatment f
 
 Extend Top Performers row styles. Document deltas only:
 
-| Component | Status |
-| --------- | ------ |
-| Period Header | TBD |
+| Component       | Status                     |
+| --------------- | -------------------------- |
+| Period Header   | TBD                        |
 | Performance Row | Extend from Top Performers |
-| Lead row state | TBD |
+| Lead row state  | TBD                        |
 
 ---
 

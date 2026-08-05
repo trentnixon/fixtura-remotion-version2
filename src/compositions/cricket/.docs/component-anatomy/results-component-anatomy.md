@@ -12,13 +12,13 @@ Design-first building-block reference for the **Cricket Results** composition. D
 
 ## Asset summary
 
-| Attribute | Value |
-| --------- | ----- |
-| **Composition type** | Weekend Results (multi-match results) |
-| **Artboard** | 1080 × 1350 portrait (proportional guide) |
-| **Match modules per frame** | Minimum **2**; stacked vertically with equal visual weight |
-| **Modes** | Association (both teams' stats) and Club (club stats only) — see [Mode matrix](#mode-matrix) |
-| **Sample payload** | `testData/samples/Cricket/Cricket_Results.json` |
+| Attribute                   | Value                                                                                        |
+| --------------------------- | -------------------------------------------------------------------------------------------- |
+| **Composition type**        | Weekend Results (multi-match results)                                                        |
+| **Artboard**                | 1080 × 1350 portrait (proportional guide)                                                    |
+| **Match modules per frame** | Minimum **2**; stacked vertically with equal visual weight                                   |
+| **Modes**                   | Association (both teams' stats) and Club (club stats only) — see [Mode matrix](#mode-matrix) |
+| **Sample payload**          | `testData/samples/Cricket/Cricket_Results.json`                                              |
 
 **Goal (design):** Match outcome and scores read first; player contributions second; fixture context quietest unless brief prioritises it.
 
@@ -57,18 +57,18 @@ Full Asset Frame
 
 One anatomy; visibility changes by account mode.
 
-| Component | Association mode | Club mode |
-| --------- | ---------------- | --------- |
-| **Asset Header** | Show | Show |
-| **Match Metadata** | Show | Show |
-| **Team and Score Area** | Both teams; **equal visual weight** | Both teams visible; **club team may be emphasised** (weight, scale, or order — subtle) |
-| **Versus / Divider** | Optional; **often omitted** for Results | Same |
-| **Result Statement** | Show | Show |
-| **Match Status** | Show when `status` is meaningful and distinct from result | Same |
-| **Performance Summary — batting** | **Both** `homeTeam` and `awayTeam` | **Club team only** (`isClubTeam: true`) |
-| **Performance Summary — bowling** | **Both** teams | **Club team only** |
-| **Team Group Label** | Recommended when showing both teams' stats | Optional; single team may not need label |
-| **Asset Footer** | Show | Show |
+| Component                         | Association mode                                          | Club mode                                                                              |
+| --------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Asset Header**                  | Show                                                      | Show                                                                                   |
+| **Match Metadata**                | Show                                                      | Show                                                                                   |
+| **Team and Score Area**           | Both teams; **equal visual weight**                       | Both teams visible; **club team may be emphasised** (weight, scale, or order — subtle) |
+| **Versus / Divider**              | Optional; **often omitted** for Results                   | Same                                                                                   |
+| **Result Statement**              | Show                                                      | Show                                                                                   |
+| **Match Status**                  | Show when `status` is meaningful and distinct from result | Same                                                                                   |
+| **Performance Summary — batting** | **Both** `homeTeam` and `awayTeam`                        | **Club team only** (`isClubTeam: true`)                                                |
+| **Performance Summary — bowling** | **Both** teams                                            | **Club team only**                                                                     |
+| **Team Group Label**              | Recommended when showing both teams' stats                | Optional; single team may not need label                                               |
+| **Asset Footer**                  | Show                                                      | Show                                                                                   |
 
 **Club team detection:** Use `isClubTeam` on `homeTeam` / `awayTeam`. If neither is club, fall back to association behaviour or hide stats per brief.
 
@@ -80,74 +80,74 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 ### Match-level fields
 
-| Field | Required | Typical use | Hidden |
-| ----- | -------- | ----------- | ------ |
-| `date` | Yes | Match Metadata | |
-| `type` | Yes | Match Metadata (e.g. T20, One Day) | |
-| `round` | Yes | Match Metadata | |
-| `ground` | Yes | Match Metadata | |
-| `gradeName` | Yes | Match Metadata or Asset Header context | |
-| `gender` | Optional | Match Metadata | |
-| `ageGroup` | Optional | Match Metadata | |
-| `status` | Optional | Match Status (e.g. Final, Abandoned) | |
-| `result` | Yes | Result Statement (long form) | |
-| `resultShort` | Yes | Result Statement (headline when tight) | |
-| `resultSummary` | Optional | Result Statement construction (`winner`, `resultWord`, team names) | |
-| `homeTeam` | Yes | Team and Score Area, Performance Summary | |
-| `awayTeam` | Yes | Team and Score Area, Performance Summary | |
-| `teamHomeLogo` | Optional | Alternate home crest source | |
-| `teamAwayLogo` | Optional | Alternate away crest source | |
-| `assignSponsors` | Optional | Asset Footer | |
-| `prompt` | Optional | Copy tone only | Usually hidden |
-| `gameID` | Optional | Automation | Hidden |
+| Field            | Required | Typical use                                                        | Hidden         |
+| ---------------- | -------- | ------------------------------------------------------------------ | -------------- |
+| `date`           | Yes      | Match Metadata                                                     |                |
+| `type`           | Yes      | Match Metadata (e.g. T20, One Day)                                 |                |
+| `round`          | Yes      | Match Metadata                                                     |                |
+| `ground`         | Yes      | Match Metadata                                                     |                |
+| `gradeName`      | Yes      | Match Metadata or Asset Header context                             |                |
+| `gender`         | Optional | Match Metadata                                                     |                |
+| `ageGroup`       | Optional | Match Metadata                                                     |                |
+| `status`         | Optional | Match Status (e.g. Final, Abandoned)                               |                |
+| `result`         | Yes      | Result Statement (long form)                                       |                |
+| `resultShort`    | Yes      | Result Statement (headline when tight)                             |                |
+| `resultSummary`  | Optional | Result Statement construction (`winner`, `resultWord`, team names) |                |
+| `homeTeam`       | Yes      | Team and Score Area, Performance Summary                           |                |
+| `awayTeam`       | Yes      | Team and Score Area, Performance Summary                           |                |
+| `teamHomeLogo`   | Optional | Alternate home crest source                                        |                |
+| `teamAwayLogo`   | Optional | Alternate away crest source                                        |                |
+| `assignSponsors` | Optional | Asset Footer                                                       |                |
+| `prompt`         | Optional | Copy tone only                                                     | Usually hidden |
+| `gameID`         | Optional | Automation                                                         | Hidden         |
 
 ### Team fields (`homeTeam` / `awayTeam`)
 
-| Field | Required | Typical use |
-| ----- | -------- | ----------- |
-| `name` | Yes | Team Identity |
-| `score` | Yes | Score Display |
-| `overs` | Optional | Score Display (secondary line) |
-| `logo` | Optional | Team Identity (nullable — design placeholder state) |
-| `isHome` | Yes | Layout order (home vs away position) |
-| `isClubTeam` | Yes | Club mode — which team's stats to show |
-| `battingPerformances` | Optional | Batting Leader Row[] |
-| `bowlingPerformances` | Optional | Bowling Leader Row[] |
-| `homeScoresFirstInnings` | Optional | Multi-innings hint (home) |
-| `awayScoresFirstInnings` | Optional | Multi-innings hint (away) |
+| Field                    | Required | Typical use                                         |
+| ------------------------ | -------- | --------------------------------------------------- |
+| `name`                   | Yes      | Team Identity                                       |
+| `score`                  | Yes      | Score Display                                       |
+| `overs`                  | Optional | Score Display (secondary line)                      |
+| `logo`                   | Optional | Team Identity (nullable — design placeholder state) |
+| `isHome`                 | Yes      | Layout order (home vs away position)                |
+| `isClubTeam`             | Yes      | Club mode — which team's stats to show              |
+| `battingPerformances`    | Optional | Batting Leader Row[]                                |
+| `bowlingPerformances`    | Optional | Bowling Leader Row[]                                |
+| `homeScoresFirstInnings` | Optional | Multi-innings hint (home)                           |
+| `awayScoresFirstInnings` | Optional | Multi-innings hint (away)                           |
 
 ### Batting Leader Row fields
 
-| Field | Required | Display |
-| ----- | -------- | ------- |
-| `player` | Yes | Player name label |
-| `runs` | Yes | Stat cell |
-| `balls` | Yes | Stat cell |
-| `SR` | Yes | Stat cell (strike rate) |
-| `fours` | Optional | Stat cell |
-| `sixes` | Optional | Stat cell |
+| Field    | Required | Display                            |
+| -------- | -------- | ---------------------------------- |
+| `player` | Yes      | Player name label                  |
+| `runs`   | Yes      | Stat cell                          |
+| `balls`  | Yes      | Stat cell                          |
+| `SR`     | Yes      | Stat cell (strike rate)            |
+| `fours`  | Optional | Stat cell                          |
+| `sixes`  | Optional | Stat cell                          |
 | `notOut` | Optional | Indicator (e.g. asterisk or badge) |
-| `team` | Optional | Automation / grouping |
+| `team`   | Optional | Automation / grouping              |
 
 ### Bowling Leader Row fields
 
-| Field | Required | Display |
-| ----- | -------- | ------- |
-| `player` | Yes | Player name label |
-| `overs` | Yes | Stat cell |
-| `wickets` | Yes | Stat cell |
-| `runs` | Optional | Stat cell (runs conceded) |
-| `economy` | Optional | Stat cell |
-| `maidens` | Optional | Stat cell |
-| `team` | Optional | Automation / grouping |
+| Field     | Required | Display                   |
+| --------- | -------- | ------------------------- |
+| `player`  | Yes      | Player name label         |
+| `overs`   | Yes      | Stat cell                 |
+| `wickets` | Yes      | Stat cell                 |
+| `runs`    | Optional | Stat cell (runs conceded) |
+| `economy` | Optional | Stat cell                 |
+| `maidens` | Optional | Stat cell                 |
+| `team`    | Optional | Automation / grouping     |
 
 ### Sponsor fields (`assignSponsors`)
 
-| Group | Use |
-| ----- | --- |
-| `competition[]` | Competition sponsor lockups in footer |
-| `grade[]` | Grade sponsor lockups |
-| `team[]` | Team sponsor lockups (home/away names + logos) |
+| Group           | Use                                            |
+| --------------- | ---------------------------------------------- |
+| `competition[]` | Competition sponsor lockups in footer          |
+| `grade[]`       | Grade sponsor lockups                          |
+| `team[]`        | Team sponsor lockups (home/away names + logos) |
 
 ---
 
@@ -201,7 +201,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Secondary line visibility may be suppressed per composition ID
 - Header height comes from theme layout tokens
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -247,7 +247,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Module height is calculated, not fixed by design
 - Stitch should provide a **module wireframe** with placeholder slots, not a final 2-match composition
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -295,7 +295,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Module must remain legible when height is halved (2-up layout)
 - Do not design assuming a single match fills the frame
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -350,7 +350,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Field selection may vary by template density
 - Not the same as Asset Header — never duplicate org identity here
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -399,7 +399,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Home/away order determined by `isHome` and layout rules
 - Club emphasis must not break result legibility for the opponent
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -445,7 +445,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Logo source may fall back to alternate team logo fields
 - Do not use colour alone to identify club team
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -495,7 +495,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Score strings are pre-formatted from data — design for variable length
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -533,7 +533,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Results layouts frequently omit this component; design as optional
 
-**Approved style mapping:** *(Stadium Signal — TBD — note if omitted)*
+**Approved style mapping:** _(Stadium Signal — TBD — note if omitted)_
 
 ---
 
@@ -592,7 +592,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Text source priority: `resultShort` when tight, else `result`, else built from `resultSummary`
 - Must not rely on colour alone to identify winner
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -632,7 +632,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Hidden when `status` adds no information beyond Result Statement
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -683,7 +683,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Row count not fixed
 - Opponent performances hidden in club mode but opponent remains in Team and Score Area
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -722,7 +722,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Omitted when only one team's stats are visible
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -773,7 +773,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Maximum visible rows set by engineering based on module height
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -821,7 +821,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Maximum visible rows set by engineering
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -868,7 +868,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Footer height from theme layout tokens
 - Sponsor set varies per account
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -899,7 +899,7 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 
 - Missing logo — text-only
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
@@ -932,36 +932,36 @@ Design-facing field names. Maps to production `MatchResult` payloads.
 - Missing logo — name fallback or skip
 - Single vs many sponsors
 
-**Approved style mapping:** *(Stadium Signal — TBD)*
+**Approved style mapping:** _(Stadium Signal — TBD)_
 
 ---
 
 ## Edge case catalogue (cross-component)
 
-| Scenario | Affected components | Design response |
-| -------- | ------------------- | --------------- |
-| Both logos missing | Team Identity | Placeholder both sides |
-| One team no stats | Performance Summary | Collapse that team's block; association mode may show empty label |
-| Club mode, no `isClubTeam` | Performance Summary | Fall back to association or hide stats |
-| Abandoned match | Result Statement, Match Status | Status may carry primary message |
-| Draw / tie | Result Statement | Distinct copy; no implied winner |
-| 8+ batting rows | Batting Leader Row | Compact row; engineering truncates |
-| Two matches, unequal density | Match Module | Equal module height; internal truncation |
-| Long result + long names | Result Statement, Team Identity | Two-line result; truncated names |
+| Scenario                     | Affected components             | Design response                                                   |
+| ---------------------------- | ------------------------------- | ----------------------------------------------------------------- |
+| Both logos missing           | Team Identity                   | Placeholder both sides                                            |
+| One team no stats            | Performance Summary             | Collapse that team's block; association mode may show empty label |
+| Club mode, no `isClubTeam`   | Performance Summary             | Fall back to association or hide stats                            |
+| Abandoned match              | Result Statement, Match Status  | Status may carry primary message                                  |
+| Draw / tie                   | Result Statement                | Distinct copy; no implied winner                                  |
+| 8+ batting rows              | Batting Leader Row              | Compact row; engineering truncates                                |
+| Two matches, unequal density | Match Module                    | Equal module height; internal truncation                          |
+| Long result + long names     | Result Statement, Team Identity | Two-line result; truncated names                                  |
 
 ---
 
 ## Layout responsibilities (summary)
 
-| Region | Approx. weight (guide) | Owner |
-| ------ | ---------------------- | ----- |
-| Asset Header | ~20–25% frame | Template shell |
-| Results Content Area | ~60–70% frame | Composition |
-| — per Match Module | Equal split of content area | Remotion |
-| — Team and Score Area | ~35–45% of module | Design + Remotion |
-| — Performance Summary | ~45–55% of module | Design + Remotion |
-| — Match Metadata | ~5–10% of module | Design |
-| Asset Footer | ~8–12% frame | Template shell |
+| Region                | Approx. weight (guide)      | Owner             |
+| --------------------- | --------------------------- | ----------------- |
+| Asset Header          | ~20–25% frame               | Template shell    |
+| Results Content Area  | ~60–70% frame               | Composition       |
+| — per Match Module    | Equal split of content area | Remotion          |
+| — Team and Score Area | ~35–45% of module           | Design + Remotion |
+| — Performance Summary | ~45–55% of module           | Design + Remotion |
+| — Match Metadata      | ~5–10% of module            | Design            |
+| Asset Footer          | ~8–12% frame                | Template shell    |
 
 Percentages are **guides for Stitch context wireframes**, not fixed implementation values.
 
@@ -971,23 +971,23 @@ Percentages are **guides for Stitch context wireframes**, not fixed implementati
 
 Fill as components are approved in Stadium Signal.
 
-| Abstract component | Stadium Signal treatment | Status |
-| ------------------ | ------------------------ | ------ |
-| Asset Header | | TBD |
-| Match Module container | | TBD |
-| Match Metadata | | TBD |
-| Team Identity | | TBD |
-| Score Display | | TBD |
-| Versus / Divider | | TBD (note if omitted) |
-| Result Statement | | TBD |
-| Match Status | | TBD |
-| Performance Summary | | TBD |
-| Team Group Label | | TBD |
-| Batting Leader Row | | TBD |
-| Bowling Leader Row | | TBD |
-| Asset Footer | | TBD |
-| Organisation Identity | | TBD |
-| Sponsor Identity | | TBD |
+| Abstract component     | Stadium Signal treatment | Status                |
+| ---------------------- | ------------------------ | --------------------- |
+| Asset Header           |                          | TBD                   |
+| Match Module container |                          | TBD                   |
+| Match Metadata         |                          | TBD                   |
+| Team Identity          |                          | TBD                   |
+| Score Display          |                          | TBD                   |
+| Versus / Divider       |                          | TBD (note if omitted) |
+| Result Statement       |                          | TBD                   |
+| Match Status           |                          | TBD                   |
+| Performance Summary    |                          | TBD                   |
+| Team Group Label       |                          | TBD                   |
+| Batting Leader Row     |                          | TBD                   |
+| Bowling Leader Row     |                          | TBD                   |
+| Asset Footer           |                          | TBD                   |
+| Organisation Identity  |                          | TBD                   |
+| Sponsor Identity       |                          | TBD                   |
 
 ---
 
@@ -1009,14 +1009,14 @@ When anatomy and code diverge, anatomy wins for new design work.
 
 ## Related documents
 
-| Document | Path |
-| -------- | ---- |
-| Overview | `component-anatomy-overview.md` |
-| Stitch brief | `../stitch-briefs/results-stitch-component-brief.md` |
-| Results design brief (index) | `../../results/.docs/llm-brief/llm-brief-cricket-results.md` |
-| Association brief | `../../results/.docs/llm-brief/llm-brief-cricket-results-association.md` |
-| Club brief | `../../results/.docs/llm-brief/llm-brief-cricket-results-club.md` |
-| Results how-to | `../../results/.docs/how-to.md` |
+| Document                     | Path                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| Overview                     | `component-anatomy-overview.md`                                          |
+| Stitch brief                 | `../stitch-briefs/results-stitch-component-brief.md`                     |
+| Results design brief (index) | `../../results/.docs/llm-brief/llm-brief-cricket-results.md`             |
+| Association brief            | `../../results/.docs/llm-brief/llm-brief-cricket-results-association.md` |
+| Club brief                   | `../../results/.docs/llm-brief/llm-brief-cricket-results-club.md`        |
+| Results how-to               | `../../results/.docs/how-to.md`                                          |
 
 ---
 

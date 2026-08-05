@@ -87,7 +87,7 @@ export const MudgeerabaMainHeader = () => {
           <AnimatedText
             textAlign="center"
             type="titleSmall"
-            variant="onBackgroundMain"
+            variant="onContainerTitle"
             letterAnimation="none"
             animation={TextAnimations.title}
             exitAnimation={TextAnimations.copyOut}
@@ -109,7 +109,7 @@ export const MudgeerabaMainHeader = () => {
             fontFamily={nameFontFamily}
             type="subtitle"
             textAlign="center"
-            variant="onBackgroundMain"
+            variant="onContainerTitle"
             letterAnimation="none"
             animation={TextAnimations.title}
             exitAnimation={TextAnimations.copyOut}
