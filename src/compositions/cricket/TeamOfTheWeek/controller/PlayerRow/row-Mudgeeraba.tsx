@@ -3,8 +3,8 @@ import { PLAYER_STAGGER_DELAY, PlayerRowProps } from "../../types";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { Img } from "remotion";
 import { TeamOfTheWeekPlayerName } from "../../../utils/primitives/TeamOfTheWeekPlayerName";
+import { TeamLogo } from "../../../utils/primitives/TeamLogo";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { cleanPlayerName, getPositionIcon } from "../../utils/config";
 import { DEFAULT_ICON_PACK } from "./_utils/constants";
@@ -28,8 +28,10 @@ import {
   clipPathStyle,
   getLayeredUnderlayColor,
 } from "../../../../../templates/variants/mudgeeraba/design";
-/** Width of icon/logo containers as fraction of row height (thinner than square) */
+/** Position icon well width as fraction of row height */
 const ICON_LOGO_WIDTH_RATIO = 0.72;
+/** Mirror of row logo flush — steepRight club logo sits on the outer right edge */
+const PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT = "pl-4 pr-0";
 
 const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
   player,
@@ -169,13 +171,17 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
       {!isAccountClub && (
         <LogoWell
           variant="steepRight"
-          size={Math.round(rowHeight * ICON_LOGO_WIDTH_RATIO)}
-          className="ml-2"
+          size={rowHeight}
+          fullBleed
+          className="ml-2 shrink-0"
         >
-          <Img
-            src={player.club.logo.url}
-            alt={player.club.name}
-            style={{
+          <TeamLogo
+            logo={player.club.logo}
+            teamName={player.club.name}
+            delay={delay}
+            size={rowHeight}
+            fit="cover"
+            imgStyle={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
@@ -203,7 +209,7 @@ const PlayerRowMudgeeraba: React.FC<PlayerRowProps> = ({
           underlayColor={getLayeredUnderlayColor(colors.primary)}
           className="w-full relative"
           style={{ height: `${rowHeight}px` }}
-          surfaceClassName="flex items-center w-full overflow-hidden pl-0 pr-0"
+          surfaceClassName={`flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT}`}
         >
           {rowInner}
         </LayeredAngularPanel>

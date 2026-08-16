@@ -15,8 +15,7 @@ import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import {
   LayeredAngularPanel,
   LogoWell,
-  PADDING_SHALLOW_LEFT,
-  PADDING_SHALLOW_RIGHT,
+  PADDING_SHALLOW_ROW_LOGO_FLUSH,
   SHALLOW_COLUMN_LEFT,
   SHALLOW_COLUMN_RIGHT,
   SHALLOW_EDGE_STRIP_LEFT,
@@ -28,6 +27,9 @@ import {
 
 const EDGE_COLOR_HOME = "rgb(34, 197, 94)"; // green
 const EDGE_COLOR_AWAY = "rgb(239, 68, 68)"; // red
+const TEAM_PANEL_HEIGHT_PX = 150;
+/** Mirror of row logo flush — steepRight well sits on the outer edge */
+const PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT = "pl-10 pr-0";
 
 export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
   game,
@@ -43,6 +45,43 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
   const animationOutFrame = calculateAnimationOutFrame(timings);
   const teamBg = selectedPalette.container.backgroundTransparent.high;
   const underlayColor = getLayeredUnderlayColor(colors.primary);
+
+  const teamPanelStyle: React.CSSProperties = {
+    height: `${TEAM_PANEL_HEIGHT_PX}px`,
+    minHeight: `${TEAM_PANEL_HEIGHT_PX}px`,
+  };
+
+  const renderTeamLogo = (
+    logo: GameCardProps["game"]["teamHomeLogo"],
+    teamName: string,
+    logoDelay: number,
+    variant: "steepLeft" | "steepRight",
+    className: string,
+  ) => (
+    <LogoWell
+      variant={variant}
+      size={TEAM_PANEL_HEIGHT_PX}
+      fullBleed
+      className={`shrink-0 ${className}`}
+    >
+      {logo ? (
+        <TeamLogo
+          logo={logo}
+          teamName={teamName}
+          delay={logoDelay}
+          size={TEAM_PANEL_HEIGHT_PX}
+          fit="cover"
+          imgStyle={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      ) : (
+        <div className="w-full h-full bg-gray-300/20" />
+      )}
+    </LogoWell>
+  );
 
   return (
     <div className="overflow-visible">
@@ -84,85 +123,83 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
           />
         </div>
 
-        {/* Two team columns: logo above, angled container with team name below */}
-        <div className="flex w-full relative overflow-visible">
-          {/* Home: logo above, then angled polygon with team name only */}
-          <div className="flex flex-1 flex-col items-center min-w-0">
-            <LogoWell variant="circle" size={112} className="shrink-0 mb-2">
-              <TeamLogo
-                logo={game.teamHomeLogo}
-                teamName={game.teamHome}
-                delay={delay + 10}
-                size={28}
+        {/* Home / away — steep logo wells (matches ladder + Top 5) */}
+        <div className="flex w-full relative overflow-visible gap-2">
+          <LayeredAngularPanel
+            clipPath={SHALLOW_COLUMN_LEFT}
+            surfaceColor={teamBg}
+            underlayColor={underlayColor}
+            className="flex flex-1 w-full min-w-0 relative"
+            style={teamPanelStyle}
+            surfaceClassName={`flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH}`}
+          >
+            {showAngularEdgeAccents() && (
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundColor: EDGE_COLOR_HOME,
+                  ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
+                }}
+                aria-hidden
               />
-            </LogoWell>
-            <LayeredAngularPanel
-              clipPath={SHALLOW_COLUMN_LEFT}
-              surfaceColor={teamBg}
-              underlayColor={underlayColor}
-              className="flex flex-1 w-full min-w-0 relative"
-              surfaceClassName={`flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_LEFT}`}
-            >
-              {showAngularEdgeAccents() && (
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    backgroundColor: EDGE_COLOR_HOME,
-                    ...clipPathStyle(SHALLOW_EDGE_STRIP_RIGHT),
-                  }}
-                  aria-hidden
-                />
-              )}
+            )}
+            {renderTeamLogo(
+              game.teamHomeLogo,
+              game.teamHome,
+              delay + 10,
+              "steepLeft",
+              "mr-3",
+            )}
+            <div className="relative z-10 flex flex-1 items-center justify-center min-w-0 px-2">
               <MetadataMedium
                 value={game.teamHome}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 15,
                 }}
-                className="block text-center truncate w-full max-w-full relative z-10"
+                className="block text-center w-full"
                 variant="onContainerCopy"
               />
-            </LayeredAngularPanel>
-          </div>
+            </div>
+          </LayeredAngularPanel>
 
-          {/* Away: logo above, then angled polygon with team name only */}
-          <div className="flex flex-1 flex-col items-center min-w-0">
-            <LogoWell variant="circle" size={112} className="shrink-0 mb-2">
-              <TeamLogo
-                logo={game.teamAwayLogo}
-                teamName={game.teamAway}
-                delay={delay + 25}
-                size={28}
+          <LayeredAngularPanel
+            clipPath={SHALLOW_COLUMN_RIGHT}
+            surfaceColor={teamBg}
+            underlayColor={underlayColor}
+            className="flex flex-1 w-full min-w-0 relative"
+            style={teamPanelStyle}
+            surfaceClassName={`flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT}`}
+          >
+            {showAngularEdgeAccents() && (
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundColor: EDGE_COLOR_AWAY,
+                  ...clipPathStyle(SHALLOW_EDGE_STRIP_LEFT),
+                }}
+                aria-hidden
               />
-            </LogoWell>
-            <LayeredAngularPanel
-              clipPath={SHALLOW_COLUMN_RIGHT}
-              surfaceColor={teamBg}
-              underlayColor={underlayColor}
-              className="flex flex-1 w-full min-w-0 relative"
-              surfaceClassName={`flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_RIGHT}`}
-            >
-              {showAngularEdgeAccents() && (
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    backgroundColor: EDGE_COLOR_AWAY,
-                    ...clipPathStyle(SHALLOW_EDGE_STRIP_LEFT),
-                  }}
-                  aria-hidden
-                />
-              )}
+            )}
+            <div className="relative z-10 flex flex-1 items-center justify-center min-w-0 px-2">
               <MetadataMedium
                 value={game.teamAway}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 30,
                 }}
-                className="block text-center truncate w-full max-w-full relative z-10"
+                className="block text-center w-full"
                 variant="onContainerCopy"
               />
-            </LayeredAngularPanel>
-          </div>
+            </div>
+            {renderTeamLogo(
+              game.teamAwayLogo,
+              game.teamAway,
+              delay + 25,
+              "steepRight",
+              "ml-3",
+            )}
+          </LayeredAngularPanel>
         </div>
       </AnimatedContainer>
     </div>

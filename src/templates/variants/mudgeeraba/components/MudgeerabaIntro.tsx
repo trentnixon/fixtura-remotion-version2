@@ -3,7 +3,7 @@ import { useVideoConfig } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { AnimatedImage } from "../../../../components/images";
-import { VerticalStackTitleLogoName } from "../../../../components/layout/titleScreen/index";
+import { VerticalStackLogoTitleName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import {
@@ -16,6 +16,7 @@ import {
 const MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
 const INTRO_TITLE_MAX_LINES = 2;
 const INTRO_TITLE_LINE_HEIGHT = 1.05;
+const INTRO_LOGO_MAX_PX = 336;
 
 /**
  * MudgeerabaIntro Component
@@ -54,17 +55,29 @@ export const MudgeerabaIntro: React.FC = () => {
 
   const titleFontSize = fittedTitleFontSize ?? MUDGEERABA_TITLE_MAX_FONT_PX;
 
+  const clubLogo = club.logo;
+  const clubLogoWidth = clubLogo?.width;
+  const clubLogoHeight = clubLogo?.height;
+
   return (
-    <VerticalStackTitleLogoName
+    <VerticalStackLogoTitleName
       alignment="center"
       Logo={
-        <div className="w-full h-full flex justify-center py-8 items-center max-h-[500px] max-w-[500px]">
+        <div
+          className="flex w-full justify-center pb-4 items-center"
+          style={{ maxHeight: INTRO_LOGO_MAX_PX, maxWidth: INTRO_LOGO_MAX_PX }}
+        >
           <AnimatedImage
-            src={club.logo?.url || ""}
+            src={clubLogo?.url || ""}
             alt={club.name}
-            width={"auto"}
-            height={"auto"}
+            originalWidth={clubLogoWidth}
+            originalHeight={clubLogoHeight}
+            width="auto"
+            height="auto"
+            maxWidth={INTRO_LOGO_MAX_PX}
+            maxHeight={INTRO_LOGO_MAX_PX}
             fit="contain"
+            preserveRatio
             animation={LogoAnimations.introIn}
             exitAnimation={LogoAnimations.introOut}
             exitFrame={LogoAnimations.introExitFrame}

@@ -9,4 +9,6 @@ export interface TeamRowProps {
   wrapperClass?: string;
   /** When true, use tighter padding, smaller logo and font so more rows fit */
   compact?: boolean;
+  /** Last row in the list — disables panel underlay bleed past the container bottom. */
+  isLast?: boolean;
 }

@@ -95,20 +95,8 @@ export const LogoWell: React.FC<LogoWellProps> = ({
       className={`relative flex shrink-0 items-center justify-center overflow-hidden ${className}`}
       style={outerStyle}
     >
-      {showCornerAccent && accentClip && (
-        <div
-          className="absolute pointer-events-none"
-          aria-hidden
-          style={{
-            inset: 0,
-            backgroundColor: colors.primary,
-            ...clipPathStyle(accentClip),
-          }}
-        />
-      )}
-
       <div
-        className="relative z-10 flex items-center justify-center overflow-hidden"
+        className="relative z-0 flex h-full w-full items-center justify-center overflow-hidden"
         style={{
           width: `${innerSize}px`,
           height: `${innerSize}px`,
@@ -120,6 +108,17 @@ export const LogoWell: React.FC<LogoWellProps> = ({
       >
         {children}
       </div>
+
+      {showCornerAccent && accentClip && (
+        <div
+          className="absolute inset-0 z-20 pointer-events-none"
+          aria-hidden
+          style={{
+            backgroundColor: colors.primary,
+            ...clipPathStyle(accentClip),
+          }}
+        />
+      )}
     </div>
   );
 };

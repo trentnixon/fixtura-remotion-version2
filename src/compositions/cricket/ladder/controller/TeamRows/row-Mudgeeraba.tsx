@@ -13,18 +13,20 @@ import {
   parseTeamPosition,
 } from "./_utils/calculations";
 import {
-  PADDING_SHALLOW_LEFT,
-  PADDING_SHALLOW_LEFT_COMPACT,
+  PADDING_SHALLOW_ROW_LOGO_FLUSH,
+  PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT,
   SHALLOW_EDGE_STRIP_RIGHT,
   SHALLOW_ROW_LEFT,
   LogoWell,
   LayeredAngularPanel,
+  LAYERED_PANEL_OFFSET_Y,
   getLayeredUnderlayColor,
   showAngularEdgeAccents,
   clipPathStyle,
 } from "../../../../../templates/variants/mudgeeraba/design";
 /** Frames to wait after row animates in before edge strip animates in */
 const EDGE_STRIP_DELAY_OFFSET = 12;
+const INNER_ROW_BORDER_PX = 5;
 
 export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   team,
@@ -33,6 +35,7 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   isBiasTeam,
   LadderRowHeight,
   compact = false,
+  isLast = false,
 }) => {
   const { data } = useVideoDataContext();
   const { animations } = useAnimationContext();
@@ -54,9 +57,6 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
     edgeStripColor = "rgb(239, 68, 68)"; // red-500 – bottom of ladder
   }
 
-  // Dynamic vertical padding: scale with row height (clamp so it never overflows)
-  const paddingY = Math.max(2, Math.min(8, Math.round(LadderRowHeight * 0.15)));
-
   // Font size by team count: < 12 = normal, >= 12 = smaller
   const useSmallerFont = totalTeams >= 12;
   const teamNameFontSizePx = useSmallerFont ? 24 : 30;
@@ -64,10 +64,11 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   const teamNameStyle = { fontSize: `${teamNameFontSizePx}px` };
   const statsStyle = { fontSize: `${statsFontSizePx}px` };
 
-  const logoWellSize = Math.min(
-    compact ? 36 : 56,
-    Math.max(28, LadderRowHeight - paddingY * 2),
-  );
+  const rowPanelClass = `flex items-stretch w-full overflow-hidden relative ${
+    compact
+      ? PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT
+      : PADDING_SHALLOW_ROW_LOGO_FLUSH
+  }`;
 
   let rowStyle: React.CSSProperties = {
     height: `${LadderRowHeight}px`,
@@ -82,9 +83,8 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   }
 
   const surfaceStyle: React.CSSProperties = {
-    paddingTop: paddingY,
-    paddingBottom: paddingY,
     boxSizing: "border-box",
+    boxShadow: `inset 0 -${INNER_ROW_BORDER_PX}px 0 0 ${colors.primary}`,
   };
 
   const rowContent = (
@@ -109,46 +109,41 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
           />
         </AnimatedContainer>
       )}
-      {/* Team info - logo + name */}
-      <div
-        className={`flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`}
-        style={{ width: "70%", minWidth: 0 }}
+      {/* Logo — flush left steep well (matches Top 5 / Performances) */}
+      <LogoWell
+        variant="steepLeft"
+        size={LadderRowHeight}
+        fullBleed
+        className={compact ? "mr-2" : "mr-4"}
       >
-        <LogoWell
-          variant="circle"
-          size={logoWellSize}
-          fullBleed
-          borderless
-          className={compact ? "mr-2" : "mr-3"}
-        >
-          {(team.clubLogo ?? team.playHQLogo) ? (
-            <TeamLogo
-              logo={team.clubLogo ?? team.playHQLogo ?? null}
-              teamName={team.teamName}
-              delay={delay}
-              size={logoWellSize}
-              fit="cover"
-              imgStyle={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          ) : (
-            <div className="w-full h-full bg-gray-300/20 rounded-full" />
-          )}
-        </LogoWell>
-        <div className="flex-1 truncate min-w-0">
-          <LadderTeamName
-            value={team.teamName}
+        {(team.clubLogo ?? team.playHQLogo) ? (
+          <TeamLogo
+            logo={team.clubLogo ?? team.playHQLogo ?? null}
+            teamName={team.teamName}
             delay={delay}
-            style={teamNameStyle}
+            size={LadderRowHeight}
+            fit="cover"
+            imgStyle={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
           />
-        </div>
+        ) : (
+          <div className="w-full h-full bg-gray-300/20" />
+        )}
+      </LogoWell>
+
+      <div className="flex flex-1 items-center min-w-0 truncate">
+        <LadderTeamName
+          value={team.teamName}
+          delay={delay}
+          style={teamNameStyle}
+        />
       </div>
 
       {/* Stats */}
-      <div className="flex flex-1 justify-evenly shrink-0" style={statsStyle}>
+      <div className="flex flex-1 justify-evenly shrink-0 items-center" style={statsStyle}>
         <div className="w-10 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.P ?? 0} delay={delay} />
         </div>
@@ -185,7 +180,8 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
           underlayColor={getLayeredUnderlayColor(colors.primary)}
           className="w-full relative"
           style={rowStyle}
-          surfaceClassName={`flex items-center relative overflow-hidden ${compact ? PADDING_SHALLOW_LEFT_COMPACT : PADDING_SHALLOW_LEFT}`}
+          offsetY={isLast ? 0 : LAYERED_PANEL_OFFSET_Y}
+          surfaceClassName={rowPanelClass}
           surfaceStyle={surfaceStyle}
         >
           {rowContent}
