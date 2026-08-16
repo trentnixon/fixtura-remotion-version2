@@ -40,6 +40,10 @@ export interface LogoWellProps {
   /** Use club primary for the outer border (match headers). Default: subtle neutral border. */
   emphasisBorder?: boolean;
   showCornerAccent?: boolean;
+  /** Logo fills the full well area (no inset padding). Useful for circular team badges. */
+  fullBleed?: boolean;
+  /** Hides well border and surface so only the logo shows. */
+  borderless?: boolean;
 }
 
 /**
@@ -54,6 +58,8 @@ export const LogoWell: React.FC<LogoWellProps> = ({
   style,
   emphasisBorder = false,
   showCornerAccent = true,
+  fullBleed = false,
+  borderless = false,
 }) => {
   const { colors, selectedPalette } = useThemeContext();
   const clipPath = getWellClipPath(variant);
@@ -65,13 +71,17 @@ export const LogoWell: React.FC<LogoWellProps> = ({
         .toRgbString();
   const borderWidth = emphasisBorder ? 4 : LOGO_WELL_BORDER_WIDTH_PX;
   const accentClip = getAccentClip(variant);
+  const innerSize = fullBleed
+    ? size
+    : Math.round(size * LOGO_WELL_MAX_LOGO_RATIO);
+  const innerPadding = fullBleed ? 0 : LOGO_WELL_PADDING_PX / 2;
 
   const outerStyle: CSSProperties = {
     width: `${size}px`,
     height: `${size}px`,
-    backgroundColor: surfaceColor,
+    backgroundColor: borderless ? "transparent" : surfaceColor,
     boxSizing: "border-box",
-    border: `${borderWidth}px solid ${borderColor}`,
+    border: borderless ? "none" : `${borderWidth}px solid ${borderColor}`,
     ...(variant === "circle"
       ? { borderRadius: "9999px" }
       : clipPath
@@ -100,9 +110,12 @@ export const LogoWell: React.FC<LogoWellProps> = ({
       <div
         className="relative z-10 flex items-center justify-center overflow-hidden"
         style={{
-          width: `${Math.round(size * LOGO_WELL_MAX_LOGO_RATIO)}px`,
-          height: `${Math.round(size * LOGO_WELL_MAX_LOGO_RATIO)}px`,
-          padding: `${LOGO_WELL_PADDING_PX / 2}px`,
+          width: `${innerSize}px`,
+          height: `${innerSize}px`,
+          padding: `${innerPadding}px`,
+          ...(variant === "circle" && fullBleed
+            ? { borderRadius: "9999px" }
+            : {}),
         }}
       >
         {children}

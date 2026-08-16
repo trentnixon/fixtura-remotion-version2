@@ -64,7 +64,13 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
       alt={teamName}
       width={width}
       height={height}
-      className="object-contain"
+      className={
+        fit === "cover"
+          ? "h-full w-full object-cover"
+          : fit === "fill"
+            ? "h-full w-full object-fill"
+            : "object-contain"
+      }
       fit={fit}
       style={imgStyle}
       animation={{ ...logoAnimation.logo.itemIn, delay: delay }}

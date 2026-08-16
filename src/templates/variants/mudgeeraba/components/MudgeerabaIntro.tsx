@@ -14,6 +14,8 @@ import {
 
 /** Mudgeeraba theme `text-[10em]` cap at default 16px root. */
 const MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
+const INTRO_TITLE_MAX_LINES = 2;
+const INTRO_TITLE_LINE_HEIGHT = 1.05;
 
 /**
  * MudgeerabaIntro Component
@@ -41,6 +43,13 @@ export const MudgeerabaIntro: React.FC = () => {
     textTransform: "uppercase",
     letterSpacing: "-0.025em",
     maxFontSize: MUDGEERABA_TITLE_MAX_FONT_PX,
+    withinWidth: contentWidth,
+    withinHeight:
+      MUDGEERABA_TITLE_MAX_FONT_PX *
+      INTRO_TITLE_LINE_HEIGHT *
+      INTRO_TITLE_MAX_LINES,
+    lineHeightRatio: INTRO_TITLE_LINE_HEIGHT,
+    maxLines: INTRO_TITLE_MAX_LINES,
   });
 
   const titleFontSize = fittedTitleFontSize ?? MUDGEERABA_TITLE_MAX_FONT_PX;
@@ -76,7 +85,11 @@ export const MudgeerabaIntro: React.FC = () => {
             exitAnimation={TextAnimations.introOut}
             exitFrame={TextAnimations.introExitFrame}
             fontFamily={titleFontFamily}
-            style={{ fontSize: titleFontSize }}
+            className="text-balance"
+            style={{
+              fontSize: titleFontSize,
+              lineHeight: INTRO_TITLE_LINE_HEIGHT,
+            }}
           >
             {title}
           </AnimatedText>

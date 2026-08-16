@@ -37,7 +37,7 @@ export const ClassicIntro: React.FC = () => {
         </div>
       }
       Title={
-        <div className="overflow-hidden mb-0 mt-[-1.5em]">
+        <div className="overflow-hidden mb-4 mt-[-1.5em]">
           <AnimatedText
             textAlign="center"
             type="title"
@@ -47,6 +47,7 @@ export const ClassicIntro: React.FC = () => {
             exitAnimation={TextAnimations.introOut}
             exitFrame={TextAnimations.introExitFrame}
             fontFamily={fontClasses.title?.family}
+            style={{ lineHeight: 1.05 }}
           >
             {metadata.title}
           </AnimatedText>

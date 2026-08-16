@@ -10122,7 +10122,7 @@ var TeamLogo = ({
       alt: teamName,
       width,
       height,
-      className: "object-contain",
+      className: fit === "cover" ? "h-full w-full object-cover" : fit === "fill" ? "h-full w-full object-fill" : "object-contain",
       fit,
       style: imgStyle,
       animation: { ...logoAnimation.logo.itemIn, delay },
@@ -12078,6 +12078,7 @@ var ClassicStatWell = ({
 // src/compositions/cricket/ladder/layout/LadderRowClassic.tsx
 var import_jsx_runtime86 = require("react/jsx-runtime");
 var CLASSIC_MAX_ROW_HEIGHT = 120;
+var CLASSIC_LADDER_LOGO_MAX = 64;
 var LadderRowClassic = ({
   team,
   delay,
@@ -12086,6 +12087,7 @@ var LadderRowClassic = ({
   const { layout, selectedPalette } = useThemeContext();
   const borderColor = selectedPalette.container.primary;
   const rowHeight = Math.min(LadderRowHeight, CLASSIC_MAX_ROW_HEIGHT);
+  const logoSize = Math.min(rowHeight - 8, CLASSIC_LADDER_LOGO_MAX);
   return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
     ClassicForegroundShell,
     {
@@ -12111,14 +12113,33 @@ var LadderRowClassic = ({
                       delay
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("div", { className: "w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center", children: team.clubLogo || team.playHQLogo ? /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("div", { className: "rounded-full", children: /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
-                    TeamLogo_default,
+                  /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
+                    "div",
                     {
-                      logo: team.clubLogo || team.playHQLogo,
-                      teamName: team.teamName,
-                      delay
+                      className: "mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center",
+                      style: { width: logoSize, height: logoSize },
+                      children: team.clubLogo || team.playHQLogo ? /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("div", { className: "rounded-full h-full w-full", children: /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
+                        TeamLogo_default,
+                        {
+                          logo: team.clubLogo || team.playHQLogo,
+                          teamName: team.teamName,
+                          delay,
+                          size: logoSize,
+                          imgStyle: {
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "contain"
+                          }
+                        }
+                      ) }) : /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
+                        "div",
+                        {
+                          className: "bg-gray-100 rounded-full",
+                          style: { width: logoSize, height: logoSize }
+                        }
+                      )
                     }
-                  ) }) : /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("div", { className: "w-8 h-8 bg-gray-100 rounded-full" }) })
+                  )
                 ]
               }
             ),
@@ -12632,6 +12653,8 @@ var Brickwork = () => {
 
 // src/compositions/cricket/ladder/layout/TableSixersRow.tsx
 var import_jsx_runtime95 = require("react/jsx-runtime");
+var LADDER_MAX_ROW_HEIGHT = 120;
+var LADDER_LOGO_MAX = 64;
 var SixersLadderRow = ({
   team,
   delay,
@@ -12640,13 +12663,15 @@ var SixersLadderRow = ({
 }) => {
   const { selectedPalette, layout } = useThemeContext();
   const borderColor = selectedPalette.container.primary;
+  const rowHeight = Math.min(LadderRowHeight, LADDER_MAX_ROW_HEIGHT);
+  const logoSize = Math.min(rowHeight - 8, LADDER_LOGO_MAX);
   return /* @__PURE__ */ (0, import_jsx_runtime95.jsxs)(
     "div",
     {
       className: `flex items-center overflow-hidden p-2 pl-4 ${layout.borderRadius.container} mb-1 ${bgColorClass}  `,
       style: {
-        height: `${LadderRowHeight}px`,
-        maxHeight: `120px`,
+        height: `${rowHeight}px`,
+        maxHeight: `${LADDER_MAX_ROW_HEIGHT}px`,
         background: bgColorClass,
         borderColor
       },
@@ -12658,14 +12683,33 @@ var SixersLadderRow = ({
             style: { width: "65%" },
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(ladderTeamName_default, { value: truncateText(team.teamName, 29), delay }),
-              /* @__PURE__ */ (0, import_jsx_runtime95.jsx)("div", { className: "w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center", children: team.clubLogo || team.playHQLogo ? /* @__PURE__ */ (0, import_jsx_runtime95.jsx)("div", { className: "rounded-full", children: /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
-                TeamLogo_default,
+              /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+                "div",
                 {
-                  logo: team.clubLogo || team.playHQLogo,
-                  teamName: team.teamName,
-                  delay
+                  className: "mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center",
+                  style: { width: logoSize, height: logoSize },
+                  children: team.clubLogo || team.playHQLogo ? /* @__PURE__ */ (0, import_jsx_runtime95.jsx)("div", { className: "rounded-full h-full w-full", children: /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+                    TeamLogo_default,
+                    {
+                      logo: team.clubLogo || team.playHQLogo,
+                      teamName: team.teamName,
+                      delay,
+                      size: logoSize,
+                      imgStyle: {
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain"
+                      }
+                    }
+                  ) }) : /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+                    "div",
+                    {
+                      className: "bg-gray-100 rounded-full",
+                      style: { width: logoSize, height: logoSize }
+                    }
+                  )
                 }
-              ) }) : /* @__PURE__ */ (0, import_jsx_runtime95.jsx)("div", { className: "w-8 h-8 bg-gray-100 rounded-full " }) })
+              )
             ]
           }
         ),
@@ -14221,7 +14265,9 @@ var LogoWell = ({
   className = "",
   style,
   emphasisBorder = false,
-  showCornerAccent = true
+  showCornerAccent = true,
+  fullBleed = false,
+  borderless = false
 }) => {
   const { colors, selectedPalette } = useThemeContext();
   const clipPath = getWellClipPath(variant);
@@ -14229,12 +14275,14 @@ var LogoWell = ({
   const borderColor = emphasisBorder ? colors.primary : (0, import_tinycolor214.default)(selectedPalette.text.onContainer.copy).setAlpha(0.22).toRgbString();
   const borderWidth = emphasisBorder ? 4 : LOGO_WELL_BORDER_WIDTH_PX;
   const accentClip = getAccentClip(variant);
+  const innerSize = fullBleed ? size : Math.round(size * LOGO_WELL_MAX_LOGO_RATIO);
+  const innerPadding = fullBleed ? 0 : LOGO_WELL_PADDING_PX / 2;
   const outerStyle = {
     width: `${size}px`,
     height: `${size}px`,
-    backgroundColor: surfaceColor,
+    backgroundColor: borderless ? "transparent" : surfaceColor,
     boxSizing: "border-box",
-    border: `${borderWidth}px solid ${borderColor}`,
+    border: borderless ? "none" : `${borderWidth}px solid ${borderColor}`,
     ...variant === "circle" ? { borderRadius: "9999px" } : clipPath ? clipPathStyle2(clipPath) : {},
     ...style
   };
@@ -14261,9 +14309,10 @@ var LogoWell = ({
           {
             className: "relative z-10 flex items-center justify-center overflow-hidden",
             style: {
-              width: `${Math.round(size * LOGO_WELL_MAX_LOGO_RATIO)}px`,
-              height: `${Math.round(size * LOGO_WELL_MAX_LOGO_RATIO)}px`,
-              padding: `${LOGO_WELL_PADDING_PX / 2}px`
+              width: `${innerSize}px`,
+              height: `${innerSize}px`,
+              padding: `${innerPadding}px`,
+              ...variant === "circle" && fullBleed ? { borderRadius: "9999px" } : {}
             },
             children
           }
@@ -14405,6 +14454,10 @@ var RowMudgeeraba = ({
   const statsFontSizePx = useSmallerFont ? 24 : 30;
   const teamNameStyle = { fontSize: `${teamNameFontSizePx}px` };
   const statsStyle = { fontSize: `${statsFontSizePx}px` };
+  const logoWellSize = Math.min(
+    compact ? 36 : 56,
+    Math.max(28, LadderRowHeight - paddingY * 2)
+  );
   let rowStyle = {
     height: `${LadderRowHeight}px`,
     minHeight: `${LadderRowHeight}px`
@@ -14454,7 +14507,9 @@ var RowMudgeeraba = ({
             LogoWell,
             {
               variant: "circle",
-              size: compact ? 36 : 56,
+              size: logoWellSize,
+              fullBleed: true,
+              borderless: true,
               className: compact ? "mr-2" : "mr-3",
               children: ((_a = team.clubLogo) != null ? _a : team.playHQLogo) ? /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
                 TeamLogo_default,
@@ -14462,7 +14517,13 @@ var RowMudgeeraba = ({
                   logo: (_c = (_b = team.clubLogo) != null ? _b : team.playHQLogo) != null ? _c : null,
                   teamName: team.teamName,
                   delay,
-                  size: compact ? 9 : 14
+                  size: logoWellSize,
+                  fit: "cover",
+                  imgStyle: {
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover"
+                  }
                 }
               ) : /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-full h-full bg-gray-300/20 rounded-full" })
             }
@@ -38553,7 +38614,7 @@ var Classic7 = () => {
 
 // src/compositions/cricket/performances/layout/StandardPerformanceRowClassicTwoColumn.tsx
 var import_jsx_runtime445 = require("react/jsx-runtime");
-var StandardPerformanceRowClassicTwoColumn = ({ performance, delay }) => {
+var StandardPerformanceRowClassicTwoColumn = ({ performance, delay, rowHeight }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette, layout, colors } = useThemeContext();
   const largeTextAnimation = animations.text.main.copyIn;
@@ -38570,8 +38631,9 @@ var StandardPerformanceRowClassicTwoColumn = ({ performance, delay }) => {
     {
       className: `${layout.borderRadius.container}`,
       backgroundColor: surfaceRoles.content.surface,
-      children: /* @__PURE__ */ (0, import_jsx_runtime445.jsxs)("div", { className: "grid grid-cols-12 items-center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime445.jsxs)("div", { className: "col-span-7 flex flex-col justify-center px-2", children: [
+      style: { height: `${rowHeight}px` },
+      children: /* @__PURE__ */ (0, import_jsx_runtime445.jsxs)("div", { className: "grid h-full grid-cols-12 items-center", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime445.jsxs)("div", { className: "col-span-7 flex h-full flex-col justify-center px-2", children: [
           /* @__PURE__ */ (0, import_jsx_runtime445.jsx)(
             Top5PlayerName,
             {
@@ -45085,7 +45147,7 @@ var ClassicIntro = () => {
           exitFrame: LogoAnimations.introExitFrame
         }
       ) }),
-      Title: /* @__PURE__ */ (0, import_jsx_runtime526.jsx)("div", { className: "overflow-hidden mb-0 mt-[-1.5em]", children: /* @__PURE__ */ (0, import_jsx_runtime526.jsx)(
+      Title: /* @__PURE__ */ (0, import_jsx_runtime526.jsx)("div", { className: "overflow-hidden mb-4 mt-[-1.5em]", children: /* @__PURE__ */ (0, import_jsx_runtime526.jsx)(
         AnimatedText,
         {
           textAlign: "center",
@@ -45096,6 +45158,7 @@ var ClassicIntro = () => {
           exitAnimation: TextAnimations.introOut,
           exitFrame: TextAnimations.introExitFrame,
           fontFamily: (_b = fontClasses.title) == null ? void 0 : _b.family,
+          style: { lineHeight: 1.05 },
           children: metadata.title
         }
       ) }),
@@ -48187,7 +48250,7 @@ var ClassicIntro2 = () => {
           exitFrame: LogoAnimations.introExitFrame
         }
       ) }),
-      Title: /* @__PURE__ */ (0, import_jsx_runtime550.jsx)("div", { className: "overflow-hidden mb-0 mt-[-1.5em]", children: /* @__PURE__ */ (0, import_jsx_runtime550.jsx)(
+      Title: /* @__PURE__ */ (0, import_jsx_runtime550.jsx)("div", { className: "overflow-hidden mb-4 mt-[-1.5em]", children: /* @__PURE__ */ (0, import_jsx_runtime550.jsx)(
         AnimatedText,
         {
           textAlign: "center",
@@ -48198,6 +48261,7 @@ var ClassicIntro2 = () => {
           exitAnimation: TextAnimations.introOut,
           exitFrame: TextAnimations.introExitFrame,
           fontFamily: (_b = fontClasses.title) == null ? void 0 : _b.family,
+          style: { lineHeight: 1.05 },
           children: metadata.title
         }
       ) }),
@@ -50135,8 +50199,69 @@ var import_remotion109 = require("remotion");
 var import_react32 = require("react");
 var import_remotion108 = require("remotion");
 var import_layout_utils = require("@remotion/layout-utils");
+var DEFAULT_LINE_HEIGHT_RATIO = 1.05;
+var DEFAULT_MAX_LINES = 2;
 var TITLE_SCREEN_BASE_FONT_PX = 16;
 var TITLE_SCREEN_HORIZONTAL_PADDING_PX = 128;
+var getFitMeasureOptions = (options) => {
+  var _a, _b, _c;
+  return {
+    fontFamily: options.fontFamily,
+    fontWeight: (_a = options.fontWeight) != null ? _a : 900,
+    textTransform: (_b = options.textTransform) != null ? _b : "uppercase",
+    letterSpacing: (_c = options.letterSpacing) != null ? _c : "-0.025em",
+    validateFontIsLoaded: true
+  };
+};
+var computeFittedFontSize = ({
+  text,
+  fontFamily,
+  fontWeight = 900,
+  textTransform = "uppercase",
+  letterSpacing = "-0.025em",
+  maxFontSize = 10 * TITLE_SCREEN_BASE_FONT_PX,
+  minFontSize = 0,
+  fitWidth,
+  withinHeight,
+  lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
+  maxLines = DEFAULT_MAX_LINES
+}) => {
+  const trimmed = text.trim();
+  if (!trimmed || fitWidth <= 0) {
+    return maxFontSize;
+  }
+  const measureOpts = getFitMeasureOptions({
+    fontFamily,
+    fontWeight,
+    textTransform,
+    letterSpacing
+  });
+  const words = trimmed.split(/\s+/).filter(Boolean);
+  const fitSizeFor = (value) => (0, import_layout_utils.fitText)({
+    text: value,
+    withinWidth: fitWidth,
+    ...measureOpts
+  }).fontSize;
+  const widthCandidates = [
+    fitSizeFor(trimmed),
+    ...words.map((word) => fitSizeFor(word))
+  ];
+  let fontSize = Math.min(maxFontSize, ...widthCandidates);
+  if (withinHeight && withinHeight > 0) {
+    const { width: singleLineWidth } = (0, import_layout_utils.measureText)({
+      text: trimmed,
+      fontSize,
+      ...measureOpts
+    });
+    const estimatedLines = Math.min(
+      maxLines,
+      Math.max(1, Math.ceil(singleLineWidth / fitWidth))
+    );
+    const heightCap = withinHeight / (estimatedLines * lineHeightRatio);
+    fontSize = Math.min(fontSize, heightCap);
+  }
+  return minFontSize > 0 ? Math.max(minFontSize, fontSize) : fontSize;
+};
 var getTitleScreenContentWidth = (compositionWidth, horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX) => Math.max(0, compositionWidth - horizontalPadding);
 var useFittedFontSize = ({
   text,
@@ -50147,7 +50272,10 @@ var useFittedFontSize = ({
   maxFontSize = 10 * TITLE_SCREEN_BASE_FONT_PX,
   minFontSize = 0,
   horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX,
-  withinWidth
+  withinWidth,
+  withinHeight,
+  lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
+  maxLines = DEFAULT_MAX_LINES
 }) => {
   const { width } = (0, import_remotion108.useVideoConfig)();
   const { fontsLoaded } = useFontContext();
@@ -50157,17 +50285,19 @@ var useFittedFontSize = ({
     }
     const fitWidth = withinWidth != null ? withinWidth : getTitleScreenContentWidth(width, horizontalPadding);
     try {
-      const { fontSize } = (0, import_layout_utils.fitText)({
+      return computeFittedFontSize({
         text,
-        withinWidth: fitWidth,
         fontFamily,
         fontWeight,
         textTransform,
         letterSpacing,
-        validateFontIsLoaded: true
+        maxFontSize,
+        minFontSize,
+        fitWidth,
+        withinHeight,
+        lineHeightRatio,
+        maxLines
       });
-      const capped = Math.min(maxFontSize, fontSize);
-      return minFontSize > 0 ? Math.max(minFontSize, capped) : capped;
     } catch (error) {
       console.warn(
         "useFittedFontSize: measurement failed, using max cap",
@@ -50186,6 +50316,9 @@ var useFittedFontSize = ({
     minFontSize,
     horizontalPadding,
     withinWidth,
+    withinHeight,
+    lineHeightRatio,
+    maxLines,
     width
   ]);
 };
@@ -50193,6 +50326,8 @@ var useFittedFontSize = ({
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
 var import_jsx_runtime563 = require("react/jsx-runtime");
 var MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
+var INTRO_TITLE_MAX_LINES = 2;
+var INTRO_TITLE_LINE_HEIGHT = 1.05;
 var MudgeerabaIntro = () => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k;
   const { club, metadata, sponsors } = useVideoDataContext();
@@ -50211,7 +50346,11 @@ var MudgeerabaIntro = () => {
     fontWeight: 900,
     textTransform: "uppercase",
     letterSpacing: "-0.025em",
-    maxFontSize: MUDGEERABA_TITLE_MAX_FONT_PX
+    maxFontSize: MUDGEERABA_TITLE_MAX_FONT_PX,
+    withinWidth: contentWidth,
+    withinHeight: MUDGEERABA_TITLE_MAX_FONT_PX * INTRO_TITLE_LINE_HEIGHT * INTRO_TITLE_MAX_LINES,
+    lineHeightRatio: INTRO_TITLE_LINE_HEIGHT,
+    maxLines: INTRO_TITLE_MAX_LINES
   });
   const titleFontSize = fittedTitleFontSize != null ? fittedTitleFontSize : MUDGEERABA_TITLE_MAX_FONT_PX;
   return /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
@@ -50247,7 +50386,11 @@ var MudgeerabaIntro = () => {
               exitAnimation: TextAnimations.introOut,
               exitFrame: TextAnimations.introExitFrame,
               fontFamily: titleFontFamily,
-              style: { fontSize: titleFontSize },
+              className: "text-balance",
+              style: {
+                fontSize: titleFontSize,
+                lineHeight: INTRO_TITLE_LINE_HEIGHT
+              },
               children: title
             }
           )
@@ -50404,6 +50547,7 @@ var MudgeerabaBackground = () => {
 var import_remotion111 = require("remotion");
 var import_jsx_runtime566 = require("react/jsx-runtime");
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
+var HEADER_TITLE_VERTICAL_PADDING_PX = 20;
 var HEADER_TEXT_CLASS = "!m-0 !px-0 w-full max-w-full leading-tight whitespace-normal break-words";
 var MudgeerabaMainHeader = () => {
   var _a, _b, _c, _d, _e, _f;
@@ -50424,6 +50568,7 @@ var MudgeerabaMainHeader = () => {
     void 0,
     HEADER_TITLE_INNER_PADDING_PX
   );
+  const titleContentHeight = Math.round(heights.header * HEADER_TITLE_PANEL_HEIGHT_RATIO) - HEADER_TITLE_VERTICAL_PADDING_PX;
   const nameContentWidth = getHeaderPanelContentWidth(
     width,
     void 0,
@@ -50437,7 +50582,10 @@ var MudgeerabaMainHeader = () => {
     letterSpacing: "-0.025em",
     maxFontSize: MUDGEERABA_HEADER_TITLE_MAX_FONT_PX,
     minFontSize: 18,
-    withinWidth: titleContentWidth
+    withinWidth: titleContentWidth,
+    withinHeight: titleContentHeight,
+    lineHeightRatio: 1.05,
+    maxLines: 2
   });
   const fittedNameFontSize = useFittedFontSize({
     text: clubName,
@@ -50472,7 +50620,7 @@ var MudgeerabaMainHeader = () => {
               exitAnimation: TextAnimations.copyOut,
               exitFrame,
               fontFamily: titleFontFamily,
-              className: HEADER_TEXT_CLASS,
+              className: `${HEADER_TEXT_CLASS} text-balance`,
               style: { fontSize: titleFontSize, lineHeight: 1.05 },
               children: title
             }

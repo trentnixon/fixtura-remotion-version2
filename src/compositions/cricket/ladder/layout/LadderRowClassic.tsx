@@ -12,6 +12,7 @@ import { ClassicForegroundShell } from "../../../../templates/variants/classic/d
  * (no recessed wells — those failed Studio review).
  */
 const CLASSIC_MAX_ROW_HEIGHT = 120;
+const CLASSIC_LADDER_LOGO_MAX = 64;
 
 export const LadderRowClassic: React.FC<BaseLayoutProps> = ({
   team,
@@ -21,6 +22,7 @@ export const LadderRowClassic: React.FC<BaseLayoutProps> = ({
   const { layout, selectedPalette } = useThemeContext();
   const borderColor = selectedPalette.container.primary;
   const rowHeight = Math.min(LadderRowHeight, CLASSIC_MAX_ROW_HEIGHT);
+  const logoSize = Math.min(rowHeight - 8, CLASSIC_LADDER_LOGO_MAX);
 
   return (
     <ClassicForegroundShell
@@ -40,17 +42,29 @@ export const LadderRowClassic: React.FC<BaseLayoutProps> = ({
             value={truncateText(team.teamName, 29)}
             delay={delay}
           />
-          <div className="w-20 mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center">
+          <div
+            className="mr-4 overflow-hidden flex flex-shrink-0 items-center justify-center"
+            style={{ width: logoSize, height: logoSize }}
+          >
             {team.clubLogo || team.playHQLogo ? (
-              <div className="rounded-full">
+              <div className="rounded-full h-full w-full">
                 <TeamLogo
                   logo={team.clubLogo || team.playHQLogo}
                   teamName={team.teamName}
                   delay={delay}
+                  size={logoSize}
+                  imgStyle={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
                 />
               </div>
             ) : (
-              <div className="w-8 h-8 bg-gray-100 rounded-full" />
+              <div
+                className="bg-gray-100 rounded-full"
+                style={{ width: logoSize, height: logoSize }}
+              />
             )}
           </div>
         </div>

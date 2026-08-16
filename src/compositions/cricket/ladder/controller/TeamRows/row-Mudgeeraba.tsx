@@ -64,6 +64,11 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
   const teamNameStyle = { fontSize: `${teamNameFontSizePx}px` };
   const statsStyle = { fontSize: `${statsFontSizePx}px` };
 
+  const logoWellSize = Math.min(
+    compact ? 36 : 56,
+    Math.max(28, LadderRowHeight - paddingY * 2),
+  );
+
   let rowStyle: React.CSSProperties = {
     height: `${LadderRowHeight}px`,
     minHeight: `${LadderRowHeight}px`,
@@ -111,7 +116,9 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
       >
         <LogoWell
           variant="circle"
-          size={compact ? 36 : 56}
+          size={logoWellSize}
+          fullBleed
+          borderless
           className={compact ? "mr-2" : "mr-3"}
         >
           {(team.clubLogo ?? team.playHQLogo) ? (
@@ -119,7 +126,13 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
               logo={team.clubLogo ?? team.playHQLogo ?? null}
               teamName={team.teamName}
               delay={delay}
-              size={compact ? 9 : 14}
+              size={logoWellSize}
+              fit="cover"
+              imgStyle={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
             />
           ) : (
             <div className="w-full h-full bg-gray-300/20 rounded-full" />

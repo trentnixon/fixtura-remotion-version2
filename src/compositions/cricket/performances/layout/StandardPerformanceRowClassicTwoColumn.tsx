@@ -18,7 +18,7 @@ import {
 
 export const StandardPerformanceRowClassicTwoColumn: React.FC<
   PerformanceRowLayoutProps
-> = ({ performance, delay }) => {
+> = ({ performance, delay, rowHeight }) => {
   const { animations } = useAnimationContext();
   const { selectedPalette, layout, colors } = useThemeContext();
 
@@ -38,9 +38,10 @@ export const StandardPerformanceRowClassicTwoColumn: React.FC<
     <ClassicTexturedSurface
       className={`${layout.borderRadius.container}`}
       backgroundColor={surfaceRoles.content.surface}
+      style={{ height: `${rowHeight}px` }}
     >
-      <div className="grid grid-cols-12 items-center">
-        <div className="col-span-7 flex flex-col justify-center px-2">
+      <div className="grid h-full grid-cols-12 items-center">
+        <div className="col-span-7 flex h-full flex-col justify-center px-2">
           <Top5PlayerName
             value={playerName}
             animation={{ ...largeTextAnimation, delay: delay + 2 }}

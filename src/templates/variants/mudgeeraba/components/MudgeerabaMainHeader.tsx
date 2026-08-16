@@ -13,11 +13,15 @@ import {
   getHeaderPanelContentWidth,
   HEADER_NAME_INNER_PADDING_PX,
   HEADER_TITLE_INNER_PADDING_PX,
+  HEADER_TITLE_PANEL_HEIGHT_RATIO,
   LayeredAngularHeader,
 } from "../design/LayeredAngularHeader";
 
 /** Mudgeeraba theme `titleSmall` cap at default 16px root. */
 const MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
+
+/** Title panel inner padding: `pt-2` + `pb-3`. */
+const HEADER_TITLE_VERTICAL_PADDING_PX = 20;
 
 const HEADER_TEXT_CLASS =
   "!m-0 !px-0 w-full max-w-full leading-tight whitespace-normal break-words";
@@ -43,6 +47,9 @@ export const MudgeerabaMainHeader = () => {
     undefined,
     HEADER_TITLE_INNER_PADDING_PX,
   );
+  const titleContentHeight =
+    Math.round(heights.header * HEADER_TITLE_PANEL_HEIGHT_RATIO) -
+    HEADER_TITLE_VERTICAL_PADDING_PX;
   const nameContentWidth = getHeaderPanelContentWidth(
     width,
     undefined,
@@ -58,6 +65,9 @@ export const MudgeerabaMainHeader = () => {
     maxFontSize: MUDGEERABA_HEADER_TITLE_MAX_FONT_PX,
     minFontSize: 18,
     withinWidth: titleContentWidth,
+    withinHeight: titleContentHeight,
+    lineHeightRatio: 1.05,
+    maxLines: 2,
   });
 
   const fittedNameFontSize = useFittedFontSize({
@@ -93,7 +103,7 @@ export const MudgeerabaMainHeader = () => {
             exitAnimation={TextAnimations.copyOut}
             exitFrame={exitFrame}
             fontFamily={titleFontFamily}
-            className={HEADER_TEXT_CLASS}
+            className={`${HEADER_TEXT_CLASS} text-balance`}
             style={{ fontSize: titleFontSize, lineHeight: 1.05 }}
           >
             {title}
