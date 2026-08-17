@@ -8484,7 +8484,7 @@ var BasicBackground = () => {
 };
 
 // src/components/layout/screen/OneColumn.tsx
-var import_remotion95 = require("remotion");
+var import_remotion94 = require("remotion");
 
 // src/core/utils/compositionMapping.ts
 var datasetToCompositionMap = {
@@ -14011,7 +14011,6 @@ var SHALLOW_DIVIDER_RIGHT = softenPolygon(
 );
 var PADDING_SHALLOW_LEFT = "pl-4 pr-10";
 var PADDING_SHALLOW_RIGHT = "pl-12 pr-3";
-var PADDING_SHALLOW_LEFT_COMPACT = "pl-2 pr-6";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH = "pl-0 pr-10";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT = "pl-0 pr-6";
 var getShallowColumnPadding = (isLeftColumn) => isLeftColumn ? PADDING_SHALLOW_LEFT : PADDING_SHALLOW_RIGHT;
@@ -14292,22 +14291,10 @@ var LogoWell = ({
       className: `relative flex shrink-0 items-center justify-center overflow-hidden ${className}`,
       style: outerStyle,
       children: [
-        showCornerAccent && accentClip && /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
-          "div",
-          {
-            className: "absolute pointer-events-none",
-            "aria-hidden": true,
-            style: {
-              inset: 0,
-              backgroundColor: colors.primary,
-              ...clipPathStyle2(accentClip)
-            }
-          }
-        ),
         /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
           "div",
           {
-            className: "relative z-10 flex items-center justify-center overflow-hidden",
+            className: "relative z-0 flex h-full w-full items-center justify-center overflow-hidden",
             style: {
               width: `${innerSize}px`,
               height: `${innerSize}px`,
@@ -14315,6 +14302,17 @@ var LogoWell = ({
               ...variant === "circle" && fullBleed ? { borderRadius: "9999px" } : {}
             },
             children
+          }
+        ),
+        showCornerAccent && accentClip && /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
+          "div",
+          {
+            className: "absolute inset-0 z-20 pointer-events-none",
+            "aria-hidden": true,
+            style: {
+              backgroundColor: colors.primary,
+              ...clipPathStyle2(accentClip)
+            }
           }
         )
       ]
@@ -14424,13 +14422,15 @@ var headerMudgeeraba_default = TableHeaderMudgeeraba;
 // src/compositions/cricket/ladder/controller/TeamRows/row-Mudgeeraba.tsx
 var import_jsx_runtime121 = require("react/jsx-runtime");
 var EDGE_STRIP_DELAY_OFFSET = 12;
+var INNER_ROW_BORDER_PX = 5;
 var RowMudgeeraba = ({
   team,
   index,
   totalTeams,
   isBiasTeam,
   LadderRowHeight,
-  compact = false
+  compact = false,
+  isLast = false
 }) => {
   var _a, _b, _c, _d, _e, _f, _g, _h;
   const { data } = useVideoDataContext();
@@ -14448,16 +14448,12 @@ var RowMudgeeraba = ({
   } else if (position >= totalTeams) {
     edgeStripColor = "rgb(239, 68, 68)";
   }
-  const paddingY = Math.max(2, Math.min(8, Math.round(LadderRowHeight * 0.15)));
   const useSmallerFont = totalTeams >= 12;
   const teamNameFontSizePx = useSmallerFont ? 24 : 30;
   const statsFontSizePx = useSmallerFont ? 24 : 30;
   const teamNameStyle = { fontSize: `${teamNameFontSizePx}px` };
   const statsStyle = { fontSize: `${statsFontSizePx}px` };
-  const logoWellSize = Math.min(
-    compact ? 36 : 56,
-    Math.max(28, LadderRowHeight - paddingY * 2)
-  );
+  const rowPanelClass = `flex items-stretch w-full overflow-hidden relative ${compact ? PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT : PADDING_SHALLOW_ROW_LOGO_FLUSH}`;
   let rowStyle = {
     height: `${LadderRowHeight}px`,
     minHeight: `${LadderRowHeight}px`
@@ -14469,9 +14465,8 @@ var RowMudgeeraba = ({
     };
   }
   const surfaceStyle = {
-    paddingTop: paddingY,
-    paddingBottom: paddingY,
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    boxShadow: `inset 0 -${INNER_ROW_BORDER_PX}px 0 0 ${colors.primary}`
   };
   const rowContent = /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)(import_jsx_runtime121.Fragment, { children: [
     showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
@@ -14497,55 +14492,52 @@ var RowMudgeeraba = ({
         )
       }
     ),
+    /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
+      LogoWell,
+      {
+        variant: "steepLeft",
+        size: LadderRowHeight,
+        fullBleed: true,
+        className: compact ? "mr-2" : "mr-4",
+        children: ((_a = team.clubLogo) != null ? _a : team.playHQLogo) ? /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
+          TeamLogo_default,
+          {
+            logo: (_c = (_b = team.clubLogo) != null ? _b : team.playHQLogo) != null ? _c : null,
+            teamName: team.teamName,
+            delay,
+            size: LadderRowHeight,
+            fit: "cover",
+            imgStyle: {
+              width: "100%",
+              height: "100%",
+              objectFit: "cover"
+            }
+          }
+        ) : /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-full h-full bg-gray-300/20" })
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "flex flex-1 items-center min-w-0 truncate", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
+      ladderTeamName_default,
+      {
+        value: team.teamName,
+        delay,
+        style: teamNameStyle
+      }
+    ) }),
     /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)(
       "div",
       {
-        className: `flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`,
-        style: { width: "70%", minWidth: 0 },
+        className: "flex flex-1 justify-evenly shrink-0 items-center",
+        style: statsStyle,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
-            LogoWell,
-            {
-              variant: "circle",
-              size: logoWellSize,
-              fullBleed: true,
-              borderless: true,
-              className: compact ? "mr-2" : "mr-3",
-              children: ((_a = team.clubLogo) != null ? _a : team.playHQLogo) ? /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
-                TeamLogo_default,
-                {
-                  logo: (_c = (_b = team.clubLogo) != null ? _b : team.playHQLogo) != null ? _c : null,
-                  teamName: team.teamName,
-                  delay,
-                  size: logoWellSize,
-                  fit: "cover",
-                  imgStyle: {
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }
-                }
-              ) : /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-full h-full bg-gray-300/20 rounded-full" })
-            }
-          ),
-          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "flex-1 truncate min-w-0", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
-            ladderTeamName_default,
-            {
-              value: team.teamName,
-              delay,
-              style: teamNameStyle
-            }
-          ) })
+          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_d = team == null ? void 0 : team.P) != null ? _d : 0, delay }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_e = team == null ? void 0 : team.W) != null ? _e : 0, delay }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_f = team == null ? void 0 : team.L) != null ? _f : 0, delay }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_g = team == null ? void 0 : team.BYE) != null ? _g : 0, delay }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-16 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_h = team == null ? void 0 : team.PTS) != null ? _h : 0, delay }) })
         ]
       }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)("div", { className: "flex flex-1 justify-evenly shrink-0", style: statsStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_d = team == null ? void 0 : team.P) != null ? _d : 0, delay }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_e = team == null ? void 0 : team.W) != null ? _e : 0, delay }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_f = team == null ? void 0 : team.L) != null ? _f : 0, delay }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_g = team == null ? void 0 : team.BYE) != null ? _g : 0, delay }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "w-16 text-center whitespace-nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(ladderTeamPoints_default, { value: (_h = team == null ? void 0 : team.PTS) != null ? _h : 0, delay }) })
-    ] })
+    )
   ] });
   return /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("div", { className: "overflow-visible", children: /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
     AnimatedContainer,
@@ -14565,7 +14557,8 @@ var RowMudgeeraba = ({
           underlayColor: getLayeredUnderlayColor(colors.primary),
           className: "w-full relative",
           style: rowStyle,
-          surfaceClassName: `flex items-center relative overflow-hidden ${compact ? PADDING_SHALLOW_LEFT_COMPACT : PADDING_SHALLOW_LEFT}`,
+          offsetY: isLast ? 0 : LAYERED_PANEL_OFFSET_Y,
+          surfaceClassName: rowPanelClass,
           surfaceStyle,
           children: rowContent
         }
@@ -14577,6 +14570,7 @@ var row_Mudgeeraba_default = RowMudgeeraba;
 
 // src/compositions/cricket/ladder/controller/Display/display-Mudgeeraba.tsx
 var import_jsx_runtime122 = require("react/jsx-runtime");
+var LADDER_ROW_GAP_PX = 4;
 var LadderDisplayMudgeeraba = ({
   ladder: ladder3
 }) => {
@@ -14585,15 +14579,16 @@ var LadderDisplayMudgeeraba = ({
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
+  const rowGapPx = LAYERED_PANEL_OFFSET_Y + LADDER_ROW_GAP_PX;
   const extraReserved = League.length > 14 ? 24 : 48;
   const { headerHeight, rowHeight, compact } = calculateRowDimensions(
     heights.asset,
     League.length,
-    extraReserved
+    extraReserved,
+    { rowGapPx }
   );
   const containerMargin = compact ? "my-2 mx-4" : "my-4 mx-4";
   const headerGap = compact ? "gap-2" : "gap-4";
-  const rowGap = compact ? "gap-0" : "gap-1";
   return /* @__PURE__ */ (0, import_jsx_runtime122.jsxs)("div", { className: "p-0 flex flex-col w-full h-full", children: [
     /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
       AnimatedContainer,
@@ -14615,7 +14610,8 @@ var LadderDisplayMudgeeraba = ({
           /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
             "div",
             {
-              className: `flex-1 flex flex-col ${rowGap} overflow-hidden min-h-0`,
+              className: "flex-1 flex flex-col overflow-hidden min-h-0",
+              style: { gap: rowGapPx },
               children: League.map((team, index) => /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
                 row_Mudgeeraba_default,
                 {
@@ -14624,7 +14620,8 @@ var LadderDisplayMudgeeraba = ({
                   totalTeams: League.length,
                   isBiasTeam: team.teamName === ladder3.bias,
                   LadderRowHeight: rowHeight,
-                  compact
+                  compact,
+                  isLast: index === League.length - 1
                 },
                 team.position
               ))
@@ -22979,6 +22976,8 @@ var CNSWPrivate2 = () => {
 var import_jsx_runtime222 = require("react/jsx-runtime");
 var EDGE_COLOR_HOME = "rgb(34, 197, 94)";
 var EDGE_COLOR_AWAY = "rgb(239, 68, 68)";
+var TEAM_PANEL_HEIGHT_PX = 150;
+var PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT = "pl-10 pr-0";
 var GameCardMudgeeraba = ({
   game,
   index
@@ -22992,6 +22991,34 @@ var GameCardMudgeeraba = ({
   const animationOutFrame = calculateAnimationOutFrame2(timings);
   const teamBg = selectedPalette.container.backgroundTransparent.high;
   const underlayColor = getLayeredUnderlayColor(colors.primary);
+  const teamPanelStyle = {
+    height: `${TEAM_PANEL_HEIGHT_PX}px`,
+    minHeight: `${TEAM_PANEL_HEIGHT_PX}px`
+  };
+  const renderTeamLogo = (logo, teamName, logoDelay, variant, className) => /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+    LogoWell,
+    {
+      variant,
+      size: TEAM_PANEL_HEIGHT_PX,
+      fullBleed: true,
+      className: `shrink-0 ${className}`,
+      children: logo ? /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+        TeamLogo_default,
+        {
+          logo,
+          teamName,
+          delay: logoDelay,
+          size: TEAM_PANEL_HEIGHT_PX,
+          fit: "cover",
+          imgStyle: {
+            width: "100%",
+            height: "100%",
+            objectFit: "cover"
+          }
+        }
+      ) : /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "w-full h-full bg-gray-300/20" })
+    }
+  );
   return /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "overflow-visible", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)(
     AnimatedContainer,
     {
@@ -23040,99 +23067,93 @@ var GameCardMudgeeraba = ({
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)("div", { className: "flex w-full relative overflow-visible", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)("div", { className: "flex flex-1 flex-col items-center min-w-0", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(LogoWell, { variant: "circle", size: 112, className: "shrink-0 mb-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-              TeamLogo_default,
-              {
-                logo: game.teamHomeLogo,
-                teamName: game.teamHome,
-                delay: delay + 10,
-                size: 28
-              }
-            ) }),
-            /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)(
-              LayeredAngularPanel,
-              {
-                clipPath: SHALLOW_COLUMN_LEFT,
-                surfaceColor: teamBg,
-                underlayColor,
-                className: "flex flex-1 w-full min-w-0 relative",
-                surfaceClassName: `flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_LEFT}`,
-                children: [
-                  showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-                    "div",
-                    {
-                      className: "absolute inset-0 pointer-events-none",
-                      style: {
-                        backgroundColor: EDGE_COLOR_HOME,
-                        ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
-                      },
-                      "aria-hidden": true
-                    }
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-                    MetadataMedium,
-                    {
-                      value: game.teamHome,
-                      animation: {
-                        ...animations.text.main.copyIn,
-                        delay: delay + 15
-                      },
-                      className: "block text-center truncate w-full max-w-full relative z-10",
-                      variant: "onContainerCopy"
-                    }
-                  )
-                ]
-              }
-            )
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)("div", { className: "flex flex-1 flex-col items-center min-w-0", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(LogoWell, { variant: "circle", size: 112, className: "shrink-0 mb-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-              TeamLogo_default,
-              {
-                logo: game.teamAwayLogo,
-                teamName: game.teamAway,
-                delay: delay + 25,
-                size: 28
-              }
-            ) }),
-            /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)(
-              LayeredAngularPanel,
-              {
-                clipPath: SHALLOW_COLUMN_RIGHT,
-                surfaceColor: teamBg,
-                underlayColor,
-                className: "flex flex-1 w-full min-w-0 relative",
-                surfaceClassName: `flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_RIGHT}`,
-                children: [
-                  showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-                    "div",
-                    {
-                      className: "absolute inset-0 pointer-events-none",
-                      style: {
-                        backgroundColor: EDGE_COLOR_AWAY,
-                        ...clipPathStyle2(SHALLOW_EDGE_STRIP_LEFT)
-                      },
-                      "aria-hidden": true
-                    }
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-                    MetadataMedium,
-                    {
-                      value: game.teamAway,
-                      animation: {
-                        ...animations.text.main.copyIn,
-                        delay: delay + 30
-                      },
-                      className: "block text-center truncate w-full max-w-full relative z-10",
-                      variant: "onContainerCopy"
-                    }
-                  )
-                ]
-              }
-            )
-          ] })
+        /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)("div", { className: "flex w-full relative overflow-visible gap-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)(
+            LayeredAngularPanel,
+            {
+              clipPath: SHALLOW_COLUMN_LEFT,
+              surfaceColor: teamBg,
+              underlayColor,
+              className: "flex flex-1 w-full min-w-0 relative",
+              style: teamPanelStyle,
+              surfaceClassName: `flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH}`,
+              children: [
+                showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+                  "div",
+                  {
+                    className: "absolute inset-0 pointer-events-none",
+                    style: {
+                      backgroundColor: EDGE_COLOR_HOME,
+                      ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
+                    },
+                    "aria-hidden": true
+                  }
+                ),
+                renderTeamLogo(
+                  game.teamHomeLogo,
+                  game.teamHome,
+                  delay + 10,
+                  "steepLeft",
+                  "mr-3"
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "relative z-10 flex flex-1 items-center justify-center min-w-0 px-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+                  MetadataMedium,
+                  {
+                    value: game.teamHome,
+                    animation: {
+                      ...animations.text.main.copyIn,
+                      delay: delay + 15
+                    },
+                    className: "block text-center w-full",
+                    variant: "onContainerCopy"
+                  }
+                ) })
+              ]
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime222.jsxs)(
+            LayeredAngularPanel,
+            {
+              clipPath: SHALLOW_COLUMN_RIGHT,
+              surfaceColor: teamBg,
+              underlayColor,
+              className: "flex flex-1 w-full min-w-0 relative",
+              style: teamPanelStyle,
+              surfaceClassName: `flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT}`,
+              children: [
+                showAngularEdgeAccents() && /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+                  "div",
+                  {
+                    className: "absolute inset-0 pointer-events-none",
+                    style: {
+                      backgroundColor: EDGE_COLOR_AWAY,
+                      ...clipPathStyle2(SHALLOW_EDGE_STRIP_LEFT)
+                    },
+                    "aria-hidden": true
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "relative z-10 flex flex-1 items-center justify-center min-w-0 px-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+                  MetadataMedium,
+                  {
+                    value: game.teamAway,
+                    animation: {
+                      ...animations.text.main.copyIn,
+                      delay: delay + 30
+                    },
+                    className: "block text-center w-full",
+                    variant: "onContainerCopy"
+                  }
+                ) }),
+                renderTeamLogo(
+                  game.teamAwayLogo,
+                  game.teamAway,
+                  delay + 25,
+                  "steepRight",
+                  "ml-3"
+                )
+              ]
+            }
+          )
         ] })
       ]
     }
@@ -42840,9 +42861,9 @@ var ClassicTwoColumn6 = () => {
 var classicTwoColumn_default3 = ClassicTwoColumn6;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Mudgeeraba.tsx
-var import_remotion90 = require("remotion");
 var import_jsx_runtime501 = require("react/jsx-runtime");
 var ICON_LOGO_WIDTH_RATIO = 0.72;
+var PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT2 = "pl-4 pr-0";
 var PlayerRowMudgeeraba2 = ({
   player,
   index,
@@ -42968,14 +42989,18 @@ var PlayerRowMudgeeraba2 = ({
       LogoWell,
       {
         variant: "steepRight",
-        size: Math.round(rowHeight * ICON_LOGO_WIDTH_RATIO),
-        className: "ml-2",
+        size: rowHeight,
+        fullBleed: true,
+        className: "ml-2 shrink-0",
         children: /* @__PURE__ */ (0, import_jsx_runtime501.jsx)(
-          import_remotion90.Img,
+          TeamLogo,
           {
-            src: player.club.logo.url,
-            alt: player.club.name,
-            style: {
+            logo: player.club.logo,
+            teamName: player.club.name,
+            delay,
+            size: rowHeight,
+            fit: "cover",
+            imgStyle: {
               width: "100%",
               height: "100%",
               objectFit: "cover"
@@ -43003,7 +43028,7 @@ var PlayerRowMudgeeraba2 = ({
           underlayColor: getLayeredUnderlayColor(colors.primary),
           className: "w-full relative",
           style: { height: `${rowHeight}px` },
-          surfaceClassName: "flex items-center w-full overflow-hidden pl-0 pr-0",
+          surfaceClassName: `flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT2}`,
           children: rowInner
         }
       )
@@ -43566,14 +43591,14 @@ var broadcastpro5 = broadcastPro_default2;
 var broadcastprorounded5 = broadcastProRounded_default2;
 
 // src/compositions/cricket/placeholders.tsx
-var import_remotion91 = require("remotion");
+var import_remotion90 = require("remotion");
 var import_jsx_runtime511 = require("react/jsx-runtime");
 var PlaceholderComposition = ({
   data
 }) => {
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
-  return /* @__PURE__ */ (0, import_jsx_runtime511.jsxs)(import_remotion91.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime511.jsxs)(import_remotion90.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
     /* @__PURE__ */ (0, import_jsx_runtime511.jsx)("h1", { className: "text-3xl mb-0.5", children: data.videoMeta.video.metadata.title || "Composition" }),
     /* @__PURE__ */ (0, import_jsx_runtime511.jsxs)("h2", { className: "text-2xl mb-4", children: [
       template,
@@ -43716,7 +43741,7 @@ __export(afl_exports, {
   top5: () => top5,
   upcoming: () => upcoming
 });
-var import_remotion92 = require("remotion");
+var import_remotion91 = require("remotion");
 var import_jsx_runtime512 = require("react/jsx-runtime");
 var PlaceholderComposition2 = ({
   data
@@ -43724,7 +43749,7 @@ var PlaceholderComposition2 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime512.jsxs)(
-    import_remotion92.AbsoluteFill,
+    import_remotion91.AbsoluteFill,
     {
       style: {
         backgroundColor: "#222",
@@ -43786,7 +43811,7 @@ __export(netball_exports, {
   top5: () => top52,
   upcoming: () => upcoming2
 });
-var import_remotion93 = require("remotion");
+var import_remotion92 = require("remotion");
 var import_jsx_runtime513 = require("react/jsx-runtime");
 var PlaceholderComposition3 = ({
   data
@@ -43794,7 +43819,7 @@ var PlaceholderComposition3 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime513.jsxs)(
-    import_remotion93.AbsoluteFill,
+    import_remotion92.AbsoluteFill,
     {
       style: {
         backgroundColor: "#103",
@@ -43977,10 +44002,10 @@ var RouteToComposition = () => {
 };
 
 // src/components/layout/main/Timer/ProgressTimer.tsx
-var import_remotion94 = require("remotion");
+var import_remotion93 = require("remotion");
 var import_jsx_runtime515 = require("react/jsx-runtime");
 var ProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion94.useCurrentFrame)();
+  const frame = (0, import_remotion93.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -44004,7 +44029,7 @@ var ProgressTimer = ({ FRAMES }) => {
   );
 };
 var VerticalProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion94.useCurrentFrame)();
+  const frame = (0, import_remotion93.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -44042,7 +44067,7 @@ var OneColumn = ({ Header }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { FPS_MAIN } = timings;
-  return /* @__PURE__ */ (0, import_jsx_runtime516.jsx)(import_remotion95.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime516.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime516.jsx)(import_remotion94.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime516.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
     /* @__PURE__ */ (0, import_jsx_runtime516.jsx)(
       "div",
       {
@@ -44712,7 +44737,7 @@ var BrickworkIntro = () => {
 };
 
 // src/templates/variants/brickwork/components/brickworkOutro.tsx
-var import_remotion96 = require("remotion");
+var import_remotion95 = require("remotion");
 var import_jsx_runtime521 = require("react/jsx-runtime");
 var GRID_SETTINGS2 = {
   columns: 2,
@@ -44796,7 +44821,7 @@ var BrickworkOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray2(sponsorsArray, GRID_SETTINGS2.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion95.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS2.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(
@@ -44808,7 +44833,7 @@ var BrickworkOutro = ({
     }
   );
 };
-var AlternativeOutro2 = () => /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)("h2", { className: "text-5xl font-bold text-center" }) });
+var AlternativeOutro2 = () => /* @__PURE__ */ (0, import_jsx_runtime521.jsx)(import_remotion95.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime521.jsx)("h2", { className: "text-5xl font-bold text-center" }) });
 var convertToArray2 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/brickwork/components/brickworkBackground.tsx
@@ -45194,7 +45219,7 @@ var ClassicIntro = () => {
 };
 
 // src/templates/variants/classic/components/ClassicOutro.tsx
-var import_remotion97 = require("remotion");
+var import_remotion96 = require("remotion");
 var import_jsx_runtime527 = require("react/jsx-runtime");
 var GRID_SETTINGS3 = {
   columns: 2,
@@ -45278,7 +45303,7 @@ var ClassicOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray3(sponsorsArray, GRID_SETTINGS3.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS3.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(
@@ -45290,7 +45315,7 @@ var ClassicOutro = ({
     }
   );
 };
-var AlternativeOutro3 = () => /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro3 = () => /* @__PURE__ */ (0, import_jsx_runtime527.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime527.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray3 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/classic/components/ClassicBackground.tsx
@@ -45866,7 +45891,7 @@ var SixersIntro = () => {
 };
 
 // src/templates/variants/sixers/components/SixersOutro.tsx
-var import_remotion98 = require("remotion");
+var import_remotion97 = require("remotion");
 var import_jsx_runtime533 = require("react/jsx-runtime");
 var GRID_SETTINGS4 = {
   columns: 2,
@@ -45950,7 +45975,7 @@ var SixersOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray4(sponsorsArray, GRID_SETTINGS4.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion98.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS4.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(
@@ -45962,7 +45987,7 @@ var SixersOutro = ({
     }
   );
 };
-var AlternativeOutro4 = () => /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion98.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro4 = () => /* @__PURE__ */ (0, import_jsx_runtime533.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime533.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray4 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/sixers/components/SixersBackground.tsx
@@ -46443,7 +46468,7 @@ var cnswTheme = {
 };
 
 // src/templates/variants/cnsw/components/CNSWIntro.tsx
-var import_remotion99 = require("remotion");
+var import_remotion98 = require("remotion");
 
 // src/templates/variants/cnsw/utils/compositionConfig.ts
 var compositionConfig = {
@@ -46758,8 +46783,8 @@ var CNSWIntro = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime538.jsxs)(import_jsx_runtime538.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(import_remotion99.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(
-      import_remotion99.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(import_remotion98.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime538.jsx)(
+      import_remotion98.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -46872,7 +46897,7 @@ var CNSWIntro = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWOutro.tsx
-var import_remotion100 = require("remotion");
+var import_remotion99 = require("remotion");
 var import_jsx_runtime539 = require("react/jsx-runtime");
 var GRID_SETTINGS5 = {
   columns: 2,
@@ -46956,7 +46981,7 @@ var CNSWOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray5(sponsorsArray, GRID_SETTINGS5.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion100.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion99.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS5.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(
@@ -46968,7 +46993,7 @@ var CNSWOutro = ({
     }
   );
 };
-var AlternativeOutro5 = () => /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion100.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro5 = () => /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion99.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray5 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/cnsw/components/CNSWBackground.tsx
@@ -46978,7 +47003,7 @@ var CNSWBackground = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWMainHeader.tsx
-var import_remotion101 = require("remotion");
+var import_remotion100 = require("remotion");
 var import_jsx_runtime541 = require("react/jsx-runtime");
 var CNSWMainHeader = () => {
   var _a, _b, _c;
@@ -47029,8 +47054,8 @@ var CNSWMainHeader = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(import_remotion101.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(
-          import_remotion101.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(import_remotion100.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(
+          import_remotion100.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -47636,7 +47661,7 @@ var ThunderIntro = () => {
 };
 
 // src/templates/variants/thunder/components/ThunderOutro.tsx
-var import_remotion102 = require("remotion");
+var import_remotion101 = require("remotion");
 var import_jsx_runtime545 = require("react/jsx-runtime");
 var GRID_SETTINGS6 = {
   columns: 2,
@@ -47720,7 +47745,7 @@ var ThunderOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray6(sponsorsArray, GRID_SETTINGS6.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion101.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS6.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(
@@ -47732,7 +47757,7 @@ var ThunderOutro = ({
     }
   );
 };
-var AlternativeOutro6 = () => /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro6 = () => /* @__PURE__ */ (0, import_jsx_runtime545.jsx)(import_remotion101.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime545.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray6 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/thunder/components/ThunderBackground.tsx
@@ -48297,7 +48322,7 @@ var ClassicIntro2 = () => {
 };
 
 // src/templates/variants/twoColumnClassic/components/ClassicOutro.tsx
-var import_remotion103 = require("remotion");
+var import_remotion102 = require("remotion");
 var import_jsx_runtime551 = require("react/jsx-runtime");
 var GRID_SETTINGS7 = {
   columns: 2,
@@ -48381,7 +48406,7 @@ var ClassicOutro2 = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray7(sponsorsArray, GRID_SETTINGS7.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion103.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS7.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(
@@ -48393,7 +48418,7 @@ var ClassicOutro2 = ({
     }
   );
 };
-var AlternativeOutro7 = () => /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion103.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro7 = () => /* @__PURE__ */ (0, import_jsx_runtime551.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime551.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray7 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/twoColumnClassic/components/ClassicBackground.tsx
@@ -48403,7 +48428,7 @@ var ClassicBackground2 = () => {
 };
 
 // src/components/layout/screen/TwoColumn.tsx
-var import_remotion104 = require("remotion");
+var import_remotion103 = require("remotion");
 var import_jsx_runtime553 = require("react/jsx-runtime");
 var TwoColumn2 = ({
   Header,
@@ -48486,7 +48511,7 @@ var TwoColumn2 = ({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(import_remotion104.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(import_remotion103.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(
     "div",
     {
       className: `flex flex-col h-full w-full ${className}`.trim(),
@@ -49111,7 +49136,7 @@ var cnswTheme2 = {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWIntro.tsx
-var import_remotion105 = require("remotion");
+var import_remotion104 = require("remotion");
 
 // src/templates/variants/cnsw-private/utils/compositionConfig.ts
 var compositionConfig2 = {
@@ -49426,8 +49451,8 @@ var CNSWIntro2 = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing2(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing2(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime557.jsxs)(import_jsx_runtime557.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(import_remotion105.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(
-      import_remotion105.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(import_remotion104.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime557.jsx)(
+      import_remotion104.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -49540,7 +49565,7 @@ var CNSWIntro2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWOutro.tsx
-var import_remotion106 = require("remotion");
+var import_remotion105 = require("remotion");
 var import_jsx_runtime558 = require("react/jsx-runtime");
 var chunkArray8 = (arr, size) => {
   const normalized = arr.map((item) => {
@@ -49590,7 +49615,7 @@ var CNSWOutro2 = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray8(sponsorsArray, 6);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion106.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion105.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
     durationInFrames: 90
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(
@@ -49602,7 +49627,7 @@ var CNSWOutro2 = ({
     }
   );
 };
-var AlternativeOutro8 = () => /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion106.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro8 = () => /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion105.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray8 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/cnsw-private/components/CNSWBackground.tsx
@@ -49612,7 +49637,7 @@ var CNSWBackground2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWMainHeader.tsx
-var import_remotion107 = require("remotion");
+var import_remotion106 = require("remotion");
 var import_jsx_runtime560 = require("react/jsx-runtime");
 var CNSWMainHeader2 = () => {
   var _a, _b, _c;
@@ -49663,8 +49688,8 @@ var CNSWMainHeader2 = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(import_remotion107.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(
-          import_remotion107.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(import_remotion106.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(
+          import_remotion106.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -50193,11 +50218,11 @@ var mudgeerabaTheme = {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
-var import_remotion109 = require("remotion");
+var import_remotion108 = require("remotion");
 
 // src/components/typography/utils/useFittedFontSize.ts
 var import_react32 = require("react");
-var import_remotion108 = require("remotion");
+var import_remotion107 = require("remotion");
 var import_layout_utils = require("@remotion/layout-utils");
 var DEFAULT_LINE_HEIGHT_RATIO = 1.05;
 var DEFAULT_MAX_LINES = 2;
@@ -50277,7 +50302,7 @@ var useFittedFontSize = ({
   lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
   maxLines = DEFAULT_MAX_LINES
 }) => {
-  const { width } = (0, import_remotion108.useVideoConfig)();
+  const { width } = (0, import_remotion107.useVideoConfig)();
   const { fontsLoaded } = useFontContext();
   return (0, import_react32.useMemo)(() => {
     if (!fontsLoaded || !text.trim() || !fontFamily) {
@@ -50328,14 +50353,15 @@ var import_jsx_runtime563 = require("react/jsx-runtime");
 var MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
 var INTRO_TITLE_MAX_LINES = 2;
 var INTRO_TITLE_LINE_HEIGHT = 1.05;
+var INTRO_LOGO_MAX_PX = 336;
 var MudgeerabaIntro = () => {
-  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j;
   const { club, metadata, sponsors } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  const { width } = (0, import_remotion109.useVideoConfig)();
+  const { width } = (0, import_remotion108.useVideoConfig)();
   const title = (_a = metadata.title) != null ? _a : "";
   const titleFontFamily = (_c = (_b = fontClasses.title) == null ? void 0 : _b.family) != null ? _c : "Unbounded";
   const nameFontFamily = (_e = (_d = fontClasses.subtitle) == null ? void 0 : _d.family) != null ? _e : "Unbounded";
@@ -50353,23 +50379,38 @@ var MudgeerabaIntro = () => {
     maxLines: INTRO_TITLE_MAX_LINES
   });
   const titleFontSize = fittedTitleFontSize != null ? fittedTitleFontSize : MUDGEERABA_TITLE_MAX_FONT_PX;
+  const clubLogo = club.logo;
+  const clubLogoWidth = clubLogo == null ? void 0 : clubLogo.width;
+  const clubLogoHeight = clubLogo == null ? void 0 : clubLogo.height;
   return /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
-    VerticalStackTitleLogoName,
+    VerticalStackLogoTitleName,
     {
       alignment: "center",
-      Logo: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)("div", { className: "w-full h-full flex justify-center py-8 items-center max-h-[500px] max-w-[500px]", children: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
-        AnimatedImage,
+      Logo: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
+        "div",
         {
-          src: ((_f = club.logo) == null ? void 0 : _f.url) || "",
-          alt: club.name,
-          width: "auto",
-          height: "auto",
-          fit: "contain",
-          animation: LogoAnimations.introIn,
-          exitAnimation: LogoAnimations.introOut,
-          exitFrame: LogoAnimations.introExitFrame
+          className: "flex w-full justify-center pb-4 items-center",
+          style: { maxHeight: INTRO_LOGO_MAX_PX, maxWidth: INTRO_LOGO_MAX_PX },
+          children: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
+            AnimatedImage,
+            {
+              src: (clubLogo == null ? void 0 : clubLogo.url) || "",
+              alt: club.name,
+              originalWidth: clubLogoWidth,
+              originalHeight: clubLogoHeight,
+              width: "auto",
+              height: "auto",
+              maxWidth: INTRO_LOGO_MAX_PX,
+              maxHeight: INTRO_LOGO_MAX_PX,
+              fit: "contain",
+              preserveRatio: true,
+              animation: LogoAnimations.introIn,
+              exitAnimation: LogoAnimations.introOut,
+              exitFrame: LogoAnimations.introExitFrame
+            }
+          )
         }
-      ) }),
+      ),
       Title: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
         "div",
         {
@@ -50418,11 +50459,11 @@ var MudgeerabaIntro = () => {
           )
         }
       ),
-      PrimarySponsor: ((_h = (_g = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _g.logo) == null ? void 0 : _h.url) && /* @__PURE__ */ (0, import_jsx_runtime563.jsx)("div", { className: "w-full h-full flex justify-center items-center max-h-[150px] max-w-[150px]", children: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
+      PrimarySponsor: ((_g = (_f = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _f.logo) == null ? void 0 : _g.url) && /* @__PURE__ */ (0, import_jsx_runtime563.jsx)("div", { className: "w-full h-full flex justify-center items-center max-h-[150px] max-w-[150px]", children: /* @__PURE__ */ (0, import_jsx_runtime563.jsx)(
         AnimatedImage,
         {
-          src: ((_j = (_i = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _i.logo) == null ? void 0 : _j.url) || "",
-          alt: ((_k = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _k.name) || "",
+          src: ((_i = (_h = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _h.logo) == null ? void 0 : _i.url) || "",
+          alt: ((_j = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _j.name) || "",
           width: "auto",
           height: "auto",
           fit: "contain",
@@ -50436,7 +50477,7 @@ var MudgeerabaIntro = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaOutro.tsx
-var import_remotion110 = require("remotion");
+var import_remotion109 = require("remotion");
 var import_jsx_runtime564 = require("react/jsx-runtime");
 var GRID_SETTINGS8 = {
   columns: 2,
@@ -50522,7 +50563,7 @@ var MudgeerabaOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray9(sponsorsArray, GRID_SETTINGS8.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion110.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS8.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(
@@ -50534,7 +50575,7 @@ var MudgeerabaOutro = ({
     }
   );
 };
-var AlternativeOutro9 = () => /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion110.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro9 = () => /* @__PURE__ */ (0, import_jsx_runtime564.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime564.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray9 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaBackground.tsx
@@ -50544,7 +50585,7 @@ var MudgeerabaBackground = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaMainHeader.tsx
-var import_remotion111 = require("remotion");
+var import_remotion110 = require("remotion");
 var import_jsx_runtime566 = require("react/jsx-runtime");
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
 var HEADER_TITLE_VERTICAL_PADDING_PX = 20;
@@ -50555,7 +50596,7 @@ var MudgeerabaMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const { width } = (0, import_remotion111.useVideoConfig)();
+  const { width } = (0, import_remotion110.useVideoConfig)();
   const { heights } = layout;
   const timings = data == null ? void 0 : data.timings;
   const exitFrame = (timings == null ? void 0 : timings.FPS_MAIN) ? timings.FPS_MAIN - 30 : 0;
@@ -51677,11 +51718,11 @@ var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
 var import_react33 = require("react");
-var import_remotion112 = require("remotion");
+var import_remotion111 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion112.useVideoConfig)();
+  const { width } = (0, import_remotion111.useVideoConfig)();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
   const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -51874,7 +51915,7 @@ var BroadcastProIntro = () => {
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProOutro.tsx
-var import_remotion113 = require("remotion");
+var import_remotion112 = require("remotion");
 var import_jsx_runtime572 = require("react/jsx-runtime");
 var GRID_SETTINGS9 = {
   columns: 2,
@@ -51958,7 +51999,7 @@ var BroadcastProOutro = ({
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray10(sponsorsArray, GRID_SETTINGS9.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion113.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS9.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(
@@ -51970,7 +52011,7 @@ var BroadcastProOutro = ({
     }
   );
 };
-var AlternativeOutro10 = () => /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion113.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro10 = () => /* @__PURE__ */ (0, import_jsx_runtime572.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime572.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray10 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/broadcastPro/components/BroadcastProBackground.tsx
@@ -53053,11 +53094,11 @@ var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastProRounded/components/headline/useBroadcastProRoundedHeadlineFit.ts
 var import_react34 = require("react");
-var import_remotion114 = require("remotion");
+var import_remotion113 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX2 = 32;
 var useBroadcastProRoundedHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion114.useVideoConfig)();
+  const { width } = (0, import_remotion113.useVideoConfig)();
   const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
   const sizing = broadcastProRoundedHeadlineSizing != null ? broadcastProRoundedHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -53270,7 +53311,7 @@ var BroadcastProRoundedIntro = () => {
 };
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedOutro.tsx
-var import_remotion115 = require("remotion");
+var import_remotion114 = require("remotion");
 var import_jsx_runtime580 = require("react/jsx-runtime");
 var GRID_SETTINGS10 = {
   columns: 2,
@@ -53356,7 +53397,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
   const sponsorsArray = [...defaultArray];
   const groups = chunkArray11(sponsorsArray, GRID_SETTINGS10.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion115.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(
       SponsorGrid11,
       {
         sponsors: group,
@@ -53375,7 +53416,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
     }
   );
 };
-var AlternativeOutro11 = () => /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion115.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
+var AlternativeOutro11 = () => /* @__PURE__ */ (0, import_jsx_runtime580.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime580.jsx)("h2", { className: "text-5xl font-bold text-center", children: "Thank you for watching!" }) });
 var convertToArray11 = (sponsors) => Object.values(sponsors).flat();
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedBackground.tsx

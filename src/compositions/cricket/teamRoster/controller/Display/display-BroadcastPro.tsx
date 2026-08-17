@@ -4,7 +4,7 @@ import { cellBlur, useBroadcastProTheme } from "../../../utils/broadcastPro";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
 import { BroadcastProRosterSheet } from "../../../../../templates/variants/broadcastPro/components/roster";
-import { formatDate } from "../../../utils/utils-text";
+import { formatDate, formatGroundLocation } from "../../../utils/utils-text";
 import { getTeamPerspective } from "../../layout/utils";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import {
@@ -127,7 +127,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
               <div className={cs("broadcastProRosterMetaStack")}>
                 <MetaRow
                   label="LOCATION"
-                  value={roster.ground.toUpperCase()}
+                  value={formatGroundLocation(roster.ground).toUpperCase()}
                   glass={glass}
                   rowClassName={cs("broadcastProRosterMetaRow")}
                   labelClassName={cs("broadcastProRosterMetaLabel")}

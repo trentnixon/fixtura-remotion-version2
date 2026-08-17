@@ -3,6 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataMedium } from "../../primitives/metadataMedium";
+import { formatGroundLocation } from "../../utils-text";
 import { cellBlur, csClass, useBroadcastProRoundedTheme } from "../index";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
 import type {
@@ -77,7 +78,7 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
         />
         {showGround && ground ? (
           <MetadataMedium
-            value={ground}
+            value={formatGroundLocation(ground)}
             animation={{ ...copyIn, delay: delay + 4 }}
             exitAnimation={exitAnimation}
             exitFrame={exitFrame}

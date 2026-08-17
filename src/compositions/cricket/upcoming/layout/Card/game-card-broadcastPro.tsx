@@ -11,6 +11,7 @@ import {
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
 import { resolveBroadcastProEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro/marker-notch";
 import {
@@ -18,6 +19,7 @@ import {
   truncateText,
 } from "../../../utils/utils-text";
 import { cellBlur, useBroadcastProTheme } from "../../../utils/broadcastPro";
+import { BROADCAST_PRO_UPCOMING_SECTION_GAP_PX } from "../../controller/GamesDisplay/_utils/calculations";
 
 const UPCOMING_TEAM_NAME_MAX = 34;
 
@@ -25,7 +27,6 @@ const formatUpcomingTeamName = (teamName: string): string =>
   truncateText(stripGradeNumberFromTeamName(teamName), UPCOMING_TEAM_NAME_MAX);
 
 const HEADER_STRIP_H = 40;
-const GROUND_STRIP_H = 36;
 
 export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   game,
@@ -50,7 +51,8 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
     <div className="flex w-full flex-col">
       <AnimatedContainer
         type="full"
-        className="flex w-full flex-col gap-0 rounded-none"
+        className="flex w-full flex-col rounded-none"
+        style={{ gap: `${BROADCAST_PRO_UPCOMING_SECTION_GAP_PX}px` }}
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
@@ -96,9 +98,9 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
           />
         </div>
 
-        {/* Glass panel: teams + VS */}
+        {/* Glass panel: teams + VS + ground */}
         <div
-          className="flex w-full px-5 py-3 md:px-6"
+          className="flex w-full flex-col px-5 py-3 md:px-6"
           style={{
             background: glass.panel,
             border: glass.border,
@@ -121,27 +123,15 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             delay={delay}
             fontFamily={headingFont}
           />
-        </div>
-
-        {/* Ground footer */}
-        <div
-          className="flex w-full flex-shrink-0 items-center px-5 py-1.5 md:px-6"
-          style={{
-            minHeight: GROUND_STRIP_H,
-            background: glass.muted,
-            borderTop: glass.border
-              ? "1px solid rgba(255,255,255,0.08)"
-              : undefined,
-            ...cellBlur,
-          }}
-        >
-          <MetadataMedium
-            value={game.ground}
-            animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
-            className="truncate font-semibold uppercase tracking-widest"
-            variant={metaVariant}
-            style={metaMutedStyle}
-          />
+          <div className="flex w-full flex-shrink-0 justify-center pt-2 md:pt-2.5">
+            <MetadataMedium
+              value={formatGroundLocation(game.ground)}
+              animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
+              className="max-w-full truncate text-center font-semibold uppercase tracking-widest"
+              variant={metaVariant}
+              style={metaMutedStyle}
+            />
+          </div>
         </div>
       </AnimatedContainer>
     </div>

@@ -11,6 +11,7 @@ import {
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { BroadcastProRoundedMatchup } from "../../../../../templates/variants/broadcastProRounded/components/matchup";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
 import {
@@ -140,7 +141,7 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
           }}
         >
           <MetadataMedium
-            value={game.ground}
+            value={formatGroundLocation(game.ground)}
             animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
             className="truncate font-semibold uppercase tracking-widest"
             variant={metaVariant}

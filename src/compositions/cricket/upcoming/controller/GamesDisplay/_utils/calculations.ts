@@ -23,12 +23,19 @@ export const DEFAULT_SPACING: GameCardSpacing = {
 export const BROADCAST_PRO_UPCOMING_SPACING: GameCardSpacing = {
   headerHeight: 0,
   contentPadding: 0,
-  cardSpacing: 6,
+  cardSpacing: 36,
 };
 
-/** List gap between fixture cards — keep in sync with `games-list-broadcastPro`. */
-export const BROADCAST_PRO_UPCOMING_LIST_GAP_PX =
+/** Space between fixture cards (divider sits centred in this band). */
+export const BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX =
   BROADCAST_PRO_UPCOMING_SPACING.cardSpacing;
+
+/** Vertical gap between header, matchup, and ground strips — keep in sync with `game-card-broadcastPro`. */
+export const BROADCAST_PRO_UPCOMING_SECTION_GAP_PX = 10;
+
+/** Centred rule between upcoming fixture cards — keep in sync with `games-list-broadcastPro`. */
+export const BROADCAST_PRO_UPCOMING_LIST_DIVIDER_WIDTH_PX = 20;
+export const BROADCAST_PRO_UPCOMING_LIST_DIVIDER_HEIGHT_PX = 2;
 
 /**
  * Calculates which games should be displayed on the current screen

@@ -17,6 +17,7 @@ import {
   BRICKWORK_ROW_GAP_STYLE,
 } from "../../../../../templates/variants/brickwork/design";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { formatGroundLocation } from "../../../utils/utils-text";
 export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
@@ -99,7 +100,7 @@ export const GameCardBrickWork: React.FC<GameCardProps> = ({ game, index }) => {
               style={{ flex: "6 0 0" }}
             >
               <MetadataMedium
-                value={game.ground}
+                value={formatGroundLocation(game.ground)}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 20,

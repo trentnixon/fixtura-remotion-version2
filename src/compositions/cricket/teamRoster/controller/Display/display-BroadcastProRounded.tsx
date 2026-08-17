@@ -7,7 +7,7 @@ import {
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { BroadcastProRoundedMatchup } from "../../../../../templates/variants/broadcastProRounded/components/matchup";
 import { BroadcastProRoundedRosterSheet } from "../../../../../templates/variants/broadcastProRounded/components/roster";
-import { formatDate } from "../../../utils/utils-text";
+import { formatDate, formatGroundLocation } from "../../../utils/utils-text";
 import { getTeamPerspective } from "../../layout/utils";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import {
@@ -134,7 +134,7 @@ const RosterDisplayBroadcastProRounded: React.FC<RosterDisplayProps> = ({
               <div className={cs("broadcastProRoundedRosterMetaStack")}>
                 <MetaRow
                   label="LOCATION"
-                  value={roster.ground.toUpperCase()}
+                  value={formatGroundLocation(roster.ground).toUpperCase()}
                   glass={glass}
                   rowClassName={cs("broadcastProRoundedRosterMetaRow")}
                   labelClassName={cs("broadcastProRoundedRosterMetaLabel")}

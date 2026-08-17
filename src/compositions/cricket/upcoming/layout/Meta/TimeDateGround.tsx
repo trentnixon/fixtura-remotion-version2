@@ -3,6 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { BottomSectionProps } from "./_types/TimeDateGroundProps";
 
 export const TimeDateGround: React.FC<BottomSectionProps> = ({
@@ -42,7 +43,7 @@ export const TimeDateGround: React.FC<BottomSectionProps> = ({
           className="text-center"
         />
         <MetadataSmall
-          value={ground}
+          value={formatGroundLocation(ground)}
           animation={{ ...TextAnimations.copyIn, delay: delay + 10 }}
           className="text-right"
         />

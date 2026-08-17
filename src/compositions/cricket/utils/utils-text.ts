@@ -93,6 +93,38 @@ export const formatDate = (date: string): string => {
   });
 };
 
+export type GroundLocationSeparator = "-" | ":";
+
+/**
+ * Formats ground strings that use "venue / field" notation.
+ * When both sides match, returns only the first part.
+ * When they differ, replaces "/" with the chosen separator (default "-").
+ */
+export const formatGroundLocation = (
+  ground: string,
+  separator: GroundLocationSeparator = "-",
+): string => {
+  if (!ground) return "";
+
+  const slashIndex = ground.indexOf("/");
+  if (slashIndex === -1) return ground.trim();
+
+  const before = ground.slice(0, slashIndex).trim();
+  const after = ground.slice(slashIndex + 1).trim();
+
+  if (!after) return before;
+  if (!before) return after;
+
+  const normalizedBefore = before.toLocaleLowerCase();
+  const normalizedAfter = after.toLocaleLowerCase();
+
+  if (normalizedBefore === normalizedAfter) {
+    return before;
+  }
+
+  return `${before} ${separator} ${after}`;
+};
+
 export const stripGradeNumberFromTeamName = (teamName: string) => {
   const GradeLookUp = [
     "1st",

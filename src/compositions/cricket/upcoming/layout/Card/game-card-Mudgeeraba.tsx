@@ -12,6 +12,7 @@ import {
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import {
   LayeredAngularPanel,
   LogoWell,
@@ -104,7 +105,7 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
         {/* Location and time under the grade (tight to grade) */}
         <div className="flex items-center justify-center gap-3 py-0.5 text-center w-full">
           <MetadataMedium
-            value={game.ground}
+            value={formatGroundLocation(game.ground)}
             animation={{ ...animations.text.main.copyIn, delay: delay + 20 }}
             className="text-center"
             variant="onContainerCopyNoBg"

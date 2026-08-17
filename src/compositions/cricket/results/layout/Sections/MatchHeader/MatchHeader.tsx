@@ -5,6 +5,7 @@ import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
 import { mergeWithPriority } from "../../../../../../core/utils/classNames";
 import { MatchHeaderProps } from "./_types/MatchHeaderProps";
 import { truncateText, formatMatchHeaderLeftText } from "./_utils/helpers";
+import { formatGroundLocation } from "../../../../utils/utils-text";
 
 export const MatchHeader: React.FC<MatchHeaderProps> = ({
   date,
@@ -46,7 +47,7 @@ export const MatchHeader: React.FC<MatchHeaderProps> = ({
       />
 
       <ResultMetaData
-        value={truncateText(ground, 50)}
+        value={truncateText(formatGroundLocation(ground ?? ""), 50)}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className="text-right"
         variant={CopyVariant}

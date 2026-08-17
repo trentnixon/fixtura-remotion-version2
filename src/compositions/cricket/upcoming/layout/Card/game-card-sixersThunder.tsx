@@ -12,6 +12,7 @@ import {
 } from "./_utils/calculations";
 import TeamLogo from "../../../utils/primitives/TeamLogo";
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { LOGO_SIZES } from "../Logos/variations/_utils/helpers";
 
 export const GameCardSixersThunder: React.FC<GameCardProps> = ({
@@ -93,7 +94,7 @@ export const GameCardSixersThunder: React.FC<GameCardProps> = ({
             <div className="mx-6 flex flex-col items-center">
               {/* Ground */}
               <MetadataSmall
-                value={game.ground}
+                value={formatGroundLocation(game.ground)}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 20,

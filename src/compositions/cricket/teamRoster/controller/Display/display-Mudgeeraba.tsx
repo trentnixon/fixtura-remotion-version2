@@ -3,7 +3,7 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
-import { formatDate, truncatePlayerName } from "../../../utils/utils-text";
+import { formatDate, truncatePlayerName, formatGroundLocation } from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
 import { RosterPlayerName } from "../../../utils/primitives/RosterPlayerName";
 import { MetadataLarge } from "../../../utils/primitives/metadataLarge";
@@ -109,7 +109,7 @@ const RosterDisplayMudgeeraba: React.FC<RosterDisplayProps> = ({ roster }) => {
               variant="onContainerCopyNoBg"
             />
             <MetadataLarge
-              value={roster.ground}
+              value={formatGroundLocation(roster.ground)}
               animation={{ ...textAnimations, delay: 2 }}
               className="text-center text-3xl"
               variant="onContainerCopyNoBg"

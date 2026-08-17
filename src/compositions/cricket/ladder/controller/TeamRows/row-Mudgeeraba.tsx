@@ -143,7 +143,10 @@ export const RowMudgeeraba: React.FC<TeamRowProps> = ({
       </div>
 
       {/* Stats */}
-      <div className="flex flex-1 justify-evenly shrink-0 items-center" style={statsStyle}>
+      <div
+        className="flex flex-1 justify-evenly shrink-0 items-center"
+        style={statsStyle}
+      >
         <div className="w-10 text-center whitespace-nowrap">
           <LadderTeamPoints value={team?.P ?? 0} delay={delay} />
         </div>

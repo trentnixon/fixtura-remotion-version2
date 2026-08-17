@@ -4,6 +4,7 @@ import { TeamLogo } from "../../utils/primitives/TeamLogo";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
+import { formatGroundLocation, truncateText } from "../../utils/utils-text";
 
 interface MatchRowLayoutProps {
   match: MatchResult;
@@ -13,7 +14,7 @@ interface MatchRowLayoutProps {
 }
 
 // Helper function to truncate text
-const truncateText = (text: string, maxLength: number): string => {
+const truncateRowText = (text: string, maxLength: number): string => {
   if (text.length <= maxLength) return text;
   return text.substring(0, maxLength - 3) + "...";
 };
@@ -38,8 +39,8 @@ export const StandardMatchRow: React.FC<MatchRowLayoutProps> = ({
     : selectedPalette.container.transparentMain;
 
   // Truncate team names
-  const homeTeamName = truncateText(match.homeTeam.name, 25).toUpperCase();
-  const awayTeamName = truncateText(match.awayTeam.name, 25).toUpperCase();
+  const homeTeamName = truncateRowText(match.homeTeam.name, 25).toUpperCase();
+  const awayTeamName = truncateRowText(match.awayTeam.name, 25).toUpperCase();
 
   // Format result status
   const getStatusColor = () => {
@@ -88,7 +89,7 @@ export const StandardMatchRow: React.FC<MatchRowLayoutProps> = ({
           className="text-xs opacity-75"
           variant="onBackgroundMain"
         >
-          {truncateText(match.ground, 25)}
+          {truncateText(formatGroundLocation(match.ground), 25)}
         </AnimatedText>
       </div>
 

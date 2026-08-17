@@ -12,6 +12,7 @@ import {
 } from "./_utils/calculations";
 import TeamLogo from "../../../utils/primitives/TeamLogo";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { LOGO_SIZES } from "../Logos/variations/_utils/helpers";
 
 export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
@@ -94,7 +95,7 @@ export const GameCardClassicTwoColumn: React.FC<GameCardProps> = ({
                 variant="onContainerCopy"
               />
               <MetadataMedium
-                value={game.ground}
+                value={formatGroundLocation(game.ground)}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 20,

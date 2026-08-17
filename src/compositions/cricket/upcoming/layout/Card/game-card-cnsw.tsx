@@ -11,6 +11,7 @@ import {
   calculateAnimationOutFrame,
 } from "./_utils/calculations";
 import { ResultMetaData } from "../../../utils/primitives/ResultMetaData";
+import { formatGroundLocation } from "../../../utils/utils-text";
 
 export const GameCardCNSW: React.FC<GameCardProps> = ({ game, index }) => {
   const { data } = useVideoDataContext();
@@ -104,7 +105,7 @@ export const GameCardCNSW: React.FC<GameCardProps> = ({ game, index }) => {
             className="text-left"
           />
           <SingleDataPointHeader
-            value={game.ground}
+            value={formatGroundLocation(game.ground)}
             height={100}
             delay={delay}
             backgroundColor={"transparent"}

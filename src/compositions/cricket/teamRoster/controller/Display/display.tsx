@@ -4,7 +4,7 @@ import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
 import { TwoMetaValuesSubtleWrapper } from "../../layout/Metadata/TwoMetaValues";
-import { formatDate, truncateText } from "../../../utils/utils-text";
+import { formatDate, truncateText, formatGroundLocation } from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import {
@@ -37,7 +37,7 @@ const RosterDisplay: React.FC<RosterDisplayProps> = ({ roster }) => {
           style={{ height: `${availableHeight}px` }}
         >
           <TwoMetaValuesSubtleWrapper
-            values={[formatDate(roster.date), truncateText(roster.ground, 50)]}
+            values={[formatDate(roster.date), truncateText(formatGroundLocation(roster.ground), 50)]}
           />
 
           <div

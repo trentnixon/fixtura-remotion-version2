@@ -4,6 +4,7 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 import { MatchHeaderProps } from "./_types/MatchHeaderProps";
 import { MetadataLarge } from "../../../../utils/primitives/metadataLarge";
+import { formatGroundLocation } from "../../../../utils/utils-text";
 
 export const Type_Round_Ground_stacked: React.FC<MatchHeaderProps> = ({
   type,
@@ -44,7 +45,7 @@ export const Type_Round_Ground_stacked: React.FC<MatchHeaderProps> = ({
         variant={CopyVariant}
       />
       <MetadataLarge
-        value={ground}
+        value={formatGroundLocation(ground)}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className="text-left"
         variant={CopyVariant}

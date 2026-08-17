@@ -2,6 +2,7 @@ import React from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataMedium } from "../../primitives/metadataMedium";
+import { formatGroundLocation } from "../../utils-text";
 import { cellBlur, csClass, useBroadcastProTheme } from "../index";
 import { resolveBroadcastProEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro/marker-notch";
 
@@ -45,7 +46,7 @@ export const BroadcastProResultMetaStrip: React.FC<
       />
       {showGround && ground ? (
         <MetadataMedium
-          value={ground}
+          value={formatGroundLocation(ground)}
           animation={{ ...copyIn, delay: delay + 2 }}
           className="ml-4 min-w-0 flex-shrink-0 truncate text-right font-medium uppercase tracking-wider"
           variant="onContainerCopy"

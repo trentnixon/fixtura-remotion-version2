@@ -6,6 +6,7 @@ import { ResultMetaData } from "../../../../utils/primitives/ResultMetaData";
 import { mergeWithPriority } from "../../../../../../core/utils/classNames";
 import { RoundGroundProps } from "./_types/MatchHeaderProps";
 import { truncateText, formatLeftText } from "./_utils/helpers";
+import { formatGroundLocation } from "../../../../utils/utils-text";
 
 export const Round_Ground: React.FC<RoundGroundProps> = ({
   date,
@@ -52,7 +53,7 @@ export const Round_Ground: React.FC<RoundGroundProps> = ({
       />
 
       <ResultMetaData
-        value={truncateText(ground, 50)}
+        value={truncateText(formatGroundLocation(ground), 50)}
         animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
         className="text-right"
         variant={variant}

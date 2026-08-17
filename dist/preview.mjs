@@ -14006,7 +14006,6 @@ var SHALLOW_DIVIDER_RIGHT = softenPolygon(
 );
 var PADDING_SHALLOW_LEFT = "pl-4 pr-10";
 var PADDING_SHALLOW_RIGHT = "pl-12 pr-3";
-var PADDING_SHALLOW_LEFT_COMPACT = "pl-2 pr-6";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH = "pl-0 pr-10";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT = "pl-0 pr-6";
 var getShallowColumnPadding = (isLeftColumn) => isLeftColumn ? PADDING_SHALLOW_LEFT : PADDING_SHALLOW_RIGHT;
@@ -14287,22 +14286,10 @@ var LogoWell = ({
       className: `relative flex shrink-0 items-center justify-center overflow-hidden ${className}`,
       style: outerStyle,
       children: [
-        showCornerAccent && accentClip && /* @__PURE__ */ jsx119(
-          "div",
-          {
-            className: "absolute pointer-events-none",
-            "aria-hidden": true,
-            style: {
-              inset: 0,
-              backgroundColor: colors.primary,
-              ...clipPathStyle2(accentClip)
-            }
-          }
-        ),
         /* @__PURE__ */ jsx119(
           "div",
           {
-            className: "relative z-10 flex items-center justify-center overflow-hidden",
+            className: "relative z-0 flex h-full w-full items-center justify-center overflow-hidden",
             style: {
               width: `${innerSize}px`,
               height: `${innerSize}px`,
@@ -14310,6 +14297,17 @@ var LogoWell = ({
               ...variant === "circle" && fullBleed ? { borderRadius: "9999px" } : {}
             },
             children
+          }
+        ),
+        showCornerAccent && accentClip && /* @__PURE__ */ jsx119(
+          "div",
+          {
+            className: "absolute inset-0 z-20 pointer-events-none",
+            "aria-hidden": true,
+            style: {
+              backgroundColor: colors.primary,
+              ...clipPathStyle2(accentClip)
+            }
           }
         )
       ]
@@ -14419,13 +14417,15 @@ var headerMudgeeraba_default = TableHeaderMudgeeraba;
 // src/compositions/cricket/ladder/controller/TeamRows/row-Mudgeeraba.tsx
 import { Fragment as Fragment2, jsx as jsx121, jsxs as jsxs47 } from "react/jsx-runtime";
 var EDGE_STRIP_DELAY_OFFSET = 12;
+var INNER_ROW_BORDER_PX = 5;
 var RowMudgeeraba = ({
   team,
   index,
   totalTeams,
   isBiasTeam,
   LadderRowHeight,
-  compact = false
+  compact = false,
+  isLast = false
 }) => {
   var _a, _b, _c, _d, _e, _f, _g, _h;
   const { data } = useVideoDataContext();
@@ -14443,16 +14443,12 @@ var RowMudgeeraba = ({
   } else if (position >= totalTeams) {
     edgeStripColor = "rgb(239, 68, 68)";
   }
-  const paddingY = Math.max(2, Math.min(8, Math.round(LadderRowHeight * 0.15)));
   const useSmallerFont = totalTeams >= 12;
   const teamNameFontSizePx = useSmallerFont ? 24 : 30;
   const statsFontSizePx = useSmallerFont ? 24 : 30;
   const teamNameStyle = { fontSize: `${teamNameFontSizePx}px` };
   const statsStyle = { fontSize: `${statsFontSizePx}px` };
-  const logoWellSize = Math.min(
-    compact ? 36 : 56,
-    Math.max(28, LadderRowHeight - paddingY * 2)
-  );
+  const rowPanelClass = `flex items-stretch w-full overflow-hidden relative ${compact ? PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT : PADDING_SHALLOW_ROW_LOGO_FLUSH}`;
   let rowStyle = {
     height: `${LadderRowHeight}px`,
     minHeight: `${LadderRowHeight}px`
@@ -14464,9 +14460,8 @@ var RowMudgeeraba = ({
     };
   }
   const surfaceStyle = {
-    paddingTop: paddingY,
-    paddingBottom: paddingY,
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    boxShadow: `inset 0 -${INNER_ROW_BORDER_PX}px 0 0 ${colors.primary}`
   };
   const rowContent = /* @__PURE__ */ jsxs47(Fragment2, { children: [
     showAngularEdgeAccents() && /* @__PURE__ */ jsx121(
@@ -14492,55 +14487,52 @@ var RowMudgeeraba = ({
         )
       }
     ),
+    /* @__PURE__ */ jsx121(
+      LogoWell,
+      {
+        variant: "steepLeft",
+        size: LadderRowHeight,
+        fullBleed: true,
+        className: compact ? "mr-2" : "mr-4",
+        children: ((_a = team.clubLogo) != null ? _a : team.playHQLogo) ? /* @__PURE__ */ jsx121(
+          TeamLogo_default,
+          {
+            logo: (_c = (_b = team.clubLogo) != null ? _b : team.playHQLogo) != null ? _c : null,
+            teamName: team.teamName,
+            delay,
+            size: LadderRowHeight,
+            fit: "cover",
+            imgStyle: {
+              width: "100%",
+              height: "100%",
+              objectFit: "cover"
+            }
+          }
+        ) : /* @__PURE__ */ jsx121("div", { className: "w-full h-full bg-gray-300/20" })
+      }
+    ),
+    /* @__PURE__ */ jsx121("div", { className: "flex flex-1 items-center min-w-0 truncate", children: /* @__PURE__ */ jsx121(
+      ladderTeamName_default,
+      {
+        value: team.teamName,
+        delay,
+        style: teamNameStyle
+      }
+    ) }),
     /* @__PURE__ */ jsxs47(
       "div",
       {
-        className: `flex items-center min-w-0 flex-1 ${compact ? "mr-2" : "mr-3"}`,
-        style: { width: "70%", minWidth: 0 },
+        className: "flex flex-1 justify-evenly shrink-0 items-center",
+        style: statsStyle,
         children: [
-          /* @__PURE__ */ jsx121(
-            LogoWell,
-            {
-              variant: "circle",
-              size: logoWellSize,
-              fullBleed: true,
-              borderless: true,
-              className: compact ? "mr-2" : "mr-3",
-              children: ((_a = team.clubLogo) != null ? _a : team.playHQLogo) ? /* @__PURE__ */ jsx121(
-                TeamLogo_default,
-                {
-                  logo: (_c = (_b = team.clubLogo) != null ? _b : team.playHQLogo) != null ? _c : null,
-                  teamName: team.teamName,
-                  delay,
-                  size: logoWellSize,
-                  fit: "cover",
-                  imgStyle: {
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }
-                }
-              ) : /* @__PURE__ */ jsx121("div", { className: "w-full h-full bg-gray-300/20 rounded-full" })
-            }
-          ),
-          /* @__PURE__ */ jsx121("div", { className: "flex-1 truncate min-w-0", children: /* @__PURE__ */ jsx121(
-            ladderTeamName_default,
-            {
-              value: team.teamName,
-              delay,
-              style: teamNameStyle
-            }
-          ) })
+          /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_d = team == null ? void 0 : team.P) != null ? _d : 0, delay }) }),
+          /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_e = team == null ? void 0 : team.W) != null ? _e : 0, delay }) }),
+          /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_f = team == null ? void 0 : team.L) != null ? _f : 0, delay }) }),
+          /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_g = team == null ? void 0 : team.BYE) != null ? _g : 0, delay }) }),
+          /* @__PURE__ */ jsx121("div", { className: "w-16 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_h = team == null ? void 0 : team.PTS) != null ? _h : 0, delay }) })
         ]
       }
-    ),
-    /* @__PURE__ */ jsxs47("div", { className: "flex flex-1 justify-evenly shrink-0", style: statsStyle, children: [
-      /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_d = team == null ? void 0 : team.P) != null ? _d : 0, delay }) }),
-      /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_e = team == null ? void 0 : team.W) != null ? _e : 0, delay }) }),
-      /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_f = team == null ? void 0 : team.L) != null ? _f : 0, delay }) }),
-      /* @__PURE__ */ jsx121("div", { className: "w-10 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_g = team == null ? void 0 : team.BYE) != null ? _g : 0, delay }) }),
-      /* @__PURE__ */ jsx121("div", { className: "w-16 text-center whitespace-nowrap", children: /* @__PURE__ */ jsx121(ladderTeamPoints_default, { value: (_h = team == null ? void 0 : team.PTS) != null ? _h : 0, delay }) })
-    ] })
+    )
   ] });
   return /* @__PURE__ */ jsx121("div", { className: "overflow-visible", children: /* @__PURE__ */ jsx121(
     AnimatedContainer,
@@ -14560,7 +14552,8 @@ var RowMudgeeraba = ({
           underlayColor: getLayeredUnderlayColor(colors.primary),
           className: "w-full relative",
           style: rowStyle,
-          surfaceClassName: `flex items-center relative overflow-hidden ${compact ? PADDING_SHALLOW_LEFT_COMPACT : PADDING_SHALLOW_LEFT}`,
+          offsetY: isLast ? 0 : LAYERED_PANEL_OFFSET_Y,
+          surfaceClassName: rowPanelClass,
           surfaceStyle,
           children: rowContent
         }
@@ -14572,6 +14565,7 @@ var row_Mudgeeraba_default = RowMudgeeraba;
 
 // src/compositions/cricket/ladder/controller/Display/display-Mudgeeraba.tsx
 import { jsx as jsx122, jsxs as jsxs48 } from "react/jsx-runtime";
+var LADDER_ROW_GAP_PX = 4;
 var LadderDisplayMudgeeraba = ({
   ladder: ladder3
 }) => {
@@ -14580,15 +14574,16 @@ var LadderDisplayMudgeeraba = ({
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
+  const rowGapPx = LAYERED_PANEL_OFFSET_Y + LADDER_ROW_GAP_PX;
   const extraReserved = League.length > 14 ? 24 : 48;
   const { headerHeight, rowHeight, compact } = calculateRowDimensions(
     heights.asset,
     League.length,
-    extraReserved
+    extraReserved,
+    { rowGapPx }
   );
   const containerMargin = compact ? "my-2 mx-4" : "my-4 mx-4";
   const headerGap = compact ? "gap-2" : "gap-4";
-  const rowGap = compact ? "gap-0" : "gap-1";
   return /* @__PURE__ */ jsxs48("div", { className: "p-0 flex flex-col w-full h-full", children: [
     /* @__PURE__ */ jsx122(
       AnimatedContainer,
@@ -14610,7 +14605,8 @@ var LadderDisplayMudgeeraba = ({
           /* @__PURE__ */ jsx122(
             "div",
             {
-              className: `flex-1 flex flex-col ${rowGap} overflow-hidden min-h-0`,
+              className: "flex-1 flex flex-col overflow-hidden min-h-0",
+              style: { gap: rowGapPx },
               children: League.map((team, index) => /* @__PURE__ */ jsx122(
                 row_Mudgeeraba_default,
                 {
@@ -14619,7 +14615,8 @@ var LadderDisplayMudgeeraba = ({
                   totalTeams: League.length,
                   isBiasTeam: team.teamName === ladder3.bias,
                   LadderRowHeight: rowHeight,
-                  compact
+                  compact,
+                  isLast: index === League.length - 1
                 },
                 team.position
               ))
@@ -22974,6 +22971,8 @@ var CNSWPrivate2 = () => {
 import { jsx as jsx220, jsxs as jsxs99 } from "react/jsx-runtime";
 var EDGE_COLOR_HOME = "rgb(34, 197, 94)";
 var EDGE_COLOR_AWAY = "rgb(239, 68, 68)";
+var TEAM_PANEL_HEIGHT_PX = 150;
+var PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT = "pl-10 pr-0";
 var GameCardMudgeeraba = ({
   game,
   index
@@ -22987,6 +22986,34 @@ var GameCardMudgeeraba = ({
   const animationOutFrame = calculateAnimationOutFrame2(timings);
   const teamBg = selectedPalette.container.backgroundTransparent.high;
   const underlayColor = getLayeredUnderlayColor(colors.primary);
+  const teamPanelStyle = {
+    height: `${TEAM_PANEL_HEIGHT_PX}px`,
+    minHeight: `${TEAM_PANEL_HEIGHT_PX}px`
+  };
+  const renderTeamLogo = (logo, teamName, logoDelay, variant, className) => /* @__PURE__ */ jsx220(
+    LogoWell,
+    {
+      variant,
+      size: TEAM_PANEL_HEIGHT_PX,
+      fullBleed: true,
+      className: `shrink-0 ${className}`,
+      children: logo ? /* @__PURE__ */ jsx220(
+        TeamLogo_default,
+        {
+          logo,
+          teamName,
+          delay: logoDelay,
+          size: TEAM_PANEL_HEIGHT_PX,
+          fit: "cover",
+          imgStyle: {
+            width: "100%",
+            height: "100%",
+            objectFit: "cover"
+          }
+        }
+      ) : /* @__PURE__ */ jsx220("div", { className: "w-full h-full bg-gray-300/20" })
+    }
+  );
   return /* @__PURE__ */ jsx220("div", { className: "overflow-visible", children: /* @__PURE__ */ jsxs99(
     AnimatedContainer,
     {
@@ -23035,99 +23062,93 @@ var GameCardMudgeeraba = ({
             }
           )
         ] }),
-        /* @__PURE__ */ jsxs99("div", { className: "flex w-full relative overflow-visible", children: [
-          /* @__PURE__ */ jsxs99("div", { className: "flex flex-1 flex-col items-center min-w-0", children: [
-            /* @__PURE__ */ jsx220(LogoWell, { variant: "circle", size: 112, className: "shrink-0 mb-2", children: /* @__PURE__ */ jsx220(
-              TeamLogo_default,
-              {
-                logo: game.teamHomeLogo,
-                teamName: game.teamHome,
-                delay: delay + 10,
-                size: 28
-              }
-            ) }),
-            /* @__PURE__ */ jsxs99(
-              LayeredAngularPanel,
-              {
-                clipPath: SHALLOW_COLUMN_LEFT,
-                surfaceColor: teamBg,
-                underlayColor,
-                className: "flex flex-1 w-full min-w-0 relative",
-                surfaceClassName: `flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_LEFT}`,
-                children: [
-                  showAngularEdgeAccents() && /* @__PURE__ */ jsx220(
-                    "div",
-                    {
-                      className: "absolute inset-0 pointer-events-none",
-                      style: {
-                        backgroundColor: EDGE_COLOR_HOME,
-                        ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
-                      },
-                      "aria-hidden": true
-                    }
-                  ),
-                  /* @__PURE__ */ jsx220(
-                    MetadataMedium,
-                    {
-                      value: game.teamHome,
-                      animation: {
-                        ...animations.text.main.copyIn,
-                        delay: delay + 15
-                      },
-                      className: "block text-center truncate w-full max-w-full relative z-10",
-                      variant: "onContainerCopy"
-                    }
-                  )
-                ]
-              }
-            )
-          ] }),
-          /* @__PURE__ */ jsxs99("div", { className: "flex flex-1 flex-col items-center min-w-0", children: [
-            /* @__PURE__ */ jsx220(LogoWell, { variant: "circle", size: 112, className: "shrink-0 mb-2", children: /* @__PURE__ */ jsx220(
-              TeamLogo_default,
-              {
-                logo: game.teamAwayLogo,
-                teamName: game.teamAway,
-                delay: delay + 25,
-                size: 28
-              }
-            ) }),
-            /* @__PURE__ */ jsxs99(
-              LayeredAngularPanel,
-              {
-                clipPath: SHALLOW_COLUMN_RIGHT,
-                surfaceColor: teamBg,
-                underlayColor,
-                className: "flex flex-1 w-full min-w-0 relative",
-                surfaceClassName: `flex flex-1 w-full min-w-0 items-center justify-center py-2 overflow-hidden relative ${PADDING_SHALLOW_RIGHT}`,
-                children: [
-                  showAngularEdgeAccents() && /* @__PURE__ */ jsx220(
-                    "div",
-                    {
-                      className: "absolute inset-0 pointer-events-none",
-                      style: {
-                        backgroundColor: EDGE_COLOR_AWAY,
-                        ...clipPathStyle2(SHALLOW_EDGE_STRIP_LEFT)
-                      },
-                      "aria-hidden": true
-                    }
-                  ),
-                  /* @__PURE__ */ jsx220(
-                    MetadataMedium,
-                    {
-                      value: game.teamAway,
-                      animation: {
-                        ...animations.text.main.copyIn,
-                        delay: delay + 30
-                      },
-                      className: "block text-center truncate w-full max-w-full relative z-10",
-                      variant: "onContainerCopy"
-                    }
-                  )
-                ]
-              }
-            )
-          ] })
+        /* @__PURE__ */ jsxs99("div", { className: "flex w-full relative overflow-visible gap-2", children: [
+          /* @__PURE__ */ jsxs99(
+            LayeredAngularPanel,
+            {
+              clipPath: SHALLOW_COLUMN_LEFT,
+              surfaceColor: teamBg,
+              underlayColor,
+              className: "flex flex-1 w-full min-w-0 relative",
+              style: teamPanelStyle,
+              surfaceClassName: `flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH}`,
+              children: [
+                showAngularEdgeAccents() && /* @__PURE__ */ jsx220(
+                  "div",
+                  {
+                    className: "absolute inset-0 pointer-events-none",
+                    style: {
+                      backgroundColor: EDGE_COLOR_HOME,
+                      ...clipPathStyle2(SHALLOW_EDGE_STRIP_RIGHT)
+                    },
+                    "aria-hidden": true
+                  }
+                ),
+                renderTeamLogo(
+                  game.teamHomeLogo,
+                  game.teamHome,
+                  delay + 10,
+                  "steepLeft",
+                  "mr-3"
+                ),
+                /* @__PURE__ */ jsx220("div", { className: "relative z-10 flex flex-1 items-center justify-center min-w-0 px-2", children: /* @__PURE__ */ jsx220(
+                  MetadataMedium,
+                  {
+                    value: game.teamHome,
+                    animation: {
+                      ...animations.text.main.copyIn,
+                      delay: delay + 15
+                    },
+                    className: "block text-center w-full",
+                    variant: "onContainerCopy"
+                  }
+                ) })
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxs99(
+            LayeredAngularPanel,
+            {
+              clipPath: SHALLOW_COLUMN_RIGHT,
+              surfaceColor: teamBg,
+              underlayColor,
+              className: "flex flex-1 w-full min-w-0 relative",
+              style: teamPanelStyle,
+              surfaceClassName: `flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT}`,
+              children: [
+                showAngularEdgeAccents() && /* @__PURE__ */ jsx220(
+                  "div",
+                  {
+                    className: "absolute inset-0 pointer-events-none",
+                    style: {
+                      backgroundColor: EDGE_COLOR_AWAY,
+                      ...clipPathStyle2(SHALLOW_EDGE_STRIP_LEFT)
+                    },
+                    "aria-hidden": true
+                  }
+                ),
+                /* @__PURE__ */ jsx220("div", { className: "relative z-10 flex flex-1 items-center justify-center min-w-0 px-2", children: /* @__PURE__ */ jsx220(
+                  MetadataMedium,
+                  {
+                    value: game.teamAway,
+                    animation: {
+                      ...animations.text.main.copyIn,
+                      delay: delay + 30
+                    },
+                    className: "block text-center w-full",
+                    variant: "onContainerCopy"
+                  }
+                ) }),
+                renderTeamLogo(
+                  game.teamAwayLogo,
+                  game.teamAway,
+                  delay + 25,
+                  "steepRight",
+                  "ml-3"
+                )
+              ]
+            }
+          )
         ] })
       ]
     }
@@ -42835,9 +42856,9 @@ var ClassicTwoColumn6 = () => {
 var classicTwoColumn_default3 = ClassicTwoColumn6;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Mudgeeraba.tsx
-import { Img as Img11 } from "remotion";
 import { Fragment as Fragment22, jsx as jsx499, jsxs as jsxs272 } from "react/jsx-runtime";
 var ICON_LOGO_WIDTH_RATIO = 0.72;
+var PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT2 = "pl-4 pr-0";
 var PlayerRowMudgeeraba2 = ({
   player,
   index,
@@ -42963,14 +42984,18 @@ var PlayerRowMudgeeraba2 = ({
       LogoWell,
       {
         variant: "steepRight",
-        size: Math.round(rowHeight * ICON_LOGO_WIDTH_RATIO),
-        className: "ml-2",
+        size: rowHeight,
+        fullBleed: true,
+        className: "ml-2 shrink-0",
         children: /* @__PURE__ */ jsx499(
-          Img11,
+          TeamLogo,
           {
-            src: player.club.logo.url,
-            alt: player.club.name,
-            style: {
+            logo: player.club.logo,
+            teamName: player.club.name,
+            delay,
+            size: rowHeight,
+            fit: "cover",
+            imgStyle: {
               width: "100%",
               height: "100%",
               objectFit: "cover"
@@ -42998,7 +43023,7 @@ var PlayerRowMudgeeraba2 = ({
           underlayColor: getLayeredUnderlayColor(colors.primary),
           className: "w-full relative",
           style: { height: `${rowHeight}px` },
-          surfaceClassName: "flex items-center w-full overflow-hidden pl-0 pr-0",
+          surfaceClassName: `flex items-stretch w-full overflow-hidden relative ${PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT2}`,
           children: rowInner
         }
       )
@@ -46438,7 +46463,7 @@ var cnswTheme = {
 };
 
 // src/templates/variants/cnsw/components/CNSWIntro.tsx
-import { AbsoluteFill as AbsoluteFill43, Img as Img12 } from "remotion";
+import { AbsoluteFill as AbsoluteFill43, Img as Img11 } from "remotion";
 
 // src/templates/variants/cnsw/utils/compositionConfig.ts
 var compositionConfig = {
@@ -46754,7 +46779,7 @@ var CNSWIntro = () => {
   const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro");
   return /* @__PURE__ */ jsxs283(Fragment23, { children: [
     /* @__PURE__ */ jsx536(AbsoluteFill43, { children: /* @__PURE__ */ jsx536(
-      Img12,
+      Img11,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -46973,7 +46998,7 @@ var CNSWBackground = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWMainHeader.tsx
-import { AbsoluteFill as AbsoluteFill45, Img as Img13 } from "remotion";
+import { AbsoluteFill as AbsoluteFill45, Img as Img12 } from "remotion";
 import { jsx as jsx539, jsxs as jsxs284 } from "react/jsx-runtime";
 var CNSWMainHeader = () => {
   var _a, _b, _c;
@@ -47025,7 +47050,7 @@ var CNSWMainHeader = () => {
       style: { height: `${heights.header}px` },
       children: [
         /* @__PURE__ */ jsx539(AbsoluteFill45, { children: /* @__PURE__ */ jsx539(
-          Img13,
+          Img12,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -49106,7 +49131,7 @@ var cnswTheme2 = {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWIntro.tsx
-import { AbsoluteFill as AbsoluteFill49, Img as Img14 } from "remotion";
+import { AbsoluteFill as AbsoluteFill49, Img as Img13 } from "remotion";
 
 // src/templates/variants/cnsw-private/utils/compositionConfig.ts
 var compositionConfig2 = {
@@ -49422,7 +49447,7 @@ var CNSWIntro2 = () => {
   const snugLetterSpacingBottomLine = getHardcodedSpacing2(bottomLine, "intro");
   return /* @__PURE__ */ jsxs287(Fragment25, { children: [
     /* @__PURE__ */ jsx555(AbsoluteFill49, { children: /* @__PURE__ */ jsx555(
-      Img14,
+      Img13,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -49607,7 +49632,7 @@ var CNSWBackground2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWMainHeader.tsx
-import { AbsoluteFill as AbsoluteFill51, Img as Img15 } from "remotion";
+import { AbsoluteFill as AbsoluteFill51, Img as Img14 } from "remotion";
 import { jsx as jsx558, jsxs as jsxs288 } from "react/jsx-runtime";
 var CNSWMainHeader2 = () => {
   var _a, _b, _c;
@@ -49659,7 +49684,7 @@ var CNSWMainHeader2 = () => {
       style: { height: `${heights.header}px` },
       children: [
         /* @__PURE__ */ jsx558(AbsoluteFill51, { children: /* @__PURE__ */ jsx558(
-          Img15,
+          Img14,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -50323,8 +50348,9 @@ import { jsx as jsx561 } from "react/jsx-runtime";
 var MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
 var INTRO_TITLE_MAX_LINES = 2;
 var INTRO_TITLE_LINE_HEIGHT = 1.05;
+var INTRO_LOGO_MAX_PX = 336;
 var MudgeerabaIntro = () => {
-  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j;
   const { club, metadata, sponsors } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
@@ -50348,23 +50374,38 @@ var MudgeerabaIntro = () => {
     maxLines: INTRO_TITLE_MAX_LINES
   });
   const titleFontSize = fittedTitleFontSize != null ? fittedTitleFontSize : MUDGEERABA_TITLE_MAX_FONT_PX;
+  const clubLogo = club.logo;
+  const clubLogoWidth = clubLogo == null ? void 0 : clubLogo.width;
+  const clubLogoHeight = clubLogo == null ? void 0 : clubLogo.height;
   return /* @__PURE__ */ jsx561(
-    VerticalStackTitleLogoName,
+    VerticalStackLogoTitleName,
     {
       alignment: "center",
-      Logo: /* @__PURE__ */ jsx561("div", { className: "w-full h-full flex justify-center py-8 items-center max-h-[500px] max-w-[500px]", children: /* @__PURE__ */ jsx561(
-        AnimatedImage,
+      Logo: /* @__PURE__ */ jsx561(
+        "div",
         {
-          src: ((_f = club.logo) == null ? void 0 : _f.url) || "",
-          alt: club.name,
-          width: "auto",
-          height: "auto",
-          fit: "contain",
-          animation: LogoAnimations.introIn,
-          exitAnimation: LogoAnimations.introOut,
-          exitFrame: LogoAnimations.introExitFrame
+          className: "flex w-full justify-center pb-4 items-center",
+          style: { maxHeight: INTRO_LOGO_MAX_PX, maxWidth: INTRO_LOGO_MAX_PX },
+          children: /* @__PURE__ */ jsx561(
+            AnimatedImage,
+            {
+              src: (clubLogo == null ? void 0 : clubLogo.url) || "",
+              alt: club.name,
+              originalWidth: clubLogoWidth,
+              originalHeight: clubLogoHeight,
+              width: "auto",
+              height: "auto",
+              maxWidth: INTRO_LOGO_MAX_PX,
+              maxHeight: INTRO_LOGO_MAX_PX,
+              fit: "contain",
+              preserveRatio: true,
+              animation: LogoAnimations.introIn,
+              exitAnimation: LogoAnimations.introOut,
+              exitFrame: LogoAnimations.introExitFrame
+            }
+          )
         }
-      ) }),
+      ),
       Title: /* @__PURE__ */ jsx561(
         "div",
         {
@@ -50413,11 +50454,11 @@ var MudgeerabaIntro = () => {
           )
         }
       ),
-      PrimarySponsor: ((_h = (_g = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _g.logo) == null ? void 0 : _h.url) && /* @__PURE__ */ jsx561("div", { className: "w-full h-full flex justify-center items-center max-h-[150px] max-w-[150px]", children: /* @__PURE__ */ jsx561(
+      PrimarySponsor: ((_g = (_f = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _f.logo) == null ? void 0 : _g.url) && /* @__PURE__ */ jsx561("div", { className: "w-full h-full flex justify-center items-center max-h-[150px] max-w-[150px]", children: /* @__PURE__ */ jsx561(
         AnimatedImage,
         {
-          src: ((_j = (_i = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _i.logo) == null ? void 0 : _j.url) || "",
-          alt: ((_k = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _k.name) || "",
+          src: ((_i = (_h = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _h.logo) == null ? void 0 : _i.url) || "",
+          alt: ((_j = sponsors == null ? void 0 : sponsors.primary[0]) == null ? void 0 : _j.name) || "",
           width: "auto",
           height: "auto",
           fit: "contain",

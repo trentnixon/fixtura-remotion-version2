@@ -3,6 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { MetadataSmall } from "../../../utils/primitives/metadataSmall";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { BottomSectionProps } from "./_types/GroundTimeProps";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { truncateString } from "./_utils/helpers";
 
 export const GroundTime: React.FC<BottomSectionProps> = ({
@@ -17,7 +18,10 @@ export const GroundTime: React.FC<BottomSectionProps> = ({
   const ContainerAnimations = animations.container;
 
   // truncate string and handle null values
-  const truncatedGround = truncateString(ground, maxLength);
+  const truncatedGround = truncateString(
+    formatGroundLocation(ground ?? ""),
+    maxLength,
+  );
 
   return (
     <AnimatedContainer

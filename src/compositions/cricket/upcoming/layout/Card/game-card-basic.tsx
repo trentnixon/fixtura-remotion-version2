@@ -13,6 +13,7 @@ import {
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
+import { formatGroundLocation } from "../../../utils/utils-text";
 import { LOGO_SIZES } from "../Logos/variations/_utils/helpers";
 
 export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
@@ -97,7 +98,7 @@ export const GameCardBasic: React.FC<GameCardProps> = ({ game, index }) => {
               />
               {/* Ground */}
               <MetadataMedium
-                value={game.ground}
+                value={formatGroundLocation(game.ground)}
                 animation={{
                   ...animations.text.main.copyIn,
                   delay: delay + 20,
