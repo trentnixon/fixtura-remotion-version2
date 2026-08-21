@@ -8,9 +8,9 @@ Data type definitions for normalized inputs to compositions and utilities. Expor
 - **`common.ts`**: ImageLogo, Theme, TemplateVariation, ThemeData, Account, Timings, Render
 - **`videoData.ts`**: Video, VideoMetadata, VideoAppearance, VideoMedia, VideoContentLayout, VideoTemplateVariation, DivideFixturesBy, VideoTheme, VideoMeta, CricketLadderData, CricketTeam
 - **`root.ts`**: FixturaDataset<T> (generic data key)
-- **`team.ts`**: Team, HomeTeam, AwayTeam, TeamsAssignSponsors; uses ImageLogo, BattingPerformance, BowlingPerformance
+- **`team.ts`**: Team, HomeTeam, AwayTeam; uses ImageLogo, BattingPerformance, BowlingPerformance
 - **`performance.ts`**: BattingPerformance, BowlingPerformance
-- **`sponsors.ts`**: Sponsor, Logo, SponsorsData, Club, GradeAssignSponsors, CompetitionAssignSponsors
+- **`sponsors.ts`**: Sponsor, SponsorLogo, SponsorsData, AssignSponsors, Club
 - **`assets.ts`**: Asset
 - **`userTheme.ts`**: UserTheme (primaryColor, secondaryColor, fontFamily, logoPosition, etc.)
 - **`match.ts`**: MatchData (date, round, homeTeam, awayTeam, assignSponsors, etc.); imports from composition-types

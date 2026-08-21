@@ -24,13 +24,3 @@ export interface HomeTeam extends Team {
 export interface AwayTeam extends Team {
   awayScoresFirstInnings: string | null;
 }
-
-// Teams structure for assign sponsors
-export interface TeamsAssignSponsors {
-  away: {
-    name: string;
-  };
-  home: {
-    name: string;
-  };
-}

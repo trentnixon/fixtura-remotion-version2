@@ -16,7 +16,10 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Ladder",
-      "TitleSplit": ["Ladder", ""],
+      "TitleSplit": [
+        "Ladder",
+        ""
+      ],
       "CompositionID": "AFLLadder",
       "VideoTitle": "League Tables - undefined",
       "HeroImage": {
@@ -42,7 +45,11 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Tate_Kirgiss_Analog_Inspired_Ill_Be_Alright_Inst_8d6691a7ca.mp3",
       "ASSETID": 58,
       "ASSETTYPEID": 3,
-      "FRAMES": [355, 600, 900]
+      "FRAMES": [
+        355,
+        600,
+        900
+      ]
     },
     "THEME": {
       "Template": "CNSW",
@@ -65,157 +72,61 @@
         "height": 595
       },
       "Sponsors": {
-        "default": {
-          "primary_sponsor": {
-            "sponsorId": 92,
+        "primary": [
+          {
+            "id": 92,
             "name": "Fixtura",
             "logo": {
+              "id": 920,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
               "width": 1281,
               "height": 1281
             }
-          },
-          "general_sponsors": [
-            {
-              "position": 1,
-              "sponsorId": 96,
-              "name": "3 month Pass",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/3_Month_Pass_c8b0b602c7.png",
-                "width": 500,
-                "height": 500
-              }
-            },
-            {
-              "position": 2,
-              "sponsorId": 97,
-              "name": "1 month Pass",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_2211ec3755.png",
-                "width": 500,
-                "height": 500
-              }
-            },
-            {
-              "position": 3,
-              "sponsorId": 98,
-              "name": "SJWCA",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Grounds_Closed_607639688f.jpg",
-                "width": 1080,
-                "height": 1080
-              }
-            },
-            {
-              "position": 4,
-              "sponsorId": 99,
-              "name": "SJWCA Logo",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SJWCA_Logo_Fixtura_c1f0397219.png",
-                "width": 279,
-                "height": 279
-              }
-            }
-          ]
-        },
-        "team": [
+          }
+        ],
+        "general": [
           {
-            "level": "team_20355",
-            "id": 20355,
-            "allocationName": "Thuringowa Bulldogs Reserves",
-            "sponsorId": 92,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_21209",
-            "id": 21209,
-            "allocationName": "Thuringowa Bulldogs U14.5's (Female)",
-            "sponsorId": 92,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_21206",
-            "id": 21206,
-            "allocationName": "Thuringowa Bulldogs U17.5's (Male)",
-            "sponsorId": 92,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_20358",
-            "id": 20358,
-            "allocationName": "Thuringowa Bulldogs Senior Men",
-            "sponsorId": 96,
+            "id": 96,
             "name": "3 month Pass",
             "logo": {
+              "id": 960,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/3_Month_Pass_c8b0b602c7.png",
               "width": 500,
               "height": 500
             }
           },
           {
-            "level": "team_21198",
-            "id": 21198,
-            "allocationName": "Thuringowa Bulldogs U13.5's (Male)",
-            "sponsorId": 96,
-            "name": "3 month Pass",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/3_Month_Pass_c8b0b602c7.png",
-              "width": 500,
-              "height": 500
-            }
-          },
-          {
-            "level": "team_20366",
-            "id": 20366,
-            "allocationName": "Thuringowa Bulldogs Senior Women",
-            "sponsorId": 97,
+            "id": 97,
             "name": "1 month Pass",
             "logo": {
+              "id": 970,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_2211ec3755.png",
               "width": 500,
               "height": 500
             }
           },
           {
-            "level": "team_21201",
-            "id": 21201,
-            "allocationName": "Thuringowa Bulldogs U15.5's (Male)",
-            "sponsorId": 98,
+            "id": 98,
             "name": "SJWCA",
             "logo": {
+              "id": 980,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Grounds_Closed_607639688f.jpg",
               "width": 1080,
               "height": 1080
             }
           },
           {
-            "level": "team_21214",
-            "id": 21214,
-            "allocationName": "Thuringowa Bulldogs U17.5's (Female)",
-            "sponsorId": 99,
+            "id": 99,
             "name": "SJWCA Logo",
             "logo": {
+              "id": 990,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SJWCA_Logo_Fixtura_c1f0397219.png",
               "width": 279,
               "height": 279
             }
           }
-        ]
+        ],
+        "sponsorNum": 5
       }
     },
     "FixtureCategory": "Senior"
@@ -331,18 +242,22 @@
       "competition": "Senior",
       "prompt": "Thuringowa Bulldogs Senior Women is currently positioned 4 in the Townsville KX Pilates Senior Women's Cup, with 2 wins and 4 losses, totaling 8 points.",
       "assignSponsors": {
-        "competition": {
-          "id": null,
-          "name": null
-        },
-        "grade": {
-          "id": 22825,
-          "name": "Townsville KX Pilates Senior Women's Cup"
-        },
-        "Team": {
-          "name": "Thuringowa Bulldogs Senior Women"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 92,
+          "name": "Fixtura",
+          "logo": {
+            "id": 920,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
+            "width": 1281,
+            "height": 1281
+          }
         }
-      }
+      ]
     },
     {
       "ID": 22823,
@@ -448,18 +363,22 @@
       "competition": "Senior",
       "prompt": "Thuringowa Bulldogs Reserves is currently positioned 1 in the Townsville Reserve Men's Premiership, with 5 wins and 1 losses, totaling 20 points.",
       "assignSponsors": {
-        "competition": {
-          "id": null,
-          "name": null
-        },
-        "grade": {
-          "id": 22823,
-          "name": "Townsville Reserve Men's Premiership"
-        },
-        "Team": {
-          "name": "Thuringowa Bulldogs Reserves"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 92,
+          "name": "Fixtura",
+          "logo": {
+            "id": 920,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
+            "width": 1281,
+            "height": 1281
+          }
         }
-      }
+      ]
     },
     {
       "ID": 22824,
@@ -565,18 +484,22 @@
       "competition": "Senior",
       "prompt": "Thuringowa Bulldogs Senior Men is currently positioned 1 in the Townsville RMS Men's Premiership, with 6 wins and 0 losses, totaling 24 points.",
       "assignSponsors": {
-        "competition": {
-          "id": null,
-          "name": null
-        },
-        "grade": {
-          "id": 22824,
-          "name": "Townsville RMS Men's Premiership"
-        },
-        "Team": {
-          "name": "Thuringowa Bulldogs Senior Men"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 92,
+          "name": "Fixtura",
+          "logo": {
+            "id": 920,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
+            "width": 1281,
+            "height": 1281
+          }
         }
-      }
+      ]
     }
   ],
   "PROMPT": []

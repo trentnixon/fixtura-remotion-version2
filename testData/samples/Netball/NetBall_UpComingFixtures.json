@@ -16,7 +16,10 @@
     "grouping_category": "terrywhite chemmart primary - Primary 5/6",
     "Video": {
       "Title": "Fixtures",
-      "TitleSplit": ["Fixtures", ""],
+      "TitleSplit": [
+        "Fixtures",
+        ""
+      ],
       "CompositionID": "UpComingNetBallFixtures",
       "VideoTitle": "Up Coming Fixtures  - undefined",
       "HeroImage": {
@@ -47,7 +50,11 @@
       "audio_option": null,
       "ASSETID": 39,
       "ASSETTYPEID": 1,
-      "FRAMES": [325, 540, 810]
+      "FRAMES": [
+        325,
+        540,
+        810
+      ]
     },
     "THEME": {
       "Template": "Basic",
@@ -69,7 +76,11 @@
         "width": 256,
         "height": 256
       },
-      "Sponsors": []
+      "Sponsors": {
+        "primary": [],
+        "general": [],
+        "sponsorNum": 0
+      }
     },
     "FixtureCategory": "terrywhite chemmart primary - Primary 5/6"
   },

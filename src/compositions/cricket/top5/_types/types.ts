@@ -27,6 +27,7 @@ export interface BasePlayerData {
   name: string;
   teamLogo: TeamLogo;
   playedFor: string;
+  gradeName?: string;
   assignSponsors: AssignSponsors;
   primaryForScreen?: Sponsor[];
   prompt: string;

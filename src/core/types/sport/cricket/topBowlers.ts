@@ -1,5 +1,6 @@
 import { ImageLogo } from "../../data/common";
 import { FixturaDataset } from "../../data/root";
+import { AssignSponsors, Sponsor } from "../../data/sponsors";
 
 export interface TopBowler {
   name: string;
@@ -9,11 +10,9 @@ export interface TopBowler {
   wickets: number;
   teamLogo: ImageLogo;
   playedFor: string;
-  assignSponsors: {
-    team: { name: string };
-    grade: { id: number; name: string };
-    competition: { id: number; name: string };
-  };
+  gradeName?: string;
+  assignSponsors: AssignSponsors;
+  primaryForScreen?: Sponsor[];
 }
 
 export type TopBowlersDataset = FixturaDataset<TopBowler>;

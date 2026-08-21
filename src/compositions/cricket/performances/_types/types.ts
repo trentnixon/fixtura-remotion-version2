@@ -1,6 +1,10 @@
 // Types for cricket performances data structure
 // Independent from top5 to allow for future changes
 
+import type { AssignSponsors, Sponsor } from "../../_types/composition-types";
+
+export type { AssignSponsors };
+
 // Team logo information
 export interface TeamLogo {
   url: string;
@@ -8,33 +12,14 @@ export interface TeamLogo {
   height: number;
 }
 
-// Grade information
-export interface Grade {
-  id: number;
-  name: string;
-}
-
-// Competition information
-export interface Competition {
-  id: number;
-  name: string;
-}
-
-// Assign sponsors structure (matches JSON format)
-export interface AssignSponsors {
-  Team: {
-    name: string;
-  };
-  grade: Grade;
-  competition: Competition;
-}
-
 // Base performance data that's common to both batting and bowling
 export interface BasePerformanceData {
   name: string;
   teamLogo: TeamLogo;
   playedFor: string;
+  gradeName?: string;
   assignSponsors: AssignSponsors;
+  primaryForScreen?: Sponsor[];
   prompt: string;
 }
 

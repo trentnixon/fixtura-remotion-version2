@@ -1,4 +1,14 @@
 import { DivideFixturesBy } from "../../core/types/data";
+import type {
+  AssignSponsors,
+  Sponsor,
+  SponsorLogo,
+  SponsorsData,
+} from "../../core/types/data/sponsors";
+
+export type { AssignSponsors, Sponsor, SponsorLogo };
+/** @deprecated Prefer SponsorsData — alias kept for AssetConfig Club.Sponsors */
+export type SponsorsGroup = SponsorsData;
 
 // Root response interface
 export interface ApiResponse {
@@ -80,30 +90,6 @@ export interface BowlingPerformance {
   team: string;
 }
 
-export interface AssignSponsors {
-  competition: Sponsor[];
-  grade: Sponsor[];
-  team: Sponsor[];
-}
-
-export interface Sponsor {
-  id: number;
-  isPrimary: boolean;
-  isActive: boolean;
-  isArticle: boolean;
-  isVideo: boolean;
-  url: string;
-  tagline: string;
-  description: string | null;
-  name: string;
-  logo: SponsorLogo;
-}
-
-export interface SponsorLogo {
-  id: number;
-  url: string;
-}
-
 // -------------------------
 // Asset, Render, Account
 // -------------------------
@@ -148,11 +134,6 @@ export interface Club {
   Name: string;
   Sport: string;
   Sponsors: SponsorsGroup;
-}
-
-export interface SponsorsGroup {
-  primary: Record<string, Sponsor>;
-  default: Record<string, Record<string, Sponsor>>;
 }
 
 // -------------------------

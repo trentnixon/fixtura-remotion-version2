@@ -107,15 +107,7 @@ export const mergeAssignSponsors = (
 ): AssignSponsors => {
   return performances.reduce(
     (acc, performance) => {
-      const { assignSponsors } = performance as PerformanceData & {
-        assignSponsors?: AssignSponsors & {
-          Team?: { name: string };
-          grade?: { id: number; name: string } | AssignSponsors["grade"];
-          competition?:
-            | { id: number; name: string }
-            | AssignSponsors["competition"];
-        };
-      };
+      const { assignSponsors } = performance;
       if (!assignSponsors) return acc;
 
       const grades = [...(acc.grade || [])];
@@ -131,18 +123,10 @@ export const mergeAssignSponsors = (
         bucket.push(sponsor);
       };
 
-      // v2: grade/team/competition are sponsor arrays
-      if (Array.isArray(assignSponsors.grade)) {
-        for (const s of assignSponsors.grade) pushUnique(grades, s);
-      }
-      if (Array.isArray(assignSponsors.team)) {
-        for (const s of assignSponsors.team) pushUnique(teams, s);
-      }
-      if (Array.isArray(assignSponsors.competition)) {
-        for (const s of assignSponsors.competition) pushUnique(competitions, s);
-      }
-
-      // Legacy singular metadata without logos is ignored (no empty-url placeholders)
+      for (const s of assignSponsors.grade || []) pushUnique(grades, s);
+      for (const s of assignSponsors.team || []) pushUnique(teams, s);
+      for (const s of assignSponsors.competition || [])
+        pushUnique(competitions, s);
 
       return {
         grade: grades,

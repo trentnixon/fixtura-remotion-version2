@@ -13,18 +13,37 @@
       },
       "playedFor": "Runaway Bay Premier Div 1",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 1"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(1) CGC Premier League - Division 1",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53103,
-          "name": "(1) CGC Premier League - Division 1"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Jack Hocart",
@@ -39,18 +58,37 @@
       },
       "playedFor": "Runaway Bay Premier Div 2",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 2"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(2) CGC Premier League - Division 2",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53104,
-          "name": "(2) CGC Premier League - Division 2"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Muhammad Abdul Wahab",
@@ -65,18 +103,37 @@
       },
       "playedFor": "Runaway Bay Navy Community Div 1",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Navy Community Div 1"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(4) CGC Community League - Division 1",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53295,
-          "name": "(4) CGC Community League - Division 1"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Harrison Rachow",
@@ -91,18 +148,37 @@
       },
       "playedFor": "Runaway Bay Orange Community Div 3",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Orange Community Div 3"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(6) CGC Community League - Division 3",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53297,
-          "name": "(6) CGC Community League - Division 3"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Stephen Rudd",
@@ -117,18 +193,37 @@
       },
       "playedFor": "Runaway Bay Navy Community Div 1",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Navy Community Div 1"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(4) CGC Community League - Division 1",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53295,
-          "name": "(4) CGC Community League - Division 1"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Austin Billing",
@@ -143,18 +238,37 @@
       },
       "playedFor": "Runaway Bay Premier Div 2",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 2"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(2) CGC Premier League - Division 2",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53104,
-          "name": "(2) CGC Premier League - Division 2"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Dale Rachow",
@@ -169,18 +283,37 @@
       },
       "playedFor": "Runaway Bay Orange Community Div 3",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Orange Community Div 3"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(6) CGC Community League - Division 3",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53297,
-          "name": "(6) CGC Community League - Division 3"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Conan Dunning",
@@ -195,18 +328,37 @@
       },
       "playedFor": "Runaway Bay Community Div 2",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Community Div 2"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(5) CGC Community League - Division 2",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53296,
-          "name": "(5) CGC Community League - Division 2"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Chris Nilon",
@@ -221,18 +373,37 @@
       },
       "playedFor": "Runaway Bay Community Div 2",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Community Div 2"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(5) CGC Community League - Division 2",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53296,
-          "name": "(5) CGC Community League - Division 2"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Hamad Ahmad",
@@ -247,18 +418,37 @@
       },
       "playedFor": "Runaway Bay Navy Community Div 1",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Navy Community Div 1"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(4) CGC Community League - Division 1",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53295,
-          "name": "(4) CGC Community League - Division 1"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Suranga Lakmal",
@@ -273,18 +463,37 @@
       },
       "playedFor": "Runaway Bay Premier Div 1",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 1"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(1) CGC Premier League - Division 1",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53103,
-          "name": "(1) CGC Premier League - Division 1"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "William Altass",
@@ -299,18 +508,37 @@
       },
       "playedFor": "Runaway Bay Premier Div 3",
       "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 3"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "(3) CGC Premier League - Division 3",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53105,
-          "name": "(3) CGC Premier League - Division 3"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 13440,
-          "name": "Cricket Gold Coast Senior Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     }
   ],
   "asset": {
@@ -334,7 +562,12 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
-  "frames": [45, 180, 345, 510],
+  "frames": [
+    45,
+    180,
+    345,
+    510
+  ],
   "videoMeta": {
     "club": {
       "logo": {
@@ -346,106 +579,59 @@
       "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "general_sponsor_1": [
-            {
-              "id": 200,
-              "url": null,
-              "logo": {
-                "id": 23213,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-              },
-              "name": "test",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 203,
-              "url": null,
-              "logo": {
-                "id": 23216,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
         "primary": [
           {
             "id": 200,
-            "url": null,
+            "name": "test",
             "logo": {
               "id": 23213,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            },
-            "name": "test",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 201,
-            "url": null,
+            "name": "edit this",
             "logo": {
               "id": 23214,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            },
-            "name": "edit this",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 203,
-            "url": null,
+            "name": "New sponsor",
             "logo": {
               "id": 23216,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-            },
-            "name": "New sponsor",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ]
+        ],
+        "general": [
+          {
+            "id": 200,
+            "name": "test",
+            "logo": {
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          },
+          {
+            "id": 201,
+            "name": "edit this",
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          },
+          {
+            "id": 203,
+            "name": "New sponsor",
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            }
+          }
+        ],
+        "sponsorNum": 6
       },
       "IsAccountClub": true
     },
@@ -454,7 +640,9 @@
       "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Bowling Performances",
-        "titleSplit": ["Performances"],
+        "titleSplit": [
+          "Performances"
+        ],
         "videoTitle": "Bowling Performances",
         "compositionId": "CricketBowlingPerformances",
         "assetId": 66,

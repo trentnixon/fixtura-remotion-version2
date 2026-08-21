@@ -24,11 +24,10 @@ const PerformancesDisplayCNSWPrivate: React.FC<PerformancesDisplayProps> = ({
     itemsPerScreen,
   );
 
-  // Get title from first performance's assignSponsors.grade.name (matching top5)
+  // Get title from first performance's gradeName (matching top5)
   const title =
-    displayedPerformances.length > 0 &&
-    displayedPerformances[0].assignSponsors?.grade?.name
-      ? displayedPerformances[0].assignSponsors.grade.name
+    displayedPerformances.length > 0
+      ? displayedPerformances[0].gradeName || ""
       : "";
 
   // Static row height for CNSW-private template (matching top5)

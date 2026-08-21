@@ -16,7 +16,9 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Results",
-      "TitleSplit": ["Results"],
+      "TitleSplit": [
+        "Results"
+      ],
       "CompositionID": "WeekendResultsAFL",
       "VideoTitle": "AFL Results - undefined",
       "HeroImage": {
@@ -42,7 +44,10 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_c1c90e4960.mp3",
       "ASSETID": 49,
       "ASSETTYPEID": 2,
-      "FRAMES": [240, 540]
+      "FRAMES": [
+        240,
+        540
+      ]
     },
     "THEME": {
       "Template": "CNSW",
@@ -65,157 +70,61 @@
         "height": 595
       },
       "Sponsors": {
-        "default": {
-          "primary_sponsor": {
-            "sponsorId": 92,
+        "primary": [
+          {
+            "id": 92,
             "name": "Fixtura",
             "logo": {
+              "id": 920,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
               "width": 1281,
               "height": 1281
             }
-          },
-          "general_sponsors": [
-            {
-              "position": 1,
-              "sponsorId": 96,
-              "name": "3 month Pass",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/3_Month_Pass_c8b0b602c7.png",
-                "width": 500,
-                "height": 500
-              }
-            },
-            {
-              "position": 2,
-              "sponsorId": 97,
-              "name": "1 month Pass",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_2211ec3755.png",
-                "width": 500,
-                "height": 500
-              }
-            },
-            {
-              "position": 3,
-              "sponsorId": 98,
-              "name": "SJWCA",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Grounds_Closed_607639688f.jpg",
-                "width": 1080,
-                "height": 1080
-              }
-            },
-            {
-              "position": 4,
-              "sponsorId": 99,
-              "name": "SJWCA Logo",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SJWCA_Logo_Fixtura_c1f0397219.png",
-                "width": 279,
-                "height": 279
-              }
-            }
-          ]
-        },
-        "team": [
+          }
+        ],
+        "general": [
           {
-            "level": "team_20355",
-            "id": 20355,
-            "allocationName": "Thuringowa Bulldogs Reserves",
-            "sponsorId": 92,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_21209",
-            "id": 21209,
-            "allocationName": "Thuringowa Bulldogs U14.5's (Female)",
-            "sponsorId": 92,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_21206",
-            "id": 21206,
-            "allocationName": "Thuringowa Bulldogs U17.5's (Male)",
-            "sponsorId": 92,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_20358",
-            "id": 20358,
-            "allocationName": "Thuringowa Bulldogs Senior Men",
-            "sponsorId": 96,
+            "id": 96,
             "name": "3 month Pass",
             "logo": {
+              "id": 960,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/3_Month_Pass_c8b0b602c7.png",
               "width": 500,
               "height": 500
             }
           },
           {
-            "level": "team_21198",
-            "id": 21198,
-            "allocationName": "Thuringowa Bulldogs U13.5's (Male)",
-            "sponsorId": 96,
-            "name": "3 month Pass",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/3_Month_Pass_c8b0b602c7.png",
-              "width": 500,
-              "height": 500
-            }
-          },
-          {
-            "level": "team_20366",
-            "id": 20366,
-            "allocationName": "Thuringowa Bulldogs Senior Women",
-            "sponsorId": 97,
+            "id": 97,
             "name": "1 month Pass",
             "logo": {
+              "id": 970,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_2211ec3755.png",
               "width": 500,
               "height": 500
             }
           },
           {
-            "level": "team_21201",
-            "id": 21201,
-            "allocationName": "Thuringowa Bulldogs U15.5's (Male)",
-            "sponsorId": 98,
+            "id": 98,
             "name": "SJWCA",
             "logo": {
+              "id": 980,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Grounds_Closed_607639688f.jpg",
               "width": 1080,
               "height": 1080
             }
           },
           {
-            "level": "team_21214",
-            "id": 21214,
-            "allocationName": "Thuringowa Bulldogs U17.5's (Female)",
-            "sponsorId": 99,
+            "id": 99,
             "name": "SJWCA Logo",
             "logo": {
+              "id": 990,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SJWCA_Logo_Fixtura_c1f0397219.png",
               "width": 279,
               "height": 279
             }
           }
-        ]
+        ],
+        "sponsorNum": 5
       }
     },
     "FixtureCategory": "Senior"
@@ -525,24 +434,24 @@
         "gradeId": "d6aae62d"
       },
       "assignSponsors": {
-        "competition": {
-          "id": 7753,
-          "name": "AFL Townsville"
-        },
-        "grade": {
-          "id": 22823,
-          "name": "Townsville Reserve Men's Premiership"
-        },
-        "Teams": {
-          "home": {
-            "name": "Thuringowa Bulldogs Reserves"
-          },
-          "away": {
-            "name": "Hermit Park Tigers Reserves"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "prompt": "Match Summary for Thuringowa Bulldogs Reserves vs. Hermit Park Tigers Reserves:\n  - Grade: Townsville Reserve Men's Premiership\n  - Date: Saturday, 18 May 2024 at Invalid Date\n  - Venue: Riverway Stadium / Riverway Stadium 1\n  - Round: Round 7\n  - Result: Thuringowa Bulldogs Reserves won by 67 points\n  - Scores: Thuringowa Bulldogs Reserves 13.7 (85), Hermit Park Tigers Reserves 2.6 (18)\n  \n  Player Performances:\n  - Matthew Trende (Thuringowa Bulldogs Reserves): 1 goals\n- Rim Kris (Thuringowa Bulldogs Reserves): 4 goals\n- Brendan McGrath (Thuringowa Bulldogs Reserves): 4 goals\n- Damon Szabo (Thuringowa Bulldogs Reserves): 1 goals\n- Christian Payne (Thuringowa Bulldogs Reserves): 3 goals\n  - Chas Reinhardt (Hermit Park Tigers Reserves): 1 goals\n- William Hall (Hermit Park Tigers Reserves): 1 goals\n  \n  This match was part of the Men Senior competition, played on Saturday.",
+      "gradeName": "Townsville Reserve Men's Premiership",
+      "primaryForScreen": [
+        {
+          "id": 92,
+          "name": "Fixtura",
+          "logo": {
+            "id": 920,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
+            "width": 1281,
+            "height": 1281
           }
         }
-      },
-      "prompt": "Match Summary for Thuringowa Bulldogs Reserves vs. Hermit Park Tigers Reserves:\n  - Grade: Townsville Reserve Men's Premiership\n  - Date: Saturday, 18 May 2024 at Invalid Date\n  - Venue: Riverway Stadium / Riverway Stadium 1\n  - Round: Round 7\n  - Result: Thuringowa Bulldogs Reserves won by 67 points\n  - Scores: Thuringowa Bulldogs Reserves 13.7 (85), Hermit Park Tigers Reserves 2.6 (18)\n  \n  Player Performances:\n  - Matthew Trende (Thuringowa Bulldogs Reserves): 1 goals\n- Rim Kris (Thuringowa Bulldogs Reserves): 4 goals\n- Brendan McGrath (Thuringowa Bulldogs Reserves): 4 goals\n- Damon Szabo (Thuringowa Bulldogs Reserves): 1 goals\n- Christian Payne (Thuringowa Bulldogs Reserves): 3 goals\n  - Chas Reinhardt (Hermit Park Tigers Reserves): 1 goals\n- William Hall (Hermit Park Tigers Reserves): 1 goals\n  \n  This match was part of the Men Senior competition, played on Saturday."
+      ]
     },
     {
       "id": 2223,
@@ -858,24 +767,24 @@
         "gradeId": "18612fcd"
       },
       "assignSponsors": {
-        "competition": {
-          "id": 7753,
-          "name": "AFL Townsville"
-        },
-        "grade": {
-          "id": 22824,
-          "name": "Townsville RMS Men's Premiership"
-        },
-        "Teams": {
-          "home": {
-            "name": "Thuringowa Bulldogs Senior Men"
-          },
-          "away": {
-            "name": "Hermit Park Tigers Senior Men"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "prompt": "Match Summary for Thuringowa Bulldogs Senior Men vs. Hermit Park Tigers Senior Men:\n  - Grade: Townsville RMS Men's Premiership\n  - Date: Saturday, 18 May 2024 at Invalid Date\n  - Venue: Riverway Stadium / Riverway Stadium 1\n  - Round: Round 7\n  - Result: Thuringowa Bulldogs Senior Men won by 24 points\n  - Scores: Thuringowa Bulldogs Senior Men 5.13 (43), Hermit Park Tigers Senior Men 2.7 (19)\n  \n  Player Performances:\n  - Samuel Chittleborough (Thuringowa Bulldogs Senior Men): 1 goals\n- Reegan Mrsich (Thuringowa Bulldogs Senior Men): 4 goals\n  - Sean Mackereth (Hermit Park Tigers Senior Men): 1 goals\n- Jackson Alderson (Hermit Park Tigers Senior Men): 1 goals\n  \n  This match was part of the Men Senior competition, played on Saturday.",
+      "gradeName": "Townsville RMS Men's Premiership",
+      "primaryForScreen": [
+        {
+          "id": 92,
+          "name": "Fixtura",
+          "logo": {
+            "id": 920,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
+            "width": 1281,
+            "height": 1281
           }
         }
-      },
-      "prompt": "Match Summary for Thuringowa Bulldogs Senior Men vs. Hermit Park Tigers Senior Men:\n  - Grade: Townsville RMS Men's Premiership\n  - Date: Saturday, 18 May 2024 at Invalid Date\n  - Venue: Riverway Stadium / Riverway Stadium 1\n  - Round: Round 7\n  - Result: Thuringowa Bulldogs Senior Men won by 24 points\n  - Scores: Thuringowa Bulldogs Senior Men 5.13 (43), Hermit Park Tigers Senior Men 2.7 (19)\n  \n  Player Performances:\n  - Samuel Chittleborough (Thuringowa Bulldogs Senior Men): 1 goals\n- Reegan Mrsich (Thuringowa Bulldogs Senior Men): 4 goals\n  - Sean Mackereth (Hermit Park Tigers Senior Men): 1 goals\n- Jackson Alderson (Hermit Park Tigers Senior Men): 1 goals\n  \n  This match was part of the Men Senior competition, played on Saturday."
+      ]
     },
     {
       "id": 2239,
@@ -1166,24 +1075,24 @@
         "gradeId": "082c3fcb"
       },
       "assignSponsors": {
-        "competition": {
-          "id": 7753,
-          "name": "AFL Townsville"
-        },
-        "grade": {
-          "id": 22825,
-          "name": "Townsville KX Pilates Senior Women's Cup"
-        },
-        "Teams": {
-          "home": {
-            "name": "Thuringowa Bulldogs Senior Women"
-          },
-          "away": {
-            "name": "Hermit Park Tigers Senior Women"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "prompt": "Match Summary for Thuringowa Bulldogs Senior Women vs. Hermit Park Tigers Senior Women:\n  - Grade: Townsville KX Pilates Senior Women's Cup\n  - Date: Saturday, 18 May 2024 at Invalid Date\n  - Venue: Riverway Stadium / Riverway Stadium 1\n  - Round: Round 7\n  - Result: Hermit Park Tigers Senior Women won by 147 points\n  - Scores: Thuringowa Bulldogs Senior Women 0.0 (0), Hermit Park Tigers Senior Women 22.15 (147)\n  \n  Player Performances:\n  \n  - Maggie Evans (Hermit Park Tigers Senior Women): 4 goals\n- Clancy Oconnell (Hermit Park Tigers Senior Women): 1 goals\n- Brianne Wilson (Hermit Park Tigers Senior Women): 1 goals\n- Ellen Turner (Hermit Park Tigers Senior Women): 5 goals\n- Hayley Cornish (Hermit Park Tigers Senior Women): 3 goals\n- Cassie Haines (Hermit Park Tigers Senior Women): 1 goals\n- Gabrielle Dockray (Hermit Park Tigers Senior Women): 3 goals\n- Stephanie Baldwin (Hermit Park Tigers Senior Women): 3 goals\n- Chloe Craven (Hermit Park Tigers Senior Women): 1 goals\n  \n  This match was part of the Women Senior competition, played on Saturday.",
+      "gradeName": "Townsville KX Pilates Senior Women's Cup",
+      "primaryForScreen": [
+        {
+          "id": 92,
+          "name": "Fixtura",
+          "logo": {
+            "id": 920,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_5001258f35.png",
+            "width": 1281,
+            "height": 1281
           }
         }
-      },
-      "prompt": "Match Summary for Thuringowa Bulldogs Senior Women vs. Hermit Park Tigers Senior Women:\n  - Grade: Townsville KX Pilates Senior Women's Cup\n  - Date: Saturday, 18 May 2024 at Invalid Date\n  - Venue: Riverway Stadium / Riverway Stadium 1\n  - Round: Round 7\n  - Result: Hermit Park Tigers Senior Women won by 147 points\n  - Scores: Thuringowa Bulldogs Senior Women 0.0 (0), Hermit Park Tigers Senior Women 22.15 (147)\n  \n  Player Performances:\n  \n  - Maggie Evans (Hermit Park Tigers Senior Women): 4 goals\n- Clancy Oconnell (Hermit Park Tigers Senior Women): 1 goals\n- Brianne Wilson (Hermit Park Tigers Senior Women): 1 goals\n- Ellen Turner (Hermit Park Tigers Senior Women): 5 goals\n- Hayley Cornish (Hermit Park Tigers Senior Women): 3 goals\n- Cassie Haines (Hermit Park Tigers Senior Women): 1 goals\n- Gabrielle Dockray (Hermit Park Tigers Senior Women): 3 goals\n- Stephanie Baldwin (Hermit Park Tigers Senior Women): 3 goals\n- Chloe Craven (Hermit Park Tigers Senior Women): 1 goals\n  \n  This match was part of the Women Senior competition, played on Saturday."
+      ]
     }
   ],
   "PROMPT": []

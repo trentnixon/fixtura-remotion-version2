@@ -14,18 +14,37 @@
       },
       "playedFor": "SJCC Blues",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC Blues"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 71.55,
@@ -41,18 +60,37 @@
       },
       "playedFor": "Hibo Green",
       "assignSponsors": {
-        "Team": {
-          "name": "Hibo Green"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 113.2,
@@ -68,18 +106,37 @@
       },
       "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "MALARVAADI SOLDIERS KINGS CC 3rd Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 119.56,
@@ -95,18 +152,37 @@
       },
       "playedFor": "MadBulls",
       "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 145.94,
@@ -122,18 +198,37 @@
       },
       "playedFor": "MadBulls",
       "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 110.2,
@@ -149,18 +244,37 @@
       },
       "playedFor": "MadBulls",
       "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 96.36,
@@ -176,18 +290,37 @@
       },
       "playedFor": "MadBulls",
       "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 85,
@@ -203,18 +336,37 @@
       },
       "playedFor": "SJCC Blues",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC Blues"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 150,
@@ -230,18 +382,37 @@
       },
       "playedFor": "SJCC Blues",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC Blues"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 0,
@@ -257,18 +428,37 @@
       },
       "playedFor": "SJCC OG",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC OG"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 105.4,
@@ -284,18 +474,37 @@
       },
       "playedFor": "Pirates 1st Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Pirates 1st Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 63.93,
@@ -311,18 +520,37 @@
       },
       "playedFor": "Pirates 1st Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Pirates 1st Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 150,
@@ -338,18 +566,37 @@
       },
       "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "MALARVAADI SOLDIERS KINGS CC 3rd Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 0,
@@ -365,18 +612,37 @@
       },
       "playedFor": "Mice",
       "assignSponsors": {
-        "Team": {
-          "name": "Mice"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 0,
@@ -392,18 +658,37 @@
       },
       "playedFor": "SJCC OG",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC OG"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 0,
@@ -419,18 +704,37 @@
       },
       "playedFor": "SJCC OG",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC OG"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 121.73,
@@ -446,18 +750,37 @@
       },
       "playedFor": "MadBulls",
       "assignSponsors": {
-        "Team": {
-          "name": "MadBulls"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 62.79,
@@ -473,18 +796,37 @@
       },
       "playedFor": "SJCC Blues",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC Blues"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "3rd Grade",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76732,
-          "name": "3rd Grade"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "SR": 0,
@@ -500,18 +842,37 @@
       },
       "playedFor": "SJCC OG",
       "assignSponsors": {
-        "Team": {
-          "name": "SJCC OG"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "1st & 2nd Grade Combined",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 76731,
-          "name": "1st & 2nd Grade Combined"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 38318,
-          "name": "Goulburn District Cricket Association"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     }
   ],
   "asset": {
@@ -521,7 +882,13 @@
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [45, 180, 345, 510, 645],
+  "frames": [
+    45,
+    180,
+    345,
+    510,
+    645
+  ],
   "render": {
     "renderId": 23107,
     "schedulerId": 1097
@@ -548,106 +915,59 @@
       "name": "Goulburn District Cricket Association",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "general_sponsor_1": [
-            {
-              "id": 200,
-              "url": null,
-              "logo": {
-                "id": 23213,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-              },
-              "name": "test",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 203,
-              "url": null,
-              "logo": {
-                "id": 23216,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
         "primary": [
           {
             "id": 200,
-            "url": null,
+            "name": "test",
             "logo": {
               "id": 23213,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            },
-            "name": "test",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 201,
-            "url": null,
+            "name": "edit this",
             "logo": {
               "id": 23214,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            },
-            "name": "edit this",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 203,
-            "url": null,
+            "name": "New sponsor",
             "logo": {
               "id": 23216,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-            },
-            "name": "New sponsor",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ]
+        ],
+        "general": [
+          {
+            "id": 200,
+            "name": "test",
+            "logo": {
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          },
+          {
+            "id": 201,
+            "name": "edit this",
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          },
+          {
+            "id": 203,
+            "name": "New sponsor",
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            }
+          }
+        ],
+        "sponsorNum": 6
       },
       "IsAccountClub": false
     },
@@ -671,7 +991,9 @@
         "title": "Batting Performances",
         "frames": [],
         "assetId": 65,
-        "titleSplit": ["Performances"],
+        "titleSplit": [
+          "Performances"
+        ],
         "videoTitle": "Batting Performances",
         "assetTypeId": 3,
         "compositionId": "CricketBattingPerformances",

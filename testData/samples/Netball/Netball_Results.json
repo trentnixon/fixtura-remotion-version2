@@ -16,7 +16,9 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Results",
-      "TitleSplit": ["Results"],
+      "TitleSplit": [
+        "Results"
+      ],
       "CompositionID": "WeekendResultsNetball",
       "VideoTitle": "Netball Results - undefined",
       "HeroImage": {
@@ -42,7 +44,10 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_c1c90e4960.mp3",
       "ASSETID": 36,
       "ASSETTYPEID": 2,
-      "FRAMES": [240, 540]
+      "FRAMES": [
+        240,
+        540
+      ]
     },
     "THEME": {
       "Template": "CNSW",
@@ -65,181 +70,101 @@
         "height": 765
       },
       "Sponsors": {
-        "default": {
-          "primary_sponsor": {
-            "sponsorId": 104,
+        "primary": [
+          {
+            "id": 104,
             "name": "Test 5",
             "logo": {
+              "id": 1040,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_Logo_dd7b981211.png",
               "width": 545,
               "height": 721
             }
-          },
-          "general_sponsors": [
-            {
-              "position": 1,
-              "sponsorId": 110,
-              "name": "Test 7",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_123acd5e8c_590d76dbe2.jpg",
-                "width": 693,
-                "height": 682
-              }
-            },
-            {
-              "position": 2,
-              "sponsorId": 109,
-              "name": "Test 7",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_98f069a40c_5f62d4fc04.jpg",
-                "width": 272,
-                "height": 274
-              }
-            },
-            {
-              "position": 3,
-              "sponsorId": 108,
-              "name": "Test 7",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_38_17e6036134.png",
-                "width": 307,
-                "height": 223
-              }
-            },
-            {
-              "position": 4,
-              "sponsorId": 107,
-              "name": "Test 7",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_39_e316792c76.png",
-                "width": 751,
-                "height": 745
-              }
-            },
-            {
-              "position": 5,
-              "sponsorId": 106,
-              "name": "Test 7",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_38_25ae35091a.jpg",
-                "width": 2404,
-                "height": 2328
-              }
-            },
-            {
-              "position": 6,
-              "sponsorId": 105,
-              "name": "Test 6",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41_6e04321df5.png",
-                "width": 440,
-                "height": 595
-              }
-            },
-            {
-              "position": 7,
-              "sponsorId": 100,
-              "name": "Test 1",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Grounds_Closed_325768f9fb.jpg",
-                "width": 1080,
-                "height": 1080
-              }
-            },
-            {
-              "position": 8,
-              "sponsorId": 103,
-              "name": "Test 4",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_25261057da.png",
-                "width": 500,
-                "height": 500
-              }
-            },
-            {
-              "position": 9,
-              "sponsorId": 103,
-              "name": "Test 4",
-              "logo": {
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_25261057da.png",
-                "width": 500,
-                "height": 500
-              }
-            }
-          ]
-        },
-        "team": [
+          }
+        ],
+        "general": [
           {
-            "level": "team_20180",
-            "sponsorId": 91,
-            "name": "Fixtura",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_Blue_on_transparent_aa6726d88c.png",
-              "width": 1281,
-              "height": 1281
-            }
-          },
-          {
-            "level": "team_20200",
-            "sponsorId": 104,
-            "name": "Test 5",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/CNSW_Logo_dd7b981211.png",
-              "width": 545,
-              "height": 721
-            }
-          },
-          {
-            "level": "team_20150",
-            "sponsorId": 106,
+            "id": 110,
             "name": "Test 7",
             "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_38_25ae35091a.jpg",
-              "width": 2404,
-              "height": 2328
+              "id": 1100,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_123acd5e8c_590d76dbe2.jpg",
+              "width": 693,
+              "height": 682
             }
           },
           {
-            "level": "team_20190",
-            "sponsorId": 107,
+            "id": 109,
             "name": "Test 7",
             "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_39_e316792c76.png",
-              "width": 751,
-              "height": 745
-            }
-          },
-          {
-            "level": "team_20160",
-            "sponsorId": 108,
-            "name": "Test 7",
-            "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_38_17e6036134.png",
-              "width": 307,
-              "height": 223
-            }
-          },
-          {
-            "level": "team_20168",
-            "sponsorId": 109,
-            "name": "Test 7",
-            "logo": {
+              "id": 1090,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_98f069a40c_5f62d4fc04.jpg",
               "width": 272,
               "height": 274
             }
           },
           {
-            "level": "team_20140",
-            "sponsorId": 110,
+            "id": 108,
             "name": "Test 7",
             "logo": {
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_123acd5e8c_590d76dbe2.jpg",
-              "width": 693,
-              "height": 682
+              "id": 1080,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_38_17e6036134.png",
+              "width": 307,
+              "height": 223
+            }
+          },
+          {
+            "id": 107,
+            "name": "Test 7",
+            "logo": {
+              "id": 1070,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_39_e316792c76.png",
+              "width": 751,
+              "height": 745
+            }
+          },
+          {
+            "id": 106,
+            "name": "Test 7",
+            "logo": {
+              "id": 1060,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_38_25ae35091a.jpg",
+              "width": 2404,
+              "height": 2328
+            }
+          },
+          {
+            "id": 105,
+            "name": "Test 6",
+            "logo": {
+              "id": 1050,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_41_6e04321df5.png",
+              "width": 440,
+              "height": 595
+            }
+          },
+          {
+            "id": 100,
+            "name": "Test 1",
+            "logo": {
+              "id": 1000,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Grounds_Closed_325768f9fb.jpg",
+              "width": 1080,
+              "height": 1080
+            }
+          },
+          {
+            "id": 103,
+            "name": "Test 4",
+            "logo": {
+              "id": 1030,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_month_pass_25261057da.png",
+              "width": 500,
+              "height": 500
             }
           }
-        ]
+        ],
+        "sponsorNum": 9
       }
     },
     "FixtureCategory": "Senior"

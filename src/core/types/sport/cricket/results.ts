@@ -3,6 +3,7 @@ import { ImageLogo } from "../../data/common";
 import { HomeTeam, AwayTeam } from "../../data/team";
 import { UserTheme } from "../../data/userTheme";
 import { Video } from "../../data/videoData";
+import { AssignSponsors, Sponsor } from "../../data/sponsors";
 
 export interface CricketResultsData {
   data: CricketResult[];
@@ -26,11 +27,8 @@ export interface CricketResult {
   gender: string;
   ageGroup: string;
   gradeName: string;
-  assignSponsors: {
-    competition: unknown[]; // Can be typed more strictly if needed
-    grade: unknown[];
-    team: unknown[];
-  };
+  assignSponsors: AssignSponsors;
+  primaryForScreen?: Sponsor[];
   result: string;
   prompt: string;
 }

@@ -13,18 +13,37 @@
       },
       "playedFor": "Mt Pritchard Southern Districts 1st Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Mt Pritchard Southern Districts 1st Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "First Grade (The RB Clark Cup)",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53003,
-          "name": "First Grade (The RB Clark Cup)"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 14949,
-          "name": "Sydney Shires Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Jacob Carter",
@@ -39,18 +58,37 @@
       },
       "playedFor": "Lindfield 5th Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Lindfield 5th Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "Fifth Grade (The Tim Creer Cup)",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53001,
-          "name": "Fifth Grade (The Tim Creer Cup)"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 14949,
-          "name": "Sydney Shires Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Lachy Shaw",
@@ -65,18 +103,37 @@
       },
       "playedFor": "Lane Cove 2nd Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Lane Cove 2nd Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "Second Grade (The SJ Mayne Trophy)",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53005,
-          "name": "Second Grade (The SJ Mayne Trophy)"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 14949,
-          "name": "Sydney Shires Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Rhodri Williams",
@@ -91,18 +148,37 @@
       },
       "playedFor": "Lindfield 1st Grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Lindfield 1st Grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "First Grade (The RB Clark Cup)",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53003,
-          "name": "First Grade (The RB Clark Cup)"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 14949,
-          "name": "Sydney Shires Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     },
     {
       "name": "Amardeep Gill",
@@ -117,18 +193,37 @@
       },
       "playedFor": "Balmain South Sydney 4th grade",
       "assignSponsors": {
-        "Team": {
-          "name": "Balmain South Sydney 4th grade"
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "gradeName": "Fourth Grade (The Harry Culbert Trophy)",
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         },
-        "grade": {
-          "id": 53004,
-          "name": "Fourth Grade (The Harry Culbert Trophy)"
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
         },
-        "competition": {
-          "id": 14949,
-          "name": "Sydney Shires Competition"
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
         }
-      }
+      ]
     }
   ],
   "asset": {
@@ -152,7 +247,10 @@
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [390, 45],
+  "frames": [
+    390,
+    45
+  ],
   "videoMeta": {
     "club": {
       "logo": {
@@ -164,106 +262,59 @@
       "name": "Sydney Shires Competition",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "general_sponsor_1": [
-            {
-              "id": 200,
-              "url": null,
-              "logo": {
-                "id": 23213,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-              },
-              "name": "test",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 203,
-              "url": null,
-              "logo": {
-                "id": 23216,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
         "primary": [
           {
             "id": 200,
-            "url": null,
+            "name": "test",
             "logo": {
               "id": 23213,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            },
-            "name": "test",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 201,
-            "url": null,
+            "name": "edit this",
             "logo": {
               "id": 23214,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            },
-            "name": "edit this",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 203,
-            "url": null,
+            "name": "New sponsor",
             "logo": {
               "id": 23216,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-            },
-            "name": "New sponsor",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ]
+        ],
+        "general": [
+          {
+            "id": 200,
+            "name": "test",
+            "logo": {
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          },
+          {
+            "id": 201,
+            "name": "edit this",
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          },
+          {
+            "id": 203,
+            "name": "New sponsor",
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            }
+          }
+        ],
+        "sponsorNum": 6
       },
       "IsAccountClub": false
     },
@@ -272,7 +323,10 @@
       "groupingCategory": "Sydney Shires Competition",
       "metadata": {
         "title": "Top 5",
-        "titleSplit": ["Bowlers", ""],
+        "titleSplit": [
+          "Bowlers",
+          ""
+        ],
         "videoTitle": "Top 5 Bowlers",
         "compositionId": "CricketTop5Bowling",
         "assetId": 7,

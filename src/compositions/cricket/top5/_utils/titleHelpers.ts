@@ -25,9 +25,9 @@ export const getCNSWPrivateTitle = (playersData: unknown[]): string => {
     return "";
   }
   const firstPlayer = playersData[0] as {
-    assignSponsors?: { grade?: { name?: string } };
+    gradeName?: string;
   };
-  return firstPlayer?.assignSponsors?.grade?.name || "";
+  return firstPlayer?.gradeName || "";
 };
 
 /**
