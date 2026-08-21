@@ -10,14 +10,13 @@ import {
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
 import { SponsorFooter } from "../sponsorFooter/index";
-import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import {
   getItemsPerScreen,
   calculateDisplayDurationPerScreen,
   hasValidPerformances,
   calculateTotalScreens,
-  mergeAssignSponsors,
+  buildPerformancesFooterSponsors,
 } from "./_utils/calculations";
 
 export const PerformancesListMudgeeraba: React.FC = () => {
@@ -102,12 +101,10 @@ export const PerformancesListMudgeeraba: React.FC = () => {
     })),
   });
 
-  const firstItem = transformedData[0];
-  const footerSponsors = buildSingleItemFooterSponsors({
-    assignSponsors: mergeAssignSponsors(firstItem ? [firstItem] : []),
-    primaryForScreen: firstItem?.primaryForScreen,
-    fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
-  });
+  const footerSponsors = buildPerformancesFooterSponsors(
+    transformedData,
+    data.videoMeta?.club?.sponsors?.primary ?? [],
+  );
 
   // Total composition height: asset (1010) + footer (150) = 1160px
   // (Header 190px is rendered by parent OneColumn layout)

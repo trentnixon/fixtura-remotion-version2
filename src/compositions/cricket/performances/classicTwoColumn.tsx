@@ -8,7 +8,6 @@ import {
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
-import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 
 import PerformancesDisplayClassicTwoColumn from "./controller/PerformancesDisplay/display-ClassicTwoColumn";
 import {
@@ -16,7 +15,7 @@ import {
   calculateDisplayDurationPerScreen,
   hasValidPerformances,
   calculateTotalScreens,
-  mergeAssignSponsors,
+  buildPerformancesFooterSponsors,
 } from "./_utils/calculations";
 
 export const PerformancesListClassicTwoColumn: React.FC = () => {
@@ -78,12 +77,10 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
   // Final validation - ensure duration is still valid before creating sequences
   const finalDuration = Math.max(1, Math.floor(displayDurationPerScreen));
 
-  const firstItem = transformedData[0];
-  const footerSponsors = buildSingleItemFooterSponsors({
-    assignSponsors: mergeAssignSponsors(firstItem ? [firstItem] : []),
-    primaryForScreen: firstItem?.primaryForScreen,
-    fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
-  });
+  const footerSponsors = buildPerformancesFooterSponsors(
+    transformedData,
+    data.videoMeta?.club?.sponsors?.primary ?? [],
+  );
 
   // Create sequence data for each screen
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({

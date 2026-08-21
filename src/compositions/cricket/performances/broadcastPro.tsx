@@ -11,7 +11,6 @@ import { useThemeContext } from "../../../core/context/ThemeContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
 import PerformancesDisplayBroadcastPro from "./controller/PerformancesDisplay/display-BroadcastPro";
 import { SponsorFooter } from "../sponsorFooter/index";
-import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import {
   getCompositionSectionHeight,
   getMainContentSectionHeight,
@@ -20,7 +19,7 @@ import {
   calculateDisplayDurationPerScreen,
   hasValidPerformances,
   calculateTotalScreens,
-  mergeAssignSponsors,
+  buildPerformancesFooterSponsors,
 } from "./_utils/calculations";
 
 /** 2×3 grid — six performance cards per screen. */
@@ -75,12 +74,10 @@ export const PerformancesListBroadcastPro: React.FC = () => {
     durationInFrames: finalDuration,
   }));
 
-  const firstItem = transformedData[0];
-  const footerSponsors = buildSingleItemFooterSponsors({
-    assignSponsors: mergeAssignSponsors(firstItem ? [firstItem] : []),
-    primaryForScreen: firstItem?.primaryForScreen,
-    fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
-  });
+  const footerSponsors = buildPerformancesFooterSponsors(
+    transformedData,
+    data.videoMeta?.club?.sponsors?.primary ?? [],
+  );
 
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);

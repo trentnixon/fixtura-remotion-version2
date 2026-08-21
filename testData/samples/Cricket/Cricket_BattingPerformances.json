@@ -15,7 +15,16 @@
       "playedFor": "SJCC Blues",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -61,7 +70,16 @@
       "playedFor": "Hibo Green",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -107,7 +125,16 @@
       "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -153,7 +180,16 @@
       "playedFor": "MadBulls",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -199,7 +235,16 @@
       "playedFor": "MadBulls",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -245,7 +290,16 @@
       "playedFor": "MadBulls",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -291,7 +345,16 @@
       "playedFor": "MadBulls",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -337,7 +400,16 @@
       "playedFor": "SJCC Blues",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -383,7 +455,16 @@
       "playedFor": "SJCC Blues",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -429,7 +510,16 @@
       "playedFor": "SJCC OG",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -475,7 +565,16 @@
       "playedFor": "Pirates 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -521,7 +620,16 @@
       "playedFor": "Pirates 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -567,7 +675,16 @@
       "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -613,7 +730,16 @@
       "playedFor": "Mice",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -659,7 +785,16 @@
       "playedFor": "SJCC OG",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -705,7 +840,16 @@
       "playedFor": "SJCC OG",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",
@@ -751,7 +895,16 @@
       "playedFor": "MadBulls",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -797,7 +950,16 @@
       "playedFor": "SJCC Blues",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "3rd Grade",
@@ -843,7 +1005,16 @@
       "playedFor": "SJCC OG",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "1st & 2nd Grade Combined",

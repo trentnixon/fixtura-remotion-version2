@@ -9,7 +9,6 @@ import {
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
 import { SponsorFooter } from "../sponsorFooter/index";
-import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import PerformancesDisplayCNSWPrivate from "./controller/PerformancesDisplay/display-CNSW-private";
 import {
@@ -17,7 +16,7 @@ import {
   calculateDisplayDurationPerScreen,
   hasValidPerformances,
   calculateTotalScreens,
-  mergeAssignSponsors,
+  buildPerformancesFooterSponsors,
 } from "./_utils/calculations";
 
 export const PerformancesListCNSWPrivate: React.FC = () => {
@@ -102,12 +101,10 @@ export const PerformancesListCNSWPrivate: React.FC = () => {
     })),
   });
 
-  const firstItem = transformedData[0];
-  const footerSponsors = buildSingleItemFooterSponsors({
-    assignSponsors: mergeAssignSponsors(firstItem ? [firstItem] : []),
-    primaryForScreen: firstItem?.primaryForScreen,
-    fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
-  });
+  const footerSponsors = buildPerformancesFooterSponsors(
+    transformedData,
+    data.videoMeta?.club?.sponsors?.primary ?? [],
+  );
 
   return (
     <div className="flex flex-col h-full w-full">

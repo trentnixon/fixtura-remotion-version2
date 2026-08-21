@@ -1,7 +1,9 @@
 import { Timings } from "../../../../core/types/data/common";
 import { PerformanceData } from "../_types/types";
 import { AssignSponsors } from "../../_types/composition-types";
+import { Sponsor } from "../../../../core/types/data/sponsors";
 import { DivideFixturesBy } from "../../../../core/types/data/videoData";
+import { buildSingleItemFooterSponsors } from "../../../../core/utils/sponsors";
 
 /**
  * Default items per screen if not specified in contentLayout
@@ -136,4 +138,19 @@ export const mergeAssignSponsors = (
     },
     { grade: [], competition: [], team: [] } as AssignSponsors,
   );
+};
+
+/**
+ * Footer logos for performances: first item's entity + primaryForScreen.
+ */
+export const buildPerformancesFooterSponsors = (
+  items: PerformanceData[],
+  fallbackPrimary: Sponsor[] = [],
+): Sponsor[] => {
+  const firstItem = items[0];
+  return buildSingleItemFooterSponsors({
+    assignSponsors: mergeAssignSponsors(firstItem ? [firstItem] : []),
+    primaryForScreen: firstItem?.primaryForScreen,
+    fallbackPrimary,
+  });
 };

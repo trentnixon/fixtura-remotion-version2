@@ -15,7 +15,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(1) CGC Premier League - Division 1",
       "primaryForScreen": [
@@ -60,7 +69,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(2) CGC Premier League - Division 2",
       "primaryForScreen": [
@@ -105,7 +123,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(4) CGC Community League - Division 1",
       "primaryForScreen": [
@@ -150,7 +177,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(6) CGC Community League - Division 3",
       "primaryForScreen": [
@@ -195,7 +231,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(4) CGC Community League - Division 1",
       "primaryForScreen": [
@@ -240,7 +285,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(2) CGC Premier League - Division 2",
       "primaryForScreen": [
@@ -285,7 +339,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(6) CGC Community League - Division 3",
       "primaryForScreen": [
@@ -330,7 +393,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(5) CGC Community League - Division 2",
       "primaryForScreen": [
@@ -375,7 +447,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(5) CGC Community League - Division 2",
       "primaryForScreen": [
@@ -420,7 +501,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(4) CGC Community League - Division 1",
       "primaryForScreen": [
@@ -465,7 +555,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(1) CGC Premier League - Division 1",
       "primaryForScreen": [
@@ -510,7 +609,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "gradeName": "(3) CGC Premier League - Division 3",
       "primaryForScreen": [

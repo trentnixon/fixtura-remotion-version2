@@ -14,7 +14,16 @@
       "playedFor": "Mt Pritchard Southern Districts 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "First Grade (The RB Clark Cup)",
@@ -59,7 +68,16 @@
       "playedFor": "Lindfield 5th Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "Fifth Grade (The Tim Creer Cup)",
@@ -104,7 +122,16 @@
       "playedFor": "Lane Cove 2nd Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "Second Grade (The SJ Mayne Trophy)",
@@ -149,7 +176,16 @@
       "playedFor": "Lindfield 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "First Grade (The RB Clark Cup)",
@@ -194,7 +230,16 @@
       "playedFor": "Balmain South Sydney 4th grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "Fourth Grade (The Harry Culbert Trophy)",

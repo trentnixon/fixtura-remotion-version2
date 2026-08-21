@@ -172,7 +172,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Queens 1st Grade won by 7 wickets",
       "resultShort": "Queens 1st Grade def Runaway Bay Premier Div 1",
@@ -382,7 +391,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Runaway Bay Navy Women won by 104 runs",
       "resultShort": "Runaway Bay Navy Women def Tamborine Senior Women",
@@ -592,7 +610,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Runaway Bay Premier Div 2 won by 48 runs",
       "resultShort": "Runaway Bay Premier Div 2 def Queens 2nd Grade",
@@ -802,7 +829,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Runaway Bay Premier Div 3 won by 7 wickets",
       "resultShort": "Runaway Bay Premier Div 3 def Alberton Premier Div 3",
@@ -1012,7 +1048,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Helensvale 4th Grade won by 5 wickets",
       "resultShort": "Helensvale 4th Grade def Runaway Bay Navy Community Div 1",
@@ -1222,7 +1267,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Palm Beach Community Div 1 won by 151 runs",
       "resultShort": "Palm Beach Community Div 1 def Runaway Bay Orange Community Div 1",
@@ -1432,7 +1486,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Runaway Bay Community Div 2 won by 164 runs",
       "resultShort": "Runaway Bay Community Div 2 def Alberton Community Div 2",
@@ -1642,7 +1705,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Runaway Bay Orange Community Div 3 won by 8 wickets",
       "resultShort": "Runaway Bay Orange Community Div 3 def Bonogin Bulls Div 3",
@@ -1852,7 +1924,16 @@
       "assignSponsors": {
         "competition": [],
         "grade": [],
-        "team": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "result": "Loganholme Queen Cobras won by 101 runs",
       "resultShort": "Loganholme Queen Cobras def Runaway Bay Pink Women",

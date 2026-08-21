@@ -15,7 +15,16 @@
       "playedFor": "Epping Bulls 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "First Grade (The RB Clark Cup)",
@@ -61,7 +70,16 @@
       "playedFor": "Strathfield 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "First Grade (The RB Clark Cup)",
@@ -107,7 +125,16 @@
       "playedFor": "Roseville 2nd Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "Second Grade (The SJ Mayne Trophy)",
@@ -153,7 +180,16 @@
       "playedFor": "Pennant Hills 2nd Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "Second Grade (The SJ Mayne Trophy)",
@@ -199,7 +235,16 @@
       "playedFor": "North West Sydney 1st Grade",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
         "team": []
       },
       "gradeName": "First Grade (The RB Clark Cup)",
