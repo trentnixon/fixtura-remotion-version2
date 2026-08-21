@@ -1,4 +1,5 @@
 import { AssignSponsors } from "../../_types/composition-types";
+import { Sponsor } from "../../../../core/types/data/sponsors";
 
 // Types for cricket match results
 export interface TeamLogo {
@@ -67,6 +68,8 @@ export interface MatchResult {
   teamAwayLogo: TeamLogo;
   teamHomeLogo: TeamLogo;
   assignSponsors: AssignSponsors;
+  /** Account primaries for this row with entity-wins applied (Scheduler v2). */
+  primaryForScreen?: Sponsor[];
 }
 
 // Constants for animation timing and other configuration

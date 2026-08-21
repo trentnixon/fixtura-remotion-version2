@@ -2,6 +2,10 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { Sponsor } from "../../../../core/types/data/sponsors";
+import {
+  buildOutroSponsorSequence,
+  chunkSponsors,
+} from "../../../../core/utils/sponsors";
 import { AnimatedImage } from "../../../../components/images";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { TransitionSeriesWrapper } from "../../../../components/transitions/TransitionSeriesWrapper";
@@ -29,25 +33,6 @@ const GRID_SETTINGS = {
   logoDelayIncrement: 5,
 } as const;
 
-const chunkArray = <T,>(arr: T[], size: number): T[][] => {
-  const normalized = arr.map((item: unknown) => {
-    if (
-      typeof item === "object" &&
-      item !== null &&
-      Object.keys(item).length === 1 &&
-      Object.keys(item)[0] === "0" &&
-      Object.prototype.hasOwnProperty.call(item, "0")
-    ) {
-      return (item as Record<string, T>)["0"];
-    }
-    return item as T;
-  });
-  const result: T[][] = [];
-  for (let i = 0; i < normalized.length; i += size) {
-    result.push(normalized.slice(i, i + size));
-  }
-  return result;
-};
 
 interface LogoAnimationsType {
   introIn?: ImageAnimationType | ImageAnimationConfig;
@@ -102,7 +87,6 @@ export const BroadcastProOutro: React.FC<BroadcastProOutroProps> = ({
   doesAccountHaveSponsors,
 }) => {
   const { sponsors } = useVideoDataContext();
-  const { default: defaultSponsors = {} } = sponsors || {};
   const { animations } = useAnimationContext();
   const LogoAnimations = animations.image.sponsor.logo;
 
@@ -110,10 +94,12 @@ export const BroadcastProOutro: React.FC<BroadcastProOutroProps> = ({
     return <AlternativeOutro />;
   }
 
-  const defaultArray: Sponsor[] = convertToArray(defaultSponsors);
-  const sponsorsArray: Sponsor[] = [...defaultArray];
+  const sponsorsArray: Sponsor[] = buildOutroSponsorSequence({
+    primary: sponsors?.primary ?? [],
+    general: sponsors?.general ?? [],
+  });
 
-  const groups = chunkArray(sponsorsArray, GRID_SETTINGS.chunkSize);
+  const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS.chunkSize);
 
   const sequences = groups.map((group) => ({
     content: (
@@ -139,5 +125,3 @@ const AlternativeOutro: React.FC = () => (
   </AbsoluteFill>
 );
 
-const convertToArray = (sponsors: Record<string, Sponsor[]>): Sponsor[] =>
-  Object.values(sponsors).flat();

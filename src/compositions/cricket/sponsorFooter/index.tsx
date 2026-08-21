@@ -66,7 +66,9 @@ export const SponsorFooter = React.memo(
       if (!assignSponsors || !validation.sponsors) {
         return [];
       }
-      const primarySponsors = Object.values(validation.sponsors.primary);
+      const primarySponsors = Array.isArray(validation.sponsors.primary)
+        ? validation.sponsors.primary
+        : [];
       return getAllSponsors(primarySponsors, assignSponsors);
     }, [validation.sponsors, assignSponsors]);
 

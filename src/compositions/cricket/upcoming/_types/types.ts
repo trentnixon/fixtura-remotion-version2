@@ -1,4 +1,5 @@
 import { AssignSponsors } from "../../_types/composition-types";
+import { Sponsor as SponsorDto } from "../../../../core/types/data/sponsors";
 
 // Types for upcoming games data structure
 export interface TeamLogo {
@@ -38,6 +39,8 @@ export interface GameData {
   teamAwayLogo: TeamLogo | null;
   teamHomeLogo: TeamLogo | null;
   assignSponsors: AssignSponsors;
+  /** Account primaries for this row with entity-wins applied (Scheduler v2). */
+  primaryForScreen?: SponsorDto[];
 }
 
 // Animation constants

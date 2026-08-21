@@ -1,6 +1,7 @@
 // Types for ladder data structure
 
 import { AssignSponsors } from "../_types/composition-types";
+import { Sponsor } from "../../../core/types/data/sponsors";
 
 export interface LadderData {
   ID: number;
@@ -9,6 +10,7 @@ export interface LadderData {
   bias: string;
   prompt: string;
   assignSponsors: AssignSponsors;
+  primaryForScreen?: Sponsor[];
 }
 
 export interface TeamLogo {

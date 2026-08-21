@@ -124,7 +124,7 @@ export const mergeAssignSponsors = (
           grades.push({
             id: assignSponsors.grade.id,
             name: assignSponsors.grade.name,
-            logo: { url: "" }, // Performance data doesn't include logos
+            logo: { id: assignSponsors.grade.id, url: "" },
           });
         }
       }
@@ -138,21 +138,20 @@ export const mergeAssignSponsors = (
           competitions.push({
             id: assignSponsors.competition.id,
             name: assignSponsors.competition.name,
-            logo: { url: "" }, // Performance data doesn't include logos
+            logo: { id: assignSponsors.competition.id, url: "" },
           });
         }
       }
 
       // Add team if it exists (Team is an object, not array in performance data)
       if (assignSponsors.Team && assignSponsors.Team.name) {
-        const teamExists = teams.some(
-          (t) => t.home?.name === assignSponsors.Team.name,
-        );
+        const teamName = assignSponsors.Team.name;
+        const teamExists = teams.some((t) => t.name === teamName);
         if (!teamExists) {
           teams.push({
-            home: { name: assignSponsors.Team.name },
-            away: { name: "" },
-            logo: { url: "" }, // Performance data doesn't include logos
+            id: teams.length + 1,
+            name: teamName,
+            logo: { id: teams.length + 1, url: "" },
           });
         }
       }

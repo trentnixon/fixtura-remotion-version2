@@ -4,7 +4,8 @@ import { TeamOfTheWeekPlayer } from "../types";
 
 const EMPTY_SPONSORS: SponsorsData = {
   primary: [],
-  default: {},
+  general: [],
+  sponsorNum: 0,
 };
 
 /**
@@ -37,7 +38,7 @@ export const castToTeamOfTheWeekPlayers = (
 /**
  * Extract sponsors from video metadata
  * @param videoMeta - Video metadata from context
- * @returns SponsorsData (empty primary/default if not available)
+ * @returns SponsorsData (empty primary/general if not available)
  */
 export const extractSponsors = (
   videoMeta: VideoMeta | undefined,

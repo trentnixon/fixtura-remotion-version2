@@ -2,45 +2,34 @@
 
 import { ImageLogo } from "./common";
 
-// Grade structure for assign sponsors
-export interface GradeAssignSponsors {
-  id: number;
-  name: string;
-}
-
-// Competition structure for assign sponsors
-export interface CompetitionAssignSponsors {
-  id: number;
-  name: string;
-}
-
-export interface SponsorsData {
-  primary: Sponsor[];
-  default: Record<string, Sponsor[]>;
-}
-
+/** Guaranteed sponsor DTO from Scheduler sponsors payload v2. */
 export interface Sponsor {
   id: number;
-  isPrimary: boolean;
-  isActive: boolean;
-  isArticle: boolean;
-  isVideo: boolean;
-  url: string;
-
-  tagline: string;
-  description: string | null;
   name: string;
-  logo: Logo;
+  logo: SponsorLogo;
 }
 
-export interface Logo {
+export interface SponsorLogo {
   id: number;
   url: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }
 
-// Club structure
+/** Account-level sponsors on videoMeta.club.sponsors */
+export interface SponsorsData {
+  primary: Sponsor[];
+  general: Sponsor[];
+  sponsorNum: number;
+}
+
+/** Per-row / entity assign buckets (arrays of sponsor DTOs). */
+export interface AssignSponsors {
+  competition: Sponsor[];
+  grade: Sponsor[];
+  team: Sponsor[];
+}
+
 export interface Club {
   logo: ImageLogo;
   name: string;

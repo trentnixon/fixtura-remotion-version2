@@ -1,5 +1,7 @@
 import React, { createContext, useContext, ReactNode } from "react";
 import { useVideoDataContext } from "./VideoDataContext";
+import { hasSponsors } from "../utils/general";
+
 interface LayoutContextProps {
   doesAccountHaveSponsors: boolean;
 }
@@ -9,10 +11,11 @@ const LayoutContext = createContext<LayoutContextProps | null>(null);
 export const LayoutProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const { sponsors } = useVideoDataContext();
+  const { sponsors, video } = useVideoDataContext();
 
   const doesAccountHaveSponsors =
-    Boolean(sponsors?.primary) || Boolean(sponsors?.default);
+    Boolean(video?.metadata?.includeSponsors) || hasSponsors(sponsors);
+
   const contextValue: LayoutContextProps = {
     doesAccountHaveSponsors,
   };

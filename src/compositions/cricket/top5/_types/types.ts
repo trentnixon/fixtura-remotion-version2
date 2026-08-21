@@ -1,4 +1,5 @@
 import { AssignSponsors } from "../../_types/composition-types";
+import { Sponsor } from "../../../../core/types/data/sponsors";
 
 // Types for top 5 players data structure
 export interface TeamLogo {
@@ -27,6 +28,7 @@ export interface BasePlayerData {
   teamLogo: TeamLogo;
   playedFor: string;
   assignSponsors: AssignSponsors;
+  primaryForScreen?: Sponsor[];
   prompt: string;
 }
 
