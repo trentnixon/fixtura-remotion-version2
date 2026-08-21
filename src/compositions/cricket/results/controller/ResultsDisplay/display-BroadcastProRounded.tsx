@@ -9,7 +9,7 @@ import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
   calculateDisplayedResults,
   calculateRowHeight,
-  mergeAssignSponsors,
+  buildResultsFooterSponsors,
 } from "./_utils/calculations";
 import { calculateAnimationOutFrame } from "../MatchRow/_utils/calculations";
 import {
@@ -40,7 +40,7 @@ const ResultsDisplayBroadcastProRounded: React.FC<ResultsDisplayProps> = ({
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);
   const rowHeight = calculateRowHeight(mainContentHeight);
-  const mergedAssignSponsors = mergeAssignSponsors(displayedResults);
+  const footerSponsors = buildResultsFooterSponsors(displayedResults);
 
   return (
     <div
@@ -80,7 +80,7 @@ const ResultsDisplayBroadcastProRounded: React.FC<ResultsDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={mergedAssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

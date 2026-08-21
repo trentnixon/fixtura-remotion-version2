@@ -1,5 +1,6 @@
 import { MatchResult } from "../../../_types/types";
-import { AssignSponsors } from "../../../../_types/composition-types";
+import { buildMultiRowFooterSponsors } from "../../../../../../core/utils/sponsors";
+import type { Sponsor } from "../../../../../../core/types/data/sponsors";
 
 /**
  * Calculates which results to display on the current screen
@@ -39,15 +40,10 @@ export const calculateRowHeight = (availableHeight: number): number => {
 };
 
 /**
- * Merges all assignSponsors objects from displayed results into one object
- * @param displayedResults - Array of match results to merge sponsors from
- * @returns Merged AssignSponsors object
+ * Build footer logos for the results currently on screen (multi-row v2 policy).
  */
-export const mergeAssignSponsors = (
+export const buildResultsFooterSponsors = (
   displayedResults: MatchResult[],
-): AssignSponsors => {
-  return displayedResults.reduce(
-    (acc, result) => ({ ...acc, ...result.assignSponsors }),
-    {},
-  ) as AssignSponsors;
+): Sponsor[] => {
+  return buildMultiRowFooterSponsors(displayedResults);
 };

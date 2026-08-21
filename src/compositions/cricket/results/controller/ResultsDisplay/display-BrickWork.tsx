@@ -5,7 +5,7 @@ import MatchRowBrickWork from "../MatchRow/row-Brickwork";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
   calculateDisplayedResults,
-  mergeAssignSponsors,
+  buildResultsFooterSponsors,
 } from "./_utils/calculations";
 import {
   BRICKWORK_ROW_STACK_CLASS,
@@ -32,7 +32,7 @@ const ResultsDisplayBrickWork: React.FC<ResultsDisplayProps> = ({
     displayedResults.length,
   );
 
-  const mergedAssignSponsors = mergeAssignSponsors(displayedResults);
+  const footerSponsors = buildResultsFooterSponsors(displayedResults);
 
   return (
     <div className="flex flex-col h-full w-full">
@@ -55,7 +55,7 @@ const ResultsDisplayBrickWork: React.FC<ResultsDisplayProps> = ({
         ))}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={mergedAssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

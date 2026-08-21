@@ -10,3 +10,9 @@ export {
   chunkSponsors,
 } from "./outroSponsors";
 export type { BuildOutroSponsorSequenceInput } from "./outroSponsors";
+
+export {
+  buildMultiRowFooterSponsors,
+  collectEntitiesFromRows,
+} from "./buildMultiRowFooterSponsors";
+export type { FooterSponsorRow } from "./buildMultiRowFooterSponsors";

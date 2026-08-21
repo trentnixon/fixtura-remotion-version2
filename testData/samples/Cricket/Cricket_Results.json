@@ -168,27 +168,46 @@
         "resultWord": "won"
       },
       "assignSponsors": {
+        "competition": [],
+        "grade": [],
         "team": [
           {
             "id": 1258,
-            "url": "Frank Dowling",
+            "name": "Frank Dowling",
             "logo": {
               "id": 8528,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2_1_b9a6e52102.png"
-            },
-            "name": "Frank Dowling",
-            "isVideo": true,
-            "tagline": "Frank Dowling",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ],
-        "grade": [],
-        "competition": []
+        ]
       },
-      "gradeSortOrder": 0
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
+        },
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
+        },
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
+        }
+      ]
     },
     {
       "date": "13 Feb 2026",
@@ -309,27 +328,46 @@
         "resultWord": "lost"
       },
       "assignSponsors": {
+        "competition": [],
+        "grade": [],
         "team": [
           {
             "id": 1258,
-            "url": "Frank Dowling",
+            "name": "Frank Dowling",
             "logo": {
               "id": 8528,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2_1_b9a6e52102.png"
-            },
-            "name": "Frank Dowling",
-            "isVideo": true,
-            "tagline": "Frank Dowling",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ],
-        "grade": [],
-        "competition": []
+        ]
       },
-      "gradeSortOrder": 0
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
+        },
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
+        },
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
+        }
+      ]
     },
     {
       "date": "06 Feb 2026",
@@ -509,27 +547,46 @@
         "resultWord": "won"
       },
       "assignSponsors": {
+        "competition": [],
+        "grade": [],
         "team": [
           {
             "id": 1258,
-            "url": "Frank Dowling",
+            "name": "Frank Dowling",
             "logo": {
               "id": 8528,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2_1_b9a6e52102.png"
-            },
-            "name": "Frank Dowling",
-            "isVideo": true,
-            "tagline": "Frank Dowling",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ],
-        "grade": [],
-        "competition": []
+        ]
       },
-      "gradeSortOrder": 0
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
+        },
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
+        },
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
+        }
+      ]
     },
     {
       "date": "06 Feb 2026",
@@ -709,27 +766,46 @@
         "resultWord": "won"
       },
       "assignSponsors": {
+        "competition": [],
+        "grade": [],
         "team": [
           {
             "id": 1258,
-            "url": "Frank Dowling",
+            "name": "Frank Dowling",
             "logo": {
               "id": 8528,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2_1_b9a6e52102.png"
-            },
-            "name": "Frank Dowling",
-            "isVideo": true,
-            "tagline": "Frank Dowling",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ],
-        "grade": [],
-        "competition": []
+        ]
       },
-      "gradeSortOrder": 0
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 200,
+          "name": "test",
+          "logo": {
+            "id": 23213,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
+        },
+        {
+          "id": 201,
+          "name": "edit this",
+          "logo": {
+            "id": 23214,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+          }
+        },
+        {
+          "id": 203,
+          "name": "New sponsor",
+          "logo": {
+            "id": 23216,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
+        }
+      ]
     }
   ],
   "asset": {
@@ -739,7 +815,12 @@
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [45, 240, 525, 705],
+  "frames": [
+    45,
+    240,
+    525,
+    705
+  ],
   "render": {
     "renderId": 29050,
     "schedulerId": 195
@@ -766,106 +847,59 @@
       "name": "Strathmore Heights Cricket Club",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "general_sponsor_1": [
-            {
-              "id": 200,
-              "url": null,
-              "logo": {
-                "id": 23213,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-              },
-              "name": "test",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 201,
-              "url": null,
-              "logo": {
-                "id": 23214,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-              },
-              "name": "edit this",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 203,
-              "url": null,
-              "logo": {
-                "id": 23216,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-              },
-              "name": "New sponsor",
-              "isVideo": null,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": null,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
         "primary": [
           {
             "id": 200,
-            "url": null,
+            "name": "test",
             "logo": {
               "id": 23213,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            },
-            "name": "test",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 201,
-            "url": null,
+            "name": "edit this",
             "logo": {
               "id": 23214,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            },
-            "name": "edit this",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           },
           {
             "id": 203,
-            "url": null,
+            "name": "New sponsor",
             "logo": {
               "id": 23216,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-            },
-            "name": "New sponsor",
-            "isVideo": null,
-            "tagline": null,
-            "isActive": true,
-            "isArticle": null,
-            "isPrimary": false,
-            "description": null
+            }
           }
-        ]
+        ],
+        "general": [
+          {
+            "id": 200,
+            "name": "test",
+            "logo": {
+              "id": 23213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          },
+          {
+            "id": 201,
+            "name": "edit this",
+            "logo": {
+              "id": 23214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          },
+          {
+            "id": 203,
+            "name": "New sponsor",
+            "logo": {
+              "id": 23216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            }
+          }
+        ],
+        "sponsorNum": 6
       },
       "IsAccountClub": true
     },
@@ -889,7 +923,9 @@
         "title": "Results",
         "frames": [],
         "assetId": 4,
-        "titleSplit": ["Results"],
+        "titleSplit": [
+          "Results"
+        ],
         "videoTitle": "Weekend Results",
         "assetTypeId": 2,
         "compositionId": "CricketResults",

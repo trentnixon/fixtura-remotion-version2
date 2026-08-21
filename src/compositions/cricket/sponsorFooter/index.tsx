@@ -3,77 +3,67 @@
 
 import React, { useMemo } from "react";
 import { AnimatedImage } from "../../../components/images/AnimatedImage";
-import { AssignSponsors } from "../_types/composition-types";
+import { AssignSponsors, Sponsor } from "../../../core/types/data/sponsors";
+import { selectFooterSponsors } from "../../../core/utils/sponsors";
 import { useSponsorValidation } from "./hooks/useSponsorValidation";
 
-// Sponsor configuration constants
 const SPONSOR_CONFIG = {
   ANIMATION_DELAY_MULTIPLIER: 5,
   EXIT_FRAME: 300,
 } as const;
 
-// Helper function to calculate max width based on logo dimensions
 const calculateMaxWidth = (
   logo: { width?: number; height?: number },
   footerHeight: number,
 ): number => {
   if (logo.width && logo.height) {
-    // Calculate the natural aspect ratio
     const aspectRatio = logo.width / logo.height;
-    // Calculate width if logo fills the full footer height
-    const naturalWidth = footerHeight * aspectRatio;
-    // Return the natural width (no artificial limits)
-    return naturalWidth;
+    return footerHeight * aspectRatio;
   }
-  // Fallback: if no dimensions provided, allow up to 3x footer height
   return footerHeight * 3;
 };
 
-// Helper function to get unique sponsors by ID
-const getUniqueSponsors = (sponsors: any[]): any[] => {
-  const seen = new Set<number>();
-  return sponsors.filter((sponsor) => {
-    if (sponsor.id && seen.has(sponsor.id)) {
-      return false;
-    }
-    if (sponsor.id) {
-      seen.add(sponsor.id);
-    }
-    return true;
-  });
-};
-
-// Helper function to calculate image height with padding
 const calculateImageHeight = (footerHeight: number): number => {
   return footerHeight - 20;
 };
 
-// Helper function to get all sponsors with deduplication
-const getAllSponsors = (
-  primarySponsors: any[],
-  assignSponsors: AssignSponsors,
-): any[] => {
-  const assignedSponsors = createFlatSponsorList(assignSponsors);
-  return getUniqueSponsors([...primarySponsors, ...assignedSponsors]);
+const entitiesFromAssign = (assignSponsors: AssignSponsors): Sponsor[] => {
+  const { grade = [], team = [] } = assignSponsors;
+  return [...grade, ...team];
+};
+
+export type SponsorFooterProps = {
+  /** Pre-selected footer logos (preferred — Results/Upcoming multi-row builders). */
+  sponsors?: Sponsor[];
+  /**
+   * Legacy single-bucket path for compositions not yet on multi-row selection.
+   * Uses account primary + this assign set through selectFooterSponsors.
+   */
+  assignSponsors?: AssignSponsors;
 };
 
 export const SponsorFooter = React.memo(
-  ({ assignSponsors }: { assignSponsors: AssignSponsors }) => {
+  ({ sponsors, assignSponsors }: SponsorFooterProps) => {
     const validation = useSponsorValidation();
 
-    // Memoize all sponsors with deduplication (must be before early returns)
     const allSponsors = useMemo(() => {
+      if (sponsors) {
+        return sponsors;
+      }
       if (!assignSponsors || !validation.sponsors) {
         return [];
       }
-      const primarySponsors = Array.isArray(validation.sponsors.primary)
+      const primaryForScreen = Array.isArray(validation.sponsors.primary)
         ? validation.sponsors.primary
         : [];
-      return getAllSponsors(primarySponsors, assignSponsors);
-    }, [validation.sponsors, assignSponsors]);
+      return selectFooterSponsors({
+        primaryForScreen,
+        entities: entitiesFromAssign(assignSponsors),
+      });
+    }, [sponsors, assignSponsors, validation.sponsors]);
 
-    if (!assignSponsors) {
-      console.warn("[SponsorFooter] Missing assignSponsors");
+    if (!sponsors && !assignSponsors) {
+      console.warn("[SponsorFooter] Missing sponsors or assignSponsors");
       return null;
     }
 
@@ -83,6 +73,10 @@ export const SponsorFooter = React.memo(
       !validation.heights ||
       !validation.sponsors
     ) {
+      return null;
+    }
+
+    if (allSponsors.length === 0) {
       return null;
     }
 
@@ -99,22 +93,18 @@ export const SponsorFooter = React.memo(
         }}
       >
         {allSponsors.map((sponsor, idx) => {
-          const key = "id" in sponsor ? sponsor.id : idx;
-
           if (!sponsor?.logo?.url) {
             return null;
           }
           return (
             <div
-              key={key}
+              key={`${sponsor.id}_${idx}`}
               className="flex items-center justify-center flex-shrink-0"
               style={{ height: imageHeight }}
             >
               <AnimatedImage
-                src={sponsor?.logo?.url || ""}
-                alt={
-                  "name" in sponsor ? sponsor.name : `Sponsor logo ${idx + 1}`
-                }
+                src={sponsor.logo.url}
+                alt={sponsor.name || `Sponsor logo ${idx + 1}`}
                 width="auto"
                 height="auto"
                 maxHeight={imageHeight}
@@ -133,8 +123,3 @@ export const SponsorFooter = React.memo(
     );
   },
 );
-
-function createFlatSponsorList(assignSponsors: AssignSponsors) {
-  const { competition = [], grade = [], team = [] } = assignSponsors;
-  return [...competition, ...grade, ...team];
-}

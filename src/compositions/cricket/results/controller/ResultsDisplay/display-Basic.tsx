@@ -6,7 +6,7 @@ import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
   calculateDisplayedResults,
   calculateRowHeight,
-  mergeAssignSponsors,
+  buildResultsFooterSponsors,
 } from "./_utils/calculations";
 
 const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
@@ -28,8 +28,7 @@ const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
   // Calculate exactly half of the available height for each row
   const rowHeight = calculateRowHeight(availableHeight);
 
-  // Merge all assignSponsors objects from displayedResults into one object
-  const mergedAssignSponsors = mergeAssignSponsors(displayedResults);
+  const footerSponsors = buildResultsFooterSponsors(displayedResults);
 
   return (
     <div className="flex flex-col h-full w-full">
@@ -52,7 +51,7 @@ const ResultsDisplayBasic: React.FC<ResultsDisplayProps> = ({
         ))}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={mergedAssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );
