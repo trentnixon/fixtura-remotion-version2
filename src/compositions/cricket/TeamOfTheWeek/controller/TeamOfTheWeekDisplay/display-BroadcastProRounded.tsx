@@ -8,7 +8,7 @@ import {
   useBroadcastProRoundedTheme,
 } from "../../../utils/broadcastProRounded";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { CardBroadcastProRounded } from "../PlayerRow/card-BroadcastProRounded";
 import {
@@ -44,6 +44,11 @@ const TeamOfTheWeekDisplayBroadcastProRounded: React.FC<
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);
 
+  const footerSponsors = buildSingleItemFooterSponsors({
+    fallbackPrimary: sponsors,
+  });
+
+
   return (
     <div className="flex flex-col" style={{ height: `${compositionHeight}px` }}>
       <AnimatedContainer
@@ -72,7 +77,7 @@ const TeamOfTheWeekDisplayBroadcastProRounded: React.FC<
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

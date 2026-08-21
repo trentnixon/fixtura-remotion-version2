@@ -10,7 +10,7 @@ import { LadderDisplayProps } from "./_types/LadderDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
 
 export const LadderDisplayCNSW: React.FC<LadderDisplayProps> = ({ ladder }) => {
-  const { League, gradeName, bias, assignSponsors } = ladder;
+  const { League, gradeName, bias, assignSponsors, primaryForScreen } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { headerHeight, rowHeight } = calculateRowDimensions(
@@ -54,7 +54,7 @@ export const LadderDisplayCNSW: React.FC<LadderDisplayProps> = ({ ladder }) => {
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} />
+        <SponsorFooter assignSponsors={assignSponsors} primaryForScreen={primaryForScreen} />
       </div>
     </div>
   );

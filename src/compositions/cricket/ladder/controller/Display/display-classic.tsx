@@ -15,7 +15,7 @@ const CLASSIC_MAX_ROW_HEIGHT = 120;
 export const LadderDisplayClassic: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
-  const { League, gradeName, bias, assignSponsors } = ladder;
+  const { League, gradeName, bias, assignSponsors, primaryForScreen } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { headerHeight, rowHeight: rawRowHeight } = calculateRowDimensions(
@@ -59,7 +59,7 @@ export const LadderDisplayClassic: React.FC<LadderDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} />
+        <SponsorFooter assignSponsors={assignSponsors} primaryForScreen={primaryForScreen} />
       </div>
     </div>
   );

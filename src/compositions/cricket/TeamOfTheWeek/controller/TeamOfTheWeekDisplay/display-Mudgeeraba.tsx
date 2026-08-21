@@ -4,7 +4,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowMudgeeraba from "../PlayerRow/row-Mudgeeraba";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { DEFAULT_ROW_HEIGHT_BASIC } from "./_utils/constants";
 
@@ -19,6 +19,11 @@ const TeamOfTheWeekDisplayMudgeeraba: React.FC<TeamOfTheWeekDisplayProps> = ({
 
   // Mudgeeraba pattern: row height a little taller; two columns for many items
   const rowHeightMudgeeraba = DEFAULT_ROW_HEIGHT_BASIC * 0.95;
+
+  const footerSponsors = buildSingleItemFooterSponsors({
+    fallbackPrimary: sponsors,
+  });
+
 
   return (
     <div className="flex flex-col h-full mx-6">
@@ -45,7 +50,7 @@ const TeamOfTheWeekDisplayMudgeeraba: React.FC<TeamOfTheWeekDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

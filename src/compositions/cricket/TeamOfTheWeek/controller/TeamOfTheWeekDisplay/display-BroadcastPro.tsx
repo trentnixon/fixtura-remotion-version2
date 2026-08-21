@@ -5,7 +5,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { csClass, useBroadcastProTheme } from "../../../utils/broadcastPro";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { CardBroadcastPro } from "../PlayerRow/card-BroadcastPro";
 import {
@@ -36,6 +36,11 @@ const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);
 
+  const footerSponsors = buildSingleItemFooterSponsors({
+    fallbackPrimary: sponsors,
+  });
+
+
   return (
     <div className="flex flex-col" style={{ height: `${compositionHeight}px` }}>
       <AnimatedContainer
@@ -64,7 +69,7 @@ const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

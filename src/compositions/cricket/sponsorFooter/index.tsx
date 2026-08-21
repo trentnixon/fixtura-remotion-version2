@@ -4,7 +4,9 @@
 import React, { useMemo } from "react";
 import { AnimatedImage } from "../../../components/images/AnimatedImage";
 import { AssignSponsors, Sponsor } from "../../../core/types/data/sponsors";
-import { selectFooterSponsors } from "../../../core/utils/sponsors";
+import {
+  buildSingleItemFooterSponsors,
+} from "../../../core/utils/sponsors";
 import { useSponsorValidation } from "./hooks/useSponsorValidation";
 
 const SPONSOR_CONFIG = {
@@ -27,23 +29,17 @@ const calculateImageHeight = (footerHeight: number): number => {
   return footerHeight - 20;
 };
 
-const entitiesFromAssign = (assignSponsors: AssignSponsors): Sponsor[] => {
-  const { grade = [], team = [] } = assignSponsors;
-  return [...grade, ...team];
-};
-
 export type SponsorFooterProps = {
-  /** Pre-selected footer logos (preferred — Results/Upcoming multi-row builders). */
+  /** Pre-selected footer logos (Results/Upcoming multi-row builders). */
   sponsors?: Sponsor[];
-  /**
-   * Legacy single-bucket path for compositions not yet on multi-row selection.
-   * Uses account primary + this assign set through selectFooterSponsors.
-   */
+  /** Single-item entity buckets when not passing a pre-built list. */
   assignSponsors?: AssignSponsors;
+  /** Per-item primaryForScreen; falls back to account primary when omitted. */
+  primaryForScreen?: Sponsor[];
 };
 
 export const SponsorFooter = React.memo(
-  ({ sponsors, assignSponsors }: SponsorFooterProps) => {
+  ({ sponsors, assignSponsors, primaryForScreen }: SponsorFooterProps) => {
     const validation = useSponsorValidation();
 
     const allSponsors = useMemo(() => {
@@ -53,14 +49,14 @@ export const SponsorFooter = React.memo(
       if (!assignSponsors || !validation.sponsors) {
         return [];
       }
-      const primaryForScreen = Array.isArray(validation.sponsors.primary)
-        ? validation.sponsors.primary
-        : [];
-      return selectFooterSponsors({
+      return buildSingleItemFooterSponsors({
+        assignSponsors,
         primaryForScreen,
-        entities: entitiesFromAssign(assignSponsors),
+        fallbackPrimary: Array.isArray(validation.sponsors.primary)
+          ? validation.sponsors.primary
+          : [],
       });
-    }, [sponsors, assignSponsors, validation.sponsors]);
+    }, [sponsors, assignSponsors, primaryForScreen, validation.sponsors]);
 
     if (!sponsors && !assignSponsors) {
       console.warn("[SponsorFooter] Missing sponsors or assignSponsors");
@@ -123,3 +119,4 @@ export const SponsorFooter = React.memo(
     );
   },
 );
+

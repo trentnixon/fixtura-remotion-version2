@@ -1,4 +1,5 @@
 import { AssignSponsors } from "../_types/composition-types";
+import { Sponsor } from "../../../core/types/data/sponsors";
 
 // Types for cricket match results
 export interface TeamLogo {
@@ -65,6 +66,7 @@ export interface MatchResult {
   teamAwayLogo: TeamLogo;
   teamHomeLogo: TeamLogo;
   assignSponsors: AssignSponsors;
+  primaryForScreen?: Sponsor[];
   resultShort?: string;
   resultSummary?: ResultSummary;
 }

@@ -12,7 +12,7 @@ export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { selectedPalette, layout } = useThemeContext();
-  const { League, gradeName, bias, assignSponsors } = ladder;
+  const { League, gradeName, bias, assignSponsors, primaryForScreen } = ladder;
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
@@ -51,7 +51,7 @@ export const LadderDisplayBasic: React.FC<LadderDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} />
+        <SponsorFooter assignSponsors={assignSponsors} primaryForScreen={primaryForScreen} />
       </div>
     </div>
   );

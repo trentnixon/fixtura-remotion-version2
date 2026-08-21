@@ -5,7 +5,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { BRICKWORK_GRID_STACK_CLASS } from "../../../../../templates/variants/brickwork/design";
 import PlayerRowBrickWork from "../PlayerRow/row-BrickWork";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { DEFAULT_ROW_HEIGHT_BRICKWORK } from "./_utils/constants";
 
@@ -17,6 +17,11 @@ const TeamOfTheWeekDisplayBrickWork: React.FC<TeamOfTheWeekDisplayProps> = ({
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
+
+  const footerSponsors = buildSingleItemFooterSponsors({
+    fallbackPrimary: sponsors,
+  });
+
 
   return (
     <div className="flex flex-col h-full">
@@ -43,7 +48,7 @@ const TeamOfTheWeekDisplayBrickWork: React.FC<TeamOfTheWeekDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

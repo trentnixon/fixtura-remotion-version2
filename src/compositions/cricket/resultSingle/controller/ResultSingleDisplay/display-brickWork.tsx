@@ -30,7 +30,7 @@ const BrickWorkSingleResult: React.FC<ResultSingleDisplayProps> = ({
         )}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={match.assignSponsors} />
+        <SponsorFooter assignSponsors={match.assignSponsors} primaryForScreen={match.primaryForScreen} />
       </div>
     </div>
   );

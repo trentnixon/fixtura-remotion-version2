@@ -33,7 +33,7 @@ export const LadderDisplayBroadcastProRounded: React.FC<LadderDisplayProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const panelAnimation = animations.container.main.itemContainerOuter;
-  const { League, gradeName, assignSponsors } = ladder;
+  const { League, gradeName, assignSponsors, primaryForScreen } = ladder;
   const { layout, broadcastProRoundedLadderZoneSizing } = useThemeContext();
   const { heights } = layout;
   const { accent } = useBroadcastProRoundedTheme();
@@ -101,7 +101,7 @@ export const LadderDisplayBroadcastProRounded: React.FC<LadderDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} />
+        <SponsorFooter assignSponsors={assignSponsors} primaryForScreen={primaryForScreen} />
       </div>
     </div>
   );

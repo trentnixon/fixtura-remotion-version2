@@ -9,7 +9,7 @@ import {
 import { useAnimationContext } from "../../../core/context/AnimationContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
 import { SponsorFooter } from "../sponsorFooter/index";
-import { AssignSponsors } from "../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import PerformancesDisplaySixersThunder from "./controller/PerformancesDisplay/display-SixersThunder";
 import {
@@ -102,8 +102,12 @@ export const PerformancesListSixersThunder: React.FC = () => {
     })),
   });
 
-  // Merge and transform assignSponsors from all performances
-  const mergedAssignSponsors = mergeAssignSponsors(transformedData);
+  const footerSponsors = buildSingleItemFooterSponsors({
+    assignSponsors: mergeAssignSponsors(
+      transformedData.length > 0 ? [transformedData[0]] : [],
+    ),
+    fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
+  });
 
   // Total composition height: asset (1010) + footer (150) = 1160px
   // (Header 190px is rendered by parent OneColumn layout)
@@ -133,9 +137,7 @@ export const PerformancesListSixersThunder: React.FC = () => {
         />
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

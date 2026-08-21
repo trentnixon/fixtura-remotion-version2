@@ -14,7 +14,7 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
-  const { League, gradeName, bias, assignSponsors } = ladder;
+  const { League, gradeName, bias, assignSponsors, primaryForScreen } = ladder;
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { headerHeight, rowHeight } = calculateRowDimensions(
@@ -52,7 +52,7 @@ export const LadderDisplayBrickWork: React.FC<LadderDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} />
+        <SponsorFooter assignSponsors={assignSponsors} primaryForScreen={primaryForScreen} />
       </div>
     </div>
   );

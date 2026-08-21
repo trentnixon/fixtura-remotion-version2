@@ -27,7 +27,7 @@ const ResultSingleDisplay: React.FC<ResultSingleDisplayProps> = ({ match }) => {
         )}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={match.assignSponsors} />
+        <SponsorFooter assignSponsors={match.assignSponsors} primaryForScreen={match.primaryForScreen} />
       </div>
     </div>
   );

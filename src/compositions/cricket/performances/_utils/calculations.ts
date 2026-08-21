@@ -107,54 +107,42 @@ export const mergeAssignSponsors = (
 ): AssignSponsors => {
   return performances.reduce(
     (acc, performance) => {
-      const { assignSponsors } = performance;
+      const { assignSponsors } = performance as PerformanceData & {
+        assignSponsors?: AssignSponsors & {
+          Team?: { name: string };
+          grade?: { id: number; name: string } | AssignSponsors["grade"];
+          competition?:
+            | { id: number; name: string }
+            | AssignSponsors["competition"];
+        };
+      };
       if (!assignSponsors) return acc;
 
-      // Collect unique grades and competitions
-      const grades = acc.grade || [];
-      const competitions = acc.competition || [];
-      const teams = acc.team || [];
+      const grades = [...(acc.grade || [])];
+      const competitions = [...(acc.competition || [])];
+      const teams = [...(acc.team || [])];
 
-      // Add grade if it exists and is unique
-      if (assignSponsors.grade && assignSponsors.grade.id) {
-        const gradeExists = grades.some(
-          (g) => g.id === assignSponsors.grade.id,
-        );
-        if (!gradeExists) {
-          grades.push({
-            id: assignSponsors.grade.id,
-            name: assignSponsors.grade.name,
-            logo: { id: assignSponsors.grade.id, url: "" },
-          });
-        }
+      const pushUnique = (
+        bucket: AssignSponsors["grade"],
+        sponsor: AssignSponsors["grade"][number],
+      ) => {
+        if (!sponsor?.logo?.url) return;
+        if (bucket.some((s) => s.id === sponsor.id)) return;
+        bucket.push(sponsor);
+      };
+
+      // v2: grade/team/competition are sponsor arrays
+      if (Array.isArray(assignSponsors.grade)) {
+        for (const s of assignSponsors.grade) pushUnique(grades, s);
+      }
+      if (Array.isArray(assignSponsors.team)) {
+        for (const s of assignSponsors.team) pushUnique(teams, s);
+      }
+      if (Array.isArray(assignSponsors.competition)) {
+        for (const s of assignSponsors.competition) pushUnique(competitions, s);
       }
 
-      // Add competition if it exists and is unique
-      if (assignSponsors.competition && assignSponsors.competition.id) {
-        const compExists = competitions.some(
-          (c) => c.id === assignSponsors.competition.id,
-        );
-        if (!compExists) {
-          competitions.push({
-            id: assignSponsors.competition.id,
-            name: assignSponsors.competition.name,
-            logo: { id: assignSponsors.competition.id, url: "" },
-          });
-        }
-      }
-
-      // Add team if it exists (Team is an object, not array in performance data)
-      if (assignSponsors.Team && assignSponsors.Team.name) {
-        const teamName = assignSponsors.Team.name;
-        const teamExists = teams.some((t) => t.name === teamName);
-        if (!teamExists) {
-          teams.push({
-            id: teams.length + 1,
-            name: teamName,
-            logo: { id: teams.length + 1, url: "" },
-          });
-        }
-      }
+      // Legacy singular metadata without logos is ignored (no empty-url placeholders)
 
       return {
         grade: grades,

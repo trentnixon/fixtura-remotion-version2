@@ -3,8 +3,8 @@ import PlayerRowClassic from "../PlayerRow/row-Classic";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
-import { AssignSponsors } from "../../../_types/composition-types";
 import { SponsorFooter } from "../../../sponsorFooter";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
 import { calculateRowDimensions } from "./_utils/calculations";
 
@@ -18,6 +18,13 @@ const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
   const ContainerAnimations = animations.container;
 
   const { rowHeight } = calculateRowDimensions(heights.asset, players.length);
+
+  const footerSponsors = buildSingleItemFooterSponsors({
+    primaryForScreen: players[0]?.primaryForScreen,
+    assignSponsors: players[0]?.assignSponsors,
+    fallbackPrimary: sponsors,
+  });
+
 
   return (
     <div className="flex flex-col h-full ">
@@ -44,7 +51,7 @@ const PlayersDisplayClassic: React.FC<PlayersDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

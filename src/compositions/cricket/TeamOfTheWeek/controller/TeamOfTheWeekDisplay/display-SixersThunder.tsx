@@ -4,7 +4,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowSixersThunder from "../PlayerRow/row-SixersThunder";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { DEFAULT_ROW_HEIGHT_SIXERS_THUNDER } from "./_utils/constants";
 
@@ -15,6 +15,11 @@ const TeamOfTheWeekDisplaySixersThunder: React.FC<
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
+
+  const footerSponsors = buildSingleItemFooterSponsors({
+    fallbackPrimary: sponsors,
+  });
+
 
   return (
     <div className="flex flex-col h-full">
@@ -41,7 +46,7 @@ const TeamOfTheWeekDisplaySixersThunder: React.FC<
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

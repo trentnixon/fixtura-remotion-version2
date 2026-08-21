@@ -4,7 +4,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import PlayerRowCNSWPrivate from "../PlayerRow/row-CNSW-private";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
 import { DEFAULT_ROW_HEIGHT_CNSW_PRIVATE } from "./_utils/constants";
 import { calculatePlayerDelay } from "./_utils/calculations";
@@ -17,6 +17,11 @@ const TeamOfTheWeekDisplayCNSWPrivate: React.FC<TeamOfTheWeekDisplayProps> = ({
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
+
+  const footerSponsors = buildSingleItemFooterSponsors({
+    fallbackPrimary: sponsors,
+  });
+
 
   return (
     <div className="flex flex-col h-full">
@@ -44,7 +49,7 @@ const TeamOfTheWeekDisplayCNSWPrivate: React.FC<TeamOfTheWeekDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

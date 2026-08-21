@@ -11,7 +11,7 @@ import { useThemeContext } from "../../../core/context/ThemeContext";
 import { transformPerformanceData } from "./utils/dataTransformer";
 import PerformancesDisplayBroadcastProRounded from "./controller/PerformancesDisplay/display-BroadcastProRounded";
 import { SponsorFooter } from "../sponsorFooter/index";
-import { AssignSponsors } from "../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import {
   getCompositionSectionHeight,
   getMainContentSectionHeight,
@@ -75,7 +75,12 @@ export const PerformancesListBroadcastProRounded: React.FC = () => {
     durationInFrames: finalDuration,
   }));
 
-  const mergedAssignSponsors = mergeAssignSponsors(transformedData);
+  const footerSponsors = buildSingleItemFooterSponsors({
+    assignSponsors: mergeAssignSponsors(
+      transformedData.length > 0 ? [transformedData[0]] : [],
+    ),
+    fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
+  });
 
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);
@@ -100,9 +105,7 @@ export const PerformancesListBroadcastProRounded: React.FC = () => {
         />
       </div>
       <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

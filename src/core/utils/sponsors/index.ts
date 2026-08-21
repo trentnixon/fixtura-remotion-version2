@@ -16,3 +16,6 @@ export {
   collectEntitiesFromRows,
 } from "./buildMultiRowFooterSponsors";
 export type { FooterSponsorRow } from "./buildMultiRowFooterSponsors";
+
+export { buildSingleItemFooterSponsors } from "./buildSingleItemFooterSponsors";
+export type { BuildSingleItemFooterSponsorsInput } from "./buildSingleItemFooterSponsors";

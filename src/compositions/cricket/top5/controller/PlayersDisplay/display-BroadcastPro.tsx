@@ -4,7 +4,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
+import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { BroadcastProCrestWell } from "../../../../../templates/variants/broadcastPro/components/crest";
 import { BroadcastProStatMatrixTriple } from "../../../../../templates/variants/broadcastPro/components/stat";
 import {
@@ -222,6 +222,12 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
   const [featured, ...rest] = players;
   const gridPlayers = rest.slice(0, 4);
 
+  const footerSponsors = buildSingleItemFooterSponsors({
+    primaryForScreen: players[0]?.primaryForScreen,
+    assignSponsors: players[0]?.assignSponsors,
+    fallbackPrimary: sponsors,
+  });
+
   return (
     <div
       className="flex w-full flex-col p-0"
@@ -262,7 +268,7 @@ const PlayersDisplayBroadcastPro: React.FC<PlayersDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={sponsors as unknown as AssignSponsors} />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

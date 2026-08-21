@@ -9,17 +9,11 @@ import { PerformancesDisplayWithSponsorsProps } from "./_types/PerformancesDispl
 
 const PerformancesDisplayClassicTwoColumn: React.FC<
   PerformancesDisplayWithSponsorsProps
-> = ({ performances, itemsPerScreen, screenIndex, assignSponsors }) => {
+> = ({ performances, itemsPerScreen, screenIndex, footerSponsors }) => {
   const { layout } = useThemeContext();
   const { heights } = layout;
   const { animations } = useAnimationContext();
   const ContainerAnimations = animations.container;
-
-  // Test: Log heights.asset to verify it's being used
-  console.log(
-    "[PerformancesDisplayClassicTwoColumn] heights.asset:",
-    heights.asset,
-  );
 
   // Get items for this specific screen
   const displayedPerformances = getItemsForScreen(
@@ -56,7 +50,7 @@ const PerformancesDisplayClassicTwoColumn: React.FC<
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} />
+        <SponsorFooter sponsors={footerSponsors ?? []} />
       </div>
     </div>
   );

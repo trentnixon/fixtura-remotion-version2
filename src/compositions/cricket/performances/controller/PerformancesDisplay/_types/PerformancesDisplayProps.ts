@@ -1,5 +1,6 @@
 import { PerformanceData } from "../../../_types/types";
 import { AssignSponsors } from "../../../../_types/composition-types";
+import type { Sponsor } from "../../../../../../core/types/data/sponsors";
 
 export interface PerformancesDisplayProps {
   performances: PerformanceData[];
@@ -9,5 +10,6 @@ export interface PerformancesDisplayProps {
 
 export interface PerformancesDisplayWithSponsorsProps
   extends PerformancesDisplayProps {
-  assignSponsors: AssignSponsors;
+  assignSponsors?: AssignSponsors;
+  footerSponsors?: Sponsor[];
 }
