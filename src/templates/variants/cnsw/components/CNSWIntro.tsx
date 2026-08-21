@@ -4,7 +4,7 @@ import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
-import { AnimatedImage } from "../../../../components/images";
+import { IntroPrimarySponsors } from "../../../../components/layout/sponsors";
 import {
   getCompositionConfig,
   getHardcodedSpacing,
@@ -125,22 +125,17 @@ export const CNSWIntro: React.FC = () => {
             </div>
           </div>
         </div>
-        {sponsors?.primary?.[0]?.logo?.url && (
+        {sponsors?.primary?.length ? (
           <div className="w-[80%] mt-8">
-            <div className="w-full h-full flex justify-start items-start max-h-[150px] max-w-[150px]">
-              <AnimatedImage
-                src={sponsors.primary[0].logo.url}
-                alt={sponsors.primary[0].name || ""}
-                width="auto"
-                height="auto"
-                fit="contain"
-                animation={LogoAnimations.introIn}
-                exitAnimation={LogoAnimations.introOut}
-                exitFrame={LogoAnimations.introExitFrame}
-              />
-            </div>
+            <IntroPrimarySponsors
+              className="w-full flex flex-row flex-wrap justify-start items-start gap-4"
+              itemClassName="flex-shrink-0 max-h-[150px] max-w-[150px]"
+              introIn={LogoAnimations.introIn}
+              introOut={LogoAnimations.introOut}
+              introExitFrame={LogoAnimations.introExitFrame}
+            />
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackLogoTitleName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { IntroPrimarySponsors } from "../../../../components/layout/sponsors";
 import { getSimplifiedTitle } from "../utils/titleLookup";
 
 /**
@@ -14,7 +15,7 @@ import { getSimplifiedTitle } from "../utils/titleLookup";
  * This template demonstrates how to style containers with various layout, text, and positioning options.
  */
 export const ThunderIntro: React.FC = () => {
-  const { club, metadata, sponsors } = useVideoDataContext();
+  const { club, metadata } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
@@ -74,20 +75,11 @@ export const ThunderIntro: React.FC = () => {
         </div> */
       }
       PrimarySponsor={
-        sponsors?.primary[0]?.logo?.url && (
-          <div className="w-full h-full ok justify-center items-center max-h-[150px] max-w-[150px]">
-            <AnimatedImage
-              src={sponsors?.primary[0]?.logo?.url || ""}
-              alt={sponsors?.primary[0]?.name || ""}
-              width={"auto"}
-              height={"auto"}
-              fit="contain"
-              animation={LogoAnimations.introIn}
-              exitAnimation={LogoAnimations.introOut}
-              exitFrame={LogoAnimations.introExitFrame}
-            />
-          </div>
-        )
+        <IntroPrimarySponsors
+          introIn={LogoAnimations.introIn}
+          introOut={LogoAnimations.introOut}
+          introExitFrame={LogoAnimations.introExitFrame}
+        />
       }
     />
   );

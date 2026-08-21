@@ -4,13 +4,14 @@ import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackTitleLogoName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { IntroPrimarySponsors } from "../../../../components/layout/sponsors";
 import {
   BroadcastProRoundedHeadlineSecondary,
   BroadcastProRoundedHeadlineTitle,
 } from "./headline";
 
 export const BroadcastProRoundedIntro: React.FC = () => {
-  const { club, metadata, sponsors } = useVideoDataContext();
+  const { club, metadata } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
@@ -60,23 +61,11 @@ export const BroadcastProRoundedIntro: React.FC = () => {
         />
       }
       PrimarySponsor={
-        sponsors?.primary[0]?.logo?.url && (
-          <div
-            className={`ok flex h-full max-h-[150px] w-full max-w-[150px] items-center justify-center overflow-hidden ${imageRadius}`}
-          >
-            <AnimatedImage
-              src={sponsors?.primary[0]?.logo?.url || ""}
-              alt={sponsors?.primary[0]?.name || ""}
-              width={"auto"}
-              height={"auto"}
-              fit="contain"
-              className={imageRadius}
-              animation={LogoAnimations.introIn}
-              exitAnimation={LogoAnimations.introOut}
-              exitFrame={LogoAnimations.introExitFrame}
-            />
-          </div>
-        )
+        <IntroPrimarySponsors
+          introIn={LogoAnimations.introIn}
+          introOut={LogoAnimations.introOut}
+          introExitFrame={LogoAnimations.introExitFrame}
+        />
       }
     />
   );

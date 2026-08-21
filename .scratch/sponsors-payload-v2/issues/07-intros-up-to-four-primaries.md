@@ -4,10 +4,13 @@
 
 **Blocked by:** 02 — v2 sponsor types & presence gating.
 
-**Status:** ready-for-agent
+**Status:** completed
 
-- [ ] Intro shows account `sponsors.primary` only
-- [ ] Up to four primary logos can appear when present
-- [ ] General and entity sponsors do not appear on intro
-- [ ] Templates that previously hardcoded `primary[0]` only are updated
-- [ ] Demoable in Studio with an account that has multiple primaries
+- [x] Intro shows account `sponsors.primary` only
+- [x] Up to four primary logos can appear when present
+- [x] General and entity sponsors do not appear on intro
+- [x] Templates that previously hardcoded `primary[0]` only are updated
+- [x] Demoable in Studio with an account that has multiple primaries
+
+## Completion Summary
+Added `getIntroPrimarySponsors` + shared `IntroPrimarySponsors` and wired all template intros to show up to four account primaries. Upcoming sample now has four primaries for Studio.

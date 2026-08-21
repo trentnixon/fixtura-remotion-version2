@@ -61,6 +61,14 @@
             "id": 23216,
             "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
           }
+        },
+        {
+          "id": 204,
+          "name": "Primary 4",
+          "logo": {
+            "id": 23217,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         }
       ]
     },
@@ -125,6 +133,14 @@
             "id": 23216,
             "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
           }
+        },
+        {
+          "id": 204,
+          "name": "Primary 4",
+          "logo": {
+            "id": 23217,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         }
       ]
     },
@@ -179,6 +195,14 @@
           "logo": {
             "id": 23216,
             "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
+        },
+        {
+          "id": 204,
+          "name": "Primary 4",
+          "logo": {
+            "id": 23217,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
           }
         }
       ]
@@ -235,6 +259,14 @@
             "id": 23216,
             "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
           }
+        },
+        {
+          "id": 204,
+          "name": "Primary 4",
+          "logo": {
+            "id": 23217,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         }
       ]
     },
@@ -290,6 +322,14 @@
             "id": 23216,
             "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
           }
+        },
+        {
+          "id": 204,
+          "name": "Primary 4",
+          "logo": {
+            "id": 23217,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+          }
         }
       ]
     },
@@ -344,6 +384,14 @@
           "logo": {
             "id": 23216,
             "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+          }
+        },
+        {
+          "id": 204,
+          "name": "Primary 4",
+          "logo": {
+            "id": 23217,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
           }
         }
       ]
@@ -410,6 +458,14 @@
               "id": 23216,
               "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
             }
+          },
+          {
+            "id": 204,
+            "name": "Primary 4",
+            "logo": {
+              "id": 23217,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
           }
         ],
         "general": [
@@ -438,7 +494,7 @@
             }
           }
         ],
-        "sponsorNum": 6
+        "sponsorNum": 7
       },
       "IsAccountClub": false
     },

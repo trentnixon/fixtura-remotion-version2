@@ -19,3 +19,8 @@ export type { FooterSponsorRow } from "./buildMultiRowFooterSponsors";
 
 export { buildSingleItemFooterSponsors } from "./buildSingleItemFooterSponsors";
 export type { BuildSingleItemFooterSponsorsInput } from "./buildSingleItemFooterSponsors";
+
+export {
+  INTRO_PRIMARY_SPONSOR_MAX,
+  getIntroPrimarySponsors,
+} from "./getIntroPrimarySponsors";

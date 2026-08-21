@@ -6,6 +6,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { VerticalStackLogoTitleName } from "../../../../components/layout/titleScreen/index";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { IntroPrimarySponsors } from "../../../../components/layout/sponsors";
 import {
   getTitleScreenContentWidth,
   TITLE_SCREEN_BASE_FONT_PX,
@@ -25,7 +26,7 @@ const INTRO_LOGO_MAX_PX = 336;
  * Long asset titles shrink to fit; association names wrap within the frame.
  */
 export const MudgeerabaIntro: React.FC = () => {
-  const { club, metadata, sponsors } = useVideoDataContext();
+  const { club, metadata } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
@@ -129,20 +130,11 @@ export const MudgeerabaIntro: React.FC = () => {
         </div>
       }
       PrimarySponsor={
-        sponsors?.primary[0]?.logo?.url && (
-          <div className="w-full h-full flex justify-center items-center max-h-[150px] max-w-[150px]">
-            <AnimatedImage
-              src={sponsors?.primary[0]?.logo?.url || ""}
-              alt={sponsors?.primary[0]?.name || ""}
-              width={"auto"}
-              height={"auto"}
-              fit="contain"
-              animation={LogoAnimations.introIn}
-              exitAnimation={LogoAnimations.introOut}
-              exitFrame={LogoAnimations.introExitFrame}
-            />
-          </div>
-        )
+        <IntroPrimarySponsors
+          introIn={LogoAnimations.introIn}
+          introOut={LogoAnimations.introOut}
+          introExitFrame={LogoAnimations.introExitFrame}
+        />
       }
     />
   );
