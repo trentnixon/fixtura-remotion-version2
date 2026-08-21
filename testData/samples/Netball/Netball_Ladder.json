@@ -16,10 +16,7 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Ladder",
-      "TitleSplit": [
-        "Ladder",
-        ""
-      ],
+      "TitleSplit": ["Ladder", ""],
       "CompositionID": "NetballLadder",
       "VideoTitle": "League Tables - undefined",
       "HeroImage": {
@@ -45,12 +42,7 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Tate_Kirgiss_Analog_Inspired_Ill_Be_Alright_Inst_8d6691a7ca.mp3",
       "ASSETID": 41,
       "ASSETTYPEID": 3,
-      "FRAMES": [
-        355,
-        600,
-        900,
-        1200
-      ]
+      "FRAMES": [355, 600, 900, 1200]
     },
     "THEME": {
       "Template": "CNSW",

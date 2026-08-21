@@ -13,4 +13,5 @@
 - [x] Demoable in Studio on a v2 Upcoming sample
 
 ## Completion Summary
+
 Upcoming fixture displays use `buildUpcomingFooterSponsors` → shared multi-row selector and pass logos to `SponsorFooter`. Sample enriched with per-row entities for Studio demo.

@@ -4,6 +4,7 @@ import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { ThemeLayout } from "../../../../core/context/types/ThemeContextTypes";
+import { Timings } from "../../../../core/types/data/common";
 import { SponsorsData } from "../../../../core/types/data/sponsors";
 
 interface ValidationResult {
@@ -14,6 +15,7 @@ interface ValidationResult {
   };
   heights?: ThemeLayout["heights"];
   sponsors?: SponsorsData;
+  timings?: Timings;
   videoDataContext?: unknown;
   animationContext?: unknown;
   data?: unknown;
@@ -57,6 +59,7 @@ export const useSponsorValidation = (): ValidationResult => {
     logoAnimations,
     heights: heights!,
     sponsors: sponsors!,
+    timings: data.timings,
     videoDataContext,
     animationContext,
     data,

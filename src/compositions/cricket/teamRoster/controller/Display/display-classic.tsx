@@ -4,7 +4,11 @@ import RosterPlayerList from "../../layout/RosterPlayerList/playerList";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
 import { TwoMetaValuesNoWrapper } from "../../layout/Metadata/TwoMetaValues";
-import { formatDate, truncateText, formatGroundLocation } from "../../../utils/utils-text";
+import {
+  formatDate,
+  truncateText,
+  formatGroundLocation,
+} from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import {
@@ -36,7 +40,10 @@ const RosterDisplayClassic: React.FC<RosterDisplayProps> = ({ roster }) => {
           style={{ height: `${availableHeight}px` }}
         >
           <TwoMetaValuesNoWrapper
-            values={[formatDate(roster.date), truncateText(formatGroundLocation(roster.ground), 50)]}
+            values={[
+              formatDate(roster.date),
+              truncateText(formatGroundLocation(roster.ground), 50),
+            ]}
           />
 
           <ClassicForegroundShell height="auto" delay={0} depth="full">

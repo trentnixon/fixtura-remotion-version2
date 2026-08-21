@@ -1,4 +1,5 @@
 import { AssignSponsors, Sponsor } from "../../types/data/sponsors";
+import { asSponsorArray } from "./asSponsorArray";
 import { selectFooterSponsors } from "./selectFooterSponsors";
 
 export type FooterSponsorRow = {
@@ -7,12 +8,17 @@ export type FooterSponsorRow = {
 };
 
 /** Collect entity sponsors from every row's grade and team buckets (row order). */
-export const collectEntitiesFromRows = (rows: FooterSponsorRow[]): Sponsor[] => {
+export const collectEntitiesFromRows = (
+  rows: FooterSponsorRow[],
+): Sponsor[] => {
   const entities: Sponsor[] = [];
   for (const row of rows) {
     const assign = row.assignSponsors;
     if (!assign) continue;
-    entities.push(...(assign.grade ?? []), ...(assign.team ?? []));
+    entities.push(
+      ...asSponsorArray(assign.grade),
+      ...asSponsorArray(assign.team),
+    );
   }
   return entities;
 };

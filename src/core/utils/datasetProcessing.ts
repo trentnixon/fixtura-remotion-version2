@@ -3,6 +3,7 @@ import { FixturaDataset } from "../types/data/index";
 import { mergeData } from "./dataProcessing";
 //import { getCompositionIdFromDatasetId } from "./compositionMapping";
 import { Video, VideoTemplateVariation } from "../types/data/videoData";
+import { calculateOutroDurationFromSponsors } from "./sponsors";
 
 /**
  * Processes dataset for a specific template and variant
@@ -103,11 +104,14 @@ export function calculateDuration(dataset: FixturaDataset): number {
 
   const introFrames = timings.FPS_INTRO || 60;
   const mainFrames = timings.FPS_MAIN || 180;
-  const outroFrames = timings.FPS_OUTRO || 60;
 
-  // Check if sponsors should be included
   const includeSponsors =
     dataset.videoMeta?.video?.metadata?.includeSponsors || false;
-  // Calculate total duration
-  return introFrames + mainFrames + (includeSponsors ? outroFrames : 30);
+  const sponsors = dataset.videoMeta?.club?.sponsors;
+  const outroFrames = calculateOutroDurationFromSponsors(
+    sponsors,
+    includeSponsors,
+  );
+
+  return introFrames + mainFrames + outroFrames;
 }

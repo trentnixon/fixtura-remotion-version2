@@ -16,6 +16,21 @@ const assign = (partial: Partial<AssignSponsors>): AssignSponsors => ({
 });
 
 describe("buildMultiRowFooterSponsors", () => {
+  it("ignores legacy assignSponsors entity metadata objects (non-arrays)", () => {
+    const result = buildMultiRowFooterSponsors([
+      {
+        primaryForScreen: [1, 2].map(sponsor),
+        assignSponsors: {
+          Team: { name: "Redlands Logan" },
+          grade: { id: 85929, name: "O60 Div 2" },
+          competition: { id: 20200, name: "QVC" },
+        } as unknown as AssignSponsors,
+      },
+    ]);
+
+    expect(result.map((s) => s.id)).toEqual([1, 2]);
+  });
+
   it("collects entities from every row grade and team arrays", () => {
     const result = buildMultiRowFooterSponsors([
       {

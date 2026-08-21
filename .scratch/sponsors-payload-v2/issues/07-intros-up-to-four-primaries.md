@@ -13,4 +13,5 @@
 - [x] Demoable in Studio with an account that has multiple primaries
 
 ## Completion Summary
+
 Added `getIntroPrimarySponsors` + shared `IntroPrimarySponsors` and wired all template intros to show up to four account primaries. Upcoming sample now has four primaries for Studio.

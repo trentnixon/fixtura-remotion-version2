@@ -40,7 +40,6 @@ const TeamOfTheWeekDisplayBroadcastPro: React.FC<TeamOfTheWeekDisplayProps> = ({
     fallbackPrimary: sponsors,
   });
 
-
   return (
     <div className="flex flex-col" style={{ height: `${compositionHeight}px` }}>
       <AnimatedContainer

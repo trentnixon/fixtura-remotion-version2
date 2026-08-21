@@ -7,4 +7,5 @@
 - [x] Smoke: key compositions load in Studio on updated samples without sponsor-related runtime warnings from missing v2 fields
 
 ## Completion Summary
+
 Migrated all sample JSON account sponsors to v2 (`primary` / `general` / `sponsorNum`), converted legacy row `assignSponsors` metadata to empty sponsor arrays with `primaryForScreen` / `gradeName`, purged leftover legacy type shapes (`AssetConfig` SponsorsGroup, performances/topBowlers assign, `TeamsAssignSponsors`), and added a fixture-contract regression test.

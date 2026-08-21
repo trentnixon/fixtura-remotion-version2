@@ -5,6 +5,9 @@ import { Sponsor } from "../../../../core/types/data/sponsors";
 import {
   buildOutroSponsorSequence,
   chunkSponsors,
+  OUTRO_SPONSOR_PAGE_SIZE,
+  OUTRO_PAGE_DURATION_FRAMES,
+  OUTRO_PAGE_LOGO_EXIT_FRAME,
 } from "../../../../core/utils/sponsors";
 import { AnimatedImage } from "../../../../components/images";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -27,16 +30,16 @@ const GRID_SETTINGS = {
   cellMaxSize: 600,
   cellPadding: 16, // px, matches Tailwind p-4
   cellAspectRatio: "1 / 1",
-  chunkSize: 6,
-  sequenceDurationInFrames: 90,
-  logoExitFrame: 300,
+  chunkSize: OUTRO_SPONSOR_PAGE_SIZE,
+  sequenceDurationInFrames: OUTRO_PAGE_DURATION_FRAMES,
+  logoExitFrame: OUTRO_PAGE_LOGO_EXIT_FRAME,
   logoDelayIncrement: 5,
 } as const;
-
 
 interface LogoAnimationsType {
   introIn?: ImageAnimationType | ImageAnimationConfig;
   exitAnimation?: ImageAnimationType | ImageAnimationConfig;
+  introOut?: ImageAnimationType | ImageAnimationConfig;
 }
 
 // Grid component for 2x3 layout (6 equal boxes)
@@ -75,7 +78,9 @@ const SponsorGrid: React.FC<{
             height={"100%"}
             fit="contain"
             animation={LogoAnimations.introIn}
-            exitAnimation={LogoAnimations.exitAnimation}
+            exitAnimation={
+              LogoAnimations.exitAnimation ?? LogoAnimations.introOut
+            }
             animationDelay={idx * GRID_SETTINGS.logoDelayIncrement}
             exitFrame={GRID_SETTINGS.logoExitFrame}
           />
@@ -127,4 +132,3 @@ const AlternativeOutro: React.FC = () => (
     <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
   </AbsoluteFill>
 );
-

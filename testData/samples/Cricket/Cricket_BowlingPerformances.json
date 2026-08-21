@@ -1,759 +1,1099 @@
 {
   "data": [
     {
-      "name": "Freddie Fowler  (c)",
-      "runs": 24,
-      "overs": "9",
-      "prompt": "Freddie Fowler  (c) played for Runaway Bay Premier Div 1, taking 5 wickets from 9 overs, conceding 24 runs. Game details: This was a One Day in the (1) CGC Premier League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Premier Div 1 (1) vs Helensvale 1st Grade (1), the match result was Helensvale 1st Grade won by 57 runs.",
-      "wickets": 5,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Premier Div 1",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 221,
-            "name": "Team Sponsor",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            }
-          }
-        ]
-      },
-      "gradeName": "(1) CGC Premier League - Division 1",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Jack Hocart",
-      "runs": 22,
+      "name": "van der Kley",
+      "runs": 29,
       "overs": "8",
-      "prompt": "Jack Hocart played for Runaway Bay Premier Div 2, taking 4 wickets from 8 overs, conceding 22 runs. Game details: This was a One Day in the (2) CGC Premier League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Premier Div 2 (1) vs Helensvale 2nd Grade (1), the match result was Runaway Bay Premier Div 2 won by 5 wickets.",
+      "prompt": "van der Kley played for Redlands Logan, taking 4 wickets from 8 overs, conceding 29 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Redlands Logan (10/94) vs Sunshine Coast Maroon (7/96), the match result was Sunshine Coast Maroon won by 3 wickets.",
       "wickets": 4,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
+        "width": 706,
+        "height": 725
       },
-      "playedFor": "Runaway Bay Premier Div 2",
+      "playedFor": "Redlands Logan",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
-        "team": [
+        "grade": [
           {
-            "id": 221,
-            "name": "Team Sponsor",
+            "id": 220,
+            "name": "10",
             "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
             }
           }
-        ]
+        ],
+        "team": []
       },
-      "gradeName": "(2) CGC Premier League - Division 2",
       "primaryForScreen": [
         {
-          "id": 200,
-          "name": "test",
+          "id": 211,
+          "name": "1",
           "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
           }
         },
         {
-          "id": 201,
-          "name": "edit this",
+          "id": 212,
+          "name": "2",
           "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
           }
         },
         {
-          "id": 203,
-          "name": "New sponsor",
+          "id": 213,
+          "name": "3",
           "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
           }
         }
       ]
     },
     {
-      "name": "Muhammad Abdul Wahab",
-      "runs": 30,
-      "overs": "6",
-      "prompt": "Muhammad Abdul Wahab played for Runaway Bay Navy Community Div 1, taking 3 wickets from 6 overs, conceding 30 runs. Game details: This was a One Day in the (4) CGC Community League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Navy Community Div 1 (1) vs Bond University Community Div 1 (1), the match result was Runaway Bay Navy Community Div 1 won by 5 wickets.",
+      "name": "NOLEN",
+      "runs": 14,
+      "overs": "8",
+      "prompt": "NOLEN played for Sunshine Coast Gold, taking 3 wickets from 8 overs, conceding 14 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
       "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
       },
-      "playedFor": "Runaway Bay Navy Community Div 1",
+      "playedFor": "Sunshine Coast Gold",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
-        "team": [
+        "grade": [
           {
-            "id": 221,
-            "name": "Team Sponsor",
+            "id": 220,
+            "name": "10",
             "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
             }
           }
-        ]
+        ],
+        "team": []
       },
-      "gradeName": "(4) CGC Community League - Division 1",
       "primaryForScreen": [
         {
-          "id": 200,
-          "name": "test",
+          "id": 211,
+          "name": "1",
           "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
           }
         },
         {
-          "id": 201,
-          "name": "edit this",
+          "id": 212,
+          "name": "2",
           "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
           }
         },
         {
-          "id": 203,
-          "name": "New sponsor",
+          "id": 213,
+          "name": "3",
           "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
           }
         }
       ]
     },
     {
-      "name": "Harrison Rachow",
-      "runs": 30,
-      "overs": "6",
-      "prompt": "Harrison Rachow played for Runaway Bay Orange Community Div 3, taking 3 wickets from 6 overs, conceding 30 runs. Game details: This was a One Day in the (6) CGC Community League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Orange Community Div 3 (1) vs Mudgeeraba Community Div 3 (1), the match result was Runaway Bay Orange Community Div 3 won by 49 runs.",
+      "name": "Hauff",
+      "runs": 18,
+      "overs": "6.2",
+      "prompt": "Hauff played for Brisbane Silver, taking 3 wickets from 6.2 overs, conceding 18 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
       "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
       },
-      "playedFor": "Runaway Bay Orange Community Div 3",
+      "playedFor": "Brisbane Silver",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
-        "team": [
+        "grade": [
           {
-            "id": 221,
-            "name": "Team Sponsor",
+            "id": 220,
+            "name": "10",
             "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
             }
           }
-        ]
+        ],
+        "team": []
       },
-      "gradeName": "(6) CGC Community League - Division 3",
       "primaryForScreen": [
         {
-          "id": 200,
-          "name": "test",
+          "id": 211,
+          "name": "1",
           "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
           }
         },
         {
-          "id": 201,
-          "name": "edit this",
+          "id": 212,
+          "name": "2",
           "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
           }
         },
         {
-          "id": 203,
-          "name": "New sponsor",
+          "id": 213,
+          "name": "3",
           "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
           }
         }
       ]
     },
     {
-      "name": "Stephen Rudd",
-      "runs": 0,
-      "overs": "0.2",
-      "prompt": "Stephen Rudd played for Runaway Bay Navy Community Div 1, taking 2 wickets from 0.2 overs, conceding 0 runs. Game details: This was a One Day in the (4) CGC Community League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Navy Community Div 1 (1) vs Bond University Community Div 1 (1), the match result was Runaway Bay Navy Community Div 1 won by 5 wickets.",
-      "wickets": 2,
+      "name": "van Vugt",
+      "runs": 24,
+      "overs": "5.5",
+      "prompt": "van Vugt played for Sunshine Coast Maroon, taking 3 wickets from 5.5 overs, conceding 24 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Maroon (7/96) vs Redlands Logan (10/94), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
       },
-      "playedFor": "Runaway Bay Navy Community Div 1",
+      "playedFor": "Sunshine Coast Maroon",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
-        "team": [
+        "grade": [
           {
-            "id": 221,
-            "name": "Team Sponsor",
+            "id": 220,
+            "name": "10",
             "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
             }
           }
-        ]
+        ],
+        "team": []
       },
-      "gradeName": "(4) CGC Community League - Division 1",
       "primaryForScreen": [
         {
-          "id": 200,
-          "name": "test",
+          "id": 211,
+          "name": "1",
           "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
           }
         },
         {
-          "id": 201,
-          "name": "edit this",
+          "id": 212,
+          "name": "2",
           "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
           }
         },
         {
-          "id": 203,
-          "name": "New sponsor",
+          "id": 213,
+          "name": "3",
           "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
           }
         }
       ]
     },
     {
-      "name": "Austin Billing",
-      "runs": 8,
-      "overs": "3",
-      "prompt": "Austin Billing played for Runaway Bay Premier Div 2, taking 2 wickets from 3 overs, conceding 8 runs. Game details: This was a One Day in the (2) CGC Premier League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Premier Div 2 (1) vs Helensvale 2nd Grade (1), the match result was Runaway Bay Premier Div 2 won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Premier Div 2",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 221,
-            "name": "Team Sponsor",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            }
-          }
-        ]
-      },
-      "gradeName": "(2) CGC Premier League - Division 2",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Dale Rachow",
-      "runs": 10,
-      "overs": "3",
-      "prompt": "Dale Rachow played for Runaway Bay Orange Community Div 3, taking 2 wickets from 3 overs, conceding 10 runs. Game details: This was a One Day in the (6) CGC Community League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Orange Community Div 3 (1) vs Mudgeeraba Community Div 3 (1), the match result was Runaway Bay Orange Community Div 3 won by 49 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Orange Community Div 3",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 221,
-            "name": "Team Sponsor",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            }
-          }
-        ]
-      },
-      "gradeName": "(6) CGC Community League - Division 3",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Conan Dunning",
-      "runs": 16,
-      "overs": "3",
-      "prompt": "Conan Dunning played for Runaway Bay Community Div 2, taking 2 wickets from 3 overs, conceding 16 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs CHICC 5th grade (1), the match result was Runaway Bay Community Div 2 won by 83 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Community Div 2",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 221,
-            "name": "Team Sponsor",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            }
-          }
-        ]
-      },
-      "gradeName": "(5) CGC Community League - Division 2",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Chris Nilon",
-      "runs": 21,
-      "overs": "5",
-      "prompt": "Chris Nilon played for Runaway Bay Community Div 2, taking 2 wickets from 5 overs, conceding 21 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs CHICC 5th grade (1), the match result was Runaway Bay Community Div 2 won by 83 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Community Div 2",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 221,
-            "name": "Team Sponsor",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            }
-          }
-        ]
-      },
-      "gradeName": "(5) CGC Community League - Division 2",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Hamad Ahmad",
-      "runs": 25,
-      "overs": "6",
-      "prompt": "Hamad Ahmad played for Runaway Bay Navy Community Div 1, taking 2 wickets from 6 overs, conceding 25 runs. Game details: This was a One Day in the (4) CGC Community League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Navy Community Div 1 (1) vs Bond University Community Div 1 (1), the match result was Runaway Bay Navy Community Div 1 won by 5 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Navy Community Div 1",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": [
-          {
-            "id": 221,
-            "name": "Team Sponsor",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-            }
-          }
-        ]
-      },
-      "gradeName": "(4) CGC Community League - Division 1",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Suranga Lakmal",
+      "name": "Solomon",
       "runs": 30,
       "overs": "8",
-      "prompt": "Suranga Lakmal played for Runaway Bay Premier Div 1, taking 2 wickets from 8 overs, conceding 30 runs. Game details: This was a One Day in the (1) CGC Premier League - Division 1 grade, and the current match status is Match Completed . Runaway Bay Premier Div 1 (1) vs Helensvale 1st Grade (1), the match result was Helensvale 1st Grade won by 57 runs.",
-      "wickets": 2,
+      "prompt": "Solomon played for GC 60's Div 2 Gold, taking 3 wickets from 8 overs, conceding 30 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Gold (10/181) vs Brisbane Silver (6/237), the match result was Brisbane Silver won by 56 runs.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
+        "width": 379,
+        "height": 303
       },
-      "playedFor": "Runaway Bay Premier Div 1",
+      "playedFor": "GC 60's Div 2 Gold",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
-        "team": [
+        "grade": [
           {
-            "id": 221,
-            "name": "Team Sponsor",
+            "id": 220,
+            "name": "10",
             "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
             }
           }
-        ]
+        ],
+        "team": []
       },
-      "gradeName": "(1) CGC Premier League - Division 1",
       "primaryForScreen": [
         {
-          "id": 200,
-          "name": "test",
+          "id": 211,
+          "name": "1",
           "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
           }
         },
         {
-          "id": 201,
-          "name": "edit this",
+          "id": 212,
+          "name": "2",
           "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
           }
         },
         {
-          "id": 203,
-          "name": "New sponsor",
+          "id": 213,
+          "name": "3",
           "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
           }
         }
       ]
     },
     {
-      "name": "William Altass",
-      "runs": 35,
-      "overs": "5",
-      "prompt": "William Altass played for Runaway Bay Premier Div 3, taking 2 wickets from 5 overs, conceding 35 runs. Game details: This was a One Day in the (3) CGC Premier League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Premier Div 3 (1) vs Burleigh Premier Div 3 (1), the match result was Runaway Bay Premier Div 3 won by 9 wickets.",
-      "wickets": 2,
+      "name": "Logue",
+      "runs": 31,
+      "overs": "8",
+      "prompt": "Logue played for Wide Bay, taking 3 wickets from 8 overs, conceding 31 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Wide Bay (7/164) vs GC 60's Div 2 Blue (9/160), the match result was Wide Bay won by 3 wickets.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_9d33cc1d_51e0004983.jpg",
+        "width": 977,
+        "height": 937
       },
-      "playedFor": "Runaway Bay Premier Div 3",
+      "playedFor": "Wide Bay",
       "assignSponsors": {
         "competition": [],
-        "grade": [],
-        "team": [
+        "grade": [
           {
-            "id": 221,
-            "name": "Team Sponsor",
+            "id": 220,
+            "name": "10",
             "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
             }
           }
-        ]
+        ],
+        "team": []
       },
-      "gradeName": "(3) CGC Premier League - Division 3",
       "primaryForScreen": [
         {
-          "id": 200,
-          "name": "test",
+          "id": 211,
+          "name": "1",
           "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
           }
         },
         {
-          "id": 201,
-          "name": "edit this",
+          "id": 212,
+          "name": "2",
           "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
           }
         },
         {
-          "id": 203,
-          "name": "New sponsor",
+          "id": 213,
+          "name": "3",
           "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brown",
+      "runs": 7,
+      "overs": "4",
+      "prompt": "Brown played for Sunshine Coast Maroon, taking 2 wickets from 4 overs, conceding 7 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Maroon (7/96) vs Redlands Logan (10/94), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
+      },
+      "playedFor": "Sunshine Coast Maroon",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "REINIKKA",
+      "runs": 9,
+      "overs": "3",
+      "prompt": "REINIKKA played for Wide Bay, taking 2 wickets from 3 overs, conceding 9 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Wide Bay (7/164) vs GC 60's Div 2 Blue (9/160), the match result was Wide Bay won by 3 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_9d33cc1d_51e0004983.jpg",
+        "width": 977,
+        "height": 937
+      },
+      "playedFor": "Wide Bay",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lorenti",
+      "runs": 17,
+      "overs": "8",
+      "prompt": "Lorenti played for Redlands Logan, taking 2 wickets from 8 overs, conceding 17 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Redlands Logan (10/94) vs Sunshine Coast Maroon (7/96), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
+        "width": 706,
+        "height": 725
+      },
+      "playedFor": "Redlands Logan",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Knell",
+      "runs": 19,
+      "overs": "8",
+      "prompt": "Knell played for Sunshine Coast Gold, taking 2 wickets from 8 overs, conceding 19 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
+      },
+      "playedFor": "Sunshine Coast Gold",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Christiansen",
+      "runs": 20,
+      "overs": "8",
+      "prompt": "Christiansen played for Wide Bay, taking 2 wickets from 8 overs, conceding 20 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Wide Bay (7/164) vs GC 60's Div 2 Blue (9/160), the match result was Wide Bay won by 3 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_9d33cc1d_51e0004983.jpg",
+        "width": 977,
+        "height": 937
+      },
+      "playedFor": "Wide Bay",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Simes",
+      "runs": 21,
+      "overs": "8",
+      "prompt": "Simes played for GC 60's Div 2 Blue, taking 2 wickets from 8 overs, conceding 21 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Blue (9/160) vs Wide Bay (7/164), the match result was Wide Bay won by 3 wickets.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 60's Div 2 Blue",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rathie",
+      "runs": 29,
+      "overs": "6",
+      "prompt": "Rathie played for Toowoomba, taking 2 wickets from 6 overs, conceding 29 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Toowoomba (3/118) vs Brisbane White (4/189), the match result was Brisbane White won by 71 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_3de10368_2021a1244a.jpg",
+        "width": 555,
+        "height": 542
+      },
+      "playedFor": "Toowoomba",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bhakta",
+      "runs": 30,
+      "overs": "8",
+      "prompt": "Bhakta played for Brisbane Silver, taking 2 wickets from 8 overs, conceding 30 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
+      },
+      "playedFor": "Brisbane Silver",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ross",
+      "runs": 35,
+      "overs": "6",
+      "prompt": "Ross played for Lockyer, taking 2 wickets from 6 overs, conceding 35 runs. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Lockyer (10/102) vs Sunshine Coast Gold (3/210), the match result was Sunshine Coast Gold won by 108 runs.",
+      "wickets": 2,
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
+        "width": 328,
+        "height": 347
+      },
+      "playedFor": "Lockyer",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
           }
         }
       ]
     }
   ],
   "asset": {
-    "assetID": 66,
+    "assetID": 123,
     "assetTypeID": 3,
-    "assetCategoryID": 1,
-    "assetsLinkID": "20582e085a467f6bcab99aa146b68bcbfc8692471d07e24cd7d85f291d8dfc9e"
+    "assetCategoryID": 2,
+    "assetsLinkID": "497bf28ecf579ac9e4df761417122c6020423de1d08740e860e0b393f2e1346f"
   },
   "render": {
-    "schedulerId": 317,
-    "renderId": 8676
+    "schedulerId": 594,
+    "renderId": 9015
   },
   "account": {
-    "accountId": 430
+    "accountId": 701
   },
   "timings": {
     "FPS_MAIN": 510,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 270,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
-  "frames": [
-    45,
-    180,
-    345,
-    510
-  ],
+  "frames": [45, 180, 345, 510, 645, 735, 825],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_5_b0cd1ca58c_fbae2b39a8.png",
-        "width": 500,
-        "height": 500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queensland_Veterans_Cricket_Logo_cropped_549341fcde.png",
+        "width": 2500,
+        "height": 2500
       },
-      "name": "Runaway Bay Cricket Club Inc",
+      "name": "Queensland Veterans Cricket",
       "sport": "Cricket",
       "sponsors": {
         "primary": [
           {
-            "id": 200,
-            "name": "test",
+            "id": 211,
+            "name": "1",
             "logo": {
-              "id": 23213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+              "id": 31204,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
             }
           },
           {
-            "id": 201,
-            "name": "edit this",
+            "id": 212,
+            "name": "2",
             "logo": {
-              "id": 23214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31205,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
             }
           },
           {
-            "id": 203,
-            "name": "New sponsor",
+            "id": 213,
+            "name": "3",
             "logo": {
-              "id": 23216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              "id": 31206,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+            }
+          },
+          {
+            "id": 214,
+            "name": "4",
+            "logo": {
+              "id": 31207,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
             }
           }
         ],
         "general": [
           {
-            "id": 200,
-            "name": "test",
+            "id": 215,
+            "name": "5",
             "logo": {
-              "id": 23213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+              "id": 31208,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_cropped_c9e01954ba.png"
             }
           },
           {
-            "id": 201,
-            "name": "edit this",
+            "id": 216,
+            "name": "6",
             "logo": {
-              "id": 23214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31209,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor6_cropped_8af0ba7b8f.png"
             }
           },
           {
-            "id": 203,
-            "name": "New sponsor",
+            "id": 217,
+            "name": "7",
             "logo": {
-              "id": 23216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              "id": 31210,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_cropped_dfb381eef0.png"
+            }
+          },
+          {
+            "id": 218,
+            "name": "8",
+            "logo": {
+              "id": 31211,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_cropped_31bb64eb78.png"
+            }
+          },
+          {
+            "id": 219,
+            "name": "9",
+            "logo": {
+              "id": 31212,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
+            }
+          },
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          },
+          {
+            "id": 221,
+            "name": "11",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_cropped_7c4fa55c7e.png"
+            }
+          },
+          {
+            "id": 222,
+            "name": "12",
+            "logo": {
+              "id": 31215,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_cropped_ef985bec1c.png"
+            }
+          },
+          {
+            "id": 223,
+            "name": "13",
+            "logo": {
+              "id": 31216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_cropped_d8f85c75e7.png"
+            }
+          },
+          {
+            "id": 224,
+            "name": "14",
+            "logo": {
+              "id": 31217,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_cropped_6105b69331.png"
+            }
+          },
+          {
+            "id": 225,
+            "name": "15",
+            "logo": {
+              "id": 31218,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_cropped_0d7cc6d2f8.png"
+            }
+          },
+          {
+            "id": 226,
+            "name": "16",
+            "logo": {
+              "id": 31219,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_cropped_4faa202880.png"
             }
           }
         ],
-        "sponsorNum": 6
+        "sponsorNum": 16
       },
-      "IsAccountClub": true
+      "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
+      "fixtureCategory": "O60 Div 2 - Kerry Emery Shield",
+      "groupingCategory": "O60 Div 2 - Kerry Emery Shield",
       "metadata": {
-        "title": "Bowling Performances",
-        "titleSplit": [
-          "Performances"
-        ],
+        "title": "Bowling  Performances",
+        "titleSplit": [""],
         "videoTitle": "Bowling Performances",
         "compositionId": "CricketBowlingPerformances",
-        "assetId": 66,
+        "assetId": 123,
         "assetTypeId": 3,
         "frames": [],
         "includeSponsors": true
@@ -762,20 +1102,20 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "primary": "#862F2F",
+          "secondary": "#EFB247"
         },
-        "template": "TwoColumnClassic"
+        "template": "CNSW"
       },
       "media": {
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/2023_Netball_Hero_CAV_9816_ddd33794fc.jpg",
-          "ratio": "landscape",
-          "width": 830,
-          "height": 400,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": null
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
         },
         "audio": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
@@ -789,8 +1129,8 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketBattingPerformances": 5,
-          "CricketBowlingPerformances": 5,
+          "CricketBattingPerformances": 7,
+          "CricketBowlingPerformances": 7,
           "CricketTeamOfTheWeek": 2
         }
       },
@@ -798,110 +1138,29 @@
         "useBackground": "Texture",
         "mode": "lightAlt",
         "category": {
-          "slug": "TwoColumnClassic",
-          "name": "Classic Two Column ",
+          "slug": "CNSW",
+          "name": "Cricket NSW",
           "divideFixturesBy": {
-            "CricketUpcoming": 3,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
             "CricketLadder": 1,
             "CricketRoster": 1,
-            "CricketBowlingPerformances": 5,
-            "CricketBattingPerformances": 5
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1,
+            "CricketBattingPerformances": 7,
+            "CricketBowlingPerformances": 7
           },
-          "bundleAudio": {
-            "id": 1,
-            "Name": "Basic",
-            "createdAt": "2023-09-27T10:36:24.428Z",
-            "updatedAt": "2025-06-15T04:50:57.910Z",
-            "publishedAt": "2023-09-27T10:36:25.639Z",
-            "audio_options": [
-              {
-                "id": 4,
-                "Name": "Better Start Now",
-                "createdAt": "2023-09-27T10:34:46.702Z",
-                "updatedAt": "2025-06-15T04:53:45.558Z",
-                "publishedAt": "2023-09-27T10:34:48.455Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Kidpenny_Single_Better_Start_Now_Inst_53b898d9ef.mp3",
-                "CompositionID": "CricketLadder",
-                "ComponentName": "CricketLadder"
-              },
-              {
-                "id": 2,
-                "Name": "Fifteen on Me",
-                "createdAt": "2022-12-20T01:59:28.337Z",
-                "updatedAt": "2025-06-15T04:53:11.194Z",
-                "publishedAt": "2022-12-20T01:59:29.080Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Fifteen%20on%20Me.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
-              },
-              {
-                "id": 5,
-                "Name": "Get The Gains",
-                "createdAt": "2023-09-27T10:35:01.053Z",
-                "updatedAt": "2025-06-15T04:53:59.493Z",
-                "publishedAt": "2023-09-27T10:35:29.163Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "CompositionID": "CricketTop5Bowling",
-                "ComponentName": "CricketTop5Bowling"
-              },
-              {
-                "id": 3,
-                "Name": "Groover",
-                "createdAt": "2022-12-20T01:59:34.014Z",
-                "updatedAt": "2025-06-15T04:53:28.656Z",
-                "publishedAt": "2022-12-20T01:59:34.670Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "CompositionID": "CricketTop5Batting",
-                "ComponentName": "CricketTop5Batting"
-              },
-              {
-                "id": 1,
-                "Name": "Saltine",
-                "createdAt": "2022-12-12T05:19:56.353Z",
-                "updatedAt": "2025-06-15T04:50:50.079Z",
-                "publishedAt": "2022-12-12T05:19:57.408Z",
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/Saltine_1.mp3",
-                "CompositionID": "CricketResults",
-                "ComponentName": "CricketResults"
-              },
-              {
-                "id": 16,
-                "Name": "BEECH LOVE",
-                "createdAt": "2024-06-05T04:31:26.640Z",
-                "updatedAt": "2026-01-05T09:04:09.788Z",
-                "publishedAt": "2024-06-07T12:45:32.118Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_BEECH_LOVE_Pieces_Inst_0b547f2b20.mp3",
-                "CompositionID": "CricketUpcoming",
-                "ComponentName": "CricketUpcoming"
-              },
-              {
-                "id": 17,
-                "Name": "FAY V",
-                "createdAt": "2024-06-05T04:33:33.970Z",
-                "updatedAt": "2024-06-07T12:48:03.161Z",
-                "publishedAt": "2024-06-07T12:47:53.394Z",
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_FAYV_Single_Encore_INST_d7b21f5451.mp3",
-                "CompositionID": "WeekendResultsAFL",
-                "ComponentName": "Weekend Results"
-              }
-            ]
-          }
+          "bundleAudio": null
         },
         "video": {
           "url": null,
           "fallbackUrl": null,
-          "position": "left",
-          "size": "cover",
+          "position": null,
+          "size": null,
           "loop": null,
-          "muted": true,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
+          "muted": null,
+          "overlay": null,
           "useOffthreadVideo": null,
-          "volume": 0.8,
+          "volume": null,
           "playbackRate": null
         },
         "image": {
@@ -909,19 +1168,19 @@
           "ratio": null,
           "width": null,
           "height": null,
-          "type": "pan",
-          "direction": "left",
-          "overlayStyle": "vignette",
-          "gradientType": "linear",
-          "overlayOpacity": 0.3
+          "type": null,
+          "direction": null,
+          "overlayStyle": null,
+          "gradientType": null,
+          "overlayOpacity": null
         },
-        "palette": "primaryOnWhite",
+        "palette": "secondary",
         "gradient": {
-          "type": "primary",
-          "direction": "HORIZONTAL"
+          "type": null,
+          "direction": null
         },
         "noise": {
-          "type": "floatingParticles"
+          "type": null
         },
         "pattern": {
           "type": "dots",
@@ -933,24 +1192,51 @@
           "animationSpeed": 0.8
         },
         "particle": {
-          "type": "lines",
-          "particleCount": "300",
-          "speed": 0.8,
-          "direction": "up",
-          "animation": "scale"
+          "type": null,
+          "particleCount": null,
+          "speed": null,
+          "direction": null,
+          "animation": null
         },
+        "modeId": 2,
+        "imageCandidates": [],
         "texture": {
-          "name": "Print Texture",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Geometric_Halftone_Print_Texture_cb888287e4.png",
+          "name": "Stadium 004",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Chat_GPT_Image_Aug_12_2026_12_25_17_PM_68e4d8018e.png",
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
-            "opacity": 0.8,
+            "opacity": 0.5,
             "blendMode": "multiply"
           }
         }
       }
     }
   },
-  "errors": []
+  "errors": [],
+  "orderingContext": {
+    "scopeKey": "account:701:association:7646",
+    "revision": 0,
+    "resolvedAt": "2026-08-21T04:12:20.168Z"
+  },
+  "organisation": {
+    "type": "association",
+    "id": 7646
+  },
+  "generationIdentity": "55eb19fbcd43171e12e8288e66ebfcc7f39838a27fd88e4f19fd61f1fa43ead7",
+  "generationManifest": {
+    "orderingContext": {
+      "scopeKey": "account:701:association:7646",
+      "revision": 0,
+      "resolvedAt": "2026-08-21T04:12:20.168Z"
+    },
+    "organisation": {
+      "type": "association",
+      "id": 7646
+    },
+    "generationIdentity": "55eb19fbcd43171e12e8288e66ebfcc7f39838a27fd88e4f19fd61f1fa43ead7",
+    "schedulerId": 594,
+    "renderId": 9015,
+    "fixtureIds": []
+  }
 }

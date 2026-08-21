@@ -22,7 +22,6 @@ const TeamOfTheWeekDisplayCNSWPrivate: React.FC<TeamOfTheWeekDisplayProps> = ({
     fallbackPrimary: sponsors,
   });
 
-
   return (
     <div className="flex flex-col h-full">
       <AnimatedContainer

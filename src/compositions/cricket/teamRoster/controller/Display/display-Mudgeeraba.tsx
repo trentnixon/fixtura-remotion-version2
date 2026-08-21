@@ -3,7 +3,11 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { AccountTeamLarge, AgainstTeamLarge } from "../../layout/RosterHeader";
-import { formatDate, truncatePlayerName, formatGroundLocation } from "../../../utils/utils-text";
+import {
+  formatDate,
+  truncatePlayerName,
+  formatGroundLocation,
+} from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
 import { RosterPlayerName } from "../../../utils/primitives/RosterPlayerName";
 import { MetadataLarge } from "../../../utils/primitives/metadataLarge";

@@ -3,12 +3,11 @@
 
 import React from "react";
 import { AnimatedImage } from "../../../../components/images/AnimatedImage";
+import {
+  FOOTER_EXIT_ANIMATION_DURATION_FRAMES,
+  calculateFooterExitFrame,
+} from "../_utils/calculations";
 import { useSponsorValidation } from "../hooks/useSponsorValidation";
-
-// Sponsor configuration constants
-const SPONSOR_CONFIG = {
-  EXIT_FRAME: 300,
-} as const;
 
 // Helper function to calculate max width based on logo dimensions
 const calculateMaxWidth = (
@@ -44,6 +43,7 @@ export const PrimarySponsor = React.memo(
     }
 
     const { logoAnimations, heights } = validation;
+    const exitFrame = calculateFooterExitFrame(validation.timings);
 
     if (primarySponsors.length > 0 && primarySponsors[0]) {
       if (!primarySponsors[0]?.logo?.url) {
@@ -70,7 +70,8 @@ export const PrimarySponsor = React.memo(
             preserveRatio={true}
             animation={logoAnimations.introIn as any}
             exitAnimation={logoAnimations.introOut as any}
-            exitFrame={SPONSOR_CONFIG.EXIT_FRAME}
+            exitFrame={exitFrame}
+            exitAnimationDuration={FOOTER_EXIT_ANIMATION_DURATION_FRAMES}
           />
         </div>
       );

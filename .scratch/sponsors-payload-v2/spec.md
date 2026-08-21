@@ -58,7 +58,14 @@ Hard-cut Remotion to the v2 contract only (no legacy fallback). Update types, sh
 - Guaranteed sponsor DTO:
 
 ```ts
-{ id: number; name: string; logo: { id: number; url: string } }
+{
+  id: number;
+  name: string;
+  logo: {
+    id: number;
+    url: string;
+  }
+}
 ```
 
 - Account sponsors shape:

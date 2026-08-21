@@ -22,7 +22,7 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
   mainComponentLayout: MainComponentLayout,
 }) => {
   // Access context data
-  const { data } = useVideoDataContext();
+  const { data, sponsors } = useVideoDataContext();
   const { doesAccountHaveSponsors } = useLayoutContext();
   const { timings } = data;
 
@@ -49,6 +49,7 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
             durationInFrames={calculateOutroDuration(
               timings,
               doesAccountHaveSponsors,
+              sponsors,
             )}
           >
             {OutroComponent && (

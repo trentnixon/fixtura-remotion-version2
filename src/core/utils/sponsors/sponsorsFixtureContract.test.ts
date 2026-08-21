@@ -20,14 +20,13 @@ const walkJson = (dir: string): string[] => {
 const collectSponsorBlocks = (value: unknown, path: string, hits: string[]) => {
   if (!value || typeof value !== "object") return;
   if (Array.isArray(value)) {
-    value.forEach((item, i) => collectSponsorBlocks(item, `${path}[${i}]`, hits));
+    value.forEach((item, i) =>
+      collectSponsorBlocks(item, `${path}[${i}]`, hits),
+    );
     return;
   }
   const record = value as Record<string, unknown>;
-  if (
-    "sponsors" in record ||
-    "Sponsors" in record
-  ) {
+  if ("sponsors" in record || "Sponsors" in record) {
     const sponsors = (record.sponsors ?? record.Sponsors) as
       | Record<string, unknown>
       | undefined;

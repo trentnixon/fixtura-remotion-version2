@@ -71,4 +71,23 @@ describe("buildPerformancesFooterSponsors", () => {
 
     expect(result.map((s) => s.id)).toEqual([1, 2, 10]);
   });
+
+  it("tolerates legacy assignSponsors entity metadata objects (non-arrays)", () => {
+    const result = buildPerformancesFooterSponsors(
+      [
+        performance({
+          name: "A",
+          // Pre-v2 fixtures ship grade/team/competition as metadata objects, not Sponsor[].
+          assignSponsors: {
+            Team: { name: "Redlands Logan" },
+            grade: { id: 85929, name: "O60 Div 2" },
+            competition: { id: 20200, name: "QVC Competitions" },
+          } as unknown as PerformanceData["assignSponsors"],
+        }),
+      ],
+      [1, 2].map(sponsor),
+    );
+
+    expect(result.map((s) => s.id)).toEqual([1, 2]);
+  });
 });

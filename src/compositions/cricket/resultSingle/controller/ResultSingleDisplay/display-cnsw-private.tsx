@@ -23,7 +23,10 @@ const CNSWSingleResultPrivate: React.FC<ResultSingleDisplayProps> = ({
         <CNSWMatchCardPrivate match={match} />
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={match.assignSponsors} primaryForScreen={match.primaryForScreen} />
+        <SponsorFooter
+          assignSponsors={match.assignSponsors}
+          primaryForScreen={match.primaryForScreen}
+        />
       </div>
     </div>
   );

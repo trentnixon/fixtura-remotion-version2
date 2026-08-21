@@ -13,4 +13,5 @@
 - [x] At least one cricket sample JSON under test data is v2-shaped and loads in Studio
 
 ## Completion Summary
+
 Core sponsor types and gating cut over to v2; `Cricket_upcoming.json` updated. Outro variants wired to `primary`+`general` so the type hard-cut stays compile-green (overlaps ticket 06).

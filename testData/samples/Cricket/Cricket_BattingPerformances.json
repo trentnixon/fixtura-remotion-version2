@@ -1,1153 +1,603 @@
 {
   "data": [
     {
-      "SR": 143.15,
-      "name": "Jac Cunningham",
-      "runs": 136,
-      "balls": 95,
+      "SR": 110,
+      "name": "Greg Noon",
+      "runs": 44,
+      "balls": 40,
       "notOut": false,
-      "prompt": "Jac Cunningham played for SJCC Blues, scoring 136 runs from 95 balls with a strike rate of 143.15. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues, (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
+      "prompt": "Greg Noon played for Brisbane Silver, scoring 44 runs from 40 balls with a strike rate of 110. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver, (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
       },
-      "playedFor": "SJCC Blues",
+      "playedFor": "Brisbane Silver",
       "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
+        "Team": {
+          "name": "Brisbane Silver"
         },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
         },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
         }
-      ]
+      }
     },
     {
-      "SR": 71.55,
-      "name": "Robert Ings",
-      "runs": 78,
-      "balls": 109,
-      "notOut": true,
-      "prompt": "Robert Ings played for Hibo Green, scoring 78 runs from 109 balls with a strike rate of 71.55. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Hibo Green, (1) vs MALARVAADI SOLDIERS KINGS CC 3rd Grade (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_6e5487f63d.jpg",
-        "width": 236,
-        "height": 289
-      },
-      "playedFor": "Hibo Green",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 113.2,
-      "name": "Akhil George  (c)",
-      "runs": 60,
-      "balls": 53,
-      "notOut": true,
-      "prompt": "Akhil George  (c) played for MALARVAADI SOLDIERS KINGS CC 3rd Grade, scoring 60 runs from 53 balls with a strike rate of 113.2. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MALARVAADI SOLDIERS KINGS CC 3rd Grade, (1) vs Hibo Green (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 119.56,
-      "name": "Dean Murray",
-      "runs": 55,
-      "balls": 46,
-      "notOut": false,
-      "prompt": "Dean Murray played for MadBulls, scoring 55 runs from 46 balls with a strike rate of 119.56. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MadBulls, (1) vs SJCC Blues (1), the match result was SJCC Blues won by 130 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 145.94,
-      "name": "Dean Cole",
-      "runs": 54,
-      "balls": 37,
-      "notOut": false,
-      "prompt": "Dean Cole played for MadBulls, scoring 54 runs from 37 balls with a strike rate of 145.94. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MadBulls, (1) vs SJCC Blues (1), the match result was SJCC Blues won by 130 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 110.2,
-      "name": "Luke Hayward",
-      "runs": 54,
-      "balls": 49,
-      "notOut": true,
-      "prompt": "Luke Hayward played for MadBulls, scoring 54 runs from 49 balls with a strike rate of 110.2. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . MadBulls, (1) vs Pirates 1st Grade (1), the match result was MadBulls won by 9 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 96.36,
-      "name": "Fill-in",
-      "runs": 53,
-      "balls": 55,
-      "notOut": true,
-      "prompt": "Fill-in played for MadBulls, scoring 53 runs from 55 balls with a strike rate of 96.36. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . MadBulls, (1) vs Pirates 1st Grade (1), the match result was MadBulls won by 9 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 85,
-      "name": "Gregory Tyler  (c)",
-      "runs": 51,
-      "balls": 60,
-      "notOut": false,
-      "prompt": "Gregory Tyler  (c) played for SJCC Blues, scoring 51 runs from 60 balls with a strike rate of 85. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues, (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC Blues",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 150,
-      "name": "Adam Bruckshaw  (vc)",
+      "SR": 105,
+      "name": "Don Fitzgerald",
       "runs": 42,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Don Fitzgerald played for Redlands Logan, scoring 42 runs from 40 balls with a strike rate of 105. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Redlands Logan, (7/96) vs Sunshine Coast Maroon (10/94), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
+        "width": 706,
+        "height": 725
+      },
+      "playedFor": "Redlands Logan",
+      "assignSponsors": {
+        "Team": {
+          "name": "Redlands Logan"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 100,
+      "name": "Joe Hauff",
+      "runs": 38,
+      "balls": 38,
+      "notOut": true,
+      "prompt": "Joe Hauff played for Brisbane Silver, scoring 38 runs from 38 balls with a strike rate of 100. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver, (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
+      },
+      "playedFor": "Brisbane Silver",
+      "assignSponsors": {
+        "Team": {
+          "name": "Brisbane Silver"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 92.5,
+      "name": "Rick Bean",
+      "runs": 37,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Rick Bean played for Sunshine Coast Gold, scoring 37 runs from 40 balls with a strike rate of 92.5. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold, (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
+      },
+      "playedFor": "Sunshine Coast Gold",
+      "assignSponsors": {
+        "Team": {
+          "name": "Sunshine Coast Gold"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 85.71,
+      "name": "Greg Deuble (c)",
+      "runs": 36,
+      "balls": 42,
+      "notOut": false,
+      "prompt": "Greg Deuble (c) played for Sunshine Coast Gold, scoring 36 runs from 42 balls with a strike rate of 85.71. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold, (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
+      },
+      "playedFor": "Sunshine Coast Gold",
+      "assignSponsors": {
+        "Team": {
+          "name": "Sunshine Coast Gold"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 80,
+      "name": "Adrian Knell",
+      "runs": 32,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Adrian Knell played for Sunshine Coast Gold, scoring 32 runs from 40 balls with a strike rate of 80. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold, (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
+      },
+      "playedFor": "Sunshine Coast Gold",
+      "assignSponsors": {
+        "Team": {
+          "name": "Sunshine Coast Gold"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 80,
+      "name": "Bryan Wilson (c)",
+      "runs": 32,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Bryan Wilson (c) played for Brisbane Silver, scoring 32 runs from 40 balls with a strike rate of 80. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver, (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
+      },
+      "playedFor": "Brisbane Silver",
+      "assignSponsors": {
+        "Team": {
+          "name": "Brisbane Silver"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 77.5,
+      "name": "Jeffrey Manitzky (vc)",
+      "runs": 31,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Jeffrey Manitzky (vc) played for GC 60's Div 2 Gold, scoring 31 runs from 40 balls with a strike rate of 77.5. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Gold, (6/237) vs Brisbane Silver (10/181), the match result was Brisbane Silver won by 56 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
+        "width": 379,
+        "height": 303
+      },
+      "playedFor": "GC 60's Div 2 Gold",
+      "assignSponsors": {
+        "Team": {
+          "name": "GC 60's Div 2 Gold"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 72.5,
+      "name": "Michael Greco",
+      "runs": 29,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Michael Greco played for Brisbane White, scoring 29 runs from 40 balls with a strike rate of 72.5. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane White, (3/118) vs Toowoomba (4/189), the match result was Brisbane White won by 71 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
+      },
+      "playedFor": "Brisbane White",
+      "assignSponsors": {
+        "Team": {
+          "name": "Brisbane White"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 100,
+      "name": "Ian Coyne",
+      "runs": 28,
       "balls": 28,
       "notOut": false,
-      "prompt": "Adam Bruckshaw  (vc) played for SJCC Blues, scoring 42 runs from 28 balls with a strike rate of 150. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues, (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
+      "prompt": "Ian Coyne played for GC 60's Div 2 Gold, scoring 28 runs from 28 balls with a strike rate of 100. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Gold, (6/237) vs Brisbane Silver (10/181), the match result was Brisbane Silver won by 56 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
+        "width": 379,
+        "height": 303
       },
-      "playedFor": "SJCC Blues",
+      "playedFor": "GC 60's Div 2 Gold",
       "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
+        "Team": {
+          "name": "GC 60's Div 2 Gold"
         },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
         },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
         }
-      ]
+      }
     },
     {
-      "SR": 0,
-      "name": "Darren Marshall",
-      "runs": 41,
-      "balls": 0,
-      "notOut": false,
-      "prompt": "Darren Marshall played for SJCC OG, scoring 41 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG, (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC OG",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 105.4,
-      "name": "Isaac McGregor",
-      "runs": 39,
-      "balls": 37,
-      "notOut": false,
-      "prompt": "Isaac McGregor played for Pirates 1st Grade, scoring 39 runs from 37 balls with a strike rate of 105.4. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Pirates 1st Grade, (1) vs MadBulls (1), the match result was MadBulls won by 9 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f76b057253.jpg",
-        "width": 4096,
-        "height": 2902
-      },
-      "playedFor": "Pirates 1st Grade",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 63.93,
-      "name": "Jacob Paterson  (c)",
-      "runs": 39,
-      "balls": 61,
-      "notOut": false,
-      "prompt": "Jacob Paterson  (c) played for Pirates 1st Grade, scoring 39 runs from 61 balls with a strike rate of 63.93. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . Pirates 1st Grade, (1) vs MadBulls (1), the match result was MadBulls won by 9 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f76b057253.jpg",
-        "width": 4096,
-        "height": 2902
-      },
-      "playedFor": "Pirates 1st Grade",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 150,
-      "name": "Sinto Joseph",
-      "runs": 36,
-      "balls": 24,
-      "notOut": false,
-      "prompt": "Sinto Joseph played for MALARVAADI SOLDIERS KINGS CC 3rd Grade, scoring 36 runs from 24 balls with a strike rate of 150. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MALARVAADI SOLDIERS KINGS CC 3rd Grade, (1) vs Hibo Green (1), the match result was MALARVAADI SOLDIERS KINGS CC 3rd Grade won by 5 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Default_ICON_171b58a21b.png",
-        "width": 1211,
-        "height": 1211
-      },
-      "playedFor": "MALARVAADI SOLDIERS KINGS CC 3rd Grade",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 0,
-      "name": "Nicolas Coppolino",
-      "runs": 36,
-      "balls": 0,
-      "notOut": false,
-      "prompt": "Nicolas Coppolino played for Mice, scoring 36 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . Mice, (1) vs Hibo Country (1), the match result was Mice won by 3 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_7dec42020c.jpg",
-        "width": 1046,
-        "height": 1054
-      },
-      "playedFor": "Mice",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 0,
-      "name": "Saxon Greenwood",
-      "runs": 35,
-      "balls": 0,
-      "notOut": false,
-      "prompt": "Saxon Greenwood played for SJCC OG, scoring 35 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG, (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC OG",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 0,
-      "name": "Jett T Edwards",
-      "runs": 30,
-      "balls": 0,
-      "notOut": false,
-      "prompt": "Jett T Edwards played for SJCC OG, scoring 30 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG, (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
-      },
-      "playedFor": "SJCC OG",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 121.73,
-      "name": "Jayden Van Bilsen",
-      "runs": 28,
-      "balls": 23,
-      "notOut": false,
-      "prompt": "Jayden Van Bilsen played for MadBulls, scoring 28 runs from 23 balls with a strike rate of 121.73. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . MadBulls, (1) vs SJCC Blues (1), the match result was SJCC Blues won by 130 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Marulan_Cricket_Club_Logo_876cb02b7c.jpg",
-        "width": 1051,
-        "height": 1324
-      },
-      "playedFor": "MadBulls",
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
-        },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
-        },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
-        }
-      ]
-    },
-    {
-      "SR": 62.79,
-      "name": "Timothy Bruckshaw",
+      "SR": 65.85,
+      "name": "David Russell",
       "runs": 27,
-      "balls": 43,
-      "notOut": false,
-      "prompt": "Timothy Bruckshaw played for SJCC Blues, scoring 27 runs from 43 balls with a strike rate of 62.79. Game details: This was a One Day in the 3rd Grade grade, and the current match status is Match Completed . SJCC Blues, (1) vs MadBulls (1), the match result was SJCC Blues won by 130 runs.",
+      "balls": 41,
+      "notOut": true,
+      "prompt": "David Russell played for GC 60's Div 2 Blue, scoring 27 runs from 41 balls with a strike rate of 65.85. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Blue, (9/160) vs Wide Bay (7/164), the match result was Wide Bay won by 3 wickets.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
+        "width": 379,
+        "height": 303
       },
-      "playedFor": "SJCC Blues",
+      "playedFor": "GC 60's Div 2 Blue",
       "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "3rd Grade",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
+        "Team": {
+          "name": "GC 60's Div 2 Blue"
         },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
         },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
         }
-      ]
+      }
     },
     {
-      "SR": 0,
-      "name": "Dave Foley",
-      "runs": 27,
-      "balls": 0,
+      "SR": 104,
+      "name": "william jeffrey",
+      "runs": 26,
+      "balls": 25,
       "notOut": false,
-      "prompt": "Dave Foley played for SJCC OG, scoring 27 runs from 0 balls with a strike rate of 0. Game details: This was a One Day in the 1st & 2nd Grade Combined grade, and the current match status is Match Completed . SJCC OG, (1) vs Big Merino Titans CC 2nd Grade (1), the match result was SJCC OG won by 0 wickets.",
+      "prompt": "william jeffrey played for Lockyer, scoring 26 runs from 25 balls with a strike rate of 104. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Lockyer, (3/210) vs Sunshine Coast Gold (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_fa028c2139.jpg",
-        "width": 1203,
-        "height": 1458
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
+        "width": 328,
+        "height": 347
       },
-      "playedFor": "SJCC OG",
+      "playedFor": "Lockyer",
       "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "Grade Sponsor",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "gradeName": "1st & 2nd Grade Combined",
-      "primaryForScreen": [
-        {
-          "id": 200,
-          "name": "test",
-          "logo": {
-            "id": 23213,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
-          }
+        "Team": {
+          "name": "Lockyer"
         },
-        {
-          "id": 201,
-          "name": "edit this",
-          "logo": {
-            "id": 23214,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
-          }
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
         },
-        {
-          "id": 203,
-          "name": "New sponsor",
-          "logo": {
-            "id": 23216,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
-          }
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
         }
-      ]
+      }
+    },
+    {
+      "SR": 65,
+      "name": "Neil Karunasekara",
+      "runs": 26,
+      "balls": 40,
+      "notOut": false,
+      "prompt": "Neil Karunasekara played for Brisbane White, scoring 26 runs from 40 balls with a strike rate of 65. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane White, (3/118) vs Toowoomba (4/189), the match result was Brisbane White won by 71 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
+        "width": 1012,
+        "height": 740
+      },
+      "playedFor": "Brisbane White",
+      "assignSponsors": {
+        "Team": {
+          "name": "Brisbane White"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 65.78,
+      "name": "Richard Dennis (c)",
+      "runs": 25,
+      "balls": 38,
+      "notOut": false,
+      "prompt": "Richard Dennis (c) played for Redlands Logan, scoring 25 runs from 38 balls with a strike rate of 65.78. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Redlands Logan, (7/96) vs Sunshine Coast Maroon (10/94), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
+        "width": 706,
+        "height": 725
+      },
+      "playedFor": "Redlands Logan",
+      "assignSponsors": {
+        "Team": {
+          "name": "Redlands Logan"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
+    },
+    {
+      "SR": 40.32,
+      "name": "Gary Hughes",
+      "runs": 25,
+      "balls": 62,
+      "notOut": false,
+      "prompt": "Gary Hughes played for Lockyer, scoring 25 runs from 62 balls with a strike rate of 40.32. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Lockyer, (3/210) vs Sunshine Coast Gold (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "teamLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
+        "width": 328,
+        "height": 347
+      },
+      "playedFor": "Lockyer",
+      "assignSponsors": {
+        "Team": {
+          "name": "Lockyer"
+        },
+        "grade": {
+          "id": 85929,
+          "name": "O60 Div 2 - Kerry Emery Shield"
+        },
+        "competition": {
+          "id": 20200,
+          "name": "QVC Competitions"
+        }
+      }
     }
   ],
   "asset": {
-    "assetID": 65,
+    "assetID": 120,
     "assetTypeID": 3,
-    "assetsLinkID": "ab80aba4d08b5a6e32d116a4a6c57b569310f942a173ed9377242e974ab5e70d",
-    "assetCategoryID": 1
+    "assetCategoryID": 2,
+    "assetsLinkID": "cbebe445d750146a6cd6ea28119c86e4ca09354294371c392efec5c36b687545"
   },
-  "errors": [],
-  "frames": [
-    45,
-    180,
-    345,
-    510,
-    645
-  ],
   "render": {
-    "renderId": 23107,
-    "schedulerId": 1097
+    "schedulerId": 594,
+    "renderId": 9015
   },
   "account": {
-    "accountId": 1097
+    "accountId": 701
   },
   "timings": {
     "FPS_MAIN": 510,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 270,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
+  "frames": [45, 180, 345, 510, 645, 735, 825],
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_65_c67e5b1404.jpg",
-        "width": 1031,
-        "height": 1330,
-        "hasLogo": true
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queensland_Veterans_Cricket_Logo_cropped_549341fcde.png",
+        "width": 2500,
+        "height": 2500
       },
-      "name": "Goulburn District Cricket Association",
+      "name": "Queensland Veterans Cricket",
       "sport": "Cricket",
       "sponsors": {
         "primary": [
           {
-            "id": 200,
-            "name": "test",
+            "id": 211,
+            "name": "1",
             "logo": {
-              "id": 23213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+              "id": 31204,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
             }
           },
           {
-            "id": 201,
-            "name": "edit this",
+            "id": 212,
+            "name": "2",
             "logo": {
-              "id": 23214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31205,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
             }
           },
           {
-            "id": 203,
-            "name": "New sponsor",
+            "id": 213,
+            "name": "3",
             "logo": {
-              "id": 23216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              "id": 31206,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+            }
+          },
+          {
+            "id": 214,
+            "name": "4",
+            "logo": {
+              "id": 31207,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
             }
           }
         ],
         "general": [
           {
-            "id": 200,
-            "name": "test",
+            "id": 215,
+            "name": "5",
             "logo": {
-              "id": 23213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+              "id": 31208,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_cropped_c9e01954ba.png"
             }
           },
           {
-            "id": 201,
-            "name": "edit this",
+            "id": 216,
+            "name": "6",
             "logo": {
-              "id": 23214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+              "id": 31209,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor6_cropped_8af0ba7b8f.png"
             }
           },
           {
-            "id": 203,
-            "name": "New sponsor",
+            "id": 217,
+            "name": "7",
             "logo": {
-              "id": 23216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_NSW_Full_Col_RGB_Primary_CNSW_Stack_569bda68f3_cropped_b0f8a7dacf.png"
+              "id": 31210,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_cropped_dfb381eef0.png"
+            }
+          },
+          {
+            "id": 218,
+            "name": "8",
+            "logo": {
+              "id": 31211,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_cropped_31bb64eb78.png"
+            }
+          },
+          {
+            "id": 219,
+            "name": "9",
+            "logo": {
+              "id": 31212,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
+            }
+          },
+          {
+            "id": 220,
+            "name": "10",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
+            }
+          },
+          {
+            "id": 221,
+            "name": "11",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_cropped_7c4fa55c7e.png"
+            }
+          },
+          {
+            "id": 222,
+            "name": "12",
+            "logo": {
+              "id": 31215,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_cropped_ef985bec1c.png"
+            }
+          },
+          {
+            "id": 223,
+            "name": "13",
+            "logo": {
+              "id": 31216,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_cropped_d8f85c75e7.png"
+            }
+          },
+          {
+            "id": 224,
+            "name": "14",
+            "logo": {
+              "id": 31217,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_cropped_6105b69331.png"
+            }
+          },
+          {
+            "id": 225,
+            "name": "15",
+            "logo": {
+              "id": 31218,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_cropped_0d7cc6d2f8.png"
+            }
+          },
+          {
+            "id": 226,
+            "name": "16",
+            "logo": {
+              "id": 31219,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_cropped_4faa202880.png"
             }
           }
         ],
-        "sponsorNum": 6
+        "sponsorNum": 16
       },
       "IsAccountClub": false
     },
     "video": {
-      "media": {
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
+      "fixtureCategory": "O60 Div 2 - Kerry Emery Shield",
+      "groupingCategory": "O60 Div 2 - Kerry Emery Shield",
+      "metadata": {
+        "title": "Batting Performances",
+        "titleSplit": [""],
+        "videoTitle": "Batting Performances",
+        "compositionId": "CricketBattingPerformances",
+        "assetId": 120,
+        "assetTypeId": 3,
+        "frames": [],
+        "includeSponsors": true
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#862F2F",
+          "secondary": "#EFB247"
         },
+        "template": "CNSW"
+      },
+      "media": {
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -1156,28 +606,11 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        }
-      },
-      "metadata": {
-        "title": "Batting Performances",
-        "frames": [],
-        "assetId": 65,
-        "titleSplit": [
-          "Performances"
-        ],
-        "videoTitle": "Batting Performances",
-        "assetTypeId": 3,
-        "compositionId": "CricketBattingPerformances",
-        "includeSponsors": true
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#de0000",
-          "secondary": "#ffa300"
         },
-        "template": "CNSW"
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        }
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -1187,134 +620,16 @@
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
           "CricketBattingPerformances": 7,
-          "CricketBowlingPerformances": 7
+          "CricketBowlingPerformances": 7,
+          "CricketTeamOfTheWeek": 2
         }
       },
-      "fixtureCategory": "Goulburn District Cricket Association",
-      "groupingCategory": "Goulburn District Cricket Association",
       "templateVariation": {
+        "useBackground": "Texture",
         "mode": "lightAlt",
-        "image": {
-          "url": null,
-          "type": "pan",
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "direction": "left",
-          "gradientType": "linear",
-          "overlayStyle": "vignette",
-          "overlayOpacity": 0.3
-        },
-        "noise": {
-          "type": "floatingParticles"
-        },
-        "video": {
-          "url": null,
-          "loop": null,
-          "size": "cover",
-          "muted": true,
-          "volume": 0.8,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "position": "left",
-          "fallbackUrl": null,
-          "playbackRate": null,
-          "useOffthreadVideo": null
-        },
-        "palette": "secondary",
-        "pattern": {
-          "type": "dots",
-          "scale": 0.75,
-          "opacity": 0.35,
-          "rotation": null,
-          "animation": "none",
-          "animationSpeed": 0.8,
-          "animationDuration": null
-        },
-        "texture": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Gemini_Stone_007e575f87.png",
-          "name": "Stone 2",
-          "scale": "100%",
-          "repeat": "cover",
-          "overlay": {
-            "opacity": 0.7,
-            "blendMode": "multiply"
-          }
-        },
         "category": {
-          "name": "Cricket NSW",
           "slug": "CNSW",
-          "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-30T00:35:16.398Z",
-            "updatedAt": "2024-10-30T00:35:17.926Z",
-            "publishedAt": "2024-10-30T00:35:17.915Z",
-            "audio_options": [
-              {
-                "id": 33,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-30T00:35:04.160Z",
-                "updatedAt": "2024-10-30T00:36:30.358Z",
-                "publishedAt": "2024-10-30T00:35:05.839Z",
-                "ComponentName": "Top 5 Bowling",
-                "CompositionID": "Top5BowlingList"
-              },
-              {
-                "id": 34,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
-                "Name": "GoodGoodFeeling_Inst",
-                "createdAt": "2024-10-30T00:37:09.563Z",
-                "updatedAt": "2024-10-30T00:38:09.963Z",
-                "publishedAt": "2024-10-30T00:38:09.959Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              },
-              {
-                "id": 35,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-30T00:38:02.552Z",
-                "updatedAt": "2024-10-30T00:38:04.070Z",
-                "publishedAt": "2024-10-30T00:38:04.063Z",
-                "ComponentName": "Weekend Results",
-                "CompositionID": "WeekendResults"
-              },
-              {
-                "id": 36,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-30T00:39:02.570Z",
-                "updatedAt": "2024-10-30T00:39:04.182Z",
-                "publishedAt": "2024-10-30T00:39:04.177Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
-              },
-              {
-                "id": 38,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-30T01:00:28.630Z",
-                "updatedAt": "2024-10-30T01:00:30.327Z",
-                "publishedAt": "2024-10-30T01:00:30.319Z",
-                "ComponentName": "Top 5 Batting",
-                "CompositionID": "Top5BattingList"
-              },
-              {
-                "id": 39,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-30T01:01:10.581Z",
-                "updatedAt": "2024-10-30T01:01:13.949Z",
-                "publishedAt": "2024-10-30T01:01:13.932Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              }
-            ]
-          },
+          "name": "Cricket NSW",
           "divideFixturesBy": {
             "CricketLadder": 1,
             "CricketRoster": 1,
@@ -1323,21 +638,95 @@
             "CricketResultSingle": 1,
             "CricketBattingPerformances": 7,
             "CricketBowlingPerformances": 7
-          }
+          },
+          "bundleAudio": null
         },
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": null,
+          "size": null,
+          "loop": null,
+          "muted": null,
+          "overlay": null,
+          "useOffthreadVideo": null,
+          "volume": null,
+          "playbackRate": null
+        },
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": null,
+          "direction": null,
+          "overlayStyle": null,
+          "gradientType": null,
+          "overlayOpacity": null
+        },
+        "palette": "secondary",
         "gradient": {
-          "type": "primary",
-          "direction": "HORIZONTAL"
+          "type": null,
+          "direction": null
+        },
+        "noise": {
+          "type": null
+        },
+        "pattern": {
+          "type": "dots",
+          "animation": "none",
+          "scale": 0.75,
+          "rotation": null,
+          "opacity": 0.35,
+          "animationDuration": null,
+          "animationSpeed": 0.8
         },
         "particle": {
-          "type": "lines",
-          "speed": 0.8,
-          "animation": "scale",
-          "direction": "up",
-          "particleCount": "300"
+          "type": null,
+          "particleCount": null,
+          "speed": null,
+          "direction": null,
+          "animation": null
         },
-        "useBackground": "Texture"
+        "modeId": 2,
+        "imageCandidates": [],
+        "texture": {
+          "name": "Stadium 004",
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Chat_GPT_Image_Aug_12_2026_12_25_17_PM_68e4d8018e.png",
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
+        }
       }
     }
+  },
+  "errors": [],
+  "orderingContext": {
+    "scopeKey": "account:701:association:7646",
+    "revision": 0,
+    "resolvedAt": "2026-08-21T04:12:20.168Z"
+  },
+  "organisation": {
+    "type": "association",
+    "id": 7646
+  },
+  "generationIdentity": "de60ed6c0a267a2bcc1594f99b2dce6925c5ef6205902a73e0273c767a297be9",
+  "generationManifest": {
+    "orderingContext": {
+      "scopeKey": "account:701:association:7646",
+      "revision": 0,
+      "resolvedAt": "2026-08-21T04:12:20.168Z"
+    },
+    "organisation": {
+      "type": "association",
+      "id": 7646
+    },
+    "generationIdentity": "de60ed6c0a267a2bcc1594f99b2dce6925c5ef6205902a73e0273c767a297be9",
+    "schedulerId": 594,
+    "renderId": 9015,
+    "fixtureIds": []
   }
 }

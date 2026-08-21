@@ -31,7 +31,6 @@ const PlayersDisplayCNSWPrivate: React.FC<PlayersDisplayProps> = ({
     fallbackPrimary: sponsors,
   });
 
-
   return (
     <div className="flex flex-col h-full ">
       <AnimatedContainer

@@ -20,7 +20,6 @@ const TeamOfTheWeekDisplaySixersThunder: React.FC<
     fallbackPrimary: sponsors,
   });
 
-
   return (
     <div className="flex flex-col h-full">
       <AnimatedContainer

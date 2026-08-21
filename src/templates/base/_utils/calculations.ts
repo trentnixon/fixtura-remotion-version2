@@ -1,4 +1,6 @@
 import { Timings } from "../../../core/types/data/common";
+import { SponsorsData } from "../../../core/types/data/sponsors";
+import { calculateOutroDurationFromSponsors } from "../../../core/utils/sponsors";
 import { DEFAULT_SEQUENCE_DURATION } from "./constants";
 
 /**
@@ -22,17 +24,13 @@ export const calculateMainDuration = (timings: Timings | undefined): number => {
 };
 
 /**
- * Calculate outro duration in frames
- * @param timings - Video data timings object
- * @param doesAccountHaveSponsors - Whether the account has sponsors
- * @returns Duration in frames (FPS_OUTRO or default, or 30 if no sponsors)
+ * Calculate outro duration in frames from sponsor pages (15 + 90 + 15 each).
+ * Falls back to default when the account has no sponsors.
  */
 export const calculateOutroDuration = (
-  timings: Timings | undefined,
+  _timings: Timings | undefined,
   doesAccountHaveSponsors: boolean,
+  sponsors?: SponsorsData | null,
 ): number => {
-  if (!doesAccountHaveSponsors) {
-    return DEFAULT_SEQUENCE_DURATION;
-  }
-  return timings?.FPS_OUTRO ?? DEFAULT_SEQUENCE_DURATION;
+  return calculateOutroDurationFromSponsors(sponsors, doesAccountHaveSponsors);
 };

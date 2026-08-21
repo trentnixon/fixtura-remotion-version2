@@ -1,5 +1,6 @@
 // src/utils/dataProcessing.ts
 // Removed unused import: import { FixturaDataset } from "../types/data/index";
+import { calculateOutroDurationFromSponsors } from "./sponsors";
 
 export interface Logo {
   url: string;
@@ -15,6 +16,7 @@ export interface TeamAllocation {
   name: string;
   logo: Logo;
 }
+
 /**
  * Generic deep merge for any object type.
  * Arrays are replaced (not merged) so list fields like sponsors.primary stay arrays.
@@ -31,7 +33,11 @@ export const mergeData = <T extends object>(
     if (Array.isArray(source)) {
       return [...source];
     }
-    if (typeof target !== "object" || target === null || Array.isArray(target)) {
+    if (
+      typeof target !== "object" ||
+      target === null ||
+      Array.isArray(target)
+    ) {
       return { ...source };
     }
     const result = { ...target };
@@ -61,9 +67,14 @@ export const mergeData = <T extends object>(
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const calculateDuration = (data: any) => {
+  const sponsors = data.videoMeta?.club?.sponsors;
+  const includeSponsors = Boolean(
+    data.videoMeta?.video?.metadata?.includeSponsors ??
+      data.videoMeta?.video?.includeSponsors,
+  );
   return (
     data.timings.FPS_INTRO +
     data.timings.FPS_MAIN +
-    (data.videoMeta.video.includeSponsors ? 60 : 0)
+    calculateOutroDurationFromSponsors(sponsors, includeSponsors)
   );
 };

@@ -16,9 +16,7 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Top 5",
-      "TitleSplit": [
-        "Goal Scorers"
-      ],
+      "TitleSplit": ["Goal Scorers"],
       "CompositionID": "Top5AFLScorers",
       "VideoTitle": "Top 5 Scorers - undefined",
       "HeroImage": {
@@ -44,9 +42,7 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Readyand_Go_Speed_Outburst_Inst_fb6bfe8381.mp3",
       "ASSETID": 60,
       "ASSETTYPEID": 3,
-      "FRAMES": [
-        390
-      ]
+      "FRAMES": [390]
     },
     "THEME": {
       "Template": "CNSW",

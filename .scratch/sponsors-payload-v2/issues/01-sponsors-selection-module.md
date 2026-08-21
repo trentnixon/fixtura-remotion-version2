@@ -16,4 +16,5 @@
 - [x] Automated tests cover the cases above (Creator/Scheduler assumed to own id dedupe)
 
 ## Completion Summary
+
 Pure selection/outro module landed under `src/core/utils/sponsors` with Vitest coverage for the locked footer and outro rules.

@@ -13,4 +13,5 @@
 - [x] Demoable in Studio: asset with primaries + generals shows them in order across pages
 
 ## Completion Summary
+
 All template outros already use `buildOutroSponsorSequence` (primary then general, chunked by 6) with LayoutContext gating via `includeSponsors` / `sponsorNum` / v2 presence. Confirmed complete as part of the v2 hard-cut.

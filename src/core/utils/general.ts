@@ -3,9 +3,14 @@ import { Sponsor, SponsorsData } from "../types/data/sponsors";
 /**
  * Check if the account sponsor list has any sponsors (v2).
  */
-export const hasSponsors = (sponsorList: SponsorsData | null | undefined): boolean => {
+export const hasSponsors = (
+  sponsorList: SponsorsData | null | undefined,
+): boolean => {
   if (!sponsorList) return false;
-  if (typeof sponsorList.sponsorNum === "number" && sponsorList.sponsorNum > 0) {
+  if (
+    typeof sponsorList.sponsorNum === "number" &&
+    sponsorList.sponsorNum > 0
+  ) {
     return true;
   }
   const hasPrimary =

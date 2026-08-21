@@ -5,6 +5,9 @@ import { Sponsor } from "../../../../core/types/data/sponsors";
 import {
   buildOutroSponsorSequence,
   chunkSponsors,
+  OUTRO_SPONSOR_PAGE_SIZE,
+  OUTRO_PAGE_DURATION_FRAMES,
+  OUTRO_PAGE_LOGO_EXIT_FRAME,
 } from "../../../../core/utils/sponsors";
 import { AnimatedImage } from "../../../../components/images";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -18,10 +21,10 @@ interface CNSWOutroProps {
   doesAccountHaveSponsors: boolean;
 }
 
-
 interface LogoAnimationsType {
   introIn?: ImageAnimationType | ImageAnimationConfig;
   exitAnimation?: ImageAnimationType | ImageAnimationConfig;
+  introOut?: ImageAnimationType | ImageAnimationConfig;
 }
 
 const SponsorGrid: React.FC<{
@@ -43,9 +46,11 @@ const SponsorGrid: React.FC<{
             height={"auto"}
             fit="contain"
             animation={LogoAnimations.introIn}
-            exitAnimation={LogoAnimations.exitAnimation}
+            exitAnimation={
+              LogoAnimations.exitAnimation ?? LogoAnimations.introOut
+            }
             animationDelay={idx * 5}
-            exitFrame={300}
+            exitFrame={OUTRO_PAGE_LOGO_EXIT_FRAME}
           />
         </div>
       ))}
@@ -68,7 +73,7 @@ export const CNSWOutro: React.FC<CNSWOutroProps> = ({
     general: sponsors?.general ?? [],
   });
 
-  const groups = chunkSponsors(sponsorsArray, 6);
+  const groups = chunkSponsors(sponsorsArray, OUTRO_SPONSOR_PAGE_SIZE);
 
   const sequences = groups.map((group) => ({
     content: (
@@ -76,7 +81,7 @@ export const CNSWOutro: React.FC<CNSWOutroProps> = ({
         <SponsorGrid sponsors={group} LogoAnimations={LogoAnimations} />
       </AbsoluteFill>
     ),
-    durationInFrames: 90,
+    durationInFrames: OUTRO_PAGE_DURATION_FRAMES,
   }));
 
   return (
@@ -93,4 +98,3 @@ const AlternativeOutro: React.FC = () => (
     <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
   </AbsoluteFill>
 );
-

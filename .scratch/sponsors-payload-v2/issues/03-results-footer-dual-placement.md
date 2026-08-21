@@ -13,4 +13,5 @@
 - [x] Demoable in Studio on a v2 Results sample
 
 ## Completion Summary
+
 Results displays build footer logos via `buildMultiRowFooterSponsors` / `buildResultsFooterSponsors` and pass them to `SponsorFooter`. `Cricket_Results.json` updated to v2 with `primaryForScreen`.

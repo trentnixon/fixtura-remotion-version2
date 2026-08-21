@@ -19,7 +19,9 @@ export const GamesListBroadcastPro: React.FC<GamesListProps> = ({ games }) => {
           {index < games.length - 1 && (
             <div
               className="flex w-full flex-shrink-0 items-center justify-center"
-              style={{ height: `${BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX}px` }}
+              style={{
+                height: `${BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX}px`,
+              }}
               aria-hidden
             >
               <div

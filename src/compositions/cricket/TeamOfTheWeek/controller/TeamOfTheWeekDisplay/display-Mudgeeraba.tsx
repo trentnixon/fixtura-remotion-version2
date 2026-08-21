@@ -24,7 +24,6 @@ const TeamOfTheWeekDisplayMudgeeraba: React.FC<TeamOfTheWeekDisplayProps> = ({
     fallbackPrimary: sponsors,
   });
 
-
   return (
     <div className="flex flex-col h-full mx-6">
       <AnimatedContainer

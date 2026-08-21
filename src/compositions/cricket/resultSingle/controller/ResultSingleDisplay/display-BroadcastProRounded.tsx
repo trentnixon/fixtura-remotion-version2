@@ -38,7 +38,10 @@ const ResultSingleDisplayBroadcastProRounded: React.FC<
         </AnimatedContainer>
       </div>
       <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={match.assignSponsors} primaryForScreen={match.primaryForScreen} />
+        <SponsorFooter
+          assignSponsors={match.assignSponsors}
+          primaryForScreen={match.primaryForScreen}
+        />
       </div>
     </div>
   );

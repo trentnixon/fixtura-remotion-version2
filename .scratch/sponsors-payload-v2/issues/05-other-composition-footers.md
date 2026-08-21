@@ -13,4 +13,5 @@
 - [x] Demoable in Studio for at least one non-Results/Upcoming composition on v2 data
 
 ## Completion Summary
+
 Added `buildSingleItemFooterSponsors` and wired Ladder, resultSingle, Top5, TOTW, and Performances through the shared max-5 selector. Ladder sample updated to v2 for Studio. TOTW still uses account primaries only until row-level assign/`primaryForScreen` exists on that asset shape; Performances use first item’s v2 assign arrays when present (legacy singular metadata without logos is ignored).

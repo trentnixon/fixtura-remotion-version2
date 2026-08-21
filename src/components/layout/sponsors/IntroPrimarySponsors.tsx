@@ -2,10 +2,7 @@ import React from "react";
 import { AnimatedImage } from "../../images";
 import { useVideoDataContext } from "../../../core/context/VideoDataContext";
 import { getIntroPrimarySponsors } from "../../../core/utils/sponsors";
-import {
-  ImageAnimationConfig,
-  ImageAnimationType,
-} from "../../easing/types";
+import { ImageAnimationConfig, ImageAnimationType } from "../../easing/types";
 
 type LogoAnimation = ImageAnimationType | ImageAnimationConfig | undefined;
 

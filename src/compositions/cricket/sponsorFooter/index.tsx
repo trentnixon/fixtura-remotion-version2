@@ -4,14 +4,15 @@
 import React, { useMemo } from "react";
 import { AnimatedImage } from "../../../components/images/AnimatedImage";
 import { AssignSponsors, Sponsor } from "../../../core/types/data/sponsors";
+import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import {
-  buildSingleItemFooterSponsors,
-} from "../../../core/utils/sponsors";
+  FOOTER_EXIT_ANIMATION_DURATION_FRAMES,
+  calculateFooterExitFrame,
+} from "./_utils/calculations";
 import { useSponsorValidation } from "./hooks/useSponsorValidation";
 
 const SPONSOR_CONFIG = {
   ANIMATION_DELAY_MULTIPLIER: 5,
-  EXIT_FRAME: 300,
 } as const;
 
 const calculateMaxWidth = (
@@ -78,6 +79,7 @@ export const SponsorFooter = React.memo(
 
     const { logoAnimations, heights } = validation;
     const imageHeight = calculateImageHeight(heights.footer);
+    const exitFrame = calculateFooterExitFrame(validation.timings);
 
     return (
       <div
@@ -110,7 +112,8 @@ export const SponsorFooter = React.memo(
                 animation={logoAnimations.introIn as any}
                 exitAnimation={logoAnimations.introOut as any}
                 animationDelay={idx * SPONSOR_CONFIG.ANIMATION_DELAY_MULTIPLIER}
-                exitFrame={SPONSOR_CONFIG.EXIT_FRAME}
+                exitFrame={exitFrame}
+                exitAnimationDuration={FOOTER_EXIT_ANIMATION_DURATION_FRAMES}
               />
             </div>
           );
@@ -119,4 +122,3 @@ export const SponsorFooter = React.memo(
     );
   },
 );
-

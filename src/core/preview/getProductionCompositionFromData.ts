@@ -1,6 +1,8 @@
 import type React from "react";
 import { templateRegistry, TemplateId } from "../../templates/registry";
 import { FixturaDataset } from "../types/data/index";
+import { calculateOutroDurationFromSponsors } from "../utils/sponsors";
+import { hasSponsors } from "../utils/general";
 
 export type FixturaTemplateComponent = React.ComponentType<{
   data: FixturaDataset;
@@ -40,12 +42,13 @@ export function getProductionCompositionFromData(
   const TemplateComponent =
     templateRegistry[templateId as TemplateId].component;
   const remoteCompositionId = `${templateId}-${useBackground}-${compositionId}`;
+  const sponsors = data.videoMeta.club?.sponsors;
+  const doesAccountHaveSponsors =
+    Boolean(metadata.includeSponsors) || hasSponsors(sponsors);
   const durationInFrames =
     (data.timings.FPS_INTRO ?? 0) +
     (data.timings.FPS_MAIN ?? 0) +
-    (data.videoMeta.video.metadata.includeSponsors
-      ? (data.timings.FPS_OUTRO ?? 0)
-      : 30);
+    calculateOutroDurationFromSponsors(sponsors, doesAccountHaveSponsors);
 
   return {
     TemplateComponent,

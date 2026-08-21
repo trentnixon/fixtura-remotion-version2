@@ -16,9 +16,7 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Results",
-      "TitleSplit": [
-        "Results"
-      ],
+      "TitleSplit": ["Results"],
       "CompositionID": "WeekendResultsNetball",
       "VideoTitle": "Netball Results - undefined",
       "HeroImage": {
@@ -44,10 +42,7 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jared_Marc_Theres_No_Stopping_Us_Come_Out_And_Play_Alt_Version_c1c90e4960.mp3",
       "ASSETID": 36,
       "ASSETTYPEID": 2,
-      "FRAMES": [
-        240,
-        540
-      ]
+      "FRAMES": [240, 540]
     },
     "THEME": {
       "Template": "CNSW",

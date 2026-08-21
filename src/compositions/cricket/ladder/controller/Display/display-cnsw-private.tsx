@@ -58,7 +58,10 @@ export const LadderDisplayCNSWPrivate: React.FC<LadderDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={assignSponsors} primaryForScreen={primaryForScreen} />
+        <SponsorFooter
+          assignSponsors={assignSponsors}
+          primaryForScreen={primaryForScreen}
+        />
       </div>
     </div>
   );

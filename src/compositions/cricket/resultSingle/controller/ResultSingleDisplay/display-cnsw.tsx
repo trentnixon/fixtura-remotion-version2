@@ -28,7 +28,10 @@ const CNSWSingleResult: React.FC<ResultSingleDisplayProps> = ({ match }) => {
         )}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter assignSponsors={match.assignSponsors} primaryForScreen={match.primaryForScreen} />
+        <SponsorFooter
+          assignSponsors={match.assignSponsors}
+          primaryForScreen={match.primaryForScreen}
+        />
       </div>
     </div>
   );

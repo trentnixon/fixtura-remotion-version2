@@ -16,10 +16,7 @@
     "grouping_category": "Senior",
     "Video": {
       "Title": "Fixtures",
-      "TitleSplit": [
-        "Fixtures",
-        ""
-      ],
+      "TitleSplit": ["Fixtures", ""],
       "CompositionID": "UpComingAFLFixtures",
       "VideoTitle": "Up Coming Fixtures  - undefined",
       "HeroImage": {
@@ -45,10 +42,7 @@
       "audio_option": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Free_The_People_Moonlight_Instrumental_1701394307461_mixdown_24f07b8a36.mp3",
       "ASSETID": 55,
       "ASSETTYPEID": 1,
-      "FRAMES": [
-        225,
-        495
-      ]
+      "FRAMES": [225, 495]
     },
     "THEME": {
       "Template": "CNSW",

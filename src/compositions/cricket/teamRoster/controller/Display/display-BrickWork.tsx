@@ -6,7 +6,11 @@ import RosterPlayerListBrickWork from "../../layout/RosterPlayerList/playerList-
 import { AccountTeamHeaderBrickWork } from "../../layout/RosterHeader/brickWork/AccountTeamHeader";
 import { AgainstTeamHeaderBrickWork } from "../../layout/RosterHeader/brickWork/AgainstTeamHeader";
 import { MetadataLarge } from "../../../utils/primitives/metadataLarge";
-import { formatDate, truncateText, formatGroundLocation } from "../../../utils/utils-text";
+import {
+  formatDate,
+  truncateText,
+  formatGroundLocation,
+} from "../../../utils/utils-text";
 import { VS } from "../../layout/Metadata/VS";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import {

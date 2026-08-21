@@ -48,7 +48,6 @@ const TeamOfTheWeekDisplayBroadcastProRounded: React.FC<
     fallbackPrimary: sponsors,
   });
 
-
   return (
     <div className="flex flex-col" style={{ height: `${compositionHeight}px` }}>
       <AnimatedContainer

@@ -3,7 +3,10 @@ import { PerformanceData } from "../_types/types";
 import { AssignSponsors } from "../../_types/composition-types";
 import { Sponsor } from "../../../../core/types/data/sponsors";
 import { DivideFixturesBy } from "../../../../core/types/data/videoData";
-import { buildSingleItemFooterSponsors } from "../../../../core/utils/sponsors";
+import {
+  asSponsorArray,
+  buildSingleItemFooterSponsors,
+} from "../../../../core/utils/sponsors";
 
 /**
  * Default items per screen if not specified in contentLayout
@@ -112,9 +115,9 @@ export const mergeAssignSponsors = (
       const { assignSponsors } = performance;
       if (!assignSponsors) return acc;
 
-      const grades = [...(acc.grade || [])];
-      const competitions = [...(acc.competition || [])];
-      const teams = [...(acc.team || [])];
+      const grades = [...asSponsorArray(acc.grade)];
+      const competitions = [...asSponsorArray(acc.competition)];
+      const teams = [...asSponsorArray(acc.team)];
 
       const pushUnique = (
         bucket: AssignSponsors["grade"],
@@ -125,9 +128,10 @@ export const mergeAssignSponsors = (
         bucket.push(sponsor);
       };
 
-      for (const s of assignSponsors.grade || []) pushUnique(grades, s);
-      for (const s of assignSponsors.team || []) pushUnique(teams, s);
-      for (const s of assignSponsors.competition || [])
+      for (const s of asSponsorArray(assignSponsors.grade))
+        pushUnique(grades, s);
+      for (const s of asSponsorArray(assignSponsors.team)) pushUnique(teams, s);
+      for (const s of asSponsorArray(assignSponsors.competition))
         pushUnique(competitions, s);
 
       return {
