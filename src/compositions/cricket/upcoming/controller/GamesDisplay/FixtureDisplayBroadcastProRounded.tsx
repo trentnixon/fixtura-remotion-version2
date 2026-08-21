@@ -4,11 +4,10 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import GamesListBroadcastProRounded from "../GamesList/games-list-broadcastProRounded";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
-  mergeAssignSponsors,
+  buildUpcomingFooterSponsors,
 } from "./_utils/calculations";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
@@ -29,7 +28,7 @@ export const FixtureDisplayBroadcastProRounded: React.FC<GamesDisplayProps> = ({
   );
 
   const mainContentHeight = getMainContentSectionHeight(heights);
-  const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
+  const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
 
   return (
     <div className="flex h-full w-full flex-col">
@@ -51,9 +50,7 @@ export const FixtureDisplayBroadcastProRounded: React.FC<GamesDisplayProps> = ({
         </AnimatedContainer>
       </div>
       <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

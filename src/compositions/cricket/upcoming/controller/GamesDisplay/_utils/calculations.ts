@@ -1,5 +1,6 @@
 import { GameData } from "../../../_types/types";
-import { AssignSponsors } from "../../../../_types/composition-types";
+import { buildMultiRowFooterSponsors } from "../../../../../../core/utils/sponsors";
+import type { Sponsor } from "../../../../../../core/types/data/sponsors";
 
 /**
  * Default spacing configuration for game card height calculations
@@ -72,13 +73,8 @@ export const calculateGameCardHeight = (
 };
 
 /**
- * Merges all assignSponsors objects from an array of games into a single object
- * @param games - Array of games with assignSponsors properties
- * @returns Merged AssignSponsors object
+ * Build footer logos for fixtures currently on screen (multi-row v2 policy).
  */
-export const mergeAssignSponsors = (games: GameData[]): AssignSponsors => {
-  return games.reduce(
-    (acc, game) => ({ ...acc, ...game.assignSponsors }),
-    {} as AssignSponsors,
-  );
+export const buildUpcomingFooterSponsors = (games: GameData[]): Sponsor[] => {
+  return buildMultiRowFooterSponsors(games);
 };

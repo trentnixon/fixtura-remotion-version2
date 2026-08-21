@@ -3,12 +3,11 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { GamesListSixersThunder } from "../GamesList/games-list-sixersThunder";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
   calculateGameCardHeight,
-  mergeAssignSponsors,
+  buildUpcomingFooterSponsors,
 } from "./_utils/calculations";
 
 export const GamesDisplayClassic: React.FC<GamesDisplayProps> = ({
@@ -28,7 +27,7 @@ export const GamesDisplayClassic: React.FC<GamesDisplayProps> = ({
 
   const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
 
-  const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
+  const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">
       <AnimatedContainer
@@ -47,9 +46,7 @@ export const GamesDisplayClassic: React.FC<GamesDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

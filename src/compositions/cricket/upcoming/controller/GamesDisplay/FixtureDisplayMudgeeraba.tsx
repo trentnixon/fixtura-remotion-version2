@@ -3,12 +3,11 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
 import GamesListMudgeeraba from "../GamesList/games-list-Mudgeeraba";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
-  mergeAssignSponsors,
+  buildUpcomingFooterSponsors,
 } from "./_utils/calculations";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
@@ -29,7 +28,7 @@ export const GamesDisplayMudgeeraba: React.FC<GamesDisplayProps> = ({
   );
 
   const mainContentHeight = getMainContentSectionHeight(heights);
-  const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
+  const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
 
   return (
     <div className="flex h-full w-full flex-col p-0">
@@ -54,9 +53,7 @@ export const GamesDisplayMudgeeraba: React.FC<GamesDisplayProps> = ({
         </AnimatedContainer>
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

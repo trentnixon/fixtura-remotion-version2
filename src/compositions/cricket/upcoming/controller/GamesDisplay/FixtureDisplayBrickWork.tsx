@@ -2,12 +2,11 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
 import GamesListBrickWork from "../GamesList/games-list-brickWork";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
-  mergeAssignSponsors,
+  buildUpcomingFooterSponsors,
 } from "./_utils/calculations";
 
 export const GamesDisplayBrickWork: React.FC<GamesDisplayProps> = ({
@@ -26,8 +25,7 @@ export const GamesDisplayBrickWork: React.FC<GamesDisplayProps> = ({
     screenIndex,
   );
 
-  // Merge all assignSponsors objects from displayedGames into one object
-  const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
+  const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
 
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">
@@ -44,9 +42,7 @@ export const GamesDisplayBrickWork: React.FC<GamesDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

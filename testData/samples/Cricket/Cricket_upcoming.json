@@ -24,9 +24,18 @@
         "height": 1458
       },
       "assignSponsors": {
-        "team": [],
-        "grade": [],
-        "competition": []
+        "competition": [],
+        "grade": [
+          {
+            "id": 220,
+            "name": "Grade Sponsor",
+            "logo": {
+              "id": 31213,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_f019f78fae.png"
+            }
+          }
+        ],
+        "team": []
       },
       "primaryForScreen": [
         {
@@ -79,9 +88,18 @@
         "height": 2902
       },
       "assignSponsors": {
-        "team": [],
+        "competition": [],
         "grade": [],
-        "competition": []
+        "team": [
+          {
+            "id": 221,
+            "name": "Team Sponsor",
+            "logo": {
+              "id": 31214,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc_cropped_9c0c6c688b.png"
+            }
+          }
+        ]
       },
       "primaryForScreen": [
         {

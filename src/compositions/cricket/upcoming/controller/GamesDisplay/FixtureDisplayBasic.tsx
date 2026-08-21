@@ -2,13 +2,12 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { SponsorFooter } from "../../../sponsorFooter";
-import { AssignSponsors } from "../../../_types/composition-types";
 import GamesListBasic from "../GamesList/games-list-basic";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
   calculateGameCardHeight,
-  mergeAssignSponsors,
+  buildUpcomingFooterSponsors,
 } from "./_utils/calculations";
 
 export const GamesDisplayBasic: React.FC<GamesDisplayProps> = ({
@@ -30,8 +29,7 @@ export const GamesDisplayBasic: React.FC<GamesDisplayProps> = ({
   // Calculate game card heights
   const gameCardHeight = calculateGameCardHeight(heights.asset, gamesPerScreen);
 
-  // Merge all assignSponsors objects from displayedGames into one object
-  const mergedAssignSponsors = mergeAssignSponsors(displayedGames);
+  const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
   return (
     <div className="p-0 flex flex-col w-full h-full justify-center">
       <AnimatedContainer
@@ -50,9 +48,7 @@ export const GamesDisplayBasic: React.FC<GamesDisplayProps> = ({
         </div>
       </AnimatedContainer>
       <div style={{ height: `${heights.footer}px` }}>
-        <SponsorFooter
-          assignSponsors={mergedAssignSponsors as unknown as AssignSponsors}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );
