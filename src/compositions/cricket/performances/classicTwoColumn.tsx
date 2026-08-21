@@ -78,10 +78,10 @@ export const PerformancesListClassicTwoColumn: React.FC = () => {
   // Final validation - ensure duration is still valid before creating sequences
   const finalDuration = Math.max(1, Math.floor(displayDurationPerScreen));
 
+  const firstItem = transformedData[0];
   const footerSponsors = buildSingleItemFooterSponsors({
-    assignSponsors: mergeAssignSponsors(
-      transformedData.length > 0 ? [transformedData[0]] : [],
-    ),
+    assignSponsors: mergeAssignSponsors(firstItem ? [firstItem] : []),
+    primaryForScreen: firstItem?.primaryForScreen,
     fallbackPrimary: data.videoMeta?.club?.sponsors?.primary ?? [],
   });
 

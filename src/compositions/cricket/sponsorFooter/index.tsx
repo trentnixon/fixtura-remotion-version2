@@ -34,7 +34,7 @@ export type SponsorFooterProps = {
   sponsors?: Sponsor[];
   /** Single-item entity buckets when not passing a pre-built list. */
   assignSponsors?: AssignSponsors;
-  /** Per-item primaryForScreen; falls back to account primary when omitted. */
+  /** Per-item primaryForScreen; account primary used only when this prop is omitted. */
   primaryForScreen?: Sponsor[];
 };
 

@@ -1,14 +1,12 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { VerticalHeaderLogoOnly } from "../../../../../components/layout/main/header";
-import { AnimatedImage } from "../../../../../components/images/AnimatedImage";
-import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import MatchRowSixersThunder from "../MatchRow/row-Sixers-thunder";
+import { SponsorFooter } from "../../../sponsorFooter";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
   calculateDisplayedResults,
   calculateRowHeight,
+  buildResultsFooterSponsors,
 } from "./_utils/calculations";
 
 const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
@@ -16,13 +14,9 @@ const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
   resultsPerScreen,
   screenIndex,
 }) => {
-  const { club } = useVideoDataContext();
-  const { animations } = useAnimationContext();
-  const LogoAnimations = animations.image.main.title.logo;
   const { layout } = useThemeContext();
   const { heights } = layout;
 
-  // Calculate which results to show on this screen
   const { displayedResults } = calculateDisplayedResults(
     results,
     resultsPerScreen,
@@ -30,13 +24,11 @@ const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
   );
 
   const availableHeight = heights.asset;
-
-  // Calculate exactly half of the available height for each row
   const rowHeight = calculateRowHeight(availableHeight);
+  const footerSponsors = buildResultsFooterSponsors(displayedResults);
 
   return (
     <div className="flex flex-col h-full w-full">
-      {/* Results container */}
       <div
         className="w-full flex flex-col justify-between"
         style={{ height: `${availableHeight}px` }}
@@ -59,28 +51,7 @@ const ResultsDisplaySixersThunder: React.FC<ResultsDisplayProps> = ({
         ))}
       </div>
       <div style={{ height: `${heights.footer}px` }}>
-        <VerticalHeaderLogoOnly
-          height={heights.header}
-          alignment="center"
-          Logo={
-            <div className="w-full h-full flex justify-center items-center ">
-              <div className="w-full h-full flex items-center rounded-none max-h-[130px] ">
-                <AnimatedImage
-                  src={club.logo?.url}
-                  width={"auto"}
-                  height={"auto"}
-                  fit="contain"
-                  className="rounded-none"
-                  animation={LogoAnimations.introIn}
-                  exitAnimation={LogoAnimations.introOut}
-                  exitFrame={50000}
-                />
-              </div>
-            </div>
-          }
-          Title={null}
-          Name={null}
-        />
+        <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>
   );

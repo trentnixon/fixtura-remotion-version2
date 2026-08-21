@@ -16,7 +16,8 @@ export interface TeamAllocation {
   logo: Logo;
 }
 /**
- * Generic deep merge for any object type
+ * Generic deep merge for any object type.
+ * Arrays are replaced (not merged) so list fields like sponsors.primary stay arrays.
  */
 export const mergeData = <T extends object>(
   baseData: T,
@@ -27,21 +28,29 @@ export const mergeData = <T extends object>(
     if (typeof source !== "object" || source === null) {
       return source;
     }
-    if (typeof target !== "object" || target === null) {
+    if (Array.isArray(source)) {
+      return [...source];
+    }
+    if (typeof target !== "object" || target === null || Array.isArray(target)) {
       return { ...source };
     }
     const result = { ...target };
     for (const key in source) {
       if (Object.prototype.hasOwnProperty.call(source, key)) {
-        if (
-          typeof source[key] === "object" &&
-          source[key] !== null &&
-          typeof result[key] === "object" &&
-          result[key] !== null
+        const sourceValue = source[key];
+        const targetValue = result[key];
+        if (Array.isArray(sourceValue)) {
+          result[key] = [...sourceValue];
+        } else if (
+          sourceValue !== null &&
+          typeof sourceValue === "object" &&
+          targetValue !== null &&
+          typeof targetValue === "object" &&
+          !Array.isArray(targetValue)
         ) {
-          result[key] = mergeDeep(result[key], source[key]);
+          result[key] = mergeDeep(targetValue, sourceValue);
         } else {
-          result[key] = source[key];
+          result[key] = sourceValue;
         }
       }
     }

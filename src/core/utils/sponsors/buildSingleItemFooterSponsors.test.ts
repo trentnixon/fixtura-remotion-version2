@@ -25,7 +25,7 @@ describe("buildSingleItemFooterSponsors", () => {
     expect(result.map((s) => s.id)).toEqual([1, 2, 3, 4, 10]);
   });
 
-  it("falls back to account primaries when primaryForScreen is missing", () => {
+  it("falls back to account primaries when primaryForScreen is absent", () => {
     const result = buildSingleItemFooterSponsors({
       assignSponsors: assign({ team: [sponsor(10)] }),
       fallbackPrimary: [1, 2].map(sponsor),
@@ -34,7 +34,18 @@ describe("buildSingleItemFooterSponsors", () => {
     expect(result.map((s) => s.id)).toEqual([1, 2, 10]);
   });
 
-  it("shows fallback primaries only when entity arrays are empty", () => {
+  it("does not use fallback when primaryForScreen is present but empty", () => {
+    // Empty primaryForScreen is intentional (e.g. Creator entity-wins cleared all).
+    const result = buildSingleItemFooterSponsors({
+      primaryForScreen: [],
+      assignSponsors: assign({ grade: [sponsor(10)] }),
+      fallbackPrimary: [1, 2, 3].map(sponsor),
+    });
+
+    expect(result.map((s) => s.id)).toEqual([10]);
+  });
+
+  it("shows fallback primaries only when entity arrays are empty and primaryForScreen is absent", () => {
     const result = buildSingleItemFooterSponsors({
       assignSponsors: assign({}),
       fallbackPrimary: [1, 2, 3].map(sponsor),
