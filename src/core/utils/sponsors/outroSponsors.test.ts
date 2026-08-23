@@ -58,9 +58,9 @@ describe("calculateOutroDurationFromSponsors", () => {
     expect(calculateOutroDurationFromSponsors(account(4, 3), true)).toBe(240);
   });
 
-  it("returns no-sponsor fallback when gated off", () => {
-    expect(calculateOutroDurationFromSponsors(account(6, 0), false)).toBe(
-      OUTRO_NO_SPONSORS_DURATION_FRAMES,
-    );
+  it("returns 0 when gated off or empty (no outro)", () => {
+    expect(OUTRO_NO_SPONSORS_DURATION_FRAMES).toBe(0);
+    expect(calculateOutroDurationFromSponsors(account(6, 0), false)).toBe(0);
+    expect(calculateOutroDurationFromSponsors(account(0, 0), true)).toBe(0);
   });
 });

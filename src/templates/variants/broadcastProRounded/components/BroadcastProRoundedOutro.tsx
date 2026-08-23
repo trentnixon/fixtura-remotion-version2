@@ -102,7 +102,7 @@ export const BroadcastProRoundedOutro: React.FC<
     layout.borderRadius.image ?? layout.borderRadius.container;
 
   if (!doesAccountHaveSponsors) {
-    return <AlternativeOutro />;
+    return null;
   }
 
   const sponsorsArray: Sponsor[] = buildOutroSponsorSequence({
@@ -133,9 +133,3 @@ export const BroadcastProRoundedOutro: React.FC<
     />
   );
 };
-
-const AlternativeOutro: React.FC = () => (
-  <AbsoluteFill className="flex flex-col justify-center items-center">
-    <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
-  </AbsoluteFill>
-);

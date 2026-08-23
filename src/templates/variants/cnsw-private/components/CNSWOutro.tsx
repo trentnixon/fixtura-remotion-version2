@@ -65,7 +65,7 @@ export const CNSWOutro: React.FC<CNSWOutroProps> = ({
   const LogoAnimations = animations.image.sponsor.logo;
 
   if (!doesAccountHaveSponsors) {
-    return <AlternativeOutro />;
+    return null;
   }
 
   const sponsorsArray: Sponsor[] = buildOutroSponsorSequence({
@@ -92,9 +92,3 @@ export const CNSWOutro: React.FC<CNSWOutroProps> = ({
     />
   );
 };
-
-const AlternativeOutro: React.FC = () => (
-  <AbsoluteFill className="flex flex-col justify-center items-center">
-    <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
-  </AbsoluteFill>
-);

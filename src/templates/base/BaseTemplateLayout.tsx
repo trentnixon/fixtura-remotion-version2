@@ -25,6 +25,11 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
   const { data, sponsors } = useVideoDataContext();
   const { doesAccountHaveSponsors } = useLayoutContext();
   const { timings } = data;
+  const outroDurationInFrames = calculateOutroDuration(
+    timings,
+    doesAccountHaveSponsors,
+    sponsors,
+  );
 
   // No need for a loading screen as we're using delayRender/continueRender in FontContext
   // Remotion will automatically wait for fonts to load before rendering
@@ -44,20 +49,16 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
             {MainComponentLayout && <MainComponentLayout />}
           </Series.Sequence>
 
-          {/* Outro Sequence */}
-          <Series.Sequence
-            durationInFrames={calculateOutroDuration(
-              timings,
-              doesAccountHaveSponsors,
-              sponsors,
-            )}
-          >
-            {OutroComponent && (
-              <OutroComponent
-                doesAccountHaveSponsors={doesAccountHaveSponsors}
-              />
-            )}
-          </Series.Sequence>
+          {/* Outro Sequence — omitted when there are no sponsors */}
+          {outroDurationInFrames > 0 && (
+            <Series.Sequence durationInFrames={outroDurationInFrames}>
+              {OutroComponent && (
+                <OutroComponent
+                  doesAccountHaveSponsors={doesAccountHaveSponsors}
+                />
+              )}
+            </Series.Sequence>
+          )}
         </Series>
       </AbsoluteFill>
 

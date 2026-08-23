@@ -96,7 +96,7 @@ export const BroadcastProOutro: React.FC<BroadcastProOutroProps> = ({
   const LogoAnimations = animations.image.sponsor.logo;
 
   if (!doesAccountHaveSponsors) {
-    return <AlternativeOutro />;
+    return null;
   }
 
   const sponsorsArray: Sponsor[] = buildOutroSponsorSequence({
@@ -123,9 +123,3 @@ export const BroadcastProOutro: React.FC<BroadcastProOutroProps> = ({
     />
   );
 };
-
-const AlternativeOutro: React.FC = () => (
-  <AbsoluteFill className="flex flex-col justify-center items-center">
-    <h2 className="text-5xl font-bold text-center">Thank you for watching!</h2>
-  </AbsoluteFill>
-);

@@ -97,7 +97,7 @@ export const BrickworkOutro: React.FC<BrickworkOutroProps> = ({
   const LogoAnimations = animations.image.sponsor.logo;
 
   if (!doesAccountHaveSponsors) {
-    return <AlternativeOutro />;
+    return null;
   }
 
   const sponsorsArray: Sponsor[] = buildOutroSponsorSequence({
@@ -125,10 +125,3 @@ export const BrickworkOutro: React.FC<BrickworkOutroProps> = ({
     />
   );
 };
-
-// Alternative outro for when there are no sponsors
-const AlternativeOutro: React.FC = () => (
-  <AbsoluteFill className="flex flex-col justify-center items-center">
-    <h2 className="text-5xl font-bold text-center"></h2>
-  </AbsoluteFill>
-);

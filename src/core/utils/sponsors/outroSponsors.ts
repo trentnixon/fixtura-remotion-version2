@@ -16,7 +16,8 @@ export const OUTRO_PAGE_DURATION_FRAMES =
 export const OUTRO_PAGE_LOGO_EXIT_FRAME =
   OUTRO_PAGE_DURATION_FRAMES - OUTRO_PAGE_ANIMATE_OUT_FRAMES;
 
-export const OUTRO_NO_SPONSORS_DURATION_FRAMES = 30;
+/** No outro when sponsors are gated off or empty. */
+export const OUTRO_NO_SPONSORS_DURATION_FRAMES = 0;
 
 export type BuildOutroSponsorSequenceInput = {
   primary: Sponsor[];
@@ -58,6 +59,7 @@ export const countOutroSponsors = (
 /**
  * Outro duration in frames from sponsor count.
  * pages = ceil(count / 6); duration = pages × (15 + 90 + 15).
+ * Returns 0 when sponsors are gated off or empty (no outro).
  */
 export const calculateOutroDurationFromSponsors = (
   sponsors: SponsorsData | null | undefined,

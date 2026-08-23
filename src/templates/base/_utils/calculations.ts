@@ -25,7 +25,7 @@ export const calculateMainDuration = (timings: Timings | undefined): number => {
 
 /**
  * Calculate outro duration in frames from sponsor pages (15 + 90 + 15 each).
- * Falls back to default when the account has no sponsors.
+ * Returns 0 when the account has no sponsors (no outro).
  */
 export const calculateOutroDuration = (
   _timings: Timings | undefined,
