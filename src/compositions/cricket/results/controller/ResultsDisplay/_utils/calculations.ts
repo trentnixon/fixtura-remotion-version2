@@ -50,7 +50,7 @@ export const calculateBroadcastProResultsLayout = (
   const listHeight =
     resultCount === 1
       ? Math.min(availableHeight, 620)
-      : Math.min(availableHeight, 850);
+      : Math.min(availableHeight, 800);
   const totalGap = BROADCAST_PRO_RESULTS_GAP_PX * (resultCount - 1);
 
   return {

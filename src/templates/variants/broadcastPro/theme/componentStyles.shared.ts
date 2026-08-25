@@ -63,7 +63,7 @@ const broadcastProScoreRosterIndex = {
 };
 
 const broadcastProVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-1 px-8 py-4",
+  className: "flex flex-col items-center justify-center gap-1 px-8 py-3",
 };
 
 const broadcastProVerdictBandCompact = {
@@ -131,7 +131,7 @@ const broadcastProCrestWellRosterAway = {
 
 const broadcastProMatchupFixture = {
   className:
-    "flex w-full min-w-0 flex-shrink-0 items-center justify-between gap-8 md:gap-10",
+    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-8 md:gap-10",
 };
 
 const broadcastProMatchupResultStack = {
@@ -143,11 +143,11 @@ const broadcastProMatchupRosterSidebar = {
 };
 
 const broadcastProMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-center gap-8",
+  className: "flex min-w-0 flex-1 items-start gap-8",
 };
 
 const broadcastProMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-center justify-end gap-8 text-right",
+  className: "flex min-w-0 flex-1 items-start justify-end gap-8 text-right",
 };
 
 const broadcastProMatchupRoleLabel = {
@@ -155,7 +155,8 @@ const broadcastProMatchupRoleLabel = {
 };
 
 const broadcastProMatchupDividerSlot = {
-  className: "flex flex-shrink-0 items-center justify-center px-8 md:px-10",
+  className:
+    "flex flex-shrink-0 self-center items-center justify-center px-8 md:px-10",
 };
 
 const broadcastProMatchupDividerVersus = {

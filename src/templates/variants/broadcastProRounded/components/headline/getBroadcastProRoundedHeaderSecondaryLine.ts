@@ -7,7 +7,10 @@ export const getBroadcastProRoundedHeaderSecondaryLine = (
   metadata: VideoMetadata,
   clubName: string,
 ): string => {
-  const videoTitle = metadata.videoTitle?.trim();
+  const videoTitle = metadata.videoTitle
+    ?.replace(/\bCricketRoster\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
   if (videoTitle) return videoTitle;
 
   const parts = metadata.titleSplit?.filter(Boolean) ?? [];

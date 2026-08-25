@@ -63,11 +63,11 @@ const broadcastProRoundedScoreRosterIndex = {
 };
 
 const broadcastProRoundedVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-1 px-8 py-4",
+  className: "flex flex-col items-center justify-center gap-1 px-8 py-3",
 };
 
 const broadcastProRoundedVerdictBandCompact = {
-  className: "flex items-center justify-center px-6 py-3",
+  className: "flex items-center justify-center px-6 py-2",
 };
 
 const broadcastProRoundedVerdictBandAbandoned = {
@@ -136,7 +136,7 @@ const broadcastProRoundedCrestWellRosterAway = {
 
 const broadcastProRoundedMatchupFixture = {
   className:
-    "flex w-full min-w-0 flex-shrink-0 items-center justify-between gap-8 md:gap-10",
+    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-8 md:gap-10",
 };
 
 const broadcastProRoundedMatchupResultStack = {
@@ -148,11 +148,11 @@ const broadcastProRoundedMatchupRosterSidebar = {
 };
 
 const broadcastProRoundedMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-center gap-8",
+  className: "flex min-w-0 flex-1 items-start gap-8",
 };
 
 const broadcastProRoundedMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-center justify-end gap-8 text-right",
+  className: "flex min-w-0 flex-1 items-start justify-end gap-8 text-right",
 };
 
 const broadcastProRoundedMatchupRoleLabel = {
@@ -160,7 +160,8 @@ const broadcastProRoundedMatchupRoleLabel = {
 };
 
 const broadcastProRoundedMatchupDividerSlot = {
-  className: "flex flex-shrink-0 items-center justify-center px-8 md:px-10",
+  className:
+    "flex flex-shrink-0 self-center items-center justify-center px-8 md:px-10",
 };
 
 const broadcastProRoundedMatchupDividerVersus = {

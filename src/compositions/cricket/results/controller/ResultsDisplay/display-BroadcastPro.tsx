@@ -11,11 +11,7 @@ import {
   BROADCAST_PRO_RESULTS_GAP_PX,
   buildResultsFooterSponsors,
 } from "./_utils/calculations";
-import {
-  getCompositionSectionHeight,
-  getMainContentSectionHeight,
-} from "../../../../../core/utils/layoutHeights";
-import { useBroadcastProTheme } from "../../../utils/broadcastPro";
+import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
 const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
   results,
@@ -24,7 +20,6 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
 }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
-  const { glass } = useBroadcastProTheme();
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
 
@@ -34,7 +29,6 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
     screenIndex,
   );
   const mainContentHeight = getMainContentSectionHeight(heights);
-  const compositionHeight = getCompositionSectionHeight(heights);
   const { listHeight, rowHeight } = calculateBroadcastProResultsLayout(
     mainContentHeight,
     displayedResults.length,
@@ -42,45 +36,49 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
   const footerSponsors = buildResultsFooterSponsors(displayedResults);
 
   return (
-    <div
-      className="flex w-full flex-col"
-      style={{ height: `${compositionHeight}px` }}
-    >
-      <AnimatedContainer
-        type="full"
-        className="flex flex-col justify-center overflow-hidden rounded-none"
-        backgroundColor="none"
-        animation={panelAnimation.containerIn}
-        exitAnimation={panelAnimation.containerOut}
-        style={{ height: mainContentHeight, background: glass.muted }}
+    <div className="flex h-full w-full flex-col">
+      <div
+        className="flex min-h-0 flex-shrink-0 flex-col justify-center overflow-hidden"
+        style={{
+          height: `${mainContentHeight}px`,
+          maxHeight: `${mainContentHeight}px`,
+        }}
       >
-        <div
-          className="flex w-full flex-col"
-          style={{
-            height: `${listHeight}px`,
-            gap: `${BROADCAST_PRO_RESULTS_GAP_PX}px`,
-          }}
+        <AnimatedContainer
+          type="full"
+          className="flex w-full flex-shrink-0 flex-col overflow-hidden rounded-none"
+          backgroundColor="none"
+          animation={panelAnimation.containerIn}
+          exitAnimation={panelAnimation.containerOut}
         >
-          {displayedResults.map((match, index) => (
-            <div
-              key={match.gameID}
-              className="w-full min-h-0 flex-none"
-              style={{
-                height: `${rowHeight}px`,
-                maxHeight: `${rowHeight}px`,
-                flexBasis: `${rowHeight}px`,
-              }}
-            >
-              <MatchRowBroadcastPro
-                match={match}
-                index={index}
-                rowHeight={rowHeight}
-              />
-            </div>
-          ))}
-        </div>
-      </AnimatedContainer>
-      <div style={{ height: `${heights.footer}px` }}>
+          <div
+            className="flex w-full flex-col"
+            style={{
+              height: `${listHeight}px`,
+              gap: `${BROADCAST_PRO_RESULTS_GAP_PX}px`,
+            }}
+          >
+            {displayedResults.map((match, index) => (
+              <div
+                key={match.gameID}
+                className="min-h-0 w-full flex-none"
+                style={{
+                  height: `${rowHeight}px`,
+                  maxHeight: `${rowHeight}px`,
+                  flexBasis: `${rowHeight}px`,
+                }}
+              >
+                <MatchRowBroadcastPro
+                  match={match}
+                  index={index}
+                  rowHeight={rowHeight}
+                />
+              </div>
+            ))}
+          </div>
+        </AnimatedContainer>
+      </div>
+      <div className="flex-shrink-0" style={{ height: `${heights.footer}px` }}>
         <SponsorFooter sponsors={footerSponsors} />
       </div>
     </div>

@@ -52,23 +52,23 @@ export const broadcastProRoundedCompositionComponentStylesTeamOfTheWeek = {
     className: "grid grid-cols-3 gap-2",
   },
   broadcastProRoundedTeamOfTheWeekCard: {
-    className: "flex h-full flex-col rounded-2xl p-3 sm:p-4",
+    className: "flex h-full flex-col rounded-2xl p-4",
   },
   broadcastProRoundedTeamOfTheWeekCardBody: {
     className: "flex min-h-0 flex-1 flex-col gap-2",
   },
   broadcastProRoundedTeamOfTheWeekCardUpper: {
-    className: "grid grid-cols-[minmax(0,1fr)_auto] items-center gap-1",
+    className: "grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3",
   },
   broadcastProRoundedTeamOfTheWeekCardCopy: {
-    className: "flex min-w-0 flex-1 flex-col justify-center gap-1 text-left",
+    className: "flex min-w-0 flex-1 flex-col items-start gap-1 text-left",
   },
   broadcastProRoundedTeamOfTheWeekCardLogoCol: {
-    className: "flex shrink-0 items-center justify-end",
+    className: "flex shrink-0 items-start justify-end",
   },
   broadcastProRoundedTeamOfTheWeekCardLogoWell: {
     className:
-      "flex h-14 w-14 shrink-0 items-center justify-center shadow-inner sm:h-16 sm:w-16",
+      "flex h-16 w-16 shrink-0 items-center justify-center shadow-inner",
   },
   broadcastProRoundedTeamOfTheWeekCardStats: {
     className:
@@ -78,7 +78,7 @@ export const broadcastProRoundedCompositionComponentStylesTeamOfTheWeek = {
     className: "h-px w-full opacity-30",
   },
   broadcastProRoundedTeamOfTheWeekCardNameRow: {
-    className: "mt-auto w-full pt-1",
+    className: "w-full",
   },
   broadcastProRoundedTeamOfTheWeekCardNameCell: {
     className: "w-full text-left uppercase leading-none",

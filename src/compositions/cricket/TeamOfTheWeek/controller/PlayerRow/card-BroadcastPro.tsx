@@ -135,6 +135,16 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
                 />
               </div>
 
+              <div className={nameRowClass}>
+                <TeamOfTheWeekPlayerName
+                  value={playerName}
+                  animation={{ ...copyAnimation, delay: nameDelay }}
+                  variant="onContainerTitle"
+                  className={nameCellClass}
+                  style={{ color: text.copy }}
+                />
+              </div>
+
               <TeamOfTheWeekTeam
                 value={teamName}
                 animation={{ ...copyAnimation, delay: nameDelay + 2 }}
@@ -165,16 +175,6 @@ export const CardBroadcastPro: React.FC<CardBroadcastProProps> = ({
                 </div>
               </div>
             ) : null}
-          </div>
-
-          <div className={nameRowClass}>
-            <TeamOfTheWeekPlayerName
-              value={playerName}
-              animation={{ ...copyAnimation, delay: nameDelay }}
-              variant="onContainerTitle"
-              className={nameCellClass}
-              style={{ color: text.copy }}
-            />
           </div>
         </div>
       </div>

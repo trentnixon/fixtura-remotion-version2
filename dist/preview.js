@@ -8606,7 +8606,7 @@ var BasicBackground = () => {
 };
 
 // src/components/layout/screen/OneColumn.tsx
-var import_remotion94 = require("remotion");
+var import_remotion98 = require("remotion");
 
 // src/core/utils/compositionMapping.ts
 var datasetToCompositionMap = {
@@ -10214,7 +10214,8 @@ var TeamLogo = ({
   delay,
   size = DEFAULT_TEAM_LOGO_SIZE,
   fit = DEFAULT_TEAM_LOGO_FIT,
-  imgStyle
+  imgStyle,
+  animate = true
 }) => {
   const { animations } = useAnimationContext();
   const logoAnimation = animations.image.main.item;
@@ -10247,7 +10248,7 @@ var TeamLogo = ({
       className: fit === "cover" ? "h-full w-full object-cover" : fit === "fill" ? "h-full w-full object-fill" : "object-contain",
       fit,
       style: imgStyle,
-      animation: { ...logoAnimation.logo.itemIn, delay },
+      animation: animate ? { ...logoAnimation.logo.itemIn, delay } : "none",
       onError: handleError
     }
   );
@@ -10665,7 +10666,8 @@ var LadderTeamName = ({
   style,
   className,
   fontFamily: fontFamilyProp,
-  letterAnimation
+  letterAnimation,
+  animate = true
 }) => {
   const defaultFont = useFontFamily();
   const fontFamily = fontFamilyProp != null ? fontFamilyProp : defaultFont;
@@ -10677,7 +10679,8 @@ var LadderTeamName = ({
       variant,
       textAlign,
       fontFamily,
-      animation: { ...animations.text.main.copyIn, delay },
+      animation: animate ? { ...animations.text.main.copyIn, delay } : { type: "none" },
+      exitAnimation: animate ? void 0 : "none",
       letterAnimation,
       style,
       className,
@@ -14847,7 +14850,7 @@ var mudgeeraba = () => {
 };
 
 // src/compositions/cricket/ladder/controller/Display/display-BroadcastPro.tsx
-var import_react24 = __toESM(require("react"));
+var import_react25 = __toESM(require("react"));
 
 // src/compositions/cricket/utils/broadcastPro/glass.ts
 var import_tinycolor215 = __toESM(require("tinycolor2"));
@@ -14916,6 +14919,23 @@ var DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING = {
   nameFontBonusPx: 2,
   nameInnerClampMaxOffsetPx: 2,
   listChromeReservePx: 24
+};
+var ROSTER_OUTER_MARGIN_PX = 48;
+var ROSTER_CONTENT_PADDING_PX = 16;
+var ROSTER_GRID_COLUMN_COUNT = 12;
+var ROSTER_SIDEBAR_COLUMN_SPAN = 5;
+var ROSTER_GRID_GAP_PX = 24;
+var getBroadcastProRosterSidebarWidth = (compositionWidth) => {
+  const gridWidth = Math.max(
+    0,
+    compositionWidth - ROSTER_OUTER_MARGIN_PX - ROSTER_CONTENT_PADDING_PX
+  );
+  const totalGapWidth = (ROSTER_GRID_COLUMN_COUNT - 1) * ROSTER_GRID_GAP_PX;
+  const columnWidth = (gridWidth - totalGapWidth) / ROSTER_GRID_COLUMN_COUNT;
+  return Math.max(
+    0,
+    columnWidth * ROSTER_SIDEBAR_COLUMN_SPAN + (ROSTER_SIDEBAR_COLUMN_SPAN - 1) * ROSTER_GRID_GAP_PX
+  );
 };
 
 // src/templates/types/broadcast-pro/roster-index.ts
@@ -15826,7 +15846,8 @@ var BroadcastProGlassPanel = ({
   className = "",
   style,
   glass: glassOverride,
-  surface = "panel"
+  surface = "panel",
+  connection = "standalone"
 }) => {
   const {
     selectedPalette,
@@ -15844,7 +15865,7 @@ var BroadcastProGlassPanel = ({
       className: `rounded-none ${className}`.trim(),
       style: {
         background: getBroadcastProGlassSurface(glass, surface),
-        border: glass.border,
+        border: connection === "standalone" ? glass.border : void 0,
         ...cellBlur,
         ...style
       },
@@ -15855,7 +15876,7 @@ var BroadcastProGlassPanel = ({
 
 // src/templates/variants/broadcastPro/components/stat/BroadcastProStatMatrixResultCell.tsx
 var import_jsx_runtime133 = require("react/jsx-runtime");
-var SINGLE_CELL_CLASS = "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
+var SINGLE_CELL_CLASS = "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 var SINGLE_PLAYER_NAME_CLASS = "!text-4xl font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
 var SINGLE_STAT_PRIMARY_CLASS = "font-teko !text-6xl font-bold !tracking-wide !leading-none";
 var SINGLE_STAT_SUFFIX_CLASS = "font-teko !text-3xl font-normal !tracking-wider !leading-none opacity-70";
@@ -15869,7 +15890,8 @@ var BroadcastProStatMatrixResultCell = ({
   accentColor,
   glass,
   className = "",
-  tier = "list"
+  tier = "list",
+  connection = "standalone"
 }) => {
   var _a, _b, _c, _d;
   const { animations } = useAnimationContext();
@@ -15926,6 +15948,7 @@ var BroadcastProStatMatrixResultCell = ({
     {
       glass,
       className: `${cellClass} ${isSingle ? SINGLE_CELL_CLASS : ""} ${className}`.trim(),
+      connection,
       children: isSingle ? /* @__PURE__ */ (0, import_jsx_runtime133.jsxs)(import_jsx_runtime133.Fragment, { children: [
         statBlock,
         nameBlock
@@ -15939,7 +15962,15 @@ var BroadcastProStatMatrixResultCell = ({
 
 // src/templates/variants/broadcastPro/components/stat/BroadcastProStatMatrixResultGrid.tsx
 var import_jsx_runtime134 = require("react/jsx-runtime");
-var BroadcastProStatMatrixResultGrid = ({ items, delay, accentColor, glass, className = "", tier = "list" }) => {
+var BroadcastProStatMatrixResultGrid = ({
+  items,
+  delay,
+  accentColor,
+  glass,
+  className = "",
+  tier = "list",
+  connection = "standalone"
+}) => {
   const { componentStyles } = useThemeContext();
   const gridClass = csClass(
     componentStyles,
@@ -15956,7 +15987,8 @@ var BroadcastProStatMatrixResultGrid = ({ items, delay, accentColor, glass, clas
       delay: delay + index * 2,
       accentColor,
       glass,
-      tier
+      tier,
+      connection
     },
     `${item.playerName}-${item.statValue}-${index}`
   )) });
@@ -16294,7 +16326,7 @@ var resolveBroadcastProTeamAccentColors = (input) => {
 };
 
 // src/compositions/cricket/utils/broadcastPro/results/BroadcastProResultMatchContent.tsx
-var import_react23 = require("react");
+var import_react24 = require("react");
 
 // src/templates/variants/broadcastPro/components/verdict/BroadcastProVerdictHeroLockup.tsx
 var import_jsx_runtime137 = require("react/jsx-runtime");
@@ -16431,19 +16463,16 @@ var BroadcastProResultVerdict = ({
   className = "",
   animation,
   exitAnimation,
-  exitFrame
+  exitFrame,
+  connection = "standalone"
 }) => {
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY[tier];
   const bandClass = csClass(componentStyles, bandKey);
-  const edgeMarkerStyle = resolveBroadcastProEdgeMarkerStyle(
-    "standard",
-    "primary",
-    {
-      accentColor,
-      mutedColor: accentColor
-    }
-  );
+  const edgeMarkerStyle = connection === "standalone" ? resolveBroadcastProEdgeMarkerStyle("standard", "primary", {
+    accentColor,
+    mutedColor: accentColor
+  }) : {};
   if (tier === "hero" && model.kind === "hero") {
     return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
       BroadcastProGlassPanel,
@@ -16452,6 +16481,7 @@ var BroadcastProResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        connection,
         children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
           BroadcastProVerdictHeroLockup,
           {
@@ -16475,6 +16505,7 @@ var BroadcastProResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        connection,
         children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
           BroadcastProVerdictCompactLine,
           {
@@ -16496,6 +16527,7 @@ var BroadcastProResultVerdict = ({
         surface: "strong",
         className: `${bandClass} ${className}`.trim(),
         style: edgeMarkerStyle,
+        connection,
         children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
           BroadcastProVerdictAbandoned,
           {
@@ -16603,7 +16635,14 @@ function computePlayerVisibility(params) {
 
 // src/compositions/cricket/utils/broadcastPro/results/BroadcastProResultMetaStrip.tsx
 var import_jsx_runtime141 = require("react/jsx-runtime");
-var BroadcastProResultMetaStrip = ({ gradeLabel, ground, delay = 0, className = "", showGround = true }) => {
+var BroadcastProResultMetaStrip = ({
+  gradeLabel,
+  ground,
+  delay = 0,
+  className = "",
+  showGround = true,
+  connection = "standalone"
+}) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { glass, text, accent } = useBroadcastProTheme();
@@ -16615,10 +16654,10 @@ var BroadcastProResultMetaStrip = ({ gradeLabel, ground, delay = 0, className = 
       className: `${stripClass} ${className}`.trim(),
       style: {
         background: glass.headerGradient,
-        ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
+        ...connection === "standalone" ? resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
           accentColor: accent,
           mutedColor: accent
-        }),
+        }) : {},
         ...cellBlur
       },
       children: [
@@ -16647,12 +16686,8 @@ var BroadcastProResultMetaStrip = ({ gradeLabel, ground, delay = 0, className = 
   );
 };
 
-// src/compositions/cricket/utils/broadcastPro/results/BroadcastProResultPlayerStatsGrid.tsx
-var import_jsx_runtime142 = require("react/jsx-runtime");
-var BroadcastProResultPlayerStatsGrid = (props) => /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(BroadcastProStatMatrixResultGrid, { ...props });
-
 // src/templates/variants/broadcastPro/components/crest/BroadcastProCrestWell.tsx
-var import_jsx_runtime143 = require("react/jsx-runtime");
+var import_jsx_runtime142 = require("react/jsx-runtime");
 var BroadcastProCrestWell = ({
   tier,
   logo,
@@ -16662,7 +16697,8 @@ var BroadcastProCrestWell = ({
   containerHeight,
   className = "",
   style,
-  showBorder = false
+  showBorder = false,
+  animate = true
 }) => {
   const { componentStyles, broadcastProCrestSizing } = useThemeContext();
   const themeKey = BROADCAST_PRO_CREST_TIER_THEME_KEY[tier];
@@ -16674,7 +16710,7 @@ var BroadcastProCrestWell = ({
   );
   const insetPct = `${contentInsetRatio * 100}%`;
   const sizeStyle = sizePx != null ? { width: sizePx, height: sizePx, minWidth: sizePx, minHeight: sizePx } : {};
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
     "div",
     {
       className: `${wellClass} ${className}`.trim(),
@@ -16685,7 +16721,7 @@ var BroadcastProCrestWell = ({
         ...sizeStyle,
         ...style
       },
-      children: /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
         TeamLogo,
         {
           logo,
@@ -16696,7 +16732,8 @@ var BroadcastProCrestWell = ({
             width: insetPct,
             height: insetPct,
             objectFit: "contain"
-          }
+          },
+          animate
         }
       )
     }
@@ -16704,7 +16741,7 @@ var BroadcastProCrestWell = ({
 };
 
 // src/compositions/cricket/utils/primitives/ResultTeamName.tsx
-var import_jsx_runtime144 = require("react/jsx-runtime");
+var import_jsx_runtime143 = require("react/jsx-runtime");
 var ResultTeamName = ({
   value,
   animation,
@@ -16715,7 +16752,7 @@ var ResultTeamName = ({
   exitFrame
 }) => {
   const fontFamily = useFontFamily();
-  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
     AnimatedText,
     {
       type: "ResultTeamName",
@@ -16733,7 +16770,7 @@ var ResultTeamName = ({
 };
 
 // src/compositions/cricket/utils/primitives/ResultScore.tsx
-var import_jsx_runtime145 = require("react/jsx-runtime");
+var import_jsx_runtime144 = require("react/jsx-runtime");
 var ResultScore = ({
   value,
   animation,
@@ -16744,7 +16781,7 @@ var ResultScore = ({
   const fontFamilyFromTheme = useFontFamily();
   const fontFamily = fontFamilyOverride != null ? fontFamilyOverride : fontFamilyFromTheme;
   if (value === "Yet to Bat") {
-    return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
       AnimatedText,
       {
         type: "ResultScoreYetToBat",
@@ -16757,7 +16794,7 @@ var ResultScore = ({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
     AnimatedText,
     {
       type: "ResultScore",
@@ -16783,7 +16820,7 @@ var ResultScoreFirstInnings = ({
   const fontFamilyFromTheme = useFontFamily();
   const fontFamily = fontFamilyOverride != null ? fontFamilyOverride : fontFamilyFromTheme;
   if (value === "1") return null;
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
     AnimatedText,
     {
       type: "ResultScoreFirstInnings",
@@ -16801,14 +16838,15 @@ var ResultScoreFirstInnings = ({
 };
 
 // src/compositions/cricket/utils/broadcastPro/results/BroadcastProResultScoreBadge.tsx
-var import_jsx_runtime146 = require("react/jsx-runtime");
+var import_jsx_runtime145 = require("react/jsx-runtime");
 var BroadcastProResultScoreBadge = ({
   score,
   firstInnings,
   accentColor,
   delay,
   matchType = "",
-  className = ""
+  className = "",
+  emphasis = "standard"
 }) => {
   var _a, _b, _c, _d;
   const { animations } = useAnimationContext();
@@ -16818,19 +16856,23 @@ var BroadcastProResultScoreBadge = ({
   const copyIn = animations.text.main.copyIn;
   const headingFont = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
   const showFirstInnings = matchType === "Two Day+" && firstInnings && firstInnings.trim().length > 0 && firstInnings.trim() !== "1";
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(
     "div",
     {
       className: `${badgeClass} ${className}`.trim(),
       style: {
-        ...resolveBroadcastProEdgeMarkerStyle("standard", "primary", {
-          accentColor,
-          mutedColor: accentColor
-        }),
+        ...resolveBroadcastProEdgeMarkerStyle(
+          emphasis === "winner" ? "standard" : "compact",
+          "primary",
+          {
+            accentColor,
+            mutedColor: accentColor
+          }
+        ),
         background: glass.strong
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
           BroadcastProStructuredScore,
           {
             value: score,
@@ -16841,7 +16883,7 @@ var BroadcastProResultScoreBadge = ({
             primaryStyle: { color: text.copy }
           }
         ),
-        showFirstInnings && /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
+        showFirstInnings && /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
           ResultScoreFirstInnings,
           {
             value: firstInnings,
@@ -16856,8 +16898,7 @@ var BroadcastProResultScoreBadge = ({
 };
 
 // src/compositions/cricket/utils/broadcastPro/results/BroadcastProResultTeamRow.tsx
-var import_jsx_runtime147 = require("react/jsx-runtime");
-var MAX_TEAM_NAME = 32;
+var import_jsx_runtime146 = require("react/jsx-runtime");
 var BroadcastProResultTeamRow = ({
   teamName,
   score,
@@ -16867,24 +16908,27 @@ var BroadcastProResultTeamRow = ({
   delay,
   matchType,
   glass,
-  className = ""
+  className = "",
+  connection = "standalone",
+  scoreEmphasis = "standard"
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { glass: themeGlass, text } = useBroadcastProTheme();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass(componentStyles, "broadcastProResultsTeamRow");
-  const nameClass = csClass(componentStyles, "broadcastProResultsTeamName");
+  const nameClass = `${csClass(componentStyles, "broadcastProResultsTeamName")} line-clamp-2`;
   const resolvedGlass = glass != null ? glass : themeGlass;
-  const displayName = truncateText2(teamName, MAX_TEAM_NAME).toUpperCase();
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)(
+  const displayName = teamName.toUpperCase();
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
     BroadcastProGlassPanel,
     {
       glass: resolvedGlass,
       className: `${rowClass} ${className}`.trim(),
+      connection,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)("div", { className: "flex min-w-0 flex-1 items-center gap-4", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)("div", { className: "flex min-w-0 flex-1 items-center gap-4", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
             BroadcastProCrestWell,
             {
               tier: "compact",
@@ -16894,7 +16938,7 @@ var BroadcastProResultTeamRow = ({
               glass: resolvedGlass
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
             ResultTeamName,
             {
               value: displayName,
@@ -16905,14 +16949,15 @@ var BroadcastProResultTeamRow = ({
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
           BroadcastProResultScoreBadge,
           {
             score,
             firstInnings,
             accentColor,
             delay: delay + 6,
-            matchType
+            matchType,
+            emphasis: scoreEmphasis
           }
         )
       ]
@@ -16920,9 +16965,109 @@ var BroadcastProResultTeamRow = ({
   );
 };
 
+// src/templates/variants/broadcastPro/components/matchup/BroadcastProMatchup.tsx
+var import_remotion74 = require("remotion");
+
+// src/components/typography/utils/useFittedTextBoxFontSize.ts
+var import_react23 = require("react");
+var import_layout_utils = require("@remotion/layout-utils");
+var computeFittedTextBoxFontSize = ({
+  text,
+  fontFamily,
+  withinWidth,
+  maxLines,
+  minFontSize,
+  maxFontSize,
+  fontWeight = 400,
+  letterSpacing = "normal",
+  textTransform = "uppercase"
+}) => {
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0 || withinWidth <= 0 || maxLines <= 0) {
+    return maxFontSize;
+  }
+  const fitsAt = (fontSize) => {
+    const textBox = (0, import_layout_utils.fillTextBox)({ maxBoxWidth: withinWidth, maxLines });
+    return words.every((word, index) => {
+      const { exceedsBox } = textBox.add({
+        text: `${index === 0 ? "" : " "}${word}`,
+        fontFamily,
+        fontWeight,
+        fontSize,
+        letterSpacing,
+        textTransform,
+        validateFontIsLoaded: true
+      });
+      return !exceedsBox;
+    });
+  };
+  for (let fontSize = maxFontSize; fontSize >= minFontSize; fontSize -= 1) {
+    if (fitsAt(fontSize)) {
+      return fontSize;
+    }
+  }
+  return minFontSize;
+};
+var useFittedTextBoxFontSize = (options) => {
+  const { fontsLoaded } = useFontContext();
+  const {
+    text,
+    fontFamily,
+    withinWidth,
+    maxLines,
+    minFontSize,
+    maxFontSize,
+    fontWeight,
+    letterSpacing,
+    textTransform
+  } = options;
+  return (0, import_react23.useMemo)(() => {
+    if (!fontsLoaded || !text.trim() || !fontFamily) {
+      return void 0;
+    }
+    try {
+      return computeFittedTextBoxFontSize({
+        text,
+        fontFamily,
+        withinWidth,
+        maxLines,
+        minFontSize,
+        maxFontSize,
+        fontWeight,
+        letterSpacing,
+        textTransform
+      });
+    } catch (error) {
+      console.warn(
+        "useFittedTextBoxFontSize: measurement failed, using max cap",
+        error
+      );
+      return maxFontSize;
+    }
+  }, [
+    fontsLoaded,
+    text,
+    fontFamily,
+    withinWidth,
+    maxLines,
+    minFontSize,
+    maxFontSize,
+    fontWeight,
+    letterSpacing,
+    textTransform
+  ]);
+};
+
 // src/templates/variants/broadcastPro/components/matchup/BroadcastProMatchupDivider.tsx
-var import_jsx_runtime148 = require("react/jsx-runtime");
-var BroadcastProMatchupDivider = ({ variant, delay = 0, compact = false, fontFamily, className = "" }) => {
+var import_jsx_runtime147 = require("react/jsx-runtime");
+var BroadcastProMatchupDivider = ({
+  variant,
+  delay = 0,
+  compact = false,
+  fontFamily,
+  className = "",
+  animateContent = true
+}) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProTheme();
@@ -16933,18 +17078,19 @@ var BroadcastProMatchupDivider = ({ variant, delay = 0, compact = false, fontFam
       componentStyles,
       "broadcastProMatchupDividerSlot"
     );
-    return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
       "div",
       {
         className: `${slotClass} ${className}`.trim(),
         style: { fontFamily: resolvedFont },
-        children: /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
           BroadcastProScoreText,
           {
             value: "VS",
             role: "matchDivider",
             variant: "onContainerTitle",
-            animation: { ...copyIn, delay: delay + 9 },
+            animation: animateContent ? { ...copyIn, delay: delay + 9 } : { type: "none" },
+            exitAnimation: animateContent ? void 0 : "none",
             fontFamily: resolvedFont,
             compact,
             style: { color: textOnGlass.copy }
@@ -16957,7 +17103,7 @@ var BroadcastProMatchupDivider = ({ variant, delay = 0, compact = false, fontFam
     componentStyles,
     "broadcastProMatchupDividerVersus"
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
     AnimatedText,
     {
       type: "bodyText",
@@ -16965,7 +17111,8 @@ var BroadcastProMatchupDivider = ({ variant, delay = 0, compact = false, fontFam
       fontFamily: resolvedFont,
       className: `${versusClass} ${className}`.trim(),
       style: { color: textOnGlass.muted },
-      animation: { ...copyIn, delay },
+      animation: animateContent ? { ...copyIn, delay } : { type: "none" },
+      exitAnimation: animateContent ? void 0 : "none",
       letterAnimation: "none",
       children: "VERSUS"
     }
@@ -16973,7 +17120,7 @@ var BroadcastProMatchupDivider = ({ variant, delay = 0, compact = false, fontFam
 };
 
 // src/templates/variants/broadcastPro/components/matchup/BroadcastProMatchupSide.tsx
-var import_jsx_runtime149 = require("react/jsx-runtime");
+var import_jsx_runtime148 = require("react/jsx-runtime");
 var BroadcastProMatchupSide = ({
   side,
   input,
@@ -16981,8 +17128,10 @@ var BroadcastProMatchupSide = ({
   glass,
   containerHeight,
   compact = false,
+  fixtureDensity = "standard",
   fontFamily,
-  labelVariant = "onContainerCopy"
+  labelVariant = "onContainerCopy",
+  animateContent = true
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -17001,13 +17150,14 @@ var BroadcastProMatchupSide = ({
     "broadcastProMatchupFixtureTeamName"
   );
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
-  const teamNameClass = `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${compact ? "!text-5xl" : "!text-6xl"}`.trim();
+  const densityClass = fixtureDensity === "featured" ? "!text-7xl" : fixtureDensity === "compact" || compact ? "!text-5xl" : "!text-6xl";
+  const teamNameClass = `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
   const isHome = side === "home";
   const crestDelay = delay + 6;
   const labelDelay = delay + 8;
   const nameDelay = delay + 10;
-  return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)("div", { className: sideClass, children: [
-    isHome && /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)("div", { className: sideClass, children: [
+    isHome && /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
       BroadcastProCrestWell,
       {
         tier: "fixture",
@@ -17015,25 +17165,27 @@ var BroadcastProMatchupSide = ({
         teamName: input.teamName,
         delay: crestDelay,
         glass,
-        containerHeight
+        containerHeight,
+        animate: animateContent
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(
       "div",
       {
         className: `flex min-w-0 flex-col gap-1 ${isHome ? "items-start" : "items-end"}`.trim(),
         children: [
-          input.roleLabel != null && input.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
+          input.roleLabel != null && input.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
             MetadataMedium,
             {
               value: input.roleLabel,
-              animation: { ...copyIn, delay: labelDelay },
+              animation: animateContent ? { ...copyIn, delay: labelDelay } : { type: "none" },
+              exitAnimation: animateContent ? void 0 : "none",
               className: roleLabelClass,
               variant: labelVariant,
               style: { color: text.secondary }
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
             ladderTeamName_default,
             {
               value: input.teamName,
@@ -17043,13 +17195,14 @@ var BroadcastProMatchupSide = ({
               letterAnimation: "none",
               className: teamNameClass,
               fontFamily,
-              style: { color: text.copy }
+              style: { color: text.copy },
+              animate: animateContent
             }
           )
         ]
       }
     ),
-    !isHome && /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
+    !isHome && /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
       BroadcastProCrestWell,
       {
         tier: "fixture",
@@ -17057,14 +17210,15 @@ var BroadcastProMatchupSide = ({
         teamName: input.teamName,
         delay: crestDelay,
         glass,
-        containerHeight
+        containerHeight,
+        animate: animateContent
       }
     )
   ] });
 };
 
 // src/templates/variants/broadcastPro/components/matchup/BroadcastProMatchup.tsx
-var import_jsx_runtime150 = require("react/jsx-runtime");
+var import_jsx_runtime149 = require("react/jsx-runtime");
 var BroadcastProMatchup = ({
   tier,
   home,
@@ -17072,20 +17226,40 @@ var BroadcastProMatchup = ({
   glass,
   delay = 0,
   compact = false,
+  fixtureDensity = "standard",
   containerHeight,
   className = "",
   style,
   fontFamily,
-  renderResultBlock
+  renderResultBlock,
+  animateContent = true
 }) => {
   const { componentStyles } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProTheme();
+  const { width: compositionWidth } = (0, import_remotion74.useVideoConfig)();
   const resolvedFont = fontFamily != null ? fontFamily : headingFont;
+  const rosterSidebarWidth = getBroadcastProRosterSidebarWidth(compositionWidth);
+  const homeTitleFontSize = useFittedTextBoxFontSize({
+    text: tier === "roster" ? home.teamName : "",
+    fontFamily: resolvedFont,
+    withinWidth: Math.max(0, rosterSidebarWidth - 42),
+    maxLines: 2,
+    minFontSize: 26,
+    maxFontSize: 36
+  });
+  const awayTitleFontSize = useFittedTextBoxFontSize({
+    text: tier === "roster" ? away.teamName : "",
+    fontFamily: resolvedFont,
+    withinWidth: Math.max(0, rosterSidebarWidth - 34),
+    maxLines: 2,
+    minFontSize: 24,
+    maxFontSize: 32
+  });
   const layoutKey = BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY[tier];
   const layoutClass = csClass(componentStyles, layoutKey);
   if (tier === "fixture") {
-    return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: `${layoutClass} ${className}`.trim(), style, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)("div", { className: `${layoutClass} ${className}`.trim(), style, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         BroadcastProMatchupSide,
         {
           side: "home",
@@ -17094,19 +17268,22 @@ var BroadcastProMatchup = ({
           glass,
           containerHeight,
           compact,
+          fixtureDensity,
+          animateContent,
           fontFamily: resolvedFont
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         BroadcastProMatchupDivider,
         {
           variant: "vs",
           delay,
           compact,
-          fontFamily: resolvedFont
+          fontFamily: resolvedFont,
+          animateContent
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         BroadcastProMatchupSide,
         {
           side: "away",
@@ -17115,6 +17292,8 @@ var BroadcastProMatchup = ({
           glass,
           containerHeight,
           compact,
+          fixtureDensity,
+          animateContent,
           fontFamily: resolvedFont
         }
       )
@@ -17124,7 +17303,7 @@ var BroadcastProMatchup = ({
     if (renderResultBlock == null) {
       return null;
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: `${layoutClass} ${className}`.trim(), style, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)("div", { className: `${layoutClass} ${className}`.trim(), style, children: [
       renderResultBlock("home", home),
       renderResultBlock("away", away)
     ] });
@@ -17158,9 +17337,9 @@ var BroadcastProMatchup = ({
     backgroundColor: glass.panel,
     border: glass.border
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: `${layoutClass} ${className}`.trim(), style, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: homeCardClass, style: panelStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)("div", { className: `${layoutClass} ${className}`.trim(), style, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)("div", { className: homeCardClass, style: panelStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         BroadcastProCrestWell,
         {
           tier: "rosterHome",
@@ -17170,20 +17349,23 @@ var BroadcastProMatchup = ({
           glass
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         ladderTeamName_default,
         {
-          value: truncateText(home.teamName, 42).toUpperCase(),
+          value: home.teamName.toUpperCase(),
           variant: "onContainerTitle",
           fontFamily: resolvedFont,
           letterAnimation: "none",
           delay,
           textAlign: "center",
           className: homeTitleClass,
-          style: { color: textOnGlass.copy }
+          style: {
+            color: textOnGlass.copy,
+            fontSize: homeTitleFontSize
+          }
         }
       ),
-      home.roleLabel != null && home.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+      home.roleLabel != null && home.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         "span",
         {
           className: homeLabelClass,
@@ -17192,9 +17374,9 @@ var BroadcastProMatchup = ({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: awayCardClass, style: panelStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(BroadcastProMatchupDivider, { variant: "versus", delay }),
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)("div", { className: awayCardClass, style: panelStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(BroadcastProMatchupDivider, { variant: "versus", delay }),
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         BroadcastProCrestWell,
         {
           tier: "rosterAway",
@@ -17204,20 +17386,23 @@ var BroadcastProMatchup = ({
           glass
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         ladderTeamName_default,
         {
-          value: truncateText(away.teamName, 36).toUpperCase(),
+          value: away.teamName.toUpperCase(),
           variant: "onContainerTitle",
           fontFamily: resolvedFont,
           letterAnimation: "none",
           delay,
           textAlign: "center",
           className: awayTitleClass,
-          style: { color: textOnGlass.copy }
+          style: {
+            color: textOnGlass.copy,
+            fontSize: awayTitleFontSize
+          }
         }
       ),
-      away.roleLabel != null && away.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+      away.roleLabel != null && away.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
         "span",
         {
           className: awayLabelClass,
@@ -17228,6 +17413,26 @@ var BroadcastProMatchup = ({
     ] })
   ] });
 };
+
+// src/templates/variants/broadcastPro/components/fixture/BroadcastProFixtureFrame.tsx
+var import_jsx_runtime150 = require("react/jsx-runtime");
+var BroadcastProFixtureFrame = ({ children, accentColor, glass, className = "", style }) => /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+  "div",
+  {
+    className: `relative flex min-h-0 w-full flex-col overflow-hidden rounded-[2px] ${className}`.trim(),
+    style: {
+      background: glass.panel,
+      border: glass.border,
+      ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
+        accentColor,
+        mutedColor: accentColor
+      }),
+      ...cellBlur,
+      ...style
+    },
+    children
+  }
+);
 
 // src/compositions/cricket/utils/broadcastPro/results/BroadcastProResultMatchContent.tsx
 var import_jsx_runtime151 = require("react/jsx-runtime");
@@ -17246,7 +17451,7 @@ var BroadcastProResultMatchContent = ({
   showGround = true,
   playerStatsTier = "list"
 }) => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e, _f, _g;
   const { animations } = useAnimationContext();
   const { isAccountClub } = useVideoDataContext();
   const {
@@ -17267,12 +17472,15 @@ var BroadcastProResultMatchContent = ({
   });
   const verdict = buildBroadcastProVerdictModel(match);
   const compactLine = buildCompactVerdictLine(match);
+  const winnerName = (_e = (_d = (_c = match.resultSummary) == null ? void 0 : _c.winner) == null ? void 0 : _d.trim()) != null ? _e : "";
+  const homeIsWinner = winnerName === match.homeTeam.name.trim();
+  const awayIsWinner = winnerName === match.awayTeam.name.trim();
   const copyIn = animations.text.main.copyIn;
   const showHeroVerdict = statementPosition === "top" && (verdict == null ? void 0 : verdict.kind) === "hero";
   const showCompactVerdict = statementPosition === "bottom" && (verdict == null ? void 0 : verdict.kind) !== "abandoned" && compactLine != null;
   const showAbandonedVerdict = (verdict == null ? void 0 : verdict.kind) === "abandoned";
   const metaDelay = showHeroVerdict ? baseDelay + 2 : baseDelay;
-  const glass = (0, import_react23.useMemo)(
+  const glass = (0, import_react24.useMemo)(
     () => resolveBroadcastProGlass({
       surfaceBase: selectedPalette.container.background,
       broadcastProGlassOpacity,
@@ -17324,127 +17532,150 @@ var BroadcastProResultMatchContent = ({
     "broadcastProResultsMatchBlock"
   );
   const compactVerdictModel = compactLine != null ? { kind: "compact", line: compactLine } : null;
-  return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
     "div",
     {
-      className: `mx-6 flex h-full w-auto flex-col gap-1 overflow-hidden md:mx-8 ${className}`.trim(),
+      className: `mx-6 flex h-full w-auto flex-col overflow-hidden md:mx-8 ${className}`.trim(),
       style,
-      children: [
-        showHeroVerdict && (verdict == null ? void 0 : verdict.kind) === "hero" && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-          BroadcastProResultVerdict,
-          {
-            model: verdict,
-            tier: "hero",
-            accentColor: primaryAccent,
-            delay: baseDelay,
-            glass,
-            animation: copyIn,
-            className: "mb-2"
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-          BroadcastProResultMetaStrip,
-          {
-            gradeLabel: buildGradeLabel(match),
-            ground: match.ground,
-            delay: metaDelay,
-            showGround
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-          BroadcastProMatchup,
-          {
-            tier: "result",
-            home: {
-              teamName: match.homeTeam.name,
-              logo: (_c = match.teamHomeLogo) != null ? _c : null
-            },
-            away: {
-              teamName: match.awayTeam.name,
-              logo: (_d = match.teamAwayLogo) != null ? _d : null
-            },
-            glass,
-            className: matchBlockClass,
-            renderResultBlock: (side) => {
-              if (side === "home") {
-                return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(import_jsx_runtime151.Fragment, { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-                    BroadcastProResultTeamRow,
-                    {
-                      teamName: match.homeTeam.name,
-                      score: normalizeScore(match.homeTeam.score),
-                      logo: match.teamHomeLogo,
-                      firstInnings: homeFirstInnings.show ? homeFirstInnings.value : null,
-                      accentColor: teamAccents.home,
-                      delay: metaDelay,
-                      matchType: match.type,
-                      glass
-                    }
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-                    BroadcastProResultPlayerStatsGrid,
-                    {
-                      items: homeStats,
-                      delay: statsDelay,
-                      accentColor: teamAccents.home,
-                      glass,
-                      tier: playerStatsTier
-                    }
-                  )
-                ] });
+      children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(
+        BroadcastProFixtureFrame,
+        {
+          accentColor: primaryAccent,
+          glass,
+          className: "min-h-0 flex-1",
+          children: [
+            showHeroVerdict && (verdict == null ? void 0 : verdict.kind) === "hero" && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+              BroadcastProResultVerdict,
+              {
+                model: verdict,
+                tier: "hero",
+                accentColor: primaryAccent,
+                delay: baseDelay,
+                glass,
+                animation: copyIn,
+                connection: "attached"
               }
-              return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(import_jsx_runtime151.Fragment, { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-                  BroadcastProResultTeamRow,
-                  {
-                    teamName: match.awayTeam.name,
-                    score: normalizeScore(match.awayTeam.score),
-                    logo: match.teamAwayLogo,
-                    firstInnings: awayFirstInnings.show ? awayFirstInnings.value : null,
-                    accentColor: teamAccents.away,
-                    delay: statsDelay + 4,
-                    matchType: match.type,
-                    glass,
-                    className: "mt-2"
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("div", { style: { borderBottom: glass.border }, children: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+              BroadcastProResultMetaStrip,
+              {
+                gradeLabel: buildGradeLabel(match),
+                ground: match.ground,
+                delay: metaDelay,
+                showGround,
+                connection: "attached"
+              }
+            ) }),
+            /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+              BroadcastProMatchup,
+              {
+                tier: "result",
+                home: {
+                  teamName: match.homeTeam.name,
+                  logo: (_f = match.teamHomeLogo) != null ? _f : null
+                },
+                away: {
+                  teamName: match.awayTeam.name,
+                  logo: (_g = match.teamAwayLogo) != null ? _g : null
+                },
+                glass,
+                className: `${matchBlockClass} min-h-0 flex-1 justify-center !gap-0`,
+                renderResultBlock: (side) => {
+                  if (side === "home") {
+                    return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)("div", { className: "flex min-h-0 flex-none flex-col", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+                        BroadcastProResultTeamRow,
+                        {
+                          teamName: match.homeTeam.name,
+                          score: normalizeScore(match.homeTeam.score),
+                          logo: match.teamHomeLogo,
+                          firstInnings: homeFirstInnings.show ? homeFirstInnings.value : null,
+                          accentColor: teamAccents.home,
+                          delay: metaDelay,
+                          matchType: match.type,
+                          glass,
+                          connection: "attached",
+                          scoreEmphasis: homeIsWinner ? "winner" : "standard"
+                        }
+                      ),
+                      /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+                        BroadcastProStatMatrixResultGrid,
+                        {
+                          items: homeStats,
+                          delay: statsDelay,
+                          accentColor: teamAccents.home,
+                          glass,
+                          tier: playerStatsTier,
+                          connection: "attached"
+                        }
+                      )
+                    ] });
                   }
-                ),
-                /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-                  BroadcastProResultPlayerStatsGrid,
-                  {
-                    items: awayStats,
-                    delay: statsDelay + 8,
-                    accentColor: teamAccents.away,
-                    glass,
-                    tier: playerStatsTier
-                  }
-                )
-              ] });
-            }
-          }
-        ),
-        showAbandonedVerdict && (verdict == null ? void 0 : verdict.kind) === "abandoned" && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-          BroadcastProResultVerdict,
-          {
-            model: verdict,
-            tier: "abandoned",
-            accentColor: primaryAccent,
-            delay: headerDelay,
-            glass,
-            animation: copyIn
-          }
-        ),
-        showCompactVerdict && compactVerdictModel && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
-          BroadcastProResultVerdict,
-          {
-            model: compactVerdictModel,
-            tier: "compact",
-            accentColor: primaryAccent,
-            delay: headerDelay + 2,
-            glass,
-            animation: copyIn
-          }
-        )
-      ]
+                  return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(
+                    "div",
+                    {
+                      className: "flex min-h-0 flex-none flex-col",
+                      style: { borderTop: glass.border },
+                      children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+                          BroadcastProResultTeamRow,
+                          {
+                            teamName: match.awayTeam.name,
+                            score: normalizeScore(match.awayTeam.score),
+                            logo: match.teamAwayLogo,
+                            firstInnings: awayFirstInnings.show ? awayFirstInnings.value : null,
+                            accentColor: teamAccents.away,
+                            delay: statsDelay + 4,
+                            matchType: match.type,
+                            glass,
+                            connection: "attached",
+                            scoreEmphasis: awayIsWinner ? "winner" : "standard"
+                          }
+                        ),
+                        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+                          BroadcastProStatMatrixResultGrid,
+                          {
+                            items: awayStats,
+                            delay: statsDelay + 8,
+                            accentColor: teamAccents.away,
+                            glass,
+                            tier: playerStatsTier,
+                            connection: "attached"
+                          }
+                        )
+                      ]
+                    }
+                  );
+                }
+              }
+            ),
+            showAbandonedVerdict && (verdict == null ? void 0 : verdict.kind) === "abandoned" && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+              BroadcastProResultVerdict,
+              {
+                model: verdict,
+                tier: "abandoned",
+                accentColor: primaryAccent,
+                delay: headerDelay,
+                glass,
+                animation: copyIn,
+                connection: "attached"
+              }
+            ),
+            showCompactVerdict && compactVerdictModel && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+              BroadcastProResultVerdict,
+              {
+                model: compactVerdictModel,
+                tier: "compact",
+                accentColor: primaryAccent,
+                delay: headerDelay + 2,
+                glass,
+                animation: copyIn,
+                connection: "attached"
+              }
+            )
+          ]
+        }
+      )
     }
   );
 };
@@ -17921,7 +18152,7 @@ var LadderDisplayBroadcastPro = ({
               className: `flex min-h-0 flex-1 flex-col overflow-hidden ${gapClass}`,
               children: League.map((team, index) => {
                 const position = parseTeamPosition(team.position);
-                return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_react24.default.Fragment, { children: [
+                return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_react25.default.Fragment, { children: [
                   /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
                     row_BroadcastPro_default,
                     {
@@ -17989,7 +18220,7 @@ var BroadcastPro = () => {
 };
 
 // src/compositions/cricket/ladder/controller/Display/display-BroadcastProRounded.tsx
-var import_react27 = __toESM(require("react"));
+var import_react28 = __toESM(require("react"));
 
 // src/compositions/cricket/utils/broadcastProRounded/glass.ts
 var import_tinycolor220 = __toESM(require("tinycolor2"));
@@ -18083,7 +18314,7 @@ var resolveBroadcastProRoundedGlass = (opts) => glassFromSurface2(
 );
 
 // src/compositions/cricket/utils/broadcastProRounded/useBroadcastProRoundedTheme.ts
-var import_react25 = require("react");
+var import_react26 = require("react");
 
 // src/compositions/cricket/utils/broadcastProRounded/themeColors.ts
 var import_tinycolor221 = __toESM(require("tinycolor2"));
@@ -18142,7 +18373,7 @@ var useBroadcastProRoundedTheme = () => {
   } = useThemeContext();
   const surfaceBase = selectedPalette.container.background;
   const headingFont = (_b = (_a = fontClasses.heading) == null ? void 0 : _a.family) != null ? _b : "font-teko";
-  const glass = (0, import_react25.useMemo)(
+  const glass = (0, import_react26.useMemo)(
     () => resolveBroadcastProRoundedGlass({
       surfaceBase,
       broadcastProRoundedGlassOpacity,
@@ -18154,11 +18385,11 @@ var useBroadcastProRoundedTheme = () => {
       broadcastProRoundedTransparentLayers
     ]
   );
-  const textOnContainer = (0, import_react25.useMemo)(
+  const textOnContainer = (0, import_react26.useMemo)(
     () => resolveBroadcastProRoundedTextOnContainer(selectedPalette),
     [selectedPalette]
   );
-  const textOnGlass = (0, import_react25.useMemo)(
+  const textOnGlass = (0, import_react26.useMemo)(
     () => resolveBroadcastProRoundedTextOnGlass(
       surfaceBase,
       glass.panel,
@@ -19019,12 +19250,14 @@ var calculateBroadcastProRoundedResultExitFrame = (fpsScorecard) => fpsScorecard
 
 // src/templates/variants/broadcastProRounded/components/stat/BroadcastProRoundedStatMatrixResultCell.tsx
 var import_jsx_runtime166 = require("react/jsx-runtime");
-var SINGLE_CELL_CLASS2 = "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
+var SINGLE_CELL_CLASS2 = "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 var SINGLE_PLAYER_NAME_CLASS2 = "!text-[38px] font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
 var SINGLE_STAT_PRIMARY_CLASS2 = "font-teko !text-[62px] !font-normal !tracking-wide !leading-none";
 var SINGLE_STAT_SUFFIX_CLASS2 = "font-teko !text-[32px] font-normal !tracking-wider !leading-none opacity-70";
 var LIST_STAT_PRIMARY_CLASS2 = "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
 var LIST_STAT_SUFFIX_CLASS2 = "font-teko !text-[26px] font-normal !tracking-tight !leading-tight opacity-70";
+var EMBEDDED_CELL_CLASS = "flex min-w-0 items-center justify-between gap-2 border-l border-white/20 px-3 py-1 first:border-l-0";
+var EMBEDDED_PLAYER_NAME_CLASS = "!text-[18px] !font-semibold !leading-none uppercase !opacity-70";
 var BroadcastProRoundedStatMatrixResultCell = ({
   playerName,
   statValue,
@@ -19056,9 +19289,11 @@ var BroadcastProRoundedStatMatrixResultCell = ({
   );
   const headingFont = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
   const isSingle = tier === "single";
+  const isEmbedded = tier === "listEmbedded";
   const resolvedNameClass = [
     nameClass,
-    isSingle ? SINGLE_PLAYER_NAME_CLASS2 : ""
+    isSingle ? SINGLE_PLAYER_NAME_CLASS2 : "",
+    isEmbedded ? EMBEDDED_PLAYER_NAME_CLASS : ""
   ].filter(Boolean).join(" ");
   const statBlock = /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("div", { className: isSingle ? "w-full" : valueClass, children: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
     BroadcastProRoundedStatMatrixCompact,
@@ -19091,6 +19326,16 @@ var BroadcastProRoundedStatMatrixResultCell = ({
       style: { color: text.copy }
     }
   );
+  const content = isSingle ? /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(import_jsx_runtime166.Fragment, { children: [
+    statBlock,
+    nameBlock
+  ] }) : /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(import_jsx_runtime166.Fragment, { children: [
+    nameBlock,
+    statBlock
+  ] });
+  if (isEmbedded) {
+    return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("div", { className: `${EMBEDDED_CELL_CLASS} ${className}`.trim(), children: content });
+  }
   return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
     BroadcastProRoundedGlassPanel,
     {
@@ -19098,13 +19343,7 @@ var BroadcastProRoundedStatMatrixResultCell = ({
       className: `${cellClass} ${isSingle ? SINGLE_CELL_CLASS2 : ""} ${className}`.trim(),
       animationDelay: resultContainerDelay(delay),
       exitFrame,
-      children: isSingle ? /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(import_jsx_runtime166.Fragment, { children: [
-        statBlock,
-        nameBlock
-      ] }) : /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(import_jsx_runtime166.Fragment, { children: [
-        nameBlock,
-        statBlock
-      ] })
+      children: content
     }
   );
 };
@@ -19126,7 +19365,7 @@ var BroadcastProRoundedStatMatrixResultGrid = ({
     componentStyles,
     "broadcastProRoundedStatMatrixResultGrid"
   );
-  const resolvedGridClass = tier === "single" ? `${gridClass} gap-2` : gridClass;
+  const resolvedGridClass = tier === "single" ? `${gridClass} gap-2` : tier === "listEmbedded" ? `${gridClass} w-full min-w-0 !gap-0 border-t border-white/20 pt-1` : gridClass;
   if (items.length === 0) {
     return null;
   }
@@ -19407,7 +19646,7 @@ var resolveBroadcastProRoundedTeamAccentColors = (input) => {
 };
 
 // src/compositions/cricket/utils/broadcastProRounded/results/BroadcastProRoundedResultMatchContent.tsx
-var import_react26 = require("react");
+var import_react27 = require("react");
 
 // src/templates/types/broadcast-pro-rounded/verdict-typography.ts
 var BROADCAST_PRO_VERDICT_ROLE_THEME_KEY2 = {
@@ -19850,7 +20089,7 @@ var BroadcastProRoundedResultScoreBadge = ({
 
 // src/compositions/cricket/utils/broadcastProRounded/results/BroadcastProRoundedResultTeamRow.tsx
 var import_jsx_runtime178 = require("react/jsx-runtime");
-var MAX_TEAM_NAME2 = 32;
+var MAX_TEAM_NAME = 32;
 var BroadcastProRoundedResultTeamRow = ({
   teamName,
   score,
@@ -19860,13 +20099,18 @@ var BroadcastProRoundedResultTeamRow = ({
   delay,
   matchType,
   glass,
+  performanceContent,
   className = "",
   exitAnimation,
   exitFrame
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
-  const { glass: themeGlass, text } = useBroadcastProRoundedTheme();
+  const {
+    glass: themeGlass,
+    headingFont,
+    text
+  } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass2(
     componentStyles,
@@ -19877,53 +20121,105 @@ var BroadcastProRoundedResultTeamRow = ({
     "broadcastProRoundedResultsTeamName"
   );
   const resolvedGlass = glass != null ? glass : themeGlass;
-  const displayName = truncateText2(teamName, MAX_TEAM_NAME2).toUpperCase();
+  const displayName = truncateText2(teamName, MAX_TEAM_NAME).toUpperCase();
+  const combinedTeamNameFontSize = useFittedTextBoxFontSize({
+    text: displayName,
+    fontFamily: headingFont,
+    withinWidth: 720,
+    maxLines: 1,
+    minFontSize: 24,
+    maxFontSize: 36
+  });
   return /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)(
     BroadcastProRoundedGlassPanel,
     {
       glass: resolvedGlass,
-      className: `${rowClass} ${className}`.trim(),
+      className: `${rowClass} ${performanceContent == null ? "" : "!flex-col !items-stretch !gap-1.5"} ${className}`.trim(),
       animationDelay: resultContainerDelay(delay),
       exitFrame,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("div", { className: "flex min-w-0 flex-1 items-center gap-4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("div", { className: "flex w-full items-center justify-between gap-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("div", { className: "flex min-w-0 flex-1 items-center gap-4", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
+              BroadcastProRoundedCrestWell,
+              {
+                tier: "compact",
+                logo: logo != null ? logo : null,
+                teamName,
+                delay: delay + RESULT_TEAM_ROW_NESTED.crest,
+                glass: resolvedGlass
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
+              ResultTeamName,
+              {
+                value: displayName,
+                animation: {
+                  ...copyIn,
+                  delay: delay + RESULT_TEAM_ROW_NESTED.name
+                },
+                exitAnimation,
+                exitFrame,
+                variant: "onContainerTitle",
+                className: nameClass,
+                style: {
+                  color: text.copy,
+                  fontSize: performanceContent == null ? void 0 : combinedTeamNameFontSize
+                }
+              }
+            )
+          ] }),
           /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
-            BroadcastProRoundedCrestWell,
+            BroadcastProRoundedResultScoreBadge,
             {
-              tier: "compact",
-              logo: logo != null ? logo : null,
-              teamName,
-              delay: delay + RESULT_TEAM_ROW_NESTED.crest,
-              glass: resolvedGlass
-            }
-          ),
-          /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
-            ResultTeamName,
-            {
-              value: displayName,
-              animation: { ...copyIn, delay: delay + RESULT_TEAM_ROW_NESTED.name },
+              score,
+              firstInnings,
+              accentColor,
+              delay: delay + RESULT_TEAM_ROW_NESTED.score,
+              matchType,
               exitAnimation,
-              exitFrame,
-              variant: "onContainerTitle",
-              className: nameClass,
-              style: { color: text.copy }
+              exitFrame
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
-          BroadcastProRoundedResultScoreBadge,
-          {
-            score,
-            firstInnings,
-            accentColor,
-            delay: delay + RESULT_TEAM_ROW_NESTED.score,
-            matchType,
-            exitAnimation,
-            exitFrame
-          }
-        )
+        performanceContent
       ]
     }
+  );
+};
+
+// src/templates/variants/broadcastProRounded/components/matchup/BroadcastProRoundedMatchup.tsx
+var import_remotion75 = require("remotion");
+
+// src/templates/types/broadcast-pro-rounded/roster-list-sizing.ts
+var DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING2 = {
+  leftColumnHeaderReservePx: 36,
+  minRowPx: 26,
+  minNameFontPx: 12,
+  maxNameFontPx: 38,
+  minNumberFontPx: 11,
+  maxNumberFontPx: 36,
+  nameRowHeightMultiplier: 0.45,
+  numberRowHeightMultiplier: 0.41,
+  nameFontBonusPx: 2,
+  nameInnerClampMaxOffsetPx: 2,
+  listChromeReservePx: 24
+};
+var ROSTER_OUTER_MARGIN_PX2 = 48;
+var ROSTER_CONTENT_PADDING_PX2 = 16;
+var ROSTER_GRID_COLUMN_COUNT2 = 12;
+var ROSTER_SIDEBAR_COLUMN_SPAN2 = 5;
+var ROSTER_GRID_GAP_PX2 = 24;
+var getBroadcastProRoundedRosterSidebarWidth = (compositionWidth) => {
+  const gridWidth = Math.max(
+    0,
+    compositionWidth - ROSTER_OUTER_MARGIN_PX2 - ROSTER_CONTENT_PADDING_PX2
+  );
+  const totalGapWidth = (ROSTER_GRID_COLUMN_COUNT2 - 1) * ROSTER_GRID_GAP_PX2;
+  const columnWidth = (gridWidth - totalGapWidth) / ROSTER_GRID_COLUMN_COUNT2;
+  return Math.max(
+    0,
+    columnWidth * ROSTER_SIDEBAR_COLUMN_SPAN2 + (ROSTER_SIDEBAR_COLUMN_SPAN2 - 1) * ROSTER_GRID_GAP_PX2
   );
 };
 
@@ -20087,8 +20383,26 @@ var BroadcastProRoundedMatchup = ({
 }) => {
   const { componentStyles, layout } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProRoundedTheme();
+  const { width: compositionWidth } = (0, import_remotion75.useVideoConfig)();
   const cellRadius = layout.borderRadius.container;
   const resolvedFont = fontFamily != null ? fontFamily : headingFont;
+  const rosterSidebarWidth = getBroadcastProRoundedRosterSidebarWidth(compositionWidth);
+  const homeTitleFontSize = useFittedTextBoxFontSize({
+    text: tier === "roster" ? home.teamName : "",
+    fontFamily: resolvedFont,
+    withinWidth: Math.max(0, rosterSidebarWidth - 42),
+    maxLines: 2,
+    minFontSize: 26,
+    maxFontSize: 36
+  });
+  const awayTitleFontSize = useFittedTextBoxFontSize({
+    text: tier === "roster" ? away.teamName : "",
+    fontFamily: resolvedFont,
+    withinWidth: Math.max(0, rosterSidebarWidth - 34),
+    maxLines: 2,
+    minFontSize: 24,
+    maxFontSize: 32
+  });
   const layoutKey = BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY2[tier];
   const layoutClass = csClass2(componentStyles, layoutKey);
   if (tier === "fixture") {
@@ -20186,14 +20500,17 @@ var BroadcastProRoundedMatchup = ({
           /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
             ladderTeamName_default,
             {
-              value: truncateText(home.teamName, 42).toUpperCase(),
+              value: home.teamName.toUpperCase(),
               variant: "onContainerTitle",
               fontFamily: resolvedFont,
               letterAnimation: "none",
               delay,
               textAlign: "center",
               className: homeTitleClass,
-              style: { color: textOnGlass.copy }
+              style: {
+                color: textOnGlass.copy,
+                fontSize: homeTitleFontSize
+              }
             }
           ),
           home.roleLabel != null && home.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
@@ -20227,14 +20544,17 @@ var BroadcastProRoundedMatchup = ({
           /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
             ladderTeamName_default,
             {
-              value: truncateText(away.teamName, 36).toUpperCase(),
+              value: away.teamName.toUpperCase(),
               variant: "onContainerTitle",
               fontFamily: resolvedFont,
               letterAnimation: "none",
               delay,
               textAlign: "center",
               className: awayTitleClass,
-              style: { color: textOnGlass.copy }
+              style: {
+                color: textOnGlass.copy,
+                fontSize: awayTitleFontSize
+              }
             }
           ),
           away.roleLabel != null && away.roleLabel !== "" && /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
@@ -20305,7 +20625,7 @@ var BroadcastProRoundedResultMatchContent = ({
   const showCompactVerdict = statementPosition === "bottom" && (verdict == null ? void 0 : verdict.kind) !== "abandoned" && compactLine != null;
   const showAbandonedVerdict = (verdict == null ? void 0 : verdict.kind) === "abandoned";
   const metaDelay = showHeroVerdict ? baseDelay + 8 : calculatedMetaDelay;
-  const glass = (0, import_react26.useMemo)(
+  const glass = (0, import_react27.useMemo)(
     () => resolveBroadcastProRoundedGlass({
       surfaceBase: selectedPalette.container.background,
       broadcastProRoundedGlassOpacity,
@@ -20357,10 +20677,11 @@ var BroadcastProRoundedResultMatchContent = ({
     "broadcastProRoundedResultsMatchBlock"
   );
   const compactVerdictModel = compactLine != null ? { kind: "compact", line: compactLine } : null;
+  const combineTeamAndStats = playerStatsTier === "list";
   return /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(
     "div",
     {
-      className: `mx-6 flex h-full w-auto flex-col gap-1 overflow-hidden md:mx-8 ${className}`.trim(),
+      className: `mx-6 flex h-full w-auto flex-col gap-0.5 overflow-hidden md:mx-8 ${className}`.trim(),
       style,
       children: [
         showHeroVerdict && (verdict == null ? void 0 : verdict.kind) === "hero" && /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
@@ -20416,11 +20737,23 @@ var BroadcastProRoundedResultMatchContent = ({
                       delay: homeTeamDelay,
                       matchType: match.type,
                       glass,
+                      performanceContent: combineTeamAndStats ? /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+                        BroadcastProRoundedResultPlayerStatsGrid,
+                        {
+                          items: homeStats,
+                          delay: homeStatsDelay,
+                          accentColor: teamAccents.home,
+                          glass,
+                          tier: "listEmbedded",
+                          exitAnimation: copyOut,
+                          exitFrame
+                        }
+                      ) : void 0,
                       exitAnimation: copyOut,
                       exitFrame
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+                  !combineTeamAndStats && /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
                     BroadcastProRoundedResultPlayerStatsGrid,
                     {
                       items: homeStats,
@@ -20446,12 +20779,24 @@ var BroadcastProRoundedResultMatchContent = ({
                     delay: awayTeamDelay,
                     matchType: match.type,
                     glass,
+                    performanceContent: combineTeamAndStats ? /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+                      BroadcastProRoundedResultPlayerStatsGrid,
+                      {
+                        items: awayStats,
+                        delay: awayStatsDelay,
+                        accentColor: teamAccents.away,
+                        glass,
+                        tier: "listEmbedded",
+                        exitAnimation: copyOut,
+                        exitFrame
+                      }
+                    ) : void 0,
                     className: "mt-2",
                     exitAnimation: copyOut,
                     exitFrame
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+                !combineTeamAndStats && /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
                   BroadcastProRoundedResultPlayerStatsGrid,
                   {
                     items: awayStats,
@@ -20958,7 +21303,7 @@ var LadderDisplayBroadcastProRounded = ({
               className: `flex min-h-0 flex-1 flex-col overflow-hidden ${gapClass}`,
               children: League.map((team, index) => {
                 const position = parseTeamPosition(team.position);
-                return /* @__PURE__ */ (0, import_jsx_runtime188.jsxs)(import_react27.default.Fragment, { children: [
+                return /* @__PURE__ */ (0, import_jsx_runtime188.jsxs)(import_react28.default.Fragment, { children: [
                   /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(
                     row_BroadcastProRounded_default,
                     {
@@ -21338,12 +21683,14 @@ var DEFAULT_SPACING = {
 var BROADCAST_PRO_UPCOMING_SPACING = {
   headerHeight: 0,
   contentPadding: 0,
-  cardSpacing: 36
+  cardSpacing: 30
 };
 var BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX = BROADCAST_PRO_UPCOMING_SPACING.cardSpacing;
-var BROADCAST_PRO_UPCOMING_SECTION_GAP_PX = 10;
-var BROADCAST_PRO_UPCOMING_LIST_DIVIDER_WIDTH_PX = 20;
-var BROADCAST_PRO_UPCOMING_LIST_DIVIDER_HEIGHT_PX = 2;
+var BROADCAST_PRO_UPCOMING_LIST_HEIGHT_PX = {
+  featured: 530,
+  standard: 760,
+  compact: 840
+};
 var calculateDisplayedGames = (games, gamesPerScreen, screenIndex) => {
   const startIndex = screenIndex * gamesPerScreen;
   const endIndex = Math.min(startIndex + gamesPerScreen, games.length);
@@ -21400,12 +21747,12 @@ var GamesDisplayBasic = ({
 var FixtureDisplayBasic_default = GamesDisplayBasic;
 
 // src/compositions/cricket/upcoming/modules/NoGamesData/no-data.tsx
-var import_remotion74 = require("remotion");
+var import_remotion76 = require("remotion");
 var import_jsx_runtime195 = require("react/jsx-runtime");
 var NoGamesData = () => {
   var _a, _b;
   const { fontClasses } = useThemeContext();
-  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_remotion74.AbsoluteFill, { className: "flex justify-center items-center text-white font-sans", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_remotion76.AbsoluteFill, { className: "flex justify-center items-center text-white font-sans", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(
       AnimatedText,
       {
@@ -23193,17 +23540,15 @@ var mudgeeraba2 = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime224.jsx)(UpcomingGamesWithTransitionsMudgeeraba, {});
 };
 
-// src/compositions/cricket/upcoming/controller/GamesList/games-list-broadcastPro.tsx
-var import_react28 = __toESM(require("react"));
-
 // src/compositions/cricket/upcoming/layout/Card/game-card-broadcastPro.tsx
 var import_jsx_runtime225 = require("react/jsx-runtime");
-var UPCOMING_TEAM_NAME_MAX = 34;
-var formatUpcomingTeamName = (teamName) => truncateText(stripGradeNumberFromTeamName(teamName), UPCOMING_TEAM_NAME_MAX);
-var HEADER_STRIP_H = 40;
+var formatUpcomingTeamName = (teamName) => stripGradeNumberFromTeamName(teamName);
+var HEADER_STRIP_H = 36;
 var GameCardBroadcastPro = ({
   game,
-  index
+  index,
+  density = "standard",
+  gameRowHeight
 }) => {
   var _a, _b;
   const { data } = useVideoDataContext();
@@ -23218,144 +23563,176 @@ var GameCardBroadcastPro = ({
   const metaVariant = "onContainerCopy";
   const metaCopyStyle = { color: text.copy };
   const metaMutedStyle = { color: text.muted };
-  return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)("div", { className: "flex w-full flex-col", children: /* @__PURE__ */ (0, import_jsx_runtime225.jsxs)(
-    AnimatedContainer,
+  const isCompact = density === "compact";
+  const matchupHeight = density === "featured" ? 330 : density === "standard" ? 240 : 170;
+  const bodyPadding = density === "featured" ? "18px 24px" : isCompact ? "8px 16px" : "14px 20px";
+  return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+    "div",
     {
-      type: "full",
-      className: "flex w-full flex-col rounded-none",
-      style: { gap: `${BROADCAST_PRO_UPCOMING_SECTION_GAP_PX}px` },
-      backgroundColor: "none",
-      animation: ContainerAnimations.main.itemContainer.containerIn,
-      animationDelay: delay,
-      exitAnimation: ContainerAnimations.main.itemContainer.containerOut,
-      exitFrame: animationOutFrame,
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime225.jsxs)(
-          "div",
-          {
-            className: "grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 px-5 py-2 md:px-6",
-            style: {
-              minHeight: HEADER_STRIP_H,
-              background: glass.headerGradient,
-              ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
-                accentColor: accent,
-                mutedColor: accent
-              }),
-              ...cellBlur
-            },
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
-                MetadataMedium,
-                {
-                  value: game.date,
-                  animation: { ...animations.text.main.copyIn, delay },
-                  className: "min-w-0 truncate font-bold uppercase tracking-wider",
-                  variant: metaVariant,
-                  style: metaCopyStyle
-                }
-              ),
-              /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
-                MetadataMedium,
-                {
-                  value: game.time,
-                  animation: { ...animations.text.main.copyIn, delay: delay + 2 },
-                  className: "min-w-0 truncate font-medium",
-                  variant: metaVariant,
-                  style: metaCopyStyle
-                }
-              ),
-              /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
-                MetadataMedium,
-                {
-                  value: (_b = game.gradeName) != null ? _b : "",
-                  animation: {
-                    ...animations.text.main.copyIn,
-                    delay: delay + 3
-                  },
-                  className: "min-w-0 truncate font-bold uppercase tracking-wider",
-                  variant: metaVariant,
-                  style: metaCopyStyle
-                }
-              )
-            ]
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime225.jsxs)(
-          "div",
-          {
-            className: "flex w-full flex-col px-5 py-3 md:px-6",
-            style: {
-              background: glass.panel,
-              border: glass.border,
-              ...cellBlur
-            },
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
-                BroadcastProMatchup,
-                {
-                  tier: "fixture",
-                  home: {
-                    teamName: formatUpcomingTeamName(game.teamHome),
-                    logo: game.teamHomeLogo,
-                    roleLabel: "Home"
-                  },
-                  away: {
-                    teamName: formatUpcomingTeamName(game.teamAway),
-                    logo: game.teamAwayLogo,
-                    roleLabel: "Away"
-                  },
-                  glass,
-                  delay,
-                  fontFamily: headingFont
-                }
-              ),
-              /* @__PURE__ */ (0, import_jsx_runtime225.jsx)("div", { className: "flex w-full flex-shrink-0 justify-center pt-2 md:pt-2.5", children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
-                MetadataMedium,
-                {
-                  value: formatGroundLocation(game.ground),
-                  animation: { ...animations.text.main.copyIn, delay: delay + 4 },
-                  className: "max-w-full truncate text-center font-semibold uppercase tracking-widest",
-                  variant: metaVariant,
-                  style: metaMutedStyle
-                }
-              ) })
-            ]
-          }
-        )
-      ]
+      className: "flex min-h-0 w-full flex-col",
+      style: gameRowHeight == null ? void 0 : { height: gameRowHeight, flex: `0 0 ${gameRowHeight}px` },
+      children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+        AnimatedContainer,
+        {
+          type: "full",
+          size: "full",
+          className: "flex h-full w-full flex-col rounded-none",
+          backgroundColor: "none",
+          animation: ContainerAnimations.main.itemContainer.containerIn,
+          animationDelay: delay,
+          exitAnimation: ContainerAnimations.main.itemContainer.containerOut,
+          exitFrame: animationOutFrame,
+          children: /* @__PURE__ */ (0, import_jsx_runtime225.jsxs)(
+            BroadcastProFixtureFrame,
+            {
+              accentColor: accent,
+              glass,
+              className: "h-full",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime225.jsxs)(
+                  "div",
+                  {
+                    className: "grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-3 px-5 py-1.5 md:px-6",
+                    style: {
+                      minHeight: HEADER_STRIP_H,
+                      background: glass.headerGradient,
+                      ...cellBlur
+                    },
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                        MetadataMedium,
+                        {
+                          value: game.date,
+                          animation: { type: "none" },
+                          exitAnimation: "none",
+                          className: "min-w-0 truncate font-bold uppercase tracking-wider",
+                          variant: metaVariant,
+                          style: metaCopyStyle
+                        }
+                      ),
+                      /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                        MetadataMedium,
+                        {
+                          value: game.time,
+                          animation: { type: "none" },
+                          exitAnimation: "none",
+                          className: "min-w-0 truncate font-medium",
+                          variant: metaVariant,
+                          style: metaCopyStyle
+                        }
+                      ),
+                      /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                        MetadataMedium,
+                        {
+                          value: (_b = game.gradeName) != null ? _b : "",
+                          animation: { type: "none" },
+                          exitAnimation: "none",
+                          className: "min-w-0 truncate text-right font-semibold uppercase tracking-wider",
+                          variant: metaVariant,
+                          style: metaMutedStyle
+                        }
+                      )
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                  "div",
+                  {
+                    className: "flex min-h-0 w-full flex-1 flex-col justify-center",
+                    style: {
+                      padding: bodyPadding,
+                      background: glass.panel,
+                      borderTop: glass.border,
+                      ...cellBlur
+                    },
+                    children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                      BroadcastProMatchup,
+                      {
+                        tier: "fixture",
+                        home: {
+                          teamName: formatUpcomingTeamName(game.teamHome),
+                          logo: game.teamHomeLogo,
+                          roleLabel: "Home"
+                        },
+                        away: {
+                          teamName: formatUpcomingTeamName(game.teamAway),
+                          logo: game.teamAwayLogo,
+                          roleLabel: "Away"
+                        },
+                        glass,
+                        delay,
+                        fontFamily: headingFont,
+                        fixtureDensity: density,
+                        containerHeight: matchupHeight,
+                        animateContent: false
+                      }
+                    )
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                  "div",
+                  {
+                    className: `flex w-full flex-shrink-0 justify-center px-5 ${isCompact ? "py-1" : "py-2"}`,
+                    style: {
+                      background: glass.muted,
+                      borderTop: glass.border
+                    },
+                    children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
+                      MetadataMedium,
+                      {
+                        value: formatGroundLocation(game.ground),
+                        animation: { type: "none" },
+                        exitAnimation: "none",
+                        className: "max-w-full truncate text-center font-semibold uppercase tracking-widest",
+                        variant: metaVariant,
+                        style: metaMutedStyle
+                      }
+                    )
+                  }
+                )
+              ]
+            }
+          )
+        }
+      )
     }
-  ) });
+  );
 };
 var game_card_broadcastPro_default = GameCardBroadcastPro;
+
+// src/templates/types/broadcast-pro/fixture-density.ts
+var resolveBroadcastProFixtureDensity = (fixtureCount) => {
+  if (fixtureCount <= 1) return "featured";
+  if (fixtureCount === 2) return "standard";
+  return "compact";
+};
 
 // src/compositions/cricket/upcoming/controller/GamesList/games-list-broadcastPro.tsx
 var import_jsx_runtime226 = require("react/jsx-runtime");
 var GamesListBroadcastPro = ({ games }) => {
-  const { accent } = useBroadcastProTheme();
-  return /* @__PURE__ */ (0, import_jsx_runtime226.jsx)("div", { className: "flex w-full max-w-full flex-col", children: games.map((game, index) => /* @__PURE__ */ (0, import_jsx_runtime226.jsxs)(import_react28.default.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime226.jsx)(game_card_broadcastPro_default, { game, index }),
-    index < games.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime226.jsx)(
-      "div",
-      {
-        className: "flex w-full flex-shrink-0 items-center justify-center",
-        style: {
-          height: `${BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX}px`
+  const density = resolveBroadcastProFixtureDensity(games.length);
+  const listHeight = BROADCAST_PRO_UPCOMING_LIST_HEIGHT_PX[density];
+  const cardHeight = (listHeight - BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX * Math.max(games.length - 1, 0)) / Math.max(games.length, 1);
+  return /* @__PURE__ */ (0, import_jsx_runtime226.jsx)(
+    "div",
+    {
+      className: "flex w-full max-w-full flex-col",
+      style: {
+        height: listHeight,
+        gap: BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX
+      },
+      children: games.map((game, index) => /* @__PURE__ */ (0, import_jsx_runtime226.jsx)(
+        game_card_broadcastPro_default,
+        {
+          game,
+          index,
+          density,
+          gameRowHeight: cardHeight
         },
-        "aria-hidden": true,
-        children: /* @__PURE__ */ (0, import_jsx_runtime226.jsx)(
-          "div",
-          {
-            style: {
-              width: `${BROADCAST_PRO_UPCOMING_LIST_DIVIDER_WIDTH_PX}px`,
-              height: `${BROADCAST_PRO_UPCOMING_LIST_DIVIDER_HEIGHT_PX}px`,
-              backgroundColor: accent,
-              opacity: 0.55
-            }
-          }
-        )
-      }
-    )
-  ] }, game.gameID)) });
+        game.gameID
+      ))
+    }
+  );
 };
 var games_list_broadcastPro_default = GamesListBroadcastPro;
 
@@ -23390,7 +23767,7 @@ var FixtureDisplayBroadcastPro = ({
           AnimatedContainer,
           {
             type: "full",
-            className: "mx-4 flex w-full flex-shrink-0 flex-col rounded-none md:mx-6",
+            className: "mx-6 flex w-auto flex-shrink-0 flex-col rounded-none md:mx-8",
             backgroundColor: "none",
             animation: panelAnimation.containerIn,
             exitAnimation: panelAnimation.containerOut,
@@ -23465,9 +23842,8 @@ var BroadcastPro2 = () => {
 
 // src/compositions/cricket/upcoming/layout/Card/game-card-broadcastProRounded.tsx
 var import_jsx_runtime229 = require("react/jsx-runtime");
-var UPCOMING_TEAM_NAME_MAX2 = 34;
-var formatUpcomingTeamName2 = (teamName) => truncateText(stripGradeNumberFromTeamName(teamName), UPCOMING_TEAM_NAME_MAX2);
-var HEADER_STRIP_H2 = 40;
+var formatUpcomingTeamName2 = (teamName) => stripGradeNumberFromTeamName(teamName);
+var HEADER_STRIP_H2 = 36;
 var GROUND_STRIP_H = 36;
 var GameCardBroadcastProRounded = ({
   game,
@@ -23501,7 +23877,7 @@ var GameCardBroadcastProRounded = ({
         /* @__PURE__ */ (0, import_jsx_runtime229.jsxs)(
           "div",
           {
-            className: `grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 overflow-hidden px-5 py-2 md:px-6 ${cellRadius}`,
+            className: `grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 overflow-hidden px-5 py-1.5 md:px-6 ${cellRadius}`,
             style: {
               minHeight: HEADER_STRIP_H2,
               background: glass.headerGradient,
@@ -23551,7 +23927,7 @@ var GameCardBroadcastProRounded = ({
         /* @__PURE__ */ (0, import_jsx_runtime229.jsx)(
           "div",
           {
-            className: `flex w-full overflow-hidden px-5 py-3 md:px-6 ${cellRadius}`,
+            className: `flex w-full overflow-hidden px-5 py-2 md:px-6 ${cellRadius}`,
             style: {
               background: glass.panel,
               border: glass.border,
@@ -23581,7 +23957,7 @@ var GameCardBroadcastProRounded = ({
         /* @__PURE__ */ (0, import_jsx_runtime229.jsx)(
           "div",
           {
-            className: `flex w-full flex-shrink-0 items-center overflow-hidden px-5 py-1.5 md:px-6 ${cellRadius}`,
+            className: `flex w-full flex-shrink-0 items-center overflow-hidden px-5 py-1 md:px-6 ${cellRadius}`,
             style: {
               minHeight: GROUND_STRIP_H,
               background: glass.muted,
@@ -24092,7 +24468,7 @@ var PlayersDisplayBasic = ({
 var display_Basic_default2 = PlayersDisplayBasic;
 
 // src/compositions/cricket/top5/modules/NoPlayersData/no-data.tsx
-var import_remotion75 = require("remotion");
+var import_remotion77 = require("remotion");
 
 // src/compositions/cricket/top5/utils/dataTransformer.ts
 var transformPlayerData = (rawData, compositionId) => {
@@ -24136,7 +24512,7 @@ var NoPlayersData = () => {
   const { videoMeta } = data;
   const compositionId = ((_b = (_a = videoMeta == null ? void 0 : videoMeta.video) == null ? void 0 : _a.metadata) == null ? void 0 : _b.compositionId) || "";
   const title = getTitle(compositionId);
-  return /* @__PURE__ */ (0, import_jsx_runtime240.jsx)(import_remotion75.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime240.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime240.jsx)(import_remotion77.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime240.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime240.jsxs)("h2", { className: "text-2xl font-bold mb-4", children: [
       "No ",
       title,
@@ -26562,10 +26938,10 @@ var BroadcastProRounded3 = () => {
 };
 
 // src/compositions/cricket/results/modules/NoResultsData/no-data.tsx
-var import_remotion76 = require("remotion");
+var import_remotion78 = require("remotion");
 var import_jsx_runtime276 = require("react/jsx-runtime");
 var NoResultsData = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime276.jsx)(import_remotion76.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime276.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime276.jsx)(import_remotion78.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime276.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime276.jsx)("h2", { className: "text-2xl font-bold mb-4", children: "No Results Data Available" }),
     /* @__PURE__ */ (0, import_jsx_runtime276.jsx)("p", { className: "text-gray-400", children: "Please check your data source and try again." })
   ] }) });
@@ -27782,6 +28158,16 @@ var calculateDisplayedResults = (results5, resultsPerScreen, screenIndex) => {
 };
 var calculateRowHeight = (availableHeight) => {
   return Math.floor(availableHeight / 2);
+};
+var BROADCAST_PRO_RESULTS_GAP_PX = 30;
+var calculateBroadcastProResultsLayout = (availableHeight, resultCount) => {
+  if (resultCount <= 0) return { listHeight: 0, rowHeight: 0 };
+  const listHeight = resultCount === 1 ? Math.min(availableHeight, 620) : Math.min(availableHeight, 800);
+  const totalGap = BROADCAST_PRO_RESULTS_GAP_PX * (resultCount - 1);
+  return {
+    listHeight,
+    rowHeight: Math.floor((listHeight - totalGap) / resultCount)
+  };
 };
 var buildResultsFooterSponsors = (displayedResults) => {
   return buildMultiRowFooterSponsors(displayedResults);
@@ -31642,6 +32028,7 @@ var MatchRowBroadcastPro = ({
     AnimatedContainer,
     {
       type: "full",
+      size: "full",
       className: "h-full w-full rounded-none",
       backgroundColor: "none",
       animation: containerAnimation.containerIn,
@@ -31679,36 +32066,44 @@ var ResultsDisplayBroadcastPro = ({
     screenIndex
   );
   const mainContentHeight = getMainContentSectionHeight(heights);
-  const compositionHeight = getCompositionSectionHeight(heights);
-  const rowHeight = calculateRowHeight(mainContentHeight);
+  const { listHeight, rowHeight } = calculateBroadcastProResultsLayout(
+    mainContentHeight,
+    displayedResults.length
+  );
   const footerSponsors = buildResultsFooterSponsors(displayedResults);
-  return /* @__PURE__ */ (0, import_jsx_runtime342.jsxs)(
-    "div",
-    {
-      className: "flex w-full flex-col",
-      style: { height: `${compositionHeight}px` },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime342.jsxs)("div", { className: "flex h-full w-full flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(
+      "div",
+      {
+        className: "flex min-h-0 flex-shrink-0 flex-col justify-center overflow-hidden",
+        style: {
+          height: `${mainContentHeight}px`,
+          maxHeight: `${mainContentHeight}px`
+        },
+        children: /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(
           AnimatedContainer,
           {
             type: "full",
-            className: "flex flex-col overflow-hidden rounded-none",
+            className: "flex w-full flex-shrink-0 flex-col overflow-hidden rounded-none",
             backgroundColor: "none",
             animation: panelAnimation.containerIn,
             exitAnimation: panelAnimation.containerOut,
-            style: { height: mainContentHeight },
             children: /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(
               "div",
               {
-                className: "flex w-full flex-col gap-0",
-                style: { height: `${mainContentHeight}px` },
+                className: "flex w-full flex-col",
+                style: {
+                  height: `${listHeight}px`,
+                  gap: `${BROADCAST_PRO_RESULTS_GAP_PX}px`
+                },
                 children: displayedResults.map((match, index) => /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(
                   "div",
                   {
-                    className: "w-full min-h-0 flex-1",
+                    className: "min-h-0 w-full flex-none",
                     style: {
                       height: `${rowHeight}px`,
-                      maxHeight: `${rowHeight}px`
+                      maxHeight: `${rowHeight}px`,
+                      flexBasis: `${rowHeight}px`
                     },
                     children: /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(
                       row_BroadcastPro_default2,
@@ -31724,11 +32119,11 @@ var ResultsDisplayBroadcastPro = ({
               }
             )
           }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime342.jsx)("div", { style: { height: `${heights.footer}px` }, children: /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(SponsorFooter, { sponsors: footerSponsors }) })
-      ]
-    }
-  );
+        )
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime342.jsx)("div", { className: "flex-shrink-0", style: { height: `${heights.footer}px` }, children: /* @__PURE__ */ (0, import_jsx_runtime342.jsx)(SponsorFooter, { sponsors: footerSponsors }) })
+  ] });
 };
 var display_BroadcastPro_default3 = ResultsDisplayBroadcastPro;
 
@@ -31738,8 +32133,10 @@ var ResultsListBroadcastPro = () => {
   var _a, _b;
   const { data } = useVideoDataContext();
   const { data: resultsData, videoMeta, timings } = data;
+  const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
+  const compositionHeight = getCompositionSectionHeight(layout.heights);
   if (!hasValidResults(resultsData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(no_data_default4, {});
   }
@@ -31755,17 +32152,17 @@ var ResultsListBroadcastPro = () => {
   );
   const matchResults = castToMatchResults(resultsData);
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime343.jsx)("div", { className: "h-full w-full", style: { height: compositionHeight }, children: /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(
       display_BroadcastPro_default3,
       {
         results: matchResults,
         resultsPerScreen,
         screenIndex: index
       }
-    ),
+    ) }),
     durationInFrames: displayDurationPerScreen
   }));
-  return /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime343.jsx)("div", { className: "w-full", style: { height: compositionHeight }, children: /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(
     TransitionSeriesWrapper,
     {
       sequences,
@@ -31776,7 +32173,7 @@ var ResultsListBroadcastPro = () => {
         durationInFrames: transitionConfig.durationInFrames
       }
     }
-  );
+  ) });
 };
 var broadcastpro = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime343.jsx)(ResultsListBroadcastPro, {});
@@ -31850,7 +32247,7 @@ var ResultsDisplayBroadcastProRounded = ({
   resultsPerScreen,
   screenIndex
 }) => {
-  var _a, _b, _c;
+  var _a;
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const { data } = useVideoDataContext();
@@ -31865,38 +32262,46 @@ var ResultsDisplayBroadcastProRounded = ({
     screenIndex
   );
   const mainContentHeight = getMainContentSectionHeight(heights);
-  const compositionHeight = getCompositionSectionHeight(heights);
-  const rowHeight = calculateRowHeight(mainContentHeight);
+  const { listHeight, rowHeight } = calculateBroadcastProResultsLayout(
+    mainContentHeight,
+    displayedResults.length
+  );
   const footerSponsors = buildResultsFooterSponsors(displayedResults);
-  return /* @__PURE__ */ (0, import_jsx_runtime346.jsxs)(
-    "div",
-    {
-      className: "flex w-full flex-col",
-      style: { height: `${compositionHeight}px` },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime346.jsxs)("div", { className: "flex h-full w-full flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(
+      "div",
+      {
+        className: "flex min-h-0 flex-shrink-0 flex-col justify-center overflow-hidden",
+        style: {
+          height: `${mainContentHeight}px`,
+          maxHeight: `${mainContentHeight}px`
+        },
+        children: /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(
           AnimatedContainer,
           {
             type: "full",
-            className: "flex flex-col overflow-hidden",
+            className: "flex w-full flex-shrink-0 flex-col overflow-hidden",
             backgroundColor: "none",
             animation: panelAnimation.containerIn,
             animationDelay: RESULT_PANEL_CONTAINER_DELAY,
             exitAnimation: panelAnimation.containerOut,
             exitFrame: panelExitFrame,
-            style: { height: mainContentHeight },
             children: /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(
               "div",
               {
-                className: `flex w-full flex-col ${(_c = (_b = layout.spacing) == null ? void 0 : _b.stack) != null ? _c : "gap-1"}`,
-                style: { height: `${mainContentHeight}px` },
+                className: "flex w-full flex-col",
+                style: {
+                  height: `${listHeight}px`,
+                  gap: `${BROADCAST_PRO_RESULTS_GAP_PX}px`
+                },
                 children: displayedResults.map((match, index) => /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(
                   "div",
                   {
-                    className: "w-full min-h-0 flex-1",
+                    className: "min-h-0 w-full flex-none",
                     style: {
                       height: `${rowHeight}px`,
-                      maxHeight: `${rowHeight}px`
+                      maxHeight: `${rowHeight}px`,
+                      flexBasis: `${rowHeight}px`
                     },
                     children: /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(
                       row_BroadcastProRounded_default2,
@@ -31912,11 +32317,11 @@ var ResultsDisplayBroadcastProRounded = ({
               }
             )
           }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime346.jsx)("div", { style: { height: `${heights.footer}px` }, children: /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(SponsorFooter, { sponsors: footerSponsors }) })
-      ]
-    }
-  );
+        )
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime346.jsx)("div", { className: "flex-shrink-0", style: { height: `${heights.footer}px` }, children: /* @__PURE__ */ (0, import_jsx_runtime346.jsx)(SponsorFooter, { sponsors: footerSponsors }) })
+  ] });
 };
 var display_BroadcastProRounded_default3 = ResultsDisplayBroadcastProRounded;
 
@@ -31926,8 +32331,10 @@ var ResultsListBroadcastProRounded = () => {
   var _a, _b;
   const { data } = useVideoDataContext();
   const { data: resultsData, videoMeta, timings } = data;
+  const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
+  const compositionHeight = getCompositionSectionHeight(layout.heights);
   if (!hasValidResults(resultsData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime347.jsx)(no_data_default4, {});
   }
@@ -31943,17 +32350,17 @@ var ResultsListBroadcastProRounded = () => {
   );
   const matchResults = castToMatchResults(resultsData);
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime347.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime347.jsx)("div", { className: "h-full w-full", style: { height: compositionHeight }, children: /* @__PURE__ */ (0, import_jsx_runtime347.jsx)(
       display_BroadcastProRounded_default3,
       {
         results: matchResults,
         resultsPerScreen,
         screenIndex: index
       }
-    ),
+    ) }),
     durationInFrames: displayDurationPerScreen
   }));
-  return /* @__PURE__ */ (0, import_jsx_runtime347.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime347.jsx)("div", { className: "w-full", style: { height: compositionHeight }, children: /* @__PURE__ */ (0, import_jsx_runtime347.jsx)(
     TransitionSeriesWrapper,
     {
       sequences,
@@ -31964,7 +32371,7 @@ var ResultsListBroadcastProRounded = () => {
         durationInFrames: transitionConfig.durationInFrames
       }
     }
-  );
+  ) });
 };
 var broadcastprorounded = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime347.jsx)(ResultsListBroadcastProRounded, {});
@@ -35660,7 +36067,7 @@ var broadcastprorounded2 = () => {
 };
 
 // src/compositions/cricket/teamRoster/basic.tsx
-var import_remotion78 = require("remotion");
+var import_remotion80 = require("remotion");
 
 // src/compositions/cricket/utils/primitives/RosterPlayerName.tsx
 var import_jsx_runtime402 = require("react/jsx-runtime");
@@ -36096,11 +36503,11 @@ var RosterDisplay = ({ roster }) => {
 var display_default2 = RosterDisplay;
 
 // src/compositions/cricket/teamRoster/modules/NoData/no-data.tsx
-var import_remotion77 = require("remotion");
+var import_remotion79 = require("remotion");
 var import_jsx_runtime409 = require("react/jsx-runtime");
 var NoRosterData = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime409.jsx)(
-    import_remotion77.AbsoluteFill,
+    import_remotion79.AbsoluteFill,
     {
       style: {
         backgroundColor: "grey",
@@ -36172,8 +36579,8 @@ var CricketRosterWithTransitions = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime411.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime411.jsx)(import_remotion78.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime411.jsxs)(
-    import_remotion78.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime411.jsx)(import_remotion80.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime411.jsxs)(
+    import_remotion80.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36190,7 +36597,7 @@ var basic = () => {
 };
 
 // src/compositions/cricket/teamRoster/sixersThunder.tsx
-var import_remotion79 = require("remotion");
+var import_remotion81 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-sixers-thunder.tsx
 var import_jsx_runtime412 = require("react/jsx-runtime");
@@ -36276,8 +36683,8 @@ var CricketRosterWithTransitions2 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(import_remotion79.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(
-    import_remotion79.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(import_remotion81.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime413.jsx)(
+    import_remotion81.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36291,7 +36698,7 @@ var SixersThunder4 = () => {
 };
 
 // src/compositions/cricket/teamRoster/classic.tsx
-var import_remotion80 = require("remotion");
+var import_remotion82 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-classic.tsx
 var import_jsx_runtime414 = require("react/jsx-runtime");
@@ -36374,8 +36781,8 @@ var CricketRosterWithTransitions3 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime415.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime415.jsx)(import_remotion80.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime415.jsx)(
-    import_remotion80.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime415.jsx)(import_remotion82.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime415.jsx)(
+    import_remotion82.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36389,7 +36796,7 @@ var Classic6 = () => {
 };
 
 // src/compositions/cricket/teamRoster/classicTwoColumn.tsx
-var import_remotion81 = require("remotion");
+var import_remotion83 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-classic-two-column.tsx
 var import_jsx_runtime416 = require("react/jsx-runtime");
@@ -36478,8 +36885,8 @@ var CricketRosterWithTransitions4 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime417.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime417.jsx)(import_remotion81.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime417.jsx)(
-    import_remotion81.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime417.jsx)(import_remotion83.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime417.jsx)(
+    import_remotion83.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36493,7 +36900,7 @@ var ClassicTwoColumn4 = () => {
 };
 
 // src/compositions/cricket/teamRoster/mudgeeraba.tsx
-var import_remotion82 = require("remotion");
+var import_remotion84 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-Mudgeeraba.tsx
 var import_jsx_runtime418 = require("react/jsx-runtime");
@@ -36623,8 +37030,8 @@ var CricketRosterWithTransitionsMudgeeraba = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime419.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime419.jsx)(import_remotion82.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime419.jsxs)(
-    import_remotion82.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime419.jsx)(import_remotion84.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime419.jsxs)(
+    import_remotion84.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36641,7 +37048,7 @@ var mudgeeraba6 = () => {
 };
 
 // src/compositions/cricket/teamRoster/brickwork.tsx
-var import_remotion83 = require("remotion");
+var import_remotion85 = require("remotion");
 
 // src/compositions/cricket/teamRoster/layout/RosterPlayerList/playerList-brickWork.tsx
 var import_jsx_runtime420 = require("react/jsx-runtime");
@@ -36892,8 +37299,8 @@ var CricketRosterBrickWork = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime424.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime424.jsx)(import_remotion83.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime424.jsxs)(
-    import_remotion83.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime424.jsx)(import_remotion85.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime424.jsxs)(
+    import_remotion85.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -36910,7 +37317,10 @@ var brickwork = () => {
 };
 
 // src/compositions/cricket/teamRoster/broadcastPro.tsx
-var import_remotion84 = require("remotion");
+var import_remotion87 = require("remotion");
+
+// src/compositions/cricket/teamRoster/controller/Display/display-BroadcastPro.tsx
+var import_remotion86 = require("remotion");
 
 // src/templates/variants/broadcastPro/components/roster/BroadcastProRosterSheet.tsx
 var import_react29 = require("react");
@@ -37114,7 +37524,8 @@ var MetaRow = ({
   labelClassName,
   valueClassName,
   labelColor,
-  valueColor
+  valueColor,
+  valueStyle
 }) => /* @__PURE__ */ (0, import_jsx_runtime427.jsx)(
   "div",
   {
@@ -37126,7 +37537,14 @@ var MetaRow = ({
     },
     children: /* @__PURE__ */ (0, import_jsx_runtime427.jsxs)("div", { className: "min-w-0", children: [
       /* @__PURE__ */ (0, import_jsx_runtime427.jsx)("span", { className: labelClassName, style: { color: labelColor }, children: label }),
-      /* @__PURE__ */ (0, import_jsx_runtime427.jsx)("span", { className: valueClassName, style: { color: valueColor }, children: value })
+      /* @__PURE__ */ (0, import_jsx_runtime427.jsx)(
+        "span",
+        {
+          className: valueClassName,
+          style: { color: valueColor, ...valueStyle },
+          children: value
+        }
+      )
     ] })
   }
 );
@@ -37135,10 +37553,20 @@ var RosterDisplayBroadcastPro = ({
 }) => {
   var _a, _b;
   const { layout, fontClasses, componentStyles } = useThemeContext();
+  const { width: compositionWidth } = (0, import_remotion86.useVideoConfig)();
   const { glass, textOnGlass: textOnContainer } = useBroadcastProTheme();
   const availableHeight = getMainContentHeightReservingFooter(layout.heights);
   const cs = (key) => rosterClass(componentStyles, key);
   const titleFontFamily = (_b = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _b : "Teko";
+  const rosterSidebarWidth = getBroadcastProRosterSidebarWidth(compositionWidth);
+  const gradeFontSize = useFittedTextBoxFontSize({
+    text: roster.gradeName,
+    fontFamily: titleFontFamily,
+    withinWidth: Math.max(0, rosterSidebarWidth - 34),
+    maxLines: 2,
+    minFontSize: 22,
+    maxFontSize: 28
+  });
   const { accountHolder, against } = getTeamPerspective(roster);
   const accountLabel = roster.isHomeTeam ? "HOME TEAM" : "AWAY TEAM";
   const opponentLabel = roster.isHomeTeam ? "AWAY TEAM" : "HOME TEAM";
@@ -37224,7 +37652,8 @@ var RosterDisplayBroadcastPro = ({
                         labelClassName: cs("broadcastProRosterMetaLabel"),
                         valueClassName: cs("broadcastProRosterMetaValue"),
                         labelColor: textOnContainer.muted,
-                        valueColor: textOnContainer.copy
+                        valueColor: textOnContainer.copy,
+                        valueStyle: { fontSize: gradeFontSize }
                       }
                     ),
                     /* @__PURE__ */ (0, import_jsx_runtime427.jsx)(
@@ -37264,8 +37693,8 @@ var CricketRosterBroadcastPro = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime428.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime428.jsx)(import_remotion84.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime428.jsxs)(
-    import_remotion84.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime428.jsx)(import_remotion87.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime428.jsxs)(
+    import_remotion87.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col",
@@ -37290,25 +37719,13 @@ var broadcastpro3 = () => {
 };
 
 // src/compositions/cricket/teamRoster/broadcastProRounded.tsx
-var import_remotion85 = require("remotion");
+var import_remotion89 = require("remotion");
+
+// src/compositions/cricket/teamRoster/controller/Display/display-BroadcastProRounded.tsx
+var import_remotion88 = require("remotion");
 
 // src/templates/variants/broadcastProRounded/components/roster/BroadcastProRoundedRosterSheet.tsx
 var import_react30 = require("react");
-
-// src/templates/types/broadcast-pro-rounded/roster-list-sizing.ts
-var DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING2 = {
-  leftColumnHeaderReservePx: 36,
-  minRowPx: 26,
-  minNameFontPx: 12,
-  maxNameFontPx: 38,
-  minNumberFontPx: 11,
-  maxNumberFontPx: 36,
-  nameRowHeightMultiplier: 0.45,
-  numberRowHeightMultiplier: 0.41,
-  nameFontBonusPx: 2,
-  nameInnerClampMaxOffsetPx: 2,
-  listChromeReservePx: 24
-};
 
 // src/compositions/cricket/teamRoster/controller/Display/_utils/broadcastProRoundedRosterListMetrics.ts
 function computeBroadcastProRoundedRosterPlayerListMetrics(availableHeightPx, playerCount, sizing) {
@@ -37523,7 +37940,8 @@ var MetaRow2 = ({
   valueClassName,
   labelColor,
   valueColor,
-  cellRadius
+  cellRadius,
+  valueStyle
 }) => /* @__PURE__ */ (0, import_jsx_runtime431.jsx)(
   "div",
   {
@@ -37535,7 +37953,14 @@ var MetaRow2 = ({
     },
     children: /* @__PURE__ */ (0, import_jsx_runtime431.jsxs)("div", { className: "min-w-0", children: [
       /* @__PURE__ */ (0, import_jsx_runtime431.jsx)("span", { className: labelClassName, style: { color: labelColor }, children: label }),
-      /* @__PURE__ */ (0, import_jsx_runtime431.jsx)("span", { className: valueClassName, style: { color: valueColor }, children: value })
+      /* @__PURE__ */ (0, import_jsx_runtime431.jsx)(
+        "span",
+        {
+          className: valueClassName,
+          style: { color: valueColor, ...valueStyle },
+          children: value
+        }
+      )
     ] })
   }
 );
@@ -37545,6 +37970,7 @@ var RosterDisplayBroadcastProRounded = ({
 }) => {
   var _a, _b;
   const { layout, fontClasses, componentStyles } = useThemeContext();
+  const { width: compositionWidth } = (0, import_remotion88.useVideoConfig)();
   const { glass, textOnGlass: textOnContainer } = useBroadcastProRoundedTheme();
   const cellRadius = layout.borderRadius.container;
   const availableHeight = getMainContentHeightReservingFooter(layout.heights);
@@ -37554,6 +37980,15 @@ var RosterDisplayBroadcastProRounded = ({
   );
   const cs = (key) => rosterClass2(componentStyles, key);
   const titleFontFamily = (_b = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _b : "Teko";
+  const rosterSidebarWidth = getBroadcastProRoundedRosterSidebarWidth(compositionWidth);
+  const gradeFontSize = useFittedTextBoxFontSize({
+    text: roster.gradeName,
+    fontFamily: titleFontFamily,
+    withinWidth: Math.max(0, rosterSidebarWidth - 34),
+    maxLines: 2,
+    minFontSize: 22,
+    maxFontSize: 28
+  });
   const { accountHolder, against } = getTeamPerspective(roster);
   const accountLabel = roster.isHomeTeam ? "HOME TEAM" : "AWAY TEAM";
   const opponentLabel = roster.isHomeTeam ? "AWAY TEAM" : "HOME TEAM";
@@ -37633,7 +38068,8 @@ var RosterDisplayBroadcastProRounded = ({
                     valueClassName: cs("broadcastProRoundedRosterMetaValue"),
                     labelColor: textOnContainer.muted,
                     valueColor: textOnContainer.copy,
-                    cellRadius
+                    cellRadius,
+                    valueStyle: { fontSize: gradeFontSize }
                   }
                 ),
                 /* @__PURE__ */ (0, import_jsx_runtime431.jsx)(
@@ -37672,8 +38108,8 @@ var CricketRosterBroadcastProRounded = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime432.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime432.jsx)(import_remotion85.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime432.jsxs)(
-    import_remotion85.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime432.jsx)(import_remotion89.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime432.jsxs)(
+    import_remotion89.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col",
@@ -37698,7 +38134,7 @@ var broadcastprorounded3 = () => {
 };
 
 // src/compositions/cricket/performances/modules/NoPlayersData/no-data.tsx
-var import_remotion86 = require("remotion");
+var import_remotion90 = require("remotion");
 
 // src/compositions/cricket/performances/utils/dataTransformer.ts
 var transformPerformanceData = (rawData, compositionId) => {
@@ -37740,7 +38176,7 @@ var NoPlayersData2 = () => {
   const { videoMeta } = data;
   const compositionId = ((_b = (_a = videoMeta == null ? void 0 : videoMeta.video) == null ? void 0 : _a.metadata) == null ? void 0 : _b.compositionId) || "";
   const title = getTitle2(compositionId);
-  return /* @__PURE__ */ (0, import_jsx_runtime433.jsx)(import_remotion86.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime433.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime433.jsx)(import_remotion90.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime433.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime433.jsxs)("h2", { className: "text-2xl font-bold mb-4", children: [
       "No ",
       title,
@@ -40769,7 +41205,7 @@ var BroadcastProRounded4 = () => {
 var PLAYER_STAGGER_DELAY = 5;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Basic.tsx
-var import_remotion87 = require("remotion");
+var import_remotion91 = require("remotion");
 
 // src/compositions/cricket/utils/primitives/TeamOfTheWeekPlayerName.tsx
 var import_jsx_runtime469 = require("react/jsx-runtime");
@@ -41684,7 +42120,7 @@ var PlayerRowBasic2 = ({
                   background: logoBG
                 },
                 children: /* @__PURE__ */ (0, import_jsx_runtime479.jsx)(
-                  import_remotion87.Img,
+                  import_remotion91.Img,
                   {
                     src: player.club.logo.url,
                     alt: player.club.name,
@@ -41800,7 +42236,7 @@ var Basic7 = () => {
 var basic_default = Basic7;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Classic.tsx
-var import_remotion88 = require("remotion");
+var import_remotion92 = require("remotion");
 var import_jsx_runtime483 = require("react/jsx-runtime");
 var PlayerRowClassic2 = ({
   player,
@@ -41950,7 +42386,7 @@ var PlayerRowClassic2 = ({
                   }
                 ),
                 !isAccountClub && /* @__PURE__ */ (0, import_jsx_runtime483.jsx)("div", { className: "col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2", children: /* @__PURE__ */ (0, import_jsx_runtime483.jsx)(
-                  import_remotion88.Img,
+                  import_remotion92.Img,
                   {
                     src: player.club.logo.url,
                     alt: player.club.name,
@@ -42843,7 +43279,7 @@ var SixersThunder6 = () => {
 var sixersThunder_default3 = SixersThunder6;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-ClassicTwoColumn.tsx
-var import_remotion89 = require("remotion");
+var import_remotion93 = require("remotion");
 var import_jsx_runtime499 = require("react/jsx-runtime");
 var PlayerRowClassicTwoColumn2 = ({
   player,
@@ -42885,7 +43321,7 @@ var PlayerRowClassicTwoColumn2 = ({
           style: { height: `${rowHeight}px` },
           children: /* @__PURE__ */ (0, import_jsx_runtime499.jsxs)("div", { className: "grid h-full grid-cols-12 items-center", children: [
             !isAccountClub && /* @__PURE__ */ (0, import_jsx_runtime499.jsx)("div", { className: "col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2", children: /* @__PURE__ */ (0, import_jsx_runtime499.jsx)(
-              import_remotion89.Img,
+              import_remotion93.Img,
               {
                 src: player.club.logo.url,
                 alt: player.club.name,
@@ -43418,66 +43854,64 @@ var CardBroadcastPro = ({
             border: glass.border,
             ...cellBlur
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime506.jsxs)("div", { className: bodyClass, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime506.jsxs)(
-              "div",
-              {
-                className: `${topRowClass}${isAccountClub ? " grid-cols-1" : ""}`.trim(),
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime506.jsxs)("div", { className: copyClass, children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: statsClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
-                      BroadcastProStatMatrixCompactGroup,
-                      {
-                        player,
-                        delay: statDelay,
-                        statClassName: statClass,
-                        statSuffixClassName: statSuffixClass,
-                        text
-                      }
-                    ) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
-                      TeamOfTheWeekTeam,
-                      {
-                        value: teamName,
-                        animation: { ...copyAnimation, delay: nameDelay + 2 },
-                        variant: "onContainerCopy",
-                        className: teamClass,
-                        style: { color: text.secondary }
-                      }
-                    )
-                  ] }),
-                  !isAccountClub ? /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: logoColClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: logoWellClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
-                    BroadcastProCrestWell,
+          children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: bodyClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsxs)(
+            "div",
+            {
+              className: `${topRowClass}${isAccountClub ? " grid-cols-1" : ""}`.trim(),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime506.jsxs)("div", { className: copyClass, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: statsClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
+                    BroadcastProStatMatrixCompactGroup,
                     {
-                      tier: "compact",
-                      logo: player.club.logo,
-                      teamName: player.club.name,
-                      delay: delay + 2,
-                      glass,
-                      className: "h-full w-full",
-                      style: {
-                        width: "100%",
-                        height: "100%",
-                        minWidth: "100%",
-                        minHeight: "100%"
-                      },
-                      showBorder: true
+                      player,
+                      delay: statDelay,
+                      statClassName: statClass,
+                      statSuffixClassName: statSuffixClass,
+                      text
                     }
-                  ) }) }) : null
-                ]
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: nameRowClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
-              TeamOfTheWeekPlayerName,
-              {
-                value: playerName,
-                animation: { ...copyAnimation, delay: nameDelay },
-                variant: "onContainerTitle",
-                className: nameCellClass,
-                style: { color: text.copy }
-              }
-            ) })
-          ] })
+                  ) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: nameRowClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
+                    TeamOfTheWeekPlayerName,
+                    {
+                      value: playerName,
+                      animation: { ...copyAnimation, delay: nameDelay },
+                      variant: "onContainerTitle",
+                      className: nameCellClass,
+                      style: { color: text.copy }
+                    }
+                  ) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
+                    TeamOfTheWeekTeam,
+                    {
+                      value: teamName,
+                      animation: { ...copyAnimation, delay: nameDelay + 2 },
+                      variant: "onContainerCopy",
+                      className: teamClass,
+                      style: { color: text.secondary }
+                    }
+                  )
+                ] }),
+                !isAccountClub ? /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: logoColClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)("div", { className: logoWellClass, children: /* @__PURE__ */ (0, import_jsx_runtime506.jsx)(
+                  BroadcastProCrestWell,
+                  {
+                    tier: "compact",
+                    logo: player.club.logo,
+                    teamName: player.club.name,
+                    delay: delay + 2,
+                    glass,
+                    className: "h-full w-full",
+                    style: {
+                      width: "100%",
+                      height: "100%",
+                      minWidth: "100%",
+                      minHeight: "100%"
+                    },
+                    showBorder: true
+                  }
+                ) }) }) : null
+              ]
+            }
+          ) })
         }
       )
     }
@@ -43644,66 +44078,64 @@ var CardBroadcastProRounded = ({ player, staggerIndex, isAccountClub, glass, tex
             border: glass.border,
             ...cellBlur2
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime509.jsxs)("div", { className: bodyClass, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime509.jsxs)(
-              "div",
-              {
-                className: `${topRowClass}${isAccountClub ? " grid-cols-1" : ""}`.trim(),
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime509.jsxs)("div", { className: copyClass, children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: statsClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
-                      BroadcastProRoundedStatMatrixCompactGroup,
-                      {
-                        player,
-                        delay: statDelay,
-                        statClassName: statClass,
-                        statSuffixClassName: statSuffixClass,
-                        text
-                      }
-                    ) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
-                      TeamOfTheWeekTeam,
-                      {
-                        value: teamName,
-                        animation: { ...copyAnimation, delay: nameDelay + 2 },
-                        variant: "onContainerCopy",
-                        className: teamClass,
-                        style: { color: text.secondary }
-                      }
-                    )
-                  ] }),
-                  !isAccountClub ? /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: logoColClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: logoWellClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
-                    BroadcastProRoundedCrestWell,
+          children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: bodyClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsxs)(
+            "div",
+            {
+              className: `${topRowClass}${isAccountClub ? " grid-cols-1" : ""}`.trim(),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime509.jsxs)("div", { className: copyClass, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: statsClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
+                    BroadcastProRoundedStatMatrixCompactGroup,
                     {
-                      tier: "compact",
-                      logo: player.club.logo,
-                      teamName: player.club.name,
-                      delay: delay + 2,
-                      glass,
-                      className: "h-full w-full",
-                      style: {
-                        width: "100%",
-                        height: "100%",
-                        minWidth: "100%",
-                        minHeight: "100%"
-                      },
-                      showBorder: true
+                      player,
+                      delay: statDelay,
+                      statClassName: statClass,
+                      statSuffixClassName: statSuffixClass,
+                      text
                     }
-                  ) }) }) : null
-                ]
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: nameRowClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
-              TeamOfTheWeekPlayerName,
-              {
-                value: playerName,
-                animation: { ...copyAnimation, delay: nameDelay },
-                variant: "onContainerTitle",
-                className: nameCellClass,
-                style: { color: text.copy }
-              }
-            ) })
-          ] })
+                  ) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: nameRowClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
+                    TeamOfTheWeekPlayerName,
+                    {
+                      value: playerName,
+                      animation: { ...copyAnimation, delay: nameDelay },
+                      variant: "onContainerTitle",
+                      className: nameCellClass,
+                      style: { color: text.copy }
+                    }
+                  ) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
+                    TeamOfTheWeekTeam,
+                    {
+                      value: teamName,
+                      animation: { ...copyAnimation, delay: nameDelay + 2 },
+                      variant: "onContainerCopy",
+                      className: teamClass,
+                      style: { color: text.secondary }
+                    }
+                  )
+                ] }),
+                !isAccountClub ? /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: logoColClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)("div", { className: logoWellClass, children: /* @__PURE__ */ (0, import_jsx_runtime509.jsx)(
+                  BroadcastProRoundedCrestWell,
+                  {
+                    tier: "compact",
+                    logo: player.club.logo,
+                    teamName: player.club.name,
+                    delay: delay + 2,
+                    glass,
+                    className: "h-full w-full",
+                    style: {
+                      width: "100%",
+                      height: "100%",
+                      minWidth: "100%",
+                      minHeight: "100%"
+                    },
+                    showBorder: true
+                  }
+                ) }) }) : null
+              ]
+            }
+          ) })
         }
       )
     }
@@ -43804,14 +44236,14 @@ var broadcastpro5 = broadcastPro_default2;
 var broadcastprorounded5 = broadcastProRounded_default2;
 
 // src/compositions/cricket/placeholders.tsx
-var import_remotion90 = require("remotion");
+var import_remotion94 = require("remotion");
 var import_jsx_runtime512 = require("react/jsx-runtime");
 var PlaceholderComposition = ({
   data
 }) => {
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
-  return /* @__PURE__ */ (0, import_jsx_runtime512.jsxs)(import_remotion90.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime512.jsxs)(import_remotion94.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
     /* @__PURE__ */ (0, import_jsx_runtime512.jsx)("h1", { className: "text-3xl mb-0.5", children: data.videoMeta.video.metadata.title || "Composition" }),
     /* @__PURE__ */ (0, import_jsx_runtime512.jsxs)("h2", { className: "text-2xl mb-4", children: [
       template,
@@ -43954,7 +44386,7 @@ __export(afl_exports, {
   top5: () => top5,
   upcoming: () => upcoming
 });
-var import_remotion91 = require("remotion");
+var import_remotion95 = require("remotion");
 var import_jsx_runtime513 = require("react/jsx-runtime");
 var PlaceholderComposition2 = ({
   data
@@ -43962,7 +44394,7 @@ var PlaceholderComposition2 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime513.jsxs)(
-    import_remotion91.AbsoluteFill,
+    import_remotion95.AbsoluteFill,
     {
       style: {
         backgroundColor: "#222",
@@ -44024,7 +44456,7 @@ __export(netball_exports, {
   top5: () => top52,
   upcoming: () => upcoming2
 });
-var import_remotion92 = require("remotion");
+var import_remotion96 = require("remotion");
 var import_jsx_runtime514 = require("react/jsx-runtime");
 var PlaceholderComposition3 = ({
   data
@@ -44032,7 +44464,7 @@ var PlaceholderComposition3 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime514.jsxs)(
-    import_remotion92.AbsoluteFill,
+    import_remotion96.AbsoluteFill,
     {
       style: {
         backgroundColor: "#103",
@@ -44215,10 +44647,10 @@ var RouteToComposition = () => {
 };
 
 // src/components/layout/main/Timer/ProgressTimer.tsx
-var import_remotion93 = require("remotion");
+var import_remotion97 = require("remotion");
 var import_jsx_runtime516 = require("react/jsx-runtime");
 var ProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion93.useCurrentFrame)();
+  const frame = (0, import_remotion97.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -44242,7 +44674,7 @@ var ProgressTimer = ({ FRAMES }) => {
   );
 };
 var VerticalProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion93.useCurrentFrame)();
+  const frame = (0, import_remotion97.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -44280,7 +44712,7 @@ var OneColumn = ({ Header }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { FPS_MAIN } = timings;
-  return /* @__PURE__ */ (0, import_jsx_runtime517.jsx)(import_remotion94.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime517.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime517.jsx)(import_remotion98.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime517.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
     /* @__PURE__ */ (0, import_jsx_runtime517.jsx)(
       "div",
       {
@@ -44945,7 +45377,7 @@ var BrickworkIntro = () => {
 };
 
 // src/templates/variants/brickwork/components/brickworkOutro.tsx
-var import_remotion95 = require("remotion");
+var import_remotion99 = require("remotion");
 var import_jsx_runtime522 = require("react/jsx-runtime");
 var GRID_SETTINGS2 = {
   columns: 2,
@@ -45021,7 +45453,7 @@ var BrickworkOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS2.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime522.jsx)(import_remotion95.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime522.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime522.jsx)(import_remotion99.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime522.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS2.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime522.jsx)(
@@ -45412,7 +45844,7 @@ var ClassicIntro = () => {
 };
 
 // src/templates/variants/classic/components/ClassicOutro.tsx
-var import_remotion96 = require("remotion");
+var import_remotion100 = require("remotion");
 var import_jsx_runtime528 = require("react/jsx-runtime");
 var GRID_SETTINGS3 = {
   columns: 2,
@@ -45488,7 +45920,7 @@ var ClassicOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS3.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime528.jsx)(import_remotion96.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime528.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime528.jsx)(import_remotion100.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime528.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS3.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime528.jsx)(
@@ -46069,7 +46501,7 @@ var SixersIntro = () => {
 };
 
 // src/templates/variants/sixers/components/SixersOutro.tsx
-var import_remotion97 = require("remotion");
+var import_remotion101 = require("remotion");
 var import_jsx_runtime534 = require("react/jsx-runtime");
 var GRID_SETTINGS4 = {
   columns: 2,
@@ -46145,7 +46577,7 @@ var SixersOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS4.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime534.jsx)(import_remotion97.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime534.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime534.jsx)(import_remotion101.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime534.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS4.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime534.jsx)(
@@ -46636,7 +47068,7 @@ var cnswTheme = {
 };
 
 // src/templates/variants/cnsw/components/CNSWIntro.tsx
-var import_remotion98 = require("remotion");
+var import_remotion102 = require("remotion");
 
 // src/templates/variants/cnsw/utils/compositionConfig.ts
 var compositionConfig = {
@@ -46951,8 +47383,8 @@ var CNSWIntro = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime539.jsxs)(import_jsx_runtime539.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion98.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(
-      import_remotion98.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(import_remotion102.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime539.jsx)(
+      import_remotion102.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -47062,7 +47494,7 @@ var CNSWIntro = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWOutro.tsx
-var import_remotion99 = require("remotion");
+var import_remotion103 = require("remotion");
 var import_jsx_runtime540 = require("react/jsx-runtime");
 var GRID_SETTINGS5 = {
   columns: 2,
@@ -47138,7 +47570,7 @@ var CNSWOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS5.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(import_remotion99.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(import_remotion103.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS5.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(
@@ -47158,7 +47590,7 @@ var CNSWBackground = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWMainHeader.tsx
-var import_remotion100 = require("remotion");
+var import_remotion104 = require("remotion");
 var import_jsx_runtime542 = require("react/jsx-runtime");
 var CNSWMainHeader = () => {
   var _a, _b, _c;
@@ -47209,8 +47641,8 @@ var CNSWMainHeader = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime542.jsx)(import_remotion100.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime542.jsx)(
-          import_remotion100.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime542.jsx)(import_remotion104.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime542.jsx)(
+          import_remotion104.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -47811,7 +48243,7 @@ var ThunderIntro = () => {
 };
 
 // src/templates/variants/thunder/components/ThunderOutro.tsx
-var import_remotion101 = require("remotion");
+var import_remotion105 = require("remotion");
 var import_jsx_runtime546 = require("react/jsx-runtime");
 var GRID_SETTINGS6 = {
   columns: 2,
@@ -47887,7 +48319,7 @@ var ThunderOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS6.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime546.jsx)(import_remotion101.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime546.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime546.jsx)(import_remotion105.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime546.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS6.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime546.jsx)(
@@ -48457,7 +48889,7 @@ var ClassicIntro2 = () => {
 };
 
 // src/templates/variants/twoColumnClassic/components/ClassicOutro.tsx
-var import_remotion102 = require("remotion");
+var import_remotion106 = require("remotion");
 var import_jsx_runtime552 = require("react/jsx-runtime");
 var GRID_SETTINGS7 = {
   columns: 2,
@@ -48533,7 +48965,7 @@ var ClassicOutro2 = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS7.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime552.jsx)(import_remotion102.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime552.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime552.jsx)(import_remotion106.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime552.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS7.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime552.jsx)(
@@ -48553,7 +48985,7 @@ var ClassicBackground2 = () => {
 };
 
 // src/components/layout/screen/TwoColumn.tsx
-var import_remotion103 = require("remotion");
+var import_remotion107 = require("remotion");
 var import_jsx_runtime554 = require("react/jsx-runtime");
 var TwoColumn2 = ({
   Header,
@@ -48636,7 +49068,7 @@ var TwoColumn2 = ({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime554.jsx)(import_remotion103.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime554.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime554.jsx)(import_remotion107.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime554.jsx)(
     "div",
     {
       className: `flex flex-col h-full w-full ${className}`.trim(),
@@ -49261,7 +49693,7 @@ var cnswTheme2 = {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWIntro.tsx
-var import_remotion104 = require("remotion");
+var import_remotion108 = require("remotion");
 
 // src/templates/variants/cnsw-private/utils/compositionConfig.ts
 var compositionConfig2 = {
@@ -49576,8 +50008,8 @@ var CNSWIntro2 = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing2(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing2(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime558.jsxs)(import_jsx_runtime558.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion104.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(
-      import_remotion104.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(import_remotion108.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime558.jsx)(
+      import_remotion108.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -49687,7 +50119,7 @@ var CNSWIntro2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWOutro.tsx
-var import_remotion105 = require("remotion");
+var import_remotion109 = require("remotion");
 var import_jsx_runtime559 = require("react/jsx-runtime");
 var SponsorGrid8 = ({ sponsors, LogoAnimations }) => /* @__PURE__ */ (0, import_jsx_runtime559.jsx)("div", { className: "grid grid-cols-2 grid-rows-3 gap-10  justify-center items-center", children: sponsors.filter((sponsor) => sponsor.logo && sponsor.logo.url).map((sponsor, idx) => {
   var _a;
@@ -49729,7 +50161,7 @@ var CNSWOutro2 = ({
   });
   const groups = chunkSponsors(sponsorsArray, OUTRO_SPONSOR_PAGE_SIZE);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(import_remotion105.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
     durationInFrames: OUTRO_PAGE_DURATION_FRAMES
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(
@@ -49749,7 +50181,7 @@ var CNSWBackground2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWMainHeader.tsx
-var import_remotion106 = require("remotion");
+var import_remotion110 = require("remotion");
 var import_jsx_runtime561 = require("react/jsx-runtime");
 var CNSWMainHeader2 = () => {
   var _a, _b, _c;
@@ -49800,8 +50232,8 @@ var CNSWMainHeader2 = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime561.jsx)(import_remotion106.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime561.jsx)(
-          import_remotion106.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime561.jsx)(import_remotion110.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime561.jsx)(
+          import_remotion110.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -50330,12 +50762,12 @@ var mudgeerabaTheme = {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
-var import_remotion108 = require("remotion");
+var import_remotion112 = require("remotion");
 
 // src/components/typography/utils/useFittedFontSize.ts
 var import_react33 = require("react");
-var import_remotion107 = require("remotion");
-var import_layout_utils = require("@remotion/layout-utils");
+var import_remotion111 = require("remotion");
+var import_layout_utils2 = require("@remotion/layout-utils");
 var DEFAULT_LINE_HEIGHT_RATIO = 1.05;
 var DEFAULT_MAX_LINES = 2;
 var TITLE_SCREEN_BASE_FONT_PX = 16;
@@ -50374,7 +50806,7 @@ var computeFittedFontSize = ({
     letterSpacing
   });
   const words = trimmed.split(/\s+/).filter(Boolean);
-  const fitSizeFor = (value) => (0, import_layout_utils.fitText)({
+  const fitSizeFor = (value) => (0, import_layout_utils2.fitText)({
     text: value,
     withinWidth: fitWidth,
     ...measureOpts
@@ -50385,7 +50817,7 @@ var computeFittedFontSize = ({
   ];
   let fontSize = Math.min(maxFontSize, ...widthCandidates);
   if (withinHeight && withinHeight > 0) {
-    const { width: singleLineWidth } = (0, import_layout_utils.measureText)({
+    const { width: singleLineWidth } = (0, import_layout_utils2.measureText)({
       text: trimmed,
       fontSize,
       ...measureOpts
@@ -50414,7 +50846,7 @@ var useFittedFontSize = ({
   lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
   maxLines = DEFAULT_MAX_LINES
 }) => {
-  const { width } = (0, import_remotion107.useVideoConfig)();
+  const { width } = (0, import_remotion111.useVideoConfig)();
   const { fontsLoaded } = useFontContext();
   return (0, import_react33.useMemo)(() => {
     if (!fontsLoaded || !text.trim() || !fontFamily) {
@@ -50473,7 +50905,7 @@ var MudgeerabaIntro = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  const { width } = (0, import_remotion108.useVideoConfig)();
+  const { width } = (0, import_remotion112.useVideoConfig)();
   const title = (_a = metadata.title) != null ? _a : "";
   const titleFontFamily = (_c = (_b = fontClasses.title) == null ? void 0 : _b.family) != null ? _c : "Unbounded";
   const nameFontFamily = (_e = (_d = fontClasses.subtitle) == null ? void 0 : _d.family) != null ? _e : "Unbounded";
@@ -50584,7 +51016,7 @@ var MudgeerabaIntro = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaOutro.tsx
-var import_remotion109 = require("remotion");
+var import_remotion113 = require("remotion");
 var import_jsx_runtime565 = require("react/jsx-runtime");
 var GRID_SETTINGS8 = {
   columns: 2,
@@ -50662,7 +51094,7 @@ var MudgeerabaOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS8.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime565.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime565.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime565.jsx)(import_remotion113.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime565.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS8.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime565.jsx)(
@@ -50682,7 +51114,7 @@ var MudgeerabaBackground = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaMainHeader.tsx
-var import_remotion110 = require("remotion");
+var import_remotion114 = require("remotion");
 var import_jsx_runtime567 = require("react/jsx-runtime");
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
 var HEADER_TITLE_VERTICAL_PADDING_PX = 20;
@@ -50693,7 +51125,7 @@ var MudgeerabaMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const { width } = (0, import_remotion110.useVideoConfig)();
+  const { width } = (0, import_remotion114.useVideoConfig)();
   const { heights } = layout;
   const timings = data == null ? void 0 : data.timings;
   const exitFrame = (timings == null ? void 0 : timings.FPS_MAIN) ? timings.FPS_MAIN - 30 : 0;
@@ -51104,7 +51536,7 @@ var broadcastProScoreRosterIndex = {
   className: "font-teko font-normal uppercase leading-none tabular-nums tracking-tight"
 };
 var broadcastProVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-1 px-8 py-4"
+  className: "flex flex-col items-center justify-center gap-1 px-8 py-3"
 };
 var broadcastProVerdictBandCompact = {
   className: "flex items-center justify-center px-6 py-3"
@@ -51149,7 +51581,7 @@ var broadcastProCrestWellRosterAway = {
   className: "mb-3 flex h-24 w-24 items-center justify-center"
 };
 var broadcastProMatchupFixture = {
-  className: "flex w-full min-w-0 flex-shrink-0 items-center justify-between gap-8 md:gap-10"
+  className: "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-8 md:gap-10"
 };
 var broadcastProMatchupResultStack = {
   className: "flex w-full flex-col gap-[3px]"
@@ -51158,16 +51590,16 @@ var broadcastProMatchupRosterSidebar = {
   className: "flex flex-col gap-4"
 };
 var broadcastProMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-center gap-8"
+  className: "flex min-w-0 flex-1 items-start gap-8"
 };
 var broadcastProMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-center justify-end gap-8 text-right"
+  className: "flex min-w-0 flex-1 items-start justify-end gap-8 text-right"
 };
 var broadcastProMatchupRoleLabel = {
   className: "text-sm font-bold uppercase tracking-widest opacity-80"
 };
 var broadcastProMatchupDividerSlot = {
-  className: "flex flex-shrink-0 items-center justify-center px-8 md:px-10"
+  className: "flex flex-shrink-0 self-center items-center justify-center px-8 md:px-10"
 };
 var broadcastProMatchupDividerVersus = {
   className: "font-teko mb-1.5 text-2xl italic sm:text-3xl"
@@ -51313,7 +51745,7 @@ var broadcastProCompositionComponentStylesResults = {
   },
   broadcastProResultsTeamLogoWell: broadcastProComponentStylesShared.broadcastProCrestWellCompact,
   broadcastProResultsTeamName: {
-    className: "min-w-0 truncate"
+    className: "min-w-0 !leading-[0.95]"
   },
   broadcastProResultsScoreBadge: {
     className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5"
@@ -51355,7 +51787,7 @@ var broadcastProCompositionComponentStylesRoster = {
     className: "col-span-12 flex min-h-0 flex-col overflow-hidden lg:col-span-7"
   },
   broadcastProRosterSidebar: {
-    className: "col-span-12 flex min-h-0 flex-col gap-4 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:col-span-5"
+    className: "col-span-12 flex min-h-0 flex-col gap-3 overflow-hidden lg:col-span-5"
   },
   broadcastProRosterContentShell: {
     className: "flex min-h-0 flex-col gap-4 px-2"
@@ -51373,21 +51805,31 @@ var broadcastProCompositionComponentStylesRoster = {
     className: "flex h-full min-h-0 min-w-0 flex-1 items-stretch justify-start self-stretch"
   },
   broadcastProRosterMetaStack: {
-    className: "flex min-h-0 flex-1 flex-col gap-3"
+    className: "flex min-h-0 flex-1 flex-col gap-2"
   },
   broadcastProRosterTeamCardHome: {
-    className: "flex flex-shrink-0 flex-col items-center p-5 text-center"
+    className: "flex flex-shrink-0 flex-col items-center p-3 text-center"
   },
   broadcastProRosterTeamCardAway: {
-    className: "flex flex-col items-center p-4 text-center"
+    className: "flex flex-col items-center p-3 text-center"
   },
-  broadcastProRosterTeamLogoWellHome: broadcastProComponentStylesShared.broadcastProCrestWellRosterHome,
-  broadcastProRosterTeamLogoWellAway: broadcastProComponentStylesShared.broadcastProCrestWellRosterAway,
+  broadcastProRosterTeamLogoWellHome: {
+    className: "mb-2 flex h-16 w-16 items-center justify-center"
+  },
+  broadcastProRosterTeamLogoWellAway: {
+    className: "mb-2 flex h-14 w-14 items-center justify-center"
+  },
+  broadcastProCrestWellRosterHome: {
+    className: "mb-2 flex h-16 w-16 items-center justify-center"
+  },
+  broadcastProCrestWellRosterAway: {
+    className: "mb-2 flex h-14 w-14 items-center justify-center"
+  },
   broadcastProRosterTeamTitleHome: {
-    className: "font-teko text-4xl uppercase sm:text-5xl"
+    className: "font-teko line-clamp-2 w-full text-4xl uppercase leading-tight sm:text-5xl"
   },
   broadcastProRosterTeamTitleAway: {
-    className: "font-teko text-3xl uppercase sm:text-4xl"
+    className: "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl"
   },
   broadcastProRosterTeamLabelHome: {
     className: "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest"
@@ -51395,15 +51837,23 @@ var broadcastProCompositionComponentStylesRoster = {
   broadcastProRosterTeamLabelAway: {
     className: "font-rajdhani mt-0.5 text-xs font-bold uppercase tracking-widest"
   },
-  broadcastProRosterVersus: broadcastProComponentStylesShared.broadcastProMatchupDividerVersus,
+  broadcastProRosterVersus: {
+    className: "font-teko mb-1 text-2xl italic leading-none"
+  },
+  broadcastProMatchupDividerVersus: {
+    className: "font-teko mb-1 text-2xl italic leading-none"
+  },
+  broadcastProMatchupRosterSidebar: {
+    className: "flex flex-col gap-3"
+  },
   broadcastProRosterMetaRow: {
-    className: "p-4"
+    className: "p-3"
   },
   broadcastProRosterMetaLabel: {
     className: "font-rajdhani block text-xs font-bold uppercase tracking-widest"
   },
   broadcastProRosterMetaValue: {
-    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-3xl"
+    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-[28px]"
   },
   broadcastProRosterAccentStrip: {
     className: "w-1.5 shrink-0 self-stretch rounded-sm"
@@ -51458,22 +51908,22 @@ var broadcastProCompositionComponentStylesTeamOfTheWeek = {
     className: "grid grid-cols-3 gap-2"
   },
   broadcastProTeamOfTheWeekCard: {
-    className: "flex h-full flex-col rounded-none p-3 sm:p-4"
+    className: "flex h-full flex-col rounded-none p-4"
   },
   broadcastProTeamOfTheWeekCardBody: {
     className: "flex min-h-0 flex-1 flex-col gap-2"
   },
   broadcastProTeamOfTheWeekCardUpper: {
-    className: "grid grid-cols-[minmax(0,1fr)_auto] items-center gap-1"
+    className: "grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3"
   },
   broadcastProTeamOfTheWeekCardCopy: {
-    className: "flex min-w-0 flex-1 flex-col justify-center gap-1 text-left"
+    className: "flex min-w-0 flex-1 flex-col items-start gap-1 text-left"
   },
   broadcastProTeamOfTheWeekCardLogoCol: {
-    className: "flex shrink-0 items-center justify-end"
+    className: "flex shrink-0 items-start justify-end"
   },
   broadcastProTeamOfTheWeekCardLogoWell: {
-    className: "flex h-14 w-14 shrink-0 items-center justify-center shadow-inner sm:h-16 sm:w-16"
+    className: "flex h-16 w-16 shrink-0 items-center justify-center shadow-inner"
   },
   broadcastProTeamOfTheWeekCardStats: {
     className: "flex min-h-[1.5rem] min-w-0 flex-1 items-center justify-start whitespace-nowrap"
@@ -51482,7 +51932,7 @@ var broadcastProCompositionComponentStylesTeamOfTheWeek = {
     className: "h-px w-full opacity-30"
   },
   broadcastProTeamOfTheWeekCardNameRow: {
-    className: "mt-auto w-full pt-1"
+    className: "w-full"
   },
   broadcastProTeamOfTheWeekCardNameCell: {
     className: "w-full text-left uppercase leading-none"
@@ -51750,7 +52200,9 @@ var broadcastProTokens = {
     ...DEFAULT_BROADCAST_PRO_SCORE_SIZING
   },
   broadcastProCrestSizing: {
-    ...DEFAULT_BROADCAST_PRO_CREST_SIZING
+    ...DEFAULT_BROADCAST_PRO_CREST_SIZING,
+    rosterHomePx: 64,
+    rosterAwayPx: 56
   },
   broadcastProLadderZoneSizing: {
     ...DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING
@@ -51806,7 +52258,7 @@ var broadcastProTheme = {
 // src/templates/variants/broadcastPro/components/headline/getBroadcastProHeaderSecondaryLine.ts
 var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
   var _a, _b, _c;
-  const videoTitle = (_a = metadata.videoTitle) == null ? void 0 : _a.trim();
+  const videoTitle = (_a = metadata.videoTitle) == null ? void 0 : _a.replace(/\bCricketRoster\b/gi, "").replace(/\s+/g, " ").trim();
   if (videoTitle) return videoTitle;
   const parts = (_c = (_b = metadata.titleSplit) == null ? void 0 : _b.filter(Boolean)) != null ? _c : [];
   if (parts.length > 0) return parts.join(" \xB7 ");
@@ -51815,11 +52267,11 @@ var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
 var import_react34 = require("react");
-var import_remotion111 = require("remotion");
+var import_remotion115 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion111.useVideoConfig)();
+  const { width } = (0, import_remotion115.useVideoConfig)();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
   const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -52007,7 +52459,7 @@ var BroadcastProIntro = () => {
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProOutro.tsx
-var import_remotion112 = require("remotion");
+var import_remotion116 = require("remotion");
 var import_jsx_runtime573 = require("react/jsx-runtime");
 var GRID_SETTINGS9 = {
   columns: 2,
@@ -52083,7 +52535,7 @@ var BroadcastProOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS9.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime573.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime573.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime573.jsx)(import_remotion116.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime573.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS9.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime573.jsx)(
@@ -52453,10 +52905,10 @@ var broadcastProRoundedScoreRosterIndex = {
   className: "font-teko font-normal uppercase leading-none tabular-nums tracking-tight"
 };
 var broadcastProRoundedVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-1 px-8 py-4"
+  className: "flex flex-col items-center justify-center gap-1 px-8 py-3"
 };
 var broadcastProRoundedVerdictBandCompact = {
-  className: "flex items-center justify-center px-6 py-3"
+  className: "flex items-center justify-center px-6 py-2"
 };
 var broadcastProRoundedVerdictBandAbandoned = {
   className: "flex flex-col items-center justify-center gap-1 px-6 py-3"
@@ -52498,7 +52950,7 @@ var broadcastProRoundedCrestWellRosterAway = {
   className: "mb-3 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl"
 };
 var broadcastProRoundedMatchupFixture = {
-  className: "flex w-full min-w-0 flex-shrink-0 items-center justify-between gap-8 md:gap-10"
+  className: "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-8 md:gap-10"
 };
 var broadcastProRoundedMatchupResultStack = {
   className: "flex w-full flex-col gap-1"
@@ -52507,16 +52959,16 @@ var broadcastProRoundedMatchupRosterSidebar = {
   className: "flex shrink-0 flex-col gap-4"
 };
 var broadcastProRoundedMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-center gap-8"
+  className: "flex min-w-0 flex-1 items-start gap-8"
 };
 var broadcastProRoundedMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-center justify-end gap-8 text-right"
+  className: "flex min-w-0 flex-1 items-start justify-end gap-8 text-right"
 };
 var broadcastProRoundedMatchupRoleLabel = {
   className: "text-sm font-bold uppercase tracking-widest opacity-80"
 };
 var broadcastProRoundedMatchupDividerSlot = {
-  className: "flex flex-shrink-0 items-center justify-center px-8 md:px-10"
+  className: "flex flex-shrink-0 self-center items-center justify-center px-8 md:px-10"
 };
 var broadcastProRoundedMatchupDividerVersus = {
   className: "font-teko mb-1.5 text-2xl italic sm:text-3xl"
@@ -52658,7 +53110,7 @@ var broadcastProRoundedCompositionComponentStylesResults = {
     className: "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5"
   },
   broadcastProRoundedResultsTeamRow: {
-    className: "flex w-full items-center justify-between gap-3 p-3"
+    className: "flex w-full items-center justify-between gap-3 px-3 py-2"
   },
   broadcastProRoundedResultsTeamLogoWell: broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellCompact,
   broadcastProRoundedResultsTeamName: {
@@ -52671,7 +53123,7 @@ var broadcastProRoundedCompositionComponentStylesResults = {
     className: "grid grid-cols-3 gap-[2px]"
   },
   broadcastProRoundedResultsPlayerStatCell: {
-    className: "flex items-center justify-between px-3 py-2"
+    className: "flex items-center justify-between px-3 py-1.5"
   },
   broadcastProRoundedResultsPlayerStatName: {
     className: "min-w-0 truncate"
@@ -52704,7 +53156,7 @@ var broadcastProRoundedCompositionComponentStylesRoster = {
     className: "col-span-12 flex h-full min-h-0 flex-col overflow-hidden lg:col-span-7"
   },
   broadcastProRoundedRosterSidebar: {
-    className: "col-span-12 flex min-h-0 flex-col justify-start gap-4 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:col-span-5"
+    className: "col-span-12 flex min-h-0 flex-col justify-start gap-3 overflow-hidden lg:col-span-5"
   },
   broadcastProRoundedRosterContentShell: {
     className: "flex min-h-0 flex-1 flex-col gap-4 px-2"
@@ -52722,21 +53174,31 @@ var broadcastProRoundedCompositionComponentStylesRoster = {
     className: "flex h-full min-h-0 min-w-0 flex-1 items-stretch justify-start self-stretch"
   },
   broadcastProRoundedRosterMetaStack: {
-    className: "flex flex-col gap-1"
+    className: "flex min-h-0 flex-1 flex-col gap-2"
   },
   broadcastProRoundedRosterTeamCardHome: {
-    className: "flex flex-shrink-0 flex-col items-center p-5 text-center"
+    className: "flex flex-shrink-0 flex-col items-center p-3 text-center"
   },
   broadcastProRoundedRosterTeamCardAway: {
-    className: "flex flex-shrink-0 flex-col items-center p-4 text-center"
+    className: "flex flex-shrink-0 flex-col items-center p-3 text-center"
   },
-  broadcastProRoundedRosterTeamLogoWellHome: broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellRosterHome,
-  broadcastProRoundedRosterTeamLogoWellAway: broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellRosterAway,
+  broadcastProRoundedRosterTeamLogoWellHome: {
+    className: "mb-2 flex h-16 w-16 items-center justify-center"
+  },
+  broadcastProRoundedRosterTeamLogoWellAway: {
+    className: "mb-2 flex h-14 w-14 items-center justify-center"
+  },
+  broadcastProRoundedCrestWellRosterHome: {
+    className: "mb-2 flex h-16 w-16 items-center justify-center"
+  },
+  broadcastProRoundedCrestWellRosterAway: {
+    className: "mb-2 flex h-14 w-14 items-center justify-center"
+  },
   broadcastProRoundedRosterTeamTitleHome: {
-    className: "font-teko text-4xl uppercase sm:text-5xl"
+    className: "font-teko line-clamp-2 w-full text-4xl uppercase leading-tight sm:text-5xl"
   },
   broadcastProRoundedRosterTeamTitleAway: {
-    className: "font-teko text-3xl uppercase sm:text-4xl"
+    className: "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl"
   },
   broadcastProRoundedRosterTeamLabelHome: {
     className: "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest"
@@ -52744,15 +53206,23 @@ var broadcastProRoundedCompositionComponentStylesRoster = {
   broadcastProRoundedRosterTeamLabelAway: {
     className: "font-rajdhani mt-0.5 text-xs font-bold uppercase tracking-widest"
   },
-  broadcastProRoundedRosterVersus: broadcastProRoundedComponentStylesShared.broadcastProRoundedMatchupDividerVersus,
+  broadcastProRoundedRosterVersus: {
+    className: "font-teko mb-1 text-2xl italic leading-none"
+  },
+  broadcastProRoundedMatchupDividerVersus: {
+    className: "font-teko mb-1 text-2xl italic leading-none"
+  },
+  broadcastProRoundedMatchupRosterSidebar: {
+    className: "flex flex-col gap-3"
+  },
   broadcastProRoundedRosterMetaRow: {
-    className: "p-4"
+    className: "p-3"
   },
   broadcastProRoundedRosterMetaLabel: {
     className: "font-rajdhani block text-xs font-bold uppercase tracking-widest"
   },
   broadcastProRoundedRosterMetaValue: {
-    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-3xl"
+    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-[28px]"
   },
   broadcastProRoundedRosterAccentStrip: {
     className: "w-1.5 shrink-0 self-stretch rounded-full"
@@ -52807,22 +53277,22 @@ var broadcastProRoundedCompositionComponentStylesTeamOfTheWeek = {
     className: "grid grid-cols-3 gap-2"
   },
   broadcastProRoundedTeamOfTheWeekCard: {
-    className: "flex h-full flex-col rounded-2xl p-3 sm:p-4"
+    className: "flex h-full flex-col rounded-2xl p-4"
   },
   broadcastProRoundedTeamOfTheWeekCardBody: {
     className: "flex min-h-0 flex-1 flex-col gap-2"
   },
   broadcastProRoundedTeamOfTheWeekCardUpper: {
-    className: "grid grid-cols-[minmax(0,1fr)_auto] items-center gap-1"
+    className: "grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3"
   },
   broadcastProRoundedTeamOfTheWeekCardCopy: {
-    className: "flex min-w-0 flex-1 flex-col justify-center gap-1 text-left"
+    className: "flex min-w-0 flex-1 flex-col items-start gap-1 text-left"
   },
   broadcastProRoundedTeamOfTheWeekCardLogoCol: {
-    className: "flex shrink-0 items-center justify-end"
+    className: "flex shrink-0 items-start justify-end"
   },
   broadcastProRoundedTeamOfTheWeekCardLogoWell: {
-    className: "flex h-14 w-14 shrink-0 items-center justify-center shadow-inner sm:h-16 sm:w-16"
+    className: "flex h-16 w-16 shrink-0 items-center justify-center shadow-inner"
   },
   broadcastProRoundedTeamOfTheWeekCardStats: {
     className: "flex min-h-[1.5rem] min-w-0 flex-1 items-center justify-start whitespace-nowrap"
@@ -52831,7 +53301,7 @@ var broadcastProRoundedCompositionComponentStylesTeamOfTheWeek = {
     className: "h-px w-full opacity-30"
   },
   broadcastProRoundedTeamOfTheWeekCardNameRow: {
-    className: "mt-auto w-full pt-1"
+    className: "w-full"
   },
   broadcastProRoundedTeamOfTheWeekCardNameCell: {
     className: "w-full text-left uppercase leading-none"
@@ -53111,7 +53581,9 @@ var broadcastProRoundedTokens = {
     ...DEFAULT_BROADCAST_PRO_SCORE_SIZING2
   },
   broadcastProRoundedCrestSizing: {
-    ...DEFAULT_BROADCAST_PRO_CREST_SIZING2
+    ...DEFAULT_BROADCAST_PRO_CREST_SIZING2,
+    rosterHomePx: 64,
+    rosterAwayPx: 56
   },
   broadcastProRoundedLadderZoneSizing: {
     ...DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING2
@@ -53167,7 +53639,7 @@ var broadcastProRoundedTheme = {
 // src/templates/variants/broadcastProRounded/components/headline/getBroadcastProRoundedHeaderSecondaryLine.ts
 var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
   var _a, _b, _c;
-  const videoTitle = (_a = metadata.videoTitle) == null ? void 0 : _a.trim();
+  const videoTitle = (_a = metadata.videoTitle) == null ? void 0 : _a.replace(/\bCricketRoster\b/gi, "").replace(/\s+/g, " ").trim();
   if (videoTitle) return videoTitle;
   const parts = (_c = (_b = metadata.titleSplit) == null ? void 0 : _b.filter(Boolean)) != null ? _c : [];
   if (parts.length > 0) return parts.join(" \xB7 ");
@@ -53176,11 +53648,11 @@ var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastProRounded/components/headline/useBroadcastProRoundedHeadlineFit.ts
 var import_react35 = require("react");
-var import_remotion113 = require("remotion");
+var import_remotion117 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX2 = 32;
 var useBroadcastProRoundedHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion113.useVideoConfig)();
+  const { width } = (0, import_remotion117.useVideoConfig)();
   const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
   const sizing = broadcastProRoundedHeadlineSizing != null ? broadcastProRoundedHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -53381,7 +53853,7 @@ var BroadcastProRoundedIntro = () => {
 };
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedOutro.tsx
-var import_remotion114 = require("remotion");
+var import_remotion118 = require("remotion");
 var import_jsx_runtime581 = require("react/jsx-runtime");
 var GRID_SETTINGS10 = {
   columns: 2,
@@ -53458,7 +53930,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS10.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime581.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime581.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime581.jsx)(import_remotion118.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime581.jsx)(
       SponsorGrid11,
       {
         sponsors: group,

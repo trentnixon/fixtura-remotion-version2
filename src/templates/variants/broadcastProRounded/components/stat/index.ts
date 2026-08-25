@@ -5,7 +5,10 @@ export type { BroadcastProRoundedStatMatrixTripleProps } from "./BroadcastProRou
 export { BroadcastProRoundedStatMatrixCompact } from "./BroadcastProRoundedStatMatrixCompact";
 export type { BroadcastProRoundedStatMatrixCompactProps } from "./BroadcastProRoundedStatMatrixCompact";
 export { BroadcastProRoundedStatMatrixResultCell } from "./BroadcastProRoundedStatMatrixResultCell";
-export type { BroadcastProRoundedStatMatrixResultCellProps } from "./BroadcastProRoundedStatMatrixResultCell";
+export type {
+  BroadcastProRoundedResultStatTier,
+  BroadcastProRoundedStatMatrixResultCellProps,
+} from "./BroadcastProRoundedStatMatrixResultCell";
 export { BroadcastProRoundedStatMatrixResultGrid } from "./BroadcastProRoundedStatMatrixResultGrid";
 export type {
   BroadcastProRoundedStatMatrixResultGridProps,

@@ -1,16 +1,18 @@
 import React, { type CSSProperties } from "react";
+import { useVideoConfig } from "remotion";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { cellBlur } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
 import { useBroadcastProRoundedTheme } from "../../../../../compositions/cricket/utils/broadcastProRounded";
 import LadderTeamName from "../../../../../compositions/cricket/utils/primitives/ladderTeamName";
-import { truncateText } from "../../../../../compositions/cricket/utils/utils-text";
+import { useFittedTextBoxFontSize } from "../../../../../components/typography/utils/useFittedTextBoxFontSize";
 import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
 import {
   BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY,
   type BroadcastProRoundedMatchupSideInput,
   type BroadcastProRoundedMatchupTier,
 } from "../../../../../templates/types/broadcast-pro-rounded/matchup";
+import { getBroadcastProRoundedRosterSidebarWidth } from "../../../../../templates/types/broadcast-pro-rounded/roster-list-sizing";
 import { BroadcastProRoundedCrestWell } from "../crest/BroadcastProRoundedCrestWell";
 import { BroadcastProRoundedMatchupDivider } from "./BroadcastProRoundedMatchupDivider";
 import { BroadcastProRoundedMatchupSide } from "./BroadcastProRoundedMatchupSide";
@@ -52,8 +54,28 @@ export const BroadcastProRoundedMatchup: React.FC<
 }) => {
   const { componentStyles, layout } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProRoundedTheme();
+  const { width: compositionWidth } = useVideoConfig();
   const cellRadius = layout.borderRadius.container;
   const resolvedFont = fontFamily ?? headingFont;
+
+  const rosterSidebarWidth =
+    getBroadcastProRoundedRosterSidebarWidth(compositionWidth);
+  const homeTitleFontSize = useFittedTextBoxFontSize({
+    text: tier === "roster" ? home.teamName : "",
+    fontFamily: resolvedFont,
+    withinWidth: Math.max(0, rosterSidebarWidth - 42),
+    maxLines: 2,
+    minFontSize: 26,
+    maxFontSize: 36,
+  });
+  const awayTitleFontSize = useFittedTextBoxFontSize({
+    text: tier === "roster" ? away.teamName : "",
+    fontFamily: resolvedFont,
+    withinWidth: Math.max(0, rosterSidebarWidth - 34),
+    maxLines: 2,
+    minFontSize: 24,
+    maxFontSize: 32,
+  });
 
   const layoutKey = BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY[tier];
   const layoutClass = csClass(componentStyles, layoutKey);
@@ -146,14 +168,17 @@ export const BroadcastProRoundedMatchup: React.FC<
           glass={glass}
         />
         <LadderTeamName
-          value={truncateText(home.teamName, 42).toUpperCase()}
+          value={home.teamName.toUpperCase()}
           variant="onContainerTitle"
           fontFamily={resolvedFont}
           letterAnimation="none"
           delay={delay}
           textAlign="center"
           className={homeTitleClass}
-          style={{ color: textOnGlass.copy }}
+          style={{
+            color: textOnGlass.copy,
+            fontSize: homeTitleFontSize,
+          }}
         />
         {home.roleLabel != null && home.roleLabel !== "" && (
           <span
@@ -178,14 +203,17 @@ export const BroadcastProRoundedMatchup: React.FC<
           glass={glass}
         />
         <LadderTeamName
-          value={truncateText(away.teamName, 36).toUpperCase()}
+          value={away.teamName.toUpperCase()}
           variant="onContainerTitle"
           fontFamily={resolvedFont}
           letterAnimation="none"
           delay={delay}
           textAlign="center"
           className={awayTitleClass}
-          style={{ color: textOnGlass.copy }}
+          style={{
+            color: textOnGlass.copy,
+            fontSize: awayTitleFontSize,
+          }}
         />
         {away.roleLabel != null && away.roleLabel !== "" && (
           <span

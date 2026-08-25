@@ -7,7 +7,10 @@ import type {
   AnimationType,
 } from "../../../../../components/typography/config/animations";
 import { RESULT_STAT_CELL_STAGGER } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
-import { BroadcastProRoundedStatMatrixResultCell } from "./BroadcastProRoundedStatMatrixResultCell";
+import {
+  BroadcastProRoundedStatMatrixResultCell,
+  type BroadcastProRoundedResultStatTier,
+} from "./BroadcastProRoundedStatMatrixResultCell";
 
 export interface BroadcastProRoundedStatMatrixResultItem {
   playerName: string;
@@ -21,7 +24,7 @@ export interface BroadcastProRoundedStatMatrixResultGridProps {
   accentColor: string;
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
-  tier?: "list" | "single";
+  tier?: BroadcastProRoundedResultStatTier;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }
@@ -44,7 +47,11 @@ export const BroadcastProRoundedStatMatrixResultGrid: React.FC<
     "broadcastProRoundedStatMatrixResultGrid",
   );
   const resolvedGridClass =
-    tier === "single" ? `${gridClass} gap-2` : gridClass;
+    tier === "single"
+      ? `${gridClass} gap-2`
+      : tier === "listEmbedded"
+        ? `${gridClass} w-full min-w-0 !gap-0 border-t border-white/20 pt-1`
+        : gridClass;
 
   if (items.length === 0) {
     return null;

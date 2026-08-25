@@ -24,7 +24,7 @@ export interface BroadcastProStatMatrixResultCellProps {
 }
 
 const SINGLE_CELL_CLASS =
-  "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
+  "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 const SINGLE_PLAYER_NAME_CLASS =
   "!text-4xl font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =

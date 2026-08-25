@@ -173,10 +173,11 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
     compactLine != null
       ? { kind: "compact" as const, line: compactLine }
       : null;
+  const combineTeamAndStats = playerStatsTier === "list";
 
   return (
     <div
-      className={`mx-6 flex h-full w-auto flex-col gap-1 overflow-hidden md:mx-8 ${className}`.trim()}
+      className={`mx-6 flex h-full w-auto flex-col gap-0.5 overflow-hidden md:mx-8 ${className}`.trim()}
       style={style}
     >
       {showHeroVerdict && verdict?.kind === "hero" && (
@@ -229,18 +230,33 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                   delay={homeTeamDelay}
                   matchType={match.type}
                   glass={glass}
+                  performanceContent={
+                    combineTeamAndStats ? (
+                      <BroadcastProRoundedResultPlayerStatsGrid
+                        items={homeStats}
+                        delay={homeStatsDelay}
+                        accentColor={teamAccents.home}
+                        glass={glass}
+                        tier="listEmbedded"
+                        exitAnimation={copyOut}
+                        exitFrame={exitFrame}
+                      />
+                    ) : undefined
+                  }
                   exitAnimation={copyOut}
                   exitFrame={exitFrame}
                 />
-                <BroadcastProRoundedResultPlayerStatsGrid
-                  items={homeStats}
-                  delay={homeStatsDelay}
-                  accentColor={teamAccents.home}
-                  glass={glass}
-                  tier={playerStatsTier}
-                  exitAnimation={copyOut}
-                  exitFrame={exitFrame}
-                />
+                {!combineTeamAndStats && (
+                  <BroadcastProRoundedResultPlayerStatsGrid
+                    items={homeStats}
+                    delay={homeStatsDelay}
+                    accentColor={teamAccents.home}
+                    glass={glass}
+                    tier={playerStatsTier}
+                    exitAnimation={copyOut}
+                    exitFrame={exitFrame}
+                  />
+                )}
               </>
             );
           }
@@ -257,19 +273,34 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                 delay={awayTeamDelay}
                 matchType={match.type}
                 glass={glass}
+                performanceContent={
+                  combineTeamAndStats ? (
+                    <BroadcastProRoundedResultPlayerStatsGrid
+                      items={awayStats}
+                      delay={awayStatsDelay}
+                      accentColor={teamAccents.away}
+                      glass={glass}
+                      tier="listEmbedded"
+                      exitAnimation={copyOut}
+                      exitFrame={exitFrame}
+                    />
+                  ) : undefined
+                }
                 className="mt-2"
                 exitAnimation={copyOut}
                 exitFrame={exitFrame}
               />
-              <BroadcastProRoundedResultPlayerStatsGrid
-                items={awayStats}
-                delay={awayStatsDelay}
-                accentColor={teamAccents.away}
-                glass={glass}
-                tier={playerStatsTier}
-                exitAnimation={copyOut}
-                exitFrame={exitFrame}
-              />
+              {!combineTeamAndStats && (
+                <BroadcastProRoundedResultPlayerStatsGrid
+                  items={awayStats}
+                  delay={awayStatsDelay}
+                  accentColor={teamAccents.away}
+                  glass={glass}
+                  tier={playerStatsTier}
+                  exitAnimation={copyOut}
+                  exitFrame={exitFrame}
+                />
+              )}
             </>
           );
         }}

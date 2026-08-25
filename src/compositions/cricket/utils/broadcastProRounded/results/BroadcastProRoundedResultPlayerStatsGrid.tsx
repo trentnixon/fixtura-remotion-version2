@@ -1,5 +1,8 @@
 import React from "react";
-import { BroadcastProRoundedStatMatrixResultGrid } from "../../../../../templates/variants/broadcastProRounded/components/stat";
+import {
+  BroadcastProRoundedStatMatrixResultGrid,
+  type BroadcastProRoundedResultStatTier,
+} from "../../../../../templates/variants/broadcastProRounded/components/stat";
 import type { BroadcastProRoundedGlassStyle } from "../glass";
 import type { BroadcastProRoundedResultStatItem } from "./types";
 import type {
@@ -13,7 +16,7 @@ export interface BroadcastProRoundedResultPlayerStatsGridProps {
   accentColor: string;
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
-  tier?: "list" | "single";
+  tier?: BroadcastProRoundedResultStatTier;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }

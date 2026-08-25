@@ -1,4 +1,5 @@
 import React from "react";
+import { useVideoConfig } from "remotion";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { cellBlur, useBroadcastProTheme } from "../../../utils/broadcastPro";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
@@ -14,6 +15,8 @@ import {
 import { getMainContentHeightReservingFooter } from "../../../../../core/utils/layoutHeights";
 import type { ComponentStyles } from "../../../../../core/context/types/ThemeContextTypes";
 import type { BroadcastProGlassStyle } from "../../../utils/broadcastPro/glass";
+import { useFittedTextBoxFontSize } from "../../../../../components/typography/utils/useFittedTextBoxFontSize";
+import { getBroadcastProRosterSidebarWidth } from "../../../../../templates/types/broadcast-pro/roster-list-sizing";
 
 /** Resolve Broadcast Pro `componentStyles` by key (falls back to empty). */
 const rosterClass = (styles: ComponentStyles, key: string): string =>
@@ -28,6 +31,7 @@ const MetaRow: React.FC<{
   valueClassName: string;
   labelColor: string;
   valueColor: string;
+  valueStyle?: React.CSSProperties;
 }> = ({
   label,
   value,
@@ -37,6 +41,7 @@ const MetaRow: React.FC<{
   valueClassName,
   labelColor,
   valueColor,
+  valueStyle,
 }) => (
   <div
     className={rowClassName}
@@ -50,7 +55,10 @@ const MetaRow: React.FC<{
       <span className={labelClassName} style={{ color: labelColor }}>
         {label}
       </span>
-      <span className={valueClassName} style={{ color: valueColor }}>
+      <span
+        className={valueClassName}
+        style={{ color: valueColor, ...valueStyle }}
+      >
         {value}
       </span>
     </div>
@@ -61,10 +69,21 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
   roster,
 }) => {
   const { layout, fontClasses, componentStyles } = useThemeContext();
+  const { width: compositionWidth } = useVideoConfig();
   const { glass, textOnGlass: textOnContainer } = useBroadcastProTheme();
   const availableHeight = getMainContentHeightReservingFooter(layout.heights);
   const cs = (key: string) => rosterClass(componentStyles, key);
   const titleFontFamily = fontClasses?.heading?.family ?? "Teko";
+  const rosterSidebarWidth =
+    getBroadcastProRosterSidebarWidth(compositionWidth);
+  const gradeFontSize = useFittedTextBoxFontSize({
+    text: roster.gradeName,
+    fontFamily: titleFontFamily,
+    withinWidth: Math.max(0, rosterSidebarWidth - 34),
+    maxLines: 2,
+    minFontSize: 22,
+    maxFontSize: 28,
+  });
 
   const { accountHolder, against } = getTeamPerspective(roster);
   const accountLabel = roster.isHomeTeam ? "HOME TEAM" : "AWAY TEAM";
@@ -144,6 +163,7 @@ const RosterDisplayBroadcastPro: React.FC<RosterDisplayProps> = ({
                   valueClassName={cs("broadcastProRosterMetaValue")}
                   labelColor={textOnContainer.muted}
                   valueColor={textOnContainer.copy}
+                  valueStyle={{ fontSize: gradeFontSize }}
                 />
                 <MetaRow
                   label="DATE"

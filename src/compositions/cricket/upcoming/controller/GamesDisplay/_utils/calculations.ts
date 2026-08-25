@@ -32,9 +32,9 @@ export const BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX =
   BROADCAST_PRO_UPCOMING_SPACING.cardSpacing;
 
 export const BROADCAST_PRO_UPCOMING_LIST_HEIGHT_PX = {
-  featured: 560,
-  standard: 800,
-  compact: 880,
+  featured: 530,
+  standard: 760,
+  compact: 840,
 } as const;
 
 /**

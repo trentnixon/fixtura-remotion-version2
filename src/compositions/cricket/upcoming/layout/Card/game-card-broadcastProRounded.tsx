@@ -14,21 +14,16 @@ import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { formatGroundLocation } from "../../../utils/utils-text";
 import { BroadcastProRoundedMatchup } from "../../../../../templates/variants/broadcastProRounded/components/matchup";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
-import {
-  stripGradeNumberFromTeamName,
-  truncateText,
-} from "../../../utils/utils-text";
+import { stripGradeNumberFromTeamName } from "../../../utils/utils-text";
 import {
   cellBlur,
   useBroadcastProRoundedTheme,
 } from "../../../utils/broadcastProRounded";
 
-const UPCOMING_TEAM_NAME_MAX = 34;
-
 const formatUpcomingTeamName = (teamName: string): string =>
-  truncateText(stripGradeNumberFromTeamName(teamName), UPCOMING_TEAM_NAME_MAX);
+  stripGradeNumberFromTeamName(teamName);
 
-const HEADER_STRIP_H = 40;
+const HEADER_STRIP_H = 36;
 const GROUND_STRIP_H = 36;
 
 export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
@@ -64,7 +59,7 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
       >
         {/* Fixture header: date 25% | time 25% | grade 50% */}
         <div
-          className={`grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 overflow-hidden px-5 py-2 md:px-6 ${cellRadius}`}
+          className={`grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 overflow-hidden px-5 py-1.5 md:px-6 ${cellRadius}`}
           style={{
             minHeight: HEADER_STRIP_H,
             background: glass.headerGradient,
@@ -103,7 +98,7 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
 
         {/* Glass panel: teams + VS */}
         <div
-          className={`flex w-full overflow-hidden px-5 py-3 md:px-6 ${cellRadius}`}
+          className={`flex w-full overflow-hidden px-5 py-2 md:px-6 ${cellRadius}`}
           style={{
             background: glass.panel,
             border: glass.border,
@@ -130,7 +125,7 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
 
         {/* Ground footer */}
         <div
-          className={`flex w-full flex-shrink-0 items-center overflow-hidden px-5 py-1.5 md:px-6 ${cellRadius}`}
+          className={`flex w-full flex-shrink-0 items-center overflow-hidden px-5 py-1 md:px-6 ${cellRadius}`}
           style={{
             minHeight: GROUND_STRIP_H,
             background: glass.muted,

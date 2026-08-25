@@ -1,5 +1,5 @@
 /**
- * Renders BroadcastPro cricket stills (Solid + Image) for Studio-equivalent regression.
+ * Renders BroadcastPro-family cricket stills (Solid + Image) for regression.
  * Usage: node scripts/broadcastpro-visual-regression.mjs
  */
 import { spawnSync } from "node:child_process";
@@ -9,11 +9,17 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
-const outRoot = path.join(root, "out", "visual-regression", "broadcastpro");
+const TEMPLATE_ID =
+  process.env.FIXTURA_VISUAL_TEMPLATE_ID?.trim() || "BroadcastPro";
+const outRoot = path.join(
+  root,
+  "out",
+  "visual-regression",
+  TEMPLATE_ID.toLowerCase(),
+);
 const propsDir = path.join(outRoot, "_props");
 
 const BACKGROUNDS = ["Solid", "Image"];
-const TEMPLATE_ID = "BroadcastPro";
 const SPORT = "Cricket";
 
 const DATASETS = [
@@ -158,7 +164,7 @@ for (const { id, file } of DATASETS) {
 const passed = results.filter((r) => r.ok).length;
 const failed = results.filter((r) => !r.ok);
 
-console.log("\n--- BroadcastPro visual regression ---");
+console.log(`\n--- ${TEMPLATE_ID} visual regression ---`);
 console.log(`Passed: ${passed}/${results.length}`);
 
 if (failed.length > 0) {

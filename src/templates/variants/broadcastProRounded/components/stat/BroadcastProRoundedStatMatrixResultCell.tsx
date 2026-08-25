@@ -13,6 +13,11 @@ import type {
 import { BroadcastProRoundedStatMatrixCompact } from "./BroadcastProRoundedStatMatrixCompact";
 import { resultContainerDelay } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
 
+export type BroadcastProRoundedResultStatTier =
+  | "list"
+  | "listEmbedded"
+  | "single";
+
 export interface BroadcastProRoundedStatMatrixResultCellProps {
   playerName: string;
   statValue: string;
@@ -21,13 +26,13 @@ export interface BroadcastProRoundedStatMatrixResultCellProps {
   accentColor: string;
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
-  tier?: "list" | "single";
+  tier?: BroadcastProRoundedResultStatTier;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }
 
 const SINGLE_CELL_CLASS =
-  "!flex !flex-col !items-start !justify-start gap-0 !py-3 !px-4";
+  "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 const SINGLE_PLAYER_NAME_CLASS =
   "!text-[38px] font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =
@@ -38,6 +43,10 @@ const LIST_STAT_PRIMARY_CLASS =
   "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
 const LIST_STAT_SUFFIX_CLASS =
   "font-teko !text-[26px] font-normal !tracking-tight !leading-tight opacity-70";
+const EMBEDDED_CELL_CLASS =
+  "flex min-w-0 items-center justify-between gap-2 border-l border-white/20 px-3 py-1 first:border-l-0";
+const EMBEDDED_PLAYER_NAME_CLASS =
+  "!text-[18px] !font-semibold !leading-none uppercase !opacity-70";
 
 export const BroadcastProRoundedStatMatrixResultCell: React.FC<
   BroadcastProRoundedStatMatrixResultCellProps
@@ -72,9 +81,11 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
   const headingFont =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
   const isSingle = tier === "single";
+  const isEmbedded = tier === "listEmbedded";
   const resolvedNameClass = [
     nameClass,
     isSingle ? SINGLE_PLAYER_NAME_CLASS : "",
+    isEmbedded ? EMBEDDED_PLAYER_NAME_CLASS : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -116,6 +127,26 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
     />
   );
 
+  const content = isSingle ? (
+    <>
+      {statBlock}
+      {nameBlock}
+    </>
+  ) : (
+    <>
+      {nameBlock}
+      {statBlock}
+    </>
+  );
+
+  if (isEmbedded) {
+    return (
+      <div className={`${EMBEDDED_CELL_CLASS} ${className}`.trim()}>
+        {content}
+      </div>
+    );
+  }
+
   return (
     <BroadcastProRoundedGlassPanel
       glass={glass}
@@ -123,17 +154,7 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
       animationDelay={resultContainerDelay(delay)}
       exitFrame={exitFrame}
     >
-      {isSingle ? (
-        <>
-          {statBlock}
-          {nameBlock}
-        </>
-      ) : (
-        <>
-          {nameBlock}
-          {statBlock}
-        </>
-      )}
+      {content}
     </BroadcastProRoundedGlassPanel>
   );
 };

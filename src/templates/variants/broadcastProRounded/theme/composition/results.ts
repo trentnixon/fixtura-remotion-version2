@@ -37,7 +37,7 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
       "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5",
   },
   broadcastProRoundedResultsTeamRow: {
-    className: "flex w-full items-center justify-between gap-3 p-3",
+    className: "flex w-full items-center justify-between gap-3 px-3 py-2",
   },
   broadcastProRoundedResultsTeamLogoWell:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellCompact,
@@ -51,7 +51,7 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
     className: "grid grid-cols-3 gap-[2px]",
   },
   broadcastProRoundedResultsPlayerStatCell: {
-    className: "flex items-center justify-between px-3 py-2",
+    className: "flex items-center justify-between px-3 py-1.5",
   },
   broadcastProRoundedResultsPlayerStatName: {
     className: "min-w-0 truncate",

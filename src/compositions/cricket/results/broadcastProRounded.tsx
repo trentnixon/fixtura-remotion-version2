@@ -8,6 +8,8 @@ import {
   TransitionType,
 } from "../../../components/transitions";
 import { useAnimationContext } from "../../../core/context/AnimationContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
+import { getCompositionSectionHeight } from "../../../core/utils/layoutHeights";
 import {
   DEFAULT_RESULTS_PER_SCREEN,
   calculateDisplayDurationPerScreen,
@@ -19,8 +21,10 @@ import {
 export const ResultsListBroadcastProRounded: React.FC = () => {
   const { data } = useVideoDataContext();
   const { data: resultsData, videoMeta, timings } = data;
+  const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
   const transitionConfig = animations.transition.Main;
+  const compositionHeight = getCompositionSectionHeight(layout.heights);
 
   if (!hasValidResults(resultsData)) {
     return <NoResultsData />;
@@ -42,25 +46,29 @@ export const ResultsListBroadcastProRounded: React.FC = () => {
 
   const sequences = Array.from({ length: totalScreens }, (_, index) => ({
     content: (
-      <ResultsDisplayBroadcastProRounded
-        results={matchResults}
-        resultsPerScreen={resultsPerScreen}
-        screenIndex={index}
-      />
+      <div className="h-full w-full" style={{ height: compositionHeight }}>
+        <ResultsDisplayBroadcastProRounded
+          results={matchResults}
+          resultsPerScreen={resultsPerScreen}
+          screenIndex={index}
+        />
+      </div>
     ),
     durationInFrames: displayDurationPerScreen,
   }));
 
   return (
-    <TransitionSeriesWrapper
-      sequences={sequences}
-      transitionType={transitionConfig.type as TransitionType}
-      direction={transitionConfig.direction as TransitionDirection}
-      timing={{
-        type: "linear",
-        durationInFrames: transitionConfig.durationInFrames,
-      }}
-    />
+    <div className="w-full" style={{ height: compositionHeight }}>
+      <TransitionSeriesWrapper
+        sequences={sequences}
+        transitionType={transitionConfig.type as TransitionType}
+        direction={transitionConfig.direction as TransitionDirection}
+        timing={{
+          type: "linear",
+          durationInFrames: transitionConfig.durationInFrames,
+        }}
+      />
+    </div>
   );
 };
 

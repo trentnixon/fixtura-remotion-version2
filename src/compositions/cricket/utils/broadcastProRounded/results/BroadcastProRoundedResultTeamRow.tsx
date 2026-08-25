@@ -3,6 +3,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { BroadcastProRoundedCrestWell } from "../../../../../templates/variants/broadcastProRounded/components/crest";
 import { ResultTeamName } from "../../primitives/ResultTeamName";
+import { useFittedTextBoxFontSize } from "../../../../../components/typography/utils/useFittedTextBoxFontSize";
 import { truncateText } from "../../../results/layout/Sections/PlayerStats/_utils/helpers";
 import { BroadcastProRoundedGlassPanel } from "./BroadcastProRoundedGlassPanel";
 import { BroadcastProRoundedResultScoreBadge } from "./BroadcastProRoundedResultScoreBadge";
@@ -26,6 +27,7 @@ export interface BroadcastProRoundedResultTeamRowProps {
   delay: number;
   matchType?: string;
   glass?: BroadcastProRoundedGlassStyle;
+  performanceContent?: React.ReactNode;
   className?: string;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
@@ -44,13 +46,18 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
   delay,
   matchType,
   glass,
+  performanceContent,
   className = "",
   exitAnimation,
   exitFrame,
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
-  const { glass: themeGlass, text } = useBroadcastProRoundedTheme();
+  const {
+    glass: themeGlass,
+    headingFont,
+    text,
+  } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass(
     componentStyles,
@@ -64,41 +71,63 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
   const resolvedGlass = glass ?? themeGlass;
 
   const displayName = truncateText(teamName, MAX_TEAM_NAME).toUpperCase();
+  const combinedTeamNameFontSize = useFittedTextBoxFontSize({
+    text: displayName,
+    fontFamily: headingFont,
+    withinWidth: 720,
+    maxLines: 1,
+    minFontSize: 24,
+    maxFontSize: 36,
+  });
 
   return (
     <BroadcastProRoundedGlassPanel
       glass={resolvedGlass}
-      className={`${rowClass} ${className}`.trim()}
+      className={`${rowClass} ${
+        performanceContent == null ? "" : "!flex-col !items-stretch !gap-1.5"
+      } ${className}`.trim()}
       animationDelay={resultContainerDelay(delay)}
       exitFrame={exitFrame}
     >
-      <div className="flex min-w-0 flex-1 items-center gap-4">
-        <BroadcastProRoundedCrestWell
-          tier="compact"
-          logo={logo ?? null}
-          teamName={teamName}
-          delay={delay + RESULT_TEAM_ROW_NESTED.crest}
-          glass={resolvedGlass}
-        />
-        <ResultTeamName
-          value={displayName}
-          animation={{ ...copyIn, delay: delay + RESULT_TEAM_ROW_NESTED.name }}
+      <div className="flex w-full items-center justify-between gap-3">
+        <div className="flex min-w-0 flex-1 items-center gap-4">
+          <BroadcastProRoundedCrestWell
+            tier="compact"
+            logo={logo ?? null}
+            teamName={teamName}
+            delay={delay + RESULT_TEAM_ROW_NESTED.crest}
+            glass={resolvedGlass}
+          />
+          <ResultTeamName
+            value={displayName}
+            animation={{
+              ...copyIn,
+              delay: delay + RESULT_TEAM_ROW_NESTED.name,
+            }}
+            exitAnimation={exitAnimation}
+            exitFrame={exitFrame}
+            variant="onContainerTitle"
+            className={nameClass}
+            style={{
+              color: text.copy,
+              fontSize:
+                performanceContent == null
+                  ? undefined
+                  : combinedTeamNameFontSize,
+            }}
+          />
+        </div>
+        <BroadcastProRoundedResultScoreBadge
+          score={score}
+          firstInnings={firstInnings}
+          accentColor={accentColor}
+          delay={delay + RESULT_TEAM_ROW_NESTED.score}
+          matchType={matchType}
           exitAnimation={exitAnimation}
           exitFrame={exitFrame}
-          variant="onContainerTitle"
-          className={nameClass}
-          style={{ color: text.copy }}
         />
       </div>
-      <BroadcastProRoundedResultScoreBadge
-        score={score}
-        firstInnings={firstInnings}
-        accentColor={accentColor}
-        delay={delay + RESULT_TEAM_ROW_NESTED.score}
-        matchType={matchType}
-        exitAnimation={exitAnimation}
-        exitFrame={exitFrame}
-      />
+      {performanceContent}
     </BroadcastProRoundedGlassPanel>
   );
 };

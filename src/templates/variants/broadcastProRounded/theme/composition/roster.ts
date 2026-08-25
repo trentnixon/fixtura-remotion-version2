@@ -1,5 +1,4 @@
 import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig";
-import { broadcastProRoundedComponentStylesShared } from "../componentStyles.shared";
 
 /**
  * Team roster (Broadcast Pro): grid, glass cells, meta — Teko/Rajdhani via classes.
@@ -28,7 +27,7 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
   },
   broadcastProRoundedRosterSidebar: {
     className:
-      "col-span-12 flex min-h-0 flex-col justify-start gap-4 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:col-span-5",
+      "col-span-12 flex min-h-0 flex-col justify-start gap-3 overflow-hidden lg:col-span-5",
   },
   broadcastProRoundedRosterContentShell: {
     className: "flex min-h-0 flex-1 flex-col gap-4 px-2",
@@ -48,23 +47,33 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
       "flex h-full min-h-0 min-w-0 flex-1 items-stretch justify-start self-stretch",
   },
   broadcastProRoundedRosterMetaStack: {
-    className: "flex flex-col gap-1",
+    className: "flex min-h-0 flex-1 flex-col gap-2",
   },
   broadcastProRoundedRosterTeamCardHome: {
-    className: "flex flex-shrink-0 flex-col items-center p-5 text-center",
+    className: "flex flex-shrink-0 flex-col items-center p-3 text-center",
   },
   broadcastProRoundedRosterTeamCardAway: {
-    className: "flex flex-shrink-0 flex-col items-center p-4 text-center",
+    className: "flex flex-shrink-0 flex-col items-center p-3 text-center",
   },
-  broadcastProRoundedRosterTeamLogoWellHome:
-    broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellRosterHome,
-  broadcastProRoundedRosterTeamLogoWellAway:
-    broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellRosterAway,
+  broadcastProRoundedRosterTeamLogoWellHome: {
+    className: "mb-2 flex h-16 w-16 items-center justify-center",
+  },
+  broadcastProRoundedRosterTeamLogoWellAway: {
+    className: "mb-2 flex h-14 w-14 items-center justify-center",
+  },
+  broadcastProRoundedCrestWellRosterHome: {
+    className: "mb-2 flex h-16 w-16 items-center justify-center",
+  },
+  broadcastProRoundedCrestWellRosterAway: {
+    className: "mb-2 flex h-14 w-14 items-center justify-center",
+  },
   broadcastProRoundedRosterTeamTitleHome: {
-    className: "font-teko text-4xl uppercase sm:text-5xl",
+    className:
+      "font-teko line-clamp-2 w-full text-4xl uppercase leading-tight sm:text-5xl",
   },
   broadcastProRoundedRosterTeamTitleAway: {
-    className: "font-teko text-3xl uppercase sm:text-4xl",
+    className:
+      "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl",
   },
   broadcastProRoundedRosterTeamLabelHome: {
     className: "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest",
@@ -73,10 +82,17 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
     className:
       "font-rajdhani mt-0.5 text-xs font-bold uppercase tracking-widest",
   },
-  broadcastProRoundedRosterVersus:
-    broadcastProRoundedComponentStylesShared.broadcastProRoundedMatchupDividerVersus,
+  broadcastProRoundedRosterVersus: {
+    className: "font-teko mb-1 text-2xl italic leading-none",
+  },
+  broadcastProRoundedMatchupDividerVersus: {
+    className: "font-teko mb-1 text-2xl italic leading-none",
+  },
+  broadcastProRoundedMatchupRosterSidebar: {
+    className: "flex flex-col gap-3",
+  },
   broadcastProRoundedRosterMetaRow: {
-    className: "p-4",
+    className: "p-3",
   },
   broadcastProRoundedRosterMetaLabel: {
     className:
@@ -84,7 +100,7 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
   },
   broadcastProRoundedRosterMetaValue: {
     className:
-      "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-3xl",
+      "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-[28px]",
   },
   broadcastProRoundedRosterAccentStrip: {
     className: "w-1.5 shrink-0 self-stretch rounded-full",
@@ -107,11 +123,15 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
   | "broadcastProRoundedRosterTeamCardAway"
   | "broadcastProRoundedRosterTeamLogoWellHome"
   | "broadcastProRoundedRosterTeamLogoWellAway"
+  | "broadcastProRoundedCrestWellRosterHome"
+  | "broadcastProRoundedCrestWellRosterAway"
   | "broadcastProRoundedRosterTeamTitleHome"
   | "broadcastProRoundedRosterTeamTitleAway"
   | "broadcastProRoundedRosterTeamLabelHome"
   | "broadcastProRoundedRosterTeamLabelAway"
   | "broadcastProRoundedRosterVersus"
+  | "broadcastProRoundedMatchupDividerVersus"
+  | "broadcastProRoundedMatchupRosterSidebar"
   | "broadcastProRoundedRosterMetaRow"
   | "broadcastProRoundedRosterMetaLabel"
   | "broadcastProRoundedRosterMetaValue"

@@ -20,7 +20,7 @@ import { cellBlur, useBroadcastProTheme } from "../../../utils/broadcastPro";
 const formatUpcomingTeamName = (teamName: string): string =>
   stripGradeNumberFromTeamName(teamName);
 
-const HEADER_STRIP_H = 40;
+const HEADER_STRIP_H = 36;
 
 export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   game,
@@ -46,11 +46,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   const matchupHeight =
     density === "featured" ? 330 : density === "standard" ? 240 : 170;
   const bodyPadding =
-    density === "featured"
-      ? "24px 28px"
-      : isCompact
-        ? "12px 20px"
-        : "18px 24px";
+    density === "featured" ? "18px 24px" : isCompact ? "8px 16px" : "14px 20px";
 
   return (
     <div
@@ -77,7 +73,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
           className="h-full"
         >
           <div
-            className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-3 px-5 py-2 md:px-6"
+            className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-3 px-5 py-1.5 md:px-6"
             style={{
               minHeight: HEADER_STRIP_H,
               background: glass.headerGradient,
@@ -141,7 +137,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
           </div>
 
           <div
-            className={`flex w-full flex-shrink-0 justify-center px-5 ${isCompact ? "py-1.5" : "py-2.5"}`}
+            className={`flex w-full flex-shrink-0 justify-center px-5 ${isCompact ? "py-1" : "py-2"}`}
             style={{
               background: glass.muted,
               borderTop: glass.border,

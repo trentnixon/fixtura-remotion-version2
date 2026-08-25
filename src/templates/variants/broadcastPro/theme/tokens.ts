@@ -21,6 +21,8 @@ export const broadcastProTokens = {
 
   broadcastProCrestSizing: {
     ...DEFAULT_BROADCAST_PRO_CREST_SIZING,
+    rosterHomePx: 64,
+    rosterAwayPx: 56,
   },
 
   broadcastProLadderZoneSizing: {
