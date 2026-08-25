@@ -19,6 +19,8 @@ export interface BroadcastProResultTeamRowProps {
   matchType?: string;
   glass?: BroadcastProGlassStyle;
   className?: string;
+  showBorder?: boolean;
+  scoreEmphasis?: "winner" | "standard";
 }
 
 const MAX_TEAM_NAME = 32;
@@ -35,6 +37,8 @@ export const BroadcastProResultTeamRow: React.FC<
   matchType,
   glass,
   className = "",
+  showBorder = true,
+  scoreEmphasis = "standard",
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -51,6 +55,7 @@ export const BroadcastProResultTeamRow: React.FC<
     <BroadcastProGlassPanel
       glass={resolvedGlass}
       className={`${rowClass} ${className}`.trim()}
+      showBorder={showBorder}
     >
       <div className="flex min-w-0 flex-1 items-center gap-4">
         <BroadcastProCrestWell
@@ -74,6 +79,7 @@ export const BroadcastProResultTeamRow: React.FC<
         accentColor={accentColor}
         delay={delay + 6}
         matchType={matchType}
+        emphasis={scoreEmphasis}
       />
     </BroadcastProGlassPanel>
   );

@@ -17,6 +17,7 @@ export interface BroadcastProStatMatrixResultCellProps {
   glass?: BroadcastProGlassStyle;
   className?: string;
   tier?: "list" | "single";
+  showBorder?: boolean;
 }
 
 const SINGLE_CELL_CLASS =
@@ -43,6 +44,7 @@ export const BroadcastProStatMatrixResultCell: React.FC<
   glass,
   className = "",
   tier = "list",
+  showBorder = true,
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
@@ -107,6 +109,7 @@ export const BroadcastProStatMatrixResultCell: React.FC<
     <BroadcastProGlassPanel
       glass={glass}
       className={`${cellClass} ${isSingle ? SINGLE_CELL_CLASS : ""} ${className}`.trim()}
+      showBorder={showBorder}
     >
       {isSingle ? (
         <>

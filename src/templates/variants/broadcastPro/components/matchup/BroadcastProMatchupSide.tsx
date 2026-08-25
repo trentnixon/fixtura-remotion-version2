@@ -7,6 +7,7 @@ import { MetadataMedium } from "../../../../../compositions/cricket/utils/primit
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
 import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
+import type { BroadcastProFixtureDensity } from "../../../../types/broadcast-pro/fixture-density";
 import type { BroadcastProMatchupSideInput } from "../../../../../templates/types/broadcast-pro/matchup";
 import { BroadcastProCrestWell } from "../crest/BroadcastProCrestWell";
 
@@ -17,6 +18,7 @@ export interface BroadcastProMatchupSideProps {
   glass: BroadcastProGlassStyle;
   containerHeight?: number;
   compact?: boolean;
+  fixtureDensity?: BroadcastProFixtureDensity;
   fontFamily?: string;
   labelVariant?: ColorVariant;
 }
@@ -30,6 +32,7 @@ export const BroadcastProMatchupSide: React.FC<
   glass,
   containerHeight,
   compact = false,
+  fixtureDensity = "standard",
   fontFamily,
   labelVariant = "onContainerCopy",
 }) => {
@@ -53,8 +56,14 @@ export const BroadcastProMatchupSide: React.FC<
     "broadcastProMatchupFixtureTeamName",
   );
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
+  const densityClass =
+    fixtureDensity === "featured"
+      ? "!text-7xl"
+      : fixtureDensity === "compact" || compact
+        ? "!text-5xl"
+        : "!text-6xl";
   const teamNameClass =
-    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${compact ? "!text-5xl" : "!text-6xl"}`.trim();
+    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
 
   const isHome = side === "home";
   const crestDelay = delay + 6;

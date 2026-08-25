@@ -6,6 +6,7 @@ import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/
 import LadderTeamName from "../../../../../compositions/cricket/utils/primitives/ladderTeamName";
 import { truncateText } from "../../../../../compositions/cricket/utils/utils-text";
 import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
+import type { BroadcastProFixtureDensity } from "../../../../types/broadcast-pro/fixture-density";
 import {
   BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY,
   type BroadcastProMatchupSideInput,
@@ -23,6 +24,8 @@ export interface BroadcastProMatchupProps {
   delay?: number;
   /** Fixture tier: smaller VS + team names when glass panel is short. */
   compact?: boolean;
+  /** Fixture tier selected from the number of fixtures on screen. */
+  fixtureDensity?: BroadcastProFixtureDensity;
   /** Fixture tier: adaptive crest well sizing. */
   containerHeight?: number;
   className?: string;
@@ -42,6 +45,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
   glass,
   delay = 0,
   compact = false,
+  fixtureDensity = "standard",
   containerHeight,
   className = "",
   style,
@@ -65,6 +69,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           glass={glass}
           containerHeight={containerHeight}
           compact={compact}
+          fixtureDensity={fixtureDensity}
           fontFamily={resolvedFont}
         />
         <BroadcastProMatchupDivider
@@ -80,6 +85,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           glass={glass}
           containerHeight={containerHeight}
           compact={compact}
+          fixtureDensity={fixtureDensity}
           fontFamily={resolvedFont}
         />
       </div>

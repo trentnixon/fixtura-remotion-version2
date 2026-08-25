@@ -26,6 +26,7 @@ const MatchRowBroadcastPro: React.FC<MatchRowProps> = ({
     <div className="h-full w-full">
       <AnimatedContainer
         type="full"
+        size="full"
         className="h-full w-full rounded-none"
         backgroundColor="none"
         animation={containerAnimation.containerIn}

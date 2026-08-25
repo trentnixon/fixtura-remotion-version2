@@ -17,6 +17,7 @@ export interface BroadcastProGlassPanelProps {
   glass?: BroadcastProGlassStyle;
   /** Semantic surface tier; defaults to primary panel glass. */
   surface?: Exclude<BroadcastProGlassSurfaceRole, "logoWell">;
+  showBorder?: boolean;
 }
 
 export const BroadcastProGlassPanel: React.FC<BroadcastProGlassPanelProps> = ({
@@ -25,6 +26,7 @@ export const BroadcastProGlassPanel: React.FC<BroadcastProGlassPanelProps> = ({
   style,
   glass: glassOverride,
   surface = "panel",
+  showBorder = true,
 }) => {
   const {
     selectedPalette,
@@ -45,7 +47,7 @@ export const BroadcastProGlassPanel: React.FC<BroadcastProGlassPanelProps> = ({
       className={`rounded-none ${className}`.trim()}
       style={{
         background: getBroadcastProGlassSurface(glass, surface),
-        border: glass.border,
+        border: showBorder ? glass.border : undefined,
         ...cellBlur,
         ...style,
       }}

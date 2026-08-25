@@ -17,11 +17,20 @@ export interface BroadcastProStatMatrixResultGridProps {
   glass?: BroadcastProGlassStyle;
   className?: string;
   tier?: "list" | "single";
+  showCellBorders?: boolean;
 }
 
 export const BroadcastProStatMatrixResultGrid: React.FC<
   BroadcastProStatMatrixResultGridProps
-> = ({ items, delay, accentColor, glass, className = "", tier = "list" }) => {
+> = ({
+  items,
+  delay,
+  accentColor,
+  glass,
+  className = "",
+  tier = "list",
+  showCellBorders = true,
+}) => {
   const { componentStyles } = useThemeContext();
   const gridClass = csClass(
     componentStyles,
@@ -44,6 +53,7 @@ export const BroadcastProStatMatrixResultGrid: React.FC<
           accentColor={accentColor}
           glass={glass}
           tier={tier}
+          showBorder={showCellBorders}
         />
       ))}
     </div>

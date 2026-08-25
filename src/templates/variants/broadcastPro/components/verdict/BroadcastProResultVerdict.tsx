@@ -25,6 +25,7 @@ export interface BroadcastProResultVerdictProps {
   animation?: AnimationType | AnimationConfig;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
+  showBorder?: boolean;
 }
 
 export const BroadcastProResultVerdict: React.FC<
@@ -39,6 +40,7 @@ export const BroadcastProResultVerdict: React.FC<
   animation,
   exitAnimation,
   exitFrame,
+  showBorder = true,
 }) => {
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY[tier];
@@ -60,6 +62,7 @@ export const BroadcastProResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
+        showBorder={showBorder}
       >
         <BroadcastProVerdictHeroLockup
           winner={model.winner}
@@ -81,6 +84,7 @@ export const BroadcastProResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
+        showBorder={showBorder}
       >
         <BroadcastProVerdictCompactLine
           line={model.line}
@@ -100,6 +104,7 @@ export const BroadcastProResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
+        showBorder={showBorder}
       >
         <BroadcastProVerdictAbandoned
           status={model.status}

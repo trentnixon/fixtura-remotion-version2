@@ -13,11 +13,19 @@ export interface BroadcastProResultMetaStripProps {
   className?: string;
   /** When false, only the grade/round label is shown (e.g. Result Single). */
   showGround?: boolean;
+  showEdgeMarker?: boolean;
 }
 
 export const BroadcastProResultMetaStrip: React.FC<
   BroadcastProResultMetaStripProps
-> = ({ gradeLabel, ground, delay = 0, className = "", showGround = true }) => {
+> = ({
+  gradeLabel,
+  ground,
+  delay = 0,
+  className = "",
+  showGround = true,
+  showEdgeMarker = true,
+}) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { glass, text, accent } = useBroadcastProTheme();
@@ -30,10 +38,12 @@ export const BroadcastProResultMetaStrip: React.FC<
       className={`${stripClass} ${className}`.trim()}
       style={{
         background: glass.headerGradient,
-        ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
-          accentColor: accent,
-          mutedColor: accent,
-        }),
+        ...(showEdgeMarker
+          ? resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
+              accentColor: accent,
+              mutedColor: accent,
+            })
+          : {}),
         ...cellBlur,
       }}
     >

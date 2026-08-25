@@ -18,6 +18,7 @@ import { BroadcastProResultMetaStrip } from "./BroadcastProResultMetaStrip";
 import { BroadcastProResultPlayerStatsGrid } from "./BroadcastProResultPlayerStatsGrid";
 import { BroadcastProResultTeamRow } from "./BroadcastProResultTeamRow";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
+import { BroadcastProFixtureFrame } from "../../../../../templates/variants/broadcastPro/components/fixture";
 import { csClass } from "../componentStyles";
 import { resolveBroadcastProGlass } from "../glass";
 import {
@@ -85,6 +86,9 @@ export const BroadcastProResultMatchContent: React.FC<
   });
   const verdict = buildBroadcastProVerdictModel(match);
   const compactLine = buildCompactVerdictLine(match);
+  const winnerName = match.resultSummary?.winner?.trim() ?? "";
+  const homeIsWinner = winnerName === match.homeTeam.name.trim();
+  const awayIsWinner = winnerName === match.awayTeam.name.trim();
   const copyIn = animations.text.main.copyIn;
 
   const showHeroVerdict =
@@ -161,7 +165,7 @@ export const BroadcastProResultMatchContent: React.FC<
 
   return (
     <div
-      className={`mx-6 flex h-full w-auto flex-col gap-1 overflow-hidden md:mx-8 ${className}`.trim()}
+      className={`mx-6 flex h-full w-auto flex-col overflow-hidden md:mx-8 ${className}`.trim()}
       style={style}
     >
       {showHeroVerdict && verdict?.kind === "hero" && (
@@ -176,99 +180,118 @@ export const BroadcastProResultMatchContent: React.FC<
         />
       )}
 
-      <BroadcastProResultMetaStrip
-        gradeLabel={buildGradeLabel(match)}
-        ground={match.ground}
-        delay={metaDelay}
-        showGround={showGround}
-      />
-
-      <BroadcastProMatchup
-        tier="result"
-        home={{
-          teamName: match.homeTeam.name,
-          logo: match.teamHomeLogo ?? null,
-        }}
-        away={{
-          teamName: match.awayTeam.name,
-          logo: match.teamAwayLogo ?? null,
-        }}
+      <BroadcastProFixtureFrame
+        accentColor={primaryAccent}
         glass={glass}
-        className={matchBlockClass}
-        renderResultBlock={(side) => {
-          if (side === "home") {
+        className="min-h-0 flex-1"
+      >
+        <div style={{ borderBottom: glass.border }}>
+          <BroadcastProResultMetaStrip
+            gradeLabel={buildGradeLabel(match)}
+            ground={match.ground}
+            delay={metaDelay}
+            showGround={showGround}
+            showEdgeMarker={false}
+          />
+        </div>
+
+        <BroadcastProMatchup
+          tier="result"
+          home={{
+            teamName: match.homeTeam.name,
+            logo: match.teamHomeLogo ?? null,
+          }}
+          away={{
+            teamName: match.awayTeam.name,
+            logo: match.teamAwayLogo ?? null,
+          }}
+          glass={glass}
+          className={`${matchBlockClass} min-h-0 flex-1 justify-center !gap-0`}
+          renderResultBlock={(side) => {
+            if (side === "home") {
+              return (
+                <div className="flex min-h-0 flex-none flex-col">
+                  <BroadcastProResultTeamRow
+                    teamName={match.homeTeam.name}
+                    score={normalizeScore(match.homeTeam.score)}
+                    logo={match.teamHomeLogo}
+                    firstInnings={
+                      homeFirstInnings.show ? homeFirstInnings.value : null
+                    }
+                    accentColor={teamAccents.home}
+                    delay={metaDelay}
+                    matchType={match.type}
+                    glass={glass}
+                    showBorder={false}
+                    scoreEmphasis={homeIsWinner ? "winner" : "standard"}
+                  />
+                  <BroadcastProResultPlayerStatsGrid
+                    items={homeStats}
+                    delay={statsDelay}
+                    accentColor={teamAccents.home}
+                    glass={glass}
+                    tier={playerStatsTier}
+                    showCellBorders={false}
+                  />
+                </div>
+              );
+            }
             return (
-              <>
+              <div
+                className="flex min-h-0 flex-none flex-col"
+                style={{ borderTop: glass.border }}
+              >
                 <BroadcastProResultTeamRow
-                  teamName={match.homeTeam.name}
-                  score={normalizeScore(match.homeTeam.score)}
-                  logo={match.teamHomeLogo}
+                  teamName={match.awayTeam.name}
+                  score={normalizeScore(match.awayTeam.score)}
+                  logo={match.teamAwayLogo}
                   firstInnings={
-                    homeFirstInnings.show ? homeFirstInnings.value : null
+                    awayFirstInnings.show ? awayFirstInnings.value : null
                   }
-                  accentColor={teamAccents.home}
-                  delay={metaDelay}
+                  accentColor={teamAccents.away}
+                  delay={statsDelay + 4}
                   matchType={match.type}
                   glass={glass}
+                  showBorder={false}
+                  scoreEmphasis={awayIsWinner ? "winner" : "standard"}
                 />
                 <BroadcastProResultPlayerStatsGrid
-                  items={homeStats}
-                  delay={statsDelay}
-                  accentColor={teamAccents.home}
+                  items={awayStats}
+                  delay={statsDelay + 8}
+                  accentColor={teamAccents.away}
                   glass={glass}
                   tier={playerStatsTier}
+                  showCellBorders={false}
                 />
-              </>
+              </div>
             );
-          }
-          return (
-            <>
-              <BroadcastProResultTeamRow
-                teamName={match.awayTeam.name}
-                score={normalizeScore(match.awayTeam.score)}
-                logo={match.teamAwayLogo}
-                firstInnings={
-                  awayFirstInnings.show ? awayFirstInnings.value : null
-                }
-                accentColor={teamAccents.away}
-                delay={statsDelay + 4}
-                matchType={match.type}
-                glass={glass}
-                className="mt-2"
-              />
-              <BroadcastProResultPlayerStatsGrid
-                items={awayStats}
-                delay={statsDelay + 8}
-                accentColor={teamAccents.away}
-                glass={glass}
-                tier={playerStatsTier}
-              />
-            </>
-          );
-        }}
-      />
-
-      {showAbandonedVerdict && verdict?.kind === "abandoned" && (
-        <BroadcastProResultVerdict
-          model={verdict}
-          tier="abandoned"
-          accentColor={primaryAccent}
-          delay={headerDelay}
-          glass={glass}
-          animation={copyIn}
+          }}
         />
-      )}
 
-      {showCompactVerdict && compactVerdictModel && (
-        <BroadcastProResultVerdict
-          model={compactVerdictModel}
-          tier="compact"
-          accentColor={primaryAccent}
-          delay={headerDelay + 2}
-          glass={glass}
-          animation={copyIn}
-        />
-      )}
+        {showAbandonedVerdict && verdict?.kind === "abandoned" && (
+          <BroadcastProResultVerdict
+            model={verdict}
+            tier="abandoned"
+            accentColor={primaryAccent}
+            delay={headerDelay}
+            glass={glass}
+            animation={copyIn}
+            showBorder={false}
+          />
+        )}
+
+        {showCompactVerdict && compactVerdictModel && (
+          <BroadcastProResultVerdict
+            model={compactVerdictModel}
+            tier="compact"
+            accentColor={primaryAccent}
+            delay={headerDelay + 2}
+            glass={glass}
+            animation={copyIn}
+            showBorder={false}
+          />
+        )}
+      </BroadcastProFixtureFrame>
     </div>
   );
 };

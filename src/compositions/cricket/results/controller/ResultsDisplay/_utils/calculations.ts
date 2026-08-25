@@ -39,6 +39,26 @@ export const calculateRowHeight = (availableHeight: number): number => {
   return Math.floor(availableHeight / 2);
 };
 
+export const BROADCAST_PRO_RESULTS_GAP_PX = 30;
+
+export const calculateBroadcastProResultsLayout = (
+  availableHeight: number,
+  resultCount: number,
+): { listHeight: number; rowHeight: number } => {
+  if (resultCount <= 0) return { listHeight: 0, rowHeight: 0 };
+
+  const listHeight =
+    resultCount === 1
+      ? Math.min(availableHeight, 620)
+      : Math.min(availableHeight, 850);
+  const totalGap = BROADCAST_PRO_RESULTS_GAP_PX * (resultCount - 1);
+
+  return {
+    listHeight,
+    rowHeight: Math.floor((listHeight - totalGap) / resultCount),
+  };
+};
+
 /**
  * Build footer logos for the results currently on screen (multi-row v2 policy).
  */

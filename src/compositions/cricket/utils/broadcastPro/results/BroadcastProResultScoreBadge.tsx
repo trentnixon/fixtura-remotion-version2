@@ -13,6 +13,7 @@ export interface BroadcastProResultScoreBadgeProps {
   delay: number;
   matchType?: string;
   className?: string;
+  emphasis?: "winner" | "standard";
 }
 
 export const BroadcastProResultScoreBadge: React.FC<
@@ -24,6 +25,7 @@ export const BroadcastProResultScoreBadge: React.FC<
   delay,
   matchType = "",
   className = "",
+  emphasis = "standard",
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
@@ -43,10 +45,14 @@ export const BroadcastProResultScoreBadge: React.FC<
     <div
       className={`${badgeClass} ${className}`.trim()}
       style={{
-        ...resolveBroadcastProEdgeMarkerStyle("standard", "primary", {
-          accentColor,
-          mutedColor: accentColor,
-        }),
+        ...resolveBroadcastProEdgeMarkerStyle(
+          emphasis === "winner" ? "standard" : "compact",
+          "primary",
+          {
+            accentColor,
+            mutedColor: accentColor,
+          },
+        ),
         background: glass.strong,
       }}
     >

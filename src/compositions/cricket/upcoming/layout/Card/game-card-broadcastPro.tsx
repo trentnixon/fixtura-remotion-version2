@@ -13,13 +13,12 @@ import {
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { formatGroundLocation } from "../../../utils/utils-text";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
-import { resolveBroadcastProEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro/marker-notch";
+import { BroadcastProFixtureFrame } from "../../../../../templates/variants/broadcastPro/components/fixture";
 import {
   stripGradeNumberFromTeamName,
   truncateText,
 } from "../../../utils/utils-text";
 import { cellBlur, useBroadcastProTheme } from "../../../utils/broadcastPro";
-import { BROADCAST_PRO_UPCOMING_SECTION_GAP_PX } from "../../controller/GamesDisplay/_utils/calculations";
 
 const UPCOMING_TEAM_NAME_MAX = 34;
 
@@ -31,6 +30,8 @@ const HEADER_STRIP_H = 40;
 export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   game,
   index,
+  density = "standard",
+  gameRowHeight,
 }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
@@ -46,84 +47,108 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   const metaVariant: ColorVariant = "onContainerCopy";
   const metaCopyStyle = { color: text.copy };
   const metaMutedStyle = { color: text.muted };
+  const isCompact = density === "compact";
+  const matchupHeight =
+    density === "featured" ? 330 : density === "standard" ? 240 : 170;
+  const bodyPadding =
+    density === "featured"
+      ? "24px 28px"
+      : isCompact
+        ? "12px 20px"
+        : "18px 24px";
 
   return (
-    <div className="flex w-full flex-col">
+    <div
+      className="flex min-h-0 w-full flex-col"
+      style={
+        gameRowHeight == null
+          ? undefined
+          : { height: gameRowHeight, flex: `0 0 ${gameRowHeight}px` }
+      }
+    >
       <AnimatedContainer
         type="full"
-        className="flex w-full flex-col rounded-none"
-        style={{ gap: `${BROADCAST_PRO_UPCOMING_SECTION_GAP_PX}px` }}
+        size="full"
+        className="flex h-full w-full flex-col rounded-none"
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
         exitAnimation={ContainerAnimations.main.itemContainer.containerOut}
         exitFrame={animationOutFrame}
       >
-        {/* Fixture header: date 25% | time 25% | grade 50% */}
-        <div
-          className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 px-5 py-2 md:px-6"
-          style={{
-            minHeight: HEADER_STRIP_H,
-            background: glass.headerGradient,
-            ...resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
-              accentColor: accent,
-              mutedColor: accent,
-            }),
-            ...cellBlur,
-          }}
+        <BroadcastProFixtureFrame
+          accentColor={accent}
+          glass={glass}
+          density={density}
+          className="h-full"
         >
-          <MetadataMedium
-            value={game.date}
-            animation={{ ...animations.text.main.copyIn, delay }}
-            className="min-w-0 truncate font-bold uppercase tracking-wider"
-            variant={metaVariant}
-            style={metaCopyStyle}
-          />
-          <MetadataMedium
-            value={game.time}
-            animation={{ ...animations.text.main.copyIn, delay: delay + 2 }}
-            className="min-w-0 truncate font-medium"
-            variant={metaVariant}
-            style={metaCopyStyle}
-          />
-          <MetadataMedium
-            value={game.gradeName ?? ""}
-            animation={{
-              ...animations.text.main.copyIn,
-              delay: delay + 3,
+          <div
+            className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-3 px-5 py-2 md:px-6"
+            style={{
+              minHeight: HEADER_STRIP_H,
+              background: glass.headerGradient,
+              ...cellBlur,
             }}
-            className="min-w-0 truncate font-bold uppercase tracking-wider"
-            variant={metaVariant}
-            style={metaCopyStyle}
-          />
-        </div>
+          >
+            <MetadataMedium
+              value={game.date}
+              animation={{ ...animations.text.main.copyIn, delay }}
+              className="min-w-0 truncate font-bold uppercase tracking-wider"
+              variant={metaVariant}
+              style={metaCopyStyle}
+            />
+            <MetadataMedium
+              value={game.time}
+              animation={{ ...animations.text.main.copyIn, delay: delay + 2 }}
+              className="min-w-0 truncate font-medium"
+              variant={metaVariant}
+              style={metaCopyStyle}
+            />
+            <MetadataMedium
+              value={game.gradeName ?? ""}
+              animation={{ ...animations.text.main.copyIn, delay: delay + 3 }}
+              className="min-w-0 truncate text-right font-semibold uppercase tracking-wider"
+              variant={metaVariant}
+              style={metaMutedStyle}
+            />
+          </div>
 
-        {/* Glass panel: teams + VS + ground */}
-        <div
-          className="flex w-full flex-col px-5 py-3 md:px-6"
-          style={{
-            background: glass.panel,
-            border: glass.border,
-            ...cellBlur,
-          }}
-        >
-          <BroadcastProMatchup
-            tier="fixture"
-            home={{
-              teamName: formatUpcomingTeamName(game.teamHome),
-              logo: game.teamHomeLogo,
-              roleLabel: "Home",
+          <div
+            className="flex min-h-0 w-full flex-1 flex-col justify-center"
+            style={{
+              padding: bodyPadding,
+              background: glass.panel,
+              borderTop: glass.border,
+              ...cellBlur,
             }}
-            away={{
-              teamName: formatUpcomingTeamName(game.teamAway),
-              logo: game.teamAwayLogo,
-              roleLabel: "Away",
+          >
+            <BroadcastProMatchup
+              tier="fixture"
+              home={{
+                teamName: formatUpcomingTeamName(game.teamHome),
+                logo: game.teamHomeLogo,
+                roleLabel: "Home",
+              }}
+              away={{
+                teamName: formatUpcomingTeamName(game.teamAway),
+                logo: game.teamAwayLogo,
+                roleLabel: "Away",
+              }}
+              glass={glass}
+              delay={delay}
+              fontFamily={headingFont}
+              fixtureDensity={density}
+              containerHeight={matchupHeight}
+            />
+          </div>
+
+          <div
+            className={`flex w-full flex-shrink-0 justify-center px-5 ${isCompact ? "py-1.5" : "py-2.5"}`}
+            style={{
+              background: glass.muted,
+              borderTop: glass.border,
             }}
-            glass={glass}
-            delay={delay}
-            fontFamily={headingFont}
-          />
-          <div className="flex w-full flex-shrink-0 justify-center pt-2 md:pt-2.5">
+          >
             <MetadataMedium
               value={formatGroundLocation(game.ground)}
               animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
@@ -132,7 +157,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               style={metaMutedStyle}
             />
           </div>
-        </div>
+        </BroadcastProFixtureFrame>
       </AnimatedContainer>
     </div>
   );

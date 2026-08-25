@@ -10,6 +10,7 @@ import {
   buildUpcomingFooterSponsors,
 } from "./_utils/calculations";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
+import { useBroadcastProTheme } from "../../../utils/broadcastPro";
 
 export const FixtureDisplayBroadcastPro: React.FC<GamesDisplayProps> = ({
   games,
@@ -19,6 +20,7 @@ export const FixtureDisplayBroadcastPro: React.FC<GamesDisplayProps> = ({
   const { animations } = useAnimationContext();
   const panelAnimation = animations.container.main.itemContainerOuter;
   const { layout } = useThemeContext();
+  const { glass } = useBroadcastProTheme();
   const { heights } = layout;
 
   const displayedGames = calculateDisplayedGames(
@@ -37,11 +39,12 @@ export const FixtureDisplayBroadcastPro: React.FC<GamesDisplayProps> = ({
         style={{
           height: `${mainContentHeight}px`,
           maxHeight: `${mainContentHeight}px`,
+          background: glass.muted,
         }}
       >
         <AnimatedContainer
           type="full"
-          className="mx-4 flex w-full flex-shrink-0 flex-col rounded-none md:mx-6"
+          className="mx-6 flex w-auto flex-shrink-0 flex-col rounded-none md:mx-8"
           backgroundColor="none"
           animation={panelAnimation.containerIn}
           exitAnimation={panelAnimation.containerOut}

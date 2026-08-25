@@ -7,13 +7,15 @@ import MatchRowBroadcastPro from "../MatchRow/row-BroadcastPro";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
   calculateDisplayedResults,
-  calculateRowHeight,
+  calculateBroadcastProResultsLayout,
+  BROADCAST_PRO_RESULTS_GAP_PX,
   buildResultsFooterSponsors,
 } from "./_utils/calculations";
 import {
   getCompositionSectionHeight,
   getMainContentSectionHeight,
 } from "../../../../../core/utils/layoutHeights";
+import { useBroadcastProTheme } from "../../../utils/broadcastPro";
 
 const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
   results,
@@ -22,6 +24,7 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
 }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
+  const { glass } = useBroadcastProTheme();
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
 
@@ -32,7 +35,10 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
   );
   const mainContentHeight = getMainContentSectionHeight(heights);
   const compositionHeight = getCompositionSectionHeight(heights);
-  const rowHeight = calculateRowHeight(mainContentHeight);
+  const { listHeight, rowHeight } = calculateBroadcastProResultsLayout(
+    mainContentHeight,
+    displayedResults.length,
+  );
   const footerSponsors = buildResultsFooterSponsors(displayedResults);
 
   return (
@@ -42,23 +48,27 @@ const ResultsDisplayBroadcastPro: React.FC<ResultsDisplayProps> = ({
     >
       <AnimatedContainer
         type="full"
-        className="flex flex-col overflow-hidden rounded-none"
+        className="flex flex-col justify-center overflow-hidden rounded-none"
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
-        style={{ height: mainContentHeight }}
+        style={{ height: mainContentHeight, background: glass.muted }}
       >
         <div
-          className="flex w-full flex-col gap-0"
-          style={{ height: `${mainContentHeight}px` }}
+          className="flex w-full flex-col"
+          style={{
+            height: `${listHeight}px`,
+            gap: `${BROADCAST_PRO_RESULTS_GAP_PX}px`,
+          }}
         >
           {displayedResults.map((match, index) => (
             <div
               key={match.gameID}
-              className="w-full min-h-0 flex-1"
+              className="w-full min-h-0 flex-none"
               style={{
                 height: `${rowHeight}px`,
                 maxHeight: `${rowHeight}px`,
+                flexBasis: `${rowHeight}px`,
               }}
             >
               <MatchRowBroadcastPro
