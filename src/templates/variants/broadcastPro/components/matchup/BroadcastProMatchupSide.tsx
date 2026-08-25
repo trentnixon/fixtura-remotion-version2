@@ -96,6 +96,7 @@ export const BroadcastProMatchupSide: React.FC<
                 ? { ...copyIn, delay: labelDelay }
                 : { type: "none" }
             }
+            exitAnimation={animateContent ? undefined : "none"}
             className={roleLabelClass}
             variant={labelVariant}
             style={{ color: text.secondary }}

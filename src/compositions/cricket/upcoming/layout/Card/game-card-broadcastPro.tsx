@@ -87,6 +87,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             <MetadataMedium
               value={game.date}
               animation={{ type: "none" }}
+              exitAnimation="none"
               className="min-w-0 truncate font-bold uppercase tracking-wider"
               variant={metaVariant}
               style={metaCopyStyle}
@@ -94,6 +95,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             <MetadataMedium
               value={game.time}
               animation={{ type: "none" }}
+              exitAnimation="none"
               className="min-w-0 truncate font-medium"
               variant={metaVariant}
               style={metaCopyStyle}
@@ -101,6 +103,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             <MetadataMedium
               value={game.gradeName ?? ""}
               animation={{ type: "none" }}
+              exitAnimation="none"
               className="min-w-0 truncate text-right font-semibold uppercase tracking-wider"
               variant={metaVariant}
               style={metaMutedStyle}
@@ -147,6 +150,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
             <MetadataMedium
               value={formatGroundLocation(game.ground)}
               animation={{ type: "none" }}
+              exitAnimation="none"
               className="max-w-full truncate text-center font-semibold uppercase tracking-widest"
               variant={metaVariant}
               style={metaMutedStyle}

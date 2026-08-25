@@ -48,6 +48,7 @@ export const BroadcastProMatchupDivider: React.FC<
           animation={
             animateContent ? { ...copyIn, delay: delay + 9 } : { type: "none" }
           }
+          exitAnimation={animateContent ? undefined : "none"}
           fontFamily={resolvedFont}
           compact={compact}
           style={{ color: textOnGlass.copy }}
@@ -69,6 +70,7 @@ export const BroadcastProMatchupDivider: React.FC<
       className={`${versusClass} ${className}`.trim()}
       style={{ color: textOnGlass.muted }}
       animation={animateContent ? { ...copyIn, delay } : { type: "none" }}
+      exitAnimation={animateContent ? undefined : "none"}
       letterAnimation="none"
     >
       VERSUS

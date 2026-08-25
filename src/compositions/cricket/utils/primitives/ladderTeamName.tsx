@@ -35,6 +35,7 @@ export const LadderTeamName: React.FC<AnimatedTextPrimitivePropsWithDelay> = ({
       animation={
         animate ? { ...animations.text.main.copyIn, delay } : { type: "none" }
       }
+      exitAnimation={animate ? undefined : "none"}
       letterAnimation={letterAnimation}
       style={style}
       className={className}
