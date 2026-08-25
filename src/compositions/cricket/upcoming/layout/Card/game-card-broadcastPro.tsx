@@ -14,16 +14,11 @@ import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { formatGroundLocation } from "../../../utils/utils-text";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
 import { BroadcastProFixtureFrame } from "../../../../../templates/variants/broadcastPro/components/fixture";
-import {
-  stripGradeNumberFromTeamName,
-  truncateText,
-} from "../../../utils/utils-text";
+import { stripGradeNumberFromTeamName } from "../../../utils/utils-text";
 import { cellBlur, useBroadcastProTheme } from "../../../utils/broadcastPro";
 
-const UPCOMING_TEAM_NAME_MAX = 34;
-
 const formatUpcomingTeamName = (teamName: string): string =>
-  truncateText(stripGradeNumberFromTeamName(teamName), UPCOMING_TEAM_NAME_MAX);
+  stripGradeNumberFromTeamName(teamName);
 
 const HEADER_STRIP_H = 40;
 
@@ -79,7 +74,6 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
         <BroadcastProFixtureFrame
           accentColor={accent}
           glass={glass}
-          density={density}
           className="h-full"
         >
           <div
@@ -92,21 +86,21 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
           >
             <MetadataMedium
               value={game.date}
-              animation={{ ...animations.text.main.copyIn, delay }}
+              animation={{ type: "none" }}
               className="min-w-0 truncate font-bold uppercase tracking-wider"
               variant={metaVariant}
               style={metaCopyStyle}
             />
             <MetadataMedium
               value={game.time}
-              animation={{ ...animations.text.main.copyIn, delay: delay + 2 }}
+              animation={{ type: "none" }}
               className="min-w-0 truncate font-medium"
               variant={metaVariant}
               style={metaCopyStyle}
             />
             <MetadataMedium
               value={game.gradeName ?? ""}
-              animation={{ ...animations.text.main.copyIn, delay: delay + 3 }}
+              animation={{ type: "none" }}
               className="min-w-0 truncate text-right font-semibold uppercase tracking-wider"
               variant={metaVariant}
               style={metaMutedStyle}
@@ -139,6 +133,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               fontFamily={headingFont}
               fixtureDensity={density}
               containerHeight={matchupHeight}
+              animateContent={false}
             />
           </div>
 
@@ -151,7 +146,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
           >
             <MetadataMedium
               value={formatGroundLocation(game.ground)}
-              animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
+              animation={{ type: "none" }}
               className="max-w-full truncate text-center font-semibold uppercase tracking-widest"
               variant={metaVariant}
               style={metaMutedStyle}

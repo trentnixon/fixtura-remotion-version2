@@ -15,10 +15,10 @@ import {
   buildCompactVerdictLine,
 } from "./buildBroadcastProVerdictModel";
 import { BroadcastProResultMetaStrip } from "./BroadcastProResultMetaStrip";
-import { BroadcastProResultPlayerStatsGrid } from "./BroadcastProResultPlayerStatsGrid";
 import { BroadcastProResultTeamRow } from "./BroadcastProResultTeamRow";
 import { BroadcastProMatchup } from "../../../../../templates/variants/broadcastPro/components/matchup";
 import { BroadcastProFixtureFrame } from "../../../../../templates/variants/broadcastPro/components/fixture";
+import { BroadcastProStatMatrixResultGrid } from "../../../../../templates/variants/broadcastPro/components/stat";
 import { csClass } from "../componentStyles";
 import { resolveBroadcastProGlass } from "../glass";
 import {
@@ -168,30 +168,30 @@ export const BroadcastProResultMatchContent: React.FC<
       className={`mx-6 flex h-full w-auto flex-col overflow-hidden md:mx-8 ${className}`.trim()}
       style={style}
     >
-      {showHeroVerdict && verdict?.kind === "hero" && (
-        <BroadcastProResultVerdict
-          model={verdict}
-          tier="hero"
-          accentColor={primaryAccent}
-          delay={baseDelay}
-          glass={glass}
-          animation={copyIn}
-          className="mb-2"
-        />
-      )}
-
       <BroadcastProFixtureFrame
         accentColor={primaryAccent}
         glass={glass}
         className="min-h-0 flex-1"
       >
+        {showHeroVerdict && verdict?.kind === "hero" && (
+          <BroadcastProResultVerdict
+            model={verdict}
+            tier="hero"
+            accentColor={primaryAccent}
+            delay={baseDelay}
+            glass={glass}
+            animation={copyIn}
+            connection="attached"
+          />
+        )}
+
         <div style={{ borderBottom: glass.border }}>
           <BroadcastProResultMetaStrip
             gradeLabel={buildGradeLabel(match)}
             ground={match.ground}
             delay={metaDelay}
             showGround={showGround}
-            showEdgeMarker={false}
+            connection="attached"
           />
         </div>
 
@@ -222,16 +222,16 @@ export const BroadcastProResultMatchContent: React.FC<
                     delay={metaDelay}
                     matchType={match.type}
                     glass={glass}
-                    showBorder={false}
+                    connection="attached"
                     scoreEmphasis={homeIsWinner ? "winner" : "standard"}
                   />
-                  <BroadcastProResultPlayerStatsGrid
+                  <BroadcastProStatMatrixResultGrid
                     items={homeStats}
                     delay={statsDelay}
                     accentColor={teamAccents.home}
                     glass={glass}
                     tier={playerStatsTier}
-                    showCellBorders={false}
+                    connection="attached"
                   />
                 </div>
               );
@@ -252,16 +252,16 @@ export const BroadcastProResultMatchContent: React.FC<
                   delay={statsDelay + 4}
                   matchType={match.type}
                   glass={glass}
-                  showBorder={false}
+                  connection="attached"
                   scoreEmphasis={awayIsWinner ? "winner" : "standard"}
                 />
-                <BroadcastProResultPlayerStatsGrid
+                <BroadcastProStatMatrixResultGrid
                   items={awayStats}
                   delay={statsDelay + 8}
                   accentColor={teamAccents.away}
                   glass={glass}
                   tier={playerStatsTier}
-                  showCellBorders={false}
+                  connection="attached"
                 />
               </div>
             );
@@ -276,7 +276,7 @@ export const BroadcastProResultMatchContent: React.FC<
             delay={headerDelay}
             glass={glass}
             animation={copyIn}
-            showBorder={false}
+            connection="attached"
           />
         )}
 
@@ -288,7 +288,7 @@ export const BroadcastProResultMatchContent: React.FC<
             delay={headerDelay + 2}
             glass={glass}
             animation={copyIn}
-            showBorder={false}
+            connection="attached"
           />
         )}
       </BroadcastProFixtureFrame>

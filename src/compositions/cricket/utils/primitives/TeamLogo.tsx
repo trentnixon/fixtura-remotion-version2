@@ -31,6 +31,7 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
   size = DEFAULT_TEAM_LOGO_SIZE,
   fit = DEFAULT_TEAM_LOGO_FIT,
   imgStyle,
+  animate = true,
 }) => {
   const { animations } = useAnimationContext();
   const logoAnimation = animations.image.main.item;
@@ -73,7 +74,7 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
       }
       fit={fit}
       style={imgStyle}
-      animation={{ ...logoAnimation.logo.itemIn, delay: delay }}
+      animation={animate ? { ...logoAnimation.logo.itemIn, delay } : "none"}
       onError={handleError}
     />
   );

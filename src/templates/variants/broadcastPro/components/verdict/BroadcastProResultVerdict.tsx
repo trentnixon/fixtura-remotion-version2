@@ -4,7 +4,10 @@ import type { BroadcastProVerdictModel } from "../../../../../compositions/crick
 import type { BroadcastProVerdictTier } from "../../../../../templates/types/broadcast-pro/verdict-typography";
 import { BROADCAST_PRO_VERDICT_TIER_BAND_KEY } from "../../../../../templates/types/broadcast-pro/verdict-typography";
 import { BroadcastProGlassPanel } from "../../../../../compositions/cricket/utils/broadcastPro/results/BroadcastProGlassPanel";
-import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
+import type {
+  BroadcastProGlassStyle,
+  BroadcastProSurfaceConnection,
+} from "../../../../../compositions/cricket/utils/broadcastPro/glass";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
 import type {
   AnimationConfig,
@@ -25,7 +28,7 @@ export interface BroadcastProResultVerdictProps {
   animation?: AnimationType | AnimationConfig;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
-  showBorder?: boolean;
+  connection?: BroadcastProSurfaceConnection;
 }
 
 export const BroadcastProResultVerdict: React.FC<
@@ -40,20 +43,19 @@ export const BroadcastProResultVerdict: React.FC<
   animation,
   exitAnimation,
   exitFrame,
-  showBorder = true,
+  connection = "standalone",
 }) => {
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY[tier];
   const bandClass = csClass(componentStyles, bandKey);
 
-  const edgeMarkerStyle = resolveBroadcastProEdgeMarkerStyle(
-    "standard",
-    "primary",
-    {
-      accentColor,
-      mutedColor: accentColor,
-    },
-  );
+  const edgeMarkerStyle =
+    connection === "standalone"
+      ? resolveBroadcastProEdgeMarkerStyle("standard", "primary", {
+          accentColor,
+          mutedColor: accentColor,
+        })
+      : {};
 
   if (tier === "hero" && model.kind === "hero") {
     return (
@@ -62,7 +64,7 @@ export const BroadcastProResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
-        showBorder={showBorder}
+        connection={connection}
       >
         <BroadcastProVerdictHeroLockup
           winner={model.winner}
@@ -84,7 +86,7 @@ export const BroadcastProResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
-        showBorder={showBorder}
+        connection={connection}
       >
         <BroadcastProVerdictCompactLine
           line={model.line}
@@ -104,7 +106,7 @@ export const BroadcastProResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
-        showBorder={showBorder}
+        connection={connection}
       >
         <BroadcastProVerdictAbandoned
           status={model.status}

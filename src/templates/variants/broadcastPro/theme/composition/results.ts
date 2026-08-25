@@ -40,7 +40,7 @@ export const broadcastProCompositionComponentStylesResults = {
   broadcastProResultsTeamLogoWell:
     broadcastProComponentStylesShared.broadcastProCrestWellCompact,
   broadcastProResultsTeamName: {
-    className: "min-w-0 truncate",
+    className: "min-w-0 !leading-[0.95]",
   },
   broadcastProResultsScoreBadge: {
     className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5",

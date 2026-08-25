@@ -23,6 +23,7 @@ export interface BroadcastProCrestWellProps {
   style?: CSSProperties;
   /** Ranking wells use glass.border on the well surface. */
   showBorder?: boolean;
+  animate?: boolean;
 }
 
 export const BroadcastProCrestWell: React.FC<BroadcastProCrestWellProps> = ({
@@ -35,6 +36,7 @@ export const BroadcastProCrestWell: React.FC<BroadcastProCrestWellProps> = ({
   className = "",
   style,
   showBorder = false,
+  animate = true,
 }) => {
   const { componentStyles, broadcastProCrestSizing } = useThemeContext();
   const themeKey = BROADCAST_PRO_CREST_TIER_THEME_KEY[tier];
@@ -74,6 +76,7 @@ export const BroadcastProCrestWell: React.FC<BroadcastProCrestWellProps> = ({
           height: insetPct,
           objectFit: "contain",
         }}
+        animate={animate}
       />
     </div>
   );

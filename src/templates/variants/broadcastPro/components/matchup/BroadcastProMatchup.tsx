@@ -36,6 +36,7 @@ export interface BroadcastProMatchupProps {
     side: "home" | "away",
     input: BroadcastProMatchupSideInput,
   ) => React.ReactNode;
+  animateContent?: boolean;
 }
 
 export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
@@ -51,6 +52,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
   style,
   fontFamily,
   renderResultBlock,
+  animateContent = true,
 }) => {
   const { componentStyles } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProTheme();
@@ -70,6 +72,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           containerHeight={containerHeight}
           compact={compact}
           fixtureDensity={fixtureDensity}
+          animateContent={animateContent}
           fontFamily={resolvedFont}
         />
         <BroadcastProMatchupDivider
@@ -77,6 +80,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           delay={delay}
           compact={compact}
           fontFamily={resolvedFont}
+          animateContent={animateContent}
         />
         <BroadcastProMatchupSide
           side="away"
@@ -86,6 +90,7 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
           containerHeight={containerHeight}
           compact={compact}
           fixtureDensity={fixtureDensity}
+          animateContent={animateContent}
           fontFamily={resolvedFont}
         />
       </div>

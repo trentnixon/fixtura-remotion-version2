@@ -10,7 +10,6 @@ export interface BroadcastProResultPlayerStatsGridProps {
   glass?: BroadcastProGlassStyle;
   className?: string;
   tier?: "list" | "single";
-  showCellBorders?: boolean;
 }
 
 /** @deprecated Use `BroadcastProStatMatrixResultGrid` from template stat components. */

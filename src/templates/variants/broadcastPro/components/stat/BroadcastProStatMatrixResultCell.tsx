@@ -5,7 +5,10 @@ import { ResultPlayerName } from "../../../../../compositions/cricket/utils/prim
 import { BroadcastProGlassPanel } from "../../../../../compositions/cricket/utils/broadcastPro/results/BroadcastProGlassPanel";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
 import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
-import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
+import type {
+  BroadcastProGlassStyle,
+  BroadcastProSurfaceConnection,
+} from "../../../../../compositions/cricket/utils/broadcastPro/glass";
 import { BroadcastProStatMatrixCompact } from "./BroadcastProStatMatrixCompact";
 
 export interface BroadcastProStatMatrixResultCellProps {
@@ -17,7 +20,7 @@ export interface BroadcastProStatMatrixResultCellProps {
   glass?: BroadcastProGlassStyle;
   className?: string;
   tier?: "list" | "single";
-  showBorder?: boolean;
+  connection?: BroadcastProSurfaceConnection;
 }
 
 const SINGLE_CELL_CLASS =
@@ -44,7 +47,7 @@ export const BroadcastProStatMatrixResultCell: React.FC<
   glass,
   className = "",
   tier = "list",
-  showBorder = true,
+  connection = "standalone",
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts } = useThemeContext();
@@ -109,7 +112,7 @@ export const BroadcastProStatMatrixResultCell: React.FC<
     <BroadcastProGlassPanel
       glass={glass}
       className={`${cellClass} ${isSingle ? SINGLE_CELL_CLASS : ""} ${className}`.trim()}
-      showBorder={showBorder}
+      connection={connection}
     >
       {isSingle ? (
         <>

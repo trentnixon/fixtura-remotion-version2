@@ -21,6 +21,7 @@ export interface BroadcastProMatchupSideProps {
   fixtureDensity?: BroadcastProFixtureDensity;
   fontFamily?: string;
   labelVariant?: ColorVariant;
+  animateContent?: boolean;
 }
 
 export const BroadcastProMatchupSide: React.FC<
@@ -35,6 +36,7 @@ export const BroadcastProMatchupSide: React.FC<
   fixtureDensity = "standard",
   fontFamily,
   labelVariant = "onContainerCopy",
+  animateContent = true,
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -80,6 +82,7 @@ export const BroadcastProMatchupSide: React.FC<
           delay={crestDelay}
           glass={glass}
           containerHeight={containerHeight}
+          animate={animateContent}
         />
       )}
       <div
@@ -88,7 +91,11 @@ export const BroadcastProMatchupSide: React.FC<
         {input.roleLabel != null && input.roleLabel !== "" && (
           <MetadataMedium
             value={input.roleLabel}
-            animation={{ ...copyIn, delay: labelDelay }}
+            animation={
+              animateContent
+                ? { ...copyIn, delay: labelDelay }
+                : { type: "none" }
+            }
             className={roleLabelClass}
             variant={labelVariant}
             style={{ color: text.secondary }}
@@ -103,6 +110,7 @@ export const BroadcastProMatchupSide: React.FC<
           className={teamNameClass}
           fontFamily={fontFamily}
           style={{ color: text.copy }}
+          animate={animateContent}
         />
       </div>
       {!isHome && (
@@ -113,6 +121,7 @@ export const BroadcastProMatchupSide: React.FC<
           delay={crestDelay}
           glass={glass}
           containerHeight={containerHeight}
+          animate={animateContent}
         />
       )}
     </div>

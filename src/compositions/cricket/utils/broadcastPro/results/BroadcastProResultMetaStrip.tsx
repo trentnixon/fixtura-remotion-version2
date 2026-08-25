@@ -5,6 +5,7 @@ import { MetadataMedium } from "../../primitives/metadataMedium";
 import { formatGroundLocation } from "../../utils-text";
 import { cellBlur, csClass, useBroadcastProTheme } from "../index";
 import { resolveBroadcastProEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro/marker-notch";
+import type { BroadcastProSurfaceConnection } from "../glass";
 
 export interface BroadcastProResultMetaStripProps {
   gradeLabel: string;
@@ -13,7 +14,7 @@ export interface BroadcastProResultMetaStripProps {
   className?: string;
   /** When false, only the grade/round label is shown (e.g. Result Single). */
   showGround?: boolean;
-  showEdgeMarker?: boolean;
+  connection?: BroadcastProSurfaceConnection;
 }
 
 export const BroadcastProResultMetaStrip: React.FC<
@@ -24,7 +25,7 @@ export const BroadcastProResultMetaStrip: React.FC<
   delay = 0,
   className = "",
   showGround = true,
-  showEdgeMarker = true,
+  connection = "standalone",
 }) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
@@ -38,7 +39,7 @@ export const BroadcastProResultMetaStrip: React.FC<
       className={`${stripClass} ${className}`.trim()}
       style={{
         background: glass.headerGradient,
-        ...(showEdgeMarker
+        ...(connection === "standalone"
           ? resolveBroadcastProEdgeMarkerStyle("compact", "primary", {
               accentColor: accent,
               mutedColor: accent,

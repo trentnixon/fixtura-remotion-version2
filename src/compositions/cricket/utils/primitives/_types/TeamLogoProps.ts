@@ -21,4 +21,5 @@ export interface TeamLogoProps {
   bgColor?: string;
   /** Optional style merged onto the img (e.g. clipPath for angled edges). */
   imgStyle?: React.CSSProperties;
+  animate?: boolean;
 }

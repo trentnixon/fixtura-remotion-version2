@@ -18,6 +18,8 @@ export type BroadcastProGlassSurfaceRole =
   | "dataCellStrong"
   | "logoWell";
 
+export type BroadcastProSurfaceConnection = "standalone" | "attached";
+
 export interface BroadcastProGlassStyle {
   panel: string;
   border: string;

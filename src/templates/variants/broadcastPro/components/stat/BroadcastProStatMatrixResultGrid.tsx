@@ -1,7 +1,10 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
-import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
+import type {
+  BroadcastProGlassStyle,
+  BroadcastProSurfaceConnection,
+} from "../../../../../compositions/cricket/utils/broadcastPro/glass";
 import { BroadcastProStatMatrixResultCell } from "./BroadcastProStatMatrixResultCell";
 
 export interface BroadcastProStatMatrixResultItem {
@@ -17,7 +20,7 @@ export interface BroadcastProStatMatrixResultGridProps {
   glass?: BroadcastProGlassStyle;
   className?: string;
   tier?: "list" | "single";
-  showCellBorders?: boolean;
+  connection?: BroadcastProSurfaceConnection;
 }
 
 export const BroadcastProStatMatrixResultGrid: React.FC<
@@ -29,7 +32,7 @@ export const BroadcastProStatMatrixResultGrid: React.FC<
   glass,
   className = "",
   tier = "list",
-  showCellBorders = true,
+  connection = "standalone",
 }) => {
   const { componentStyles } = useThemeContext();
   const gridClass = csClass(
@@ -53,7 +56,7 @@ export const BroadcastProStatMatrixResultGrid: React.FC<
           accentColor={accentColor}
           glass={glass}
           tier={tier}
-          showBorder={showCellBorders}
+          connection={connection}
         />
       ))}
     </div>

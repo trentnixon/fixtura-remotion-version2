@@ -68,6 +68,7 @@ export interface AnimatedTextPrimitivePropsWithDelay {
   fontFamily?: string;
   /** Per-letter/word stagger; `"none"` renders copy without letter animation */
   letterAnimation?: AnimationMode;
+  animate?: boolean;
 }
 
 /**

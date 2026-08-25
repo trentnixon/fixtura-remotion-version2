@@ -3,11 +3,13 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { BroadcastProCrestWell } from "../../../../../templates/variants/broadcastPro/components/crest";
 import { ResultTeamName } from "../../primitives/ResultTeamName";
-import { truncateText } from "../../../results/layout/Sections/PlayerStats/_utils/helpers";
 import { BroadcastProGlassPanel } from "./BroadcastProGlassPanel";
 import { BroadcastProResultScoreBadge } from "./BroadcastProResultScoreBadge";
 import { csClass, useBroadcastProTheme } from "../index";
-import type { BroadcastProGlassStyle } from "../glass";
+import type {
+  BroadcastProGlassStyle,
+  BroadcastProSurfaceConnection,
+} from "../glass";
 
 export interface BroadcastProResultTeamRowProps {
   teamName: string;
@@ -19,11 +21,9 @@ export interface BroadcastProResultTeamRowProps {
   matchType?: string;
   glass?: BroadcastProGlassStyle;
   className?: string;
-  showBorder?: boolean;
+  connection?: BroadcastProSurfaceConnection;
   scoreEmphasis?: "winner" | "standard";
 }
-
-const MAX_TEAM_NAME = 32;
 
 export const BroadcastProResultTeamRow: React.FC<
   BroadcastProResultTeamRowProps
@@ -37,7 +37,7 @@ export const BroadcastProResultTeamRow: React.FC<
   matchType,
   glass,
   className = "",
-  showBorder = true,
+  connection = "standalone",
   scoreEmphasis = "standard",
 }) => {
   const { animations } = useAnimationContext();
@@ -45,17 +45,17 @@ export const BroadcastProResultTeamRow: React.FC<
   const { glass: themeGlass, text } = useBroadcastProTheme();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass(componentStyles, "broadcastProResultsTeamRow");
-  const nameClass = csClass(componentStyles, "broadcastProResultsTeamName");
+  const nameClass = `${csClass(componentStyles, "broadcastProResultsTeamName")} line-clamp-2`;
 
   const resolvedGlass = glass ?? themeGlass;
 
-  const displayName = truncateText(teamName, MAX_TEAM_NAME).toUpperCase();
+  const displayName = teamName.toUpperCase();
 
   return (
     <BroadcastProGlassPanel
       glass={resolvedGlass}
       className={`${rowClass} ${className}`.trim()}
-      showBorder={showBorder}
+      connection={connection}
     >
       <div className="flex min-w-0 flex-1 items-center gap-4">
         <BroadcastProCrestWell
