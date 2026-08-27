@@ -1,0 +1,55 @@
+/** Must stay identical to `.scratch/generated-backgrounds/phase-0/fixtures/shared.json`. */
+export const sharedFixture = {
+  width: 1080,
+  height: 1350,
+  fps: 30,
+  frame: 30,
+  palette: {
+    id: "primary",
+    mode: "light",
+    appearanceTheme: {
+      dark: "#0b1f33",
+      white: "#ffffff",
+      primary: "#003366",
+      secondary: "#ffcc00",
+    },
+  },
+  foreground: {
+    text: {
+      content: "Phase 0 readability check",
+      x: 80,
+      y: 160,
+      fontSize: 56,
+      color: "#ffffff",
+      fontFamily: "Heebo, sans-serif",
+      fontWeight: 800,
+    },
+    logo: {
+      assetPath: "svg/totw/icon1/12thman.svg",
+      x: 80,
+      y: 280,
+      width: 160,
+      height: 160,
+    },
+    card: {
+      title: "Fixture card",
+      body: "Representative content for Generated background readability.",
+      x: 80,
+      y: 520,
+      width: 920,
+      height: 280,
+      background: "rgba(0, 0, 0, 0.55)",
+      borderRadius: 16,
+      padding: 32,
+      titleFontSize: 40,
+      bodyFontSize: 28,
+      titleColor: "#ffffff",
+      bodyColor: "#f0f0f0",
+    },
+  },
+  compositionId: "Generated-Phase0-Audit",
+  gradient: {
+    type: "primaryToSecondary",
+    direction: "VERTICAL",
+  },
+} as const;

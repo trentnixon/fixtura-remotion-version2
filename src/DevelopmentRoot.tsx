@@ -4,6 +4,8 @@ import { Folder } from "remotion";
 import { templateRegistry } from "./templates/registry";
 import { datasetsByCategory } from "../testData";
 import { CompositionEntry } from "./core/components/dev/CompositionEntry";
+import { LuminanceTestRoot } from "./components/backgrounds/variants/Luminance/test/LuminanceTestRoot";
+import { GeneratedPhase0Root } from "./components/backgrounds/variants/Generated/test/GeneratedPhase0Root";
 
 // Define the dataset info interface
 interface DatasetInfo {
@@ -18,6 +20,8 @@ export const DevelopmentRoot: React.FC = () => {
   console.log("[DevelopmentRoot]");
   return (
     <>
+      <LuminanceTestRoot />
+      <GeneratedPhase0Root />
       {/* Template Registry */}
       {Object.entries(templateRegistry).map(([templateId, template]) => (
         <Folder key={templateId} name={templateId}>
