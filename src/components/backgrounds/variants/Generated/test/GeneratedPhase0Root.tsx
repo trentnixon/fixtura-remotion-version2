@@ -1,26 +1,14 @@
 import React from "react";
 import { Composition, Folder } from "remotion";
+import { GeneratedPhase0Composition } from "./GeneratedPhase0Composition";
 import {
-  GeneratedPhase0Composition,
+  GENERATED_PHASE0_ROW_IDS,
+  sharedFixture,
   type GeneratedPhase0RowId,
-} from "./GeneratedPhase0Composition";
-import { sharedFixture } from "./sharedFixture";
+} from "./phase0Fixtures";
 
-export const GENERATED_PHASE0_ROW_IDS: GeneratedPhase0RowId[] = [
-  "G-geo",
-  "N-geo",
-  "G-spk",
-  "N-spk",
-  "G-gfx",
-  "N-gfx",
-  "G-mismatch",
-  "P-dots",
-  "P-lines",
-  "P-grid",
-  "P-crosshatch",
-  "P-triangles",
-  "P-chevron",
-];
+export type { GeneratedPhase0RowId };
+export { GENERATED_PHASE0_ROW_IDS };
 
 /**
  * Development-only registration for Phase 0 audit stills.

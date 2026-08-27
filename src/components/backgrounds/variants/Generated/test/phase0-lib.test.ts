@@ -8,9 +8,13 @@ import {
   comparePngExact,
   parseApprovalRecord,
   parseDualIngressSection,
-  MATRIX_ROWS,
   SHARED_FIXTURE_PATH,
+  MATRIX_PATH,
   loadSharedFixture,
+  loadMatrix,
+  syncPhase0HarnessLocks,
+  assertHarnessLocksMatchAuthoritative,
+  getMatrixRows,
 } from "../../../../../../scripts/generated-backgrounds-phase-0-lib.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -30,9 +34,17 @@ describe("generated backgrounds phase-0 lib", () => {
     ).toThrow(/foreground\.text\.content/);
   });
 
-  it("loads the locked shared.json fixture", () => {
+  it("loads authoritative shared and matrix fixtures", () => {
     expect(fs.existsSync(SHARED_FIXTURE_PATH)).toBe(true);
+    expect(fs.existsSync(MATRIX_PATH)).toBe(true);
     expect(() => assertSharedFixtureShape(loadSharedFixture())).not.toThrow();
+    expect(loadMatrix().rows).toHaveLength(13);
+    expect(getMatrixRows()).toHaveLength(13);
+  });
+
+  it("syncs harness locks to deep-equal authoritative fixtures", () => {
+    syncPhase0HarnessLocks();
+    expect(() => assertHarnessLocksMatchAuthoritative()).not.toThrow();
   });
 
   it("derives outputsMatch from zero differing pixels only", () => {
@@ -82,6 +94,5 @@ describe("generated backgrounds phase-0 lib", () => {
       "0",
     );
     expect(parseApprovalRecord(markdown)[0].rowId).toBe("G-geo");
-    expect(MATRIX_ROWS).toHaveLength(13);
   });
 });

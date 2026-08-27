@@ -33,8 +33,9 @@ In scope:
 - `approval-record.md` prepared with evidence paths and measurements
 - `noise-inventory.md`
 - `pattern-animation-inventory.md` (Pattern `animation` values across samples; may conclude “none found”)
-- Optional development-only harness registered for Remotion still capture (DevelopmentRoot and ProductionRoot, because CLI stills use ProductionRoot when `NODE_ENV=production`). Does not change `SelectTemplateBackground` routing.
-- Audit verification script/command that checks matrix completeness, files, record fields, and dual-ingress pixel comparisons
+- Dedicated Remotion entry `src/GeneratedPhase0Entry.tsx` for still capture (keeps ProductionRoot unchanged)
+- Optional DevelopmentRoot registration for Studio browsing only
+- Audit verification script/command that checks matrix completeness, files, record fields, lock deep-equality, and dual-ingress pixel comparisons
 
 Out of scope:
 
@@ -219,7 +220,7 @@ Optional production-safety check (not a substitute for the audit verifier): conf
 
 ## Completion criterion
 
-Phase 0 is complete when both agent-pack and human-completion acceptance criteria are true. Prefer product decisions of `keep`, `merge`, `replace`, or `retire` for every retained candidate before drafting Phase 1 issues. Do not open Phase 1 implementation issues until luminance work is closed or merged and this audit has resolved the catalogue decisions needed for ID minting.
+Phase 0 is complete when both agent-pack and human-completion acceptance criteria are true. Prefer product decisions of `keep`, `merge`, `replace`, or `retire` for every retained candidate before drafting Phase 1 issues. Do not start Phase 1 implementation until luminance work is closed or merged and this audit has resolved the catalogue decisions needed for ID minting. Blocked Phase 1 tickets may exist for planning; they must remain unstarted.
 
 ## References
 
@@ -229,11 +230,13 @@ Phase 0 is complete when both agent-pack and human-completion acceptance criteri
 
 ## Comments
 
-### 2026-08-27 — Agent audit pack handoff
+### 2026-08-27 — Agent audit pack handoff (revised)
 
-Audit pack generated. Commands:
+Audit pack regenerated after production-isolation fixes:
 
-- `npm run generated:phase0:render`
-- `npm run generated:phase0:verify` → PASS
+- ProductionRoot restored (throws when `data` missing; no audit compositions)
+- Still capture uses `src/GeneratedPhase0Entry.tsx`
+- Authoritative fixtures: `phase-0/fixtures/shared.json` + `matrix.json`; harness `locks/` deep-equal synced before render
+- Commands: `npm run generated:phase0:render`, `npm run generated:phase0:verify`
 
-Dual-ingress measurements (same render run): all three pairs `differingPixels: 0` / `outputsMatch: yes`. Pattern animation inventory: `none found`. Product decisions left `unresolved` for human approval. Status → `ready-for-human`.
+Product decisions remain `unresolved`. Status → `ready-for-human`.

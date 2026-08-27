@@ -16,7 +16,8 @@ export const STILLS_DIR = path.join(PHASE0_DIR, "stills");
 export const CONTACT_DIR = path.join(PHASE0_DIR, "contact-sheet");
 export const FIXTURES_DIR = path.join(PHASE0_DIR, "fixtures");
 export const SHARED_FIXTURE_PATH = path.join(FIXTURES_DIR, "shared.json");
-export const HARNESS_SHARED_FIXTURE_PATH = path.join(
+export const MATRIX_PATH = path.join(FIXTURES_DIR, "matrix.json");
+export const HARNESS_LOCKS_DIR = path.join(
   ROOT,
   "src",
   "components",
@@ -24,96 +25,16 @@ export const HARNESS_SHARED_FIXTURE_PATH = path.join(
   "variants",
   "Generated",
   "test",
-  "sharedFixture.ts",
+  "locks",
 );
-
-export const MATRIX_ROWS = [
-  {
-    rowId: "G-geo",
-    workingName: "Geometric field",
-    wireIngress: 'useBackground: "Graphics", noise.type: "geometric"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "N-geo",
-    workingName: "Geometric field",
-    wireIngress: 'useBackground: "Noise", noise.type: "geometric"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "G-spk",
-    workingName: "Spokes",
-    wireIngress: 'useBackground: "Graphics", noise.type: "spokes"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "N-spk",
-    workingName: "Spokes",
-    wireIngress: 'useBackground: "Noise", noise.type: "spokes"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "G-gfx",
-    workingName: "Orphan graphics",
-    wireIngress: 'useBackground: "Graphics", noise.type: "graphics"',
-    orphanOrMismatch: true,
-  },
-  {
-    rowId: "N-gfx",
-    workingName: "Orphan graphics",
-    wireIngress: 'useBackground: "Noise", noise.type: "graphics"',
-    orphanOrMismatch: true,
-  },
-  {
-    rowId: "G-mismatch",
-    workingName: "Graphics mismatch",
-    wireIngress:
-      'useBackground: "Graphics", noise.type: "floatingParticles"',
-    orphanOrMismatch: true,
-  },
-  {
-    rowId: "P-dots",
-    workingName: "Dots",
-    wireIngress: 'Pattern dots, animation: "none"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "P-lines",
-    workingName: "Lines",
-    wireIngress: 'Pattern lines, animation: "none"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "P-grid",
-    workingName: "Grid",
-    wireIngress: 'Pattern grid, animation: "none"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "P-crosshatch",
-    workingName: "Crosshatch",
-    wireIngress: 'Pattern crosshatch, animation: "none"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "P-triangles",
-    workingName: "Triangles",
-    wireIngress: 'Pattern triangles, animation: "none"',
-    orphanOrMismatch: false,
-  },
-  {
-    rowId: "P-chevron",
-    workingName: "Chevron",
-    wireIngress: 'Pattern chevron, animation: "none"',
-    orphanOrMismatch: false,
-  },
-];
-
-export const DUAL_INGRESS_PAIRS = [
-  ["G-geo", "N-geo"],
-  ["G-spk", "N-spk"],
-  ["G-gfx", "N-gfx"],
-];
+export const HARNESS_SHARED_LOCK_PATH = path.join(
+  HARNESS_LOCKS_DIR,
+  "shared.json",
+);
+export const HARNESS_MATRIX_LOCK_PATH = path.join(
+  HARNESS_LOCKS_DIR,
+  "matrix.json",
+);
 
 export const SHARED_FIXTURE_REQUIRED_FIELDS = [
   "width",
@@ -124,13 +45,16 @@ export const SHARED_FIXTURE_REQUIRED_FIELDS = [
   "foreground",
 ];
 
-export const stillPathForRow = (rowId) =>
-  path.join(STILLS_DIR, `${rowId}.png`);
+export const loadJson = (filePath) =>
+  JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-export const loadSharedFixture = () => {
-  const raw = fs.readFileSync(SHARED_FIXTURE_PATH, "utf8");
-  return JSON.parse(raw);
-};
+export const loadSharedFixture = () => loadJson(SHARED_FIXTURE_PATH);
+
+export const loadMatrix = () => loadJson(MATRIX_PATH);
+
+export const getMatrixRows = () => loadMatrix().rows;
+
+export const getDualIngressPairs = () => loadMatrix().dualIngressPairs;
 
 export const assertSharedFixtureShape = (fixture) => {
   const missing = SHARED_FIXTURE_REQUIRED_FIELDS.filter(
@@ -155,13 +79,45 @@ export const assertSharedFixtureShape = (fixture) => {
   }
 };
 
-export const ensureHarnessSharedFixturePresent = () => {
-  const fixture = loadSharedFixture();
-  assertSharedFixtureShape(fixture);
-  if (!fs.existsSync(HARNESS_SHARED_FIXTURE_PATH)) {
-    throw new Error("harness sharedFixture.ts missing");
+export const stableStringify = (value) => JSON.stringify(value, null, 2);
+
+export const syncPhase0HarnessLocks = () => {
+  const shared = loadSharedFixture();
+  const matrix = loadMatrix();
+  assertSharedFixtureShape(shared);
+  if (!Array.isArray(matrix.rows) || matrix.rows.length !== 13) {
+    throw new Error("matrix.json must define exactly 13 rows");
+  }
+  fs.mkdirSync(HARNESS_LOCKS_DIR, { recursive: true });
+  fs.writeFileSync(HARNESS_SHARED_LOCK_PATH, `${stableStringify(shared)}\n`);
+  fs.writeFileSync(HARNESS_MATRIX_LOCK_PATH, `${stableStringify(matrix)}\n`);
+};
+
+export const assertHarnessLocksMatchAuthoritative = () => {
+  if (!fs.existsSync(HARNESS_SHARED_LOCK_PATH)) {
+    throw new Error("harness lock shared.json missing — run render/sync first");
+  }
+  if (!fs.existsSync(HARNESS_MATRIX_LOCK_PATH)) {
+    throw new Error("harness lock matrix.json missing — run render/sync first");
+  }
+  const authoritativeShared = loadSharedFixture();
+  const lockShared = loadJson(HARNESS_SHARED_LOCK_PATH);
+  if (stableStringify(authoritativeShared) !== stableStringify(lockShared)) {
+    throw new Error(
+      "harness locks/shared.json does not deep-equal authoritative fixtures/shared.json",
+    );
+  }
+  const authoritativeMatrix = loadMatrix();
+  const lockMatrix = loadJson(HARNESS_MATRIX_LOCK_PATH);
+  if (stableStringify(authoritativeMatrix) !== stableStringify(lockMatrix)) {
+    throw new Error(
+      "harness locks/matrix.json does not deep-equal authoritative fixtures/matrix.json",
+    );
   }
 };
+
+export const stillPathForRow = (rowId) =>
+  path.join(STILLS_DIR, `${rowId}.png`);
 
 export const comparePngExact = (leftPath, rightPath) => {
   const left = PNG.sync.read(fs.readFileSync(leftPath));
@@ -182,7 +138,7 @@ export const comparePngExact = (leftPath, rightPath) => {
     diff.data,
     width,
     height,
-    { threshold: 0 },
+    { threshold: 0, includeAA: true },
   );
   return {
     differingPixels,
@@ -270,4 +226,41 @@ export const buildContactSheet = (rowIds, stillDir, outputPath) => {
     JSON.stringify(manifest, null, 2),
   );
   return manifest;
+};
+
+export const collectNoiseMentions = () => {
+  const roots = [
+    path.join(ROOT, "src"),
+    path.join(ROOT, "docs"),
+    path.join(ROOT, ".comms"),
+    path.join(ROOT, ".skills"),
+    path.join(ROOT, "CONTEXT.md"),
+    path.join(ROOT, "WARP.md"),
+  ];
+  const hits = new Set();
+  const walk = (target) => {
+    if (!fs.existsSync(target)) return;
+    const stat = fs.statSync(target);
+    if (stat.isFile()) {
+      if (!/\.(md|ts|tsx|js|mjs|json)$/i.test(target)) return;
+      const text = fs.readFileSync(target, "utf8");
+      if (/\bNoise\b/.test(text) || /"Noise"/.test(text)) {
+        hits.add(path.relative(ROOT, target).replace(/\\/g, "/"));
+      }
+      return;
+    }
+    for (const entry of fs.readdirSync(target)) {
+      if (
+        entry === "node_modules" ||
+        entry === "dist" ||
+        entry === ".git" ||
+        entry === "locks"
+      ) {
+        continue;
+      }
+      walk(path.join(target, entry));
+    }
+  };
+  for (const root of roots) walk(root);
+  return [...hits].sort();
 };

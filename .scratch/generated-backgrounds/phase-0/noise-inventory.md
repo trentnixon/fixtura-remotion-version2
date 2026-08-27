@@ -5,6 +5,8 @@ Runtime continues to accept Noise payloads. Noise is not newly advertised.
 ## Mentions found
 
 - `.comms/Guide to Remotion Set up handoff.md`
+- `.skills/architecture/components-backgrounds-folder.md`
+- `CONTEXT.md`
 - `docs/adr/0002-generated-background-wire-deferred.md`
 - `src/components/.docs/DevelopmentRoadMap.md`
 - `src/components/.docs/README.md`
@@ -14,7 +16,7 @@ Runtime continues to accept Noise payloads. Noise is not newly advertised.
 - `src/components/backgrounds/.llm/agent.md`
 - `src/components/backgrounds/config/types.ts`
 - `src/components/backgrounds/index.tsx`
-- `src/components/backgrounds/variants/Generated/test/GeneratedPhase0Composition.tsx`
+- `src/components/backgrounds/variants/Generated/test/phase0Fixtures.ts`
 - `src/components/backgrounds/variants/NoiseBackground/.docs/README.md`
 - `src/components/backgrounds/variants/NoiseBackground/config.ts`
 - `src/components/backgrounds/variants/NoiseBackground/variants/.docs/README.md`

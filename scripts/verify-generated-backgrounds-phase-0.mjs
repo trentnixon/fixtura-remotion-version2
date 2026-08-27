@@ -1,19 +1,20 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
-  MATRIX_ROWS,
-  DUAL_INGRESS_PAIRS,
   PHASE0_DIR,
   STILLS_DIR,
   CONTACT_DIR,
   SHARED_FIXTURE_PATH,
-  HARNESS_SHARED_FIXTURE_PATH,
   stillPathForRow,
   loadSharedFixture,
   assertSharedFixtureShape,
+  assertHarnessLocksMatchAuthoritative,
+  getMatrixRows,
+  getDualIngressPairs,
   comparePngExact,
   parseApprovalRecord,
   parseDualIngressSection,
+  collectNoiseMentions,
   ROOT,
 } from "./generated-backgrounds-phase-0-lib.mjs";
 
@@ -31,31 +32,24 @@ const main = () => {
   }
 
   let fixture;
+  let matrixRows;
+  let dualPairs;
   try {
     fixture = loadSharedFixture();
     assertSharedFixtureShape(fixture);
+    assertHarnessLocksMatchAuthoritative();
+    matrixRows = getMatrixRows();
+    dualPairs = getDualIngressPairs();
   } catch (error) {
     fail(error.message);
     return;
   }
 
-  const harnessText = fs.readFileSync(HARNESS_SHARED_FIXTURE_PATH, "utf8");
-  for (const token of [
-    String(fixture.width),
-    String(fixture.height),
-    String(fixture.frame),
-    fixture.foreground.text.content,
-    fixture.foreground.logo.assetPath,
-    fixture.foreground.card.title,
-  ]) {
-    if (!harnessText.includes(token)) {
-      fail(
-        `harness sharedFixture.ts missing locked value from shared.json: ${token}`,
-      );
-    }
+  if (matrixRows.length !== 13) {
+    fail(`expected 13 matrix rows, found ${matrixRows.length}`);
   }
 
-  const expectedIds = MATRIX_ROWS.map((row) => row.rowId);
+  const expectedIds = matrixRows.map((row) => row.rowId);
   for (const rowId of expectedIds) {
     const still = stillPathForRow(rowId);
     if (!fs.existsSync(still)) {
@@ -100,7 +94,7 @@ const main = () => {
   }
   const approvalMarkdown = fs.readFileSync(approvalPath, "utf8");
   const rows = parseApprovalRecord(approvalMarkdown);
-  for (const expected of MATRIX_ROWS) {
+  for (const expected of matrixRows) {
     const row = rows.find((entry) => entry.rowId === expected.rowId);
     if (!row) {
       fail(`approval-record missing row ${expected.rowId}`);
@@ -112,7 +106,16 @@ const main = () => {
       "wireIngress",
       "stillPath",
       "productDecision",
+      "productApprover",
+      "productRole",
+      "productDate",
+      "productNotes",
+      "mergeTarget",
       "engineeringResult",
+      "engineeringApprover",
+      "engineeringRole",
+      "engineeringDate",
+      "engineeringNotes",
     ]) {
       if (row.fields[field] === undefined) {
         fail(`${expected.rowId} missing field ${field}`);
@@ -131,14 +134,16 @@ const main = () => {
   }
 
   const pairs = parseDualIngressSection(approvalMarkdown);
-  if (pairs.length !== DUAL_INGRESS_PAIRS.length) {
+  if (pairs.length !== dualPairs.length) {
     fail(
-      `expected ${DUAL_INGRESS_PAIRS.length} dual-ingress pair blocks, found ${pairs.length}`,
+      `expected ${dualPairs.length} dual-ingress pair blocks, found ${pairs.length}`,
     );
   }
 
-  for (const [left, right] of DUAL_INGRESS_PAIRS) {
-    const block = pairs.find((pair) => pair.title.includes(left) && pair.title.includes(right));
+  for (const [left, right] of dualPairs) {
+    const block = pairs.find(
+      (pair) => pair.title.includes(left) && pair.title.includes(right),
+    );
     if (!block) {
       fail(`dual-ingress section missing ${left} ↔ ${right}`);
       continue;
@@ -169,6 +174,20 @@ const main = () => {
   const patternPath = path.join(PHASE0_DIR, "pattern-animation-inventory.md");
   if (!fs.existsSync(noisePath)) {
     fail("noise-inventory.md missing");
+  } else {
+    const noiseText = fs.readFileSync(noisePath, "utf8");
+    const requiredMentions = collectNoiseMentions();
+    for (const mention of [
+      "CONTEXT.md",
+      ".skills/architecture/components-backgrounds-folder.md",
+    ]) {
+      if (
+        requiredMentions.includes(mention) &&
+        !noiseText.includes(`\`${mention}\``)
+      ) {
+        fail(`noise-inventory.md missing required mention ${mention}`);
+      }
+    }
   }
   if (!fs.existsSync(patternPath)) {
     fail("pattern-animation-inventory.md missing");

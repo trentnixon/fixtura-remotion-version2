@@ -7,100 +7,16 @@ import { StyleProvider } from "../../../../../core/context/StyleContext";
 import { SelectTemplateBackground } from "../../..";
 import { basicTheme } from "../../../../../templates/variants/basic/theme";
 import { createGeneratedPhase0Dataset } from "./createGeneratedPhase0Dataset";
-import { sharedFixture } from "./sharedFixture";
+import {
+  getRowTemplateVariation,
+  sharedFixture,
+  type GeneratedPhase0RowId,
+} from "./phase0Fixtures";
 
-export type GeneratedPhase0RowId =
-  | "G-geo"
-  | "N-geo"
-  | "G-spk"
-  | "N-spk"
-  | "G-gfx"
-  | "N-gfx"
-  | "G-mismatch"
-  | "P-dots"
-  | "P-lines"
-  | "P-grid"
-  | "P-crosshatch"
-  | "P-triangles"
-  | "P-chevron";
+export type { GeneratedPhase0RowId };
 
 export type GeneratedPhase0Props = {
   rowId?: GeneratedPhase0RowId;
-};
-
-const ROW_TEMPLATE_VARIATION: Record<
-  GeneratedPhase0RowId,
-  Record<string, unknown>
-> = {
-  "G-geo": {
-    useBackground: "Graphics",
-    noise: { type: "geometric" },
-    gradient: sharedFixture.gradient,
-  },
-  "N-geo": {
-    useBackground: "Noise",
-    noise: { type: "geometric" },
-    gradient: sharedFixture.gradient,
-  },
-  "G-spk": {
-    useBackground: "Graphics",
-    noise: { type: "spokes" },
-    gradient: sharedFixture.gradient,
-  },
-  "N-spk": {
-    useBackground: "Noise",
-    noise: { type: "spokes" },
-    gradient: sharedFixture.gradient,
-  },
-  "G-gfx": {
-    useBackground: "Graphics",
-    noise: { type: "graphics" },
-    gradient: sharedFixture.gradient,
-  },
-  "N-gfx": {
-    useBackground: "Noise",
-    noise: { type: "graphics" },
-    gradient: sharedFixture.gradient,
-  },
-  "G-mismatch": {
-    useBackground: "Graphics",
-    noise: { type: "floatingParticles" },
-    gradient: sharedFixture.gradient,
-  },
-  "P-dots": {
-    useBackground: "Pattern",
-    pattern: { type: "dots", animation: "none", scale: 0.75, opacity: 0.35 },
-  },
-  "P-lines": {
-    useBackground: "Pattern",
-    pattern: { type: "lines", animation: "none", scale: 0.75, opacity: 0.35 },
-  },
-  "P-grid": {
-    useBackground: "Pattern",
-    pattern: { type: "grid", animation: "none", scale: 0.75, opacity: 0.35 },
-  },
-  "P-crosshatch": {
-    useBackground: "Pattern",
-    pattern: {
-      type: "crosshatch",
-      animation: "none",
-      scale: 0.75,
-      opacity: 0.35,
-    },
-  },
-  "P-triangles": {
-    useBackground: "Pattern",
-    pattern: {
-      type: "triangles",
-      animation: "none",
-      scale: 0.75,
-      opacity: 0.35,
-    },
-  },
-  "P-chevron": {
-    useBackground: "Pattern",
-    pattern: { type: "chevron", animation: "none", scale: 0.75, opacity: 0.35 },
-  },
 };
 
 const ForegroundFixture: React.FC = () => {
@@ -173,7 +89,8 @@ const ForegroundFixture: React.FC = () => {
 
 /**
  * Development-only Phase 0 audit harness.
- * Registered in DevelopmentRoot and ProductionRoot so `remotion still` (NODE_ENV=production) can resolve composition IDs. Does not change SelectTemplateBackground routing.
+ * Rendered via `src/GeneratedPhase0Entry.tsx` or DevelopmentRoot Studio browsing.
+ * Does not change ProductionRoot or SelectTemplateBackground routing.
  */
 export const GeneratedPhase0Composition: React.FC<GeneratedPhase0Props> = ({
   rowId = "G-geo",
@@ -182,7 +99,7 @@ export const GeneratedPhase0Composition: React.FC<GeneratedPhase0Props> = ({
   const dataset = createGeneratedPhase0Dataset({
     palette: sharedFixture.palette.id,
     mode: sharedFixture.palette.mode,
-    ...ROW_TEMPLATE_VARIATION[rowId],
+    ...getRowTemplateVariation(rowId),
   });
 
   dataset.videoMeta.theme.theme = { ...appearanceTheme };

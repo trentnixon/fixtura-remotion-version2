@@ -2,20 +2,22 @@ import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import {
-  MATRIX_ROWS,
-  DUAL_INGRESS_PAIRS,
   PHASE0_DIR,
   STILLS_DIR,
   CONTACT_DIR,
-  SHARED_FIXTURE_PATH,
   stillPathForRow,
   loadSharedFixture,
   assertSharedFixtureShape,
-  ensureHarnessSharedFixturePresent,
+  syncPhase0HarnessLocks,
+  getMatrixRows,
+  getDualIngressPairs,
   comparePngExact,
   buildContactSheet,
+  collectNoiseMentions,
   ROOT,
 } from "./generated-backgrounds-phase-0-lib.mjs";
+
+const ENTRY = "src/GeneratedPhase0Entry.tsx";
 
 const renderRow = (rowId, frame) => {
   const outputPath = stillPathForRow(rowId);
@@ -27,7 +29,7 @@ const renderRow = (rowId, frame) => {
     [
       "remotion",
       "still",
-      "src/index.ts",
+      ENTRY,
       compositionId,
       outputPath,
       `--frame=${frame}`,
@@ -36,7 +38,7 @@ const renderRow = (rowId, frame) => {
       cwd: ROOT,
       stdio: "inherit",
       shell: true,
-      env: { ...process.env, NODE_ENV: "production" },
+      env: { ...process.env },
     },
   );
   if (result.status !== 0 || !fs.existsSync(outputPath)) {
@@ -46,33 +48,7 @@ const renderRow = (rowId, frame) => {
 };
 
 const inventoryNoise = () => {
-  const roots = [
-    path.join(ROOT, "src"),
-    path.join(ROOT, "docs"),
-    path.join(ROOT, ".comms"),
-    path.join(ROOT, "WARP.md"),
-  ];
-  const hits = [];
-  const walk = (target) => {
-    if (!fs.existsSync(target)) return;
-    const stat = fs.statSync(target);
-    if (stat.isFile()) {
-      if (!/\.(md|ts|tsx|js|mjs|json)$/i.test(target)) return;
-      const text = fs.readFileSync(target, "utf8");
-      if (/\bNoise\b/.test(text) || /"Noise"/.test(text)) {
-        hits.push(path.relative(ROOT, target).replace(/\\/g, "/"));
-      }
-      return;
-    }
-    for (const entry of fs.readdirSync(target)) {
-      if (entry === "node_modules" || entry === "dist" || entry === ".git") {
-        continue;
-      }
-      walk(path.join(target, entry));
-    }
-  };
-  for (const root of roots) walk(root);
-  hits.sort();
+  const hits = collectNoiseMentions();
   const body = [
     "# Noise inventory (Phase 0)",
     "",
@@ -101,7 +77,11 @@ const inventoryPatternAnimation = () => {
       if (!full.endsWith(".json")) continue;
       const json = JSON.parse(fs.readFileSync(full, "utf8"));
       const pattern = json?.videoMeta?.video?.templateVariation?.pattern;
-      if (!pattern || pattern.animation === undefined || pattern.animation === null) {
+      if (
+        !pattern ||
+        pattern.animation === undefined ||
+        pattern.animation === null
+      ) {
         continue;
       }
       if (pattern.animation === "none") continue;
@@ -137,6 +117,7 @@ const inventoryPatternAnimation = () => {
 };
 
 const writeApprovalRecord = (pairResults) => {
+  const matrixRows = getMatrixRows();
   const pairByRow = new Map();
   for (const pair of pairResults) {
     pairByRow.set(pair.left, pair);
@@ -161,7 +142,7 @@ const writeApprovalRecord = (pairResults) => {
     lines.push("");
   }
 
-  for (const row of MATRIX_ROWS) {
+  for (const row of matrixRows) {
     const still = stillPathForRow(row.rowId);
     const relStill = path.relative(ROOT, still).replace(/\\/g, "/");
     lines.push(`## ${row.rowId} — ${row.workingName}`);
@@ -195,18 +176,20 @@ const writeApprovalRecord = (pairResults) => {
 };
 
 const main = () => {
-  ensureHarnessSharedFixturePresent();
+  syncPhase0HarnessLocks();
   const fixture = loadSharedFixture();
   assertSharedFixtureShape(fixture);
+  const matrixRows = getMatrixRows();
+  const dualPairs = getDualIngressPairs();
 
   fs.mkdirSync(STILLS_DIR, { recursive: true });
   fs.mkdirSync(CONTACT_DIR, { recursive: true });
 
-  for (const row of MATRIX_ROWS) {
+  for (const row of matrixRows) {
     renderRow(row.rowId, fixture.frame);
   }
 
-  const pairResults = DUAL_INGRESS_PAIRS.map(([left, right]) => {
+  const pairResults = dualPairs.map(([left, right]) => {
     const leftStill = stillPathForRow(left);
     const rightStill = stillPathForRow(right);
     const comparison = comparePngExact(leftStill, rightStill);
@@ -220,7 +203,7 @@ const main = () => {
     };
   });
 
-  const rowIds = MATRIX_ROWS.map((row) => row.rowId);
+  const rowIds = matrixRows.map((row) => row.rowId);
   buildContactSheet(
     rowIds,
     STILLS_DIR,
