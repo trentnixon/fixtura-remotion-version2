@@ -2,7 +2,6 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { PNG } from "pngjs";
-import pixelmatch from "pixelmatch";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = path.resolve(__dirname, "..");
@@ -85,9 +84,7 @@ export const syncPhase0HarnessLocks = () => {
   const shared = loadSharedFixture();
   const matrix = loadMatrix();
   assertSharedFixtureShape(shared);
-  if (!Array.isArray(matrix.rows) || matrix.rows.length !== 13) {
-    throw new Error("matrix.json must define exactly 13 rows");
-  }
+  assertMatrixMatchesContract(matrix);
   fs.mkdirSync(HARNESS_LOCKS_DIR, { recursive: true });
   fs.writeFileSync(HARNESS_SHARED_LOCK_PATH, `${stableStringify(shared)}\n`);
   fs.writeFileSync(HARNESS_MATRIX_LOCK_PATH, `${stableStringify(matrix)}\n`);
@@ -131,22 +128,152 @@ export const comparePngExact = (leftPath, rightPath) => {
     };
   }
   const { width, height } = left;
-  const diff = new PNG({ width, height });
-  const differingPixels = pixelmatch(
-    left.data,
-    right.data,
-    diff.data,
-    width,
-    height,
-    { threshold: 0, includeAA: true },
-  );
+  const leftData = left.data;
+  const rightData = right.data;
+  let differingPixels = 0;
+  // Exact decoded RGBA comparison — every channel of every pixel, including
+  // fully transparent pixels (Pixelmatch can ignore those).
+  for (let i = 0; i < leftData.length; i += 4) {
+    if (
+      leftData[i] !== rightData[i] ||
+      leftData[i + 1] !== rightData[i + 1] ||
+      leftData[i + 2] !== rightData[i + 2] ||
+      leftData[i + 3] !== rightData[i + 3]
+    ) {
+      differingPixels += 1;
+    }
+  }
   return {
     differingPixels,
     outputsMatch: differingPixels === 0 ? "yes" : "no",
     width,
     height,
-    diff,
   };
+};
+
+/** Agreed Phase 0 matrix contract from issue 01 — matrix.json must match this. */
+export const EXPECTED_PHASE0_MATRIX = {
+  rowIds: [
+    "G-geo",
+    "N-geo",
+    "G-spk",
+    "N-spk",
+    "G-gfx",
+    "N-gfx",
+    "G-mismatch",
+    "P-dots",
+    "P-lines",
+    "P-grid",
+    "P-crosshatch",
+    "P-triangles",
+    "P-chevron",
+  ],
+  dualIngressPairs: [
+    ["G-geo", "N-geo"],
+    ["G-spk", "N-spk"],
+    ["G-gfx", "N-gfx"],
+  ],
+  ingressByRowId: {
+    "G-geo": { useBackground: "Graphics", noiseType: "geometric" },
+    "N-geo": { useBackground: "Noise", noiseType: "geometric" },
+    "G-spk": { useBackground: "Graphics", noiseType: "spokes" },
+    "N-spk": { useBackground: "Noise", noiseType: "spokes" },
+    "G-gfx": { useBackground: "Graphics", noiseType: "graphics" },
+    "N-gfx": { useBackground: "Noise", noiseType: "graphics" },
+    "G-mismatch": { useBackground: "Graphics", noiseType: "floatingParticles" },
+    "P-dots": { useBackground: "Pattern", patternType: "dots", animation: "none" },
+    "P-lines": { useBackground: "Pattern", patternType: "lines", animation: "none" },
+    "P-grid": { useBackground: "Pattern", patternType: "grid", animation: "none" },
+    "P-crosshatch": {
+      useBackground: "Pattern",
+      patternType: "crosshatch",
+      animation: "none",
+    },
+    "P-triangles": {
+      useBackground: "Pattern",
+      patternType: "triangles",
+      animation: "none",
+    },
+    "P-chevron": {
+      useBackground: "Pattern",
+      patternType: "chevron",
+      animation: "none",
+    },
+  },
+};
+
+export const assertMatrixMatchesContract = (matrix) => {
+  const rows = matrix?.rows;
+  if (!Array.isArray(rows)) {
+    throw new Error("matrix.json must define a rows array");
+  }
+  const expectedIds = EXPECTED_PHASE0_MATRIX.rowIds;
+  if (rows.length !== expectedIds.length) {
+    throw new Error(
+      `matrix.json must have ${expectedIds.length} rows, found ${rows.length}`,
+    );
+  }
+  const seen = new Set();
+  for (let index = 0; index < rows.length; index += 1) {
+    const row = rows[index];
+    const expectedId = expectedIds[index];
+    if (row.rowId !== expectedId) {
+      throw new Error(
+        `matrix row ${index} rowId must be ${expectedId}, found ${row.rowId}`,
+      );
+    }
+    if (seen.has(row.rowId)) {
+      throw new Error(`duplicate matrix rowId: ${row.rowId}`);
+    }
+    seen.add(row.rowId);
+    const expected = EXPECTED_PHASE0_MATRIX.ingressByRowId[row.rowId];
+    const variation = row.templateVariation || {};
+    if (variation.useBackground !== expected.useBackground) {
+      throw new Error(
+        `${row.rowId} useBackground must be ${expected.useBackground}`,
+      );
+    }
+    if (expected.noiseType) {
+      if (variation.noise?.type !== expected.noiseType) {
+        throw new Error(
+          `${row.rowId} noise.type must be ${expected.noiseType}`,
+        );
+      }
+    }
+    if (expected.patternType) {
+      if (variation.pattern?.type !== expected.patternType) {
+        throw new Error(
+          `${row.rowId} pattern.type must be ${expected.patternType}`,
+        );
+      }
+      if (variation.pattern?.animation !== expected.animation) {
+        throw new Error(
+          `${row.rowId} pattern.animation must be ${expected.animation}`,
+        );
+      }
+    }
+  }
+  const pairs = matrix.dualIngressPairs;
+  if (!Array.isArray(pairs) || pairs.length !== EXPECTED_PHASE0_MATRIX.dualIngressPairs.length) {
+    throw new Error(
+      `matrix.json must define ${EXPECTED_PHASE0_MATRIX.dualIngressPairs.length} dualIngressPairs`,
+    );
+  }
+  for (let index = 0; index < pairs.length; index += 1) {
+    const [left, right] = pairs[index];
+    const [expectedLeft, expectedRight] =
+      EXPECTED_PHASE0_MATRIX.dualIngressPairs[index];
+    if (left !== expectedLeft || right !== expectedRight) {
+      throw new Error(
+        `dualIngressPairs[${index}] must be [${expectedLeft}, ${expectedRight}]`,
+      );
+    }
+    if (!seen.has(left) || !seen.has(right)) {
+      throw new Error(
+        `dualIngressPairs[${index}] references unknown rowId`,
+      );
+    }
+  }
 };
 
 export const parseApprovalRecord = (markdown) => {

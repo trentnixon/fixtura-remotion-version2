@@ -9,12 +9,14 @@ import {
   loadSharedFixture,
   assertSharedFixtureShape,
   assertHarnessLocksMatchAuthoritative,
+  assertMatrixMatchesContract,
   getMatrixRows,
   getDualIngressPairs,
   comparePngExact,
   parseApprovalRecord,
   parseDualIngressSection,
   collectNoiseMentions,
+  loadMatrix,
   ROOT,
 } from "./generated-backgrounds-phase-0-lib.mjs";
 
@@ -38,15 +40,12 @@ const main = () => {
     fixture = loadSharedFixture();
     assertSharedFixtureShape(fixture);
     assertHarnessLocksMatchAuthoritative();
+    assertMatrixMatchesContract(loadMatrix());
     matrixRows = getMatrixRows();
     dualPairs = getDualIngressPairs();
   } catch (error) {
     fail(error.message);
     return;
-  }
-
-  if (matrixRows.length !== 13) {
-    fail(`expected 13 matrix rows, found ${matrixRows.length}`);
   }
 
   const expectedIds = matrixRows.map((row) => row.rowId);

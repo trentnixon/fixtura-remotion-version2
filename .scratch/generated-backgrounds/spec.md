@@ -161,4 +161,4 @@ Comparable rows: Graphics/Noise × geometric, spokes, orphan `graphics`; Graphic
 
 ### Issue tracker
 
-Implementation issues: one file per deliverable under `.scratch/generated-backgrounds/issues/`. Do not open Phase 1 implementation issues until Phase 0 resolves the needed catalogue decisions and luminance is closed or merged.
+Implementation issues: one file per deliverable under `.scratch/generated-backgrounds/issues/`. Blocked Phase 1 planning tickets may exist. Do not start Phase 1 implementation until Phase 0 resolves the needed catalogue decisions and luminance is closed or merged.

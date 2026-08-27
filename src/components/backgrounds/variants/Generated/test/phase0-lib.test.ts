@@ -14,7 +14,9 @@ import {
   loadMatrix,
   syncPhase0HarnessLocks,
   assertHarnessLocksMatchAuthoritative,
+  assertMatrixMatchesContract,
   getMatrixRows,
+  EXPECTED_PHASE0_MATRIX,
 } from "../../../../../../scripts/generated-backgrounds-phase-0-lib.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -38,8 +40,15 @@ describe("generated backgrounds phase-0 lib", () => {
     expect(fs.existsSync(SHARED_FIXTURE_PATH)).toBe(true);
     expect(fs.existsSync(MATRIX_PATH)).toBe(true);
     expect(() => assertSharedFixtureShape(loadSharedFixture())).not.toThrow();
-    expect(loadMatrix().rows).toHaveLength(13);
-    expect(getMatrixRows()).toHaveLength(13);
+    expect(() => assertMatrixMatchesContract(loadMatrix())).not.toThrow();
+    expect(loadMatrix().rows).toHaveLength(EXPECTED_PHASE0_MATRIX.rowIds.length);
+    expect(getMatrixRows()).toHaveLength(EXPECTED_PHASE0_MATRIX.rowIds.length);
+  });
+
+  it("rejects a matrix that drifts from the agreed contract", () => {
+    const drifted = structuredClone(loadMatrix());
+    drifted.rows[0].rowId = "WRONG";
+    expect(() => assertMatrixMatchesContract(drifted)).toThrow(/rowId must be G-geo/);
   });
 
   it("syncs harness locks to deep-equal authoritative fixtures", () => {
