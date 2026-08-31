@@ -5,7 +5,7 @@ import { linearGradient } from "@remotion/effects/linear-gradient";
 import { vignette } from "@remotion/effects/vignette";
 import { useThemeContext } from "../../../../../../../core/context/ThemeContext";
 import { useVideoDataContext } from "../../../../../../../core/context/VideoDataContext";
-import { hexToHue } from "./hexToHue";
+import { colorToHue } from "./hexToHue";
 import {
   buildLightLeakVariantSeed,
   resolveLightLeakVariantKey,
@@ -23,9 +23,18 @@ export const LightLeakBackground: React.FC = () => {
   const { selectedPalette } = useThemeContext();
   const { video } = useVideoDataContext();
 
+  const theme = video.appearance?.theme;
   const palette = {
-    main: selectedPalette.background.main,
-    accent: selectedPalette.background.accent,
+    main:
+      selectedPalette.background.main ??
+      theme?.primary ??
+      selectedPalette.background.userPrimary ??
+      "#111111",
+    accent:
+      selectedPalette.background.accent ??
+      theme?.secondary ??
+      selectedPalette.background.userSecondary ??
+      "#ffffff",
   };
 
   const variantKey = resolveLightLeakVariantKey(
@@ -43,7 +52,7 @@ export const LightLeakBackground: React.FC = () => {
   const leakEffects = variant.leaks.map((layer) =>
     lightLeak({
       seed: layer.seed,
-      hueShift: resolveHueShift(layer.hueRole, palette, hexToHue),
+      hueShift: resolveHueShift(layer.hueRole, palette, colorToHue),
       progress: getLeakProgress(
         loopProgress,
         layer.phaseOffset,

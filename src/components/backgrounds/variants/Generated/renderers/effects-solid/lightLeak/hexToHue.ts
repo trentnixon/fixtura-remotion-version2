@@ -1,25 +1,22 @@
-export const hexToHue = (hex: string): number => {
-  const normalized = hex.replace("#", "");
-  const r = Number.parseInt(normalized.slice(0, 2), 16) / 255;
-  const g = Number.parseInt(normalized.slice(2, 4), 16) / 255;
-  const b = Number.parseInt(normalized.slice(4, 6), 16) / 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
+import tinycolor from "tinycolor2";
 
-  if (max === min) {
+/**
+ * Maps a CSS color (hex, rgb, named) to a 0–360 hue for lightLeak().
+ * Returns 0 for missing or invalid input so WebGL effects always get a finite hue.
+ */
+export const colorToHue = (color: string | null | undefined): number => {
+  if (color == null || color.trim() === "") {
     return 0;
   }
 
-  const delta = max - min;
-  let hue = 0;
-
-  if (max === r) {
-    hue = ((g - b) / delta + (g < b ? 6 : 0)) / 6;
-  } else if (max === g) {
-    hue = ((b - r) / delta + 2) / 6;
-  } else {
-    hue = ((r - g) / delta + 4) / 6;
+  const parsed = tinycolor(color);
+  if (!parsed.isValid()) {
+    return 0;
   }
 
-  return hue * 360;
+  const hue = parsed.toHsv().h;
+  return Number.isFinite(hue) ? hue : 0;
 };
+
+/** @deprecated Use colorToHue — kept for existing imports */
+export const hexToHue = (hex: string): number => colorToHue(hex);

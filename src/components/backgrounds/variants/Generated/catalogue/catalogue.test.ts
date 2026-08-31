@@ -10,46 +10,22 @@ import {
 
 const inventoryIngressCases = [
   ["INV-PAT-dots", "ingress-pattern-dots", "dot-field"],
-  ["INV-PAT-lines", "ingress-pattern-lines", "line-field"],
-  ["INV-PAT-grid", "ingress-pattern-grid", "tile-grid"],
-  ["INV-PAT-crosshatch", "ingress-pattern-crosshatch", "crosshatch-field"],
-  ["INV-PAT-triangles", "ingress-pattern-triangles", "triangle-tile"],
-  ["INV-PAT-chevron", "ingress-pattern-chevron", "chevron-field"],
-  ["INV-PAR-dots", "ingress-particle-dots", "floating-dots"],
   ["INV-PAR-lines", "ingress-particle-lines", "streak-lines"],
-  ["INV-PAR-bubbles", "ingress-particle-bubbles", "bubble-field"],
-  ["INV-PAR-snow", "ingress-particle-snow", "snow-field"],
-  ["INV-PAR-confetti", "ingress-particle-confetti", "confetti-field"],
-  ["INV-NOI-default", "ingress-noise-default", "balanced-noise"],
-  ["INV-NOI-subtle", "ingress-noise-subtle", "subtle-noise"],
-  ["INV-NOI-grain", "ingress-noise-grain", "grain-field"],
-  ["INV-NOI-wave", "ingress-noise-wave", "wave-noise"],
-  ["INV-NOI-fog", "ingress-noise-fog", "fog-field"],
-  ["INV-NOI-static", "ingress-noise-static", "tv-static"],
   [
     "INV-NOI-floatingParticles",
     "ingress-noise-floatingParticles",
     "floating-particles",
   ],
-  [
-    "INV-NOI-dynamicParticles",
-    "ingress-noise-dynamicParticles",
-    "dynamic-particles",
-  ],
-  ["INV-NOI-triangleSwarm", "ingress-noise-triangleSwarm", "triangle-swarm"],
   ["INV-NOI-pulsingCircles", "ingress-noise-pulsingCircles", "pulsing-circles"],
   ["INV-NOI-digitalRain", "ingress-noise-digitalRain", "digital-rain"],
-  ["INV-NOI-gradientGrid", "ingress-noise-gradientGrid", "gradient-grid"],
-  ["INV-NOI-graphics", "ingress-noise-graphics", "balanced-noise"],
-  ["INV-NOI-geometric", "ingress-noise-geometric", "geometric-field"],
   ["INV-NOI-spokes", "ingress-noise-spokes", "spokes-field"],
 ] satisfies ReadonlyArray<readonly [string, string, string]>;
 
 describe("generated catalogue", () => {
-  test("contains 26 unique visual presets and seven adapter groups", () => {
-    expect(generatedCatalogue).toHaveLength(26);
-    expect(new Set(generatedCatalogue.map((entry) => entry.id)).size).toBe(26);
-    expect(rendererAdapterRegistry.size).toBe(26);
+  test("contains 16 unique visual presets and nine adapter groups", () => {
+    expect(generatedCatalogue).toHaveLength(16);
+    expect(new Set(generatedCatalogue.map((entry) => entry.id)).size).toBe(16);
+    expect(rendererAdapterRegistry.size).toBe(16);
 
     const adapterCounts = generatedCatalogue.reduce<Record<string, number>>(
       (counts, entry) => ({
@@ -60,18 +36,20 @@ describe("generated catalogue", () => {
     );
 
     expect(adapterCounts).toEqual({
-      "pattern-tiled": 6,
-      "particle-field": 5,
-      "grid-noise": 8,
-      "particle-noise": 4,
-      "svg-geometric": 1,
+      "pattern-tiled": 1,
+      "particle-field": 1,
+      "grid-noise": 1,
+      "particle-noise": 2,
       "svg-spokes": 1,
-      "effects-solid": 1,
+      "effects-solid": 5,
+      "motion-asset": 1,
+      "html-in-canvas": 3,
+      "three-scene": 1,
     });
   });
 
-  test("maps all 26 inventory keys through catalogue ingress IDs", () => {
-    expect(inventoryIngressCases).toHaveLength(26);
+  test("maps all inventory keys through catalogue ingress IDs", () => {
+    expect(inventoryIngressCases).toHaveLength(6);
 
     for (const [
       inventoryKey,
@@ -83,12 +61,12 @@ describe("generated catalogue", () => {
     }
   });
 
-  test("owns all 45 generated ingress IDs without duplicates", () => {
+  test("owns all generated ingress IDs without duplicates", () => {
     const ingressIds = generatedCatalogue.flatMap(
       (entry) => entry.legacyIngressIds,
     );
-    expect(ingressIds).toHaveLength(46);
-    expect(new Set(ingressIds).size).toBe(46);
+    expect(ingressIds).toHaveLength(26);
+    expect(new Set(ingressIds).size).toBe(26);
   });
 
   test("defines the exact canonical egress for every preset", () => {
@@ -124,24 +102,8 @@ describe("generated catalogue", () => {
     ).toBe(true);
   });
 
-  test("excludes unresolved visibility and palette states from operator presets", () => {
+  test("excludes unresolved visibility presets from operator presets", () => {
     expect(operatorPresets).toEqual([]);
-
-    const grain = generatedCatalogue.find(
-      (entry) => entry.id === "grain-field",
-    );
-    expect(grain?.paletteBehavior.status).toBe("unresolved");
-
-    if (!grain) {
-      throw new Error("Expected grain-field in the Generated catalogue");
-    }
-
-    const visibleGrain = {
-      ...grain,
-      operatorVisibility: { status: "resolved-visible" },
-    } satisfies GeneratedCatalogueEntry;
-
-    expect(isOperatorSelectable(visibleGrain)).toBe(false);
   });
 
   test("registers light-leak on the effects-solid adapter with active palette", () => {
@@ -161,6 +123,32 @@ describe("generated catalogue", () => {
       readabilityPolicy: {
         status: "resolved",
         policy: "vignette",
+      },
+    });
+  });
+
+  test("registers html-in-canvas presets on the html-in-canvas adapter", () => {
+    const htmlPresets = generatedCatalogue.filter(
+      (entry) => entry.rendererAdapter === "html-in-canvas",
+    );
+
+    expect(htmlPresets.map((entry) => entry.id)).toEqual([
+      "html-orbit-rings",
+      "html-scoreboard-grid",
+      "html-neon-beams",
+    ]);
+  });
+
+  test("registers webgpu-metal-wave on the three-scene adapter", () => {
+    const metalWave = generatedCatalogue.find(
+      (entry) => entry.id === "webgpu-metal-wave",
+    );
+
+    expect(metalWave).toMatchObject({
+      rendererAdapter: "three-scene",
+      defaultConfiguration: {
+        useBackground: "Animated",
+        animation: { type: "webgpu-metal-wave" },
       },
     });
   });

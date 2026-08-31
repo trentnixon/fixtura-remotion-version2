@@ -13,60 +13,69 @@ describe("matchLegacyIngress", () => {
     expect(
       matchLegacyIngress({
         useBackground: "Pattern",
-        pattern: { type: "grid" },
+        pattern: { type: "dots" },
       }),
     ).toMatchObject({
       outcome: "generated",
-      presetId: "tile-grid",
-      ingressId: "ingress-pattern-grid",
+      presetId: "dot-field",
+      ingressId: "ingress-pattern-dots",
     });
 
     expect(
       matchLegacyIngress({
         useBackground: "Particle",
-        particle: { type: "snow" },
+        particle: { type: "lines" },
       }),
     ).toMatchObject({
       outcome: "generated",
-      presetId: "snow-field",
-      ingressId: "ingress-particle-snow",
+      presetId: "streak-lines",
+      ingressId: "ingress-particle-lines",
     });
   });
 
-  test("matches dual Graphics and Noise ingresses", () => {
+  test("matches dual Graphics and Noise ingresses for retained presets", () => {
     expect(
       matchLegacyIngress({
         useBackground: "Graphics",
-        noise: { type: "geometric" },
+        noise: { type: "spokes" },
       }),
     ).toMatchObject({
       outcome: "generated",
-      presetId: "geometric-field",
-      ingressId: "ingress-graphics-geometric",
+      presetId: "spokes-field",
+      ingressId: "ingress-graphics-spokes",
     });
 
     expect(
       matchLegacyIngress({
         useBackground: "Noise",
-        noise: { type: "geometric" },
+        noise: { type: "floatingParticles" },
       }),
     ).toMatchObject({
       outcome: "generated",
-      presetId: "geometric-field",
-      ingressId: "ingress-noise-geometric",
+      presetId: "floating-particles",
+      ingressId: "ingress-noise-floatingParticles",
     });
   });
 
-  test("maps inventory-only graphics type to balanced-noise", () => {
+  test("treats removed legacy discriminators as unsupported", () => {
+    expect(
+      matchLegacyIngress({
+        useBackground: "Pattern",
+        pattern: { type: "grid" },
+      }),
+    ).toMatchObject({
+      outcome: "unsupported",
+      ingressId: "ingress-unsupported-pattern-unknown-type",
+    });
+
     expect(
       matchLegacyIngress({
         useBackground: "Noise",
         noise: { type: "graphics" },
       }),
     ).toMatchObject({
-      outcome: "generated",
-      presetId: "balanced-noise",
-      ingressId: "ingress-noise-graphics",
+      outcome: "unsupported",
+      ingressId: "ingress-unsupported-noise-unknown-noise-type",
     });
   });
 
@@ -83,7 +92,7 @@ describe("matchLegacyIngress", () => {
       matchLegacyIngress({ useBackground: "Noise", noise: {} }),
     ).toMatchObject({
       outcome: "generated",
-      presetId: "balanced-noise",
+      presetId: "floating-particles",
       ingressId: "ingress-noise-missing-type",
     });
   });
@@ -201,18 +210,18 @@ describe("preserveStickyIngress", () => {
   test("preserves original wire on unchanged preset", () => {
     const original = {
       useBackground: "Noise",
-      noise: { type: "wave" },
+      noise: { type: "floatingParticles" },
       pattern: { type: "dots" },
     };
 
-    const saved = preserveStickyIngress(original, "wave-noise");
+    const saved = preserveStickyIngress(original, "floating-particles");
     expect(saved).toEqual(original);
   });
 
   test("writes canonical egress when preset changes and retains sibling blocks", () => {
     const original = {
       useBackground: "Noise",
-      noise: { type: "wave" },
+      noise: { type: "floatingParticles" },
       pattern: { type: "dots" },
     };
 
@@ -224,7 +233,7 @@ describe("preserveStickyIngress", () => {
 
     expect(saved.useBackground).toBe("Animated");
     expect(saved.animation?.type).toBe("dot-field");
-    expect(saved.noise?.type).toBe("wave");
+    expect(saved.noise?.type).toBe("floatingParticles");
   });
 
   test("applyCanonicalEgress matches catalogue defaults", () => {
@@ -240,9 +249,9 @@ describe("buildDiscoveryContract", () => {
     const contract = buildDiscoveryContract("2026-08-28T00:00:00.000Z");
 
     expect(contract.contractVersion).toBe("1.0.0");
-    expect(contract.catalogue.presets).toHaveLength(26);
+    expect(contract.catalogue.presets).toHaveLength(16);
     expect(contract.operatorPresets).toEqual([]);
     expect(contract.legacyIngress).toHaveLength(legacyIngress.length);
-    expect(contract.legacyIngress).toHaveLength(61);
+    expect(contract.legacyIngress).toHaveLength(41);
   });
 });

@@ -5,20 +5,20 @@ import { useThemeContext } from "../../../core/context/ThemeContext";
 import { PatternBackground } from "./Patterns";
 import ParticleBackground from "./Particles";
 import type { AnimatedPresetType } from "./Generated/catalogue/types";
-import { GridNoise } from "./NoiseBackground/GridNoise";
-import SubtleNoise from "./NoiseBackground/variants/SubtleNoise";
-import GrainNoise from "./NoiseBackground/variants/GrainNoise";
-import WaveNoise from "./NoiseBackground/variants/WaveNoise";
-import FogNoise from "./NoiseBackground/variants/FogNoise";
-import StaticNoise from "./NoiseBackground/variants/StaticNoise";
 import FloatingParticles from "./NoiseBackground/variants/FloatingParticles";
-import DynamicParticles from "./NoiseBackground/variants/DynamicParticles";
-import TriangleSwarm from "./NoiseBackground/variants/TriangleSwarm";
 import PulsingCircles from "./NoiseBackground/variants/PulsingCircles";
 import DigitalRain from "./NoiseBackground/variants/DigitalRain";
-import GradientGrid from "./NoiseBackground/variants/GradientGrid";
-import GeometricGraphics from "./NoiseBackground/variants/GeometricGraphics";
 import SpokesGraphics from "./NoiseBackground/variants/SpokesGraphics";
+import { MotionMotifBackground } from "./Generated/renderers/motion-asset/motionMotif/MotionMotifBackground";
+import {
+  HtmlInCanvasPresetBackground,
+} from "./Generated/renderers/html-in-canvas/HtmlInCanvasPresetBackground";
+import { isHtmlInCanvasPresetId } from "./Generated/renderers/html-in-canvas/presets";
+import { WebgpuMetalWaveBackground } from "./Generated/renderers/three-scene/webgpuMetalWave/WebgpuMetalWaveBackground";
+import { ReactivePathBackground } from "./Generated/renderers/effects-solid/reactivePath/ReactivePathBackground";
+import { SignalGridBackground } from "./Generated/renderers/effects-solid/signalGrid/SignalGridBackground";
+import { TopographicFlowBackground } from "./Generated/renderers/effects-solid/topographicFlow/TopographicFlowBackground";
+import { BroadcastHalftoneBackground } from "./Generated/renderers/effects-solid/broadcastHalftone/BroadcastHalftoneBackground";
 import { LightLeakBackground } from "./Generated/renderers/effects-solid/lightLeak/LightLeakBackground";
 
 type AnimationType = AnimatedPresetType;
@@ -53,46 +53,47 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     return <LightLeakBackground />;
   }
 
-  if (
-    [
-      "dot-field",
-      "line-field",
-      "tile-grid",
-      "crosshatch-field",
-      "triangle-tile",
-      "chevron-field",
-    ].includes(animationType)
-  ) {
+  if (animationType === "broadcast-halftone") {
+    return <BroadcastHalftoneBackground />;
+  }
+
+  if (animationType === "topographic-flow") {
+    return <TopographicFlowBackground />;
+  }
+
+  if (animationType === "signal-grid") {
+    return <SignalGridBackground />;
+  }
+
+  if (animationType === "reactive-path") {
+    return <ReactivePathBackground />;
+  }
+
+  if (animationType === "motion-motif") {
+    return <MotionMotifBackground />;
+  }
+
+  if (isHtmlInCanvasPresetId(animationType)) {
+    return <HtmlInCanvasPresetBackground presetId={animationType} />;
+  }
+
+  if (animationType === "webgpu-metal-wave") {
+    return <WebgpuMetalWaveBackground />;
+  }
+
+  if (animationType === "dot-field") {
     return <PatternBackground />;
   }
 
-  if (
-    [
-      "floating-dots",
-      "streak-lines",
-      "bubble-field",
-      "snow-field",
-      "confetti-field",
-    ].includes(animationType)
-  ) {
+  if (animationType === "streak-lines") {
     return <ParticleBackground />;
   }
 
   if (
     [
-      "balanced-noise",
-      "subtle-noise",
-      "grain-field",
-      "wave-noise",
-      "fog-field",
-      "tv-static",
       "floating-particles",
-      "dynamic-particles",
-      "triangle-swarm",
       "pulsing-circles",
       "digital-rain",
-      "gradient-grid",
-      "geometric-field",
       "spokes-field",
     ].includes(animationType)
   ) {
@@ -107,13 +108,10 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   const resolvedBaseColor = animationConfig?.baseColor ?? baseColor;
   const resolvedDirection = animationConfig?.direction ?? direction;
 
-  // Calculate animation progress
   const progress = (frame % resolvedDuration) / resolvedDuration;
 
-  // Render different animation types
   switch (animationType) {
     case "pulsingGradient": {
-      // Pulsing gradient effect
       const scale = interpolate(
         progress,
         [0, 0.5, 1],
@@ -137,7 +135,6 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     }
 
     case "movingGradient": {
-      // Moving gradient effect
       const position = interpolate(progress, [0, 1], [0, 100], {
         extrapolateRight: "clamp",
       });
@@ -157,7 +154,6 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     }
 
     case "breathingColor": {
-      // Breathing color effect
       const opacity = interpolate(
         progress,
         [0, 0.5, 1],
@@ -185,7 +181,6 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     }
 
     case "waveEffect": {
-      // Wave effect using SVG
       const waveHeight = 20 * resolvedIntensity;
       const wavePosition = interpolate(progress, [0, 1], [0, 100], {
         extrapolateRight: "clamp",
@@ -227,7 +222,6 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
               </linearGradient>
             </defs>
 
-            {/* First wave */}
             <path
               d={`M -50 50
                  C 0 ${50 - waveHeight},
@@ -243,7 +237,6 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
               }}
             />
 
-            {/* Second wave */}
             <path
               d={`M -50 60
                  C 0 ${60 + waveHeight},
@@ -285,41 +278,15 @@ const GeneratedNoise: React.FC<{ type: AnimationType }> = ({ type }) => {
   };
 
   switch (type) {
-    case "subtle-noise":
-      return <SubtleNoise {...baseProps} />;
-    case "grain-field":
-      return <GrainNoise {...baseProps} />;
-    case "wave-noise":
-      return <WaveNoise {...baseProps} />;
-    case "fog-field":
-      return <FogNoise {...baseProps} />;
-    case "tv-static":
-      return <StaticNoise {...baseProps} />;
     case "floating-particles":
       return <FloatingParticles {...baseProps} />;
-    case "dynamic-particles":
-      return <DynamicParticles {...baseProps} />;
-    case "triangle-swarm":
-      return <TriangleSwarm {...baseProps} />;
     case "pulsing-circles":
       return <PulsingCircles {...baseProps} />;
     case "digital-rain":
       return <DigitalRain {...baseProps} />;
-    case "gradient-grid":
-      return <GradientGrid {...baseProps} />;
-    case "geometric-field":
-      return (
-        <GeometricGraphics
-          baseColor={baseProps.baseColor}
-          primaryColor={baseProps.noiseColor}
-          secondaryColor={selectedPalette.container.secondary}
-          accentColor={selectedPalette.container.accent}
-        />
-      );
     case "spokes-field":
       return <SpokesGraphics />;
-    case "balanced-noise":
     default:
-      return <GridNoise {...baseProps} />;
+      return <FloatingParticles {...baseProps} />;
   }
 };

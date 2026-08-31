@@ -1,0 +1,5 @@
+export const THREE_SCENE_LOOP_DURATION_IN_SECONDS = 12;
+
+export const THREE_SCENE_PLANE_WIDTH = 11;
+export const THREE_SCENE_PLANE_HEIGHT = 13.75;
+export const THREE_SCENE_CAMERA_Z = 14;

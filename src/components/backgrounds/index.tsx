@@ -15,25 +15,13 @@ import { ImageBackground as ImageBg } from "./variants/Image";
 import { VideoBackground as VideoBg } from "./variants/Video/VideoBackground";
 
 // Import NoiseBackground components
-import { GridNoise as NoiseBg } from "./variants/NoiseBackground/GridNoise";
 import {
   NoiseVariant,
   NOISE_VARIANTS,
 } from "./variants/NoiseBackground/config";
-import SubtleNoise from "./variants/NoiseBackground/variants/SubtleNoise";
-import GrainNoise from "./variants/NoiseBackground/variants/GrainNoise";
-import WaveNoise from "./variants/NoiseBackground/variants/WaveNoise";
-import FogNoise from "./variants/NoiseBackground/variants/FogNoise";
-import StaticNoise from "./variants/NoiseBackground/variants/StaticNoise";
 import FloatingParticles from "./variants/NoiseBackground/variants/FloatingParticles";
-import DynamicParticles from "./variants/NoiseBackground/variants/DynamicParticles";
-import TriangleSwarm from "./variants/NoiseBackground/variants/TriangleSwarm";
 import PulsingCircles from "./variants/NoiseBackground/variants/PulsingCircles";
 import DigitalRain from "./variants/NoiseBackground/variants/DigitalRain";
-import GradientGrid from "./variants/NoiseBackground/variants/GradientGrid";
-
-// Import GraphicsBackground variants
-import GeometricGraphics from "./variants/NoiseBackground/variants/GeometricGraphics";
 import SpokesGraphics from "./variants/NoiseBackground/variants/SpokesGraphics";
 
 //import { LayeredBackground as LayeredBg } from "./variants/LayeredBackground";
@@ -50,25 +38,16 @@ export const BackgroundComponents = {
   Gradient: GradientBg,
   Image: ImageBg,
   Video: VideoBg,
-  Graphics: GeometricGraphics,
+  Graphics: SpokesGraphics,
   Pattern: PatternBackground,
   Particle: ParticleBackground,
   Texture: TextureBackground,
   Luminance: LuminanceBackground,
   Noise: {
-    Default: NoiseBg,
-    Subtle: SubtleNoise,
-    Grain: GrainNoise,
-    Wave: WaveNoise,
-    Fog: FogNoise,
-    Static: StaticNoise,
-    FloatingParticles: FloatingParticles,
-    DynamicParticles: DynamicParticles,
-    TriangleSwarm: TriangleSwarm,
-    PulsingCircles: PulsingCircles,
-    DigitalRain: DigitalRain,
-    GradientGrid: GradientGrid,
-    Graphics: GeometricGraphics,
+    FloatingParticles,
+    PulsingCircles,
+    DigitalRain,
+    Spokes: SpokesGraphics,
   },
   Animated: AnimatedBg,
 };
@@ -154,7 +133,7 @@ const VideoBackground = () => {
 
 // Noise background
 const NoiseBackground = ({
-  variant = "default",
+  variant = "floatingParticles",
 }: {
   variant?: NoiseVariant;
 }) => {
@@ -164,50 +143,17 @@ const NoiseBackground = ({
     noiseColor: selectedPalette.background.accent,
   };
 
-  // video.templateVariation?.Noise.type
   switch (variant) {
-    case "subtle":
-      return <SubtleNoise {...baseProps} />;
-    case "grain":
-      return <GrainNoise {...baseProps} />;
-    case "wave":
-      return <WaveNoise {...baseProps} />;
-    case "fog":
-      return <FogNoise {...baseProps} />;
-    case "static":
-      return <StaticNoise {...baseProps} />;
     case "floatingParticles":
       return <FloatingParticles {...baseProps} />;
-    case "dynamicParticles":
-      return <DynamicParticles {...baseProps} />;
-    case "triangleSwarm":
-      return <TriangleSwarm {...baseProps} />;
     case "pulsingCircles":
       return <PulsingCircles {...baseProps} />;
     case "digitalRain":
       return <DigitalRain {...baseProps} />;
-    case "gradientGrid":
-      return <GradientGrid {...baseProps} />;
-    case "geometric":
-      return (
-        <GeometricGraphics
-          baseColor={baseProps.baseColor}
-          primaryColor={baseProps.noiseColor}
-          secondaryColor={selectedPalette.container.secondary}
-          accentColor={selectedPalette.container.accent}
-        />
-      );
     case "spokes":
       return <SpokesGraphics />;
     default:
-      return (
-        <NoiseBg
-          baseColor={selectedPalette.background.main}
-          noiseColor={selectedPalette.background.accent}
-          noiseOpacity={0.3}
-          noiseScale={0.5}
-        />
-      );
+      return <FloatingParticles {...baseProps} />;
   }
 };
 

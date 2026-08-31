@@ -37,33 +37,10 @@ const patternPalette = {
   roles: ["background.contrast", "background.gradient.primary"],
 } satisfies PaletteBehaviorState;
 
-const particlePalette = {
-  status: "resolved",
-  mode: "active-palette",
-  roles: ["background.contrast", "background.gradient.primaryRadial"],
-} satisfies PaletteBehaviorState;
-
 const particleLinePalette = {
   status: "resolved",
   mode: "active-palette",
   roles: ["background.gradient.primaryRadial", "text.onContainer.light"],
-} satisfies PaletteBehaviorState;
-
-const snowPalette = {
-  status: "resolved",
-  mode: "mixed",
-  parts: [
-    {
-      aspect: "background",
-      mode: "active-palette",
-      roles: ["background.gradient.primaryRadial"],
-    },
-    {
-      aspect: "particles",
-      mode: "fixed",
-      note: "SnowRenderer hardcodes white particles",
-    },
-  ],
 } satisfies PaletteBehaviorState;
 
 const gridNoisePalette = {
@@ -72,27 +49,10 @@ const gridNoisePalette = {
   roles: ["background.main", "background.accent"],
 } satisfies PaletteBehaviorState;
 
-const grainPalette = {
-  status: "unresolved",
-  note: "Invalid noiseColor implementation defect",
-} satisfies PaletteBehaviorState;
-
 const particleNoisePalette = {
   status: "resolved",
   mode: "active-palette",
   roles: ["container.gradientPrimaryToSecondaryVertical", "container.main"],
-} satisfies PaletteBehaviorState;
-
-const gradientGridPalette = {
-  status: "resolved",
-  mode: "active-palette",
-  roles: ["background.accent", "background.main"],
-} satisfies PaletteBehaviorState;
-
-const geometricPalette = {
-  status: "resolved",
-  mode: "active-palette",
-  roles: ["background.main", "background.accent", "container.main"],
 } satisfies PaletteBehaviorState;
 
 const spokesPalette = {
@@ -113,7 +73,50 @@ const effectsSolidAuthorControls = [
     key: "animation.type",
     label: "Animated preset",
     type: "enum",
-    enumValues: ["light-leak"],
+    enumValues: [
+      "light-leak",
+      "broadcast-halftone",
+      "topographic-flow",
+      "signal-grid",
+      "reactive-path",
+    ],
+    source: "templateVariation",
+    affectsRendering: true,
+  },
+] satisfies readonly AuthorControl[];
+
+const motionAssetAuthorControls = [
+  {
+    key: "animation.type",
+    label: "Animated preset",
+    type: "enum",
+    enumValues: ["motion-motif"],
+    source: "templateVariation",
+    affectsRendering: true,
+  },
+] satisfies readonly AuthorControl[];
+
+const htmlInCanvasAuthorControls = [
+  {
+    key: "animation.type",
+    label: "Animated preset",
+    type: "enum",
+    enumValues: [
+      "html-orbit-rings",
+      "html-scoreboard-grid",
+      "html-neon-beams",
+    ],
+    source: "templateVariation",
+    affectsRendering: true,
+  },
+] satisfies readonly AuthorControl[];
+
+const threeSceneAuthorControls = [
+  {
+    key: "animation.type",
+    label: "Animated preset",
+    type: "enum",
+    enumValues: ["webgpu-metal-wave"],
     source: "templateVariation",
     affectsRendering: true,
   },
@@ -124,14 +127,7 @@ const patternAuthorControls = [
     key: "animation.type",
     label: "Animated preset",
     type: "enum",
-    enumValues: [
-      "dot-field",
-      "line-field",
-      "tile-grid",
-      "crosshatch-field",
-      "triangle-tile",
-      "chevron-field",
-    ],
+    enumValues: ["dot-field"],
     source: "templateVariation",
     affectsRendering: true,
   },
@@ -193,13 +189,7 @@ const particleAuthorControls = [
     key: "animation.type",
     label: "Animated preset",
     type: "enum",
-    enumValues: [
-      "floating-dots",
-      "streak-lines",
-      "bubble-field",
-      "snow-field",
-      "confetti-field",
-    ],
+    enumValues: ["streak-lines"],
     source: "templateVariation",
     affectsRendering: true,
   },
@@ -241,19 +231,9 @@ const noiseAuthorControls = [
     label: "Animated preset",
     type: "enum",
     enumValues: [
-      "balanced-noise",
-      "subtle-noise",
-      "grain-field",
-      "wave-noise",
-      "fog-field",
-      "tv-static",
       "floating-particles",
-      "dynamic-particles",
-      "triangle-swarm",
       "pulsing-circles",
       "digital-rain",
-      "gradient-grid",
-      "geometric-field",
       "spokes-field",
     ],
     source: "templateVariation",
@@ -386,6 +366,66 @@ const makeEffectsSolidPreset = <const Id extends string>(
   legacyIngressIds,
 });
 
+const makeMotionAssetPreset = <const Id extends string>(
+  identity: PresetIdentity<Id>,
+  paletteBehavior: PaletteBehaviorState,
+  readabilityPolicy: GeneratedCatalogueEntry["readabilityPolicy"],
+  legacyIngressIds: readonly string[],
+): GeneratedCatalogueEntry & { readonly id: Id } => ({
+  ...identity,
+  rendererAdapter: "motion-asset",
+  defaultConfiguration: {
+    useBackground: "Animated",
+    animation: { type: identity.id as AnimatedPresetType },
+  },
+  operatorVisibility: unresolvedCmsVisibility,
+  readabilityPolicy,
+  paletteBehavior,
+  operatorControls: animatedOperatorControls,
+  authorControls: motionAssetAuthorControls,
+  legacyIngressIds,
+});
+
+const makeHtmlInCanvasPreset = <const Id extends string>(
+  identity: PresetIdentity<Id>,
+  paletteBehavior: PaletteBehaviorState,
+  readabilityPolicy: GeneratedCatalogueEntry["readabilityPolicy"],
+  legacyIngressIds: readonly string[],
+): GeneratedCatalogueEntry & { readonly id: Id } => ({
+  ...identity,
+  rendererAdapter: "html-in-canvas",
+  defaultConfiguration: {
+    useBackground: "Animated",
+    animation: { type: identity.id as AnimatedPresetType },
+  },
+  operatorVisibility: unresolvedCmsVisibility,
+  readabilityPolicy,
+  paletteBehavior,
+  operatorControls: animatedOperatorControls,
+  authorControls: htmlInCanvasAuthorControls,
+  legacyIngressIds,
+});
+
+const makeThreeScenePreset = <const Id extends string>(
+  identity: PresetIdentity<Id>,
+  paletteBehavior: PaletteBehaviorState,
+  readabilityPolicy: GeneratedCatalogueEntry["readabilityPolicy"],
+  legacyIngressIds: readonly string[],
+): GeneratedCatalogueEntry & { readonly id: Id } => ({
+  ...identity,
+  rendererAdapter: "three-scene",
+  defaultConfiguration: {
+    useBackground: "Animated",
+    animation: { type: identity.id as AnimatedPresetType },
+  },
+  operatorVisibility: unresolvedCmsVisibility,
+  readabilityPolicy,
+  paletteBehavior,
+  operatorControls: animatedOperatorControls,
+  authorControls: threeSceneAuthorControls,
+  legacyIngressIds,
+});
+
 const defineGeneratedCatalogue = <
   const Catalogue extends readonly GeneratedCatalogueEntry[],
 >(
@@ -396,263 +436,39 @@ export const generatedCatalogue = defineGeneratedCatalogue([
   makePatternPreset(
     {
       id: "dot-field",
-      displayName: "Dot field",
-      description:
-        "A tiled field of dots with optional pan, rotation, or pulse motion.",
+      displayName: "Soft Dots",
+      description: "A gentle dotted pattern in your club colours.",
       inventoryKey: "INV-PAT-dots",
       discovery: {
         motionClass: "ambient",
         tags: ["dots", "tile", "pattern"],
-        relatedPresetIds: ["floating-dots", "pulsing-circles"],
+        relatedPresetIds: ["pulsing-circles"],
       },
     },
     "dots",
     ["ingress-pattern-dots", "ingress-pattern-missing-type"],
     { motion: "panLeft", duration: 600, speed: 1 },
   ),
-  makePatternPreset(
-    {
-      id: "line-field",
-      displayName: "Line field",
-      description: "A tiled line pattern with optional directional motion.",
-      inventoryKey: "INV-PAT-lines",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["lines", "tile", "pattern"],
-        relatedPresetIds: ["streak-lines"],
-      },
-    },
-    "lines",
-    ["ingress-pattern-lines"],
-  ),
-  makePatternPreset(
-    {
-      id: "tile-grid",
-      displayName: "Tile grid",
-      description: "A regular tiled grid drawn from the active palette.",
-      inventoryKey: "INV-PAT-grid",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["grid", "tile", "pattern"],
-        relatedPresetIds: ["gradient-grid"],
-      },
-    },
-    "grid",
-    ["ingress-pattern-grid"],
-  ),
-  makePatternPreset(
-    {
-      id: "crosshatch-field",
-      displayName: "Crosshatch",
-      description:
-        "A layered crosshatch pattern drawn from the active palette.",
-      inventoryKey: "INV-PAT-crosshatch",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["crosshatch", "tile", "pattern"],
-      },
-    },
-    "crosshatch",
-    ["ingress-pattern-crosshatch"],
-  ),
-  makePatternPreset(
-    {
-      id: "triangle-tile",
-      displayName: "Triangle tile",
-      description: "A repeating triangle motif with optional ambient motion.",
-      inventoryKey: "INV-PAT-triangles",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["triangles", "tile", "pattern"],
-        relatedPresetIds: ["triangle-swarm"],
-      },
-    },
-    "triangles",
-    ["ingress-pattern-triangles"],
-  ),
-  makePatternPreset(
-    {
-      id: "chevron-field",
-      displayName: "Chevron",
-      description: "A repeating chevron pattern drawn from the active palette.",
-      inventoryKey: "INV-PAT-chevron",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["chevron", "tile", "pattern"],
-      },
-    },
-    "chevron",
-    ["ingress-pattern-chevron"],
-  ),
-  makeParticlePreset(
-    {
-      id: "floating-dots",
-      displayName: "Floating dots",
-      description: "A moving field of dot particles.",
-      inventoryKey: "INV-PAR-dots",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["dots", "particles", "floating"],
-        relatedPresetIds: ["dot-field", "floating-particles"],
-      },
-    },
-    "dots",
-    particlePalette,
-    ["ingress-particle-dots", "ingress-particle-missing-type"],
-  ),
   makeParticlePreset(
     {
       id: "streak-lines",
-      displayName: "Streak lines",
-      description:
-        "A moving field of line particles using the template text palette.",
+      displayName: "Speed Lines",
+      description: "Dynamic streaks that suggest motion and energy.",
       inventoryKey: "INV-PAR-lines",
       discovery: {
         motionClass: "energetic",
         tags: ["lines", "particles", "streaks"],
-        relatedPresetIds: ["line-field"],
+        relatedPresetIds: ["digital-rain"],
       },
     },
     "lines",
     particleLinePalette,
-    ["ingress-particle-lines"],
+    ["ingress-particle-lines", "ingress-particle-missing-type"],
   ),
-  makeParticlePreset(
-    {
-      id: "bubble-field",
-      displayName: "Bubbles",
-      description: "A moving field of bubble particles.",
-      inventoryKey: "INV-PAR-bubbles",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["bubbles", "particles", "floating"],
-      },
-    },
-    "bubbles",
-    particlePalette,
-    ["ingress-particle-bubbles"],
-  ),
-  makeParticlePreset(
-    {
-      id: "snow-field",
-      displayName: "Snow",
-      description: "White snow particles over an active-palette background.",
-      inventoryKey: "INV-PAR-snow",
-      discovery: {
-        motionClass: "ambient",
-        tags: ["snow", "particles", "white"],
-      },
-    },
-    "snow",
-    snowPalette,
-    ["ingress-particle-snow"],
-  ),
-  makeParticlePreset(
-    {
-      id: "confetti-field",
-      displayName: "Confetti",
-      description: "An energetic field of confetti particles.",
-      inventoryKey: "INV-PAR-confetti",
-      discovery: {
-        motionClass: "energetic",
-        tags: ["confetti", "particles", "celebration"],
-      },
-    },
-    "confetti",
-    particlePalette,
-    ["ingress-particle-confetti"],
-  ),
-  makeNoisePreset({
-    id: "balanced-noise",
-    displayName: "Balanced noise",
-    description: "The default animated noise grid with balanced settings.",
-    inventoryKey: "INV-NOI-default",
-    noiseType: "default",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: gridNoisePalette,
-    legacyIngressIds: [
-      "ingress-graphics-default",
-      "ingress-noise-default",
-      "ingress-graphics-missing-type",
-      "ingress-noise-missing-type",
-      "ingress-graphics-graphics",
-      "ingress-noise-graphics",
-    ],
-    discovery: {
-      motionClass: "ambient",
-      tags: ["noise", "grid", "balanced"],
-      relatedPresetIds: ["subtle-noise", "grain-field"],
-    },
-  }),
-  makeNoisePreset({
-    id: "subtle-noise",
-    displayName: "Subtle noise",
-    description: "A low-opacity animated noise texture.",
-    inventoryKey: "INV-NOI-subtle",
-    noiseType: "subtle",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: gridNoisePalette,
-    legacyIngressIds: ["ingress-graphics-subtle", "ingress-noise-subtle"],
-    discovery: { motionClass: "ambient", tags: ["noise", "subtle", "texture"] },
-  }),
-  makeNoisePreset({
-    id: "grain-field",
-    displayName: "Film grain",
-    description:
-      "A fine animated grain texture with unresolved colour behavior.",
-    inventoryKey: "INV-NOI-grain",
-    noiseType: "grain",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: grainPalette,
-    legacyIngressIds: ["ingress-graphics-grain", "ingress-noise-grain"],
-    discovery: { motionClass: "ambient", tags: ["grain", "noise", "texture"] },
-  }),
-  makeNoisePreset({
-    id: "wave-noise",
-    displayName: "Wave noise",
-    description: "A flowing animated noise field.",
-    inventoryKey: "INV-NOI-wave",
-    noiseType: "wave",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: gridNoisePalette,
-    legacyIngressIds: ["ingress-graphics-wave", "ingress-noise-wave"],
-    discovery: { motionClass: "ambient", tags: ["wave", "noise", "flow"] },
-  }),
-  makeNoisePreset({
-    id: "fog-field",
-    displayName: "Fog",
-    description: "A soft animated fog-like noise field.",
-    inventoryKey: "INV-NOI-fog",
-    noiseType: "fog",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: gridNoisePalette,
-    legacyIngressIds: ["ingress-graphics-fog", "ingress-noise-fog"],
-    discovery: { motionClass: "ambient", tags: ["fog", "noise", "soft"] },
-  }),
-  makeNoisePreset({
-    id: "tv-static",
-    displayName: "TV static",
-    description: "A fast, high-contrast animated static field.",
-    inventoryKey: "INV-NOI-static",
-    noiseType: "static",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: gridNoisePalette,
-    legacyIngressIds: ["ingress-graphics-static", "ingress-noise-static"],
-    discovery: {
-      motionClass: "energetic",
-      tags: ["static", "noise", "television"],
-    },
-  }),
   makeNoisePreset({
     id: "floating-particles",
-    displayName: "Floating particles",
-    description: "A dense field of slowly moving circular particles.",
+    displayName: "Drifting Lights",
+    description: "Soft lights floating slowly across the background.",
     inventoryKey: "INV-NOI-floatingParticles",
     noiseType: "floatingParticles",
     useBackground: "Graphics",
@@ -661,55 +477,21 @@ export const generatedCatalogue = defineGeneratedCatalogue([
     legacyIngressIds: [
       "ingress-graphics-floatingParticles",
       "ingress-noise-floatingParticles",
+      "ingress-graphics-default",
+      "ingress-noise-default",
+      "ingress-graphics-missing-type",
+      "ingress-noise-missing-type",
     ],
     discovery: {
       motionClass: "ambient",
       tags: ["particles", "floating", "circles"],
-      relatedPresetIds: ["floating-dots", "dynamic-particles"],
-    },
-  }),
-  makeNoisePreset({
-    id: "dynamic-particles",
-    displayName: "Dynamic particles",
-    description: "A lighter, more energetic moving particle field.",
-    inventoryKey: "INV-NOI-dynamicParticles",
-    noiseType: "dynamicParticles",
-    useBackground: "Noise",
-    rendererAdapter: "particle-noise",
-    paletteBehavior: particleNoisePalette,
-    legacyIngressIds: [
-      "ingress-graphics-dynamicParticles",
-      "ingress-noise-dynamicParticles",
-    ],
-    discovery: {
-      motionClass: "energetic",
-      tags: ["particles", "dynamic", "circles"],
-      relatedPresetIds: ["floating-particles"],
-    },
-  }),
-  makeNoisePreset({
-    id: "triangle-swarm",
-    displayName: "Triangle swarm",
-    description: "A moving field of triangle particles.",
-    inventoryKey: "INV-NOI-triangleSwarm",
-    noiseType: "triangleSwarm",
-    useBackground: "Noise",
-    rendererAdapter: "particle-noise",
-    paletteBehavior: particleNoisePalette,
-    legacyIngressIds: [
-      "ingress-graphics-triangleSwarm",
-      "ingress-noise-triangleSwarm",
-    ],
-    discovery: {
-      motionClass: "ambient",
-      tags: ["triangles", "particles", "swarm"],
-      relatedPresetIds: ["triangle-tile"],
+      relatedPresetIds: ["dot-field", "pulsing-circles"],
     },
   }),
   makeNoisePreset({
     id: "pulsing-circles",
-    displayName: "Pulsing circles",
-    description: "A grid of soft circles driven by animated noise.",
+    displayName: "Breathing Circles",
+    description: "Soft circles that gently expand and fade.",
     inventoryKey: "INV-NOI-pulsingCircles",
     noiseType: "pulsingCircles",
     useBackground: "Noise",
@@ -727,8 +509,8 @@ export const generatedCatalogue = defineGeneratedCatalogue([
   }),
   makeNoisePreset({
     id: "digital-rain",
-    displayName: "Digital rain",
-    description: "A field of falling line particles.",
+    displayName: "Falling Lines",
+    description: "Vertical lines cascading down the screen.",
     inventoryKey: "INV-NOI-digitalRain",
     noiseType: "digitalRain",
     useBackground: "Noise",
@@ -741,44 +523,9 @@ export const generatedCatalogue = defineGeneratedCatalogue([
     discovery: { motionClass: "energetic", tags: ["digital", "rain", "lines"] },
   }),
   makeNoisePreset({
-    id: "gradient-grid",
-    displayName: "Gradient grid",
-    description: "An animated noise grid blended across palette colours.",
-    inventoryKey: "INV-NOI-gradientGrid",
-    noiseType: "gradientGrid",
-    useBackground: "Noise",
-    rendererAdapter: "grid-noise",
-    paletteBehavior: gradientGridPalette,
-    legacyIngressIds: [
-      "ingress-graphics-gradientGrid",
-      "ingress-noise-gradientGrid",
-    ],
-    discovery: {
-      motionClass: "ambient",
-      tags: ["gradient", "grid", "noise"],
-      relatedPresetIds: ["tile-grid"],
-    },
-  }),
-  makeNoisePreset({
-    id: "geometric-field",
-    displayName: "Geometric field",
-    description: "Animated geometric SVG shapes drawn from the active palette.",
-    inventoryKey: "INV-NOI-geometric",
-    noiseType: "geometric",
-    useBackground: "Graphics",
-    rendererAdapter: "svg-geometric",
-    paletteBehavior: geometricPalette,
-    legacyIngressIds: ["ingress-graphics-geometric", "ingress-noise-geometric"],
-    discovery: {
-      motionClass: "energetic",
-      tags: ["geometry", "svg", "shapes"],
-      relatedPresetIds: ["triangle-tile", "triangle-swarm"],
-    },
-  }),
-  makeNoisePreset({
     id: "spokes-field",
-    displayName: "Radial spokes",
-    description: "An animated radial spokes sequence over a palette gradient.",
+    displayName: "Sunburst",
+    description: "Radiating spokes over a smooth colour gradient.",
     inventoryKey: "INV-NOI-spokes",
     noiseType: "spokes",
     useBackground: "Graphics",
@@ -793,9 +540,8 @@ export const generatedCatalogue = defineGeneratedCatalogue([
   makeEffectsSolidPreset(
     {
       id: "light-leak",
-      displayName: "Light leak",
-      description:
-        "A cinematic two-colour light leak overlay with an internally randomized variant.",
+      displayName: "Cinematic Glow",
+      description: "Warm colour washes moving across the frame.",
       inventoryKey: "INV-EFF-lightLeak",
       discovery: {
         motionClass: "ambient",
@@ -805,6 +551,142 @@ export const generatedCatalogue = defineGeneratedCatalogue([
     lightLeakPalette,
     lightLeakReadability,
     ["ingress-animated-light-leak"],
+  ),
+  makeEffectsSolidPreset(
+    {
+      id: "broadcast-halftone",
+      displayName: "Halftone Blend",
+      description:
+        "Classic print-style dots blended with your club colours.",
+      inventoryKey: "INV-EFF-broadcastHalftone",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["halftone", "gradient", "broadcast"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-broadcast-halftone"],
+  ),
+  makeEffectsSolidPreset(
+    {
+      id: "topographic-flow",
+      displayName: "Flowing Contours",
+      description: "Slow-moving colour bands like rolling terrain.",
+      inventoryKey: "INV-EFF-topographicFlow",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["topographic", "contours", "liquid"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-topographic-flow"],
+  ),
+  makeEffectsSolidPreset(
+    {
+      id: "signal-grid",
+      displayName: "Live Grid",
+      description: "A perspective grid with a broadcast studio feel.",
+      inventoryKey: "INV-EFF-signalGrid",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["grid", "scanlines", "perspective"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-signal-grid"],
+  ),
+  makeEffectsSolidPreset(
+    {
+      id: "reactive-path",
+      displayName: "Route Pulse",
+      description: "Travelling energy marks along curved paths.",
+      inventoryKey: "INV-EFF-reactivePath",
+      discovery: {
+        motionClass: "energetic",
+        tags: ["paths", "orbits", "routes"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-reactive-path"],
+  ),
+  makeMotionAssetPreset(
+    {
+      id: "motion-motif",
+      displayName: "Club Motif",
+      description: "A looping animated emblem in your club colours.",
+      inventoryKey: "INV-MOT-motionMotif",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["lottie", "motif", "motion-asset"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-motion-motif"],
+  ),
+  makeHtmlInCanvasPreset(
+    {
+      id: "html-orbit-rings",
+      displayName: "Orbit Rings",
+      description: "Concentric rings with a soft glowing finish.",
+      inventoryKey: "INV-HIC-htmlOrbitRings",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["html-in-canvas", "orbits", "rings"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-html-orbit-rings"],
+  ),
+  makeHtmlInCanvasPreset(
+    {
+      id: "html-scoreboard-grid",
+      displayName: "Stadium Grid",
+      description: "A scoreboard-style grid with broadcast glow.",
+      inventoryKey: "INV-HIC-htmlScoreboardGrid",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["html-in-canvas", "grid", "scoreboard"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-html-scoreboard-grid"],
+  ),
+  makeHtmlInCanvasPreset(
+    {
+      id: "html-neon-beams",
+      displayName: "Neon Sweep",
+      description: "Diagonal neon light sweeps across the background.",
+      inventoryKey: "INV-HIC-htmlNeonBeams",
+      discovery: {
+        motionClass: "energetic",
+        tags: ["html-in-canvas", "neon", "beams"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-html-neon-beams"],
+  ),
+  makeThreeScenePreset(
+    {
+      id: "webgpu-metal-wave",
+      displayName: "Liquid Metal",
+      description: "Shimmering metallic waves in your club colours.",
+      inventoryKey: "INV-3SC-webgpuMetalWave",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["three-scene", "webgpu", "metal", "tsl"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-webgpu-metal-wave"],
   ),
 ]);
 

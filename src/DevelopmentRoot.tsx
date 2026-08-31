@@ -1,6 +1,6 @@
 // src/DevelopmentRoot.tsx
 import React from "react";
-import { Folder } from "remotion";
+import { Composition, Folder } from "remotion";
 import {
   generatedCatalogue,
   getCanonicalEgress,
@@ -9,15 +9,39 @@ import { CompositionEntry } from "./core/components/dev/CompositionEntry";
 import { passthroughDevBackgrounds } from "./core/utils/passthroughDevBackgrounds";
 import { templateRegistry } from "./templates/registry";
 import { datasetsByCategory } from "../testData";
+import { EffectsSolidTestComposition } from "./components/backgrounds/variants/Generated/renderers/effects-solid/test/EffectsSolidTestComposition";
 
 interface DatasetInfo {
   id: string;
   name: string;
 }
 
+const VideoRatio = {
+  width: 1080,
+  height: 1350,
+  fps: 30,
+};
+
 export const DevelopmentRoot: React.FC = () => {
   return (
     <>
+      <Folder name="EffectsSolid-Test">
+        <Composition
+          id="EffectsSolid-Background-Test"
+          component={EffectsSolidTestComposition}
+          durationInFrames={360}
+          fps={VideoRatio.fps}
+          width={VideoRatio.width}
+          height={VideoRatio.height}
+          defaultProps={{
+            presetId: "light-leak",
+            primary: "#FF0000",
+            secondary: "#004DE2",
+            compositionId: "CricketResults",
+          }}
+        />
+      </Folder>
+
       {Object.entries(templateRegistry).map(([templateId, template]) => (
         <Folder key={templateId} name={templateId}>
           <Folder name="Animated">

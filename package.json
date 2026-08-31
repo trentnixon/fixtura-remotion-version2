@@ -37,6 +37,7 @@
     "@remotion/animation-utils": "4.0.499",
     "@remotion/cli": "4.0.499",
     "@remotion/effects": "4.0.499",
+    "@remotion/light-leaks": "4.0.499",
     "@remotion/eslint-config-flat": "4.0.499",
     "@remotion/fonts": "4.0.499",
     "@remotion/google-fonts": "4.0.499",
@@ -71,7 +72,6 @@
     "remotion": "4.0.499"
   },
   "devDependencies": {
-    "@remotion/light-leaks": "^4.0.499",
     "@tailwindcss/cli": "^4.2.2",
     "@types/lodash": "^4.17.17",
     "@types/react": "19.0.0",
@@ -101,6 +101,8 @@
     "visual-regression:broadcastpro": "node scripts/broadcastpro-visual-regression.mjs",
     "format": "prettier --write .",
     "clean:cache": "node scripts/clear-webpack-cache.mjs",
+    "render:effects-solid:smoke": "node scripts/effects-solid-render-smoke.mjs",
+    "test:effects-solid": "vitest run src/components/backgrounds/variants/Generated/renderers/effects-solid && npm run render:effects-solid:smoke",
     "deploy": "npm run clean:cache && npx remotion lambda sites create src/index.ts --site-name=fixtura-remotion-v2 --region=ap-southeast-2 && node scripts/upload-public-assets.mjs && node scripts/verify-deploy.mjs",
     "deploy:verify": "node scripts/verify-deploy.mjs"
   },

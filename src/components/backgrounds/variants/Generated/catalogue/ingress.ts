@@ -111,38 +111,15 @@ export type DisplaySelection =
   | PassthroughDisplaySelection
   | UnsupportedDisplaySelection;
 
-const patternIngress = [
-  ["dots", "dot-field"],
-  ["lines", "line-field"],
-  ["grid", "tile-grid"],
-  ["crosshatch", "crosshatch-field"],
-  ["triangles", "triangle-tile"],
-  ["chevron", "chevron-field"],
-] as const;
+const patternIngress = [["dots", "dot-field"]] as const;
 
-const particleIngress = [
-  ["dots", "floating-dots"],
-  ["lines", "streak-lines"],
-  ["bubbles", "bubble-field"],
-  ["snow", "snow-field"],
-  ["confetti", "confetti-field"],
-] as const;
+const particleIngress = [["lines", "streak-lines"]] as const;
 
 const noiseIngress = [
-  ["default", "balanced-noise"],
-  ["subtle", "subtle-noise"],
-  ["grain", "grain-field"],
-  ["wave", "wave-noise"],
-  ["fog", "fog-field"],
-  ["static", "tv-static"],
+  ["default", "floating-particles"],
   ["floatingParticles", "floating-particles"],
-  ["dynamicParticles", "dynamic-particles"],
-  ["triangleSwarm", "triangle-swarm"],
   ["pulsingCircles", "pulsing-circles"],
   ["digitalRain", "digital-rain"],
-  ["gradientGrid", "gradient-grid"],
-  ["graphics", "balanced-noise"],
-  ["geometric", "geometric-field"],
   ["spokes", "spokes-field"],
 ] as const;
 
@@ -207,9 +184,6 @@ const noiseRows: readonly GeneratedLegacyIngressRow[] = [
         matchKind: "exact",
         outcome: "generated",
         presetId: getPresetIdForIngress(id),
-        ...(type === "graphics"
-          ? { note: "Inventory-only alias of balanced-noise" }
-          : {}),
       } satisfies GeneratedLegacyIngressRow;
     }),
   ),

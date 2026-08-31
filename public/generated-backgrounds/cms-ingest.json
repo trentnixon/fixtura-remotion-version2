@@ -4,8 +4,8 @@
   "items": [
     {
       "id": "dot-field",
-      "displayName": "Dot field",
-      "description": "A tiled field of dots with optional pan, rotation, or pulse motion.",
+      "displayName": "Soft Dots",
+      "description": "A gentle dotted pattern in your club colours.",
       "inventoryKey": "INV-PAT-dots",
       "wire": {
         "useBackground": "Animated",
@@ -18,7 +18,7 @@
           "speed": 1
         }
       },
-      "rendererAdapter": "pattern-tiled",
+      "rendererAdapter": "pattern-t iled",
       "operatorVisibility": {
         "status": "unresolved",
         "note": "CMS visibility inventory pending"
@@ -30,10 +30,7 @@
       "paletteBehavior": {
         "status": "resolved",
         "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primary"
-        ]
+        "roles": ["background.contrast", "background.gradient.primary"]
       },
       "operatorControls": [
         {
@@ -47,14 +44,7 @@
           "key": "animation.type",
           "label": "Animated preset",
           "type": "enum",
-          "enumValues": [
-            "dot-field",
-            "line-field",
-            "tile-grid",
-            "crosshatch-field",
-            "triangle-tile",
-            "chevron-field"
-          ],
+          "enumValues": ["dot-field"],
           "source": "templateVariation",
           "affectsRendering": true
         },
@@ -112,708 +102,14 @@
       ],
       "discovery": {
         "motionClass": "ambient",
-        "tags": [
-          "dots",
-          "tile",
-          "pattern"
-        ],
-        "relatedPresetIds": [
-          "floating-dots",
-          "pulsing-circles"
-        ]
-      }
-    },
-    {
-      "id": "line-field",
-      "displayName": "Line field",
-      "description": "A tiled line pattern with optional directional motion.",
-      "inventoryKey": "INV-PAT-lines",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "line-field",
-          "scale": 1,
-          "rotation": 0
-        }
-      },
-      "rendererAdapter": "pattern-tiled",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primary"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "dot-field",
-            "line-field",
-            "tile-grid",
-            "crosshatch-field",
-            "triangle-tile",
-            "chevron-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.scale",
-          "label": "Scale",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.rotation",
-          "label": "Rotation",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.motion",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "none",
-            "panUp",
-            "panDown",
-            "panLeft",
-            "panRight",
-            "rotate",
-            "pulse"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.duration",
-          "label": "Animation duration",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Animation speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.opacity",
-          "label": "Opacity",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "lines",
-          "tile",
-          "pattern"
-        ],
-        "relatedPresetIds": [
-          "streak-lines"
-        ]
-      }
-    },
-    {
-      "id": "tile-grid",
-      "displayName": "Tile grid",
-      "description": "A regular tiled grid drawn from the active palette.",
-      "inventoryKey": "INV-PAT-grid",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "tile-grid",
-          "scale": 1,
-          "rotation": 0
-        }
-      },
-      "rendererAdapter": "pattern-tiled",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primary"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "dot-field",
-            "line-field",
-            "tile-grid",
-            "crosshatch-field",
-            "triangle-tile",
-            "chevron-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.scale",
-          "label": "Scale",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.rotation",
-          "label": "Rotation",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.motion",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "none",
-            "panUp",
-            "panDown",
-            "panLeft",
-            "panRight",
-            "rotate",
-            "pulse"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.duration",
-          "label": "Animation duration",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Animation speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.opacity",
-          "label": "Opacity",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "grid",
-          "tile",
-          "pattern"
-        ],
-        "relatedPresetIds": [
-          "gradient-grid"
-        ]
-      }
-    },
-    {
-      "id": "crosshatch-field",
-      "displayName": "Crosshatch",
-      "description": "A layered crosshatch pattern drawn from the active palette.",
-      "inventoryKey": "INV-PAT-crosshatch",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "crosshatch-field",
-          "scale": 1,
-          "rotation": 0
-        }
-      },
-      "rendererAdapter": "pattern-tiled",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primary"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "dot-field",
-            "line-field",
-            "tile-grid",
-            "crosshatch-field",
-            "triangle-tile",
-            "chevron-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.scale",
-          "label": "Scale",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.rotation",
-          "label": "Rotation",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.motion",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "none",
-            "panUp",
-            "panDown",
-            "panLeft",
-            "panRight",
-            "rotate",
-            "pulse"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.duration",
-          "label": "Animation duration",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Animation speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.opacity",
-          "label": "Opacity",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "crosshatch",
-          "tile",
-          "pattern"
-        ]
-      }
-    },
-    {
-      "id": "triangle-tile",
-      "displayName": "Triangle tile",
-      "description": "A repeating triangle motif with optional ambient motion.",
-      "inventoryKey": "INV-PAT-triangles",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "triangle-tile",
-          "scale": 1,
-          "rotation": 0
-        }
-      },
-      "rendererAdapter": "pattern-tiled",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primary"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "dot-field",
-            "line-field",
-            "tile-grid",
-            "crosshatch-field",
-            "triangle-tile",
-            "chevron-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.scale",
-          "label": "Scale",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.rotation",
-          "label": "Rotation",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.motion",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "none",
-            "panUp",
-            "panDown",
-            "panLeft",
-            "panRight",
-            "rotate",
-            "pulse"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.duration",
-          "label": "Animation duration",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Animation speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.opacity",
-          "label": "Opacity",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "triangles",
-          "tile",
-          "pattern"
-        ],
-        "relatedPresetIds": [
-          "triangle-swarm"
-        ]
-      }
-    },
-    {
-      "id": "chevron-field",
-      "displayName": "Chevron",
-      "description": "A repeating chevron pattern drawn from the active palette.",
-      "inventoryKey": "INV-PAT-chevron",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "chevron-field",
-          "scale": 1,
-          "rotation": 0
-        }
-      },
-      "rendererAdapter": "pattern-tiled",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primary"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "dot-field",
-            "line-field",
-            "tile-grid",
-            "crosshatch-field",
-            "triangle-tile",
-            "chevron-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.scale",
-          "label": "Scale",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.rotation",
-          "label": "Rotation",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.motion",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "none",
-            "panUp",
-            "panDown",
-            "panLeft",
-            "panRight",
-            "rotate",
-            "pulse"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.duration",
-          "label": "Animation duration",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Animation speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.opacity",
-          "label": "Opacity",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "chevron",
-          "tile",
-          "pattern"
-        ]
-      }
-    },
-    {
-      "id": "floating-dots",
-      "displayName": "Floating dots",
-      "description": "A moving field of dot particles.",
-      "inventoryKey": "INV-PAR-dots",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "floating-dots",
-          "particleCount": 300,
-          "speed": 1,
-          "direction": "random"
-        }
-      },
-      "rendererAdapter": "particle-field",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primaryRadial"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "floating-dots",
-            "streak-lines",
-            "bubble-field",
-            "snow-field",
-            "confetti-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.particleCount",
-          "label": "Particle count",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.direction",
-          "label": "Direction",
-          "type": "enum",
-          "enumValues": [
-            "up",
-            "down",
-            "left",
-            "right",
-            "random"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.animation",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "fade",
-            "scale",
-            "slide",
-            "none"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "dots",
-          "particles",
-          "floating"
-        ],
-        "relatedPresetIds": [
-          "dot-field",
-          "floating-particles"
-        ]
+        "tags": ["dots", "tile", "pattern"],
+        "relatedPresetIds": ["pulsing-circles"]
       }
     },
     {
       "id": "streak-lines",
-      "displayName": "Streak lines",
-      "description": "A moving field of line particles using the template text palette.",
+      "displayName": "Speed Lines",
+      "description": "Dynamic streaks that suggest motion and energy.",
       "inventoryKey": "INV-PAR-lines",
       "wire": {
         "useBackground": "Animated",
@@ -836,10 +132,7 @@
       "paletteBehavior": {
         "status": "resolved",
         "mode": "active-palette",
-        "roles": [
-          "background.gradient.primaryRadial",
-          "text.onContainer.light"
-        ]
+        "roles": ["background.gradient.primaryRadial", "text.onContainer.light"]
       },
       "operatorControls": [
         {
@@ -853,13 +146,7 @@
           "key": "animation.type",
           "label": "Animated preset",
           "type": "enum",
-          "enumValues": [
-            "floating-dots",
-            "streak-lines",
-            "bubble-field",
-            "snow-field",
-            "confetti-field"
-          ],
+          "enumValues": ["streak-lines"],
           "source": "templateVariation",
           "affectsRendering": true
         },
@@ -881,13 +168,7 @@
           "key": "animation.direction",
           "label": "Direction",
           "type": "enum",
-          "enumValues": [
-            "up",
-            "down",
-            "left",
-            "right",
-            "random"
-          ],
+          "enumValues": ["up", "down", "left", "right", "random"],
           "source": "templateVariation",
           "affectsRendering": true
         },
@@ -895,768 +176,21 @@
           "key": "animation.animation",
           "label": "Animation",
           "type": "enum",
-          "enumValues": [
-            "fade",
-            "scale",
-            "slide",
-            "none"
-          ],
+          "enumValues": ["fade", "scale", "slide", "none"],
           "source": "templateVariation",
           "affectsRendering": false
         }
       ],
       "discovery": {
         "motionClass": "energetic",
-        "tags": [
-          "lines",
-          "particles",
-          "streaks"
-        ],
-        "relatedPresetIds": [
-          "line-field"
-        ]
-      }
-    },
-    {
-      "id": "bubble-field",
-      "displayName": "Bubbles",
-      "description": "A moving field of bubble particles.",
-      "inventoryKey": "INV-PAR-bubbles",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "bubble-field",
-          "particleCount": 300,
-          "speed": 1,
-          "direction": "random"
-        }
-      },
-      "rendererAdapter": "particle-field",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primaryRadial"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "floating-dots",
-            "streak-lines",
-            "bubble-field",
-            "snow-field",
-            "confetti-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.particleCount",
-          "label": "Particle count",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.direction",
-          "label": "Direction",
-          "type": "enum",
-          "enumValues": [
-            "up",
-            "down",
-            "left",
-            "right",
-            "random"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.animation",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "fade",
-            "scale",
-            "slide",
-            "none"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "bubbles",
-          "particles",
-          "floating"
-        ]
-      }
-    },
-    {
-      "id": "snow-field",
-      "displayName": "Snow",
-      "description": "White snow particles over an active-palette background.",
-      "inventoryKey": "INV-PAR-snow",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "snow-field",
-          "particleCount": 300,
-          "speed": 1,
-          "direction": "random"
-        }
-      },
-      "rendererAdapter": "particle-field",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "mixed",
-        "parts": [
-          {
-            "aspect": "background",
-            "mode": "active-palette",
-            "roles": [
-              "background.gradient.primaryRadial"
-            ]
-          },
-          {
-            "aspect": "particles",
-            "mode": "fixed",
-            "note": "SnowRenderer hardcodes white particles"
-          }
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "floating-dots",
-            "streak-lines",
-            "bubble-field",
-            "snow-field",
-            "confetti-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.particleCount",
-          "label": "Particle count",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.direction",
-          "label": "Direction",
-          "type": "enum",
-          "enumValues": [
-            "up",
-            "down",
-            "left",
-            "right",
-            "random"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.animation",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "fade",
-            "scale",
-            "slide",
-            "none"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "snow",
-          "particles",
-          "white"
-        ]
-      }
-    },
-    {
-      "id": "confetti-field",
-      "displayName": "Confetti",
-      "description": "An energetic field of confetti particles.",
-      "inventoryKey": "INV-PAR-confetti",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "confetti-field",
-          "particleCount": 300,
-          "speed": 1,
-          "direction": "random"
-        }
-      },
-      "rendererAdapter": "particle-field",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.contrast",
-          "background.gradient.primaryRadial"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "floating-dots",
-            "streak-lines",
-            "bubble-field",
-            "snow-field",
-            "confetti-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.particleCount",
-          "label": "Particle count",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.speed",
-          "label": "Speed",
-          "type": "number",
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.direction",
-          "label": "Direction",
-          "type": "enum",
-          "enumValues": [
-            "up",
-            "down",
-            "left",
-            "right",
-            "random"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        },
-        {
-          "key": "animation.animation",
-          "label": "Animation",
-          "type": "enum",
-          "enumValues": [
-            "fade",
-            "scale",
-            "slide",
-            "none"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": false
-        }
-      ],
-      "discovery": {
-        "motionClass": "energetic",
-        "tags": [
-          "confetti",
-          "particles",
-          "celebration"
-        ]
-      }
-    },
-    {
-      "id": "balanced-noise",
-      "displayName": "Balanced noise",
-      "description": "The default animated noise grid with balanced settings.",
-      "inventoryKey": "INV-NOI-default",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "balanced-noise"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "noise",
-          "grid",
-          "balanced"
-        ],
-        "relatedPresetIds": [
-          "subtle-noise",
-          "grain-field"
-        ]
-      }
-    },
-    {
-      "id": "subtle-noise",
-      "displayName": "Subtle noise",
-      "description": "A low-opacity animated noise texture.",
-      "inventoryKey": "INV-NOI-subtle",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "subtle-noise"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "noise",
-          "subtle",
-          "texture"
-        ]
-      }
-    },
-    {
-      "id": "grain-field",
-      "displayName": "Film grain",
-      "description": "A fine animated grain texture with unresolved colour behavior.",
-      "inventoryKey": "INV-NOI-grain",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "grain-field"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "unresolved",
-        "note": "Invalid noiseColor implementation defect"
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "grain",
-          "noise",
-          "texture"
-        ]
-      }
-    },
-    {
-      "id": "wave-noise",
-      "displayName": "Wave noise",
-      "description": "A flowing animated noise field.",
-      "inventoryKey": "INV-NOI-wave",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "wave-noise"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "wave",
-          "noise",
-          "flow"
-        ]
-      }
-    },
-    {
-      "id": "fog-field",
-      "displayName": "Fog",
-      "description": "A soft animated fog-like noise field.",
-      "inventoryKey": "INV-NOI-fog",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "fog-field"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "fog",
-          "noise",
-          "soft"
-        ]
-      }
-    },
-    {
-      "id": "tv-static",
-      "displayName": "TV static",
-      "description": "A fast, high-contrast animated static field.",
-      "inventoryKey": "INV-NOI-static",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "tv-static"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "energetic",
-        "tags": [
-          "static",
-          "noise",
-          "television"
-        ]
+        "tags": ["lines", "particles", "streaks"],
+        "relatedPresetIds": ["digital-rain"]
       }
     },
     {
       "id": "floating-particles",
-      "displayName": "Floating particles",
-      "description": "A dense field of slowly moving circular particles.",
+      "displayName": "Drifting Lights",
+      "description": "Soft lights floating slowly across the background.",
       "inventoryKey": "INV-NOI-floatingParticles",
       "wire": {
         "useBackground": "Animated",
@@ -1694,19 +228,9 @@
           "label": "Animated preset",
           "type": "enum",
           "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
             "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
             "pulsing-circles",
             "digital-rain",
-            "gradient-grid",
-            "geometric-field",
             "spokes-field"
           ],
           "source": "templateVariation",
@@ -1715,165 +239,14 @@
       ],
       "discovery": {
         "motionClass": "ambient",
-        "tags": [
-          "particles",
-          "floating",
-          "circles"
-        ],
-        "relatedPresetIds": [
-          "floating-dots",
-          "dynamic-particles"
-        ]
-      }
-    },
-    {
-      "id": "dynamic-particles",
-      "displayName": "Dynamic particles",
-      "description": "A lighter, more energetic moving particle field.",
-      "inventoryKey": "INV-NOI-dynamicParticles",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "dynamic-particles"
-        }
-      },
-      "rendererAdapter": "particle-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "container.gradientPrimaryToSecondaryVertical",
-          "container.main"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "energetic",
-        "tags": [
-          "particles",
-          "dynamic",
-          "circles"
-        ],
-        "relatedPresetIds": [
-          "floating-particles"
-        ]
-      }
-    },
-    {
-      "id": "triangle-swarm",
-      "displayName": "Triangle swarm",
-      "description": "A moving field of triangle particles.",
-      "inventoryKey": "INV-NOI-triangleSwarm",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "triangle-swarm"
-        }
-      },
-      "rendererAdapter": "particle-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "container.gradientPrimaryToSecondaryVertical",
-          "container.main"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "triangles",
-          "particles",
-          "swarm"
-        ],
-        "relatedPresetIds": [
-          "triangle-tile"
-        ]
+        "tags": ["particles", "floating", "circles"],
+        "relatedPresetIds": ["dot-field", "pulsing-circles"]
       }
     },
     {
       "id": "pulsing-circles",
-      "displayName": "Pulsing circles",
-      "description": "A grid of soft circles driven by animated noise.",
+      "displayName": "Breathing Circles",
+      "description": "Soft circles that gently expand and fade.",
       "inventoryKey": "INV-NOI-pulsingCircles",
       "wire": {
         "useBackground": "Animated",
@@ -1893,10 +266,7 @@
       "paletteBehavior": {
         "status": "resolved",
         "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
+        "roles": ["background.main", "background.accent"]
       },
       "operatorControls": [
         {
@@ -1911,19 +281,9 @@
           "label": "Animated preset",
           "type": "enum",
           "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
             "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
             "pulsing-circles",
             "digital-rain",
-            "gradient-grid",
-            "geometric-field",
             "spokes-field"
           ],
           "source": "templateVariation",
@@ -1932,20 +292,14 @@
       ],
       "discovery": {
         "motionClass": "ambient",
-        "tags": [
-          "circles",
-          "pulse",
-          "grid"
-        ],
-        "relatedPresetIds": [
-          "dot-field"
-        ]
+        "tags": ["circles", "pulse", "grid"],
+        "relatedPresetIds": ["dot-field"]
       }
     },
     {
       "id": "digital-rain",
-      "displayName": "Digital rain",
-      "description": "A field of falling line particles.",
+      "displayName": "Falling Lines",
+      "description": "Vertical lines cascading down the screen.",
       "inventoryKey": "INV-NOI-digitalRain",
       "wire": {
         "useBackground": "Animated",
@@ -1983,19 +337,9 @@
           "label": "Animated preset",
           "type": "enum",
           "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
             "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
             "pulsing-circles",
             "digital-rain",
-            "gradient-grid",
-            "geometric-field",
             "spokes-field"
           ],
           "source": "templateVariation",
@@ -2004,163 +348,13 @@
       ],
       "discovery": {
         "motionClass": "energetic",
-        "tags": [
-          "digital",
-          "rain",
-          "lines"
-        ]
-      }
-    },
-    {
-      "id": "gradient-grid",
-      "displayName": "Gradient grid",
-      "description": "An animated noise grid blended across palette colours.",
-      "inventoryKey": "INV-NOI-gradientGrid",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "gradient-grid"
-        }
-      },
-      "rendererAdapter": "grid-noise",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.accent",
-          "background.main"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "ambient",
-        "tags": [
-          "gradient",
-          "grid",
-          "noise"
-        ],
-        "relatedPresetIds": [
-          "tile-grid"
-        ]
-      }
-    },
-    {
-      "id": "geometric-field",
-      "displayName": "Geometric field",
-      "description": "Animated geometric SVG shapes drawn from the active palette.",
-      "inventoryKey": "INV-NOI-geometric",
-      "wire": {
-        "useBackground": "Animated",
-        "animation": {
-          "type": "geometric-field"
-        }
-      },
-      "rendererAdapter": "svg-geometric",
-      "operatorVisibility": {
-        "status": "unresolved",
-        "note": "CMS visibility inventory pending"
-      },
-      "readabilityPolicy": {
-        "status": "resolved",
-        "policy": "none"
-      },
-      "paletteBehavior": {
-        "status": "resolved",
-        "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent",
-          "container.main"
-        ]
-      },
-      "operatorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "preset"
-        }
-      ],
-      "authorControls": [
-        {
-          "key": "animation.type",
-          "label": "Animated preset",
-          "type": "enum",
-          "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
-            "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
-            "pulsing-circles",
-            "digital-rain",
-            "gradient-grid",
-            "geometric-field",
-            "spokes-field"
-          ],
-          "source": "templateVariation",
-          "affectsRendering": true
-        }
-      ],
-      "discovery": {
-        "motionClass": "energetic",
-        "tags": [
-          "geometry",
-          "svg",
-          "shapes"
-        ],
-        "relatedPresetIds": [
-          "triangle-tile",
-          "triangle-swarm"
-        ]
+        "tags": ["digital", "rain", "lines"]
       }
     },
     {
       "id": "spokes-field",
-      "displayName": "Radial spokes",
-      "description": "An animated radial spokes sequence over a palette gradient.",
+      "displayName": "Sunburst",
+      "description": "Radiating spokes over a smooth colour gradient.",
       "inventoryKey": "INV-NOI-spokes",
       "wire": {
         "useBackground": "Animated",
@@ -2180,10 +374,7 @@
       "paletteBehavior": {
         "status": "resolved",
         "mode": "active-palette",
-        "roles": [
-          "background.gradient",
-          "templateVariation.gradient"
-        ]
+        "roles": ["background.gradient", "templateVariation.gradient"]
       },
       "operatorControls": [
         {
@@ -2198,19 +389,9 @@
           "label": "Animated preset",
           "type": "enum",
           "enumValues": [
-            "balanced-noise",
-            "subtle-noise",
-            "grain-field",
-            "wave-noise",
-            "fog-field",
-            "tv-static",
             "floating-particles",
-            "dynamic-particles",
-            "triangle-swarm",
             "pulsing-circles",
             "digital-rain",
-            "gradient-grid",
-            "geometric-field",
             "spokes-field"
           ],
           "source": "templateVariation",
@@ -2219,17 +400,13 @@
       ],
       "discovery": {
         "motionClass": "intro-sequence",
-        "tags": [
-          "spokes",
-          "radial",
-          "svg"
-        ]
+        "tags": ["spokes", "radial", "svg"]
       }
     },
     {
       "id": "light-leak",
-      "displayName": "Light leak",
-      "description": "A cinematic two-colour light leak overlay with an internally randomized variant.",
+      "displayName": "Cinematic Glow",
+      "description": "Warm colour washes moving across the frame.",
       "inventoryKey": "INV-EFF-lightLeak",
       "wire": {
         "useBackground": "Animated",
@@ -2249,10 +426,7 @@
       "paletteBehavior": {
         "status": "resolved",
         "mode": "active-palette",
-        "roles": [
-          "background.main",
-          "background.accent"
-        ]
+        "roles": ["background.main", "background.accent"]
       },
       "operatorControls": [
         {
@@ -2267,7 +441,11 @@
           "label": "Animated preset",
           "type": "enum",
           "enumValues": [
-            "light-leak"
+            "light-leak",
+            "broadcast-halftone",
+            "topographic-flow",
+            "signal-grid",
+            "reactive-path"
           ],
           "source": "templateVariation",
           "affectsRendering": true
@@ -2275,11 +453,466 @@
       ],
       "discovery": {
         "motionClass": "ambient",
-        "tags": [
-          "light-leak",
-          "gradient",
-          "cinematic"
-        ]
+        "tags": ["light-leak", "gradient", "cinematic"]
+      }
+    },
+    {
+      "id": "broadcast-halftone",
+      "displayName": "Halftone Blend",
+      "description": "Classic print-style dots blended with your club colours.",
+      "inventoryKey": "INV-EFF-broadcastHalftone",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "broadcast-halftone"
+        }
+      },
+      "rendererAdapter": "effects-solid",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "light-leak",
+            "broadcast-halftone",
+            "topographic-flow",
+            "signal-grid",
+            "reactive-path"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["halftone", "gradient", "broadcast"]
+      }
+    },
+    {
+      "id": "topographic-flow",
+      "displayName": "Flowing Contours",
+      "description": "Slow-moving colour bands like rolling terrain.",
+      "inventoryKey": "INV-EFF-topographicFlow",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "topographic-flow"
+        }
+      },
+      "rendererAdapter": "effects-solid",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "light-leak",
+            "broadcast-halftone",
+            "topographic-flow",
+            "signal-grid",
+            "reactive-path"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["topographic", "contours", "liquid"]
+      }
+    },
+    {
+      "id": "signal-grid",
+      "displayName": "Live Grid",
+      "description": "A perspective grid with a broadcast studio feel.",
+      "inventoryKey": "INV-EFF-signalGrid",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "signal-grid"
+        }
+      },
+      "rendererAdapter": "effects-solid",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "light-leak",
+            "broadcast-halftone",
+            "topographic-flow",
+            "signal-grid",
+            "reactive-path"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["grid", "scanlines", "perspective"]
+      }
+    },
+    {
+      "id": "reactive-path",
+      "displayName": "Route Pulse",
+      "description": "Travelling energy marks along curved paths.",
+      "inventoryKey": "INV-EFF-reactivePath",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "reactive-path"
+        }
+      },
+      "rendererAdapter": "effects-solid",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "light-leak",
+            "broadcast-halftone",
+            "topographic-flow",
+            "signal-grid",
+            "reactive-path"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "energetic",
+        "tags": ["paths", "orbits", "routes"]
+      }
+    },
+    {
+      "id": "motion-motif",
+      "displayName": "Club Motif",
+      "description": "A looping animated emblem in your club colours.",
+      "inventoryKey": "INV-MOT-motionMotif",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "motion-motif"
+        }
+      },
+      "rendererAdapter": "motion-asset",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": ["motion-motif"],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["lottie", "motif", "motion-asset"]
+      }
+    },
+    {
+      "id": "html-orbit-rings",
+      "displayName": "Orbit Rings",
+      "description": "Concentric rings with a soft glowing finish.",
+      "inventoryKey": "INV-HIC-htmlOrbitRings",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "html-orbit-rings"
+        }
+      },
+      "rendererAdapter": "html-in-canvas",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "html-orbit-rings",
+            "html-scoreboard-grid",
+            "html-neon-beams"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["html-in-canvas", "orbits", "rings"]
+      }
+    },
+    {
+      "id": "html-scoreboard-grid",
+      "displayName": "Stadium Grid",
+      "description": "A scoreboard-style grid with broadcast glow.",
+      "inventoryKey": "INV-HIC-htmlScoreboardGrid",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "html-scoreboard-grid"
+        }
+      },
+      "rendererAdapter": "html-in-canvas",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "html-orbit-rings",
+            "html-scoreboard-grid",
+            "html-neon-beams"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["html-in-canvas", "grid", "scoreboard"]
+      }
+    },
+    {
+      "id": "html-neon-beams",
+      "displayName": "Neon Sweep",
+      "description": "Diagonal neon light sweeps across the background.",
+      "inventoryKey": "INV-HIC-htmlNeonBeams",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "html-neon-beams"
+        }
+      },
+      "rendererAdapter": "html-in-canvas",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": [
+            "html-orbit-rings",
+            "html-scoreboard-grid",
+            "html-neon-beams"
+          ],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "energetic",
+        "tags": ["html-in-canvas", "neon", "beams"]
+      }
+    },
+    {
+      "id": "webgpu-metal-wave",
+      "displayName": "Liquid Metal",
+      "description": "Shimmering metallic waves in your club colours.",
+      "inventoryKey": "INV-3SC-webgpuMetalWave",
+      "wire": {
+        "useBackground": "Animated",
+        "animation": {
+          "type": "webgpu-metal-wave"
+        }
+      },
+      "rendererAdapter": "three-scene",
+      "operatorVisibility": {
+        "status": "unresolved",
+        "note": "CMS visibility inventory pending"
+      },
+      "readabilityPolicy": {
+        "status": "resolved",
+        "policy": "vignette"
+      },
+      "paletteBehavior": {
+        "status": "resolved",
+        "mode": "active-palette",
+        "roles": ["background.main", "background.accent"]
+      },
+      "operatorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "preset"
+        }
+      ],
+      "authorControls": [
+        {
+          "key": "animation.type",
+          "label": "Animated preset",
+          "type": "enum",
+          "enumValues": ["webgpu-metal-wave"],
+          "source": "templateVariation",
+          "affectsRendering": true
+        }
+      ],
+      "discovery": {
+        "motionClass": "ambient",
+        "tags": ["three-scene", "webgpu", "metal", "tsl"]
       }
     }
   ]
