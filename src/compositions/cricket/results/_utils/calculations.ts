@@ -1,4 +1,9 @@
-import { MatchResult } from "../_types/types";
+import {
+  BattingPerformance,
+  BowlingPerformance,
+  MatchResult,
+} from "../_types/types";
+import { resolvePerformerOwnedPerformances } from "../../utils/resolvePerformerOwnedPerformances";
 
 /**
  * Default number of results to display per screen
@@ -44,7 +49,27 @@ export const calculateTotalScreens = (
  * @returns Typed MatchResult array
  */
 export const castToMatchResults = (resultsData: unknown): MatchResult[] => {
-  return (resultsData as unknown as MatchResult[]) || [];
+  const matches = (resultsData as unknown as MatchResult[]) || [];
+
+  return matches.map((match) => {
+    const performances = resolvePerformerOwnedPerformances<
+      BattingPerformance,
+      BowlingPerformance,
+      MatchResult["homeTeam"]
+    >(match);
+
+    return {
+      ...match,
+      homeTeam: {
+        ...match.homeTeam,
+        ...performances.home,
+      },
+      awayTeam: {
+        ...match.awayTeam,
+        ...performances.away,
+      },
+    };
+  });
 };
 
 /**

@@ -1,4 +1,5 @@
-import { MatchResult } from "../types";
+import { BattingPerformance, BowlingPerformance, MatchResult } from "../types";
+import { resolvePerformerOwnedPerformances } from "../../utils/resolvePerformerOwnedPerformances";
 
 /**
  * Default frame duration if not specified
@@ -26,7 +27,27 @@ export const calculateDisplayDurationPerMatch = (
  * @returns Typed MatchResult array
  */
 export const castToMatchResults = (resultsData: unknown): MatchResult[] => {
-  return (resultsData as MatchResult[]) || [];
+  const matches = (resultsData as MatchResult[]) || [];
+
+  return matches.map((match) => {
+    const performances = resolvePerformerOwnedPerformances<
+      BattingPerformance,
+      BowlingPerformance,
+      MatchResult["homeTeam"]
+    >(match);
+
+    return {
+      ...match,
+      homeTeam: {
+        ...match.homeTeam,
+        ...performances.home,
+      },
+      awayTeam: {
+        ...match.awayTeam,
+        ...performances.away,
+      },
+    };
+  });
 };
 
 /**
