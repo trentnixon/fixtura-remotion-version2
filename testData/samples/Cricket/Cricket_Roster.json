@@ -624,7 +624,20 @@
           "direction": "up",
           "particleCount": "300"
         },
-        "useBackground": "Graphics"
+        "useBackground": "Graphics",
+        "luminance": {
+          "name": "Test 006",
+          "url": null,
+          "asset": "_verify/test006.png",
+          "map": {
+            "kind": "theme",
+            "preset": "brand"
+          },
+          "protection": "none",
+          "position": "center",
+          "size": "cover",
+          "opacity": 1
+        }
       }
     }
   }

@@ -12,6 +12,8 @@ const siteBase = SERVE_URL.replace(/\/index\.html$/, "");
 const requiredAssets = [
   "public/fonts/Heebo/static/Heebo-Regular.ttf",
   "public/fonts/impact/impact.ttf",
+  "public/luminance/_verify/smooth-ramp.png",
+  "public/luminance/_verify/test001.png",
 ];
 
 let failed = false;

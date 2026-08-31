@@ -7,6 +7,7 @@ import {
   ANIMATION_TYPES,
   PatternType,
   AnimationType,
+  PatternComponentProps,
 } from "./variants/config";
 
 // Import pattern components
@@ -29,6 +30,15 @@ interface PatternTemplateVariation {
   animationSpeed?: number;
 }
 
+const patternTypeByAnimationType: Record<string, PatternType> = {
+  "dot-field": "dots",
+  "line-field": "lines",
+  "tile-grid": "grid",
+  "crosshatch-field": "crosshatch",
+  "triangle-tile": "triangles",
+  "chevron-field": "chevron",
+};
+
 /**
  * PatternBackground component that renders different pattern backgrounds
  */
@@ -46,18 +56,34 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
   const { selectedPalette } = useStylesContext();
 
   // Get pattern type and animation settings from template variation or use defaults
-  const patternConfig = (video.templateVariation?.pattern ||
-    {}) as PatternTemplateVariation;
+  const animationConfig = video.templateVariation?.animation;
+  const animationType = animationConfig?.type;
+  const existingPattern =
+    video.templateVariation?.useBackground !== "Animated"
+      ? (video.templateVariation?.pattern as
+          | PatternTemplateVariation
+          | undefined)
+      : undefined;
+  const patternConfig: PatternTemplateVariation = existingPattern || {
+    type: patternTypeByAnimationType[animationType || ""],
+    scale: animationConfig?.scale,
+    rotation: animationConfig?.rotation,
+    animation: animationConfig?.motion as AnimationType | undefined,
+    animationDuration: animationConfig?.duration,
+    animationSpeed: animationConfig?.speed,
+  };
   const patternType = patternConfig.type || PATTERN_TYPES.DOTS;
 
   // Common pattern props
-  const patternProps = {
+  const patternProps: PatternComponentProps = {
     primaryColor: selectedPalette.background.contrast,
     secondaryColor: selectedPalette.background.gradient.primary.css.HORIZONTAL,
     scale: patternConfig.scale || scale,
     rotation: patternConfig.rotation || rotation,
     opacity,
-    animation: patternConfig.animation || animation,
+    animation: (patternConfig.animation || animation) as
+      | AnimationType
+      | undefined,
     animationDuration: patternConfig.animationDuration || animationDuration,
     animationSpeed: patternConfig.animationSpeed || animationSpeed,
   };

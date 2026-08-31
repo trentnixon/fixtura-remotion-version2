@@ -33,8 +33,10 @@
     "./src/*": "./src/*"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.2.0",
     "@remotion/animation-utils": "4.0.499",
     "@remotion/cli": "4.0.499",
+    "@remotion/effects": "4.0.499",
     "@remotion/eslint-config-flat": "4.0.499",
     "@remotion/fonts": "4.0.499",
     "@remotion/google-fonts": "4.0.499",
@@ -48,6 +50,7 @@
     "@remotion/rive": "4.0.499",
     "@remotion/shapes": "4.0.499",
     "@remotion/tailwind-v4": "4.0.499",
+    "@remotion/three": "^4.0.499",
     "@remotion/transitions": "4.0.499",
     "@remotion/zod-types": "4.0.499",
     "colorthief": "^2.6.0",
@@ -57,6 +60,7 @@
     "react-dom": "^19.0.0",
     "remotion": "4.0.499",
     "tailwindcss": "4.0.0",
+    "three": "^0.171.0",
     "tinycolor2": "^1.6.0",
     "zod": "4.4.3"
   },
@@ -67,12 +71,12 @@
     "remotion": "4.0.499"
   },
   "devDependencies": {
+    "@remotion/light-leaks": "^4.0.499",
     "@tailwindcss/cli": "^4.2.2",
     "@types/lodash": "^4.17.17",
     "@types/react": "19.0.0",
     "@types/tinycolor2": "^1.4.6",
     "@types/web": "0.0.166",
-    "pixelmatch": "^7.2.0",
     "pngjs": "^7.0.0",
     "prettier": "3.3.3",
     "tsup": "^8.5.1",
@@ -91,10 +95,10 @@
     "lint": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
+    "build:generated-backgrounds-contract": "npx tsx scripts/build-generated-backgrounds-contract.mjs",
+    "prototype:halftone": "remotion studio .scratch/remotion-background-effects-prototype/index.tsx --port=3012",
     "lint:fix": "eslint . --fix",
     "visual-regression:broadcastpro": "node scripts/broadcastpro-visual-regression.mjs",
-    "generated:phase0:render": "node scripts/generated-backgrounds-phase-0-render.mjs",
-    "generated:phase0:verify": "node scripts/verify-generated-backgrounds-phase-0.mjs",
     "format": "prettier --write .",
     "clean:cache": "node scripts/clear-webpack-cache.mjs",
     "deploy": "npm run clean:cache && npx remotion lambda sites create src/index.ts --site-name=fixtura-remotion-v2 --region=ap-southeast-2 && node scripts/upload-public-assets.mjs && node scripts/verify-deploy.mjs",

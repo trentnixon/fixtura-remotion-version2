@@ -442,6 +442,19 @@
             "opacity": 0.5,
             "blendMode": "multiply"
           }
+        },
+        "luminance": {
+          "name": "Test 002",
+          "url": null,
+          "asset": "_verify/test002.png",
+          "map": {
+            "kind": "theme",
+            "preset": "brand"
+          },
+          "protection": "none",
+          "position": "center",
+          "size": "cover",
+          "opacity": 1
         }
       }
     }

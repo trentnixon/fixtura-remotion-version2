@@ -775,18 +775,34 @@ Behavior:
 - an overlay layer is then applied
 - if `templateVariation.gradient` exists, the texture overlay can become gradient-based instead of solid
 
-## 10.6 Pattern
+## 10.6 Animated backgrounds
 
 Configured via:
 
 ```json
-"pattern": {
-  "type": "dots",
+"templateVariation": {
+  "useBackground": "Animated",
+  "animation": {
+    "type": "dot-field",
+    "motion": "panLeft",
+    "duration": 600,
+    "speed": 1
+  }
+}
+```
+
+The `animation.type` value is the concrete catalogue preset. Examples include `dot-field`, `snow-field`, `wave-noise`, `geometric-field`, and `spokes-field`.
+
+Pattern-specific controls can be supplied on the same `animation` object:
+
+```json
+"animation": {
+  "type": "dot-field",
   "scale": 0.75,
   "opacity": 0.35,
   "rotation": 0,
-  "animation": "none",
-  "animationSpeed": 0.8
+  "motion": "panLeft",
+  "speed": 0.8
 }
 ```
 
@@ -794,50 +810,31 @@ Use when:
 
 - decorative branded texture is needed without external media
 
-## 10.7 Particle
+## 10.7 Animated particle presets
 
-Configured via:
+Use the same wire shape for particle looks:
 
 ```json
-"particle": {
-  "type": "lines",
+"animation": {
+  "type": "snow-field",
   "particleCount": 300,
-  "speed": 0.8,
-  "direction": "up",
-  "animation": "scale"
+  "speed": 1,
+  "direction": "down",
+  "animation": "fade"
 }
 ```
 
-Use when:
+## 10.8 Animated noise and SVG presets
 
-- motion and energy are needed
-- fileless procedural backgrounds are preferred
-
-## 10.8 Graphics / Noise
-
-Configured via:
+Use the same wire shape for noise and SVG looks:
 
 ```json
-"noise": {
-  "type": "floatingParticles"
+"animation": {
+  "type": "wave-noise"
 }
 ```
 
-Supported internal variants include examples like:
-
-- `subtle`
-- `grain`
-- `wave`
-- `fog`
-- `static`
-- `floatingParticles`
-- `dynamicParticles`
-- `triangleSwarm`
-- `pulsingCircles`
-- `digitalRain`
-- `gradientGrid`
-- `geometric`
-- `spokes`
+All animated families are selected through `animation.type`; `useBackground` is never set to `Pattern`, `Particle`, `Graphics`, or `Noise` for new payloads. The catalogue and contract remain at `src/components/backgrounds/variants/Generated/catalogue/`, `public/generated-backgrounds/discovery-contract.json`, and `schemas/generated-backgrounds/discovery-contract.schema.json`.
 
 ## 11. Content Layout Rules
 

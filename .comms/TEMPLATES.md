@@ -108,18 +108,41 @@ videoMeta: {
 
 ## Background options available now
 
-All templates in the registry currently advertise the same background options:
+### Operator model (CMS / Studio)
 
-- `Graphics`
-- `Solid`
-- `Image`
-- `Gradient`
-- `Video`
-- `Particle`
-- `Pattern`
-- `Texture`
+Fixtura consolidates **Graphics**, **Pattern**, **Particle**, and **Noise** presets under the operator category **Animated → Preset**. Operators pick a named preset from the catalogue; the CMS does not expose `useBackground: "Generated"` on production wire ([ADR 0002](../docs/adr/0002-generated-background-wire-deferred.md)).
 
-These are declared in `src/templates/registry.tsx`.
+Published discovery contract (for CMS ingress and Studio browse):
+
+- JSON: `public/generated-backgrounds/discovery-contract.json`
+- CMS ingest JSON: `public/generated-backgrounds/cms-ingest.json`
+- Schema: `schemas/generated-backgrounds/discovery-contract.schema.json`
+- Build: `npm run build:generated-backgrounds-contract`
+
+### Production wire
+
+New payloads use one animated background wire. The concrete catalogue preset is selected by `animation.type`:
+
+```json
+{
+  "useBackground": "Animated",
+  "animation": {
+    "type": "dot-field",
+    "motion": "panLeft",
+    "speed": 1
+  }
+}
+```
+
+The catalogue preset IDs include `dot-field`, `snow-field`, `wave-noise`, `geometric-field`, and `spokes-field`. `Pattern`, `Particle`, `Graphics`, and `Noise` remain compatibility inputs for previously stored payloads only; they are not emitted by new data or Studio compositions.
+
+Ingress is validated at render time via `matchLegacyIngress` in `src/components/backgrounds/variants/Generated/catalogue/`. Unsupported combinations render **Solid** with a structured console diagnostic.
+
+### Remotion Studio dev browse
+
+Studio dev compositions use folder navigation `{Template}/Animated/{presetId}/{Sport}/{Dataset}` plus optional passthrough trees. **Studio passthrough browse may include categories beyond current CMS operator visibility** (engineering-governed). Folder labels are navigation only; they never become production wire.
+
+Passthrough dev categories today include: `Solid`, `Gradient`, `Image`, `Video`, `Texture`, `Luminance`.
 
 If no background is provided in production, the resolver falls back to:
 

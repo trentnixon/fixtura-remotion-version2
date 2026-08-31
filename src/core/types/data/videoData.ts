@@ -117,6 +117,53 @@ export interface VideoTemplateVariation {
       blendMode?: string;
     };
   };
+  luminance?: {
+    /** Display / library label (parity with texture.name). */
+    name?: string;
+    /** Account-assigned master URL (CDN). Preferred over local name/asset. Null when unset in JSON. */
+    url?: string | null;
+    /** Local library key under public/luminance/ (fixtures / bundled masters). */
+    asset?: string;
+    map?: {
+      kind: "theme" | "stops" | "segments";
+      preset?:
+        | "brand"
+        | "brand-with-accent"
+        | "tonal-brand"
+        | "protected-brand";
+      /** Pure black/white core width for `protected-brand` (default 0.02). */
+      protectedEndpointCore?: number;
+      /** Anti-alias transition width for `protected-brand` (default 0.06). */
+      endpointTransitionWidth?: number;
+      /** Solid primary/secondary band width for `protected-brand` (default 0.07). */
+      brandSolidWidth?: number;
+      stops?: Array<{ position: number; color: string }>;
+      segments?: Array<
+        | {
+            kind: "solid";
+            from: number;
+            to: number;
+            color: string;
+          }
+        | {
+            kind: "gradient";
+            from: number;
+            to: number;
+            fromColor: string;
+            toColor: string;
+          }
+      >;
+      reverse?: boolean;
+    };
+    contrast?: number;
+    brightness?: number;
+    protection?: "none" | "bottom-weighted" | "center-vignette" | "uniform";
+    opacity?: number;
+    position?: string;
+    size?: string;
+    /** Spatial AA supersample (1 | 2 | 4). Defaults to 2 for protected-brand. */
+    supersampleScale?: 1 | 2 | 4;
+  };
   background?: string;
   palette?: string;
   borderRadius?: string;
@@ -142,6 +189,21 @@ export interface VideoTemplateVariation {
     speed: number;
     direction: string;
     animation: string;
+  };
+  animation?: {
+    type: string;
+    scale?: number;
+    rotation?: number;
+    opacity?: number;
+    motion?: string;
+    animation?: string;
+    duration?: number;
+    speed?: number;
+    particleCount?: number;
+    direction?: string;
+    colors?: string[];
+    baseColor?: string;
+    intensity?: number;
   };
 }
 

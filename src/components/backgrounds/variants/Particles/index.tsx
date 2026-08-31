@@ -26,6 +26,14 @@ interface ParticleTemplateVariation {
   animation?: ParticleAnimation;
 }
 
+const particleTypeByAnimationType: Record<string, ParticleType> = {
+  "floating-dots": "dots",
+  "streak-lines": "lines",
+  "bubble-field": "bubbles",
+  "snow-field": "snow",
+  "confetti-field": "confetti",
+};
+
 /**
  * ParticleBackground component that dynamically renders different particle effects
  * based on the specified type.
@@ -34,13 +42,25 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = () => {
   const { video } = useVideoDataContext();
   const { selectedPalette } = useStylesContext();
 
-  const particleConfig = (video.templateVariation?.particle ||
-    {}) as ParticleTemplateVariation;
+  const animationConfig = video.templateVariation?.animation;
+  const existingParticle =
+    video.templateVariation?.useBackground !== "Animated"
+      ? (video.templateVariation?.particle as
+          | ParticleTemplateVariation
+          | undefined)
+      : undefined;
+  const particleConfig: ParticleTemplateVariation = existingParticle || {
+    type: particleTypeByAnimationType[animationConfig?.type || ""],
+    particleCount: animationConfig?.particleCount,
+    speed: animationConfig?.speed,
+    direction: animationConfig?.direction as ParticleDirection | undefined,
+    animation: animationConfig?.animation as ParticleAnimation | undefined,
+  };
 
   const particleProps = {
     particleColor: selectedPalette.background.contrast,
     background: selectedPalette.background.gradient.primaryRadial.css.DEFAULT,
-    particleType: particleConfig.type || "dots",
+    particleType: (particleConfig.type || "dots") as ParticleType,
     particleCount: particleConfig.particleCount || 300,
     speed: particleConfig.speed || 1,
     direction: particleConfig.direction || "random",

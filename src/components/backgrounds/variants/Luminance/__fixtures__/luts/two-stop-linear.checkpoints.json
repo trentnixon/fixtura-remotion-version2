@@ -1,0 +1,14 @@
+{
+  "id": "two-stop-linear",
+  "stops": [
+    { "position": 0, "color": "#000000" },
+    { "position": 1, "color": "#ffffff" }
+  ],
+  "boundaries": [
+    { "index": 0, "r": 0, "g": 0, "b": 0 },
+    { "index": 255, "r": 255, "g": 255, "b": 255 }
+  ],
+  "midpoints": [
+    { "between": [0, 1], "index": 128, "r": 128, "g": 128, "b": 128 }
+  ]
+}

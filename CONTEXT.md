@@ -29,12 +29,12 @@ The featured, standard, or compact presentation selected from the number of fixt
 _Avoid_: Scaling every fixture layout uniformly to fit
 
 **Generated background**:
-A palette-aware background chosen from a named catalogue and produced by a preset renderer, such as an effect, SVG scene, tiled pattern, particle field, or reusable motion asset. It is the product category for background operators and preset authors wherever an in-repo interface can present it without changing composition IDs.
+A palette-aware background chosen from a named catalogue and produced by a preset renderer, such as an effect, SVG scene, tiled pattern, particle field, noise field, or reusable motion asset. It is represented in DATA as `useBackground: "Animated"` with the concrete catalogue preset in `animation.type`.
 _Avoid_: Graphics background, Pattern background, Noise, Particle, or another renderer name used as the product category
 
 **Legacy wire value**:
-An external `useBackground` string such as Graphics, Pattern, or Noise that production payloads and composition IDs still use while the internal catalogue is Generated.
-_Avoid_: Treating Graphics, Pattern, or Noise as the product category name
+An older external `useBackground` string such as Graphics, Pattern, Particle, or Noise retained only for reading previously stored payloads during migration.
+_Avoid_: Emitting Graphics, Pattern, Particle, or Noise from new DATA
 
 **Background operator**:
 The club or admin who selects a background through Fixtura. Sees names, previews, and restrained controls.

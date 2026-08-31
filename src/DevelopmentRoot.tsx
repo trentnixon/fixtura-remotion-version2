@@ -1,41 +1,63 @@
 // src/DevelopmentRoot.tsx
 import React from "react";
 import { Folder } from "remotion";
+import {
+  generatedCatalogue,
+  getCanonicalEgress,
+} from "./components/backgrounds/variants/Generated/catalogue";
+import { CompositionEntry } from "./core/components/dev/CompositionEntry";
+import { passthroughDevBackgrounds } from "./core/utils/passthroughDevBackgrounds";
 import { templateRegistry } from "./templates/registry";
 import { datasetsByCategory } from "../testData";
-import { CompositionEntry } from "./core/components/dev/CompositionEntry";
-import { GeneratedPhase0Root } from "./components/backgrounds/variants/Generated/test/GeneratedPhase0Root";
 
-// Define the dataset info interface
 interface DatasetInfo {
   id: string;
   name: string;
 }
 
-/**
- * Development environment for browsing templates
- */
 export const DevelopmentRoot: React.FC = () => {
-  console.log("[DevelopmentRoot]");
   return (
     <>
-      <GeneratedPhase0Root />
-      {/* Template Registry */}
       {Object.entries(templateRegistry).map(([templateId, template]) => (
         <Folder key={templateId} name={templateId}>
-          {template.variants?.map((variant) => (
-            <Folder key={variant} name={variant}>
+          <Folder name="Animated">
+            {generatedCatalogue.map((preset) => (
+              <Folder key={preset.id} name={preset.id}>
+                {Object.entries(datasetsByCategory).map(
+                  ([sportName, datasets]) => (
+                    <Folder key={sportName} name={sportName}>
+                      {(datasets as DatasetInfo[]).map((dataset) => (
+                        <CompositionEntry
+                          key={`${preset.id}-${dataset.id}`}
+                          templateId={templateId}
+                          sportName={sportName}
+                          datasetID={dataset.id}
+                          templateComponent={template.component}
+                          presetId={preset.id}
+                          legacyEgress={getCanonicalEgress(preset.id)}
+                        />
+                      ))}
+                    </Folder>
+                  ),
+                )}
+              </Folder>
+            ))}
+          </Folder>
+
+          {passthroughDevBackgrounds.map(({ label, wire }) => (
+            <Folder key={label} name={label}>
               {Object.entries(datasetsByCategory).map(
                 ([sportName, datasets]) => (
                   <Folder key={sportName} name={sportName}>
-                    {(datasets as DatasetInfo[]).map((dataset: DatasetInfo) => (
+                    {(datasets as DatasetInfo[]).map((dataset) => (
                       <CompositionEntry
-                        key={dataset.id}
+                        key={`${label}-${dataset.id}`}
                         templateId={templateId}
-                        variant={variant}
                         sportName={sportName}
                         datasetID={dataset.id}
                         templateComponent={template.component}
+                        legacyEgress={wire}
+                        devLabel={label}
                       />
                     ))}
                   </Folder>

@@ -1,1318 +1,302 @@
 {
   "data": [
     {
-      "gameID": "c26730dd",
+      "gameID": "b854c1c7",
       "status": "Final",
       "homeTeam": {
-        "name": "Toowoomba",
+        "name": "Mudgeeraba Blue",
         "isHome": true,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_3de10368_2021a1244a.jpg",
-          "width": 555,
-          "height": 542
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
+          "width": 1134,
+          "height": 1417
         },
-        "score": "3/118",
-        "overs": "45",
+        "score": "215",
+        "overs": "20",
         "homeScoresFirstInnings": null,
         "battingPerformances": [
           {
-            "player": "Stephen Roberts",
-            "runs": 23,
-            "balls": 40,
-            "fours": 4,
+            "player": "Melissa Lewis",
+            "runs": 60,
+            "balls": 14,
+            "fours": 0,
             "sixes": 0,
-            "SR": 57.5,
-            "team": "Toowoomba",
-            "notOut": false
-          },
-          {
-            "player": "Ian Reimers",
-            "runs": 22,
-            "balls": 26,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 84.61,
-            "team": "Toowoomba",
-            "notOut": false
-          },
-          {
-            "player": "Les Amos",
-            "runs": 13,
-            "balls": 40,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 32.5,
-            "team": "Toowoomba",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Greco",
-            "overs": 4,
-            "maidens": 1,
-            "runs": 4,
-            "wickets": 1,
-            "economy": "1.00",
-            "team": "Brisbane White"
-          },
-          {
-            "player": "Townsend",
-            "overs": 8,
-            "maidens": 3,
-            "runs": 16,
-            "wickets": 1,
-            "economy": "2.00",
-            "team": "Brisbane White"
-          },
-          {
-            "player": "Gibson",
-            "overs": 7,
-            "maidens": 1,
-            "runs": 14,
-            "wickets": 1,
-            "economy": "2.00",
-            "team": "Brisbane White"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Brisbane White",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-          "width": 1012,
-          "height": 740
-        },
-        "score": "4/189",
-        "overs": "45",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Michael Greco",
-            "runs": 29,
-            "balls": 40,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 72.5,
-            "team": "Brisbane White",
-            "notOut": false
-          },
-          {
-            "player": "Neil Karunasekara",
-            "runs": 26,
-            "balls": 40,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 65,
-            "team": "Brisbane White",
-            "notOut": false
-          },
-          {
-            "player": "Dominic Gibson",
-            "runs": 23,
-            "balls": 18,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 127.77,
-            "team": "Brisbane White",
+            "SR": 428.57,
+            "team": "Mudgeeraba Blue",
             "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Rathie",
-            "overs": 6,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 2,
-            "economy": "4.83",
-            "team": "Toowoomba"
           },
           {
-            "player": "Whittaker",
-            "overs": 5,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 1,
-            "economy": "4.20",
-            "team": "Toowoomba"
+            "player": "Eden Carter",
+            "runs": 22,
+            "balls": 13,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 169.23,
+            "team": "Mudgeeraba Blue",
+            "notOut": false
           },
           {
-            "player": "Reimers",
-            "overs": 4,
-            "maidens": 1,
-            "runs": 9,
-            "wickets": 0,
-            "economy": "2.25",
-            "team": "Toowoomba"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_3de10368_2021a1244a.jpg",
-        "width": 555,
-        "height": 542
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
-      },
-      "date": "15 Aug 2026",
-      "type": "One Day",
-      "ground": "Kingsthorpe Recreation Reserve / Kingsthorpe Recreation Reserve",
-      "round": "Round 9",
-      "gender": "Mixed",
-      "ageGroup": "Over 60",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "gradeResolvedPosition": 5,
-      "gradeSortOrder": 5,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ],
-      "result": "Brisbane White won by 71 runs",
-      "resultShort": "Brisbane White def Toowoomba",
-      "resultSummary": {
-        "homeTeam": "Toowoomba",
-        "awayTeam": "Brisbane White",
-        "winner": "Brisbane White",
-        "resultWord": "lost"
-      },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"QVC Competitions\",\n    \"grade\": \"O60 Div 2 - Kerry Emery Shield\",\n    \"round\": \"Round 9\",\n    \"ground\": \"Kingsthorpe Recreation Reserve / Kingsthorpe Recreation Reserve\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Brisbane White\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Brisbane White won by 71 runs\",\n    \"dayOne\": \"2026-08-15\",\n    \"finalDaysPlay\": \"2026-08-15\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Toowoomba\",\n    \"innings\": [\n      {\n        \"teamName\": \"Toowoomba\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Desmond Steinberg, scored 11 Runs from (40) balls, with 1 four, at a strike Rate of 27.50., they were out.\"\n          },\n          {\n            \"description\": \"Les Amos, scored 13 Runs from (40) balls, with 1 four, at a strike Rate of 32.50., they were out.\"\n          },\n          {\n            \"description\": \"Angus Rathie, scored 4 Runs from (20) balls, with 1 four, at a strike Rate of 20.00., they were out.\"\n          },\n          {\n            \"description\": \"Stephen Roberts, scored 23 Runs from (40) balls, with 4 fours, at a strike Rate of 57.50., they were out.\"\n          },\n          {\n            \"description\": \"Errol Deeth, scored 10 Runs from (40) balls, with 1 four, at a strike Rate of 25.00., they were out.\"\n          },\n          {\n            \"description\": \"Bob Englebright, scored 9 Runs from (29) balls, with 2 fours, at a strike Rate of 31.03., they were out.\"\n          },\n          {\n            \"description\": \"Ian Reimers, scored 22 Runs from (26) balls, with 2 fours, at a strike Rate of 84.61., they were out.\"\n          },\n          {\n            \"description\": \"David Reuter (c), scored 7 Runs from (12) balls, at a strike Rate of 58.33., they were not out.\"\n          },\n          {\n            \"description\": \"Alan Donges (vc), scored 1 Runs from (13) balls, at a strike Rate of 7.69., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Hislop, bowled 2 overs, took 1.87 wickets for 0 runs, with 15 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Gibson, bowled 1 over, took 2 wickets for 1 run, with 14 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Gode, took 2.75 wickets for 0 runs, with 22 maidens.\"\n          },\n          {\n            \"description\": \"Townsend, bowled 3 overs, took 2 wickets for 1 run, with 16 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Ross, took 4 wickets for 0 runs, with 28 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Greco, bowled 1 over, took 1 wicket for 1 run, with 4 maidens.\"\n          },\n          {\n            \"description\": \"Wise (c), took 3.66 wickets for 0 runs, with 11 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Toowoomba Batting\"\n      }\n    ],\n    \"totalScore\": \"3/118\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Brisbane White\",\n    \"innings\": [\n      {\n        \"teamName\": \"Brisbane White\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Richard Valenti, scored 19 Runs from (40) balls, with 1 four, at a strike Rate of 47.50., they were out.\"\n          },\n          {\n            \"description\": \"Neil Karunasekara, scored 26 Runs from (40) balls, with 3 fours, at a strike Rate of 65.00., they were out.\"\n          },\n          {\n            \"description\": \"Bill Townsend, scored 17 Runs from (40) balls, with 1 four, at a strike Rate of 42.50., they were out.\"\n          },\n          {\n            \"description\": \"Andrew Ross, scored 19 Runs from (26) balls, with 3 fours, at a strike Rate of 73.07., they were out.\"\n          },\n          {\n            \"description\": \"Michael Greco, scored 29 Runs from (40) balls, with 2 fours, at a strike Rate of 72.50., they were out.\"\n          },\n          {\n            \"description\": \"Craig Hislop, scored 14 Runs from (40) balls, with 1 four, at a strike Rate of 35.00., they were out.\"\n          },\n          {\n            \"description\": \"Steve Gode, scored 2 Runs from (13) balls, at a strike Rate of 15.38., they were out.\"\n          },\n          {\n            \"description\": \"Bryan James, scored 3 Runs from (7) balls, at a strike Rate of 42.85., they were out.\"\n          },\n          {\n            \"description\": \"Dominic Gibson, scored 23 Runs from (18) balls, with 2 fours and 1 six, at a strike Rate of 127.77., they were not out.\"\n          },\n          {\n            \"description\": \"Maurice Wise (c), scored 7 Runs from (6) balls, with 1 four, at a strike Rate of 116.66., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Tuesley, took 4.4 wickets for 0 runs, with 22 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Reuter (c), bowled 1 over, took 4.66 wickets for 0 runs, with 28 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Reimers, bowled 1 over, took 2.25 wickets for 0 runs, with 9 maidens.\"\n          },\n          {\n            \"description\": \"Donges (vc), bowled 1 over, took 3.6 wickets for 0 runs, with 18 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Roberts, bowled 1 over, took 2.87 wickets for 0 runs, with 23 maidens.\"\n          },\n          {\n            \"description\": \"Whittaker, took 4.2 wickets for 1 run, with 21 maidens.\"\n          },\n          {\n            \"description\": \"Deeth, bowled 2 overs, took 4 wickets for 0 runs, with 24 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Rathie, took 4.83 wickets for 2 runs, with 29 maidens, at an economy of 5.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Englebright, took 2 catches.\"\n          },\n          {\n            \"description\": \"Roberts, took 2 catches.\"\n          },\n          {\n            \"description\": \"Whittaker, made 2 run outs.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Brisbane White Batting\"\n      }\n    ],\n    \"totalScore\": \"4/189\",\n    \"totalWickets\": 0\n  }\n}"
-    },
-    {
-      "gameID": "229f3bd0",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Sunshine Coast Maroon",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-          "width": 547,
-          "height": 796
-        },
-        "score": "7/96",
-        "overs": "31.3",
-        "homeScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Robert Plath",
+            "player": "Melinda Santer",
             "runs": 20,
-            "balls": 23,
-            "fours": 3,
+            "balls": 13,
+            "fours": 0,
             "sixes": 0,
-            "SR": 86.95,
-            "team": "Sunshine Coast Maroon",
-            "notOut": false
-          },
-          {
-            "player": "Marcus van Vugt",
-            "runs": 18,
-            "balls": 19,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 94.73,
-            "team": "Sunshine Coast Maroon",
-            "notOut": true
-          },
-          {
-            "player": "Rosemary Gan",
-            "runs": 13,
-            "balls": 17,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 76.47,
-            "team": "Sunshine Coast Maroon",
+            "SR": 153.84,
+            "team": "Mudgeeraba Blue",
             "notOut": false
           }
         ],
-        "bowlingPerformances": [
-          {
-            "player": "van der Kley",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 29,
-            "wickets": 4,
-            "economy": "3.63",
-            "team": "Redlands Logan"
-          },
-          {
-            "player": "Lorenti",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 17,
-            "wickets": 2,
-            "economy": "2.13",
-            "team": "Redlands Logan"
-          },
-          {
-            "player": "Mendo (vc)",
-            "overs": 8,
-            "maidens": 4,
-            "runs": 13,
-            "wickets": 1,
-            "economy": "1.63",
-            "team": "Redlands Logan"
-          }
-        ],
-        "isClubTeam": false
+        "bowlingPerformances": [],
+        "isClubTeam": true
       },
       "awayTeam": {
-        "name": "Redlands Logan",
+        "name": "Coomera",
         "isHome": false,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
-          "width": 706,
-          "height": 725
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_e4b49fbd_3c380c1ddd.png",
+          "width": 512,
+          "height": 512
         },
-        "score": "10/94",
-        "overs": "26.5",
+        "score": "255",
+        "overs": "20",
         "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Don Fitzgerald",
-            "runs": 42,
-            "balls": 40,
-            "fours": 5,
-            "sixes": 0,
-            "SR": 105,
-            "team": "Redlands Logan",
-            "notOut": false
-          },
-          {
-            "player": "Richard Dennis (c)",
-            "runs": 25,
-            "balls": 38,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 65.78,
-            "team": "Redlands Logan",
-            "notOut": false
-          },
-          {
-            "player": "Gary Davis",
-            "runs": 4,
-            "balls": 8,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 50,
-            "team": "Redlands Logan",
-            "notOut": false
-          }
-        ],
+        "battingPerformances": [],
         "bowlingPerformances": [
           {
-            "player": "van Vugt",
-            "overs": 5.5,
+            "player": "Waller",
+            "overs": 3,
             "maidens": 0,
-            "runs": 24,
-            "wickets": 3,
-            "economy": "4.36",
-            "team": "Sunshine Coast Maroon"
-          },
-          {
-            "player": "Brown",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 7,
-            "wickets": 2,
-            "economy": "1.75",
-            "team": "Sunshine Coast Maroon"
-          },
-          {
-            "player": "Shearer",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 28,
-            "wickets": 1,
-            "economy": "3.50",
-            "team": "Sunshine Coast Maroon"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
-        "width": 706,
-        "height": 725
-      },
-      "date": "15 Aug 2026",
-      "type": "One Day",
-      "ground": "Wonga Park / Thorogood Oval",
-      "round": "Round 9",
-      "gender": "Mixed",
-      "ageGroup": "Over 60",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "gradeResolvedPosition": 5,
-      "gradeSortOrder": 5,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ],
-      "result": "Sunshine Coast Maroon won by 3 wickets",
-      "resultShort": "Sunshine Coast Maroon def Redlands Logan",
-      "resultSummary": {
-        "homeTeam": "Sunshine Coast Maroon",
-        "awayTeam": "Redlands Logan",
-        "winner": "Sunshine Coast Maroon",
-        "resultWord": "won"
-      },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"QVC Competitions\",\n    \"grade\": \"O60 Div 2 - Kerry Emery Shield\",\n    \"round\": \"Round 9\",\n    \"ground\": \"Wonga Park / Thorogood Oval\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Sunshine Coast Maroon\",\n    \"tossResult\": \"bowl\",\n    \"resultStatement\": \"Sunshine Coast Maroon won by 3 wickets\",\n    \"dayOne\": \"2026-08-15\",\n    \"finalDaysPlay\": \"2026-08-15\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Sunshine Coast Maroon\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sunshine Coast Maroon\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Stephen Geils, scored 3 Runs from (9) balls, at a strike Rate of 33.33., they were out.\"\n          },\n          {\n            \"description\": \"Jeff Cole, scored 8 Runs from (21) balls, at a strike Rate of 38.09., they were out.\"\n          },\n          {\n            \"description\": \"Peter Timms (c), scored 6 Runs from (36) balls, at a strike Rate of 16.66., they were out.\"\n          },\n          {\n            \"description\": \"Paul Blamire, scored 10 Runs from (39) balls, at a strike Rate of 25.64., they were out.\"\n          },\n          {\n            \"description\": \"Robert Plath, scored 20 Runs from (23) balls, with 3 fours, at a strike Rate of 86.95., they were out.\"\n          },\n          {\n            \"description\": \"peter smith, scored 8 Runs from (10) balls, with 1 four, at a strike Rate of 80.00., they were out.\"\n          },\n          {\n            \"description\": \"Rosemary Gan, scored 13 Runs from (17) balls, with 2 fours, at a strike Rate of 76.47., they were out.\"\n          },\n          {\n            \"description\": \"Marcus van Vugt, scored 18 Runs from (19) balls, with 3 fours, at a strike Rate of 94.73., they were not out.\"\n          },\n          {\n            \"description\": \"Wayne Brown, scored 7 Runs from (13) balls, with 1 four, at a strike Rate of 53.84., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Mendo (vc), bowled 4 overs, took 1.62 wickets for 1 run, with 13 maidens.\"\n          },\n          {\n            \"description\": \"Lorenti, bowled 1 over, took 2.12 wickets for 2 runs, with 17 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"van der Kley, bowled 1 over, took 3.62 wickets for 4 runs, with 29 maidens.\"\n          },\n          {\n            \"description\": \"Davis, took 4.66 wickets for 0 runs, with 35 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sunshine Coast Maroon Batting\"\n      }\n    ],\n    \"totalScore\": \"7/96\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Redlands Logan\",\n    \"innings\": [\n      {\n        \"teamName\": \"Redlands Logan\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Don Fitzgerald, scored 42 Runs from (40) balls, with 5 fours, at a strike Rate of 105.00., they were out.\"\n          },\n          {\n            \"description\": \"John Gardner, scored 4 Runs from (21) balls, at a strike Rate of 19.04., they were out.\"\n          },\n          {\n            \"description\": \"Richard Dennis (c), scored 25 Runs from (38) balls, with 3 fours, at a strike Rate of 65.78., they were out.\"\n          },\n          {\n            \"description\": \"Graham Larrescy, scored 3 Runs from (24) balls, at a strike Rate of 12.50., they were out.\"\n          },\n          {\n            \"description\": \"Wayne Sander, scored 3 Runs from (9) balls, at a strike Rate of 33.33., they were out.\"\n          },\n          {\n            \"description\": \"Phillip Lambert, scored 2 Runs from (4) balls, at a strike Rate of 50.00., they were out.\"\n          },\n          {\n            \"description\": \"Eric Mendo (vc), scored 1 Runs from (5) balls, at a strike Rate of 20.00., they were out.\"\n          },\n          {\n            \"description\": \"Jim Coppock, scored 3 Runs from (8) balls, at a strike Rate of 37.50., they were out.\"\n          },\n          {\n            \"description\": \"Gary Davis, scored 4 Runs from (8) balls, with 1 four, at a strike Rate of 50.00., they were out.\"\n          },\n          {\n            \"description\": \"Phil van der Kley, scored 1 Runs from (1) balls, at a strike Rate of 100.00., they were out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Shearer, bowled 1 over, took 3.5 wickets for 1 run, with 28 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Adams, bowled 1 over, took 3.5 wickets for 0 runs, with 14 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Amos, bowled 1 over, took 3.8 wickets for 1 run, with 19 maidens.\"\n          },\n          {\n            \"description\": \"van Vugt, took 4.11 wickets for 3 runs, with 24 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Brown, took 1.75 wickets for 2 runs, with 7 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Redlands Logan Batting\"\n      }\n    ],\n    \"totalScore\": \"10/94\",\n    \"totalWickets\": 0\n  }\n}"
-    },
-    {
-      "gameID": "ae1dedc7",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Sunshine Coast Gold",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-          "width": 547,
-          "height": 796
-        },
-        "score": "3/210",
-        "overs": "45",
-        "homeScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Rick Bean",
-            "runs": 37,
-            "balls": 40,
-            "fours": 7,
-            "sixes": 0,
-            "SR": 92.5,
-            "team": "Sunshine Coast Gold",
-            "notOut": false
-          },
-          {
-            "player": "Greg Deuble (c)",
-            "runs": 36,
-            "balls": 42,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 85.71,
-            "team": "Sunshine Coast Gold",
-            "notOut": false
-          },
-          {
-            "player": "Adrian Knell",
-            "runs": 32,
-            "balls": 40,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 80,
-            "team": "Sunshine Coast Gold",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Ross",
-            "overs": 6,
-            "maidens": 0,
-            "runs": 35,
-            "wickets": 2,
-            "economy": "5.83",
-            "team": "Lockyer"
-          },
-          {
-            "player": "Hughes",
-            "overs": 8,
-            "maidens": 2,
-            "runs": 24,
-            "wickets": 1,
-            "economy": "3.00",
-            "team": "Lockyer"
-          },
-          {
-            "player": "jeffrey",
-            "overs": 8,
-            "maidens": 2,
-            "runs": 24,
-            "wickets": 0,
-            "economy": "3.00",
-            "team": "Lockyer"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Lockyer",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
-          "width": 328,
-          "height": 347
-        },
-        "score": "10/102",
-        "overs": "44.5",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "william jeffrey",
-            "runs": 26,
-            "balls": 25,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 104,
-            "team": "Lockyer",
-            "notOut": false
-          },
-          {
-            "player": "Gary Hughes",
-            "runs": 25,
-            "balls": 62,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 40.32,
-            "team": "Lockyer",
-            "notOut": false
-          },
-          {
-            "player": "Darryl Ready",
-            "runs": 22,
-            "balls": 40,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 55,
-            "team": "Lockyer",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "NOLEN",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 14,
-            "wickets": 3,
-            "economy": "1.75",
-            "team": "Sunshine Coast Gold"
-          },
-          {
-            "player": "Knell",
-            "overs": 8,
-            "maidens": 2,
             "runs": 19,
             "wickets": 2,
-            "economy": "2.38",
-            "team": "Sunshine Coast Gold"
+            "economy": "6.33",
+            "team": "Mudgeeraba Blue"
           },
           {
-            "player": "Davey",
-            "overs": 6.5,
-            "maidens": 1,
-            "runs": 6,
-            "wickets": 1,
-            "economy": "0.92",
-            "team": "Sunshine Coast Gold"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
-        "width": 328,
-        "height": 347
-      },
-      "date": "15 Aug 2026",
-      "type": "One Day",
-      "ground": "Wonga Park / Roy Thompson Oval",
-      "round": "Round 9",
-      "gender": "Mixed",
-      "ageGroup": "Over 60",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "gradeResolvedPosition": 5,
-      "gradeSortOrder": 5,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ],
-      "result": "Sunshine Coast Gold won by 108 runs",
-      "resultShort": "Sunshine Coast Gold def Lockyer",
-      "resultSummary": {
-        "homeTeam": "Sunshine Coast Gold",
-        "awayTeam": "Lockyer",
-        "winner": "Sunshine Coast Gold",
-        "resultWord": "won"
-      },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"QVC Competitions\",\n    \"grade\": \"O60 Div 2 - Kerry Emery Shield\",\n    \"round\": \"Round 9\",\n    \"ground\": \"Wonga Park / Roy Thompson Oval\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Sunshine Coast Gold\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Sunshine Coast Gold won by 108 runs\",\n    \"dayOne\": \"2026-08-15\",\n    \"finalDaysPlay\": \"2026-08-15\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Sunshine Coast Gold\",\n    \"innings\": [\n      {\n        \"teamName\": \"Sunshine Coast Gold\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Neville Gooch, scored 21 Runs from (40) balls, with 1 four, at a strike Rate of 52.50., they were out.\"\n          },\n          {\n            \"description\": \"Rick Bean, scored 37 Runs from (40) balls, with 7 fours, at a strike Rate of 92.50., they were out.\"\n          },\n          {\n            \"description\": \"Adrian Knell, scored 32 Runs from (40) balls, with 4 fours, at a strike Rate of 80.00., they were out.\"\n          },\n          {\n            \"description\": \"Jeff Barker, scored 22 Runs from (33) balls, with 1 four, at a strike Rate of 66.66., they were out.\"\n          },\n          {\n            \"description\": \"Greg Deuble (c), scored 36 Runs from (42) balls, with 3 fours, at a strike Rate of 85.71., they were out.\"\n          },\n          {\n            \"description\": \"Peter Wright, scored 5 Runs from (4) balls, with 1 four, at a strike Rate of 125.00., they were out.\"\n          },\n          {\n            \"description\": \"Robert Mair, scored 21 Runs from (24) balls, with 1 four, at a strike Rate of 87.50., they were out.\"\n          },\n          {\n            \"description\": \"Rod Armstrong, scored 11 Runs from (8) balls, with 1 four, at a strike Rate of 137.50., they were not out.\"\n          },\n          {\n            \"description\": \"Ron Davey, scored 9 Runs from (9) balls, with 1 four, at a strike Rate of 100.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"jeffrey, bowled 2 overs, took 3 wickets for 0 runs, with 24 maidens.\"\n          },\n          {\n            \"description\": \"Hughes, bowled 2 overs, took 3 wickets for 1 run, with 24 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Wilson, took 4.66 wickets for 0 runs, with 28 maidens.\"\n          },\n          {\n            \"description\": \"Maroske, took 4.37 wickets for 0 runs, with 35 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Lyons, took 6 wickets for 0 runs, with 30 maidens.\"\n          },\n          {\n            \"description\": \"Ross, took 5.83 wickets for 2 runs, with 35 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Bailey, took 6.5 wickets for 0 runs, with 26 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Sunshine Coast Gold Batting\"\n      }\n    ],\n    \"totalScore\": \"3/210\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Lockyer\",\n    \"innings\": [\n      {\n        \"teamName\": \"Lockyer\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Gary Hughes, scored 25 Runs from (62) balls, with 2 fours, at a strike Rate of 40.32., they were out.\"\n          },\n          {\n            \"description\": \"Darryl Ready, scored 22 Runs from (40) balls, with 2 fours, at a strike Rate of 55.00., they were out.\"\n          },\n          {\n            \"description\": \"Neville Maroske, scored 6 Runs from (17) balls, at a strike Rate of 35.29., they were out.\"\n          },\n          {\n            \"description\": \"william jeffrey, scored 26 Runs from (25) balls, with 4 fours, at a strike Rate of 104.00., they were out.\"\n          },\n          {\n            \"description\": \"David Lyons, scored 8 Runs from (59) balls, at a strike Rate of 13.55., they were out.\"\n          },\n          {\n            \"description\": \"Robert Bailey, scored 1 Runs from (17) balls, at a strike Rate of 5.88., they were out.\"\n          },\n          {\n            \"description\": \"Robson Lockey, scored 2 Runs from (43) balls, at a strike Rate of 4.65., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Rosing, bowled 4 overs, took 2.25 wickets for 1 run, with 18 maidens.\"\n          },\n          {\n            \"description\": \"NOLEN, bowled 1 over, took 1.75 wickets for 3 runs, with 14 maidens, at an economy of 5.\"\n          },\n          {\n            \"description\": \"Knell, bowled 2 overs, took 2.37 wickets for 2 runs, with 19 maidens.\"\n          },\n          {\n            \"description\": \"Deuble (c), bowled 1 over, took 3.25 wickets for 1 run, with 26 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Davey, bowled 1 over, took 0.87 wickets for 1 run, with 6 maidens.\"\n          },\n          {\n            \"description\": \"McKeever, took 2.83 wickets for 1 run, with 17 maidens, at an economy of 1.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Lockyer Batting\"\n      }\n    ],\n    \"totalScore\": \"10/102\",\n    \"totalWickets\": 0\n  }\n}"
-    },
-    {
-      "gameID": "461173e5",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Brisbane Silver",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-          "width": 1012,
-          "height": 740
-        },
-        "score": "6/237",
-        "overs": "45",
-        "homeScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Greg Noon",
-            "runs": 44,
-            "balls": 40,
-            "fours": 7,
-            "sixes": 0,
-            "SR": 110,
-            "team": "Brisbane Silver",
-            "notOut": false
-          },
-          {
-            "player": "Joe Hauff",
-            "runs": 38,
-            "balls": 38,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 100,
-            "team": "Brisbane Silver",
-            "notOut": true
-          },
-          {
-            "player": "Bryan Wilson (c)",
-            "runs": 32,
-            "balls": 40,
-            "fours": 3,
-            "sixes": 0,
-            "SR": 80,
-            "team": "Brisbane Silver",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Solomon",
-            "overs": 8,
-            "maidens": 2,
-            "runs": 30,
-            "wickets": 3,
-            "economy": "3.75",
-            "team": "GC 60's Div 2 Gold"
-          },
-          {
-            "player": "Coyne",
+            "player": "Baker (c)",
             "overs": 2,
             "maidens": 0,
-            "runs": 7,
-            "wickets": 1,
-            "economy": "3.50",
-            "team": "GC 60's Div 2 Gold"
-          },
-          {
-            "player": "MacDonald",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 23,
-            "wickets": 1,
-            "economy": "7.67",
-            "team": "GC 60's Div 2 Gold"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "GC 60's Div 2 Gold",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-          "width": 379,
-          "height": 303
-        },
-        "score": "10/181",
-        "overs": "42.2",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Jeffrey Manitzky (vc)",
-            "runs": 31,
-            "balls": 40,
-            "fours": 5,
-            "sixes": 0,
-            "SR": 77.5,
-            "team": "GC 60's Div 2 Gold",
-            "notOut": false
-          },
-          {
-            "player": "Ian Coyne",
-            "runs": 28,
-            "balls": 28,
-            "fours": 5,
-            "sixes": 0,
-            "SR": 100,
-            "team": "GC 60's Div 2 Gold",
-            "notOut": false
-          },
-          {
-            "player": "Rory Solomon",
-            "runs": 22,
-            "balls": 25,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 88,
-            "team": "GC 60's Div 2 Gold",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Hauff",
-            "overs": 6.2,
-            "maidens": 0,
-            "runs": 18,
-            "wickets": 3,
-            "economy": "2.90",
-            "team": "Brisbane Silver"
-          },
-          {
-            "player": "Bhakta",
-            "overs": 8,
-            "maidens": 0,
-            "runs": 30,
-            "wickets": 2,
-            "economy": "3.75",
-            "team": "Brisbane Silver"
-          },
-          {
-            "player": "Pinho",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 12,
-            "wickets": 1,
-            "economy": "3.00",
-            "team": "Brisbane Silver"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
-      },
-      "date": "15 Aug 2026",
-      "type": "One Day",
-      "ground": "Everton District Cricket Club / Peter Gallagher Oval",
-      "round": "Round 9",
-      "gender": "Mixed",
-      "ageGroup": "Over 60",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "gradeResolvedPosition": 5,
-      "gradeSortOrder": 5,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ],
-      "result": "Brisbane Silver won by 56 runs",
-      "resultShort": "Brisbane Silver def GC 60's Div 2 Gold",
-      "resultSummary": {
-        "homeTeam": "Brisbane Silver",
-        "awayTeam": "GC 60's Div 2 Gold",
-        "winner": "Brisbane Silver",
-        "resultWord": "won"
-      },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"QVC Competitions\",\n    \"grade\": \"O60 Div 2 - Kerry Emery Shield\",\n    \"round\": \"Round 9\",\n    \"ground\": \"Everton District Cricket Club / Peter Gallagher Oval\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Brisbane Silver\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Brisbane Silver won by 56 runs\",\n    \"dayOne\": \"2026-08-15\",\n    \"finalDaysPlay\": \"2026-08-15\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Brisbane Silver\",\n    \"innings\": [\n      {\n        \"teamName\": \"Brisbane Silver\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Ross Adams, scored 6 Runs from (18) balls, with 1 four, at a strike Rate of 33.33., they were out.\"\n          },\n          {\n            \"description\": \"Anil Bhakta, scored 7 Runs from (7) balls, with 1 four, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Andrew Pinho, scored 21 Runs from (15) balls, with 4 fours, at a strike Rate of 140.00., they were out.\"\n          },\n          {\n            \"description\": \"Greg Noon, scored 44 Runs from (40) balls, with 7 fours, at a strike Rate of 110.00., they were out.\"\n          },\n          {\n            \"description\": \"Julian Cosmi, scored 18 Runs from (27) balls, with 2 fours, at a strike Rate of 66.66., they were out.\"\n          },\n          {\n            \"description\": \"Bryan Wilson (c), scored 32 Runs from (40) balls, with 3 fours, at a strike Rate of 80.00., they were out.\"\n          },\n          {\n            \"description\": \"John Lloyd, scored 19 Runs from (37) balls, with 1 four, at a strike Rate of 51.35., they were out.\"\n          },\n          {\n            \"description\": \"MARK WILLIAMS, scored 19 Runs from (28) balls, at a strike Rate of 67.85., they were out.\"\n          },\n          {\n            \"description\": \"Joe Hauff, scored 38 Runs from (38) balls, with 4 fours, at a strike Rate of 100.00., they were not out.\"\n          },\n          {\n            \"description\": \"Tony Lambert, scored 17 Runs from (20) balls, with 1 four, at a strike Rate of 85.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Solomon, bowled 2 overs, took 3.75 wickets for 3 runs, with 30 maidens.\"\n          },\n          {\n            \"description\": \"Morton, took 6.28 wickets for 0 runs, with 44 maidens.\"\n          },\n          {\n            \"description\": \"Reynolds, took 4.25 wickets for 0 runs, with 34 maidens.\"\n          },\n          {\n            \"description\": \"SMITH, took 7.75 wickets for 0 runs, with 31 maidens.\"\n          },\n          {\n            \"description\": \"Williams, took 4.25 wickets for 0 runs, with 17 maidens.\"\n          },\n          {\n            \"description\": \"Hopgood (c), took 4.71 wickets for 0 runs, with 33 maidens.\"\n          },\n          {\n            \"description\": \"MacDonald, took 7.66 wickets for 1 run, with 23 maidens.\"\n          },\n          {\n            \"description\": \"Coyne, took 3.5 wickets for 1 run, with 7 maidens.\"\n          },\n          {\n            \"description\": \"Morris, took 7.5 wickets for 0 runs, with 15 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Brisbane Silver Batting\"\n      }\n    ],\n    \"totalScore\": \"6/237\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"GC 60's Div 2 Gold\",\n    \"innings\": [\n      {\n        \"teamName\": \"GC 60's Div 2 Gold\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"tony binns, scored 3 Runs from (14) balls, at a strike Rate of 21.42., they were out.\"\n          },\n          {\n            \"description\": \"Jeffrey Manitzky (vc), scored 31 Runs from (40) balls, with 5 fours, at a strike Rate of 77.50., they were out.\"\n          },\n          {\n            \"description\": \"Ian Coyne, scored 28 Runs from (28) balls, with 5 fours, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Craig Watson, scored 9 Runs from (18) balls, at a strike Rate of 50.00., they were out.\"\n          },\n          {\n            \"description\": \"Tony Williams, scored 17 Runs from (26) balls, with 3 fours, at a strike Rate of 65.38., they were out.\"\n          },\n          {\n            \"description\": \"ALAN J SMITH, scored 12 Runs from (27) balls, at a strike Rate of 44.44., they were out.\"\n          },\n          {\n            \"description\": \"Mark MacDonald, scored 21 Runs from (21) balls, with 3 fours, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Richard Morris, scored 14 Runs from (40) balls, at a strike Rate of 35.00., they were out.\"\n          },\n          {\n            \"description\": \"Rory Solomon, scored 22 Runs from (25) balls, with 1 four, at a strike Rate of 88.00., they were not out.\"\n          },\n          {\n            \"description\": \"Phillip Hopgood (c), scored 3 Runs from (6) balls, at a strike Rate of 50.00., they were out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Lloyd, took 4.66 wickets for 0 runs, with 14 maidens.\"\n          },\n          {\n            \"description\": \"Wilson (c), bowled 1 over, took 4 wickets for 1 run, with 32 maidens.\"\n          },\n          {\n            \"description\": \"Haines, took 6.25 wickets for 1 run, with 25 maidens.\"\n          },\n          {\n            \"description\": \"RAVENHILL, took 5.62 wickets for 1 run, with 45 maidens.\"\n          },\n          {\n            \"description\": \"Bhakta, took 3.75 wickets for 2 runs, with 30 maidens.\"\n          },\n          {\n            \"description\": \"Pinho, took 3 wickets for 1 run, with 12 maidens.\"\n          },\n          {\n            \"description\": \"Hauff, took 2.84 wickets for 3 runs, with 18 maidens.\"\n          },\n          {\n            \"description\": \"Cosmi, took 3 wickets for 0 runs, with 3 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"GC 60's Div 2 Gold Batting\"\n      }\n    ],\n    \"totalScore\": \"10/181\",\n    \"totalWickets\": 0\n  }\n}"
-    },
-    {
-      "gameID": "beb0f000",
-      "status": "Final",
-      "homeTeam": {
-        "name": "GC 60's Div 2 Blue",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-          "width": 379,
-          "height": 303
-        },
-        "score": "9/160",
-        "overs": "45",
-        "homeScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "David Russell",
-            "runs": 27,
-            "balls": 41,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 65.85,
-            "team": "GC 60's Div 2 Blue",
-            "notOut": true
-          },
-          {
-            "player": "Warren Rose",
-            "runs": 24,
-            "balls": 40,
-            "fours": 4,
-            "sixes": 0,
-            "SR": 60,
-            "team": "GC 60's Div 2 Blue",
-            "notOut": false
-          },
-          {
-            "player": "John Guiver",
-            "runs": 18,
-            "balls": 26,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 69.23,
-            "team": "GC 60's Div 2 Blue",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Logue",
-            "overs": 8,
-            "maidens": 0,
-            "runs": 31,
-            "wickets": 3,
-            "economy": "3.88",
-            "team": "Wide Bay"
-          },
-          {
-            "player": "Christiansen",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 20,
-            "wickets": 2,
-            "economy": "2.50",
-            "team": "Wide Bay"
-          },
-          {
-            "player": "REINIKKA",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 9,
-            "wickets": 2,
-            "economy": "3.00",
-            "team": "Wide Bay"
-          }
-        ],
-        "isClubTeam": false
-      },
-      "awayTeam": {
-        "name": "Wide Bay",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_9d33cc1d_51e0004983.jpg",
-          "width": 977,
-          "height": 937
-        },
-        "score": "7/164",
-        "overs": "41",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Peter Miller",
-            "runs": 24,
-            "balls": 25,
-            "fours": 6,
-            "sixes": 0,
-            "SR": 96,
-            "team": "Wide Bay",
-            "notOut": false
-          },
-          {
-            "player": "Brian Kratzmann",
-            "runs": 21,
-            "balls": 31,
-            "fours": 1,
-            "sixes": 0,
-            "SR": 67.74,
-            "team": "Wide Bay",
-            "notOut": false
-          },
-          {
-            "player": "Brett Rankin",
-            "runs": 18,
-            "balls": 7,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 257.14,
-            "team": "Wide Bay",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Simes",
-            "overs": 8,
-            "maidens": 3,
-            "runs": 21,
-            "wickets": 2,
-            "economy": "2.63",
-            "team": "GC 60's Div 2 Blue"
-          },
-          {
-            "player": "Foster",
-            "overs": 5,
-            "maidens": 1,
             "runs": 14,
             "wickets": 1,
-            "economy": "2.80",
-            "team": "GC 60's Div 2 Blue"
+            "economy": "7.00",
+            "team": "Mudgeeraba Blue"
           },
           {
-            "player": "Russell",
-            "overs": 4,
-            "maidens": 1,
-            "runs": 13,
+            "player": "Cahill",
+            "overs": 2,
+            "maidens": 0,
+            "runs": 16,
             "wickets": 1,
-            "economy": "3.25",
-            "team": "GC 60's Div 2 Blue"
+            "economy": "8.00",
+            "team": "Mudgeeraba Blue"
           }
         ],
         "isClubTeam": false
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
+        "width": 1134,
+        "height": 1417
       },
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_9d33cc1d_51e0004983.jpg",
-        "width": 977,
-        "height": 937
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_e4b49fbd_3c380c1ddd.png",
+        "width": 512,
+        "height": 512
       },
-      "date": "15 Aug 2026",
-      "type": "One Day",
-      "ground": "Palmwoods Sports Reserve / Oval 1 - Turf",
-      "round": "Round 9",
-      "gender": "Mixed",
-      "ageGroup": "Over 60",
-      "gradeName": "O60 Div 2 - Kerry Emery Shield",
-      "gradeResolvedPosition": 5,
-      "gradeSortOrder": 5,
+      "date": "30 Aug 2026",
+      "type": "T20",
+      "ground": "Pacific Pines Park / Pacific Pines Park",
+      "round": "Round 10",
+      "gender": "Women",
+      "ageGroup": "Senior",
+      "gradeName": "Senior Women",
+      "gradeResolvedPosition": 0,
+      "gradeSortOrder": 0,
       "assignSponsors": {
         "competition": [],
-        "grade": [
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          }
-        ],
+        "grade": [],
         "team": []
       },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ],
-      "result": "Wide Bay won by 3 wickets",
-      "resultShort": "Wide Bay def GC 60's Div 2 Blue",
+      "primaryForScreen": [],
+      "result": "Coomera won by 5 wickets",
+      "resultShort": "Coomera def Mudgeeraba Blue",
       "resultSummary": {
-        "homeTeam": "GC 60's Div 2 Blue",
-        "awayTeam": "Wide Bay",
-        "winner": "Wide Bay",
+        "homeTeam": "Mudgeeraba Blue",
+        "awayTeam": "Coomera",
+        "winner": "Coomera",
         "resultWord": "lost"
       },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"QVC Competitions\",\n    \"grade\": \"O60 Div 2 - Kerry Emery Shield\",\n    \"round\": \"Round 9\",\n    \"ground\": \"Palmwoods Sports Reserve / Oval 1 - Turf\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Wide Bay\",\n    \"tossResult\": \"bowl\",\n    \"resultStatement\": \"Wide Bay won by 3 wickets\",\n    \"dayOne\": \"2026-08-15\",\n    \"finalDaysPlay\": \"2026-08-15\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"GC 60's Div 2 Blue\",\n    \"innings\": [\n      {\n        \"teamName\": \"GC 60's Div 2 Blue\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Roger Boyd (c), scored 10 Runs from (15) balls, with 1 four, at a strike Rate of 66.66., they were out.\"\n          },\n          {\n            \"description\": \"David Russell, scored 27 Runs from (41) balls, with 4 fours, at a strike Rate of 65.85., they were not out.\"\n          },\n          {\n            \"description\": \"Mark Simes, scored 17 Runs from (40) balls, with 1 four, at a strike Rate of 42.50., they were out.\"\n          },\n          {\n            \"description\": \"Peter Gow, scored 7 Runs from (18) balls, with 1 four, at a strike Rate of 38.88., they were out.\"\n          },\n          {\n            \"description\": \"John Guiver, scored 18 Runs from (26) balls, with 2 fours, at a strike Rate of 69.23., they were out.\"\n          },\n          {\n            \"description\": \"Raymond Sanders, scored 1 Runs from (4) balls, at a strike Rate of 25.00., they were out.\"\n          },\n          {\n            \"description\": \"Darel Vidler, scored 18 Runs from (26) balls, with 2 fours, at a strike Rate of 69.23., they were out.\"\n          },\n          {\n            \"description\": \"Warren Rose, scored 24 Runs from (40) balls, with 4 fours, at a strike Rate of 60.00., they were out.\"\n          },\n          {\n            \"description\": \"John Foster, scored 9 Runs from (19) balls, with 1 four, at a strike Rate of 47.36., they were out.\"\n          },\n          {\n            \"description\": \"Mick Seery, scored 9 Runs from (10) balls, with 1 four, at a strike Rate of 90.00., they were out.\"\n          },\n          {\n            \"description\": \"john burns, scored 3 Runs from (12) balls, at a strike Rate of 25.00., they were out.\"\n          },\n          {\n            \"description\": \"Graham Rose, scored 6 Runs from (17) balls, at a strike Rate of 35.29., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Rankin, took 6.5 wickets for 0 runs, with 26 maidens.\"\n          },\n          {\n            \"description\": \"McLellan (c), took 4.25 wickets for 1 run, with 17 maidens.\"\n          },\n          {\n            \"description\": \"McCarron, bowled 1 over, took 1.5 wickets for 0 runs, with 6 maidens.\"\n          },\n          {\n            \"description\": \"Stiefvater, took 1.5 wickets for 0 runs, with 3 maidens.\"\n          },\n          {\n            \"description\": \"Christiansen, bowled 1 over, took 2.5 wickets for 2 runs, with 20 maidens.\"\n          },\n          {\n            \"description\": \"Kratzmann, took 3.87 wickets for 1 run, with 31 maidens.\"\n          },\n          {\n            \"description\": \"Miller, bowled 1 over, took 2.75 wickets for 0 runs, with 11 maidens.\"\n          },\n          {\n            \"description\": \"Logue, took 3.87 wickets for 3 runs, with 31 maidens.\"\n          },\n          {\n            \"description\": \"REINIKKA, took 3 wickets for 2 runs, with 9 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Dansie, effected 1 stumping.\"\n          },\n          {\n            \"description\": \"McLellan (c), took 6 catches.\"\n          },\n          {\n            \"description\": \"Kratzmann, took 2 catches.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"GC 60's Div 2 Blue Batting\"\n      }\n    ],\n    \"totalScore\": \"9/160\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Wide Bay\",\n    \"innings\": [\n      {\n        \"teamName\": \"Wide Bay\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Ross Pegg, scored 13 Runs from (40) balls, with 3 fours, at a strike Rate of 32.50., they were out.\"\n          },\n          {\n            \"description\": \"Mike McLellan (c), scored 10 Runs from (25) balls, with 1 four, at a strike Rate of 40.00., they were out.\"\n          },\n          {\n            \"description\": \"Peter Miller, scored 24 Runs from (25) balls, with 6 fours, at a strike Rate of 96.00., they were out.\"\n          },\n          {\n            \"description\": \"Keith Christiansen, scored 5 Runs from (8) balls, with 1 four, at a strike Rate of 62.50., they were out.\"\n          },\n          {\n            \"description\": \"VYVIAN REINIKKA, scored 2 Runs from (5) balls, at a strike Rate of 40.00., they were out.\"\n          },\n          {\n            \"description\": \"Pat Logue, scored 17 Runs from (40) balls, with 2 fours, at a strike Rate of 42.50., they were out.\"\n          },\n          {\n            \"description\": \"Michael McCarron, scored 17 Runs from (25) balls, with 2 fours, at a strike Rate of 68.00., they were out.\"\n          },\n          {\n            \"description\": \"Dave Dansie, scored 13 Runs from (32) balls, with 2 fours, at a strike Rate of 40.62., they were not out.\"\n          },\n          {\n            \"description\": \"Brian Kratzmann, scored 21 Runs from (31) balls, with 1 four, at a strike Rate of 67.74., they were out.\"\n          },\n          {\n            \"description\": \"Brett Rankin, scored 18 Runs from (7) balls, with 2 fours, at a strike Rate of 257.14., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Foster, bowled 1 over, took 2.8 wickets for 1 run, with 14 maidens.\"\n          },\n          {\n            \"description\": \"Vidler, bowled 3 overs, took 2.28 wickets for 0 runs, with 16 maidens.\"\n          },\n          {\n            \"description\": \"Simes, bowled 3 overs, took 2.62 wickets for 2 runs, with 21 maidens.\"\n          },\n          {\n            \"description\": \"burns, took 7.25 wickets for 0 runs, with 29 maidens.\"\n          },\n          {\n            \"description\": \"Seery, bowled 2 overs, took 4.2 wickets for 0 runs, with 21 maidens.\"\n          },\n          {\n            \"description\": \"Rose, took 5.12 wickets for 0 runs, with 41 maidens.\"\n          },\n          {\n            \"description\": \"Russell, bowled 1 over, took 3.25 wickets for 1 run, with 13 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Rose, took 2 catches.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Wide Bay Batting\"\n      }\n    ],\n    \"totalScore\": \"7/164\",\n    \"totalWickets\": 0\n  }\n}"
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Women's Winter Community Cricket\",\n    \"grade\": \"Senior Women\",\n    \"round\": \"Round 10\",\n    \"ground\": \"Pacific Pines Park / Pacific Pines Park\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Coomera\",\n    \"tossResult\": \"bowl\",\n    \"resultStatement\": \"Coomera won by 5 wickets\",\n    \"dayOne\": \"2026-08-30\",\n    \"finalDaysPlay\": \"2026-08-30\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Mudgeeraba Blue\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba Blue\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Roxy Waller, scored 15 Runs from (13) balls, at a strike Rate of 115.38., they were out.\"\n          },\n          {\n            \"description\": \"Eden Carter, scored 22 Runs from (13) balls, at a strike Rate of 169.23., they were out.\"\n          },\n          {\n            \"description\": \"Jess Dooley, scored 16 Runs from (14) balls, at a strike Rate of 114.28., they were out.\"\n          },\n          {\n            \"description\": \"Melinda Santer, scored 20 Runs from (13) balls, at a strike Rate of 153.84., they were out.\"\n          },\n          {\n            \"description\": \"Eleanor Carter, scored 13 Runs from (13) balls, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Donna Oroz, scored 20 Runs from (13) balls, at a strike Rate of 153.84., they were out.\"\n          },\n          {\n            \"description\": \"Joanne Cahill, scored 4 Runs from (13) balls, at a strike Rate of 30.76., they were out.\"\n          },\n          {\n            \"description\": \"Melissa Lewis, scored 60 Runs from (14) balls, at a strike Rate of 428.57., they were not out.\"\n          },\n          {\n            \"description\": \"Melinda Baker (c), scored 20 Runs from (14) balls, at a strike Rate of 142.85., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba Blue Batting\"\n      }\n    ],\n    \"totalScore\": \"215\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Coomera\",\n    \"innings\": [\n      {\n        \"teamName\": \"Coomera\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Coomera Batting\"\n      }\n    ],\n    \"totalScore\": \"255\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Red\"\n    ]\n  }\n}"
+    },
+    {
+      "gameID": "e4e61f32",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Mudgeeraba Red",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
+          "width": 1134,
+          "height": 1417
+        },
+        "score": "90",
+        "overs": "20",
+        "homeScoresFirstInnings": null,
+        "battingPerformances": [],
+        "bowlingPerformances": [
+          {
+            "player": "Rowley",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 10,
+            "wickets": 3,
+            "economy": "3.33",
+            "team": "Surfers Paradise"
+          },
+          {
+            "player": "Ireland",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 11,
+            "wickets": 3,
+            "economy": "3.67",
+            "team": "Surfers Paradise"
+          },
+          {
+            "player": "Eckersley",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 5,
+            "wickets": 2,
+            "economy": "1.67",
+            "team": "Surfers Paradise"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "awayTeam": {
+        "name": "Surfers Paradise",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_91aa3470_ecc46cc045.png",
+          "width": 169,
+          "height": 163
+        },
+        "score": "321",
+        "overs": "20",
+        "awayScoresFirstInnings": null,
+        "battingPerformances": [
+          {
+            "player": "Belinda Dawney (c)",
+            "runs": 66,
+            "balls": 15,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 440,
+            "team": "Surfers Paradise",
+            "notOut": false
+          },
+          {
+            "player": "Kerry Ireland",
+            "runs": 41,
+            "balls": 15,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 273.33,
+            "team": "Surfers Paradise",
+            "notOut": true
+          },
+          {
+            "player": "Suzanna Gent",
+            "runs": 34,
+            "balls": 15,
+            "fours": 0,
+            "sixes": 0,
+            "SR": 226.66,
+            "team": "Surfers Paradise",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [],
+        "isClubTeam": false
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
+        "width": 1134,
+        "height": 1417
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_91aa3470_ecc46cc045.png",
+        "width": 169,
+        "height": 163
+      },
+      "date": "30 Aug 2026",
+      "type": "T20",
+      "ground": "Alan Nielsen Park / Alan Nielsen Park 3 (Corbwood No 3)",
+      "round": "Round 10",
+      "gender": "Women",
+      "ageGroup": "Senior",
+      "gradeName": "Senior Women",
+      "gradeResolvedPosition": 0,
+      "gradeSortOrder": 0,
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "primaryForScreen": [],
+      "result": "Surfers Paradise won by 231 runs",
+      "resultShort": "Surfers Paradise def Mudgeeraba Red",
+      "resultSummary": {
+        "homeTeam": "Mudgeeraba Red",
+        "awayTeam": "Surfers Paradise",
+        "winner": "Surfers Paradise",
+        "resultWord": "lost"
+      },
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Women's Winter Community Cricket\",\n    \"grade\": \"Senior Women\",\n    \"round\": \"Round 10\",\n    \"ground\": \"Alan Nielsen Park / Alan Nielsen Park 3 (Corbwood No 3)\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Surfers Paradise\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Surfers Paradise won by 231 runs\",\n    \"dayOne\": \"2026-08-30\",\n    \"finalDaysPlay\": \"2026-08-30\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Mudgeeraba Red\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba Red\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Dawney (c), took 3 wickets for 1 run, with 6 maidens.\"\n          },\n          {\n            \"description\": \"Eckersley, took 1.66 wickets for 2 runs, with 5 maidens.\"\n          },\n          {\n            \"description\": \"Gent, took 4 wickets for 0 runs, with 12 maidens.\"\n          },\n          {\n            \"description\": \"Ireland, took 3.66 wickets for 3 runs, with 11 maidens.\"\n          },\n          {\n            \"description\": \"McKaskill, took 4.33 wickets for 1 run, with 13 maidens.\"\n          },\n          {\n            \"description\": \"Pennycook, took 6 wickets for 2 runs, with 18 maidens.\"\n          },\n          {\n            \"description\": \"Rowley, took 3.33 wickets for 3 runs, with 10 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"SARAGOZZA, took 4 catches, made 2 run outs, and effected 5 stumpings.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba Red Batting\"\n      }\n    ],\n    \"totalScore\": \"90\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Surfers Paradise\",\n    \"innings\": [\n      {\n        \"teamName\": \"Surfers Paradise\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Surfers Paradise Batting\"\n      }\n    ],\n    \"totalScore\": \"321\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Red\"\n    ]\n  }\n}"
     }
   ],
   "asset": {
     "assetID": 80,
     "assetTypeID": 2,
     "assetCategoryID": 2,
-    "assetsLinkID": "2c254b27c9b0f5db80b04fc2c70e12c648ba1c453d45ec28b3f34563910c298a"
+    "assetsLinkID": "99a7fe1aa55ccf40f000bf4a2672337284a02b0d6df51dd96c96c77b957f9d4b"
   },
   "render": {
-    "schedulerId": 594,
-    "renderId": 9015
+    "schedulerId": 598,
+    "renderId": 9032
   },
   "account": {
-    "accountId": 701
+    "accountId": 705
   },
   "timings": {
-    "FPS_MAIN": 600,
+    "FPS_MAIN": 210,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 270,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [45, 195, 390, 585, 720, 810, 900],
+  "frames": [45, 195],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queensland_Veterans_Cricket_Logo_cropped_549341fcde.png",
-        "width": 2500,
-        "height": 2500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
+        "width": 1134,
+        "height": 1417
       },
-      "name": "Queensland Veterans Cricket",
+      "name": "Mudgeeraba Nerang And Districts Cricket Club",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 211,
-            "name": "1",
-            "logo": {
-              "id": 31204,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-            }
-          },
-          {
-            "id": 212,
-            "name": "2",
-            "logo": {
-              "id": 31205,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-            }
-          },
-          {
-            "id": 213,
-            "name": "3",
-            "logo": {
-              "id": 31206,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-            }
-          },
-          {
-            "id": 214,
-            "name": "4",
-            "logo": {
-              "id": 31207,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-            }
-          }
-        ],
-        "general": [
-          {
-            "id": 215,
-            "name": "5",
-            "logo": {
-              "id": 31208,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_cropped_c9e01954ba.png"
-            }
-          },
-          {
-            "id": 216,
-            "name": "6",
-            "logo": {
-              "id": 31209,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor6_cropped_8af0ba7b8f.png"
-            }
-          },
-          {
-            "id": 217,
-            "name": "7",
-            "logo": {
-              "id": 31210,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_cropped_dfb381eef0.png"
-            }
-          },
-          {
-            "id": 218,
-            "name": "8",
-            "logo": {
-              "id": 31211,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_cropped_31bb64eb78.png"
-            }
-          },
-          {
-            "id": 219,
-            "name": "9",
-            "logo": {
-              "id": 31212,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
-            }
-          },
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          },
-          {
-            "id": 221,
-            "name": "11",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_cropped_7c4fa55c7e.png"
-            }
-          },
-          {
-            "id": 222,
-            "name": "12",
-            "logo": {
-              "id": 31215,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_cropped_ef985bec1c.png"
-            }
-          },
-          {
-            "id": 223,
-            "name": "13",
-            "logo": {
-              "id": 31216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_cropped_d8f85c75e7.png"
-            }
-          },
-          {
-            "id": 224,
-            "name": "14",
-            "logo": {
-              "id": 31217,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_cropped_6105b69331.png"
-            }
-          },
-          {
-            "id": 225,
-            "name": "15",
-            "logo": {
-              "id": 31218,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_cropped_0d7cc6d2f8.png"
-            }
-          },
-          {
-            "id": 226,
-            "name": "16",
-            "logo": {
-              "id": 31219,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_cropped_4faa202880.png"
-            }
-          }
-        ],
-        "sponsorNum": 16
+        "primary": [],
+        "general": [],
+        "sponsorNum": 0
       },
-      "IsAccountClub": false
+      "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "O60 Div 2 - Kerry Emery Shield",
-      "groupingCategory": "O60 Div 2 - Kerry Emery Shield",
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Results",
         "titleSplit": ["Results"],
@@ -1321,16 +305,16 @@
         "assetId": 80,
         "assetTypeId": 2,
         "frames": [],
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#862F2F",
-          "secondary": "#EFB247"
+          "primary": "#FF0000",
+          "secondary": "#004DE2"
         },
-        "template": "CNSW"
+        "template": "Mudgeeraba"
       },
       "media": {
         "HeroImage": {
@@ -1354,25 +338,25 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketBattingPerformances": 7,
-          "CricketBowlingPerformances": 7,
+          "CricketBattingPerformances": 5,
+          "CricketBowlingPerformances": 5,
           "CricketTeamOfTheWeek": 2
         }
       },
       "templateVariation": {
-        "useBackground": "Texture",
+        "useBackground": "Gradient",
         "mode": "lightAlt",
         "category": {
-          "slug": "CNSW",
-          "name": "Cricket NSW",
+          "slug": "Mudgeeraba",
+          "name": "Mudgeeraba",
           "divideFixturesBy": {
+            "CricketUpcoming": 3,
+            "CricketResults": 2,
+            "CricketResultSingle": 1,
             "CricketLadder": 1,
             "CricketRoster": 1,
-            "CricketResults": 2,
-            "CricketUpcoming": 3,
-            "CricketResultSingle": 1,
-            "CricketBattingPerformances": 7,
-            "CricketBowlingPerformances": 7
+            "CricketBowlingPerformances": 5,
+            "CricketBattingPerformances": 5
           },
           "bundleAudio": null
         },
@@ -1399,10 +383,10 @@
           "gradientType": null,
           "overlayOpacity": null
         },
-        "palette": "secondary",
+        "palette": "primary",
         "gradient": {
-          "type": null,
-          "direction": null
+          "type": "primary",
+          "direction": "DIAGONAL"
         },
         "noise": {
           "type": null
@@ -1426,8 +410,8 @@
         "modeId": 2,
         "imageCandidates": [],
         "texture": {
-          "name": "Stadium 004",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Chat_GPT_Image_Aug_12_2026_12_25_17_PM_68e4d8018e.png",
+          "name": null,
+          "url": null,
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
@@ -1440,28 +424,28 @@
   },
   "errors": [],
   "orderingContext": {
-    "scopeKey": "account:701:association:7646",
+    "scopeKey": "account:705:club:58977",
     "revision": 0,
-    "resolvedAt": "2026-08-21T04:12:20.168Z"
+    "resolvedAt": "2026-08-31T02:21:55.040Z"
   },
   "organisation": {
-    "type": "association",
-    "id": 7646
+    "type": "club",
+    "id": 58977
   },
-  "generationIdentity": "bd34e24868611b1b6937e3988ab6101bd0bb34c7c5de640a28c29fc1ff120856",
+  "generationIdentity": "46e8ced389f60923edfa029bfad34630e78a4dff6fc31633fb7d711b6c2341f7",
   "generationManifest": {
     "orderingContext": {
-      "scopeKey": "account:701:association:7646",
+      "scopeKey": "account:705:club:58977",
       "revision": 0,
-      "resolvedAt": "2026-08-21T04:12:20.168Z"
+      "resolvedAt": "2026-08-31T02:21:55.040Z"
     },
     "organisation": {
-      "type": "association",
-      "id": 7646
+      "type": "club",
+      "id": 58977
     },
-    "generationIdentity": "bd34e24868611b1b6937e3988ab6101bd0bb34c7c5de640a28c29fc1ff120856",
-    "schedulerId": 594,
-    "renderId": 9015,
-    "fixtureIds": ["c26730dd", "229f3bd0", "ae1dedc7", "461173e5", "beb0f000"]
+    "generationIdentity": "46e8ced389f60923edfa029bfad34630e78a4dff6fc31633fb7d711b6c2341f7",
+    "schedulerId": 598,
+    "renderId": 9032,
+    "fixtureIds": ["b854c1c7", "e4e61f32"]
   }
 }

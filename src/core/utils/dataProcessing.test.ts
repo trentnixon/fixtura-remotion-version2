@@ -41,8 +41,9 @@ describe("processDatasetForTemplate + outro sponsors", () => {
     const processed = processDatasetForTemplate(
       CricketResults as FixturaDataset,
       "basic",
-      "Basic",
       "Cricket",
+      { useBackground: "Solid" },
+      { kind: "passthrough", label: "Solid" },
     );
 
     const sponsors = processed.videoMeta?.club?.sponsors;
@@ -61,8 +62,9 @@ describe("processDatasetForTemplate + outro sponsors", () => {
     const processed = processDatasetForTemplate(
       CricketResults as FixturaDataset,
       "basic",
-      "Basic",
       "Cricket",
+      { useBackground: "Solid" },
+      { kind: "passthrough", label: "Solid" },
     );
     const sponsors = processed.videoMeta?.club?.sponsors;
     const includeSponsors =

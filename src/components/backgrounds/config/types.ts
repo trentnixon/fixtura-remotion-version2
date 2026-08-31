@@ -12,7 +12,8 @@ export type BackgroundType =
   | "noise"
   | "layered"
   | "animated"
-  | "texture";
+  | "texture"
+  | "luminance";
 
 /**
  * Background animation types

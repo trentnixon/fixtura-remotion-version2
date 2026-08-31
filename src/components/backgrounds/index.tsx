@@ -2,6 +2,11 @@
 
 import { useVideoDataContext } from "../../core/context/VideoDataContext";
 import { useThemeContext } from "../../core/context/ThemeContext";
+import { matchLegacyIngress } from "./variants/Generated/catalogue";
+import {
+  logUnsupportedBackgroundDiagnostic,
+  resolveValidatedBackgroundRoute,
+} from "./resolveValidatedBackgroundRoute";
 
 // Import all background variants
 import { SolidBackground as SolidBg } from "./variants/Solid/SolidBackground";
@@ -37,6 +42,7 @@ import { PatternBackground } from "./variants/Patterns";
 import ParticleBackground from "./variants/Particles";
 import { VideoTemplateVariation } from "../../core/types/data/videoData";
 import TextureBackground from "./variants/Textures/TextureBackground";
+import { LuminanceBackground } from "./variants/Luminance";
 
 // Export all background variants
 export const BackgroundComponents = {
@@ -48,6 +54,7 @@ export const BackgroundComponents = {
   Pattern: PatternBackground,
   Particle: ParticleBackground,
   Texture: TextureBackground,
+  Luminance: LuminanceBackground,
   Noise: {
     Default: NoiseBg,
     Subtle: SubtleNoise,
@@ -75,35 +82,39 @@ export * from "./config";
 // Background component
 export const SelectTemplateBackground = () => {
   const { video } = useVideoDataContext();
-  const background = video.templateVariation?.useBackground;
+  const match = matchLegacyIngress(video.templateVariation ?? {});
+  const route = resolveValidatedBackgroundRoute(match);
 
-  // Render different backgrounds based on template variation
-  switch (background) {
-    case "Gradient":
+  if (route.kind === "unsupported") {
+    logUnsupportedBackgroundDiagnostic(route.diagnostic);
+    return <SolidBackground />;
+  }
+
+  switch (route.kind) {
+    case "gradient":
       return <GradientBackground />;
-    case "Image":
+    case "image":
       return <ImageBackground />;
-    case "Video":
+    case "video":
       return <VideoBackground />;
-    case "Texture":
+    case "texture":
       return <TextureBackground />;
-    case "Graphics":
-    case "Noise":
-      return (
-        <NoiseBackground
-          variant={video.templateVariation?.noise?.type as NoiseVariant}
-        />
-      );
-    case "Pattern":
+    case "luminance":
+      return <LuminanceBackground />;
+    case "noise":
+      return <NoiseBackground variant={route.variant} />;
+    case "pattern":
       return <PatternBackground />;
-    case "Particle":
+    case "particle":
       return <ParticleBackground />;
-    /*   case "Layered":
-      return <LayeredBackground />; */
-    case "Animated":
+    case "animated":
       return <AnimatedBackground />;
-    default:
+    case "solid":
       return <SolidBackground />;
+    default: {
+      const exhaustive: never = route;
+      return exhaustive;
+    }
   }
 };
 

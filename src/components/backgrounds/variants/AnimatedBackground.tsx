@@ -1,11 +1,26 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame, interpolate } from "remotion";
+import { useVideoDataContext } from "../../../core/context/VideoDataContext";
+import { useThemeContext } from "../../../core/context/ThemeContext";
+import { PatternBackground } from "./Patterns";
+import ParticleBackground from "./Particles";
+import type { AnimatedPresetType } from "./Generated/catalogue/types";
+import { GridNoise } from "./NoiseBackground/GridNoise";
+import SubtleNoise from "./NoiseBackground/variants/SubtleNoise";
+import GrainNoise from "./NoiseBackground/variants/GrainNoise";
+import WaveNoise from "./NoiseBackground/variants/WaveNoise";
+import FogNoise from "./NoiseBackground/variants/FogNoise";
+import StaticNoise from "./NoiseBackground/variants/StaticNoise";
+import FloatingParticles from "./NoiseBackground/variants/FloatingParticles";
+import DynamicParticles from "./NoiseBackground/variants/DynamicParticles";
+import TriangleSwarm from "./NoiseBackground/variants/TriangleSwarm";
+import PulsingCircles from "./NoiseBackground/variants/PulsingCircles";
+import DigitalRain from "./NoiseBackground/variants/DigitalRain";
+import GradientGrid from "./NoiseBackground/variants/GradientGrid";
+import GeometricGraphics from "./NoiseBackground/variants/GeometricGraphics";
+import SpokesGraphics from "./NoiseBackground/variants/SpokesGraphics";
 
-type AnimationType =
-  | "pulsingGradient"
-  | "movingGradient"
-  | "breathingColor"
-  | "waveEffect";
+type AnimationType = AnimatedPresetType;
 
 interface AnimatedBackgroundProps {
   type: AnimationType;
@@ -29,23 +44,85 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   style = {},
 }) => {
   const frame = useCurrentFrame();
+  const { video } = useVideoDataContext();
+  const animationConfig = video.templateVariation?.animation;
+  const animationType = (animationConfig?.type || type) as AnimationType;
+
+  if (
+    [
+      "dot-field",
+      "line-field",
+      "tile-grid",
+      "crosshatch-field",
+      "triangle-tile",
+      "chevron-field",
+    ].includes(animationType)
+  ) {
+    return <PatternBackground />;
+  }
+
+  if (
+    [
+      "floating-dots",
+      "streak-lines",
+      "bubble-field",
+      "snow-field",
+      "confetti-field",
+    ].includes(animationType)
+  ) {
+    return <ParticleBackground />;
+  }
+
+  if (
+    [
+      "balanced-noise",
+      "subtle-noise",
+      "grain-field",
+      "wave-noise",
+      "fog-field",
+      "tv-static",
+      "floating-particles",
+      "dynamic-particles",
+      "triangle-swarm",
+      "pulsing-circles",
+      "digital-rain",
+      "gradient-grid",
+      "geometric-field",
+      "spokes-field",
+    ].includes(animationType)
+  ) {
+    return <GeneratedNoise type={animationType} />;
+  }
+
+  const resolvedColors = animationConfig?.colors
+    ? [...animationConfig.colors]
+    : colors;
+  const resolvedDuration = animationConfig?.duration ?? duration;
+  const resolvedIntensity = animationConfig?.intensity ?? intensity;
+  const resolvedBaseColor = animationConfig?.baseColor ?? baseColor;
+  const resolvedDirection = animationConfig?.direction ?? direction;
 
   // Calculate animation progress
-  const progress = (frame % duration) / duration;
+  const progress = (frame % resolvedDuration) / resolvedDuration;
 
   // Render different animation types
-  switch (type) {
+  switch (animationType) {
     case "pulsingGradient": {
       // Pulsing gradient effect
-      const scale = interpolate(progress, [0, 0.5, 1], [1, 1 + intensity, 1], {
-        extrapolateRight: "clamp",
-      });
+      const scale = interpolate(
+        progress,
+        [0, 0.5, 1],
+        [1, 1 + resolvedIntensity, 1],
+        {
+          extrapolateRight: "clamp",
+        },
+      );
 
       return (
         <AbsoluteFill
           className={`bg-animated bg-pulsing-gradient ${className}`}
           style={{
-            background: `linear-gradient(${direction}, ${colors[0]}, ${colors[1]})`,
+            background: `linear-gradient(${resolvedDirection}, ${resolvedColors[0]}, ${resolvedColors[1]})`,
             transform: `scale(${scale})`,
             zIndex: -1,
             ...style,
@@ -64,7 +141,7 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
         <AbsoluteFill
           className={`bg-animated bg-moving-gradient ${className}`}
           style={{
-            background: `linear-gradient(${direction}, ${colors[0]}, ${colors[1]}, ${colors[0]})`,
+            background: `linear-gradient(${resolvedDirection}, ${resolvedColors[0]}, ${resolvedColors[1]}, ${resolvedColors[0]})`,
             backgroundSize: "200% 200%",
             backgroundPosition: `${position}% ${position}%`,
             zIndex: -1,
@@ -79,7 +156,7 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
       const opacity = interpolate(
         progress,
         [0, 0.5, 1],
-        [1, 1 - intensity, 1],
+        [1, 1 - resolvedIntensity, 1],
         { extrapolateRight: "clamp" },
       );
 
@@ -87,14 +164,14 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
         <AbsoluteFill
           className={`bg-animated bg-breathing-color ${className}`}
           style={{
-            backgroundColor: baseColor,
+            backgroundColor: resolvedBaseColor,
             zIndex: -1,
             ...style,
           }}
         >
           <AbsoluteFill
             style={{
-              backgroundColor: colors[0],
+              backgroundColor: resolvedColors[0],
               opacity,
             }}
           />
@@ -104,7 +181,7 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
 
     case "waveEffect": {
       // Wave effect using SVG
-      const waveHeight = 20 * intensity;
+      const waveHeight = 20 * resolvedIntensity;
       const wavePosition = interpolate(progress, [0, 1], [0, 100], {
         extrapolateRight: "clamp",
       });
@@ -113,7 +190,7 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
         <AbsoluteFill
           className={`bg-animated bg-wave-effect ${className}`}
           style={{
-            backgroundColor: baseColor,
+            backgroundColor: resolvedBaseColor,
             zIndex: -1,
             overflow: "hidden",
             ...style,
@@ -140,8 +217,8 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
                 x2="100%"
                 y2="0%"
               >
-                <stop offset="0%" stopColor={colors[0]} />
-                <stop offset="100%" stopColor={colors[1]} />
+                <stop offset="0%" stopColor={resolvedColors[0]} />
+                <stop offset="100%" stopColor={resolvedColors[1]} />
               </linearGradient>
             </defs>
 
@@ -186,11 +263,58 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
         <AbsoluteFill
           className={`bg-animated ${className}`}
           style={{
-            backgroundColor: baseColor,
+            backgroundColor: resolvedBaseColor,
             zIndex: -1,
             ...style,
           }}
         />
       );
+  }
+};
+
+const GeneratedNoise: React.FC<{ type: AnimationType }> = ({ type }) => {
+  const { selectedPalette } = useThemeContext();
+  const baseProps = {
+    baseColor: selectedPalette.background.main,
+    noiseColor: selectedPalette.background.accent,
+  };
+
+  switch (type) {
+    case "subtle-noise":
+      return <SubtleNoise {...baseProps} />;
+    case "grain-field":
+      return <GrainNoise {...baseProps} />;
+    case "wave-noise":
+      return <WaveNoise {...baseProps} />;
+    case "fog-field":
+      return <FogNoise {...baseProps} />;
+    case "tv-static":
+      return <StaticNoise {...baseProps} />;
+    case "floating-particles":
+      return <FloatingParticles {...baseProps} />;
+    case "dynamic-particles":
+      return <DynamicParticles {...baseProps} />;
+    case "triangle-swarm":
+      return <TriangleSwarm {...baseProps} />;
+    case "pulsing-circles":
+      return <PulsingCircles {...baseProps} />;
+    case "digital-rain":
+      return <DigitalRain {...baseProps} />;
+    case "gradient-grid":
+      return <GradientGrid {...baseProps} />;
+    case "geometric-field":
+      return (
+        <GeometricGraphics
+          baseColor={baseProps.baseColor}
+          primaryColor={baseProps.noiseColor}
+          secondaryColor={selectedPalette.container.secondary}
+          accentColor={selectedPalette.container.accent}
+        />
+      );
+    case "spokes-field":
+      return <SpokesGraphics />;
+    case "balanced-noise":
+    default:
+      return <GridNoise {...baseProps} />;
   }
 };

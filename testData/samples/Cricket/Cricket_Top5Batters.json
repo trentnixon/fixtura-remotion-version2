@@ -429,6 +429,19 @@
             "opacity": 0.5,
             "blendMode": "multiply"
           }
+        },
+        "luminance": {
+          "name": "Test 004",
+          "url": null,
+          "asset": "_verify/test004.png",
+          "map": {
+            "kind": "theme",
+            "preset": "brand"
+          },
+          "protection": "none",
+          "position": "center",
+          "size": "cover",
+          "opacity": 1
         }
       }
     }

@@ -39,7 +39,12 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
       <AbsoluteFill style={{ zIndex: CONTENT_Z_INDEX }}>
         <Series>
           {/* Intro Sequence */}
-          <Series.Sequence durationInFrames={calculateIntroDuration(timings)}>
+          <Series.Sequence
+            durationInFrames={calculateIntroDuration(timings)}
+            style={{
+              translate: "46.9px 0px",
+            }}
+          >
             {IntroComponent && <IntroComponent />}
           </Series.Sequence>
 
@@ -61,10 +66,8 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
           )}
         </Series>
       </AbsoluteFill>
-
       {/* Background */}
       <BackgroundComponent />
-
       {/* Audio */}
       <CustomAudioComponent />
     </AbsoluteFill>

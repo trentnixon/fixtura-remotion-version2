@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fixtura.dev/schemas/generated-backgrounds/discovery-contract.schema.json",
+  "title": "Generated Background Discovery Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contractVersion",
+    "generatedAt",
+    "catalogue",
+    "operatorPresets",
+    "legacyIngress"
+  ],
+  "properties": {
+    "contractVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "catalogue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["presets"],
+      "properties": {
+        "presets": {
+          "type": "array",
+          "minItems": 25,
+          "items": {
+            "$ref": "#/$defs/generatedCatalogueEntry"
+          }
+        }
+      }
+    },
+    "operatorPresets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "legacyIngress": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/legacyIngressRow"
+      }
+    }
+  },
+  "$defs": {
+    "legacyIngressMatch": {
+      "type": "object",
+      "required": ["useBackground"],
+      "properties": {
+        "useBackground": { "type": "string" },
+        "pattern": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "particle": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "noise": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string" }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "legacyIngressRowGenerated": {
+      "type": "object",
+      "required": ["id", "match", "outcome", "presetId"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "match": { "$ref": "#/$defs/legacyIngressMatch" },
+        "outcome": { "const": "generated" },
+        "presetId": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "legacyIngressRowPassthroughOrUnsupported": {
+      "type": "object",
+      "required": ["id", "match", "outcome"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "match": { "$ref": "#/$defs/legacyIngressMatch" },
+        "outcome": {
+          "enum": ["passthrough", "unsupported"]
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "legacyIngressRow": {
+      "oneOf": [
+        { "$ref": "#/$defs/legacyIngressRowGenerated" },
+        { "$ref": "#/$defs/legacyIngressRowPassthroughOrUnsupported" }
+      ]
+    },
+    "generatedCatalogueEntry": {
+      "type": "object",
+      "required": [
+        "id",
+        "displayName",
+        "description",
+        "inventoryKey",
+        "rendererAdapter",
+        "defaultConfiguration",
+        "operatorVisibility",
+        "readabilityPolicy",
+        "paletteBehavior",
+        "operatorControls",
+        "authorControls",
+        "legacyIngressIds",
+        "discovery"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "displayName": { "type": "string" },
+        "description": { "type": "string" },
+        "inventoryKey": { "type": "string" },
+        "rendererAdapter": {
+          "enum": [
+            "pattern-tiled",
+            "particle-field",
+            "grid-noise",
+            "particle-noise",
+            "svg-geometric",
+            "svg-spokes"
+          ]
+        },
+        "defaultConfiguration": { "type": "object" },
+        "operatorVisibility": { "type": "object" },
+        "readabilityPolicy": { "type": "object" },
+        "paletteBehavior": { "type": "object" },
+        "operatorControls": { "type": "array" },
+        "authorControls": { "type": "array" },
+        "legacyIngressIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "discovery": { "type": "object" }
+      }
+    }
+  }
+}
