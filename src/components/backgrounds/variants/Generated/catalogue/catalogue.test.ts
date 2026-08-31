@@ -46,10 +46,10 @@ const inventoryIngressCases = [
 ] satisfies ReadonlyArray<readonly [string, string, string]>;
 
 describe("generated catalogue", () => {
-  test("contains the 25 unique visual presets and six adapter groups", () => {
-    expect(generatedCatalogue).toHaveLength(25);
-    expect(new Set(generatedCatalogue.map((entry) => entry.id)).size).toBe(25);
-    expect(rendererAdapterRegistry.size).toBe(25);
+  test("contains 26 unique visual presets and seven adapter groups", () => {
+    expect(generatedCatalogue).toHaveLength(26);
+    expect(new Set(generatedCatalogue.map((entry) => entry.id)).size).toBe(26);
+    expect(rendererAdapterRegistry.size).toBe(26);
 
     const adapterCounts = generatedCatalogue.reduce<Record<string, number>>(
       (counts, entry) => ({
@@ -66,6 +66,7 @@ describe("generated catalogue", () => {
       "particle-noise": 4,
       "svg-geometric": 1,
       "svg-spokes": 1,
+      "effects-solid": 1,
     });
   });
 
@@ -86,8 +87,8 @@ describe("generated catalogue", () => {
     const ingressIds = generatedCatalogue.flatMap(
       (entry) => entry.legacyIngressIds,
     );
-    expect(ingressIds).toHaveLength(45);
-    expect(new Set(ingressIds).size).toBe(45);
+    expect(ingressIds).toHaveLength(46);
+    expect(new Set(ingressIds).size).toBe(46);
   });
 
   test("defines the exact canonical egress for every preset", () => {
@@ -141,5 +142,26 @@ describe("generated catalogue", () => {
     } satisfies GeneratedCatalogueEntry;
 
     expect(isOperatorSelectable(visibleGrain)).toBe(false);
+  });
+
+  test("registers light-leak on the effects-solid adapter with active palette", () => {
+    const lightLeak = generatedCatalogue.find((entry) => entry.id === "light-leak");
+
+    expect(lightLeak).toMatchObject({
+      rendererAdapter: "effects-solid",
+      defaultConfiguration: {
+        useBackground: "Animated",
+        animation: { type: "light-leak" },
+      },
+      paletteBehavior: {
+        status: "resolved",
+        mode: "active-palette",
+        roles: ["background.main", "background.accent"],
+      },
+      readabilityPolicy: {
+        status: "resolved",
+        policy: "vignette",
+      },
+    });
   });
 });

@@ -398,4 +398,5 @@ From `decisions.md`:
 - Compatibility: `compatibility-plan.md`
 - Surfaces: `discovery-surfaces.md`
 - Remotion shortlist: `remotion-options.md`
+- Prototype promotion plan: `remotion-prototype-promotion-plan.md`
 - Decisions: `decisions.md`

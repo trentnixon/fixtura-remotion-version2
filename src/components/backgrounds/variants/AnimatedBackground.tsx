@@ -19,6 +19,7 @@ import DigitalRain from "./NoiseBackground/variants/DigitalRain";
 import GradientGrid from "./NoiseBackground/variants/GradientGrid";
 import GeometricGraphics from "./NoiseBackground/variants/GeometricGraphics";
 import SpokesGraphics from "./NoiseBackground/variants/SpokesGraphics";
+import { LightLeakBackground } from "./Generated/renderers/effects-solid/lightLeak/LightLeakBackground";
 
 type AnimationType = AnimatedPresetType;
 
@@ -47,6 +48,10 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   const { video } = useVideoDataContext();
   const animationConfig = video.templateVariation?.animation;
   const animationType = (animationConfig?.type || type) as AnimationType;
+
+  if (animationType === "light-leak") {
+    return <LightLeakBackground />;
+  }
 
   if (
     [

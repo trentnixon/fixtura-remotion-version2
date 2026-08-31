@@ -14,7 +14,8 @@ export type RendererAdapterKey =
   | "grid-noise"
   | "particle-noise"
   | "svg-geometric"
-  | "svg-spokes";
+  | "svg-spokes"
+  | "effects-solid";
 
 export type AnimatedPresetType =
   | "dot-field"
@@ -42,6 +43,7 @@ export type AnimatedPresetType =
   | "gradient-grid"
   | "geometric-field"
   | "spokes-field"
+  | "light-leak"
   | "pulsingGradient"
   | "movingGradient"
   | "breathingColor"

@@ -276,3 +276,11 @@ Retained after visual review:
 Do not add this to the Generated catalogue yet. First verify the same composition
 through the target server/Lambda render path, then decide whether to promote it
 through an `effects-solid` renderer adapter.
+
+**Production rule:** promoted presets must take background colours from the data
+object (`video.appearance.theme` → `selectedPalette` via `ThemeContext`). Prototype
+compositions use `baseTheme` as an isolated fixture only.
+
+**Promotion plan:** `.scratch/generated-backgrounds/remotion-prototype-promotion-plan.md`
+— preset families, light-leak spec (one operator preset, six internal variants,
+stable random selection), phases, and tickets.

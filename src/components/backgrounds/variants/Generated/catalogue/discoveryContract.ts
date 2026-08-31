@@ -115,6 +115,20 @@ export const generatedBackgroundsDiscoveryContractSchema = {
           },
           additionalProperties: false,
         },
+        {
+          type: "object",
+          required: ["useBackground", "animation"],
+          properties: {
+            useBackground: { const: "Animated" },
+            animation: {
+              type: "object",
+              required: ["type"],
+              properties: { type: { type: "string", minLength: 1 } },
+              additionalProperties: true,
+            },
+          },
+          additionalProperties: false,
+        },
       ],
     },
     state: {
@@ -175,6 +189,7 @@ export const generatedBackgroundsDiscoveryContractSchema = {
             "particle-noise",
             "svg-geometric",
             "svg-spokes",
+            "effects-solid",
           ],
         },
         defaultConfiguration: { $ref: "#/$defs/legacyEgress" },

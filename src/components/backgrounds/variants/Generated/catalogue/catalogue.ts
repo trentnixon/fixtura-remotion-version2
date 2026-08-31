@@ -101,6 +101,24 @@ const spokesPalette = {
   roles: ["background.gradient", "templateVariation.gradient"],
 } satisfies PaletteBehaviorState;
 
+const lightLeakPalette = gridNoisePalette;
+
+const lightLeakReadability = {
+  status: "resolved",
+  policy: "vignette",
+} satisfies GeneratedCatalogueEntry["readabilityPolicy"];
+
+const effectsSolidAuthorControls = [
+  {
+    key: "animation.type",
+    label: "Animated preset",
+    type: "enum",
+    enumValues: ["light-leak"],
+    source: "templateVariation",
+    affectsRendering: true,
+  },
+] satisfies readonly AuthorControl[];
+
 const patternAuthorControls = [
   {
     key: "animation.type",
@@ -347,6 +365,26 @@ const makeNoisePreset = <const Id extends string>(
     legacyIngressIds,
   };
 };
+
+const makeEffectsSolidPreset = <const Id extends string>(
+  identity: PresetIdentity<Id>,
+  paletteBehavior: PaletteBehaviorState,
+  readabilityPolicy: GeneratedCatalogueEntry["readabilityPolicy"],
+  legacyIngressIds: readonly string[],
+): GeneratedCatalogueEntry & { readonly id: Id } => ({
+  ...identity,
+  rendererAdapter: "effects-solid",
+  defaultConfiguration: {
+    useBackground: "Animated",
+    animation: { type: identity.id as AnimatedPresetType },
+  },
+  operatorVisibility: unresolvedCmsVisibility,
+  readabilityPolicy,
+  paletteBehavior,
+  operatorControls: animatedOperatorControls,
+  authorControls: effectsSolidAuthorControls,
+  legacyIngressIds,
+});
 
 const defineGeneratedCatalogue = <
   const Catalogue extends readonly GeneratedCatalogueEntry[],
@@ -752,6 +790,22 @@ export const generatedCatalogue = defineGeneratedCatalogue([
       tags: ["spokes", "radial", "svg"],
     },
   }),
+  makeEffectsSolidPreset(
+    {
+      id: "light-leak",
+      displayName: "Light leak",
+      description:
+        "A cinematic two-colour light leak overlay with an internally randomized variant.",
+      inventoryKey: "INV-EFF-lightLeak",
+      discovery: {
+        motionClass: "ambient",
+        tags: ["light-leak", "gradient", "cinematic"],
+      },
+    },
+    lightLeakPalette,
+    lightLeakReadability,
+    ["ingress-animated-light-leak"],
+  ),
 ]);
 
 export type GeneratedPresetId = (typeof generatedCatalogue)[number]["id"];

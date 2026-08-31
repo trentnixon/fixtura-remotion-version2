@@ -6,6 +6,11 @@
 **Implementation status:** Research and test-only prototyping. No production
 catalogue or CMS promotion is authorized by this document.
 
+**Promotion plan (2026-08-31):** `.scratch/generated-backgrounds/remotion-prototype-promotion-plan.md`
+— maps 33 retained prototype compositions to catalogue families, documents the
+approved light-leak model (one operator preset, six internal variants, stable
+random selection), and lists promotion phases and tickets.
+
 An isolated Broadcast Halftone prototype now lives at
 `.scratch/remotion-background-effects-prototype/`. It uses the current
 Remotion `4.0.499` baseline and does not add a Generated catalogue entry.

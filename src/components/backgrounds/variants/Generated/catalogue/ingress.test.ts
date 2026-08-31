@@ -156,6 +156,17 @@ describe("matchLegacyIngress", () => {
       outcome: "generated",
       presetId: "dot-field",
     });
+
+    expect(
+      matchLegacyIngress({
+        useBackground: "Animated",
+        animation: { type: "light-leak" },
+      }),
+    ).toMatchObject({
+      outcome: "generated",
+      ingressId: "ingress-animated-light-leak",
+      presetId: "light-leak",
+    });
   });
 
   test("extracts nested templateVariation payloads", () => {
@@ -229,9 +240,9 @@ describe("buildDiscoveryContract", () => {
     const contract = buildDiscoveryContract("2026-08-28T00:00:00.000Z");
 
     expect(contract.contractVersion).toBe("1.0.0");
-    expect(contract.catalogue.presets).toHaveLength(25);
+    expect(contract.catalogue.presets).toHaveLength(26);
     expect(contract.operatorPresets).toEqual([]);
     expect(contract.legacyIngress).toHaveLength(legacyIngress.length);
-    expect(contract.legacyIngress).toHaveLength(60);
+    expect(contract.legacyIngress).toHaveLength(61);
   });
 });

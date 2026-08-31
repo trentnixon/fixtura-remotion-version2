@@ -15,6 +15,7 @@ export type LegacyIngressMatchShape = {
   readonly pattern?: { readonly type?: string };
   readonly particle?: { readonly type?: string };
   readonly noise?: { readonly type?: string };
+  readonly animation?: { readonly type?: string };
 };
 
 export type LegacyIngressMatchKind =
@@ -226,10 +227,30 @@ const noiseRows: readonly GeneratedLegacyIngressRow[] = [
   }),
 ];
 
+const animatedCatalogueRows = generatedCatalogue.flatMap((entry) =>
+  entry.legacyIngressIds
+    .filter((ingressId) => ingressId.startsWith("ingress-animated-"))
+    .map((ingressId) => {
+      const match: LegacyIngressMatchShape = {
+        useBackground: "Animated",
+        animation: { type: entry.id },
+      };
+
+      return {
+        id: ingressId,
+        match,
+        matchKind: "exact",
+        outcome: "generated",
+        presetId: entry.id,
+      } satisfies GeneratedLegacyIngressRow;
+    }),
+);
+
 export const generatedLegacyIngress = [
   ...patternRows,
   ...particleRows,
   ...noiseRows,
+  ...animatedCatalogueRows,
 ] satisfies readonly GeneratedLegacyIngressRow[];
 
 const passthroughBackgrounds = [
@@ -425,7 +446,8 @@ const findGeneratedRow = ({
     const rowType =
       row.match.pattern?.type ??
       row.match.particle?.type ??
-      row.match.noise?.type;
+      row.match.noise?.type ??
+      row.match.animation?.type;
     return row.matchKind === "exact" && rowType === type;
   });
 
