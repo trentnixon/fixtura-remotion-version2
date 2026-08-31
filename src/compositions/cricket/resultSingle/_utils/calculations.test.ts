@@ -7,8 +7,14 @@ describe("castToMatchResults", () => {
     const [match] = castToMatchResults(sampleResults.data);
 
     expect(
+      match.homeTeam.battingPerformances.map((player) => player.player),
+    ).toEqual(["Stephen Roberts", "Ian Reimers", "Les Amos"]);
+    expect(
       match.homeTeam.bowlingPerformances.map((player) => player.player),
     ).toEqual(["Rathie", "Whittaker", "Reimers"]);
+    expect(
+      match.awayTeam.battingPerformances.map((player) => player.player),
+    ).toEqual(["Michael Greco", "Neil Karunasekara", "Dominic Gibson"]);
     expect(
       match.awayTeam.bowlingPerformances.map((player) => player.player),
     ).toEqual(["Greco", "Townsend", "Gibson"]);
