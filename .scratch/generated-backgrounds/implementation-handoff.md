@@ -23,16 +23,16 @@ Generated is a **Studio/CMS grouping**, not a Phase 1 production wire value.
 
 ## Approved discovery package
 
-| Document                      | Status              | Role                                               |
-| ----------------------------- | ------------------- | -------------------------------------------------- |
-| `handoff.md`                  | Authoritative brief | Scope and completion criteria                      |
-| `decisions.md`                | Approved            | Product and engineering decisions                  |
-| `current-preset-inventory.md` | Approved            | 26 ingress keys, runtime corrections RC-1–RC-6     |
-| `catalogue-contract.md`       | Approved            | 25 visual presets, entry shape, discovery artifact |
-| `compatibility-plan.md`       | Approved            | Ingress, sticky/canonical egress, invalid input    |
-| `remotion-options.md`         | Approved            | Post–Phase 1 Remotion preset shortlist             |
-| `effects-solid-upgrade-guide.md` | Active           | Local + cloud rollout for WebGL effects-solid presets |
-| `discovery-surfaces.md`       | Approved            | CMS, production router, Studio, dev wiring         |
+| Document                         | Status              | Role                                                  |
+| -------------------------------- | ------------------- | ----------------------------------------------------- |
+| `handoff.md`                     | Authoritative brief | Scope and completion criteria                         |
+| `decisions.md`                   | Approved            | Product and engineering decisions                     |
+| `current-preset-inventory.md`    | Approved            | 26 ingress keys, runtime corrections RC-1–RC-6        |
+| `catalogue-contract.md`          | Approved            | 25 visual presets, entry shape, discovery artifact    |
+| `compatibility-plan.md`          | Approved            | Ingress, sticky/canonical egress, invalid input       |
+| `remotion-options.md`            | Approved            | Post–Phase 1 Remotion preset shortlist                |
+| `effects-solid-upgrade-guide.md` | Active              | Local + cloud rollout for WebGL effects-solid presets |
+| `discovery-surfaces.md`          | Approved            | CMS, production router, Studio, dev wiring            |
 
 ---
 

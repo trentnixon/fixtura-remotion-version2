@@ -10,9 +10,7 @@ import PulsingCircles from "./NoiseBackground/variants/PulsingCircles";
 import DigitalRain from "./NoiseBackground/variants/DigitalRain";
 import SpokesGraphics from "./NoiseBackground/variants/SpokesGraphics";
 import { MotionMotifBackground } from "./Generated/renderers/motion-asset/motionMotif/MotionMotifBackground";
-import {
-  HtmlInCanvasPresetBackground,
-} from "./Generated/renderers/html-in-canvas/HtmlInCanvasPresetBackground";
+import { HtmlInCanvasPresetBackground } from "./Generated/renderers/html-in-canvas/HtmlInCanvasPresetBackground";
 import { isHtmlInCanvasPresetId } from "./Generated/renderers/html-in-canvas/presets";
 import { WebgpuMetalWaveBackground } from "./Generated/renderers/three-scene/webgpuMetalWave/WebgpuMetalWaveBackground";
 import { ReactivePathBackground } from "./Generated/renderers/effects-solid/reactivePath/ReactivePathBackground";

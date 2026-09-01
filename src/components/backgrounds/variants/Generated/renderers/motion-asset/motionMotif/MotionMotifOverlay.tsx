@@ -26,7 +26,7 @@ export const MotionMotifOverlay: React.FC<MotionMotifOverlayProps> = ({
   const settings = MOTION_MOTIF_VARIANTS[variant];
   const animationData = useMemo(
     () => createBroadcastMotifLottie(palette),
-    [palette.accent, palette.line],
+    [palette],
   );
 
   const renderMotif = (key: string, playbackRate = 1, opacity = 1) => (

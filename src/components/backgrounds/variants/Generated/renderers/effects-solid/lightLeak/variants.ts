@@ -104,6 +104,9 @@ export const getLeakProgress = (
 
 export const resolveHueShift = (
   role: LightLeakHueRole,
-  palette: { main: string | null | undefined; accent: string | null | undefined },
+  palette: {
+    main: string | null | undefined;
+    accent: string | null | undefined;
+  },
   colorToHueFn: (color: string | null | undefined) => number,
 ): number => colorToHueFn(role === "main" ? palette.main : palette.accent);

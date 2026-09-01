@@ -6,10 +6,7 @@ import { vignette } from "@remotion/effects/vignette";
 import { wave } from "@remotion/effects/wave";
 import { useThemeContext } from "../../../../../../../core/context/ThemeContext";
 import { useVideoDataContext } from "../../../../../../../core/context/VideoDataContext";
-import {
-  BROADCAST_HALFTONE_CONFIG,
-  getWavePhase,
-} from "./variants";
+import { BROADCAST_HALFTONE_CONFIG, getWavePhase } from "./variants";
 
 export const BroadcastHalftoneBackground: React.FC = () => {
   const frame = useCurrentFrame();

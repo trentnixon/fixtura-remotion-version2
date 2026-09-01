@@ -224,6 +224,7 @@ palette roles; `progress` uses a cosine loop for a twelve-second
 reveal/retract cycle. Requires WebGL2 — render with `--gl=angle`.
 
 Retained after visual review:
+
 - [x] `LightLeakWarmFlarePrototype` — warm leak keyed to secondary colour
 - [x] `LightLeakCoolFlarePrototype` — cool leak keyed to primary colour
 - [x] `LightLeakSlowBreathePrototype` — one swell per twelve-second loop

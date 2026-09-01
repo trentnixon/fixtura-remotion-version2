@@ -88,8 +88,7 @@ const renderHits = (
           const travel = routeProgress(route, loopProgress + hitPhase);
           const point = pointOnRoute(route, width, height, travel);
           const localPulse =
-            0.45 +
-            Math.sin((loopProgress + hitPhase) * Math.PI * 2 * 3) * 0.55;
+            0.45 + Math.sin((loopProgress + hitPhase) * Math.PI * 2 * 3) * 0.55;
           const radius = 5 + localPulse * 6 + hitPulse * 2;
 
           return (

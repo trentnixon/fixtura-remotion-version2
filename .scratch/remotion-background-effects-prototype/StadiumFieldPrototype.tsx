@@ -1,9 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import {
-  AbsoluteFill,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
@@ -177,7 +173,11 @@ const PitchScene: React.FC<{
       {/* Outfield */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
         <planeGeometry args={[26, 20]} />
-        <meshStandardMaterial color={palette.outfield} roughness={0.86} metalness={0.03} />
+        <meshStandardMaterial
+          color={palette.outfield}
+          roughness={0.86}
+          metalness={0.03}
+        />
       </mesh>
 
       {/* Oval boundary rope */}
@@ -189,7 +189,11 @@ const PitchScene: React.FC<{
       {/* Wicket strip */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.025, 0]}>
         <planeGeometry args={[pitchHalfWidth * 2, pitchLength]} />
-        <meshStandardMaterial color={palette.pitchStrip} roughness={0.72} metalness={0.02} />
+        <meshStandardMaterial
+          color={palette.pitchStrip}
+          roughness={0.72}
+          metalness={0.02}
+        />
       </mesh>
 
       {/* Crease sets at both ends */}
@@ -216,8 +220,16 @@ const PitchScene: React.FC<{
         color={palette.text}
       />
 
-      <Stumps z={-pitchHalfLength + 0.55} color={palette.text} bailColor={palette.accent} />
-      <Stumps z={pitchHalfLength - 0.55} color={palette.text} bailColor={palette.accent} />
+      <Stumps
+        z={-pitchHalfLength + 0.55}
+        color={palette.text}
+        bailColor={palette.accent}
+      />
+      <Stumps
+        z={pitchHalfLength - 0.55}
+        color={palette.text}
+        bailColor={palette.accent}
+      />
 
       {/* Cricket ball travel along the strip */}
       <mesh position={[markerX, 0.22, markerZ]}>

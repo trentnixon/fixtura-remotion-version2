@@ -5,8 +5,7 @@ export const buildMotionMotifVariantSeed = (input: {
   compositionId: string;
   primary: string;
   secondary: string;
-}): string =>
-  `${input.compositionId}|${input.primary}|${input.secondary}`;
+}): string => `${input.compositionId}|${input.primary}|${input.secondary}`;
 
 export const resolveMotionMotifVariantIndex = (seed: string): number =>
   hashStringToIndex(seed, MOTION_MOTIF_VARIANT_KEYS.length);

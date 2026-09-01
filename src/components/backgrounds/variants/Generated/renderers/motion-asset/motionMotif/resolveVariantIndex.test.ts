@@ -34,11 +34,29 @@ describe("resolveMotionMotifVariantIndex", () => {
   test("selects both baseline and tiled-field across palette seeds", () => {
     const keys = new Set(
       [
-        { compositionId: "CricketResults", primary: "#111111", secondary: "#ffffff" },
-        { compositionId: "CricketLadder", primary: "#FF0000", secondary: "#004DE2" },
-        { compositionId: "CricketUpcoming", primary: "#002244", secondary: "#FFD700" },
-        { compositionId: "CricketRoster", primary: "#003300", secondary: "#CCFFCC" },
-      ].map((input) => resolveMotionMotifVariantKey(buildMotionMotifVariantSeed(input))),
+        {
+          compositionId: "CricketResults",
+          primary: "#111111",
+          secondary: "#ffffff",
+        },
+        {
+          compositionId: "CricketLadder",
+          primary: "#FF0000",
+          secondary: "#004DE2",
+        },
+        {
+          compositionId: "CricketUpcoming",
+          primary: "#002244",
+          secondary: "#FFD700",
+        },
+        {
+          compositionId: "CricketRoster",
+          primary: "#003300",
+          secondary: "#CCFFCC",
+        },
+      ].map((input) =>
+        resolveMotionMotifVariantKey(buildMotionMotifVariantSeed(input)),
+      ),
     );
 
     expect(keys.has("baseline")).toBe(true);

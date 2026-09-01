@@ -12,9 +12,9 @@ describe("html-in-canvas presets", () => {
       "html-scoreboard-grid",
       "html-neon-beams",
     ]);
-    expect(HTML_IN_CANVAS_PRESETS["html-neon-beams"].chromaticAmount).toBeGreaterThan(
-      0,
-    );
+    expect(
+      HTML_IN_CANVAS_PRESETS["html-neon-beams"].chromaticAmount,
+    ).toBeGreaterThan(0);
     expect(HTML_IN_CANVAS_PRESETS["html-scoreboard-grid"].graphicId).toBe(
       "scoreboard-grid",
     );

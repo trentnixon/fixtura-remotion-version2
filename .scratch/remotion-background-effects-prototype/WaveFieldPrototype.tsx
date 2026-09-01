@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { glow } from "@remotion/effects/glow";
 import { linearGradient } from "@remotion/effects/linear-gradient";
 import { vignette } from "@remotion/effects/vignette";
@@ -36,7 +31,8 @@ const VARIANT_SETTINGS: Record<
 > = {
   baseline: {
     label: "WAVE FIELD TEST",
-    description: "Zigzag bands with slow dual-axis wave drift over a palette gradient.",
+    description:
+      "Zigzag bands with slow dual-axis wave drift over a palette gradient.",
     direction: "horizontal",
     thickness: 26,
     gap: 6,
@@ -51,7 +47,8 @@ const VARIANT_SETTINGS: Record<
   },
   "wide-rows": {
     label: "WIDE ROWS",
-    description: "Extra-wide zigzag bands with broader wave motion across the frame.",
+    description:
+      "Extra-wide zigzag bands with broader wave motion across the frame.",
     direction: "horizontal",
     thickness: 104,
     gap: 26,
@@ -66,7 +63,8 @@ const VARIANT_SETTINGS: Record<
   },
   vertical: {
     label: "VERTICAL BANDS",
-    description: "Extra-wide vertical zigzag columns with cross-axis wave displacement.",
+    description:
+      "Extra-wide vertical zigzag columns with cross-axis wave displacement.",
     direction: "vertical",
     thickness: 104,
     gap: 26,
@@ -101,7 +99,8 @@ const WaveFieldScene: React.FC<WaveFieldPrototypeProps> = ({
   const loopProgress = (frame % loopFrames) / loopFrames;
   const phase = loopProgress * Math.PI * 2;
   const settings = VARIANT_SETTINGS[variant];
-  const zigzagOffset = loopProgress * getBandCycle(settings.thickness, settings.gap);
+  const zigzagOffset =
+    loopProgress * getBandCycle(settings.thickness, settings.gap);
   const palette = {
     background: baseTheme.colors.primary,
     accent: baseTheme.colors.secondary,

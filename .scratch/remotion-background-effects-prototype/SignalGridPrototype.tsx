@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { gridlines } from "@remotion/effects/gridlines";
 import { linearGradient } from "@remotion/effects/linear-gradient";
 import { scanlines } from "@remotion/effects/scanlines";
@@ -64,9 +59,9 @@ interface SignalGridPrototypeProps {
   variant?: SignalGridVariant;
 }
 
-const SignalGridPrototype: React.FC<
-  SignalGridPrototypeProps
-> = ({ variant = "floor" }) => {
+const SignalGridPrototype: React.FC<SignalGridPrototypeProps> = ({
+  variant = "floor",
+}) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const loopFrames = fps * LOOP_DURATION_IN_SECONDS;

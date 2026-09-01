@@ -178,7 +178,10 @@ export const REACTIVE_PATH_ORBIT_CENTER = {
   y: 0.46,
 } as const;
 
-export const getReactivePathLoopProgress = (frame: number, fps: number): number => {
+export const getReactivePathLoopProgress = (
+  frame: number,
+  fps: number,
+): number => {
   const loopFrames = fps * LOOP_DURATION_IN_SECONDS;
   return (frame % loopFrames) / loopFrames;
 };

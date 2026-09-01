@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { glow } from "@remotion/effects/glow";
 import { linearGradient } from "@remotion/effects/linear-gradient";
 import { rings } from "@remotion/effects/rings";

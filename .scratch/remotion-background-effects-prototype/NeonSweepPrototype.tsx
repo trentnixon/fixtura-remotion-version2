@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { blur } from "@remotion/effects/blur";
 import { chromaticAberration } from "@remotion/effects/chromatic-aberration";
 import { glow } from "@remotion/effects/glow";
@@ -36,7 +31,8 @@ const VARIANT_SETTINGS: Record<
 > = {
   "wide-beams": {
     label: "WIDE BEAMS",
-    description: "Extra-wide diagonal neon beams with a slower, bolder sweep read.",
+    description:
+      "Extra-wide diagonal neon beams with a slower, bolder sweep read.",
     direction: "horizontal",
     thickness: 36,
     gap: 72,
@@ -50,7 +46,8 @@ const VARIANT_SETTINGS: Record<
   },
   "heavy-glow": {
     label: "HEAVY GLOW",
-    description: "Dense diagonal lines with stronger blur, glow, and chromatic split.",
+    description:
+      "Dense diagonal lines with stronger blur, glow, and chromatic split.",
     direction: "horizontal",
     thickness: 4,
     gap: 18,
@@ -83,7 +80,8 @@ const NeonSweepScene: React.FC<NeonSweepPrototypeProps> = ({
   const loopFrames = fps * LOOP_DURATION_IN_SECONDS;
   const loopProgress = (frame % loopFrames) / loopFrames;
   const settings = VARIANT_SETTINGS[variant];
-  const lineOffset = loopProgress * getLineCycle(settings.thickness, settings.gap);
+  const lineOffset =
+    loopProgress * getLineCycle(settings.thickness, settings.gap);
   const aberrationAngle = loopProgress * 360;
   const palette = {
     background: baseTheme.colors.primary,

@@ -4,8 +4,7 @@ export const buildLightLeakVariantSeed = (input: {
   compositionId: string;
   primary: string;
   secondary: string;
-}): string =>
-  `${input.compositionId}|${input.primary}|${input.secondary}`;
+}): string => `${input.compositionId}|${input.primary}|${input.secondary}`;
 
 export const hashStringToIndex = (input: string, count: number): number => {
   if (count <= 0) {

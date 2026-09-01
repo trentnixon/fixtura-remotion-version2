@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { glow } from "@remotion/effects/glow";
 import { linearGradient } from "@remotion/effects/linear-gradient";
 import { vignette } from "@remotion/effects/vignette";
@@ -50,9 +45,21 @@ type ResolvedRoute = {
 /** Concentric orbit rings — static field, travelling dashes only. */
 const ORBITS: OrbitSpec[] = [
   { radius: 220, dashRatio: 0.34, strokeWidth: 2, direction: 1, color: "text" },
-  { radius: 310, dashRatio: 0.28, strokeWidth: 2, direction: -1, color: "accent" },
+  {
+    radius: 310,
+    dashRatio: 0.28,
+    strokeWidth: 2,
+    direction: -1,
+    color: "accent",
+  },
   { radius: 400, dashRatio: 0.22, strokeWidth: 3, direction: 1, color: "text" },
-  { radius: 490, dashRatio: 0.18, strokeWidth: 2, direction: -1, color: "accent" },
+  {
+    radius: 490,
+    dashRatio: 0.18,
+    strokeWidth: 2,
+    direction: -1,
+    color: "accent",
+  },
   { radius: 580, dashRatio: 0.14, strokeWidth: 2, direction: 1, color: "text" },
 ];
 
@@ -244,8 +251,7 @@ const renderHits = (
           const travel = routeProgress(route, loopProgress + hitPhase);
           const point = pointOnRoute(route, width, height, travel);
           const localPulse =
-            0.45 +
-            Math.sin((loopProgress + hitPhase) * Math.PI * 2 * 3) * 0.55;
+            0.45 + Math.sin((loopProgress + hitPhase) * Math.PI * 2 * 3) * 0.55;
           const radius = 5 + localPulse * 6 + hitPulse * 2;
 
           return (

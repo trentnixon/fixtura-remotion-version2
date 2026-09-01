@@ -69,9 +69,7 @@ export const HtmlInCanvasPresetBackground: React.FC<
   };
 
   const canvasEffects = [
-    ...(settings.blurRadius > 0
-      ? [blur({ radius: settings.blurRadius })]
-      : []),
+    ...(settings.blurRadius > 0 ? [blur({ radius: settings.blurRadius })] : []),
     glow({
       radius: settings.glowRadius,
       intensity: settings.glowIntensity,

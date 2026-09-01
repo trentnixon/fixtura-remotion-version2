@@ -5,8 +5,7 @@ export const buildReactivePathVariantSeed = (input: {
   compositionId: string;
   primary: string;
   secondary: string;
-}): string =>
-  `${input.compositionId}|${input.primary}|${input.secondary}`;
+}): string => `${input.compositionId}|${input.primary}|${input.secondary}`;
 
 export const resolveReactivePathVariantIndex = (seed: string): number =>
   hashStringToIndex(seed, REACTIVE_PATH_VARIANT_KEYS.length);

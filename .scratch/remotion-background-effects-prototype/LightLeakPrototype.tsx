@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { lightLeak } from "@remotion/light-leaks";
 import { linearGradient } from "@remotion/effects/linear-gradient";
 import { vignette } from "@remotion/effects/vignette";

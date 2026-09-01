@@ -10,14 +10,8 @@
         "inventoryKey": "INV-PAT-dots",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "dots",
-            "tile",
-            "pattern"
-          ],
-          "relatedPresetIds": [
-            "pulsing-circles"
-          ]
+          "tags": ["dots", "tile", "pattern"],
+          "relatedPresetIds": ["pulsing-circles"]
         },
         "rendererAdapter": "pattern-tiled",
         "defaultConfiguration": {
@@ -42,10 +36,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.contrast",
-            "background.gradient.primary"
-          ]
+          "roles": ["background.contrast", "background.gradient.primary"]
         },
         "operatorControls": [
           {
@@ -59,9 +50,7 @@
             "key": "animation.type",
             "label": "Animated preset",
             "type": "enum",
-            "enumValues": [
-              "dot-field"
-            ],
+            "enumValues": ["dot-field"],
             "source": "templateVariation",
             "affectsRendering": true
           },
@@ -129,14 +118,8 @@
         "inventoryKey": "INV-PAR-lines",
         "discovery": {
           "motionClass": "energetic",
-          "tags": [
-            "lines",
-            "particles",
-            "streaks"
-          ],
-          "relatedPresetIds": [
-            "digital-rain"
-          ]
+          "tags": ["lines", "particles", "streaks"],
+          "relatedPresetIds": ["digital-rain"]
         },
         "rendererAdapter": "particle-field",
         "defaultConfiguration": {
@@ -176,9 +159,7 @@
             "key": "animation.type",
             "label": "Animated preset",
             "type": "enum",
-            "enumValues": [
-              "streak-lines"
-            ],
+            "enumValues": ["streak-lines"],
             "source": "templateVariation",
             "affectsRendering": true
           },
@@ -200,13 +181,7 @@
             "key": "animation.direction",
             "label": "Direction",
             "type": "enum",
-            "enumValues": [
-              "up",
-              "down",
-              "left",
-              "right",
-              "random"
-            ],
+            "enumValues": ["up", "down", "left", "right", "random"],
             "source": "templateVariation",
             "affectsRendering": true
           },
@@ -214,12 +189,7 @@
             "key": "animation.animation",
             "label": "Animation",
             "type": "enum",
-            "enumValues": [
-              "fade",
-              "scale",
-              "slide",
-              "none"
-            ],
+            "enumValues": ["fade", "scale", "slide", "none"],
             "source": "templateVariation",
             "affectsRendering": false
           }
@@ -236,15 +206,8 @@
         "inventoryKey": "INV-NOI-floatingParticles",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "particles",
-            "floating",
-            "circles"
-          ],
-          "relatedPresetIds": [
-            "dot-field",
-            "pulsing-circles"
-          ]
+          "tags": ["particles", "floating", "circles"],
+          "relatedPresetIds": ["dot-field", "pulsing-circles"]
         },
         "rendererAdapter": "particle-noise",
         "defaultConfiguration": {
@@ -307,14 +270,8 @@
         "inventoryKey": "INV-NOI-pulsingCircles",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "circles",
-            "pulse",
-            "grid"
-          ],
-          "relatedPresetIds": [
-            "dot-field"
-          ]
+          "tags": ["circles", "pulse", "grid"],
+          "relatedPresetIds": ["dot-field"]
         },
         "rendererAdapter": "grid-noise",
         "defaultConfiguration": {
@@ -334,10 +291,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -373,11 +327,7 @@
         "inventoryKey": "INV-NOI-digitalRain",
         "discovery": {
           "motionClass": "energetic",
-          "tags": [
-            "digital",
-            "rain",
-            "lines"
-          ]
+          "tags": ["digital", "rain", "lines"]
         },
         "rendererAdapter": "particle-noise",
         "defaultConfiguration": {
@@ -436,11 +386,7 @@
         "inventoryKey": "INV-NOI-spokes",
         "discovery": {
           "motionClass": "intro-sequence",
-          "tags": [
-            "spokes",
-            "radial",
-            "svg"
-          ]
+          "tags": ["spokes", "radial", "svg"]
         },
         "rendererAdapter": "svg-spokes",
         "defaultConfiguration": {
@@ -460,10 +406,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.gradient",
-            "templateVariation.gradient"
-          ]
+          "roles": ["background.gradient", "templateVariation.gradient"]
         },
         "operatorControls": [
           {
@@ -487,10 +430,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-graphics-spokes",
-          "ingress-noise-spokes"
-        ]
+        "legacyIngressIds": ["ingress-graphics-spokes", "ingress-noise-spokes"]
       },
       {
         "id": "light-leak",
@@ -499,11 +439,7 @@
         "inventoryKey": "INV-EFF-lightLeak",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "light-leak",
-            "gradient",
-            "cinematic"
-          ]
+          "tags": ["light-leak", "gradient", "cinematic"]
         },
         "rendererAdapter": "effects-solid",
         "defaultConfiguration": {
@@ -523,10 +459,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -551,9 +484,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-light-leak"
-        ]
+        "legacyIngressIds": ["ingress-animated-light-leak"]
       },
       {
         "id": "broadcast-halftone",
@@ -562,11 +493,7 @@
         "inventoryKey": "INV-EFF-broadcastHalftone",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "halftone",
-            "gradient",
-            "broadcast"
-          ]
+          "tags": ["halftone", "gradient", "broadcast"]
         },
         "rendererAdapter": "effects-solid",
         "defaultConfiguration": {
@@ -586,10 +513,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -614,9 +538,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-broadcast-halftone"
-        ]
+        "legacyIngressIds": ["ingress-animated-broadcast-halftone"]
       },
       {
         "id": "topographic-flow",
@@ -625,11 +547,7 @@
         "inventoryKey": "INV-EFF-topographicFlow",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "topographic",
-            "contours",
-            "liquid"
-          ]
+          "tags": ["topographic", "contours", "liquid"]
         },
         "rendererAdapter": "effects-solid",
         "defaultConfiguration": {
@@ -649,10 +567,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -677,9 +592,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-topographic-flow"
-        ]
+        "legacyIngressIds": ["ingress-animated-topographic-flow"]
       },
       {
         "id": "signal-grid",
@@ -688,11 +601,7 @@
         "inventoryKey": "INV-EFF-signalGrid",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "grid",
-            "scanlines",
-            "perspective"
-          ]
+          "tags": ["grid", "scanlines", "perspective"]
         },
         "rendererAdapter": "effects-solid",
         "defaultConfiguration": {
@@ -712,10 +621,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -740,9 +646,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-signal-grid"
-        ]
+        "legacyIngressIds": ["ingress-animated-signal-grid"]
       },
       {
         "id": "reactive-path",
@@ -751,11 +655,7 @@
         "inventoryKey": "INV-EFF-reactivePath",
         "discovery": {
           "motionClass": "energetic",
-          "tags": [
-            "paths",
-            "orbits",
-            "routes"
-          ]
+          "tags": ["paths", "orbits", "routes"]
         },
         "rendererAdapter": "effects-solid",
         "defaultConfiguration": {
@@ -775,10 +675,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -803,9 +700,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-reactive-path"
-        ]
+        "legacyIngressIds": ["ingress-animated-reactive-path"]
       },
       {
         "id": "motion-motif",
@@ -814,11 +709,7 @@
         "inventoryKey": "INV-MOT-motionMotif",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "lottie",
-            "motif",
-            "motion-asset"
-          ]
+          "tags": ["lottie", "motif", "motion-asset"]
         },
         "rendererAdapter": "motion-asset",
         "defaultConfiguration": {
@@ -838,10 +729,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -855,16 +743,12 @@
             "key": "animation.type",
             "label": "Animated preset",
             "type": "enum",
-            "enumValues": [
-              "motion-motif"
-            ],
+            "enumValues": ["motion-motif"],
             "source": "templateVariation",
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-motion-motif"
-        ]
+        "legacyIngressIds": ["ingress-animated-motion-motif"]
       },
       {
         "id": "html-orbit-rings",
@@ -873,11 +757,7 @@
         "inventoryKey": "INV-HIC-htmlOrbitRings",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "html-in-canvas",
-            "orbits",
-            "rings"
-          ]
+          "tags": ["html-in-canvas", "orbits", "rings"]
         },
         "rendererAdapter": "html-in-canvas",
         "defaultConfiguration": {
@@ -897,10 +777,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -923,9 +800,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-html-orbit-rings"
-        ]
+        "legacyIngressIds": ["ingress-animated-html-orbit-rings"]
       },
       {
         "id": "html-scoreboard-grid",
@@ -934,11 +809,7 @@
         "inventoryKey": "INV-HIC-htmlScoreboardGrid",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "html-in-canvas",
-            "grid",
-            "scoreboard"
-          ]
+          "tags": ["html-in-canvas", "grid", "scoreboard"]
         },
         "rendererAdapter": "html-in-canvas",
         "defaultConfiguration": {
@@ -958,10 +829,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -984,9 +852,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-html-scoreboard-grid"
-        ]
+        "legacyIngressIds": ["ingress-animated-html-scoreboard-grid"]
       },
       {
         "id": "html-neon-beams",
@@ -995,11 +861,7 @@
         "inventoryKey": "INV-HIC-htmlNeonBeams",
         "discovery": {
           "motionClass": "energetic",
-          "tags": [
-            "html-in-canvas",
-            "neon",
-            "beams"
-          ]
+          "tags": ["html-in-canvas", "neon", "beams"]
         },
         "rendererAdapter": "html-in-canvas",
         "defaultConfiguration": {
@@ -1019,10 +881,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -1045,9 +904,7 @@
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-html-neon-beams"
-        ]
+        "legacyIngressIds": ["ingress-animated-html-neon-beams"]
       },
       {
         "id": "webgpu-metal-wave",
@@ -1056,12 +913,7 @@
         "inventoryKey": "INV-3SC-webgpuMetalWave",
         "discovery": {
           "motionClass": "ambient",
-          "tags": [
-            "three-scene",
-            "webgpu",
-            "metal",
-            "tsl"
-          ]
+          "tags": ["three-scene", "webgpu", "metal", "tsl"]
         },
         "rendererAdapter": "three-scene",
         "defaultConfiguration": {
@@ -1081,10 +933,7 @@
         "paletteBehavior": {
           "status": "resolved",
           "mode": "active-palette",
-          "roles": [
-            "background.main",
-            "background.accent"
-          ]
+          "roles": ["background.main", "background.accent"]
         },
         "operatorControls": [
           {
@@ -1098,16 +947,12 @@
             "key": "animation.type",
             "label": "Animated preset",
             "type": "enum",
-            "enumValues": [
-              "webgpu-metal-wave"
-            ],
+            "enumValues": ["webgpu-metal-wave"],
             "source": "templateVariation",
             "affectsRendering": true
           }
         ],
-        "legacyIngressIds": [
-          "ingress-animated-webgpu-metal-wave"
-        ]
+        "legacyIngressIds": ["ingress-animated-webgpu-metal-wave"]
       }
     ]
   },

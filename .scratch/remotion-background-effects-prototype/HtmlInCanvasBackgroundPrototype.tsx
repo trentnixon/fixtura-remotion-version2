@@ -19,11 +19,7 @@ type Palette = {
   text: string;
 };
 
-type GraphicId =
-  | "broadcast"
-  | "orbit-rings"
-  | "scoreboard-grid"
-  | "neon-beams";
+type GraphicId = "broadcast" | "orbit-rings" | "scoreboard-grid" | "neon-beams";
 
 type HtmlInCanvasVariant =
   | "broadcast"
@@ -221,7 +217,8 @@ const DomOrbitRingsField: React.FC<{ palette: Palette }> = ({ palette }) => {
           const dashLength = circumference * ring.dash;
           const gapLength = circumference - dashLength;
           const offset =
-            loopProgress * circumference * ring.dir + index * circumference * 0.08;
+            loopProgress * circumference * ring.dir +
+            index * circumference * 0.08;
           return (
             <circle
               key={index}
@@ -237,13 +234,7 @@ const DomOrbitRingsField: React.FC<{ palette: Palette }> = ({ palette }) => {
             />
           );
         })}
-        <circle
-          cx={cx}
-          cy={cy}
-          r={48}
-          fill={palette.accent}
-          opacity={0.22}
-        />
+        <circle cx={cx} cy={cy} r={48} fill={palette.accent} opacity={0.22} />
         <circle
           cx={cx}
           cy={cy}
@@ -258,7 +249,9 @@ const DomOrbitRingsField: React.FC<{ palette: Palette }> = ({ palette }) => {
   );
 };
 
-const DomScoreboardGridField: React.FC<{ palette: Palette }> = ({ palette }) => {
+const DomScoreboardGridField: React.FC<{ palette: Palette }> = ({
+  palette,
+}) => {
   const { width, height } = useVideoConfig();
   const { frame, loopProgress } = useLoopTiming();
   const cols = 14;
@@ -272,10 +265,7 @@ const DomScoreboardGridField: React.FC<{ palette: Palette }> = ({ palette }) => 
     const wave =
       0.5 +
       Math.sin(
-        loopProgress * Math.PI * 2 +
-          col * 0.55 +
-          row * 0.35 +
-          frame * 0.04,
+        loopProgress * Math.PI * 2 + col * 0.55 + row * 0.35 + frame * 0.04,
       ) *
         0.5;
     const lit = wave > 0.62;
@@ -411,9 +401,7 @@ const HtmlInCanvasBackgroundScene: React.FC<HtmlInCanvasBackgroundProps> = ({
   };
 
   const canvasEffects = [
-    ...(settings.blurRadius > 0
-      ? [blur({ radius: settings.blurRadius })]
-      : []),
+    ...(settings.blurRadius > 0 ? [blur({ radius: settings.blurRadius })] : []),
     glow({
       radius: settings.glowRadius,
       intensity: settings.glowIntensity,

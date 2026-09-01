@@ -44,7 +44,10 @@ export const MOTION_MOTIF_VIGNETTE = {
   feather: 0.48,
 } as const;
 
-export const getMotionMotifLoopProgress = (frame: number, fps: number): number => {
+export const getMotionMotifLoopProgress = (
+  frame: number,
+  fps: number,
+): number => {
   const loopFrames = fps * LOOP_DURATION_IN_SECONDS;
   return (frame % loopFrames) / loopFrames;
 };

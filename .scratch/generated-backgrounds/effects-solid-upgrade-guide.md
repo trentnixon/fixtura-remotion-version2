@@ -17,9 +17,9 @@
 
 The Generated catalogue gained a new renderer adapter: **`effects-solid`**.
 
-| Preset (today) | Adapter | Stack | WebGL |
-| --- | --- | --- | --- |
-| `light-leak` | `effects-solid` | `linearGradient` → `lightLeak()` → `vignette` | Yes |
+| Preset (today) | Adapter         | Stack                                         | WebGL |
+| -------------- | --------------- | --------------------------------------------- | ----- |
+| `light-leak`   | `effects-solid` | `linearGradient` → `lightLeak()` → `vignette` | Yes   |
 
 Existing **25** pattern / noise / particle presets are unchanged — they do **not** need WebGL render options.
 
@@ -72,10 +72,10 @@ It does **not** apply to Lambda Node API calls (see Phase B).
 npm run dev
 ```
 
-| Path | Purpose |
-| --- | --- |
-| `EffectsSolid-Test` → `EffectsSolid-Background-Test` | Isolated background only — fast palette / variant check |
-| `{Template}` → `Animated` → `light-leak` → `{Sport}` → `{Dataset}` | Full template integration (same wire as production) |
+| Path                                                               | Purpose                                                 |
+| ------------------------------------------------------------------ | ------------------------------------------------------- |
+| `EffectsSolid-Test` → `EffectsSolid-Background-Test`               | Isolated background only — fast palette / variant check |
+| `{Template}` → `Animated` → `light-leak` → `{Sport}` → `{Dataset}` | Full template integration (same wire as production)     |
 
 CLI smoke uses composition id **`EffectsSolid-Background-Test`** for isolated  
 WebGL proof (registered in both `DevelopmentRoot` and `ProductionRoot`).
@@ -110,11 +110,11 @@ node scripts/effects-solid-render-smoke.mjs --fixtures=light-leak-isolated
 
 **Fixtures:**
 
-| ID | Mode | What it proves |
-| --- | --- | --- |
-| `light-leak-isolated` | Isolated Basic template | WebGL stack + palette + variant hash |
-| `light-leak-mudgeeraba-results` | Integration | Full Mudgeeraba + Cricket Results |
-| `light-leak-broadcastpro-results` | Integration | BroadcastPro readability |
+| ID                                | Mode                    | What it proves                       |
+| --------------------------------- | ----------------------- | ------------------------------------ |
+| `light-leak-isolated`             | Isolated Basic template | WebGL stack + palette + variant hash |
+| `light-leak-mudgeeraba-results`   | Integration             | Full Mudgeeraba + Cricket Results    |
+| `light-leak-broadcastpro-results` | Integration             | BroadcastPro readability             |
 
 Smoke script passes `--gl=angle` explicitly (belt-and-braces with config).
 
@@ -174,10 +174,10 @@ Adding `light-leak` code is a **site** update, not necessarily a function update
 
 Lambda has no GPU. WebGL2 presets **must** use software WebGL:
 
-| Environment | `chromiumOptions.gl` |
-| --- | --- |
+| Environment        | `chromiumOptions.gl`                 |
+| ------------------ | ------------------------------------ |
 | Local CLI / Studio | `angle` (via config or `--gl=angle`) |
-| Lambda / server | **`swangle`** |
+| Lambda / server    | **`swangle`**                        |
 
 Example for `renderMediaOnLambda` (Fixtura Creators service — adjust to your API):
 
@@ -238,14 +238,14 @@ After local + Lambda spikes:
 
 When promoting the next prototype families (see promotion plan Phase D):
 
-| Planned preset | WebGL | Local test | Lambda |
-| --- | --- | --- | --- |
-| `broadcast-halftone` | Yes | Add fixture to smoke config | `swangle` |
-| `topographic-flow` | Yes | Add fixture | `swangle` |
-| `signal-grid` | Yes | Add fixture | `swangle` |
-| `wave-field` | Yes | Add fixture | `swangle` |
-| `neon-sweep` | Yes | Add fixture | `swangle` |
-| `energy-burst` | Yes (may need Remotion upgrade for `starburst`) | TBD | `swangle` |
+| Planned preset       | WebGL                                           | Local test                  | Lambda    |
+| -------------------- | ----------------------------------------------- | --------------------------- | --------- |
+| `broadcast-halftone` | Yes                                             | Add fixture to smoke config | `swangle` |
+| `topographic-flow`   | Yes                                             | Add fixture                 | `swangle` |
+| `signal-grid`        | Yes                                             | Add fixture                 | `swangle` |
+| `wave-field`         | Yes                                             | Add fixture                 | `swangle` |
+| `neon-sweep`         | Yes                                             | Add fixture                 | `swangle` |
+| `energy-burst`       | Yes (may need Remotion upgrade for `starburst`) | TBD                         | `swangle` |
 
 **Does not use effects-solid / swangle:**
 
@@ -286,24 +286,24 @@ For each new effects-solid preset:
 
 ## Troubleshooting
 
-| Symptom | Likely cause | Fix |
-| --- | --- | --- |
-| Black / empty background | WebGL unavailable | Local: `--gl=angle`. Lambda: `swangle` |
-| Flat gradient, no leak | `@remotion/light-leaks` missing from bundle | Move to `dependencies`, redeploy site |
-| Different variant every render | Seed inputs changing | Ensure stable `compositionId`, `theme.primary`, `theme.secondary` |
-| Studio works, Lambda fails | Config not applied on API | Pass `chromiumOptions` in Creators caller |
-| OOM on Lambda | WebGL software renderer memory | Increase Lambda memory; reduce concurrency during spike |
+| Symptom                        | Likely cause                                | Fix                                                               |
+| ------------------------------ | ------------------------------------------- | ----------------------------------------------------------------- |
+| Black / empty background       | WebGL unavailable                           | Local: `--gl=angle`. Lambda: `swangle`                            |
+| Flat gradient, no leak         | `@remotion/light-leaks` missing from bundle | Move to `dependencies`, redeploy site                             |
+| Different variant every render | Seed inputs changing                        | Ensure stable `compositionId`, `theme.primary`, `theme.secondary` |
+| Studio works, Lambda fails     | Config not applied on API                   | Pass `chromiumOptions` in Creators caller                         |
+| OOM on Lambda                  | WebGL software renderer memory              | Increase Lambda memory; reduce concurrency during spike           |
 
 ---
 
 ## File reference
 
-| File | Role |
-| --- | --- |
-| `remotion.config.ts` | Local ANGLE default |
-| `src/components/backgrounds/variants/Generated/renderers/effects-solid/lightLeak/` | Production renderer |
-| `src/components/backgrounds/variants/Generated/renderers/effects-solid/test/EffectsSolidTestComposition.tsx` | Isolated Studio fixture |
-| `src/DevelopmentRoot.tsx` | Registers `EffectsSolid-Test` + Animated catalogue tree |
-| `scripts/effects-solid-smoke-config.mjs` | Smoke fixture definitions |
-| `scripts/effects-solid-render-smoke.mjs` | Local render smoke runner |
-| `public/generated-backgrounds/cms-ingest.json` | CMS contract (regenerate after visibility change) |
+| File                                                                                                         | Role                                                    |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| `remotion.config.ts`                                                                                         | Local ANGLE default                                     |
+| `src/components/backgrounds/variants/Generated/renderers/effects-solid/lightLeak/`                           | Production renderer                                     |
+| `src/components/backgrounds/variants/Generated/renderers/effects-solid/test/EffectsSolidTestComposition.tsx` | Isolated Studio fixture                                 |
+| `src/DevelopmentRoot.tsx`                                                                                    | Registers `EffectsSolid-Test` + Animated catalogue tree |
+| `scripts/effects-solid-smoke-config.mjs`                                                                     | Smoke fixture definitions                               |
+| `scripts/effects-solid-render-smoke.mjs`                                                                     | Local render smoke runner                               |
+| `public/generated-backgrounds/cms-ingest.json`                                                               | CMS contract (regenerate after visibility change)       |

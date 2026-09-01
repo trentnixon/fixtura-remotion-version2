@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Solid,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Solid, useCurrentFrame, useVideoConfig } from "remotion";
 import { RemotionRiveCanvas } from "@remotion/rive";
 import { glow } from "@remotion/effects/glow";
 import { linearGradient } from "@remotion/effects/linear-gradient";
@@ -153,7 +148,8 @@ export const RiveMotifTiledFieldPrototype: React.FC = () => {
               lineHeight: 1.3,
             }}
           >
-            2×2 Rive tile field with staggered opacity over the palette gradient.
+            2×2 Rive tile field with staggered opacity over the palette
+            gradient.
           </div>
         </div>
       </AbsoluteFill>

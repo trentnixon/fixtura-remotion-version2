@@ -101,11 +101,7 @@ const htmlInCanvasAuthorControls = [
     key: "animation.type",
     label: "Animated preset",
     type: "enum",
-    enumValues: [
-      "html-orbit-rings",
-      "html-scoreboard-grid",
-      "html-neon-beams",
-    ],
+    enumValues: ["html-orbit-rings", "html-scoreboard-grid", "html-neon-beams"],
     source: "templateVariation",
     affectsRendering: true,
   },
@@ -556,8 +552,7 @@ export const generatedCatalogue = defineGeneratedCatalogue([
     {
       id: "broadcast-halftone",
       displayName: "Halftone Blend",
-      description:
-        "Classic print-style dots blended with your club colours.",
+      description: "Classic print-style dots blended with your club colours.",
       inventoryKey: "INV-EFF-broadcastHalftone",
       discovery: {
         motionClass: "ambient",

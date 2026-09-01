@@ -3,7 +3,6 @@ import {
   findGeneratedPresetByLegacyIngressId,
   generatedCatalogue,
   getCanonicalEgress,
-  isOperatorSelectable,
   operatorPresets,
   rendererAdapterRegistry,
 } from "./catalogue";
@@ -107,7 +106,9 @@ describe("generated catalogue", () => {
   });
 
   test("registers light-leak on the effects-solid adapter with active palette", () => {
-    const lightLeak = generatedCatalogue.find((entry) => entry.id === "light-leak");
+    const lightLeak = generatedCatalogue.find(
+      (entry) => entry.id === "light-leak",
+    );
 
     expect(lightLeak).toMatchObject({
       rendererAdapter: "effects-solid",

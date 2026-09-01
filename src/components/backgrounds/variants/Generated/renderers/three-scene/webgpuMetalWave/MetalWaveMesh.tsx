@@ -32,7 +32,11 @@ export const MetalWaveMesh: React.FC<MetalWaveMeshProps> = ({ palette }) => {
     mat.colorNode = mix(
       color(palette.main),
       color(palette.accent),
-      sin(uv().y.mul(6).add(progressUniform.mul(Math.PI * 2)))
+      sin(
+        uv()
+          .y.mul(6)
+          .add(progressUniform.mul(Math.PI * 2)),
+      )
         .mul(0.5)
         .add(0.5),
     );

@@ -747,20 +747,20 @@ Removed after review: fractal-club-field, radial-pulse, scanline-field, worley-c
 
 ### Later prototypes
 
-- **Wave field:** rings, waves, zigzags, or noise displacement with slow frame-driven motion. *(retained variants added; see Wave Field above)*
-- **Brand geometry field:** Remotion shapes and paths forming a coherent animated field. *(rejected in prototype review)*
-- **Motion motif:** a designer-authored Lottie or Rive loop recoloured per club. *(Lottie retained; Rive baseline and tiled demos added — see Rive Motif above)*
-- **Reactive path system:** fixture routes, orbit lines, or energy marks driven by composition data. *(orbits and hits retained; see Reactive Path System above)*
-- **Perspective floor:** gridlines with X rotation and perspective. *(partially covered by Signal Grid perspective floor variants)*
-- **Animated texture tile:** CanvasImage or Gif processed through scale, tile, wave, and tint. *(rejected in prototype review — too busy)*
-- **Neon sweep:** lines, blur, glow, and chromatic aberration. *(retained variants added; see Neon Sweep above)*
-- **Pixel matrix:** pixelate, gridlines, noise, and colour correction. *(rejected in prototype review)*
+- **Wave field:** rings, waves, zigzags, or noise displacement with slow frame-driven motion. _(retained variants added; see Wave Field above)_
+- **Brand geometry field:** Remotion shapes and paths forming a coherent animated field. _(rejected in prototype review)_
+- **Motion motif:** a designer-authored Lottie or Rive loop recoloured per club. _(Lottie retained; Rive baseline and tiled demos added — see Rive Motif above)_
+- **Reactive path system:** fixture routes, orbit lines, or energy marks driven by composition data. _(orbits and hits retained; see Reactive Path System above)_
+- **Perspective floor:** gridlines with X rotation and perspective. _(partially covered by Signal Grid perspective floor variants)_
+- **Animated texture tile:** CanvasImage or Gif processed through scale, tile, wave, and tint. _(rejected in prototype review — too busy)_
+- **Neon sweep:** lines, blur, glow, and chromatic aberration. _(retained variants added; see Neon Sweep above)_
+- **Pixel matrix:** pixelate, gridlines, noise, and colour correction. _(rejected in prototype review)_
 
 ### Experimental options
 
-- **Stadium field 3D:** `ThreeCanvas` with a lightweight pitch, stadium lighting, ribbons, or particles. *(low-sweep cricket example retained; see Stadium Field 3D above)*
-- **HTML-in-canvas background:** post-processing of live DOM content. *(broadcast, orbit-rings, scoreboard-grid, and neon-beams retained; see HTML-in-Canvas Background above)*
-- **WebGPU material lab:** custom WebGPU effects or `ThreeWebGPUCanvas`. *(metal-wave, contour-map, and sheen-sweep retained via ThreeCanvas + WebGPURenderer; see WebGPU Material Lab above)*
+- **Stadium field 3D:** `ThreeCanvas` with a lightweight pitch, stadium lighting, ribbons, or particles. _(low-sweep cricket example retained; see Stadium Field 3D above)_
+- **HTML-in-canvas background:** post-processing of live DOM content. _(broadcast, orbit-rings, scoreboard-grid, and neon-beams retained; see HTML-in-Canvas Background above)_
+- **WebGPU material lab:** custom WebGPU effects or `ThreeWebGPUCanvas`. _(metal-wave, contour-map, and sheen-sweep retained via ThreeCanvas + WebGPURenderer; see WebGPU Material Lab above)_
 
 HTML-in-canvas and WebGPU should remain research options until render parity and Studio behaviour are proven.
 

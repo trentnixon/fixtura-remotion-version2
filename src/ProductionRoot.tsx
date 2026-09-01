@@ -48,8 +48,7 @@ export const ProductionRoot: React.FC = () => {
     return renderEffectsSolidBackgroundTest({
       presetId: inputProps.presetId ?? defaultEffectsSolidTestProps.presetId,
       primary: inputProps.primary ?? defaultEffectsSolidTestProps.primary,
-      secondary:
-        inputProps.secondary ?? defaultEffectsSolidTestProps.secondary,
+      secondary: inputProps.secondary ?? defaultEffectsSolidTestProps.secondary,
       compositionId:
         inputProps.compositionId ?? defaultEffectsSolidTestProps.compositionId,
     });

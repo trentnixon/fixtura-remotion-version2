@@ -1,9 +1,5 @@
 import React, { useLayoutEffect, useMemo, useRef } from "react";
-import {
-  AbsoluteFill,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import {
   MeshBasicNodeMaterial,
@@ -113,7 +109,11 @@ const MetalWaveMesh: React.FC<{ palette: Palette }> = ({ palette }) => {
     mat.colorNode = mix(
       color(palette.background),
       color(palette.accent),
-      sin(uv().y.mul(6).add(progressUniform.mul(Math.PI * 2)))
+      sin(
+        uv()
+          .y.mul(6)
+          .add(progressUniform.mul(Math.PI * 2)),
+      )
         .mul(0.5)
         .add(0.5),
     );
@@ -130,7 +130,9 @@ const ContourMapMesh: React.FC<{ palette: Palette }> = ({ palette }) => {
   const material = useMemo(() => {
     const mat = new MeshBasicNodeMaterial();
     const terrain = mx_fractal_noise_float(
-      uv().mul(5).add(vec2(progressUniform.mul(0.8), progressUniform.mul(0.25))),
+      uv()
+        .mul(5)
+        .add(vec2(progressUniform.mul(0.8), progressUniform.mul(0.25))),
     );
     const contours = sin(terrain.mul(22).add(progressUniform.mul(Math.PI * 2)))
       .mul(0.5)
@@ -150,13 +152,25 @@ const SheenSweepMesh: React.FC<{ palette: Palette }> = ({ palette }) => {
   const progressUniform = useProgressUniform();
   const material = useMemo(() => {
     const mat = new MeshStandardNodeMaterial();
-    const sweep = sin(uv().x.mul(9).add(progressUniform.mul(Math.PI * 2)))
+    const sweep = sin(
+      uv()
+        .x.mul(9)
+        .add(progressUniform.mul(Math.PI * 2)),
+    )
       .mul(0.5)
       .add(0.5);
-    const sheenBand = sin(uv().y.mul(14).sub(progressUniform.mul(Math.PI * 2)))
+    const sheenBand = sin(
+      uv()
+        .y.mul(14)
+        .sub(progressUniform.mul(Math.PI * 2)),
+    )
       .mul(0.5)
       .add(0.5);
-    mat.colorNode = mix(color(palette.background), color(palette.accent), sweep);
+    mat.colorNode = mix(
+      color(palette.background),
+      color(palette.accent),
+      sweep,
+    );
     mat.metalnessNode = float(0.72);
     mat.roughnessNode = float(0.28);
     mat.sheenNode = float(1);
@@ -189,11 +203,7 @@ const SceneLightingRig: React.FC<{
     <>
       <ambientLight intensity={0.25} />
       <directionalLight position={[4, 6, 8]} intensity={2.2} />
-      <directionalLight
-        position={[-5, -2, 4]}
-        intensity={0.8}
-        color={accent}
-      />
+      <directionalLight position={[-5, -2, 4]} intensity={0.8} color={accent} />
     </>
   );
 };

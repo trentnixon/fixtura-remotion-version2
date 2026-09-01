@@ -5,8 +5,7 @@ export const buildSignalGridVariantSeed = (input: {
   compositionId: string;
   primary: string;
   secondary: string;
-}): string =>
-  `${input.compositionId}|${input.primary}|${input.secondary}`;
+}): string => `${input.compositionId}|${input.primary}|${input.secondary}`;
 
 export const resolveSignalGridVariantIndex = (seed: string): number =>
   hashStringToIndex(seed, SIGNAL_GRID_VARIANT_KEYS.length);
