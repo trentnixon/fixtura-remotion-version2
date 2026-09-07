@@ -114,7 +114,8 @@ export const GameCardMudgeeraba: React.FC<GameCardProps> = ({
   const { animations } = useAnimationContext();
   const { selectedPalette, colors } = useThemeContext();
   const { width: compositionWidth } = useVideoConfig();
-  const teamNameFitWidth = getMudgeerabaFixtureTeamNameFitWidth(compositionWidth);
+  const teamNameFitWidth =
+    getMudgeerabaFixtureTeamNameFitWidth(compositionWidth);
 
   const ContainerAnimations = animations.container;
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);

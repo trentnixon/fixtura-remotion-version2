@@ -18,7 +18,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const fsiPath = path.join(root, "node_modules", "webpack", "lib", "FileSystemInfo.js");
+const fsiPath = path.join(
+  root,
+  "node_modules",
+  "webpack",
+  "lib",
+  "FileSystemInfo.js",
+);
 
 const MARKER = "FIXTURA_DIAGNOSTIC_PATCH";
 
@@ -52,7 +58,9 @@ if (!fs.existsSync(fsiPath)) {
 
 const original = fs.readFileSync(fsiPath, "utf8");
 if (original.includes(MARKER)) {
-  console.error("Diagnostic patch already applied. Restore webpack first (reinstall) or remove marker.");
+  console.error(
+    "Diagnostic patch already applied. Restore webpack first (reinstall) or remove marker.",
+  );
   process.exit(1);
 }
 
@@ -71,7 +79,10 @@ const patched = original.replace(
 
 fs.writeFileSync(fsiPath, patched, "utf8");
 console.log("Applied webpack diagnostic patch.");
-console.log("Cache location:", path.join(root, "node_modules", ".cache", "webpack"));
+console.log(
+  "Cache location:",
+  path.join(root, "node_modules", ".cache", "webpack"),
+);
 console.log("Running:", bundleArgs.join(" "));
 
 const result = spawnSync(bundleArgs[0], bundleArgs.slice(1), {

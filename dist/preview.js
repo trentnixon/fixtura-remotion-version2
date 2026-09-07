@@ -11928,7 +11928,7 @@ var BasicBackground = () => {
 };
 
 // src/components/layout/screen/OneColumn.tsx
-var import_remotion107 = require("remotion");
+var import_remotion109 = require("remotion");
 
 // src/core/utils/compositionMapping.ts
 var datasetToCompositionMap = {
@@ -26562,11 +26562,192 @@ var CNSWPrivate2 = () => {
 };
 
 // src/compositions/cricket/upcoming/layout/Card/game-card-Mudgeeraba.tsx
+var import_remotion87 = require("remotion");
+
+// src/components/typography/utils/useFittedFontSize.ts
+var import_react30 = require("react");
+var import_remotion86 = require("remotion");
+var import_layout_utils2 = require("@remotion/layout-utils");
+var DEFAULT_LINE_HEIGHT_RATIO = 1.05;
+var DEFAULT_MAX_LINES = 2;
+var TITLE_SCREEN_BASE_FONT_PX = 16;
+var TITLE_SCREEN_HORIZONTAL_PADDING_PX = 128;
+var getFitMeasureOptions = (options) => {
+  var _a, _b, _c;
+  return {
+    fontFamily: options.fontFamily,
+    fontWeight: (_a = options.fontWeight) != null ? _a : 900,
+    textTransform: (_b = options.textTransform) != null ? _b : "uppercase",
+    letterSpacing: (_c = options.letterSpacing) != null ? _c : "-0.025em",
+    validateFontIsLoaded: true
+  };
+};
+var computeFittedFontSize = ({
+  text,
+  fontFamily,
+  fontWeight = 900,
+  textTransform = "uppercase",
+  letterSpacing = "-0.025em",
+  maxFontSize = 10 * TITLE_SCREEN_BASE_FONT_PX,
+  minFontSize = 0,
+  fitWidth,
+  withinHeight,
+  lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
+  maxLines = DEFAULT_MAX_LINES
+}) => {
+  const trimmed = text.trim();
+  if (!trimmed || fitWidth <= 0) {
+    return maxFontSize;
+  }
+  const measureOpts = getFitMeasureOptions({
+    fontFamily,
+    fontWeight,
+    textTransform,
+    letterSpacing
+  });
+  const words = trimmed.split(/\s+/).filter(Boolean);
+  const fitSizeFor = (value) => (0, import_layout_utils2.fitText)({
+    text: value,
+    withinWidth: fitWidth,
+    ...measureOpts
+  }).fontSize;
+  const widthCandidates = [
+    fitSizeFor(trimmed),
+    ...words.map((word) => fitSizeFor(word))
+  ];
+  let fontSize = Math.min(maxFontSize, ...widthCandidates);
+  if (withinHeight && withinHeight > 0) {
+    const { width: singleLineWidth } = (0, import_layout_utils2.measureText)({
+      text: trimmed,
+      fontSize,
+      ...measureOpts
+    });
+    const estimatedLines = Math.min(
+      maxLines,
+      Math.max(1, Math.ceil(singleLineWidth / fitWidth))
+    );
+    const heightCap = withinHeight / (estimatedLines * lineHeightRatio);
+    fontSize = Math.min(fontSize, heightCap);
+  }
+  return minFontSize > 0 ? Math.max(minFontSize, fontSize) : fontSize;
+};
+var getTitleScreenContentWidth = (compositionWidth, horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX) => Math.max(0, compositionWidth - horizontalPadding);
+var useFittedFontSize = ({
+  text,
+  fontFamily,
+  fontWeight = 900,
+  textTransform = "uppercase",
+  letterSpacing = "-0.025em",
+  maxFontSize = 10 * TITLE_SCREEN_BASE_FONT_PX,
+  minFontSize = 0,
+  horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX,
+  withinWidth,
+  withinHeight,
+  lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
+  maxLines = DEFAULT_MAX_LINES
+}) => {
+  const { width } = (0, import_remotion86.useVideoConfig)();
+  const { fontsLoaded } = useFontContext();
+  return (0, import_react30.useMemo)(() => {
+    if (!fontsLoaded || !text.trim() || !fontFamily) {
+      return void 0;
+    }
+    const fitWidth = withinWidth != null ? withinWidth : getTitleScreenContentWidth(width, horizontalPadding);
+    try {
+      return computeFittedFontSize({
+        text,
+        fontFamily,
+        fontWeight,
+        textTransform,
+        letterSpacing,
+        maxFontSize,
+        minFontSize,
+        fitWidth,
+        withinHeight,
+        lineHeightRatio,
+        maxLines
+      });
+    } catch (error) {
+      console.warn(
+        "useFittedFontSize: measurement failed, using max cap",
+        error
+      );
+      return maxFontSize;
+    }
+  }, [
+    fontsLoaded,
+    text,
+    fontFamily,
+    fontWeight,
+    textTransform,
+    letterSpacing,
+    maxFontSize,
+    minFontSize,
+    horizontalPadding,
+    withinWidth,
+    withinHeight,
+    lineHeightRatio,
+    maxLines,
+    width
+  ]);
+};
+
+// src/compositions/cricket/upcoming/layout/Card/game-card-Mudgeeraba.tsx
 var import_jsx_runtime222 = require("react/jsx-runtime");
 var EDGE_COLOR_HOME = "rgb(34, 197, 94)";
 var EDGE_COLOR_AWAY = "rgb(239, 68, 68)";
 var TEAM_PANEL_HEIGHT_PX = 150;
+var TEAM_NAME_MAX_FONT_PX = 36;
+var TEAM_NAME_MIN_FONT_PX = 20;
+var TEAM_NAME_LINE_HEIGHT = 1.375;
+var TEAM_NAME_MAX_LINES = 2;
+var FIXTURE_HORIZONTAL_MARGIN_PX = 64;
+var TEAM_PANEL_GAP_PX = 8;
+var LOGO_TEXT_GAP_PX = 12;
+var TEAM_TEXT_HORIZONTAL_PADDING_PX = 16;
+var PANEL_EDGE_PADDING_PX = 40;
+var MUDGEERABA_COPY_FONT = "Heebo";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH_RIGHT = "pl-10 pr-0";
+var getMudgeerabaFixtureTeamNameFitWidth = (compositionWidth) => {
+  const panelWidth = (compositionWidth - FIXTURE_HORIZONTAL_MARGIN_PX - TEAM_PANEL_GAP_PX) / 2;
+  return Math.max(
+    0,
+    panelWidth - TEAM_PANEL_HEIGHT_PX - LOGO_TEXT_GAP_PX - TEAM_TEXT_HORIZONTAL_PADDING_PX - PANEL_EDGE_PADDING_PX
+  );
+};
+var MudgeerabaFixtureTeamName = ({
+  name,
+  animation,
+  fitWidth,
+  textAlign
+}) => {
+  var _a;
+  const fontFamily = (_a = useFontFamily()) != null ? _a : MUDGEERABA_COPY_FONT;
+  const alignClass = textAlign === "right" ? "text-right" : "text-left";
+  const fittedFontSize = useFittedFontSize({
+    text: name,
+    fontFamily,
+    fontWeight: 400,
+    textTransform: "none",
+    letterSpacing: "0.05em",
+    maxFontSize: TEAM_NAME_MAX_FONT_PX,
+    minFontSize: TEAM_NAME_MIN_FONT_PX,
+    withinWidth: fitWidth,
+    withinHeight: TEAM_PANEL_HEIGHT_PX - 20,
+    lineHeightRatio: TEAM_NAME_LINE_HEIGHT,
+    maxLines: TEAM_NAME_MAX_LINES
+  });
+  return /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+    MetadataMedium,
+    {
+      value: name,
+      animation,
+      className: `block w-full text-balance ${alignClass}`,
+      variant: "onContainerCopy",
+      style: { fontSize: fittedFontSize != null ? fittedFontSize : TEAM_NAME_MAX_FONT_PX }
+    }
+  );
+};
 var GameCardMudgeeraba = ({
   game,
   index
@@ -26575,6 +26756,8 @@ var GameCardMudgeeraba = ({
   const { timings } = data;
   const { animations } = useAnimationContext();
   const { selectedPalette, colors } = useThemeContext();
+  const { width: compositionWidth } = (0, import_remotion87.useVideoConfig)();
+  const teamNameFitWidth = getMudgeerabaFixtureTeamNameFitWidth(compositionWidth);
   const ContainerAnimations = animations.container;
   const delay = calculateAnimationDelay2(index, FAST_DELAY_MULTIPLIER);
   const animationOutFrame = calculateAnimationOutFrame2(timings);
@@ -26685,16 +26868,16 @@ var GameCardMudgeeraba = ({
                   "steepLeft",
                   "mr-3"
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "relative z-10 flex flex-1 items-center justify-center min-w-0 px-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-                  MetadataMedium,
+                /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "relative z-10 flex flex-1 items-center justify-start min-w-0 px-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+                  MudgeerabaFixtureTeamName,
                   {
-                    value: game.teamHome,
+                    name: game.teamHome,
+                    fitWidth: teamNameFitWidth,
+                    textAlign: "left",
                     animation: {
                       ...animations.text.main.copyIn,
                       delay: delay + 15
-                    },
-                    className: "block text-center w-full",
-                    variant: "onContainerCopy"
+                    }
                   }
                 ) })
               ]
@@ -26721,16 +26904,16 @@ var GameCardMudgeeraba = ({
                     "aria-hidden": true
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "relative z-10 flex flex-1 items-center justify-center min-w-0 px-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
-                  MetadataMedium,
+                /* @__PURE__ */ (0, import_jsx_runtime222.jsx)("div", { className: "relative z-10 flex flex-1 items-center justify-end min-w-0 px-2", children: /* @__PURE__ */ (0, import_jsx_runtime222.jsx)(
+                  MudgeerabaFixtureTeamName,
                   {
-                    value: game.teamAway,
+                    name: game.teamAway,
+                    fitWidth: teamNameFitWidth,
+                    textAlign: "right",
                     animation: {
                       ...animations.text.main.copyIn,
                       delay: delay + 30
-                    },
-                    className: "block text-center w-full",
-                    variant: "onContainerCopy"
+                    }
                   }
                 ) }),
                 renderTeamLogo(
@@ -27790,7 +27973,7 @@ var PlayersDisplayBasic = ({
 var display_Basic_default2 = PlayersDisplayBasic;
 
 // src/compositions/cricket/top5/modules/NoPlayersData/no-data.tsx
-var import_remotion86 = require("remotion");
+var import_remotion88 = require("remotion");
 
 // src/compositions/cricket/top5/utils/dataTransformer.ts
 var transformPlayerData = (rawData, compositionId) => {
@@ -27834,7 +28017,7 @@ var NoPlayersData = () => {
   const { videoMeta } = data;
   const compositionId = ((_b = (_a = videoMeta == null ? void 0 : videoMeta.video) == null ? void 0 : _a.metadata) == null ? void 0 : _b.compositionId) || "";
   const title = getTitle(compositionId);
-  return /* @__PURE__ */ (0, import_jsx_runtime241.jsx)(import_remotion86.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime241.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime241.jsx)(import_remotion88.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime241.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime241.jsxs)("h2", { className: "text-2xl font-bold mb-4", children: [
       "No ",
       title,
@@ -30260,10 +30443,10 @@ var BroadcastProRounded3 = () => {
 };
 
 // src/compositions/cricket/results/modules/NoResultsData/no-data.tsx
-var import_remotion87 = require("remotion");
+var import_remotion89 = require("remotion");
 var import_jsx_runtime277 = require("react/jsx-runtime");
 var NoResultsData = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime277.jsx)(import_remotion87.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime277.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime277.jsx)(import_remotion89.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime277.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime277.jsx)("h2", { className: "text-2xl font-bold mb-4", children: "No Results Data Available" }),
     /* @__PURE__ */ (0, import_jsx_runtime277.jsx)("p", { className: "text-gray-400", children: "Please check your data source and try again." })
   ] }) });
@@ -39452,7 +39635,7 @@ var broadcastprorounded2 = () => {
 };
 
 // src/compositions/cricket/teamRoster/basic.tsx
-var import_remotion89 = require("remotion");
+var import_remotion91 = require("remotion");
 
 // src/compositions/cricket/utils/primitives/RosterPlayerName.tsx
 var import_jsx_runtime403 = require("react/jsx-runtime");
@@ -39888,11 +40071,11 @@ var RosterDisplay = ({ roster }) => {
 var display_default2 = RosterDisplay;
 
 // src/compositions/cricket/teamRoster/modules/NoData/no-data.tsx
-var import_remotion88 = require("remotion");
+var import_remotion90 = require("remotion");
 var import_jsx_runtime410 = require("react/jsx-runtime");
 var NoRosterData = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime410.jsx)(
-    import_remotion88.AbsoluteFill,
+    import_remotion90.AbsoluteFill,
     {
       style: {
         backgroundColor: "grey",
@@ -39964,8 +40147,8 @@ var CricketRosterWithTransitions = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(import_remotion89.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime412.jsxs)(
-    import_remotion89.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime412.jsx)(import_remotion91.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime412.jsxs)(
+    import_remotion91.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -39982,7 +40165,7 @@ var basic = () => {
 };
 
 // src/compositions/cricket/teamRoster/sixersThunder.tsx
-var import_remotion90 = require("remotion");
+var import_remotion92 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-sixers-thunder.tsx
 var import_jsx_runtime413 = require("react/jsx-runtime");
@@ -40068,8 +40251,8 @@ var CricketRosterWithTransitions2 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(import_remotion90.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(
-    import_remotion90.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(import_remotion92.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime414.jsx)(
+    import_remotion92.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -40083,7 +40266,7 @@ var SixersThunder4 = () => {
 };
 
 // src/compositions/cricket/teamRoster/classic.tsx
-var import_remotion91 = require("remotion");
+var import_remotion93 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-classic.tsx
 var import_jsx_runtime415 = require("react/jsx-runtime");
@@ -40166,8 +40349,8 @@ var CricketRosterWithTransitions3 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(import_remotion91.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(
-    import_remotion91.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(import_remotion93.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime416.jsx)(
+    import_remotion93.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -40181,7 +40364,7 @@ var Classic6 = () => {
 };
 
 // src/compositions/cricket/teamRoster/classicTwoColumn.tsx
-var import_remotion92 = require("remotion");
+var import_remotion94 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-classic-two-column.tsx
 var import_jsx_runtime417 = require("react/jsx-runtime");
@@ -40270,8 +40453,8 @@ var CricketRosterWithTransitions4 = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(import_remotion92.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(
-    import_remotion92.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(import_remotion94.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime418.jsx)(
+    import_remotion94.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -40285,7 +40468,7 @@ var ClassicTwoColumn4 = () => {
 };
 
 // src/compositions/cricket/teamRoster/mudgeeraba.tsx
-var import_remotion93 = require("remotion");
+var import_remotion95 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-Mudgeeraba.tsx
 var import_jsx_runtime419 = require("react/jsx-runtime");
@@ -40415,8 +40598,8 @@ var CricketRosterWithTransitionsMudgeeraba = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime420.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime420.jsx)(import_remotion93.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime420.jsxs)(
-    import_remotion93.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime420.jsx)(import_remotion95.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime420.jsxs)(
+    import_remotion95.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -40433,7 +40616,7 @@ var mudgeeraba6 = () => {
 };
 
 // src/compositions/cricket/teamRoster/brickwork.tsx
-var import_remotion94 = require("remotion");
+var import_remotion96 = require("remotion");
 
 // src/compositions/cricket/teamRoster/layout/RosterPlayerList/playerList-brickWork.tsx
 var import_jsx_runtime421 = require("react/jsx-runtime");
@@ -40684,8 +40867,8 @@ var CricketRosterBrickWork = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime425.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime425.jsx)(import_remotion94.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime425.jsxs)(
-    import_remotion94.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime425.jsx)(import_remotion96.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime425.jsxs)(
+    import_remotion96.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col justify-center",
@@ -40702,13 +40885,13 @@ var brickwork = () => {
 };
 
 // src/compositions/cricket/teamRoster/broadcastPro.tsx
-var import_remotion96 = require("remotion");
+var import_remotion98 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-BroadcastPro.tsx
-var import_remotion95 = require("remotion");
+var import_remotion97 = require("remotion");
 
 // src/templates/variants/broadcastPro/components/roster/BroadcastProRosterSheet.tsx
-var import_react30 = require("react");
+var import_react31 = require("react");
 
 // src/compositions/cricket/teamRoster/controller/Display/_utils/broadcastProRosterListMetrics.ts
 function computeBroadcastProRosterPlayerListMetrics(availableHeightPx, playerCount, sizing) {
@@ -40859,7 +41042,7 @@ var import_jsx_runtime427 = require("react/jsx-runtime");
 var BroadcastProRosterSheet = ({ players, availableHeightPx, nameColor, className = "" }) => {
   const { componentStyles, broadcastProRosterListSizing } = useThemeContext();
   const { accent } = useBroadcastProTheme();
-  const metrics = (0, import_react30.useMemo)(
+  const metrics = (0, import_react31.useMemo)(
     () => computeBroadcastProRosterPlayerListMetrics(
       availableHeightPx,
       players.length,
@@ -40938,7 +41121,7 @@ var RosterDisplayBroadcastPro = ({
 }) => {
   var _a, _b;
   const { layout, fontClasses, componentStyles } = useThemeContext();
-  const { width: compositionWidth } = (0, import_remotion95.useVideoConfig)();
+  const { width: compositionWidth } = (0, import_remotion97.useVideoConfig)();
   const { glass, textOnGlass: textOnContainer } = useBroadcastProTheme();
   const availableHeight = getMainContentHeightReservingFooter(layout.heights);
   const cs = (key) => rosterClass(componentStyles, key);
@@ -41078,8 +41261,8 @@ var CricketRosterBroadcastPro = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime429.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime429.jsx)(import_remotion96.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime429.jsxs)(
-    import_remotion96.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime429.jsx)(import_remotion98.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime429.jsxs)(
+    import_remotion98.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col",
@@ -41104,13 +41287,13 @@ var broadcastpro3 = () => {
 };
 
 // src/compositions/cricket/teamRoster/broadcastProRounded.tsx
-var import_remotion98 = require("remotion");
+var import_remotion100 = require("remotion");
 
 // src/compositions/cricket/teamRoster/controller/Display/display-BroadcastProRounded.tsx
-var import_remotion97 = require("remotion");
+var import_remotion99 = require("remotion");
 
 // src/templates/variants/broadcastProRounded/components/roster/BroadcastProRoundedRosterSheet.tsx
-var import_react31 = require("react");
+var import_react32 = require("react");
 
 // src/compositions/cricket/teamRoster/controller/Display/_utils/broadcastProRoundedRosterListMetrics.ts
 function computeBroadcastProRoundedRosterPlayerListMetrics(availableHeightPx, playerCount, sizing) {
@@ -41262,7 +41445,7 @@ var import_jsx_runtime431 = require("react/jsx-runtime");
 var BroadcastProRoundedRosterSheet = ({ players, availableHeightPx, nameColor, className = "" }) => {
   const { componentStyles, broadcastProRoundedRosterListSizing } = useThemeContext();
   const { accent } = useBroadcastProRoundedTheme();
-  const metrics = (0, import_react31.useMemo)(
+  const metrics = (0, import_react32.useMemo)(
     () => computeBroadcastProRoundedRosterPlayerListMetrics(
       availableHeightPx,
       players.length,
@@ -41355,7 +41538,7 @@ var RosterDisplayBroadcastProRounded = ({
 }) => {
   var _a, _b;
   const { layout, fontClasses, componentStyles } = useThemeContext();
-  const { width: compositionWidth } = (0, import_remotion97.useVideoConfig)();
+  const { width: compositionWidth } = (0, import_remotion99.useVideoConfig)();
   const { glass, textOnGlass: textOnContainer } = useBroadcastProRoundedTheme();
   const cellRadius = layout.borderRadius.container;
   const availableHeight = getMainContentHeightReservingFooter(layout.heights);
@@ -41493,8 +41676,8 @@ var CricketRosterBroadcastProRounded = () => {
   if (!hasValidRosterData(rosterData)) {
     return /* @__PURE__ */ (0, import_jsx_runtime433.jsx)(no_data_default6, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime433.jsx)(import_remotion98.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime433.jsxs)(
-    import_remotion98.Series.Sequence,
+  return /* @__PURE__ */ (0, import_jsx_runtime433.jsx)(import_remotion100.Series, { children: rosterData.map((rosterItem, i) => /* @__PURE__ */ (0, import_jsx_runtime433.jsxs)(
+    import_remotion100.Series.Sequence,
     {
       durationInFrames: calculateRosterDuration(timings),
       className: "flex flex-col",
@@ -41519,7 +41702,7 @@ var broadcastprorounded3 = () => {
 };
 
 // src/compositions/cricket/performances/modules/NoPlayersData/no-data.tsx
-var import_remotion99 = require("remotion");
+var import_remotion101 = require("remotion");
 
 // src/compositions/cricket/performances/utils/dataTransformer.ts
 var transformPerformanceData = (rawData, compositionId) => {
@@ -41561,7 +41744,7 @@ var NoPlayersData2 = () => {
   const { videoMeta } = data;
   const compositionId = ((_b = (_a = videoMeta == null ? void 0 : videoMeta.video) == null ? void 0 : _a.metadata) == null ? void 0 : _b.compositionId) || "";
   const title = getTitle2(compositionId);
-  return /* @__PURE__ */ (0, import_jsx_runtime434.jsx)(import_remotion99.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime434.jsxs)("div", { className: "text-center", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime434.jsx)(import_remotion101.AbsoluteFill, { className: "flex items-center justify-center bg-gray-900 text-white", children: /* @__PURE__ */ (0, import_jsx_runtime434.jsxs)("div", { className: "text-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime434.jsxs)("h2", { className: "text-2xl font-bold mb-4", children: [
       "No ",
       title,
@@ -44590,7 +44773,7 @@ var BroadcastProRounded4 = () => {
 var PLAYER_STAGGER_DELAY = 5;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Basic.tsx
-var import_remotion100 = require("remotion");
+var import_remotion102 = require("remotion");
 
 // src/compositions/cricket/utils/primitives/TeamOfTheWeekPlayerName.tsx
 var import_jsx_runtime470 = require("react/jsx-runtime");
@@ -45505,7 +45688,7 @@ var PlayerRowBasic2 = ({
                   background: logoBG
                 },
                 children: /* @__PURE__ */ (0, import_jsx_runtime480.jsx)(
-                  import_remotion100.Img,
+                  import_remotion102.Img,
                   {
                     src: player.club.logo.url,
                     alt: player.club.name,
@@ -45621,7 +45804,7 @@ var Basic7 = () => {
 var basic_default = Basic7;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-Classic.tsx
-var import_remotion101 = require("remotion");
+var import_remotion103 = require("remotion");
 var import_jsx_runtime484 = require("react/jsx-runtime");
 var PlayerRowClassic2 = ({
   player,
@@ -45771,7 +45954,7 @@ var PlayerRowClassic2 = ({
                   }
                 ),
                 !isAccountClub && /* @__PURE__ */ (0, import_jsx_runtime484.jsx)("div", { className: "col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2", children: /* @__PURE__ */ (0, import_jsx_runtime484.jsx)(
-                  import_remotion101.Img,
+                  import_remotion103.Img,
                   {
                     src: player.club.logo.url,
                     alt: player.club.name,
@@ -46664,7 +46847,7 @@ var SixersThunder6 = () => {
 var sixersThunder_default3 = SixersThunder6;
 
 // src/compositions/cricket/TeamOfTheWeek/controller/PlayerRow/row-ClassicTwoColumn.tsx
-var import_remotion102 = require("remotion");
+var import_remotion104 = require("remotion");
 var import_jsx_runtime500 = require("react/jsx-runtime");
 var PlayerRowClassicTwoColumn2 = ({
   player,
@@ -46706,7 +46889,7 @@ var PlayerRowClassicTwoColumn2 = ({
           style: { height: `${rowHeight}px` },
           children: /* @__PURE__ */ (0, import_jsx_runtime500.jsxs)("div", { className: "grid h-full grid-cols-12 items-center", children: [
             !isAccountClub && /* @__PURE__ */ (0, import_jsx_runtime500.jsx)("div", { className: "col-span-2 flex h-full w-full items-center justify-center overflow-hidden p-2", children: /* @__PURE__ */ (0, import_jsx_runtime500.jsx)(
-              import_remotion102.Img,
+              import_remotion104.Img,
               {
                 src: player.club.logo.url,
                 alt: player.club.name,
@@ -47621,14 +47804,14 @@ var broadcastpro5 = broadcastPro_default2;
 var broadcastprorounded5 = broadcastProRounded_default2;
 
 // src/compositions/cricket/placeholders.tsx
-var import_remotion103 = require("remotion");
+var import_remotion105 = require("remotion");
 var import_jsx_runtime513 = require("react/jsx-runtime");
 var PlaceholderComposition = ({
   data
 }) => {
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
-  return /* @__PURE__ */ (0, import_jsx_runtime513.jsxs)(import_remotion103.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime513.jsxs)(import_remotion105.AbsoluteFill, { className: "bg-black bg-opacity-50 flex flex-col items-center justify-center p-8 text-white", children: [
     /* @__PURE__ */ (0, import_jsx_runtime513.jsx)("h1", { className: "text-3xl mb-0.5", children: data.videoMeta.video.metadata.title || "Composition" }),
     /* @__PURE__ */ (0, import_jsx_runtime513.jsxs)("h2", { className: "text-2xl mb-4", children: [
       template,
@@ -47771,7 +47954,7 @@ __export(afl_exports, {
   top5: () => top5,
   upcoming: () => upcoming
 });
-var import_remotion104 = require("remotion");
+var import_remotion106 = require("remotion");
 var import_jsx_runtime514 = require("react/jsx-runtime");
 var PlaceholderComposition2 = ({
   data
@@ -47779,7 +47962,7 @@ var PlaceholderComposition2 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime514.jsxs)(
-    import_remotion104.AbsoluteFill,
+    import_remotion106.AbsoluteFill,
     {
       style: {
         backgroundColor: "#222",
@@ -47841,7 +48024,7 @@ __export(netball_exports, {
   top5: () => top52,
   upcoming: () => upcoming2
 });
-var import_remotion105 = require("remotion");
+var import_remotion107 = require("remotion");
 var import_jsx_runtime515 = require("react/jsx-runtime");
 var PlaceholderComposition3 = ({
   data
@@ -47849,7 +48032,7 @@ var PlaceholderComposition3 = ({
   const compositionId = data.videoMeta.video.metadata.compositionId;
   const template = data.videoMeta.video.appearance.template || "Basic";
   return /* @__PURE__ */ (0, import_jsx_runtime515.jsxs)(
-    import_remotion105.AbsoluteFill,
+    import_remotion107.AbsoluteFill,
     {
       style: {
         backgroundColor: "#103",
@@ -48032,10 +48215,10 @@ var RouteToComposition = () => {
 };
 
 // src/components/layout/main/Timer/ProgressTimer.tsx
-var import_remotion106 = require("remotion");
+var import_remotion108 = require("remotion");
 var import_jsx_runtime517 = require("react/jsx-runtime");
 var ProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion106.useCurrentFrame)();
+  const frame = (0, import_remotion108.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -48059,7 +48242,7 @@ var ProgressTimer = ({ FRAMES }) => {
   );
 };
 var VerticalProgressTimer = ({ FRAMES }) => {
-  const frame = (0, import_remotion106.useCurrentFrame)();
+  const frame = (0, import_remotion108.useCurrentFrame)();
   const total = FRAMES;
   const percentProgress = total ? Math.min(100, frame / total * 100) : 0;
   const { selectedPalette } = useThemeContext();
@@ -48097,7 +48280,7 @@ var OneColumn = ({ Header }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { FPS_MAIN } = timings;
-  return /* @__PURE__ */ (0, import_jsx_runtime518.jsx)(import_remotion107.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime518.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime518.jsx)(import_remotion109.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime518.jsxs)("div", { className: "flex flex-col h-full w-full ", children: [
     /* @__PURE__ */ (0, import_jsx_runtime518.jsx)(
       "div",
       {
@@ -48654,20 +48837,20 @@ var brickworkTheme = {
 };
 
 // src/templates/variants/brickwork/utils/useFitTitleFontSize.ts
-var import_react32 = require("react");
+var import_react33 = require("react");
 var SAFETY_MARGIN = 0.95;
 var MIN_FONT_SIZE_PX = 24;
 function useFitTitleFontSize(text, enabled = true) {
-  const [fontSizeStyle, setFontSizeStyle] = (0, import_react32.useState)(null);
-  const containerRef = (0, import_react32.useRef)(null);
-  const textRef = (0, import_react32.useRef)(null);
-  const setContainerRef = (0, import_react32.useCallback)((el) => {
+  const [fontSizeStyle, setFontSizeStyle] = (0, import_react33.useState)(null);
+  const containerRef = (0, import_react33.useRef)(null);
+  const textRef = (0, import_react33.useRef)(null);
+  const setContainerRef = (0, import_react33.useCallback)((el) => {
     containerRef.current = el;
   }, []);
-  const setTextRef = (0, import_react32.useCallback)((el) => {
+  const setTextRef = (0, import_react33.useCallback)((el) => {
     textRef.current = el;
   }, []);
-  (0, import_react32.useLayoutEffect)(() => {
+  (0, import_react33.useLayoutEffect)(() => {
     if (!enabled || !containerRef.current || !textRef.current || !text) return;
     const container = containerRef.current;
     const textEl = textRef.current;
@@ -48762,7 +48945,7 @@ var BrickworkIntro = () => {
 };
 
 // src/templates/variants/brickwork/components/brickworkOutro.tsx
-var import_remotion108 = require("remotion");
+var import_remotion110 = require("remotion");
 var import_jsx_runtime523 = require("react/jsx-runtime");
 var GRID_SETTINGS2 = {
   columns: 2,
@@ -48838,7 +49021,7 @@ var BrickworkOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS2.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime523.jsx)(import_remotion108.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime523.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime523.jsx)(import_remotion110.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime523.jsx)(SponsorGrid2, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS2.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime523.jsx)(
@@ -49229,7 +49412,7 @@ var ClassicIntro = () => {
 };
 
 // src/templates/variants/classic/components/ClassicOutro.tsx
-var import_remotion109 = require("remotion");
+var import_remotion111 = require("remotion");
 var import_jsx_runtime529 = require("react/jsx-runtime");
 var GRID_SETTINGS3 = {
   columns: 2,
@@ -49305,7 +49488,7 @@ var ClassicOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS3.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime529.jsx)(import_remotion109.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime529.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime529.jsx)(import_remotion111.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime529.jsx)(SponsorGrid3, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS3.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime529.jsx)(
@@ -49886,7 +50069,7 @@ var SixersIntro = () => {
 };
 
 // src/templates/variants/sixers/components/SixersOutro.tsx
-var import_remotion110 = require("remotion");
+var import_remotion112 = require("remotion");
 var import_jsx_runtime535 = require("react/jsx-runtime");
 var GRID_SETTINGS4 = {
   columns: 2,
@@ -49962,7 +50145,7 @@ var SixersOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS4.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime535.jsx)(import_remotion110.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime535.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime535.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime535.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS4.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime535.jsx)(
@@ -50453,7 +50636,7 @@ var cnswTheme = {
 };
 
 // src/templates/variants/cnsw/components/CNSWIntro.tsx
-var import_remotion111 = require("remotion");
+var import_remotion113 = require("remotion");
 
 // src/templates/variants/cnsw/utils/compositionConfig.ts
 var compositionConfig = {
@@ -50768,8 +50951,8 @@ var CNSWIntro = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime540.jsxs)(import_jsx_runtime540.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(import_remotion111.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(
-      import_remotion111.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(import_remotion113.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime540.jsx)(
+      import_remotion113.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -50879,7 +51062,7 @@ var CNSWIntro = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWOutro.tsx
-var import_remotion112 = require("remotion");
+var import_remotion114 = require("remotion");
 var import_jsx_runtime541 = require("react/jsx-runtime");
 var GRID_SETTINGS5 = {
   columns: 2,
@@ -50955,7 +51138,7 @@ var CNSWOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS5.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(import_remotion112.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS5.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime541.jsx)(
@@ -50975,7 +51158,7 @@ var CNSWBackground = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWMainHeader.tsx
-var import_remotion113 = require("remotion");
+var import_remotion115 = require("remotion");
 var import_jsx_runtime543 = require("react/jsx-runtime");
 var CNSWMainHeader = () => {
   var _a, _b, _c;
@@ -51026,8 +51209,8 @@ var CNSWMainHeader = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime543.jsx)(import_remotion113.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime543.jsx)(
-          import_remotion113.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime543.jsx)(import_remotion115.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime543.jsx)(
+          import_remotion115.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -51628,7 +51811,7 @@ var ThunderIntro = () => {
 };
 
 // src/templates/variants/thunder/components/ThunderOutro.tsx
-var import_remotion114 = require("remotion");
+var import_remotion116 = require("remotion");
 var import_jsx_runtime547 = require("react/jsx-runtime");
 var GRID_SETTINGS6 = {
   columns: 2,
@@ -51704,7 +51887,7 @@ var ThunderOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS6.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime547.jsx)(import_remotion114.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime547.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime547.jsx)(import_remotion116.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime547.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS6.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime547.jsx)(
@@ -52274,7 +52457,7 @@ var ClassicIntro2 = () => {
 };
 
 // src/templates/variants/twoColumnClassic/components/ClassicOutro.tsx
-var import_remotion115 = require("remotion");
+var import_remotion117 = require("remotion");
 var import_jsx_runtime553 = require("react/jsx-runtime");
 var GRID_SETTINGS7 = {
   columns: 2,
@@ -52350,7 +52533,7 @@ var ClassicOutro2 = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS7.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(import_remotion115.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(import_remotion117.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS7.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime553.jsx)(
@@ -52370,7 +52553,7 @@ var ClassicBackground2 = () => {
 };
 
 // src/components/layout/screen/TwoColumn.tsx
-var import_remotion116 = require("remotion");
+var import_remotion118 = require("remotion");
 var import_jsx_runtime555 = require("react/jsx-runtime");
 var TwoColumn2 = ({
   Header,
@@ -52453,7 +52636,7 @@ var TwoColumn2 = ({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime555.jsx)(import_remotion116.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime555.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime555.jsx)(import_remotion118.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime555.jsx)(
     "div",
     {
       className: `flex flex-col h-full w-full ${className}`.trim(),
@@ -52481,7 +52664,7 @@ var TwoColumn2 = ({
 };
 
 // src/templates/variants/twoColumnClassic/components/ClassicMainHeaderRotated.tsx
-var import_react33 = __toESM(require("react"));
+var import_react34 = __toESM(require("react"));
 
 // src/templates/variants/twoColumnClassic/utils/titleLookup.ts
 var titleLookup2 = [
@@ -52516,9 +52699,9 @@ var ClassicMainHeaderRotated = () => {
   const { timings } = data;
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
   const displayTitle = getSimplifiedTitle2(metadata.title || "");
-  const [rotatedMinHeight, setRotatedMinHeight] = import_react33.default.useState(0);
-  const measureRef = import_react33.default.useRef(null);
-  import_react33.default.useLayoutEffect(() => {
+  const [rotatedMinHeight, setRotatedMinHeight] = import_react34.default.useState(0);
+  const measureRef = import_react34.default.useRef(null);
+  import_react34.default.useLayoutEffect(() => {
     if (measureRef.current) {
       setRotatedMinHeight(measureRef.current.offsetWidth);
     }
@@ -53078,7 +53261,7 @@ var cnswTheme2 = {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWIntro.tsx
-var import_remotion117 = require("remotion");
+var import_remotion119 = require("remotion");
 
 // src/templates/variants/cnsw-private/utils/compositionConfig.ts
 var compositionConfig2 = {
@@ -53393,8 +53576,8 @@ var CNSWIntro2 = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing2(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing2(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime559.jsxs)(import_jsx_runtime559.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(import_remotion117.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(
-      import_remotion117.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(import_remotion119.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime559.jsx)(
+      import_remotion119.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -53504,7 +53687,7 @@ var CNSWIntro2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWOutro.tsx
-var import_remotion118 = require("remotion");
+var import_remotion120 = require("remotion");
 var import_jsx_runtime560 = require("react/jsx-runtime");
 var SponsorGrid8 = ({ sponsors, LogoAnimations }) => /* @__PURE__ */ (0, import_jsx_runtime560.jsx)("div", { className: "grid grid-cols-2 grid-rows-3 gap-10  justify-center items-center", children: sponsors.filter((sponsor) => sponsor.logo && sponsor.logo.url).map((sponsor, idx) => {
   var _a;
@@ -53546,7 +53729,7 @@ var CNSWOutro2 = ({
   });
   const groups = chunkSponsors(sponsorsArray, OUTRO_SPONSOR_PAGE_SIZE);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(import_remotion118.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(import_remotion120.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
     durationInFrames: OUTRO_PAGE_DURATION_FRAMES
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime560.jsx)(
@@ -53566,7 +53749,7 @@ var CNSWBackground2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWMainHeader.tsx
-var import_remotion119 = require("remotion");
+var import_remotion121 = require("remotion");
 var import_jsx_runtime562 = require("react/jsx-runtime");
 var CNSWMainHeader2 = () => {
   var _a, _b, _c;
@@ -53617,8 +53800,8 @@ var CNSWMainHeader2 = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime562.jsx)(import_remotion119.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime562.jsx)(
-          import_remotion119.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime562.jsx)(import_remotion121.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime562.jsx)(
+          import_remotion121.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -54147,137 +54330,7 @@ var mudgeerabaTheme = {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
-var import_remotion121 = require("remotion");
-
-// src/components/typography/utils/useFittedFontSize.ts
-var import_react34 = require("react");
-var import_remotion120 = require("remotion");
-var import_layout_utils2 = require("@remotion/layout-utils");
-var DEFAULT_LINE_HEIGHT_RATIO = 1.05;
-var DEFAULT_MAX_LINES = 2;
-var TITLE_SCREEN_BASE_FONT_PX = 16;
-var TITLE_SCREEN_HORIZONTAL_PADDING_PX = 128;
-var getFitMeasureOptions = (options) => {
-  var _a, _b, _c;
-  return {
-    fontFamily: options.fontFamily,
-    fontWeight: (_a = options.fontWeight) != null ? _a : 900,
-    textTransform: (_b = options.textTransform) != null ? _b : "uppercase",
-    letterSpacing: (_c = options.letterSpacing) != null ? _c : "-0.025em",
-    validateFontIsLoaded: true
-  };
-};
-var computeFittedFontSize = ({
-  text,
-  fontFamily,
-  fontWeight = 900,
-  textTransform = "uppercase",
-  letterSpacing = "-0.025em",
-  maxFontSize = 10 * TITLE_SCREEN_BASE_FONT_PX,
-  minFontSize = 0,
-  fitWidth,
-  withinHeight,
-  lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
-  maxLines = DEFAULT_MAX_LINES
-}) => {
-  const trimmed = text.trim();
-  if (!trimmed || fitWidth <= 0) {
-    return maxFontSize;
-  }
-  const measureOpts = getFitMeasureOptions({
-    fontFamily,
-    fontWeight,
-    textTransform,
-    letterSpacing
-  });
-  const words = trimmed.split(/\s+/).filter(Boolean);
-  const fitSizeFor = (value) => (0, import_layout_utils2.fitText)({
-    text: value,
-    withinWidth: fitWidth,
-    ...measureOpts
-  }).fontSize;
-  const widthCandidates = [
-    fitSizeFor(trimmed),
-    ...words.map((word) => fitSizeFor(word))
-  ];
-  let fontSize = Math.min(maxFontSize, ...widthCandidates);
-  if (withinHeight && withinHeight > 0) {
-    const { width: singleLineWidth } = (0, import_layout_utils2.measureText)({
-      text: trimmed,
-      fontSize,
-      ...measureOpts
-    });
-    const estimatedLines = Math.min(
-      maxLines,
-      Math.max(1, Math.ceil(singleLineWidth / fitWidth))
-    );
-    const heightCap = withinHeight / (estimatedLines * lineHeightRatio);
-    fontSize = Math.min(fontSize, heightCap);
-  }
-  return minFontSize > 0 ? Math.max(minFontSize, fontSize) : fontSize;
-};
-var getTitleScreenContentWidth = (compositionWidth, horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX) => Math.max(0, compositionWidth - horizontalPadding);
-var useFittedFontSize = ({
-  text,
-  fontFamily,
-  fontWeight = 900,
-  textTransform = "uppercase",
-  letterSpacing = "-0.025em",
-  maxFontSize = 10 * TITLE_SCREEN_BASE_FONT_PX,
-  minFontSize = 0,
-  horizontalPadding = TITLE_SCREEN_HORIZONTAL_PADDING_PX,
-  withinWidth,
-  withinHeight,
-  lineHeightRatio = DEFAULT_LINE_HEIGHT_RATIO,
-  maxLines = DEFAULT_MAX_LINES
-}) => {
-  const { width } = (0, import_remotion120.useVideoConfig)();
-  const { fontsLoaded } = useFontContext();
-  return (0, import_react34.useMemo)(() => {
-    if (!fontsLoaded || !text.trim() || !fontFamily) {
-      return void 0;
-    }
-    const fitWidth = withinWidth != null ? withinWidth : getTitleScreenContentWidth(width, horizontalPadding);
-    try {
-      return computeFittedFontSize({
-        text,
-        fontFamily,
-        fontWeight,
-        textTransform,
-        letterSpacing,
-        maxFontSize,
-        minFontSize,
-        fitWidth,
-        withinHeight,
-        lineHeightRatio,
-        maxLines
-      });
-    } catch (error) {
-      console.warn(
-        "useFittedFontSize: measurement failed, using max cap",
-        error
-      );
-      return maxFontSize;
-    }
-  }, [
-    fontsLoaded,
-    text,
-    fontFamily,
-    fontWeight,
-    textTransform,
-    letterSpacing,
-    maxFontSize,
-    minFontSize,
-    horizontalPadding,
-    withinWidth,
-    withinHeight,
-    lineHeightRatio,
-    maxLines,
-    width
-  ]);
-};
-
-// src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
+var import_remotion122 = require("remotion");
 var import_jsx_runtime565 = require("react/jsx-runtime");
 var MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
 var INTRO_TITLE_MAX_LINES = 2;
@@ -54290,7 +54343,7 @@ var MudgeerabaIntro = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  const { width } = (0, import_remotion121.useVideoConfig)();
+  const { width } = (0, import_remotion122.useVideoConfig)();
   const title = (_a = metadata.title) != null ? _a : "";
   const titleFontFamily = (_c = (_b = fontClasses.title) == null ? void 0 : _b.family) != null ? _c : "Unbounded";
   const nameFontFamily = (_e = (_d = fontClasses.subtitle) == null ? void 0 : _d.family) != null ? _e : "Unbounded";
@@ -54401,7 +54454,7 @@ var MudgeerabaIntro = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaOutro.tsx
-var import_remotion122 = require("remotion");
+var import_remotion123 = require("remotion");
 var import_jsx_runtime566 = require("react/jsx-runtime");
 var GRID_SETTINGS8 = {
   columns: 2,
@@ -54479,7 +54532,7 @@ var MudgeerabaOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS8.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime566.jsx)(import_remotion122.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime566.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime566.jsx)(import_remotion123.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime566.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS8.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime566.jsx)(
@@ -54499,7 +54552,7 @@ var MudgeerabaBackground = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaMainHeader.tsx
-var import_remotion123 = require("remotion");
+var import_remotion124 = require("remotion");
 var import_jsx_runtime568 = require("react/jsx-runtime");
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
 var HEADER_TITLE_VERTICAL_PADDING_PX = 20;
@@ -54510,7 +54563,7 @@ var MudgeerabaMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const { width } = (0, import_remotion123.useVideoConfig)();
+  const { width } = (0, import_remotion124.useVideoConfig)();
   const { heights } = layout;
   const timings = data == null ? void 0 : data.timings;
   const exitFrame = (timings == null ? void 0 : timings.FPS_MAIN) ? timings.FPS_MAIN - 30 : 0;
@@ -55652,11 +55705,11 @@ var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
 var import_react35 = require("react");
-var import_remotion124 = require("remotion");
+var import_remotion125 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion124.useVideoConfig)();
+  const { width } = (0, import_remotion125.useVideoConfig)();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
   const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -55844,7 +55897,7 @@ var BroadcastProIntro = () => {
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProOutro.tsx
-var import_remotion125 = require("remotion");
+var import_remotion126 = require("remotion");
 var import_jsx_runtime574 = require("react/jsx-runtime");
 var GRID_SETTINGS9 = {
   columns: 2,
@@ -55920,7 +55973,7 @@ var BroadcastProOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS9.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime574.jsx)(import_remotion125.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime574.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime574.jsx)(import_remotion126.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime574.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS9.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime574.jsx)(
@@ -57033,11 +57086,11 @@ var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastProRounded/components/headline/useBroadcastProRoundedHeadlineFit.ts
 var import_react36 = require("react");
-var import_remotion126 = require("remotion");
+var import_remotion127 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX2 = 32;
 var useBroadcastProRoundedHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion126.useVideoConfig)();
+  const { width } = (0, import_remotion127.useVideoConfig)();
   const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
   const sizing = broadcastProRoundedHeadlineSizing != null ? broadcastProRoundedHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -57238,7 +57291,7 @@ var BroadcastProRoundedIntro = () => {
 };
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedOutro.tsx
-var import_remotion127 = require("remotion");
+var import_remotion128 = require("remotion");
 var import_jsx_runtime582 = require("react/jsx-runtime");
 var GRID_SETTINGS10 = {
   columns: 2,
@@ -57315,7 +57368,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS10.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime582.jsx)(import_remotion127.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime582.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime582.jsx)(import_remotion128.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime582.jsx)(
       SponsorGrid11,
       {
         sponsors: group,
