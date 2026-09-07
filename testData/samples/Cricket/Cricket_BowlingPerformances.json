@@ -1,783 +1,278 @@
 {
   "data": [
     {
-      "name": "Brown  (c)",
-      "runs": 32,
-      "overs": "8",
-      "prompt": "Brown  (c) played for Runaway Bay Premier Div 2, taking 4 wickets from 8 overs, conceding 32 runs. Game details: This was a One Day in the (2) CGC Premier League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Premier Div 2 (1) vs Mudgeeraba Premier Div 2 (1), the match result was Mudgeeraba Premier Div 2 won by 63 runs.",
-      "wickets": 4,
+      "name": "Anis",
+      "runs": 16,
+      "overs": "4",
+      "prompt": "Anis played for Runaway Bay T20, taking 3 wickets from 4 overs, conceding 16 runs. Game details: This was a T20 in the Veterans First Consulting T20 Cup grade, and the current match status is Match Completed . Runaway Bay T20 (8/105) vs Palm Beach T20 (8/162), the match result was Palm Beach T20 won by 57 runs.",
+      "wickets": 3,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
         "width": 500,
         "height": 500
       },
-      "playedFor": "Runaway Bay Premier Div 2",
+      "playedFor": "Runaway Bay T20",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Premier Div 2"
+          "name": "Runaway Bay T20"
         },
         "grade": {
-          "id": 70587,
-          "name": "(2) CGC Premier League - Division 2"
+          "id": 86530,
+          "name": "Veterans First Consulting T20 Cup"
         },
         "competition": {
-          "id": 15239,
+          "id": 20385,
           "name": "Cricket Gold Coast Senior Competition"
         }
       }
     },
     {
-      "name": "Altass",
-      "runs": 32,
-      "overs": "8",
-      "prompt": "Altass played for Runaway Bay Premier Div 3, taking 4 wickets from 8 overs, conceding 32 runs. Game details: This was a One Day in the (3) CGC Premier League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Premier Div 3 (1) vs Logan Village (1), the match result was Logan Village won by 65 runs.",
-      "wickets": 4,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Premier Div 3",
-      "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 3"
-        },
-        "grade": {
-          "id": 70588,
-          "name": "(3) CGC Premier League - Division 3"
-        },
-        "competition": {
-          "id": 15239,
-          "name": "Cricket Gold Coast Senior Competition"
-        }
-      }
-    },
-    {
-      "name": "Dunning",
-      "runs": 7,
-      "overs": "2",
-      "prompt": "Dunning played for Runaway Bay Community Div 2, taking 2 wickets from 2 overs, conceding 7 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs Southport Labrador Community Div 2 (1), the match result was Runaway Bay Community Div 2 won by 4 wickets.",
+      "name": "Hashimi",
+      "runs": 28,
+      "overs": "4",
+      "prompt": "Hashimi played for Runaway Bay T20, taking 2 wickets from 4 overs, conceding 28 runs. Game details: This was a T20 in the Veterans First Consulting T20 Cup grade, and the current match status is Match Completed . Runaway Bay T20 (8/105) vs Palm Beach T20 (8/162), the match result was Palm Beach T20 won by 57 runs.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
         "width": 500,
         "height": 500
       },
-      "playedFor": "Runaway Bay Community Div 2",
+      "playedFor": "Runaway Bay T20",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Community Div 2"
+          "name": "Runaway Bay T20"
         },
         "grade": {
-          "id": 75690,
-          "name": "(5) CGC Community League - Division 2"
+          "id": 86530,
+          "name": "Veterans First Consulting T20 Cup"
         },
         "competition": {
-          "id": 15239,
+          "id": 20385,
           "name": "Cricket Gold Coast Senior Competition"
         }
       }
     },
     {
-      "name": "Schumacher",
-      "runs": 21,
-      "overs": "6",
-      "prompt": "Schumacher played for Runaway Bay Community Div 2, taking 2 wickets from 6 overs, conceding 21 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs Southport Labrador Community Div 2 (1), the match result was Runaway Bay Community Div 2 won by 4 wickets.",
+      "name": "Canning",
+      "runs": 49,
+      "overs": "4",
+      "prompt": "Canning played for Runaway Bay T20, taking 2 wickets from 4 overs, conceding 49 runs. Game details: This was a T20 in the Veterans First Consulting T20 Cup grade, and the current match status is Match Completed . Runaway Bay T20 (10/73) vs Southport T20 (3/186), the match result was Southport T20 won by 113 runs.",
       "wickets": 2,
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
         "width": 500,
         "height": 500
       },
-      "playedFor": "Runaway Bay Community Div 2",
+      "playedFor": "Runaway Bay T20",
       "assignSponsors": {
         "Team": {
-          "name": "Runaway Bay Community Div 2"
+          "name": "Runaway Bay T20"
         },
         "grade": {
-          "id": 75690,
-          "name": "(5) CGC Community League - Division 2"
+          "id": 86530,
+          "name": "Veterans First Consulting T20 Cup"
         },
         "competition": {
-          "id": 15239,
-          "name": "Cricket Gold Coast Senior Competition"
-        }
-      }
-    },
-    {
-      "name": "McGhie",
-      "runs": 38,
-      "overs": "6",
-      "prompt": "McGhie played for Runaway Bay Community Div 2, taking 2 wickets from 6 overs, conceding 38 runs. Game details: This was a One Day in the (5) CGC Community League - Division 2 grade, and the current match status is Match Completed . Runaway Bay Community Div 2 (1) vs Southport Labrador Community Div 2 (1), the match result was Runaway Bay Community Div 2 won by 4 wickets.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Community Div 2",
-      "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Community Div 2"
-        },
-        "grade": {
-          "id": 75690,
-          "name": "(5) CGC Community League - Division 2"
-        },
-        "competition": {
-          "id": 15239,
-          "name": "Cricket Gold Coast Senior Competition"
-        }
-      }
-    },
-    {
-      "name": "Nadeem",
-      "runs": 39,
-      "overs": "8",
-      "prompt": "Nadeem played for Runaway Bay Premier Div 3, taking 2 wickets from 8 overs, conceding 39 runs. Game details: This was a One Day in the (3) CGC Premier League - Division 3 grade, and the current match status is Match Completed . Runaway Bay Premier Div 3 (1) vs Logan Village (1), the match result was Logan Village won by 65 runs.",
-      "wickets": 2,
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
-        "width": 500,
-        "height": 500
-      },
-      "playedFor": "Runaway Bay Premier Div 3",
-      "assignSponsors": {
-        "Team": {
-          "name": "Runaway Bay Premier Div 3"
-        },
-        "grade": {
-          "id": 70588,
-          "name": "(3) CGC Premier League - Division 3"
-        },
-        "competition": {
-          "id": 15239,
+          "id": 20385,
           "name": "Cricket Gold Coast Senior Competition"
         }
       }
     }
   ],
   "asset": {
-    "assetID": 68,
+    "assetID": 123,
     "assetTypeID": 3,
-    "assetsLinkID": "e5fbcceecfecc160a0d60f589459b1ae0b3cea955f085cb588cf7881e79cb224",
-    "assetCategoryID": 2
+    "assetCategoryID": 2,
+    "assetsLinkID": "e781df99a30d186a71996da295d96e2c0e5c223d4f2ee64d0565eb7d82dd478e"
   },
-  "errors": [],
-  "frames": [45, 180, 315, 405, 495, 585],
   "render": {
-    "renderId": 33858,
-    "schedulerId": 49
+    "schedulerId": 596,
+    "renderId": 9049
   },
   "account": {
-    "accountId": 49
+    "accountId": 703
   },
   "timings": {
     "FPS_MAIN": 180,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 360,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
+  "frames": [45, 180],
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
+        "hasLogo": true,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
         "width": 500,
-        "height": 500,
-        "hasLogo": true
+        "height": 500
       },
       "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
       "sponsors": {
-        "default": {
-          "primary_sponsor": [
-            {
-              "id": 598,
-              "url": "https://www.synergycardiology.com.au/",
-              "logo": {
-                "id": 7314,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_12_eea3f7daa0.png"
-              },
-              "name": "Synergy Cardiology",
-              "isVideo": true,
-              "tagline": "We strive to create a warm and welcoming environment where you can feel comfortable and confident in the care you receiv",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_1": [
-            {
-              "id": 134,
-              "url": "https://www.runawaybaycricketclub.com.au/our-sponsors",
-              "logo": {
-                "id": 5644,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_4_b8d44bf9f9.png"
-              },
-              "name": "Aussieelec Electrical",
-              "isVideo": true,
-              "tagline": "Prompt reliable service - Servicing all areas of the Gold Coast",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": true,
-              "description": null
-            }
-          ],
-          "general_sponsor_2": [
-            {
-              "id": 144,
-              "url": "https://www.qpf.com.au",
-              "logo": {
-                "id": 5670,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/32da5954_05ee_4021_861a_92025bc1013e_679fba694b.jfif"
-              },
-              "name": "QBF Finance & Insurance",
-              "isVideo": true,
-              "tagline": "Finance & Insurance To Drive Your Business Forward",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_3": [
-            {
-              "id": 599,
-              "url": "https://www.westerapartners.com.au/",
-              "logo": {
-                "id": 7315,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6e8c3c97_274e_49a6_a63e_c9eb2fc9ee60_515a984616.jpg"
-              },
-              "name": "Westera Partners",
-              "isVideo": true,
-              "tagline": "People Focused  Project Excellence",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_4": [
-            {
-              "id": 632,
-              "url": "https://southport.multidynamic.com.au/",
-              "logo": {
-                "id": 7503,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_22_adb0d7fe19.png"
-              },
-              "name": "Multi Dynamic",
-              "isVideo": true,
-              "tagline": "We are a full-service real estate agency operating in your area",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_5": [
-            {
-              "id": 334,
-              "url": "https://www.flexihire.com.au/",
-              "logo": {
-                "id": 6195,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/462569956_1072729634439256_8107546613115575304_n_56c260dc10.png"
-              },
-              "name": "Flexihire",
-              "isVideo": true,
-              "tagline": "GET THE JOB DONE RIGHT",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_6": [
-            {
-              "id": 138,
-              "url": "https://www.asapstumpgrinding.com.au/",
-              "logo": {
-                "id": 5651,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fca7f89f_d219_4afe_ad2a_12b018fe658e_fa98198d90.jfif"
-              },
-              "name": "ASAP Stump Grinding",
-              "isVideo": true,
-              "tagline": "QUICK PROMPT SERVICE | ALL  AREAS OF THE GOLD COAST",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_7": [
-            {
-              "id": 631,
-              "url": "https://tjays.com.au/",
-              "logo": {
-                "id": 7340,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo245_2367b249ca.jpg"
-              },
-              "name": "TJAYS Plumbing & Civil",
-              "isVideo": true,
-              "tagline": "Brisbane and Gold Coast’s trusted plumbing experts",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_8": [
-            {
-              "id": 139,
-              "url": "https://wireco.com.au/",
-              "logo": {
-                "id": 5659,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/images_de55b7ed12.jfif"
-              },
-              "name": "WiIRECO",
-              "isVideo": true,
-              "tagline": "TRUSTED PRODUCTS. UNMATCHED EXPERTISE.",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_9": [
-            {
-              "id": 141,
-              "url": "https://www.urbansolutions.net.au/",
-              "logo": {
-                "id": 5654,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/0ba00039_f094_422c_8c61_e493323785ad_39443b6002.jfif"
-              },
-              "name": "Mortons Urban Solutions",
-              "isVideo": true,
-              "tagline": "Urban and Regional Planning, Civil Engineering Design and Project Coordination",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_10": [
-            {
-              "id": 26,
-              "url": "https://www.ssq.net.au/",
-              "logo": {
-                "id": 121,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_43_579cc38621.png"
-              },
-              "name": "Schlencker Surveying",
-              "isVideo": true,
-              "tagline": "GET THE BEST PROPERTY DEVELOPMENT  ADVICE ON THE GOLD COAST",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": "We can assist with a variety of land surveying services including Cadastral, Engineering and Construction & Town Plannin"
-            }
-          ],
-          "general_sponsor_11": [
-            {
-              "id": 135,
-              "url": "https://www.aktilestone.com.au/",
-              "logo": {
-                "id": 5645,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_J_version_JPG_1_1_a526f1dcbf.jpg"
-              },
-              "name": "A & K Tile & Stone",
-              "isVideo": true,
-              "tagline": "Professional and Reliable Tile and Stone Contractors who take pride in their work. Contact us for a quote ",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_12": [
-            {
-              "id": 23,
-              "url": "https://essentialenergysolutions.com.au/",
-              "logo": {
-                "id": 118,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/295678203_805750660786940_8208108140140120547_n_9d2f0ce667.png"
-              },
-              "name": "Essential Energy Solutions",
-              "isVideo": true,
-              "tagline": "PROVIDING THE BEST SOLAR ENERGY SOLUTIONS FOR YOUR FUTURE",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": "We provide green solar power energy to local Gold Coasters with our solar services.  Solar power - it's great for our pl"
-            }
-          ],
-          "general_sponsor_13": [
-            {
-              "id": 143,
-              "url": "https://aigs.com.au/",
-              "logo": {
-                "id": 5658,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/assure2_pdf_7fe330f66c.jpg"
-              },
-              "name": "Assure Industrial Gates Solutions",
-              "isVideo": true,
-              "tagline": "Queensland manufacturer, installer and service provider of industrial automatic gate systems and traffic control.",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_14": [
-            {
-              "id": 133,
-              "url": "https://wildthingfishingcharters.com.au/",
-              "logo": {
-                "id": 5650,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/35c9aaa1_abaf_4d5c_957c_24edba82c712_8facd54422.jfif"
-              },
-              "name": "Wild Thing Fishing Charters",
-              "isVideo": true,
-              "tagline": " Wild Thing Fishing Charters the best fishing charter on the Gold Coast",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_15": [
-            {
-              "id": 140,
-              "url": "https://online.lnp.org.au/david-crisafulli",
-              "logo": {
-                "id": 5653,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fe83dfe1_0790_481a_b646_6ecf328569ef_2a297bdec5.jfif"
-              },
-              "name": "David Chrisafulli",
-              "isVideo": true,
-              "tagline": "The Right Priorities for Queensland's Future",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_16": [
-            {
-              "id": 145,
-              "url": "https://www.facebook.com/PeakPerformanceCricket/",
-              "logo": {
-                "id": 5671,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/122b3edd_0e29_4b1f_a788_d61c2f0a49fe_049c1721bb.jfif"
-              },
-              "name": "Peak Performance Cricket",
-              "isVideo": true,
-              "tagline": "Peak Performance Cricket provides structured 1;1 and group coaching sessions. ",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_17": [
-            {
-              "id": 697,
-              "url": "https://www.bendigobank.com.au/branch/qld/community-bank-paradise-point/",
-              "logo": {
-                "id": 7538,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bendigo_bank_250x250_b71bac5301.png"
-              },
-              "name": "Bendigo Bank Paradise Point",
-              "isVideo": true,
-              "tagline": "Community Bank Paradise Point not only gives you access to award-winning financial products and services, we're also com",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_18": [
-            {
-              "id": 698,
-              "url": "https://exchangedepot.com.au/",
-              "logo": {
-                "id": 7540,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/305302086_416190323831708_4580525394291034891_n_d1ea39420d.png"
-              },
-              "name": "Exchange Depot",
-              "isVideo": true,
-              "tagline": "Our facilities provide a quick and easy way to redeem your 10 cent deposit containers",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_19": [
-            {
-              "id": 700,
-              "url": "https://scgurban.com.au/",
-              "logo": {
-                "id": 7542,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/web_logo_2018_trans_7200f6030e.png"
-              },
-              "name": "SCG Urban",
-              "isVideo": true,
-              "tagline": "At SCG Urban quality is never compromised and we pride ourselves on producing innovative & sustainable solutions to all ",
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ],
-          "general_sponsor_20": [
-            {
-              "id": 699,
-              "url": "https://www.sicame.com.au/",
-              "logo": {
-                "id": 7541,
-                "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/sicame_australia_2bd50e2a10.png"
-              },
-              "name": "Sicame Australia",
-              "isVideo": true,
-              "tagline": null,
-              "isActive": true,
-              "isArticle": true,
-              "isPrimary": false,
-              "description": null
-            }
-          ]
-        },
-        "primary": [
-          {
-            "id": 598,
-            "url": "https://www.synergycardiology.com.au/",
-            "logo": {
-              "id": 7314,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_12_eea3f7daa0.png"
-            },
-            "name": "Synergy Cardiology",
-            "isVideo": true,
-            "tagline": "We strive to create a warm and welcoming environment where you can feel comfortable and confident in the care you receiv",
-            "isActive": true,
-            "isArticle": true,
-            "isPrimary": false,
-            "description": null
-          }
-        ]
+        "primary": [],
+        "general": [],
+        "sponsorNum": 0
       },
       "IsAccountClub": true
     },
     "video": {
-      "media": {
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
-        },
-        "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/cfc17f09_2711_4d02_8622_f2f4bcee2e32_903a03f9d3.jpg",
-          "ratio": "landscape",
-          "width": 2048,
-          "height": 1365,
-          "AgeGroup": "Both",
-          "AssetType": "ALL",
-          "markerPosition": []
-        }
-      },
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
-        "title": "Bowling Performances",
-        "frames": [],
-        "assetId": 68,
-        "titleSplit": ["Performances"],
+        "title": "Bowling  Performances",
+        "titleSplit": [""],
         "videoTitle": "Bowling Performances",
-        "assetTypeId": 3,
         "compositionId": "CricketBowlingPerformances",
-        "includeSponsors": true
+        "assetId": 123,
+        "assetTypeId": 3,
+        "frames": [],
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#352466",
-          "secondary": "#ffa500"
+          "primary": "#611E75",
+          "secondary": "#DABF30"
         },
-        "template": "Classic"
+        "template": "CNSW"
+      },
+      "media": {
+        "HeroImage": {
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
+        },
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        }
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 2,
+          "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketTeamOfTheWeek": 2,
           "CricketBattingPerformances": 7,
-          "CricketBowlingPerformances": 7
+          "CricketBowlingPerformances": 7,
+          "CricketTeamOfTheWeek": 2
         }
       },
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
       "templateVariation": {
+        "useBackground": "Animated",
         "mode": "lightAlt",
-        "image": {
-          "url": null,
-          "type": "pan",
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "direction": "left",
-          "gradientType": "linear",
-          "overlayStyle": "vignette",
-          "overlayOpacity": 0.3
-        },
-        "noise": {
-          "type": "triangleSwarm"
-        },
-        "video": {
-          "url": null,
-          "loop": null,
-          "size": "cover",
-          "muted": true,
-          "volume": 0.8,
-          "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
-          },
-          "position": "left",
-          "fallbackUrl": null,
-          "playbackRate": null,
-          "useOffthreadVideo": null
-        },
-        "palette": "primary",
-        "pattern": {
-          "type": "dots",
-          "scale": 0.75,
-          "opacity": 0.35,
-          "rotation": null,
-          "animation": "none",
-          "animationSpeed": 0.8,
-          "animationDuration": null
-        },
-        "texture": {
-          "url": null,
-          "name": null,
-          "scale": "100%",
-          "repeat": "cover",
-          "overlay": {
-            "opacity": 0.5,
-            "blendMode": "multiply"
-          }
-        },
         "category": {
-          "name": "Classic",
-          "slug": "Classic",
-          "bundleAudio": {
-            "id": 6,
-            "Name": "Muted",
-            "createdAt": "2024-10-30T00:35:16.398Z",
-            "updatedAt": "2024-10-30T00:35:17.926Z",
-            "publishedAt": "2024-10-30T00:35:17.915Z",
-            "audio_options": [
-              {
-                "id": 33,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
-                "Name": "HelloStranger_Instrumental",
-                "createdAt": "2024-10-30T00:35:04.160Z",
-                "updatedAt": "2024-10-30T00:36:30.358Z",
-                "publishedAt": "2024-10-30T00:35:05.839Z",
-                "ComponentName": "Top 5 Bowling",
-                "CompositionID": "Top5BowlingList"
-              },
-              {
-                "id": 34,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
-                "Name": "GoodGoodFeeling_Inst",
-                "createdAt": "2024-10-30T00:37:09.563Z",
-                "updatedAt": "2024-10-30T00:38:09.963Z",
-                "publishedAt": "2024-10-30T00:38:09.959Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              },
-              {
-                "id": 35,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
-                "Name": "Collateral-NoGuitarSolo_Inst",
-                "createdAt": "2024-10-30T00:38:02.552Z",
-                "updatedAt": "2024-10-30T00:38:04.070Z",
-                "publishedAt": "2024-10-30T00:38:04.063Z",
-                "ComponentName": "Weekend Results",
-                "CompositionID": "WeekendResults"
-              },
-              {
-                "id": 36,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
-                "Name": "Wall-Of-Sound_Instrumental",
-                "createdAt": "2024-10-30T00:39:02.570Z",
-                "updatedAt": "2024-10-30T00:39:04.182Z",
-                "publishedAt": "2024-10-30T00:39:04.177Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
-              },
-              {
-                "id": 38,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
-                "Name": "So Good To Be Alive_Inst_Ohhs",
-                "createdAt": "2024-10-30T01:00:28.630Z",
-                "updatedAt": "2024-10-30T01:00:30.327Z",
-                "publishedAt": "2024-10-30T01:00:30.319Z",
-                "ComponentName": "Top 5 Batting",
-                "CompositionID": "Top5BattingList"
-              },
-              {
-                "id": 39,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
-                "Name": "KnuckleSandwhich",
-                "createdAt": "2024-10-30T01:01:10.581Z",
-                "updatedAt": "2024-10-30T01:01:13.949Z",
-                "publishedAt": "2024-10-30T01:01:13.932Z",
-                "ComponentName": "UpComing Fixtures",
-                "CompositionID": "UpComingFixtures"
-              }
-            ]
-          },
+          "slug": "CNSW",
+          "name": "Cricket NSW",
           "divideFixturesBy": {
             "CricketLadder": 1,
             "CricketRoster": 1,
             "CricketResults": 2,
-            "CricketUpcoming": 2,
+            "CricketUpcoming": 3,
             "CricketResultSingle": 1,
             "CricketBattingPerformances": 7,
             "CricketBowlingPerformances": 7
-          }
+          },
+          "bundleAudio": null
         },
+        "video": {
+          "url": null,
+          "fallbackUrl": null,
+          "position": null,
+          "size": null,
+          "loop": null,
+          "muted": null,
+          "overlay": null,
+          "useOffthreadVideo": null,
+          "volume": null,
+          "playbackRate": null
+        },
+        "image": {
+          "url": null,
+          "ratio": null,
+          "width": null,
+          "height": null,
+          "type": null,
+          "direction": null,
+          "overlayStyle": null,
+          "gradientType": null,
+          "overlayOpacity": null
+        },
+        "palette": "primary",
         "gradient": {
-          "type": "primaryToSecondary",
-          "direction": "DIAGONAL_REVERSE"
+          "type": null,
+          "direction": null
+        },
+        "noise": {
+          "type": null
+        },
+        "pattern": {
+          "type": null,
+          "animation": null,
+          "scale": null,
+          "rotation": null,
+          "opacity": null,
+          "animationDuration": null,
+          "animationSpeed": null
         },
         "particle": {
-          "type": "lines",
-          "speed": 0.8,
-          "animation": "scale",
-          "direction": "up",
-          "particleCount": "300"
+          "type": null,
+          "particleCount": null,
+          "speed": null,
+          "direction": null,
+          "animation": null
         },
-        "useBackground": "Image",
-        "luminance": {
-          "name": "Test 001",
+        "modeId": 2,
+        "animation": {
+          "type": "html-scoreboard-grid"
+        },
+        "imageCandidates": [],
+        "texture": {
+          "name": null,
           "url": null,
-          "asset": "_verify/test001.png",
-          "map": {
-            "kind": "theme",
-            "preset": "brand"
-          },
-          "protection": "none",
-          "position": "center",
-          "size": "cover",
-          "opacity": 1
+          "repeat": "cover",
+          "scale": "100%",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
         }
       }
     }
+  },
+  "errors": [],
+  "orderingContext": {
+    "scopeKey": "account:703:club:60120",
+    "revision": 0,
+    "resolvedAt": "2026-09-07T07:48:27.110Z"
+  },
+  "organisation": {
+    "type": "club",
+    "id": 60120
+  },
+  "generationIdentity": "d3cc282223597d492d103c316eace630b3ecd92796d20d7a132dc16aeb59f0cc",
+  "generationManifest": {
+    "orderingContext": {
+      "scopeKey": "account:703:club:60120",
+      "revision": 0,
+      "resolvedAt": "2026-09-07T07:48:27.110Z"
+    },
+    "organisation": {
+      "type": "club",
+      "id": 60120
+    },
+    "generationIdentity": "d3cc282223597d492d103c316eace630b3ecd92796d20d7a132dc16aeb59f0cc",
+    "schedulerId": 596,
+    "renderId": 9049,
+    "fixtureIds": []
   }
 }
