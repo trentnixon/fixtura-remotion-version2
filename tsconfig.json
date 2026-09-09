@@ -12,5 +12,10 @@
     "noUnusedLocals": true,
     "resolveJsonModule": true
   },
-  "exclude": ["remotion.config.ts", "vitest.config.ts", "src/**/*.test.ts"]
+  "exclude": [
+    "remotion.config.ts",
+    "vitest.config.ts",
+    "src/**/*.test.ts",
+    "design/**"
+  ]
 }

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "broadcast-pro": {
+      "label": "Broadcast Pro",
+      "registryId": "BroadcastPro",
+      "sports": {
+        "cricket": {
+          "assets": {
+            "results": {
+              "label": "Results",
+              "fixture": "testData/samples/Cricket/Cricket_Results.json",
+              "remotion": {
+                "composition": "cricket/results",
+                "theme": "src/templates/variants/broadcastPro/theme/composition/results.ts"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

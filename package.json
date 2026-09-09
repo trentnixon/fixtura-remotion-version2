@@ -85,6 +85,7 @@
   },
   "scripts": {
     "dev": "remotion studio",
+    "design": "npx serve . -p 3456",
     "build": "remotion bundle",
     "build:package:js": "tsup && node scripts/copy-preview-dts.mjs",
     "build:package:css": "tailwindcss -i ./src/package/styles.css -o ./dist/preview.css --minify",

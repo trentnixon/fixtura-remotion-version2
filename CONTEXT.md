@@ -4,6 +4,18 @@ Domain language for Fixtura Remotion video assets and sponsor presentation.
 
 ## Language
 
+**Design prototype**:
+Static 1080×1350 HTML under the repository `design/` folder, used to approve layout before Remotion implementation.
+_Avoid:_ stitch folder (as a path name)
+
+**Asset type**:
+A composition family within a sport (e.g. Results, Ladder). Appears as a tab in the design prototype site and maps to a Remotion composition.
+_Avoid:_ asset (when meaning the full exported frame — use exported frame or anatomy “asset” only in composition docs)
+
+**Template** (Fixtura):
+A visual style package registered in the template registry (e.g. Broadcast Pro).
+_Avoid:_ template (when meaning a single Remotion Composition or an arbitrary source file)
+
 **Sponsor footer**:
 The sponsor logo strip shown during the main asset sequence of a composition.
 _Avoid_: Outro, sponsor bar (unless referring to layout chrome only)

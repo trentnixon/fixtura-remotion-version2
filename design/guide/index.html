@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Guide — Fixtura</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <main class="design-main">
+        <article class="design-guide">
+          <h1>Design prototype guide</h1>
+          <p>
+            Static 1080×1350 HTML for layout approval before Remotion
+            implementation. Run <code>npm run design</code> from the repository
+            root, then open <code>http://localhost:3456/design/</code>.
+          </p>
+
+          <h2>Frame contract</h2>
+          <p>Every exported asset is a <strong>1080 × 1350</strong> portrait frame:</p>
+          <ul>
+            <li><strong>Asset header</strong> — organisation / competition identity</li>
+            <li><strong>Composition content area</strong> — sport-specific modules</li>
+            <li><strong>Asset footer</strong> — organisation + sponsor lockups</li>
+          </ul>
+          <p>
+            See
+            <a href="/src/compositions/cricket/.docs/component-anatomy/component-anatomy-overview.md"
+              >component anatomy overview</a
+            >
+            (open in editor) for shared primitives and block names.
+          </p>
+
+          <h2>Tailwind vocabulary</h2>
+          <ul>
+            <li><code>font-teko</code> — display / scores (Broadcast Pro)</li>
+            <li><code>font-rajdhani</code> — labels / body (Broadcast Pro)</li>
+            <li>Utility-first layout: <code>flex</code>, <code>gap-*</code>, <code>text-*</code></li>
+          </ul>
+          <p>
+            Design pages use CDN Tailwind for speed. Remotion uses the package
+            tailwind preset and theme <code>componentStyles</code> after handoff.
+            Verify typography in Remotion Studio before sign-off.
+          </p>
+
+          <h2>Fixtures &amp; hydration</h2>
+          <p>
+            Key copy is loaded from the same JSON as Remotion Studio
+            (<code>testData/samples/</code>). Paths are declared in
+            <code>design/_shared/routes.json</code>; DOM mapping lives in
+            <code>design/_shared/hydration/{variant}/{sport}/{asset}.bind.json</code>.
+          </p>
+
+          <h2>Add a new asset</h2>
+          <ol>
+            <li>Create <code>design/variants/{variant}/{sport}/{asset}.html</code></li>
+            <li>Add bind map under <code>design/_shared/hydration/...</code></li>
+            <li>Register in <code>design/_shared/routes.json</code></li>
+            <li>Add row to <code>design/.docs/asset-index.md</code></li>
+            <li>Add handoff comment block at top of HTML</li>
+          </ol>
+
+          <h2>Handoff to Remotion</h2>
+          <p>When a design prototype is approved:</p>
+          <blockquote>
+            Move <code>design/variants/{variant}/{sport}/{asset}.html</code> to
+            Remotion. Registry: <code>{RegistryId}</code>. Composition:
+            <code>{composition}</code>. Update theme composition surface and
+            display component. Map HTML classes to theme keys per variant readMe.
+          </blockquote>
+          <p>
+            Authoritative theme mapping:
+            <a href="/src/templates/variants/broadcastPro/.docs/readMe.md"
+              >Broadcast Pro variant readMe</a
+            >
+          </p>
+          <p>
+            Stitch briefs (design tool prompts):
+            <a href="/src/compositions/cricket/.docs/stitch-briefs/readMe.md"
+              >stitch-briefs index</a
+            >
+          </p>
+
+          <h2>Demo</h2>
+          <p>
+            <a href="/design/variants/broadcast-pro/cricket/results.html"
+              >Broadcast Pro → Cricket → Results</a
+            >
+            (golden reference)
+          </p>
+        </article>
+      </main>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      renderVariantNav(undefined);
+    </script>
+  </body>
+</html>

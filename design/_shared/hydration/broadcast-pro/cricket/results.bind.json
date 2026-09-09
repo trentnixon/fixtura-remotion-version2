@@ -1,0 +1,11 @@
+{
+  "[data-hydrate=club-name]": "videoMeta.club.name",
+  "[data-hydrate=header-title]": "videoMeta.video.metadata.title",
+  "[data-hydrate=header-secondary]": "videoMeta.video.metadata.videoTitle",
+  "[data-hydrate=metadata-grade]": "data.0.gradeName",
+  "[data-hydrate=metadata-ground]": "data.0.ground",
+  "[data-hydrate=home-team]": "data.0.homeTeam.name",
+  "[data-hydrate=away-team]": "data.0.awayTeam.name",
+  "[data-hydrate=home-score]": "data.0.homeTeam.score",
+  "[data-hydrate=away-score]": "data.0.awayTeam.score"
+}

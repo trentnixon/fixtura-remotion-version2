@@ -1,0 +1,15 @@
+/* 1080×1350 exported frame — scaled preview inside design shell */
+.design-frame-scale {
+  transform: scale(0.45);
+  transform-origin: top center;
+  margin-bottom: calc(-1350px * 0.55);
+}
+
+.design-social-canvas {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

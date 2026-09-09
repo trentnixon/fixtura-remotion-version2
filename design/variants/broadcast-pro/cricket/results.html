@@ -1,0 +1,269 @@
+<!doctype html>
+<!--
+  Handoff: broadcast-pro / cricket / results
+  Registry: BroadcastPro
+  Remotion: src/compositions/cricket/results/
+  Theme: src/templates/variants/broadcastPro/theme/composition/results.ts
+  Fixture: testData/samples/Cricket/Cricket_Results.json
+-->
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Broadcast Pro — Cricket Results</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#c3f5ff",
+              secondary: "#ffb2b9",
+              "secondary-container": "#e2044d",
+              surface: "#041329",
+              "surface-container": "#112036",
+              "surface-container-lowest": "#010e24",
+              "on-surface": "#d6e3ff",
+            },
+            fontFamily: {
+              teko: ["Teko", "sans-serif"],
+              rajdhani: ["Rajdhani", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(4, 19, 41, 0.5) 0%,
+          rgba(4, 19, 41, 0.85) 100%
+        );
+      }
+    </style>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav class="design-tabs" aria-label="Asset types" data-design-tabs></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas relative bg-surface shadow-2xl text-on-surface font-rajdhani"
+            >
+              <!-- Background Layer -->
+              <div class="absolute inset-0 z-0">
+                <img
+                  alt="Professional cricket stadium at night with floodlights"
+                  class="w-full h-full object-cover scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdiLrwwbskCS0aKtpFPzek6DgcYDROX4QjZ6QvQvj_2z4qHFSiLYTXBK2VwLSiUNuul8udYiVOm4bZZKxIs1XZ5jn-LOcqFFRnAEIJVsabnQB5G0T-PYgGivgVbva4WKGfkgp_626njQ239OxwFJUAOPqT3JpbWIQCIxyUoVJa68c1ab_10Kl0xI0GyfAZfHbWoxqWUGYZ-m5JC6CSQZv045Ep0fwthPWVzfsNkGu0Tz_rDNOzRAUJJ2--dpTyvU2g786cmuSTr0k"
+                />
+                <div class="absolute inset-0 hero-gradient"></div>
+              </div>
+
+              <!-- Asset Header -->
+              <header class="relative z-10 w-full pt-16 flex flex-col items-center">
+                <div
+                  class="w-28 h-28 bg-white rounded-full flex items-center justify-center p-3 shadow-xl mb-6"
+                >
+                  <span
+                    class="material-symbols-outlined text-surface text-7xl"
+                    style="font-variation-settings: 'FILL' 1"
+                    >sports_cricket</span
+                  >
+                </div>
+                <h1
+                  class="font-teko text-[140px] leading-[0.8] text-white uppercase tracking-tight drop-shadow-2xl"
+                  data-hydrate="header-title"
+                >
+                  Results
+                </h1>
+                <p
+                  class="font-rajdhani text-white/90 text-2xl font-bold mt-4 uppercase tracking-[0.2em] bg-white/10 px-6 py-2 backdrop-blur-md"
+                  data-hydrate="header-secondary"
+                >
+                  Weekend Results
+                </p>
+                <p class="sr-only" data-hydrate="club-name"></p>
+              </header>
+
+              <!-- Composition Content Area -->
+              <main
+                class="relative z-10 flex-1 px-14 py-12 flex flex-col gap-12 overflow-hidden"
+              >
+                <!-- Match Module 1 -->
+                <div class="flex flex-col gap-2">
+                  <!-- Metadata Strip -->
+                  <div
+                    class="flex justify-between items-center bg-white/10 px-5 py-2"
+                  >
+                    <span
+                      class="text-white/80 text-sm font-bold uppercase tracking-widest"
+                      data-hydrate="metadata-grade"
+                      >Grade</span
+                    >
+                    <span
+                      class="text-white/80 text-xs uppercase font-medium tracking-wider"
+                      data-hydrate="metadata-ground"
+                      >Ground</span
+                    >
+                  </div>
+
+                  <div class="flex flex-col gap-[3px]">
+                    <!-- Team row (home) -->
+                    <div class="glass-panel flex items-center justify-between p-4">
+                      <div class="flex items-center gap-6">
+                        <div
+                          class="w-12 h-12 bg-white/20 flex items-center justify-center"
+                        >
+                          <span class="material-symbols-outlined text-white text-3xl"
+                            >shield</span
+                          >
+                        </div>
+                        <h3
+                          class="font-teko text-4xl text-white uppercase tracking-wide"
+                          data-hydrate="home-team"
+                        >
+                          Home Team
+                        </h3>
+                      </div>
+                      <div
+                        class="bg-surface-container-lowest px-6 py-2 border-l-8 border-primary"
+                      >
+                        <span
+                          class="font-teko text-5xl text-white"
+                          data-hydrate="home-score"
+                          >0</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Performance stats (static placeholders in v1) -->
+                    <div class="grid grid-cols-3 gap-[3px]">
+                      <div
+                        class="glass-panel p-3 flex justify-between items-center px-5"
+                      >
+                        <span class="text-white/70 text-base font-semibold"
+                          >Batter</span
+                        >
+                        <span class="text-white font-bold text-base">—</span>
+                      </div>
+                      <div
+                        class="glass-panel p-3 flex justify-between items-center px-5"
+                      >
+                        <span class="text-white/70 text-base font-semibold"
+                          >Batter</span
+                        >
+                        <span class="text-white font-bold text-base">—</span>
+                      </div>
+                      <div
+                        class="glass-panel p-3 flex justify-between items-center px-5"
+                      >
+                        <span class="text-white/70 text-base font-semibold"
+                          >Bowler</span
+                        >
+                        <span class="text-primary font-bold text-base">—</span>
+                      </div>
+                    </div>
+
+                    <!-- Team row (away) -->
+                    <div class="glass-panel flex items-center justify-between p-4 mt-2">
+                      <div class="flex items-center gap-6">
+                        <div
+                          class="w-12 h-12 bg-white/20 flex items-center justify-center"
+                        >
+                          <span class="material-symbols-outlined text-white text-3xl"
+                            >token</span
+                          >
+                        </div>
+                        <h3
+                          class="font-teko text-4xl text-white uppercase tracking-wide"
+                          data-hydrate="away-team"
+                        >
+                          Away Team
+                        </h3>
+                      </div>
+                      <div
+                        class="bg-surface-container-lowest px-6 py-2 border-l-8 border-secondary-container"
+                      >
+                        <span
+                          class="font-teko text-5xl text-white"
+                          data-hydrate="away-score"
+                          >0</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+
+              <!-- Asset Footer -->
+              <footer
+                class="relative z-10 w-full h-28 bg-white flex items-center justify-between px-14"
+              >
+                <div class="flex items-center gap-12">
+                  <div
+                    class="w-20 h-20 bg-surface-container flex items-center justify-center p-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-white text-4xl"
+                      style="font-variation-settings: 'FILL' 1"
+                      >eco</span
+                    >
+                  </div>
+                  <div
+                    class="font-rajdhani text-surface font-bold text-sm uppercase tracking-[0.2em]"
+                  >
+                    Sponsor strip
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { hydratePage } from "/design/_shared/hydrate.js";
+
+      const context = {
+        variantSlug: "broadcast-pro",
+        sportSlug: "cricket",
+        assetSlug: "results",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      hydratePage(context);
+    </script>
+  </body>
+</html>

@@ -105,7 +105,7 @@ Stitch default (team 1 / team 2) maps to the positional fallback. Ladder uses th
 
 ## Crest wells
 
-Logo wells isolate unpredictable crest artwork inside **square containers** on rectangular sporting surfaces. Stitch baseline: **`w-12 h-12`**, `bg-white/20`, **`object-contain`** crest centred in the well ([`stitch/index.html`](../stitch/index.html)).
+Logo wells isolate unpredictable crest artwork inside **square containers** on rectangular sporting surfaces. Design prototype baseline: **`w-12 h-12`**, `bg-white/20`, **`object-contain`** crest centred in the well ([`design/variants/broadcast-pro/cricket/results.html`](../../../../../design/variants/broadcast-pro/cricket/results.html)).
 
 **Exception:** the circular org badge in [`BroadcastProMainHeader`](../components/BroadcastProMainHeader.tsx) is intentional — not part of the crest-well system.
 
@@ -137,7 +137,7 @@ Home-vs-away opposition layout — how two team sides are arranged relative to a
 | **result**  | Vertical stack                                   | **none** (stitch-correct — no VS on results)         | Results, Result Single |
 | **roster**  | Vertical sidebar cards                           | **VERSUS** (muted italic, not primary VS)            | Roster                 |
 
-**Stitch alignment:** Upcoming central **`VS`** ([`stitch/upcoming.html`](../stitch/upcoming.html)); Results stacked rows without divider ([`stitch/index.html`](../stitch/index.html)); Roster **`VERSUS`** above opponent crest ([`stitch/teamRoster.html`](../stitch/teamRoster.html)).
+**Design prototype alignment:** Results stacked rows without divider ([`design/variants/broadcast-pro/cricket/results.html`](../../../../../design/variants/broadcast-pro/cricket/results.html)). Additional asset types (Upcoming, Roster, etc.) will be added to `design/` incrementally.
 
 **Types:** **`matchup.ts`** in `src/templates/types/broadcast-pro/` — `BROADCAST_PRO_MATCHUP_TIER_DIVIDER`, `BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY`.
 
