@@ -1,0 +1,487 @@
+﻿<!doctype html>
+<!--
+  Handoff: scoreline / cricket / result-single
+  Registry: Scoreline (provisional)
+  Remotion: src/compositions/cricket/resultSingle/
+  Theme: The Crease System (Barlow Condensed + Source Sans 3)
+  Fixture: testData/samples/Cricket/Cricket_WeekendResultsSingle.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreline - Cricket Result Single</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-results.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-result-single.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("scoreline");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas scoreline-canvas"
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+              <!-- Asset Header -->
+              <header class="scoreline-header">
+                <div class="header-shell">
+                  <div class="header-shell__main">
+                    <div class="header-identity-lockup">
+                      <div class="organisation-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Club logo"
+                          data-hydrate="club-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="header-identity">
+                        <p class="organisation-name" data-hydrate="club-name">
+                          Club name
+                        </p>
+                      </div>
+                    </div>
+                    <div class="header-title-stack">
+                      <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                        Result
+                      </p>
+                      <h1 data-hydrate="header-title">
+                        Weekend Result Single Game
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="header-shell__crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <!-- Result Single Content Area -->
+              <main class="results-ledger results-ledger--single">
+                <div class="single-result-stack">
+                  <section class="match-module match-module--single">
+                    <!-- Team and Score Area -->
+                    <div class="team-score-area team-score-area--single">
+                      <header class="match-head">
+                        <div class="match-grade">
+                          <h2
+                            class="match-grade-name"
+                            data-hydrate="grade-name"
+                          >
+                            Grade
+                          </h2>
+                        </div>
+
+                        <div class="result-bridge">
+                          <p
+                            class="result-statement"
+                            data-hydrate="match-1-result"
+                          >
+                            Result
+                          </p>
+                        </div>
+                      </header>
+
+                      <!-- Team Identity + Score Display: home -->
+                      <div
+                        class="team-band"
+                        data-hydrate="match-1-home-club"
+                        data-hydrate-attr="data-club-team"
+                      >
+                        <div class="team-primary">
+                          <div class="team-mark">
+                            <span
+                              class="mark-fallback"
+                              aria-hidden="true"
+                            ></span>
+                            <img
+                              alt="Home team logo"
+                              data-hydrate="match-1-home-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p class="team-score">
+                            <span
+                              class="score"
+                              data-hydrate="match-1-home-score"
+                              >0</span
+                            >
+                            <span class="overs"
+                              ><span data-hydrate="match-1-home-overs">0</span>
+                              ov</span
+                            >
+                          </p>
+                        </div>
+                        <div class="team-identity">
+                          <h2
+                            class="team-name"
+                            data-hydrate="match-1-home-team"
+                          >
+                            Home team
+                          </h2>
+                          <span class="team-role"
+                            ><span class="club-role">Our Team</span
+                            ><span class="opposition-role"
+                              >Opposition</span
+                            ></span
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Versus / Divider -->
+                      <div class="team-divider" aria-hidden="true">V</div>
+
+                      <!-- Team Identity + Score Display: away -->
+                      <div
+                        class="team-band"
+                        data-hydrate="match-1-away-club"
+                        data-hydrate-attr="data-club-team"
+                      >
+                        <div class="team-primary">
+                          <div class="team-mark">
+                            <span
+                              class="mark-fallback"
+                              aria-hidden="true"
+                            ></span>
+                            <img
+                              alt="Away team logo"
+                              data-hydrate="match-1-away-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p class="team-score">
+                            <span
+                              class="score"
+                              data-hydrate="match-1-away-score"
+                              >0</span
+                            >
+                            <span class="overs"
+                              ><span data-hydrate="match-1-away-overs">0</span>
+                              ov</span
+                            >
+                          </p>
+                        </div>
+                        <div class="team-identity">
+                          <h2
+                            class="team-name"
+                            data-hydrate="match-1-away-team"
+                          >
+                            Away team
+                          </h2>
+                          <span class="team-role"
+                            ><span class="club-role">Our Team</span
+                            ><span class="opposition-role"
+                              >Opposition</span
+                            ></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Performance Summary -->
+                    <div class="performance-area">
+                      <!-- Batting Panel -->
+                      <section class="performance-panel">
+                        <h3 class="performance-heading">Batting</h3>
+                        <p class="performance-row">
+                          <span
+                            class="performance-player"
+                            data-hydrate="match-1-batter-1"
+                            >Player</span
+                          ><span class="performance-figure"
+                            ><span data-hydrate="match-1-batter-1-runs">0</span
+                            ><span
+                              data-hydrate="match-1-batter-1-not-out"
+                              data-hydrate-format="not-out"
+                            ></span>
+                            <span class="performance-balls"
+                              >(<span data-hydrate="match-1-batter-1-balls"
+                                >0</span
+                              >)</span
+                            ></span
+                          >
+                        </p>
+                        <p class="performance-row">
+                          <span
+                            class="performance-player"
+                            data-hydrate="match-1-batter-2"
+                            >Player</span
+                          ><span class="performance-figure"
+                            ><span data-hydrate="match-1-batter-2-runs">0</span
+                            ><span
+                              data-hydrate="match-1-batter-2-not-out"
+                              data-hydrate-format="not-out"
+                            ></span>
+                            <span class="performance-balls"
+                              >(<span data-hydrate="match-1-batter-2-balls"
+                                >0</span
+                              >)</span
+                            ></span
+                          >
+                        </p>
+                        <p class="performance-row">
+                          <span
+                            class="performance-player"
+                            data-hydrate="match-1-batter-3"
+                            >Player</span
+                          ><span class="performance-figure"
+                            ><span data-hydrate="match-1-batter-3-runs">0</span
+                            ><span
+                              data-hydrate="match-1-batter-3-not-out"
+                              data-hydrate-format="not-out"
+                            ></span>
+                            <span class="performance-balls"
+                              >(<span data-hydrate="match-1-batter-3-balls"
+                                >0</span
+                              >)</span
+                            ></span
+                          >
+                        </p>
+                      </section>
+
+                      <!-- Bowling Panel -->
+                      <section class="performance-panel">
+                        <h3 class="performance-heading">Bowling</h3>
+                        <p class="performance-row">
+                          <span
+                            class="performance-player"
+                            data-hydrate="match-1-bowler-1"
+                            >Player</span
+                          ><span class="performance-figure"
+                            ><span data-hydrate="match-1-bowler-1-wickets"
+                              >0</span
+                            >/<span data-hydrate="match-1-bowler-1-runs"
+                              >0</span
+                            >
+                            <span class="performance-balls"
+                              >(<span data-hydrate="match-1-bowler-1-overs"
+                                >0</span
+                              >)</span
+                            ></span
+                          >
+                        </p>
+                        <p class="performance-row">
+                          <span
+                            class="performance-player"
+                            data-hydrate="match-1-bowler-2"
+                            >Player</span
+                          ><span class="performance-figure"
+                            ><span data-hydrate="match-1-bowler-2-wickets"
+                              >0</span
+                            >/<span data-hydrate="match-1-bowler-2-runs"
+                              >0</span
+                            >
+                            <span class="performance-balls"
+                              >(<span data-hydrate="match-1-bowler-2-overs"
+                                >0</span
+                              >)</span
+                            ></span
+                          >
+                        </p>
+                        <p class="performance-row">
+                          <span
+                            class="performance-player"
+                            data-hydrate="match-1-bowler-3"
+                            >Player</span
+                          ><span class="performance-figure"
+                            ><span data-hydrate="match-1-bowler-3-wickets"
+                              >0</span
+                            >/<span data-hydrate="match-1-bowler-3-runs"
+                              >0</span
+                            >
+                            <span class="performance-balls"
+                              >(<span data-hydrate="match-1-bowler-3-overs"
+                                >0</span
+                              >)</span
+                            ></span
+                          >
+                        </p>
+                      </section>
+                    </div>
+
+                    <div class="match-context">
+                      <p class="context-left">
+                        <span data-hydrate="match-1-type">Type</span
+                        ><span class="context-separator"></span
+                        ><span data-hydrate="match-1-round">Round</span>
+                      </p>
+                      <p class="context-venue" data-hydrate="match-1-ground">
+                        Ground
+                      </p>
+                    </div>
+                  </section>
+                </div>
+              </main>
+
+              <!-- Asset Footer -->
+              <footer class="asset-footer">
+                <div class="footer-crease" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+                <!-- Sponsor Identity -->
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initScorelineAsset } from "/design/_shared/scoreline-init.js";
+
+      const context = {
+        variantSlug: "scoreline",
+        sportSlug: "cricket",
+        assetSlug: "result-single",
+      };
+
+      const applyClubPerformances = (match) => {
+        const clubTeam = match.homeTeam?.isClubTeam
+          ? match.homeTeam
+          : match.awayTeam?.isClubTeam
+            ? match.awayTeam
+            : null;
+
+        if (!clubTeam) {
+          return;
+        }
+
+        clubTeam.battingPerformances.slice(0, 3).forEach((player, index) => {
+          const row = index + 1;
+          const name = document.querySelector(
+            `[data-hydrate="match-1-batter-${row}"]`,
+          );
+          const runs = document.querySelector(
+            `[data-hydrate="match-1-batter-${row}-runs"]`,
+          );
+          const balls = document.querySelector(
+            `[data-hydrate="match-1-batter-${row}-balls"]`,
+          );
+          const notOut = document.querySelector(
+            `[data-hydrate="match-1-batter-${row}-not-out"]`,
+          );
+
+          if (name) name.textContent = player.player ?? "";
+          if (runs) runs.textContent = String(player.runs ?? "");
+          if (balls) balls.textContent = String(player.balls ?? "");
+          if (notOut) {
+            notOut.textContent = player.notOut ? "*" : "";
+          }
+        });
+
+        clubTeam.bowlingPerformances.slice(0, 3).forEach((player, index) => {
+          const row = index + 1;
+          const name = document.querySelector(
+            `[data-hydrate="match-1-bowler-${row}"]`,
+          );
+          const wickets = document.querySelector(
+            `[data-hydrate="match-1-bowler-${row}-wickets"]`,
+          );
+          const runs = document.querySelector(
+            `[data-hydrate="match-1-bowler-${row}-runs"]`,
+          );
+          const overs = document.querySelector(
+            `[data-hydrate="match-1-bowler-${row}-overs"]`,
+          );
+
+          if (name) name.textContent = player.player ?? "";
+          if (wickets) wickets.textContent = String(player.wickets ?? "");
+          if (runs) runs.textContent = String(player.runs ?? "");
+          if (overs) overs.textContent = String(player.overs ?? "");
+        });
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initScorelineAsset(context, {
+        resultsLayout: true,
+        afterHydrate: async () => {
+          const fixtureResponse = await fetch(
+            "/testData/samples/Cricket/Cricket_WeekendResultsSingle.json",
+          );
+          if (fixtureResponse.ok) {
+            const fixture = await fixtureResponse.json();
+            if (fixture.data?.[0]) {
+              applyClubPerformances(fixture.data[0]);
+            }
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
+

@@ -6,6 +6,7 @@
 
 @import "../templates/variants/scoreline/styles/scoreline-polish.css";
 @import "../templates/variants/scoreline/styles/scoreline-results.css";
+@import "../templates/variants/scoreline/styles/scoreline-result-single.css";
 
 .single-team-font,
 .single-team-font * {
