@@ -9,6 +9,7 @@ import { CNSWPrivate } from "./variants/cnsw-private";
 import { Mudgeeraba } from "./variants/mudgeeraba";
 import { BroadcastPro } from "./variants/broadcastPro";
 import { BroadcastProRounded } from "./variants/broadcastProRounded";
+import { Scoreline } from "./variants/scoreline";
 /**
  * Define template registry key type
  */
@@ -68,6 +69,10 @@ export const templateRegistry = {
   },
   BroadcastProRounded: {
     component: BroadcastProRounded,
+    variants: Variants,
+  },
+  Scoreline: {
+    component: Scoreline,
     variants: Variants,
   },
 };

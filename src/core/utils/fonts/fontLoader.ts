@@ -128,6 +128,20 @@ export const fontPathMap: Record<string, string> = {
   "Teko-Medium": "fonts/Teko/static/Teko-Medium.ttf",
   "Teko-SemiBold": "fonts/Teko/static/Teko-SemiBold.ttf",
   "Teko-Bold": "fonts/Teko/static/Teko-Bold.ttf",
+
+  // Barlow Condensed (Scoreline display)
+  "Barlow Condensed": "fonts/BarlowCondensed/static/BarlowCondensed-Regular.ttf",
+  "Barlow Condensed-Medium":
+    "fonts/BarlowCondensed/static/BarlowCondensed-Medium.ttf",
+  "Barlow Condensed-SemiBold":
+    "fonts/BarlowCondensed/static/BarlowCondensed-SemiBold.ttf",
+  "Barlow Condensed-Bold":
+    "fonts/BarlowCondensed/static/BarlowCondensed-Bold.ttf",
+  "Barlow Condensed-ExtraBold":
+    "fonts/BarlowCondensed/static/BarlowCondensed-ExtraBold.ttf",
+
+  // Source Sans 3 (Scoreline body)
+  "Source Sans 3": "fonts/SourceSans3/static/SourceSans3-Variable.ttf",
 };
 
 // System fonts that don't need to be loaded
@@ -185,6 +199,10 @@ const fontNameVariants: Record<string, string> = {
   RAJDHANI: "Rajdhani",
   teko: "Teko",
   TEKO: "Teko",
+  "barlow condensed": "Barlow Condensed",
+  "Barlow Condensed": "Barlow Condensed",
+  "source sans 3": "Source Sans 3",
+  "Source Sans 3": "Source Sans 3",
 };
 
 // Reverse lookup map for debugging (font string value to fontPathMap key)

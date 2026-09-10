@@ -11,6 +11,8 @@ module.exports = {
       fontFamily: {
         teko: ["Teko", "sans-serif"],
         rajdhani: ["Rajdhani", "sans-serif"],
+        "barlow-condensed": ["Barlow Condensed", "Arial", "sans-serif"],
+        "source-sans": ["Source Sans 3", "Arial", "sans-serif"],
       },
     },
   },

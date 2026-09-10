@@ -9,6 +9,7 @@ import { CNSWPrivate } from "./cnsw-private";
 import { mudgeeraba as MudgeerabaUpcomingGames } from "./mudgeeraba";
 import { BroadcastPro as BroadcastProUpcomingGames } from "./broadcastPro";
 import { BroadcastProRounded as BroadcastProRoundedUpcomingGames } from "./broadcastProRounded";
+import { scoreline as ScorelineUpcomingGames } from "./scoreline";
 // Import other template implementations
 
 // Export all template implementations
@@ -23,4 +24,5 @@ export {
   MudgeerabaUpcomingGames as mudgeeraba,
   BroadcastProUpcomingGames as broadcastpro,
   BroadcastProRoundedUpcomingGames as broadcastprorounded,
+  ScorelineUpcomingGames as scoreline,
 };

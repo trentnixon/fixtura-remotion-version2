@@ -8,6 +8,7 @@ import { BrickWork } from "./brickWork";
 import { mudgeeraba as MudgeerabaResultSingle } from "./mudgeeraba";
 import { broadcastpro as BroadcastProResultSingle } from "./broadcastPro";
 import { broadcastprorounded as BroadcastProRoundedResultSingle } from "./broadcastProRounded";
+import { scoreline as ScorelineResultSingle } from "./scoreline";
 
 // Export all template implementations
 export {
@@ -21,4 +22,5 @@ export {
   MudgeerabaResultSingle as mudgeeraba,
   BroadcastProResultSingle as broadcastpro,
   BroadcastProRoundedResultSingle as broadcastprorounded,
+  ScorelineResultSingle as scoreline,
 };

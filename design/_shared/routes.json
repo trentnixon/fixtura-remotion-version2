@@ -17,6 +17,80 @@
           }
         }
       }
+    },
+    "scoreline": {
+      "label": "Scoreline",
+      "registryId": "Scoreline",
+      "sports": {
+        "cricket": {
+          "assets": {
+            "results": {
+              "label": "Results",
+              "fixture": "testData/samples/Cricket/Cricket_Results.json",
+              "remotion": {
+                "composition": "cricket/results",
+                "theme": "src/templates/variants/scoreline/theme/composition/results.ts"
+              }
+            },
+            "upcoming": {
+              "label": "Upcoming Fixtures",
+              "fixture": "testData/samples/Cricket/Cricket_upcoming.json",
+              "remotion": {
+                "composition": "cricket/upcoming",
+                "theme": "src/templates/variants/scoreline/theme/composition/upcoming.ts"
+              }
+            },
+            "top5-batting": {
+              "label": "Top 5 Batting",
+              "fixture": "testData/samples/Cricket/Cricket_Top5Batters.json",
+              "remotion": {
+                "composition": "cricket/top5",
+                "theme": "src/templates/variants/scoreline/theme/composition/top5.ts"
+              }
+            },
+            "top5-bowling": {
+              "label": "Top 5 Bowling",
+              "fixture": "testData/samples/Cricket/Cricket_Top5Bowlers.json",
+              "remotion": {
+                "composition": "cricket/top5",
+                "theme": "src/templates/variants/scoreline/theme/composition/top5.ts"
+              }
+            },
+            "ladder": {
+              "label": "Ladder",
+              "fixture": "testData/samples/Cricket/Cricket_Ladder.json",
+              "remotion": {
+                "composition": "cricket/ladder",
+                "theme": "src/templates/variants/scoreline/theme/composition/ladder.ts"
+              }
+            },
+            "result-single": {
+              "label": "Result Single",
+              "fixture": "testData/samples/Cricket/Cricket_WeekendResultsSingle.json",
+              "remotion": {
+                "composition": "cricket/resultSingle",
+                "theme": "src/templates/variants/scoreline/theme/composition/resultSingle.ts"
+              }
+            },
+            "team-roster": {
+              "label": "Team Roster",
+              "fixture": "testData/samples/Cricket/Cricket_Roster.json",
+              "remotion": {
+                "composition": "cricket/teamRoster",
+                "theme": "src/templates/variants/scoreline/theme/composition/roster.ts"
+              }
+            },
+            "team-of-the-week": {
+              "label": "Team of the Week",
+              "fixture": "testData/samples/Cricket/Cricket_TeamOfTheWeek.json",
+              "remotion": {
+                "composition": "cricket/teamOfTheWeek",
+                "theme": "src/templates/variants/scoreline/theme/composition/teamOfTheWeek.ts"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

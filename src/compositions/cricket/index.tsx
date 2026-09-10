@@ -10,6 +10,7 @@ import {
   mudgeeraba as ladderMudgeeraba,
   broadcastpro as ladderBroadcastPro,
   broadcastprorounded as ladderBroadcastProRounded,
+  scoreline as ladderScoreline,
 } from "./ladder";
 import {
   basic as upcomingBasic,
@@ -22,6 +23,7 @@ import {
   mudgeeraba as upcomingMudgeeraba,
   broadcastpro as upcomingBroadcastPro,
   broadcastprorounded as upcomingBroadcastProRounded,
+  scoreline as upcomingScoreline,
 } from "./upcoming";
 import {
   basic as top5Basic,
@@ -34,6 +36,7 @@ import {
   mudgeeraba as top5Mudgeeraba,
   broadcastpro as top5BroadcastPro,
   broadcastprorounded as top5BroadcastProRounded,
+  scoreline as top5Scoreline,
 } from "./top5";
 import {
   basic as resultsBasic,
@@ -46,6 +49,7 @@ import {
   mudgeeraba as resultsMudgeeraba,
   broadcastpro as resultsBroadcastPro,
   broadcastprorounded as resultsBroadcastProRounded,
+  scoreline as resultsScoreline,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -59,6 +63,7 @@ import {
   mudgeeraba as resultSingleMudgeeraba,
   broadcastpro as resultSingleBroadcastPro,
   broadcastprorounded as resultSingleBroadcastProRounded,
+  scoreline as resultSingleScoreline,
 } from "./resultSingle";
 
 import {
@@ -70,6 +75,7 @@ import {
   brickwork as rosterBrickwork,
   broadcastpro as rosterBroadcastPro,
   broadcastprorounded as rosterBroadcastProRounded,
+  scoreline as rosterScoreline,
 } from "./teamRoster";
 import {
   basic as performancesBasic,
@@ -82,6 +88,7 @@ import {
   mudgeeraba as performancesMudgeeraba,
   broadcastpro as performancesBroadcastPro,
   broadcastprorounded as performancesBroadcastProRounded,
+  scoreline as performancesScoreline,
 } from "./performances";
 import {
   basic as teamOfTheWeekBasic,
@@ -94,6 +101,7 @@ import {
   mudgeeraba as teamOfTheWeekMudgeeraba,
   broadcastpro as teamOfTheWeekBroadcastPro,
   broadcastprorounded as teamOfTheWeekBroadcastProRounded,
+  scoreline as teamOfTheWeekScoreline,
 } from "./TeamOfTheWeek";
 
 /* export * as ladder from './ladder';
@@ -120,6 +128,7 @@ export const CricketLadder = {
   mudgeeraba: ladderMudgeeraba,
   broadcastpro: ladderBroadcastPro,
   broadcastprorounded: ladderBroadcastProRounded,
+  scoreline: ladderScoreline,
 };
 
 export const CricketTop5 = {
@@ -134,6 +143,7 @@ export const CricketTop5 = {
   mudgeeraba: top5Mudgeeraba,
   broadcastpro: top5BroadcastPro,
   broadcastprorounded: top5BroadcastProRounded,
+  scoreline: top5Scoreline,
 };
 
 export const CricketResults = {
@@ -148,6 +158,7 @@ export const CricketResults = {
   mudgeeraba: resultsMudgeeraba,
   broadcastpro: resultsBroadcastPro,
   broadcastprorounded: resultsBroadcastProRounded,
+  scoreline: resultsScoreline,
 };
 
 export const CricketUpcoming = {
@@ -162,6 +173,7 @@ export const CricketUpcoming = {
   mudgeeraba: upcomingMudgeeraba,
   broadcastpro: upcomingBroadcastPro,
   broadcastprorounded: upcomingBroadcastProRounded,
+  scoreline: upcomingScoreline,
 };
 
 export const CricketResultSingle = {
@@ -176,6 +188,7 @@ export const CricketResultSingle = {
   mudgeeraba: resultSingleMudgeeraba,
   broadcastpro: resultSingleBroadcastPro,
   broadcastprorounded: resultSingleBroadcastProRounded,
+  scoreline: resultSingleScoreline,
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -190,6 +203,7 @@ export const CricketRoster = {
   mudgeeraba: rosterMudgeeraba,
   broadcastpro: rosterBroadcastPro,
   broadcastprorounded: rosterBroadcastProRounded,
+  scoreline: rosterScoreline,
 };
 
 // Add CricketPerformances export for batting and bowling performances
@@ -205,6 +219,7 @@ export const CricketPerformances = {
   mudgeeraba: performancesMudgeeraba,
   broadcastpro: performancesBroadcastPro,
   broadcastprorounded: performancesBroadcastProRounded,
+  scoreline: performancesScoreline,
 };
 
 // Add CricketTeamOfTheWeek export for Team of the Week
@@ -220,6 +235,7 @@ export const CricketTeamOfTheWeek = {
   mudgeeraba: teamOfTheWeekMudgeeraba,
   broadcastpro: teamOfTheWeekBroadcastPro,
   broadcastprorounded: teamOfTheWeekBroadcastProRounded,
+  scoreline: teamOfTheWeekScoreline,
 };
 
 export const singleGameResult = {

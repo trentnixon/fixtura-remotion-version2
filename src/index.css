@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@config "../tailwind.config.ts";
+@import "./templates/variants/scoreline/styles/scoreline-polish.css";
+@import "./templates/variants/scoreline/styles/scoreline-results.css";
 
 .single-team-font,
 .single-team-font * {

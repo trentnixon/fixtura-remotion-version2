@@ -9,6 +9,7 @@ import { CNSWPrivate as CNSWPrivateLadder } from "./cnsw-private";
 import { mudgeeraba as MudgeerabaLadder } from "./mudgeeraba";
 import { BroadcastPro as BroadcastProLadder } from "./broadcastPro";
 import { BroadcastProRounded as BroadcastProRoundedLadder } from "./broadcastProRounded";
+import { scoreline as ScorelineLadder } from "./scoreline";
 // Import other template implementations
 
 // Export all template implementations
@@ -22,3 +23,4 @@ export { CNSWPrivateLadder as cnswprivate };
 export { MudgeerabaLadder as mudgeeraba };
 export { BroadcastProLadder as broadcastpro };
 export { BroadcastProRoundedLadder as broadcastprorounded };
+export { ScorelineLadder as scoreline };

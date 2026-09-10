@@ -6,6 +6,7 @@ import { mudgeeraba } from "./mudgeeraba";
 import { brickwork } from "./brickwork";
 import { broadcastpro } from "./broadcastPro";
 import { broadcastprorounded } from "./broadcastProRounded";
+import { scoreline } from "./scoreline";
 
 export {
   basic,
@@ -16,4 +17,5 @@ export {
   brickwork,
   broadcastpro,
   broadcastprorounded,
+  scoreline,
 };

@@ -1,7 +1,11 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 /* Scan package preview sources (templates, core, etc.) for utility classes. */
 @source "../**/*.{js,ts,jsx,tsx,html}";
+
+@import "../templates/variants/scoreline/styles/scoreline-polish.css";
+@import "../templates/variants/scoreline/styles/scoreline-results.css";
 
 .single-team-font,
 .single-team-font * {

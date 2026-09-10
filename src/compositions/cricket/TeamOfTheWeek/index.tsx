@@ -9,6 +9,7 @@ import ClassicTwoColumnTeamOfTheWeek from "./classicTwoColumn";
 import MudgeerabaTeamOfTheWeek from "./mudgeeraba";
 import BroadcastProTeamOfTheWeek from "./broadcastPro";
 import BroadcastProRoundedTeamOfTheWeek from "./broadcastProRounded";
+import { scoreline as ScorelineTeamOfTheWeek } from "./scoreline";
 
 // Export all template implementations
 export const basic = BasicTeamOfTheWeek;
@@ -21,3 +22,4 @@ export const classicTwoColumn = ClassicTwoColumnTeamOfTheWeek;
 export const mudgeeraba = MudgeerabaTeamOfTheWeek;
 export const broadcastpro = BroadcastProTeamOfTheWeek;
 export const broadcastprorounded = BroadcastProRoundedTeamOfTheWeek;
+export { ScorelineTeamOfTheWeek as scoreline };
