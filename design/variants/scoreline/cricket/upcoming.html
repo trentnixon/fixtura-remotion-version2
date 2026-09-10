@@ -1,0 +1,444 @@
+<!doctype html>
+<!--
+  Handoff: scoreline / cricket / upcoming
+  Registry: Scoreline (provisional)
+  Remotion: src/compositions/cricket/upcoming/
+  Theme: The Crease System (Barlow Condensed + Source Sans 3)
+  Fixture: testData/samples/Cricket/Cricket_upcoming.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreline - Cricket Upcoming Fixtures</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-upcoming.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("scoreline");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+
+</head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas scoreline-canvas"
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <header class="scoreline-header">
+                <div class="header-shell">
+                  <div class="header-shell__main">
+                    <div class="header-identity-lockup">
+                      <div class="organisation-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Club logo"
+                          data-hydrate="club-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="header-identity">
+                        <p class="organisation-name" data-hydrate="club-name">
+                          Club name
+                        </p>
+                      </div>
+                    </div>
+                    <div class="header-title-stack">
+                      <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                        Upcoming
+                      </p>
+                      <h1 data-hydrate="header-title">Upcoming Fixtures</h1>
+                    </div>
+                  </div>
+                  <div class="header-shell__crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <main class="fixtures-ledger">
+                <div class="fixtures-stack">
+                <section class="fixture-card">
+                  <div class="fixture-grade">
+                    <h2
+                      class="fixture-grade-name"
+                      data-hydrate="fixture-1-grade"
+                    >
+                      Grade
+                    </h2>
+                    <p class="fixture-grade-meta">
+                      <span class="meta-chip" data-hydrate="fixture-1-type"
+                        >Type</span
+                      ><span class="meta-separator"></span
+                      ><span class="meta-chip" data-hydrate="fixture-1-round"
+                        >Round</span
+                      ><span
+                        class="meta-separator meta-separator--secondary"
+                      ></span
+                      ><span class="meta-chip" data-hydrate="fixture-1-age"
+                        >Age</span
+                      >
+                    </p>
+                    </div>
+                    <div class="fixture-matchup">
+                    <div class="team-band team-band--home">
+                      <div class="team-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Home team logo"
+                          data-hydrate="fixture-1-home-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="team-copy">
+                        <span class="team-side-label">Home</span>
+                        <p class="team-name" data-hydrate="fixture-1-home-team">
+                          Home
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fixture-centre">
+                      <span class="fixture-vs" aria-hidden="true">V</span>
+                      <div class="fixture-when">
+                        <span class="fixture-field-label">When</span>
+                        <p class="fixture-date" data-hydrate="fixture-1-date">
+                          Date
+                        </p>
+                        <p class="fixture-time" data-hydrate="fixture-1-time">
+                          Time
+                        </p>
+                      </div>
+                      <div class="fixture-where">
+                        <span class="fixture-field-label">Venue</span>
+                        <p
+                          class="fixture-ground"
+                          data-hydrate="fixture-1-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                    <div class="team-band team-band--away">
+                      <div class="team-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Away team logo"
+                          data-hydrate="fixture-1-away-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="team-copy">
+                        <span class="team-side-label">Away</span>
+                        <p class="team-name" data-hydrate="fixture-1-away-team">
+                          Away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div class="fixture-separator" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+
+                <section class="fixture-card">
+                  <div class="fixture-grade">
+                    <h2
+                      class="fixture-grade-name"
+                      data-hydrate="fixture-2-grade"
+                    >
+                      Grade
+                    </h2>
+                    <p class="fixture-grade-meta">
+                      <span class="meta-chip" data-hydrate="fixture-2-type"
+                        >Type</span
+                      ><span class="meta-separator"></span
+                      ><span class="meta-chip" data-hydrate="fixture-2-round"
+                        >Round</span
+                      ><span
+                        class="meta-separator meta-separator--secondary"
+                      ></span
+                      ><span class="meta-chip" data-hydrate="fixture-2-age"
+                        >Age</span
+                      >
+                    </p>
+                    </div>
+                    <div class="fixture-matchup">
+                    <div class="team-band team-band--home">
+                      <div class="team-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Home team logo"
+                          data-hydrate="fixture-2-home-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="team-copy">
+                        <span class="team-side-label">Home</span>
+                        <p class="team-name" data-hydrate="fixture-2-home-team">
+                          Home
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fixture-centre">
+                      <span class="fixture-vs" aria-hidden="true">V</span>
+                      <div class="fixture-when">
+                        <span class="fixture-field-label">When</span>
+                        <p class="fixture-date" data-hydrate="fixture-2-date">
+                          Date
+                        </p>
+                        <p class="fixture-time" data-hydrate="fixture-2-time">
+                          Time
+                        </p>
+                      </div>
+                      <div class="fixture-where">
+                        <span class="fixture-field-label">Venue</span>
+                        <p
+                          class="fixture-ground"
+                          data-hydrate="fixture-2-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                    <div class="team-band team-band--away">
+                      <div class="team-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Away team logo"
+                          data-hydrate="fixture-2-away-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="team-copy">
+                        <span class="team-side-label">Away</span>
+                        <p class="team-name" data-hydrate="fixture-2-away-team">
+                          Away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div class="fixture-separator" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+
+                <section class="fixture-card">
+                  <div class="fixture-grade">
+                    <h2
+                      class="fixture-grade-name"
+                      data-hydrate="fixture-3-grade"
+                    >
+                      Grade
+                    </h2>
+                    <p class="fixture-grade-meta">
+                      <span class="meta-chip" data-hydrate="fixture-3-type"
+                        >Type</span
+                      ><span class="meta-separator"></span
+                      ><span class="meta-chip" data-hydrate="fixture-3-round"
+                        >Round</span
+                      ><span
+                        class="meta-separator meta-separator--secondary"
+                      ></span
+                      ><span class="meta-chip" data-hydrate="fixture-3-age"
+                        >Age</span
+                      >
+                    </p>
+                    </div>
+                    <div class="fixture-matchup">
+                    <div class="team-band team-band--home">
+                      <div class="team-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Home team logo"
+                          data-hydrate="fixture-3-home-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="team-copy">
+                        <span class="team-side-label">Home</span>
+                        <p class="team-name" data-hydrate="fixture-3-home-team">
+                          Home
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fixture-centre">
+                      <span class="fixture-vs" aria-hidden="true">V</span>
+                      <div class="fixture-when">
+                        <span class="fixture-field-label">When</span>
+                        <p class="fixture-date" data-hydrate="fixture-3-date">
+                          Date
+                        </p>
+                        <p class="fixture-time" data-hydrate="fixture-3-time">
+                          Time
+                        </p>
+                      </div>
+                      <div class="fixture-where">
+                        <span class="fixture-field-label">Venue</span>
+                        <p
+                          class="fixture-ground"
+                          data-hydrate="fixture-3-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                    <div class="team-band team-band--away">
+                      <div class="team-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Away team logo"
+                          data-hydrate="fixture-3-away-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="team-copy">
+                        <span class="team-side-label">Away</span>
+                        <p class="team-name" data-hydrate="fixture-3-away-team">
+                          Away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                </div>
+              </main>
+
+              <footer class="asset-footer">
+                <div class="footer-crease" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initScorelineAsset } from "/design/_shared/scoreline-init.js";
+
+      const context = {
+        variantSlug: "scoreline",
+        sportSlug: "cricket",
+        assetSlug: "upcoming",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initScorelineAsset(context, {
+        afterHydrate: async () => {
+      document.querySelectorAll(".meta-chip").forEach((chip) => {
+        if (!(chip instanceof HTMLElement)) {
+          return;
+        }
+
+        chip.dataset.empty = chip.textContent?.trim() ? "false" : "true";
+      });
+
+      document.querySelectorAll(".fixture-grade-meta").forEach((meta) => {
+        if (!(meta instanceof HTMLElement)) {
+          return;
+        }
+
+        const visible = Array.from(meta.querySelectorAll(".meta-chip")).some(
+          (chip) => chip.dataset.empty !== "true",
+        );
+        meta.dataset.empty = visible ? "false" : "true";
+      });
+        },
+      });
+    </script>
+  </body>
+</html>

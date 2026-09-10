@@ -1,0 +1,219 @@
+/* Scoreline ladder layout — synced with src/templates/variants/scoreline/styles/scoreline-ladder.css */
+
+/* Scoreline — The Crease System · Ladder */
+      .scoreline-canvas {
+        --frame-height: 1350px;
+        --zone-pad: 12px;
+        --zone-header-pad-inline: 28px;
+        --zone-header-pad-bottom: 0px;
+        --zone-content-pad: 28px;
+        --zone-header: 140px;
+        --zone-content: 1088px;
+        --zone-footer: 112px;
+        --club-primary: #352466;
+        --club-secondary: #ffa500;
+        --ink: #080b0d;
+        --paper: #ffffff;
+        --surface: #ffffff;
+        --surface-muted: #f3f0ea;
+        --rule: rgba(8, 11, 13, 0.12);
+        --muted: #5f5b56;
+        --font-display: "Barlow Condensed", Arial, sans-serif;
+        --font-body: "Source Sans 3", Arial, sans-serif;
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 16px;
+        --space-4: 24px;
+        --ladder-grid: 40px 52px minmax(0, 1fr) repeat(5, 46px);
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: transparent;
+  /* Remotion: overlay-only — template background shows through */
+        color: var(--ink);
+        font-family: var(--font-body);
+      }
+
+      .scoreline-canvas,
+      .scoreline-canvas * {
+        box-sizing: border-box;
+      }
+
+      .scoreline-canvas h1,
+      .scoreline-canvas h2,
+      .scoreline-canvas p {
+        margin: 0;
+      }
+
+      .fixture-palette {
+        display: none;
+      }
+
+      .ladder-mark {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        flex: 0 0 52px;
+        background: var(--surface);
+      }
+
+      .mark-fallback {
+        width: 42%;
+        height: 42%;
+        border: 3px solid currentColor;
+        opacity: 0.14;
+      }
+
+      .ladder-mark img {
+        position: absolute;
+        inset: 3px;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        object-fit: contain;
+      }
+
+      .ladder-ledger {
+        min-height: 0;
+        flex: 1 1 var(--zone-content);
+        max-height: var(--zone-content);
+        padding: var(--zone-content-pad);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .ladder-stack {
+        min-height: 0;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+
+      .ladder-grade {
+        flex: 0 0 auto;
+        padding: 10px 14px;
+        background: color-mix(in srgb, var(--surface-muted) 72%, transparent);
+      }
+
+      .ladder-grade-name {
+        display: -webkit-box;
+        overflow: hidden;
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 700;
+        font-stretch: condensed;
+        letter-spacing: -0.01em;
+        line-height: 1.12;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .ladder-table {
+        min-height: 0;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ladder-columns {
+        flex: 0 0 auto;
+        padding: 6px 12px;
+        display: grid;
+        grid-template-columns: var(--ladder-grid);
+        gap: 8px;
+        align-items: end;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .ladder-columns span:nth-child(n + 4) {
+        text-align: center;
+      }
+
+      .ladder-rows {
+        min-height: 0;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ladder-entry {
+        flex: 1 1 0;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ladder-entry[data-empty="true"] {
+        display: none;
+      }
+
+      .ladder-row {
+        min-height: 0;
+        flex: 1 1 auto;
+        padding: 6px 12px;
+        display: grid;
+        grid-template-columns: var(--ladder-grid);
+        gap: 8px;
+        align-items: center;
+        background: var(--surface);
+      }
+
+      .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row {
+        background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
+      }
+
+      .ladder-rank {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 900;
+        font-stretch: condensed;
+        line-height: 1;
+        font-variant-numeric: tabular-nums lining-nums;
+        text-align: center;
+      }
+
+      .ladder-rows .ladder-entry:first-of-type .ladder-rank {
+        font-size: 32px;
+      }
+
+      .ladder-team {
+        min-width: 0;
+        overflow: hidden;
+        font-family: var(--font-display);
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 700;
+        font-stretch: condensed;
+        line-height: 1.05;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .ladder-rows .ladder-entry:first-of-type .ladder-team {
+        font-size: 24px;
+        white-space: normal;
+      }
+
+      .ladder-stat {
+        font-family: var(--font-display);
+        font-size: 22px;
+        font-weight: 700;
+        font-stretch: condensed;
+        line-height: 1;
+        font-variant-numeric: tabular-nums lining-nums;
+        text-align: center;
+      }
+
+      .ladder-stat--pts {
+        font-size: 26px;
+        font-weight: 800;
+      }

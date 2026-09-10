@@ -3,7 +3,7 @@ import type { ThemeModes } from "../../../types/global/theme-shared";
 export const scorelineMode: ThemeModes = {
   light: {
     container: {
-      background: "#ffffff",
+      background: "transparent",
       backgroundAlt: "#f3f0ea",
       backgroundTransparent: "rgba(255, 255, 255, 0.5)",
     },
@@ -14,12 +14,12 @@ export const scorelineMode: ThemeModes = {
   },
   lightAlt: {
     container: {
-      background: "#ffffff",
+      background: "transparent",
       backgroundAlt: "#f3f0ea",
       backgroundTransparent: "rgba(255, 255, 255, 0.5)",
     },
     text: {
-      title: "#080b0d",
+      title: "#ffffff",
       copy: "#080b0d",
     },
   },
@@ -41,7 +41,7 @@ export const scorelineMode: ThemeModes = {
       backgroundTransparent: "rgba(0, 0, 0, 0.5)",
     },
     text: {
-      title: "#ffffff",
+      title: "#080b0d",
       copy: "#ffffff",
     },
   },

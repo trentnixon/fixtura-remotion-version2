@@ -18,4 +18,8 @@ export const scorelineComponentStylesShared = {
     className:
       "font-barlow-condensed text-[30px] font-bold leading-none tabular-nums",
   },
+  scorelineSponsorStrip: {
+    className:
+      "relative isolate flex min-h-[88px] w-full items-center justify-evenly gap-6 overflow-hidden px-6 py-4",
+  },
 };

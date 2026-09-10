@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "fx-texture-fine-noise-v1",
+      "name": "Fine Noise Grain",
+      "path": "/design/_shared/textures/fine-noise.svg",
+      "medium": "svg-filter-tile",
+      "primaryRole": "atmospheric",
+      "motifFamily": "grain",
+      "themeInputs": [],
+      "defaultOpacity": 0.05,
+      "defaultBlendMode": "soft-light",
+      "tileSize": [256, 256],
+      "supportsMotion": false,
+      "deterministicSeed": 42,
+      "approvedUses": [
+        "scoreline-header-shell",
+        "scoreline-team-band",
+        "scoreline-result-bar",
+        "scoreline-featured-row",
+        "scoreline-sponsor-strip",
+        "scoreline-roster-context"
+      ],
+      "discouragedUses": [
+        "performance-rows",
+        "dense-metadata",
+        "paper-surfaces"
+      ],
+      "testedOutputs": ["1080x1350"],
+      "notes": "Single atmospheric texture for Scoreline structural surfaces. Barely perceptible at delivery size."
+    }
+  ],
+  "creaseMotif": {
+    "id": "fx-crease-rail-v1",
+    "name": "Crease Rail",
+    "medium": "css-components",
+    "primaryRole": "semantic",
+    "motifFamily": "crease-system",
+    "components": ["crease-rule", "crease-post", "crease-rail"],
+    "approvedUses": [
+      "header-shell",
+      "footer",
+      "match-separator",
+      "row-separator"
+    ]
+  }
+}

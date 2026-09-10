@@ -1,0 +1,320 @@
+<!doctype html>
+<!--
+  Handoff: scoreline / cricket / ladder
+  Registry: Scoreline (provisional)
+  Remotion: src/compositions/cricket/ladder/
+  Theme: The Crease System (Barlow Condensed + Source Sans 3)
+  Fixture: testData/samples/Cricket/Cricket_Ladder.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreline - Cricket Ladder</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-ladder.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("scoreline");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+
+</head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas scoreline-canvas"
+              data-ladder
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <header class="scoreline-header">
+                <div class="header-shell">
+                  <div class="header-shell__main">
+                    <div class="header-identity-lockup">
+                      <div class="organisation-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Club logo"
+                          data-hydrate="club-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="header-identity">
+                        <p class="organisation-name" data-hydrate="club-name">
+                          Club name
+                        </p>
+                      </div>
+                    </div>
+                    <div class="header-title-stack">
+                      <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                        Ladder
+                      </p>
+                      <h1 data-hydrate="header-title">League Tables</h1>
+                    </div>
+                  </div>
+                  <div class="header-shell__crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <main class="ladder-ledger">
+                <div class="ladder-stack">
+                  <div class="ladder-grade">
+                    <h2 class="ladder-grade-name" data-hydrate="grade-name">
+                      Grade
+                    </h2>
+                  </div>
+
+                  <div class="ladder-table">
+                    <div class="ladder-columns" aria-hidden="true">
+                      <span>#</span>
+                      <span></span>
+                      <span>Team</span>
+                      <span>P</span>
+                      <span>W</span>
+                      <span>L</span>
+                      <span>B</span>
+                      <span>Pts</span>
+                    </div>
+
+                    <div class="ladder-rows" data-ladder-rows></div>
+                  </div>
+                </div>
+              </main>
+
+              <footer class="asset-footer">
+                <div class="footer-crease" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <template id="ladder-row-template">
+      <div class="ladder-entry">
+        <div class="ladder-row">
+          <span class="ladder-rank"></span>
+          <div class="ladder-mark">
+            <span class="mark-fallback" aria-hidden="true"></span>
+            <img alt="" hidden onerror="this.hidden=true" />
+          </div>
+          <p class="ladder-team"></p>
+          <span class="ladder-stat"></span>
+          <span class="ladder-stat"></span>
+          <span class="ladder-stat"></span>
+          <span class="ladder-stat"></span>
+          <span class="ladder-stat ladder-stat--pts"></span>
+        </div>
+        <div class="ladder-crease" aria-hidden="true">
+          <div class="crease-rule">
+            <span class="crease-post crease-post--primary"></span>
+            <span class="crease-rail"
+              ><span class="crease-rail__primary"></span
+              ><span class="crease-rail__secondary"></span
+            ></span>
+            <span class="crease-post crease-post--secondary"></span>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initScorelineAsset } from "/design/_shared/scoreline-init.js";
+      import { syncScorelineLadderLayout } from "/design/_shared/scoreline-layout.js";
+
+      const context = {
+        variantSlug: "scoreline",
+        sportSlug: "cricket",
+        assetSlug: "ladder",
+      };
+
+      const TEAM_COUNT = 11;
+
+      function resolveLogo(team) {
+        const candidate = team.clubLogo ?? team.playHQLogo ?? team.teamLogo;
+        if (!candidate) {
+          return "";
+        }
+        return typeof candidate === "string" ? candidate : candidate.url ?? "";
+      }
+
+      function mountLadderRows() {
+        const container = document.querySelector("[data-ladder-rows]");
+        const template = document.getElementById("ladder-row-template");
+        if (!(container instanceof HTMLElement) || !(template instanceof HTMLTemplateElement)) {
+          return;
+        }
+
+        container.innerHTML = "";
+        for (let index = 0; index < TEAM_COUNT; index += 1) {
+          const rowNumber = index + 1;
+          const fragment = template.content.cloneNode(true);
+          const entry = fragment.querySelector(".ladder-entry");
+          const row = fragment.querySelector(".ladder-row");
+          if (!(entry instanceof HTMLElement) || !(row instanceof HTMLElement)) {
+            continue;
+          }
+
+          entry.dataset.teamIndex = String(index);
+          row.dataset.teamIndex = String(index);
+
+          const rank = row.querySelector(".ladder-rank");
+          const team = row.querySelector(".ladder-team");
+          const stats = row.querySelectorAll(".ladder-stat");
+          const keys = ["pos", "name", "p", "w", "l", "bye", "pts"];
+
+          if (rank instanceof HTMLElement) {
+            rank.dataset.hydrate = `team-${rowNumber}-pos`;
+            rank.textContent = String(rowNumber);
+          }
+
+          if (team instanceof HTMLElement) {
+            team.dataset.hydrate = `team-${rowNumber}-name`;
+            team.textContent = "Team";
+          }
+
+          stats.forEach((stat, statIndex) => {
+            if (!(stat instanceof HTMLElement)) {
+              return;
+            }
+            stat.dataset.hydrate = `team-${rowNumber}-${keys[statIndex + 2]}`;
+            stat.textContent = "0";
+          });
+
+          container.appendChild(fragment);
+        }
+      }
+
+      mountLadderRows();
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initScorelineAsset(context, {
+        afterHydrate: async () => {
+          const fixtureResponse = await fetch(
+            "/testData/samples/Cricket/Cricket_Ladder.json",
+          );
+          if (fixtureResponse.ok) {
+            const fixture = await fixtureResponse.json();
+            const ladder = fixture.data?.[0];
+            const bias = ladder?.bias;
+            const clubName = fixture.videoMeta?.club?.name ?? "";
+            const clubFocus = clubName
+              .replace(/\s+cricket club.*$/i, "")
+              .trim();
+
+            document.querySelectorAll(".ladder-entry").forEach((entry) => {
+              if (!(entry instanceof HTMLElement)) {
+                return;
+              }
+
+              const index = Number(entry.dataset.teamIndex);
+              const team = ladder?.League?.[index];
+              const row = entry.querySelector(".ladder-row");
+              const img = entry.querySelector(".ladder-mark img");
+
+              if (!team?.teamName?.trim()) {
+                entry.dataset.empty = "true";
+                return;
+              }
+
+              entry.dataset.empty = "false";
+
+              if (row instanceof HTMLElement) {
+                const isBias =
+                  (bias && team.teamName === bias) ||
+                  (!bias &&
+                    clubFocus.length > 3 &&
+                    team.teamName.includes(clubFocus));
+                if (isBias) {
+                  row.dataset.bias = "true";
+                }
+              }
+
+              const logoUrl = resolveLogo(team);
+              if (img instanceof HTMLImageElement && logoUrl) {
+                img.src = logoUrl;
+                img.hidden = false;
+                img.alt = `${team.teamName} logo`;
+              }
+            });
+          }
+
+          syncScorelineLadderLayout(document);
+        },
+      });
+    </script>
+  </body>
+</html>

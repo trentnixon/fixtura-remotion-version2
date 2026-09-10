@@ -1,0 +1,463 @@
+<!doctype html>
+<!--
+  Handoff: scoreline / cricket / top5-batting
+  Registry: Scoreline (provisional)
+  Remotion: src/compositions/cricket/top5/
+  Theme: The Crease System (Barlow Condensed + Source Sans 3)
+  Fixture: testData/samples/Cricket/Cricket_Top5Batters.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreline - Cricket Top 5 Batting</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-top5.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("scoreline");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+
+</head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas scoreline-canvas"
+              data-leaderboard="batting"
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <!-- Asset Header -->
+              <header class="scoreline-header">
+                <div class="header-shell">
+                  <div class="header-shell__main">
+                    <div class="header-identity-lockup">
+                      <div class="organisation-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Club logo"
+                          data-hydrate="club-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="header-identity">
+                        <p class="organisation-name" data-hydrate="club-name">
+                          Club name
+                        </p>
+                      </div>
+                    </div>
+                    <div class="header-title-stack">
+                      <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                        Top 5 Batting
+                      </p>
+                      <h1 data-hydrate="header-title">Top 5 Run Scorers</h1>
+                    </div>
+                  </div>
+                  <div class="header-shell__crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <!-- Top Performers Content Area -->
+              <main class="leaderboard-ledger">
+                <div class="leaderboard-stack">
+                  <div class="leaderboard-category">
+                    <span class="leaderboard-category-label">Grade</span>
+                    <p
+                      class="leaderboard-category-value"
+                      data-hydrate="category-label"
+                    >
+                      Category
+                    </p>
+                  </div>
+
+                  <div class="leaderboard-rows">
+                  <!-- Ranked Player Row 1 -->
+                  <div class="leader-entry">
+                  <article class="leader-row">
+                    <span class="leader-rank" aria-hidden="true">1</span>
+                    <div class="leader-mark">
+                      <span class="mark-fallback" aria-hidden="true"></span>
+                      <img
+                        alt="Team logo"
+                        data-hydrate="player-1-logo"
+                        data-hydrate-attr="src"
+                        onerror="this.hidden=true"
+                      />
+                    </div>
+                    <div class="leader-copy">
+                      <p class="leader-name" data-hydrate="player-1-name">
+                        Player
+                      </p>
+                      <div class="leader-team-block">
+                        <span class="leader-team-label">Played for</span>
+                        <p class="leader-team" data-hydrate="player-1-team">
+                          Team
+                        </p>
+                      </div>
+                    </div>
+                    <div class="leader-stats">
+                      <p class="leader-figure">
+                        <span data-hydrate="player-1-runs">0</span
+                        ><span
+                          data-hydrate="player-1-not-out"
+                          data-hydrate-format="not-out"
+                        ></span
+                        ><span class="leader-balls"
+                          >(<span data-hydrate="player-1-balls">0</span>)</span
+                        >
+                      </p>
+                      <p class="leader-sr">
+                        SR <span data-hydrate="player-1-sr">0</span>
+                      </p>
+                    </div>
+                  </article>
+                  <div class="leader-crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Ranked Player Row 2 -->
+                  <div class="leader-entry">
+                  <article class="leader-row">
+                    <span class="leader-rank" aria-hidden="true">2</span>
+                    <div class="leader-mark">
+                      <span class="mark-fallback" aria-hidden="true"></span>
+                      <img
+                        alt="Team logo"
+                        data-hydrate="player-2-logo"
+                        data-hydrate-attr="src"
+                        onerror="this.hidden=true"
+                      />
+                    </div>
+                    <div class="leader-copy">
+                      <p class="leader-name" data-hydrate="player-2-name">
+                        Player
+                      </p>
+                      <div class="leader-team-block">
+                        <span class="leader-team-label">Played for</span>
+                        <p class="leader-team" data-hydrate="player-2-team">
+                          Team
+                        </p>
+                      </div>
+                    </div>
+                    <div class="leader-stats">
+                      <p class="leader-figure">
+                        <span data-hydrate="player-2-runs">0</span
+                        ><span
+                          data-hydrate="player-2-not-out"
+                          data-hydrate-format="not-out"
+                        ></span
+                        ><span class="leader-balls"
+                          >(<span data-hydrate="player-2-balls">0</span>)</span
+                        >
+                      </p>
+                      <p class="leader-sr">
+                        SR <span data-hydrate="player-2-sr">0</span>
+                      </p>
+                    </div>
+                  </article>
+                  <div class="leader-crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Ranked Player Row 3 -->
+                  <div class="leader-entry">
+                  <article class="leader-row">
+                    <span class="leader-rank" aria-hidden="true">3</span>
+                    <div class="leader-mark">
+                      <span class="mark-fallback" aria-hidden="true"></span>
+                      <img
+                        alt="Team logo"
+                        data-hydrate="player-3-logo"
+                        data-hydrate-attr="src"
+                        onerror="this.hidden=true"
+                      />
+                    </div>
+                    <div class="leader-copy">
+                      <p class="leader-name" data-hydrate="player-3-name">
+                        Player
+                      </p>
+                      <div class="leader-team-block">
+                        <span class="leader-team-label">Played for</span>
+                        <p class="leader-team" data-hydrate="player-3-team">
+                          Team
+                        </p>
+                      </div>
+                    </div>
+                    <div class="leader-stats">
+                      <p class="leader-figure">
+                        <span data-hydrate="player-3-runs">0</span
+                        ><span
+                          data-hydrate="player-3-not-out"
+                          data-hydrate-format="not-out"
+                        ></span
+                        ><span class="leader-balls"
+                          >(<span data-hydrate="player-3-balls">0</span>)</span
+                        >
+                      </p>
+                      <p class="leader-sr">
+                        SR <span data-hydrate="player-3-sr">0</span>
+                      </p>
+                    </div>
+                  </article>
+                  <div class="leader-crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Ranked Player Row 4 -->
+                  <div class="leader-entry">
+                  <article class="leader-row">
+                    <span class="leader-rank" aria-hidden="true">4</span>
+                    <div class="leader-mark">
+                      <span class="mark-fallback" aria-hidden="true"></span>
+                      <img
+                        alt="Team logo"
+                        data-hydrate="player-4-logo"
+                        data-hydrate-attr="src"
+                        onerror="this.hidden=true"
+                      />
+                    </div>
+                    <div class="leader-copy">
+                      <p class="leader-name" data-hydrate="player-4-name">
+                        Player
+                      </p>
+                      <div class="leader-team-block">
+                        <span class="leader-team-label">Played for</span>
+                        <p class="leader-team" data-hydrate="player-4-team">
+                          Team
+                        </p>
+                      </div>
+                    </div>
+                    <div class="leader-stats">
+                      <p class="leader-figure">
+                        <span data-hydrate="player-4-runs">0</span
+                        ><span
+                          data-hydrate="player-4-not-out"
+                          data-hydrate-format="not-out"
+                        ></span
+                        ><span class="leader-balls"
+                          >(<span data-hydrate="player-4-balls">0</span>)</span
+                        >
+                      </p>
+                      <p class="leader-sr">
+                        SR <span data-hydrate="player-4-sr">0</span>
+                      </p>
+                    </div>
+                  </article>
+                  <div class="leader-crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Ranked Player Row 5 -->
+                  <div class="leader-entry">
+                  <article class="leader-row">
+                    <span class="leader-rank" aria-hidden="true">5</span>
+                    <div class="leader-mark">
+                      <span class="mark-fallback" aria-hidden="true"></span>
+                      <img
+                        alt="Team logo"
+                        data-hydrate="player-5-logo"
+                        data-hydrate-attr="src"
+                        onerror="this.hidden=true"
+                      />
+                    </div>
+                    <div class="leader-copy">
+                      <p class="leader-name" data-hydrate="player-5-name">
+                        Player
+                      </p>
+                      <div class="leader-team-block">
+                        <span class="leader-team-label">Played for</span>
+                        <p class="leader-team" data-hydrate="player-5-team">
+                          Team
+                        </p>
+                      </div>
+                    </div>
+                    <div class="leader-stats">
+                      <p class="leader-figure">
+                        <span data-hydrate="player-5-runs">0</span
+                        ><span
+                          data-hydrate="player-5-not-out"
+                          data-hydrate-format="not-out"
+                        ></span
+                        ><span class="leader-balls"
+                          >(<span data-hydrate="player-5-balls">0</span>)</span
+                        >
+                      </p>
+                      <p class="leader-sr">
+                        SR <span data-hydrate="player-5-sr">0</span>
+                      </p>
+                    </div>
+                  </article>
+                  <div class="leader-crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </main>
+
+              <!-- Asset Footer -->
+              <footer class="asset-footer">
+                <div class="footer-crease" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initScorelineAsset } from "/design/_shared/scoreline-init.js";
+
+      const context = {
+        variantSlug: "scoreline",
+        sportSlug: "cricket",
+        assetSlug: "top5-batting",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initScorelineAsset(context, {
+        afterHydrate: async () => {
+      document.querySelectorAll(".leader-sr").forEach((sr) => {
+        if (!(sr instanceof HTMLElement)) {
+          return;
+        }
+
+        const value = sr.querySelector("span")?.textContent?.trim();
+        sr.dataset.empty = value && value !== "0" ? "false" : "true";
+      });
+
+      document.querySelectorAll(".leaderboard-category").forEach((band) => {
+        if (!(band instanceof HTMLElement)) {
+          return;
+        }
+
+        const value = band.querySelector(".leaderboard-category-value");
+        band.dataset.empty = value?.textContent?.trim() ? "false" : "true";
+      });
+
+      document.querySelectorAll(".leader-entry").forEach((entry) => {
+        if (!(entry instanceof HTMLElement)) {
+          return;
+        }
+
+        const name = entry.querySelector(".leader-name");
+        entry.dataset.empty = name?.textContent?.trim() ? "false" : "true";
+      });
+        },
+      });
+    </script>
+  </body>
+</html>

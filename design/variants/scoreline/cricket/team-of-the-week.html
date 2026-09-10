@@ -1,0 +1,376 @@
+<!doctype html>
+<!--
+  Handoff: scoreline / cricket / team-of-the-week
+  Registry: Scoreline (provisional)
+  Remotion: src/compositions/cricket/TeamOfTheWeek/
+  Theme: The Crease System (Barlow Condensed + Source Sans 3)
+  Fixture: testData/samples/Cricket/Cricket_TeamOfTheWeek.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreline - Cricket Team of the Week</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-team-of-the-week.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("scoreline");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+
+</head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <a href="/design/guide/">Guide</a>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas scoreline-canvas"
+              data-totw
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <!-- Asset Header -->
+              <header class="scoreline-header">
+                <div class="header-shell">
+                  <div class="header-shell__main">
+                    <div class="header-identity-lockup">
+                      <div class="organisation-mark">
+                        <span class="mark-fallback" aria-hidden="true"></span>
+                        <img
+                          alt="Club logo"
+                          data-hydrate="club-logo"
+                          data-hydrate-attr="src"
+                          onerror="this.hidden=true"
+                        />
+                      </div>
+                      <div class="header-identity">
+                        <p class="organisation-name" data-hydrate="club-name">
+                          Club name
+                        </p>
+                      </div>
+                    </div>
+                    <div class="header-title-stack">
+                      <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                        Team of the Week
+                      </p>
+                    </div>
+                  </div>
+                  <div class="header-shell__crease" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <!-- Team of the Week Content Area -->
+              <main class="totw-ledger">
+                <div class="totw-stack">
+                  <div class="totw-selection">
+                    <div class="totw-category">
+                      <span class="totw-category-label">Grade</span>
+                      <p
+                        class="totw-category-value"
+                        data-hydrate="category-label"
+                      >
+                        Category
+                      </p>
+                    </div>
+
+                    <div class="totw-rows" data-totw-rows></div>
+                  </div>
+                </div>
+              </main>
+
+              <!-- Asset Footer -->
+              <footer class="asset-footer">
+                <div class="footer-crease" aria-hidden="true">
+                  <div class="crease-rule">
+                    <span class="crease-post crease-post--primary"></span>
+                    <span class="crease-rail"
+                      ><span class="crease-rail__primary"></span
+                      ><span class="crease-rail__secondary"></span
+                    ></span>
+                    <span class="crease-post crease-post--secondary"></span>
+                  </div>
+                </div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+
+    <template id="totw-row-template">
+      <div class="totw-entry">
+        <article class="totw-row">
+          <span class="totw-rank"></span>
+          <div class="totw-mark">
+            <span class="mark-fallback" aria-hidden="true"></span>
+            <img alt="" hidden onerror="this.hidden=true" />
+          </div>
+          <div class="totw-copy">
+            <span class="totw-role"></span>
+            <p class="totw-name"></p>
+            <div class="totw-team-block">
+              <span class="totw-team-label">Played for</span>
+              <p class="totw-team"></p>
+            </div>
+          </div>
+          <div class="totw-stats">
+            <p class="totw-figure"></p>
+            <p class="totw-subline"></p>
+          </div>
+        </article>
+        <div class="totw-crease" aria-hidden="true">
+          <div class="crease-rule">
+            <span class="crease-post crease-post--primary"></span>
+            <span class="crease-rail"
+              ><span class="crease-rail__primary"></span
+              ><span class="crease-rail__secondary"></span
+            ></span>
+            <span class="crease-post crease-post--secondary"></span>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initScorelineAsset } from "/design/_shared/scoreline-init.js";
+      import { syncScorelineTotwLayout } from "/design/_shared/scoreline-layout.js";
+
+      const context = {
+        variantSlug: "scoreline",
+        sportSlug: "cricket",
+        assetSlug: "team-of-the-week",
+      };
+
+      const POSITION_LABELS = {
+        topscorer: "Top Scorer",
+        higheststrikerate: "Highest Strike Rate",
+        mostwickets: "Most Wickets",
+        besteconomy: "Best Economy",
+        topallrounder: "Top All-Rounder",
+        bestoftherest: "12th Man",
+        wicketKeeper: "Wicket-Keeper",
+      };
+
+      const getRoleLabel = (player) => {
+        const position = player.categoryDetail?.position ?? "";
+        const positionLabel =
+          POSITION_LABELS[position] ??
+          position.replace(/([a-z])([A-Z])/g, "$1 $2");
+        return `${player.category} · ${positionLabel}`;
+      };
+
+      const formatStats = (player) => {
+        const position = player.categoryDetail?.position ?? "";
+
+        if (
+          (position === "topscorer" ||
+            position === "higheststrikerate" ||
+            position === "bestoftherest") &&
+          player.batting
+        ) {
+          const { runs, balls, strikeRate, notOut } = player.batting;
+          const main = notOut ? `${runs}*` : String(runs);
+          const suffix = balls > 0 ? `(${balls})` : "";
+          const subline =
+            strikeRate > 0 ? `SR ${Number(strikeRate).toFixed(1)}` : "";
+          return { main, suffix, subline, kind: "batting" };
+        }
+
+        if (
+          (position === "mostwickets" || position === "besteconomy") &&
+          player.bowling
+        ) {
+          const { wickets, runs, overs, economy } = player.bowling;
+          return {
+            main: `${wickets}/${runs}`,
+            suffix: overs > 0 ? `(${overs})` : "",
+            subline: economy > 0 ? `Econ ${Number(economy).toFixed(2)}` : "",
+            kind: "bowling",
+          };
+        }
+
+        if (position === "topallrounder" && player.batting && player.bowling) {
+          const { runs, balls, notOut } = player.batting;
+          const main = notOut ? `${runs}*` : String(runs);
+          const suffix = balls > 0 ? `(${balls})` : "";
+          const subline = `${player.bowling.wickets}/${player.bowling.runs} (${player.bowling.overs})`;
+          return { main, suffix, subline, kind: "allrounder" };
+        }
+
+        if (position === "wicketKeeper" && player.fielding) {
+          return {
+            main: `${player.fielding.catches} ct`,
+            suffix: "",
+            subline: `${player.fielding.stumpings} st`,
+            kind: "fielding",
+          };
+        }
+
+        return { main: "", suffix: "", subline: "", kind: "empty" };
+      };
+
+      const resolveDensity = (count) => {
+        if (count <= 7) {
+          return "normal";
+        }
+        if (count <= 10) {
+          return "compact";
+        }
+        return "tight";
+      };
+
+      const mountSelectionRows = (players) => {
+        const container = document.querySelector("[data-totw-rows]");
+        const template = document.getElementById("totw-row-template");
+        if (!(container instanceof HTMLElement) || !(template instanceof HTMLTemplateElement)) {
+          return;
+        }
+
+        container.innerHTML = "";
+        container.dataset.density = resolveDensity(players.length);
+
+        players.forEach((player, index) => {
+          const fragment = template.content.cloneNode(true);
+          const entry = fragment.querySelector(".totw-entry");
+          const rank = fragment.querySelector(".totw-rank");
+          const img = fragment.querySelector(".totw-mark img");
+          const role = fragment.querySelector(".totw-role");
+          const name = fragment.querySelector(".totw-name");
+          const team = fragment.querySelector(".totw-team");
+          const figure = fragment.querySelector(".totw-figure");
+          const subline = fragment.querySelector(".totw-subline");
+          const stats = formatStats(player);
+
+          if (rank instanceof HTMLElement) {
+            rank.textContent = String(index + 1);
+          }
+          if (role instanceof HTMLElement) {
+            role.textContent = getRoleLabel(player);
+          }
+          if (name instanceof HTMLElement) {
+            name.textContent = player.player ?? "";
+            name.title = player.player ?? "";
+          }
+          if (team instanceof HTMLElement) {
+            team.textContent = player.primaryTeam ?? player.club?.name ?? "";
+          }
+          if (figure instanceof HTMLElement) {
+            figure.textContent = "";
+            const main = document.createElement("span");
+            main.textContent = stats.main;
+            figure.appendChild(main);
+            if (stats.suffix) {
+              const balls = document.createElement("span");
+              balls.className = "totw-balls";
+              balls.textContent = stats.suffix;
+              figure.appendChild(balls);
+            }
+          }
+          if (subline instanceof HTMLElement) {
+            subline.textContent = stats.subline;
+            subline.dataset.empty = stats.subline ? "false" : "true";
+          }
+
+          const logoUrl = player.club?.logo?.url ?? "";
+          if (img instanceof HTMLImageElement && logoUrl) {
+            img.src = logoUrl;
+            img.hidden = false;
+            img.alt = `${player.primaryTeam ?? "Team"} logo`;
+          }
+
+          if (entry instanceof HTMLElement) {
+            container.appendChild(fragment);
+          }
+        });
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initScorelineAsset(context, {
+        afterHydrate: async () => {
+          document.querySelectorAll(".totw-category").forEach((band) => {
+            if (!(band instanceof HTMLElement)) {
+              return;
+            }
+
+            const value = band.querySelector(".totw-category-value");
+            band.dataset.empty = value?.textContent?.trim() ? "false" : "true";
+          });
+
+          const fixtureResponse = await fetch(
+            "/testData/samples/Cricket/Cricket_TeamOfTheWeek.json",
+          );
+          if (fixtureResponse.ok) {
+            const fixture = await fixtureResponse.json();
+            const players = Array.isArray(fixture.data) ? fixture.data : [];
+            mountSelectionRows(players);
+          }
+
+          syncScorelineTotwLayout(document);
+        },
+      });
+    </script>
+  </body>
+</html>

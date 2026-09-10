@@ -1,0 +1,403 @@
+/* Scoreline team-roster layout — synced with src/templates/variants/scoreline/styles/scoreline-team-roster.css */
+
+/* Scoreline — The Crease System · Team Roster */
+      .scoreline-canvas {
+        --frame-height: 1350px;
+        --zone-pad: 12px;
+        --zone-header-pad-inline: 28px;
+        --zone-header-pad-bottom: 0px;
+        --zone-content-pad: 28px;
+        --zone-header: 140px;
+        --zone-content: 1088px;
+        --zone-footer: 112px;
+        --club-primary: #352466;
+        --club-secondary: #ffa500;
+        --ink: #080b0d;
+        --paper: #ffffff;
+        --surface: #ffffff;
+        --surface-muted: #f3f0ea;
+        --rule: rgba(8, 11, 13, 0.12);
+        --muted: #5f5b56;
+        --font-display: "Barlow Condensed", Arial, sans-serif;
+        --font-body: "Source Sans 3", Arial, sans-serif;
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 16px;
+        --space-4: 24px;
+        --type-team: 24px;
+        --roster-row-height: 44px;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: transparent;
+  /* Remotion: overlay-only — template background shows through */
+        color: var(--ink);
+        font-family: var(--font-body);
+      }
+
+      .scoreline-canvas,
+      .scoreline-canvas * {
+        box-sizing: border-box;
+      }
+
+      .scoreline-canvas h1,
+      .scoreline-canvas h2,
+      .scoreline-canvas h3,
+      .scoreline-canvas p {
+        margin: 0;
+      }
+
+      .fixture-palette {
+        display: none;
+      }
+
+      .team-mark {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        width: 72px;
+        height: 72px;
+        flex: 0 0 72px;
+        background: var(--surface);
+      }
+
+      .mark-fallback {
+        width: 42%;
+        height: 42%;
+        border: 3px solid currentColor;
+        opacity: 0.14;
+      }
+
+      .team-mark img {
+        position: absolute;
+        inset: 4px;
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        object-fit: contain;
+      }
+
+      .roster-ledger {
+        min-height: 0;
+        flex: 1 1 var(--zone-content);
+        max-height: var(--zone-content);
+        padding: var(--zone-content-pad);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .roster-stack {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+
+      .roster-grade {
+        min-width: 0;
+        padding: 10px 12px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: var(--space-3);
+        align-items: start;
+        background: color-mix(in srgb, var(--surface-muted) 72%, transparent);
+        box-shadow: var(--highlight-inset-light);
+      }
+
+      .roster-grade-name {
+        display: -webkit-box;
+        overflow: hidden;
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: 21px;
+        font-weight: 700;
+        font-stretch: condensed;
+        letter-spacing: -0.01em;
+        line-height: 1.12;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .roster-grade-meta {
+        min-width: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: right;
+      }
+
+      .meta-separator {
+        width: 4px;
+        height: 4px;
+        flex: 0 0 auto;
+        background: var(--club-primary);
+      }
+
+      .meta-separator--secondary {
+        background: var(--club-secondary);
+      }
+
+      .meta-chip[data-empty="true"] {
+        display: none;
+      }
+
+      .fixture-matchup {
+        min-height: 110px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
+        gap: 6px;
+        align-items: stretch;
+      }
+
+      .team-band {
+        min-width: 0;
+        min-height: 110px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .team-band--away {
+        flex-direction: row-reverse;
+      }
+
+      .team-copy {
+        min-width: 0;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .team-band--away .team-copy {
+        align-items: flex-end;
+      }
+
+      .team-side-label {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .team-name {
+        display: -webkit-box;
+        overflow: hidden;
+        min-width: 0;
+        width: 100%;
+        font-family: var(--font-display);
+        font-size: var(--type-team);
+        font-style: italic;
+        font-weight: 700;
+        font-stretch: condensed;
+        line-height: 1.05;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .team-band--away .team-name {
+        text-align: right;
+      }
+
+      .fixture-centre {
+        padding: 8px;
+        display: grid;
+        place-items: center;
+        background: color-mix(in srgb, var(--surface-muted) 72%, transparent);
+        box-shadow: var(--highlight-inset-light);
+      }
+
+      .fixture-vs {
+        color: var(--muted);
+        font-family: var(--font-display);
+        font-size: 16px;
+        font-weight: 700;
+        font-stretch: condensed;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .roster-lineup {
+        width: min(100%, 560px);
+        max-width: 58%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+      }
+
+      .roster-squad-header {
+        min-width: 0;
+        padding: 8px 12px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-3);
+        background: color-mix(in srgb, var(--surface-muted) 48%, transparent);
+      }
+
+      .roster-squad-label {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .roster-squad-team {
+        min-width: 0;
+        flex: 1 1 auto;
+        overflow: hidden;
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: 22px;
+        font-weight: 700;
+        font-stretch: condensed;
+        line-height: 1.1;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .roster-rows {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .roster-rows[data-density="compact"] {
+        --roster-row-height: 38px;
+      }
+
+      .roster-rows[data-density="tight"] {
+        --roster-row-height: 34px;
+      }
+
+      .roster-entry {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .roster-entry[data-empty="true"] {
+        display: none;
+      }
+
+      .roster-row {
+        min-height: var(--roster-row-height);
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: 32px minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+        background: var(--surface);
+      }
+
+      .roster-rows .roster-entry:nth-of-type(even) .roster-row {
+        background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
+      }
+
+      .roster-row[data-empty-roster="true"] {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      .roster-index {
+        font-family: var(--font-display);
+        font-size: 22px;
+        font-weight: 900;
+        font-stretch: condensed;
+        line-height: 1;
+        font-variant-numeric: tabular-nums lining-nums;
+        text-align: center;
+      }
+
+      .roster-rows[data-density="compact"] .roster-index {
+        font-size: 20px;
+      }
+
+      .roster-rows[data-density="tight"] .roster-index {
+        font-size: 18px;
+      }
+
+      .roster-player {
+        min-width: 0;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.15;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .roster-rows[data-density="compact"] .roster-player {
+        font-size: 17px;
+      }
+
+      .roster-rows[data-density="tight"] .roster-player {
+        font-size: 16px;
+      }
+
+      .roster-badges {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex: 0 0 auto;
+      }
+
+      .roster-badge {
+        padding: 1px 5px;
+        color: var(--on-team);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        font-stretch: condensed;
+        letter-spacing: 0.06em;
+        line-height: 1;
+        text-transform: uppercase;
+        background: var(--club-secondary);
+      }
+
+      .roster-badge--captain {
+        background: var(--club-primary);
+      }
+
+      .roster-context {
+        min-width: 0;
+        padding: 10px 12px;
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: var(--space-3);
+        align-items: start;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.25;
+      }
+
+      .roster-context-date {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 700;
+        font-stretch: condensed;
+        line-height: 1.1;
+      }
+
+      .roster-context-venue {
+        display: -webkit-box;
+        overflow: hidden;
+        text-align: right;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }

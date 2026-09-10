@@ -1,0 +1,62 @@
+{
+  "families": {
+    "outfit": {
+      "label": "Outfit",
+      "family": "Outfit",
+      "tailwindClass": "font-outfit",
+      "tailwindKey": "outfit",
+      "googleFontsHref": "https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap",
+      "roles": ["display", "heading", "score"]
+    },
+    "teko": {
+      "label": "Teko",
+      "family": "Teko",
+      "tailwindClass": "font-teko",
+      "tailwindKey": "teko",
+      "googleFontsHref": "https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap",
+      "roles": ["display", "heading", "score"]
+    },
+    "rajdhani": {
+      "label": "Rajdhani",
+      "family": "Rajdhani",
+      "tailwindClass": "font-rajdhani",
+      "tailwindKey": "rajdhani",
+      "googleFontsHref": "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap",
+      "roles": ["body", "label", "metadata"]
+    },
+    "heebo": {
+      "label": "Heebo",
+      "family": "Heebo",
+      "tailwindClass": "font-heebo",
+      "tailwindKey": "heebo",
+      "googleFontsHref": "https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap",
+      "roles": ["body", "heading"]
+    },
+    "sourceSans3": {
+      "label": "Source Sans 3",
+      "family": "Source Sans 3",
+      "tailwindClass": "font-source-sans-3",
+      "tailwindKey": "sourceSans3",
+      "googleFontsHref": "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap",
+      "roles": ["body", "label", "metadata"]
+    },
+    "barlowCondensed": {
+      "label": "Barlow Condensed",
+      "family": "Barlow Condensed",
+      "tailwindClass": "font-barlow-condensed",
+      "tailwindKey": "barlowCondensed",
+      "googleFontsHref": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap",
+      "roles": ["display", "heading", "score", "label"]
+    }
+  },
+  "variantFonts": {
+    "broadcast-pro": {
+      "heading": "teko",
+      "body": "rajdhani"
+    },
+    "scoreline": {
+      "heading": "barlowCondensed",
+      "body": "sourceSans3"
+    }
+  }
+}

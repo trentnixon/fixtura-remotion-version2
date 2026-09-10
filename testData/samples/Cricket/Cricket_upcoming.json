@@ -147,6 +147,80 @@
           }
         }
       ]
+    },
+    {
+      "date": "Sat, 29 Aug",
+      "time": "1:00 PM",
+      "type": "Grand Final",
+      "round": "GF",
+      "gameID": "c8f2a91e",
+      "gender": "Mixed",
+      "ground": "Allan Border Field",
+      "prompt": "Upcoming cricket match details:\n- Teams: Gold Coast vs Sunshine Coast, Date and Time: 2026-08-29, 1:00 PM, Location: Allan Border Field\n- Round: GF, Match Type: Grand Final\n- League: O60 Div 1 - Geoff Dymock Shield",
+      "ageGroup": "Over 60",
+      "teamAway": "Sunshine Coast",
+      "teamHome": "Gold Coast",
+      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
+      "gradeResolvedPosition": 4,
+      "gradeSortOrder": 4,
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
+        "width": 547,
+        "height": 796
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
+        "width": 379,
+        "height": 303
+      },
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 219,
+            "name": "9",
+            "logo": {
+              "id": 31212,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 211,
+          "name": "1",
+          "logo": {
+            "id": 31204,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+          }
+        },
+        {
+          "id": 212,
+          "name": "2",
+          "logo": {
+            "id": 31205,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+          }
+        },
+        {
+          "id": 213,
+          "name": "3",
+          "logo": {
+            "id": 31206,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+          }
+        },
+        {
+          "id": 214,
+          "name": "4",
+          "logo": {
+            "id": 31207,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+          }
+        }
+      ]
     }
   ],
   "asset": {

@@ -42,7 +42,7 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
           <Series.Sequence
             durationInFrames={calculateIntroDuration(timings)}
             style={{
-              translate: "46.9px 0px",
+              translate: "-65.5px 29.8px",
             }}
           >
             {IntroComponent && <IntroComponent />}

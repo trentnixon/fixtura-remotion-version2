@@ -579,14 +579,17 @@
 }
 
 .scoreline-canvas .performance-balls,
-.scoreline-canvas .performance-empty,
-.scoreline-canvas .context-left,
-.scoreline-canvas .match-context {
+.scoreline-canvas .performance-empty {
   color: var(--contrast-meta);
 }
 
+.scoreline-canvas .context-left,
+.scoreline-canvas .match-context {
+  color: var(--match-context-text-muted, var(--contrast-meta));
+}
+
 .scoreline-canvas .context-venue {
-  color: var(--contrast-performance);
+  color: var(--match-context-text, var(--contrast-performance));
 }
 
 /* —— Result statement —— */
@@ -1084,8 +1087,11 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  box-shadow: var(--highlight-inset-light);
-  background: color-mix(in srgb, var(--surface-muted) 72%, transparent);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 72%, transparent)
+  );
 }
 
 .scoreline-canvas[data-roster] .roster-context > * {
@@ -1094,11 +1100,11 @@
 }
 
 .scoreline-canvas[data-roster] .roster-context-date {
-  color: var(--contrast-performance-lead);
+  color: var(--match-context-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-roster] .roster-context-venue {
-  color: var(--contrast-performance);
+  color: var(--match-context-text-muted, var(--contrast-performance));
 }
 
 .scoreline-canvas[data-roster] .fixture-matchup .team-band[data-has-crest="false"] .team-mark {

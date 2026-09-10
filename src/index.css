@@ -3,6 +3,11 @@
 @import "./templates/variants/scoreline/styles/scoreline-polish.css";
 @import "./templates/variants/scoreline/styles/scoreline-results.css";
 @import "./templates/variants/scoreline/styles/scoreline-result-single.css";
+@import "./templates/variants/scoreline/styles/scoreline-upcoming.css";
+@import "./templates/variants/scoreline/styles/scoreline-ladder.css";
+@import "./templates/variants/scoreline/styles/scoreline-top5.css";
+@import "./templates/variants/scoreline/styles/scoreline-team-roster.css";
+@import "./templates/variants/scoreline/styles/scoreline-team-of-the-week.css";
 
 .single-team-font,
 .single-team-font * {

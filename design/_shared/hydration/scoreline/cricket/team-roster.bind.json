@@ -1,0 +1,19 @@
+{
+  "[data-hydrate=palette-primary]": "videoMeta.video.appearance.theme.primary",
+  "[data-hydrate=palette-secondary]": "videoMeta.video.appearance.theme.secondary",
+  "[data-hydrate=club-name]": "videoMeta.club.name",
+  "[data-hydrate=club-logo]": "videoMeta.club.logo.url",
+  "[data-hydrate=header-eyebrow]": "videoMeta.video.metadata.title",
+  "[data-hydrate=grade-name]": "data.0.gradeName",
+  "[data-hydrate=fixture-type]": "data.0.type",
+  "[data-hydrate=fixture-round]": "data.0.round",
+  "[data-hydrate=fixture-age]": "data.0.ageGroup",
+  "[data-hydrate=fixture-gender]": "data.0.gender",
+  "[data-hydrate=home-team]": "data.0.teamHome",
+  "[data-hydrate=away-team]": "data.0.teamAway",
+  "[data-hydrate=home-logo]": "data.0.teamHomeLogo",
+  "[data-hydrate=away-logo]": "data.0.teamAwayLogo",
+  "[data-hydrate=home-club]": "data.0.isHomeTeam",
+  "[data-hydrate=fixture-date]": "data.0.date",
+  "[data-hydrate=fixture-ground]": "data.0.ground"
+}

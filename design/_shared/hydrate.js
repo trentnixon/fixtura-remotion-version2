@@ -46,6 +46,19 @@ export async function hydratePage(context) {
         throw new Error(`No element found for selector ${selector}`);
       }
       nodes.forEach((node) => {
+        const attribute = node.getAttribute("data-hydrate-attr");
+        const format = node.getAttribute("data-hydrate-format");
+
+        if (attribute) {
+          node.setAttribute(attribute, value);
+          return;
+        }
+
+        if (format === "not-out") {
+          node.textContent = value === "true" ? "*" : "";
+          return;
+        }
+
         node.textContent = value;
       });
     }
