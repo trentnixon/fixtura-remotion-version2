@@ -1,58 +1,48 @@
 import React from "react";
 import type { RosterDataItem } from "../../../teamRoster/_types/types";
-import { getTeamPerspective } from "../../../teamRoster/layout/utils";
-import { formatDate, formatGroundLocation } from "../../../utils/utils-text";
+import { formatDate } from "../../../utils/utils-text";
 import {
   ScorelineFixtureMatchup,
   ScorelineRosterGrade,
 } from "../fixture/ScorelineFixturePrimitives";
-import { teamMatchesClub } from "../teamMatchesClub";
-import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-
-const resolveRosterDensity = (
-  playerCount: number,
-): "normal" | "compact" | "tight" => {
-  if (playerCount <= 12) {
-    return "normal";
-  }
-
-  if (playerCount <= 16) {
-    return "compact";
-  }
-
-  return "tight";
-};
+import { dedupeVenueLabel } from "../results/dedupeVenueLabel";
+import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { csClass } from "../componentStyles";
+import { resolveScorelineRosterClubSides } from "./resolveScorelineRosterClubSides";
+import { resolveScorelineRosterLineup } from "./resolveScorelineRosterPlayerEntry";
+import {
+  ScorelineRosterEmptyRow,
+  ScorelineRosterRow,
+} from "./ScorelineRosterRow";
 
 export const ScorelineRosterContent: React.FC<{
   roster: RosterDataItem;
   availableHeight: number;
 }> = ({ roster, availableHeight }) => {
-  const { club } = useVideoDataContext();
-  const { accountHolder, against } = getTeamPerspective(roster);
-  const clubName = club?.name;
-  const homeIsClub = teamMatchesClub(accountHolder.name, clubName);
-  const awayIsClub = teamMatchesClub(against.name, clubName);
-  const density = resolveRosterDensity(roster.teamRoster.length);
-  const homeSide = roster.isHomeTeam ? "Home" : "Away";
-  const awaySide = roster.isHomeTeam ? "Away" : "Home";
+  const { componentStyles } = useThemeContext();
+  const { homeIsClub, awayIsClub } = resolveScorelineRosterClubSides(
+    roster.isHomeTeam,
+  );
+  const squadTeamName = roster.isHomeTeam ? roster.teamHome : roster.teamAway;
+  const lineup = resolveScorelineRosterLineup(roster.teamRoster);
 
   return (
     <main
-      className="roster-ledger"
+      className={`roster-ledger ${csClass(componentStyles, "scorelineRosterLedger")}`}
       style={{ height: availableHeight, maxHeight: availableHeight }}
     >
       <div className="roster-stack">
         <ScorelineFixtureMatchup
           home={{
-            sideLabel: homeSide,
-            teamName: accountHolder.name,
-            logoUrl: accountHolder.logoUrl,
+            sideLabel: "Home",
+            teamName: roster.teamHome,
+            logoUrl: roster.teamHomeLogo,
             isClubTeam: homeIsClub,
           }}
           away={{
-            sideLabel: awaySide,
-            teamName: against.name,
-            logoUrl: against.logoUrl,
+            sideLabel: "Away",
+            teamName: roster.teamAway,
+            logoUrl: roster.teamAwayLogo,
             isClubTeam: awayIsClub,
           }}
         />
@@ -64,31 +54,40 @@ export const ScorelineRosterContent: React.FC<{
             roster.round,
             roster.ageGroup,
             roster.gender,
-          ].filter(Boolean)}
+          ]}
         />
 
         <div className="roster-lineup">
           <div className="roster-squad-header">
             <span className="roster-squad-label">Line-up</span>
-            <p className="roster-squad-team">{accountHolder.name}</p>
+            <p className="roster-squad-team">{squadTeamName}</p>
           </div>
 
-          <div className="roster-rows" data-density={density}>
-            {roster.teamRoster.map((playerName, index) => (
-              <div key={`${playerName}-${index}`} className="roster-entry">
-                <div className="roster-row">
-                  <span className="roster-index">{index + 1}</span>
-                  <p className="roster-player">{playerName}</p>
-                </div>
-              </div>
-            ))}
+          <div
+            className="roster-rows"
+            data-density={
+              lineup.kind === "players" ? lineup.density : undefined
+            }
+          >
+            {lineup.kind === "empty" ? (
+              <ScorelineRosterEmptyRow message={lineup.message} />
+            ) : (
+              lineup.rows.map((row) => (
+                <ScorelineRosterRow
+                  key={`${row.index}-${row.name}`}
+                  index={row.index}
+                  name={row.name}
+                  badges={row.badges}
+                />
+              ))
+            )}
           </div>
         </div>
 
         <div className="roster-context">
           <p className="roster-context-date">{formatDate(roster.date)}</p>
           <p className="roster-context-venue">
-            {formatGroundLocation(roster.ground)}
+            {dedupeVenueLabel(roster.ground)}
           </p>
         </div>
       </div>

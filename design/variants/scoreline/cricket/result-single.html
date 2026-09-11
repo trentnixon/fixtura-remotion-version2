@@ -53,6 +53,7 @@
           <div class="design-frame-scale">
             <div
               class="design-social-canvas scoreline-canvas"
+              data-result-single
               data-sponsor-state="placeholder"
             >
               <span
@@ -87,7 +88,7 @@
                       <p class="header-eyebrow" data-hydrate="header-eyebrow">
                         Result
                       </p>
-                      <h1 data-hydrate="header-title">
+                      <h1 class="header-title" data-hydrate="header-title">
                         Weekend Result Single Game
                       </h1>
                     </div>
@@ -133,7 +134,8 @@
 
                       <!-- Team Identity + Score Display: home -->
                       <div
-                        class="team-band"
+                        class="team-band team-band--hero"
+                        data-side="home"
                         data-hydrate="match-1-home-club"
                         data-hydrate-attr="data-club-team"
                       >
@@ -183,7 +185,8 @@
 
                       <!-- Team Identity + Score Display: away -->
                       <div
-                        class="team-band"
+                        class="team-band team-band--hero"
+                        data-side="away"
                         data-hydrate="match-1-away-club"
                         data-hydrate-attr="data-club-team"
                       >
@@ -484,4 +487,3 @@
     </script>
   </body>
 </html>
-

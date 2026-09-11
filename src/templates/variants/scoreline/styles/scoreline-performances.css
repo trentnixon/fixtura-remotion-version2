@@ -1,0 +1,43 @@
+/* Scoreline performances — density overrides for 6–7 row screens (Top 5 base: scoreline-top5.css) */
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-row {
+  min-height: 96px;
+  padding: 10px 14px;
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-entry:first-of-type
+  .leader-row {
+  min-height: 124px;
+  padding: 12px 14px;
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-row {
+  min-height: 88px;
+  padding: 8px 14px;
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-entry:first-of-type
+  .leader-row {
+  min-height: 112px;
+  padding: 10px 14px;
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-copy {
+  gap: 6px;
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-stats {
+  gap: 4px;
+}

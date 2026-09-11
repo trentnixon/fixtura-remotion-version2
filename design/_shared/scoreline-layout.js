@@ -1,3 +1,28 @@
+const isPrefixSegment = (prefix, candidate) => {
+  const prefixKey = prefix.toLowerCase();
+  const candidateKey = candidate.toLowerCase();
+
+  if (candidateKey.length <= prefixKey.length) {
+    return false;
+  }
+
+  if (!candidateKey.startsWith(prefixKey)) {
+    return false;
+  }
+
+  const nextChar = candidateKey[prefixKey.length];
+  return nextChar === " " || nextChar === "/";
+};
+
+const collapsePrefixVenueSegments = (parts) =>
+  parts.filter(
+    (part, index) =>
+      !parts.some(
+        (other, otherIndex) =>
+          index !== otherIndex && isPrefixSegment(part, other),
+      ),
+  );
+
 const dedupeVenueLabel = (value) => {
   const parts = String(value)
     .split("/")
@@ -20,7 +45,7 @@ const dedupeVenueLabel = (value) => {
     unique.push(part);
   }
 
-  return unique.join(" / ");
+  return collapsePrefixVenueSegments(unique).join(" / ");
 };
 
 const countPerformanceRows = (matchNumber, discipline) => {
@@ -119,8 +144,7 @@ const syncResultLength = (module, matchNumber) => {
 export function syncScorelineMatchModule(matchNumber, module) {
   const battingCount = countPerformanceRows(matchNumber, "batter");
   const bowlingCount = countPerformanceRows(matchNumber, "bowler");
-  const panelCount =
-    (battingCount > 0 ? 1 : 0) + (bowlingCount > 0 ? 1 : 0);
+  const panelCount = (battingCount > 0 ? 1 : 0) + (bowlingCount > 0 ? 1 : 0);
   const hasPerformances = panelCount > 0;
 
   if (!(module instanceof HTMLElement)) {
@@ -146,7 +170,9 @@ export function syncScorelineMatchModule(matchNumber, module) {
     bowlingPanel.dataset.state = bowlingCount > 0 ? "filled" : "empty";
   }
 
-  const venue = module.querySelector(`[data-hydrate="match-${matchNumber}-ground"]`);
+  const venue = module.querySelector(
+    `[data-hydrate="match-${matchNumber}-ground"]`,
+  );
   if (venue?.textContent) {
     venue.textContent = dedupeVenueLabel(venue.textContent);
   }
@@ -164,9 +190,11 @@ export function syncScorelineOrganisationCrest(root = document) {
  * @param {ParentNode} root
  */
 export function syncScorelineResultsLayout(root = document) {
-  root.querySelectorAll(".results-ledger .match-module").forEach((module, index) => {
-    syncScorelineMatchModule(index + 1, module);
-  });
+  root
+    .querySelectorAll(".results-ledger .match-module")
+    .forEach((module, index) => {
+      syncScorelineMatchModule(index + 1, module);
+    });
 
   syncScorelineOrganisationCrest(root);
 }
@@ -226,6 +254,27 @@ export function syncScorelineLeaderboardLayout(root = document) {
  * @param {ParentNode} root
  */
 export function syncScorelineLadderLayout(root = document) {
+  const CREASE_MAX_ROWS = 12;
+  const rowsContainer = root.querySelector(".ladder-rows");
+  const visibleEntries = [...root.querySelectorAll(".ladder-entry")].filter(
+    (entry) => entry instanceof HTMLElement && entry.dataset.empty !== "true",
+  );
+  const rowCount =
+    visibleEntries.length || root.querySelectorAll(".ladder-entry").length;
+
+  if (rowsContainer instanceof HTMLElement) {
+    rowsContainer.dataset.density =
+      rowCount <= 11 ? "normal" : rowCount <= 14 ? "compact" : "tight";
+    const showCreases = rowCount <= CREASE_MAX_ROWS;
+    rowsContainer.dataset.creases = showCreases ? "true" : "false";
+
+    if (!showCreases) {
+      rowsContainer.querySelectorAll(".ladder-crease").forEach((crease) => {
+        crease.remove();
+      });
+    }
+  }
+
   root.querySelectorAll(".ladder-entry").forEach((entry, index) => {
     if (!(entry instanceof HTMLElement)) {
       return;
@@ -276,7 +325,10 @@ export function syncScorelineRosterLayout(root = document) {
 
   if (homeBand instanceof HTMLElement && awayBand instanceof HTMLElement) {
     const homeIsClub = homeBand.dataset.clubTeam === "true";
-    if (homeBand.dataset.clubTeam === "true" || homeBand.dataset.clubTeam === "false") {
+    if (
+      homeBand.dataset.clubTeam === "true" ||
+      homeBand.dataset.clubTeam === "false"
+    ) {
       awayBand.dataset.clubTeam = homeIsClub ? "false" : "true";
     }
   }
@@ -318,7 +370,8 @@ export function syncScorelineUpcomingLayout(root = document) {
         ?.textContent?.trim() ?? "";
 
     const teamIsClub = (name) =>
-      clubFocus.length > 3 && name.toLowerCase().includes(clubFocus.toLowerCase());
+      clubFocus.length > 3 &&
+      name.toLowerCase().includes(clubFocus.toLowerCase());
     const homeIsClub = teamIsClub(homeTeam);
     const awayIsClub = teamIsClub(awayTeam);
 
@@ -346,7 +399,9 @@ export function syncScorelineUpcomingLayout(root = document) {
       }
     }
 
-    const ground = root.querySelector(`[data-hydrate="fixture-${fixtureNumber}-ground"]`);
+    const ground = root.querySelector(
+      `[data-hydrate="fixture-${fixtureNumber}-ground"]`,
+    );
     if (ground?.textContent) {
       ground.textContent = dedupeVenueLabel(ground.textContent);
     }
@@ -413,35 +468,39 @@ export function syncScoreWatermark(canvas) {
  * @param {ParentNode} root
  */
 export function watchScorelineCrests(root = document) {
-  root.querySelectorAll(".team-mark img, .organisation-mark img").forEach((img) => {
-    if (!(img instanceof HTMLImageElement)) {
-      return;
-    }
+  root
+    .querySelectorAll(".team-mark img, .organisation-mark img")
+    .forEach((img) => {
+      if (!(img instanceof HTMLImageElement)) {
+        return;
+      }
 
-    const resync = () => {
-      syncScorelineOrganisationCrest(root);
-      syncScorelineResultsLayout(root);
-      syncScorelineUpcomingLayout(root);
-      syncScorelineRosterLayout(root);
-      syncScorelineLeaderboardLayout(root);
-      syncScorelineLadderLayout(root);
-      syncScorelineTotwLayout(root);
-    };
-    img.addEventListener("load", resync);
-    img.addEventListener("error", resync);
-  });
+      const resync = () => {
+        syncScorelineOrganisationCrest(root);
+        syncScorelineResultsLayout(root);
+        syncScorelineUpcomingLayout(root);
+        syncScorelineRosterLayout(root);
+        syncScorelineLeaderboardLayout(root);
+        syncScorelineLadderLayout(root);
+        syncScorelineTotwLayout(root);
+      };
+      img.addEventListener("load", resync);
+      img.addEventListener("error", resync);
+    });
 
-  root.querySelectorAll(".ladder-mark img, .leader-mark img, .totw-mark img").forEach((img) => {
-    if (!(img instanceof HTMLImageElement)) {
-      return;
-    }
+  root
+    .querySelectorAll(".ladder-mark img, .leader-mark img, .totw-mark img")
+    .forEach((img) => {
+      if (!(img instanceof HTMLImageElement)) {
+        return;
+      }
 
-    const resync = () => {
-      syncScorelineLeaderboardLayout(root);
-      syncScorelineLadderLayout(root);
-      syncScorelineTotwLayout(root);
-    };
-    img.addEventListener("load", resync);
-    img.addEventListener("error", resync);
-  });
+      const resync = () => {
+        syncScorelineLeaderboardLayout(root);
+        syncScorelineLadderLayout(root);
+        syncScorelineTotwLayout(root);
+      };
+      img.addEventListener("load", resync);
+      img.addEventListener("error", resync);
+    });
 }

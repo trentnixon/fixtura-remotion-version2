@@ -1,4 +1,4 @@
-/* Scoreline Results layout — canonical for design site + Remotion (keep in sync) */
+/* Scoreline Results layout — synced with design/_shared/scoreline-results.css */
 
 .scoreline-canvas {
   --frame-height: 1350px;
@@ -33,14 +33,10 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--paper);
+  /* Remotion: overlay-only — selected template background shows through */
+  background: transparent;
   color: var(--ink);
   font-family: var(--font-body);
-}
-
-.scoreline-canvas[data-scoreline-mode="dark"],
-.scoreline-canvas[data-scoreline-mode="darkAlt"] {
-  background: #080b0d;
 }
 
 .scoreline-canvas,
@@ -53,10 +49,6 @@
 .scoreline-canvas h3,
 .scoreline-canvas p {
   margin: 0;
-}
-
-.scoreline-canvas .fixture-palette {
-  display: none;
 }
 
 .scoreline-canvas .team-mark {
@@ -86,6 +78,26 @@
   overflow: hidden;
 }
 
+/* Remotion wraps each match row in AnimatedContainer — restore flex height chain */
+.scoreline-canvas .results-ledger > .animated-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1 1 0;
+}
+
+.scoreline-canvas .results-ledger > .animated-container > .match-module {
+  flex: 1 1 0;
+  min-height: 0;
+  height: 100%;
+}
+
+/* Two-match density: keep separator readable without consuming ledger height */
+.scoreline-canvas .results-ledger > .match-separator {
+  margin: var(--space-2) 0;
+  padding: var(--space-2) 0;
+}
+
 /* Reading order: teams → outcome → performances → context */
 .scoreline-canvas .match-module {
   min-height: 0;
@@ -103,18 +115,115 @@
 
 .scoreline-canvas .team-score-area {
   min-height: 0;
+  height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
   gap: 6px;
+  align-items: stretch;
   background: transparent;
 }
 
-.scoreline-canvas .team-band {
+.scoreline-canvas .team-score-area__divider {
+  display: grid;
+  place-items: center;
+}
+
+.scoreline-canvas .team-score-area__divider-anim {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.scoreline-canvas .team-score-area .team-band > .team-band__slot {
+  min-width: 0;
+  min-height: 0;
+}
+
+.scoreline-canvas .team-score-area .team-band > .team-band__slot--identity {
+  height: 40px;
+  max-height: 40px;
+}
+
+.scoreline-canvas .team-score-area .team-band__anim {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.scoreline-canvas .team-score-area .team-band__anim > .team-primary,
+.scoreline-canvas .team-score-area .team-band__anim > .team-identity {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.scoreline-canvas .scoreline-result-cell {
+  min-width: 0;
+  width: 100%;
+  min-height: 0;
+}
+
+.scoreline-canvas .scoreline-result-cell__anim {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreline-canvas .scoreline-result-cell__anim--divider {
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreline-canvas .scoreline-result-cell__anim > .performance-area {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scoreline-canvas .match-module__section {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreline-canvas .match-module__section .scoreline-result-cell {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreline-canvas .match-module__section--performances {
+  overflow: hidden;
+}
+
+.scoreline-canvas .match-module__section--performances .scoreline-result-cell,
+.scoreline-canvas
+  .match-module__section--performances
+  .scoreline-result-cell__anim,
+.scoreline-canvas .match-module__section--performances .performance-area {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+}
+
+.scoreline-canvas .match-module__section--result .result-bridge,
+.scoreline-canvas .match-module__section--context .match-context {
+  width: 100%;
+}
+
+.scoreline-canvas .team-score-area .team-band {
   min-width: 0;
   position: relative;
   overflow: hidden;
   display: grid;
   grid-template-rows: minmax(0, 1fr) 40px;
+  border: 0;
 }
 
 .scoreline-canvas .team-primary {
@@ -125,11 +234,11 @@
   align-items: center;
 }
 
-.scoreline-canvas .team-score-area > .team-band:first-child .team-score {
+.scoreline-canvas .team-score-area .team-band[data-side="home"] .team-score {
   justify-items: end;
 }
 
-.scoreline-canvas .team-score-area > .team-band:last-child .team-score {
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .team-score {
   justify-items: start;
 }
 
@@ -153,13 +262,13 @@
   font-variant-numeric: tabular-nums lining-nums;
 }
 
-.scoreline-canvas .team-score-area > .team-band:first-child .score,
-.scoreline-canvas .team-score-area > .team-band:first-child .overs {
+.scoreline-canvas .team-score-area .team-band[data-side="home"] .score,
+.scoreline-canvas .team-score-area .team-band[data-side="home"] .overs {
   text-align: right;
 }
 
-.scoreline-canvas .team-score-area > .team-band:last-child .score,
-.scoreline-canvas .team-score-area > .team-band:last-child .overs {
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .score,
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .overs {
   text-align: left;
 }
 
@@ -264,11 +373,17 @@
 
 .scoreline-canvas .performance-area {
   min-height: 0;
+  min-width: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
-  padding: 4px 0 0;
-  background: transparent;
+  padding: var(--space-2) var(--space-3);
+  overflow: hidden;
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas .performance-panel {
@@ -277,12 +392,12 @@
   display: grid;
   grid-template-rows: auto repeat(3, minmax(0, 1fr));
   gap: 0;
-  background: transparent;
   border: 0;
 }
 
 .scoreline-canvas .performance-row {
   min-width: 0;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 16px;
@@ -349,13 +464,17 @@
 .scoreline-canvas .match-context {
   min-width: 0;
   margin-top: 0;
-  padding: var(--space-1) var(--space-2);
+  padding: 8px 12px;
   display: grid;
   grid-template-columns: minmax(0, 0.64fr) minmax(0, 1.36fr);
   gap: var(--space-3);
-  align-items: start;
+  align-items: center;
   border: 0;
-  background: var(--match-context-surface, color-mix(in srgb, var(--surface-muted) 72%, transparent));
+  overflow: hidden;
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+  );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   font-family: var(--font-body);
   font-size: var(--type-meta);
@@ -368,14 +487,17 @@
 .scoreline-canvas .context-left,
 .scoreline-canvas .context-venue {
   min-width: 0;
+  margin: 0;
+  font-size: var(--type-meta);
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .scoreline-canvas .context-left {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--type-meta);
-  font-weight: 500;
 }
 
 .scoreline-canvas .context-separator {
@@ -386,24 +508,24 @@
 }
 
 .scoreline-canvas .context-venue {
-  display: -webkit-box;
   overflow: hidden;
-  font-size: var(--type-venue);
-  font-weight: 500;
   text-align: right;
+  text-wrap: balance;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-height: 1.42;
+  line-clamp: 2;
+  display: -webkit-box;
+  align-self: center;
 }
 
-.scoreline-canvas .team-score-area > .team-band:last-child .team-primary {
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .team-primary {
   grid-template-columns: minmax(0, 1fr) 96px;
 }
 
-.scoreline-canvas .team-score-area > .team-band:last-child .team-mark {
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .team-mark {
   order: 2;
 }
 
-.scoreline-canvas .team-score-area > .team-band:last-child .team-score {
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .team-score {
   order: 1;
 }

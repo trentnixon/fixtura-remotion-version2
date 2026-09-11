@@ -72,8 +72,7 @@ export async function hydratePage(context) {
       ].join(" ");
     }
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Hydration failed";
+    const message = error instanceof Error ? error.message : "Hydration failed";
     if (banner) {
       banner.textContent = `Hydration error: ${message}`;
       banner.hidden = false;

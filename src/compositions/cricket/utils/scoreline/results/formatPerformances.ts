@@ -43,10 +43,13 @@ export const pickTopBowling = (
     overs: p.overs,
   }));
 
-export const formatBattingFigure = (row: Extract<ScorelinePerformanceRow, { kind: "batting" }>) => {
+export const formatBattingFigure = (
+  row: Extract<ScorelinePerformanceRow, { kind: "batting" }>,
+) => {
   const notOut = row.notOut ? "*" : "";
   return `${row.runs}${notOut} (${row.balls})`;
 };
 
-export const formatBowlingFigure = (row: Extract<ScorelinePerformanceRow, { kind: "bowling" }>) =>
-  `${row.wickets}/${row.runs} (${row.overs})`;
+export const formatBowlingFigure = (
+  row: Extract<ScorelinePerformanceRow, { kind: "bowling" }>,
+) => `${row.wickets}/${row.runs} (${row.overs})`;

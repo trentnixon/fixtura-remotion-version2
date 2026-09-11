@@ -1,11 +1,12 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { deriveScorelineThemeVars } from "./applyScorelineTheme";
+import { csClass } from "./componentStyles";
 
 export const useScorelineTheme = () => {
-  const { colors } = useThemeContext();
+  const { colors, componentStyles } = useThemeContext();
 
-  return useMemo(
+  const themeVars = useMemo(
     () =>
       deriveScorelineThemeVars({
         primary: colors?.primary,
@@ -13,4 +14,11 @@ export const useScorelineTheme = () => {
       }),
     [colors?.primary, colors?.secondary],
   );
+
+  const cs = useCallback(
+    (key: string) => csClass(componentStyles, key),
+    [componentStyles],
+  );
+
+  return { ...themeVars, cs, componentStyles };
 };

@@ -7,12 +7,13 @@ import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { getCompositionSectionHeight } from "../../../../core/utils/layoutHeights";
 import { useScorelineCanvasStyle } from "../../../../compositions/cricket/utils/scoreline/scorelineCanvasStyle";
 import { resolveScorelineCanvasDataset } from "../../../../compositions/cricket/utils/scoreline/resolveScorelineCanvasDataset";
+import { csClass } from "../../../../compositions/cricket/utils/scoreline/componentStyles";
 import { ScorelineMainHeader } from "./ScorelineMainHeader";
 
 export const ScorelineMain: React.FC = () => {
-  const { layout } = useThemeContext();
+  const { layout, componentStyles } = useThemeContext();
   const { heights } = layout;
-  const { data, metadata } = useVideoDataContext();
+  const { data, metadata, templateVariation } = useVideoDataContext();
   const { timings } = data;
   const canvasStyle = useScorelineCanvasStyle();
   const canvasDataset = resolveScorelineCanvasDataset(metadata.compositionId);
@@ -21,8 +22,9 @@ export const ScorelineMain: React.FC = () => {
   return (
     <AbsoluteFill>
       <div
-        className="scoreline-canvas flex h-full w-full flex-col overflow-hidden"
+        className={`scoreline-canvas ${csClass(componentStyles, "scorelineCanvasShell")}`}
         style={canvasStyle}
+        data-scoreline-mode={templateVariation.mode || "light"}
         {...canvasDataset}
       >
         <ScorelineMainHeader />

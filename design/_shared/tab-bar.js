@@ -1,7 +1,4 @@
-import {
-  listAssetSlugs,
-  validateRoutesManifest,
-} from "./lib/manifest.js";
+import { listAssetSlugs, validateRoutesManifest } from "./lib/manifest.js";
 
 const ROUTES_URL = "/design/_shared/routes.json";
 

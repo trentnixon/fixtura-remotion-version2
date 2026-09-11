@@ -1,66 +1,13 @@
 import scorelineModes from "./scoreline-modes.json" with { type: "json" };
 
-const MATCH_CONTEXT_PANEL_LIGHT = "rgba(243, 240, 234, 0.72)";
-const MATCH_CONTEXT_PANEL_DARK = "rgba(8, 11, 13, 0.35)";
+const MATCH_CONTEXT_PANEL_LIGHT = "rgba(243, 240, 234, 0.2)";
+const MATCH_CONTEXT_PANEL_DARK = "rgba(8, 11, 13, 0.2)";
 const DEFAULT_INK = "#080b0d";
 const STORAGE_KEY = "fixtura-scoreline-preview-mode";
 const BACKDROP_STORAGE_KEY = "fixtura-scoreline-preview-backdrop";
 
 /** @typedef {"light" | "lightAlt" | "dark" | "darkAlt"} ScorelineModeId */
 /** @typedef {"light" | "dark" | "club"} ScorelineBackdropId */
-
-/**
- * @param {string} input
- * @returns {{ r: number; g: number; b: number } | null}
- */
-function parseHex(input) {
-  if (!input) {
-    return null;
-  }
-
-  let hex = String(input).trim();
-  if (!hex.startsWith("#")) {
-    hex = `#${hex}`;
-  }
-
-  if (!/^#[0-9a-f]{3,8}$/i.test(hex)) {
-    return null;
-  }
-
-  if (hex.length === 4) {
-    hex = `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`;
-  }
-
-  return {
-    r: Number.parseInt(hex.slice(1, 3), 16),
-    g: Number.parseInt(hex.slice(3, 5), 16),
-    b: Number.parseInt(hex.slice(5, 7), 16),
-  };
-}
-
-/**
- * @param {{ r: number; g: number; b: number }} rgb
- */
-function relativeLuminance({ r, g, b }) {
-  const channel = (value) => {
-    const c = value / 255;
-    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-  };
-
-  return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b);
-}
-
-/**
- * @param {string} color
- */
-function isLightColor(color) {
-  const rgb = parseHex(color);
-  if (!rgb) {
-    return false;
-  }
-
-  return relativeLuminance(rgb) > 0.45;
-}
 
 /**
  * @param {ScorelineModeId} modeId
@@ -75,24 +22,53 @@ export function getScorelineModeDefinition(modeId) {
 }
 
 /**
- * Mirrors Remotion resolveScorelineMatchContextTokens for design preview.
+ * Container copy panels follow mode family (light/lightAlt vs dark/darkAlt).
+ * Alt modes flip header title only — not container hue or in-container copy.
  *
  * @param {ScorelineModeId} modeId
  * @param {string} [accent]
  */
-export function resolveScorelineMatchContextTokens(modeId, accent = DEFAULT_INK) {
+export function resolveScorelineMatchContextTokens(
+  modeId,
+  accent = DEFAULT_INK,
+) {
   const mode = getScorelineModeDefinition(modeId);
-  const lightTitle = isLightColor(mode.text.title);
-  const surface = lightTitle ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT;
-  const onDarkPanel = lightTitle;
+  const isDark =
+    Boolean(mode.container.background) &&
+    mode.container.background !== "transparent";
+  const surface = isDark ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT;
 
   return {
     surface,
-    inset: lightTitle
+    inset: isDark
       ? "inset 0 1px 0 rgb(255 255 255 / 12%)"
       : "inset 0 1px 0 rgb(255 255 255 / 55%)",
-    textMuted: onDarkPanel ? "rgb(255 255 255 / 68%)" : "rgb(8 11 13 / 68%)",
-    text: onDarkPanel ? "rgb(255 255 255 / 92%)" : "rgb(8 11 13 / 88%)",
+    textMuted: isDark ? "rgb(255 255 255 / 68%)" : "rgb(8 11 13 / 68%)",
+    text: isDark ? "rgb(255 255 255 / 92%)" : "rgb(8 11 13 / 88%)",
+    accent,
+  };
+}
+
+/**
+ * @param {ReturnType<typeof getScorelineModeDefinition>} mode
+ * @param {string} accent
+ */
+function resolveScorelineContainerCopyTokens(mode, accent) {
+  const isDark =
+    Boolean(mode.container.background) &&
+    mode.container.background !== "transparent";
+
+  return {
+    surface: isDark ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT,
+    surfaceSolid: isDark
+      ? mode.container.background
+      : mode.container.backgroundAlt,
+    inset: isDark
+      ? "inset 0 1px 0 rgb(255 255 255 / 12%)"
+      : "inset 0 1px 0 rgb(255 255 255 / 55%)",
+    text: mode.text.copy,
+    textMuted: isDark ? "rgb(255 255 255 / 68%)" : "rgb(8 11 13 / 68%)",
+    textSupport: isDark ? "rgb(255 255 255 / 74%)" : "rgb(8 11 13 / 74%)",
     accent,
   };
 }
@@ -101,7 +77,9 @@ export function resolveScorelineMatchContextTokens(modeId, accent = DEFAULT_INK)
  * @param {URLSearchParams} [params]
  * @returns {ScorelineModeId}
  */
-export function readScorelineMode(params = new URLSearchParams(window.location.search)) {
+export function readScorelineMode(
+  params = new URLSearchParams(window.location.search),
+) {
   const fromQuery = params.get("mode");
   if (fromQuery && fromQuery in scorelineModes) {
     return /** @type {ScorelineModeId} */ (fromQuery);
@@ -136,6 +114,26 @@ export function readScorelineBackdrop(
 }
 
 /**
+ * Container tokens for copy panels (footer, context strips, roster rows).
+ * The overlay canvas itself stays transparent in Remotion and design preview.
+ *
+ * @param {ReturnType<typeof getScorelineModeDefinition>} mode
+ */
+function resolveScorelineModeSurfaceVars(mode) {
+  const containerBackground = mode.container.background;
+  const containerBackgroundAlt = mode.container.backgroundAlt;
+  const isTransparent =
+    !containerBackground || containerBackground === "transparent";
+
+  return {
+    containerBackground,
+    containerBackgroundAlt,
+    surfaceMuted: containerBackgroundAlt,
+    surface: isTransparent ? "#ffffff" : containerBackground,
+  };
+}
+
+/**
  * @param {HTMLElement} canvas
  * @param {ScorelineModeId} modeId
  * @param {{ accent?: string }} [options]
@@ -151,24 +149,54 @@ export function applyScorelineMode(canvas, modeId, options = {}) {
       getComputedStyle(canvas).getPropertyValue("--club-primary").trim()) ||
     DEFAULT_INK;
   const matchContext = resolveScorelineMatchContextTokens(modeId, accent);
+  const modeSurfaces = resolveScorelineModeSurfaceVars(mode);
+  const containerCopy = resolveScorelineContainerCopyTokens(mode, accent);
 
   canvas.dataset.scorelineMode = modeId;
-  canvas.style.background = mode.container.background;
-  canvas.style.color = mode.text.copy;
+  canvas.style.removeProperty("background");
+  canvas.style.removeProperty("color");
+  canvas.style.setProperty(
+    "--container-background",
+    modeSurfaces.containerBackground,
+  );
+  canvas.style.setProperty(
+    "--container-background-alt",
+    modeSurfaces.containerBackgroundAlt,
+  );
+  canvas.style.setProperty("--container-surface", containerCopy.surface);
+  canvas.style.setProperty(
+    "--container-surface-solid",
+    containerCopy.surfaceSolid,
+  );
+  canvas.style.setProperty("--container-inset", containerCopy.inset);
+  canvas.style.setProperty("--container-text", containerCopy.text);
+  canvas.style.setProperty("--container-text-muted", containerCopy.textMuted);
+  canvas.style.setProperty(
+    "--container-text-support",
+    containerCopy.textSupport,
+  );
+  canvas.style.setProperty("--container-text-accent", containerCopy.accent);
+  canvas.style.setProperty("--surface-muted", modeSurfaces.surfaceMuted);
+  canvas.style.setProperty("--surface", modeSurfaces.surface);
 
   canvas.style.setProperty("--header-text", mode.text.title);
   canvas.style.setProperty("--header-accent", accent);
   canvas.style.setProperty("--match-context-surface", matchContext.surface);
   canvas.style.setProperty("--match-context-inset", matchContext.inset);
-  canvas.style.setProperty("--match-context-text-muted", matchContext.textMuted);
+  canvas.style.setProperty(
+    "--match-context-text-muted",
+    matchContext.textMuted,
+  );
   canvas.style.setProperty("--match-context-text", matchContext.text);
   canvas.style.setProperty("--match-context-accent", matchContext.accent);
 
-  canvas.querySelectorAll(".header-eyebrow, .organisation-name").forEach((node) => {
-    if (node instanceof HTMLElement) {
-      node.style.color = mode.text.title;
-    }
-  });
+  canvas
+    .querySelectorAll(".header-eyebrow, .organisation-name")
+    .forEach((node) => {
+      if (node instanceof HTMLElement) {
+        node.style.color = mode.text.title;
+      }
+    });
 
   const title = canvas.querySelector(".header-title-stack h1");
   if (title instanceof HTMLElement) {

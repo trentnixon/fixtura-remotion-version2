@@ -20,13 +20,13 @@ Hand off only when the design prototype is approved:
 
 ## What you are translating
 
-| Design site (static HTML) | Remotion (React) |
-| --- | --- |
-| `.design-social-canvas` markup | Composition **display** components |
-| Tailwind / CSS in HTML | Template **theme** `componentStyles` + variant **components** |
-| `data-hydrate` + bind map | Video data context + composition utils |
-| CDN fonts (`fonts.json`) | Local fonts — see [fonts.md](./fonts.md) |
-| Flat neutral canvas backdrop | Remotion **background system** (unchanged) |
+| Design site (static HTML)      | Remotion (React)                                              |
+| ------------------------------ | ------------------------------------------------------------- |
+| `.design-social-canvas` markup | Composition **display** components                            |
+| Tailwind / CSS in HTML         | Template **theme** `componentStyles` + variant **components** |
+| `data-hydrate` + bind map      | Video data context + composition utils                        |
+| CDN fonts (`fonts.json`)       | Local fonts — see [fonts.md](./fonts.md)                      |
+| Flat neutral canvas backdrop   | Remotion **background system** (unchanged)                    |
 
 ---
 
@@ -77,12 +77,12 @@ For each approved asset, add display code under the composition folder named in 
 
 Example — Results (`src/compositions/cricket/results/`):
 
-| Role | Broadcast Pro file |
-| --- | --- |
-| Composition entry | `broadcastPro.tsx` |
-| Display orchestrator | `controller/ResultsDisplay/display-BroadcastPro.tsx` |
-| Row / card layout | `controller/MatchRow/row-BroadcastPro.tsx`, `layout/MatchCard/card-BroadcastPro.tsx` |
-| Export key | `index.tsx` exports `broadcastpro` |
+| Role                 | Broadcast Pro file                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| Composition entry    | `broadcastPro.tsx`                                                                   |
+| Display orchestrator | `controller/ResultsDisplay/display-BroadcastPro.tsx`                                 |
+| Row / card layout    | `controller/MatchRow/row-BroadcastPro.tsx`, `layout/MatchCard/card-BroadcastPro.tsx` |
+| Export key           | `index.tsx` exports `broadcastpro`                                                   |
 
 Wire into **`src/compositions/cricket/index.tsx`** — add a lowercase routing key to each relevant `Cricket*` map:
 
@@ -115,15 +115,15 @@ Variant-specific motif rules (e.g. [scoreline-crease-motif-grammar.md](./scoreli
 
 Read **[tailwind-css-remotion.md](../design-Reference-docs/tailwind-css-remotion.md)** — re-read if already used during Pass 2.
 
-| Styling need | Preferred location |
-| --- | --- |
-| Layout (flex, grid, gap) | Complete literal Tailwind class strings |
-| Reusable roles | `theme/componentStyles.shared.ts` |
-| Asset-specific roles | `theme/composition/{asset}.ts` |
-| Fonts, sizing tokens | `theme/tokens.ts`, `theme/layout.ts` |
-| Club/mode/calculated values | React `style` or scoped CSS variables from hooks |
+| Styling need                             | Preferred location                                           |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| Layout (flex, grid, gap)                 | Complete literal Tailwind class strings                      |
+| Reusable roles                           | `theme/componentStyles.shared.ts`                            |
+| Asset-specific roles                     | `theme/composition/{asset}.ts`                               |
+| Fonts, sizing tokens                     | `theme/tokens.ts`, `theme/layout.ts`                         |
+| Club/mode/calculated values              | React `style` or scoped CSS variables from hooks             |
 | Motifs, pseudo-elements, layered shadows | Variant CSS scoped to canvas root (e.g. `.scoreline-canvas`) |
-| Motion | Frame-derived React styles — not CSS transitions or timers |
+| Motion                                   | Frame-derived React styles — not CSS transitions or timers   |
 
 **Design site ≠ Remotion.** CDN Tailwind on HTML prototypes does not transfer automatically. Remotion uses Tailwind v4 via `src/index.css`; custom variant CSS must be imported in **both** Studio (`src/index.css`) and package (`src/package/styles.css`) when distributed. Use complete class strings — never `bg-${color}` or dynamic assembly. Tailwind `dark:` is **not** wired to Fixtura theme modes — use [theme-modes.md](../design-Reference-docs/theme-modes.md).
 
@@ -218,14 +218,14 @@ Read design/.docs/remotion-handoff.md.
 
 ## Definition of done
 
-| Check | Done when |
-| --- | --- |
-| Template shell | Registry entry exists; intro/main/outro render |
-| Composition routing | Lowercase key in each `Cricket*` map in `cricket/index.tsx` |
-| Visual parity | Studio render matches approved prototype for same fixture |
-| Manifest | `routes.json` + `asset-index.md` have real theme paths |
-| Fonts | Local fonts load in render pipeline |
-| Backgrounds | Still from Remotion background config — not design placeholder |
+| Check               | Done when                                                      |
+| ------------------- | -------------------------------------------------------------- |
+| Template shell      | Registry entry exists; intro/main/outro render                 |
+| Composition routing | Lowercase key in each `Cricket*` map in `cricket/index.tsx`    |
+| Visual parity       | Studio render matches approved prototype for same fixture      |
+| Manifest            | `routes.json` + `asset-index.md` have real theme paths         |
+| Fonts               | Local fonts load in render pipeline                            |
+| Backgrounds         | Still from Remotion background config — not design placeholder |
 
 ---
 

@@ -41,3 +41,8 @@ export const calculateAnimationOutFrame = (timings?: {
 }): number => {
   return (timings?.FPS_SCORECARD || DEFAULT_FPS_SCORECARD) - EXIT_FRAME_OFFSET;
 };
+
+export {
+  SCORELINE_INNER_TIER_OFFSETS,
+  calculateScorelineInnerDelay,
+} from "../../../../utils/scoreline/scorelineInnerAnimationDelays";

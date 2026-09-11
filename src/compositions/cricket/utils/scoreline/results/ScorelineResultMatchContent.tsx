@@ -1,7 +1,11 @@
 import React from "react";
-import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import type { MatchResult } from "../../../results/_types/types";
 import { ScorelineCreaseMarkup } from "../../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
+import {
+  resolveScorelineResultStatementLength,
+  resolveScorelineResultStatementText,
+} from "./resolveScorelineResultStatement";
+import { ScorelineResultMatchCell } from "./ScorelineResultMatchCell";
 import {
   ScorelineMatchContext,
   ScorelinePerformancePanels,
@@ -13,22 +17,27 @@ export type ScorelineResultMatchContentProps = {
   match: MatchResult;
   className?: string;
   style?: React.CSSProperties;
+  rowDelay?: number;
+  exitFrame?: number;
 };
 
 export const ScorelineResultMatchContent: React.FC<
   ScorelineResultMatchContentProps
-> = ({ match, className = "", style }) => {
-  const { isAccountClub } = useVideoDataContext();
+> = ({ match, className = "", style, rowDelay, exitFrame }) => {
   const {
     battingRows,
     bowlingRows,
     hasBatting,
     hasBowling,
     performancePanelCount,
-  } = useScorelineMatchPerformances(match, isAccountClub ?? false);
+  } = useScorelineMatchPerformances(match);
 
-  const resultText = match.resultShort || match.result || "Result pending";
-  const resultLengthClass = resultText.length > 42 ? "long" : undefined;
+  const resultText = resolveScorelineResultStatementText(
+    match.result,
+    match.resultShort,
+  );
+  const resultLength = resolveScorelineResultStatementLength(resultText);
+  const animateInner = rowDelay !== undefined && exitFrame !== undefined;
 
   return (
     <section
@@ -41,37 +50,107 @@ export const ScorelineResultMatchContent: React.FC<
           team={match.homeTeam}
           logoUrl={match.teamHomeLogo?.url || match.homeTeam.logo?.url || ""}
           isClubTeam={match.homeTeam.isClubTeam}
+          side="home"
+          rowDelay={rowDelay}
+          exitFrame={exitFrame}
+          primaryTier="rank"
+          identityTier="mark"
         />
-        <div className="team-divider" aria-hidden>
-          V
-        </div>
+        {animateInner ? (
+          <ScorelineResultMatchCell
+            tier="mark"
+            rowDelay={rowDelay}
+            exitFrame={exitFrame}
+            className="team-score-area__divider"
+            animClassName="team-score-area__divider-anim"
+          >
+            <div className="team-divider" aria-hidden>
+              V
+            </div>
+          </ScorelineResultMatchCell>
+        ) : (
+          <div className="team-divider" aria-hidden>
+            V
+          </div>
+        )}
         <ScorelineTeamBand
           team={match.awayTeam}
           logoUrl={match.teamAwayLogo?.url || match.awayTeam.logo?.url || ""}
           isClubTeam={match.awayTeam.isClubTeam}
+          side="away"
+          rowDelay={rowDelay}
+          exitFrame={exitFrame}
+          primaryTier="team"
+          identityTier="away"
         />
       </div>
 
-      <div className="result-bridge">
-        <p className="result-statement" data-length={resultLengthClass}>
-          {resultText}
-        </p>
-      </div>
+      {animateInner ? (
+        <ScorelineResultMatchCell
+          tier="stats"
+          rowDelay={rowDelay}
+          exitFrame={exitFrame}
+          className="match-module__section match-module__section--result"
+        >
+          <div className="result-bridge">
+            <p className="result-statement" data-length={resultLength}>
+              {resultText}
+            </p>
+          </div>
+        </ScorelineResultMatchCell>
+      ) : (
+        <div className="result-bridge">
+          <p className="result-statement" data-length={resultLength}>
+            {resultText}
+          </p>
+        </div>
+      )}
 
       {performancePanelCount > 0 ? (
-        <ScorelinePerformancePanels
-          battingRows={battingRows}
-          bowlingRows={bowlingRows}
-          hasBatting={hasBatting}
-          hasBowling={hasBowling}
-        />
+        animateInner ? (
+          <ScorelineResultMatchCell
+            tier="performances"
+            rowDelay={rowDelay}
+            exitFrame={exitFrame}
+            className="match-module__section match-module__section--performances"
+          >
+            <ScorelinePerformancePanels
+              battingRows={battingRows}
+              bowlingRows={bowlingRows}
+              hasBatting={hasBatting}
+              hasBowling={hasBowling}
+            />
+          </ScorelineResultMatchCell>
+        ) : (
+          <ScorelinePerformancePanels
+            battingRows={battingRows}
+            bowlingRows={bowlingRows}
+            hasBatting={hasBatting}
+            hasBowling={hasBowling}
+          />
+        )
       ) : null}
 
-      <ScorelineMatchContext
-        type={match.type}
-        round={match.round}
-        ground={match.ground}
-      />
+      {animateInner ? (
+        <ScorelineResultMatchCell
+          tier="context"
+          rowDelay={rowDelay}
+          exitFrame={exitFrame}
+          className="match-module__section match-module__section--context"
+        >
+          <ScorelineMatchContext
+            type={match.type}
+            round={match.round}
+            ground={match.ground}
+          />
+        </ScorelineResultMatchCell>
+      ) : (
+        <ScorelineMatchContext
+          type={match.type}
+          round={match.round}
+          ground={match.ground}
+        />
+      )}
     </section>
   );
 };

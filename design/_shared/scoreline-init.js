@@ -23,8 +23,11 @@ import {
  * Shared Scoreline bootstrap: hydrate → theme → mode → crest watch → optional layout hooks.
  */
 export async function initScorelineAsset(context, options = {}) {
-  const { resultsLayout = false, watermark = false, skipHydrate = false } =
-    options;
+  const {
+    resultsLayout = false,
+    watermark = false,
+    skipHydrate = false,
+  } = options;
 
   if (!skipHydrate) {
     await hydratePage(context);
@@ -36,7 +39,9 @@ export async function initScorelineAsset(context, options = {}) {
   }
 
   const primary = document.querySelector('[data-hydrate="palette-primary"]');
-  const secondary = document.querySelector('[data-hydrate="palette-secondary"]');
+  const secondary = document.querySelector(
+    '[data-hydrate="palette-secondary"]',
+  );
 
   applyScorelineTheme(canvas, {
     primary: primary?.textContent?.trim(),
@@ -47,16 +52,19 @@ export async function initScorelineAsset(context, options = {}) {
   if (wrap instanceof HTMLElement) {
     wrap.style.setProperty(
       "--preview-club-primary",
-      getComputedStyle(canvas).getPropertyValue("--club-primary").trim() || "#004de2",
+      getComputedStyle(canvas).getPropertyValue("--club-primary").trim() ||
+        "#004de2",
     );
     wrap.style.setProperty(
       "--preview-club-secondary",
-      getComputedStyle(canvas).getPropertyValue("--club-secondary").trim() || "#ff0000",
+      getComputedStyle(canvas).getPropertyValue("--club-secondary").trim() ||
+        "#ff0000",
     );
   }
 
   const accent =
-    getComputedStyle(canvas).getPropertyValue("--club-primary").trim() || undefined;
+    getComputedStyle(canvas).getPropertyValue("--club-primary").trim() ||
+    undefined;
   applyScorelineMode(canvas, readScorelineMode(), { accent });
   applyScorelineBackdrop(document, readScorelineBackdrop());
   mountScorelineModeControls(canvas);
@@ -81,8 +89,11 @@ export async function initScorelineAsset(context, options = {}) {
   }
 
   if (watermark) {
-    syncScoreWatermark(canvas);
+    canvas.dataset.scoreWatermark = "enabled";
+  } else {
+    delete canvas.dataset.scoreWatermark;
   }
+  syncScoreWatermark(canvas);
 
   return { canvas };
 }

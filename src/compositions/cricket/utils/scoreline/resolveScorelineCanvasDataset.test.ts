@@ -12,11 +12,24 @@ describe("resolveScorelineCanvasDataset", () => {
     expect(resolveScorelineCanvasDataset("CricketTop5Bowling")).toEqual({
       "data-leaderboard": "bowling",
     });
+    expect(resolveScorelineCanvasDataset("CricketBattingPerformances")).toEqual(
+      {
+        "data-leaderboard": "batting",
+      },
+    );
+    expect(resolveScorelineCanvasDataset("CricketBowlingPerformances")).toEqual(
+      {
+        "data-leaderboard": "bowling",
+      },
+    );
     expect(resolveScorelineCanvasDataset("CricketRoster")).toEqual({
       "data-roster": "",
     });
     expect(resolveScorelineCanvasDataset("CricketTeamOfTheWeek")).toEqual({
       "data-totw": "",
+    });
+    expect(resolveScorelineCanvasDataset("CricketResultSingle")).toEqual({
+      "data-result-single": "",
     });
   });
 

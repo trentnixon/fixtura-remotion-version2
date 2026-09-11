@@ -1,5 +1,9 @@
 /* Scoreline Result Single — synced with design/_shared/scoreline-result-single.css */
 
+.scoreline-canvas[data-result-single] {
+  --type-header-title: 36px;
+}
+
 .scoreline-canvas {
   --type-score: 88px;
   --type-result: 38px;
@@ -44,6 +48,16 @@
   grid-column: 1 / -1;
 }
 
+.scoreline-canvas .team-score-area--single > .team-band[data-side="home"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.scoreline-canvas .team-score-area--single > .team-band[data-side="away"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+
 .scoreline-canvas .team-score-area--single > .team-band:first-of-type {
   grid-column: 1;
   grid-row: 2;
@@ -59,6 +73,132 @@
   grid-row: 2;
 }
 
+/* match-head is :first-child — reset shared :first/:last-child team rules below */
+
+/* Hero band grid: row 1 = crest + score, row 2 = name/role full width */
+.scoreline-canvas .team-score-area--single .team-band {
+  display: grid;
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.scoreline-canvas .team-score-area--single .team-band .team-primary {
+  display: contents;
+}
+
+.scoreline-canvas .team-score-area--single .team-band .team-mark {
+  width: 112px;
+  height: 112px;
+  justify-self: center;
+}
+
+.scoreline-canvas .team-score-area--single .team-band .team-score {
+  width: auto;
+  min-width: 0;
+  align-self: center;
+}
+
+.scoreline-canvas .team-score-area--single .team-band .team-mark,
+.scoreline-canvas .team-score-area--single .team-band .team-score {
+  order: unset;
+}
+
+.scoreline-canvas .team-score-area--single .team-band .team-identity {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.scoreline-canvas[data-result-single] .team-score-area--single .team-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+/* Home — crest left, score right (toward centre), name row below */
+.scoreline-canvas .team-score-area--single .team-band[data-side="home"] {
+  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-mark {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-score {
+  grid-column: 2;
+  grid-row: 1;
+  justify-items: end;
+}
+
+.scoreline-canvas .team-score-area--single .team-band[data-side="home"] .score,
+.scoreline-canvas .team-score-area--single .team-band[data-side="home"] .overs {
+  text-align: right;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-identity {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+/* Away — score left (toward centre), crest right, name row below */
+.scoreline-canvas .team-score-area--single .team-band[data-side="away"] {
+  grid-template-columns: minmax(0, 1fr) 112px;
+  grid-template-rows: auto auto;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-score {
+  grid-column: 1;
+  grid-row: 1;
+  justify-items: start;
+}
+
+.scoreline-canvas .team-score-area--single .team-band[data-side="away"] .score,
+.scoreline-canvas .team-score-area--single .team-band[data-side="away"] .overs {
+  text-align: left;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-mark {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-identity {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  flex-direction: row-reverse;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-name {
+  text-align: right;
+}
+
 .scoreline-canvas .match-head {
   display: flex;
   flex-direction: column;
@@ -68,14 +208,21 @@
 .scoreline-canvas .match-grade {
   min-width: 0;
   padding: 12px 16px 10px;
-  background: var(--match-context-surface, color-mix(in srgb, var(--surface-muted) 72%, transparent));
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+  );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+}
+
+.scoreline-canvas .match-grade[data-empty="true"] {
+  display: none;
 }
 
 .scoreline-canvas .match-grade-name {
   display: -webkit-box;
   overflow: hidden;
-  color: var(--match-context-text, var(--ink));
+  color: var(--match-context-text, var(--container-text, var(--ink)));
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
@@ -104,25 +251,13 @@
   text-align: center;
 }
 
-.scoreline-canvas .team-band--hero .team-primary {
-  grid-template-columns: 112px minmax(0, 1fr);
-}
-
 .scoreline-canvas .team-band--hero .team-mark {
   width: 112px;
   height: 112px;
 }
 
-.scoreline-canvas
-  .team-score-area--single
-  > .team-band:last-of-type.team-band--hero
-  .team-primary {
-  grid-template-columns: minmax(0, 1fr) 112px;
-}
-
 .scoreline-canvas .match-module--single .performance-area {
   align-content: start;
-  padding: var(--space-2) 0 0;
 }
 
 .scoreline-canvas .match-module--single .performance-panel {
@@ -133,20 +268,6 @@
 
 .scoreline-canvas .match-module--single .performance-row {
   padding: 0;
-}
-
-.scoreline-canvas
-  .team-score-area--single
-  > .team-band:last-of-type.team-band--hero
-  .team-mark {
-  order: 2;
-}
-
-.scoreline-canvas
-  .team-score-area--single
-  > .team-band:last-of-type.team-band--hero
-  .team-score {
-  order: 1;
 }
 
 .scoreline-canvas .match-module--single .performance-heading {

@@ -39,9 +39,7 @@ function relativeLuminance({ r, g, b }) {
     return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
   };
 
-  return (
-    0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
-  );
+  return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b);
 }
 
 /**
@@ -107,7 +105,9 @@ function pickOnSurface(surface, ink, paper) {
  * @param {{ r: number; g: number; b: number }} ink
  */
 function separateSimilarColors(primary, secondary, ink) {
-  if (Math.abs(relativeLuminance(primary) - relativeLuminance(secondary)) < 0.12) {
+  if (
+    Math.abs(relativeLuminance(primary) - relativeLuminance(secondary)) < 0.12
+  ) {
     return [primary, mixRgb(secondary, ink, 0.35)];
   }
 
@@ -126,7 +126,8 @@ export function applyScorelineTheme(canvas, theme = {}) {
   }
 
   const ink = parseHex(theme.ink ?? DEFAULT_INK) ?? parseHex(DEFAULT_INK);
-  const paper = parseHex(theme.paper ?? DEFAULT_PAPER) ?? parseHex(DEFAULT_PAPER);
+  const paper =
+    parseHex(theme.paper ?? DEFAULT_PAPER) ?? parseHex(DEFAULT_PAPER);
   let primary = parseHex(theme.primary) ?? parseHex("#ff0000");
   let secondary = parseHex(theme.secondary) ?? parseHex("#004de2");
 
@@ -141,7 +142,10 @@ export function applyScorelineTheme(canvas, theme = {}) {
   canvas.style.setProperty("--club-primary", toRgb(primary));
   canvas.style.setProperty("--club-secondary", toRgb(secondary));
   canvas.style.setProperty("--surface-strong-primary", toRgb(surfacePrimary));
-  canvas.style.setProperty("--surface-strong-secondary", toRgb(surfaceSecondary));
+  canvas.style.setProperty(
+    "--surface-strong-secondary",
+    toRgb(surfaceSecondary),
+  );
   canvas.style.setProperty("--on-surface", toRgb(onSurface));
   canvas.style.setProperty("--contrast-score", toRgb(onSurface));
   canvas.style.setProperty(

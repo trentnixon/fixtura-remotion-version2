@@ -130,7 +130,8 @@ export const fontPathMap: Record<string, string> = {
   "Teko-Bold": "fonts/Teko/static/Teko-Bold.ttf",
 
   // Barlow Condensed (Scoreline display)
-  "Barlow Condensed": "fonts/BarlowCondensed/static/BarlowCondensed-Regular.ttf",
+  "Barlow Condensed":
+    "fonts/BarlowCondensed/static/BarlowCondensed-Regular.ttf",
   "Barlow Condensed-Medium":
     "fonts/BarlowCondensed/static/BarlowCondensed-Medium.ttf",
   "Barlow Condensed-SemiBold":
@@ -139,6 +140,12 @@ export const fontPathMap: Record<string, string> = {
     "fonts/BarlowCondensed/static/BarlowCondensed-Bold.ttf",
   "Barlow Condensed-ExtraBold":
     "fonts/BarlowCondensed/static/BarlowCondensed-ExtraBold.ttf",
+  "Barlow Condensed-Black":
+    "fonts/BarlowCondensed/static/BarlowCondensed-Black.ttf",
+  "Barlow Condensed-BoldItalic":
+    "fonts/BarlowCondensed/static/BarlowCondensed-BoldItalic.ttf",
+  "Barlow Condensed-ExtraBoldItalic":
+    "fonts/BarlowCondensed/static/BarlowCondensed-ExtraBoldItalic.ttf",
 
   // Source Sans 3 (Scoreline body)
   "Source Sans 3": "fonts/SourceSans3/static/SourceSans3-Variable.ttf",
@@ -416,6 +423,67 @@ export const loadFontByName = async (
   await loadFontFile(fontConfig);
 };
 
+const SCORELINE_BARLOW_CONDENSED_FACES: ReadonlyArray<{
+  mapKey: string;
+  weight: string;
+  style?: string;
+}> = [
+  { mapKey: "Barlow Condensed", weight: "400" },
+  { mapKey: "Barlow Condensed-Medium", weight: "500" },
+  { mapKey: "Barlow Condensed-SemiBold", weight: "600" },
+  { mapKey: "Barlow Condensed-Bold", weight: "700" },
+  { mapKey: "Barlow Condensed-ExtraBold", weight: "800" },
+  { mapKey: "Barlow Condensed-Black", weight: "900" },
+  { mapKey: "Barlow Condensed-BoldItalic", weight: "700", style: "italic" },
+  {
+    mapKey: "Barlow Condensed-ExtraBoldItalic",
+    weight: "800",
+    style: "italic",
+  },
+];
+
+const usesScorelineTypography = (theme: TemplateThemeConfig): boolean => {
+  const titleFamily = theme.fonts?.title?.family;
+  const copyFamily = theme.fonts?.copy?.family;
+
+  return (
+    normalizeFontName(titleFamily ?? "") === "Barlow Condensed" &&
+    normalizeFontName(copyFamily ?? "") === "Source Sans 3"
+  );
+};
+
+/**
+ * Registers Scoreline display/body faces under the same family names as design
+ * (Google Fonts: Barlow Condensed 500–900 + italic 700/800, Source Sans 3 variable).
+ */
+export const loadScorelineTypographyFonts = async (): Promise<void> => {
+  await Promise.allSettled(
+    SCORELINE_BARLOW_CONDENSED_FACES.map(async (face) => {
+      const path = fontPathMap[face.mapKey];
+      if (!path) {
+        return;
+      }
+
+      await loadFontFile({
+        family: "Barlow Condensed",
+        url: staticFile(path),
+        weight: face.weight,
+        style: face.style ?? "normal",
+      });
+    }),
+  );
+
+  const sourceSansPath = fontPathMap["Source Sans 3"];
+  if (sourceSansPath) {
+    await loadFontFile({
+      family: "Source Sans 3",
+      url: staticFile(sourceSansPath),
+      weight: "200 900",
+      style: "normal",
+    });
+  }
+};
+
 /**
  * Loads fonts specified in a theme configuration
  *
@@ -481,11 +549,21 @@ export const loadFontsFromTheme = async (
   } */
 
   // Filter out system fonts
-  const fontsToLoadFiltered = Array.from(fontsToLoad).filter(
-    (font) => !isSystemFont(font),
-  );
+  const scorelineTypography = usesScorelineTypography(theme);
+  const fontsToLoadFiltered = Array.from(fontsToLoad).filter((font) => {
+    if (isSystemFont(font)) {
+      return false;
+    }
 
-  if (fontsToLoadFiltered.length === 0) {
+    if (!scorelineTypography) {
+      return true;
+    }
+
+    const normalized = normalizeFontName(font);
+    return normalized !== "Barlow Condensed" && normalized !== "Source Sans 3";
+  });
+
+  if (fontsToLoadFiltered.length === 0 && !scorelineTypography) {
     //console.log("No custom fonts to load - using system fonts only");
     return;
   }
@@ -512,6 +590,10 @@ export const loadFontsFromTheme = async (
 
     // Wait for all fonts to load (or fail)
     await Promise.allSettled(loadPromises);
+
+    if (scorelineTypography) {
+      await loadScorelineTypographyFonts();
+    }
 
     //console.log("Finished font loading process");
     continueRender(handle);

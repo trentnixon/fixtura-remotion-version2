@@ -13,7 +13,7 @@
     <title>Scoreline - Cricket Ladder</title>
     <link rel="stylesheet" href="/design/_shared/shell.css" />
     <link rel="stylesheet" href="/design/_shared/frame.css" />
-        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
     <link rel="stylesheet" href="/design/_shared/scoreline-ladder.css" />
     <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,8 +30,7 @@
         },
       };
     </script>
-
-</head>
+  </head>
   <body class="design-shell">
     <header class="design-topbar">
       <strong>Fixtura Design Prototypes</strong>
@@ -88,7 +87,9 @@
                       <p class="header-eyebrow" data-hydrate="header-eyebrow">
                         Ladder
                       </p>
-                      <h1 data-hydrate="header-title">League Tables</h1>
+                      <h1 class="header-title" data-hydrate="header-title">
+                        League Tables
+                      </h1>
                     </div>
                   </div>
                   <div class="header-shell__crease" aria-hidden="true">
@@ -200,30 +201,43 @@
         assetSlug: "ladder",
       };
 
-      const TEAM_COUNT = 11;
+      const CREASE_MAX_ROWS = 12;
+      const DEFAULT_TEAM_COUNT = 11;
 
-      function resolveLogo(team) {
-        const candidate = team.clubLogo ?? team.playHQLogo ?? team.teamLogo;
-        if (!candidate) {
-          return "";
+      function resolveLadderDensity(rowCount) {
+        if (rowCount <= 11) {
+          return "normal";
         }
-        return typeof candidate === "string" ? candidate : candidate.url ?? "";
+        if (rowCount <= 14) {
+          return "compact";
+        }
+        return "tight";
       }
 
-      function mountLadderRows() {
+      function mountLadderRows(teamCount = DEFAULT_TEAM_COUNT) {
         const container = document.querySelector("[data-ladder-rows]");
         const template = document.getElementById("ladder-row-template");
-        if (!(container instanceof HTMLElement) || !(template instanceof HTMLTemplateElement)) {
+        if (
+          !(container instanceof HTMLElement) ||
+          !(template instanceof HTMLTemplateElement)
+        ) {
           return;
         }
 
+        const showCreases = teamCount <= CREASE_MAX_ROWS;
+        container.dataset.density = resolveLadderDensity(teamCount);
+        container.dataset.creases = showCreases ? "true" : "false";
         container.innerHTML = "";
-        for (let index = 0; index < TEAM_COUNT; index += 1) {
+
+        for (let index = 0; index < teamCount; index += 1) {
           const rowNumber = index + 1;
           const fragment = template.content.cloneNode(true);
           const entry = fragment.querySelector(".ladder-entry");
           const row = fragment.querySelector(".ladder-row");
-          if (!(entry instanceof HTMLElement) || !(row instanceof HTMLElement)) {
+          if (
+            !(entry instanceof HTMLElement) ||
+            !(row instanceof HTMLElement)
+          ) {
             continue;
           }
 
@@ -253,11 +267,25 @@
             stat.textContent = "0";
           });
 
+          if (!showCreases || index === teamCount - 1) {
+            fragment.querySelector(".ladder-crease")?.remove();
+          }
+
           container.appendChild(fragment);
         }
       }
 
-      mountLadderRows();
+      function resolveLogo(team) {
+        const candidate = team.clubLogo ?? team.playHQLogo ?? team.teamLogo;
+        if (!candidate) {
+          return "";
+        }
+        return typeof candidate === "string"
+          ? candidate
+          : (candidate.url ?? "");
+      }
+
+      mountLadderRows(DEFAULT_TEAM_COUNT);
 
       renderVariantNav(context.variantSlug);
       renderTabBar(context);
@@ -274,6 +302,12 @@
             const clubFocus = clubName
               .replace(/\s+cricket club.*$/i, "")
               .trim();
+            const teamCount = Math.max(
+              ladder?.League?.length ?? DEFAULT_TEAM_COUNT,
+              1,
+            );
+
+            mountLadderRows(teamCount);
 
             document.querySelectorAll(".ladder-entry").forEach((entry) => {
               if (!(entry instanceof HTMLElement)) {
@@ -284,6 +318,9 @@
               const team = ladder?.League?.[index];
               const row = entry.querySelector(".ladder-row");
               const img = entry.querySelector(".ladder-mark img");
+              const rank = row?.querySelector(".ladder-rank");
+              const teamName = row?.querySelector(".ladder-team");
+              const stats = row?.querySelectorAll(".ladder-stat");
 
               if (!team?.teamName?.trim()) {
                 entry.dataset.empty = "true";
@@ -291,6 +328,22 @@
               }
 
               entry.dataset.empty = "false";
+
+              if (rank instanceof HTMLElement) {
+                rank.textContent = team.position ?? String(index + 1);
+              }
+
+              if (teamName instanceof HTMLElement) {
+                teamName.textContent = team.teamName;
+              }
+
+              if (stats?.length >= 5) {
+                stats[0].textContent = team.P ?? "0";
+                stats[1].textContent = team.W ?? "0";
+                stats[2].textContent = team.L ?? "0";
+                stats[3].textContent = team.BYE ?? "0";
+                stats[4].textContent = team.PTS ?? "0";
+              }
 
               if (row instanceof HTMLElement) {
                 const isBias =

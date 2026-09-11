@@ -4,10 +4,10 @@
 
 Each template picks two typography roles:
 
-| Role | Typical use | Broadcast Pro | Scoreline |
-| --- | --- | --- | --- |
-| **Heading / display** | Titles, scores, hero type | Teko (`font-teko`) | Barlow Condensed (`--font-display`) |
-| **Body / labels** | Metadata, names, chips | Rajdhani (`font-rajdhani`) | Source Sans 3 (`--font-body`) |
+| Role                  | Typical use               | Broadcast Pro              | Scoreline                           |
+| --------------------- | ------------------------- | -------------------------- | ----------------------------------- |
+| **Heading / display** | Titles, scores, hero type | Teko (`font-teko`)         | Barlow Condensed (`--font-display`) |
+| **Body / labels**     | Metadata, names, chips    | Rajdhani (`font-rajdhani`) | Source Sans 3 (`--font-body`)       |
 
 In HTML prototypes, apply roles with Tailwind classes (Broadcast Pro) or CSS variables (Scoreline):
 
@@ -63,10 +63,10 @@ Family strings must match `fontPathMap` keys (e.g. `"Teko"`, `"Rajdhani"`, `"Bar
 
 ## Files
 
-| File | Purpose |
-| --- | --- |
-| `design/_shared/fonts.json` | Design-site font catalog + variant assignments |
-| `design/_shared/fonts.js` | Load CDN links + Tailwind `fontFamily` extend |
-| `public/fonts/` | Local font files for Remotion render |
-| `src/core/utils/fonts/fontLoader.ts` | Remotion font loading |
-| `src/package/tailwind-preset.cjs` | Shared Tailwind font utilities |
+| File                                 | Purpose                                        |
+| ------------------------------------ | ---------------------------------------------- |
+| `design/_shared/fonts.json`          | Design-site font catalog + variant assignments |
+| `design/_shared/fonts.js`            | Load CDN links + Tailwind `fontFamily` extend  |
+| `public/fonts/`                      | Local font files for Remotion render           |
+| `src/core/utils/fonts/fontLoader.ts` | Remotion font loading                          |
+| `src/package/tailwind-preset.cjs`    | Shared Tailwind font utilities                 |

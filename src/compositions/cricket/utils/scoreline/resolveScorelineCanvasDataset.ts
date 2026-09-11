@@ -3,6 +3,7 @@ export type ScorelineCanvasDataset = {
   "data-leaderboard"?: "batting" | "bowling";
   "data-roster"?: "";
   "data-totw"?: "";
+  "data-result-single"?: "";
 };
 
 export const resolveScorelineCanvasDataset = (
@@ -15,10 +16,16 @@ export const resolveScorelineCanvasDataset = (
       return { "data-leaderboard": "batting" };
     case "CricketTop5Bowling":
       return { "data-leaderboard": "bowling" };
+    case "CricketBattingPerformances":
+      return { "data-leaderboard": "batting" };
+    case "CricketBowlingPerformances":
+      return { "data-leaderboard": "bowling" };
     case "CricketRoster":
       return { "data-roster": "" };
     case "CricketTeamOfTheWeek":
       return { "data-totw": "" };
+    case "CricketResultSingle":
+      return { "data-result-single": "" };
     default:
       return {};
   }

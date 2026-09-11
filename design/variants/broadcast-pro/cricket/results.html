@@ -15,10 +15,14 @@
     <link rel="stylesheet" href="/design/_shared/frame.css" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
-    <script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("broadcast-pro");
+
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -32,18 +36,24 @@
               "surface-container-lowest": "#010e24",
               "on-surface": "#d6e3ff",
             },
-            fontFamily: {
-              teko: ["Teko", "sans-serif"],
-              rajdhani: ["Rajdhani", "sans-serif"],
+            fontFamily,
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
             },
-            borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
           },
         },
       };
     </script>
     <style>
       .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
       }
       .glass-panel {
         background: rgba(255, 255, 255, 0.1);
@@ -71,7 +81,11 @@
         <ul data-design-variant-nav></ul>
       </nav>
       <div class="design-main">
-        <nav class="design-tabs" aria-label="Asset types" data-design-tabs></nav>
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
         <div class="design-canvas-wrap">
           <div class="design-frame-scale">
             <div
@@ -88,13 +102,15 @@
               </div>
 
               <!-- Asset Header -->
-              <header class="relative z-10 w-full pt-16 flex flex-col items-center">
+              <header
+                class="relative z-10 w-full pt-16 flex flex-col items-center"
+              >
                 <div
                   class="w-28 h-28 bg-white rounded-full flex items-center justify-center p-3 shadow-xl mb-6"
                 >
                   <span
                     class="material-symbols-outlined text-surface text-7xl"
-                    style="font-variation-settings: 'FILL' 1"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
                     >sports_cricket</span
                   >
                 </div>
@@ -137,12 +153,15 @@
 
                   <div class="flex flex-col gap-[3px]">
                     <!-- Team row (home) -->
-                    <div class="glass-panel flex items-center justify-between p-4">
+                    <div
+                      class="glass-panel flex items-center justify-between p-4"
+                    >
                       <div class="flex items-center gap-6">
                         <div
                           class="w-12 h-12 bg-white/20 flex items-center justify-center"
                         >
-                          <span class="material-symbols-outlined text-white text-3xl"
+                          <span
+                            class="material-symbols-outlined text-white text-3xl"
                             >shield</span
                           >
                         </div>
@@ -193,12 +212,15 @@
                     </div>
 
                     <!-- Team row (away) -->
-                    <div class="glass-panel flex items-center justify-between p-4 mt-2">
+                    <div
+                      class="glass-panel flex items-center justify-between p-4 mt-2"
+                    >
                       <div class="flex items-center gap-6">
                         <div
                           class="w-12 h-12 bg-white/20 flex items-center justify-center"
                         >
-                          <span class="material-symbols-outlined text-white text-3xl"
+                          <span
+                            class="material-symbols-outlined text-white text-3xl"
                             >token</span
                           >
                         </div>
@@ -233,7 +255,7 @@
                   >
                     <span
                       class="material-symbols-outlined text-white text-4xl"
-                      style="font-variation-settings: 'FILL' 1"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
                       >eco</span
                     >
                   </div>

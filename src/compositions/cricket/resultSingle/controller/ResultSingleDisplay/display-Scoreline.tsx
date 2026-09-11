@@ -2,8 +2,8 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { SponsorFooter } from "../../../sponsorFooter";
-import { ScorelineCreaseMarkup } from "../../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
+import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { csClass } from "../../../utils/scoreline/componentStyles";
 import MatchCardScoreline from "../../layout/MatchCard/card-Scoreline";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
@@ -11,7 +11,7 @@ import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHei
 const ResultSingleDisplayScoreline: React.FC<ResultSingleDisplayProps> = ({
   match,
 }) => {
-  const { layout } = useThemeContext();
+  const { layout, componentStyles } = useThemeContext();
   const { animations } = useAnimationContext();
   const { heights } = layout;
   const containerAnimation = animations.container.main.itemContainer;
@@ -19,17 +19,18 @@ const ResultSingleDisplayScoreline: React.FC<ResultSingleDisplayProps> = ({
 
   return (
     <div
-      className="flex h-full w-full flex-col"
+      className={csClass(componentStyles, "scorelineDisplayColumn")}
       style={{ height: `${mainContentHeight + heights.footer}px` }}
     >
       <AnimatedContainer
         type="full"
-        className="min-h-0 flex-1 overflow-hidden rounded-none"
+        className={csClass(componentStyles, "scorelineAnimatedShell")}
         backgroundColor="none"
         animation={containerAnimation.containerIn}
+        exitAnimation={containerAnimation.containerOut}
       >
         <main
-          className="results-ledger results-ledger--single"
+          className={`results-ledger results-ledger--single ${csClass(componentStyles, "scorelineResultsLedger")}`}
           style={{
             height: `${mainContentHeight}px`,
             maxHeight: `${mainContentHeight}px`,
@@ -39,20 +40,11 @@ const ResultSingleDisplayScoreline: React.FC<ResultSingleDisplayProps> = ({
         </main>
       </AnimatedContainer>
 
-      <footer
-        className="asset-footer"
-        style={{ height: `${heights.footer}px`, maxHeight: `${heights.footer}px` }}
-      >
-        <div className="footer-crease" aria-hidden>
-          <ScorelineCreaseMarkup />
-        </div>
-        <div className="sponsor-strip">
-          <SponsorFooter
-            assignSponsors={match.assignSponsors}
-            primaryForScreen={match.primaryForScreen}
-          />
-        </div>
-      </footer>
+      <ScorelineSponsorFooter
+        assignSponsors={match.assignSponsors}
+        primaryForScreen={match.primaryForScreen}
+        sponsorStripKey="scorelineResultsSponsorStrip"
+      />
     </div>
   );
 };

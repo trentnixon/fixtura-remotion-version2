@@ -13,7 +13,7 @@
     <title>Scoreline - Cricket Upcoming Fixtures</title>
     <link rel="stylesheet" href="/design/_shared/shell.css" />
     <link rel="stylesheet" href="/design/_shared/frame.css" />
-        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
     <link rel="stylesheet" href="/design/_shared/scoreline-upcoming.css" />
     <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,8 +30,7 @@
         },
       };
     </script>
-
-</head>
+  </head>
   <body class="design-shell">
     <header class="design-topbar">
       <strong>Fixtura Design Prototypes</strong>
@@ -87,7 +86,9 @@
                       <p class="header-eyebrow" data-hydrate="header-eyebrow">
                         Upcoming
                       </p>
-                      <h1 data-hydrate="header-title">Upcoming Fixtures</h1>
+                      <h1 class="header-title" data-hydrate="header-title">
+                        Upcoming Fixtures
+                      </h1>
                     </div>
                   </div>
                   <div class="header-shell__crease" aria-hidden="true">
@@ -105,270 +106,288 @@
 
               <main class="fixtures-ledger">
                 <div class="fixtures-stack">
-                <section class="fixture-card">
-                  <div class="fixture-grade">
-                    <h2
-                      class="fixture-grade-name"
-                      data-hydrate="fixture-1-grade"
-                    >
-                      Grade
-                    </h2>
-                    <p class="fixture-grade-meta">
-                      <span class="meta-chip" data-hydrate="fixture-1-type"
-                        >Type</span
-                      ><span class="meta-separator"></span
-                      ><span class="meta-chip" data-hydrate="fixture-1-round"
-                        >Round</span
-                      ><span
-                        class="meta-separator meta-separator--secondary"
-                      ></span
-                      ><span class="meta-chip" data-hydrate="fixture-1-age"
-                        >Age</span
+                  <section class="fixture-card">
+                    <div class="fixture-grade">
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="fixture-1-grade"
                       >
-                    </p>
+                        Grade
+                      </h2>
+                      <p class="fixture-grade-meta">
+                        <span class="meta-chip" data-hydrate="fixture-1-type"
+                          >Type</span
+                        ><span class="meta-separator"></span
+                        ><span class="meta-chip" data-hydrate="fixture-1-round"
+                          >Round</span
+                        ><span
+                          class="meta-separator meta-separator--secondary"
+                        ></span
+                        ><span class="meta-chip" data-hydrate="fixture-1-age"
+                          >Age</span
+                        >
+                      </p>
                     </div>
                     <div class="fixture-matchup">
-                    <div class="team-band team-band--home">
-                      <div class="team-mark">
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Home team logo"
-                          data-hydrate="fixture-1-home-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
+                      <div class="team-band team-band--home">
+                        <div class="team-mark">
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Home team logo"
+                            data-hydrate="fixture-1-home-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="team-copy">
+                          <span class="team-side-label">Home</span>
+                          <p
+                            class="team-name"
+                            data-hydrate="fixture-1-home-team"
+                          >
+                            Home
+                          </p>
+                        </div>
                       </div>
-                      <div class="team-copy">
-                        <span class="team-side-label">Home</span>
-                        <p class="team-name" data-hydrate="fixture-1-home-team">
-                          Home
-                        </p>
+                      <div class="fixture-centre">
+                        <span class="fixture-vs" aria-hidden="true">V</span>
+                        <div class="fixture-when">
+                          <span class="fixture-field-label">When</span>
+                          <p class="fixture-date" data-hydrate="fixture-1-date">
+                            Date
+                          </p>
+                          <p class="fixture-time" data-hydrate="fixture-1-time">
+                            Time
+                          </p>
+                        </div>
+                        <div class="fixture-where">
+                          <span class="fixture-field-label">Venue</span>
+                          <p
+                            class="fixture-ground"
+                            data-hydrate="fixture-1-ground"
+                          >
+                            Ground
+                          </p>
+                        </div>
+                      </div>
+                      <div class="team-band team-band--away">
+                        <div class="team-mark">
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Away team logo"
+                            data-hydrate="fixture-1-away-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="team-copy">
+                          <span class="team-side-label">Away</span>
+                          <p
+                            class="team-name"
+                            data-hydrate="fixture-1-away-team"
+                          >
+                            Away
+                          </p>
+                        </div>
                       </div>
                     </div>
-                    <div class="fixture-centre">
-                      <span class="fixture-vs" aria-hidden="true">V</span>
-                      <div class="fixture-when">
-                        <span class="fixture-field-label">When</span>
-                        <p class="fixture-date" data-hydrate="fixture-1-date">
-                          Date
-                        </p>
-                        <p class="fixture-time" data-hydrate="fixture-1-time">
-                          Time
-                        </p>
-                      </div>
-                      <div class="fixture-where">
-                        <span class="fixture-field-label">Venue</span>
-                        <p
-                          class="fixture-ground"
-                          data-hydrate="fixture-1-ground"
-                        >
-                          Ground
-                        </p>
-                      </div>
-                    </div>
-                    <div class="team-band team-band--away">
-                      <div class="team-mark">
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Away team logo"
-                          data-hydrate="fixture-1-away-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
-                      </div>
-                      <div class="team-copy">
-                        <span class="team-side-label">Away</span>
-                        <p class="team-name" data-hydrate="fixture-1-away-team">
-                          Away
-                        </p>
-                      </div>
+                  </section>
+
+                  <div class="fixture-separator" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
                     </div>
                   </div>
-                </section>
 
-                <div class="fixture-separator" aria-hidden="true">
-                  <div class="crease-rule">
-                    <span class="crease-post crease-post--primary"></span>
-                    <span class="crease-rail"
-                      ><span class="crease-rail__primary"></span
-                      ><span class="crease-rail__secondary"></span
-                    ></span>
-                    <span class="crease-post crease-post--secondary"></span>
-                  </div>
-                </div>
-
-                <section class="fixture-card">
-                  <div class="fixture-grade">
-                    <h2
-                      class="fixture-grade-name"
-                      data-hydrate="fixture-2-grade"
-                    >
-                      Grade
-                    </h2>
-                    <p class="fixture-grade-meta">
-                      <span class="meta-chip" data-hydrate="fixture-2-type"
-                        >Type</span
-                      ><span class="meta-separator"></span
-                      ><span class="meta-chip" data-hydrate="fixture-2-round"
-                        >Round</span
-                      ><span
-                        class="meta-separator meta-separator--secondary"
-                      ></span
-                      ><span class="meta-chip" data-hydrate="fixture-2-age"
-                        >Age</span
+                  <section class="fixture-card">
+                    <div class="fixture-grade">
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="fixture-2-grade"
                       >
-                    </p>
+                        Grade
+                      </h2>
+                      <p class="fixture-grade-meta">
+                        <span class="meta-chip" data-hydrate="fixture-2-type"
+                          >Type</span
+                        ><span class="meta-separator"></span
+                        ><span class="meta-chip" data-hydrate="fixture-2-round"
+                          >Round</span
+                        ><span
+                          class="meta-separator meta-separator--secondary"
+                        ></span
+                        ><span class="meta-chip" data-hydrate="fixture-2-age"
+                          >Age</span
+                        >
+                      </p>
                     </div>
                     <div class="fixture-matchup">
-                    <div class="team-band team-band--home">
-                      <div class="team-mark">
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Home team logo"
-                          data-hydrate="fixture-2-home-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
+                      <div class="team-band team-band--home">
+                        <div class="team-mark">
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Home team logo"
+                            data-hydrate="fixture-2-home-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="team-copy">
+                          <span class="team-side-label">Home</span>
+                          <p
+                            class="team-name"
+                            data-hydrate="fixture-2-home-team"
+                          >
+                            Home
+                          </p>
+                        </div>
                       </div>
-                      <div class="team-copy">
-                        <span class="team-side-label">Home</span>
-                        <p class="team-name" data-hydrate="fixture-2-home-team">
-                          Home
-                        </p>
+                      <div class="fixture-centre">
+                        <span class="fixture-vs" aria-hidden="true">V</span>
+                        <div class="fixture-when">
+                          <span class="fixture-field-label">When</span>
+                          <p class="fixture-date" data-hydrate="fixture-2-date">
+                            Date
+                          </p>
+                          <p class="fixture-time" data-hydrate="fixture-2-time">
+                            Time
+                          </p>
+                        </div>
+                        <div class="fixture-where">
+                          <span class="fixture-field-label">Venue</span>
+                          <p
+                            class="fixture-ground"
+                            data-hydrate="fixture-2-ground"
+                          >
+                            Ground
+                          </p>
+                        </div>
+                      </div>
+                      <div class="team-band team-band--away">
+                        <div class="team-mark">
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Away team logo"
+                            data-hydrate="fixture-2-away-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="team-copy">
+                          <span class="team-side-label">Away</span>
+                          <p
+                            class="team-name"
+                            data-hydrate="fixture-2-away-team"
+                          >
+                            Away
+                          </p>
+                        </div>
                       </div>
                     </div>
-                    <div class="fixture-centre">
-                      <span class="fixture-vs" aria-hidden="true">V</span>
-                      <div class="fixture-when">
-                        <span class="fixture-field-label">When</span>
-                        <p class="fixture-date" data-hydrate="fixture-2-date">
-                          Date
-                        </p>
-                        <p class="fixture-time" data-hydrate="fixture-2-time">
-                          Time
-                        </p>
-                      </div>
-                      <div class="fixture-where">
-                        <span class="fixture-field-label">Venue</span>
-                        <p
-                          class="fixture-ground"
-                          data-hydrate="fixture-2-ground"
-                        >
-                          Ground
-                        </p>
-                      </div>
-                    </div>
-                    <div class="team-band team-band--away">
-                      <div class="team-mark">
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Away team logo"
-                          data-hydrate="fixture-2-away-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
-                      </div>
-                      <div class="team-copy">
-                        <span class="team-side-label">Away</span>
-                        <p class="team-name" data-hydrate="fixture-2-away-team">
-                          Away
-                        </p>
-                      </div>
+                  </section>
+
+                  <div class="fixture-separator" aria-hidden="true">
+                    <div class="crease-rule">
+                      <span class="crease-post crease-post--primary"></span>
+                      <span class="crease-rail"
+                        ><span class="crease-rail__primary"></span
+                        ><span class="crease-rail__secondary"></span
+                      ></span>
+                      <span class="crease-post crease-post--secondary"></span>
                     </div>
                   </div>
-                </section>
 
-                <div class="fixture-separator" aria-hidden="true">
-                  <div class="crease-rule">
-                    <span class="crease-post crease-post--primary"></span>
-                    <span class="crease-rail"
-                      ><span class="crease-rail__primary"></span
-                      ><span class="crease-rail__secondary"></span
-                    ></span>
-                    <span class="crease-post crease-post--secondary"></span>
-                  </div>
-                </div>
-
-                <section class="fixture-card">
-                  <div class="fixture-grade">
-                    <h2
-                      class="fixture-grade-name"
-                      data-hydrate="fixture-3-grade"
-                    >
-                      Grade
-                    </h2>
-                    <p class="fixture-grade-meta">
-                      <span class="meta-chip" data-hydrate="fixture-3-type"
-                        >Type</span
-                      ><span class="meta-separator"></span
-                      ><span class="meta-chip" data-hydrate="fixture-3-round"
-                        >Round</span
-                      ><span
-                        class="meta-separator meta-separator--secondary"
-                      ></span
-                      ><span class="meta-chip" data-hydrate="fixture-3-age"
-                        >Age</span
+                  <section class="fixture-card">
+                    <div class="fixture-grade">
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="fixture-3-grade"
                       >
-                    </p>
+                        Grade
+                      </h2>
+                      <p class="fixture-grade-meta">
+                        <span class="meta-chip" data-hydrate="fixture-3-type"
+                          >Type</span
+                        ><span class="meta-separator"></span
+                        ><span class="meta-chip" data-hydrate="fixture-3-round"
+                          >Round</span
+                        ><span
+                          class="meta-separator meta-separator--secondary"
+                        ></span
+                        ><span class="meta-chip" data-hydrate="fixture-3-age"
+                          >Age</span
+                        >
+                      </p>
                     </div>
                     <div class="fixture-matchup">
-                    <div class="team-band team-band--home">
-                      <div class="team-mark">
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Home team logo"
-                          data-hydrate="fixture-3-home-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
+                      <div class="team-band team-band--home">
+                        <div class="team-mark">
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Home team logo"
+                            data-hydrate="fixture-3-home-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="team-copy">
+                          <span class="team-side-label">Home</span>
+                          <p
+                            class="team-name"
+                            data-hydrate="fixture-3-home-team"
+                          >
+                            Home
+                          </p>
+                        </div>
                       </div>
-                      <div class="team-copy">
-                        <span class="team-side-label">Home</span>
-                        <p class="team-name" data-hydrate="fixture-3-home-team">
-                          Home
-                        </p>
+                      <div class="fixture-centre">
+                        <span class="fixture-vs" aria-hidden="true">V</span>
+                        <div class="fixture-when">
+                          <span class="fixture-field-label">When</span>
+                          <p class="fixture-date" data-hydrate="fixture-3-date">
+                            Date
+                          </p>
+                          <p class="fixture-time" data-hydrate="fixture-3-time">
+                            Time
+                          </p>
+                        </div>
+                        <div class="fixture-where">
+                          <span class="fixture-field-label">Venue</span>
+                          <p
+                            class="fixture-ground"
+                            data-hydrate="fixture-3-ground"
+                          >
+                            Ground
+                          </p>
+                        </div>
+                      </div>
+                      <div class="team-band team-band--away">
+                        <div class="team-mark">
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Away team logo"
+                            data-hydrate="fixture-3-away-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="team-copy">
+                          <span class="team-side-label">Away</span>
+                          <p
+                            class="team-name"
+                            data-hydrate="fixture-3-away-team"
+                          >
+                            Away
+                          </p>
+                        </div>
                       </div>
                     </div>
-                    <div class="fixture-centre">
-                      <span class="fixture-vs" aria-hidden="true">V</span>
-                      <div class="fixture-when">
-                        <span class="fixture-field-label">When</span>
-                        <p class="fixture-date" data-hydrate="fixture-3-date">
-                          Date
-                        </p>
-                        <p class="fixture-time" data-hydrate="fixture-3-time">
-                          Time
-                        </p>
-                      </div>
-                      <div class="fixture-where">
-                        <span class="fixture-field-label">Venue</span>
-                        <p
-                          class="fixture-ground"
-                          data-hydrate="fixture-3-ground"
-                        >
-                          Ground
-                        </p>
-                      </div>
-                    </div>
-                    <div class="team-band team-band--away">
-                      <div class="team-mark">
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Away team logo"
-                          data-hydrate="fixture-3-away-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
-                      </div>
-                      <div class="team-copy">
-                        <span class="team-side-label">Away</span>
-                        <p class="team-name" data-hydrate="fixture-3-away-team">
-                          Away
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+                  </section>
                 </div>
               </main>
 
@@ -419,24 +438,24 @@
       renderTabBar(context);
       await initScorelineAsset(context, {
         afterHydrate: async () => {
-      document.querySelectorAll(".meta-chip").forEach((chip) => {
-        if (!(chip instanceof HTMLElement)) {
-          return;
-        }
+          document.querySelectorAll(".meta-chip").forEach((chip) => {
+            if (!(chip instanceof HTMLElement)) {
+              return;
+            }
 
-        chip.dataset.empty = chip.textContent?.trim() ? "false" : "true";
-      });
+            chip.dataset.empty = chip.textContent?.trim() ? "false" : "true";
+          });
 
-      document.querySelectorAll(".fixture-grade-meta").forEach((meta) => {
-        if (!(meta instanceof HTMLElement)) {
-          return;
-        }
+          document.querySelectorAll(".fixture-grade-meta").forEach((meta) => {
+            if (!(meta instanceof HTMLElement)) {
+              return;
+            }
 
-        const visible = Array.from(meta.querySelectorAll(".meta-chip")).some(
-          (chip) => chip.dataset.empty !== "true",
-        );
-        meta.dataset.empty = visible ? "false" : "true";
-      });
+            const visible = Array.from(
+              meta.querySelectorAll(".meta-chip"),
+            ).some((chip) => chip.dataset.empty !== "true");
+            meta.dataset.empty = visible ? "false" : "true";
+          });
         },
       });
     </script>

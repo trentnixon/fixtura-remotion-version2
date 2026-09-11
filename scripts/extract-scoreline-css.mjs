@@ -4,18 +4,36 @@ import path from "path";
 const root = process.cwd();
 
 const assets = [
-  { html: "design/variants/scoreline/cricket/upcoming.html", css: "scoreline-upcoming.css" },
-  { html: "design/variants/scoreline/cricket/ladder.html", css: "scoreline-ladder.css" },
-  { html: "design/variants/scoreline/cricket/top5-batting.html", css: "scoreline-top5.css" },
-  { html: "design/variants/scoreline/cricket/top5-bowling.html", css: "scoreline-top5.css", skipWrite: true },
-  { html: "design/variants/scoreline/cricket/team-roster.html", css: "scoreline-team-roster.css" },
+  {
+    html: "design/variants/scoreline/cricket/upcoming.html",
+    css: "scoreline-upcoming.css",
+  },
+  {
+    html: "design/variants/scoreline/cricket/ladder.html",
+    css: "scoreline-ladder.css",
+  },
+  {
+    html: "design/variants/scoreline/cricket/top5-batting.html",
+    css: "scoreline-top5.css",
+  },
+  {
+    html: "design/variants/scoreline/cricket/top5-bowling.html",
+    css: "scoreline-top5.css",
+    skipWrite: true,
+  },
+  {
+    html: "design/variants/scoreline/cricket/team-roster.html",
+    css: "scoreline-team-roster.css",
+  },
   {
     html: "design/variants/scoreline/cricket/team-of-the-week.html",
     css: "scoreline-team-of-the-week.css",
   },
 ];
 
-const headLinks = (cssFile) => `    <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+const headLinks = (
+  cssFile,
+) => `    <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
     <link rel="stylesheet" href="/design/_shared/${cssFile}" />
     <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
     <script src="https://cdn.tailwindcss.com"></script>

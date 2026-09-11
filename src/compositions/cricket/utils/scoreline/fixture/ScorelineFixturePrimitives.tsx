@@ -2,14 +2,9 @@ import React from "react";
 import { Img } from "remotion";
 import { ScorelineCreaseMarkup } from "../../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
 
-const renderMetaChips = (chips: string[]) => {
-  const visible = chips.filter(Boolean);
-  if (visible.length === 0) {
-    return null;
-  }
-
-  return visible.map((chip, index) => (
-    <React.Fragment key={`${chip}-${index}`}>
+const renderRosterMetaChips = (chips: [string, string, string, string]) =>
+  chips.map((chip, index) => (
+    <React.Fragment key={`roster-meta-${index}`}>
       {index > 0 ? (
         <span
           className={
@@ -20,25 +15,46 @@ const renderMetaChips = (chips: string[]) => {
           aria-hidden
         />
       ) : null}
-      <span className="meta-chip">{chip}</span>
+      <span className="meta-chip" data-empty={chip.trim() ? "false" : "true"}>
+        {chip}
+      </span>
     </React.Fragment>
   ));
-};
+
+/** Fixed type · round · age slots — mirrors design upcoming.bind.json chips. */
+const renderFixtureMetaChips = (chips: [string, string, string]) =>
+  chips.map((chip, index) => (
+    <React.Fragment key={`fixture-meta-${index}`}>
+      {index > 0 ? (
+        <span
+          className={
+            index === 2
+              ? "meta-separator meta-separator--secondary"
+              : "meta-separator"
+          }
+          aria-hidden
+        />
+      ) : null}
+      <span className="meta-chip" data-empty={chip.trim() ? "false" : "true"}>
+        {chip}
+      </span>
+    </React.Fragment>
+  ));
 
 export const ScorelineFixtureGrade: React.FC<{
   gradeName: string;
-  metaChips: string[];
+  metaChips: [string, string, string];
 }> = ({ gradeName, metaChips }) => {
-  const chips = metaChips.filter(Boolean);
+  const hasVisibleChip = metaChips.some((chip) => chip.trim());
 
   return (
     <div className="fixture-grade">
       <h2 className="fixture-grade-name">{gradeName}</h2>
       <p
         className="fixture-grade-meta"
-        data-empty={chips.length === 0 ? "true" : "false"}
+        data-empty={hasVisibleChip ? "false" : "true"}
       >
-        {renderMetaChips(chips)}
+        {renderFixtureMetaChips(metaChips)}
       </p>
     </div>
   );
@@ -46,24 +62,24 @@ export const ScorelineFixtureGrade: React.FC<{
 
 export const ScorelineRosterGrade: React.FC<{
   gradeName: string;
-  metaChips: string[];
+  metaChips: [string, string, string, string];
 }> = ({ gradeName, metaChips }) => {
-  const chips = metaChips.filter(Boolean);
+  const hasVisibleChip = metaChips.some((chip) => chip.trim());
 
   return (
     <div className="roster-grade">
       <h2 className="roster-grade-name">{gradeName}</h2>
       <p
         className="roster-grade-meta"
-        data-empty={chips.length === 0 ? "true" : "false"}
+        data-empty={hasVisibleChip ? "false" : "true"}
       >
-        {renderMetaChips(chips)}
+        {renderRosterMetaChips(metaChips)}
       </p>
     </div>
   );
 };
 
-const ScorelineFixtureTeamBand: React.FC<{
+export const ScorelineFixtureTeamBand: React.FC<{
   side: "home" | "away";
   sideLabel: string;
   teamName: string;
@@ -101,7 +117,7 @@ export const ScorelineFixtureCentre: React.FC<{
     <div className="fixture-when">
       <span className="fixture-field-label">When</span>
       <p className="fixture-date">{date}</p>
-      {time ? <p className="fixture-time">{time}</p> : null}
+      <p className="fixture-time">{time}</p>
     </div>
     <div className="fixture-where">
       <span className="fixture-field-label">Venue</span>
@@ -135,6 +151,6 @@ export const ScorelineFixtureSeparator: React.FC = () => (
 );
 
 /** @deprecated Use ScorelineFixtureSeparator */
-export const ScorelineCreaseSeparator: React.FC<{ className?: string }> = () => (
-  <ScorelineFixtureSeparator />
-);
+export const ScorelineCreaseSeparator: React.FC<{
+  className?: string;
+}> = () => <ScorelineFixtureSeparator />;

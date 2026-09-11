@@ -3,7 +3,11 @@ import { useMemo } from "react";
 import { staticFile } from "remotion";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { deriveScorelineThemeVars } from "./applyScorelineTheme";
-import { resolveScorelineMatchContextTokens } from "./resolveScorelineOverlayTokens";
+import {
+  resolveScorelineContainerCopyTokens,
+  resolveScorelineMatchContextTokens,
+  resolveScorelineModeSurfaceVars,
+} from "./resolveScorelineOverlayTokens";
 
 export const getScorelineCanvasStyle = (
   primary?: string,
@@ -36,11 +40,31 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
     () => resolveScorelineMatchContextTokens(selectedPalette),
     [selectedPalette],
   );
+  const modeSurfaces = useMemo(
+    () => resolveScorelineModeSurfaceVars(selectedPalette),
+    [selectedPalette],
+  );
+  const containerCopy = useMemo(
+    () => resolveScorelineContainerCopyTokens(selectedPalette),
+    [selectedPalette],
+  );
 
   return useMemo(
     () =>
       ({
         ...getScorelineCanvasStyle(colors?.primary, colors?.secondary),
+        background: "transparent",
+        "--container-background": modeSurfaces.containerBackground,
+        "--container-background-alt": modeSurfaces.containerBackgroundAlt,
+        "--container-surface": containerCopy.surface,
+        "--container-surface-solid": containerCopy.surfaceSolid,
+        "--container-inset": containerCopy.inset,
+        "--container-text": containerCopy.text,
+        "--container-text-muted": containerCopy.textMuted,
+        "--container-text-support": containerCopy.textSupport,
+        "--container-text-accent": containerCopy.accent,
+        "--surface-muted": modeSurfaces.surfaceMuted,
+        "--surface": modeSurfaces.surface,
         "--header-text": headerText,
         "--header-accent": headerAccent,
         "--match-context-surface": matchContext.surface,
@@ -49,6 +73,14 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
         "--match-context-text": matchContext.text,
         "--match-context-accent": matchContext.accent,
       }) as CSSProperties,
-    [colors?.primary, colors?.secondary, headerAccent, headerText, matchContext],
+    [
+      colors?.primary,
+      colors?.secondary,
+      containerCopy,
+      headerAccent,
+      headerText,
+      matchContext,
+      modeSurfaces,
+    ],
   );
 };

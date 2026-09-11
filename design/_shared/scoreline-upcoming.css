@@ -1,300 +1,344 @@
-/* Scoreline upcoming layout — synced with src/templates/variants/scoreline/styles/scoreline-upcoming.css */
+/* Scoreline Upcoming layout — synced with design/_shared/scoreline-upcoming.css */
 
-/* Scoreline — The Crease System · Upcoming Fixtures */
-      .scoreline-canvas {
-        --frame-height: 1350px;
-        --zone-pad: 12px;
-        --zone-header-pad-inline: 28px;
-        --zone-header-pad-bottom: 0px;
-        --zone-content-pad: 28px;
-        --zone-header: 140px;
-        --zone-content: 1088px;
-        --zone-footer: 112px;
-        --club-primary: #862f2f;
-        --club-secondary: #efb247;
-        --ink: #080b0d;
-        --paper: #ffffff;
-        --surface: #ffffff;
-        --surface-muted: #f3f0ea;
-        --rule: rgba(8, 11, 13, 0.12);
-        --muted: #5f5b56;
-        --font-display: "Barlow Condensed", Arial, sans-serif;
-        --font-body: "Source Sans 3", Arial, sans-serif;
-        --space-1: 4px;
-        --space-2: 8px;
-        --space-3: 16px;
-        --space-4: 24px;
-        --type-team: 30px;
-        --type-meta: 21px;
-        position: relative;
-        isolation: isolate;
-        overflow: hidden;
-        background: var(--paper);
-        color: var(--ink);
-        font-family: var(--font-body);
-      }
+.scoreline-canvas {
+  --frame-height: 1350px;
+  --zone-pad: 12px;
+  --zone-header-pad-inline: 28px;
+  --zone-header-pad-bottom: 0px;
+  --zone-content-pad: 28px;
+  --zone-header: 140px;
+  --zone-content: 1088px;
+  --zone-footer: 112px;
+  --club-primary: #862f2f;
+  --club-secondary: #efb247;
+  --ink: #080b0d;
+  --paper: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f3f0ea;
+  --rule: rgba(8, 11, 13, 0.12);
+  --muted: #5f5b56;
+  --font-display: "Barlow Condensed", Arial, sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --type-fixture-grade: 21px;
+  --type-fixture-team: 34px;
+  --type-meta: 21px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
 
-      .scoreline-canvas,
-      .scoreline-canvas * {
-        box-sizing: border-box;
-      }
+.scoreline-canvas,
+.scoreline-canvas * {
+  box-sizing: border-box;
+}
 
-      .scoreline-canvas h1,
-      .scoreline-canvas h2,
-      .scoreline-canvas h3,
-      .scoreline-canvas p {
-        margin: 0;
-      }
+.scoreline-canvas h1,
+.scoreline-canvas h2,
+.scoreline-canvas h3,
+.scoreline-canvas p {
+  margin: 0;
+}
 
-      .fixture-palette {
-        display: none;
-      }
+.scoreline-canvas .fixture-palette {
+  display: none;
+}
 
-      .team-mark {
-        position: relative;
-        overflow: hidden;
-        display: grid;
-        place-items: center;
-        background: var(--surface);
-      }
+.scoreline-canvas .team-mark {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+}
 
-      .team-mark img {
-        position: absolute;
-        inset: 4px;
-        width: calc(100% - 8px);
-        height: calc(100% - 8px);
-        object-fit: contain;
-      }
+.scoreline-canvas .team-mark img {
+  position: absolute;
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  object-fit: contain;
+}
 
-      .fixtures-ledger {
-        min-height: 0;
-        flex: 1 1 var(--zone-content);
-        max-height: var(--zone-content);
-        padding: var(--zone-content-pad);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0;
-        overflow: hidden;
-      }
+.scoreline-canvas .fixtures-ledger {
+  min-height: 0;
+  flex: 1 1 var(--zone-content);
+  max-height: var(--zone-content);
+  padding: var(--zone-content-pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+}
 
-      .fixtures-stack {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
+.scoreline-canvas .fixtures-stack {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
-      .fixture-card {
-        flex: 0 0 auto;
-        display: grid;
-        grid-template-rows: auto auto;
-        gap: var(--space-2);
-      }
+.scoreline-canvas .fixtures-stack > .fixture-card {
+  flex: 0 0 auto;
+}
 
-      .fixture-grade {
-        min-width: 0;
-        padding: 10px 12px;
-        display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-        gap: var(--space-3);
-        align-items: start;
-        background: var(--match-context-surface, color-mix(in srgb, var(--surface-muted) 72%, transparent));
-      }
+.scoreline-canvas .fixtures-stack > .fixture-separator {
+  flex: 0 0 auto;
+  margin: var(--space-2) 0;
+  padding: var(--space-2) 0;
+}
 
-      .fixture-grade-name {
-        display: -webkit-box;
-        overflow: hidden;
-        color: var(--ink);
-        font-family: var(--font-display);
-        font-size: 21px;
-        font-weight: 700;
-        font-stretch: condensed;
-        letter-spacing: -0.01em;
-        line-height: 1.12;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-      }
+.scoreline-canvas .fixture-card {
+  overflow: hidden;
+}
 
-      .fixture-grade-meta {
-        min-width: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 6px 8px;
-        color: var(--contrast-meta);
-        font-family: var(--font-body);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.2;
-        text-align: right;
-      }
+.scoreline-canvas .fixture-card > .animated-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
 
-      .fixture-grade-meta[data-empty="true"] {
-        display: none;
-      }
+.scoreline-canvas .fixture-grade {
+  min-width: 0;
+  padding: 10px 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: var(--space-3);
+  align-items: center;
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+}
 
-      .meta-separator {
-        width: 4px;
-        height: 4px;
-        flex: 0 0 auto;
-        background: var(--club-primary);
-      }
+.scoreline-canvas .fixture-grade-name {
+  display: -webkit-box;
+  overflow: hidden;
+  align-self: center;
+  color: var(--container-text, var(--ink));
+  font-family: var(--font-display);
+  font-size: var(--type-fixture-grade);
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
 
-      .meta-separator--secondary {
-        background: var(--club-secondary);
-      }
+.scoreline-canvas .fixture-grade-meta {
+  min-width: 0;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px 8px;
+  color: var(--container-text-muted, var(--contrast-meta));
+  font-family: var(--font-body);
+  font-size: var(--type-fixture-grade);
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: right;
+}
 
-      .meta-chip[data-empty="true"] {
-        display: none;
-      }
+.scoreline-canvas .fixture-grade-meta[data-empty="true"] {
+  display: none;
+}
 
-      .fixture-matchup {
-        min-height: 132px;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 176px minmax(0, 1fr);
-        gap: 6px;
-        align-items: stretch;
-      }
+.scoreline-canvas .meta-separator {
+  width: 4px;
+  height: 4px;
+  flex: 0 0 auto;
+  background: var(--club-primary);
+}
 
-      .team-band {
-        min-width: 0;
-        min-height: 132px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 14px;
-      }
+.scoreline-canvas .meta-separator--secondary {
+  background: var(--club-secondary);
+}
 
-      .team-band--away {
-        flex-direction: row-reverse;
-      }
+.scoreline-canvas .meta-chip[data-empty="true"] {
+  display: none;
+}
 
-      .team-mark {
-        width: 96px;
-        height: 96px;
-        flex: 0 0 96px;
-        background: #ffffff;
-      }
+.scoreline-canvas .fixture-matchup {
+  min-height: 132px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px minmax(0, 1fr);
+  gap: 6px;
+  align-items: stretch;
+}
 
-      .team-copy {
-        min-width: 0;
-        flex: 1 1 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
+.scoreline-canvas .fixture-matchup__cell {
+  min-width: 0;
+  min-height: 132px;
+  height: 100%;
+}
 
-      .team-band--away .team-copy {
-        align-items: flex-end;
-      }
+.scoreline-canvas .fixture-matchup__anim {
+  width: 100%;
+  height: 100%;
+  min-height: 132px;
+}
 
-      .team-side-label {
-        font-family: var(--font-body);
-        font-size: 13px;
-        font-weight: 500;
-        letter-spacing: 0.14em;
-        line-height: 1;
-        text-transform: uppercase;
-      }
+.scoreline-canvas .fixture-matchup__anim > .team-band,
+.scoreline-canvas .fixture-matchup__anim > .fixture-centre {
+  width: 100%;
+  height: 100%;
+  min-height: 132px;
+}
 
-      .team-name {
-        display: -webkit-box;
-        overflow: hidden;
-        min-width: 0;
-        width: 100%;
-        font-family: var(--font-display);
-        font-size: var(--type-team);
-        font-style: italic;
-        font-weight: 700;
-        font-stretch: condensed;
-        letter-spacing: -0.02em;
-        line-height: 1.05;
-        text-align: left;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-      }
+.scoreline-canvas .fixture-matchup .team-band {
+  min-width: 0;
+  min-height: 132px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
 
-      .team-band--away .team-name {
-        text-align: right;
-      }
+.scoreline-canvas .fixture-matchup .team-band--away {
+  flex-direction: row-reverse;
+}
 
-      .fixture-centre {
-        min-width: 0;
-        padding: 12px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-2);
-        background: var(--match-context-surface, color-mix(in srgb, var(--surface-muted) 72%, transparent));
-        text-align: center;
-      }
+.scoreline-canvas .fixture-matchup .team-mark {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  background: var(--surface);
+}
 
-      .fixture-vs {
-        color: var(--muted);
-        font-family: var(--font-display);
-        font-size: 17px;
-        font-weight: 700;
-        font-stretch: condensed;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-      }
+.scoreline-canvas .fixture-matchup .team-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
-      .fixture-when,
-      .fixture-where {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-      }
+.scoreline-canvas .fixture-matchup .team-band--away .team-copy {
+  align-items: flex-end;
+}
 
-      .fixture-where {
-        padding-top: var(--space-2);
-        border-top: 1px solid rgb(8 11 13 / 10%);
-      }
+.scoreline-canvas .fixture-matchup .team-side-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
 
-      .fixture-field-label {
-        color: var(--contrast-meta);
-        font-family: var(--font-body);
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 0.14em;
-        line-height: 1;
-        text-transform: uppercase;
-      }
+.scoreline-canvas .fixture-matchup .team-name {
+  display: -webkit-box;
+  overflow: hidden;
+  min-width: 0;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: var(--type-fixture-team);
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
 
-      .fixture-date {
-        color: var(--ink);
-        font-family: var(--font-display);
-        font-size: 28px;
-        font-weight: 800;
-        font-stretch: condensed;
-        letter-spacing: -0.02em;
-        line-height: 1;
-      }
+.scoreline-canvas .fixture-matchup .team-band--away .team-name {
+  text-align: right;
+}
 
-      .fixture-time {
-        color: var(--club-primary);
-        font-family: var(--font-display);
-        font-size: 24px;
-        font-weight: 700;
-        font-stretch: condensed;
-        line-height: 1;
-      }
+.scoreline-canvas .fixture-centre {
+  min-width: 0;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  text-align: center;
+}
 
-      .fixture-ground {
-        display: -webkit-box;
-        overflow: hidden;
-        width: 100%;
-        color: var(--contrast-performance);
-        font-family: var(--font-body);
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 1.34;
-        overflow-wrap: anywhere;
-        text-wrap: balance;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-      }
+.scoreline-canvas .fixture-vs {
+  color: var(--container-text-muted, var(--muted));
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.scoreline-canvas .fixture-when,
+.scoreline-canvas .fixture-where {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.scoreline-canvas .fixture-where {
+  padding-top: var(--space-2);
+  border-top: 1px solid rgb(8 11 13 / 10%);
+}
+
+.scoreline-canvas .fixture-field-label {
+  color: var(--container-text-muted, var(--contrast-meta));
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.scoreline-canvas .fixture-date {
+  color: var(--container-text, var(--ink));
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  font-stretch: condensed;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.scoreline-canvas .fixture-time {
+  color: var(--club-primary);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  font-stretch: condensed;
+  line-height: 1;
+}
+
+.scoreline-canvas .fixture-ground {
+  display: -webkit-box;
+  overflow: hidden;
+  width: 100%;
+  color: var(--container-text, var(--contrast-performance));
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.34;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

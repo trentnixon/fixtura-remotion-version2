@@ -49,21 +49,21 @@ If any answer is missing, state your recommended default and ask once more. Do n
 
 Read in this order (paths from repository root):
 
-| Order | File | Why |
-| --- | --- | --- |
-| 1 | `design/.docs/design-system-brief.md` | Product purpose, constraints, principles |
-| 2 | `design/guide/index.html` | In-site guide (open in browser after `npm run design`) |
-| 3 | `design/.docs/fonts.md` | How fonts work in prototypes vs Remotion |
-| 4 | `design/.docs/results-layout-reference.md` | **Structural baseline** for Results match modules (content/layout rules; not styling) |
-| 5 | `src/compositions/cricket/.docs/component-anatomy/results-component-anatomy.md` | Full component anatomy (or matching file for chosen asset) |
-| 6 | `testData/samples/Cricket/Cricket_Results.json` | Real field shapes, score strings, result statements, performances |
-| 7 | `design/variants/broadcast-pro/cricket/results.html` | Golden reference for **design-site shell**, canvas, hydration wiring (not match-module layout) |
-| 8 | `design/_shared/hydration/broadcast-pro/cricket/results.bind.json` | Example bind-map pattern — extend for new variants |
-| 9 | `design/.docs/reference-library.md` | **Pass 2 only** — hub for craft references (skip until hydration verified) |
-| 10 | `design/design-Reference-docs/Google Fonts for Professional Graphic Design.md` | **Pass 2 only** — font selection by role + LLM protocol (use with `fonts.json`) |
-| 11 | `design/design-Reference-docs/CSS Professional Design Techniques-2.md` | **Pass 2 only** — tokens, depth, shadows, surfaces on overlays |
-| 12 | `design/design-Reference-docs/SVG Pattern and Texture Systems for Professional Graphics.md` | **Pass 2 only** — structural motifs and fine grain; overlays only |
-| 13 | `design/design-Reference-docs/tailwind-css-remotion.md` | **Pass 2 + Phase 4** — where styles belong; literal Tailwind; design site vs Remotion styling |
+| Order | File                                                                                        | Why                                                                                            |
+| ----- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| 1     | `design/.docs/design-system-brief.md`                                                       | Product purpose, constraints, principles                                                       |
+| 2     | `design/guide/index.html`                                                                   | In-site guide (open in browser after `npm run design`)                                         |
+| 3     | `design/.docs/fonts.md`                                                                     | How fonts work in prototypes vs Remotion                                                       |
+| 4     | `design/.docs/results-layout-reference.md`                                                  | **Structural baseline** for Results match modules (content/layout rules; not styling)          |
+| 5     | `src/compositions/cricket/.docs/component-anatomy/results-component-anatomy.md`             | Full component anatomy (or matching file for chosen asset)                                     |
+| 6     | `testData/samples/Cricket/Cricket_Results.json`                                             | Real field shapes, score strings, result statements, performances                              |
+| 7     | `design/variants/broadcast-pro/cricket/results.html`                                        | Golden reference for **design-site shell**, canvas, hydration wiring (not match-module layout) |
+| 8     | `design/_shared/hydration/broadcast-pro/cricket/results.bind.json`                          | Example bind-map pattern — extend for new variants                                             |
+| 9     | `design/.docs/reference-library.md`                                                         | **Pass 2 only** — hub for craft references (skip until hydration verified)                     |
+| 10    | `design/design-Reference-docs/Google Fonts for Professional Graphic Design.md`              | **Pass 2 only** — font selection by role + LLM protocol (use with `fonts.json`)                |
+| 11    | `design/design-Reference-docs/CSS Professional Design Techniques-2.md`                      | **Pass 2 only** — tokens, depth, shadows, surfaces on overlays                                 |
+| 12    | `design/design-Reference-docs/SVG Pattern and Texture Systems for Professional Graphics.md` | **Pass 2 only** — structural motifs and fine grain; overlays only                              |
+| 13    | `design/design-Reference-docs/tailwind-css-remotion.md`                                     | **Pass 2 + Phase 4** — where styles belong; literal Tailwind; design site vs Remotion styling  |
 
 Optional: `src/compositions/cricket/.docs/stitch-briefs/` for asset-family prompts (one family at a time).
 
@@ -81,15 +81,15 @@ Copy the page structure from `design/variants/broadcast-pro/cricket/results.html
 
 ### Naming conventions
 
-| Layer | Convention | Example |
-| --- | --- | --- |
-| Folder slug | kebab-case | `stadium-signal` |
-| Display label | Human readable | Stadium Signal |
-| Remotion registry ID | PascalCase | `StadiumSignal` |
-| Sport segment | lowercase | `cricket` |
-| Asset file | kebab-case + `.html` | `results.html` |
-| Tailwind font key | kebab-case | `font-outfit` |
-| Font catalog key | kebab-case | `"outfit"` in `fonts.json` |
+| Layer                | Convention           | Example                    |
+| -------------------- | -------------------- | -------------------------- |
+| Folder slug          | kebab-case           | `stadium-signal`           |
+| Display label        | Human readable       | Stadium Signal             |
+| Remotion registry ID | PascalCase           | `StadiumSignal`            |
+| Sport segment        | lowercase            | `cricket`                  |
+| Asset file           | kebab-case + `.html` | `results.html`             |
+| Tailwind font key    | kebab-case           | `font-outfit`              |
+| Font catalog key     | kebab-case           | `"outfit"` in `fonts.json` |
 
 ### Files to create or update
 
@@ -106,16 +106,16 @@ design/
 
 ### Fixture map (cricket)
 
-| Asset slug | Test fixture |
-| --- | --- |
-| `results` | `testData/samples/Cricket/Cricket_Results.json` |
-| `result-single` | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` |
-| `upcoming` | `testData/samples/Cricket/Cricket_upcoming.json` |
-| `ladder` | `testData/samples/Cricket/Cricket_Ladder.json` |
-| `top5` | `testData/samples/Cricket/Cricket_Top5Batters.json` |
-| `performances` | `testData/samples/Cricket/Cricket_BattingPerformances.json` |
-| `team-roster` | `testData/samples/Cricket/Cricket_Roster.json` |
-| `team-of-the-week` | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json` |
+| Asset slug         | Test fixture                                                 |
+| ------------------ | ------------------------------------------------------------ |
+| `results`          | `testData/samples/Cricket/Cricket_Results.json`              |
+| `result-single`    | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` |
+| `upcoming`         | `testData/samples/Cricket/Cricket_upcoming.json`             |
+| `ladder`           | `testData/samples/Cricket/Cricket_Ladder.json`               |
+| `top5`             | `testData/samples/Cricket/Cricket_Top5Batters.json`          |
+| `performances`     | `testData/samples/Cricket/Cricket_BattingPerformances.json`  |
+| `team-roster`      | `testData/samples/Cricket/Cricket_Roster.json`               |
+| `team-of-the-week` | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json`        |
 
 ### HTML page requirements
 
@@ -163,6 +163,7 @@ Create a new template design for Fixtura’s automated sports graphics.
 Fixtura generates weekly club-branded cricket media from structured competition data for Australian grassroots sport. You are designing **overlay UI only** (titles, typography, layout, scores, metadata, sponsor strip) on a fixed frame. **Do not design backgrounds** — no stadium photos, gradients, or full-bleed imagery; a neutral placeholder behind overlays is acceptable for preview only.
 
 Read first:
+
 - `design/.docs/design-system-brief.md`
 - Component anatomy for the starting asset type (see Phase 1 table in `design/.docs/new-template-prompt.md`)
 

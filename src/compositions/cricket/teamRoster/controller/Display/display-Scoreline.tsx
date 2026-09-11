@@ -1,39 +1,45 @@
 import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
+import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { ScorelineRosterContent } from "../../../utils/scoreline/roster/ScorelineRosterContent";
 import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { csClass } from "../../../utils/scoreline/componentStyles";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
-import {
-  DEFAULT_CONTAINER_ANIMATION,
-  DEFAULT_CONTAINER_EXIT_ANIMATION,
-} from "./_utils/animations";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
+import { buildRosterFooterSponsors } from "../../_utils/buildRosterFooterSponsors";
 
 const RosterDisplayScoreline: React.FC<RosterDisplayProps> = ({ roster }) => {
-  const { layout } = useThemeContext();
-  const mainContentHeight = getMainContentSectionHeight(layout.heights);
+  const { animations } = useAnimationContext();
+  const panelAnimation = animations.container.main.itemContainerOuter;
+  const { layout, componentStyles } = useThemeContext();
+  const { heights } = layout;
+  const mainContentHeight = getMainContentSectionHeight(heights);
+  const footerSponsors = buildRosterFooterSponsors(roster);
 
   return (
-    <>
+    <div
+      className={csClass(componentStyles, "scorelineDisplayColumn")}
+      style={{ height: `${mainContentHeight + heights.footer}px` }}
+    >
       <AnimatedContainer
         type="full"
-        className="min-h-0 flex-1 overflow-hidden rounded-none"
+        className={csClass(componentStyles, "scorelineAnimatedShell")}
         backgroundColor="none"
-        animation={DEFAULT_CONTAINER_ANIMATION}
-        animationDelay={0}
-        exitAnimation={DEFAULT_CONTAINER_EXIT_ANIMATION}
+        animation={panelAnimation.containerIn}
+        exitAnimation={panelAnimation.containerOut}
       >
         <ScorelineRosterContent
           roster={roster}
           availableHeight={mainContentHeight}
         />
       </AnimatedContainer>
+
       <ScorelineSponsorFooter
-        assignSponsors={roster.assignSponsors}
-        primaryForScreen={roster.primaryForScreen}
+        sponsors={footerSponsors}
+        sponsorStripKey="scorelineRosterSponsorStrip"
       />
-    </>
+    </div>
   );
 };
 

@@ -2,8 +2,8 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { SponsorFooter } from "../../../sponsorFooter";
-import { ScorelineCreaseMarkup } from "../../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
+import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { csClass } from "../../../utils/scoreline/componentStyles";
 import MatchRowScoreline from "../MatchRow/row-Scoreline";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import {
@@ -18,7 +18,7 @@ const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
   resultsPerScreen,
   screenIndex,
 }) => {
-  const { layout } = useThemeContext();
+  const { layout, componentStyles } = useThemeContext();
   const { animations } = useAnimationContext();
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
@@ -33,18 +33,18 @@ const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
 
   return (
     <div
-      className="flex h-full w-full flex-col"
+      className={csClass(componentStyles, "scorelineDisplayColumn")}
       style={{ height: `${mainContentHeight + heights.footer}px` }}
     >
       <AnimatedContainer
         type="full"
-        className="min-h-0 flex-1 overflow-hidden rounded-none"
+        className={csClass(componentStyles, "scorelineAnimatedShell")}
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
       >
         <main
-          className="results-ledger"
+          className={`results-ledger ${csClass(componentStyles, "scorelineResultsLedger")}`}
           style={{
             height: `${mainContentHeight}px`,
             maxHeight: `${mainContentHeight}px`,
@@ -59,17 +59,10 @@ const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
         </main>
       </AnimatedContainer>
 
-      <footer
-        className="asset-footer"
-        style={{ height: `${heights.footer}px`, maxHeight: `${heights.footer}px` }}
-      >
-        <div className="footer-crease" aria-hidden>
-          <ScorelineCreaseMarkup />
-        </div>
-        <div className="sponsor-strip">
-          <SponsorFooter sponsors={footerSponsors} />
-        </div>
-      </footer>
+      <ScorelineSponsorFooter
+        sponsors={footerSponsors}
+        sponsorStripKey="scorelineResultsSponsorStrip"
+      />
     </div>
   );
 };

@@ -13,7 +13,7 @@
     <title>Scoreline - Cricket Team Roster</title>
     <link rel="stylesheet" href="/design/_shared/shell.css" />
     <link rel="stylesheet" href="/design/_shared/frame.css" />
-        <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
+    <link rel="stylesheet" href="/design/_shared/scoreline-polish.css" />
     <link rel="stylesheet" href="/design/_shared/scoreline-team-roster.css" />
     <link rel="stylesheet" href="/design/_shared/scoreline-preview.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,8 +30,7 @@
         },
       };
     </script>
-
-</head>
+  </head>
   <body class="design-shell">
     <header class="design-topbar">
       <strong>Fixtura Design Prototypes</strong>
@@ -79,16 +78,14 @@
                           onerror="this.hidden=true"
                         />
                       </div>
-                      <div class="header-identity">
-                        <p class="organisation-name" data-hydrate="club-name">
-                          Club name
-                        </p>
-                      </div>
                     </div>
                     <div class="header-title-stack">
                       <p class="header-eyebrow" data-hydrate="header-eyebrow">
                         Team List
                       </p>
+                      <h1 class="header-title" data-hydrate="header-title">
+                        Team Roster
+                      </h1>
                     </div>
                   </div>
                   <div class="header-shell__crease" aria-hidden="true">
@@ -301,13 +298,19 @@
       const mountRosterRows = (players) => {
         const container = document.querySelector("[data-roster-rows]");
         const template = document.getElementById("roster-row-template");
-        if (!(container instanceof HTMLElement) || !(template instanceof HTMLTemplateElement)) {
+        if (
+          !(container instanceof HTMLElement) ||
+          !(template instanceof HTMLTemplateElement)
+        ) {
           return;
         }
 
         container.innerHTML = "";
 
-        if (players.length === 0 || players.every((entry) => parsePlayerEntry(entry).emptyRoster)) {
+        if (
+          players.length === 0 ||
+          players.every((entry) => parsePlayerEntry(entry).emptyRoster)
+        ) {
           const fragment = template.content.cloneNode(true);
           const entry = fragment.querySelector(".roster-entry");
           const row = fragment.querySelector(".roster-row");
@@ -397,7 +400,9 @@
             const roster = fixture.data?.[0];
 
             if (roster) {
-              const squadTeam = document.querySelector("[data-roster-squad-team]");
+              const squadTeam = document.querySelector(
+                "[data-roster-squad-team]",
+              );
               if (squadTeam instanceof HTMLElement) {
                 squadTeam.textContent = roster.isHomeTeam
                   ? roster.teamHome

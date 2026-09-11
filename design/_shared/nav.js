@@ -23,8 +23,7 @@ export async function renderVariantNav(activeVariantSlug) {
       const firstSport = Object.keys(variant.sports)[0];
       const firstAsset = Object.keys(variant.sports[firstSport].assets)[0];
       const href = `/design/variants/${slug}/${firstSport}/${firstAsset}.html`;
-      const current =
-        slug === activeVariantSlug ? ' aria-current="page"' : "";
+      const current = slug === activeVariantSlug ? ' aria-current="page"' : "";
       return `<li><a href="${href}"${current}>${variant.label}</a></li>`;
     })
     .join("");

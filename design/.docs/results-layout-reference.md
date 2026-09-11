@@ -43,13 +43,13 @@ Match Module
 
 ### Team comparison
 
-| Rule | Detail |
-| --- | --- |
-| Horizontal opposition | Two teams sit opposite each other with **comparable visual weight**. |
-| Full scores | Render complete supplied strings: `7/146`, `2/89`, `10/88` — never runs alone or invented notation. |
-| Logos | Large enough to identify; consistent bounding areas; preserved proportions. |
-| Names under groups | Team name sits **directly beneath** its logo/score group. Viewer must never guess which score belongs to whom. |
-| Club side | **Do not assume left = club.** Identify club via `isClubTeam` / data. Featured club may appear left or right per match. Preserve source home/away ordering until defined otherwise. |
+| Rule                  | Detail                                                                                                                                                                              |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Horizontal opposition | Two teams sit opposite each other with **comparable visual weight**.                                                                                                                |
+| Full scores           | Render complete supplied strings: `7/146`, `2/89`, `10/88` — never runs alone or invented notation.                                                                                 |
+| Logos                 | Large enough to identify; consistent bounding areas; preserved proportions.                                                                                                         |
+| Names under groups    | Team name sits **directly beneath** its logo/score group. Viewer must never guess which score belongs to whom.                                                                      |
+| Club side             | **Do not assume left = club.** Identify club via `isClubTeam` / data. Featured club may appear left or right per match. Preserve source home/away ordering until defined otherwise. |
 
 **Club-biased ≠ visually unbalanced teams.** Both sides get equal treatment in the score comparison. Club focus applies to **which performances are shown** (club mode), not shrinking the opposing team.
 
@@ -60,14 +60,14 @@ Match Module
 
 ### Performance panels
 
-| Rule | Detail |
-| --- | --- |
-| Two panels | Separate **batting** and **bowling** sections — not one compressed “club performances” footer. |
-| Data roles | Columns are **batting vs bowling**, not left-team vs right-team statistics. Label panels if layout could mislead. |
-| Baseline count | Up to **three batting** and **three bowling** entries when data supplies them (per anatomy / mode rules). |
-| Column scan | Names align **left**; figures align **right** — stable vertical columns. |
-| Notation intact | Preserve supplied strings: `25* (17)`, `2/8 (2.3)`, wickets/runs/overs — do not reformat. |
-| Club mode | When club-biased, filter **entries** by `isClubTeam` / mode matrix — do not collapse layout to one column. |
+| Rule            | Detail                                                                                                            |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Two panels      | Separate **batting** and **bowling** sections — not one compressed “club performances” footer.                    |
+| Data roles      | Columns are **batting vs bowling**, not left-team vs right-team statistics. Label panels if layout could mislead. |
+| Baseline count  | Up to **three batting** and **three bowling** entries when data supplies them (per anatomy / mode rules).         |
+| Column scan     | Names align **left**; figures align **right** — stable vertical columns.                                          |
+| Notation intact | Preserve supplied strings: `25* (17)`, `2/8 (2.3)`, wickets/runs/overs — do not reformat.                         |
+| Club mode       | When club-biased, filter **entries** by `isClubTeam` / mode matrix — do not collapse layout to one column.        |
 
 ### Match context (metadata)
 

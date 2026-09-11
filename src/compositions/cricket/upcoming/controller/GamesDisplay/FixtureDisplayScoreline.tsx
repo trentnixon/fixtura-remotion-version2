@@ -3,6 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { csClass } from "../../../utils/scoreline/componentStyles";
 import GamesListScoreline from "../GamesList/games-list-Scoreline";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
@@ -18,7 +19,7 @@ export const FixtureDisplayScoreline: React.FC<GamesDisplayProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const panelAnimation = animations.container.main.itemContainerOuter;
-  const { layout } = useThemeContext();
+  const { layout, componentStyles } = useThemeContext();
   const { heights } = layout;
 
   const displayedGames = calculateDisplayedGames(
@@ -31,29 +32,32 @@ export const FixtureDisplayScoreline: React.FC<GamesDisplayProps> = ({
   const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
 
   return (
-    <>
+    <div
+      className={csClass(componentStyles, "scorelineDisplayColumn")}
+      style={{ height: `${mainContentHeight + heights.footer}px` }}
+    >
       <AnimatedContainer
         type="full"
-        className="min-h-0 flex-1 overflow-hidden rounded-none"
+        className={csClass(componentStyles, "scorelineAnimatedShell")}
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
       >
         <main
-          className="fixtures-ledger"
+          className={`fixtures-ledger ${csClass(componentStyles, "scorelineUpcomingLedger")}`}
           style={{
             height: `${mainContentHeight}px`,
             maxHeight: `${mainContentHeight}px`,
           }}
         >
-          <GamesListScoreline
-            games={displayedGames}
-            availableHeight={mainContentHeight}
-          />
+          <GamesListScoreline games={displayedGames} />
         </main>
       </AnimatedContainer>
-      <ScorelineSponsorFooter sponsors={footerSponsors} />
-    </>
+      <ScorelineSponsorFooter
+        sponsors={footerSponsors}
+        sponsorStripKey="scorelineUpcomingSponsorStrip"
+      />
+    </div>
   );
 };
 

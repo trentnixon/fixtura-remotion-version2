@@ -6,7 +6,7 @@ export const DEFAULT_DISPLAY_DURATION = 300;
 /**
  * Default games per screen if not specified in contentLayout
  */
-export const DEFAULT_GAMES_PER_SCREEN = 2;
+export const DEFAULT_GAMES_PER_SCREEN = 3;
 
 /**
  * Extracts games per screen from contentLayout configuration

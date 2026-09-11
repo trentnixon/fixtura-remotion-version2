@@ -46,7 +46,9 @@ export function resolveAssetEntry(manifest, variantSlug, sportSlug, assetSlug) {
 
   const sport = variant.sports[sportSlug];
   if (!sport) {
-    throw new Error(`Unknown sport "${sportSlug}" for variant "${variantSlug}"`);
+    throw new Error(
+      `Unknown sport "${sportSlug}" for variant "${variantSlug}"`,
+    );
   }
 
   const asset = sport.assets[assetSlug];

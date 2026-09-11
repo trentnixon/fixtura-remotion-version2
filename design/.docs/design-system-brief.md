@@ -14,16 +14,16 @@ Fixtura turns structured competition data (fixtures, results, ladders, performan
 
 **Promise:** consistent, credible, sponsor-ready content without volunteers hand-building graphics each week.
 
-**Feeling:** *“Our club looks as professional as the work people put into it.”*
+**Feeling:** _“Our club looks as professional as the work people put into it.”_
 
 ## Scope of this site (`design/`)
 
-| Design here | Not here |
-| --- | --- |
+| Design here                                                                       | Not here                                                             |
+| --------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Titles, typography, overlays, cards, rows, scores, metadata, sponsor strip layout | Backgrounds (photo, gradient, Generated, Luminance, texture, motion) |
-| Foreground structure and hierarchy | Player photography or cut-outs |
-| Placeholder backdrop for contrast only | Dashboard / app UI chrome |
-| Registered pages under `design/variants/` | Draft HTML in `.scratch/` or ad-hoc paths |
+| Foreground structure and hierarchy                                                | Player photography or cut-outs                                       |
+| Placeholder backdrop for contrast only                                            | Dashboard / app UI chrome                                            |
+| Registered pages under `design/variants/`                                         | Draft HTML in `.scratch/` or ad-hoc paths                            |
 
 Backgrounds are configured in Remotion: `src/components/backgrounds/`.
 
@@ -66,11 +66,11 @@ Avoid: fake stadium lights, flames/glow, AI athletes, esports styling, decoratio
 
 ## Vertical zones (guidance)
 
-| Zone | Share | Content |
-| --- | --- | --- |
-| Identity / context | top 14–18% | Org logo, asset title, round/date |
-| Primary content | middle 62–70% | Matches, ladder, roster, etc. |
-| Sponsor / attribution | bottom 12–16% | Sponsor strip, Fixtura mark |
+| Zone                  | Share         | Content                           |
+| --------------------- | ------------- | --------------------------------- |
+| Identity / context    | top 14–18%    | Org logo, asset title, round/date |
+| Primary content       | middle 62–70% | Matches, ladder, roster, etc.     |
+| Sponsor / attribution | bottom 12–16% | Sponsor strip, Fixtura mark       |
 
 ## Typography
 
@@ -80,12 +80,12 @@ Avoid: fake stadium lights, flames/glow, AI athletes, esports styling, decoratio
 
 **Variant fonts** (e.g. Broadcast Pro): see `design/_shared/fonts.json` — may differ from platform default.
 
-| Role | Weights | Notes |
-| --- | --- | --- |
-| Scores / hero numerals | 800–900 | Largest element |
-| Titles, team/player names | 700 | |
-| Labels, metadata | 600 / uppercase short labels | |
-| Supporting copy | 400–500 | Min **20 px** rendered |
+| Role                      | Weights                      | Notes                  |
+| ------------------------- | ---------------------------- | ---------------------- |
+| Scores / hero numerals    | 800–900                      | Largest element        |
+| Titles, team/player names | 700                          |                        |
+| Labels, metadata          | 600 / uppercase short labels |                        |
+| Supporting copy           | 400–500                      | Min **20 px** rendered |
 
 Long names: second line → reduce size → official short name if supplied → truncate last (never truncate scores or result statements).
 
@@ -133,17 +133,17 @@ The layout must be **designed around cricket information**, not a compact web ta
 
 **Hierarchy unit:** each match is a **complete repeated composition** — horizontal team comparison (full scores + logos), outcome, batting/bowling panels, then context — not a heading competing with oversized bare numerals.
 
-| Priority | Failure mode | Required behaviour |
-| --- | --- | --- |
-| **Complete scores** | Runs alone (`215`, `255`) with wickets/all-out dropped | Render the **full supplied score string** exactly. Show **overs** when supplied. Never strip wickets or innings context from formatted scores. |
-| **Outcome consistency** | Scores and result statement contradict (e.g. 215 vs 255 but “won by 5 wickets”) | Hydrate from fixture JSON via bind map. Map `result` / `resultStatement` fields correctly. If data looks inconsistent, **flag in chat** — do not silently “fix” or invent margins. |
-| **Readable metadata** | Truncated top strips, tiny labels, duplicated venue text | Put **format/round** and **venue** at the **bottom** of each match module (quiet context layer). Do not squeeze metadata into a competing top strip. |
-| **Equal match modules** | First match compact; second match with huge outcome block when performances absent | Define **intentional missing-performance layout**. Absent optional sections must **not** inflate other bands. Match modules keep **equal visual weight** (anatomy: min 2 matches). |
-| **Team identification** | Tiny crests, team names subordinate to decorative heading | Logos large enough to recognise. Team name and score belong in one **team band** — identity and score visually connected. |
-| **Meaningful labels** | “CLUB XI” repeated; prominent “01” / “02” index boxes | Use grade/team context from data. Match index is **secondary** unless brief requires it — do not give index badges dominant colour blocks. |
-| **Performances** | One compressed “club performances” footer; columns mistaken for left/right teams | Two panels: **Batting** and **Bowling** (data roles, not team sides). Up to three entries each; names left, figures right. Notation intact (`25* (17)`, `2/8 (2.3)`). Club mode filters **entries**, not team comparison balance. |
-| **Colour logic** | Random accent colours (blue index boxes, pink rows) unrelated to org palette | Every accent must map to **org primary/secondary** roles from the fixture. Black/white/neutrals for structure only. |
-| **Sponsor strip** | “SPONSOR PLACEMENT” wireframe annotations | Placeholder is OK — but **scale and position** must look like a believable sponsor strip in the finished graphic, not dev copy. |
+| Priority                | Failure mode                                                                       | Required behaviour                                                                                                                                                                                                                |
+| ----------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Complete scores**     | Runs alone (`215`, `255`) with wickets/all-out dropped                             | Render the **full supplied score string** exactly. Show **overs** when supplied. Never strip wickets or innings context from formatted scores.                                                                                    |
+| **Outcome consistency** | Scores and result statement contradict (e.g. 215 vs 255 but “won by 5 wickets”)    | Hydrate from fixture JSON via bind map. Map `result` / `resultStatement` fields correctly. If data looks inconsistent, **flag in chat** — do not silently “fix” or invent margins.                                                |
+| **Readable metadata**   | Truncated top strips, tiny labels, duplicated venue text                           | Put **format/round** and **venue** at the **bottom** of each match module (quiet context layer). Do not squeeze metadata into a competing top strip.                                                                              |
+| **Equal match modules** | First match compact; second match with huge outcome block when performances absent | Define **intentional missing-performance layout**. Absent optional sections must **not** inflate other bands. Match modules keep **equal visual weight** (anatomy: min 2 matches).                                                |
+| **Team identification** | Tiny crests, team names subordinate to decorative heading                          | Logos large enough to recognise. Team name and score belong in one **team band** — identity and score visually connected.                                                                                                         |
+| **Meaningful labels**   | “CLUB XI” repeated; prominent “01” / “02” index boxes                              | Use grade/team context from data. Match index is **secondary** unless brief requires it — do not give index badges dominant colour blocks.                                                                                        |
+| **Performances**        | One compressed “club performances” footer; columns mistaken for left/right teams   | Two panels: **Batting** and **Bowling** (data roles, not team sides). Up to three entries each; names left, figures right. Notation intact (`25* (17)`, `2/8 (2.3)`). Club mode filters **entries**, not team comparison balance. |
+| **Colour logic**        | Random accent colours (blue index boxes, pink rows) unrelated to org palette       | Every accent must map to **org primary/secondary** roles from the fixture. Black/white/neutrals for structure only.                                                                                                               |
+| **Sponsor strip**       | “SPONSOR PLACEMENT” wireframe annotations                                          | Placeholder is OK — but **scale and position** must look like a believable sponsor strip in the finished graphic, not dev copy.                                                                                                   |
 
 **Avoid:** HTML `<table>` layouts that treat matches as spreadsheet rows. Use **match modules** per component anatomy.
 
@@ -158,16 +158,16 @@ The layout must be **designed around cricket information**, not a compact web ta
 
 ## Asset types (cricket)
 
-| Asset type | Primary story |
-| --- | --- |
-| Weekend Results | Scan of completed matches |
-| Single Game Result | One match, score-first |
-| Upcoming Fixtures | Who, when, where |
-| Ladder | Standings table |
-| Top 5 Batting / Bowling | Ranked players + metric |
+| Asset type                     | Primary story              |
+| ------------------------------ | -------------------------- |
+| Weekend Results                | Scan of completed matches  |
+| Single Game Result             | One match, score-first     |
+| Upcoming Fixtures              | Who, when, where           |
+| Ladder                         | Standings table            |
+| Top 5 Batting / Bowling        | Ranked players + metric    |
 | Batting / Bowling Performances | Notable individual figures |
-| Team of the Week | Selected players |
-| Team Roster | Squad for upcoming match |
+| Team of the Week               | Selected players           |
+| Team Roster                    | Squad for upcoming match   |
 
 Map to prototype routes in `design/_shared/routes.json` and anatomy in `src/compositions/cricket/.docs/component-anatomy/`.
 
@@ -181,28 +181,28 @@ Plan a stable footer zone. Works with zero, one or many sponsors. Never overlaps
 
 ## Voice in graphics
 
-Prefer: *Weekend Results*, *Upcoming Fixtures*, *Round 5*, *Final*, *Match abandoned*.
+Prefer: _Weekend Results_, _Upcoming Fixtures_, _Round 5_, _Final_, _Match abandoned_.
 
-Avoid: hype (*EPIC SHOWDOWN*), exclamation spam, trash talk, unverified superlatives.
+Avoid: hype (_EPIC SHOWDOWN_), exclamation spam, trash talk, unverified superlatives.
 
 ## Priority order (when choices conflict)
 
-1. Truth of sporting data  
-2. Clarity of primary story  
-3. Organisation identity  
-4. Mobile legibility  
-5. Systematic automation  
-6. Sponsor value  
-7. Visual energy / decoration  
+1. Truth of sporting data
+2. Clarity of primary story
+3. Organisation identity
+4. Mobile legibility
+5. Systematic automation
+6. Sponsor value
+7. Visual energy / decoration
 
 ## Prototype workflow
 
-1. Restate asset type, audience, primary fact, density, club vs association mode.  
-2. Define **reading order** before styling.  
-3. Map required / optional / conditional fields (use `testData` fixtures).  
-4. Pick composition archetype (list, hero comparison, table, roster, etc.).  
-5. Apply grid, type roles, colour roles, components — **overlays only**.  
-6. Stress-test: long names, dense data, missing logo, no sponsor, hard palette.  
+1. Restate asset type, audience, primary fact, density, club vs association mode.
+2. Define **reading order** before styling.
+3. Map required / optional / conditional fields (use `testData` fixtures).
+4. Pick composition archetype (list, hero comparison, table, roster, etc.).
+5. Apply grid, type roles, colour roles, components — **overlays only**.
+6. Stress-test: long names, dense data, missing logo, no sponsor, hard palette.
 7. Hand off to Remotion via `asset-index.md` and theme/display components.
 
 ## What prototypes must not become

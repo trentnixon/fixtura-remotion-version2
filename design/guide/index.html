@@ -53,26 +53,29 @@
         <article class="design-guide">
           <h1>Fixtura Assets — design prototype guide</h1>
           <p>
-            Automated sports-media overlays for grassroots clubs and associations.
-            Launch: <code>npm run design</code> from repo root →
+            Automated sports-media overlays for grassroots clubs and
+            associations. Launch: <code>npm run design</code> from repo root →
             <code>http://localhost:3456/design/</code>
             (see <code>design/.docs/getting-started.md</code>).
           </p>
 
           <div class="note">
-            <strong>Your job:</strong> design reusable <em>overlay</em> templates (titles,
-            type, rows, scores, metadata, sponsor strip) — not one-off posters. Optimise
-            for variable real data: long names, missing logos, different counts, awkward
-            colour pairs.
+            <strong>Your job:</strong> design reusable
+            <em>overlay</em> templates (titles, type, rows, scores, metadata,
+            sponsor strip) — not one-off posters. Optimise for variable real
+            data: long names, missing logos, different counts, awkward colour
+            pairs.
           </div>
 
           <h2>LLM starter prompt</h2>
           <p>
-            Copy into Codex or your design LLM to start a <strong>new template</strong>.
-            Full grill questions, naming and repo setup:
+            Copy into Codex or your design LLM to start a
+            <strong>new template</strong>. Full grill questions, naming and repo
+            setup:
             <code>design/.docs/new-template-prompt.md</code>
           </p>
-          <pre class="prompt">Read design/.docs/new-template-prompt.md, design/.docs/design-system-brief.md, and design/.docs/results-layout-reference.md.
+          <pre class="prompt">
+Read design/.docs/new-template-prompt.md, design/.docs/design-system-brief.md, and design/.docs/results-layout-reference.md.
 
 Phase 0 — Ask me every pre-flight question in new-template-prompt.md before designing. Do not produce visuals until I answer.
 
@@ -104,20 +107,26 @@ Pass 1 — follow design/.docs/results-layout-reference.md (structure only — d
 Pass 2 — visual identity around that anatomy. Org colours from fixture only.
 Pass 2 craft refs (after pass 1 hydrates): design/.docs/reference-library.md and design/design-Reference-docs/ — Google Fonts, CSS Techniques, SVG/Pattern/Texture, tailwind-css-remotion. Overlays only; no backgrounds.
 
-Deliver registered HTML in the design site. Rationale in chat only.</pre>
+Deliver registered HTML in the design site. Rationale in chat only.</pre
+          >
 
           <h2>Scope — overlays and titles only</h2>
           <p><strong>Design here:</strong></p>
           <ul>
             <li>Titles and asset-type labels</li>
             <li>Typography hierarchy (scores, team names, metadata)</li>
-            <li>Foreground layout: cards, glass panels, rows, tables, roster lists</li>
+            <li>
+              Foreground layout: cards, glass panels, rows, tables, roster lists
+            </li>
             <li>Sponsor strip structure (not sponsor artwork creation)</li>
             <li>Logo frames and identity placement</li>
           </ul>
           <p><strong>Not here — handled elsewhere in Remotion:</strong></p>
           <ul>
-            <li>Backgrounds (photos, gradients, Generated, Luminance, textures, motion)</li>
+            <li>
+              Backgrounds (photos, gradients, Generated, Luminance, textures,
+              motion)
+            </li>
             <li>Player photography or cut-outs</li>
           </ul>
           <p>
@@ -129,20 +138,26 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
           <p>
             Structural baseline for Weekend Results —
             <code>design/.docs/results-layout-reference.md</code>
-            (reference image in <code>design/.research/</code>).
-            Extract <strong>match-module rules</strong>; do not copy background or styling.
-            Develop visual identity around this anatomy.
+            (reference image in <code>design/.research/</code>). Extract
+            <strong>match-module rules</strong>; do not copy background or
+            styling. Develop visual identity around this anatomy.
           </p>
           <p><strong>Per-match reading order:</strong></p>
           <ol>
-            <li>Horizontal team comparison — full scores, logos, names beneath each group</li>
+            <li>
+              Horizontal team comparison — full scores, logos, names beneath
+              each group
+            </li>
             <li>Outcome spanning both teams</li>
-            <li>Batting panel + bowling panel (label by data role, not team side)</li>
+            <li>
+              Batting panel + bowling panel (label by data role, not team side)
+            </li>
             <li>Format/round bottom-left; venue bottom-right</li>
           </ol>
           <p>
-            Club-biased mode filters <em>performance entries</em>, not team comparison balance.
-            Do not assume left team = club. Both matches repeat the same internal structure.
+            Club-biased mode filters <em>performance entries</em>, not team
+            comparison balance. Do not assume left team = club. Both matches
+            repeat the same internal structure.
           </p>
           <p>
             Full rules and checklist:
@@ -151,40 +166,68 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
 
           <h2>Not a website — one frame</h2>
           <p>
-            Each prototype is a <strong>single 1080 × 1350 video/social poster frame</strong>,
-            not a web page. HTML is an authoring preview; Remotion renders the same layout to
-            video. The sidebar, tabs and handoff line are dev chrome only.
+            Each prototype is a
+            <strong>single 1080 × 1350 video/social poster frame</strong>, not a
+            web page. HTML is an authoring preview; Remotion renders the same
+            layout to video. The sidebar, tabs and handoff line are dev chrome
+            only.
           </p>
-          <p><strong>Do not add:</strong> review footers, concept labels, fixture-ID captions,
-            colour-provenance copy, or preview-mode links outside
-            <code>.design-social-canvas</code>. Sponsor strip <em>inside</em> the canvas is
-            part of the graphic.</p>
+          <p>
+            <strong>Do not add:</strong> review footers, concept labels,
+            fixture-ID captions, colour-provenance copy, or preview-mode links
+            outside <code>.design-social-canvas</code>. Sponsor strip
+            <em>inside</em> the canvas is part of the graphic.
+          </p>
 
           <h2>Hard constraints</h2>
           <ul>
-            <li><strong>1080 × 1350 px</strong> portrait — single finished graphic, not app UI or website</li>
-            <li><strong>72 px</strong> safe margin; keep critical type/logos ~88 px from edges</li>
-            <li><strong>12-column grid</strong>, 24 px gutter, 8 px spacing unit</li>
-            <li><strong>Mobile-first</strong> — main fact readable at feed size</li>
-            <li><strong>Data accuracy</strong> — never invent or alter competition data</li>
-            <li><strong>Colours</strong> — org primary + secondary only (+ black/white/neutrals)</li>
-            <li><strong>Automatable</strong> — every element maps to a component or data field</li>
+            <li>
+              <strong>1080 × 1350 px</strong> portrait — single finished
+              graphic, not app UI or website
+            </li>
+            <li>
+              <strong>72 px</strong> safe margin; keep critical type/logos ~88
+              px from edges
+            </li>
+            <li>
+              <strong>12-column grid</strong>, 24 px gutter, 8 px spacing unit
+            </li>
+            <li>
+              <strong>Mobile-first</strong> — main fact readable at feed size
+            </li>
+            <li>
+              <strong>Data accuracy</strong> — never invent or alter competition
+              data
+            </li>
+            <li>
+              <strong>Colours</strong> — org primary + secondary only (+
+              black/white/neutrals)
+            </li>
+            <li>
+              <strong>Automatable</strong> — every element maps to a component
+              or data field
+            </li>
           </ul>
 
           <h2>Design thesis</h2>
           <p>
-            <strong>Sports broadcast energy × SaaS restraint.</strong> Match-day authority —
-            energetic but not chaotic, bold but not esports. Score-first hierarchy, large
-            numerals, rhythm and compact labels. No fake stadium FX, flames, or decoration
-            that beats names and scores.
+            <strong>Sports broadcast energy × SaaS restraint.</strong> Match-day
+            authority — energetic but not chaotic, bold but not esports.
+            Score-first hierarchy, large numerals, rhythm and compact labels. No
+            fake stadium FX, flames, or decoration that beats names and scores.
           </p>
 
           <h2>Principles</h2>
           <ol>
-            <li><strong>3-second comprehension</strong> — asset type, org, primary fact</li>
+            <li>
+              <strong>3-second comprehension</strong> — asset type, org, primary
+              fact
+            </li>
             <li><strong>Score/outcome before ornament</strong></li>
             <li><strong>One dominant story</strong> per asset</li>
-            <li><strong>Reusable structure</strong>, adaptable styling per club</li>
+            <li>
+              <strong>Reusable structure</strong>, adaptable styling per club
+            </li>
             <li><strong>Family consistency</strong> across asset types</li>
             <li><strong>Calm confidence</strong> — editorial, not hype</li>
           </ol>
@@ -192,77 +235,150 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
           <h2>Frame zones</h2>
           <table>
             <thead>
-              <tr><th>Zone</th><th>Typical share</th><th>Content</th></tr>
+              <tr>
+                <th>Zone</th>
+                <th>Typical share</th>
+                <th>Content</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Identity / context</td><td>top 14–18%</td><td>Logo, title, round/date</td></tr>
-              <tr><td>Primary content</td><td>middle 62–70%</td><td>Matches, ladder, roster, etc.</td></tr>
-              <tr><td>Sponsor / attribution</td><td>bottom 12–16%</td><td>Sponsor strip</td></tr>
+              <tr>
+                <td>Identity / context</td>
+                <td>top 14–18%</td>
+                <td>Logo, title, round/date</td>
+              </tr>
+              <tr>
+                <td>Primary content</td>
+                <td>middle 62–70%</td>
+                <td>Matches, ladder, roster, etc.</td>
+              </tr>
+              <tr>
+                <td>Sponsor / attribution</td>
+                <td>bottom 12–16%</td>
+                <td>Sponsor strip</td>
+              </tr>
             </tbody>
           </table>
           <p>
-            Component names: <code>src/compositions/cricket/.docs/component-anatomy/</code>
+            Component names:
+            <code>src/compositions/cricket/.docs/component-anatomy/</code>
             (open in editor).
           </p>
 
           <h2>Typography</h2>
-          <p><strong>Platform default:</strong> Outfit (display/scores) + Heebo (metadata/body).</p>
-          <p><strong>Per variant:</strong> registered in <code>design/_shared/fonts.json</code>.</p>
+          <p>
+            <strong>Platform default:</strong> Outfit (display/scores) + Heebo
+            (metadata/body).
+          </p>
+          <p>
+            <strong>Per variant:</strong> registered in
+            <code>design/_shared/fonts.json</code>.
+          </p>
           <ul>
-            <li><strong>Broadcast Pro</strong> — Teko (<code>font-teko</code>) + Rajdhani (<code>font-rajdhani</code>)</li>
-            <li><strong>Scoreline</strong> — Barlow Condensed (<code>--font-display</code>) + Source Sans 3 (<code>--font-body</code>)</li>
+            <li>
+              <strong>Broadcast Pro</strong> — Teko (<code>font-teko</code>) +
+              Rajdhani (<code>font-rajdhani</code>)
+            </li>
+            <li>
+              <strong>Scoreline</strong> — Barlow Condensed
+              (<code>--font-display</code>) + Source Sans 3
+              (<code>--font-body</code>)
+            </li>
           </ul>
           <p>
-            Min 20 px rendered type. Long names: wrap → shrink → official short name → truncate
-            last (never truncate scores or result statements).
+            Min 20 px rendered type. Long names: wrap → shrink → official short
+            name → truncate last (never truncate scores or result statements).
           </p>
           <h3>Add a font</h3>
           <ol>
             <li>Entry in <code>design/_shared/fonts.json</code></li>
             <li>Assign in <code>variantFonts</code></li>
             <li><code>applyVariantFonts(variantSlug)</code> on the page</li>
-            <li>Remotion handoff: <code>public/fonts/</code>, <code>fontPathMap</code>, tailwind preset, theme tokens</li>
+            <li>
+              Remotion handoff: <code>public/fonts/</code>,
+              <code>fontPathMap</code>, tailwind preset, theme tokens
+            </li>
           </ol>
           <p>Details: <code>design/.docs/fonts.md</code></p>
 
           <h2>Colour</h2>
           <p>
-            Two org colours + black/white/neutrals. Assign dominant field, accent, surfaces,
-            text. Fix contrast with structure — do not add random accent colours. Status =
-            words and weight first, not red/green alone.
+            Two org colours + black/white/neutrals. Assign dominant field,
+            accent, surfaces, text. Fix contrast with structure — do not add
+            random accent colours. Status = words and weight first, not
+            red/green alone.
           </p>
 
           <h2>Cricket data</h2>
           <ul>
-            <li>Preserve full score strings, wickets, overs, results and names exactly as supplied</li>
+            <li>
+              Preserve full score strings, wickets, overs, results and names
+              exactly as supplied
+            </li>
             <li>Keep not-out markers when supplied</li>
-            <li>Do not infer winners, recalculate margins, or strip score notation</li>
-            <li>Hydrate from fixture JSON — confirm bind map before styling (see below)</li>
-            <li>If scores and outcome contradict, check mapping first; flag bad fixture data in chat</li>
+            <li>
+              Do not infer winners, recalculate margins, or strip score notation
+            </li>
+            <li>
+              Hydrate from fixture JSON — confirm bind map before styling (see
+              below)
+            </li>
+            <li>
+              If scores and outcome contradict, check mapping first; flag bad
+              fixture data in chat
+            </li>
           </ul>
 
           <h2>Asset types (cricket)</h2>
           <table>
             <thead>
-              <tr><th>Type</th><th>Primary story</th></tr>
+              <tr>
+                <th>Type</th>
+                <th>Primary story</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Weekend Results</td><td>Scan of completed matches</td></tr>
-              <tr><td>Single Game Result</td><td>One match, score-first</td></tr>
-              <tr><td>Upcoming Fixtures</td><td>Who, when, where</td></tr>
-              <tr><td>Ladder</td><td>Standings</td></tr>
-              <tr><td>Top 5 Batting / Bowling</td><td>Ranked players</td></tr>
-              <tr><td>Performances</td><td>Notable individual figures</td></tr>
-              <tr><td>Team of the Week</td><td>Selected players</td></tr>
-              <tr><td>Team Roster</td><td>Match squad</td></tr>
+              <tr>
+                <td>Weekend Results</td>
+                <td>Scan of completed matches</td>
+              </tr>
+              <tr>
+                <td>Single Game Result</td>
+                <td>One match, score-first</td>
+              </tr>
+              <tr>
+                <td>Upcoming Fixtures</td>
+                <td>Who, when, where</td>
+              </tr>
+              <tr>
+                <td>Ladder</td>
+                <td>Standings</td>
+              </tr>
+              <tr>
+                <td>Top 5 Batting / Bowling</td>
+                <td>Ranked players</td>
+              </tr>
+              <tr>
+                <td>Performances</td>
+                <td>Notable individual figures</td>
+              </tr>
+              <tr>
+                <td>Team of the Week</td>
+                <td>Selected players</td>
+              </tr>
+              <tr>
+                <td>Team Roster</td>
+                <td>Match squad</td>
+              </tr>
             </tbody>
           </table>
 
           <h2>Fixtures &amp; hydration</h2>
           <p>
-            Key copy from Remotion Studio fixtures (<code>testData/samples/</code>).
-            Manifest: <code>design/_shared/routes.json</code>.
-            Bind maps: <code>design/_shared/hydration/…/*.bind.json</code>.
+            Key copy from Remotion Studio fixtures
+            (<code>testData/samples/</code>). Manifest:
+            <code>design/_shared/routes.json</code>. Bind maps:
+            <code>design/_shared/hydration/…/*.bind.json</code>.
           </p>
 
           <h2>Add a new prototype</h2>
@@ -275,31 +391,48 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
               (overlays only inside <code>.design-social-canvas</code>)
             </li>
             <li>
-              Register in <code>routes.json</code> on <strong>first delivery</strong> so the
-              template appears in the sidebar — never <code>.scratch/</code>
+              Register in <code>routes.json</code> on
+              <strong>first delivery</strong> so the template appears in the
+              sidebar — never <code>.scratch/</code>
             </li>
-            <li>Bind map + <code>fonts.json</code> if needed; iterate on the same file</li>
-            <li>Stress-test in design: long names, dense rows, missing logo, no sponsor</li>
-            <li>Handoff comment at top of HTML; add <code>asset-index.md</code> row when stable</li>
+            <li>
+              Bind map + <code>fonts.json</code> if needed; iterate on the same
+              file
+            </li>
+            <li>
+              Stress-test in design: long names, dense rows, missing logo, no
+              sponsor
+            </li>
+            <li>
+              Handoff comment at top of HTML; add
+              <code>asset-index.md</code> row when stable
+            </li>
           </ol>
 
           <h2>Handoff to Remotion</h2>
           <p>
-            Move <strong>approved overlay layouts</strong> from the design site into Remotion.
-            Manual reimplementation — no HTML-to-React converter. Full runbook:
+            Move <strong>approved overlay layouts</strong> from the design site
+            into Remotion. Manual reimplementation — no HTML-to-React converter.
+            Full runbook:
             <code>design/.docs/remotion-handoff.md</code>
           </p>
           <div class="note">
-            <strong>When:</strong> Pass 1 hydrates + Pass 2 visual identity approved + stress cases checked.<br />
-            <strong>Scope:</strong> Overlays inside main content only — not backgrounds, placeholder
-            imagery, or design-site chrome.
+            <strong>When:</strong> Pass 1 hydrates + Pass 2 visual identity
+            approved + stress cases checked.<br />
+            <strong>Scope:</strong> Overlays inside main content only — not
+            backgrounds, placeholder imagery, or design-site chrome.
           </div>
 
           <h3>Find your targets</h3>
           <ul>
             <li>HTML header comment on each asset page</li>
-            <li>Live handoff footer on the page (from <code>routes.json</code>)</li>
-            <li><code>design/_shared/routes.json</code> — registry, composition, theme path</li>
+            <li>
+              Live handoff footer on the page (from <code>routes.json</code>)
+            </li>
+            <li>
+              <code>design/_shared/routes.json</code> — registry, composition,
+              theme path
+            </li>
             <li><code>design/.docs/asset-index.md</code> — human index</li>
           </ul>
 
@@ -312,17 +445,21 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
             </li>
             <li>
               <strong>Composition displays</strong> — per asset under
-              <code>src/compositions/cricket/{composition}/</code>; export lowercase routing key
-              (e.g. <code>scoreline</code>) in <code>src/compositions/cricket/index.tsx</code>
+              <code>src/compositions/cricket/{composition}/</code>; export
+              lowercase routing key (e.g. <code>scoreline</code>) in
+              <code>src/compositions/cricket/index.tsx</code>
             </li>
             <li>
               <strong>Theme mapping</strong> —
-              <code>theme/composition/{asset}.ts</code> + <code>theme/mode.ts</code> + variant components; follow
-              <code>src/templates/variants/broadcastPro/.docs/readMe.md</code> and
+              <code>theme/composition/{asset}.ts</code> +
+              <code>theme/mode.ts</code> + variant components; follow
+              <code>src/templates/variants/broadcastPro/.docs/readMe.md</code>
+              and
               <code>design/design-Reference-docs/theme-modes.md</code>
             </li>
             <li>
-              <strong>Fonts</strong> — <code>design/.docs/fonts.md</code> (CDN in design → local in Remotion)
+              <strong>Fonts</strong> — <code>design/.docs/fonts.md</code> (CDN
+              in design → local in Remotion)
             </li>
             <li>
               <strong>Update manifest</strong> — replace <code>TBD</code> in
@@ -330,11 +467,14 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
             </li>
             <li>
               <strong>Verify</strong> — Remotion Studio with same fixture;
-              <code>appearance.template</code> = registry ID;
-              compare at 1080×1350
+              <code>appearance.template</code> = registry ID; compare at
+              1080×1350
             </li>
           </ol>
-          <p><strong>Order for new variants:</strong> Results first, then result-single, then wider asset family.</p>
+          <p>
+            <strong>Order for new variants:</strong> Results first, then
+            result-single, then wider asset family.
+          </p>
 
           <h3>Tailwind, CSS, and styling</h3>
           <p>
@@ -343,37 +483,43 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
           </p>
           <ul>
             <li>
-              <strong>Design site ≠ Remotion</strong> — CDN Tailwind / page CSS on prototypes does not
-              copy automatically; Remotion uses Tailwind v4 via <code>src/index.css</code>
+              <strong>Design site ≠ Remotion</strong> — CDN Tailwind / page CSS
+              on prototypes does not copy automatically; Remotion uses Tailwind
+              v4 via <code>src/index.css</code>
             </li>
             <li>
-              <strong>Where styles live</strong> — layout in literal Tailwind classes; reusable roles in
-              <code>theme/componentStyles</code>; club/mode colours in hooks or
-              <code>style</code>; motifs in variant CSS scoped to canvas root
+              <strong>Where styles live</strong> — layout in literal Tailwind
+              classes; reusable roles in <code>theme/componentStyles</code>;
+              club/mode colours in hooks or <code>style</code>; motifs in
+              variant CSS scoped to canvas root
             </li>
             <li>
-              <strong>Handoff-safe classes</strong> — complete strings only (<code>gap-4</code>);
-              no dynamic assembly (<code>bg-${color}</code>); runtime values via
+              <strong>Handoff-safe classes</strong> — complete strings only
+              (<code>gap-4</code>); no dynamic assembly
+              (<code>bg-${color}</code>); runtime values via
               <code>style</code> or CSS variables
             </li>
             <li>
-              <strong>Package CSS</strong> — custom variant stylesheets may need both
-              <code>src/index.css</code> (Studio) and <code>src/package/styles.css</code> (distributed build)
+              <strong>Package CSS</strong> — custom variant stylesheets may need
+              both <code>src/index.css</code> (Studio) and
+              <code>src/package/styles.css</code> (distributed build)
             </li>
             <li>
-              <strong>Modes</strong> — Fixtura modes come from theme data, not Tailwind
-              <code>dark:</code> — see theme-modes doc
+              <strong>Modes</strong> — Fixtura modes come from theme data, not
+              Tailwind <code>dark:</code> — see theme-modes doc
             </li>
             <li>
-              <strong>Motion</strong> — frame-derived React styles only; no CSS transitions or timers
+              <strong>Motion</strong> — frame-derived React styles only; no CSS
+              transitions or timers
             </li>
           </ul>
 
           <h3>Theme modes and contrast</h3>
           <p>
-            <code>templateVariation.mode</code> selects palette behaviour in Remotion.
-            Club colours still supply brand backgrounds and accents; mode supplies container and text tokens.
-            Full reference: <code>design/design-Reference-docs/theme-modes.md</code>
+            <code>templateVariation.mode</code> selects palette behaviour in
+            Remotion. Club colours still supply brand backgrounds and accents;
+            mode supplies container and text tokens. Full reference:
+            <code>design/design-Reference-docs/theme-modes.md</code>
           </p>
           <table>
             <thead>
@@ -385,39 +531,68 @@ Deliver registered HTML in the design site. Rationale in chat only.</pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td><code>light</code></td><td>White</td><td>Black</td><td>Black</td></tr>
-              <tr><td><code>lightAlt</code></td><td>White</td><td>White</td><td>Black</td></tr>
-              <tr><td><code>dark</code></td><td>Black</td><td>White</td><td>White</td></tr>
-              <tr><td><code>darkAlt</code></td><td>Black</td><td>Black</td><td>White</td></tr>
+              <tr>
+                <td><code>light</code></td>
+                <td>White</td>
+                <td>Black</td>
+                <td>Black</td>
+              </tr>
+              <tr>
+                <td><code>lightAlt</code></td>
+                <td>White</td>
+                <td>White</td>
+                <td>Black</td>
+              </tr>
+              <tr>
+                <td><code>dark</code></td>
+                <td>Black</td>
+                <td>White</td>
+                <td>White</td>
+              </tr>
+              <tr>
+                <td><code>darkAlt</code></td>
+                <td>Black</td>
+                <td>Black</td>
+                <td>White</td>
+              </tr>
             </tbody>
           </table>
           <p>
-            <strong>Alt</strong> flips title colour only — use for white headings over dark backdrops
-            with light cards, or the reverse. Panel transparency uses shared tokens
-            (<code>subtle</code> 30% → <code>strong</code> 85% opacity).
-            Copy contrast is resolved against <code>container.background</code>; titles over
-            transparent or moving backgrounds depend on what sits behind them.
+            <strong>Alt</strong> flips title colour only — use for white
+            headings over dark backdrops with light cards, or the reverse. Panel
+            transparency uses shared tokens (<code>subtle</code> 30% →
+            <code>strong</code> 85% opacity). Copy contrast is resolved against
+            <code>container.background</code>; titles over transparent or moving
+            backgrounds depend on what sits behind them.
           </p>
           <p>
-            <strong>Exceptions:</strong> Scoreline (transparent light containers, adaptive context strip)
-            and CNSW Private — see theme-modes doc. Verify all four modes in Studio, not only the
+            <strong>Exceptions:</strong> Scoreline (transparent light
+            containers, adaptive context strip) and CNSW Private — see
+            theme-modes doc. Verify all four modes in Studio, not only the
             design-site placeholder backdrop.
           </p>
 
           <h3>Agent one-liner</h3>
           <p>Copy to start an implement session:</p>
-          <pre class="prompt">Implement Remotion handoff for design/variants/{slug}/cricket/{asset}.html
+          <pre class="prompt">
+Implement Remotion handoff for design/variants/{slug}/cricket/{asset}.html
 → Registry: {RegistryId} (routing key: {slug})
 → Composition: src/compositions/cricket/{composition}/
 → Theme: src/templates/variants/{VariantFolder}/theme/composition/{asset}.ts
 → Fixture: {fixture path from routes.json}
 Overlays only — match approved design HTML in main content; no backgrounds or design-site chrome.
 Follow src/templates/variants/broadcastPro/ structure. Update routes.json + asset-index.md when theme path is known.
-Read design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.md, and design/design-Reference-docs/tailwind-css-remotion.md for full steps.</pre>
+Read design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.md, and design/design-Reference-docs/tailwind-css-remotion.md for full steps.</pre
+          >
 
           <h3>Definition of done</h3>
           <ul>
-            <li>Registry + composition routing keys wired (<code>routing.tsx</code> resolves template)</li>
+            <li>
+              Registry + composition routing keys wired (<code
+                >routing.tsx</code
+              >
+              resolves template)
+            </li>
             <li>Studio render matches approved prototype for same fixture</li>
             <li>Theme paths documented — not <code>TBD</code></li>
             <li>Backgrounds still from Remotion background system</li>
@@ -425,8 +600,8 @@ Read design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.
           <p>
             Golden example: Broadcast Pro Results —
             <code>design/variants/broadcast-pro/cricket/results.html</code> →
-            <code>src/templates/variants/broadcastPro/</code>.
-            Legacy stitch briefs (optional):
+            <code>src/templates/variants/broadcastPro/</code>. Legacy stitch
+            briefs (optional):
             <code>src/compositions/cricket/.docs/stitch-briefs/</code>.
           </p>
 
@@ -443,37 +618,74 @@ Read design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.
 
           <h2>Visual craft library (Pass 2)</h2>
           <p>
-            Read <strong>after pass 1 hydrates</strong> in the browser. Overlays inside
-            <code>.design-social-canvas</code> only — not Remotion backgrounds.
-            Hub: <code>design/.docs/reference-library.md</code>
+            Read <strong>after pass 1 hydrates</strong> in the browser. Overlays
+            inside <code>.design-social-canvas</code> only — not Remotion
+            backgrounds. Hub: <code>design/.docs/reference-library.md</code>
           </p>
           <table>
             <thead>
-              <tr><th>Doc</th><th>Use when</th><th>Constraint</th></tr>
+              <tr>
+                <th>Doc</th>
+                <th>Use when</th>
+                <th>Constraint</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td><code>design/design-Reference-docs/Google Fonts for Professional Graphic Design.md</code></td>
+                <td>
+                  <code
+                    >design/design-Reference-docs/Google Fonts for Professional
+                    Graphic Design.md</code
+                  >
+                </td>
                 <td>Choosing or changing font pairing</td>
-                <td>Respect <code>fonts.json</code>; includes LLM font-selection prompt</td>
+                <td>
+                  Respect <code>fonts.json</code>; includes LLM font-selection
+                  prompt
+                </td>
               </tr>
               <tr>
-                <td><code>design/design-Reference-docs/CSS Professional Design Techniques-2.md</code></td>
+                <td>
+                  <code
+                    >design/design-Reference-docs/CSS Professional Design
+                    Techniques-2.md</code
+                  >
+                </td>
                 <td>Tokens, depth, panels, shadows on overlay surfaces</td>
                 <td>No full-bleed backgrounds</td>
               </tr>
               <tr>
-                <td><code>design/design-Reference-docs/SVG Pattern and Texture Systems for Professional Graphics.md</code></td>
+                <td>
+                  <code
+                    >design/design-Reference-docs/SVG Pattern and Texture
+                    Systems for Professional Graphics.md</code
+                  >
+                </td>
                 <td>Structural motifs, rails, fine grain</td>
-                <td>Overlays only; variant motif rules override (e.g. Scoreline crease grammar)</td>
+                <td>
+                  Overlays only; variant motif rules override (e.g. Scoreline
+                  crease grammar)
+                </td>
               </tr>
               <tr>
-                <td><code>design/design-Reference-docs/tailwind-css-remotion.md</code></td>
-                <td>Pass 2 styling plan + Remotion handoff — theme vs CSS vs hooks; literal classes</td>
-                <td>Dynamic Tailwind; assuming design CDN config transfers to Remotion</td>
+                <td>
+                  <code
+                    >design/design-Reference-docs/tailwind-css-remotion.md</code
+                  >
+                </td>
+                <td>
+                  Pass 2 styling plan + Remotion handoff — theme vs CSS vs
+                  hooks; literal classes
+                </td>
+                <td>
+                  Dynamic Tailwind; assuming design CDN config transfers to
+                  Remotion
+                </td>
               </tr>
               <tr>
-                <td><code>design/design-Reference-docs/theme-modes.md</code></td>
+                <td>
+                  <code>design/design-Reference-docs/theme-modes.md</code>
+                </td>
                 <td>Remotion handoff — four modes, transparency, contrast</td>
                 <td>Tailwind <code>dark:</code> as mode substitute</td>
               </tr>

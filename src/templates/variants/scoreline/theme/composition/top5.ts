@@ -2,11 +2,10 @@ import { scorelineComponentStylesShared } from "../componentStyles.shared";
 
 export const scorelineCompositionComponentStylesTop5 = {
   scorelineTop5Ledger: {
-    className: "flex min-h-0 flex-1 flex-col overflow-hidden px-7 py-0",
+    className: "min-h-0 flex-1 overflow-hidden",
   },
   scorelineLeaderRow: {
-    className:
-      "grid min-h-0 flex-1 items-center gap-3 px-4 py-2 bg-white",
+    className: "grid min-h-0 flex-1 items-center gap-3 px-4 py-2",
   },
   scorelineTop5SponsorStrip:
     scorelineComponentStylesShared.scorelineSponsorStrip,

@@ -19,8 +19,7 @@ const POSITION_LABELS: Record<string, string> = {
 export const getTotwRoleLabel = (player: TeamOfTheWeekPlayer): string => {
   const position = player.categoryDetail?.position ?? "";
   const positionLabel =
-    POSITION_LABELS[position] ??
-    position.replace(/([a-z])([A-Z])/g, "$1 $2");
+    POSITION_LABELS[position] ?? position.replace(/([a-z])([A-Z])/g, "$1 $2");
 
   return `${player.category} · ${positionLabel}`;
 };
@@ -40,8 +39,7 @@ export const formatTotwStats = (
     const { runs, balls, strikeRate, notOut } = player.batting;
     const main = notOut ? `${runs}*` : String(runs);
     const suffix = balls > 0 ? `(${balls})` : "";
-    const subline =
-      strikeRate > 0 ? `SR ${Number(strikeRate).toFixed(1)}` : "";
+    const subline = strikeRate > 0 ? `SR ${Number(strikeRate).toFixed(1)}` : "";
 
     return { main, suffix, subline };
   }
@@ -84,6 +82,15 @@ export const formatTotwStats = (
   }
 
   return { main: "", suffix: "", subline: "" };
+};
+
+export const resolveTotwTeamName = (player: TeamOfTheWeekPlayer): string => {
+  const primaryTeam = player.primaryTeam?.trim() ?? "";
+  if (primaryTeam) {
+    return primaryTeam;
+  }
+
+  return player.club?.name?.trim() ?? "";
 };
 
 export const resolveTotwDensity = (

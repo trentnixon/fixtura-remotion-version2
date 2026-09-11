@@ -81,8 +81,8 @@
   --team-band-pad: 14px;
 
   /* Sponsor strip */
-  --sponsor-gradient-top: color-mix(in srgb, var(--surface-muted) 96%, white);
-  --sponsor-gradient-base: var(--surface-muted);
+  --sponsor-gradient-top: transparent;
+  --sponsor-gradient-base: transparent;
 
   /* Surface texture (see design/_shared/textures/manifest.json) */
   --texture-noise-url: url("/design/_shared/textures/fine-noise.svg");
@@ -111,6 +111,11 @@
 
   /* Header shell (integrated crease) */
   --zone-header-pad-bottom: 0px;
+}
+
+/* Hydration-only palette / debug binds — must not paint on canvas */
+.scoreline-canvas .fixture-palette {
+  display: none;
 }
 
 /* —— Crease motif (shared across Scoreline assets) —— */
@@ -167,33 +172,39 @@
   padding: var(--space-3) 0;
 }
 
-.scoreline-canvas :is(
-  .match-separator,
-  .fixture-separator,
-  .leader-crease,
-  .ladder-crease,
-  .totw-crease
-) .crease-rule {
+.scoreline-canvas
+  :is(
+    .match-separator,
+    .fixture-separator,
+    .leader-crease,
+    .ladder-crease,
+    .totw-crease
+  )
+  .crease-rule {
   height: var(--crease-rule-height-emphasis);
 }
 
-.scoreline-canvas :is(
-  .match-separator,
-  .fixture-separator,
-  .leader-crease,
-  .ladder-crease,
-  .totw-crease
-) .crease-post {
+.scoreline-canvas
+  :is(
+    .match-separator,
+    .fixture-separator,
+    .leader-crease,
+    .ladder-crease,
+    .totw-crease
+  )
+  .crease-post {
   height: var(--crease-post-height-emphasis);
 }
 
-.scoreline-canvas :is(
-  .match-separator,
-  .fixture-separator,
-  .leader-crease,
-  .ladder-crease,
-  .totw-crease
-) :is(.crease-rail, .crease-rail__primary, .crease-rail__secondary) {
+.scoreline-canvas
+  :is(
+    .match-separator,
+    .fixture-separator,
+    .leader-crease,
+    .ladder-crease,
+    .totw-crease
+  )
+  :is(.crease-rail, .crease-rail__primary, .crease-rail__secondary) {
   height: var(--crease-rail-height-emphasis);
 }
 
@@ -215,7 +226,9 @@
   height: var(--crease-post-height-compact);
 }
 
-.scoreline-canvas .roster-crease :is(.crease-rail, .crease-rail__primary, .crease-rail__secondary) {
+.scoreline-canvas
+  .roster-crease
+  :is(.crease-rail, .crease-rail__primary, .crease-rail__secondary) {
   height: var(--crease-rail-height);
 }
 
@@ -253,13 +266,29 @@
   background: var(--club-primary);
 }
 
-.scoreline-canvas .roster-rows .roster-entry:nth-of-type(even) .roster-crease .crease-post--primary,
-.scoreline-canvas .roster-rows .roster-entry:nth-of-type(even) .roster-crease .crease-rail__primary {
+.scoreline-canvas
+  .roster-rows
+  .roster-entry:nth-of-type(even)
+  .roster-crease
+  .crease-post--primary,
+.scoreline-canvas
+  .roster-rows
+  .roster-entry:nth-of-type(even)
+  .roster-crease
+  .crease-rail__primary {
   background: var(--club-secondary);
 }
 
-.scoreline-canvas .roster-rows .roster-entry:nth-of-type(even) .roster-crease .crease-post--secondary,
-.scoreline-canvas .roster-rows .roster-entry:nth-of-type(even) .roster-crease .crease-rail__secondary {
+.scoreline-canvas
+  .roster-rows
+  .roster-entry:nth-of-type(even)
+  .roster-crease
+  .crease-post--secondary,
+.scoreline-canvas
+  .roster-rows
+  .roster-entry:nth-of-type(even)
+  .roster-crease
+  .crease-rail__secondary {
   background: var(--club-primary);
 }
 
@@ -315,6 +344,7 @@
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
   overflow: hidden;
+  /* Remotion overlay: template background shows through header zone */
   background: transparent;
   border: none;
   box-shadow: none;
@@ -338,7 +368,7 @@
   min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(168px, 42%);
-  align-items: stretch;
+  align-items: center;
 }
 
 .scoreline-canvas .header-identity-lockup {
@@ -347,7 +377,7 @@
   grid-template-columns: 80px minmax(0, 1fr);
   gap: 14px;
   align-items: center;
-  padding: 12px 16px 12px 20px;
+  padding: 0 16px 0 20px;
 }
 
 .scoreline-canvas .header-title-stack {
@@ -356,8 +386,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  gap: 2px;
-  padding: 10px 16px;
+  gap: 4px;
+  padding: 0 16px;
   border-inline-start: 1px solid
     color-mix(in srgb, var(--header-text, var(--ink)) 10%, transparent);
 }
@@ -405,16 +435,17 @@
   -webkit-line-clamp: 2;
 }
 
-.scoreline-canvas .scoreline-header h1 {
+.scoreline-canvas .scoreline-header h1,
+.scoreline-canvas .header-title-stack .header-title {
   min-width: 0;
   overflow: hidden;
   color: var(--header-text, var(--ink));
   font-family: var(--font-display);
-  font-size: 65px;
+  font-size: var(--type-header-title, 44px);
   font-weight: 900;
   font-stretch: condensed;
-  letter-spacing: -0.03em;
-  line-height: 0.92;
+  letter-spacing: -0.02em;
+  line-height: 1;
   text-align: right;
   text-transform: uppercase;
   -webkit-box-orient: vertical;
@@ -487,9 +518,7 @@
   z-index: 1;
 }
 
-.scoreline-canvas
-  .team-score-area
-  .team-band[data-club-team="true"] {
+.scoreline-canvas .team-score-area .team-band[data-club-team="true"] {
   background: linear-gradient(
     var(--surface-gradient-angle),
     var(--team-gradient-deep-primary),
@@ -498,9 +527,7 @@
   );
 }
 
-.scoreline-canvas
-  .team-score-area
-  .team-band[data-club-team="false"] {
+.scoreline-canvas .team-score-area .team-band[data-club-team="false"] {
   background: linear-gradient(
     var(--surface-gradient-angle),
     var(--team-gradient-deep-secondary),
@@ -554,18 +581,40 @@
   font-weight: 600;
 }
 
+.scoreline-canvas .performance-area .performance-player {
+  color: var(--container-text-support, var(--contrast-performance-support));
+}
+
 .scoreline-canvas .performance-figure {
   color: var(--accent-on-light-primary);
   font-weight: 700;
+}
+
+.scoreline-canvas .performance-area .performance-figure {
+  color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
 .scoreline-canvas .performance-panel:last-child .performance-figure {
   color: var(--accent-on-light-secondary);
 }
 
+.scoreline-canvas
+  .performance-area
+  .performance-panel:last-child
+  .performance-figure {
+  color: var(--club-secondary);
+}
+
 .scoreline-canvas .performance-row[data-rank="1"] .performance-player {
   color: var(--contrast-performance-lead);
   font-weight: 650;
+}
+
+.scoreline-canvas
+  .performance-area
+  .performance-row[data-rank="1"]
+  .performance-player {
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas .performance-row[data-rank="1"] .performance-figure {
@@ -583,13 +632,132 @@
   color: var(--contrast-meta);
 }
 
+.scoreline-canvas .performance-area .performance-balls,
+.scoreline-canvas .performance-area .performance-empty {
+  color: var(--container-text-muted, var(--contrast-meta));
+}
+
 .scoreline-canvas .context-left,
 .scoreline-canvas .match-context {
-  color: var(--match-context-text-muted, var(--contrast-meta));
+  color: var(
+    --match-context-text-muted,
+    var(--container-text-muted, var(--contrast-meta))
+  );
 }
 
 .scoreline-canvas .context-venue {
-  color: var(--match-context-text, var(--contrast-performance));
+  color: var(
+    --match-context-text,
+    var(--container-text, var(--contrast-performance))
+  );
+}
+
+/* —— Container copy (light/lightAlt = light panel + dark text; dark/darkAlt = dark panel + white text) —— */
+.scoreline-canvas
+  :is(
+    .match-context,
+    .match-grade,
+    .performance-area,
+    .roster-context,
+    .fixture-grade,
+    .fixture-centre,
+    .ladder-grade,
+    .leaderboard-category,
+    .totw-category,
+    [data-roster] .roster-grade,
+    [data-roster] .roster-squad-header,
+    [data-leaderboard]
+      .leaderboard-rows
+      .leader-entry:nth-of-type(even)
+      .leader-row,
+    [data-ladder] .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row,
+    [data-roster] .roster-rows .roster-entry:nth-of-type(even) .roster-row,
+    [data-totw] .totw-rows .totw-entry:nth-of-type(even) .totw-row
+  ) {
+  color: var(--container-text, var(--contrast-performance-lead));
+}
+
+.scoreline-canvas
+  :is(
+    .match-context,
+    .match-grade,
+    .performance-area,
+    .roster-context,
+    .fixture-grade,
+    .fixture-centre,
+    .ladder-grade,
+    .leaderboard-category,
+    .totw-category,
+    [data-roster] .roster-grade-meta,
+    [data-roster] .roster-squad-label,
+    [data-leaderboard] .leaderboard-category-label,
+    [data-totw] .totw-category-label,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-team-label,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-team,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-balls,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-overs,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-sr,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure-label,
+    [data-ladder] .ladder-stat,
+    [data-totw] .totw-team-label,
+    [data-totw] .totw-team,
+    [data-totw] .totw-balls,
+    [data-totw] .totw-subline,
+    .fixture-field-label,
+    .fixture-grade-meta
+  ) {
+  color: var(--container-text-muted, var(--contrast-meta));
+}
+
+.scoreline-canvas
+  :is(
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-name,
+    [data-leaderboard] .leaderboard-category-value,
+    [data-ladder] .ladder-team,
+    [data-ladder] .ladder-grade-name,
+    [data-roster] .roster-player,
+    [data-roster] .roster-grade-name,
+    [data-roster] .roster-squad-team,
+    [data-totw] .totw-entry:not(:first-of-type) .totw-name,
+    [data-totw] .totw-category-value,
+    .fixture-grade-name,
+    .fixture-date,
+    .fixture-ground
+  ) {
+  color: var(--container-text, var(--contrast-performance-lead));
+}
+
+.scoreline-canvas
+  :is(
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-rank,
+    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure,
+    [data-ladder] .ladder-rank,
+    [data-ladder] .ladder-stat--pts,
+    [data-roster] .roster-index,
+    [data-totw] .totw-entry:not(:first-of-type) .totw-rank,
+    [data-totw] .totw-entry:not(:first-of-type) .totw-figure
+  ) {
+  color: var(--container-text-accent, var(--accent-on-light-primary));
+}
+
+/* Container surfaces — 20% tint via tokens; clip copy inside panel bounds */
+.scoreline-canvas
+  :is(
+    .match-context,
+    .match-grade,
+    .performance-area,
+    .performance-panel,
+    .roster-context,
+    .fixture-grade,
+    .fixture-centre,
+    .ladder-grade,
+    .leaderboard-category,
+    .totw-category,
+    [data-roster] .roster-grade,
+    [data-roster] .roster-squad-header
+  ) {
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* —— Result statement —— */
@@ -605,7 +773,6 @@
   border-top: var(--border-optical-light);
   box-shadow: var(--shadow-result-bar);
 }
-
 
 /* —— Logo wells —— */
 .scoreline-canvas .organisation-mark,
@@ -634,11 +801,17 @@
   display: none;
 }
 
-.scoreline-canvas .team-score-area .team-band[data-has-crest="false"] .team-mark {
+.scoreline-canvas
+  .team-score-area
+  .team-band[data-has-crest="false"]
+  .team-mark {
   display: none;
 }
 
-.scoreline-canvas .team-score-area .team-band[data-has-crest="false"] .team-primary,
+.scoreline-canvas
+  .team-score-area
+  .team-band[data-has-crest="false"]
+  .team-primary,
 .scoreline-canvas
   .team-score-area
   > .team-band:last-of-type[data-has-crest="false"]
@@ -682,11 +855,7 @@
 }
 
 .scoreline-canvas .sponsor-strip {
-  --surface-grain-opacity: var(--texture-noise-opacity-sponsor);
-
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
   width: 100%;
   min-height: 88px;
   display: flex;
@@ -695,12 +864,8 @@
   gap: var(--space-4, 24px);
   padding: var(--space-3, 16px) var(--space-4, 24px);
   border: 0;
-  background: linear-gradient(
-    180deg,
-    var(--sponsor-gradient-top) 0%,
-    var(--sponsor-gradient-base) 100%
-  );
-  box-shadow: var(--highlight-inset-light);
+  background: transparent;
+  box-shadow: none;
 }
 
 .scoreline-canvas .sponsor-strip > * {
@@ -832,28 +997,34 @@
   color: var(--contrast-meta-on-surface);
 }
 
-.scoreline-canvas .fixture-matchup .team-band[data-has-crest="false"] .team-mark {
+.scoreline-canvas
+  .fixture-matchup
+  .team-band[data-has-crest="false"]
+  .team-mark {
   display: none;
 }
 
 .scoreline-canvas .fixture-grade {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas .fixture-centre {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 /* —— Top 5 leaderboard —— */
 .scoreline-canvas .leaderboard-category {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas .leaderboard-category-label {
-  color: var(--contrast-meta);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-leaderboard] .leaderboard-rows .leader-entry:first-of-type .leader-row {
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry:first-of-type
+  .leader-row {
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -863,7 +1034,10 @@
   color: var(--on-surface);
 }
 
-.scoreline-canvas[data-leaderboard] .leaderboard-rows .leader-entry:first-of-type .leader-row::before {
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry:first-of-type
+  .leader-row::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -876,7 +1050,11 @@
   pointer-events: none;
 }
 
-.scoreline-canvas[data-leaderboard] .leaderboard-rows .leader-entry:first-of-type .leader-row > * {
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry:first-of-type
+  .leader-row
+  > * {
   position: relative;
   z-index: 1;
 }
@@ -916,12 +1094,16 @@
   color: var(--contrast-score);
 }
 
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-team-label,
+.scoreline-canvas[data-leaderboard]
+  .leader-entry:first-of-type
+  .leader-team-label,
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-team,
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-balls,
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-overs,
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-sr,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-figure-label {
+.scoreline-canvas[data-leaderboard]
+  .leader-entry:first-of-type
+  .leader-figure-label {
   color: var(--contrast-meta-on-surface);
 }
 
@@ -941,8 +1123,10 @@
   color: var(--accent-on-light-secondary);
 }
 
-.scoreline-canvas[data-leaderboard] .leader-entry:not(:first-of-type) .leader-name {
-  color: var(--contrast-performance-lead);
+.scoreline-canvas[data-leaderboard]
+  .leader-entry:not(:first-of-type)
+  .leader-name {
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-team-label,
@@ -954,7 +1138,10 @@
   color: var(--contrast-meta);
 }
 
-.scoreline-canvas[data-leaderboard] .leaderboard-rows .leader-entry:nth-of-type(even) .leader-row {
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry:nth-of-type(even)
+  .leader-row {
   box-shadow: var(--highlight-inset-light);
 }
 
@@ -964,7 +1151,7 @@
 
 /* —— Ladder table —— */
 .scoreline-canvas .ladder-grade {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas .ladder-columns {
@@ -972,7 +1159,10 @@
   border-bottom: 1px solid rgb(8 11 13 / 8%);
 }
 
-.scoreline-canvas[data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row {
+.scoreline-canvas[data-ladder]
+  .ladder-rows
+  .ladder-entry:first-of-type
+  .ladder-row {
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -988,7 +1178,10 @@
   );
 }
 
-.scoreline-canvas[data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row::before {
+.scoreline-canvas[data-ladder]
+  .ladder-rows
+  .ladder-entry:first-of-type
+  .ladder-row::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1001,7 +1194,11 @@
   pointer-events: none;
 }
 
-.scoreline-canvas[data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row > * {
+.scoreline-canvas[data-ladder]
+  .ladder-rows
+  .ladder-entry:first-of-type
+  .ladder-row
+  > * {
   position: relative;
   z-index: 1;
 }
@@ -1019,31 +1216,40 @@
 }
 
 .scoreline-canvas[data-ladder] .ladder-rank {
-  color: var(--accent-on-light-primary);
+  color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
 .scoreline-canvas[data-ladder] .ladder-team {
-  color: var(--contrast-performance-lead);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-ladder] .ladder-stat {
-  color: var(--contrast-performance-support);
+  color: var(--container-text-support, var(--contrast-performance-support));
 }
 
 .scoreline-canvas[data-ladder] .ladder-stat--pts {
-  color: var(--accent-on-light-primary);
+  color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
-.scoreline-canvas[data-ladder] .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row {
+.scoreline-canvas[data-ladder]
+  .ladder-rows
+  .ladder-entry:nth-of-type(even)
+  .ladder-row {
   box-shadow: var(--highlight-inset-light);
 }
 
 .scoreline-canvas[data-ladder] .ladder-row[data-bias="true"] {
-  box-shadow: var(--highlight-inset-light), inset 4px 0 0 var(--club-secondary);
+  box-shadow:
+    var(--highlight-inset-light),
+    inset 4px 0 0 var(--club-secondary);
 }
 
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-row[data-bias="true"] {
-  box-shadow: var(--highlight-inset), inset 4px 0 0 var(--club-secondary);
+.scoreline-canvas[data-ladder]
+  .ladder-entry:first-of-type
+  .ladder-row[data-bias="true"] {
+  box-shadow:
+    var(--highlight-inset),
+    inset 4px 0 0 var(--club-secondary);
 }
 
 .scoreline-canvas[data-ladder] .ladder-mark[data-has-crest="false"] {
@@ -1052,35 +1258,38 @@
 
 /* —— Team roster —— */
 .scoreline-canvas[data-roster] .roster-grade {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas[data-roster] .roster-grade-meta {
-  color: var(--contrast-meta);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-roster] .roster-squad-header {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas[data-roster] .roster-squad-label {
   color: var(--contrast-meta);
 }
 
-.scoreline-canvas[data-roster] .roster-rows .roster-entry:nth-of-type(even) .roster-row {
+.scoreline-canvas[data-roster]
+  .roster-rows
+  .roster-entry:nth-of-type(even)
+  .roster-row {
   box-shadow: var(--highlight-inset-light);
 }
 
 .scoreline-canvas[data-roster] .roster-index {
-  color: var(--accent-on-light-primary);
+  color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
 .scoreline-canvas[data-roster] .roster-player {
-  color: var(--contrast-performance-lead);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-roster] .roster-row[data-empty-roster="true"] {
-  color: var(--contrast-meta);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-roster] .roster-context {
@@ -1090,7 +1299,7 @@
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 72%, transparent)
+    color-mix(in srgb, var(--surface-muted) 20%, transparent)
   );
 }
 
@@ -1100,24 +1309,33 @@
 }
 
 .scoreline-canvas[data-roster] .roster-context-date {
-  color: var(--match-context-text, var(--contrast-performance-lead));
+  color: var(
+    --match-context-text,
+    var(--container-text, var(--contrast-performance-lead))
+  );
 }
 
 .scoreline-canvas[data-roster] .roster-context-venue {
-  color: var(--match-context-text-muted, var(--contrast-performance));
+  color: var(
+    --match-context-text-muted,
+    var(--container-text-muted, var(--contrast-performance))
+  );
 }
 
-.scoreline-canvas[data-roster] .fixture-matchup .team-band[data-has-crest="false"] .team-mark {
+.scoreline-canvas[data-roster]
+  .fixture-matchup
+  .team-band[data-has-crest="false"]
+  .team-mark {
   display: none;
 }
 
 /* —— Team of the Week —— */
 .scoreline-canvas .totw-category {
-  box-shadow: var(--highlight-inset-light);
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .scoreline-canvas .totw-category-label {
-  color: var(--contrast-meta);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-totw] .totw-rows .totw-entry:first-of-type .totw-row {
@@ -1136,7 +1354,10 @@
   );
 }
 
-.scoreline-canvas[data-totw] .totw-rows .totw-entry:first-of-type .totw-row::before {
+.scoreline-canvas[data-totw]
+  .totw-rows
+  .totw-entry:first-of-type
+  .totw-row::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1149,7 +1370,11 @@
   pointer-events: none;
 }
 
-.scoreline-canvas[data-totw] .totw-rows .totw-entry:first-of-type .totw-row > * {
+.scoreline-canvas[data-totw]
+  .totw-rows
+  .totw-entry:first-of-type
+  .totw-row
+  > * {
   position: relative;
   z-index: 1;
 }
@@ -1180,11 +1405,11 @@
 }
 
 .scoreline-canvas[data-totw] .totw-entry:not(:first-of-type) .totw-name {
-  color: var(--contrast-performance-lead);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-totw] .totw-entry:not(:first-of-type) .totw-role {
-  color: var(--accent-on-light-secondary);
+  color: var(--container-text-accent, var(--accent-on-light-secondary));
 }
 
 .scoreline-canvas[data-totw] .totw-team-label,
@@ -1194,7 +1419,10 @@
   color: var(--contrast-meta);
 }
 
-.scoreline-canvas[data-totw] .totw-rows .totw-entry:nth-of-type(even) .totw-row {
+.scoreline-canvas[data-totw]
+  .totw-rows
+  .totw-entry:nth-of-type(even)
+  .totw-row {
   box-shadow: var(--highlight-inset-light);
 }
 
@@ -1209,17 +1437,19 @@
 }
 
 /* —— Shared surface grain (single atmospheric texture) —— */
-.scoreline-canvas :is(
-  .header-shell,
-  .result-statement,
-  .team-score-area .team-band,
-  .fixture-matchup .team-band,
-  .sponsor-strip,
-  [data-roster] .roster-context,
-  [data-leaderboard] .leaderboard-rows .leader-entry:first-of-type .leader-row,
-  [data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row,
-  [data-totw] .totw-rows .totw-entry:first-of-type .totw-row
-)::after {
+.scoreline-canvas
+  :is(
+    .result-statement,
+    .team-score-area .team-band,
+    .fixture-matchup .team-band,
+    [data-roster] .roster-context,
+    [data-leaderboard]
+      .leaderboard-rows
+      .leader-entry:first-of-type
+      .leader-row,
+    [data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row,
+    [data-totw] .totw-rows .totw-entry:first-of-type .totw-row
+  )::after {
   content: "";
   position: absolute;
   inset: 0;

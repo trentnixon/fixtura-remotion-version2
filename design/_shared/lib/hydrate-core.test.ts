@@ -17,9 +17,7 @@ describe("routes manifest", () => {
       "cricket",
       "results",
     );
-    expect(entry.fixture).toBe(
-      "testData/samples/Cricket/Cricket_Results.json",
-    );
+    expect(entry.fixture).toBe("testData/samples/Cricket/Cricket_Results.json");
     expect(entry.registryId).toBe("BroadcastPro");
   });
 

@@ -151,12 +151,8 @@ export function deriveScorelineThemeVars(
     contrastMetaOnSurface: onDark
       ? "rgb(255 255 255 / 58%)"
       : "rgb(8 11 13 / 58%)",
-    onSurfaceMuted: onDark
-      ? "rgb(255 255 255 / 72%)"
-      : "rgb(8 11 13 / 72%)",
-    onSurfaceLabel: onDark
-      ? "rgb(255 255 255 / 68%)"
-      : "rgb(8 11 13 / 68%)",
+    onSurfaceMuted: onDark ? "rgb(255 255 255 / 72%)" : "rgb(8 11 13 / 72%)",
+    onSurfaceLabel: onDark ? "rgb(255 255 255 / 68%)" : "rgb(8 11 13 / 68%)",
     accentOnLightPrimary: toRgbString(accentOnLight(primary, ink)),
     accentOnLightSecondary: toRgbString(accentOnLight(secondary, ink)),
     onDark,

@@ -28,20 +28,25 @@
 }
 
 .design-canvas-wrap[data-scoreline-backdrop="light"] {
-  background:
-    linear-gradient(180deg, rgb(243 240 234) 0%, rgb(255 255 255) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(243 240 234) 0%,
+    rgb(255 255 255) 100%
+  );
 }
 
 .design-canvas-wrap[data-scoreline-backdrop="dark"] {
-  background:
-    radial-gradient(circle at 50% 0%, rgb(30 36 44) 0%, rgb(8 11 13) 72%);
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgb(30 36 44) 0%,
+    rgb(8 11 13) 72%
+  );
 }
 
 .design-canvas-wrap[data-scoreline-backdrop="club"] {
-  background:
-    linear-gradient(
-      118deg,
-      color-mix(in srgb, var(--preview-club-primary, #004de2) 55%, #080b0d),
-      color-mix(in srgb, var(--preview-club-secondary, #ff0000) 45%, #080b0d)
-    );
+  background: linear-gradient(
+    118deg,
+    color-mix(in srgb, var(--preview-club-primary, #004de2) 55%, #080b0d),
+    color-mix(in srgb, var(--preview-club-secondary, #ff0000) 45%, #080b0d)
+  );
 }

@@ -1,68 +1,84 @@
 import React from "react";
 import { Img } from "remotion";
+import { AnimatedContainer } from "../../../../components/containers/AnimatedContainer";
+import type { ContainerAnimationConfig } from "../../../../components/containers/animations";
 import type { TeamOfTheWeekPlayer } from "../types";
-import { ScorelineCreaseMarkup } from "../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
+import { csClass } from "../../utils/scoreline/componentStyles";
 import {
   formatTotwStats,
   getTotwRoleLabel,
+  resolveTotwTeamName,
 } from "../../utils/scoreline/totw/formatTotwStats";
+import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 export const ScorelineTotwRow: React.FC<{
   player: TeamOfTheWeekPlayer;
   index: number;
-  rowHeight: number;
-  compact: boolean;
-  showCrease: boolean;
-}> = ({ player, index, rowHeight, showCrease }) => {
+  animation: ContainerAnimationConfig;
+  animationDelay: number;
+  exitAnimation: ContainerAnimationConfig;
+  exitFrame: number;
+}> = ({
+  player,
+  index,
+  animation,
+  animationDelay,
+  exitAnimation,
+  exitFrame,
+}) => {
+  const { componentStyles } = useThemeContext();
   const stats = formatTotwStats(player);
-  const isFirst = index === 0;
   const logoUrl = player.club?.logo?.url;
+  const playerName = player.player?.trim() ?? "";
+  const hasName = Boolean(playerName);
+  const teamName = resolveTotwTeamName(player);
 
   return (
-    <div className="totw-entry">
-      <article
-        className="totw-row"
-        style={{ minHeight: rowHeight, maxHeight: rowHeight }}
+    <div className="totw-entry" data-empty={hasName ? "false" : "true"}>
+      <AnimatedContainer
+        type="full"
+        size="auto"
+        className={csClass(componentStyles, "scorelineAnimatedItem")}
+        backgroundColor="none"
+        animation={animation}
+        animationDelay={animationDelay}
+        exitAnimation={exitAnimation}
+        exitFrame={exitFrame}
       >
-        <span className="totw-rank" aria-hidden>
-          {index + 1}
-        </span>
-        <div
-          className="totw-mark"
-          data-has-crest={logoUrl ? "true" : "false"}
-        >
-          {logoUrl ? <Img src={logoUrl} alt="" /> : null}
-        </div>
-        <div className="totw-copy">
-          <span className="totw-role">{getTotwRoleLabel(player)}</span>
-          <p className="totw-name">{player.player}</p>
-          <div className="totw-team-block">
-            <span className="totw-team-label">Played for</span>
-            <p className="totw-team">{player.primaryTeam}</p>
+        <article className="totw-row">
+          <div
+            className="totw-mark"
+            data-has-crest={logoUrl ? "true" : "false"}
+          >
+            <span className="mark-fallback" aria-hidden />
+            {logoUrl ? <Img src={logoUrl} alt="" /> : null}
           </div>
-        </div>
-        <div className="totw-stats">
-          <p className="totw-figure">
-            {stats.main}
-            {stats.suffix ? (
-              <span className="totw-balls"> {stats.suffix}</span>
-            ) : null}
-          </p>
-          {stats.subline ? (
+          <div className="totw-copy">
+            <span className="totw-role">{getTotwRoleLabel(player)}</span>
+            <p className="totw-name" title={playerName}>
+              {playerName}
+            </p>
+            <div className="totw-team-block">
+              <span className="totw-team-label">Played for</span>
+              <p className="totw-team">{teamName}</p>
+            </div>
+          </div>
+          <div className="totw-stats">
+            <p className="totw-figure">
+              <span>{stats.main}</span>
+              {stats.suffix ? (
+                <span className="totw-balls">{stats.suffix}</span>
+              ) : null}
+            </p>
             <p
               className="totw-subline"
               data-empty={stats.subline ? "false" : "true"}
             >
               {stats.subline}
             </p>
-          ) : null}
-        </div>
-      </article>
-      {showCrease ? (
-        <div className="totw-crease" aria-hidden>
-          <ScorelineCreaseMarkup />
-        </div>
-      ) : null}
+          </div>
+        </article>
+      </AnimatedContainer>
     </div>
   );
 };

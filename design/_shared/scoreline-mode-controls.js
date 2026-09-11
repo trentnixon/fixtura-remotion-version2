@@ -80,17 +80,19 @@ export function mountScorelineModeControls(canvas) {
   };
 
   modeSelect.addEventListener("change", () => {
-    const modeId = /** @type {import("./scoreline-mode.js").ScorelineModeId} */ (
-      modeSelect.value
-    );
+    const modeId =
+      /** @type {import("./scoreline-mode.js").ScorelineModeId} */ (
+        modeSelect.value
+      );
     persistScorelineMode(modeId);
     applyScorelineMode(canvas, modeId);
   });
 
   backdropSelect.addEventListener("change", () => {
-    const backdropId = /** @type {import("./scoreline-mode.js").ScorelineBackdropId} */ (
-      backdropSelect.value
-    );
+    const backdropId =
+      /** @type {import("./scoreline-mode.js").ScorelineBackdropId} */ (
+        backdropSelect.value
+      );
     persistScorelineBackdrop(backdropId);
     applyScorelineBackdrop(document, backdropId);
   });
