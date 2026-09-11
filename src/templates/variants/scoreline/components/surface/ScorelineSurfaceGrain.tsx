@@ -16,6 +16,8 @@ export const ScorelineSurfaceGrain: React.FC<ScorelineSurfaceGrainProps> = ({
     <span
       className={`pointer-events-none absolute inset-0 z-0 ${className}`}
       style={{
+        // Pattern tiling requires CSS repeat; asset is local via staticFile.
+        // eslint-disable-next-line @remotion/no-background-image -- tiled noise texture overlay
         backgroundImage: `url("${NOISE_URL}")`,
         backgroundSize: "256px 256px",
         backgroundRepeat: "repeat",

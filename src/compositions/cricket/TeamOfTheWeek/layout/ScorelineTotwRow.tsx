@@ -13,14 +13,12 @@ import { useThemeContext } from "../../../../core/context/ThemeContext";
 
 export const ScorelineTotwRow: React.FC<{
   player: TeamOfTheWeekPlayer;
-  index: number;
   animation: ContainerAnimationConfig;
   animationDelay: number;
   exitAnimation: ContainerAnimationConfig;
   exitFrame: number;
 }> = ({
   player,
-  index,
   animation,
   animationDelay,
   exitAnimation,

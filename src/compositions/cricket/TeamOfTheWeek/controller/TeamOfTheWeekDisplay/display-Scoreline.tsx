@@ -69,7 +69,6 @@ const TeamOfTheWeekDisplayScoreline: React.FC<TeamOfTheWeekDisplayProps> = ({
                   <ScorelineTotwRow
                     key={`${player.player}-${player.categoryDetail.position}-${index}`}
                     player={player}
-                    index={index}
                     animation={containerAnimation.containerIn}
                     animationDelay={calculatePlayerDelay(index)}
                     exitAnimation={containerAnimation.containerOut}

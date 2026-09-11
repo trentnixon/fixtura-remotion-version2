@@ -6,6 +6,21 @@ export default [
     ignores: [".agents/**", ".claude/**"],
   },
   {
+    files: ["design/_shared/**/*.{js,mjs}"],
+    languageOptions: {
+      globals: {
+        console: "readonly",
+        document: "readonly",
+        fetch: "readonly",
+        getComputedStyle: "readonly",
+        HTMLElement: "readonly",
+        HTMLImageElement: "readonly",
+        URLSearchParams: "readonly",
+        window: "readonly",
+      },
+    },
+  },
+  {
     files: ["scripts/**/*.{js,mjs,cjs}", "src/package/**/*.{js,cjs}"],
     languageOptions: {
       globals: {
