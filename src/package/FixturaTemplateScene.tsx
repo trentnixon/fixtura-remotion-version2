@@ -1,6 +1,7 @@
 import React from "react";
 import { getProductionCompositionFromData } from "../core/preview/getProductionCompositionFromData";
 import { FixturaDataset } from "../core/types/data/index";
+import { ScorelineBundledStyles } from "./ScorelineBundledStyles";
 
 export type FixturaTemplateSceneProps = {
   data: FixturaDataset;
@@ -13,5 +14,12 @@ export const FixturaTemplateScene: React.FC<FixturaTemplateSceneProps> = ({
   data,
 }) => {
   const { TemplateComponent } = getProductionCompositionFromData(data);
-  return <TemplateComponent data={data} />;
+  const templateId = data.videoMeta.video.appearance.template;
+
+  return (
+    <>
+      {templateId === "Scoreline" ? <ScorelineBundledStyles /> : null}
+      <TemplateComponent data={data} />
+    </>
+  );
 };

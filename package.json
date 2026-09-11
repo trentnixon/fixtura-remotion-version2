@@ -1,6 +1,6 @@
 {
   "name": "@fixtura/remotion-assets",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Fixtura Remotion Assets",
   "repository": {
     "type": "git",
@@ -87,13 +87,13 @@
     "dev": "remotion studio",
     "design": "npx serve . -p 3456",
     "build": "remotion bundle",
-    "build:package:js": "tsup && node scripts/copy-preview-dts.mjs",
+    "build:package:js": "node scripts/inline-scoreline-css.mjs && tsup && node scripts/copy-preview-dts.mjs",
     "build:package:css": "tailwindcss -i ./src/package/styles.css -o ./dist/preview.css --minify",
     "build:package": "npm run build:package:js && npm run build:package:css && npm run verify:pack",
     "verify:pack": "node scripts/verify-pack.mjs",
     "prepack": "npm run build:package",
     "upgrade": "remotion upgrade",
-    "lint": "tsc",
+    "lint": "node scripts/inline-scoreline-css.mjs && tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint:fix": "eslint . --fix",

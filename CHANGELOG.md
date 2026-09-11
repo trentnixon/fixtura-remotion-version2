@@ -4,6 +4,16 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.6] - 2026-09-11
+
+### Added
+
+- **Scoreline bundled CSS in preview bundle** — `build:package` inlines Scoreline scoped stylesheets into `dist/preview.*` and injects them at runtime via `ScorelineBundledStyles`, so consuming apps only need `@fixtura/remotion-assets/preview` (no separate stylesheet import for Scoreline layout).
+
+### Changed
+
+- **`build:package`** runs `scripts/inline-scoreline-css.mjs` before `tsup`; **`verify:pack`** asserts Scoreline CSS markers in `dist/preview.css`, `dist/preview.mjs`, and the generated module.
+
 ## [0.1.3] - 2026-04-14
 
 ### Added

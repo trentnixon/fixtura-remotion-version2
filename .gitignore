@@ -9,3 +9,6 @@ out
 build
 build/
 build/*
+
+# Generated at build time; bundled into dist/preview.* via tsup.
+src/package/generated/

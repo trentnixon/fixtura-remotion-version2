@@ -45,8 +45,44 @@ for (const rel of mustExist) {
   }
 }
 
+const scorelineChecks = [
+  {
+    path: "dist/preview.css",
+    label: "dist/preview.css",
+    needles: [".scoreline-canvas", ".results-ledger"],
+  },
+  {
+    path: "dist/preview.mjs",
+    label: "dist/preview.mjs",
+    needles: [".scoreline-canvas", "fixtura-scoreline-styles"],
+  },
+  {
+    path: "src/package/generated/scorelineBundledCss.ts",
+    label: "scorelineBundledCss.ts",
+    needles: ["SCORELINE_BUNDLED_CSS", ".scoreline-canvas"],
+  },
+];
+
+for (const check of scorelineChecks) {
+  const abs = join(root, check.path);
+  if (!existsSync(abs)) {
+    console.error(`verify-pack: Scoreline bundle check missing file: ${check.path}`);
+    failed = true;
+    continue;
+  }
+  const content = readFileSync(abs, "utf8");
+  for (const needle of check.needles) {
+    if (!content.includes(needle)) {
+      console.error(
+        `verify-pack: ${check.label} missing Scoreline marker: ${needle}`,
+      );
+      failed = true;
+    }
+  }
+}
+
 if (failed) {
   process.exit(1);
 }
 
-console.log("verify-pack: OK (files list + critical paths)");
+console.log("verify-pack: OK (files list + critical paths + Scoreline CSS bundle)");
