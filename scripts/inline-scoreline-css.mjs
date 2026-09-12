@@ -38,7 +38,10 @@ if (!bundledCss.includes(".scoreline-canvas")) {
   process.exit(1);
 }
 
-const escaped = bundledCss.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
+const escaped = bundledCss
+  .replace(/\\/g, "\\\\")
+  .replace(/`/g, "\\`")
+  .replace(/\$\{/g, "\\${");
 
 mkdirSync(outDir, { recursive: true });
 
@@ -48,4 +51,6 @@ writeFileSync(
   "utf8",
 );
 
-console.log(`inline-scoreline-css: wrote ${outFile} (${bundledCss.length} bytes)`);
+console.log(
+  `inline-scoreline-css: wrote ${outFile} (${bundledCss.length} bytes)`,
+);

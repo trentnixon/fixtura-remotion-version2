@@ -66,7 +66,9 @@ const scorelineChecks = [
 for (const check of scorelineChecks) {
   const abs = join(root, check.path);
   if (!existsSync(abs)) {
-    console.error(`verify-pack: Scoreline bundle check missing file: ${check.path}`);
+    console.error(
+      `verify-pack: Scoreline bundle check missing file: ${check.path}`,
+    );
     failed = true;
     continue;
   }
@@ -85,4 +87,6 @@ if (failed) {
   process.exit(1);
 }
 
-console.log("verify-pack: OK (files list + critical paths + Scoreline CSS bundle)");
+console.log(
+  "verify-pack: OK (files list + critical paths + Scoreline CSS bundle)",
+);

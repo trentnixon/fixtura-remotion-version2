@@ -1,6 +1,6 @@
 # Folder Overview
 
-Scoreline variant: overlay-first cricket graphics with crease motif grammar, Barlow Condensed + Source Sans 3 typography, and mode-aware container panels at 20% tint over the Remotion background.
+Scoreline variant: overlay-first cricket graphics with crease motif grammar, Barlow Condensed + Source Sans 3 typography, and mode-aware container panels at 40% minimum tint over the Remotion background.
 
 ## Files
 

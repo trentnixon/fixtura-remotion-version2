@@ -491,7 +491,7 @@
   border-top: var(--border-optical-light);
   border-bottom: var(--border-optical-dark);
   box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
+  color: var(--container-text, var(--on-surface));
 }
 
 .scoreline-canvas .team-score-area .team-band[data-club-team="true"]::before {
@@ -558,18 +558,18 @@
   );
 }
 
-/* —— Contrast wiring —— */
+/* —— Contrast wiring (results team bands follow mode container copy) —— */
 .scoreline-canvas .team-score-area .score {
-  color: var(--contrast-score);
+  color: var(--container-text, var(--contrast-score));
 }
 
 .scoreline-canvas .team-score-area .team-name {
-  color: var(--contrast-team);
+  color: var(--container-text, var(--contrast-team));
 }
 
 .scoreline-canvas .team-score-area .overs,
 .scoreline-canvas .team-score-area .team-role {
-  color: var(--contrast-meta-on-surface);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .scoreline-canvas .result-statement {
@@ -671,8 +671,8 @@
       .leader-entry:nth-of-type(even)
       .leader-row,
     [data-ladder] .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row,
-    [data-roster] .roster-rows .roster-entry:nth-of-type(even) .roster-row,
-    [data-totw] .totw-rows .totw-entry:nth-of-type(even) .totw-row
+    [data-roster] .roster-rows .roster-entry .roster-row,
+    [data-totw] .totw-rows .totw-entry .totw-row
   ) {
   color: var(--container-text, var(--contrast-performance-lead));
 }
@@ -700,7 +700,6 @@
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure-label,
     [data-ladder] .ladder-stat,
     [data-totw] .totw-team-label,
-    [data-totw] .totw-team,
     [data-totw] .totw-balls,
     [data-totw] .totw-subline,
     .fixture-field-label,
@@ -718,7 +717,8 @@
     [data-roster] .roster-player,
     [data-roster] .roster-grade-name,
     [data-roster] .roster-squad-team,
-    [data-totw] .totw-entry:not(:first-of-type) .totw-name,
+    [data-totw] .totw-name,
+    [data-totw] .totw-team,
     [data-totw] .totw-category-value,
     .fixture-grade-name,
     .fixture-date,
@@ -734,13 +734,12 @@
     [data-ladder] .ladder-rank,
     [data-ladder] .ladder-stat--pts,
     [data-roster] .roster-index,
-    [data-totw] .totw-entry:not(:first-of-type) .totw-rank,
-    [data-totw] .totw-entry:not(:first-of-type) .totw-figure
+    [data-totw] .totw-figure
   ) {
   color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
-/* Container surfaces — 20% tint via tokens; clip copy inside panel bounds */
+/* Container surfaces — 40% min tint via tokens; clip copy inside panel bounds */
 .scoreline-canvas
   :is(
     .match-context,
@@ -754,7 +753,9 @@
     .leaderboard-category,
     .totw-category,
     [data-roster] .roster-grade,
-    [data-roster] .roster-squad-header
+    [data-roster] .roster-squad-header,
+    [data-roster] .roster-rows .roster-entry .roster-row,
+    [data-totw] .totw-rows .totw-entry .totw-row
   ) {
   min-width: 0;
   overflow: hidden;
@@ -922,7 +923,7 @@
   border-top: var(--border-optical-light);
   border-bottom: var(--border-optical-dark);
   box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
+  color: var(--container-text, var(--on-surface));
 }
 
 .scoreline-canvas .fixture-matchup .team-band::before {
@@ -987,14 +988,15 @@
   );
 }
 
+/* Fixture team bands — mode container copy (not surface contrast) */
 .scoreline-canvas .fixture-matchup .team-name {
-  color: var(--contrast-team);
+  color: var(--container-text, var(--contrast-team));
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 .scoreline-canvas .fixture-matchup .team-side-label {
-  color: var(--contrast-meta-on-surface);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .scoreline-canvas
@@ -1021,112 +1023,29 @@
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-top: var(--border-optical-light);
-  border-bottom: var(--border-optical-dark);
-  box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(
-    var(--surface-spot-size) at var(--team-spot-x, 28%) var(--surface-spot-y),
-    rgb(255 255 255 / var(--surface-spot-opacity)),
-    transparent 68%
-  );
-  pointer-events: none;
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row
-  > * {
-  position: relative;
-  z-index: 1;
-}
-
-.scoreline-canvas[data-leaderboard="batting"]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row {
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-primary),
-    var(--team-surface-primary),
-    var(--team-gradient-lift-primary)
-  );
-}
-
-.scoreline-canvas[data-leaderboard="bowling"]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row {
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-secondary),
-    var(--team-surface-secondary),
-    var(--team-gradient-lift-secondary)
-  );
-}
-
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-name {
-  color: var(--contrast-team);
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-rank,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-figure {
-  color: var(--contrast-score);
+.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-copy,
+.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-stats {
+  opacity: 0.75;
 }
 
-.scoreline-canvas[data-leaderboard]
-  .leader-entry:first-of-type
-  .leader-team-label,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-team,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-balls,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-overs,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-sr,
-.scoreline-canvas[data-leaderboard]
-  .leader-entry:first-of-type
-  .leader-figure-label {
-  color: var(--contrast-meta-on-surface);
-}
-
-.scoreline-canvas[data-leaderboard="batting"] .leader-rank {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-leaderboard="bowling"] .leader-rank {
-  color: var(--accent-on-light-secondary);
-}
-
-.scoreline-canvas[data-leaderboard="batting"] .leader-figure {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-leaderboard="bowling"] .leader-figure {
-  color: var(--accent-on-light-secondary);
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leader-entry:not(:first-of-type)
-  .leader-name {
+.scoreline-canvas[data-leaderboard] .leader-name {
   color: var(--container-text, var(--contrast-performance-lead));
+}
+
+.scoreline-canvas[data-leaderboard="batting"] .leader-rank,
+.scoreline-canvas[data-leaderboard="batting"] .leader-figure {
+  color: var(--container-text-accent, var(--accent-on-light-primary));
+}
+
+.scoreline-canvas[data-leaderboard="bowling"] .leader-rank,
+.scoreline-canvas[data-leaderboard="bowling"] .leader-figure {
+  color: var(--container-text-accent, var(--accent-on-light-secondary));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-team-label,
@@ -1135,14 +1054,7 @@
 .scoreline-canvas[data-leaderboard] .leader-overs,
 .scoreline-canvas[data-leaderboard] .leader-sr,
 .scoreline-canvas[data-leaderboard] .leader-figure-label {
-  color: var(--contrast-meta);
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:nth-of-type(even)
-  .leader-row {
-  box-shadow: var(--highlight-inset-light);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-mark[data-has-crest="false"] {
@@ -1159,58 +1071,7 @@
   border-bottom: 1px solid rgb(8 11 13 / 8%);
 }
 
-.scoreline-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry:first-of-type
-  .ladder-row {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-top: var(--border-optical-light);
-  border-bottom: var(--border-optical-dark);
-  box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-primary),
-    var(--team-surface-primary),
-    var(--team-gradient-lift-primary)
-  );
-}
-
-.scoreline-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry:first-of-type
-  .ladder-row::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(
-    var(--surface-spot-size) at var(--team-spot-x, 28%) var(--surface-spot-y),
-    rgb(255 255 255 / var(--surface-spot-opacity)),
-    transparent 68%
-  );
-  pointer-events: none;
-}
-
-.scoreline-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry:first-of-type
-  .ladder-row
-  > * {
-  position: relative;
-  z-index: 1;
-}
-
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-rank,
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-team,
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-stat {
-  color: var(--contrast-score);
-}
-
 .scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-team {
-  color: var(--contrast-team);
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
@@ -1240,15 +1101,7 @@
 
 .scoreline-canvas[data-ladder] .ladder-row[data-bias="true"] {
   box-shadow:
-    var(--highlight-inset-light),
-    inset 4px 0 0 var(--club-secondary);
-}
-
-.scoreline-canvas[data-ladder]
-  .ladder-entry:first-of-type
-  .ladder-row[data-bias="true"] {
-  box-shadow:
-    var(--highlight-inset),
+    var(--match-context-inset, var(--highlight-inset-light)),
     inset 4px 0 0 var(--club-secondary);
 }
 
@@ -1270,14 +1123,11 @@
 }
 
 .scoreline-canvas[data-roster] .roster-squad-label {
-  color: var(--contrast-meta);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-roster]
-  .roster-rows
-  .roster-entry:nth-of-type(even)
-  .roster-row {
-  box-shadow: var(--highlight-inset-light);
+.scoreline-canvas[data-roster] .fixture-matchup .team-name {
+  color: var(--container-text, var(--contrast-team));
 }
 
 .scoreline-canvas[data-roster] .roster-index {
@@ -1299,7 +1149,7 @@
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
 }
 
@@ -1338,92 +1188,27 @@
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-totw] .totw-rows .totw-entry:first-of-type .totw-row {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-top: var(--border-optical-light);
-  border-bottom: var(--border-optical-dark);
-  box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-primary),
-    var(--team-surface-primary),
-    var(--team-gradient-lift-primary)
-  );
-}
-
-.scoreline-canvas[data-totw]
-  .totw-rows
-  .totw-entry:first-of-type
-  .totw-row::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(
-    var(--surface-spot-size) at var(--team-spot-x, 28%) var(--surface-spot-y),
-    rgb(255 255 255 / var(--surface-spot-opacity)),
-    transparent 68%
-  );
-  pointer-events: none;
-}
-
-.scoreline-canvas[data-totw]
-  .totw-rows
-  .totw-entry:first-of-type
-  .totw-row
-  > * {
-  position: relative;
-  z-index: 1;
-}
-
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-name {
-  color: var(--contrast-team);
-}
-
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-rank,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-figure {
-  color: var(--contrast-score);
-}
-
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-role,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-team-label,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-team,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-balls,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-subline {
-  color: var(--contrast-meta-on-surface);
-}
-
-.scoreline-canvas[data-totw] .totw-rank {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-totw] .totw-figure {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-totw] .totw-entry:not(:first-of-type) .totw-name {
+.scoreline-canvas[data-totw] .totw-name {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-totw] .totw-entry:not(:first-of-type) .totw-role {
+.scoreline-canvas[data-totw] .totw-rank,
+.scoreline-canvas[data-totw] .totw-figure {
+  color: var(--container-text-accent, var(--accent-on-light-primary));
+}
+
+.scoreline-canvas[data-totw] .totw-role {
   color: var(--container-text-accent, var(--accent-on-light-secondary));
 }
 
-.scoreline-canvas[data-totw] .totw-team-label,
-.scoreline-canvas[data-totw] .totw-team,
-.scoreline-canvas[data-totw] .totw-balls,
-.scoreline-canvas[data-totw] .totw-subline {
-  color: var(--contrast-meta);
+.scoreline-canvas[data-totw] .totw-team {
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-totw]
-  .totw-rows
-  .totw-entry:nth-of-type(even)
-  .totw-row {
-  box-shadow: var(--highlight-inset-light);
+.scoreline-canvas[data-totw] .totw-team-label,
+.scoreline-canvas[data-totw] .totw-balls,
+.scoreline-canvas[data-totw] .totw-subline {
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-totw] .totw-mark[data-has-crest="false"] {
@@ -1442,13 +1227,7 @@
     .result-statement,
     .team-score-area .team-band,
     .fixture-matchup .team-band,
-    [data-roster] .roster-context,
-    [data-leaderboard]
-      .leaderboard-rows
-      .leader-entry:first-of-type
-      .leader-row,
-    [data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row,
-    [data-totw] .totw-rows .totw-entry:first-of-type .totw-row
+    [data-roster] .roster-context
   )::after {
   content: "";
   position: absolute;

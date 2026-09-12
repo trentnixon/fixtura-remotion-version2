@@ -50291,13 +50291,7 @@ var resolveTotwDensity = (count) => {
 
 // src/compositions/cricket/TeamOfTheWeek/layout/ScorelineTotwRow.tsx
 import { jsx as jsx543, jsxs as jsxs303 } from "react/jsx-runtime";
-var ScorelineTotwRow = ({
-  player,
-  animation,
-  animationDelay,
-  exitAnimation,
-  exitFrame
-}) => {
+var ScorelineTotwRow = ({ player, animation, animationDelay, exitAnimation, exitFrame }) => {
   var _a, _b, _c, _d;
   const { componentStyles } = useThemeContext();
   const stats = formatTotwStats(player);
@@ -60800,8 +60794,13 @@ function deriveScorelineThemeVars(theme = {}) {
 
 // src/compositions/cricket/utils/scoreline/resolveScorelineOverlayTokens.ts
 import tinycolor33 from "tinycolor2";
-var MATCH_CONTEXT_PANEL_LIGHT = "rgba(243, 240, 234, 0.2)";
-var MATCH_CONTEXT_PANEL_DARK = "rgba(8, 11, 13, 0.2)";
+var SCORELINE_PANEL_MIN_OPACITY = 0.4;
+var SCORELINE_PANEL_LIGHT = `rgba(243, 240, 234, ${SCORELINE_PANEL_MIN_OPACITY})`;
+var SCORELINE_PANEL_DARK = `rgba(8, 11, 13, ${SCORELINE_PANEL_MIN_OPACITY})`;
+var PERFORMANCE_AREA_PANEL_LIGHT = "rgba(243, 240, 234, 0.5)";
+var PERFORMANCE_AREA_PANEL_DARK = "rgba(8, 11, 13, 0.5)";
+var LEADERBOARD_HERO_ROW_LIGHT = "rgba(243, 240, 234, 0.75)";
+var LEADERBOARD_HERO_ROW_DARK = "rgba(8, 11, 13, 0.75)";
 var SCORELINE_DEFAULT_SURFACE = "#ffffff";
 var isTransparentContainerBackground = (background) => !background || background === "transparent" || tinycolor33(background).getAlpha() === 0;
 var isScorelineDarkContainerMode = (selectedPalette) => !isTransparentContainerBackground(selectedPalette.container.background);
@@ -60824,7 +60823,7 @@ var resolveScorelineContainerCopyTokens = (selectedPalette) => {
   var _a;
   const isDark = isScorelineDarkContainerMode(selectedPalette);
   const surfaceSolid = isDark ? selectedPalette.container.background : selectedPalette.container.backgroundAlt;
-  const surface = isDark ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT;
+  const surface = isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT;
   const copy = ensureContrast2(
     surfaceSolid,
     selectedPalette.text.onContainer.copy
@@ -60846,14 +60845,19 @@ var resolveScorelineContainerCopyTokens = (selectedPalette) => {
 };
 var resolveScorelineMatchContextTokens = (selectedPalette) => {
   const container = resolveScorelineContainerCopyTokens(selectedPalette);
+  const isDark = isScorelineDarkContainerMode(selectedPalette);
   return {
-    surface: container.surface,
+    surface: isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT,
     inset: container.inset,
     textMuted: container.textMuted,
     text: container.text,
     accent: container.accent
   };
 };
+var resolveScorelinePerformanceAreaSurface = (selectedPalette) => isScorelineDarkContainerMode(selectedPalette) ? PERFORMANCE_AREA_PANEL_DARK : PERFORMANCE_AREA_PANEL_LIGHT;
+var resolveScorelineLadderRowSurface = (selectedPalette) => resolveScorelinePerformanceAreaSurface(selectedPalette);
+var resolveScorelineLeaderboardHeroRowSurface = (selectedPalette) => isScorelineDarkContainerMode(selectedPalette) ? LEADERBOARD_HERO_ROW_DARK : LEADERBOARD_HERO_ROW_LIGHT;
+var resolveScorelineRosterRowSurface = (selectedPalette) => resolveScorelineLeaderboardHeroRowSurface(selectedPalette);
 
 // src/compositions/cricket/utils/scoreline/scorelineCanvasStyle.ts
 var getScorelineCanvasStyle = (primary, secondary) => {
@@ -60890,6 +60894,22 @@ var useScorelineCanvasStyle = () => {
     () => resolveScorelineContainerCopyTokens(selectedPalette),
     [selectedPalette]
   );
+  const performanceAreaSurface = useMemo21(
+    () => resolveScorelinePerformanceAreaSurface(selectedPalette),
+    [selectedPalette]
+  );
+  const ladderRowSurface = useMemo21(
+    () => resolveScorelineLadderRowSurface(selectedPalette),
+    [selectedPalette]
+  );
+  const leaderboardHeroRowSurface = useMemo21(
+    () => resolveScorelineLeaderboardHeroRowSurface(selectedPalette),
+    [selectedPalette]
+  );
+  const rosterRowSurface = useMemo21(
+    () => resolveScorelineRosterRowSurface(selectedPalette),
+    [selectedPalette]
+  );
   return useMemo21(
     () => ({
       ...getScorelineCanvasStyle(colors == null ? void 0 : colors.primary, colors == null ? void 0 : colors.secondary),
@@ -60911,7 +60931,11 @@ var useScorelineCanvasStyle = () => {
       "--match-context-inset": matchContext.inset,
       "--match-context-text-muted": matchContext.textMuted,
       "--match-context-text": matchContext.text,
-      "--match-context-accent": matchContext.accent
+      "--match-context-accent": matchContext.accent,
+      "--performance-area-surface": performanceAreaSurface,
+      "--ladder-row-surface": ladderRowSurface,
+      "--leaderboard-hero-row-surface": leaderboardHeroRowSurface,
+      "--roster-row-surface": rosterRowSurface
     }),
     [
       colors == null ? void 0 : colors.primary,
@@ -60919,8 +60943,12 @@ var useScorelineCanvasStyle = () => {
       containerCopy,
       headerAccent,
       headerText,
+      ladderRowSurface,
+      leaderboardHeroRowSurface,
+      rosterRowSurface,
       matchContext,
-      modeSurfaces
+      modeSurfaces,
+      performanceAreaSurface
     ]
   );
 };
@@ -61714,7 +61742,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   border-top: var(--border-optical-light);
   border-bottom: var(--border-optical-dark);
   box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
+  color: var(--container-text, var(--on-surface));
 }
 
 .scoreline-canvas .team-score-area .team-band[data-club-team="true"]::before {
@@ -61781,18 +61809,18 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   );
 }
 
-/* \u2014\u2014 Contrast wiring \u2014\u2014 */
+/* \u2014\u2014 Contrast wiring (results team bands follow mode container copy) \u2014\u2014 */
 .scoreline-canvas .team-score-area .score {
-  color: var(--contrast-score);
+  color: var(--container-text, var(--contrast-score));
 }
 
 .scoreline-canvas .team-score-area .team-name {
-  color: var(--contrast-team);
+  color: var(--container-text, var(--contrast-team));
 }
 
 .scoreline-canvas .team-score-area .overs,
 .scoreline-canvas .team-score-area .team-role {
-  color: var(--contrast-meta-on-surface);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .scoreline-canvas .result-statement {
@@ -61894,8 +61922,8 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
       .leader-entry:nth-of-type(even)
       .leader-row,
     [data-ladder] .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row,
-    [data-roster] .roster-rows .roster-entry:nth-of-type(even) .roster-row,
-    [data-totw] .totw-rows .totw-entry:nth-of-type(even) .totw-row
+    [data-roster] .roster-rows .roster-entry .roster-row,
+    [data-totw] .totw-rows .totw-entry .totw-row
   ) {
   color: var(--container-text, var(--contrast-performance-lead));
 }
@@ -61923,7 +61951,6 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure-label,
     [data-ladder] .ladder-stat,
     [data-totw] .totw-team-label,
-    [data-totw] .totw-team,
     [data-totw] .totw-balls,
     [data-totw] .totw-subline,
     .fixture-field-label,
@@ -61941,7 +61968,8 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     [data-roster] .roster-player,
     [data-roster] .roster-grade-name,
     [data-roster] .roster-squad-team,
-    [data-totw] .totw-entry:not(:first-of-type) .totw-name,
+    [data-totw] .totw-name,
+    [data-totw] .totw-team,
     [data-totw] .totw-category-value,
     .fixture-grade-name,
     .fixture-date,
@@ -61957,13 +61985,12 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     [data-ladder] .ladder-rank,
     [data-ladder] .ladder-stat--pts,
     [data-roster] .roster-index,
-    [data-totw] .totw-entry:not(:first-of-type) .totw-rank,
-    [data-totw] .totw-entry:not(:first-of-type) .totw-figure
+    [data-totw] .totw-figure
   ) {
   color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
-/* Container surfaces \u2014 20% tint via tokens; clip copy inside panel bounds */
+/* Container surfaces \u2014 40% min tint via tokens; clip copy inside panel bounds */
 .scoreline-canvas
   :is(
     .match-context,
@@ -61977,7 +62004,9 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     .leaderboard-category,
     .totw-category,
     [data-roster] .roster-grade,
-    [data-roster] .roster-squad-header
+    [data-roster] .roster-squad-header,
+    [data-roster] .roster-rows .roster-entry .roster-row,
+    [data-totw] .totw-rows .totw-entry .totw-row
   ) {
   min-width: 0;
   overflow: hidden;
@@ -62145,7 +62174,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   border-top: var(--border-optical-light);
   border-bottom: var(--border-optical-dark);
   box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
+  color: var(--container-text, var(--on-surface));
 }
 
 .scoreline-canvas .fixture-matchup .team-band::before {
@@ -62210,14 +62239,15 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   );
 }
 
+/* Fixture team bands \u2014 mode container copy (not surface contrast) */
 .scoreline-canvas .fixture-matchup .team-name {
-  color: var(--contrast-team);
+  color: var(--container-text, var(--contrast-team));
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 .scoreline-canvas .fixture-matchup .team-side-label {
-  color: var(--contrast-meta-on-surface);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .scoreline-canvas
@@ -62244,112 +62274,29 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-top: var(--border-optical-light);
-  border-bottom: var(--border-optical-dark);
-  box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(
-    var(--surface-spot-size) at var(--team-spot-x, 28%) var(--surface-spot-y),
-    rgb(255 255 255 / var(--surface-spot-opacity)),
-    transparent 68%
-  );
-  pointer-events: none;
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row
-  > * {
-  position: relative;
-  z-index: 1;
-}
-
-.scoreline-canvas[data-leaderboard="batting"]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row {
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-primary),
-    var(--team-surface-primary),
-    var(--team-gradient-lift-primary)
-  );
-}
-
-.scoreline-canvas[data-leaderboard="bowling"]
-  .leaderboard-rows
-  .leader-entry:first-of-type
-  .leader-row {
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-secondary),
-    var(--team-surface-secondary),
-    var(--team-gradient-lift-secondary)
-  );
-}
-
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-name {
-  color: var(--contrast-team);
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 .scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-rank,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-figure {
-  color: var(--contrast-score);
+.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-copy,
+.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-stats {
+  opacity: 0.75;
 }
 
-.scoreline-canvas[data-leaderboard]
-  .leader-entry:first-of-type
-  .leader-team-label,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-team,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-balls,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-overs,
-.scoreline-canvas[data-leaderboard] .leader-entry:first-of-type .leader-sr,
-.scoreline-canvas[data-leaderboard]
-  .leader-entry:first-of-type
-  .leader-figure-label {
-  color: var(--contrast-meta-on-surface);
-}
-
-.scoreline-canvas[data-leaderboard="batting"] .leader-rank {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-leaderboard="bowling"] .leader-rank {
-  color: var(--accent-on-light-secondary);
-}
-
-.scoreline-canvas[data-leaderboard="batting"] .leader-figure {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-leaderboard="bowling"] .leader-figure {
-  color: var(--accent-on-light-secondary);
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leader-entry:not(:first-of-type)
-  .leader-name {
+.scoreline-canvas[data-leaderboard] .leader-name {
   color: var(--container-text, var(--contrast-performance-lead));
+}
+
+.scoreline-canvas[data-leaderboard="batting"] .leader-rank,
+.scoreline-canvas[data-leaderboard="batting"] .leader-figure {
+  color: var(--container-text-accent, var(--accent-on-light-primary));
+}
+
+.scoreline-canvas[data-leaderboard="bowling"] .leader-rank,
+.scoreline-canvas[data-leaderboard="bowling"] .leader-figure {
+  color: var(--container-text-accent, var(--accent-on-light-secondary));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-team-label,
@@ -62358,14 +62305,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 .scoreline-canvas[data-leaderboard] .leader-overs,
 .scoreline-canvas[data-leaderboard] .leader-sr,
 .scoreline-canvas[data-leaderboard] .leader-figure-label {
-  color: var(--contrast-meta);
-}
-
-.scoreline-canvas[data-leaderboard]
-  .leaderboard-rows
-  .leader-entry:nth-of-type(even)
-  .leader-row {
-  box-shadow: var(--highlight-inset-light);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-mark[data-has-crest="false"] {
@@ -62382,58 +62322,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   border-bottom: 1px solid rgb(8 11 13 / 8%);
 }
 
-.scoreline-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry:first-of-type
-  .ladder-row {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-top: var(--border-optical-light);
-  border-bottom: var(--border-optical-dark);
-  box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-primary),
-    var(--team-surface-primary),
-    var(--team-gradient-lift-primary)
-  );
-}
-
-.scoreline-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry:first-of-type
-  .ladder-row::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(
-    var(--surface-spot-size) at var(--team-spot-x, 28%) var(--surface-spot-y),
-    rgb(255 255 255 / var(--surface-spot-opacity)),
-    transparent 68%
-  );
-  pointer-events: none;
-}
-
-.scoreline-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry:first-of-type
-  .ladder-row
-  > * {
-  position: relative;
-  z-index: 1;
-}
-
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-rank,
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-team,
-.scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-stat {
-  color: var(--contrast-score);
-}
-
 .scoreline-canvas[data-ladder] .ladder-entry:first-of-type .ladder-team {
-  color: var(--contrast-team);
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
@@ -62463,15 +62352,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 
 .scoreline-canvas[data-ladder] .ladder-row[data-bias="true"] {
   box-shadow:
-    var(--highlight-inset-light),
-    inset 4px 0 0 var(--club-secondary);
-}
-
-.scoreline-canvas[data-ladder]
-  .ladder-entry:first-of-type
-  .ladder-row[data-bias="true"] {
-  box-shadow:
-    var(--highlight-inset),
+    var(--match-context-inset, var(--highlight-inset-light)),
     inset 4px 0 0 var(--club-secondary);
 }
 
@@ -62493,14 +62374,11 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 }
 
 .scoreline-canvas[data-roster] .roster-squad-label {
-  color: var(--contrast-meta);
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-roster]
-  .roster-rows
-  .roster-entry:nth-of-type(even)
-  .roster-row {
-  box-shadow: var(--highlight-inset-light);
+.scoreline-canvas[data-roster] .fixture-matchup .team-name {
+  color: var(--container-text, var(--contrast-team));
 }
 
 .scoreline-canvas[data-roster] .roster-index {
@@ -62522,7 +62400,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
 }
 
@@ -62561,92 +62439,27 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.scoreline-canvas[data-totw] .totw-rows .totw-entry:first-of-type .totw-row {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-top: var(--border-optical-light);
-  border-bottom: var(--border-optical-dark);
-  box-shadow: var(--highlight-inset);
-  color: var(--on-surface);
-  background: linear-gradient(
-    var(--surface-gradient-angle),
-    var(--team-gradient-deep-primary),
-    var(--team-surface-primary),
-    var(--team-gradient-lift-primary)
-  );
-}
-
-.scoreline-canvas[data-totw]
-  .totw-rows
-  .totw-entry:first-of-type
-  .totw-row::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(
-    var(--surface-spot-size) at var(--team-spot-x, 28%) var(--surface-spot-y),
-    rgb(255 255 255 / var(--surface-spot-opacity)),
-    transparent 68%
-  );
-  pointer-events: none;
-}
-
-.scoreline-canvas[data-totw]
-  .totw-rows
-  .totw-entry:first-of-type
-  .totw-row
-  > * {
-  position: relative;
-  z-index: 1;
-}
-
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-name {
-  color: var(--contrast-team);
-}
-
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-rank,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-figure {
-  color: var(--contrast-score);
-}
-
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-role,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-team-label,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-team,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-balls,
-.scoreline-canvas[data-totw] .totw-entry:first-of-type .totw-subline {
-  color: var(--contrast-meta-on-surface);
-}
-
-.scoreline-canvas[data-totw] .totw-rank {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-totw] .totw-figure {
-  color: var(--accent-on-light-primary);
-}
-
-.scoreline-canvas[data-totw] .totw-entry:not(:first-of-type) .totw-name {
+.scoreline-canvas[data-totw] .totw-name {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-totw] .totw-entry:not(:first-of-type) .totw-role {
+.scoreline-canvas[data-totw] .totw-rank,
+.scoreline-canvas[data-totw] .totw-figure {
+  color: var(--container-text-accent, var(--accent-on-light-primary));
+}
+
+.scoreline-canvas[data-totw] .totw-role {
   color: var(--container-text-accent, var(--accent-on-light-secondary));
 }
 
-.scoreline-canvas[data-totw] .totw-team-label,
-.scoreline-canvas[data-totw] .totw-team,
-.scoreline-canvas[data-totw] .totw-balls,
-.scoreline-canvas[data-totw] .totw-subline {
-  color: var(--contrast-meta);
+.scoreline-canvas[data-totw] .totw-team {
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-totw]
-  .totw-rows
-  .totw-entry:nth-of-type(even)
-  .totw-row {
-  box-shadow: var(--highlight-inset-light);
+.scoreline-canvas[data-totw] .totw-team-label,
+.scoreline-canvas[data-totw] .totw-balls,
+.scoreline-canvas[data-totw] .totw-subline {
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .scoreline-canvas[data-totw] .totw-mark[data-has-crest="false"] {
@@ -62665,13 +62478,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     .result-statement,
     .team-score-area .team-band,
     .fixture-matchup .team-band,
-    [data-roster] .roster-context,
-    [data-leaderboard]
-      .leaderboard-rows
-      .leader-entry:first-of-type
-      .leader-row,
-    [data-ladder] .ladder-rows .ladder-entry:first-of-type .ladder-row,
-    [data-totw] .totw-rows .totw-entry:first-of-type .totw-row
+    [data-roster] .roster-context
   )::after {
   content: "";
   position: absolute;
@@ -63110,8 +62917,8 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   padding: var(--space-2) var(--space-3);
   overflow: hidden;
   background: var(
-    --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    --performance-area-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -63203,7 +63010,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   overflow: hidden;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   font-family: var(--font-body);
@@ -63474,7 +63281,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   padding: 12px 16px 10px;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -63657,7 +63464,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   align-items: center;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -63811,7 +63618,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   gap: var(--space-2);
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   text-align: center;
@@ -63987,7 +63794,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   padding: 10px 14px;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -64113,7 +63920,14 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   grid-template-columns: 40px 52px minmax(0, 1fr) minmax(0, 262px);
   gap: 8px;
   align-items: center;
-  background: var(--surface);
+}
+
+.scoreline-canvas[data-ladder] .ladder-rows .ladder-entry .ladder-row {
+  background: var(
+    --ladder-row-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .ladder-row__cell {
@@ -64166,10 +63980,6 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 
 .ladder-row__cell--team .ladder-team {
   width: 100%;
-}
-
-.ladder-rows .ladder-entry:nth-of-type(even) .ladder-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
 }
 
 .ladder-rank {
@@ -64337,7 +64147,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   gap: var(--space-3);
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -64379,7 +64189,27 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   grid-template-columns: 48px 72px minmax(0, 1fr) auto;
   gap: 14px;
   align-items: center;
-  background: var(--surface);
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry
+  .leader-row {
+  background: var(
+    --ladder-row-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry:first-of-type
+  .leader-row {
+  background: var(
+    --leaderboard-hero-row-surface,
+    color-mix(in srgb, var(--surface-muted) 75%, transparent)
+  );
 }
 
 .leader-entry {
@@ -64389,10 +64219,6 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 
 .leader-entry[data-empty="true"] {
   display: none;
-}
-
-.leaderboard-rows .leader-entry:nth-of-type(even) .leader-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
 }
 
 .leaderboard-rows .leader-entry:first-of-type .leader-row {
@@ -64675,7 +64501,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   align-items: start;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -64768,6 +64594,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   overflow: hidden;
   min-width: 0;
   width: 100%;
+  color: var(--container-text, var(--ink));
   font-family: var(--font-display);
   font-size: var(--type-team);
   font-style: italic;
@@ -64788,7 +64615,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   place-items: center;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -64821,7 +64648,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   gap: var(--space-3);
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -64879,17 +64706,21 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   grid-template-columns: 32px minmax(0, 1fr) auto;
   gap: 8px;
   align-items: center;
-  background: var(--surface);
 }
 
-.roster-rows .roster-entry:nth-of-type(even) .roster-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
+.scoreline-canvas[data-roster] .roster-rows .roster-entry .roster-row {
+  background: var(
+    --roster-row-surface,
+    color-mix(in srgb, var(--surface-muted) 75%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  color: var(--container-text, var(--ink));
 }
 
 .roster-row[data-empty-roster="true"] {
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
-  color: var(--muted);
+  color: var(--container-text-muted, var(--muted));
   font-size: 16px;
   font-weight: 500;
   font-style: italic;
@@ -64916,6 +64747,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 .roster-player {
   min-width: 0;
   overflow: hidden;
+  color: var(--container-text, var(--ink));
   font-size: 22px;
   font-weight: 500;
   line-height: 1.15;
@@ -65145,7 +64977,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   gap: var(--space-3);
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -65205,6 +65037,15 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   display: none;
 }
 
+.scoreline-canvas[data-totw] .totw-rows .totw-entry .totw-row {
+  background: var(
+    --ladder-row-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  color: var(--container-text, var(--ink));
+}
+
 .totw-row {
   min-height: var(--totw-row-height);
   max-height: var(--totw-row-height);
@@ -65214,11 +65055,6 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   gap: 10px;
   align-items: center;
   overflow: hidden;
-  background: var(--surface);
-}
-
-.totw-rows .totw-entry:nth-of-type(even) .totw-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
 }
 
 .totw-rows .totw-entry:first-of-type .totw-row {
@@ -65235,6 +65071,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 }
 
 .totw-role {
+  color: var(--container-text-accent, var(--club-secondary));
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -65245,6 +65082,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 .totw-name {
   overflow: hidden;
   min-width: 0;
+  color: var(--container-text, var(--ink));
   font-family: var(--font-display);
   font-size: var(--type-leader-name);
   font-style: italic;
@@ -65268,6 +65106,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 }
 
 .totw-team-label {
+  color: var(--container-text-muted, var(--muted));
   font-family: var(--font-body);
   font-size: var(--type-leader-meta-label);
   font-weight: 500;
@@ -65280,6 +65119,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 .totw-team {
   overflow: hidden;
   min-width: 0;
+  color: var(--container-text, var(--ink));
   font-size: var(--type-leader-team);
   font-weight: 500;
   line-height: 1.2;
@@ -65300,6 +65140,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   display: inline-flex;
   align-items: baseline;
   gap: 0;
+  color: var(--container-text-accent, var(--club-primary));
   font-family: var(--font-display);
   font-size: var(--type-leader-figure);
   font-weight: 800;
@@ -65316,6 +65157,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 
 .totw-balls {
   margin-left: 4px;
+  color: var(--container-text-muted, var(--muted));
   font-family: var(--font-body);
   font-size: var(--type-leader-suffix);
   font-weight: 500;
@@ -65323,6 +65165,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 }
 
 .totw-subline {
+  color: var(--container-text-muted, var(--muted));
   font-family: var(--font-body);
   font-size: var(--type-leader-sr);
   font-weight: 500;
@@ -65339,7 +65182,13 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 // src/package/ScorelineBundledStyles.tsx
 import { jsx as jsx625 } from "react/jsx-runtime";
 var STYLE_ELEMENT_ID = "fixtura-scoreline-styles";
-var ScorelineBundledStyles = () => /* @__PURE__ */ jsx625("style", { id: STYLE_ELEMENT_ID, dangerouslySetInnerHTML: { __html: SCORELINE_BUNDLED_CSS } });
+var ScorelineBundledStyles = () => /* @__PURE__ */ jsx625(
+  "style",
+  {
+    id: STYLE_ELEMENT_ID,
+    dangerouslySetInnerHTML: { __html: SCORELINE_BUNDLED_CSS }
+  }
+);
 
 // src/package/FixturaTemplateScene.tsx
 import { Fragment as Fragment30, jsx as jsx626, jsxs as jsxs318 } from "react/jsx-runtime";

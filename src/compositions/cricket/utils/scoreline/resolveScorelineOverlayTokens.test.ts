@@ -7,6 +7,9 @@ import {
   resolveScorelineContainerCopyTokens,
   resolveScorelineMatchContextTokens,
   resolveScorelineModeSurfaceVars,
+  resolveScorelineLadderRowSurface,
+  resolveScorelinePerformanceAreaSurface,
+  resolveScorelineRosterRowSurface,
 } from "./resolveScorelineOverlayTokens";
 
 const paletteForMode = (mode: keyof typeof scorelineMode) =>
@@ -47,6 +50,15 @@ describe("resolveScorelineMatchContextTokens", () => {
 });
 
 describe("resolveScorelineContainerCopyTokens", () => {
+  it("uses a 40% minimum panel tint", () => {
+    expect(
+      resolveScorelineContainerCopyTokens(paletteForMode("light")).surface,
+    ).toBe("rgba(243, 240, 234, 0.4)");
+    expect(
+      resolveScorelineContainerCopyTokens(paletteForMode("dark")).surface,
+    ).toBe("rgba(8, 11, 13, 0.4)");
+  });
+
   it("maps Alt modes to the same container family as their base mode", () => {
     const light = resolveScorelineContainerCopyTokens(paletteForMode("light"));
     const lightAlt = resolveScorelineContainerCopyTokens(
@@ -72,6 +84,39 @@ describe("isScorelineDarkContainerMode", () => {
     );
     expect(isScorelineDarkContainerMode(paletteForMode("dark"))).toBe(true);
     expect(isScorelineDarkContainerMode(paletteForMode("darkAlt"))).toBe(true);
+  });
+});
+
+describe("resolveScorelinePerformanceAreaSurface", () => {
+  it("uses a 50% tint for results performance panels", () => {
+    expect(
+      resolveScorelinePerformanceAreaSurface(paletteForMode("light")),
+    ).toBe("rgba(243, 240, 234, 0.5)");
+    expect(resolveScorelinePerformanceAreaSurface(paletteForMode("dark"))).toBe(
+      "rgba(8, 11, 13, 0.5)",
+    );
+  });
+});
+
+describe("resolveScorelineLadderRowSurface", () => {
+  it("uses a 50% tint for ladder row containers", () => {
+    expect(resolveScorelineLadderRowSurface(paletteForMode("light"))).toBe(
+      "rgba(243, 240, 234, 0.5)",
+    );
+    expect(resolveScorelineLadderRowSurface(paletteForMode("dark"))).toBe(
+      "rgba(8, 11, 13, 0.5)",
+    );
+  });
+});
+
+describe("resolveScorelineRosterRowSurface", () => {
+  it("uses a 75% tint for roster player row containers", () => {
+    expect(resolveScorelineRosterRowSurface(paletteForMode("light"))).toBe(
+      "rgba(243, 240, 234, 0.75)",
+    );
+    expect(resolveScorelineRosterRowSurface(paletteForMode("dark"))).toBe(
+      "rgba(8, 11, 13, 0.75)",
+    );
   });
 });
 

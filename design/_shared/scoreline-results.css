@@ -380,8 +380,8 @@
   padding: var(--space-2) var(--space-3);
   overflow: hidden;
   background: var(
-    --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    --performance-area-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -473,7 +473,7 @@
   overflow: hidden;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
   font-family: var(--font-body);

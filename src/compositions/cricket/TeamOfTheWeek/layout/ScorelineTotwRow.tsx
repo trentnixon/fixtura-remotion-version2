@@ -17,13 +17,7 @@ export const ScorelineTotwRow: React.FC<{
   animationDelay: number;
   exitAnimation: ContainerAnimationConfig;
   exitFrame: number;
-}> = ({
-  player,
-  animation,
-  animationDelay,
-  exitAnimation,
-  exitFrame,
-}) => {
+}> = ({ player, animation, animationDelay, exitAnimation, exitFrame }) => {
   const { componentStyles } = useThemeContext();
   const stats = formatTotwStats(player);
   const logoUrl = player.club?.logo?.url;

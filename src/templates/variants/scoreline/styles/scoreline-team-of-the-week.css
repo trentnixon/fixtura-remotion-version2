@@ -125,7 +125,7 @@
   gap: var(--space-3);
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -185,6 +185,15 @@
   display: none;
 }
 
+.scoreline-canvas[data-totw] .totw-rows .totw-entry .totw-row {
+  background: var(
+    --ladder-row-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  color: var(--container-text, var(--ink));
+}
+
 .totw-row {
   min-height: var(--totw-row-height);
   max-height: var(--totw-row-height);
@@ -194,11 +203,6 @@
   gap: 10px;
   align-items: center;
   overflow: hidden;
-  background: var(--surface);
-}
-
-.totw-rows .totw-entry:nth-of-type(even) .totw-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
 }
 
 .totw-rows .totw-entry:first-of-type .totw-row {
@@ -215,6 +219,7 @@
 }
 
 .totw-role {
+  color: var(--container-text-accent, var(--club-secondary));
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -225,6 +230,7 @@
 .totw-name {
   overflow: hidden;
   min-width: 0;
+  color: var(--container-text, var(--ink));
   font-family: var(--font-display);
   font-size: var(--type-leader-name);
   font-style: italic;
@@ -248,6 +254,7 @@
 }
 
 .totw-team-label {
+  color: var(--container-text-muted, var(--muted));
   font-family: var(--font-body);
   font-size: var(--type-leader-meta-label);
   font-weight: 500;
@@ -260,6 +267,7 @@
 .totw-team {
   overflow: hidden;
   min-width: 0;
+  color: var(--container-text, var(--ink));
   font-size: var(--type-leader-team);
   font-weight: 500;
   line-height: 1.2;
@@ -280,6 +288,7 @@
   display: inline-flex;
   align-items: baseline;
   gap: 0;
+  color: var(--container-text-accent, var(--club-primary));
   font-family: var(--font-display);
   font-size: var(--type-leader-figure);
   font-weight: 800;
@@ -296,6 +305,7 @@
 
 .totw-balls {
   margin-left: 4px;
+  color: var(--container-text-muted, var(--muted));
   font-family: var(--font-body);
   font-size: var(--type-leader-suffix);
   font-weight: 500;
@@ -303,6 +313,7 @@
 }
 
 .totw-subline {
+  color: var(--container-text-muted, var(--muted));
   font-family: var(--font-body);
   font-size: var(--type-leader-sr);
   font-weight: 500;

@@ -98,7 +98,7 @@
   padding: 10px 14px;
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -224,7 +224,14 @@
   grid-template-columns: 40px 52px minmax(0, 1fr) minmax(0, 262px);
   gap: 8px;
   align-items: center;
-  background: var(--surface);
+}
+
+.scoreline-canvas[data-ladder] .ladder-rows .ladder-entry .ladder-row {
+  background: var(
+    --ladder-row-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 .ladder-row__cell {
@@ -277,10 +284,6 @@
 
 .ladder-row__cell--team .ladder-team {
   width: 100%;
-}
-
-.ladder-rows .ladder-entry:nth-of-type(even) .ladder-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
 }
 
 .ladder-rank {

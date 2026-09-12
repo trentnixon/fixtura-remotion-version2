@@ -1,7 +1,13 @@
 import scorelineModes from "./scoreline-modes.json" with { type: "json" };
 
-const MATCH_CONTEXT_PANEL_LIGHT = "rgba(243, 240, 234, 0.2)";
-const MATCH_CONTEXT_PANEL_DARK = "rgba(8, 11, 13, 0.2)";
+/** Minimum tint for Scoreline container panels. */
+const SCORELINE_PANEL_MIN_OPACITY = 0.4;
+const SCORELINE_PANEL_LIGHT = `rgba(243, 240, 234, ${SCORELINE_PANEL_MIN_OPACITY})`;
+const SCORELINE_PANEL_DARK = `rgba(8, 11, 13, ${SCORELINE_PANEL_MIN_OPACITY})`;
+const PERFORMANCE_AREA_PANEL_LIGHT = "rgba(243, 240, 234, 0.5)";
+const PERFORMANCE_AREA_PANEL_DARK = "rgba(8, 11, 13, 0.5)";
+const LEADERBOARD_HERO_ROW_LIGHT = "rgba(243, 240, 234, 0.75)";
+const LEADERBOARD_HERO_ROW_DARK = "rgba(8, 11, 13, 0.75)";
 const DEFAULT_INK = "#080b0d";
 const STORAGE_KEY = "fixtura-scoreline-preview-mode";
 const BACKDROP_STORAGE_KEY = "fixtura-scoreline-preview-backdrop";
@@ -36,7 +42,7 @@ export function resolveScorelineMatchContextTokens(
   const isDark =
     Boolean(mode.container.background) &&
     mode.container.background !== "transparent";
-  const surface = isDark ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT;
+  const surface = isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT;
 
   return {
     surface,
@@ -59,7 +65,7 @@ function resolveScorelineContainerCopyTokens(mode, accent) {
     mode.container.background !== "transparent";
 
   return {
-    surface: isDark ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT,
+    surface: isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT,
     surfaceSolid: isDark
       ? mode.container.background
       : mode.container.backgroundAlt,
@@ -189,6 +195,29 @@ export function applyScorelineMode(canvas, modeId, options = {}) {
   );
   canvas.style.setProperty("--match-context-text", matchContext.text);
   canvas.style.setProperty("--match-context-accent", matchContext.accent);
+  const isDarkContainer =
+    Boolean(mode.container.background) &&
+    mode.container.background !== "transparent";
+  canvas.style.setProperty(
+    "--performance-area-surface",
+    isDarkContainer
+      ? PERFORMANCE_AREA_PANEL_DARK
+      : PERFORMANCE_AREA_PANEL_LIGHT,
+  );
+  canvas.style.setProperty(
+    "--ladder-row-surface",
+    isDarkContainer
+      ? PERFORMANCE_AREA_PANEL_DARK
+      : PERFORMANCE_AREA_PANEL_LIGHT,
+  );
+  canvas.style.setProperty(
+    "--leaderboard-hero-row-surface",
+    isDarkContainer ? LEADERBOARD_HERO_ROW_DARK : LEADERBOARD_HERO_ROW_LIGHT,
+  );
+  canvas.style.setProperty(
+    "--roster-row-surface",
+    isDarkContainer ? LEADERBOARD_HERO_ROW_DARK : LEADERBOARD_HERO_ROW_LIGHT,
+  );
 
   canvas
     .querySelectorAll(".header-eyebrow, .organisation-name")

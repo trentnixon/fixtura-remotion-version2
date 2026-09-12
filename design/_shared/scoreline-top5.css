@@ -109,7 +109,7 @@
   gap: var(--space-3);
   background: var(
     --match-context-surface,
-    color-mix(in srgb, var(--surface-muted) 20%, transparent)
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
   );
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
@@ -151,7 +151,27 @@
   grid-template-columns: 48px 72px minmax(0, 1fr) auto;
   gap: 14px;
   align-items: center;
-  background: var(--surface);
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry
+  .leader-row {
+  background: var(
+    --ladder-row-surface,
+    color-mix(in srgb, var(--surface-muted) 50%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+}
+
+.scoreline-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry:first-of-type
+  .leader-row {
+  background: var(
+    --leaderboard-hero-row-surface,
+    color-mix(in srgb, var(--surface-muted) 75%, transparent)
+  );
 }
 
 .leader-entry {
@@ -161,10 +181,6 @@
 
 .leader-entry[data-empty="true"] {
   display: none;
-}
-
-.leaderboard-rows .leader-entry:nth-of-type(even) .leader-row {
-  background: color-mix(in srgb, var(--surface-muted) 48%, var(--surface));
 }
 
 .leaderboard-rows .leader-entry:first-of-type .leader-row {

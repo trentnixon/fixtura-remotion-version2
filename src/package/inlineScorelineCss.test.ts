@@ -10,7 +10,10 @@ const generatedFile = join(packageDir, "generated/scorelineBundledCss.ts");
 
 describe("inline-scoreline-css", () => {
   it("generates bundled CSS module with Scoreline layout selectors", () => {
-    execSync("node scripts/inline-scoreline-css.mjs", { cwd: root, stdio: "pipe" });
+    execSync("node scripts/inline-scoreline-css.mjs", {
+      cwd: root,
+      stdio: "pipe",
+    });
 
     expect(existsSync(generatedFile)).toBe(true);
 

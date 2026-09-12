@@ -2,8 +2,14 @@ import tinycolor from "tinycolor2";
 import type { DesignPalette } from "../../../../core/utils/designPalettes/types";
 import { ensureContrast } from "../../../../core/utils/designPalettes/types";
 
-const MATCH_CONTEXT_PANEL_LIGHT = "rgba(243, 240, 234, 0.2)";
-const MATCH_CONTEXT_PANEL_DARK = "rgba(8, 11, 13, 0.2)";
+/** Minimum tint for Scoreline container panels (match-context, ledger rows, etc.). */
+const SCORELINE_PANEL_MIN_OPACITY = 0.4;
+const SCORELINE_PANEL_LIGHT = `rgba(243, 240, 234, ${SCORELINE_PANEL_MIN_OPACITY})`;
+const SCORELINE_PANEL_DARK = `rgba(8, 11, 13, ${SCORELINE_PANEL_MIN_OPACITY})`;
+const PERFORMANCE_AREA_PANEL_LIGHT = "rgba(243, 240, 234, 0.5)";
+const PERFORMANCE_AREA_PANEL_DARK = "rgba(8, 11, 13, 0.5)";
+const LEADERBOARD_HERO_ROW_LIGHT = "rgba(243, 240, 234, 0.75)";
+const LEADERBOARD_HERO_ROW_DARK = "rgba(8, 11, 13, 0.75)";
 const SCORELINE_DEFAULT_SURFACE = "#ffffff";
 
 export type ScorelineModeSurfaceVars = {
@@ -74,7 +80,7 @@ export const resolveScorelineContainerCopyTokens = (
   const surfaceSolid = isDark
     ? selectedPalette.container.background
     : selectedPalette.container.backgroundAlt;
-  const surface = isDark ? MATCH_CONTEXT_PANEL_DARK : MATCH_CONTEXT_PANEL_LIGHT;
+  const surface = isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT;
   const copy = ensureContrast(
     surfaceSolid,
     selectedPalette.text.onContainer.copy,
@@ -115,12 +121,39 @@ export const resolveScorelineMatchContextTokens = (
   selectedPalette: DesignPalette,
 ): ScorelineMatchContextTokens => {
   const container = resolveScorelineContainerCopyTokens(selectedPalette);
+  const isDark = isScorelineDarkContainerMode(selectedPalette);
 
   return {
-    surface: container.surface,
+    surface: isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT,
     inset: container.inset,
     textMuted: container.textMuted,
     text: container.text,
     accent: container.accent,
   };
 };
+
+/** Results performance panel — stronger tint than match-context (50%). */
+export const resolveScorelinePerformanceAreaSurface = (
+  selectedPalette: DesignPalette,
+): string =>
+  isScorelineDarkContainerMode(selectedPalette)
+    ? PERFORMANCE_AREA_PANEL_DARK
+    : PERFORMANCE_AREA_PANEL_LIGHT;
+
+/** Ladder table rows (leader row uses club band in CSS). */
+export const resolveScorelineLadderRowSurface = (
+  selectedPalette: DesignPalette,
+): string => resolveScorelinePerformanceAreaSurface(selectedPalette);
+
+/** Top 5 rank #1 row panel — 75% tint. */
+export const resolveScorelineLeaderboardHeroRowSurface = (
+  selectedPalette: DesignPalette,
+): string =>
+  isScorelineDarkContainerMode(selectedPalette)
+    ? LEADERBOARD_HERO_ROW_DARK
+    : LEADERBOARD_HERO_ROW_LIGHT;
+
+/** Team roster player rows — 75% tint (same family as leaderboard hero row). */
+export const resolveScorelineRosterRowSurface = (
+  selectedPalette: DesignPalette,
+): string => resolveScorelineLeaderboardHeroRowSurface(selectedPalette);

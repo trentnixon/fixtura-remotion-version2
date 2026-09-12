@@ -8,5 +8,8 @@ const STYLE_ELEMENT_ID = "fixtura-scoreline-styles";
  * @fixtura/remotion-assets/styles.css. Used from FixturaTemplateScene only.
  */
 export const ScorelineBundledStyles: React.FC = () => (
-  <style id={STYLE_ELEMENT_ID} dangerouslySetInnerHTML={{ __html: SCORELINE_BUNDLED_CSS }} />
+  <style
+    id={STYLE_ELEMENT_ID}
+    dangerouslySetInnerHTML={{ __html: SCORELINE_BUNDLED_CSS }}
+  />
 );

@@ -7,6 +7,10 @@ import {
   resolveScorelineContainerCopyTokens,
   resolveScorelineMatchContextTokens,
   resolveScorelineModeSurfaceVars,
+  resolveScorelineLeaderboardHeroRowSurface,
+  resolveScorelineLadderRowSurface,
+  resolveScorelinePerformanceAreaSurface,
+  resolveScorelineRosterRowSurface,
 } from "./resolveScorelineOverlayTokens";
 
 export const getScorelineCanvasStyle = (
@@ -48,6 +52,22 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
     () => resolveScorelineContainerCopyTokens(selectedPalette),
     [selectedPalette],
   );
+  const performanceAreaSurface = useMemo(
+    () => resolveScorelinePerformanceAreaSurface(selectedPalette),
+    [selectedPalette],
+  );
+  const ladderRowSurface = useMemo(
+    () => resolveScorelineLadderRowSurface(selectedPalette),
+    [selectedPalette],
+  );
+  const leaderboardHeroRowSurface = useMemo(
+    () => resolveScorelineLeaderboardHeroRowSurface(selectedPalette),
+    [selectedPalette],
+  );
+  const rosterRowSurface = useMemo(
+    () => resolveScorelineRosterRowSurface(selectedPalette),
+    [selectedPalette],
+  );
 
   return useMemo(
     () =>
@@ -72,6 +92,10 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
         "--match-context-text-muted": matchContext.textMuted,
         "--match-context-text": matchContext.text,
         "--match-context-accent": matchContext.accent,
+        "--performance-area-surface": performanceAreaSurface,
+        "--ladder-row-surface": ladderRowSurface,
+        "--leaderboard-hero-row-surface": leaderboardHeroRowSurface,
+        "--roster-row-surface": rosterRowSurface,
       }) as CSSProperties,
     [
       colors?.primary,
@@ -79,8 +103,12 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
       containerCopy,
       headerAccent,
       headerText,
+      ladderRowSurface,
+      leaderboardHeroRowSurface,
+      rosterRowSurface,
       matchContext,
       modeSurfaces,
+      performanceAreaSurface,
     ],
   );
 };
