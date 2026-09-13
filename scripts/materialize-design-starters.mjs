@@ -60,7 +60,11 @@ function transformHtml(html, assetSlug) {
   );
   out = out.replace(/<script src="https:\/\/cdn\.tailwindcss\.com"><\/script>\s*/g, "");
   out = out.replace(
-    /<script type="module">[\s\S]*?<\/script>\s*(?=<\/body>)/,
+    /<script type="module">\s*import \{ applyVariantFonts \}[\s\S]*?<\/script>\s*/g,
+    "",
+  );
+  out = out.replace(
+    /<script type="module">\s*import \{ renderVariantNav \}[\s\S]*?scoreline-init\.js[\s\S]*?<\/script>\s*(?=<\/body>)/,
     `<script type="module">\n${STANDARD_BOOT_SCRIPT.replace("__VARIANT_SLUG__", "starter-preview").replace("__ASSET_SLUG__", assetSlug)}\n    </script>\n    `,
   );
   out = out.replace(

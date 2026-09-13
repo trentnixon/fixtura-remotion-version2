@@ -1,11 +1,9 @@
 # 09 — Factory onboarding and handoff milestones
 
-**What to build:** README design entry; shortened getting-started; handoff runbook milestones (ready vs complete); cross-links.
+**Status:** Completed
 
-**Blocked by:** 07, 08
+- [x] README mentions design site launch and getting-started link
+- [x] Getting-started covers scaffold flow in few steps
+- [x] Handoff runbook extended with ready-for-handoff vs handoff-complete (no separate checklist file)
 
-**Status:** ready-for-agent
-
-- [ ] README mentions design site launch and getting-started link
-- [ ] Getting-started covers scaffold flow in few steps
-- [ ] Handoff runbook extended with ready-for-handoff vs handoff-complete (no separate checklist file)
+**Completion:** root README, `design/.docs/getting-started.md`, `design/.docs/remotion-handoff.md`.

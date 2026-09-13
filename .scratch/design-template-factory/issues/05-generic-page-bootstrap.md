@@ -1,11 +1,9 @@
 # 05 — Generic design page bootstrap
 
-**What to build:** Single shared initializer: hydrate → population → palette → fonts; fail-closed; nav always usable.
+**Status:** Completed
 
-**Blocked by:** 02, 04
+- [x] Shared initializer invoked with variant/sport/asset context
+- [x] Declared population module runs only after successful scalar hydration
+- [x] Org palette applied to page canvas; Outfit/Heebo via variant fonts
 
-**Status:** ready-for-agent
-
-- [ ] Shared initializer invoked with variant/sport/asset context
-- [ ] Declared population module runs only after successful scalar hydration
-- [ ] Org palette applied to page canvas; Outfit/Heebo via variant fonts
+**Completion:** `design/_shared/init-template.js`.

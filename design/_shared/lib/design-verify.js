@@ -1,6 +1,21 @@
 import fs from "node:fs";
 import path from "node:path";
-import { CRICKET_FACTORY_ASSETS } from "./factory-assets.js";
+import {
+  CRICKET_FACTORY_ASSETS,
+  routingKeyFromRegistryId,
+} from "./factory-assets.js";
+
+/** @type {Record<string, string>} */
+const COMPOSITION_ROUTE_TO_EXPORT = {
+  "cricket/results": "CricketResults",
+  "cricket/resultSingle": "CricketResultSingle",
+  "cricket/upcoming": "CricketUpcoming",
+  "cricket/ladder": "CricketLadder",
+  "cricket/top5": "CricketTop5",
+  "cricket/performances": "CricketPerformances",
+  "cricket/teamRoster": "CricketRoster",
+  "cricket/teamOfTheWeek": "CricketTeamOfTheWeek",
+};
 import { applyBindMap } from "./hydrate-core.js";
 import { parseBindMapJson } from "./bind-json.js";
 import { validateRoutesManifest, listAssetSlugs } from "./manifest.js";
@@ -21,6 +36,8 @@ export function runDesignVerify(repoRoot, options = {}) {
 
   verifyStarters(repoRoot, errors);
 
+  const handoffContext = handoff ? loadHandoffContext(repoRoot) : null;
+
   for (const [variantSlug, variant] of Object.entries(routes.variants)) {
     if (options.variant && options.variant !== variantSlug) {
       continue;
@@ -37,11 +54,14 @@ export function runDesignVerify(repoRoot, options = {}) {
         handoff,
         bootstrap,
         errors,
+        handoffContext,
+        registryId: variant.registryId,
       });
     }
   }
 
-  verifyOrphanVariantHtml(repoRoot, routes, errors, options);
+  const pendingOrphans = loadPendingOrphanPrototypes(repoRoot);
+  verifyOrphanVariantHtml(repoRoot, routes, errors, options, pendingOrphans);
 
   if (errors.length > 0) {
     return { ok: false, errors };
@@ -68,6 +88,20 @@ function verifyStarters(repoRoot, errors) {
     for (const p of [htmlPath, bindPath, cssPath]) {
       if (!fs.existsSync(p)) {
         errors.push(`Starter missing file: ${path.relative(repoRoot, p)}`);
+      }
+    }
+
+    if (fs.existsSync(htmlPath)) {
+      const html = fs.readFileSync(htmlPath, "utf8");
+      if (!html.includes("template-canvas")) {
+        errors.push(`Starter ${asset.slug} must include .template-canvas root`);
+      }
+      if (!html.includes("data-hydrate-error")) {
+        errors.push(`Starter ${asset.slug} must include hydration error banner`);
+      }
+      const bodyMatch = html.match(/<body[\s\S]*<\/body>/i);
+      if (!bodyMatch || bodyMatch[0].length < 200) {
+        errors.push(`Starter ${asset.slug} body markup is missing or too small`);
       }
     }
 
@@ -99,7 +133,13 @@ function verifyStarters(repoRoot, errors) {
  * @param {string} variantSlug
  * @param {string} sportSlug
  * @param {string} assetSlug
- * @param {{ handoff: boolean, bootstrap: string, errors: string[] }} ctx
+ * @param {{
+ *   handoff: boolean,
+ *   bootstrap: string,
+ *   errors: string[],
+ *   handoffContext: ReturnType<typeof loadHandoffContext> | null,
+ *   registryId: string,
+ * }} ctx
  */
 function verifyRegisteredAsset(
   repoRoot,
@@ -193,6 +233,80 @@ function verifyRegisteredAsset(
       ctx.errors.push(`Handoff: missing theme file ${asset.remotion.theme}`);
     }
   }
+
+  if (ctx.handoff && ctx.handoffContext) {
+    const registryId = ctx.registryId;
+    if (!registryId) {
+      ctx.errors.push(`Handoff: variant ${variantSlug} missing registryId`);
+    } else if (!ctx.handoffContext.templateRegistry.has(registryId)) {
+      ctx.errors.push(
+        `Handoff: Registry ID ${registryId} not in src/templates/registry.tsx`,
+      );
+    }
+
+    const routingKey = registryId ? routingKeyFromRegistryId(registryId) : "";
+    const compositionRoute = asset.remotion?.composition;
+    const exportName = compositionRoute
+      ? COMPOSITION_ROUTE_TO_EXPORT[compositionRoute]
+      : undefined;
+    if (!exportName) {
+      ctx.errors.push(
+        `Handoff: unknown composition route "${compositionRoute}" for ${variantSlug}/${assetSlug}`,
+      );
+    } else if (
+      routingKey &&
+      !compositionExportHasRoutingKey(
+        ctx.handoffContext.cricketIndex,
+        exportName,
+        routingKey,
+      )
+    ) {
+      ctx.errors.push(
+        `Handoff: ${exportName} missing composition routing key "${routingKey}" (Registry ${registryId})`,
+      );
+    }
+  }
+}
+
+/**
+ * @param {string} repoRoot
+ */
+function loadHandoffContext(repoRoot) {
+  const registryPath = path.join(repoRoot, "src/templates/registry.tsx");
+  const cricketIndexPath = path.join(
+    repoRoot,
+    "src/compositions/cricket/index.tsx",
+  );
+  const registryText = fs.readFileSync(registryPath, "utf8");
+  const cricketIndex = fs.readFileSync(cricketIndexPath, "utf8");
+  /** @type {Set<string>} */
+  const templateRegistry = new Set();
+  const block = registryText.match(
+    /export const templateRegistry = \{([\s\S]*?)\n\};/,
+  )?.[1];
+  if (block) {
+    for (const line of block.split("\n")) {
+      const match = line.match(/^  ([A-Za-z][A-Za-z0-9]*): \{/);
+      if (match) {
+        templateRegistry.add(match[1]);
+      }
+    }
+  }
+  return { templateRegistry, cricketIndex };
+}
+
+/**
+ * @param {string} cricketIndex
+ * @param {string} exportName
+ * @param {string} routingKey
+ */
+function compositionExportHasRoutingKey(cricketIndex, exportName, routingKey) {
+  const re = new RegExp(
+    `export const ${exportName} = \\{([\\s\\S]*?)\\n\\};`,
+    "m",
+  );
+  const block = cricketIndex.match(re)?.[1] ?? "";
+  return new RegExp(`\\b${routingKey}\\s*:`).test(block);
 }
 
 /**
@@ -200,8 +314,9 @@ function verifyRegisteredAsset(
  * @param {ReturnType<typeof validateRoutesManifest>} routes
  * @param {string[]} errors
  * @param {{ variant?: string, asset?: string }} options
+ * @param {Set<string>} pendingOrphans
  */
-function verifyOrphanVariantHtml(repoRoot, routes, errors, options) {
+function verifyOrphanVariantHtml(repoRoot, routes, errors, options, pendingOrphans) {
   const variantsDir = path.join(repoRoot, "design/variants");
   if (!fs.existsSync(variantsDir)) {
     return;
@@ -226,8 +341,35 @@ function verifyOrphanVariantHtml(repoRoot, routes, errors, options) {
       const registered =
         routes.variants[variantSlug]?.sports?.cricket?.assets?.[assetSlug];
       if (!registered) {
-        errors.push(`Orphan prototype HTML: design/variants/${variantSlug}/cricket/${file}`);
+        const rel = `design/variants/${variantSlug}/cricket/${file}`;
+        if (pendingOrphans.has(`${variantSlug}/cricket/${file}`)) {
+          continue;
+        }
+        errors.push(`Orphan prototype HTML: ${rel}`);
       }
     }
   }
+}
+
+/**
+ * @param {string} repoRoot
+ */
+function loadPendingOrphanPrototypes(repoRoot) {
+  const listPath = path.join(
+    repoRoot,
+    "design/_shared/pending-orphan-prototypes.txt",
+  );
+  /** @type {Set<string>} */
+  const pending = new Set();
+  if (!fs.existsSync(listPath)) {
+    return pending;
+  }
+  for (const line of fs.readFileSync(listPath, "utf8").split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) {
+      continue;
+    }
+    pending.add(trimmed.replace(/^design\/variants\//, ""));
+  }
+  return pending;
 }

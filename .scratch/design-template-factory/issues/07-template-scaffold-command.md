@@ -1,11 +1,9 @@
 # 07 — Template scaffold command
 
-**What to build:** CLI creates ten registered assets from starters; copies CSS; registers fonts; updates routes and asset index; never overwrites existing variant.
+**Status:** Completed
 
-**Blocked by:** 04, 05, 06
+- [x] Scaffold requires label, slug, Registry ID; optional variant folder override
+- [x] All ten cricket assets registered with planned handoff paths
+- [x] Conflict detection aborts before write if variant exists
 
-**Status:** ready-for-agent
-
-- [ ] Scaffold requires label, slug, Registry ID; optional variant folder override
-- [ ] All ten cricket assets registered with planned handoff paths
-- [ ] Conflict detection aborts before write if variant exists
+**Completion:** `scripts/scaffold-design-template.mjs` (+ `--force` overwrite, `--registry-id`, npm-safe positional args, asset-index upsert).

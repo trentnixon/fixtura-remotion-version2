@@ -1,6 +1,6 @@
 # Design template factory (cricket)
 
-Status: ready-for-agent
+Status: completed
 
 ---
 

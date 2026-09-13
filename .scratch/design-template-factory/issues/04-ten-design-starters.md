@@ -1,11 +1,9 @@
 # 04 — Ten design starters (anatomy-authoritative)
 
-**What to build:** Complete starter library outside sidebar manifest: HTML, binds, non-empty neutral CSS per asset; performances-batting/bowling included.
+**Status:** Completed
 
-**Blocked by:** 03 — Shared cricket population modules
+- [x] Ten cricket starters aligned to component anatomy and fixtures
+- [x] Starters reference population modules where repeats exist
+- [x] Neutral CSS scoped to starter canvas; not empty placeholders
 
-**Status:** ready-for-agent
-
-- [ ] Ten cricket starters aligned to component anatomy and fixtures
-- [ ] Starters reference population modules where repeats exist
-- [ ] Neutral CSS scoped to starter canvas; not empty placeholders
+**Completion:** `design/_templates/cricket/*` via `npm run design:materialize-starters` (fixed bootstrap script replacement so body markup is preserved).

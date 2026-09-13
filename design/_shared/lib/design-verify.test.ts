@@ -12,3 +12,15 @@ describe("design-verify explore", () => {
     expect(result.ok).toBe(true);
   });
 });
+
+describe("design-verify handoff", () => {
+  it("passes for scoreline results (registry + routing + theme)", () => {
+    const result = runDesignVerify(repoRoot, {
+      handoff: true,
+      variant: "scoreline",
+      asset: "results",
+    });
+    expect(result.errors, result.errors.join("\n")).toEqual([]);
+    expect(result.ok).toBe(true);
+  });
+});
