@@ -1,14 +1,27 @@
 import { applyBindMap } from "./lib/hydrate-core.js";
+import { parseBindMapJson } from "./lib/bind-json.js";
 import { resolveAssetEntry, validateRoutesManifest } from "./lib/manifest.js";
 
 const ROUTES_URL = "/design/_shared/routes.json";
 
 /**
  * @param {{ variantSlug: string; sportSlug: string; assetSlug: string }} context
+ * @returns {Promise<boolean>}
  */
 export async function hydratePage(context) {
   const banner = document.querySelector("[data-hydrate-error]");
   const handoff = document.querySelector("[data-design-handoff]");
+  const assetLabel = `${context.variantSlug}/${context.sportSlug}/${context.assetSlug}`;
+
+  const showError = (message) => {
+    const full = `${assetLabel}: ${message}`;
+    if (banner) {
+      banner.textContent = `Hydration error: ${full}`;
+      banner.hidden = false;
+    } else {
+      console.error(full);
+    }
+  };
 
   try {
     const routesResponse = await fetch(ROUTES_URL);
@@ -24,21 +37,20 @@ export async function hydratePage(context) {
       context.assetSlug,
     );
 
-    const bindResponse = await fetch(
-      `/design/_shared/hydration/${context.variantSlug}/${context.sportSlug}/${context.assetSlug}.bind.json`,
-    );
+    const bindUrl = `/design/_shared/hydration/${context.variantSlug}/${context.sportSlug}/${context.assetSlug}.bind.json`;
+    const bindResponse = await fetch(bindUrl);
     if (!bindResponse.ok) {
-      throw new Error("Could not load hydration bind map");
+      throw new Error(`Could not load hydration bind map at ${bindUrl}`);
     }
 
-    const bindMap = await bindResponse.json();
+    const bindMap = parseBindMapJson(await bindResponse.text());
     const fixtureResponse = await fetch(`/${entry.fixture}`);
     if (!fixtureResponse.ok) {
       throw new Error(`Could not load fixture at ${entry.fixture}`);
     }
 
     const fixture = await fixtureResponse.json();
-    const values = applyBindMap(fixture, bindMap);
+    const { values } = applyBindMap(fixture, bindMap);
 
     for (const [selector, value] of Object.entries(values)) {
       const nodes = document.querySelectorAll(selector);
@@ -71,13 +83,17 @@ export async function hydratePage(context) {
         `· Remotion: <code>${entry.remotion.composition}</code>`,
       ].join(" ");
     }
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Hydration failed";
+
     if (banner) {
-      banner.textContent = `Hydration error: ${message}`;
-      banner.hidden = false;
-    } else {
-      console.error(message);
+      banner.hidden = true;
+      banner.textContent = "";
     }
+
+    return true;
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Hydration failed";
+    showError(message);
+    return false;
   }
 }

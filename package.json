@@ -86,6 +86,9 @@
   "scripts": {
     "dev": "remotion studio",
     "design": "npx serve . -p 3456",
+    "design:verify": "node scripts/design-verify.mjs",
+    "design:scaffold": "node scripts/scaffold-design-template.mjs",
+    "design:materialize-starters": "node scripts/materialize-design-starters.mjs",
     "build": "remotion bundle",
     "build:package:js": "node scripts/inline-scoreline-css.mjs && tsup && node scripts/copy-preview-dts.mjs",
     "build:package:css": "tailwindcss -i ./src/package/styles.css -o ./dist/preview.css --minify",

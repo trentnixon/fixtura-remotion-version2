@@ -4,6 +4,7 @@ Dev-only static design prototype site for 1080×1350 layout approval before Remo
 
 ## Files
 
+- `briefs/{slug}/design-brief.md`: draft or agreed creative brief, with reference images in `references/`
 - `index.html`: redirects to guide
 - `guide/index.html`: design system instructions and outbound doc links
 - `_shared/routes.json`: manifest for variants, sports, assets, fixtures, handoff targets
@@ -15,9 +16,12 @@ Dev-only static design prototype site for 1080×1350 layout approval before Remo
 ## Child Modules
 
 - [getting-started.md](./getting-started.md): how to start the dev server and open prototypes
+- [naming-contract.md](./naming-contract.md): factory naming (slug, Registry ID, ten cricket assets)
 - [design-system-brief.md](./design-system-brief.md): product purpose, constraints, principles (condensed)
 - [results-layout-reference.md](./results-layout-reference.md): Results match-module structural baseline (pass 1)
-- [new-template-prompt.md](./new-template-prompt.md): LLM prompt to start a new template (grill + setup + creative brief)
+- [design-interview-prompt.md](./design-interview-prompt.md): copy-and-paste interview to define or resume a template brief
+- [design-brief-template.md](./design-brief-template.md): structure for answers, reference interpretations, and agreed direction
+- [new-template-prompt.md](./new-template-prompt.md): build from an agreed brief, then hand off to Remotion
 - [reference-library.md](./reference-library.md): Pass 2 craft library hub (CSS, fonts, SVG/motifs)
 - [remotion-handoff.md](./remotion-handoff.md): design prototype → Remotion implementation runbook
 - [fonts.md](./fonts.md): font catalog, roles, adding fonts, Remotion handoff

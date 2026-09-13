@@ -5,8 +5,40 @@ Domain language for Fixtura Remotion video assets and sponsor presentation.
 ## Language
 
 **Design prototype**:
-Static 1080×1350 HTML under the repository `design/` folder, used to approve layout before Remotion implementation.
+Static 1080×1350 HTML under the repository `design/` folder, used to explore, iterate, and optionally sign off overlay layout before Remotion implementation.
 _Avoid:_ stitch folder (as a path name)
+
+**Design starter**:
+Neutral files under `design/_templates/` used to scaffold new variants. Authority derives from component anatomy and fixtures; starters do not supersede those sources.
+_Avoid:_ treating starters as registered sidebar templates
+
+**Variant slug**:
+Kebab-case key for paths under `design/variants/{variant slug}/`. Not the Remotion routing key.
+_Avoid:_ conflating with Registry ID
+
+**Registry ID**:
+PascalCase template identifier in production video data. Runtime routing uses its lowercase form.
+_Avoid:_ using the URL variant slug as the routing key
+
+**Asset slug**:
+Kebab-case key for one asset-type prototype page within a variant and sport.
+_Avoid:_ asset (when meaning the exported frame)
+
+**Population module**:
+Shared script that fills repeated on-canvas content from fixture data after scalar hydration.
+_Avoid:_ embedding template styling or cross-asset layout in population modules
+
+**Design handoff**:
+Deliberate move from design prototype to Remotion, including reconciliation and Studio visual comparison—not automatic CSS parity.
+_Avoid:_ assuming a CSS file copy completes handoff
+
+**Explore verify**:
+Automated checks that prototype registration, fixtures, bindings, and starters are wired (`npm run design:verify`).
+_Avoid:_ treating explore verify as pixel parity with Remotion
+
+**Handoff verify**:
+Stricter verify pass requiring Remotion theme files and routing (`npm run design:verify -- --handoff`).
+_Avoid:_ running handoff verify before Remotion targets exist
 
 **Asset type**:
 A composition family within a sport (e.g. Results, Ladder). Appears as a tab in the design prototype site and maps to a Remotion composition.

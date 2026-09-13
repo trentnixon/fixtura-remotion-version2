@@ -1,5 +1,9 @@
 # Design prototype → Remotion index
 
+**Broadcast Pro** intentionally registers **Results only** (golden single-page reference). Other cricket asset types are not missing by mistake; expand via a future additive command, not scaffold overwrite.
+
+**Scoreline** does not yet register standalone **performances-batting** / **performances-bowling** pages (grandfathered). New factory scaffolds include all ten assets per [naming-contract.md](./naming-contract.md).
+
 | Design route                         | Registry       | Fixture                                                      | Remotion composition    | Theme surface                                  |
 | ------------------------------------ | -------------- | ------------------------------------------------------------ | ----------------------- | ---------------------------------------------- |
 | `broadcast-pro/cricket/results`      | `BroadcastPro` | `testData/samples/Cricket/Cricket_Results.json`              | `cricket/results`       | `broadcastPro/theme/composition/results.ts`    |

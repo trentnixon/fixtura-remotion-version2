@@ -3,6 +3,8 @@
     "broadcast-pro": {
       "label": "Broadcast Pro",
       "registryId": "BroadcastPro",
+      "bootstrap": "legacy",
+      "remotionVariantFolder": "broadcastPro",
       "sports": {
         "cricket": {
           "assets": {
@@ -21,6 +23,8 @@
     "scoreline": {
       "label": "Scoreline",
       "registryId": "Scoreline",
+      "bootstrap": "legacy",
+      "remotionVariantFolder": "scoreline",
       "sports": {
         "cricket": {
           "assets": {

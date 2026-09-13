@@ -1,0 +1,44 @@
+{
+  "[data-hydrate=palette-primary]": "videoMeta.video.appearance.theme.primary",
+  "[data-hydrate=palette-secondary]": "videoMeta.video.appearance.theme.secondary",
+  "[data-hydrate=club-name]": "videoMeta.club.name",
+  "[data-hydrate=club-logo]": "videoMeta.club.logo.url",
+  "[data-hydrate=header-eyebrow]": "videoMeta.video.metadata.title",
+  "[data-hydrate=header-title]": "videoMeta.video.metadata.videoTitle",
+  "[data-hydrate=category-label]": "videoMeta.video.fixtureCategory",
+
+  "[data-hydrate=player-1-name]": "data.0.name",
+  "[data-hydrate=player-1-team]": "data.0.playedFor",
+  "[data-hydrate=player-1-logo]": "data.0.teamLogo.url",
+  "[data-hydrate=player-1-wickets]": "data.0.wickets",
+  "[data-hydrate=player-1-conceded]": "data.0.runs",
+  "[data-hydrate=player-1-overs]": "data.0.overs",
+
+  "[data-hydrate=player-2-name]": "data.1.name",
+  "[data-hydrate=player-2-team]": "data.1.playedFor",
+  "[data-hydrate=player-2-logo]": "data.1.teamLogo.url",
+  "[data-hydrate=player-2-wickets]": "data.1.wickets",
+  "[data-hydrate=player-2-conceded]": "data.1.runs",
+  "[data-hydrate=player-2-overs]": "data.1.overs",
+
+  "[data-hydrate=player-3-name]": "data.2.name",
+  "[data-hydrate=player-3-team]": "data.2.playedFor",
+  "[data-hydrate=player-3-logo]": "data.2.teamLogo.url",
+  "[data-hydrate=player-3-wickets]": "data.2.wickets",
+  "[data-hydrate=player-3-conceded]": "data.2.runs",
+  "[data-hydrate=player-3-overs]": "data.2.overs",
+
+  "[data-hydrate=player-4-name]": "data.3.name",
+  "[data-hydrate=player-4-team]": "data.3.playedFor",
+  "[data-hydrate=player-4-logo]": "data.3.teamLogo.url",
+  "[data-hydrate=player-4-wickets]": "data.3.wickets",
+  "[data-hydrate=player-4-conceded]": "data.3.runs",
+  "[data-hydrate=player-4-overs]": "data.3.overs",
+
+  "[data-hydrate=player-5-name]": "data.4.name",
+  "[data-hydrate=player-5-team]": "data.4.playedFor",
+  "[data-hydrate=player-5-logo]": "data.4.teamLogo.url",
+  "[data-hydrate=player-5-wickets]": "data.4.wickets",
+  "[data-hydrate=player-5-conceded]": "data.4.runs",
+  "[data-hydrate=player-5-overs]": "data.4.overs"
+}

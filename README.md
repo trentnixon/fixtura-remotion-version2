@@ -11,11 +11,24 @@
 
 Fixtura Remotion Version 2 — published as **`@fixtura/remotion-assets`**.
 
+## Design prototypes (overlays)
+
+Static **1080×1350** HTML under `design/` for exploring overlay layouts before Remotion work. From repo root:
+
+```bash
+npm run design
+```
+
+→ [http://localhost:3456/design/](http://localhost:3456/design/) — see [design/.docs/getting-started.md](design/.docs/getting-started.md). New templates: `npm run design:scaffold`, verify: `npm run design:verify`.
+
 ## Commands
 
 | Script                  | Description                                                               |
 | ----------------------- | ------------------------------------------------------------------------- |
 | `npm run dev`           | Remotion Studio                                                           |
+| `npm run design`        | Design prototype static site (port 3456)                                  |
+| `npm run design:verify` | Validate design registration, fixtures, and bindings                      |
+| `npm run design:scaffold` | Scaffold ten cricket assets for a new template variant                  |
 | `npm run build:package` | Build JS/CSS for npm (`dist/`) and run pack verification                  |
 | `npm run verify:pack`   | Assert publish `files` and critical paths (e.g. `src/templates/variants`) |
 

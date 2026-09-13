@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- Design starter: cricket / top5-batting (copy via scaffold) -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreline - Cricket Top 5 Batting</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+        <link rel="stylesheet" href="/design/_templates/cricket/starter-shared.css" />
+    <link rel="stylesheet" href="/design/_templates/cricket/starter-top5-batting.css" />
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initDesignPage } from "/design/_shared/init-template.js";
+
+      const context = {
+        variantSlug: "starter-preview",
+        sportSlug: "cricket",
+        assetSlug: "top5-batting",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initDesignPage(context);
+    </script>
+    </body>
+</html>

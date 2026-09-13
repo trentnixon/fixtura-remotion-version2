@@ -1,0 +1,275 @@
+/* Scoreline Result Single — synced with design/_shared/scoreline-result-single.css */
+
+.template-canvas[data-result-single] {
+  --type-header-title: 36px;
+}
+
+.template-canvas {
+  --type-score: 88px;
+  --type-result: 38px;
+  --type-team: 34px;
+  --type-player: 28px;
+  --type-figure: 34px;
+}
+
+.template-canvas .results-ledger--single,
+.template-canvas .results-ledger:has(.single-result-stack) {
+  justify-content: center;
+}
+
+.template-canvas .single-result-stack {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.template-canvas .match-module--single {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: var(--space-2) 0;
+}
+
+.template-canvas .match-module--single.without-performances {
+  grid-template-rows: auto auto;
+}
+
+.template-canvas .team-score-area--single {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 32px 6px;
+  align-items: center;
+  background: transparent;
+}
+
+.template-canvas .team-score-area--single > .match-head {
+  grid-column: 1 / -1;
+}
+
+.template-canvas .team-score-area--single > .team-band[data-side="home"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.template-canvas .team-score-area--single > .team-band[data-side="away"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.template-canvas .team-score-area--single > .team-band:first-of-type {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.template-canvas .team-score-area--single > .team-band:last-of-type {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.template-canvas .team-score-area--single > .team-divider {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* match-head is :first-child — reset shared :first/:last-child team rules below */
+
+/* Hero band grid: row 1 = crest + score, row 2 = name/role full width */
+.template-canvas .team-score-area--single .team-band {
+  display: grid;
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.template-canvas .team-score-area--single .team-band .team-primary {
+  display: contents;
+}
+
+.template-canvas .team-score-area--single .team-band .team-mark,
+.template-canvas .team-score-area--single .team-band .team-score {
+  order: unset;
+}
+
+.template-canvas .team-score-area--single .team-band .team-mark {
+  width: 112px;
+  height: 112px;
+  justify-self: center;
+}
+
+.template-canvas .team-score-area--single .team-band .team-score {
+  width: auto;
+  min-width: 0;
+  align-self: center;
+}
+
+.template-canvas .team-score-area--single .team-band .team-identity {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.template-canvas[data-result-single] .team-score-area--single .team-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+/* Home — crest left, score right (toward centre), name row below */
+.template-canvas .team-score-area--single .team-band[data-side="home"] {
+  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-mark {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-score {
+  grid-column: 2;
+  grid-row: 1;
+  justify-items: end;
+}
+
+.template-canvas .team-score-area--single .team-band[data-side="home"] .score,
+.template-canvas .team-score-area--single .team-band[data-side="home"] .overs {
+  text-align: right;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-identity {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+/* Away — score left (toward centre), crest right, name row below */
+.template-canvas .team-score-area--single .team-band[data-side="away"] {
+  grid-template-columns: minmax(0, 1fr) 112px;
+  grid-template-rows: auto auto;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-score {
+  grid-column: 1;
+  grid-row: 1;
+  justify-items: start;
+}
+
+.template-canvas .team-score-area--single .team-band[data-side="away"] .score,
+.template-canvas .team-score-area--single .team-band[data-side="away"] .overs {
+  text-align: left;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-mark {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-identity {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  flex-direction: row-reverse;
+}
+
+.template-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-name {
+  text-align: right;
+}
+
+.template-canvas .match-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.template-canvas .match-grade {
+  min-width: 0;
+  padding: 12px 16px 10px;
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+}
+
+.template-canvas .match-grade[data-empty="true"] {
+  display: none;
+}
+
+.template-canvas .match-grade-name {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--match-context-text, var(--container-text, var(--ink)));
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: -0.01em;
+  line-height: 1.06;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.template-canvas .match-head .result-statement {
+  min-width: 0;
+  min-height: 0;
+  padding: 7px 16px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: var(--type-result);
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  text-align: center;
+}
+
+.template-canvas .team-band--hero .team-mark {
+  width: 112px;
+  height: 112px;
+}
+
+.template-canvas .match-module--single .performance-area {
+  align-content: start;
+}
+
+.template-canvas .match-module--single .performance-panel {
+  grid-template-rows: auto repeat(3, auto);
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.template-canvas .match-module--single .performance-row {
+  padding: 0;
+}
+
+.template-canvas .match-module--single .performance-heading {
+  margin-bottom: 0;
+}

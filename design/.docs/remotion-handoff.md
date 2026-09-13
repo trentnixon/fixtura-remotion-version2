@@ -18,6 +18,28 @@ Hand off only when the design prototype is approved:
 
 ---
 
+## Handoff milestones
+
+### Ready for handoff (design)
+
+- `npm run design:verify` passes for the asset (optionally `--variant` / `--asset` filters).
+- Design direction accepted for that asset.
+- Fixture locked; **CSS reconciliation notes** captured (what to port vs preview-only rules staying in `design/`).
+
+### Handoff complete (Remotion)
+
+- `npm run design:verify -- --handoff` passes for the asset.
+- Remotion theme file, registry entry, and composition routing key (`registryId.toLowerCase()`) exist.
+- Studio comparison: **same fixture**, **1080×1350**, **settled frame**; exercise supported **theme modes** where the variant uses them.
+- Metadata updated (`routes.json`, `asset-index.md`, HTML header).
+- Fonts resolve in the render pipeline (including platform defaults when used).
+- Exercise long names, missing logo, absent sponsor, and sparse/dense fixtures where relevant.
+- Record intentional visual differences and comparison evidence. Screenshots or sign-off alone do not prove pixel parity.
+
+Handoff requires **deliberate reconciliation and visual comparison** — not assuming a CSS copy from the design site yields parity. See [ADR 0003](../../docs/adr/0003-design-site-css-authority.md).
+
+---
+
 ## What you are translating
 
 | Design site (static HTML)      | Remotion (React)                                              |
@@ -193,7 +215,7 @@ Copy into an implement session:
 
 ```text
 Implement Remotion handoff for design/variants/{slug}/cricket/{asset}.html
-→ Registry: {RegistryId} (routing key: {slug})
+→ Registry: {RegistryId} (routing key: lowercased Registry ID, e.g. BroadcastPro → broadcastpro)
 → Composition: src/compositions/cricket/{composition}/
 → Theme: src/templates/variants/{VariantFolder}/theme/composition/{asset}.ts
 → Fixture: {fixture path from routes.json}

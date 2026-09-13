@@ -1,0 +1,344 @@
+/* Scoreline Upcoming layout — synced with design/_shared/scoreline-upcoming.css */
+
+.template-canvas {
+  --frame-height: 1350px;
+  --zone-pad: 12px;
+  --zone-header-pad-inline: 28px;
+  --zone-header-pad-bottom: 0px;
+  --zone-content-pad: 28px;
+  --zone-header: 140px;
+  --zone-content: 1088px;
+  --zone-footer: 112px;
+  --club-primary: #862f2f;
+  --club-secondary: #efb247;
+  --ink: #080b0d;
+  --paper: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f3f0ea;
+  --rule: rgba(8, 11, 13, 0.12);
+  --muted: #5f5b56;
+  --font-display: "Barlow Condensed", Arial, sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --type-fixture-grade: 21px;
+  --type-fixture-team: 34px;
+  --type-meta: 21px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.template-canvas,
+.template-canvas * {
+  box-sizing: border-box;
+}
+
+.template-canvas h1,
+.template-canvas h2,
+.template-canvas h3,
+.template-canvas p {
+  margin: 0;
+}
+
+.template-canvas .fixture-palette {
+  display: none;
+}
+
+.template-canvas .team-mark {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+}
+
+.template-canvas .team-mark img {
+  position: absolute;
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  object-fit: contain;
+}
+
+.template-canvas .fixtures-ledger {
+  min-height: 0;
+  flex: 1 1 var(--zone-content);
+  max-height: var(--zone-content);
+  padding: var(--zone-content-pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+}
+
+.template-canvas .fixtures-stack {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.template-canvas .fixtures-stack > .fixture-card {
+  flex: 0 0 auto;
+}
+
+.template-canvas .fixtures-stack > .fixture-separator {
+  flex: 0 0 auto;
+  margin: var(--space-2) 0;
+  padding: var(--space-2) 0;
+}
+
+.template-canvas .fixture-card {
+  overflow: hidden;
+}
+
+.template-canvas .fixture-card > .animated-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.template-canvas .fixture-grade {
+  min-width: 0;
+  padding: 10px 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: var(--space-3);
+  align-items: center;
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+}
+
+.template-canvas .fixture-grade-name {
+  display: -webkit-box;
+  overflow: hidden;
+  align-self: center;
+  color: var(--container-text, var(--ink));
+  font-family: var(--font-display);
+  font-size: var(--type-fixture-grade);
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.template-canvas .fixture-grade-meta {
+  min-width: 0;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px 8px;
+  color: var(--container-text-muted, var(--contrast-meta));
+  font-family: var(--font-body);
+  font-size: var(--type-fixture-grade);
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.template-canvas .fixture-grade-meta[data-empty="true"] {
+  display: none;
+}
+
+.template-canvas .meta-separator {
+  width: 4px;
+  height: 4px;
+  flex: 0 0 auto;
+  background: var(--club-primary);
+}
+
+.template-canvas .meta-separator--secondary {
+  background: var(--club-secondary);
+}
+
+.template-canvas .meta-chip[data-empty="true"] {
+  display: none;
+}
+
+.template-canvas .fixture-matchup {
+  min-height: 132px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px minmax(0, 1fr);
+  gap: 6px;
+  align-items: stretch;
+}
+
+.template-canvas .fixture-matchup__cell {
+  min-width: 0;
+  min-height: 132px;
+  height: 100%;
+}
+
+.template-canvas .fixture-matchup__anim {
+  width: 100%;
+  height: 100%;
+  min-height: 132px;
+}
+
+.template-canvas .fixture-matchup__anim > .team-band,
+.template-canvas .fixture-matchup__anim > .fixture-centre {
+  width: 100%;
+  height: 100%;
+  min-height: 132px;
+}
+
+.template-canvas .fixture-matchup .team-band {
+  min-width: 0;
+  min-height: 132px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.template-canvas .fixture-matchup .team-band--away {
+  flex-direction: row-reverse;
+}
+
+.template-canvas .fixture-matchup .team-mark {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  background: var(--surface);
+}
+
+.template-canvas .fixture-matchup .team-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-canvas .fixture-matchup .team-band--away .team-copy {
+  align-items: flex-end;
+}
+
+.template-canvas .fixture-matchup .team-side-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.template-canvas .fixture-matchup .team-name {
+  display: -webkit-box;
+  overflow: hidden;
+  min-width: 0;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: var(--type-fixture-team);
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.template-canvas .fixture-matchup .team-band--away .team-name {
+  text-align: right;
+}
+
+.template-canvas .fixture-centre {
+  min-width: 0;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  text-align: center;
+}
+
+.template-canvas .fixture-vs {
+  color: var(--container-text-muted, var(--muted));
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  font-stretch: condensed;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.template-canvas .fixture-when,
+.template-canvas .fixture-where {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.template-canvas .fixture-where {
+  padding-top: var(--space-2);
+  border-top: 1px solid rgb(8 11 13 / 10%);
+}
+
+.template-canvas .fixture-field-label {
+  color: var(--container-text-muted, var(--contrast-meta));
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.template-canvas .fixture-date {
+  color: var(--container-text, var(--ink));
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  font-stretch: condensed;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.template-canvas .fixture-time {
+  color: var(--club-primary);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  font-stretch: condensed;
+  line-height: 1;
+}
+
+.template-canvas .fixture-ground {
+  display: -webkit-box;
+  overflow: hidden;
+  width: 100%;
+  color: var(--container-text, var(--contrast-performance));
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.34;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

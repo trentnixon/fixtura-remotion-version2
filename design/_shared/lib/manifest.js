@@ -63,6 +63,10 @@ export function resolveAssetEntry(manifest, variantSlug, sportSlug, assetSlug) {
     fixture: asset.fixture,
     registryId: variant.registryId,
     remotion: asset.remotion,
+    bootstrap: variant.bootstrap ?? "generic",
+    population: asset.population ?? null,
+    populationOverride: asset.populationOverride ?? null,
+    variantFolder: variant.remotionVariantFolder ?? null,
   };
 }
 

@@ -30,7 +30,10 @@ export async function initScorelineAsset(context, options = {}) {
   } = options;
 
   if (!skipHydrate) {
-    await hydratePage(context);
+    const hydrated = await hydratePage(context);
+    if (!hydrated) {
+      return { canvas: null };
+    }
   }
 
   const canvas = document.querySelector(".scoreline-canvas");
