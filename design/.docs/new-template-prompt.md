@@ -6,42 +6,18 @@ Before styling a new template, read [Tailwind and CSS for Fixtura templates](../
 
 ---
 
-## Phase 0 — Ask the human first (do not design until answered)
+## Phase 0 — Load the agreed design brief
 
-Ask these questions in one message. Wait for answers before producing visuals or HTML.
+Read the template brief supplied by the user or the interview's build prompt at `design/briefs/{slug}/design-brief.md` before producing prototype visuals.
 
-### Template identity
+- If no brief is supplied, look for the named template under `design/briefs/`. Ask which brief to use if the selection is ambiguous.
+- If the brief is missing or still draft, follow [the design interview](./design-interview-prompt.md). Resume known answers and resolve only the open decisions. Do not start prototype work until the brief is agreed.
+- Read its fixed requirements, creative direction, open exploration, and reference interpretations. Inspect available reference images. Flag essential unavailable references before dependent work.
+- Reuse the identity, first asset, audience, and font decisions. Check naming against existing routes and fonts. Ask only about unresolved conflicts; do not repeat the creative interview.
+- Anatomy and fixtures own content. The brief owns creative intent. Flag a conflict before dependent work instead of silently changing either source.
+- The first asset comes from the brief. Results is the default only when the brief delegates that choice. For other assets, use the matching anatomy and fixture and adapt Phase 3's Results-specific instructions.
 
-1. **Template name (human):** What should we call this template? (e.g. “Stadium Signal”, “North Shore Classic”)
-2. **URL slug:** Confirm kebab-case slug for paths (e.g. `stadium-signal` → `design/variants/stadium-signal/…`)
-3. **Registry ID (Remotion):** Confirm PascalCase ID for later handoff (e.g. `StadiumSignal`) — can be provisional until Remotion variant exists
-4. **Relationship:** New family from scratch, or fork/evolution of an existing variant (e.g. Broadcast Pro)?
-
-### First asset
-
-5. **Starting asset type:** Default is **Weekend Results** (`results`). Confirm or pick another:
-   - `results` · `result-single` · `upcoming` · `ladder` · `top5` · `performances` · `team-roster` · `team-of-the-week`
-6. **Sport:** Default `cricket`. Confirm.
-7. **Reference:** Any existing prototype or competitor reference to **preserve reading order** but not copy styling? (path or link)
-
-### Typography (pass 2 — optional on first pass)
-
-8. **Font pairing:** Defer unless the human cares now. Scoreline pass 1: Barlow Condensed (display) + Source Sans 3 (body). Other variants: see `design/_shared/fonts.json`. Custom fonts only after cricket layout hydrates correctly.
-9. **Character:** Skip on pass 1, or one line only if the human wants direction early.
-
-### Mode & data
-
-10. **Club vs association:** Is the first concept **club**-biased or **association**-balanced home/away?
-11. **Sponsor on first pass:** Show sponsor strip placeholder, or design sponsor-absent collapse only?
-12. **Fixture:** Use repo test data (`testData/samples/Cricket/Cricket_Results.json` for weekend results) or fictional sample clearly labelled?
-
-### Scope check (confirm human agrees)
-
-13. **Overlays only:** You will design titles, type, rows, scores, metadata, sponsor strip — **no backgrounds** (no photos, gradients, Generated/Luminance). Neutral placeholder backdrop OK for contrast only. Agreed?
-14. **No player photography.** Agreed?
-15. **One polished concept** first; wider asset family later. Agreed?
-
-If any answer is missing, state your recommended default and ask once more. Do not proceed on silent assumptions for Q1–Q4 and Q13–Q15.
+An agreed brief is input to design work, not approval of unseen visuals. Record deliberate direction changes in the brief; ordinary layout adjustments do not require another interview.
 
 ---
 
@@ -77,55 +53,11 @@ Optional: `src/compositions/cricket/.docs/stitch-briefs/` for asset-family promp
 
 **Never** save template prototypes under `.scratch/`, repo root, or ad-hoc URLs. The only valid location is `design/variants/{slug}/…` with a matching `routes.json` entry so the template appears in the sidebar.
 
-Copy the page structure from `design/variants/broadcast-pro/cricket/results.html` (design-site shell + scaled canvas + hydration scripts). Register the variant before calling the first pass done.
+For a new cricket family, follow the factory setup in [getting-started.md](./getting-started.md#new-template-factory). Read [naming-contract.md](./naming-contract.md) for the ten asset slugs, fixture mappings, CSS layers, and bootstrap profiles. Use the agreed label, slug, and registry ID from the brief. If the scaffold command is unavailable in this checkout, report that prerequisite instead of inventing a command or silently copying a legacy page.
 
-### Naming conventions
+Scaffold the family once, then focus visual work on the brief's selected asset. Existing variants must be resumed in place rather than re-scaffolded. Keep the brief outside the variant directory.
 
-| Layer                | Convention           | Example                    |
-| -------------------- | -------------------- | -------------------------- |
-| Folder slug          | kebab-case           | `stadium-signal`           |
-| Display label        | Human readable       | Stadium Signal             |
-| Remotion registry ID | PascalCase           | `StadiumSignal`            |
-| Sport segment        | lowercase            | `cricket`                  |
-| Asset file           | kebab-case + `.html` | `results.html`             |
-| Tailwind font key    | kebab-case           | `font-outfit`              |
-| Font catalog key     | kebab-case           | `"outfit"` in `fonts.json` |
-
-### Files to create or update
-
-```text
-design/
-├── _shared/
-│   ├── fonts.json              ← add families + variantFonts.{slug}
-│   ├── routes.json             ← add variants.{slug}.sports.cricket.assets.{asset}
-│   └── hydration/{slug}/cricket/{asset}.bind.json
-├── variants/{slug}/cricket/
-│   └── {asset}.html            ← overlay prototype (1080×1350)
-└── .docs/asset-index.md        ← handoff row
-```
-
-### Fixture map (cricket)
-
-| Asset slug         | Test fixture                                                 |
-| ------------------ | ------------------------------------------------------------ |
-| `results`          | `testData/samples/Cricket/Cricket_Results.json`              |
-| `result-single`    | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` |
-| `upcoming`         | `testData/samples/Cricket/Cricket_upcoming.json`             |
-| `ladder`           | `testData/samples/Cricket/Cricket_Ladder.json`               |
-| `top5`             | `testData/samples/Cricket/Cricket_Top5Batters.json`          |
-| `performances`     | `testData/samples/Cricket/Cricket_BattingPerformances.json`  |
-| `team-roster`      | `testData/samples/Cricket/Cricket_Roster.json`               |
-| `team-of-the-week` | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json`        |
-
-### HTML page requirements
-
-- Handoff comment block at top (variant, sport, asset, registry ID, Remotion paths — TBD until variant exists)
-- Design-site shell: topbar, sidebar nav, asset tabs, `design-canvas-wrap` → `design-social-canvas` (see Broadcast Pro reference)
-- Load fonts via `applyVariantFonts("{slug}")` from `design/_shared/fonts.js`
-- Use `data-hydrate="…"` attributes + bind map for key fields
-- Wire `renderVariantNav`, `renderTabBar`, `hydratePage` with correct `context`
-- **Placeholder background only** inside the canvas — flat neutral; not a designed background
-- HTML comments naming anatomy blocks inside the canvas (Metadata Strip, Score Block, etc.)
+The scaffold owns registration, initial bindings, and neutral asset styles. Preserve its generic bootstrap when designing new assets. Broadcast Pro and Scoreline are legacy references, not the setup source for a new family. Verify wiring with the documented design verifier after changes.
 
 ### Not a website — one video/poster frame
 
@@ -151,12 +83,14 @@ From repo root: `npm run design` →
 
 ## Phase 3 — Main design prompt (copy from here)
 
-Use the block below as the creative brief once Phase 0 is complete.
+Use the block below as build instructions once Phase 0 is complete. The agreed template brief supplies creative direction; this block does not replace it.
 
 ---
 
 ```markdown
 Create a new template design for Fixtura’s automated sports graphics.
+
+Read the agreed design brief: {DESIGN_BRIEF_PATH}. Follow its fixed requirements and reference interpretations. Use judgment within its creative direction and delegated exploration.
 
 ## Context
 
@@ -230,7 +164,7 @@ Deliver **one registered overlay** — not an app UI, device mockup, dashboard, 
 Iterate on the same registered file as feedback arrives. Remotion theme/registry handoff is a separate later pass.
 ```
 
-Replace `{PLACEholders}` with answers from Phase 0.
+Replace `{PLACEholders}` from the agreed brief, including `{DESIGN_BRIEF_PATH}`. Resolve only missing implementation details.
 
 ---
 
@@ -249,18 +183,14 @@ Do not register a Remotion template variant until overlay prototypes are approve
 
 ---
 
-## Quick copy — minimal Codex opener
+## Quick copy — start or resume discovery
+
+Copy the starter from [the design interview](./design-interview-prompt.md#copy-and-paste-to-start). No paths or placeholders need filling in.
+
+## Quick copy — build from the agreed brief
+
+After the interview, use its generated build prompt, which includes the exact saved brief path. To continue in the same conversation:
 
 ```text
-Read design/.docs/new-template-prompt.md, design/.docs/design-system-brief.md, and design/.docs/results-layout-reference.md.
-Run Phase 0: ask me all pre-flight questions before designing.
-Then execute Phase 3 for a new template starting with Weekend Results (results).
-
-Pass 1 first: follow design/.docs/results-layout-reference.md — horizontal team comparison, full scores, outcome, batting/bowling panels, context at bottom. Hydrate Cricket_Results.json. Do not copy reference background. Org colours from fixture only.
-
-Save into design/variants/{slug}/cricket/results.html and register routes.json + bind map on first delivery — never .scratch/.
-One 1080×1350 video/poster frame inside .design-social-canvas — not a website. No review footers or preview toggles.
-Overlays only — no backgrounds. Visual styling comes after pass 1 hydrates correctly.
-
-Pass 2 craft refs (after pass 1 hydrates): design/.docs/reference-library.md and design/design-Reference-docs/ — Google Fonts, CSS Techniques, SVG/Pattern/Texture, tailwind-css-remotion. Overlays only; no backgrounds.
+Build from the agreed Fixtura design brief we just completed. Follow design/.docs/new-template-prompt.md. Read the saved brief and its references first. Reuse settled answers and use its selected first asset. If the brief cannot be identified, ask which one to use. Verify fixture hydration before visual styling. Keep Remotion implementation separate.
 ```
