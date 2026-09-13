@@ -29,6 +29,10 @@ const scorelineRowOut = {
   custom: { distance: "105%" },
 };
 
+/** Intro title card — same wipe as ledger outer panels. */
+const scorelineIntroPanelIn = scorelinePanelIn;
+const scorelineIntroPanelOut = scorelinePanelOut;
+
 /**
  * Scoreline motion: horizontal L→R in, mirrored R exit.
  * Intro/outro/text presets inherit BroadcastSnap; main containers use horizontal swipe.
@@ -36,6 +40,12 @@ const scorelineRowOut = {
 export const templateAnimations: AnimationConfig = {
   ...broadcastSnapAnimations,
   container: {
+    intro: {
+      panel: {
+        containerIn: scorelineIntroPanelIn,
+        containerOut: scorelineIntroPanelOut,
+      },
+    },
     main: {
       parent: {
         containerIn: { type: "none" },

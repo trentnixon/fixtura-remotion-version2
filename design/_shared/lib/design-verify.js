@@ -50,13 +50,20 @@ export function runDesignVerify(repoRoot, options = {}) {
       if (options.asset && options.asset !== assetSlug) {
         continue;
       }
-      verifyRegisteredAsset(repoRoot, routes, variantSlug, "cricket", assetSlug, {
-        handoff,
-        bootstrap,
-        errors,
-        handoffContext,
-        registryId: variant.registryId,
-      });
+      verifyRegisteredAsset(
+        repoRoot,
+        routes,
+        variantSlug,
+        "cricket",
+        assetSlug,
+        {
+          handoff,
+          bootstrap,
+          errors,
+          handoffContext,
+          registryId: variant.registryId,
+        },
+      );
     }
   }
 
@@ -97,15 +104,22 @@ function verifyStarters(repoRoot, errors) {
         errors.push(`Starter ${asset.slug} must include .template-canvas root`);
       }
       if (!html.includes("data-hydrate-error")) {
-        errors.push(`Starter ${asset.slug} must include hydration error banner`);
+        errors.push(
+          `Starter ${asset.slug} must include hydration error banner`,
+        );
       }
       const bodyMatch = html.match(/<body[\s\S]*<\/body>/i);
       if (!bodyMatch || bodyMatch[0].length < 200) {
-        errors.push(`Starter ${asset.slug} body markup is missing or too small`);
+        errors.push(
+          `Starter ${asset.slug} body markup is missing or too small`,
+        );
       }
     }
 
-    if (!fs.existsSync(bindPath) || !fs.existsSync(path.join(repoRoot, asset.fixture))) {
+    if (
+      !fs.existsSync(bindPath) ||
+      !fs.existsSync(path.join(repoRoot, asset.fixture))
+    ) {
       continue;
     }
 
@@ -168,13 +182,18 @@ function verifyRegisteredAsset(
   }
 
   if (ctx.bootstrap === "generic") {
-    const sharedCss = path.join(repoRoot, `design/_shared/${variantSlug}-shared.css`);
+    const sharedCss = path.join(
+      repoRoot,
+      `design/_shared/${variantSlug}-shared.css`,
+    );
     const assetCss = path.join(
       repoRoot,
       `design/_shared/${variantSlug}-${assetSlug}.css`,
     );
     if (!fs.existsSync(sharedCss)) {
-      ctx.errors.push(`Missing generic shared CSS: design/_shared/${variantSlug}-shared.css`);
+      ctx.errors.push(
+        `Missing generic shared CSS: design/_shared/${variantSlug}-shared.css`,
+      );
     }
     if (!fs.existsSync(assetCss)) {
       ctx.errors.push(
@@ -184,7 +203,9 @@ function verifyRegisteredAsset(
     if (fs.existsSync(htmlPath)) {
       const html = fs.readFileSync(htmlPath, "utf8");
       if (!html.includes("init-template.js")) {
-        ctx.errors.push(`${htmlRel} must use init-template.js (generic bootstrap)`);
+        ctx.errors.push(
+          `${htmlRel} must use init-template.js (generic bootstrap)`,
+        );
       }
       if (!html.includes(".template-canvas")) {
         ctx.errors.push(`${htmlRel} must include .template-canvas root`);
@@ -217,7 +238,9 @@ function verifyRegisteredAsset(
     if (ctx.bootstrap === "generic" && fs.existsSync(htmlPath)) {
       const html = fs.readFileSync(htmlPath, "utf8");
       for (const selector of Object.keys(values)) {
-        const attr = selector.match(/data-hydrate=([^\]]+)/)?.[1]?.replace(/"/g, "");
+        const attr = selector
+          .match(/data-hydrate=([^\]]+)/)?.[1]
+          ?.replace(/"/g, "");
         if (attr && !html.includes(`data-hydrate="${attr}"`)) {
           ctx.errors.push(
             `Scalar selector not in HTML (${variantSlug}/${assetSlug}): ${selector}`,
@@ -286,7 +309,7 @@ function loadHandoffContext(repoRoot) {
   )?.[1];
   if (block) {
     for (const line of block.split("\n")) {
-      const match = line.match(/^  ([A-Za-z][A-Za-z0-9]*): \{/);
+      const match = line.match(/^ {2}([A-Za-z][A-Za-z0-9]*): \{/);
       if (match) {
         templateRegistry.add(match[1]);
       }
@@ -316,7 +339,13 @@ function compositionExportHasRoutingKey(cricketIndex, exportName, routingKey) {
  * @param {{ variant?: string, asset?: string }} options
  * @param {Set<string>} pendingOrphans
  */
-function verifyOrphanVariantHtml(repoRoot, routes, errors, options, pendingOrphans) {
+function verifyOrphanVariantHtml(
+  repoRoot,
+  routes,
+  errors,
+  options,
+  pendingOrphans,
+) {
   const variantsDir = path.join(repoRoot, "design/variants");
   if (!fs.existsSync(variantsDir)) {
     return;

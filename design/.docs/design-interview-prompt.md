@@ -28,18 +28,18 @@ Translate statements such as "more newspaper, less scoreboard" into specific pro
 
 Use this question bank to cover the decisions that matter. Skip questions already answered and adapt examples to the user's references.
 
-| Topic | Decisions to resolve |
-| --- | --- |
-| Audience and media | Who sees these graphics? Club or association emphasis? Feed, story, video frame, or another publishing context? What must a viewer understand first? |
-| Character | Editorial, broadcast, traditional, contemporary, restrained, expressive? Which qualities matter, and which would feel wrong? Ask for concrete examples rather than adjective lists alone. |
-| Hierarchy and density | What should dominate within the asset anatomy? How much breathing room versus compact detail? How should sparse and dense weeks feel? |
-| Typography | Condensed or broad display type? Quiet or prominent metadata? Numeral character, case, weight, and contrast between heading and body roles? Read fonts.json and fonts.md when discussing exact font choices. |
-| Colour and surfaces | How should fixture-supplied primary and secondary colours be used? Neutral surfaces, solid bands, outlines, contrast, and overlay transparency? Avoid inventing a fixed club palette. |
-| Graphic language | Rules, borders, corner treatments, motifs, iconography, logo framing, and depth? Which devices are essential and which are optional? |
-| Identity and sponsors | How prominent are club identity and sponsors? What should collapse when optional content is absent? Preserve required sporting data and supplied team ordering. |
-| Asset family | Which asset gets visual attention first? What stays consistent across the family? Where may ladder, roster, results, and player-focused assets differ? |
-| Motion intent | If video matters, what pace and emphasis should later animation express? Record intent only; this workflow produces a static overlay brief. |
-| Success and exclusions | What would make the first concept feel right? What should the designer explicitly avoid? Which decisions can remain open for exploration? |
+| Topic                  | Decisions to resolve                                                                                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Audience and media     | Who sees these graphics? Club or association emphasis? Feed, story, video frame, or another publishing context? What must a viewer understand first?                                                         |
+| Character              | Editorial, broadcast, traditional, contemporary, restrained, expressive? Which qualities matter, and which would feel wrong? Ask for concrete examples rather than adjective lists alone.                    |
+| Hierarchy and density  | What should dominate within the asset anatomy? How much breathing room versus compact detail? How should sparse and dense weeks feel?                                                                        |
+| Typography             | Condensed or broad display type? Quiet or prominent metadata? Numeral character, case, weight, and contrast between heading and body roles? Read fonts.json and fonts.md when discussing exact font choices. |
+| Colour and surfaces    | How should fixture-supplied primary and secondary colours be used? Neutral surfaces, solid bands, outlines, contrast, and overlay transparency? Avoid inventing a fixed club palette.                        |
+| Graphic language       | Rules, borders, corner treatments, motifs, iconography, logo framing, and depth? Which devices are essential and which are optional?                                                                         |
+| Identity and sponsors  | How prominent are club identity and sponsors? What should collapse when optional content is absent? Preserve required sporting data and supplied team ordering.                                              |
+| Asset family           | Which asset gets visual attention first? What stays consistent across the family? Where may ladder, roster, results, and player-focused assets differ?                                                       |
+| Motion intent          | If video matters, what pace and emphasis should later animation express? Record intent only; this workflow produces a static overlay brief.                                                                  |
+| Success and exclusions | What would make the first concept feel right? What should the designer explicitly avoid? Which decisions can remain open for exploration?                                                                    |
 
 Cricket and Results are defaults, not mandatory creative choices. Record the selected first asset and map it to the current anatomy and fixture during the build. A request for another aspect ratio or scope is an unresolved project constraint, not permission to silently change the 1080 x 1350 system.
 

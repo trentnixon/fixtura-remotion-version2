@@ -15,6 +15,7 @@ export default [
         getComputedStyle: "readonly",
         HTMLElement: "readonly",
         HTMLImageElement: "readonly",
+        HTMLTemplateElement: "readonly",
         URLSearchParams: "readonly",
         window: "readonly",
       },

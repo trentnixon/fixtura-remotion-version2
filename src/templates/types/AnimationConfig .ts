@@ -57,6 +57,12 @@ export interface TextConfig {
 }
 
 export interface ContainerConfig {
+  intro?: {
+    panel: {
+      containerIn: AnimationSettings;
+      containerOut: AnimationSettings;
+    };
+  };
   main: {
     parent: {
       containerIn: AnimationSettings;

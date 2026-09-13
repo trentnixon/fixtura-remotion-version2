@@ -39,12 +39,7 @@ export const BaseTemplateLayout: React.FC<BaseTemplateLayoutProps> = ({
       <AbsoluteFill style={{ zIndex: CONTENT_Z_INDEX }}>
         <Series>
           {/* Intro Sequence */}
-          <Series.Sequence
-            durationInFrames={calculateIntroDuration(timings)}
-            style={{
-              translate: "-65.5px 29.8px",
-            }}
-          >
+          <Series.Sequence durationInFrames={calculateIntroDuration(timings)}>
             {IntroComponent && <IntroComponent />}
           </Series.Sequence>
 

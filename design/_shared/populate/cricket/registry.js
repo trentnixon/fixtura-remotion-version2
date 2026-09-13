@@ -33,14 +33,15 @@ const MODULES = {
  * }} params
  */
 export async function runPopulationModule(params) {
-  const { populationId, populationOverride, canvas, fixture, context } =
-    params;
+  const { populationId, populationOverride, canvas, fixture, context } = params;
 
   if (populationOverride) {
     const mod = await import(/* @vite-ignore */ populationOverride);
     const fn = mod.default ?? mod.populate;
     if (typeof fn !== "function") {
-      throw new Error(`Population override has no default export: ${populationOverride}`);
+      throw new Error(
+        `Population override has no default export: ${populationOverride}`,
+      );
     }
     await fn({ canvas, fixture, context });
     return;

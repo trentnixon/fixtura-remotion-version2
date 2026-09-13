@@ -1,0 +1,3 @@
+Add design template factory for ten cricket overlay prototypes.
+
+Scaffold, verify, starters, generic hydration bootstrap, and docs so new templates get populated assets without touching legacy Scoreline wiring.

@@ -288,7 +288,7 @@
   display: inline-flex;
   align-items: baseline;
   gap: 0;
-  color: var(--container-text-accent, var(--club-primary));
+  color: var(--container-text, var(--ink));
   font-family: var(--font-display);
   font-size: var(--type-leader-figure);
   font-weight: 800;

@@ -586,23 +586,23 @@
 }
 
 .scoreline-canvas .performance-figure {
-  color: var(--accent-on-light-primary);
+  color: var(--container-text, var(--contrast-performance-lead));
   font-weight: 700;
 }
 
 .scoreline-canvas .performance-area .performance-figure {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas .performance-panel:last-child .performance-figure {
-  color: var(--accent-on-light-secondary);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas
   .performance-area
   .performance-panel:last-child
   .performance-figure {
-  color: var(--club-secondary);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas .performance-row[data-rank="1"] .performance-player {
@@ -666,10 +666,7 @@
     .totw-category,
     [data-roster] .roster-grade,
     [data-roster] .roster-squad-header,
-    [data-leaderboard]
-      .leaderboard-rows
-      .leader-entry:nth-of-type(even)
-      .leader-row,
+    [data-leaderboard] .leaderboard-rows .leader-entry .leader-row,
     [data-ladder] .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row,
     [data-roster] .roster-rows .roster-entry .roster-row,
     [data-totw] .totw-rows .totw-entry .totw-row
@@ -710,7 +707,8 @@
 
 .scoreline-canvas
   :is(
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-name,
+    [data-leaderboard] .leader-name,
+    [data-leaderboard] .leader-figure,
     [data-leaderboard] .leaderboard-category-value,
     [data-ladder] .ladder-team,
     [data-ladder] .ladder-grade-name,
@@ -719,6 +717,7 @@
     [data-roster] .roster-squad-team,
     [data-totw] .totw-name,
     [data-totw] .totw-team,
+    [data-totw] .totw-figure,
     [data-totw] .totw-category-value,
     .fixture-grade-name,
     .fixture-date,
@@ -730,11 +729,9 @@
 .scoreline-canvas
   :is(
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-rank,
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure,
     [data-ladder] .ladder-rank,
     [data-ladder] .ladder-stat--pts,
-    [data-roster] .roster-index,
-    [data-totw] .totw-figure
+    [data-roster] .roster-index
   ) {
   color: var(--container-text-accent, var(--accent-on-light-primary));
 }
@@ -755,7 +752,8 @@
     [data-roster] .roster-grade,
     [data-roster] .roster-squad-header,
     [data-roster] .roster-rows .roster-entry .roster-row,
-    [data-totw] .totw-rows .totw-entry .totw-row
+    [data-totw] .totw-rows .totw-entry .totw-row,
+    [data-leaderboard] .leaderboard-rows .leader-entry .leader-row
   ) {
   min-width: 0;
   overflow: hidden;
@@ -1038,14 +1036,16 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-leaderboard="batting"] .leader-rank,
-.scoreline-canvas[data-leaderboard="batting"] .leader-figure {
+.scoreline-canvas[data-leaderboard="batting"] .leader-rank {
   color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
-.scoreline-canvas[data-leaderboard="bowling"] .leader-rank,
-.scoreline-canvas[data-leaderboard="bowling"] .leader-figure {
+.scoreline-canvas[data-leaderboard="bowling"] .leader-rank {
   color: var(--container-text-accent, var(--accent-on-light-secondary));
+}
+
+.scoreline-canvas[data-leaderboard] .leader-figure {
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-team-label,
@@ -1192,9 +1192,8 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-totw] .totw-rank,
 .scoreline-canvas[data-totw] .totw-figure {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-totw] .totw-role {
@@ -1219,6 +1218,13 @@
 .scoreline-canvas .header-shell__crease {
   position: relative;
   z-index: 1;
+}
+
+/* —— Intro title card —— */
+.scoreline-canvas.scoreline-intro .header-eyebrow,
+.scoreline-canvas.scoreline-intro .organisation-name,
+.scoreline-canvas.scoreline-intro .header-title {
+  color: var(--header-text, var(--container-text, var(--ink)));
 }
 
 /* —— Shared surface grain (single atmospheric texture) —— */

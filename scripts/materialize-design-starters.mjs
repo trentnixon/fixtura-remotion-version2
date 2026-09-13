@@ -58,7 +58,10 @@ function transformHtml(html, assetSlug) {
     `    <link rel="stylesheet" href="/design/_templates/cricket/starter-shared.css" />
     <link rel="stylesheet" href="/design/_templates/cricket/starter-${assetSlug}.css" />`,
   );
-  out = out.replace(/<script src="https:\/\/cdn\.tailwindcss\.com"><\/script>\s*/g, "");
+  out = out.replace(
+    /<script src="https:\/\/cdn\.tailwindcss\.com"><\/script>\s*/g,
+    "",
+  );
   out = out.replace(
     /<script type="module">\s*import \{ applyVariantFonts \}[\s\S]*?<\/script>\s*/g,
     "",

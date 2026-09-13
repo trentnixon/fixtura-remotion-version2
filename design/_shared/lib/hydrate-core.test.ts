@@ -7,10 +7,7 @@ import {
   getValueByPath,
   normalizeBindEntry,
 } from "./hydrate-core.js";
-import {
-  assertNoDuplicateJsonKeys,
-  parseBindMapJson,
-} from "./bind-json.js";
+import { assertNoDuplicateJsonKeys, parseBindMapJson } from "./bind-json.js";
 import { resolveAssetEntry, validateRoutesManifest } from "./manifest.js";
 
 describe("routes manifest", () => {
@@ -86,11 +83,9 @@ describe("hydrate-core", () => {
 
 describe("bind-json", () => {
   it("rejects duplicate top-level keys", () => {
-    expect(() =>
-      assertNoDuplicateJsonKeys(
-        '{"[a]":"x","[a]":"y"}',
-      ),
-    ).toThrow(/Duplicate bind-map key/);
+    expect(() => assertNoDuplicateJsonKeys('{"[a]":"x","[a]":"y"}')).toThrow(
+      /Duplicate bind-map key/,
+    );
   });
 
   it("parses bind maps after duplicate check", () => {

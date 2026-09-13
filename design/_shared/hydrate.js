@@ -91,8 +91,7 @@ export async function hydratePage(context) {
 
     return true;
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Hydration failed";
+    const message = error instanceof Error ? error.message : "Hydration failed";
     showError(message);
     return false;
   }

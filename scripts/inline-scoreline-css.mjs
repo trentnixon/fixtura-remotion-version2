@@ -12,6 +12,7 @@ const root = join(__dirname, "..");
 
 const SCORELINE_STYLE_FILES = [
   "src/templates/variants/scoreline/styles/scoreline-polish.css",
+  "src/templates/variants/scoreline/styles/scoreline-intro.css",
   "src/templates/variants/scoreline/styles/scoreline-results.css",
   "src/templates/variants/scoreline/styles/scoreline-result-single.css",
   "src/templates/variants/scoreline/styles/scoreline-upcoming.css",

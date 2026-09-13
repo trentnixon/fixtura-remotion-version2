@@ -146,7 +146,7 @@ const force = args.force === "true";
 
 if (!label || !slug || !registryId) {
   console.error(
-    "Usage: node scripts/scaffold-design-template.mjs --label \"Name\" --slug my-template --registry-id MyTemplate [--variant-folder myTemplate] [--force]",
+    'Usage: node scripts/scaffold-design-template.mjs --label "Name" --slug my-template --registry-id MyTemplate [--variant-folder myTemplate] [--force]',
   );
   console.error(
     "Note: do not use --registry with npm (npm treats it as the package registry URL).",
@@ -225,7 +225,10 @@ for (const asset of CRICKET_FACTORY_ASSETS) {
       `/design/_shared/${slug}-${asset.slug}.css`,
     );
 
-  fs.writeFileSync(path.join(variantDir, "cricket", `${asset.slug}.html`), html);
+  fs.writeFileSync(
+    path.join(variantDir, "cricket", `${asset.slug}.html`),
+    html,
+  );
 
   const hydrationDir = path.join(
     root,
@@ -273,5 +276,9 @@ fs.writeFileSync(fontsPath, `${JSON.stringify(fonts, null, 2)}\n`);
 
 upsertAssetIndexBlock(slug, registryId, variantFolder);
 
-console.log(`Scaffolded design variant "${slug}" (${registryId}) with 10 assets.`);
-console.log(`Open: http://localhost:3456/design/variants/${slug}/cricket/results.html`);
+console.log(
+  `Scaffolded design variant "${slug}" (${registryId}) with 10 assets.`,
+);
+console.log(
+  `Open: http://localhost:3456/design/variants/${slug}/cricket/results.html`,
+);

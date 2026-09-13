@@ -59,7 +59,16 @@ const scorelineChecks = [
   {
     path: "src/package/generated/scorelineBundledCss.ts",
     label: "scorelineBundledCss.ts",
-    needles: ["SCORELINE_BUNDLED_CSS", ".scoreline-canvas"],
+    needles: [
+      "SCORELINE_BUNDLED_CSS",
+      ".scoreline-canvas",
+      ".scoreline-intro__panel",
+    ],
+  },
+  {
+    path: "dist/preview.css",
+    label: "dist/preview.css (intro layout)",
+    needles: [".scoreline-intro__panel"],
   },
 ];
 

@@ -1,0 +1,5 @@
+Complete design template factory close-out: starters, verify, scaffold.
+
+Fix materialize so starters keep full body markup; extend design:verify
+with starter anatomy checks and handoff registry/routing checks; harden
+scaffold --force overwrite and npm-safe args; mark factory tickets complete.

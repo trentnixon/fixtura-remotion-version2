@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 @import "./templates/variants/scoreline/styles/scoreline-polish.css";
+@import "./templates/variants/scoreline/styles/scoreline-intro.css";
 @import "./templates/variants/scoreline/styles/scoreline-results.css";
 @import "./templates/variants/scoreline/styles/scoreline-result-single.css";
 @import "./templates/variants/scoreline/styles/scoreline-upcoming.css";

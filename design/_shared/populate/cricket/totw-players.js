@@ -30,8 +30,7 @@ const formatStats = (player) => {
     const { runs, balls, strikeRate, notOut } = player.batting;
     const main = notOut ? `${runs}*` : String(runs);
     const suffix = balls > 0 ? `(${balls})` : "";
-    const subline =
-      strikeRate > 0 ? `SR ${Number(strikeRate).toFixed(1)}` : "";
+    const subline = strikeRate > 0 ? `SR ${Number(strikeRate).toFixed(1)}` : "";
     return { main, suffix, subline, kind: "batting" };
   }
 

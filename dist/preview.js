@@ -1892,16 +1892,7 @@ var BaseTemplateLayout = ({
   );
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_remotion5.AbsoluteFill, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_remotion5.AbsoluteFill, { style: { zIndex: CONTENT_Z_INDEX }, children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_remotion5.Series, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
-        import_remotion5.Series.Sequence,
-        {
-          durationInFrames: calculateIntroDuration(timings),
-          style: {
-            translate: "-65.5px 29.8px"
-          },
-          children: IntroComponent && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IntroComponent, {})
-        }
-      ),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_remotion5.Series.Sequence, { durationInFrames: calculateIntroDuration(timings), children: IntroComponent && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IntroComponent, {}) }),
       /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_remotion5.Series.Sequence, { durationInFrames: calculateMainDuration(timings), children: MainComponentLayout && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(MainComponentLayout, {}) }),
       outroDurationInFrames > 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_remotion5.Series.Sequence, { durationInFrames: outroDurationInFrames, children: OutroComponent && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
         OutroComponent,
@@ -60615,80 +60606,7 @@ var scorelineTheme = {
 };
 
 // src/templates/variants/scoreline/components/ScorelineIntro.tsx
-var import_jsx_runtime622 = require("react/jsx-runtime");
-var ScorelineIntro = () => {
-  var _a, _b, _c;
-  const { club, metadata } = useVideoDataContext();
-  const { animations } = useAnimationContext();
-  const TextAnimations = animations.text.intro;
-  const LogoAnimations = animations.image.intro.logo;
-  const { fontClasses } = useThemeContext();
-  return /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
-    VerticalStackTitleLogoName,
-    {
-      alignment: "center",
-      Logo: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)("div", { className: "flex h-full max-h-[500px] w-full max-w-[500px] items-center justify-center py-8", children: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
-        AnimatedImage,
-        {
-          src: ((_a = club.logo) == null ? void 0 : _a.url) || "",
-          alt: club.name,
-          width: "auto",
-          height: "auto",
-          fit: "contain",
-          animation: LogoAnimations.introIn,
-          exitAnimation: LogoAnimations.introOut,
-          exitFrame: LogoAnimations.introExitFrame
-        }
-      ) }),
-      Title: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)("div", { className: "mb-4 overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
-        AnimatedText,
-        {
-          textAlign: "center",
-          type: "title",
-          variant: "onContainerTitle",
-          letterAnimation: "word",
-          animation: TextAnimations.mainTitle,
-          exitAnimation: TextAnimations.introOut,
-          exitFrame: TextAnimations.introExitFrame,
-          fontFamily: (_b = fontClasses.heading) == null ? void 0 : _b.family,
-          className: "font-barlow-condensed text-[124px] font-extrabold uppercase leading-none tracking-wide",
-          children: metadata.title
-        }
-      ) }),
-      Name: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
-        AnimatedText,
-        {
-          textAlign: "center",
-          type: "copy",
-          variant: "onContainerCopy",
-          animation: TextAnimations.clubName,
-          exitAnimation: TextAnimations.introOut,
-          exitFrame: TextAnimations.introExitFrame,
-          fontFamily: (_c = fontClasses.body) == null ? void 0 : _c.family,
-          className: "font-source-sans text-3xl font-semibold uppercase tracking-widest",
-          children: club.name
-        }
-      ),
-      PrimarySponsor: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
-        IntroPrimarySponsors,
-        {
-          introIn: LogoAnimations.introIn,
-          introOut: LogoAnimations.introOut,
-          introExitFrame: LogoAnimations.introExitFrame
-        }
-      )
-    }
-  );
-};
-
-// src/templates/variants/scoreline/components/ScorelineBackground.tsx
-var import_jsx_runtime623 = require("react/jsx-runtime");
-var ScorelineBackground = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime623.jsx)(SelectTemplateBackground, {});
-};
-
-// src/templates/variants/scoreline/components/ScorelineMain.tsx
-var import_remotion137 = require("remotion");
+var import_remotion136 = require("remotion");
 
 // src/compositions/cricket/utils/scoreline/scorelineCanvasStyle.ts
 var import_react41 = require("react");
@@ -60952,6 +60870,177 @@ var useScorelineCanvasStyle = () => {
   );
 };
 
+// src/compositions/cricket/utils/scoreline/resolveScorelineHeaderDefaults.ts
+var SCORELINE_HEADER_DEFAULTS = {
+  CricketUpcoming: { eyebrow: "Upcoming", title: "Upcoming Fixtures" },
+  CricketResults: { eyebrow: "Results", title: "Weekend Results" },
+  CricketResultSingle: { eyebrow: "Result", title: "Match Result" },
+  CricketLadder: { eyebrow: "Ladder", title: "Ladder" },
+  CricketTop5Batting: { eyebrow: "Top 5", title: "Top 5 Batting" },
+  CricketTop5Bowling: { eyebrow: "Top 5", title: "Top 5 Bowling" },
+  CricketBattingPerformances: {
+    eyebrow: "Performances",
+    title: "Top Batting"
+  },
+  CricketBowlingPerformances: {
+    eyebrow: "Performances",
+    title: "Top Bowling"
+  },
+  CricketRoster: { eyebrow: "Team", title: "Team Roster" },
+  CricketTeamOfTheWeek: {
+    eyebrow: "Team of the Week",
+    title: "Team of the Week"
+  }
+};
+var resolveScorelineHeaderDefaults = (compositionId) => {
+  if (compositionId && SCORELINE_HEADER_DEFAULTS[compositionId]) {
+    return SCORELINE_HEADER_DEFAULTS[compositionId];
+  }
+  return SCORELINE_HEADER_DEFAULTS.CricketResults;
+};
+
+// src/templates/variants/scoreline/components/ScorelineIntro.tsx
+var import_jsx_runtime622 = require("react/jsx-runtime");
+var ScorelineIntro = () => {
+  var _a, _b, _c, _d, _e, _f, _g, _h;
+  const { club, metadata, templateVariation } = useVideoDataContext();
+  const { animations } = useAnimationContext();
+  const TextAnimations = animations.text.intro;
+  const LogoAnimations = animations.image.intro.logo;
+  const introPanelAnimation = (_b = (_a = animations.container.intro) == null ? void 0 : _a.panel) != null ? _b : animations.container.main.itemContainerOuter;
+  const introExitFrame = TextAnimations.introExitFrame;
+  const { fontClasses, componentStyles, selectedPalette } = useThemeContext();
+  const canvasStyle = useScorelineCanvasStyle();
+  const headerTextColor = selectedPalette.text.onContainer.title;
+  const headerDefaults = resolveScorelineHeaderDefaults(metadata.compositionId);
+  const eyebrow = metadata.title || ((_c = metadata.titleSplit) == null ? void 0 : _c.join(" \xB7 ")) || headerDefaults.eyebrow;
+  const title = metadata.videoTitle || metadata.title || headerDefaults.title;
+  const logoUrl = (_e = (_d = club.logo) == null ? void 0 : _d.url) != null ? _e : "";
+  const hasCrest = Boolean(logoUrl);
+  return /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(import_remotion136.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+    "div",
+    {
+      className: `scoreline-canvas scoreline-intro ${csClass3(componentStyles, "scorelineCanvasShell")}`,
+      style: canvasStyle,
+      "data-scoreline-mode": templateVariation.mode || "light",
+      children: /* @__PURE__ */ (0, import_jsx_runtime622.jsxs)("div", { className: "scoreline-intro__frame", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+          AnimatedContainer,
+          {
+            type: "full",
+            size: "auto",
+            className: `scoreline-intro__animated ${csClass3(componentStyles, "scorelineAnimatedItem")}`,
+            backgroundColor: "none",
+            animation: introPanelAnimation.containerIn,
+            exitAnimation: introPanelAnimation.containerOut,
+            exitFrame: introExitFrame,
+            children: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)("div", { className: "scoreline-intro__panel", children: /* @__PURE__ */ (0, import_jsx_runtime622.jsxs)("div", { className: "scoreline-intro__shell", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime622.jsxs)("div", { className: "scoreline-intro__main", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime622.jsxs)("div", { className: "header-identity-lockup", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime622.jsxs)(
+                    "div",
+                    {
+                      className: "organisation-mark",
+                      "data-has-crest": hasCrest ? "true" : "false",
+                      children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime622.jsx)("span", { className: "mark-fallback", "aria-hidden": true }),
+                        hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+                          AnimatedImage,
+                          {
+                            src: logoUrl,
+                            alt: "",
+                            width: "auto",
+                            height: "auto",
+                            fit: "contain",
+                            animation: LogoAnimations.introIn,
+                            exitAnimation: LogoAnimations.introOut,
+                            exitFrame: LogoAnimations.introExitFrame
+                          }
+                        ) : null
+                      ]
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime622.jsx)("div", { className: "header-identity", children: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+                    AnimatedText,
+                    {
+                      textAlign: "left",
+                      type: "copy",
+                      variant: "onContainerCopy",
+                      letterAnimation: "word",
+                      animation: TextAnimations.clubName,
+                      exitAnimation: TextAnimations.introOut,
+                      exitFrame: TextAnimations.introExitFrame,
+                      fontFamily: (_f = fontClasses.body) == null ? void 0 : _f.family,
+                      className: "organisation-name",
+                      style: { color: headerTextColor },
+                      children: club.name
+                    }
+                  ) })
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime622.jsxs)("div", { className: "header-title-stack", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+                    AnimatedText,
+                    {
+                      textAlign: "right",
+                      type: "label",
+                      variant: "onContainerTitle",
+                      letterAnimation: "word",
+                      animation: TextAnimations.mainTitle,
+                      exitAnimation: TextAnimations.introOut,
+                      exitFrame: TextAnimations.introExitFrame,
+                      fontFamily: (_g = fontClasses.heading) == null ? void 0 : _g.family,
+                      className: "header-eyebrow",
+                      style: { color: headerTextColor },
+                      children: eyebrow
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+                    AnimatedText,
+                    {
+                      textAlign: "right",
+                      type: "title",
+                      variant: "onContainerTitle",
+                      letterAnimation: "word",
+                      animation: TextAnimations.mainTitle,
+                      animationDelay: 4,
+                      exitAnimation: TextAnimations.introOut,
+                      exitFrame: TextAnimations.introExitFrame,
+                      fontFamily: (_h = fontClasses.heading) == null ? void 0 : _h.family,
+                      className: "header-title scoreline-intro__headline",
+                      style: { color: headerTextColor },
+                      children: title
+                    }
+                  )
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime622.jsx)("div", { className: "scoreline-intro__crease", "aria-hidden": true, children: /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(ScorelineCreaseMarkup, {}) })
+            ] }) })
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime622.jsx)(
+          IntroPrimarySponsors,
+          {
+            introIn: LogoAnimations.introIn,
+            introOut: LogoAnimations.introOut,
+            introExitFrame: LogoAnimations.introExitFrame,
+            className: "scoreline-intro__sponsors",
+            itemClassName: "scoreline-intro__sponsor-slot"
+          }
+        )
+      ] })
+    }
+  ) });
+};
+
+// src/templates/variants/scoreline/components/ScorelineBackground.tsx
+var import_jsx_runtime623 = require("react/jsx-runtime");
+var ScorelineBackground = () => {
+  return /* @__PURE__ */ (0, import_jsx_runtime623.jsx)(SelectTemplateBackground, {});
+};
+
+// src/templates/variants/scoreline/components/ScorelineMain.tsx
+var import_remotion138 = require("remotion");
+
 // src/compositions/cricket/utils/scoreline/resolveScorelineCanvasDataset.ts
 var resolveScorelineCanvasDataset = (compositionId) => {
   switch (compositionId) {
@@ -60977,30 +61066,7 @@ var resolveScorelineCanvasDataset = (compositionId) => {
 };
 
 // src/templates/variants/scoreline/components/ScorelineMainHeader.tsx
-var import_remotion136 = require("remotion");
-
-// src/compositions/cricket/utils/scoreline/resolveScorelineHeaderDefaults.ts
-var SCORELINE_HEADER_DEFAULTS = {
-  CricketUpcoming: { eyebrow: "Upcoming", title: "Upcoming Fixtures" },
-  CricketResults: { eyebrow: "Results", title: "Weekend Results" },
-  CricketResultSingle: { eyebrow: "Result", title: "Match Result" },
-  CricketLadder: { eyebrow: "Ladder", title: "Ladder" },
-  CricketTop5Batting: { eyebrow: "Top 5", title: "Top 5 Batting" },
-  CricketTop5Bowling: { eyebrow: "Top 5", title: "Top 5 Bowling" },
-  CricketRoster: { eyebrow: "Team", title: "Team Roster" },
-  CricketTeamOfTheWeek: {
-    eyebrow: "Team of the Week",
-    title: "Team of the Week"
-  }
-};
-var resolveScorelineHeaderDefaults = (compositionId) => {
-  if (compositionId && SCORELINE_HEADER_DEFAULTS[compositionId]) {
-    return SCORELINE_HEADER_DEFAULTS[compositionId];
-  }
-  return SCORELINE_HEADER_DEFAULTS.CricketResults;
-};
-
-// src/templates/variants/scoreline/components/ScorelineMainHeader.tsx
+var import_remotion137 = require("remotion");
 var import_jsx_runtime624 = require("react/jsx-runtime");
 var ScorelineMainHeader = () => {
   var _a, _b, _c;
@@ -61023,7 +61089,7 @@ var ScorelineMainHeader = () => {
             "data-has-crest": hasCrest ? "true" : "false",
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime624.jsx)("span", { className: "mark-fallback", "aria-hidden": true }),
-              hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime624.jsx)(import_remotion136.Img, { src: logoUrl, alt: "" }) : null
+              hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime624.jsx)(import_remotion137.Img, { src: logoUrl, alt: "" }) : null
             ]
           }
         ),
@@ -61056,7 +61122,7 @@ var ScorelineMain = () => {
   const canvasStyle = useScorelineCanvasStyle();
   const canvasDataset = resolveScorelineCanvasDataset(metadata.compositionId);
   const compositionRouteHeight = getCompositionSectionHeight(heights);
-  return /* @__PURE__ */ (0, import_jsx_runtime625.jsx)(import_remotion137.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime625.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime625.jsx)(import_remotion138.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime625.jsxs)(
     "div",
     {
       className: `scoreline-canvas ${csClass3(componentStyles, "scorelineCanvasShell")}`,
@@ -61105,9 +61171,17 @@ var scorelineRowOut = {
   duration: 10,
   custom: { distance: "105%" }
 };
+var scorelineIntroPanelIn = scorelinePanelIn;
+var scorelineIntroPanelOut = scorelinePanelOut;
 var templateAnimations12 = {
   ...broadcastSnapAnimations,
   container: {
+    intro: {
+      panel: {
+        containerIn: scorelineIntroPanelIn,
+        containerOut: scorelineIntroPanelOut
+      }
+    },
     main: {
       parent: {
         containerIn: { type: "none" },
@@ -61836,23 +61910,23 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 }
 
 .scoreline-canvas .performance-figure {
-  color: var(--accent-on-light-primary);
+  color: var(--container-text, var(--contrast-performance-lead));
   font-weight: 700;
 }
 
 .scoreline-canvas .performance-area .performance-figure {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas .performance-panel:last-child .performance-figure {
-  color: var(--accent-on-light-secondary);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas
   .performance-area
   .performance-panel:last-child
   .performance-figure {
-  color: var(--club-secondary);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas .performance-row[data-rank="1"] .performance-player {
@@ -61916,10 +61990,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     .totw-category,
     [data-roster] .roster-grade,
     [data-roster] .roster-squad-header,
-    [data-leaderboard]
-      .leaderboard-rows
-      .leader-entry:nth-of-type(even)
-      .leader-row,
+    [data-leaderboard] .leaderboard-rows .leader-entry .leader-row,
     [data-ladder] .ladder-rows .ladder-entry:nth-of-type(even) .ladder-row,
     [data-roster] .roster-rows .roster-entry .roster-row,
     [data-totw] .totw-rows .totw-entry .totw-row
@@ -61960,7 +62031,8 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 
 .scoreline-canvas
   :is(
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-name,
+    [data-leaderboard] .leader-name,
+    [data-leaderboard] .leader-figure,
     [data-leaderboard] .leaderboard-category-value,
     [data-ladder] .ladder-team,
     [data-ladder] .ladder-grade-name,
@@ -61969,6 +62041,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     [data-roster] .roster-squad-team,
     [data-totw] .totw-name,
     [data-totw] .totw-team,
+    [data-totw] .totw-figure,
     [data-totw] .totw-category-value,
     .fixture-grade-name,
     .fixture-date,
@@ -61980,11 +62053,9 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 .scoreline-canvas
   :is(
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-rank,
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure,
     [data-ladder] .ladder-rank,
     [data-ladder] .ladder-stat--pts,
-    [data-roster] .roster-index,
-    [data-totw] .totw-figure
+    [data-roster] .roster-index
   ) {
   color: var(--container-text-accent, var(--accent-on-light-primary));
 }
@@ -62005,7 +62076,8 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     [data-roster] .roster-grade,
     [data-roster] .roster-squad-header,
     [data-roster] .roster-rows .roster-entry .roster-row,
-    [data-totw] .totw-rows .totw-entry .totw-row
+    [data-totw] .totw-rows .totw-entry .totw-row,
+    [data-leaderboard] .leaderboard-rows .leader-entry .leader-row
   ) {
   min-width: 0;
   overflow: hidden;
@@ -62288,14 +62360,16 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-leaderboard="batting"] .leader-rank,
-.scoreline-canvas[data-leaderboard="batting"] .leader-figure {
+.scoreline-canvas[data-leaderboard="batting"] .leader-rank {
   color: var(--container-text-accent, var(--accent-on-light-primary));
 }
 
-.scoreline-canvas[data-leaderboard="bowling"] .leader-rank,
-.scoreline-canvas[data-leaderboard="bowling"] .leader-figure {
+.scoreline-canvas[data-leaderboard="bowling"] .leader-rank {
   color: var(--container-text-accent, var(--accent-on-light-secondary));
+}
+
+.scoreline-canvas[data-leaderboard] .leader-figure {
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-leaderboard] .leader-team-label,
@@ -62442,9 +62516,8 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-totw] .totw-rank,
 .scoreline-canvas[data-totw] .totw-figure {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-totw] .totw-role {
@@ -62469,6 +62542,13 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
 .scoreline-canvas .header-shell__crease {
   position: relative;
   z-index: 1;
+}
+
+/* \u2014\u2014 Intro title card \u2014\u2014 */
+.scoreline-canvas.scoreline-intro .header-eyebrow,
+.scoreline-canvas.scoreline-intro .organisation-name,
+.scoreline-canvas.scoreline-intro .header-title {
+  color: var(--header-text, var(--container-text, var(--ink)));
 }
 
 /* \u2014\u2014 Shared surface grain (single atmospheric texture) \u2014\u2014 */
@@ -62530,6 +62610,159 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
     --team-surface-secondary: var(--surface-strong-secondary);
     --result-gradient-core: var(--surface-ink);
   }
+}
+
+
+/* src/templates/variants/scoreline/styles/scoreline-intro.css */
+/* Scoreline intro \u2014 synced with design/_shared/scoreline-intro.css */
+
+.scoreline-canvas.scoreline-intro {
+  --type-intro-title: 64px;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.scoreline-intro__animated {
+  width: 100%;
+  min-width: 0;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.scoreline-intro__frame {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--space-3, 16px);
+  padding: var(--zone-pad, 12px) var(--zone-content-pad, 28px);
+}
+
+.scoreline-intro__panel {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  background: var(
+    --match-context-surface,
+    color-mix(in srgb, var(--surface-muted) 40%, transparent)
+  );
+  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+  color: var(--container-text, var(--ink));
+}
+
+.scoreline-intro__panel::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    var(--club-primary) 0%,
+    var(--club-secondary) 100%
+  );
+  pointer-events: none;
+}
+
+.scoreline-intro__shell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: var(--space-2, 8px);
+  padding: 22px 20px 12px 24px;
+}
+
+.scoreline-intro__main {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 44%);
+  gap: var(--space-3, 16px);
+  align-items: center;
+}
+
+.scoreline-canvas.scoreline-intro .header-identity-lockup {
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+  padding: 0;
+}
+
+.scoreline-canvas.scoreline-intro .organisation-mark {
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+}
+
+.scoreline-canvas.scoreline-intro
+  .header-identity-lockup
+  .organisation-mark
+  img {
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+}
+
+.scoreline-canvas.scoreline-intro .header-title-stack {
+  align-items: flex-end;
+  padding: 0;
+  border-inline-start: 1px solid
+    color-mix(in srgb, var(--header-text, var(--ink)) 10%, transparent);
+}
+
+.scoreline-canvas.scoreline-intro .header-title-stack .header-title,
+.scoreline-canvas.scoreline-intro .scoreline-intro__headline {
+  font-size: var(--type-intro-title);
+  font-weight: 900;
+  line-height: 0.98;
+  text-align: right;
+  text-wrap: balance;
+}
+
+.scoreline-intro__crease {
+  padding: 0 0 4px;
+}
+
+.scoreline-intro__sponsors {
+  width: 100%;
+  min-height: 88px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: var(--space-4, 24px);
+  padding: var(--space-3, 16px) var(--space-4, 24px);
+}
+
+.scoreline-intro__sponsors:empty {
+  display: none;
+}
+
+.scoreline-canvas.scoreline-intro .scoreline-intro__sponsor-slot {
+  min-width: 0;
+  min-height: 64px;
+  flex: 1 1 0;
+  max-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreline-canvas.scoreline-intro .scoreline-intro__sponsor-slot img {
+  max-width: 100%;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 
@@ -64302,6 +64535,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   display: inline-flex;
   align-items: baseline;
   gap: 0;
+  color: var(--container-text, var(--ink));
   font-family: var(--font-display);
   font-size: var(--type-leader-figure);
   font-weight: 800;
@@ -65139,7 +65373,7 @@ var SCORELINE_BUNDLED_CSS = `/* src/templates/variants/scoreline/styles/scorelin
   display: inline-flex;
   align-items: baseline;
   gap: 0;
-  color: var(--container-text-accent, var(--club-primary));
+  color: var(--container-text, var(--ink));
   font-family: var(--font-display);
   font-size: var(--type-leader-figure);
   font-weight: 800;

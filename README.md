@@ -23,14 +23,14 @@ npm run design
 
 ## Commands
 
-| Script                  | Description                                                               |
-| ----------------------- | ------------------------------------------------------------------------- |
-| `npm run dev`           | Remotion Studio                                                           |
-| `npm run design`        | Design prototype static site (port 3456)                                  |
-| `npm run design:verify` | Validate design registration, fixtures, and bindings                      |
-| `npm run design:scaffold` | Scaffold ten cricket assets for a new template variant                  |
-| `npm run build:package` | Build JS/CSS for npm (`dist/`) and run pack verification                  |
-| `npm run verify:pack`   | Assert publish `files` and critical paths (e.g. `src/templates/variants`) |
+| Script                    | Description                                                               |
+| ------------------------- | ------------------------------------------------------------------------- |
+| `npm run dev`             | Remotion Studio                                                           |
+| `npm run design`          | Design prototype static site (port 3456)                                  |
+| `npm run design:verify`   | Validate design registration, fixtures, and bindings                      |
+| `npm run design:scaffold` | Scaffold ten cricket assets for a new template variant                    |
+| `npm run build:package`   | Build JS/CSS for npm (`dist/`) and run pack verification                  |
+| `npm run verify:pack`     | Assert publish `files` and critical paths (e.g. `src/templates/variants`) |
 
 ---
 

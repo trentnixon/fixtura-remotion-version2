@@ -58,9 +58,9 @@ Repeat this entry for each reference, or write "No references supplied".
 
 ## Answers and design implications
 
-| Topic or question | User answer | Design implication | Agreement |
-| --- | --- | --- | --- |
-| {topic} | {answer} | {concrete interpretation} | {confirmed or proposed} |
+| Topic or question | User answer | Design implication        | Agreement               |
+| ----------------- | ----------- | ------------------------- | ----------------------- |
+| {topic}           | {answer}    | {concrete interpretation} | {confirmed or proposed} |
 
 ## Open decisions and next round
 

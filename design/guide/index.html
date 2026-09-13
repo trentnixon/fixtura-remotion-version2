@@ -42,7 +42,10 @@
   <body class="design-shell">
     <header class="design-topbar">
       <strong>Fixtura Design Prototypes</strong>
-      <a href="/design/guide/">Guide</a>
+      <nav class="design-topbar-links" aria-label="Design tools">
+        <a href="/design/guide/" aria-current="page">Guide</a>
+        <a href="/design/interview/">Design interview</a>
+      </nav>
     </header>
     <div class="design-layout">
       <nav class="design-sidebar" aria-label="Templates">
@@ -70,28 +73,34 @@
           <h2>Start a template design interview</h2>
           <p>
             Copy this prompt into your design LLM. No setup or placeholders are
-            needed. You can attach screenshots to explain the direction you want.
-            The interview saves a brief before any prototype work starts.
+            needed. You can attach screenshots to explain the direction you
+            want. The interview saves a brief before any prototype work starts.
           </p>
-          <pre class="prompt">Start a new Fixtura template design interview. Follow design/.docs/design-interview-prompt.md. Ask short rounds of design questions, accept screenshots as references, and translate my preferences into concrete design direction. Reuse answers already given. Once we agree, save the template brief and reference interpretations, then give me the exact prompt to start building. Do not create prototype pages during this interview.</pre>
+          <pre class="prompt">
+Start a new Fixtura template design interview. Follow design/.docs/design-interview-prompt.md. Ask short rounds of design questions, accept screenshots as references, and translate my preferences into concrete design direction. Reuse answers already given. Once we agree, save the template brief and reference interpretations, then give me the exact prompt to start building. Do not create prototype pages during this interview.</pre
+          >
           <p>
-            <a href="/design/.docs/design-interview-prompt.md">Interview instructions</a>
-            and <a href="/design/.docs/design-brief-template.md">brief structure</a>.
-            Drafts and agreed briefs live under
-            <code>design/briefs/{slug}/design-brief.md</code>, with images in the
-            adjacent <code>references/</code> folder. Resume a draft by naming the
-            template; the interview reuses settled answers.
+            <a href="/design/interview/">Interview instructions</a>
+            and
+            <a href="/design/.docs/design-brief-template.md">brief structure</a
+            >. Drafts and agreed briefs live under
+            <code>design/briefs/{slug}/design-brief.md</code>, with images in
+            the adjacent <code>references/</code> folder. Resume a draft by
+            naming the template; the interview reuses settled answers.
           </p>
           <h2>Build from an agreed brief</h2>
           <p>
             Use the interview's final build prompt, which includes the saved
             brief's exact path. To continue in the same conversation, copy:
           </p>
-          <pre class="prompt">Build from the agreed Fixtura design brief we just completed. Follow design/.docs/new-template-prompt.md. Read the saved brief and its references first. Reuse settled answers and use its selected first asset. If the brief cannot be identified, ask which one to use. Verify fixture hydration before visual styling. Keep Remotion implementation separate.</pre>
+          <pre class="prompt">
+Build from the agreed Fixtura design brief we just completed. Follow design/.docs/new-template-prompt.md. Read the saved brief and its references first. Reuse settled answers and use its selected first asset. If the brief cannot be identified, ask which one to use. Verify fixture hydration before visual styling. Keep Remotion implementation separate.</pre
+          >
           <p>
             <a href="/design/.docs/new-template-prompt.md">Build workflow</a>.
             Fixed requirements guide implementation; creative direction leaves
-            room for judgment. Anatomy and fixtures remain the content authority.
+            room for judgment. Anatomy and fixtures remain the content
+            authority.
           </p>
 
           <h2>Scope — overlays and titles only</h2>

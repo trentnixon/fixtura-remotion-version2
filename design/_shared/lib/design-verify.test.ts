@@ -3,7 +3,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { runDesignVerify } from "./design-verify.js";
 
-const repoRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "../../..");
+const repoRoot = path.join(
+  path.dirname(fileURLToPath(import.meta.url)),
+  "../../..",
+);
 
 describe("design-verify explore", () => {
   it("passes for grandfathered variants and materialized starters", () => {
