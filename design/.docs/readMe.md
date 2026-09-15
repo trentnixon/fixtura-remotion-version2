@@ -31,6 +31,17 @@ Dev-only static design prototype site for 1080×1350 layout approval before Remo
 
 ## Relations
 
+The interview's Markdown instructions are the content source for `interview/index.html`.
+After editing them, run `node scripts/render-design-interview.mjs`.
+Check for drift with `node scripts/render-design-interview.mjs --check`.
+
+The renderer supports headings through level three, paragraphs, single-line lists,
+unaligned pipe tables, fenced code with an optional language, inline code, bold,
+and relative, root, fragment, or HTTP(S) links. It rejects unsupported syntax with
+a line number, including nested or continued lists, raw HTML, images, emphasis,
+and table alignment markers. Renderer tests live in
+`design/_shared/lib/interview-markdown.test.ts`.
+
 - Parent: repository root
 - Fixtures: `testData/samples/`
 - Handoff targets: `src/compositions/cricket/`, `src/templates/variants/`

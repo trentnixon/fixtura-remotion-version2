@@ -202,9 +202,14 @@ function verifyRegisteredAsset(
     }
     if (fs.existsSync(htmlPath)) {
       const html = fs.readFileSync(htmlPath, "utf8");
-      if (!html.includes("init-template.js")) {
+      const hasGenericInit = html.includes("init-template.js");
+      const hasVariantInit =
+        (variantSlug === "night-session" &&
+          html.includes("night-session-init.js")) ||
+        (variantSlug === "scoreline" && html.includes("scoreline-init.js"));
+      if (!hasGenericInit && !hasVariantInit) {
         ctx.errors.push(
-          `${htmlRel} must use init-template.js (generic bootstrap)`,
+          `${htmlRel} must use init-template.js or ${variantSlug}-init.js`,
         );
       }
       if (!html.includes(".template-canvas")) {

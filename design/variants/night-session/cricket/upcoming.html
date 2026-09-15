@@ -1,0 +1,448 @@
+<!doctype html>
+<!--
+  Handoff: night-session / cricket / upcoming
+  Canvas root: .template-canvas
+  Layout: bordered fixture units (opponent ledger + schedule bridge + match context)
+  Fixture: testData/samples/Cricket/Cricket_upcoming.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Session — Cricket Upcoming</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-shared.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-upcoming.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-broadcast.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("night-session");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <nav class="design-topbar-links" aria-label="Design tools">
+        <a href="/design/guide/">Guide</a>
+        <a href="/design/interview/">Design interview</a>
+      </nav>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas template-canvas night-session-canvas"
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <header class="ns-header">
+                <div class="ns-header__accent" aria-hidden="true">
+                  <span class="ns-accent-wedge"></span>
+                  <span class="ns-accent-lines"></span>
+                </div>
+                <div class="organisation-mark ns-header__mark">
+                  <span class="mark-fallback" aria-hidden="true"></span>
+                  <img
+                    alt="Club logo"
+                    data-hydrate="club-logo"
+                    data-hydrate-attr="src"
+                    onerror="this.hidden=true"
+                  />
+                </div>
+                <div class="ns-header__lockup">
+                  <p class="header-shared-grade" hidden></p>
+                  <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                    Upcoming
+                  </p>
+                  <h1 class="header-title" data-hydrate="header-title">
+                    Upcoming Fixtures
+                  </h1>
+                  <p class="header-shared-round" hidden></p>
+                </div>
+                <p class="sr-only" data-hydrate="club-name">Club name</p>
+              </header>
+
+              <main class="fixtures-ledger">
+                <div class="fixtures-stack">
+                  <section class="fixture-card fixture-unit">
+                    <header class="fixture-unit__rail">
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="fixture-1-grade"
+                      >
+                        Grade
+                      </h2>
+                    </header>
+                    <div class="fixture-unit__frame gap-2">
+                      <div class="schedule-bridge">
+                        <div
+                          class="schedule-bridge__rule"
+                          aria-hidden="true"
+                        ></div>
+                        <div class="schedule-lockup">
+                          <p
+                            class="fixture-date"
+                            data-hydrate="fixture-1-date"
+                          >
+                            Date
+                          </p>
+                          <p
+                            class="fixture-time"
+                            data-hydrate="fixture-1-time"
+                          >
+                            Time
+                          </p>
+                        </div>
+                      </div>
+                      <div class="fixture-opponents gap-2">
+                        <div class="fixture-side fixture-side--home gap-2">
+                            <div
+                              class="fixture-opponent__cell fixture-opponent__cell--mark team-mark team-band team-band--home"
+                            >
+                              <span
+                                class="mark-fallback"
+                                aria-hidden="true"
+                              ></span>
+                              <img
+                                alt="Home team logo"
+                                data-hydrate="fixture-1-home-logo"
+                                data-hydrate-attr="src"
+                                onerror="this.hidden=true"
+                              />
+                            </div>
+                            <span class="team-side-label">Home</span>
+                            <p
+                              class="team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--home"
+                              data-hydrate="fixture-1-home-team"
+                            >
+                              Home
+                            </p>
+                        </div>
+                        <div
+                          class="fixture-opponents__spine"
+                          aria-hidden="true"
+                        ></div>
+                        <div class="fixture-side fixture-side--away gap-2">
+                            <span class="team-side-label">Away</span>
+                            <p
+                              class="team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--away"
+                              data-hydrate="fixture-1-away-team"
+                            >
+                              Away
+                            </p>
+                            <div
+                              class="fixture-opponent__cell fixture-opponent__cell--mark team-mark team-band team-band--away"
+                            >
+                              <span
+                                class="mark-fallback"
+                                aria-hidden="true"
+                              ></span>
+                              <img
+                                alt="Away team logo"
+                                data-hydrate="fixture-1-away-logo"
+                                data-hydrate-attr="src"
+                                onerror="this.hidden=true"
+                              />
+                            </div>
+                        </div>
+                      </div>
+<div class="match-context gap-2">
+                        <p class="context-left">
+                          <span data-hydrate="fixture-1-type">Type</span
+                          ><span class="context-separator"></span
+                          ><span data-hydrate="fixture-1-round">Round</span
+                          ><span class="context-separator"></span
+                          ><span data-hydrate="fixture-1-age">Age</span>
+                        </p>
+                        <p
+                          class="context-venue"
+                          data-hydrate="fixture-1-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fixture-close" aria-hidden="true">
+                      <span class="fixture-close__rule"></span>
+                    </div>
+                  </section>
+
+                  <section class="fixture-card fixture-unit">
+                    <header class="fixture-unit__rail">
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="fixture-2-grade"
+                      >
+                        Grade
+                      </h2>
+                    </header>
+                    <div class="fixture-unit__frame gap-2">
+                      <div class="schedule-bridge">
+                        <div
+                          class="schedule-bridge__rule"
+                          aria-hidden="true"
+                        ></div>
+                        <div class="schedule-lockup">
+                          <p
+                            class="fixture-date"
+                            data-hydrate="fixture-2-date"
+                          >
+                            Date
+                          </p>
+                          <p
+                            class="fixture-time"
+                            data-hydrate="fixture-2-time"
+                          >
+                            Time
+                          </p>
+                        </div>
+                      </div>
+                      <div class="fixture-opponents gap-2">
+                        <div class="fixture-side fixture-side--home gap-2">
+                            <div
+                              class="fixture-opponent__cell fixture-opponent__cell--mark team-mark team-band team-band--home"
+                            >
+                              <span
+                                class="mark-fallback"
+                                aria-hidden="true"
+                              ></span>
+                              <img
+                                alt="Home team logo"
+                                data-hydrate="fixture-2-home-logo"
+                                data-hydrate-attr="src"
+                                onerror="this.hidden=true"
+                              />
+                            </div>
+                            <span class="team-side-label">Home</span>
+                            <p
+                              class="team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--home"
+                              data-hydrate="fixture-2-home-team"
+                            >
+                              Home
+                            </p>
+                        </div>
+                        <div
+                          class="fixture-opponents__spine"
+                          aria-hidden="true"
+                        ></div>
+                        <div class="fixture-side fixture-side--away gap-2">
+                            <span class="team-side-label">Away</span>
+                            <p
+                              class="team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--away"
+                              data-hydrate="fixture-2-away-team"
+                            >
+                              Away
+                            </p>
+                            <div
+                              class="fixture-opponent__cell fixture-opponent__cell--mark team-mark team-band team-band--away"
+                            >
+                              <span
+                                class="mark-fallback"
+                                aria-hidden="true"
+                              ></span>
+                              <img
+                                alt="Away team logo"
+                                data-hydrate="fixture-2-away-logo"
+                                data-hydrate-attr="src"
+                                onerror="this.hidden=true"
+                              />
+                            </div>
+                        </div>
+                      </div>
+<div class="match-context gap-2">
+                        <p class="context-left">
+                          <span data-hydrate="fixture-2-type">Type</span
+                          ><span class="context-separator"></span
+                          ><span data-hydrate="fixture-2-round">Round</span
+                          ><span class="context-separator"></span
+                          ><span data-hydrate="fixture-2-age">Age</span>
+                        </p>
+                        <p
+                          class="context-venue"
+                          data-hydrate="fixture-2-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fixture-close" aria-hidden="true">
+                      <span class="fixture-close__rule"></span>
+                    </div>
+                  </section>
+
+                  <section class="fixture-card fixture-unit">
+                    <header class="fixture-unit__rail">
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="fixture-3-grade"
+                      >
+                        Grade
+                      </h2>
+                    </header>
+                    <div class="fixture-unit__frame gap-2">
+                      <div class="schedule-bridge">
+                        <div
+                          class="schedule-bridge__rule"
+                          aria-hidden="true"
+                        ></div>
+                        <div class="schedule-lockup">
+                          <p
+                            class="fixture-date"
+                            data-hydrate="fixture-3-date"
+                          >
+                            Date
+                          </p>
+                          <p
+                            class="fixture-time"
+                            data-hydrate="fixture-3-time"
+                          >
+                            Time
+                          </p>
+                        </div>
+                      </div>
+                      <div class="fixture-opponents gap-2">
+                        <div class="fixture-side fixture-side--home gap-2">
+                            <div
+                              class="fixture-opponent__cell fixture-opponent__cell--mark team-mark team-band team-band--home"
+                            >
+                              <span
+                                class="mark-fallback"
+                                aria-hidden="true"
+                              ></span>
+                              <img
+                                alt="Home team logo"
+                                data-hydrate="fixture-3-home-logo"
+                                data-hydrate-attr="src"
+                                onerror="this.hidden=true"
+                              />
+                            </div>
+                            <span class="team-side-label">Home</span>
+                            <p
+                              class="team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--home"
+                              data-hydrate="fixture-3-home-team"
+                            >
+                              Home
+                            </p>
+                        </div>
+                        <div
+                          class="fixture-opponents__spine"
+                          aria-hidden="true"
+                        ></div>
+                        <div class="fixture-side fixture-side--away gap-2">
+                            <span class="team-side-label">Away</span>
+                            <p
+                              class="team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--away"
+                              data-hydrate="fixture-3-away-team"
+                            >
+                              Away
+                            </p>
+                            <div
+                              class="fixture-opponent__cell fixture-opponent__cell--mark team-mark team-band team-band--away"
+                            >
+                              <span
+                                class="mark-fallback"
+                                aria-hidden="true"
+                              ></span>
+                              <img
+                                alt="Away team logo"
+                                data-hydrate="fixture-3-away-logo"
+                                data-hydrate-attr="src"
+                                onerror="this.hidden=true"
+                              />
+                            </div>
+                        </div>
+                      </div>
+<div class="match-context gap-2">
+                        <p class="context-left">
+                          <span data-hydrate="fixture-3-type">Type</span
+                          ><span class="context-separator"></span
+                          ><span data-hydrate="fixture-3-round">Round</span
+                          ><span class="context-separator"></span
+                          ><span data-hydrate="fixture-3-age">Age</span>
+                        </p>
+                        <p
+                          class="context-venue"
+                          data-hydrate="fixture-3-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fixture-close" aria-hidden="true">
+                      <span class="fixture-close__rule"></span>
+                    </div>
+                  </section>
+                </div>
+              </main>
+
+              <footer class="asset-footer">
+                <div class="footer-rule" aria-hidden="true"></div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initNightSessionAsset } from "/design/_shared/night-session-init.js";
+
+      const context = {
+        variantSlug: "night-session",
+        sportSlug: "cricket",
+        assetSlug: "upcoming",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initNightSessionAsset(context);
+    </script>
+  </body>
+</html>

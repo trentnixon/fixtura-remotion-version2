@@ -1,0 +1,269 @@
+<!doctype html>
+<!--
+  Handoff: night-session / cricket / team-roster
+  Canvas root: .template-canvas
+  Fixture: testData/samples/Cricket/Cricket_Roster.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Session — Cricket Team Roster</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-shared.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-upcoming.css" />
+    <link
+      rel="stylesheet"
+      href="/design/_shared/night-session-team-roster.css"
+    />
+    <link rel="stylesheet" href="/design/_shared/night-session-broadcast.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("night-session");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <nav class="design-topbar-links" aria-label="Design tools">
+        <a href="/design/guide/">Guide</a>
+        <a href="/design/interview/">Design interview</a>
+      </nav>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas template-canvas night-session-canvas"
+              data-roster
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <header class="ns-header">
+                <div class="ns-header__accent" aria-hidden="true">
+                  <span class="ns-accent-wedge"></span>
+                  <span class="ns-accent-lines"></span>
+                </div>
+                <div class="organisation-mark ns-header__mark">
+                  <span class="mark-fallback" aria-hidden="true"></span>
+                  <img
+                    alt="Club logo"
+                    data-hydrate="club-logo"
+                    data-hydrate-attr="src"
+                    onerror="this.hidden=true"
+                  />
+                </div>
+                <div class="ns-header__lockup">
+                  <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                    Team List
+                  </p>
+                  <h1 class="header-title" data-hydrate="header-title">
+                    Team Roster
+                  </h1>
+                </div>
+                <p class="sr-only" data-hydrate="club-name">Club name</p>
+              </header>
+
+              <main class="roster-ledger">
+                <div class="roster-columns gap-2">
+                  <section class="roster-info fixture-card fixture-unit">
+                    <header
+                      class="fixture-unit__rail roster-grade"
+                      data-roster-grade-rail
+                    >
+                      <h2
+                        class="fixture-grade-name"
+                        data-hydrate="grade-name"
+                      >
+                        Grade
+                      </h2>
+                    </header>
+                    <div class="fixture-unit__frame roster-info__frame">
+                      <div class="roster-teams-stack roster-teams-stack--hero gap-2">
+                        <div
+                          class="roster-team-block roster-team-block--home team-band team-band--home"
+                          data-hydrate="home-club"
+                          data-hydrate-attr="data-club-team"
+                        >
+                          <div
+                            class="roster-team-mark roster-cell roster-team-mark--hero team-mark"
+                          >
+                            <span
+                              class="mark-fallback"
+                              aria-hidden="true"
+                            ></span>
+                            <img
+                              alt="Home team logo"
+                              data-hydrate="home-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p
+                            class="team-name roster-cell roster-team-name--hero"
+                            data-hydrate="home-team"
+                          >
+                            Home
+                          </p>
+                        </div>
+                        <div
+                          class="roster-team-block roster-team-block--away team-band team-band--away"
+                        >
+                          <div
+                            class="roster-team-mark roster-cell roster-team-mark--hero team-mark"
+                          >
+                            <span
+                              class="mark-fallback"
+                              aria-hidden="true"
+                            ></span>
+                            <img
+                              alt="Away team logo"
+                              data-hydrate="away-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p
+                            class="team-name roster-cell roster-team-name--hero"
+                            data-hydrate="away-team"
+                          >
+                            Away
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="roster-meta roster-cell" data-roster-meta>
+                        <span
+                          class="roster-meta-part meta-chip"
+                          data-hydrate="fixture-type"
+                          >Type</span
+                        ><span
+                          class="roster-meta-part meta-chip"
+                          data-hydrate="fixture-round"
+                          >Round</span
+                        ><span
+                          class="roster-meta-part meta-chip"
+                          data-hydrate="fixture-age"
+                          >Age</span
+                        ><span
+                          class="roster-meta-part meta-chip"
+                          data-hydrate="fixture-gender"
+                          >Gender</span
+                        >
+                      </div>
+
+                      <div class="roster-schedule-stack gap-2">
+                        <p
+                          class="roster-schedule-line roster-cell"
+                          data-hydrate="fixture-date"
+                        >
+                          Date
+                        </p>
+                        <p
+                          class="roster-schedule-line roster-cell"
+                          data-hydrate="fixture-ground"
+                        >
+                          Ground
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="roster-lineup fixture-card fixture-unit">
+                    <header class="fixture-unit__rail roster-lineup__rail">
+                      <span class="roster-squad-label">Line-up</span>
+                      <p class="roster-squad-team" data-roster-squad-team>
+                        Squad
+                      </p>
+                    </header>
+                    <div class="fixture-unit__frame roster-lineup__frame">
+                      <div class="roster-rows" data-roster-rows></div>
+                    </div>
+                  </section>
+                </div>
+              </main>
+
+              <footer class="asset-footer">
+                <div class="footer-rule" aria-hidden="true"></div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+
+    <template id="roster-row-template">
+      <div class="roster-entry">
+        <div class="roster-row gap-2">
+          <span class="roster-index roster-cell"></span>
+          <div class="roster-player roster-cell">
+            <p class="roster-player__name"></p>
+            <span class="roster-badges"></span>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initNightSessionAsset } from "/design/_shared/night-session-init.js";
+
+      const context = {
+        variantSlug: "night-session",
+        sportSlug: "cricket",
+        assetSlug: "team-roster",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initNightSessionAsset(context);
+    </script>
+  </body>
+</html>

@@ -1,3 +1,8 @@
 # One path per line: design/variants/{variant}/cricket/{asset}.html
 # Remove the line after deleting the orphan file from disk.
 factory-demo/cricket/results.html
+night-session/cricket/upcoming.html
+night-session/cricket/top5-batting.html
+night-session/cricket/top5-bowling.html
+night-session/cricket/performances-batting.html
+night-session/cricket/performances-bowling.html

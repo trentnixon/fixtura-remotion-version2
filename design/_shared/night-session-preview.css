@@ -1,0 +1,52 @@
+/* Night Session design-site preview chrome — dev only, outside .design-social-canvas */
+
+.night-session-mode-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--design-border);
+  background: var(--design-panel);
+  font-size: 0.82rem;
+  color: var(--design-muted);
+}
+
+.night-session-mode-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.night-session-mode-controls select {
+  background: var(--design-bg);
+  color: var(--design-text);
+  border: 1px solid var(--design-border);
+  border-radius: 4px;
+  padding: 0.25rem 0.45rem;
+  font-size: 0.82rem;
+}
+
+.design-canvas-wrap[data-night-session-backdrop="light"] {
+  background: linear-gradient(
+    180deg,
+    rgb(243 240 234) 0%,
+    rgb(255 255 255) 100%
+  );
+}
+
+.design-canvas-wrap[data-night-session-backdrop="dark"] {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgb(40 44 52 / 55%) 0%,
+    rgb(8 9 11) 72%
+  );
+}
+
+.design-canvas-wrap[data-night-session-backdrop="club"] {
+  background: linear-gradient(
+    118deg,
+    color-mix(in srgb, var(--preview-club-primary, #ff0000) 55%, #080b0d),
+    color-mix(in srgb, var(--preview-club-secondary, #004de2) 45%, #080b0d)
+  );
+}

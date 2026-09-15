@@ -1,0 +1,372 @@
+<!doctype html>
+<!--
+  Handoff: night-session / cricket / ladder
+  Canvas root: .template-canvas
+  Fixture: testData/samples/Cricket/Cricket_Ladder.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Session — Cricket Ladder</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-shared.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-ladder.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-broadcast.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("night-session");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <nav class="design-topbar-links" aria-label="Design tools">
+        <a href="/design/guide/">Guide</a>
+        <a href="/design/interview/">Design interview</a>
+      </nav>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas template-canvas night-session-canvas"
+              data-ladder
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <header class="ns-header">
+                <div class="ns-header__accent" aria-hidden="true">
+                  <span class="ns-accent-wedge"></span>
+                  <span class="ns-accent-lines"></span>
+                </div>
+                <div class="organisation-mark ns-header__mark">
+                  <span class="mark-fallback" aria-hidden="true"></span>
+                  <img
+                    alt="Club logo"
+                    data-hydrate="club-logo"
+                    data-hydrate-attr="src"
+                    onerror="this.hidden=true"
+                  />
+                </div>
+                <div class="ns-header__lockup">
+                  <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                    Ladder
+                  </p>
+                  <h1 class="header-title" data-hydrate="header-title">
+                    League Tables
+                  </h1>
+                </div>
+                <p class="sr-only" data-hydrate="club-name">Club name</p>
+              </header>
+
+              <main class="ladder-ledger">
+                <div class="ladder-stack">
+                  <section class="ladder-table ladder-unit">
+                    <header class="ladder-unit__rail ladder-grade">
+                      <h2 class="ladder-grade-name" data-hydrate="grade-name">
+                        Grade
+                      </h2>
+                    </header>
+                    <div class="ladder-unit__frame">
+                      <div class="ladder-columns" aria-hidden="true">
+                        <span>#</span>
+                        <span></span>
+                        <span>Team</span>
+                        <span class="ladder-columns__stats">
+                          <span>P</span>
+                          <span>W</span>
+                          <span>L</span>
+                          <span>B</span>
+                          <span>Pts</span>
+                        </span>
+                      </div>
+                      <div
+                        class="ladder-rows"
+                        data-ladder-rows
+                        data-density="normal"
+                        data-creases="false"
+                      >
+                        <div class="ladder-entry" data-team-index="0">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-1-pos">1</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-1-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-1-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-1-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-1-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-1-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-1-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="1">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-2-pos">2</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-2-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-2-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-2-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-2-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-2-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-2-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="2">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-3-pos">3</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-3-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-3-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-3-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-3-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-3-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-3-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="3">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-4-pos">4</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-4-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-4-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-4-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-4-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-4-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-4-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="4">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-5-pos">5</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-5-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-5-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-5-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-5-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-5-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-5-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="5">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-6-pos">6</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-6-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-6-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-6-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-6-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-6-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-6-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="6">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-7-pos">7</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-7-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-7-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-7-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-7-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-7-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-7-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="7">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-8-pos">8</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-8-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-8-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-8-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-8-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-8-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-8-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="8">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-9-pos">9</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-9-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-9-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-9-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-9-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-9-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-9-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="9">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-10-pos">10</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-10-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-10-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-10-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-10-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-10-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-10-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ladder-entry" data-team-index="10">
+                          <div class="ladder-row">
+                            <span class="ladder-rank ladder-cell" data-hydrate="team-11-pos">11</span>
+                            <div class="ladder-mark ladder-cell">
+                              <span class="mark-fallback" aria-hidden="true"></span>
+                              <img alt="" hidden onerror="this.hidden=true" />
+                            </div>
+                            <p class="ladder-team ladder-cell" data-hydrate="team-11-name">Team</p>
+                            <div class="ladder-stats ladder-cell">
+                              <span class="ladder-stat" data-hydrate="team-11-p">0</span>
+                              <span class="ladder-stat" data-hydrate="team-11-w">0</span>
+                              <span class="ladder-stat" data-hydrate="team-11-l">0</span>
+                              <span class="ladder-stat" data-hydrate="team-11-bye">0</span>
+                              <span class="ladder-stat ladder-stat--pts" data-hydrate="team-11-pts">0</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </main>
+
+              <footer class="asset-footer">
+                <div class="footer-rule" aria-hidden="true"></div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <template id="ladder-row-template">
+      <div class="ladder-entry">
+        <div class="ladder-row">
+          <span class="ladder-rank ladder-cell"></span>
+          <div class="ladder-mark ladder-cell">
+            <span class="mark-fallback" aria-hidden="true"></span>
+            <img alt="" hidden onerror="this.hidden=true" />
+          </div>
+          <p class="ladder-team ladder-cell"></p>
+          <div class="ladder-stats ladder-cell">
+            <span class="ladder-stat"></span>
+            <span class="ladder-stat"></span>
+            <span class="ladder-stat"></span>
+            <span class="ladder-stat"></span>
+            <span class="ladder-stat ladder-stat--pts"></span>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initNightSessionAsset } from "/design/_shared/night-session-init.js";
+
+      const context = {
+        variantSlug: "night-session",
+        sportSlug: "cricket",
+        assetSlug: "ladder",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initNightSessionAsset(context);
+    </script>
+  </body>
+</html>

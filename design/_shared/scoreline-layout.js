@@ -200,6 +200,55 @@ export function syncScorelineResultsLayout(root = document) {
 }
 
 /**
+ * Shared competition / round in centred Night Session header lockup.
+ *
+ * @param {ParentNode} root
+ * @param {{ data?: Array<{ gradeName?: string; round?: string }> }} fixture
+ */
+export function syncUpcomingHeaderContext(root, fixture) {
+  syncResultsHeaderContext(root, fixture);
+}
+
+export function syncResultsHeaderContext(root, fixture) {
+  const gradeEl = root.querySelector(".header-shared-grade");
+  const roundEl = root.querySelector(".header-shared-round");
+  const eyebrow = root.querySelector(".header-eyebrow");
+
+  if (!(gradeEl instanceof HTMLElement)) {
+    return;
+  }
+
+  const matches = Array.isArray(fixture?.data) ? fixture.data : [];
+  const grades = matches
+    .map((match) => String(match?.gradeName ?? "").trim())
+    .filter(Boolean);
+  const rounds = matches
+    .map((match) => String(match?.round ?? "").trim())
+    .filter(Boolean);
+
+  const sharedGrade =
+    grades.length > 0 && grades.every((grade) => grade === grades[0])
+      ? grades[0]
+      : "";
+  const sharedRound =
+    rounds.length > 0 && rounds.every((round) => round === rounds[0])
+      ? rounds[0]
+      : "";
+
+  gradeEl.textContent = sharedGrade;
+  gradeEl.hidden = !sharedGrade;
+
+  if (roundEl instanceof HTMLElement) {
+    roundEl.textContent = sharedRound;
+    roundEl.hidden = !sharedRound;
+  }
+
+  if (eyebrow instanceof HTMLElement) {
+    eyebrow.hidden = Boolean(sharedGrade);
+  }
+}
+
+/**
  * @param {ParentNode} root
  */
 export function syncScorelineTotwLayout(root = document) {
@@ -354,20 +403,20 @@ export function syncScorelineUpcomingLayout(root = document) {
 
     const fixtureNumber = index + 1;
 
-    const homeBand = root
+    const homeMark = root
       .querySelector(`[data-hydrate="fixture-${fixtureNumber}-home-logo"]`)
-      ?.closest(".team-band");
-    const awayBand = root
+      ?.closest(".team-band, .fixture-opponent__cell--mark");
+    const awayMark = root
       .querySelector(`[data-hydrate="fixture-${fixtureNumber}-away-logo"]`)
-      ?.closest(".team-band");
-    const homeTeam =
-      root
-        .querySelector(`[data-hydrate="fixture-${fixtureNumber}-home-team"]`)
-        ?.textContent?.trim() ?? "";
-    const awayTeam =
-      root
-        .querySelector(`[data-hydrate="fixture-${fixtureNumber}-away-team"]`)
-        ?.textContent?.trim() ?? "";
+      ?.closest(".team-band, .fixture-opponent__cell--mark");
+    const homeName = root.querySelector(
+      `[data-hydrate="fixture-${fixtureNumber}-home-team"]`,
+    );
+    const awayName = root.querySelector(
+      `[data-hydrate="fixture-${fixtureNumber}-away-team"]`,
+    );
+    const homeTeam = homeName?.textContent?.trim() ?? "";
+    const awayTeam = awayName?.textContent?.trim() ?? "";
 
     const teamIsClub = (name) =>
       clubFocus.length > 3 &&
@@ -375,27 +424,46 @@ export function syncScorelineUpcomingLayout(root = document) {
     const homeIsClub = teamIsClub(homeTeam);
     const awayIsClub = teamIsClub(awayTeam);
 
-    for (const [band, side] of [
-      [homeBand, "home"],
-      [awayBand, "away"],
+    for (const [mark, side] of [
+      [homeMark, "home"],
+      [awayMark, "away"],
     ]) {
-      if (!(band instanceof HTMLElement)) {
+      if (!(mark instanceof HTMLElement)) {
         continue;
       }
 
       const img = root.querySelector(
         `[data-hydrate="fixture-${fixtureNumber}-${side}-logo"]`,
       );
-      band.dataset.hasCrest = logoHasCrest(img) ? "true" : "false";
-      delete band.dataset.clubTeam;
+      mark.dataset.hasCrest = logoHasCrest(img) ? "true" : "false";
+      delete mark.dataset.clubTeam;
     }
 
-    if (homeIsClub && homeBand instanceof HTMLElement) {
-      homeBand.dataset.clubTeam = "true";
-    } else if (awayIsClub && awayBand instanceof HTMLElement) {
-      awayBand.dataset.clubTeam = "true";
-      if (homeBand instanceof HTMLElement) {
-        homeBand.dataset.clubTeam = "false";
+    for (const el of [homeMark, awayMark, homeName, awayName]) {
+      if (el instanceof HTMLElement) {
+        delete el.dataset.clubTeam;
+      }
+    }
+
+    if (homeIsClub) {
+      if (homeMark instanceof HTMLElement) {
+        homeMark.dataset.clubTeam = "true";
+      }
+      if (homeName instanceof HTMLElement) {
+        homeName.dataset.clubTeam = "true";
+      }
+    } else if (awayIsClub) {
+      if (awayMark instanceof HTMLElement) {
+        awayMark.dataset.clubTeam = "true";
+      }
+      if (awayName instanceof HTMLElement) {
+        awayName.dataset.clubTeam = "true";
+      }
+      if (homeMark instanceof HTMLElement) {
+        homeMark.dataset.clubTeam = "false";
+      }
+      if (homeName instanceof HTMLElement) {
+        homeName.dataset.clubTeam = "false";
       }
     }
 

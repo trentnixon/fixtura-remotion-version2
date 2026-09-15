@@ -15,3 +15,15 @@
 | `scoreline/cricket/result-single`    | `Scoreline`    | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` | `cricket/resultSingle`  | `scoreline/theme/composition/resultSingle.ts`  |
 | `scoreline/cricket/team-roster`      | `Scoreline`    | `testData/samples/Cricket/Cricket_Roster.json`               | `cricket/teamRoster`    | `scoreline/theme/composition/roster.ts`        |
 | `scoreline/cricket/team-of-the-week` | `Scoreline`    | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json`        | `cricket/teamOfTheWeek` | `scoreline/theme/composition/teamOfTheWeek.ts` |
+
+<!-- scaffold night-session -->
+| `night-session/cricket/results` | `NightSession` | `testData/samples/Cricket/Cricket_Results.json` | `cricket/results` | `nightSession/theme/composition/results.ts` |
+| `night-session/cricket/result-single` | `NightSession` | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` | `cricket/resultSingle` | `nightSession/theme/composition/resultSingle.ts` |
+| `night-session/cricket/upcoming` | `NightSession` | `testData/samples/Cricket/Cricket_upcoming.json` | `cricket/upcoming` | `nightSession/theme/composition/upcoming.ts` |
+| `night-session/cricket/ladder` | `NightSession` | `testData/samples/Cricket/Cricket_Ladder.json` | `cricket/ladder` | `nightSession/theme/composition/ladder.ts` |
+| `night-session/cricket/top5-batting` | `NightSession` | `testData/samples/Cricket/Cricket_Top5Batters.json` | `cricket/top5` | `nightSession/theme/composition/top5.ts` |
+| `night-session/cricket/top5-bowling` | `NightSession` | `testData/samples/Cricket/Cricket_Top5Bowlers.json` | `cricket/top5` | `nightSession/theme/composition/top5.ts` |
+| `night-session/cricket/performances-batting` | `NightSession` | `testData/samples/Cricket/Cricket_BattingPerformances.json` | `cricket/performances` | `nightSession/theme/composition/performances.ts` |
+| `night-session/cricket/performances-bowling` | `NightSession` | `testData/samples/Cricket/Cricket_BowlingPerformances.json` | `cricket/performances` | `nightSession/theme/composition/performances.ts` |
+| `night-session/cricket/team-roster` | `NightSession` | `testData/samples/Cricket/Cricket_Roster.json` | `cricket/teamRoster` | `nightSession/theme/composition/roster.ts` |
+| `night-session/cricket/team-of-the-week` | `NightSession` | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json` | `cricket/teamOfTheWeek` | `nightSession/theme/composition/teamOfTheWeek.ts` |

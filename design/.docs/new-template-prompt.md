@@ -14,8 +14,11 @@ Read the template brief supplied by the user or the interview's build prompt at 
 - If the brief is missing or still draft, follow [the design interview](./design-interview-prompt.md). Resume known answers and resolve only the open decisions. Do not start prototype work until the brief is agreed.
 - Read its fixed requirements, creative direction, open exploration, and reference interpretations. Inspect available reference images. Flag essential unavailable references before dependent work.
 - Reuse the identity, first asset, audience, and font decisions. Check naming against existing routes and fonts. Ask only about unresolved conflicts; do not repeat the creative interview.
+- Check that the brief contains the sourced constraint map, confirmed annotated composition, region-by-region visual specification, and observable acceptance criteria required by the interview workflow. An older brief marked agreed but containing only mood, font suggestions, and layout constraints needs the missing technical rounds before styling. Preserve its settled answers.
 - Anatomy and fixtures own content. The brief owns creative intent. Flag a conflict before dependent work instead of silently changing either source.
 - The first asset comes from the brief. Results is the default only when the brief delegates that choice. For other assets, use the matching anatomy and fixture and adapt Phase 3's Results-specific instructions.
+
+The build agent must independently enforce the interview's completion gate: confirmed applicable construction decisions, recorded retained/replaced features and observable differences, and a user-confirmed annotated frame. Require separate creative-direction and construction agreements. Do not rely on Status: agreed alone. Implement the confirmed visual construction, including the annotated frame and recorded retained/replaced features. Do not inherit unspecified composition from the starter template. If required construction decisions or the confirmed frame are missing, stop and return the brief to the interview workflow. If evidence is missing, resume the Visual construction pass rather than starting a build.
 
 An agreed brief is input to design work, not approval of unseen visuals. Record deliberate direction changes in the brief; ordinary layout adjustments do not require another interview.
 
@@ -58,6 +61,8 @@ For a new cricket family, follow the factory setup in [getting-started.md](./get
 Scaffold the family once, then focus visual work on the brief's selected asset. Existing variants must be resumed in place rather than re-scaffolded. Keep the brief outside the variant directory.
 
 The scaffold owns registration, initial bindings, and neutral asset styles. Preserve its generic bootstrap when designing new assets. Broadcast Pro and Scoreline are legacy references, not the setup source for a new family. Verify wiring with the documented design verifier after changes.
+
+Treat initial scaffold styling and visual geometry as provisional. Replace visual wrappers and layout CSS as needed to implement the confirmed composition while preserving binding selectors, population contracts, and sourced layout constraints. In Pass 2, replace its visual treatments with the agreed specification while preserving wiring, established anatomy, and data behaviour. Do not treat successful hydration or a palette change as evidence that the new visual identity is complete.
 
 ### Not a website — one video/poster frame
 
@@ -149,7 +154,7 @@ Respect `design/.docs/design-system-brief.md` scope: overlays inside `.design-so
 
 ## Explore
 
-Propose a **fresh visual direction** only after pass 1 hydrates correctly. Preserve **information architecture and reading order** from the anatomy doc — do not clone Broadcast Pro styling or collapse matches into spreadsheet rows.
+Implement the brief's **agreed visual specification** only after pass 1 hydrates correctly. Tune within its refinement boundaries. Preserve **information architecture and reading order** from the anatomy doc. Evaluate the rendered header, match surfaces, typography, footer, and motifs against the specified treatments and distinctive characteristics.
 
 Deliver **one registered overlay** — not an app UI, device mockup, dashboard, or website with review chrome.
 
@@ -160,6 +165,7 @@ Deliver **one registered overlay** — not an app UI, device mockup, dashboard, 
 3. **Brief rationale** — 3–6 sentences in chat (not rendered on the page).
 4. **Extension note** — how this direction could extend to other Fixtura asset types (bullet list in chat).
 5. **Stress cases** — describe in chat: long team names, missing logo, absent performances, absent sponsor (do not build preview-toggle UI).
+6. **Visual acceptance** — report each brief criterion as met or unmet using the rendered frame. Identify any inherited starter treatments that still conflict with the specification and resolve them before calling the design complete.
 
 Iterate on the same registered file as feedback arrives. Remotion theme/registry handoff is a separate later pass.
 ```

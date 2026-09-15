@@ -1,0 +1,185 @@
+<!doctype html>
+<!--
+  Handoff: night-session / cricket / team-of-the-week
+  Canvas root: .template-canvas
+  Fixture: testData/samples/Cricket/Cricket_TeamOfTheWeek.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Session — Cricket Team of the Week</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-shared.css" />
+    <link
+      rel="stylesheet"
+      href="/design/_shared/night-session-team-of-the-week.css"
+    />
+    <link rel="stylesheet" href="/design/_shared/night-session-broadcast.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("night-session");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <nav class="design-topbar-links" aria-label="Design tools">
+        <a href="/design/guide/">Guide</a>
+        <a href="/design/interview/">Design interview</a>
+      </nav>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas template-canvas night-session-canvas"
+              data-totw
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+
+              <header class="ns-header">
+                <div class="ns-header__accent" aria-hidden="true">
+                  <span class="ns-accent-wedge"></span>
+                  <span class="ns-accent-lines"></span>
+                </div>
+                <div class="organisation-mark ns-header__mark">
+                  <span class="mark-fallback" aria-hidden="true"></span>
+                  <img
+                    alt="Club logo"
+                    data-hydrate="club-logo"
+                    data-hydrate-attr="src"
+                    onerror="this.hidden=true"
+                  />
+                </div>
+                <div class="ns-header__lockup">
+                  <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                    Team of the Week
+                  </p>
+                  <h1 class="header-title" data-hydrate="header-title">
+                    Team of the Week
+                  </h1>
+                </div>
+                <p class="sr-only" data-hydrate="club-name">Club name</p>
+              </header>
+
+              <main class="totw-ledger">
+                <div class="totw-stack">
+                  <section class="totw-selection totw-unit">
+                    <header class="totw-category totw-unit__rail">
+                      <span class="totw-category-label">Round</span>
+                      <p
+                        class="totw-category-value"
+                        data-hydrate="category-label"
+                      >
+                        Category
+                      </p>
+                    </header>
+
+                    <div class="totw-unit__frame">
+                      <div class="totw-columns gap-12">
+                        <div class="totw-col" data-totw-column="0"></div>
+                        <div class="totw-col" data-totw-column="1"></div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </main>
+
+              <footer class="asset-footer">
+                <div class="footer-rule" aria-hidden="true"></div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+
+    <template id="totw-row-template">
+      <div class="totw-entry">
+        <div class="totw-role-rail totw-cell">
+          <span class="totw-role"></span>
+        </div>
+        <article class="totw-row gap-2">
+          <div class="totw-mark">
+            <span class="mark-fallback" aria-hidden="true"></span>
+            <img alt="" hidden onerror="this.hidden=true" />
+          </div>
+          <div class="totw-copy totw-cell">
+            <p class="totw-name"></p>
+            <div class="totw-team-block">
+              <span class="totw-team-label">Played for</span>
+              <p class="totw-team"></p>
+            </div>
+          </div>
+          <div class="totw-stats totw-cell">
+            <p class="totw-figure"></p>
+            <p class="totw-subline"></p>
+          </div>
+        </article>
+      </div>
+    </template>
+
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initNightSessionAsset } from "/design/_shared/night-session-init.js";
+
+      const context = {
+        variantSlug: "night-session",
+        sportSlug: "cricket",
+        assetSlug: "team-of-the-week",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initNightSessionAsset(context);
+    </script>
+  </body>
+</html>

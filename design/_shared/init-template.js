@@ -2,6 +2,7 @@ import { hydratePage } from "./hydrate.js";
 import { applyVariantFonts } from "./fonts.js";
 import { resolveAssetEntry, validateRoutesManifest } from "./lib/manifest.js";
 import { runPopulationModule } from "./populate/cricket/registry.js";
+import { watchScorelineCrests } from "./scoreline-layout.js";
 
 const ROUTES_URL = "/design/_shared/routes.json";
 
@@ -86,6 +87,7 @@ export async function initDesignPage(context) {
   });
 
   await applyVariantFonts(context.variantSlug);
+  watchScorelineCrests(document);
 
   return { ok: true, canvas };
 }

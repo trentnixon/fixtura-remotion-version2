@@ -1,0 +1,568 @@
+<!doctype html>
+<!--
+  Handoff: night-session / cricket / results
+  Canvas root: .template-canvas
+  Registry: NightSession
+  Remotion: src/compositions/cricket/results/
+  Theme: src/templates/variants/nightSession/theme/composition/results.ts
+  Fixture: testData/samples/Cricket/Cricket_Results.json
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Session — Cricket Results</title>
+    <link rel="stylesheet" href="/design/_shared/shell.css" />
+    <link rel="stylesheet" href="/design/_shared/frame.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-shared.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-results.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-broadcast.css" />
+    <link rel="stylesheet" href="/design/_shared/night-session-preview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import { applyVariantFonts } from "/design/_shared/fonts.js";
+
+      const fontFamily = await applyVariantFonts("night-session");
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily,
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="design-shell">
+    <header class="design-topbar">
+      <strong>Fixtura Design Prototypes</strong>
+      <nav class="design-topbar-links" aria-label="Design tools">
+        <a href="/design/guide/">Guide</a>
+        <a href="/design/interview/">Design interview</a>
+      </nav>
+    </header>
+    <p class="design-error" data-hydrate-error hidden></p>
+    <div class="design-layout">
+      <nav class="design-sidebar" aria-label="Templates">
+        <h2>Templates</h2>
+        <ul data-design-variant-nav></ul>
+      </nav>
+      <div class="design-main">
+        <nav
+          class="design-tabs"
+          aria-label="Asset types"
+          data-design-tabs
+        ></nav>
+        <div class="design-canvas-wrap">
+          <div class="design-frame-scale">
+            <div
+              class="design-social-canvas template-canvas night-session-canvas"
+              data-sponsor-state="placeholder"
+            >
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-primary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="palette-secondary"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="match-1-source"
+              ></span>
+              <span
+                class="fixture-palette"
+                data-hydrate="match-2-source"
+              ></span>
+
+              <!-- Asset Header -->
+              <header class="ns-header">
+                <div class="ns-header__accent" aria-hidden="true">
+                  <span class="ns-accent-wedge"></span>
+                  <span class="ns-accent-lines"></span>
+                </div>
+                <div class="organisation-mark ns-header__mark">
+                  <span class="mark-fallback" aria-hidden="true"></span>
+                  <img
+                    alt="Club logo"
+                    data-hydrate="club-logo"
+                    data-hydrate-attr="src"
+                    onerror="this.hidden=true"
+                  />
+                </div>
+                <div class="ns-header__lockup">
+                  <p class="header-shared-grade" hidden></p>
+                  <p class="header-eyebrow" data-hydrate="header-eyebrow">
+                    Results
+                  </p>
+                  <h1 class="header-title" data-hydrate="header-title">
+                    Weekend Results
+                  </h1>
+                  <p class="header-shared-round" hidden></p>
+                </div>
+                <p class="sr-only" data-hydrate="club-name">Club name</p>
+              </header>
+
+              <!-- Results Content Area -->
+              <main
+                class="results-ledger flex min-h-0 flex-1 flex-col overflow-hidden"
+              >
+                <!-- Match Module 1 -->
+                <section class="match-module">
+                  <div class="comparison-band">
+                    <div
+                      class="team-band"
+                      data-side="home"
+                      data-hydrate="match-1-home-club"
+                      data-hydrate-attr="data-club-team"
+                    >
+                      <div class="team-group">
+                        <div class="team-primary">
+                          <div class="team-mark">
+                            <span class="mark-fallback" aria-hidden="true"></span>
+                            <img
+                              alt="Home team logo"
+                              data-hydrate="match-1-home-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p class="team-score">
+                            <span class="score" data-hydrate="match-1-home-score"
+                              >0</span
+                            >
+                            <span class="overs"
+                              ><span data-hydrate="match-1-home-overs">0</span>
+                              ov</span
+                            >
+                          </p>
+                        </div>
+                        <div class="team-identity">
+                          <h2 class="team-name" data-hydrate="match-1-home-team">
+                            Home team
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comparison-band__spine" aria-hidden="true"></div>
+
+                    <div
+                      class="team-band"
+                      data-side="away"
+                      data-hydrate="match-1-away-club"
+                      data-hydrate-attr="data-club-team"
+                    >
+                      <div class="team-group">
+                        <div class="team-primary">
+                          <div class="team-mark">
+                            <span class="mark-fallback" aria-hidden="true"></span>
+                            <img
+                              alt="Away team logo"
+                              data-hydrate="match-1-away-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p class="team-score">
+                            <span class="score" data-hydrate="match-1-away-score"
+                              >0</span
+                            >
+                            <span class="overs"
+                              ><span data-hydrate="match-1-away-overs">0</span>
+                              ov</span
+                            >
+                          </p>
+                        </div>
+                        <div class="team-identity">
+                          <h2 class="team-name" data-hydrate="match-1-away-team">
+                            Away team
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="result-bridge outcome-bridge">
+                    <div class="outcome-bridge__rule" aria-hidden="true"></div>
+                    <p class="result-statement" data-hydrate="match-1-result">
+                      Result
+                    </p>
+                  </div>
+
+                  <div class="performance-area">
+                    <section class="performance-panel">
+                      <h3 class="performance-heading">Batting</h3>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-1-batter-1"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-1-batter-1-runs">0</span
+                          ><span
+                            data-hydrate="match-1-batter-1-not-out"
+                            data-hydrate-format="not-out"
+                          ></span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-1-batter-1-balls"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-1-batter-2"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-1-batter-2-runs">0</span
+                          ><span
+                            data-hydrate="match-1-batter-2-not-out"
+                            data-hydrate-format="not-out"
+                          ></span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-1-batter-2-balls"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-1-batter-3"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-1-batter-3-runs">0</span
+                          ><span
+                            data-hydrate="match-1-batter-3-not-out"
+                            data-hydrate-format="not-out"
+                          ></span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-1-batter-3-balls"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                    </section>
+
+                    <section class="performance-panel">
+                      <h3 class="performance-heading">Bowling</h3>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-1-bowler-1"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-1-bowler-1-wickets">0</span
+                          >/<span data-hydrate="match-1-bowler-1-runs">0</span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-1-bowler-1-overs"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-1-bowler-2"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-1-bowler-2-wickets">0</span
+                          >/<span data-hydrate="match-1-bowler-2-runs">0</span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-1-bowler-2-overs"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-1-bowler-3"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-1-bowler-3-wickets">0</span
+                          >/<span data-hydrate="match-1-bowler-3-runs">0</span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-1-bowler-3-overs"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                    </section>
+                  </div>
+
+                  <div class="match-context">
+                    <p class="context-left">
+                      <span data-hydrate="match-1-type">Type</span
+                      ><span class="context-separator"></span
+                      ><span data-hydrate="match-1-round">Round</span>
+                    </p>
+                    <p class="context-venue" data-hydrate="match-1-ground">
+                      Ground
+                    </p>
+                  </div>
+
+                  <div class="fixture-close" aria-hidden="true">
+                    <span class="fixture-close__rule"></span>
+                  </div>
+                </section>
+
+                <!-- Match Module 2 -->
+                <section class="match-module">
+                  <div class="comparison-band">
+                    <div
+                      class="team-band"
+                      data-side="home"
+                      data-hydrate="match-2-home-club"
+                      data-hydrate-attr="data-club-team"
+                    >
+                      <div class="team-group">
+                        <div class="team-primary">
+                          <div class="team-mark">
+                            <span class="mark-fallback" aria-hidden="true"></span>
+                            <img
+                              alt="Home team logo"
+                              data-hydrate="match-2-home-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p class="team-score">
+                            <span class="score" data-hydrate="match-2-home-score"
+                              >0</span
+                            >
+                            <span class="overs"
+                              ><span data-hydrate="match-2-home-overs">0</span>
+                              ov</span
+                            >
+                          </p>
+                        </div>
+                        <div class="team-identity">
+                          <h2 class="team-name" data-hydrate="match-2-home-team">
+                            Home team
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comparison-band__spine" aria-hidden="true"></div>
+
+                    <div
+                      class="team-band"
+                      data-side="away"
+                      data-hydrate="match-2-away-club"
+                      data-hydrate-attr="data-club-team"
+                    >
+                      <div class="team-group">
+                        <div class="team-primary">
+                          <div class="team-mark">
+                            <span class="mark-fallback" aria-hidden="true"></span>
+                            <img
+                              alt="Away team logo"
+                              data-hydrate="match-2-away-logo"
+                              data-hydrate-attr="src"
+                              onerror="this.hidden=true"
+                            />
+                          </div>
+                          <p class="team-score">
+                            <span class="score" data-hydrate="match-2-away-score"
+                              >0</span
+                            >
+                            <span class="overs"
+                              ><span data-hydrate="match-2-away-overs">0</span>
+                              ov</span
+                            >
+                          </p>
+                        </div>
+                        <div class="team-identity">
+                          <h2 class="team-name" data-hydrate="match-2-away-team">
+                            Away team
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="result-bridge outcome-bridge">
+                    <div class="outcome-bridge__rule" aria-hidden="true"></div>
+                    <p class="result-statement" data-hydrate="match-2-result">
+                      Result
+                    </p>
+                  </div>
+
+                  <div class="performance-area">
+                    <section class="performance-panel">
+                      <h3 class="performance-heading">Batting</h3>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-2-batter-1"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-2-batter-1-runs">0</span
+                          ><span
+                            data-hydrate="match-2-batter-1-not-out"
+                            data-hydrate-format="not-out"
+                          ></span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-2-batter-1-balls"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-2-batter-2"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-2-batter-2-runs">0</span
+                          ><span
+                            data-hydrate="match-2-batter-2-not-out"
+                            data-hydrate-format="not-out"
+                          ></span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-2-batter-2-balls"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-2-batter-3"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-2-batter-3-runs">0</span
+                          ><span
+                            data-hydrate="match-2-batter-3-not-out"
+                            data-hydrate-format="not-out"
+                          ></span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-2-batter-3-balls"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                    </section>
+
+                    <section class="performance-panel">
+                      <h3 class="performance-heading">Bowling</h3>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-2-bowler-1"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-2-bowler-1-wickets">0</span
+                          >/<span data-hydrate="match-2-bowler-1-runs">0</span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-2-bowler-1-overs"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-2-bowler-2"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-2-bowler-2-wickets">0</span
+                          >/<span data-hydrate="match-2-bowler-2-runs">0</span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-2-bowler-2-overs"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                      <p class="performance-row">
+                        <span
+                          class="performance-player"
+                          data-hydrate="match-2-bowler-3"
+                          >Player</span
+                        ><span class="performance-figure"
+                          ><span data-hydrate="match-2-bowler-3-wickets">0</span
+                          >/<span data-hydrate="match-2-bowler-3-runs">0</span>
+                          <span class="performance-balls"
+                            >(<span data-hydrate="match-2-bowler-3-overs"
+                              >0</span
+                            >)</span
+                          ></span
+                        >
+                      </p>
+                    </section>
+                  </div>
+
+                  <div class="match-context">
+                    <p class="context-left">
+                      <span data-hydrate="match-2-type">Type</span
+                      ><span class="context-separator"></span
+                      ><span data-hydrate="match-2-round">Round</span>
+                    </p>
+                    <p class="context-venue" data-hydrate="match-2-ground">
+                      Ground
+                    </p>
+                  </div>
+
+                  <div class="fixture-close" aria-hidden="true">
+                    <span class="fixture-close__rule"></span>
+                  </div>
+                </section>
+              </main>
+
+              <!-- Asset Footer -->
+              <footer class="asset-footer">
+                <div class="footer-rule" aria-hidden="true"></div>
+                <div class="sponsor-strip">
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                  <div class="sponsor-slot">
+                    <span class="sponsor-symbol" aria-hidden="true"></span
+                    ><span>Partner</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <footer class="design-handoff" data-design-handoff></footer>
+      </div>
+    </div>
+    <script type="module">
+      import { renderVariantNav } from "/design/_shared/nav.js";
+      import { renderTabBar } from "/design/_shared/tab-bar.js";
+      import { initNightSessionAsset } from "/design/_shared/night-session-init.js";
+
+      const context = {
+        variantSlug: "night-session",
+        sportSlug: "cricket",
+        assetSlug: "results",
+      };
+
+      renderVariantNav(context.variantSlug);
+      renderTabBar(context);
+      await initNightSessionAsset(context, { resultsLayout: true });
+    </script>
+  </body>
+</html>

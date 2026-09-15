@@ -1,3 +1,16 @@
+/** @param {string} name */
+export function formatRosterPlayerName(name) {
+  const value = String(name ?? "").trim();
+  if (!value) {
+    return value;
+  }
+  const letters = value.replace(/[^a-zA-Z]/g, "");
+  if (letters.length > 0 && letters === letters.toUpperCase()) {
+    return value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+  }
+  return value;
+}
+
 const parsePlayerEntry = (raw) => {
   const value = String(raw ?? "").trim();
   if (!value || /no players allocated/i.test(value)) {
@@ -54,7 +67,9 @@ export function mountScorelineRosterRows(players) {
     const entry = fragment.querySelector(".roster-entry");
     const row = fragment.querySelector(".roster-row");
     const index = row?.querySelector(".roster-index");
-    const player = row?.querySelector(".roster-player");
+    const player =
+      row?.querySelector(".roster-player__name") ??
+      row?.querySelector(".roster-player");
     const badges = row?.querySelector(".roster-badges");
     const crease = fragment.querySelector(".roster-crease");
 
@@ -91,15 +106,18 @@ export function mountScorelineRosterRows(players) {
     const entry = fragment.querySelector(".roster-entry");
     const row = fragment.querySelector(".roster-row");
     const index = row?.querySelector(".roster-index");
-    const player = row?.querySelector(".roster-player");
+    const player =
+      row?.querySelector(".roster-player__name") ??
+      row?.querySelector(".roster-player");
     const badges = row?.querySelector(".roster-badges");
 
     if (index instanceof HTMLElement) {
       index.textContent = String(playerIndex + 1);
     }
     if (player instanceof HTMLElement) {
-      player.textContent = parsed.name;
-      player.title = parsed.name;
+      const displayName = formatRosterPlayerName(parsed.name);
+      player.textContent = displayName;
+      player.title = displayName;
     }
     if (badges instanceof HTMLElement) {
       parsed.badges.forEach((badge) => {
