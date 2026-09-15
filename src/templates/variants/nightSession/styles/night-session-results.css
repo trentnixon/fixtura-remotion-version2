@@ -224,11 +224,7 @@
   min-height: 156px;
   background: var(
     --ns-band-bg,
-    linear-gradient(
-      180deg,
-      rgb(22 25 29 / 80%) 0%,
-      rgb(10 12 14 / 80%) 100%
-    )
+    linear-gradient(180deg, rgb(22 25 29 / 80%) 0%, rgb(10 12 14 / 80%) 100%)
   );
   border: 1px solid var(--ns-band-border, rgb(255 255 255 / 7%));
   border-top: 2px solid rgb(255 255 255 / 10%);
@@ -457,7 +453,9 @@
   box-shadow: none;
 }
 
-.night-session-canvas .match-module[data-performance-count="1"] .performance-area {
+.night-session-canvas
+  .match-module[data-performance-count="1"]
+  .performance-area {
   grid-template-columns: minmax(0, 1fr);
 }
 
@@ -511,16 +509,12 @@
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
 }
 
-.night-session-canvas
-  .performance-row
-  .performance-player {
+.night-session-canvas .performance-row .performance-player {
   flex: 1 1 auto;
   min-width: 0;
 }
 
-.night-session-canvas
-  .performance-row
-  .performance-figure {
+.night-session-canvas .performance-row .performance-figure {
   flex: 0 0 auto;
   justify-content: flex-end;
 }
@@ -690,12 +684,8 @@
   opacity: 0.14;
 }
 
-.night-session-canvas
-  .organisation-mark[data-has-crest="true"]
-  .mark-fallback,
-.night-session-canvas
-  .organisation-mark:has(img:not([hidden]))
-  .mark-fallback {
+.night-session-canvas .organisation-mark[data-has-crest="true"] .mark-fallback,
+.night-session-canvas .organisation-mark:has(img:not([hidden])) .mark-fallback {
   display: none;
 }
 

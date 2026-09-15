@@ -10,12 +10,14 @@ export default [
     languageOptions: {
       globals: {
         console: "readonly",
+        Document: "readonly",
         document: "readonly",
         fetch: "readonly",
         getComputedStyle: "readonly",
         HTMLElement: "readonly",
         HTMLImageElement: "readonly",
         HTMLTemplateElement: "readonly",
+        URL: "readonly",
         URLSearchParams: "readonly",
         window: "readonly",
       },

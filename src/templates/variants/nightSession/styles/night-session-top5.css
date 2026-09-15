@@ -272,9 +272,7 @@
 }
 
 /* Remotion anim wrapper — rank bridge + player row (no subgrid; wrapper breaks subgrid) */
-.night-session-canvas
-  .leader-entry.leader-unit
-  > .animated-container {
+.night-session-canvas .leader-entry.leader-unit > .animated-container {
   display: grid;
   width: 100%;
   grid-template-columns:
@@ -312,9 +310,7 @@
   pointer-events: none;
 }
 
-.night-session-canvas
-  .leader-rank-bridge
-  .schedule-bridge__rule {
+.night-session-canvas .leader-rank-bridge .schedule-bridge__rule {
   position: absolute;
   left: 0;
   right: 0;
@@ -324,9 +320,7 @@
   z-index: 0;
 }
 
-.night-session-canvas
-  .leader-rank-bridge
-  .schedule-bridge__rule::after {
+.night-session-canvas .leader-rank-bridge .schedule-bridge__rule::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -464,12 +458,8 @@
   height: 100%;
 }
 
-.night-session-canvas
-  .leader-mark[data-has-crest="true"]
-  .mark-fallback,
-.night-session-canvas
-  .leader-mark:has(img:not([hidden]))
-  .mark-fallback {
+.night-session-canvas .leader-mark[data-has-crest="true"] .mark-fallback,
+.night-session-canvas .leader-mark:has(img:not([hidden])) .mark-fallback {
   display: none;
 }
 

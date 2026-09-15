@@ -93,13 +93,13 @@ Follow this sequence: intent, constraint map, reference translation, composition
 
 Ask two to four questions per round. Offer concrete alternatives only within the constraint map. Recommend one and explain the effect; the user does not need to supply pixel values. Resolve the following for the selected asset, replacing match terminology with rows, player entries, or roster groups as appropriate:
 
-| Round | Composition questions | Record |
-| --- | --- | --- |
-| Frame and header | How much visual mass belongs to the header, content, and footer? How do title, identity, and context align? Compact lockup, wide band, or another arrangement? | Region proportions, alignment lines, title/logo relationship, and entry point |
-| Primary module | How is each match, row, or player group divided? What is connected, opposed, or separated? Where do the main scores or metrics anchor? | Module subdivisions, identity-to-metric relationship, anchor points, and geometry |
-| Supporting information | How does the outcome connect to the comparison? How do performances and metadata attach while preserving required ordering? | Adjacencies, shared bands or rules, label positions, and hierarchy |
-| Repetition and footer | How do repeated modules separate? How does the footer connect? What happens with sparse, dense, or absent optional content? | Spacing rhythm, footer relationship, density adaptations, and collapse behaviour |
-| Family translation | Which compositional principles carry across asset types? Which arrangements are specific to this asset? | Family rules and explicit asset exceptions |
+| Round                  | Composition questions                                                                                                                                          | Record                                                                            |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Frame and header       | How much visual mass belongs to the header, content, and footer? How do title, identity, and context align? Compact lockup, wide band, or another arrangement? | Region proportions, alignment lines, title/logo relationship, and entry point     |
+| Primary module         | How is each match, row, or player group divided? What is connected, opposed, or separated? Where do the main scores or metrics anchor?                         | Module subdivisions, identity-to-metric relationship, anchor points, and geometry |
+| Supporting information | How does the outcome connect to the comparison? How do performances and metadata attach while preserving required ordering?                                    | Adjacencies, shared bands or rules, label positions, and hierarchy                |
+| Repetition and footer  | How do repeated modules separate? How does the footer connect? What happens with sparse, dense, or absent optional content?                                    | Spacing rhythm, footer relationship, density adaptations, and collapse behaviour  |
+| Family translation     | Which compositional principles carry across asset types? Which arrangements are specific to this asset?                                                        | Family rules and explicit asset exceptions                                        |
 
 Record proposed proportions or bounded dimensions at 1080 x 1350. Check that header, content, footer, gaps, and safe margins fit together. Resolve contradictions before adding decorative detail.
 
@@ -117,13 +117,13 @@ For an intentional evolution, an annotated existing frame can serve this checkpo
 
 Once the composition is confirmed, resolve these treatments in short rounds:
 
-| System | Decisions to record |
-| --- | --- |
-| Typography | Families, role sizes or ratios, weights, line height, tracking, case, and wrapping that preserves full data |
+| System                  | Decisions to record                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Typography              | Families, role sizes or ratios, weights, line height, tracking, case, and wrapping that preserves full data          |
 | Surfaces and separators | Coverage, opacity, padding, border sides and width, corner treatment, and relationship to the agreed module geometry |
-| Identity and footer | Logo fit, clear space, contrast protection, and sponsor treatment at the agreed positions |
-| Motifs and finish | Shape grammar, angles, count, scale, stroke, permitted edges, clipping, and texture strength or none |
-| Density and contrast | Standard and dense values, minimum readable sizes, collapse behaviour, and contrast over supplied backgrounds |
+| Identity and footer     | Logo fit, clear space, contrast protection, and sponsor treatment at the agreed positions                            |
+| Motifs and finish       | Shape grammar, angles, count, scale, stroke, permitted edges, clipping, and texture strength or none                 |
+| Density and contrast    | Standard and dense values, minimum readable sizes, collapse behaviour, and contrast over supplied backgrounds        |
 
 Use proposed pixels, ratios, or tuning ranges where useful. Distinguish proposed values from measurements. Numeric detail refines the agreed composition; it must not lock in the starter's arrangement by accident.
 

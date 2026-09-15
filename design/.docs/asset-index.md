@@ -17,6 +17,7 @@
 | `scoreline/cricket/team-of-the-week` | `Scoreline`    | `testData/samples/Cricket/Cricket_TeamOfTheWeek.json`        | `cricket/teamOfTheWeek` | `scoreline/theme/composition/teamOfTheWeek.ts` |
 
 <!-- scaffold night-session -->
+
 | `night-session/cricket/results` | `NightSession` | `testData/samples/Cricket/Cricket_Results.json` | `cricket/results` | `nightSession/theme/composition/results.ts` |
 | `night-session/cricket/result-single` | `NightSession` | `testData/samples/Cricket/Cricket_WeekendResultsSingle.json` | `cricket/resultSingle` | `nightSession/theme/composition/resultSingle.ts` |
 | `night-session/cricket/upcoming` | `NightSession` | `testData/samples/Cricket/Cricket_upcoming.json` | `cricket/upcoming` | `nightSession/theme/composition/upcoming.ts` |

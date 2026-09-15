@@ -153,7 +153,10 @@
   align-items: center;
 }
 
-.night-session-canvas[data-leaderboard] .leaderboard-rows .leader-entry .leader-row {
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows
+  .leader-entry
+  .leader-row {
   background: var(
     --ladder-row-surface,
     color-mix(in srgb, var(--surface-muted) 50%, transparent)

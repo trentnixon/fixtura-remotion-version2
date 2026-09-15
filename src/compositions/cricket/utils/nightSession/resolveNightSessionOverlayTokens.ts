@@ -35,9 +35,7 @@ export const resolveNightSessionBandTokens = (
     "--ns-band-bg": isDark
       ? "linear-gradient(180deg, rgb(22 25 29 / 80%) 0%, rgb(10 12 14 / 80%) 100%)"
       : "linear-gradient(180deg, rgb(243 240 234 / 80%) 0%, rgb(255 255 255 / 80%) 100%)",
-    "--ns-band-border": isDark
-      ? "rgb(255 255 255 / 7%)"
-      : "rgb(8 11 13 / 10%)",
+    "--ns-band-border": isDark ? "rgb(255 255 255 / 7%)" : "rgb(8 11 13 / 10%)",
     "--ns-band-score": isDark ? "#ffffff" : containerCopy.text,
     "--ns-band-team": isDark ? "rgb(255 255 255 / 92%)" : containerCopy.text,
     "--ns-band-meta": isDark
@@ -46,9 +44,7 @@ export const resolveNightSessionBandTokens = (
     "--ns-outcome-bg": isDark
       ? "rgb(10 12 14 / 92%)"
       : "rgb(255 255 255 / 94%)",
-    "--ns-outcome-text": isDark
-      ? "rgb(244 243 241 / 92%)"
-      : containerCopy.text,
+    "--ns-outcome-text": isDark ? "rgb(244 243 241 / 92%)" : containerCopy.text,
     "--ns-schedule-lockup-bg": isDark
       ? "rgb(10 12 14 / 95%)"
       : "rgb(255 255 255 / 95%)",

@@ -231,7 +231,8 @@
   pointer-events: none;
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-category[data-empty="true"] {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-category[data-empty="true"] {
   display: none;
 }
 
@@ -291,8 +292,10 @@
   overflow-x: hidden;
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-columns[data-density="compact"],
-.template-canvas.night-session-canvas[data-totw] .totw-col[data-density="compact"] {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-columns[data-density="compact"],
+.template-canvas.night-session-canvas[data-totw]
+  .totw-col[data-density="compact"] {
   --totw-row-min-height: 92px;
   --totw-row-min-height-hero: 114px;
   --type-totw-name: 30px;
@@ -303,8 +306,10 @@
   --totw-logo-size: 84px;
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-columns[data-density="tight"],
-.template-canvas.night-session-canvas[data-totw] .totw-col[data-density="tight"] {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-columns[data-density="tight"],
+.template-canvas.night-session-canvas[data-totw]
+  .totw-col[data-density="tight"] {
   --totw-row-min-height: 86px;
   --totw-row-min-height-hero: 106px;
   --type-totw-name: 28px;
@@ -323,7 +328,8 @@
   gap: var(--space-2);
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-entry[data-empty="true"] {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-entry[data-empty="true"] {
   display: none;
 }
 
@@ -338,7 +344,9 @@
   box-shadow: none !important;
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-entry[data-rank="1"] .totw-row {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-entry[data-rank="1"]
+  .totw-row {
   min-height: var(--totw-row-min-height-hero);
 }
 
@@ -401,7 +409,9 @@
   display: none;
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-mark[data-has-crest="false"] img {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-mark[data-has-crest="false"]
+  img {
   display: none;
 }
 
@@ -530,7 +540,8 @@
   color: rgb(244 243 241 / 58%);
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-subline[data-empty="true"] {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-subline[data-empty="true"] {
   display: none;
 }
 

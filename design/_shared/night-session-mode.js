@@ -28,7 +28,10 @@ export function getNightSessionModeDefinition(modeId) {
  * @param {NightSessionModeId} modeId
  * @param {string} [accent]
  */
-export function resolveNightSessionMatchContextTokens(modeId, accent = DEFAULT_INK) {
+export function resolveNightSessionMatchContextTokens(
+  modeId,
+  accent = DEFAULT_INK,
+) {
   const mode = getNightSessionModeDefinition(modeId);
   const isDark =
     Boolean(mode.container.background) &&
@@ -201,9 +204,7 @@ export function applyNightSessionMode(canvas, modeId, options = {}) {
   );
   canvas.style.setProperty(
     "--ns-band-border",
-    isDarkContainer
-      ? "rgb(255 255 255 / 7%)"
-      : "rgb(8 11 13 / 10%)",
+    isDarkContainer ? "rgb(255 255 255 / 7%)" : "rgb(8 11 13 / 10%)",
   );
   canvas.style.setProperty(
     "--ns-band-score",

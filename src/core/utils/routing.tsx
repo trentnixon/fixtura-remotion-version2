@@ -155,9 +155,7 @@ export const RouteToComposition = (): React.ReactElement => {
   const resolvedMetadata = metadata ?? videoMetadata;
   const resolvedAppearance = appearance ?? videoAppearance;
 
-  const compositionId = normalizeCompositionId(
-    resolvedMetadata.compositionId,
-  );
+  const compositionId = normalizeCompositionId(resolvedMetadata.compositionId);
   const templateId = resolvedAppearance.template?.toLowerCase() || "basic";
   const sport = (videoMeta.club?.sport?.toLowerCase() || "cricket") as Sport;
   const title = resolvedMetadata.title;

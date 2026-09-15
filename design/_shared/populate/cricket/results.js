@@ -25,9 +25,7 @@ function syncResultsSponsorState(root, fixture) {
     return;
   }
 
-  const include =
-    fixture?.videoMeta?.video?.metadata?.includeSponsors === true;
+  const include = fixture?.videoMeta?.video?.metadata?.includeSponsors === true;
   const count = Number(fixture?.videoMeta?.club?.sponsors?.sponsorNum ?? 0);
-  canvas.dataset.sponsorState =
-    include && count > 0 ? "present" : "absent";
+  canvas.dataset.sponsorState = include && count > 0 ? "present" : "absent";
 }

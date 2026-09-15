@@ -222,9 +222,15 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--ns-grade-rail-gradient-mid, color-mix(in srgb, var(--club-primary) 10%, transparent))
+    var(
+        --ns-grade-rail-gradient-mid,
+        color-mix(in srgb, var(--club-primary) 10%, transparent)
+      )
       58%,
-    var(--ns-grade-rail-gradient-end, color-mix(in srgb, var(--club-primary) 32%, transparent))
+    var(
+        --ns-grade-rail-gradient-end,
+        color-mix(in srgb, var(--club-primary) 32%, transparent)
+      )
       100%
   );
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%));
@@ -430,17 +436,13 @@
 }
 
 .template-canvas.night-session-canvas
-  .fixture-side--home:has(
-    .fixture-opponent__cell--mark[data-has-crest="false"]
-  )
+  .fixture-side--home:has(.fixture-opponent__cell--mark[data-has-crest="false"])
   .fixture-opponent__cell--name {
   flex: 1 1 100%;
 }
 
 .template-canvas.night-session-canvas
-  .fixture-side--away:has(
-    .fixture-opponent__cell--mark[data-has-crest="false"]
-  )
+  .fixture-side--away:has(.fixture-opponent__cell--mark[data-has-crest="false"])
   .fixture-opponent__cell--name {
   flex: 1 1 100%;
 }
@@ -663,7 +665,8 @@
   opacity: 0.6;
 }
 
-.template-canvas.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
+.template-canvas.night-session-canvas[data-sponsor-state="absent"]
+  .asset-footer {
   display: none;
 }
 

@@ -249,9 +249,7 @@
   object-fit: contain;
 }
 
-.night-session-canvas[data-roster]
-  .roster-team-mark--hero
-  .mark-fallback {
+.night-session-canvas[data-roster] .roster-team-mark--hero .mark-fallback {
   width: 48%;
   height: 48%;
   border-width: 3px;
@@ -319,8 +317,7 @@
   color: rgb(244 243 241 / 78%);
 }
 
-.night-session-canvas[data-roster]
-  .roster-schedule-line:first-child {
+.night-session-canvas[data-roster] .roster-schedule-line:first-child {
   font-family: var(--font-display);
   font-size: var(--type-roster-date);
   font-weight: 700;

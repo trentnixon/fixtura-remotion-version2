@@ -16,7 +16,9 @@ export const NightSessionMain: React.FC = () => {
   const { data, metadata, templateVariation } = useVideoDataContext();
   const { timings } = data;
   const canvasStyle = useNightSessionCanvasStyle();
-  const canvasDataset = resolveNightSessionCanvasDataset(metadata.compositionId);
+  const canvasDataset = resolveNightSessionCanvasDataset(
+    metadata.compositionId,
+  );
   const compositionRouteHeight = getCompositionSectionHeight(heights);
 
   return (

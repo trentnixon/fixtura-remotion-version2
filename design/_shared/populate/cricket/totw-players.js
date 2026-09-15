@@ -146,7 +146,8 @@ export function mountScorelineTotwPlayers(players, root = document) {
     band.dataset.empty = value?.textContent?.trim() ? "false" : "true";
   });
 
-  const doc = root instanceof Document ? root : (root.ownerDocument ?? document);
+  const doc =
+    root instanceof Document ? root : (root.ownerDocument ?? document);
   const template = doc.getElementById("totw-row-template");
   if (!(template instanceof HTMLTemplateElement)) {
     return;

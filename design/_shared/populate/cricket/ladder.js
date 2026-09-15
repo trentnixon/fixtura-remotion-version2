@@ -51,7 +51,10 @@ function mountLadderRows(document, teamCount = DEFAULT_TEAM_COUNT) {
   container.dataset.creases = "false";
 
   const staticRows = container.querySelectorAll(".ladder-entry");
-  if (teamCount <= DEFAULT_TEAM_COUNT && staticRows.length >= DEFAULT_TEAM_COUNT) {
+  if (
+    teamCount <= DEFAULT_TEAM_COUNT &&
+    staticRows.length >= DEFAULT_TEAM_COUNT
+  ) {
     staticRows.forEach((entry, index) => {
       if (!(entry instanceof HTMLElement)) {
         return;
@@ -116,9 +119,10 @@ function mountLadderRows(document, teamCount = DEFAULT_TEAM_COUNT) {
  */
 export function populateLadder({ canvas, fixture }) {
   const document = canvas.ownerDocument;
-  const ladder = /** @type {{ gradeName?: string; bias?: string; League?: unknown[] }} */ (
-    /** @type {{ data?: unknown[] }} */ (fixture)?.data?.[0]
-  );
+  const ladder =
+    /** @type {{ gradeName?: string; bias?: string; League?: unknown[] }} */ (
+      /** @type {{ data?: unknown[] }} */ (fixture)?.data?.[0]
+    );
   const league = Array.isArray(ladder?.League) ? ladder.League : [];
   const teamCount = Math.max(league.length || DEFAULT_TEAM_COUNT, 1);
 
@@ -147,8 +151,7 @@ export function populateLadder({ canvas, fixture }) {
     const teamName = row?.querySelector(".ladder-team");
     const stats = row?.querySelectorAll(".ladder-stat");
 
-    const name =
-      typeof team?.teamName === "string" ? team.teamName.trim() : "";
+    const name = typeof team?.teamName === "string" ? team.teamName.trim() : "";
     if (!name) {
       entry.dataset.empty = "true";
       return;
@@ -175,9 +178,7 @@ export function populateLadder({ canvas, fixture }) {
     if (row instanceof HTMLElement) {
       const isBias =
         (typeof bias === "string" && bias.length > 0 && name === bias) ||
-        (!bias &&
-          clubFocus.length > 3 &&
-          name.includes(clubFocus));
+        (!bias && clubFocus.length > 3 && name.includes(clubFocus));
       if (isBias) {
         row.dataset.bias = "true";
       } else {

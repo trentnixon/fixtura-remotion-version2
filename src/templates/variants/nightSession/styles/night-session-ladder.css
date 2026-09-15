@@ -207,9 +207,15 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--ns-grade-rail-gradient-mid, color-mix(in srgb, var(--club-primary) 10%, transparent))
+    var(
+        --ns-grade-rail-gradient-mid,
+        color-mix(in srgb, var(--club-primary) 10%, transparent)
+      )
       58%,
-    var(--ns-grade-rail-gradient-end, color-mix(in srgb, var(--club-primary) 32%, transparent))
+    var(
+        --ns-grade-rail-gradient-end,
+        color-mix(in srgb, var(--club-primary) 32%, transparent)
+      )
       100%
   );
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
@@ -341,10 +347,7 @@
   min-height: var(--ladder-row-min-height);
 }
 
-.night-session-canvas
-  .ladder-entry
-  > .animated-container
-  > .ladder-row {
+.night-session-canvas .ladder-entry > .animated-container > .ladder-row {
   flex: 0 0 auto;
   min-height: var(--ladder-row-min-height);
   height: auto;
@@ -491,10 +494,12 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.night-session-canvas
-  .ladder-row[data-bias="true"]
-  .ladder-team.ladder-cell {
-  border-color: color-mix(in srgb, var(--club-primary) 55%, rgb(255 255 255 / 10%));
+.night-session-canvas .ladder-row[data-bias="true"] .ladder-team.ladder-cell {
+  border-color: color-mix(
+    in srgb,
+    var(--club-primary) 55%,
+    rgb(255 255 255 / 10%)
+  );
   background: color-mix(
     in srgb,
     var(--club-primary) 12%,

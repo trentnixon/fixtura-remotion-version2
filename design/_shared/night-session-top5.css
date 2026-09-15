@@ -607,6 +607,7 @@
   opacity: 0.6;
 }
 
-.template-canvas.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
+.template-canvas.night-session-canvas[data-sponsor-state="absent"]
+  .asset-footer {
   display: none;
 }

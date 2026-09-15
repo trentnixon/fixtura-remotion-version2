@@ -72,7 +72,10 @@ const NightSessionOpponentSide: React.FC<{
   );
 };
 
-export const GameCardNightSession: React.FC<GameCardProps> = ({ game, index }) => {
+export const GameCardNightSession: React.FC<GameCardProps> = ({
+  game,
+  index,
+}) => {
   const { data, club } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
@@ -130,7 +133,10 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({ game, index }) =
               <div className="schedule-bridge__rule" aria-hidden />
               <div className="schedule-lockup">
                 <p className="fixture-date">{game.date}</p>
-                <p className="fixture-time" data-empty={timeLabel ? "false" : "true"}>
+                <p
+                  className="fixture-time"
+                  data-empty={timeLabel ? "false" : "true"}
+                >
                   {timeLabel}
                 </p>
               </div>

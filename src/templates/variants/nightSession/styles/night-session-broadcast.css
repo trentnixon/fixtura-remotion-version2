@@ -73,9 +73,7 @@
   box-shadow: none !important;
 }
 
-.night-session-canvas
-  .comparison-band
-  .team-band[data-club-team="true"] {
+.night-session-canvas .comparison-band .team-band[data-club-team="true"] {
   border-top: 0 !important;
 }
 
@@ -83,8 +81,7 @@
   border-top-color: rgb(255 255 255 / 10%);
 }
 
-.night-session-canvas
-  .comparison-band:has(.team-band[data-club-team="true"]) {
+.night-session-canvas .comparison-band:has(.team-band[data-club-team="true"]) {
   border-top-color: color-mix(in srgb, var(--club-primary) 72%, white);
 }
 
@@ -136,10 +133,7 @@
 }
 
 /* Ladder — neutralise inherited Scoreline row fills and grade surfaces */
-.night-session-canvas[data-ladder]
-  .ladder-rows
-  .ladder-entry
-  .ladder-row {
+.night-session-canvas[data-ladder] .ladder-rows .ladder-entry .ladder-row {
   background: transparent !important;
   box-shadow: none !important;
 }
@@ -163,10 +157,7 @@
 }
 
 /* Team roster — neutralise inherited Scoreline row fills */
-.night-session-canvas[data-roster]
-  .roster-rows
-  .roster-entry
-  .roster-row {
+.night-session-canvas[data-roster] .roster-rows .roster-entry .roster-row {
   background: transparent !important;
   box-shadow: none !important;
 }
@@ -199,4 +190,3 @@
   ) !important;
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%) !important;
 }
-

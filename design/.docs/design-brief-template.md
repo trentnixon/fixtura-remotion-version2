@@ -37,12 +37,12 @@ Follow [the design system brief](/design/.docs/design-system-brief.md). Anatomy 
 
 ## Constraint map
 
-| Category | Requirement or replaceable feature | Source and exact rule | Design freedom or conflict |
-| --- | --- | --- | --- |
-| Required information | {fields and conditional content} | {anatomy or fixture} | {preserve} |
-| Reading relationships | {ordering and associations} | {document and rule} | {preserve} |
-| Explicit layout constraint | {only documented fixed geometry} | {document and rule} | {permitted choices or unresolved conflict} |
-| Starter geometry | {inherited arrangement} | {starter observation, not a requirement} | {replace, or deliberately retain for an evolution} |
+| Category                   | Requirement or replaceable feature | Source and exact rule                    | Design freedom or conflict                         |
+| -------------------------- | ---------------------------------- | ---------------------------------------- | -------------------------------------------------- |
+| Required information       | {fields and conditional content}   | {anatomy or fixture}                     | {preserve}                                         |
+| Reading relationships      | {ordering and associations}        | {document and rule}                      | {preserve}                                         |
+| Explicit layout constraint | {only documented fixed geometry}   | {document and rule}                      | {permitted choices or unresolved conflict}         |
+| Starter geometry           | {inherited arrangement}            | {starter observation, not a requirement} | {replace, or deliberately retain for an evolution} |
 
 ## Composition specification and visual checkpoint
 
@@ -62,16 +62,16 @@ A confirmed schematic is required before final agreement. Use the selected asset
 
 {Required before agreement. Specify styling for the confirmed composition within the sourced constraints. Each row needs concrete starting values or bounded ranges where applicable. Mark each choice as proposed or confirmed. Use not applicable with a reason rather than leaving a blank.}
 
-| Region or system | Treatment and visual purpose | Starting values or bounded ranges | Fixed anatomy and behaviour to preserve | Agreement |
-| --- | --- | --- | --- | --- |
-| Header and title | {alignment, title treatment, label, mark balance} | {type size, width, maximum lines, mark scale, spacing} | {sourced header constraints and required content} | {proposed or confirmed} |
-| Match module | {open, strip, panel, surface separation} | {opacity, padding, gap, radius, border sides and width} | {module structure and ordering} | {proposed or confirmed} |
-| Team names and full scores | {type roles, emphasis, alignment, wrapping} | {family, weight, size ratios, leading, tracking, limits} | {complete score notation and team order} | {proposed or confirmed} |
-| Outcome | {text emphasis and surface treatment} | {size, weight, padding, accent role} | {sourced outcome ordering and missing-content behaviour} | {proposed or confirmed} |
-| Performances and metadata | {labels, names, figures, separators} | {type hierarchy, gaps, rule width and contrast} | {sourced ordering and conditional content} | {proposed or confirmed} |
-| Crests and sponsor footer | {fit, contrast protection, surface treatment} | {scale at agreed positions, clear space, separator} | {sourced placement constraints and collapse rules} | {proposed or confirmed} |
-| Motifs and finish | {original shape grammar and permitted locations} | {angle, count, size, stroke, clipping, texture strength or none} | {safe margins and usable content space} | {proposed or confirmed} |
-| Density and background contrast | {how treatments adapt within sourced constraints} | {standard and dense values, minima, opacity or contrast bounds} | {sourced density constraints and independent background} | {proposed or confirmed} |
+| Region or system                | Treatment and visual purpose                      | Starting values or bounded ranges                                | Fixed anatomy and behaviour to preserve                  | Agreement               |
+| ------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------- | ----------------------- |
+| Header and title                | {alignment, title treatment, label, mark balance} | {type size, width, maximum lines, mark scale, spacing}           | {sourced header constraints and required content}        | {proposed or confirmed} |
+| Match module                    | {open, strip, panel, surface separation}          | {opacity, padding, gap, radius, border sides and width}          | {module structure and ordering}                          | {proposed or confirmed} |
+| Team names and full scores      | {type roles, emphasis, alignment, wrapping}       | {family, weight, size ratios, leading, tracking, limits}         | {complete score notation and team order}                 | {proposed or confirmed} |
+| Outcome                         | {text emphasis and surface treatment}             | {size, weight, padding, accent role}                             | {sourced outcome ordering and missing-content behaviour} | {proposed or confirmed} |
+| Performances and metadata       | {labels, names, figures, separators}              | {type hierarchy, gaps, rule width and contrast}                  | {sourced ordering and conditional content}               | {proposed or confirmed} |
+| Crests and sponsor footer       | {fit, contrast protection, surface treatment}     | {scale at agreed positions, clear space, separator}              | {sourced placement constraints and collapse rules}       | {proposed or confirmed} |
+| Motifs and finish               | {original shape grammar and permitted locations}  | {angle, count, size, stroke, clipping, texture strength or none} | {safe margins and usable content space}                  | {proposed or confirmed} |
+| Density and background contrast | {how treatments adapt within sourced constraints} | {standard and dense values, minima, opacity or contrast bounds}  | {sourced density constraints and independent background} | {proposed or confirmed} |
 
 ### Observable differences from existing templates
 
@@ -87,8 +87,8 @@ A confirmed schematic is required before final agreement. Use the selected asset
 
 ### Rejection criteria and desired alternatives
 
-| Avoid | Use instead | Observable check |
-| --- | --- | --- |
+| Avoid                          | Use instead                                   | Observable check           |
+| ------------------------------ | --------------------------------------------- | -------------------------- |
 | {unwanted inherited treatment} | {positive composition or styling requirement} | {what the frame must show} |
 
 ### First-delivery acceptance criteria
@@ -122,9 +122,9 @@ Repeat this entry for each reference, or write "No references supplied".
 - Direction strength: {fixed, preferred, or exploratory per takeaway}
 - Interpretation confirmed: {yes or pending}
 
-| Reference device | Target-asset equivalent | Preserve | Adapt or exclude | Source constraint | Confirmation |
-| --- | --- | --- | --- | --- | --- |
-| {device} | {specific relationship or treatment} | {useful feature} | {content or geometry not transferred} | {applicable rule or none} | {proposed or confirmed} |
+| Reference device | Target-asset equivalent              | Preserve         | Adapt or exclude                      | Source constraint         | Confirmation            |
+| ---------------- | ------------------------------------ | ---------------- | ------------------------------------- | ------------------------- | ----------------------- |
+| {device}         | {specific relationship or treatment} | {useful feature} | {content or geometry not transferred} | {applicable rule or none} | {proposed or confirmed} |
 
 ## Answers and design implications
 

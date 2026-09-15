@@ -32,8 +32,7 @@
   overflow: visible;
 }
 
-.night-session-canvas
-  .match-module--single.fixture-card.fixture-unit {
+.night-session-canvas .match-module--single.fixture-card.fixture-unit {
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: transparent;
   box-shadow: none;
@@ -50,17 +49,21 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--ns-grade-rail-gradient-mid, color-mix(in srgb, var(--club-primary) 10%, transparent))
+    var(
+        --ns-grade-rail-gradient-mid,
+        color-mix(in srgb, var(--club-primary) 10%, transparent)
+      )
       58%,
-    var(--ns-grade-rail-gradient-end, color-mix(in srgb, var(--club-primary) 32%, transparent))
+    var(
+        --ns-grade-rail-gradient-end,
+        color-mix(in srgb, var(--club-primary) 32%, transparent)
+      )
       100%
   );
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
 }
 
-.night-session-canvas
-  .match-module--single
-  .fixture-unit__rail::after {
+.night-session-canvas .match-module--single .fixture-unit__rail::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -115,9 +118,7 @@
   padding: var(--space-2);
 }
 
-.night-session-canvas
-  .comparison-band--single
-  .comparison-band__spine {
+.night-session-canvas .comparison-band--single .comparison-band__spine {
   width: 100%;
   height: 1px;
   min-height: 1px;
@@ -130,9 +131,7 @@
   );
 }
 
-.night-session-canvas
-  .comparison-band--single
-  .team-band {
+.night-session-canvas .comparison-band--single .team-band {
   flex: 0 0 auto;
   width: 100%;
   padding: 16px 18px 14px;
@@ -141,23 +140,17 @@
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
 }
 
-.night-session-canvas
-  .comparison-band--single
-  .team-mark {
+.night-session-canvas .comparison-band--single .team-mark {
   width: 96px;
   height: 96px;
 }
 
-.night-session-canvas
-  .comparison-band--single
-  .team-group {
+.night-session-canvas .comparison-band--single .team-group {
   gap: 14px;
 }
 
 /* Inner layout: same as Results comparison band (crest + score row, name below) */
-.night-session-canvas
-  .comparison-band--single
-  .team-primary {
+.night-session-canvas .comparison-band--single .team-primary {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -189,9 +182,7 @@
   margin-inline-end: 0;
 }
 
-.night-session-canvas
-  .comparison-band--single
-  .team-score {
+.night-session-canvas .comparison-band--single .team-score {
   display: grid;
   grid-template-rows: auto auto;
   gap: 4px;
@@ -232,9 +223,7 @@
   text-align: left;
 }
 
-.night-session-canvas
-  .match-module--single
-  .performance-area {
+.night-session-canvas .match-module--single .performance-area {
   padding: var(--space-2) 2px;
   gap: var(--space-3);
 }
@@ -253,9 +242,7 @@
   line-height: 1.08;
 }
 
-.night-session-canvas
-  .match-module--single
-  .match-context {
+.night-session-canvas .match-module--single .match-context {
   margin-top: var(--space-1);
 }
 

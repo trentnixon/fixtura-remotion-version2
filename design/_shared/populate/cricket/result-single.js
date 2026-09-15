@@ -35,8 +35,7 @@ function syncResultSingleSponsorState(root, fixture) {
     return;
   }
 
-  const include =
-    fixture?.videoMeta?.video?.metadata?.includeSponsors === true;
+  const include = fixture?.videoMeta?.video?.metadata?.includeSponsors === true;
   const count = Number(fixture?.videoMeta?.club?.sponsors?.sponsorNum ?? 0);
   const hasSponsors = include && count > 0;
   canvas.dataset.sponsorState = hasSponsors ? "live" : "hidden";
