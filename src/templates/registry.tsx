@@ -10,6 +10,7 @@ import { Mudgeeraba } from "./variants/mudgeeraba";
 import { BroadcastPro } from "./variants/broadcastPro";
 import { BroadcastProRounded } from "./variants/broadcastProRounded";
 import { Scoreline } from "./variants/scoreline";
+import { NightSession } from "./variants/nightSession";
 /**
  * Define template registry key type
  */
@@ -73,6 +74,10 @@ export const templateRegistry = {
   },
   Scoreline: {
     component: Scoreline,
+    variants: Variants,
+  },
+  NightSession: {
+    component: NightSession,
     variants: Variants,
   },
 };

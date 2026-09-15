@@ -1,6 +1,6 @@
 /* Night Session — Upcoming layout */
 
-.template-canvas.night-session-canvas {
+.night-session-canvas {
   --frame-height: 1350px;
   --zone-pad: 12px;
   --zone-header: 148px;
@@ -30,19 +30,19 @@
   font-family: var(--font-body);
 }
 
-.template-canvas.night-session-canvas,
-.template-canvas.night-session-canvas * {
+.night-session-canvas,
+.night-session-canvas * {
   box-sizing: border-box;
 }
 
-.template-canvas.night-session-canvas h1,
-.template-canvas.night-session-canvas h2,
-.template-canvas.night-session-canvas h3,
-.template-canvas.night-session-canvas p {
+.night-session-canvas h1,
+.night-session-canvas h2,
+.night-session-canvas h3,
+.night-session-canvas p {
   margin: 0;
 }
 
-.template-canvas.night-session-canvas .sr-only {
+.night-session-canvas .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -55,7 +55,7 @@
 }
 
 /* —— Header (shared with Results) —— */
-.template-canvas.night-session-canvas .ns-header {
+.night-session-canvas .ns-header {
   flex: 0 0 var(--zone-header);
   min-height: var(--zone-header);
   max-height: var(--zone-header);
@@ -66,7 +66,7 @@
   position: relative;
 }
 
-.template-canvas.night-session-canvas .ns-header__mark {
+.night-session-canvas .ns-header__mark {
   position: absolute;
   top: calc(var(--zone-pad) + 4px);
   right: var(--content-inset);
@@ -77,7 +77,7 @@
   z-index: 2;
 }
 
-.template-canvas.night-session-canvas .ns-header__mark img {
+.night-session-canvas .ns-header__mark img {
   position: absolute;
   inset: 4px;
   width: calc(100% - 8px);
@@ -85,7 +85,7 @@
   object-fit: contain;
 }
 
-.template-canvas.night-session-canvas .ns-header__lockup {
+.night-session-canvas .ns-header__lockup {
   position: relative;
   z-index: 1;
   display: flex;
@@ -98,7 +98,7 @@
   text-align: center;
 }
 
-.template-canvas.night-session-canvas .header-shared-grade {
+.night-session-canvas .header-shared-grade {
   display: inline-block;
   padding: 4px 10px;
   color: var(--ink, #070809);
@@ -111,7 +111,7 @@
   text-transform: uppercase;
 }
 
-.template-canvas.night-session-canvas .header-eyebrow {
+.night-session-canvas .header-eyebrow {
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 500;
@@ -121,7 +121,7 @@
   color: rgb(244 243 241 / 52%);
 }
 
-.template-canvas.night-session-canvas .header-title {
+.night-session-canvas .header-title {
   font-family: var(--font-display);
   font-size: 56px;
   font-weight: 600;
@@ -131,7 +131,7 @@
   color: var(--header-text, #fff);
 }
 
-.template-canvas.night-session-canvas .header-shared-round {
+.night-session-canvas .header-shared-round {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 500;
@@ -139,14 +139,14 @@
   color: rgb(244 243 241 / 58%);
 }
 
-.template-canvas.night-session-canvas .ns-header__accent {
+.night-session-canvas .ns-header__accent {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
 }
 
-.template-canvas.night-session-canvas .ns-accent-wedge {
+.night-session-canvas .ns-accent-wedge {
   position: absolute;
   top: 18px;
   left: calc(50% - 120px);
@@ -161,7 +161,7 @@
   opacity: 0.75;
 }
 
-.template-canvas.night-session-canvas .ns-accent-lines {
+.night-session-canvas .ns-accent-lines {
   position: absolute;
   top: 22px;
   right: calc(var(--content-inset) + 84px);
@@ -177,7 +177,7 @@
   opacity: 0.55;
 }
 
-.template-canvas.night-session-canvas .fixtures-ledger {
+.night-session-canvas .fixtures-ledger {
   min-height: 0;
   flex: 1 1 var(--zone-content);
   max-height: var(--zone-content);
@@ -189,7 +189,7 @@
   overflow: hidden;
 }
 
-.template-canvas.night-session-canvas .fixtures-stack {
+.night-session-canvas .fixtures-stack {
   width: 100%;
   flex: 0 1 auto;
   max-height: 100%;
@@ -200,7 +200,7 @@
 }
 
 /* One bordered module per fixture — grade rail + body read as a single unit */
-.template-canvas.night-session-canvas .fixture-card.fixture-unit {
+.night-session-canvas .fixture-card.fixture-unit {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
@@ -213,7 +213,7 @@
 }
 
 /* Grade rail — fixture label; club primary washes left → right */
-.template-canvas.night-session-canvas .fixture-unit__rail {
+.night-session-canvas .fixture-unit__rail {
   position: relative;
   min-width: 0;
   padding: 7px 12px;
@@ -230,7 +230,7 @@
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%));
 }
 
-.template-canvas.night-session-canvas .fixture-unit__rail::after {
+.night-session-canvas .fixture-unit__rail::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -248,7 +248,7 @@
   pointer-events: none;
 }
 
-.template-canvas.night-session-canvas .fixture-grade-name {
+.night-session-canvas .fixture-grade-name {
   display: -webkit-box;
   overflow: hidden;
   padding-right: 36px;
@@ -262,7 +262,7 @@
 }
 
 /* Fixture body — stacked bordered blocks with gap-2 */
-.template-canvas.night-session-canvas .fixture-unit__frame {
+.night-session-canvas .fixture-unit__frame {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -274,7 +274,7 @@
   box-shadow: none;
 }
 
-.template-canvas.night-session-canvas .fixture-opponents {
+.night-session-canvas .fixture-opponents {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
@@ -290,7 +290,7 @@
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
-.template-canvas.night-session-canvas .fixture-side {
+.night-session-canvas .fixture-side {
   display: flex;
   align-items: stretch;
   gap: var(--space-2);
@@ -298,18 +298,18 @@
 }
 
 /* Home: crest on outer left, name immediately to its right (toward spine) */
-.template-canvas.night-session-canvas .fixture-side--home {
+.night-session-canvas .fixture-side--home {
   flex-direction: row;
   justify-content: flex-start;
 }
 
 /* Away: crest on outer right, name immediately to its left (toward spine) */
-.template-canvas.night-session-canvas .fixture-side--away {
+.night-session-canvas .fixture-side--away {
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.template-canvas.night-session-canvas .fixture-opponents__spine {
+.night-session-canvas .fixture-opponents__spine {
   align-self: stretch;
   background: linear-gradient(
     180deg,
@@ -320,14 +320,14 @@
   );
 }
 
-.template-canvas.night-session-canvas .fixture-opponents .team-band {
+.night-session-canvas .fixture-opponents .team-band {
   min-width: 0;
   background: transparent;
   border: 0;
   box-shadow: none;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-opponents
   .fixture-opponent__cell--name[data-club-team="true"] {
   border-color: color-mix(
@@ -337,7 +337,7 @@
   );
 }
 
-.template-canvas.night-session-canvas .fixture-opponent__cell {
+.night-session-canvas .fixture-opponent__cell {
   min-width: 0;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: var(--ns-performance-row-bg, rgb(10 12 14 / 28%));
@@ -347,7 +347,7 @@
   );
 }
 
-.template-canvas.night-session-canvas .fixture-opponent__cell--mark {
+.night-session-canvas .fixture-opponent__cell--mark {
   flex: 0 0 auto;
   align-self: stretch;
   display: grid;
@@ -360,7 +360,7 @@
   overflow: hidden;
 }
 
-.template-canvas.night-session-canvas .fixture-opponent__cell--name {
+.night-session-canvas .fixture-opponent__cell--name {
   display: flex;
   align-items: center;
   flex: 1 1 auto;
@@ -370,14 +370,14 @@
   padding: 8px 12px;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--home
   .fixture-opponent__cell--name {
   justify-content: flex-start;
   text-align: left;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--away
   .fixture-opponent__cell--name {
   justify-content: flex-end;
@@ -385,25 +385,25 @@
   order: 1;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--away
   .fixture-opponent__cell--mark {
   order: 2;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--home
   .fixture-opponent__cell--mark {
   order: 1;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--home
   .fixture-opponent__cell--name {
   order: 2;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-opponents
   .fixture-opponent__cell--mark.team-mark {
   position: relative;
@@ -411,7 +411,7 @@
   place-items: center;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-opponents
   .fixture-opponent__cell--mark.team-mark
   img {
@@ -423,13 +423,13 @@
   object-position: center;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-opponents
   .fixture-opponent__cell--mark[data-has-crest="false"] {
   display: none;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--home:has(
     .fixture-opponent__cell--mark[data-has-crest="false"]
   )
@@ -437,7 +437,7 @@
   flex: 1 1 100%;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-side--away:has(
     .fixture-opponent__cell--mark[data-has-crest="false"]
   )
@@ -445,7 +445,7 @@
   flex: 1 1 100%;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .fixture-opponents
   .team-name.fixture-opponent__cell--name {
   overflow: hidden;
@@ -457,7 +457,7 @@
   color: var(--container-text, var(--ns-band-team, rgb(255 255 255 / 92%)));
 }
 
-.template-canvas.night-session-canvas .fixture-opponents .team-side-label {
+.night-session-canvas .fixture-opponents .team-side-label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -469,7 +469,7 @@
 }
 
 /* Schedule bridge — rule only; date/time sit in one bordered lockup */
-.template-canvas.night-session-canvas .schedule-bridge {
+.night-session-canvas .schedule-bridge {
   position: relative;
   display: grid;
   place-items: center;
@@ -480,7 +480,7 @@
   box-shadow: none;
 }
 
-.template-canvas.night-session-canvas .schedule-bridge__rule {
+.night-session-canvas .schedule-bridge__rule {
   position: absolute;
   left: 0;
   right: 0;
@@ -490,7 +490,7 @@
   z-index: 0;
 }
 
-.template-canvas.night-session-canvas .schedule-bridge__rule::after {
+.night-session-canvas .schedule-bridge__rule::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -501,7 +501,7 @@
   background: var(--club-primary);
 }
 
-.template-canvas.night-session-canvas .schedule-lockup {
+.night-session-canvas .schedule-lockup {
   position: relative;
   z-index: 1;
   display: flex;
@@ -517,7 +517,7 @@
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%));
 }
 
-.template-canvas.night-session-canvas .fixture-date {
+.night-session-canvas .fixture-date {
   font-family: var(--font-display);
   font-size: var(--type-fixture-date);
   font-weight: 600;
@@ -527,7 +527,7 @@
   color: var(--container-text, var(--ns-band-score, #fff));
 }
 
-.template-canvas.night-session-canvas .fixture-time {
+.night-session-canvas .fixture-time {
   font-family: var(--font-display);
   font-size: var(--type-fixture-time);
   font-weight: 500;
@@ -538,7 +538,7 @@
 }
 
 /* Match context — same reading order as Results metadata row */
-.template-canvas.night-session-canvas .fixture-unit .match-context {
+.night-session-canvas .fixture-unit .match-context {
   min-width: 0;
   padding: 0;
   display: grid;
@@ -552,8 +552,8 @@
   color: var(--match-context-text-muted, rgb(244 243 241 / 58%));
 }
 
-.template-canvas.night-session-canvas .fixture-unit .context-left,
-.template-canvas.night-session-canvas .fixture-unit .context-venue {
+.night-session-canvas .fixture-unit .context-left,
+.night-session-canvas .fixture-unit .context-venue {
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -566,12 +566,12 @@
   );
 }
 
-.template-canvas.night-session-canvas .fixture-unit .context-left {
+.night-session-canvas .fixture-unit .context-left {
   flex-wrap: wrap;
   gap: var(--space-2);
 }
 
-.template-canvas.night-session-canvas .fixture-unit .context-separator {
+.night-session-canvas .fixture-unit .context-separator {
   width: 3px;
   height: 3px;
   flex: 0 0 auto;
@@ -579,7 +579,7 @@
   opacity: 0.7;
 }
 
-.template-canvas.night-session-canvas .fixture-unit .context-venue {
+.night-session-canvas .fixture-unit .context-venue {
   justify-content: flex-end;
   overflow: hidden;
   text-align: right;
@@ -590,37 +590,37 @@
   color: var(--match-context-text, rgb(244 243 241 / 72%));
 }
 
-.template-canvas.night-session-canvas .fixture-close {
+.night-session-canvas .fixture-close {
   display: none;
 }
 
 /* Inter-fixture rhythm lives in fixtures-stack gap + module shell above */
-.template-canvas.night-session-canvas .fixture-unit:not(:last-child) {
+.night-session-canvas .fixture-unit:not(:last-child) {
   margin-bottom: 0;
 }
 
-.template-canvas.night-session-canvas .fixtures-stack > .fixture-separator {
+.night-session-canvas .fixtures-stack > .fixture-separator {
   display: none;
 }
 
-.template-canvas.night-session-canvas .mark-fallback {
+.night-session-canvas .mark-fallback {
   width: 42%;
   height: 42%;
   border: 2px solid currentColor;
   opacity: 0.14;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .team-mark[data-has-crest="true"]
   .mark-fallback,
-.template-canvas.night-session-canvas
+.night-session-canvas
   .team-mark:has(img:not([hidden]))
   .mark-fallback {
   display: none;
 }
 
 /* —— Footer —— */
-.template-canvas.night-session-canvas .asset-footer {
+.night-session-canvas .asset-footer {
   flex: 0 0 var(--zone-footer);
   min-height: var(--zone-footer);
   max-height: var(--zone-footer);
@@ -631,13 +631,13 @@
   gap: 0;
 }
 
-.template-canvas.night-session-canvas .footer-rule {
+.night-session-canvas .footer-rule {
   height: 1px;
   margin-bottom: 10px;
   background: rgb(255 255 255 / 10%);
 }
 
-.template-canvas.night-session-canvas .sponsor-strip {
+.night-session-canvas .sponsor-strip {
   min-height: 88px;
   display: flex;
   align-items: center;
@@ -646,7 +646,7 @@
   padding: var(--space-3) var(--space-4);
 }
 
-.template-canvas.night-session-canvas .sponsor-slot {
+.night-session-canvas .sponsor-slot {
   flex: 0 1 auto;
   min-height: 64px;
   display: flex;
@@ -656,18 +656,18 @@
   color: rgb(244 243 241 / 42%);
 }
 
-.template-canvas.night-session-canvas .sponsor-symbol {
+.night-session-canvas .sponsor-symbol {
   width: 56px;
   height: 40px;
   background: rgb(255 255 255 / 6%);
   opacity: 0.6;
 }
 
-.template-canvas.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
+.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
   display: none;
 }
 
-.template-canvas.night-session-canvas .team-name {
+.night-session-canvas .team-name {
   overflow-wrap: anywhere;
   text-wrap: balance;
 }

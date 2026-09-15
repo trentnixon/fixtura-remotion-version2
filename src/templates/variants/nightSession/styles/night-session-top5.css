@@ -1,6 +1,6 @@
 /* Night Session — Top 5 (batting & bowling) */
 
-.template-canvas.night-session-canvas {
+.night-session-canvas {
   --frame-height: 1350px;
   --zone-pad: 12px;
   --zone-header: 148px;
@@ -41,23 +41,23 @@
   font-family: var(--font-body);
 }
 
-.template-canvas.night-session-canvas,
-.template-canvas.night-session-canvas * {
+.night-session-canvas,
+.night-session-canvas * {
   box-sizing: border-box;
 }
 
-.template-canvas.night-session-canvas h1,
-.template-canvas.night-session-canvas h2,
-.template-canvas.night-session-canvas h3,
-.template-canvas.night-session-canvas p {
+.night-session-canvas h1,
+.night-session-canvas h2,
+.night-session-canvas h3,
+.night-session-canvas p {
   margin: 0;
 }
 
-.template-canvas.night-session-canvas .fixture-palette {
+.night-session-canvas .fixture-palette {
   display: none;
 }
 
-.template-canvas.night-session-canvas .sr-only {
+.night-session-canvas .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -70,7 +70,7 @@
 }
 
 /* —— Header —— */
-.template-canvas.night-session-canvas .ns-header {
+.night-session-canvas .ns-header {
   flex: 0 0 var(--zone-header);
   min-height: var(--zone-header);
   max-height: var(--zone-header);
@@ -81,7 +81,7 @@
   position: relative;
 }
 
-.template-canvas.night-session-canvas .ns-header__mark {
+.night-session-canvas .ns-header__mark {
   position: absolute;
   top: calc(var(--zone-pad) + 4px);
   right: var(--content-inset);
@@ -92,7 +92,7 @@
   z-index: 2;
 }
 
-.template-canvas.night-session-canvas .ns-header__mark img {
+.night-session-canvas .ns-header__mark img {
   position: absolute;
   inset: 4px;
   width: calc(100% - 8px);
@@ -100,7 +100,7 @@
   object-fit: contain;
 }
 
-.template-canvas.night-session-canvas .ns-header__lockup {
+.night-session-canvas .ns-header__lockup {
   position: relative;
   z-index: 1;
   display: flex;
@@ -113,7 +113,7 @@
   text-align: center;
 }
 
-.template-canvas.night-session-canvas .header-eyebrow {
+.night-session-canvas .header-eyebrow {
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 500;
@@ -123,7 +123,7 @@
   color: rgb(244 243 241 / 52%);
 }
 
-.template-canvas.night-session-canvas .header-title {
+.night-session-canvas .header-title {
   font-family: var(--font-display);
   font-size: 56px;
   font-weight: 600;
@@ -133,14 +133,14 @@
   color: var(--header-text, #fff);
 }
 
-.template-canvas.night-session-canvas .ns-header__accent {
+.night-session-canvas .ns-header__accent {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
 }
 
-.template-canvas.night-session-canvas .ns-accent-wedge {
+.night-session-canvas .ns-accent-wedge {
   position: absolute;
   top: 18px;
   left: calc(50% - 120px);
@@ -155,7 +155,7 @@
   opacity: 0.75;
 }
 
-.template-canvas.night-session-canvas .ns-accent-lines {
+.night-session-canvas .ns-accent-lines {
   position: absolute;
   top: 22px;
   right: calc(var(--content-inset) + 84px);
@@ -172,7 +172,7 @@
 }
 
 /* —— Ledger —— */
-.template-canvas.night-session-canvas .leaderboard-ledger {
+.night-session-canvas .leaderboard-ledger {
   min-height: 0;
   flex: 1 1 var(--zone-content);
   max-height: var(--zone-content);
@@ -184,7 +184,7 @@
   overflow: hidden;
 }
 
-.template-canvas.night-session-canvas .leaderboard-stack {
+.night-session-canvas .leaderboard-stack {
   width: 100%;
   flex: 0 1 auto;
   max-height: 100%;
@@ -194,7 +194,7 @@
   overflow: hidden;
 }
 
-.template-canvas.night-session-canvas .leaderboard-category {
+.night-session-canvas .leaderboard-category {
   position: relative;
   min-width: 0;
   padding: 9px 14px;
@@ -220,7 +220,7 @@
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
 }
 
-.template-canvas.night-session-canvas .leaderboard-category-label {
+.night-session-canvas .leaderboard-category-label {
   font-family: var(--font-body);
   font-size: var(--type-leaderboard-category);
   font-weight: 600;
@@ -230,7 +230,7 @@
   color: rgb(244 243 241 / 58%);
 }
 
-.template-canvas.night-session-canvas .leaderboard-category-value {
+.night-session-canvas .leaderboard-category-value {
   min-width: 0;
   flex: 1 1 auto;
   overflow: hidden;
@@ -245,11 +245,11 @@
   color: var(--ns-band-team, rgb(255 255 255 / 92%));
 }
 
-.template-canvas.night-session-canvas .leaderboard-category[data-empty="true"] {
+.night-session-canvas .leaderboard-category[data-empty="true"] {
   display: none;
 }
 
-.template-canvas.night-session-canvas .leaderboard-rows {
+.night-session-canvas .leaderboard-rows {
   display: grid;
   grid-template-columns:
     var(--leader-player-row-height)
@@ -261,7 +261,7 @@
   min-width: 0;
 }
 
-.template-canvas.night-session-canvas .leader-entry.leader-unit {
+.night-session-canvas .leader-entry.leader-unit {
   grid-column: 1 / -1;
   min-width: 0;
   position: relative;
@@ -271,7 +271,8 @@
   box-shadow: none;
 }
 
-.template-canvas.night-session-canvas
+/* Remotion anim wrapper — rank bridge + player row (no subgrid; wrapper breaks subgrid) */
+.night-session-canvas
   .leader-entry.leader-unit
   > .animated-container {
   display: grid;
@@ -285,12 +286,18 @@
   min-width: 0;
 }
 
-.template-canvas.night-session-canvas .leader-entry[data-empty="true"] {
+.night-session-canvas
+  .leader-entry.leader-unit
+  > .animated-container.container-full {
+  width: 100%;
+}
+
+.night-session-canvas .leader-entry[data-empty="true"] {
   display: none;
 }
 
 /* Rank tag — schedule bridge + lockup (Upcoming motif) */
-.template-canvas.night-session-canvas .leader-rank-bridge.schedule-bridge {
+.night-session-canvas .leader-rank-bridge.schedule-bridge {
   grid-column: 1 / -1;
   position: relative;
   z-index: 10;
@@ -305,7 +312,7 @@
   pointer-events: none;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .leader-rank-bridge
   .schedule-bridge__rule {
   position: absolute;
@@ -317,7 +324,7 @@
   z-index: 0;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .leader-rank-bridge
   .schedule-bridge__rule::after {
   content: "";
@@ -330,7 +337,7 @@
   background: var(--club-primary);
 }
 
-.template-canvas.night-session-canvas .leader-rank-tag.schedule-lockup {
+.night-session-canvas .leader-rank-tag.schedule-lockup {
   position: relative;
   z-index: 11;
   pointer-events: auto;
@@ -352,7 +359,7 @@
   color: var(--club-primary);
 }
 
-.template-canvas.night-session-canvas .leader-row {
+.night-session-canvas .leader-row {
   grid-column: 1 / -1;
   position: relative;
   z-index: 0;
@@ -373,7 +380,8 @@
   box-shadow: none !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+/* Beat performances-top5 stylesheet bleed (same .leaderboard-rows selectors) */
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows
   .leader-entry
   .leader-row {
@@ -385,7 +393,7 @@
   box-shadow: none !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows
   .leader-entry
   .leader-name {
@@ -394,7 +402,7 @@
   font-weight: 600;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows
   .leader-entry
   .leader-rank {
@@ -402,7 +410,7 @@
   font-weight: 700;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows
   .leader-entry
   .leader-figure {
@@ -410,7 +418,7 @@
   font-weight: 700;
 }
 
-.template-canvas.night-session-canvas .leader-row .leader-cell {
+.night-session-canvas .leader-row .leader-cell {
   position: relative;
   z-index: 0;
   min-height: 100%;
@@ -423,12 +431,12 @@
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
 }
 
-.template-canvas.night-session-canvas .leader-row .leader-figure {
+.night-session-canvas .leader-row .leader-figure {
   position: relative;
   z-index: 0;
 }
 
-.template-canvas.night-session-canvas .leader-mark.leader-cell {
+.night-session-canvas .leader-mark.leader-cell {
   position: relative;
   width: 100%;
   min-height: 0;
@@ -440,7 +448,7 @@
   align-self: stretch;
 }
 
-.template-canvas.night-session-canvas .leader-mark.leader-cell img {
+.night-session-canvas .leader-mark.leader-cell img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -449,27 +457,27 @@
   object-position: center;
 }
 
-.template-canvas.night-session-canvas .leader-mark.leader-cell .mark-fallback {
+.night-session-canvas .leader-mark.leader-cell .mark-fallback {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.template-canvas.night-session-canvas
+.night-session-canvas
   .leader-mark[data-has-crest="true"]
   .mark-fallback,
-.template-canvas.night-session-canvas
+.night-session-canvas
   .leader-mark:has(img:not([hidden]))
   .mark-fallback {
   display: none;
 }
 
-.template-canvas.night-session-canvas .leader-team-label {
+.night-session-canvas .leader-team-label {
   display: none;
 }
 
-.template-canvas.night-session-canvas .leader-copy.leader-cell {
+.night-session-canvas .leader-copy.leader-cell {
   width: 100%;
   min-width: 0;
   flex-direction: column;
@@ -479,7 +487,7 @@
   justify-self: stretch;
 }
 
-.template-canvas.night-session-canvas .leader-copy .leader-name {
+.night-session-canvas .leader-copy .leader-name {
   width: 100%;
   overflow: hidden;
   font-family: var(--font-display);
@@ -493,7 +501,7 @@
   overflow-wrap: anywhere;
 }
 
-.template-canvas.night-session-canvas .leader-copy .leader-team {
+.night-session-canvas .leader-copy .leader-team {
   width: 100%;
   overflow: hidden;
   font-size: var(--type-leader-team);
@@ -504,7 +512,7 @@
   color: rgb(244 243 241 / 58%);
 }
 
-.template-canvas.night-session-canvas .leader-row .leader-figure {
+.night-session-canvas .leader-row .leader-figure {
   align-self: center;
   justify-self: end;
   min-width: 0;
@@ -527,11 +535,12 @@
   color: var(--header-text, rgb(255 255 255 / 92%));
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+/* #1 — same dimensions as other rows; only opacity differs (see shared + token) */
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows
   > .leader-entry:first-of-type:not([data-empty="true"])
   > .animated-container,
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows
   > .leader-entry:first-of-type:not([data-empty="true"]):not(
     :has(> .animated-container)
@@ -539,14 +548,14 @@
   opacity: var(--leader-rank-one-opacity);
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leader-entry:first-of-type
   :is(.leader-rank, .leader-copy, .leader-stats) {
   opacity: 1;
 }
 
-.template-canvas.night-session-canvas .leader-balls,
-.template-canvas.night-session-canvas .leader-overs {
+.night-session-canvas .leader-balls,
+.night-session-canvas .leader-overs {
   margin-left: 4px;
   font-family: var(--font-body);
   font-size: var(--type-leader-suffix);
@@ -555,16 +564,16 @@
   color: rgb(244 243 241 / 62%);
 }
 
-.template-canvas.night-session-canvas .leader-figure-label {
+.night-session-canvas .leader-figure-label {
   display: none;
 }
 
-.template-canvas.night-session-canvas .leader-crease {
+.night-session-canvas .leader-crease {
   display: none !important;
 }
 
 /* —— Footer —— */
-.template-canvas.night-session-canvas .asset-footer {
+.night-session-canvas .asset-footer {
   flex: 0 0 var(--zone-footer);
   min-height: var(--zone-footer);
   max-height: var(--zone-footer);
@@ -575,13 +584,13 @@
   gap: 0;
 }
 
-.template-canvas.night-session-canvas .footer-rule {
+.night-session-canvas .footer-rule {
   height: 1px;
   margin-bottom: 10px;
   background: rgb(255 255 255 / 10%);
 }
 
-.template-canvas.night-session-canvas .sponsor-strip {
+.night-session-canvas .sponsor-strip {
   min-height: 88px;
   display: flex;
   align-items: center;
@@ -590,7 +599,7 @@
   padding: var(--space-3) var(--space-4);
 }
 
-.template-canvas.night-session-canvas .sponsor-slot {
+.night-session-canvas .sponsor-slot {
   flex: 0 1 auto;
   min-height: 64px;
   display: flex;
@@ -600,13 +609,13 @@
   color: rgb(244 243 241 / 42%);
 }
 
-.template-canvas.night-session-canvas .sponsor-symbol {
+.night-session-canvas .sponsor-symbol {
   width: 56px;
   height: 40px;
   background: rgb(255 255 255 / 6%);
   opacity: 0.6;
 }
 
-.template-canvas.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
+.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
   display: none;
 }

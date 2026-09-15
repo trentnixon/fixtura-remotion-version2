@@ -11,6 +11,7 @@ import {
   broadcastpro as ladderBroadcastPro,
   broadcastprorounded as ladderBroadcastProRounded,
   scoreline as ladderScoreline,
+  nightsession as ladderNightSession,
 } from "./ladder";
 import {
   basic as upcomingBasic,
@@ -24,6 +25,7 @@ import {
   broadcastpro as upcomingBroadcastPro,
   broadcastprorounded as upcomingBroadcastProRounded,
   scoreline as upcomingScoreline,
+  nightsession as upcomingNightSession,
 } from "./upcoming";
 import {
   basic as top5Basic,
@@ -37,6 +39,7 @@ import {
   broadcastpro as top5BroadcastPro,
   broadcastprorounded as top5BroadcastProRounded,
   scoreline as top5Scoreline,
+  nightsession as top5NightSession,
 } from "./top5";
 import {
   basic as resultsBasic,
@@ -64,6 +67,7 @@ import {
   broadcastpro as resultSingleBroadcastPro,
   broadcastprorounded as resultSingleBroadcastProRounded,
   scoreline as resultSingleScoreline,
+  nightsession as resultSingleNightSession,
 } from "./resultSingle";
 
 import {
@@ -129,6 +133,7 @@ export const CricketLadder = {
   broadcastpro: ladderBroadcastPro,
   broadcastprorounded: ladderBroadcastProRounded,
   scoreline: ladderScoreline,
+  nightsession: ladderNightSession,
 };
 
 export const CricketTop5 = {
@@ -144,6 +149,7 @@ export const CricketTop5 = {
   broadcastpro: top5BroadcastPro,
   broadcastprorounded: top5BroadcastProRounded,
   scoreline: top5Scoreline,
+  nightsession: top5NightSession,
 };
 
 export const CricketResults = {
@@ -159,6 +165,7 @@ export const CricketResults = {
   broadcastpro: resultsBroadcastPro,
   broadcastprorounded: resultsBroadcastProRounded,
   scoreline: resultsScoreline,
+  nightsession: PlaceholderComposition,
 };
 
 export const CricketUpcoming = {
@@ -174,6 +181,7 @@ export const CricketUpcoming = {
   broadcastpro: upcomingBroadcastPro,
   broadcastprorounded: upcomingBroadcastProRounded,
   scoreline: upcomingScoreline,
+  nightsession: upcomingNightSession,
 };
 
 export const CricketResultSingle = {
@@ -189,6 +197,7 @@ export const CricketResultSingle = {
   broadcastpro: resultSingleBroadcastPro,
   broadcastprorounded: resultSingleBroadcastProRounded,
   scoreline: resultSingleScoreline,
+  nightsession: resultSingleNightSession,
 };
 
 // Add CricketRoster export to match compositionId in test data
@@ -204,6 +213,7 @@ export const CricketRoster = {
   broadcastpro: rosterBroadcastPro,
   broadcastprorounded: rosterBroadcastProRounded,
   scoreline: rosterScoreline,
+  nightsession: PlaceholderComposition,
 };
 
 // Add CricketPerformances export for batting and bowling performances
@@ -220,6 +230,7 @@ export const CricketPerformances = {
   broadcastpro: performancesBroadcastPro,
   broadcastprorounded: performancesBroadcastProRounded,
   scoreline: performancesScoreline,
+  nightsession: PlaceholderComposition,
 };
 
 // Add CricketTeamOfTheWeek export for Team of the Week
@@ -236,6 +247,7 @@ export const CricketTeamOfTheWeek = {
   broadcastpro: teamOfTheWeekBroadcastPro,
   broadcastprorounded: teamOfTheWeekBroadcastProRounded,
   scoreline: teamOfTheWeekScoreline,
+  nightsession: PlaceholderComposition,
 };
 
 export const singleGameResult = {

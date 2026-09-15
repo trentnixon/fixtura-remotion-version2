@@ -10,6 +10,7 @@ import { mudgeeraba as MudgeerabaLadder } from "./mudgeeraba";
 import { BroadcastPro as BroadcastProLadder } from "./broadcastPro";
 import { BroadcastProRounded as BroadcastProRoundedLadder } from "./broadcastProRounded";
 import { scoreline as ScorelineLadder } from "./scoreline";
+import { nightSession as NightSessionLadder } from "./nightSession";
 // Import other template implementations
 
 // Export all template implementations
@@ -24,3 +25,4 @@ export { MudgeerabaLadder as mudgeeraba };
 export { BroadcastProLadder as broadcastpro };
 export { BroadcastProRoundedLadder as broadcastprorounded };
 export { ScorelineLadder as scoreline };
+export { NightSessionLadder as nightsession };

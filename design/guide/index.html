@@ -569,13 +569,30 @@ Build from the agreed Fixtura design brief we just completed. Follow design/.doc
           <p>Copy to start an implement session:</p>
           <pre class="prompt">
 Implement Remotion handoff for design/variants/{slug}/cricket/{asset}.html
-→ Registry: {RegistryId} (routing key: {slug})
-→ Composition: src/compositions/cricket/{composition}/
-→ Theme: src/templates/variants/{VariantFolder}/theme/composition/{asset}.ts
-→ Fixture: {fixture path from routes.json}
-Overlays only — match approved design HTML in main content; no backgrounds or design-site chrome.
-Follow src/templates/variants/broadcastPro/ structure. Update routes.json + asset-index.md when theme path is known.
-Read design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.md, and design/design-Reference-docs/tailwind-css-remotion.md for full steps.</pre
+
+Prerequisites: design prototype approved; `npm run design:verify -- {slug} cricket {asset}` passes.
+
+Targets:
+→ Design route: {slug}/cricket/{asset}
+→ Registry ID: {registryId} (Remotion routing key: lowercased registry ID, e.g. NightSession → nightsession — not the URL slug)
+→ Variant folder: src/templates/variants/{remotionVariantFolder}/
+→ Composition: src/compositions/{remotion.composition}/
+→ Theme surface: {remotion.theme}  (exact path from routes.json)
+→ Fixture: {fixture}
+→ Population: design/_shared/populate/cricket/{population}.js
+→ Bind map: design/_shared/hydration/{slug}/cricket/{asset}.bind.json
+
+Overlays only — reimplement approved markup inside `.design-social-canvas` / `.template-canvas` main content. No Remotion backgrounds. No design-site chrome.
+
+Template shell: follow src/templates/variants/broadcastPro/. Reconcile CSS deliberately (ADR 0003).
+
+Night Session: ns-header, .night-session-canvas, gap-2 bordered cells, grade/role rails, footer-rule (no creases), initNightSessionAsset, Teko + Heebo.
+
+Wire lowercase routing key in src/compositions/cricket/index.tsx. Update routes.json + asset-index.md when theme paths are known.
+
+Read design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.md, design/design-Reference-docs/tailwind-css-remotion.md
+
+Verify: npm run design:verify -- --handoff {slug} cricket {asset}; Studio 1080×1350 same fixture; four theme modes where supported.</pre
           >
 
           <h3>Definition of done</h3>

@@ -1,0 +1,264 @@
+/* Night Session — Result Single (one match, Results family) */
+
+.night-session-canvas[data-result-single] {
+  --type-score: 96px;
+  --type-result: 34px;
+  --type-team: 26px;
+  --type-player: 30px;
+  --type-figure: 30px;
+  --type-meta: 18px;
+}
+
+/* —— Centered single stack —— */
+.night-session-canvas .results-ledger--single {
+  justify-content: center;
+  padding-top: var(--space-3);
+}
+
+.night-session-canvas .single-result-stack {
+  flex: 0 1 auto;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.night-session-canvas .match-module--single {
+  flex: 0 0 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: visible;
+}
+
+.night-session-canvas
+  .match-module--single.fixture-card.fixture-unit {
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module--single .fixture-unit__rail {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 8px 14px;
+  border: 0;
+  border-bottom: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ns-grade-rail-gradient-mid, color-mix(in srgb, var(--club-primary) 10%, transparent))
+      58%,
+    var(--ns-grade-rail-gradient-end, color-mix(in srgb, var(--club-primary) 32%, transparent))
+      100%
+  );
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+
+.night-session-canvas
+  .match-module--single
+  .fixture-unit__rail::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 28px;
+  height: 12px;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 2px,
+    rgb(255 255 255 / 12%) 2px,
+    rgb(255 255 255 / 12%) 3px
+  );
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.night-session-canvas
+  .match-module--single
+  .fixture-unit__rail[data-empty="true"] {
+  display: none;
+}
+
+.night-session-canvas .match-module--single .fixture-grade-name {
+  display: -webkit-box;
+  overflow: hidden;
+  padding-right: 36px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ns-band-team, rgb(255 255 255 / 92%));
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.night-session-canvas .match-module--single .fixture-unit__frame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  min-width: 0;
+}
+
+/* —— Hero comparison band —— (teams stacked, not side-by-side columns) */
+.night-session-canvas .comparison-band--single {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .comparison-band__spine {
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 14%) 20%,
+    rgb(255 255 255 / 14%) 80%,
+    transparent
+  );
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  background: rgb(8 10 12 / 18%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-mark {
+  width: 96px;
+  height: 96px;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-group {
+  gap: 14px;
+}
+
+/* Inner layout: same as Results comparison band (crest + score row, name below) */
+.night-session-canvas
+  .comparison-band--single
+  .team-primary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Both teams: crest left, score block toward the right (no away mirror) */
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .team-primary,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .team-primary {
+  flex-direction: row;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .team-score,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .team-score {
+  text-align: left;
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-score {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 4px;
+  align-content: center;
+  min-width: 0;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .score,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .overs,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .score,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .overs {
+  text-align: left;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .team-identity {
+  flex-direction: row;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .team-name {
+  text-align: left;
+}
+
+.night-session-canvas
+  .match-module--single
+  .performance-area {
+  padding: var(--space-2) 2px;
+  gap: var(--space-3);
+}
+
+.night-session-canvas
+  .match-module--single
+  .performance-row
+  .performance-player,
+.night-session-canvas
+  .match-module--single
+  .performance-row
+  .performance-figure {
+  min-height: 48px;
+  padding: 10px 14px;
+  font-size: 30px;
+  line-height: 1.08;
+}
+
+.night-session-canvas
+  .match-module--single
+  .match-context {
+  margin-top: var(--space-1);
+}
+
+.night-session-canvas[data-result-single] .footer-crease {
+  display: none;
+}

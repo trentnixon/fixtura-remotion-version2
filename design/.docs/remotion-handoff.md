@@ -211,17 +211,57 @@ Do not ship to production until **Results** is approved end-to-end in Studio.
 
 ## Agent one-liner
 
-Copy into an implement session:
+Copy into an implement session (fill placeholders from **`design/_shared/routes.json`**, the asset **HTML header comment**, and **`design/.docs/asset-index.md`**):
 
 ```text
 Implement Remotion handoff for design/variants/{slug}/cricket/{asset}.html
-→ Registry: {RegistryId} (routing key: lowercased Registry ID, e.g. BroadcastPro → broadcastpro)
-→ Composition: src/compositions/cricket/{composition}/
-→ Theme: src/templates/variants/{VariantFolder}/theme/composition/{asset}.ts
-→ Fixture: {fixture path from routes.json}
-Overlays only — match approved design HTML in main content; no backgrounds or design-site chrome.
-Follow src/templates/variants/broadcastPro/ structure. Update routes.json + asset-index.md when theme path is known.
-Read design/.docs/remotion-handoff.md for full steps.
+
+Prerequisites: design prototype approved; `npm run design:verify -- {slug} cricket {asset}` passes.
+
+Targets:
+→ Design route: {slug}/cricket/{asset}
+→ Registry ID: {registryId} (Remotion routing key: lowercased registry ID, e.g. NightSession → nightsession — not the URL slug {slug})
+→ Variant folder: src/templates/variants/{remotionVariantFolder}/
+→ Composition: src/compositions/{remotion.composition}/  (from routes.json, e.g. cricket/teamOfTheWeek)
+→ Theme surface: {remotion.theme}  (exact path from routes.json; filename is camelCase, not the asset slug)
+→ Fixture: {fixture}
+→ Population: design/_shared/populate/cricket/{population}.js
+→ Bind map: design/_shared/hydration/{slug}/cricket/{asset}.bind.json
+
+Overlays only — reimplement approved markup inside `.design-social-canvas` / `.template-canvas` main content. No Remotion backgrounds. No design-site chrome (sidebar, tabs, handoff footer, preview toggles).
+
+Template shell: follow `src/templates/variants/broadcastPro/` (registry, theme tokens, composition displays, `componentStyles`). Reconcile CSS deliberately (ADR 0003) — copying design CSS alone is not parity.
+
+Night Session ({slug} = night-session): match approved HTML — `ns-header`, `.night-session-canvas`, `data-*` asset root, bordered `gap-2` cells, grade/role rails, `footer-rule` (no creases), shared layers (`night-session-shared.css`, asset CSS, `night-session-broadcast.css`). Design bootstrap: `initNightSessionAsset`; fonts: `fonts.json` slug `night-session` (Teko + Heebo). Exercise night-session mode/backdrop controls where relevant.
+
+Scoreline ({slug} = scoreline): crease motif grammar where the prototype uses Scoreline chrome.
+
+Wire the lowercase routing key in each relevant `Cricket*` map in `src/compositions/cricket/index.tsx`. Update `routes.json` + `asset-index.md` when theme paths are no longer TBD.
+
+Read: design/.docs/remotion-handoff.md, design/design-Reference-docs/theme-modes.md, design/design-Reference-docs/tailwind-css-remotion.md
+
+Verify: `npm run design:verify -- --handoff {slug} cricket {asset}`; Remotion Studio at 1080×1350 with the same fixture; all four theme modes where the variant supports them; long names, missing crests, sparse/dense fixtures as applicable.
+```
+
+**Example — Night Session Team of the Week:**
+
+```text
+Implement Remotion handoff for design/variants/night-session/cricket/team-of-the-week.html
+
+Prerequisites: `npm run design:verify -- night-session cricket team-of-the-week` passes.
+
+Targets:
+→ Registry ID: NightSession (routing key: nightsession)
+→ Variant folder: src/templates/variants/nightSession/
+→ Composition: src/compositions/cricket/teamOfTheWeek/
+→ Theme surface: src/templates/variants/nightSession/theme/composition/teamOfTheWeek.ts
+→ Fixture: testData/samples/Cricket/Cricket_TeamOfTheWeek.json
+→ Population: design/_shared/populate/cricket/team-of-the-week.js
+→ Bind map: design/_shared/hydration/night-session/cricket/team-of-the-week.bind.json
+
+Overlays only. Match two-column TOTW layout (role rail full width per pick, logo cover squares, bordered copy/stats cells, gap-12 column split). No creases; `footer-rule` sponsor strip.
+
+Read design/.docs/remotion-handoff.md, theme-modes.md, tailwind-css-remotion.md. Verify with `--handoff` + Studio comparison.
 ```
 
 **Example — Scoreline Results:**
@@ -233,7 +273,7 @@ Implement Remotion handoff for design/variants/scoreline/cricket/results.html
 → Theme: src/templates/variants/scoreline/theme/composition/results.ts
 → Fixture: testData/samples/Cricket/Cricket_Results.json
 Overlays only. Follow scoreline-crease-motif-grammar.md. Update routes.json + asset-index.md.
-Read design/.docs/remotion-handoff.md.
+Read design/.docs/remotion-handoff.md, theme-modes.md, tailwind-css-remotion.md.
 ```
 
 ---

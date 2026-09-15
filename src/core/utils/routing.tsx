@@ -114,9 +114,14 @@ const getTemplateComponent = (
 
   // Proceed assuming it's a Record<string, React.ComponentType<unknown>>
 
+  const normalizedTemplateId = templateId.toLowerCase().replace(/-/g, "");
   const TemplateComponent =
     compositionModule[templateId] ||
-    compositionModule[templateId.toLowerCase()];
+    compositionModule[templateId.toLowerCase()] ||
+    compositionModule[normalizedTemplateId] ||
+    (normalizedTemplateId === "nightsession"
+      ? compositionModule.nightSession
+      : undefined);
 
   console.log(
     "[getTemplateComponent] TemplateComponent found:",
@@ -132,14 +137,30 @@ const getTemplateComponent = (
  * Routes to the appropriate composition based on template, sport, and composition ID
  */
 export const RouteToComposition = (): React.ReactElement => {
-  const { data } = useVideoDataContext();
-  const { videoMeta } = data;
-  const { metadata, appearance } = videoMeta.video;
+  const { data, metadata, appearance, club } = useVideoDataContext();
+  const videoMeta = data?.videoMeta;
+  if (!videoMeta?.video) {
+    return (
+      <PlaceholderComponent
+        title={metadata?.title}
+        compositionId={metadata?.compositionId ?? "Unknown"}
+        templateId={appearance?.template?.toLowerCase() || "basic"}
+        sport={(club?.sport?.toLowerCase() || "cricket") as Sport}
+        reason="Missing videoMeta"
+      />
+    );
+  }
+  const videoMetadata = videoMeta.video.metadata;
+  const videoAppearance = videoMeta.video.appearance;
+  const resolvedMetadata = metadata ?? videoMetadata;
+  const resolvedAppearance = appearance ?? videoAppearance;
 
-  const compositionId = normalizeCompositionId(metadata.compositionId);
-  const templateId = appearance.template?.toLowerCase() || "basic";
+  const compositionId = normalizeCompositionId(
+    resolvedMetadata.compositionId,
+  );
+  const templateId = resolvedAppearance.template?.toLowerCase() || "basic";
   const sport = (videoMeta.club?.sport?.toLowerCase() || "cricket") as Sport;
-  const title = metadata.title;
+  const title = resolvedMetadata.title;
 
   try {
     // Get the sport module

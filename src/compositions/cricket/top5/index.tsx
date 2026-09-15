@@ -10,6 +10,7 @@ import { mudgeeraba as mudgeerabaTop5 } from "./mudgeeraba";
 import { BroadcastPro as BroadcastProTop5 } from "./broadcastPro";
 import { BroadcastProRounded as BroadcastProRoundedTop5 } from "./broadcastProRounded";
 import { scoreline as ScorelineTop5 } from "./scoreline";
+import { nightSession as NightSessionTop5 } from "./nightSession";
 // Import other template implementations
 
 // Export all template implementations
@@ -24,3 +25,5 @@ export { mudgeerabaTop5 as mudgeeraba };
 export { BroadcastProTop5 as broadcastpro };
 export { BroadcastProRoundedTop5 as broadcastprorounded };
 export { ScorelineTop5 as scoreline };
+export { NightSessionTop5 as nightSession };
+export { NightSessionTop5 as nightsession };
