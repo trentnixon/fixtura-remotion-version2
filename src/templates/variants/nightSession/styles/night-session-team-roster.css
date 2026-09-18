@@ -523,10 +523,7 @@
   font-weight: 500;
   font-style: italic;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
-  ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
 }
 
 .night-session-canvas[data-roster] .roster-cell {
@@ -553,10 +550,7 @@
   font-variant-numeric: tabular-nums lining-nums;
   color: var(
     --ns-roster-index-text,
-    var(
-      --container-text-accent,
-      var(--container-text, rgb(8 11 13 / 96%))
-    )
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   );
 }
 

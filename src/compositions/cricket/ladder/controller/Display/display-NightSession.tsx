@@ -50,74 +50,74 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
             }}
           >
             <div className="ladder-stack">
-            <section className="ladder-table ladder-unit">
-              <AnimatedContainer
-                type="full"
-                size="auto"
-                className="w-full min-w-0"
-                backgroundColor="none"
-                animation={innerAnimation.containerIn}
-                animationDelay={enterTiming.innerDelay(0, "grade")}
-                exitAnimation={innerAnimation.containerOut}
-                exitFrame={animationOutFrame}
-              >
-                <header
-                  className="ladder-unit__rail ladder-grade"
-                  data-empty={gradeLabel ? "false" : "true"}
-                >
-                  <h2 className="ladder-grade-name">{gradeLabel}</h2>
-                </header>
-              </AnimatedContainer>
-
-              <div className="ladder-unit__frame">
+              <section className="ladder-table ladder-unit">
                 <AnimatedContainer
                   type="full"
                   size="auto"
                   className="w-full min-w-0"
                   backgroundColor="none"
                   animation={innerAnimation.containerIn}
-                  animationDelay={enterTiming.innerDelay(0, "columns")}
+                  animationDelay={enterTiming.innerDelay(0, "grade")}
                   exitAnimation={innerAnimation.containerOut}
                   exitFrame={animationOutFrame}
                 >
-                  <div className="ladder-columns" aria-hidden>
-                    <span>#</span>
-                    <span />
-                    <span>Team</span>
-                    <span className="ladder-columns__stats">
-                      <span>P</span>
-                      <span>W</span>
-                      <span>L</span>
-                      <span>B</span>
-                      <span>Pts</span>
-                    </span>
-                  </div>
+                  <header
+                    className="ladder-unit__rail ladder-grade"
+                    data-empty={gradeLabel ? "false" : "true"}
+                  >
+                    <h2 className="ladder-grade-name">{gradeLabel}</h2>
+                  </header>
                 </AnimatedContainer>
 
-                <div
-                  className="ladder-rows"
-                  data-ladder-rows
-                  data-density={density}
-                  data-creases="false"
-                >
-                  {League.map((team, index) => (
-                    <RowNightSession
-                      key={`${team.position}-${index}`}
-                      team={team}
-                      index={index}
-                      totalTeams={League.length}
-                      isBiasTeam={resolveScorelineLadderBiasTeam(
-                        team.teamName,
-                        bias,
-                        club.name,
-                      )}
-                      LadderRowHeight={0}
-                    />
-                  ))}
+                <div className="ladder-unit__frame">
+                  <AnimatedContainer
+                    type="full"
+                    size="auto"
+                    className="w-full min-w-0"
+                    backgroundColor="none"
+                    animation={innerAnimation.containerIn}
+                    animationDelay={enterTiming.innerDelay(0, "columns")}
+                    exitAnimation={innerAnimation.containerOut}
+                    exitFrame={animationOutFrame}
+                  >
+                    <div className="ladder-columns" aria-hidden>
+                      <span>#</span>
+                      <span />
+                      <span>Team</span>
+                      <span className="ladder-columns__stats">
+                        <span>P</span>
+                        <span>W</span>
+                        <span>L</span>
+                        <span>B</span>
+                        <span>Pts</span>
+                      </span>
+                    </div>
+                  </AnimatedContainer>
+
+                  <div
+                    className="ladder-rows"
+                    data-ladder-rows
+                    data-density={density}
+                    data-creases="false"
+                  >
+                    {League.map((team, index) => (
+                      <RowNightSession
+                        key={`${team.position}-${index}`}
+                        team={team}
+                        index={index}
+                        totalTeams={League.length}
+                        isBiasTeam={resolveScorelineLadderBiasTeam(
+                          team.teamName,
+                          bias,
+                          club.name,
+                        )}
+                        LadderRowHeight={0}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
+              </section>
+            </div>
           </main>
         </NightSessionEnterTimingProvider>
       </NightSessionAnimatedShell>

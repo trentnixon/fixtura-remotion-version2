@@ -279,9 +279,7 @@
   border-color: var(--ns-performance-border, rgb(255 255 255 / 10%));
 }
 
-.night-session-canvas
-  .comparison-band--single
-  .comparison-band__spine {
+.night-session-canvas .comparison-band--single .comparison-band__spine {
   background: linear-gradient(
     90deg,
     transparent,
@@ -309,9 +307,7 @@
   );
 }
 
-.night-session-canvas
-  .match-module--single
-  .fixture-unit__rail::after {
+.night-session-canvas .match-module--single .fixture-unit__rail::after {
   background: repeating-linear-gradient(
     -55deg,
     transparent,
@@ -378,10 +374,7 @@
   .match-module--single
   .performance-row
   .performance-figure,
-.night-session-canvas
-  .match-module--single
-  .performance-row
-  .performance-balls,
+.night-session-canvas .match-module--single .performance-row .performance-balls,
 .night-session-canvas
   .match-module--single
   .performance-row

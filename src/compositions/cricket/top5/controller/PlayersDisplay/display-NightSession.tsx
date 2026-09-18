@@ -17,7 +17,7 @@ const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
   sponsors,
 }) => {
   const { animations } = useAnimationContext();
-  const { data, video } = useVideoDataContext();
+  const { video } = useVideoDataContext();
   const { layout, componentStyles } = useThemeContext();
   const { heights } = layout;
   const mainContentHeight = getMainContentSectionHeight(heights);

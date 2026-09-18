@@ -207,7 +207,10 @@ export function applyNightSessionMode(canvas, modeId, options = {}) {
     ? "linear-gradient(180deg, rgb(22 25 29) 0%, rgb(10 12 14) 100%)"
     : "linear-gradient(180deg, rgb(243 240 234) 0%, rgb(255 255 255) 100%)";
 
-  canvas.style.setProperty("--ns-team-score-container-bg", teamScoreContainerBg);
+  canvas.style.setProperty(
+    "--ns-team-score-container-bg",
+    teamScoreContainerBg,
+  );
   canvas.style.setProperty("--ns-team-score-container-opacity", "0.85");
   canvas.style.setProperty("--ns-band-bg", teamScoreContainerBg);
   canvas.style.setProperty(

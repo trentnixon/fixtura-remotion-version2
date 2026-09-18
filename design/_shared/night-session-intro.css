@@ -44,9 +44,15 @@
   overflow: hidden;
   background: var(
     --container-surface,
-    var(--match-context-surface, color-mix(in srgb, var(--surface-muted, #0f1418) 88%, transparent))
+    var(
+      --match-context-surface,
+      color-mix(in srgb, var(--surface-muted, #0f1418) 88%, transparent)
+    )
   );
-  box-shadow: var(--container-inset, var(--match-context-inset, var(--highlight-inset-light)));
+  box-shadow: var(
+    --container-inset,
+    var(--match-context-inset, var(--highlight-inset-light))
+  );
   color: var(--container-text, var(--on-surface));
 }
 
@@ -146,7 +152,10 @@
 .template-canvas.night-session-canvas.night-session-intro .header-eyebrow {
   font-size: 18px;
   letter-spacing: 0.22em;
-  color: var(--container-text-muted, var(--match-context-text-muted, rgb(244 243 241 / 52%)));
+  color: var(
+    --container-text-muted,
+    var(--match-context-text-muted, rgb(244 243 241 / 52%))
+  );
 }
 
 .template-canvas.night-session-canvas.night-session-intro .header-title {

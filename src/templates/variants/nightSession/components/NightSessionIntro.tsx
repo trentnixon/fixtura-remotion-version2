@@ -44,60 +44,60 @@ export const NightSessionIntro: React.FC = () => {
             >
               <div className="night-session-intro__panel">
                 <header className="ns-header ns-header--intro">
-                <div className="ns-header__accent" aria-hidden>
-                  <span className="ns-accent-wedge" />
-                  <span className="ns-accent-lines" />
-                </div>
-                <div
-                  className="organisation-mark ns-header__mark"
-                  data-has-crest={hasCrest ? "true" : "false"}
-                >
-                  <span className="mark-fallback" aria-hidden />
-                  {hasCrest ? (
-                    <AnimatedImage
-                      src={logoUrl}
-                      alt=""
-                      width="auto"
-                      height="auto"
-                      fit="contain"
-                      animation={LogoAnimations.introIn}
-                      exitAnimation={LogoAnimations.introOut}
-                      exitFrame={LogoAnimations.introExitFrame}
-                    />
-                  ) : null}
-                </div>
-                <div className="ns-header__lockup">
-                  <AnimatedText
-                    textAlign="center"
-                    type="label"
-                    variant="onContainerCopy"
-                    letterAnimation="word"
-                    animation={TextAnimations.mainTitle}
-                    animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY}
-                    exitAnimation={TextAnimations.introOut}
-                    exitFrame={TextAnimations.introExitFrame}
-                    fontFamily={fontClasses.heading?.family}
-                    className="header-eyebrow"
+                  <div className="ns-header__accent" aria-hidden>
+                    <span className="ns-accent-wedge" />
+                    <span className="ns-accent-lines" />
+                  </div>
+                  <div
+                    className="organisation-mark ns-header__mark"
+                    data-has-crest={hasCrest ? "true" : "false"}
                   >
-                    {eyebrow}
-                  </AnimatedText>
-                  <AnimatedText
-                    textAlign="center"
-                    type="title"
-                    variant="onContainerCopy"
-                    letterAnimation="word"
-                    animation={TextAnimations.mainTitle}
-                    animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY + 4}
-                    exitAnimation={TextAnimations.introOut}
-                    exitFrame={TextAnimations.introExitFrame}
-                    fontFamily={fontClasses.heading?.family}
-                    className="header-title"
-                  >
-                    {title}
-                  </AnimatedText>
-                </div>
-                <p className="sr-only">{club.name}</p>
-              </header>
+                    <span className="mark-fallback" aria-hidden />
+                    {hasCrest ? (
+                      <AnimatedImage
+                        src={logoUrl}
+                        alt=""
+                        width="auto"
+                        height="auto"
+                        fit="contain"
+                        animation={LogoAnimations.introIn}
+                        exitAnimation={LogoAnimations.introOut}
+                        exitFrame={LogoAnimations.introExitFrame}
+                      />
+                    ) : null}
+                  </div>
+                  <div className="ns-header__lockup">
+                    <AnimatedText
+                      textAlign="center"
+                      type="label"
+                      variant="onContainerCopy"
+                      letterAnimation="word"
+                      animation={TextAnimations.mainTitle}
+                      animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY}
+                      exitAnimation={TextAnimations.introOut}
+                      exitFrame={TextAnimations.introExitFrame}
+                      fontFamily={fontClasses.heading?.family}
+                      className="header-eyebrow"
+                    >
+                      {eyebrow}
+                    </AnimatedText>
+                    <AnimatedText
+                      textAlign="center"
+                      type="title"
+                      variant="onContainerCopy"
+                      letterAnimation="word"
+                      animation={TextAnimations.mainTitle}
+                      animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY + 4}
+                      exitAnimation={TextAnimations.introOut}
+                      exitFrame={TextAnimations.introExitFrame}
+                      fontFamily={fontClasses.heading?.family}
+                      className="header-title"
+                    >
+                      {title}
+                    </AnimatedText>
+                  </div>
+                  <p className="sr-only">{club.name}</p>
+                </header>
               </div>
             </NightSessionAnimatedShell>
           </div>

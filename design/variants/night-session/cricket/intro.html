@@ -1,6 +1,7 @@
 <!doctype html>
 <!--
   Handoff: night-session / cricket / intro
+  Canvas root: .template-canvas
   Remotion: NightSessionIntro (template intro sequence)
   Fixture: testData/samples/Cricket/Cricket_Results.json
 -->
@@ -69,39 +70,36 @@
                 <div class="night-session-intro__main">
                   <div class="night-session-intro__animated">
                     <div class="night-session-intro__panel">
-                    <header class="ns-header ns-header--intro">
-                      <div class="ns-header__accent" aria-hidden="true">
-                        <span class="ns-accent-wedge"></span>
-                        <span class="ns-accent-lines"></span>
-                      </div>
-                      <div
-                        class="organisation-mark ns-header__mark"
-                        data-has-crest="true"
-                      >
-                        <span class="mark-fallback" aria-hidden="true"></span>
-                        <img
-                          alt="Club logo"
-                          data-hydrate="club-logo"
-                          data-hydrate-attr="src"
-                          onerror="this.hidden=true"
-                        />
-                      </div>
-                      <div class="ns-header__lockup">
-                        <p
-                          class="header-eyebrow"
-                          data-hydrate="header-eyebrow"
+                      <header class="ns-header ns-header--intro">
+                        <div class="ns-header__accent" aria-hidden="true">
+                          <span class="ns-accent-wedge"></span>
+                          <span class="ns-accent-lines"></span>
+                        </div>
+                        <div
+                          class="organisation-mark ns-header__mark"
+                          data-has-crest="true"
                         >
-                          Grade label
-                        </p>
-                        <h1
-                          class="header-title"
-                          data-hydrate="header-title"
-                        >
-                          Weekend Results
-                        </h1>
-                      </div>
-                      <p class="sr-only" data-hydrate="club-name">Club</p>
-                    </header>
+                          <span class="mark-fallback" aria-hidden="true"></span>
+                          <img
+                            alt="Club logo"
+                            data-hydrate="club-logo"
+                            data-hydrate-attr="src"
+                            onerror="this.hidden=true"
+                          />
+                        </div>
+                        <div class="ns-header__lockup">
+                          <p
+                            class="header-eyebrow"
+                            data-hydrate="header-eyebrow"
+                          >
+                            Grade label
+                          </p>
+                          <h1 class="header-title" data-hydrate="header-title">
+                            Weekend Results
+                          </h1>
+                        </div>
+                        <p class="sr-only" data-hydrate="club-name">Club</p>
+                      </header>
                     </div>
                   </div>
                 </div>

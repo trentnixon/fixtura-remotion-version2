@@ -163,11 +163,17 @@
 }
 
 .night-session-canvas .match-module--single .match-context {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas .match-module--single .match-context .context-left {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas .match-module--single .match-context .context-venue {
@@ -180,11 +186,17 @@
 
 /* Upcoming — fixture meta uses in-container mode copy */
 .night-session-canvas .fixture-unit .match-context {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas .fixture-unit .match-context .context-left {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas .fixture-unit .match-context .context-venue {
@@ -200,7 +212,10 @@
 }
 
 .night-session-canvas .fixture-unit .fixture-time {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas .fixture-unit .fixture-grade-name {
@@ -217,10 +232,7 @@
 }
 
 .night-session-canvas .match-module .team-score-area::before {
-  background: var(
-    --ns-team-score-container-bg,
-    var(--ns-band-bg)
-  ) !important;
+  background: var(--ns-team-score-container-bg, var(--ns-band-bg)) !important;
   opacity: var(--ns-team-score-container-opacity, 0.85) !important;
 }
 
@@ -280,7 +292,10 @@
 
 /* Top 5 — in-container vs open-canvas copy */
 .night-session-canvas[data-leaderboard] .leaderboard-category-label {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas[data-leaderboard] .leaderboard-category-value {
@@ -292,7 +307,10 @@
 }
 
 .night-session-canvas[data-leaderboard] .leader-copy .leader-team {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas[data-leaderboard] .leader-rank-tag.schedule-lockup {
@@ -357,10 +375,7 @@
 
 /* Team roster — mode container panels + copy */
 .night-session-canvas[data-roster] .roster-cell {
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
-  ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
   border-color: var(--ns-performance-border) !important;
   box-shadow: var(--container-inset) !important;
 }
@@ -399,7 +414,10 @@
 }
 
 .night-session-canvas[data-roster] .roster-squad-label {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas[data-roster] .roster-squad-team {
@@ -407,7 +425,10 @@
 }
 
 .night-session-canvas[data-roster] .roster-meta-part {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas[data-roster] .roster-team-name--hero {
@@ -419,17 +440,17 @@
 }
 
 .night-session-canvas[data-roster] .roster-schedule-line {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas[data-roster] .roster-index.roster-cell,
 .night-session-canvas[data-roster] .roster-index {
   color: var(
     --ns-roster-index-text,
-    var(
-      --container-text-accent,
-      var(--container-text, rgb(8 11 13 / 96%))
-    )
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   ) !important;
 }
 
@@ -438,11 +459,11 @@
 }
 
 .night-session-canvas[data-roster] .roster-row[data-empty-roster="true"] {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
   ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
   border-color: var(--ns-performance-border) !important;
 }
 
@@ -514,10 +535,7 @@
 }
 
 .night-session-canvas[data-totw] .totw-row .totw-cell {
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
-  ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
   border-color: var(--ns-performance-border) !important;
   box-shadow: var(--container-inset) !important;
 }
@@ -562,7 +580,10 @@
 .night-session-canvas[data-totw] .totw-team-label,
 .night-session-canvas[data-totw] .totw-subline,
 .night-session-canvas[data-totw] .totw-category-label {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 /* Intro — panel copy uses mode container tokens (not header-text) */
@@ -572,7 +593,10 @@
 }
 
 .night-session-canvas.night-session-intro .header-eyebrow {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .night-session-canvas.night-session-intro .header-title {

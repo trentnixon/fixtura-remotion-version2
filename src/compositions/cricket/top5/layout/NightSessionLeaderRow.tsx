@@ -32,7 +32,6 @@ export const NightSessionLeaderRow: React.FC<{
   animation,
   animationDelay,
   exitAnimation,
-  exitFrame,
   enterTiming,
 }) => {
   const rowExitFrame = enterTiming.rowExitFrameForIndex(rowIndex);

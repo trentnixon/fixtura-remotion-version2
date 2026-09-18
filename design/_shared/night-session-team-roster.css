@@ -174,8 +174,10 @@
   gap: 0;
 }
 
-.template-canvas.night-session-canvas[data-roster] .fixture-unit__rail.roster-grade,
-.template-canvas.night-session-canvas[data-roster] .fixture-unit__rail.roster-lineup__rail {
+.template-canvas.night-session-canvas[data-roster]
+  .fixture-unit__rail.roster-grade,
+.template-canvas.night-session-canvas[data-roster]
+  .fixture-unit__rail.roster-lineup__rail {
   display: flex;
   align-items: center;
   grid-template-columns: unset;
@@ -208,7 +210,8 @@
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-grade.fixture-unit__rail {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-grade.fixture-unit__rail {
   background: linear-gradient(
       90deg,
       transparent 0%,
@@ -239,7 +242,10 @@
   justify-content: center;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-rows .roster-entry .roster-row {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-rows
+  .roster-entry
+  .roster-row {
   grid-template-columns: var(--roster-grid-index) minmax(0, 1fr);
   column-gap: var(--space-2);
   padding: 0;
@@ -262,7 +268,8 @@
   flex-direction: column;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-grade[data-empty="true"] {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-grade[data-empty="true"] {
   display: none;
 }
 
@@ -285,7 +292,8 @@
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
-.template-canvas.night-session-canvas[data-roster] .meta-chip[data-empty="true"] {
+.template-canvas.night-session-canvas[data-roster]
+  .meta-chip[data-empty="true"] {
   display: none;
 }
 
@@ -347,7 +355,9 @@
   object-fit: contain;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-team-mark--hero .mark-fallback {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-team-mark--hero
+  .mark-fallback {
   width: 48%;
   height: 48%;
   border-width: 3px;
@@ -423,7 +433,8 @@
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-schedule-line:first-child {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-schedule-line:first-child {
   font-family: var(--font-display);
   font-size: var(--type-roster-date);
   font-weight: 700;
@@ -483,13 +494,15 @@
   overflow-x: hidden;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-rows[data-density="compact"] {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-rows[data-density="compact"] {
   --roster-row-min-height: 46px;
   --type-roster-player: 30px;
   --type-roster-index: 32px;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-rows[data-density="tight"] {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-rows[data-density="tight"] {
   --roster-row-min-height: 42px;
   --type-roster-player: 27px;
   --type-roster-index: 28px;
@@ -500,7 +513,8 @@
   min-height: var(--roster-row-min-height);
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-entry[data-empty="true"] {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-entry[data-empty="true"] {
   display: none;
 }
 
@@ -515,7 +529,8 @@
   box-shadow: none !important;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-row[data-empty-roster="true"] {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-row[data-empty-roster="true"] {
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   padding: 12px;
@@ -551,10 +566,7 @@
   font-variant-numeric: tabular-nums lining-nums;
   color: var(
     --ns-roster-index-text,
-    var(
-      --container-text-accent,
-      var(--container-text, rgb(8 11 13 / 96%))
-    )
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   );
 }
 

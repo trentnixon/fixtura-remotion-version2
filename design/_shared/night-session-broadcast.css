@@ -182,14 +182,20 @@
 }
 
 .template-canvas.night-session-canvas .match-module--single .match-context {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas
   .match-module--single
   .match-context
   .context-left {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas
@@ -208,18 +214,33 @@
 
 /* Upcoming — fixture meta uses in-container mode copy */
 .template-canvas.night-session-canvas .fixture-unit .match-context {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
-.template-canvas.night-session-canvas .fixture-unit .match-context .context-left {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+.template-canvas.night-session-canvas
+  .fixture-unit
+  .match-context
+  .context-left {
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
-.template-canvas.night-session-canvas .fixture-unit .match-context .context-venue {
+.template-canvas.night-session-canvas
+  .fixture-unit
+  .match-context
+  .context-venue {
   color: var(--container-text, var(--contrast-team)) !important;
 }
 
-.template-canvas.night-session-canvas .fixture-unit .match-context .context-separator {
+.template-canvas.night-session-canvas
+  .fixture-unit
+  .match-context
+  .context-separator {
   background: var(--container-text-accent, var(--club-primary)) !important;
 }
 
@@ -228,7 +249,10 @@
 }
 
 .template-canvas.night-session-canvas .fixture-unit .fixture-time {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas .fixture-unit .fixture-grade-name {
@@ -247,10 +271,7 @@
 }
 
 .template-canvas.night-session-canvas .match-module .team-score-area::before {
-  background: var(
-    --ns-team-score-container-bg,
-    var(--ns-band-bg)
-  ) !important;
+  background: var(--ns-team-score-container-bg, var(--ns-band-bg)) !important;
   opacity: var(--ns-team-score-container-opacity, 0.85) !important;
 }
 
@@ -309,23 +330,36 @@
 }
 
 /* Top 5 — in-container vs open-canvas copy */
-.template-canvas.night-session-canvas[data-leaderboard] .leaderboard-category-label {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+.template-canvas.night-session-canvas[data-leaderboard]
+  .leaderboard-category-label {
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard] .leaderboard-category-value {
+.template-canvas.night-session-canvas[data-leaderboard]
+  .leaderboard-category-value {
   color: var(--container-text, var(--contrast-team)) !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard] .leader-copy .leader-name {
+.template-canvas.night-session-canvas[data-leaderboard]
+  .leader-copy
+  .leader-name {
   color: var(--container-text, var(--contrast-team)) !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard] .leader-copy .leader-team {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+.template-canvas.night-session-canvas[data-leaderboard]
+  .leader-copy
+  .leader-team {
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard] .leader-rank-tag.schedule-lockup {
+.template-canvas.night-session-canvas[data-leaderboard]
+  .leader-rank-tag.schedule-lockup {
   background: var(--ns-leader-rank-bg, rgb(255 255 255 / 95%)) !important;
   color: var(
     --ns-leader-rank-text,
@@ -333,7 +367,9 @@
   ) !important;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard] .leader-row .leader-figure {
+.template-canvas.night-session-canvas[data-leaderboard]
+  .leader-row
+  .leader-figure {
   color: var(--header-text, rgb(255 255 255 / 92%)) !important;
 }
 
@@ -379,7 +415,8 @@
 }
 
 .template-canvas.night-session-canvas[data-roster] .fixture-unit__rail,
-.template-canvas.night-session-canvas[data-roster] .roster-grade.fixture-unit__rail {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-grade.fixture-unit__rail {
   background: linear-gradient(
       90deg,
       transparent 0%,
@@ -393,10 +430,7 @@
 
 /* Team roster — mode container panels + copy */
 .template-canvas.night-session-canvas[data-roster] .roster-cell {
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
-  ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
   border-color: var(--ns-performance-border) !important;
   box-shadow: var(--container-inset) !important;
 }
@@ -435,7 +469,10 @@
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-squad-label {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-squad-team {
@@ -443,29 +480,33 @@
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-meta-part {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-team-name--hero {
   color: var(--container-text, var(--contrast-team)) !important;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-schedule-line:first-child {
+.template-canvas.night-session-canvas[data-roster]
+  .roster-schedule-line:first-child {
   color: var(--container-text, var(--contrast-performance-lead)) !important;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-schedule-line {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-index.roster-cell,
 .template-canvas.night-session-canvas[data-roster] .roster-index {
   color: var(
     --ns-roster-index-text,
-    var(
-      --container-text-accent,
-      var(--container-text, rgb(8 11 13 / 96%))
-    )
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   ) !important;
 }
 
@@ -473,12 +514,13 @@
   color: var(--container-text, var(--contrast-performance-lead)) !important;
 }
 
-.template-canvas.night-session-canvas[data-roster] .roster-row[data-empty-roster="true"] {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
+.template-canvas.night-session-canvas[data-roster]
+  .roster-row[data-empty-roster="true"] {
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
   ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
   border-color: var(--ns-performance-border) !important;
 }
 
@@ -517,7 +559,10 @@
   max-height: var(--totw-row-min-height) !important;
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-col .totw-entry:first-of-type .totw-row,
+.template-canvas.night-session-canvas[data-totw]
+  .totw-col
+  .totw-entry:first-of-type
+  .totw-row,
 .template-canvas.night-session-canvas[data-totw]
   .totw-rows
   .totw-entry:first-of-type
@@ -568,7 +613,8 @@
 }
 
 .template-canvas.night-session-canvas[data-totw] .totw-unit__rail,
-.template-canvas.night-session-canvas[data-totw] .totw-category.totw-unit__rail {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-category.totw-unit__rail {
   background: linear-gradient(
       90deg,
       transparent 0%,
@@ -581,10 +627,7 @@
 }
 
 .template-canvas.night-session-canvas[data-totw] .totw-row .totw-cell {
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface)
-  ) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
   border-color: var(--ns-performance-border) !important;
   box-shadow: var(--container-inset) !important;
 }
@@ -631,17 +674,24 @@
 .template-canvas.night-session-canvas[data-totw] .totw-team-label,
 .template-canvas.night-session-canvas[data-totw] .totw-subline,
 .template-canvas.night-session-canvas[data-totw] .totw-category-label {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 /* Intro — panel copy uses mode container tokens (not header-text) */
-.template-canvas.night-session-canvas.night-session-intro .night-session-intro__panel {
+.template-canvas.night-session-canvas.night-session-intro
+  .night-session-intro__panel {
   background: var(--container-surface, var(--match-context-surface)) !important;
   box-shadow: var(--container-inset, var(--match-context-inset)) !important;
 }
 
 .template-canvas.night-session-canvas.night-session-intro .header-eyebrow {
-  color: var(--container-text-muted, var(--contrast-meta-on-surface)) !important;
+  color: var(
+    --container-text-muted,
+    var(--contrast-meta-on-surface)
+  ) !important;
 }
 
 .template-canvas.night-session-canvas.night-session-intro .header-title {

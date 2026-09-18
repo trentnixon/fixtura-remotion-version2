@@ -39,7 +39,13 @@ export const NightSessionResultMatchCell: React.FC<{
   exitFrame: number;
   className?: string;
   children: React.ReactNode;
-}> = ({ tier, rowDelay, exitFrame, className = "w-full min-w-0", children }) => {
+}> = ({
+  tier,
+  rowDelay,
+  exitFrame,
+  className = "w-full min-w-0",
+  children,
+}) => {
   const { animations } = useAnimationContext();
   const enterTiming = useNightSessionRowEnterTiming();
   const innerAnimation = animations.container.main.itemContainerInner;

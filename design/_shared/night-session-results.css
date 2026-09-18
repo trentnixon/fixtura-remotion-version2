@@ -641,8 +641,12 @@
   display: none;
 }
 
-.template-canvas.night-session-canvas .performance-row[data-empty="true"] .performance-player,
-.template-canvas.night-session-canvas .performance-row[data-empty="true"] .performance-figure {
+.template-canvas.night-session-canvas
+  .performance-row[data-empty="true"]
+  .performance-player,
+.template-canvas.night-session-canvas
+  .performance-row[data-empty="true"]
+  .performance-figure {
   display: none;
 }
 

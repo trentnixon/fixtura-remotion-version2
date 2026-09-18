@@ -41,6 +41,7 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
   const { colors, selectedPalette } = useThemeContext();
   const headerText = selectedPalette.text.onContainer.title;
   const headerAccent = selectedPalette.text.onContainer.accent;
+  const copyNoBg = selectedPalette.text.onContainer.copyNoBg;
   const matchContext = useMemo(
     () => resolveScorelineMatchContextTokens(selectedPalette),
     [selectedPalette],
@@ -93,10 +94,8 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
         "--match-context-text-muted": matchContext.textMuted,
         "--match-context-text": matchContext.text,
         "--match-context-accent": matchContext.accent,
-        "--on-container-copy-no-bg": selectedPalette.text.onContainer.copyNoBg,
-        "--on-container-copy-no-bg-muted": tinycolor(
-          selectedPalette.text.onContainer.copyNoBg,
-        )
+        "--on-container-copy-no-bg": copyNoBg,
+        "--on-container-copy-no-bg-muted": tinycolor(copyNoBg)
           .setAlpha(0.68)
           .toRgbString(),
         "--performance-area-surface": performanceAreaSurface,
@@ -108,6 +107,7 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
       colors?.primary,
       colors?.secondary,
       containerCopy,
+      copyNoBg,
       headerAccent,
       headerText,
       ladderRowSurface,

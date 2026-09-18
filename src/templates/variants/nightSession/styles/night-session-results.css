@@ -767,10 +767,7 @@
   overflow-wrap: anywhere;
 }
 
-.night-session-canvas
-  .match-module
-  > .match-context
-  .context-separator {
+.night-session-canvas .match-module > .match-context .context-separator {
   width: 3px;
   height: 3px;
   flex: 0 0 auto;

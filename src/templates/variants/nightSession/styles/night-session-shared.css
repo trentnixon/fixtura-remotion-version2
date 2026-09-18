@@ -731,10 +731,7 @@
 .night-session-canvas :is([data-roster] .roster-index) {
   color: var(
     --ns-roster-index-text,
-    var(
-      --container-text-accent,
-      var(--container-text, rgb(8 11 13 / 96%))
-    )
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   );
 }
 
@@ -1142,10 +1139,7 @@
 .night-session-canvas[data-roster] .roster-index {
   color: var(
     --ns-roster-index-text,
-    var(
-      --container-text-accent,
-      var(--container-text, rgb(8 11 13 / 96%))
-    )
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   );
 }
 

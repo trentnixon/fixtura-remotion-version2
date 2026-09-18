@@ -256,7 +256,8 @@
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
-.template-canvas.night-session-canvas[data-totw] .totw-category.totw-unit__rail {
+.template-canvas.night-session-canvas[data-totw]
+  .totw-category.totw-unit__rail {
   background: linear-gradient(
       90deg,
       transparent 0%,
