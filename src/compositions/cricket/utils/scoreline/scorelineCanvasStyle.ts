@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { useMemo } from "react";
+import tinycolor from "tinycolor2";
 import { staticFile } from "remotion";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { deriveScorelineThemeVars } from "./applyScorelineTheme";
@@ -92,6 +93,12 @@ export const useScorelineCanvasStyle = (): CSSProperties => {
         "--match-context-text-muted": matchContext.textMuted,
         "--match-context-text": matchContext.text,
         "--match-context-accent": matchContext.accent,
+        "--on-container-copy-no-bg": selectedPalette.text.onContainer.copyNoBg,
+        "--on-container-copy-no-bg-muted": tinycolor(
+          selectedPalette.text.onContainer.copyNoBg,
+        )
+          .setAlpha(0.68)
+          .toRgbString(),
         "--performance-area-surface": performanceAreaSurface,
         "--ladder-row-surface": ladderRowSurface,
         "--leaderboard-hero-row-surface": leaderboardHeroRowSurface,

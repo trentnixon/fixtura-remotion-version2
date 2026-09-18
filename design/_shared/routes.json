@@ -104,6 +104,14 @@
       "sports": {
         "cricket": {
           "assets": {
+            "intro": {
+              "label": "Intro",
+              "fixture": "testData/samples/Cricket/Cricket_Results.json",
+              "remotion": {
+                "composition": "cricket/results",
+                "theme": "src/templates/variants/nightSession/theme/composition/results.ts"
+              }
+            },
             "results": {
               "label": "Results",
               "fixture": "testData/samples/Cricket/Cricket_Results.json",
@@ -138,6 +146,24 @@
               "remotion": {
                 "composition": "cricket/top5",
                 "theme": "src/templates/variants/nightSession/theme/composition/top5.ts"
+              }
+            },
+            "performances-batting": {
+              "label": "Batting Performances",
+              "fixture": "testData/samples/Cricket/Cricket_BattingPerformances.json",
+              "population": "performances-batting",
+              "remotion": {
+                "composition": "cricket/performances",
+                "theme": "src/templates/variants/nightSession/theme/composition/performances.ts"
+              }
+            },
+            "performances-bowling": {
+              "label": "Bowling Performances",
+              "fixture": "testData/samples/Cricket/Cricket_BowlingPerformances.json",
+              "population": "performances-bowling",
+              "remotion": {
+                "composition": "cricket/performances",
+                "theme": "src/templates/variants/nightSession/theme/composition/performances.ts"
               }
             },
             "ladder": {

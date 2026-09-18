@@ -576,6 +576,10 @@
   color: var(--contrast-score);
 }
 
+.template-canvas.night-session-canvas .outcome-bridge .result-statement {
+  color: rgb(244 243 241 / 96%);
+}
+
 .template-canvas .performance-player {
   color: var(--contrast-performance-support);
   font-weight: 600;
@@ -655,7 +659,6 @@
 /* —— Container copy (light/lightAlt = light panel + dark text; dark/darkAlt = dark panel + white text) —— */
 .template-canvas
   :is(
-    .match-context,
     .match-grade,
     .performance-area,
     .roster-context,
@@ -676,7 +679,6 @@
 
 .template-canvas
   :is(
-    .match-context,
     .match-grade,
     .performance-area,
     .roster-context,
@@ -691,8 +693,6 @@
     [data-totw] .totw-category-label,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-team-label,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-team,
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-balls,
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-overs,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-sr,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure-label,
     [data-totw] .totw-team-label,
@@ -707,7 +707,6 @@
 .template-canvas
   :is(
     [data-leaderboard] .leader-name,
-    [data-leaderboard] .leader-figure,
     [data-leaderboard] .leaderboard-category-value,
     [data-ladder] .ladder-grade-name,
     [data-roster] .roster-player,
@@ -724,12 +723,22 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas
-  :is(
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-rank,
-    [data-roster] .roster-index
-  ) {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+.template-canvas :is([data-roster] .roster-index) {
+  color: var(
+    --ns-roster-index-text,
+    var(
+      --container-text-accent,
+      var(--container-text, rgb(8 11 13 / 96%))
+    )
+  );
+}
+
+.template-canvas[data-leaderboard] .leader-rank.leader-rank-tag,
+.template-canvas[data-leaderboard] .leader-rank-tag.schedule-lockup {
+  color: var(
+    --ns-leader-rank-text,
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
+  );
 }
 
 /* Container surfaces — 40% min tint via tokens; clip copy inside panel bounds */
@@ -1033,22 +1042,14 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas[data-leaderboard="batting"] .leader-rank {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
-}
-
-.template-canvas[data-leaderboard="bowling"] .leader-rank {
-  color: var(--container-text-accent, var(--accent-on-light-secondary));
-}
-
-.template-canvas[data-leaderboard] .leader-figure {
-  color: var(--container-text, var(--contrast-performance-lead));
+.template-canvas[data-leaderboard] .leader-figure,
+.template-canvas[data-leaderboard] .leader-balls,
+.template-canvas[data-leaderboard] .leader-overs {
+  color: var(--header-text, rgb(255 255 255 / 92%));
 }
 
 .template-canvas[data-leaderboard] .leader-team-label,
 .template-canvas[data-leaderboard] .leader-team,
-.template-canvas[data-leaderboard] .leader-balls,
-.template-canvas[data-leaderboard] .leader-overs,
 .template-canvas[data-leaderboard] .leader-sr,
 .template-canvas[data-leaderboard] .leader-figure-label {
   color: var(--container-text-muted, var(--contrast-meta));
@@ -1105,8 +1106,8 @@
 }
 
 /* —— Team roster —— */
-.template-canvas[data-roster] .roster-grade {
-  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+.template-canvas[data-roster] .roster-grade.fixture-unit__rail {
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
 .template-canvas[data-roster] .roster-grade-meta {
@@ -1126,7 +1127,13 @@
 }
 
 .template-canvas[data-roster] .roster-index {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(
+    --ns-roster-index-text,
+    var(
+      --container-text-accent,
+      var(--container-text, rgb(8 11 13 / 96%))
+    )
+  );
 }
 
 .template-canvas[data-roster] .roster-player {
@@ -1192,11 +1199,17 @@
 }
 
 .template-canvas[data-totw] .totw-role {
-  color: var(--container-text-accent, var(--accent-on-light-secondary));
+  color: var(
+    --ns-performance-player,
+    var(--container-text-support, var(--contrast-performance-support))
+  );
 }
 
 .template-canvas[data-totw] .totw-team {
-  color: var(--container-text, var(--contrast-performance-lead));
+  color: var(
+    --container-text-support,
+    var(--contrast-performance-support, var(--container-text-muted))
+  );
 }
 
 .template-canvas[data-totw] .totw-team-label,
@@ -1216,11 +1229,7 @@
 }
 
 /* —— Intro title card —— */
-.template-canvas.scoreline-intro .header-eyebrow,
-.template-canvas.scoreline-intro .organisation-name,
-.template-canvas.scoreline-intro .header-title {
-  color: var(--header-text, var(--container-text, var(--ink)));
-}
+/* Intro layout: night-session-intro.css */
 
 /* —— Shared surface grain (single atmospheric texture) —— */
 .template-canvas

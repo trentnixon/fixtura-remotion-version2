@@ -7,6 +7,7 @@ import { brickwork } from "./brickwork";
 import { broadcastpro } from "./broadcastPro";
 import { broadcastprorounded } from "./broadcastProRounded";
 import { scoreline } from "./scoreline";
+import { nightSession } from "./nightSession";
 
 export {
   basic,
@@ -18,4 +19,5 @@ export {
   broadcastpro,
   broadcastprorounded,
   scoreline,
+  nightSession,
 };

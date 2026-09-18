@@ -3,21 +3,60 @@
  * (standard JSON.parse keeps the last duplicate silently).
  */
 
-const TOP_LEVEL_KEY = /"((?:\\.|[^"\\])*)"\s*:/g;
-
 /**
  * @param {string} text
  */
 export function assertNoDuplicateJsonKeys(text) {
+  /** @type {Set<string>} */
   const seen = new Set();
-  let match;
+  let depth = 0;
+  let index = 0;
 
-  while ((match = TOP_LEVEL_KEY.exec(text)) !== null) {
-    const key = match[1].replace(/\\"/g, '"');
-    if (seen.has(key)) {
-      throw new Error(`Duplicate bind-map key: ${key}`);
+  while (index < text.length) {
+    const char = text[index];
+
+    if (char === "{") {
+      depth += 1;
+      index += 1;
+      continue;
     }
-    seen.add(key);
+
+    if (char === "}") {
+      depth -= 1;
+      index += 1;
+      continue;
+    }
+
+    if (char !== '"') {
+      index += 1;
+      continue;
+    }
+
+    let end = index + 1;
+    while (end < text.length) {
+      if (text[end] === "\\") {
+        end += 2;
+        continue;
+      }
+      if (text[end] === '"') {
+        break;
+      }
+      end += 1;
+    }
+
+    const key = text.slice(index + 1, end).replace(/\\"/g, '"');
+    index = end + 1;
+
+    while (index < text.length && /\s/.test(text[index])) {
+      index += 1;
+    }
+
+    if (depth === 1 && text[index] === ":") {
+      if (seen.has(key)) {
+        throw new Error(`Duplicate bind-map key: ${key}`);
+      }
+      seen.add(key);
+    }
   }
 }
 

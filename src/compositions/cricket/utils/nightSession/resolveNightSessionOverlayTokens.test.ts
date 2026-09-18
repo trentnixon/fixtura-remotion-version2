@@ -21,5 +21,8 @@ describe("resolveNightSessionBandTokens", () => {
     const tokens = resolveNightSessionBandTokens(darkPalette);
     expect(tokens["--ns-band-score"]).toBe("#ffffff");
     expect(tokens["--ns-performance-border"]).toContain("255");
+    expect(tokens["--ns-leader-rank-bg"]).toBe("rgb(255 255 255 / 95%)");
+    expect(tokens["--ns-leader-rank-text"]).toBe("#c41e3a");
+    expect(tokens["--ns-roster-index-text"]).toBe("#FFFFFF");
   });
 });

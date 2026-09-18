@@ -275,6 +275,36 @@ export function syncScorelineTotwLayout(root = document) {
   });
 }
 
+const resolvePerformanceLeaderboardDensity = (rowCount) => {
+  if (rowCount <= 5) {
+    return undefined;
+  }
+
+  if (rowCount === 6) {
+    return "compact";
+  }
+
+  return "tight";
+};
+
+export function syncNightSessionLeaderboardDensity(root = document) {
+  const rowsContainer = root.querySelector(".leaderboard-rows");
+  if (!(rowsContainer instanceof HTMLElement)) {
+    return;
+  }
+
+  const visibleCount = [...root.querySelectorAll(".leader-entry")].filter(
+    (entry) => entry instanceof HTMLElement && entry.dataset.empty !== "true",
+  ).length;
+
+  const density = resolvePerformanceLeaderboardDensity(visibleCount);
+  if (density) {
+    rowsContainer.dataset.density = density;
+  } else {
+    delete rowsContainer.dataset.density;
+  }
+}
+
 export function syncScorelineLeaderboardLayout(root = document) {
   root.querySelectorAll(".leader-entry").forEach((entry, index) => {
     if (!(entry instanceof HTMLElement)) {

@@ -1,18 +1,16 @@
-import React from "react";
-import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
+import React, { useMemo } from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
 import { csClass } from "../../../utils/scoreline/componentStyles";
 import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
+import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import NightSessionLeaderRow from "../../layout/NightSessionLeaderRow";
 import { PlayersDisplayProps } from "./_types/PlayersDisplayProps";
-import {
-  calculatePlayerDelay,
-  calculateExitFrame,
-} from "../PlayerRow/_utils/calculations";
+import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNightSessionEnterTiming";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
+import { NIGHT_SESSION_FIXTURE_ROW_STAGGER_FRAMES } from "../../../utils/nightSession/nightSessionAnimationTiming";
 
 const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
   players,
@@ -20,13 +18,20 @@ const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
 }) => {
   const { animations } = useAnimationContext();
   const { data, video } = useVideoDataContext();
-  const { timings } = data;
-  const panelAnimation = animations.container.main.itemContainerOuter;
   const { layout, componentStyles } = useThemeContext();
   const { heights } = layout;
   const mainContentHeight = getMainContentSectionHeight(heights);
   const containerAnimation = animations.container.main.itemContainer;
-  const exitFrame = calculateExitFrame(timings);
+  const top5EnterTimingOptions = useMemo(
+    () => ({ rowStaggerFrames: NIGHT_SESSION_FIXTURE_ROW_STAGGER_FRAMES }),
+    [],
+  );
+  const enterTiming = useNightSessionEnterTiming(
+    players.length,
+    "FPS_MAIN",
+    undefined,
+    top5EnterTimingOptions,
+  );
   const categoryLabel = video.fixtureCategory?.trim() ?? "";
 
   const footerSponsors = buildSingleItemFooterSponsors({
@@ -40,12 +45,10 @@ const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
       className={csClass(componentStyles, "nightSessionDisplayColumn")}
       style={{ height: `${mainContentHeight + heights.footer}px` }}
     >
-      <AnimatedContainer
-        type="full"
+      <NightSessionAnimatedShell
         className={csClass(componentStyles, "nightSessionAnimatedShell")}
-        backgroundColor="none"
-        animation={panelAnimation.containerIn}
-        exitAnimation={panelAnimation.containerOut}
+        exitFrame={enterTiming.shellExitFrame}
+        animateShell={false}
       >
         <main
           className={`leaderboard-ledger ${csClass(componentStyles, "nightSessionTop5Ledger")}`}
@@ -68,16 +71,18 @@ const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
                   key={`${player.name}-${index}`}
                   player={player}
                   rank={index + 1}
+                  rowIndex={index}
                   animation={containerAnimation.containerIn}
-                  animationDelay={calculatePlayerDelay(index)}
+                  animationDelay={enterTiming.rowDelayForIndex(index)}
                   exitAnimation={containerAnimation.containerOut}
-                  exitFrame={exitFrame}
+                  exitFrame={enterTiming.shellExitFrame}
+                  enterTiming={enterTiming}
                 />
               ))}
             </div>
           </div>
         </main>
-      </AnimatedContainer>
+      </NightSessionAnimatedShell>
       <NightSessionSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="nightSessionTop5SponsorStrip"

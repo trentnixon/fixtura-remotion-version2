@@ -23,13 +23,18 @@ describe("resolveScorelineMatchContextTokens", () => {
     expect(tinycolor(tokens.text).isDark()).toBe(true);
   });
 
-  it("uses the same light panel and dark copy for lightAlt mode", () => {
+  it("uses light panel and inverted open copy for lightAlt mode", () => {
     const tokens = resolveScorelineMatchContextTokens(
       paletteForMode("lightAlt"),
     );
 
     expect(tokens.surface).toContain("243, 240, 234");
-    expect(tinycolor(tokens.text).isDark()).toBe(true);
+    expect(tinycolor(tokens.text).isLight()).toBe(true);
+    expect(tokens.text).toBe(
+      tinycolor(paletteForMode("lightAlt").text.onContainer.copyNoBg)
+        .setAlpha(0.92)
+        .toRgbString(),
+    );
   });
 
   it("uses a dark panel and light copy for dark mode", () => {
@@ -39,13 +44,18 @@ describe("resolveScorelineMatchContextTokens", () => {
     expect(tinycolor(tokens.text).isLight()).toBe(true);
   });
 
-  it("uses the same dark panel and light copy for darkAlt mode", () => {
+  it("uses dark panel and inverted open copy for darkAlt mode", () => {
     const tokens = resolveScorelineMatchContextTokens(
       paletteForMode("darkAlt"),
     );
 
     expect(tokens.surface).toContain("8, 11, 13");
-    expect(tinycolor(tokens.text).isLight()).toBe(true);
+    expect(tinycolor(tokens.text).isDark()).toBe(true);
+    expect(tokens.text).toBe(
+      tinycolor(paletteForMode("darkAlt").text.onContainer.copyNoBg)
+        .setAlpha(0.92)
+        .toRgbString(),
+    );
   });
 });
 

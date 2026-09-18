@@ -38,13 +38,15 @@ export function resolveNightSessionMatchContextTokens(
     mode.container.background !== "transparent";
   const surface = isDark ? PANEL_DARK : PANEL_LIGHT;
 
+  const openCopy = mode.text.title;
+
   return {
     surface,
     inset: isDark
       ? "inset 0 1px 0 rgb(255 255 255 / 12%)"
       : "inset 0 1px 0 rgb(255 255 255 / 55%)",
-    textMuted: isDark ? "rgb(255 255 255 / 68%)" : "rgb(8 11 13 / 68%)",
-    text: isDark ? "rgb(255 255 255 / 92%)" : "rgb(8 11 13 / 88%)",
+    textMuted: `color-mix(in srgb, ${openCopy} 68%, transparent)`,
+    text: `color-mix(in srgb, ${openCopy} 92%, transparent)`,
     accent,
   };
 }
@@ -187,6 +189,11 @@ export function applyNightSessionMode(canvas, modeId, options = {}) {
   );
   canvas.style.setProperty("--match-context-text", matchContext.text);
   canvas.style.setProperty("--match-context-accent", matchContext.accent);
+  canvas.style.setProperty("--on-container-copy-no-bg", mode.text.title);
+  canvas.style.setProperty(
+    "--on-container-copy-no-bg-muted",
+    `color-mix(in srgb, ${mode.text.title} 68%, transparent)`,
+  );
 
   const isDarkContainer = containerCopy.isDark;
   canvas.style.setProperty(
@@ -196,12 +203,13 @@ export function applyNightSessionMode(canvas, modeId, options = {}) {
       : PERFORMANCE_AREA_PANEL_LIGHT,
   );
 
-  canvas.style.setProperty(
-    "--ns-band-bg",
-    isDarkContainer
-      ? "linear-gradient(180deg, rgb(22 25 29 / 80%) 0%, rgb(10 12 14 / 80%) 100%)"
-      : "linear-gradient(180deg, rgb(243 240 234 / 80%) 0%, rgb(255 255 255 / 80%) 100%)",
-  );
+  const teamScoreContainerBg = isDarkContainer
+    ? "linear-gradient(180deg, rgb(22 25 29) 0%, rgb(10 12 14) 100%)"
+    : "linear-gradient(180deg, rgb(243 240 234) 0%, rgb(255 255 255) 100%)";
+
+  canvas.style.setProperty("--ns-team-score-container-bg", teamScoreContainerBg);
+  canvas.style.setProperty("--ns-team-score-container-opacity", "0.85");
+  canvas.style.setProperty("--ns-band-bg", teamScoreContainerBg);
   canvas.style.setProperty(
     "--ns-band-border",
     isDarkContainer ? "rgb(255 255 255 / 7%)" : "rgb(8 11 13 / 10%)",
@@ -220,19 +228,18 @@ export function applyNightSessionMode(canvas, modeId, options = {}) {
   );
   canvas.style.setProperty(
     "--ns-outcome-bg",
-    isDarkContainer ? "rgb(10 12 14 / 92%)" : "rgb(255 255 255 / 94%)",
+    isDarkContainer
+      ? "rgb(10 12 14 / 92%)"
+      : "color-mix(in srgb, var(--container-surface-solid, #ffffff) 92%, transparent)",
   );
-  canvas.style.setProperty(
-    "--ns-outcome-text",
-    isDarkContainer ? "rgb(244 243 241 / 92%)" : containerCopy.text,
-  );
+  canvas.style.setProperty("--ns-outcome-text", containerCopy.text);
   canvas.style.setProperty(
     "--ns-schedule-lockup-bg",
     isDarkContainer ? "rgb(10 12 14 / 95%)" : "rgb(255 255 255 / 95%)",
   );
   canvas.style.setProperty(
     "--ns-performance-row-bg",
-    isDarkContainer ? "rgb(10 12 14 / 28%)" : "rgb(243 240 234 / 35%)",
+    isDarkContainer ? "rgb(10 12 14 / 65%)" : "rgb(243 240 234 / 35%)",
   );
   canvas.style.setProperty(
     "--ns-performance-border",
@@ -242,13 +249,18 @@ export function applyNightSessionMode(canvas, modeId, options = {}) {
     "--ns-performance-row-rule",
     isDarkContainer ? "rgb(255 255 255 / 7%)" : "rgb(8 11 13 / 8%)",
   );
+  canvas.style.setProperty("--ns-performance-player", containerCopy.text);
+  canvas.style.setProperty("--ns-performance-figure", containerCopy.text);
+  canvas.style.setProperty("--ns-leader-rank-bg", "rgb(255 255 255 / 95%)");
+  canvas.style.setProperty("--ns-leader-rank-text", containerCopy.accent);
+  canvas.style.setProperty("--ns-roster-index-text", containerCopy.accent);
   canvas.style.setProperty(
-    "--ns-performance-player",
-    isDarkContainer ? "rgb(244 243 241 / 78%)" : containerCopy.textSupport,
+    "--ns-grade-rail-gradient-mid",
+    `color-mix(in srgb, ${containerCopy.accent} 10%, transparent)`,
   );
   canvas.style.setProperty(
-    "--ns-performance-figure",
-    isDarkContainer ? "#ffffff" : containerCopy.text,
+    "--ns-grade-rail-gradient-end",
+    `color-mix(in srgb, ${containerCopy.accent} 32%, transparent)`,
   );
 
   canvas

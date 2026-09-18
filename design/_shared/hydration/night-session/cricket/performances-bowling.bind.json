@@ -28,17 +28,136 @@
   "[data-hydrate=player-3-conceded]": "data.2.runs",
   "[data-hydrate=player-3-overs]": "data.2.overs",
 
-  "[data-hydrate=player-4-name]": "data.3.name",
-  "[data-hydrate=player-4-team]": "data.3.playedFor",
-  "[data-hydrate=player-4-logo]": "data.3.teamLogo.url",
-  "[data-hydrate=player-4-wickets]": "data.3.wickets",
-  "[data-hydrate=player-4-conceded]": "data.3.runs",
-  "[data-hydrate=player-4-overs]": "data.3.overs",
+  "[data-hydrate=player-4-name]": { "path": "data.3.name", "optional": true },
+  "[data-hydrate=player-4-team]": {
+    "path": "data.3.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-4-logo]": {
+    "path": "data.3.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-4-wickets]": {
+    "path": "data.3.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-4-conceded]": {
+    "path": "data.3.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-4-overs]": { "path": "data.3.overs", "optional": true },
 
-  "[data-hydrate=player-5-name]": "data.4.name",
-  "[data-hydrate=player-5-team]": "data.4.playedFor",
-  "[data-hydrate=player-5-logo]": "data.4.teamLogo.url",
-  "[data-hydrate=player-5-wickets]": "data.4.wickets",
-  "[data-hydrate=player-5-conceded]": "data.4.runs",
-  "[data-hydrate=player-5-overs]": "data.4.overs"
+  "[data-hydrate=player-5-name]": { "path": "data.4.name", "optional": true },
+  "[data-hydrate=player-5-team]": {
+    "path": "data.4.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-5-logo]": {
+    "path": "data.4.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-5-wickets]": {
+    "path": "data.4.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-5-conceded]": {
+    "path": "data.4.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-5-overs]": { "path": "data.4.overs", "optional": true },
+
+  "[data-hydrate=player-6-name]": { "path": "data.5.name", "optional": true },
+  "[data-hydrate=player-6-team]": {
+    "path": "data.5.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-6-logo]": {
+    "path": "data.5.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-6-wickets]": {
+    "path": "data.5.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-6-conceded]": {
+    "path": "data.5.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-6-overs]": { "path": "data.5.overs", "optional": true },
+
+  "[data-hydrate=player-7-name]": { "path": "data.6.name", "optional": true },
+  "[data-hydrate=player-7-team]": {
+    "path": "data.6.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-7-logo]": {
+    "path": "data.6.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-7-wickets]": {
+    "path": "data.6.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-7-conceded]": {
+    "path": "data.6.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-7-overs]": { "path": "data.6.overs", "optional": true },
+
+  "[data-hydrate=player-8-name]": { "path": "data.7.name", "optional": true },
+  "[data-hydrate=player-8-team]": {
+    "path": "data.7.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-8-logo]": {
+    "path": "data.7.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-8-wickets]": {
+    "path": "data.7.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-8-conceded]": {
+    "path": "data.7.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-8-overs]": { "path": "data.7.overs", "optional": true },
+
+  "[data-hydrate=player-9-name]": { "path": "data.8.name", "optional": true },
+  "[data-hydrate=player-9-team]": {
+    "path": "data.8.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-9-logo]": {
+    "path": "data.8.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-9-wickets]": {
+    "path": "data.8.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-9-conceded]": {
+    "path": "data.8.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-9-overs]": { "path": "data.8.overs", "optional": true },
+
+  "[data-hydrate=player-10-name]": { "path": "data.9.name", "optional": true },
+  "[data-hydrate=player-10-team]": {
+    "path": "data.9.playedFor",
+    "optional": true
+  },
+  "[data-hydrate=player-10-logo]": {
+    "path": "data.9.teamLogo.url",
+    "optional": true
+  },
+  "[data-hydrate=player-10-wickets]": {
+    "path": "data.9.wickets",
+    "optional": true
+  },
+  "[data-hydrate=player-10-conceded]": {
+    "path": "data.9.runs",
+    "optional": true
+  },
+  "[data-hydrate=player-10-overs]": { "path": "data.9.overs", "optional": true }
 }

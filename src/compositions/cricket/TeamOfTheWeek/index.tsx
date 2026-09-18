@@ -10,6 +10,7 @@ import MudgeerabaTeamOfTheWeek from "./mudgeeraba";
 import BroadcastProTeamOfTheWeek from "./broadcastPro";
 import BroadcastProRoundedTeamOfTheWeek from "./broadcastProRounded";
 import { scoreline as ScorelineTeamOfTheWeek } from "./scoreline";
+import { nightSession as NightSessionTeamOfTheWeek } from "./nightSession";
 
 // Export all template implementations
 export const basic = BasicTeamOfTheWeek;
@@ -23,3 +24,4 @@ export const mudgeeraba = MudgeerabaTeamOfTheWeek;
 export const broadcastpro = BroadcastProTeamOfTheWeek;
 export const broadcastprorounded = BroadcastProRoundedTeamOfTheWeek;
 export { ScorelineTeamOfTheWeek as scoreline };
+export { NightSessionTeamOfTheWeek as nightSession };

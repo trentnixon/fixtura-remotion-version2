@@ -1,0 +1,203 @@
+/* Night Session intro — synced with src/templates/variants/nightSession/styles/night-session-intro.css */
+
+.template-canvas.night-session-canvas.night-session-intro {
+  --type-intro-title: 72px;
+  --intro-mark-size: 96px;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.template-canvas.night-session-intro .night-session-intro__frame {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: var(--zone-pad, 12px) var(--content-inset, 28px)
+    calc(var(--zone-pad, 12px) + 12px);
+}
+
+.template-canvas.night-session-intro .night-session-intro__main {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-canvas.night-session-intro .night-session-intro__animated {
+  width: 100%;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+
+.template-canvas.night-session-intro .night-session-intro__panel {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  background: var(
+    --container-surface,
+    var(--match-context-surface, color-mix(in srgb, var(--surface-muted, #0f1418) 88%, transparent))
+  );
+  box-shadow: var(--container-inset, var(--match-context-inset, var(--highlight-inset-light)));
+  color: var(--container-text, var(--on-surface));
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header__accent {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-accent-wedge {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--container-text-accent, var(--club-primary)) 45%,
+    transparent
+  );
+  opacity: 0.75;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-accent-lines {
+  position: absolute;
+  top: 28px;
+  right: calc(var(--content-inset, 28px) + var(--intro-mark-size) - 12px);
+  width: 36px;
+  height: 18px;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 3px,
+    rgb(255 255 255 / 14%) 3px,
+    rgb(255 255 255 / 14%) 4px
+  );
+  opacity: 0.55;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header__mark {
+  position: absolute;
+  right: var(--content-inset, 28px);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header__mark img {
+  position: absolute;
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  object-fit: contain;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header__lockup {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .header-eyebrow,
+.template-canvas.night-session-canvas.night-session-intro .header-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header--intro {
+  flex: none;
+  min-height: 0;
+  max-height: none;
+  padding: 28px var(--content-inset, 28px) 32px;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header__mark {
+  top: calc(var(--zone-pad, 12px) + 12px);
+  width: var(--intro-mark-size);
+  height: var(--intro-mark-size);
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-header__lockup {
+  padding: 12px calc(var(--intro-mark-size) + 16px) 8px;
+  gap: 10px;
+}
+
+.template-canvas.night-session-canvas.night-session-intro .header-eyebrow {
+  font-size: 18px;
+  letter-spacing: 0.22em;
+  color: var(--container-text-muted, var(--match-context-text-muted, rgb(244 243 241 / 52%)));
+}
+
+.template-canvas.night-session-canvas.night-session-intro .header-title {
+  font-size: var(--type-intro-title);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 0.94;
+  text-wrap: balance;
+  color: var(--container-text, var(--match-context-text, var(--on-surface)));
+}
+
+.template-canvas.night-session-canvas.night-session-intro .ns-accent-wedge {
+  top: 24px;
+  left: calc(50% - 140px);
+  width: 280px;
+}
+
+.template-canvas.night-session-intro .night-session-intro__sponsors {
+  width: 100%;
+  min-height: 88px;
+  flex: 0 0 auto;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: var(--space-4, 24px);
+  padding: var(--space-3, 16px) var(--space-2, 8px) 0;
+}
+
+.template-canvas.night-session-intro .night-session-intro__sponsors:empty {
+  display: none;
+}
+
+.template-canvas.night-session-canvas.night-session-intro
+  .night-session-intro__sponsor-slot {
+  min-width: 0;
+  min-height: 64px;
+  flex: 1 1 0;
+  max-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-canvas.night-session-canvas.night-session-intro
+  .night-session-intro__sponsor-slot
+  img {
+  max-width: 100%;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}

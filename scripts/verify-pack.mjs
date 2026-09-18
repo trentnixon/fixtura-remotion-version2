@@ -96,6 +96,48 @@ if (failed) {
   process.exit(1);
 }
 
+const nightSessionChecks = [
+  {
+    path: "dist/preview.css",
+    label: "dist/preview.css (Night Session)",
+    needles: [".night-session-canvas", ".leaderboard-ledger"],
+  },
+  {
+    path: "dist/preview.mjs",
+    label: "dist/preview.mjs (Night Session)",
+    needles: [".night-session-canvas", "fixtura-night-session-styles"],
+  },
+  {
+    path: "src/package/generated/nightSessionBundledCss.ts",
+    label: "nightSessionBundledCss.ts",
+    needles: [
+      "NIGHT_SESSION_BUNDLED_CSS",
+      ".night-session-canvas",
+      ".leaderboard-ledger",
+    ],
+  },
+];
+
+for (const check of nightSessionChecks) {
+  const abs = join(root, check.path);
+  if (!existsSync(abs)) {
+    console.error(
+      `verify-pack: Night Session bundle check missing file: ${check.path}`,
+    );
+    failed = true;
+    continue;
+  }
+  const content = readFileSync(abs, "utf8");
+  for (const needle of check.needles) {
+    if (!content.includes(needle)) {
+      console.error(
+        `verify-pack: ${check.label} missing Night Session marker: ${needle}`,
+      );
+      failed = true;
+    }
+  }
+}
+
 console.log(
-  "verify-pack: OK (files list + critical paths + Scoreline CSS bundle)",
+  "verify-pack: OK (files list + critical paths + Scoreline + Night Session CSS bundles)",
 );

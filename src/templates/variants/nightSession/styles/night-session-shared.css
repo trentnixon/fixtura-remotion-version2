@@ -580,6 +580,11 @@
   color: var(--contrast-score);
 }
 
+/* Outcome pill on results — black tag, white copy (see night-session-results.css) */
+.night-session-canvas .outcome-bridge .result-statement {
+  color: rgb(244 243 241 / 96%);
+}
+
 .night-session-canvas .performance-player {
   color: var(--contrast-performance-support);
   font-weight: 600;
@@ -659,7 +664,6 @@
 /* —— Container copy (light/lightAlt = light panel + dark text; dark/darkAlt = dark panel + white text) —— */
 .night-session-canvas
   :is(
-    .match-context,
     .match-grade,
     .performance-area,
     .roster-context,
@@ -680,7 +684,6 @@
 
 .night-session-canvas
   :is(
-    .match-context,
     .match-grade,
     .performance-area,
     .roster-context,
@@ -695,8 +698,6 @@
     [data-totw] .totw-category-label,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-team-label,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-team,
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-balls,
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-overs,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-sr,
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-figure-label,
     [data-totw] .totw-team-label,
@@ -711,7 +712,6 @@
 .night-session-canvas
   :is(
     [data-leaderboard] .leader-name,
-    [data-leaderboard] .leader-figure,
     [data-leaderboard] .leaderboard-category-value,
     [data-ladder] .ladder-grade-name,
     [data-roster] .roster-player,
@@ -728,12 +728,22 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.night-session-canvas
-  :is(
-    [data-leaderboard] .leader-entry:not(:first-of-type) .leader-rank,
-    [data-roster] .roster-index
-  ) {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+.night-session-canvas :is([data-roster] .roster-index) {
+  color: var(
+    --ns-roster-index-text,
+    var(
+      --container-text-accent,
+      var(--container-text, rgb(8 11 13 / 96%))
+    )
+  );
+}
+
+.night-session-canvas[data-leaderboard] .leader-rank.leader-rank-tag,
+.night-session-canvas[data-leaderboard] .leader-rank-tag.schedule-lockup {
+  color: var(
+    --ns-leader-rank-text,
+    var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
+  );
 }
 
 /* Container surfaces — 40% min tint via tokens; clip copy inside panel bounds */
@@ -1045,22 +1055,14 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.night-session-canvas[data-leaderboard="batting"] .leader-rank {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
-}
-
-.night-session-canvas[data-leaderboard="bowling"] .leader-rank {
-  color: var(--container-text-accent, var(--accent-on-light-secondary));
-}
-
-.night-session-canvas[data-leaderboard] .leader-figure {
-  color: var(--container-text, var(--contrast-performance-lead));
+.night-session-canvas[data-leaderboard] .leader-figure,
+.night-session-canvas[data-leaderboard] .leader-balls,
+.night-session-canvas[data-leaderboard] .leader-overs {
+  color: var(--header-text, rgb(255 255 255 / 92%));
 }
 
 .night-session-canvas[data-leaderboard] .leader-team-label,
 .night-session-canvas[data-leaderboard] .leader-team,
-.night-session-canvas[data-leaderboard] .leader-balls,
-.night-session-canvas[data-leaderboard] .leader-overs,
 .night-session-canvas[data-leaderboard] .leader-sr,
 .night-session-canvas[data-leaderboard] .leader-figure-label {
   color: var(--container-text-muted, var(--contrast-meta));
@@ -1117,8 +1119,8 @@
 }
 
 /* —— Team roster —— */
-.night-session-canvas[data-roster] .roster-grade {
-  box-shadow: var(--match-context-inset, var(--highlight-inset-light));
+.night-session-canvas[data-roster] .roster-grade.fixture-unit__rail {
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
 .night-session-canvas[data-roster] .roster-grade-meta {
@@ -1138,7 +1140,13 @@
 }
 
 .night-session-canvas[data-roster] .roster-index {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(
+    --ns-roster-index-text,
+    var(
+      --container-text-accent,
+      var(--container-text, rgb(8 11 13 / 96%))
+    )
+  );
 }
 
 .night-session-canvas[data-roster] .roster-player {
@@ -1204,11 +1212,17 @@
 }
 
 .night-session-canvas[data-totw] .totw-role {
-  color: var(--container-text-accent, var(--accent-on-light-secondary));
+  color: var(
+    --ns-performance-player,
+    var(--container-text-support, var(--contrast-performance-support))
+  );
 }
 
 .night-session-canvas[data-totw] .totw-team {
-  color: var(--container-text, var(--contrast-performance-lead));
+  color: var(
+    --container-text-support,
+    var(--contrast-performance-support, var(--container-text-muted))
+  );
 }
 
 .night-session-canvas[data-totw] .totw-team-label,
@@ -1227,12 +1241,7 @@
   z-index: 1;
 }
 
-/* —— Intro title card —— */
-.night-session-canvas.scoreline-intro .header-eyebrow,
-.night-session-canvas.scoreline-intro .organisation-name,
-.night-session-canvas.scoreline-intro .header-title {
-  color: var(--header-text, var(--container-text, var(--ink)));
-}
+/* Intro layout: night-session-intro.css */
 
 /* —— Shared surface grain (single atmospheric texture) —— */
 .night-session-canvas

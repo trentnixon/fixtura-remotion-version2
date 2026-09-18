@@ -18,8 +18,8 @@
   --font-body: "Heebo", Arial, sans-serif;
   --type-fixture-grade: 18px;
   --type-fixture-team: 28px;
-  --type-fixture-date: 28px;
-  --type-fixture-time: 20px;
+  --type-fixture-date: 20px;
+  --type-fixture-time: 28px;
   --type-fixture-venue: 16px;
 
   position: relative;
@@ -213,30 +213,43 @@
 }
 
 /* Grade rail — fixture label; club primary washes left → right */
-.template-canvas.night-session-canvas .fixture-unit__rail {
+.template-canvas.night-session-canvas
+  .fixture-unit:not(.match-module--single)
+  .fixture-unit__rail {
   position: relative;
   min-width: 0;
   padding: 7px 12px;
   border: 0;
   border-bottom: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(
-        --ns-grade-rail-gradient-mid,
-        color-mix(in srgb, var(--club-primary) 10%, transparent)
-      )
-      58%,
-    var(
-        --ns-grade-rail-gradient-end,
-        color-mix(in srgb, var(--club-primary) 32%, transparent)
-      )
-      100%
-  );
-  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%));
+      90deg,
+      transparent 0%,
+      var(
+          --ns-grade-rail-gradient-mid,
+          color-mix(
+            in srgb,
+            var(--container-text-accent, var(--club-primary)) 10%,
+            transparent
+          )
+        )
+        58%,
+      var(
+          --ns-grade-rail-gradient-end,
+          color-mix(
+            in srgb,
+            var(--container-text-accent, var(--club-primary)) 32%,
+            transparent
+          )
+        )
+        100%
+    ),
+    var(--ns-performance-row-bg, rgb(10 12 14 / 65%));
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
-.template-canvas.night-session-canvas .fixture-unit__rail::after {
+.template-canvas.night-session-canvas
+  .fixture-unit:not(.match-module--single)
+  .fixture-unit__rail::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -291,7 +304,7 @@
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: var(
     --performance-area-surface,
-    var(--ns-performance-row-bg, rgb(10 12 14 / 28%))
+    var(--ns-performance-row-bg, rgb(10 12 14 / 65%))
   );
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
@@ -346,7 +359,7 @@
 .template-canvas.night-session-canvas .fixture-opponent__cell {
   min-width: 0;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  background: var(--ns-performance-row-bg, rgb(10 12 14 / 28%));
+  background: var(--ns-performance-row-bg, rgb(10 12 14 / 65%));
   box-shadow: var(
     --match-context-inset,
     var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%))
@@ -510,48 +523,68 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 4px;
   min-width: min(100%, 280px);
   min-height: 44px;
-  padding: 8px 28px;
+  padding: 10px 28px;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: var(--ns-schedule-lockup-bg, rgb(10 12 14 / 95%));
-  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%));
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
-.template-canvas.night-session-canvas .fixture-date {
-  font-family: var(--font-display);
-  font-size: var(--type-fixture-date);
+.template-canvas.night-session-canvas .schedule-lockup .fixture-grade-name {
+  padding-right: 0;
+  margin: 0;
+  text-align: center;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--container-text, var(--ns-band-score, #fff));
+  line-height: 1.2;
+  color: var(
+    --container-text-accent,
+    var(--container-text, var(--ns-band-team, rgb(255 255 255 / 92%)))
+  );
+  -webkit-line-clamp: 2;
+}
+
+.template-canvas.night-session-canvas
+  .schedule-lockup
+  .fixture-grade-name[data-empty="true"] {
+  display: none;
 }
 
 .template-canvas.night-session-canvas .fixture-time {
   font-family: var(--font-display);
   font-size: var(--type-fixture-time);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--container-text, var(--contrast-performance-lead));
+}
+
+.template-canvas.night-session-canvas .fixture-date {
+  font-family: var(--font-display);
+  font-size: var(--type-fixture-date);
   font-weight: 500;
   letter-spacing: 0.06em;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--club-primary);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 /* Match context — same reading order as Results metadata row */
 .template-canvas.night-session-canvas .fixture-unit .match-context {
   min-width: 0;
   padding: 0;
+  margin-top: var(--space-2);
   display: grid;
-  grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
-  gap: var(--space-2);
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
+  gap: var(--space-3);
   align-items: stretch;
   border: 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
-  color: var(--match-context-text-muted, rgb(244 243 241 / 58%));
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .template-canvas.night-session-canvas .fixture-unit .context-left,
@@ -561,24 +594,22 @@
   align-items: center;
   padding: 8px 12px;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  background: var(--ns-performance-row-bg, rgb(10 12 14 / 28%));
-  box-shadow: var(
-    --match-context-inset,
-    var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 3%))
-  );
+  background: var(--ns-performance-row-bg, rgb(10 12 14 / 65%));
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
 .template-canvas.night-session-canvas .fixture-unit .context-left {
   flex-wrap: wrap;
   gap: var(--space-2);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .template-canvas.night-session-canvas .fixture-unit .context-separator {
   width: 3px;
   height: 3px;
   flex: 0 0 auto;
-  background: var(--club-secondary);
-  opacity: 0.7;
+  background: var(--container-text-accent, var(--club-primary));
+  opacity: 0.85;
 }
 
 .template-canvas.night-session-canvas .fixture-unit .context-venue {
@@ -589,7 +620,7 @@
   font-size: var(--type-fixture-venue);
   line-clamp: 2;
   -webkit-line-clamp: 2;
-  color: var(--match-context-text, rgb(244 243 241 / 72%));
+  color: var(--container-text, var(--contrast-team));
 }
 
 .template-canvas.night-session-canvas .fixture-close {

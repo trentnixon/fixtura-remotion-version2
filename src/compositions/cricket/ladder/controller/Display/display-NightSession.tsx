@@ -5,8 +5,10 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
 import { csClass } from "../../../utils/scoreline/componentStyles";
-import { calculateScorelineInnerDelay } from "../../../utils/scoreline/scorelineInnerAnimationDelays";
+import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNightSessionEnterTiming";
+import { NightSessionEnterTimingProvider } from "../../../utils/nightSession/NightSessionEnterTimingContext";
 import { resolveScorelineLadderBiasTeam } from "../../../utils/scoreline/ladder/resolveScorelineLadderBiasTeam";
+import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import { resolveScorelineLadderDensity } from "../../../utils/scoreline/ladder/resolveScorelineLadderLayout";
 import RowNightSession from "../TeamRows/row-NightSession";
 import { LadderDisplayProps } from "./_types/LadderDisplayProps";
@@ -17,7 +19,6 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
   ladder,
 }) => {
   const { animations } = useAnimationContext();
-  const panelAnimation = animations.container.main.itemContainerOuter;
   const innerAnimation = animations.container.main.itemContainerInner;
   const { club, data } = useVideoDataContext();
   const { timings } = data;
@@ -29,27 +30,26 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
   const teamCount = League.length;
   const density = resolveScorelineLadderDensity(teamCount);
   const animationOutFrame = calculateAnimationOutFrame(timings);
+  const enterTiming = useNightSessionEnterTiming(teamCount, "FPS_LADDER");
 
   return (
     <div
       className={csClass(componentStyles, "nightSessionDisplayColumn")}
       style={{ height: `${mainContentHeight + heights.footer}px` }}
     >
-      <AnimatedContainer
-        type="full"
+      <NightSessionAnimatedShell
         className={csClass(componentStyles, "nightSessionAnimatedShell")}
-        backgroundColor="none"
-        animation={panelAnimation.containerIn}
-        exitAnimation={panelAnimation.containerOut}
+        exitFrame={animationOutFrame}
       >
-        <main
-          className={`ladder-ledger ${csClass(componentStyles, "nightSessionLadderLedger")}`}
-          style={{
-            height: `${mainContentHeight}px`,
-            maxHeight: `${mainContentHeight}px`,
-          }}
-        >
-          <div className="ladder-stack">
+        <NightSessionEnterTimingProvider value={enterTiming}>
+          <main
+            className={`ladder-ledger ${csClass(componentStyles, "nightSessionLadderLedger")}`}
+            style={{
+              height: `${mainContentHeight}px`,
+              maxHeight: `${mainContentHeight}px`,
+            }}
+          >
+            <div className="ladder-stack">
             <section className="ladder-table ladder-unit">
               <AnimatedContainer
                 type="full"
@@ -57,7 +57,7 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
                 className="w-full min-w-0"
                 backgroundColor="none"
                 animation={innerAnimation.containerIn}
-                animationDelay={calculateScorelineInnerDelay(0, "grade")}
+                animationDelay={enterTiming.innerDelay(0, "grade")}
                 exitAnimation={innerAnimation.containerOut}
                 exitFrame={animationOutFrame}
               >
@@ -76,7 +76,7 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
                   className="w-full min-w-0"
                   backgroundColor="none"
                   animation={innerAnimation.containerIn}
-                  animationDelay={calculateScorelineInnerDelay(0, "columns")}
+                  animationDelay={enterTiming.innerDelay(0, "columns")}
                   exitAnimation={innerAnimation.containerOut}
                   exitFrame={animationOutFrame}
                 >
@@ -118,8 +118,9 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
               </div>
             </section>
           </div>
-        </main>
-      </AnimatedContainer>
+          </main>
+        </NightSessionEnterTimingProvider>
+      </NightSessionAnimatedShell>
       <NightSessionSponsorFooter
         assignSponsors={assignSponsors}
         primaryForScreen={primaryForScreen}

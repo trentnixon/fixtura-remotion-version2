@@ -1,3 +1,5 @@
+/* Night Session — Team Roster (synced from src/templates) */
+
 /* Night Session — Team Roster */
 
 .template-canvas.night-session-canvas[data-roster] {
@@ -24,7 +26,6 @@
   --type-roster-index: 36px;
   --type-roster-squad: 22px;
   --type-fixture-grade: 20px;
-  --header-text: rgb(244 243 241 / 96%);
   --font-display: "Teko", "Arial Narrow", sans-serif;
   --font-body: "Heebo", Arial, sans-serif;
 
@@ -131,14 +132,31 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-columns {
   flex: 1 1 auto;
   min-height: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: var(--roster-col-info) var(--roster-col-lineup);
+  gap: var(--space-2);
   align-items: stretch;
+}
+
+.template-canvas.night-session-canvas[data-roster]
+  .roster-columns
+  > .fixture-card.fixture-unit {
+  flex: 1 1 auto;
+  width: auto;
+  max-width: none;
+  min-height: 0;
+  height: 100%;
+  align-self: stretch;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-info,
@@ -147,6 +165,85 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+}
+
+.template-canvas.night-session-canvas[data-roster] .roster-lineup {
+  width: auto;
+  max-width: none;
+  margin-inline: 0;
+  gap: 0;
+}
+
+.template-canvas.night-session-canvas[data-roster] .fixture-unit__rail.roster-grade,
+.template-canvas.night-session-canvas[data-roster] .fixture-unit__rail.roster-lineup__rail {
+  display: flex;
+  align-items: center;
+  grid-template-columns: unset;
+  gap: 0;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(
+          --ns-grade-rail-gradient-mid,
+          color-mix(
+            in srgb,
+            var(--container-text-accent, var(--club-primary)) 10%,
+            transparent
+          )
+        )
+        58%,
+      var(
+          --ns-grade-rail-gradient-end,
+          color-mix(
+            in srgb,
+            var(--container-text-accent, var(--club-primary)) 32%,
+            transparent
+          )
+        )
+        100%
+    ),
+    var(--ns-performance-row-bg, var(--container-surface));
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
+}
+
+.template-canvas.night-session-canvas[data-roster] .roster-grade.fixture-unit__rail {
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(
+          --ns-grade-rail-gradient-mid,
+          color-mix(
+            in srgb,
+            var(--container-text-accent, var(--club-primary)) 10%,
+            transparent
+          )
+        )
+        58%,
+      var(
+          --ns-grade-rail-gradient-end,
+          color-mix(
+            in srgb,
+            var(--container-text-accent, var(--club-primary)) 32%,
+            transparent
+          )
+        )
+        100%
+    ),
+    var(--ns-performance-row-bg, var(--container-surface));
+}
+
+.template-canvas.night-session-canvas[data-roster] .roster-meta.roster-cell {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.template-canvas.night-session-canvas[data-roster] .roster-rows .roster-entry .roster-row {
+  grid-template-columns: var(--roster-grid-index) minmax(0, 1fr);
+  column-gap: var(--space-2);
+  padding: 0;
+  align-items: stretch;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-info__frame {
@@ -165,8 +262,7 @@
   flex-direction: column;
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-grade[data-empty="true"] {
+.template-canvas.night-session-canvas[data-roster] .roster-grade[data-empty="true"] {
   display: none;
 }
 
@@ -186,11 +282,10 @@
   letter-spacing: 0.02em;
   line-height: 1.3;
   text-transform: none;
-  color: rgb(244 243 241 / 68%);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .meta-chip[data-empty="true"] {
+.template-canvas.night-session-canvas[data-roster] .meta-chip[data-empty="true"] {
   display: none;
 }
 
@@ -199,7 +294,8 @@
   ~ .roster-meta-part.meta-chip:not([data-empty="true"])::before {
   content: "·";
   margin-inline: 10px;
-  color: rgb(244 243 241 / 36%);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
+  opacity: 0.55;
   font-weight: 700;
   letter-spacing: 0;
   text-transform: none;
@@ -251,9 +347,7 @@
   object-fit: contain;
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-team-mark--hero
-  .mark-fallback {
+.template-canvas.night-session-canvas[data-roster] .roster-team-mark--hero .mark-fallback {
   width: 48%;
   height: 48%;
   border-width: 3px;
@@ -271,7 +365,7 @@
   font-weight: 700;
   font-stretch: condensed;
   line-height: 1.05;
-  color: rgb(244 243 241 / 96%);
+  color: var(--container-text, var(--contrast-team));
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -282,11 +376,15 @@
   .roster-team-name--hero[data-club-team="true"] {
   border-color: color-mix(
     in srgb,
-    var(--club-primary) 42%,
-    rgb(255 255 255 / 10%)
+    var(--container-text-accent, var(--club-primary)) 42%,
+    var(--ns-performance-border, rgb(255 255 255 / 10%))
   );
-  background: color-mix(in srgb, var(--club-primary) 14%, rgb(8 10 12 / 22%));
-  color: rgb(255 255 255 / 98%);
+  background: color-mix(
+    in srgb,
+    var(--container-text-accent, var(--club-primary)) 14%,
+    var(--ns-performance-row-bg, var(--container-surface))
+  );
+  color: var(--container-text, var(--contrast-team));
 }
 
 .template-canvas.night-session-canvas[data-roster]
@@ -297,10 +395,14 @@
   .roster-team-mark--hero {
   border-color: color-mix(
     in srgb,
-    var(--club-primary) 38%,
-    rgb(255 255 255 / 10%)
+    var(--container-text-accent, var(--club-primary)) 38%,
+    var(--ns-performance-border, rgb(255 255 255 / 10%))
   );
-  background: color-mix(in srgb, var(--club-primary) 10%, rgb(8 10 12 / 22%));
+  background: color-mix(
+    in srgb,
+    var(--container-text-accent, var(--club-primary)) 10%,
+    var(--ns-performance-row-bg, var(--container-surface))
+  );
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-schedule-stack {
@@ -318,17 +420,16 @@
   font-size: var(--type-roster-venue);
   font-weight: 500;
   line-height: 1.25;
-  color: rgb(244 243 241 / 78%);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-schedule-line:first-child {
+.template-canvas.night-session-canvas[data-roster] .roster-schedule-line:first-child {
   font-family: var(--font-display);
   font-size: var(--type-roster-date);
   font-weight: 700;
   font-stretch: condensed;
   line-height: 1.08;
-  color: rgb(244 243 241 / 96%);
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .template-canvas.night-session-canvas[data-roster]
@@ -353,7 +454,7 @@
   letter-spacing: 0.06em;
   line-height: 1;
   text-transform: none;
-  color: rgb(244 243 241 / 58%);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-squad-team {
@@ -368,7 +469,7 @@
   text-align: right;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--ns-band-team, rgb(255 255 255 / 92%));
+  color: var(--container-text, var(--contrast-team));
 }
 
 /* Player rows */
@@ -382,15 +483,13 @@
   overflow-x: hidden;
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-rows[data-density="compact"] {
+.template-canvas.night-session-canvas[data-roster] .roster-rows[data-density="compact"] {
   --roster-row-min-height: 46px;
   --type-roster-player: 30px;
   --type-roster-index: 32px;
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-rows[data-density="tight"] {
+.template-canvas.night-session-canvas[data-roster] .roster-rows[data-density="tight"] {
   --roster-row-min-height: 42px;
   --type-roster-player: 27px;
   --type-roster-index: 28px;
@@ -401,8 +500,7 @@
   min-height: var(--roster-row-min-height);
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-entry[data-empty="true"] {
+.template-canvas.night-session-canvas[data-roster] .roster-entry[data-empty="true"] {
   display: none;
 }
 
@@ -417,17 +515,16 @@
   box-shadow: none !important;
 }
 
-.template-canvas.night-session-canvas[data-roster]
-  .roster-row[data-empty-roster="true"] {
+.template-canvas.night-session-canvas[data-roster] .roster-row[data-empty-roster="true"] {
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   padding: 12px;
-  color: rgb(244 243 241 / 52%);
+  color: var(--container-text-muted, var(--contrast-meta-on-surface));
   font-size: 16px;
   font-weight: 500;
   font-style: italic;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  background: rgb(8 10 12 / 18%) !important;
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-cell {
@@ -435,8 +532,8 @@
   display: flex;
   align-items: center;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  background: rgb(8 10 12 / 18%);
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
+  background: var(--ns-performance-row-bg, var(--container-surface));
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-rows .roster-cell {
@@ -452,7 +549,13 @@
   font-stretch: condensed;
   line-height: 1;
   font-variant-numeric: tabular-nums lining-nums;
-  color: rgb(244 243 241 / 96%);
+  color: var(
+    --ns-roster-index-text,
+    var(
+      --container-text-accent,
+      var(--container-text, rgb(8 11 13 / 96%))
+    )
+  );
 }
 
 .template-canvas.night-session-canvas[data-roster] .roster-player.roster-cell {
@@ -470,7 +573,7 @@
   font-weight: 600;
   font-stretch: condensed;
   line-height: 1.12;
-  color: rgb(244 243 241 / 94%);
+  color: var(--container-text, var(--contrast-performance-lead));
   text-transform: none;
   text-overflow: ellipsis;
   white-space: nowrap;

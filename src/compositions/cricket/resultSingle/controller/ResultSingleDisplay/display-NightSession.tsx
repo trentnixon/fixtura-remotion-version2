@@ -1,8 +1,7 @@
 import React from "react";
-import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
-import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import { csClass } from "../../../utils/scoreline/componentStyles";
 import { NightSessionResultSingleContent } from "../../../utils/nightSession/results/NightSessionResultSingleContent";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
@@ -12,9 +11,7 @@ const ResultSingleDisplayNightSession: React.FC<ResultSingleDisplayProps> = ({
   match,
 }) => {
   const { layout, componentStyles } = useThemeContext();
-  const { animations } = useAnimationContext();
   const { heights } = layout;
-  const containerAnimation = animations.container.main.itemContainer;
   const mainContentHeight = getMainContentSectionHeight(heights);
 
   return (
@@ -22,12 +19,8 @@ const ResultSingleDisplayNightSession: React.FC<ResultSingleDisplayProps> = ({
       className={csClass(componentStyles, "nightSessionDisplayColumn")}
       style={{ height: `${mainContentHeight + heights.footer}px` }}
     >
-      <AnimatedContainer
-        type="full"
+      <NightSessionAnimatedShell
         className={csClass(componentStyles, "nightSessionAnimatedShell")}
-        backgroundColor="none"
-        animation={containerAnimation.containerIn}
-        exitAnimation={containerAnimation.containerOut}
       >
         <main
           className={`results-ledger results-ledger--single ${csClass(componentStyles, "nightSessionResultsLedger")}`}
@@ -41,7 +34,7 @@ const ResultSingleDisplayNightSession: React.FC<ResultSingleDisplayProps> = ({
             style={{ maxHeight: mainContentHeight }}
           />
         </main>
-      </AnimatedContainer>
+      </NightSessionAnimatedShell>
 
       <NightSessionSponsorFooter
         assignSponsors={match.assignSponsors}

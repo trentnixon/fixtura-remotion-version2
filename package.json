@@ -90,20 +90,21 @@
     "design:scaffold": "node scripts/scaffold-design-template.mjs",
     "design:materialize-starters": "node scripts/materialize-design-starters.mjs",
     "build": "remotion bundle",
-    "build:package:js": "node scripts/inline-scoreline-css.mjs && tsup && node scripts/copy-preview-dts.mjs",
+    "build:package:js": "node scripts/inline-scoreline-css.mjs && node scripts/inline-night-session-css.mjs && tsup && node scripts/copy-preview-dts.mjs",
     "build:package:css": "tailwindcss -i ./src/package/styles.css -o ./dist/preview.css --minify",
-    "build:package": "npm run build:package:js && npm run build:package:css && npm run verify:pack",
+    "build:package": "npm run build:package:js && npm run build:package:css && npm run verify:pack && npm run copy",
     "verify:pack": "node scripts/verify-pack.mjs",
     "prepack": "npm run build:package",
     "upgrade": "remotion upgrade",
-    "lint": "node scripts/inline-scoreline-css.mjs && tsc",
+    "lint": "node scripts/inline-scoreline-css.mjs && node scripts/inline-night-session-css.mjs && tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "clean:cache": "node scripts/clear-webpack-cache.mjs",
     "deploy": "npm run clean:cache && npx remotion lambda sites create src/index.ts --site-name=fixtura-remotion-v2 --region=ap-southeast-2 && node scripts/upload-public-assets.mjs && node scripts/verify-deploy.mjs",
-    "deploy:verify": "node scripts/verify-deploy.mjs"
+    "deploy:verify": "node scripts/verify-deploy.mjs",
+    "copy": "powershell -NoProfile -Command Copy-Item D:\\htdoc\\Fixtura\\Creators\\RemotionV2\\dist\\preview.mjs D:\\htdoc\\Fixtura\\Fixtura.com.au\\application\\src\\vendor\\fixtura-remotion-assets\\preview.mjs -Force"
   },
   "sideEffects": [
     "*.css"

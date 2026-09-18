@@ -3,6 +3,8 @@ import { Img } from "remotion";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { resolveScorelineHeaderDefaults } from "../../../../compositions/cricket/utils/scoreline/resolveScorelineHeaderDefaults";
+import { NightSessionAnimatedCopy } from "../../../../compositions/cricket/utils/nightSession/NightSessionAnimatedCopy";
+import { NIGHT_SESSION_HEADER_COPY_DELAY } from "../../../../compositions/cricket/utils/nightSession/nightSessionAnimationTiming";
 
 export const NightSessionMainHeader: React.FC = () => {
   const { selectedPalette } = useThemeContext();
@@ -27,14 +29,17 @@ export const NightSessionMainHeader: React.FC = () => {
         <span className="mark-fallback" aria-hidden />
         {hasCrest ? <Img src={logoUrl} alt="" /> : null}
       </div>
-      <div className="ns-header__lockup">
+      <NightSessionAnimatedCopy
+        className="ns-header__lockup"
+        animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY}
+      >
         <p className="header-eyebrow" style={{ color: headerTextColor }}>
           {eyebrow}
         </p>
         <h1 className="header-title" style={{ color: headerTextColor }}>
           {title}
         </h1>
-      </div>
+      </NightSessionAnimatedCopy>
       <p className="sr-only">{club.name}</p>
     </header>
   );

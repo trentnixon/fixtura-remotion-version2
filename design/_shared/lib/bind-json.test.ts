@@ -9,4 +9,12 @@ describe("bind-json duplicate detection", () => {
       ),
     ).not.toThrow();
   });
+
+  it("allows repeated nested path keys in optional bind entries", () => {
+    expect(() =>
+      assertNoDuplicateJsonKeys(
+        '{"[data-hydrate=a]":{"path":"p.a","optional":true},"[data-hydrate=b]":{"path":"p.b","optional":true}}',
+      ),
+    ).not.toThrow();
+  });
 });

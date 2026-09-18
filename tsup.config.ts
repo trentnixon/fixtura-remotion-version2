@@ -17,7 +17,9 @@ export default defineConfig({
   // Declaration emit is maintained in src/package/preview.public.d.ts (tsup cannot emit .d.ts
   // for this graph without TS4023 errors in template/background modules).
   dts: false,
-  clean: true,
+  // Do not unlink dist outputs before build. On Windows, preview.js/.map are often locked
+  // (Remotion Studio, watchers, AV) and tsup's pre-clean hits EPERM. Overwrite in place instead.
+  clean: false,
   sourcemap: true,
   outDir: "dist",
   external,

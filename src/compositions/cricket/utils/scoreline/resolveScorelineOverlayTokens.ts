@@ -116,18 +116,21 @@ export type ScorelineMatchContextTokens = {
   accent: string;
 };
 
-/** Mode-aware match-context strip — follows container family, not Alt title flip. */
+/** Open-canvas meta (match-context without panel) — uses mode title / copyNoBg, incl. Alt flips. */
 export const resolveScorelineMatchContextTokens = (
   selectedPalette: DesignPalette,
 ): ScorelineMatchContextTokens => {
   const container = resolveScorelineContainerCopyTokens(selectedPalette);
   const isDark = isScorelineDarkContainerMode(selectedPalette);
+  const openCopy = selectedPalette.text.onContainer.copyNoBg;
+  const openCopyMuted = tinycolor(openCopy).setAlpha(0.68).toRgbString();
+  const openCopyStrong = tinycolor(openCopy).setAlpha(0.92).toRgbString();
 
   return {
     surface: isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT,
     inset: container.inset,
-    textMuted: container.textMuted,
-    text: container.text,
+    textMuted: openCopyMuted,
+    text: openCopyStrong,
     accent: container.accent,
   };
 };

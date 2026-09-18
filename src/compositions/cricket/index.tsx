@@ -53,6 +53,7 @@ import {
   broadcastpro as resultsBroadcastPro,
   broadcastprorounded as resultsBroadcastProRounded,
   scoreline as resultsScoreline,
+  nightsession as resultsNightSession,
 } from "./results";
 // Import directly from BasicTemplate for resultSingle
 import {
@@ -80,6 +81,7 @@ import {
   broadcastpro as rosterBroadcastPro,
   broadcastprorounded as rosterBroadcastProRounded,
   scoreline as rosterScoreline,
+  nightSession as rosterNightSession,
 } from "./teamRoster";
 import {
   basic as performancesBasic,
@@ -93,6 +95,7 @@ import {
   broadcastpro as performancesBroadcastPro,
   broadcastprorounded as performancesBroadcastProRounded,
   scoreline as performancesScoreline,
+  nightsession as performancesNightSession,
 } from "./performances";
 import {
   basic as teamOfTheWeekBasic,
@@ -106,6 +109,7 @@ import {
   broadcastpro as teamOfTheWeekBroadcastPro,
   broadcastprorounded as teamOfTheWeekBroadcastProRounded,
   scoreline as teamOfTheWeekScoreline,
+  nightSession as teamOfTheWeekNightSession,
 } from "./TeamOfTheWeek";
 
 /* export * as ladder from './ladder';
@@ -165,7 +169,7 @@ export const CricketResults = {
   broadcastpro: resultsBroadcastPro,
   broadcastprorounded: resultsBroadcastProRounded,
   scoreline: resultsScoreline,
-  nightsession: PlaceholderComposition,
+  nightsession: resultsNightSession,
 };
 
 export const CricketUpcoming = {
@@ -213,7 +217,7 @@ export const CricketRoster = {
   broadcastpro: rosterBroadcastPro,
   broadcastprorounded: rosterBroadcastProRounded,
   scoreline: rosterScoreline,
-  nightsession: PlaceholderComposition,
+  nightsession: rosterNightSession,
 };
 
 // Add CricketPerformances export for batting and bowling performances
@@ -230,7 +234,7 @@ export const CricketPerformances = {
   broadcastpro: performancesBroadcastPro,
   broadcastprorounded: performancesBroadcastProRounded,
   scoreline: performancesScoreline,
-  nightsession: PlaceholderComposition,
+  nightsession: performancesNightSession,
 };
 
 // Add CricketTeamOfTheWeek export for Team of the Week
@@ -247,7 +251,7 @@ export const CricketTeamOfTheWeek = {
   broadcastpro: teamOfTheWeekBroadcastPro,
   broadcastprorounded: teamOfTheWeekBroadcastProRounded,
   scoreline: teamOfTheWeekScoreline,
-  nightsession: PlaceholderComposition,
+  nightsession: teamOfTheWeekNightSession,
 };
 
 export const singleGameResult = {

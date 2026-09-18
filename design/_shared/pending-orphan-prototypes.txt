@@ -4,5 +4,3 @@ factory-demo/cricket/results.html
 night-session/cricket/upcoming.html
 night-session/cricket/top5-batting.html
 night-session/cricket/top5-bowling.html
-night-session/cricket/performances-batting.html
-night-session/cricket/performances-bowling.html

@@ -12,6 +12,7 @@ import {
 import { mountNightSessionModeControls } from "./night-session-mode-controls.js";
 import {
   syncScorelineLeaderboardLayout,
+  syncNightSessionLeaderboardDensity,
   syncScorelineLadderLayout,
   syncScorelineOrganisationCrest,
   syncScorelineResultsLayout,
@@ -122,6 +123,7 @@ export async function initNightSessionAsset(context, options = {}) {
   syncScorelineUpcomingLayout(document);
   syncScorelineRosterLayout(document);
   syncScorelineLeaderboardLayout(document);
+  syncNightSessionLeaderboardDensity(document);
   syncScorelineLadderLayout(document);
   syncScorelineTotwLayout(document);
 

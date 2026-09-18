@@ -9,6 +9,7 @@ import { mudgeeraba as MudgeerabaResults } from "./mudgeeraba";
 import BroadcastProResults from "./broadcastPro";
 import BroadcastProRoundedResults from "./broadcastProRounded";
 import ScorelineResults from "./scoreline";
+import { nightSession as NightSessionResults } from "./nightSession";
 
 // Export all template implementations
 export { BasicResults as basic };
@@ -22,3 +23,5 @@ export { MudgeerabaResults as mudgeeraba };
 export { BroadcastProResults as broadcastpro };
 export { BroadcastProRoundedResults as broadcastprorounded };
 export { ScorelineResults as scoreline };
+export { NightSessionResults as nightSession };
+export { NightSessionResults as nightsession };

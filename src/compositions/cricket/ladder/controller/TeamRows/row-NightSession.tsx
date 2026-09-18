@@ -3,10 +3,8 @@ import { useVideoDataContext } from "../../../../../core/context/VideoDataContex
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import NightSessionLadderRow from "../../layout/NightSessionLadderRow";
 import { TeamRowProps } from "./_types/TeamRowProps";
-import {
-  calculateAnimationDelay,
-  calculateAnimationOutFrame,
-} from "./_utils/calculations";
+import { calculateAnimationOutFrame } from "./_utils/calculations";
+import { useNightSessionRowEnterTiming } from "../../../utils/nightSession/NightSessionEnterTimingContext";
 
 export const RowNightSession: React.FC<TeamRowProps> = ({
   team,
@@ -18,7 +16,8 @@ export const RowNightSession: React.FC<TeamRowProps> = ({
   const containerAnimation = animations.container.main.itemContainer;
   const { timings } = data;
 
-  const delay = calculateAnimationDelay(index, 9);
+  const enterTiming = useNightSessionRowEnterTiming();
+  const delay = enterTiming.rowDelayForIndex(index);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
@@ -30,6 +29,7 @@ export const RowNightSession: React.FC<TeamRowProps> = ({
       animationDelay={delay}
       exitAnimation={containerAnimation.containerOut}
       exitFrame={animationOutFrame}
+      enterTiming={enterTiming}
     />
   );
 };

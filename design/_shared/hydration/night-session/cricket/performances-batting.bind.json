@@ -13,7 +13,6 @@
   "[data-hydrate=player-1-runs]": "data.0.runs",
   "[data-hydrate=player-1-balls]": "data.0.balls",
   "[data-hydrate=player-1-not-out]": "data.0.notOut",
-  "[data-hydrate=player-1-sr]": "data.0.SR",
 
   "[data-hydrate=player-2-name]": "data.1.name",
   "[data-hydrate=player-2-team]": "data.1.playedFor",
@@ -21,7 +20,6 @@
   "[data-hydrate=player-2-runs]": "data.1.runs",
   "[data-hydrate=player-2-balls]": "data.1.balls",
   "[data-hydrate=player-2-not-out]": "data.1.notOut",
-  "[data-hydrate=player-2-sr]": "data.1.SR",
 
   "[data-hydrate=player-3-name]": "data.2.name",
   "[data-hydrate=player-3-team]": "data.2.playedFor",
@@ -29,7 +27,6 @@
   "[data-hydrate=player-3-runs]": "data.2.runs",
   "[data-hydrate=player-3-balls]": "data.2.balls",
   "[data-hydrate=player-3-not-out]": "data.2.notOut",
-  "[data-hydrate=player-3-sr]": "data.2.SR",
 
   "[data-hydrate=player-4-name]": "data.3.name",
   "[data-hydrate=player-4-team]": "data.3.playedFor",
@@ -37,7 +34,6 @@
   "[data-hydrate=player-4-runs]": "data.3.runs",
   "[data-hydrate=player-4-balls]": "data.3.balls",
   "[data-hydrate=player-4-not-out]": "data.3.notOut",
-  "[data-hydrate=player-4-sr]": "data.3.SR",
 
   "[data-hydrate=player-5-name]": "data.4.name",
   "[data-hydrate=player-5-team]": "data.4.playedFor",
@@ -45,5 +41,39 @@
   "[data-hydrate=player-5-runs]": "data.4.runs",
   "[data-hydrate=player-5-balls]": "data.4.balls",
   "[data-hydrate=player-5-not-out]": "data.4.notOut",
-  "[data-hydrate=player-5-sr]": "data.4.SR"
+
+  "[data-hydrate=player-6-name]": "data.5.name",
+  "[data-hydrate=player-6-team]": "data.5.playedFor",
+  "[data-hydrate=player-6-logo]": "data.5.teamLogo.url",
+  "[data-hydrate=player-6-runs]": "data.5.runs",
+  "[data-hydrate=player-6-balls]": "data.5.balls",
+  "[data-hydrate=player-6-not-out]": "data.5.notOut",
+
+  "[data-hydrate=player-7-name]": "data.6.name",
+  "[data-hydrate=player-7-team]": "data.6.playedFor",
+  "[data-hydrate=player-7-logo]": "data.6.teamLogo.url",
+  "[data-hydrate=player-7-runs]": "data.6.runs",
+  "[data-hydrate=player-7-balls]": "data.6.balls",
+  "[data-hydrate=player-7-not-out]": "data.6.notOut",
+
+  "[data-hydrate=player-8-name]": "data.7.name",
+  "[data-hydrate=player-8-team]": "data.7.playedFor",
+  "[data-hydrate=player-8-logo]": "data.7.teamLogo.url",
+  "[data-hydrate=player-8-runs]": "data.7.runs",
+  "[data-hydrate=player-8-balls]": "data.7.balls",
+  "[data-hydrate=player-8-not-out]": "data.7.notOut",
+
+  "[data-hydrate=player-9-name]": "data.8.name",
+  "[data-hydrate=player-9-team]": "data.8.playedFor",
+  "[data-hydrate=player-9-logo]": "data.8.teamLogo.url",
+  "[data-hydrate=player-9-runs]": "data.8.runs",
+  "[data-hydrate=player-9-balls]": "data.8.balls",
+  "[data-hydrate=player-9-not-out]": "data.8.notOut",
+
+  "[data-hydrate=player-10-name]": "data.9.name",
+  "[data-hydrate=player-10-team]": "data.9.playedFor",
+  "[data-hydrate=player-10-logo]": "data.9.teamLogo.url",
+  "[data-hydrate=player-10-runs]": "data.9.runs",
+  "[data-hydrate=player-10-balls]": "data.9.balls",
+  "[data-hydrate=player-10-not-out]": "data.9.notOut"
 }

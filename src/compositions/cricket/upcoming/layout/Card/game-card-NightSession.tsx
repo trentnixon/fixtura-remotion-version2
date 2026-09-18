@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Img } from "remotion";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import type { ContainerAnimationConfig } from "../../../../../components/containers/animations";
 import { GameCardProps } from "./_types/GameCardProps";
-import {
-  calculateAnimationDelay,
-  calculateAnimationOutFrame,
-  calculateScorelineInnerDelay,
-  FAST_DELAY_MULTIPLIER,
-} from "./_utils/calculations";
+import { calculateAnimationOutFrame } from "./_utils/calculations";
+import { useNightSessionRowEnterTiming } from "../../../utils/nightSession/NightSessionEnterTimingContext";
 import { dedupeVenueLabel } from "../../../utils/scoreline/results/dedupeVenueLabel";
 import { resolveScorelineUpcomingClubSides } from "../../../utils/scoreline/fixture/resolveScorelineUpcomingClubSides";
+import {
+  NIGHT_SESSION_FIXTURE_INNER_ENTER_DISTANCE_PX,
+  NIGHT_SESSION_FIXTURE_ROW_ENTER_DISTANCE_PX,
+} from "../../../utils/nightSession/nightSessionAnimationTiming";
+
+const withFixtureInnerDistance = (
+  config: ContainerAnimationConfig,
+): ContainerAnimationConfig => ({
+  ...config,
+  custom: { distance: NIGHT_SESSION_FIXTURE_INNER_ENTER_DISTANCE_PX },
+});
 
 const NightSessionFixtureAnim: React.FC<{
   animationIn: ContainerAnimationConfig;
@@ -28,20 +35,31 @@ const NightSessionFixtureAnim: React.FC<{
   animationOutFrame,
   className = "w-full min-w-0",
   children,
-}) => (
-  <AnimatedContainer
-    type="full"
-    size="auto"
-    className={className}
-    backgroundColor="none"
-    animation={animationIn}
-    animationDelay={animationDelay}
-    exitAnimation={animationOut}
-    exitFrame={animationOutFrame}
-  >
-    {children}
-  </AnimatedContainer>
-);
+}) => {
+  const enter = useMemo(
+    () => withFixtureInnerDistance(animationIn),
+    [animationIn],
+  );
+  const exit = useMemo(
+    () => withFixtureInnerDistance(animationOut),
+    [animationOut],
+  );
+
+  return (
+    <AnimatedContainer
+      type="full"
+      size="auto"
+      className={className}
+      backgroundColor="none"
+      animation={enter}
+      animationDelay={animationDelay}
+      exitAnimation={exit}
+      exitFrame={animationOutFrame}
+    >
+      {children}
+    </AnimatedContainer>
+  );
+};
 
 const NightSessionOpponentSide: React.FC<{
   side: "home" | "away";
@@ -83,7 +101,8 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
   const innerAnimation = animations.container.main.itemContainerInner;
   const secondaryAnimation = animations.container.main.itemContainerSecondary;
 
-  const rowDelay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
+  const enterTiming = useNightSessionRowEnterTiming();
+  const rowDelay = enterTiming.rowDelayForIndex(index);
   const animationOutFrame = calculateAnimationOutFrame(timings);
   const { homeIsClub, awayIsClub } = resolveScorelineUpcomingClubSides(
     game.teamHome,
@@ -96,57 +115,64 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
   const ageLabel = game.ageGroup?.trim() ?? "";
   const timeLabel = game.time?.trim() ?? "";
 
+  const fixtureRowEnter = useMemo(
+    () => ({
+      ...rowAnimation.containerIn,
+      custom: { distance: NIGHT_SESSION_FIXTURE_ROW_ENTER_DISTANCE_PX },
+    }),
+    [rowAnimation.containerIn],
+  );
+  const fixtureRowExit = useMemo(
+    () => ({
+      ...rowAnimation.containerOut,
+      custom: { distance: NIGHT_SESSION_FIXTURE_ROW_ENTER_DISTANCE_PX },
+    }),
+    [rowAnimation.containerOut],
+  );
+
   return (
     <section className="fixture-card fixture-unit">
       <AnimatedContainer
         type="full"
         size="auto"
-        className="flex w-full flex-col rounded-none"
+        className="flex min-h-0 w-full flex-col rounded-none"
         backgroundColor="none"
-        animation={rowAnimation.containerIn}
+        animation={fixtureRowEnter}
         animationDelay={rowDelay}
-        exitAnimation={rowAnimation.containerOut}
+        exitAnimation={fixtureRowExit}
         exitFrame={animationOutFrame}
       >
-        <NightSessionFixtureAnim
-          animationIn={innerAnimation.containerIn}
-          animationOut={innerAnimation.containerOut}
-          animationDelay={calculateScorelineInnerDelay(rowDelay, "grade")}
-          animationOutFrame={animationOutFrame}
-        >
-          <header
-            className="fixture-unit__rail"
-            data-empty={gradeLabel ? "false" : "true"}
-          >
-            <h2 className="fixture-grade-name">{gradeLabel}</h2>
-          </header>
-        </NightSessionFixtureAnim>
-
         <div className="fixture-unit__frame gap-2">
           <NightSessionFixtureAnim
             animationIn={innerAnimation.containerIn}
             animationOut={innerAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(rowDelay, "centre")}
+            animationDelay={enterTiming.innerDelay(rowDelay, "home")}
             animationOutFrame={animationOutFrame}
           >
             <div className="schedule-bridge">
               <div className="schedule-bridge__rule" aria-hidden />
               <div className="schedule-lockup">
-                <p className="fixture-date">{game.date}</p>
+                <h2
+                  className="fixture-grade-name"
+                  data-empty={gradeLabel ? "false" : "true"}
+                >
+                  {gradeLabel}
+                </h2>
                 <p
                   className="fixture-time"
                   data-empty={timeLabel ? "false" : "true"}
                 >
                   {timeLabel}
                 </p>
+                <p className="fixture-date">{game.date}</p>
               </div>
             </div>
           </NightSessionFixtureAnim>
 
           <NightSessionFixtureAnim
-            animationIn={secondaryAnimation.containerIn}
-            animationOut={secondaryAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(rowDelay, "home")}
+            animationIn={innerAnimation.containerIn}
+            animationOut={innerAnimation.containerOut}
+            animationDelay={enterTiming.innerDelay(rowDelay, "centre")}
             animationOutFrame={animationOutFrame}
           >
             <div className="fixture-opponents gap-2">
@@ -171,7 +197,7 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
           <NightSessionFixtureAnim
             animationIn={secondaryAnimation.containerIn}
             animationOut={secondaryAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(rowDelay, "context")}
+            animationDelay={enterTiming.innerDelay(rowDelay, "context")}
             animationOutFrame={animationOutFrame}
           >
             <div className="match-context gap-2">

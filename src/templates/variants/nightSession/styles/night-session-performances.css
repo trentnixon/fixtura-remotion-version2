@@ -1,0 +1,51 @@
+/* Night Session performances — density when a screen shows more than five rows */
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"] {
+  --leader-player-row-height: 88px;
+  --type-leader-mark: 88px;
+  --type-leader-name: 48px;
+  --type-leader-figure: 42px;
+  --type-leader-rank: 38px;
+  --leader-stack-gap: 2px;
+  --leader-rank-bridge-overlap: 10px;
+}
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"] {
+  --leader-player-row-height: 76px;
+  --type-leader-mark: 76px;
+  --type-leader-name: 42px;
+  --type-leader-figure: 36px;
+  --type-leader-rank: 34px;
+  --type-leader-team: 16px;
+  --leader-stack-gap: 0px;
+  --leader-rank-bridge-overlap: 8px;
+}
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-rank-bridge.schedule-bridge,
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-rank-bridge.schedule-bridge {
+  min-height: 34px;
+}
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-rank-tag.schedule-lockup,
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-rank-tag.schedule-lockup {
+  min-width: 72px;
+  min-height: 34px;
+  padding: 6px 28px;
+}
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-row
+  .leader-cell {
+  padding: 6px 10px;
+}

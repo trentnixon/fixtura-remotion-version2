@@ -1,6 +1,7 @@
 import React from "react";
 import { getProductionCompositionFromData } from "../core/preview/getProductionCompositionFromData";
 import { FixturaDataset } from "../core/types/data/index";
+import { NightSessionBundledStyles } from "./NightSessionBundledStyles";
 import { ScorelineBundledStyles } from "./ScorelineBundledStyles";
 
 export type FixturaTemplateSceneProps = {
@@ -19,6 +20,7 @@ export const FixturaTemplateScene: React.FC<FixturaTemplateSceneProps> = ({
   return (
     <>
       {templateId === "Scoreline" ? <ScorelineBundledStyles /> : null}
+      {templateId === "NightSession" ? <NightSessionBundledStyles /> : null}
       <TemplateComponent data={data} />
     </>
   );

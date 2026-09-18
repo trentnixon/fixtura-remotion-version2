@@ -4,7 +4,7 @@ import { AnimatedContainer } from "../../../../components/containers/AnimatedCon
 import type { ContainerAnimationConfig } from "../../../../components/containers/animations";
 import type { TeamData } from "../types";
 import { csClass } from "../../utils/scoreline/componentStyles";
-import { calculateScorelineInnerDelay } from "../../utils/scoreline/scorelineInnerAnimationDelays";
+import type { NightSessionRowEnterTiming } from "../../utils/nightSession/nightSessionEnterTiming";
 import { parseTeamPosition } from "../controller/TeamRows/_utils/calculations";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -27,6 +27,7 @@ export const NightSessionLadderRow: React.FC<{
   exitAnimation: ContainerAnimationConfig;
   exitFrame: number;
   teamIndex: number;
+  enterTiming: NightSessionRowEnterTiming;
 }> = ({
   team,
   isBiasTeam,
@@ -35,6 +36,7 @@ export const NightSessionLadderRow: React.FC<{
   exitAnimation,
   exitFrame,
   teamIndex,
+  enterTiming,
 }) => {
   const { componentStyles } = useThemeContext();
   const { animations } = useAnimationContext();
@@ -66,10 +68,7 @@ export const NightSessionLadderRow: React.FC<{
             className="ladder-cell ladder-row__cell--rank"
             animationIn={innerAnimation.containerIn}
             animationOut={innerAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(
-              animationDelay,
-              "rank",
-            )}
+            animationDelay={enterTiming.innerDelay(animationDelay, "rank")}
             animationOutFrame={exitFrame}
           >
             <span className="ladder-rank ladder-cell">{position}</span>
@@ -78,10 +77,7 @@ export const NightSessionLadderRow: React.FC<{
             className="ladder-cell ladder-row__cell--mark"
             animationIn={innerAnimation.containerIn}
             animationOut={innerAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(
-              animationDelay,
-              "mark",
-            )}
+            animationDelay={enterTiming.innerDelay(animationDelay, "mark")}
             animationOutFrame={exitFrame}
           >
             <div
@@ -96,10 +92,7 @@ export const NightSessionLadderRow: React.FC<{
             className="ladder-cell ladder-row__cell--team"
             animationIn={secondaryAnimation.containerIn}
             animationOut={secondaryAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(
-              animationDelay,
-              "team",
-            )}
+            animationDelay={enterTiming.innerDelay(animationDelay, "team")}
             animationOutFrame={exitFrame}
           >
             <p className="ladder-team ladder-cell">{teamName}</p>
@@ -108,10 +101,7 @@ export const NightSessionLadderRow: React.FC<{
             className="ladder-cell ladder-row__cell--stats"
             animationIn={secondaryAnimation.containerIn}
             animationOut={secondaryAnimation.containerOut}
-            animationDelay={calculateScorelineInnerDelay(
-              animationDelay,
-              "stats",
-            )}
+            animationDelay={enterTiming.innerDelay(animationDelay, "stats")}
             animationOutFrame={exitFrame}
           >
             <div className="ladder-stats ladder-cell">

@@ -39,22 +39,20 @@ const NightSessionTeamBand: React.FC<{
       data-has-crest={hasCrest ? "true" : "false"}
     >
       <div className="team-group">
-        <div className="team-primary">
-          <div className="team-mark">
-            <span className="mark-fallback" aria-hidden />
-            {hasCrest ? <Img src={logoUrl} alt="" /> : null}
-          </div>
-          <p className="team-score">
-            <span className="score">{normalizeScore(team.score)}</span>
-            <span className="overs" data-empty={oversValue ? "false" : "true"}>
-              {oversValue ? (
-                <>
-                  <span>{oversValue}</span> ov
-                </>
-              ) : null}
-            </span>
-          </p>
+        <div className="team-mark">
+          <span className="mark-fallback" aria-hidden />
+          {hasCrest ? <Img src={logoUrl} alt="" /> : null}
         </div>
+        <p className="team-score">
+          <span className="score">{normalizeScore(team.score)}</span>
+          <span className="overs" data-empty={oversValue ? "false" : "true"}>
+            {oversValue ? (
+              <>
+                <span>{oversValue}</span> ov
+              </>
+            ) : null}
+          </span>
+        </p>
         <div className="team-identity">
           <h2 className="team-name">{team.name}</h2>
         </div>
