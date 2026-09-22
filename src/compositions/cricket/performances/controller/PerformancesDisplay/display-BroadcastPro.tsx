@@ -23,6 +23,10 @@ import {
 import { calculateBroadcastProPerformanceGridLayout } from "./_utils/calculations";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 
+/** Full-height crest column on the right (matches Top 5 grid cards). */
+const CREST_WIDTH_PX = 96;
+const CREST_CONTENT_GAP_PX = 12;
+
 const PerformanceGridCard: React.FC<{
   performance: PerformanceData;
   globalRank: number;
@@ -33,8 +37,11 @@ const PerformanceGridCard: React.FC<{
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
   const delay = calculatePlayerDelay(indexOnScreen);
-  const { glass, text, accent, headingFont, cs, selectedPalette } =
+  const { fontClasses } = useThemeContext();
+  const { glass, text, accent, cs, selectedPalette } =
     useBroadcastProPlayerRankingTheme();
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
   const restrictions = getDefaultRestrictions();
   const statCells = buildBroadcastProPerformanceStatMatrixCells(performance);
 
@@ -67,7 +74,7 @@ const PerformanceGridCard: React.FC<{
       >
         <BroadcastProGlassPanel
           glass={glass}
-          className={`${cs("broadcastProPlayerRankingGridCard")} h-full`}
+          className={`${cs("broadcastProPlayerRankingGridCard")} h-full !gap-0`}
           style={{
             height: cardHeight,
             minHeight: cardHeight,
@@ -83,21 +90,19 @@ const PerformanceGridCard: React.FC<{
             text={text}
             accent={accent}
             selectedPalette={selectedPalette}
-            headingFont={headingFont}
+            headingFont={copyFont}
           />
-          <BroadcastProCrestWell
-            tier="grid"
-            logo={performance.teamLogo}
-            teamName={performance.playedFor}
-            delay={delay + 5}
-            glass={glass}
-            showBorder
-          />
-          <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center overflow-hidden">
+          <div
+            className="flex min-h-0 min-w-0 flex-1 flex-col justify-center overflow-hidden"
+            style={{
+              paddingRight: CREST_WIDTH_PX + CREST_CONTENT_GAP_PX,
+            }}
+          >
             <h3
-              className={`${headingFont} ${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0`}
+              className={`${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0`}
               style={{
                 color: text.copy,
+                fontFamily: copyFont,
                 textShadow: "0 2px 4px rgba(0,0,0,0.5)",
               }}
             >
@@ -105,19 +110,38 @@ const PerformanceGridCard: React.FC<{
             </h3>
             <p
               className={cs("broadcastProPlayerRankingTeamGridTop5")}
-              style={{ color: text.muted }}
+              style={{ color: text.muted, fontFamily: copyFont }}
             >
               {team}
             </p>
             <BroadcastProStatMatrixTriple
               cells={statCells}
               tier="performancesTriple"
-              headingFont={headingFont}
+              headingFont={copyFont}
               text={text}
               glass={glass}
               accent={accent}
             />
           </div>
+          <BroadcastProCrestWell
+            tier="grid"
+            logo={performance.teamLogo}
+            teamName={performance.playedFor}
+            delay={delay + 5}
+            glass={glass}
+            containerHeight={cardHeight}
+            showBorder
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: CREST_WIDTH_PX,
+              minWidth: CREST_WIDTH_PX,
+              height: "100%",
+              minHeight: "100%",
+            }}
+          />
         </BroadcastProGlassPanel>
       </AnimatedContainer>
     </div>

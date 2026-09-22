@@ -96,7 +96,7 @@ describe("resolveScorelineResultSinglePerformances", () => {
     ).toBe("Club Bowler");
     expect(
       bind.battingRows[0]?.kind === "batting" && bind.battingRows[0].player,
-    ).toBe("Melissa Lewis");
+    ).toBe("Sam Lickiss (c)");
   });
 
   it("falls back to bind-map performances when no club team", () => {

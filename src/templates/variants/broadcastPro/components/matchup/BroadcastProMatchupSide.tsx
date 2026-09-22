@@ -1,9 +1,7 @@
 import React from "react";
-import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import type { ColorVariant } from "../../../../../components/typography/AnimatedText";
 import LadderTeamName from "../../../../../compositions/cricket/utils/primitives/ladderTeamName";
-import { MetadataMedium } from "../../../../../compositions/cricket/utils/primitives/metadataMedium";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
 import { useBroadcastProTheme } from "../../../../../compositions/cricket/utils/broadcastPro";
 import type { BroadcastProGlassStyle } from "../../../../../compositions/cricket/utils/broadcastPro/glass";
@@ -38,20 +36,14 @@ export const BroadcastProMatchupSide: React.FC<
   labelVariant = "onContainerCopy",
   animateContent = true,
 }) => {
-  const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { text } = useBroadcastProTheme();
-  const copyIn = animations.text.main.copyIn;
 
   const sideClass = csClass(
     componentStyles,
     side === "home"
       ? "broadcastProMatchupSideFixtureHome"
       : "broadcastProMatchupSideFixtureAway",
-  );
-  const roleLabelClass = csClass(
-    componentStyles,
-    "broadcastProMatchupRoleLabel",
   );
   const teamNameBaseClass = csClass(
     componentStyles,
@@ -60,16 +52,15 @@ export const BroadcastProMatchupSide: React.FC<
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
   const densityClass =
     fixtureDensity === "featured"
-      ? "!text-7xl"
+      ? "!text-4xl"
       : fixtureDensity === "compact" || compact
-        ? "!text-5xl"
-        : "!text-6xl";
+        ? "!text-2xl"
+        : "!text-3xl";
   const teamNameClass =
     `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
 
   const isHome = side === "home";
   const crestDelay = delay + 6;
-  const labelDelay = delay + 8;
   const nameDelay = delay + 10;
 
   return (
@@ -86,26 +77,12 @@ export const BroadcastProMatchupSide: React.FC<
         />
       )}
       <div
-        className={`flex min-w-0 flex-col gap-1 ${isHome ? "items-start" : "items-end"}`.trim()}
+        className={`flex min-w-0 flex-col ${isHome ? "items-end" : "items-start"}`.trim()}
       >
-        {input.roleLabel != null && input.roleLabel !== "" && (
-          <MetadataMedium
-            value={input.roleLabel}
-            animation={
-              animateContent
-                ? { ...copyIn, delay: labelDelay }
-                : { type: "none" }
-            }
-            exitAnimation={animateContent ? undefined : "none"}
-            className={roleLabelClass}
-            variant={labelVariant}
-            style={{ color: text.secondary }}
-          />
-        )}
         <LadderTeamName
           value={input.teamName}
           variant={labelVariant}
-          textAlign={isHome ? "left" : "right"}
+          textAlign={isHome ? "right" : "left"}
           delay={nameDelay}
           letterAnimation="none"
           className={teamNameClass}

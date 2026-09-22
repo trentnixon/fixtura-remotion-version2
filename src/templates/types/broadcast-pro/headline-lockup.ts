@@ -24,9 +24,10 @@ export interface BroadcastProHeadlineSizing {
 
 export const DEFAULT_BROADCAST_PRO_HEADLINE_SIZING: BroadcastProHeadlineSizing =
   {
-    mainHeaderMaxPx: 124,
+    /** Fitted Teko cap after the 200px header shrink (was 124). */
+    mainHeaderMaxPx: 80,
     introMaxPx: 140,
-    minPx: 48,
+    minPx: 44,
     lineHeight: 0.82,
     letterSpacing: "-0.025em",
     fontWeight: 400,

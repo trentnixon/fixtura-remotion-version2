@@ -39,15 +39,13 @@ export const BroadcastProStatMatrixResultGrid: React.FC<
     componentStyles,
     "broadcastProStatMatrixResultGrid",
   );
-  const resolvedGridClass =
-    tier === "single" ? `${gridClass} gap-2` : gridClass;
 
   if (items.length === 0) {
     return null;
   }
 
   return (
-    <div className={`${resolvedGridClass} ${className}`.trim()}>
+    <div className={`${gridClass} ${className}`.trim()}>
       {items.map((item, index) => (
         <BroadcastProStatMatrixResultCell
           key={`${item.playerName}-${item.statValue}-${index}`}

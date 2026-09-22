@@ -24,14 +24,17 @@ const resolveBroadcastProRowCrestSize = (containerHeight) => {
   return clamp(minPx, containerHeight, containerHeight);
 };
 
+const FIXTURE_CREST_MAX_PX = 136;
+
 const resolveBroadcastProFixtureCrestSize = (containerHeight) =>
   Math.min(
     Math.max(containerHeight - 32, 48),
-    Math.max(72, Math.floor(containerHeight * 0.42)),
+    Math.max(72, Math.floor(containerHeight * 0.44)),
+    FIXTURE_CREST_MAX_PX,
   );
 
 const insetForTier = (tier, sizing) =>
-  tier === "grid" || tier === "featured"
+  tier === "grid" || tier === "featured" || tier === "fixture"
     ? sizing.fullBleedInsetRatio
     : sizing.contentInsetRatio;
 
@@ -88,10 +91,14 @@ describe("resolveBroadcastProCrestWellSize", () => {
     assert.equal(resolveBroadcastProCrestWellSize("row", 100).sizePx, 100);
   });
 
-  it("clamps upcoming fixture size", () => {
+  it("clamps upcoming fixture size with full-bleed inset", () => {
     assert.equal(resolveBroadcastProCrestWellSize("fixture", 60).sizePx, 48);
-    assert.equal(resolveBroadcastProCrestWellSize("fixture", 200).sizePx, 84);
-    assert.equal(resolveBroadcastProCrestWellSize("fixture", 400).sizePx, 168);
+    assert.equal(resolveBroadcastProCrestWellSize("fixture", 200).sizePx, 88);
+    assert.equal(resolveBroadcastProCrestWellSize("fixture", 400).sizePx, 136);
+    assert.equal(
+      resolveBroadcastProCrestWellSize("fixture", 200).contentInsetRatio,
+      1,
+    );
   });
 
   it("returns null sizePx for grid and featured with full bleed inset", () => {

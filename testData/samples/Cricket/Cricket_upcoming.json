@@ -13,101 +13,296 @@
       "teamAway": "Runaway Bay Premier Div 1",
       "teamHome": "Southport Premier Div 1",
       "gradeName": "(1) CGC Premier League - Division 1",
-      "gradeResolvedPosition": 0,
-      "gradeSortOrder": 0,
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
         "width": 500,
         "height": 500
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_43830d9b_590f829d05.jpg",
-        "width": 1772,
-        "height": 1772
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SLCC_Logo_New_7_003_6e91c41a6b.jpg",
+        "width": 1000,
+        "height": 1000
       },
       "assignSponsors": {
-        "competition": [],
+        "team": [
+          {
+            "id": 1819,
+            "logo": {
+              "id": 13020,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/RBT_ALT_LOGO_BLACK_RGB_900_PX_W_72_PPI_cropped_d9325a41da.png"
+            },
+            "name": "Runaway Bay Tavern"
+          }
+        ],
         "grade": [],
-        "team": []
+        "competition": []
       },
-      "primaryForScreen": []
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 598,
+          "logo": {
+            "id": 7314,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_12_eea3f7daa0.png"
+          },
+          "name": "Synergy Cardiology"
+        },
+        {
+          "id": 632,
+          "logo": {
+            "id": 7503,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_22_adb0d7fe19.png"
+          },
+          "name": "Multi Dynamic"
+        },
+        {
+          "id": 141,
+          "logo": {
+            "id": 5654,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/0ba00039_f094_422c_8c61_e493323785ad_39443b6002.jfif"
+          },
+          "name": "Mortons Urban Solutions"
+        }
+      ],
+      "gradeResolvedPosition": 1
     }
   ],
   "asset": {
-    "assetID": 73,
+    "assetID": 2,
     "assetTypeID": 1,
-    "assetCategoryID": 1,
-    "assetsLinkID": "7a60aa1a7b1afe14ce9def9c1cd17b8718337ffc675217d4d93567b69c43a95f"
+    "assetsLinkID": "e95f539b92d412f73ef7dd8b262149db338ccffec62399a14360314536159510",
+    "assetCategoryID": 2
   },
+  "errors": [],
+  "frames": [45, 195, 330, 420, 510, 600],
   "render": {
-    "schedulerId": 596,
-    "renderId": 9061
+    "renderId": 37884,
+    "schedulerId": 49
   },
   "account": {
-    "accountId": 703
+    "accountId": 49
   },
   "timings": {
-    "FPS_MAIN": 270,
+    "FPS_MAIN": 210,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 360,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 270,
+    "FPS_SCORECARD": 210,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [45, 225],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31.png",
         "width": 500,
-        "height": 500
+        "height": 500,
+        "hasLogo": true
       },
       "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "general": [],
-        "sponsorNum": 0
+        "general": [
+          {
+            "id": 26,
+            "logo": {
+              "id": 121,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_43_579cc38621.png"
+            },
+            "name": "Schlencker Surveying"
+          },
+          {
+            "id": 631,
+            "logo": {
+              "id": 7340,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo245_2367b249ca.jpg"
+            },
+            "name": "TJAYS Plumbing & Civil"
+          },
+          {
+            "id": 135,
+            "logo": {
+              "id": 5645,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_J_version_JPG_1_1_a526f1dcbf.jpg"
+            },
+            "name": "A & K Tile & Stone"
+          },
+          {
+            "id": 698,
+            "logo": {
+              "id": 7540,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/305302086_416190323831708_4580525394291034891_n_d1ea39420d.png"
+            },
+            "name": "Exchange Depot"
+          },
+          {
+            "id": 140,
+            "logo": {
+              "id": 5653,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fe83dfe1_0790_481a_b646_6ecf328569ef_2a297bdec5.jfif"
+            },
+            "name": "David Chrisafulli"
+          },
+          {
+            "id": 133,
+            "logo": {
+              "id": 5650,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/35c9aaa1_abaf_4d5c_957c_24edba82c712_8facd54422.jfif"
+            },
+            "name": "Wild Thing Fishing Charters"
+          },
+          {
+            "id": 631,
+            "logo": {
+              "id": 7340,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo245_2367b249ca.jpg"
+            },
+            "name": "TJAYS Plumbing & Civil"
+          },
+          {
+            "id": 139,
+            "logo": {
+              "id": 5659,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/images_de55b7ed12.jfif"
+            },
+            "name": "WiIRECO"
+          },
+          {
+            "id": 1852,
+            "logo": {
+              "id": 13416,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Powerzone_1080x1080_cropped_fe87cc22b8.png"
+            },
+            "name": "Gas Electrical Powerzone"
+          },
+          {
+            "id": 26,
+            "logo": {
+              "id": 121,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_43_579cc38621.png"
+            },
+            "name": "Schlencker Surveying"
+          },
+          {
+            "id": 135,
+            "logo": {
+              "id": 5645,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_J_version_JPG_1_1_a526f1dcbf.jpg"
+            },
+            "name": "A & K Tile & Stone"
+          },
+          {
+            "id": 133,
+            "logo": {
+              "id": 5650,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/35c9aaa1_abaf_4d5c_957c_24edba82c712_8facd54422.jfif"
+            },
+            "name": "Wild Thing Fishing Charters"
+          },
+          {
+            "id": 140,
+            "logo": {
+              "id": 5653,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/fe83dfe1_0790_481a_b646_6ecf328569ef_2a297bdec5.jfif"
+            },
+            "name": "David Chrisafulli"
+          },
+          {
+            "id": 698,
+            "logo": {
+              "id": 7540,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/305302086_416190323831708_4580525394291034891_n_d1ea39420d.png"
+            },
+            "name": "Exchange Depot"
+          },
+          {
+            "id": 700,
+            "logo": {
+              "id": 7542,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/web_logo_2018_trans_7200f6030e.png"
+            },
+            "name": "SCG Urban"
+          },
+          {
+            "id": 699,
+            "logo": {
+              "id": 7541,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/sicame_australia_2bd50e2a10.png"
+            },
+            "name": "Sicame Australia"
+          }
+        ],
+        "primary": [
+          {
+            "id": 598,
+            "logo": {
+              "id": 7314,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_12_eea3f7daa0.png"
+            },
+            "name": "Synergy Cardiology"
+          },
+          {
+            "id": 632,
+            "logo": {
+              "id": 7503,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_22_adb0d7fe19.png"
+            },
+            "name": "Multi Dynamic"
+          },
+          {
+            "id": 1819,
+            "logo": {
+              "id": 13020,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/RBT_ALT_LOGO_BLACK_RGB_900_PX_W_72_PPI_cropped_d9325a41da.png"
+            },
+            "name": "Runaway Bay Tavern"
+          },
+          {
+            "id": 141,
+            "logo": {
+              "id": 5654,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/0ba00039_f094_422c_8c61_e493323785ad_39443b6002.jfif"
+            },
+            "name": "Mortons Urban Solutions"
+          }
+        ],
+        "sponsorNum": 20
       },
       "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
+      "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
+        "HeroImage": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/487281388_1082045350607848_211705570176542852_n_982150ff62.jpg",
+          "ratio": "landscape",
+          "width": 1084,
+          "height": 613,
+          "AgeGroup": "Seniors",
+          "AssetType": "Upcoming Fixtures",
+          "markerPosition": []
+        }
+      },
       "metadata": {
         "title": "Fixtures",
+        "frames": [],
+        "assetId": 2,
         "titleSplit": ["Fixtures", ""],
         "videoTitle": "Upcoming Fixtures",
-        "compositionId": "CricketUpcoming",
-        "assetId": 73,
         "assetTypeId": 1,
-        "frames": [],
-        "includeSponsors": false
+        "compositionId": "CricketUpcoming",
+        "includeSponsors": true
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#611E75",
-          "secondary": "#DABF30"
+          "primary": "#352466",
+          "secondary": "#ffa500"
         },
-        "template": "CNSW"
-      },
-      "media": {
-        "HeroImage": {
-          "url": "",
-          "ratio": "",
-          "width": 0,
-          "height": 0,
-          "AgeGroup": "",
-          "AssetType": "",
-          "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
-        }
+        "template": "BroadcastPro"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -116,117 +311,462 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
-          "CricketBattingPerformances": 7,
-          "CricketBowlingPerformances": 7,
-          "CricketTeamOfTheWeek": 2
+          "CricketTeamOfTheWeek": 2,
+          "CricketBattingPerformances": 5,
+          "CricketBowlingPerformances": 5
         }
       },
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "templateVariation": {
-        "useBackground": "Animated",
         "mode": "lightAlt",
+        "image": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/487281388_1082045350607848_211705570176542852_n_982150ff62.jpg",
+          "type": "pan",
+          "ratio": 1.7684,
+          "width": 1084,
+          "height": 613,
+          "direction": "left",
+          "gradientType": "linear",
+          "overlayStyle": "vignette",
+          "overlayOpacity": 0.3
+        },
+        "noise": {
+          "type": null
+        },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": null,
+          "muted": null,
+          "volume": null,
+          "overlay": null,
+          "position": null,
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "modeId": 2,
+        "palette": "primary",
+        "pattern": {
+          "type": "dots",
+          "scale": 0.75,
+          "opacity": 0.35,
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
+        },
+        "texture": {
+          "url": null,
+          "name": null,
+          "scale": "100%",
+          "repeat": "cover",
+          "overlay": {
+            "opacity": 0.5,
+            "blendMode": "multiply"
+          }
+        },
         "category": {
-          "slug": "CNSW",
-          "name": "Cricket NSW",
+          "name": "Broadcast Pro",
+          "slug": "BroadcastPro",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
           "divideFixturesBy": {
             "CricketLadder": 1,
             "CricketRoster": 1,
             "CricketResults": 2,
             "CricketUpcoming": 3,
             "CricketResultSingle": 1,
-            "CricketBattingPerformances": 7,
-            "CricketBowlingPerformances": 7
-          },
-          "bundleAudio": null
+            "CricketBattingPerformances": 5,
+            "CricketBowlingPerformances": 5
+          }
         },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": null,
-          "size": null,
-          "loop": null,
-          "muted": null,
-          "overlay": null,
-          "useOffthreadVideo": null,
-          "volume": null,
-          "playbackRate": null
-        },
-        "image": {
-          "url": null,
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "type": null,
-          "direction": null,
-          "overlayStyle": null,
-          "gradientType": null,
-          "overlayOpacity": null
-        },
-        "palette": "primary",
         "gradient": {
           "type": null,
           "direction": null
         },
-        "noise": {
-          "type": null
-        },
-        "pattern": {
-          "type": null,
-          "animation": null,
-          "scale": null,
-          "rotation": null,
-          "opacity": null,
-          "animationDuration": null,
-          "animationSpeed": null
-        },
         "particle": {
           "type": null,
-          "particleCount": null,
           "speed": null,
+          "animation": null,
           "direction": null,
-          "animation": null
+          "particleCount": null
         },
-        "modeId": 2,
-        "animation": {
-          "type": "html-scoreboard-grid"
-        },
-        "imageCandidates": [],
-        "texture": {
-          "name": null,
-          "url": null,
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": {
-            "opacity": 0.5,
-            "blendMode": "multiply"
+        "useBackground": "Image",
+        "imageCandidates": [
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/457138191_2161380524243105_6228865285192700250_n_85ba302a5f.jpg",
+              "ratio": 1.1248,
+              "width": 1217,
+              "height": 1082
+            },
+            "assetTypes": ["Top 5 Run Scorers"],
+            "mediaFileId": 5661,
+            "mediaLibraryId": 220,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["junior"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/456694315_874095547501189_2796309277275713751_n_9b0ddf1b35.jpg",
+              "ratio": 0.9766,
+              "width": 625,
+              "height": 640
+            },
+            "assetTypes": ["Upcoming Fixtures"],
+            "mediaFileId": 5662,
+            "mediaLibraryId": 221,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["junior"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/487281388_1082045350607848_211705570176542852_n_982150ff62.jpg",
+              "ratio": 1.7684,
+              "width": 1084,
+              "height": 613
+            },
+            "assetTypes": ["Upcoming Fixtures"],
+            "mediaFileId": 7307,
+            "mediaLibraryId": 772,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6b131d78_d222_47cb_9c4f_060c0dac7a41_395bf27b84.jpg",
+              "ratio": 1,
+              "width": 1080,
+              "height": 1080
+            },
+            "assetTypes": ["Top 5 Run Scorers"],
+            "mediaFileId": 7310,
+            "mediaLibraryId": 775,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6fa63900_c3ae_4499_9abb_589dac44ffb9_a0b9adc3f1.jpg",
+              "ratio": 1,
+              "width": 1080,
+              "height": 1080
+            },
+            "assetTypes": ["League Tables"],
+            "mediaFileId": 7311,
+            "mediaLibraryId": 776,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/484544327_1074148714730845_8775951106992172633_n_dd6db1d084.jpg",
+              "ratio": 1.26,
+              "width": 1609,
+              "height": 1277
+            },
+            "assetTypes": ["Upcoming Fixtures"],
+            "mediaFileId": 7319,
+            "mediaLibraryId": 780,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["junior"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/df881472_01ff_4e84_a648_6706e61d7b13_2a9c289e4b.jpg",
+              "ratio": 1.1015,
+              "width": 944,
+              "height": 857
+            },
+            "assetTypes": ["Weekend Results"],
+            "mediaFileId": 9160,
+            "mediaLibraryId": 1037,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["junior"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/214942c6_0aae_4017_a14f_8aad34076508_b297cac5df.jpg",
+              "ratio": 1.5004,
+              "width": 2048,
+              "height": 1365
+            },
+            "assetTypes": ["Top 5 Run Scorers"],
+            "mediaFileId": 9192,
+            "mediaLibraryId": 1069,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/a669e2f9_ebc4_40b6_b851_1f2515156a12_d2d56efb44.jpg",
+              "ratio": 1.4036,
+              "width": 1398,
+              "height": 996
+            },
+            "assetTypes": ["Weekend Results"],
+            "mediaFileId": 9193,
+            "mediaLibraryId": 1070,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["junior"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/274227a7_1ff1_4222_ba96_78de8daf41a3_ce2b5e236c.jpg",
+              "ratio": 1.5004,
+              "width": 2048,
+              "height": 1365
+            },
+            "assetTypes": ["Weekend Results"],
+            "mediaFileId": 9194,
+            "mediaLibraryId": 1071,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/98a8a4cf_b8e2_42b4_ad5d_10925cca8687_b874c092f4.jpg",
+              "ratio": 1.5004,
+              "width": 2048,
+              "height": 1365
+            },
+            "assetTypes": ["Top 5 Run Scorers"],
+            "mediaFileId": 9195,
+            "mediaLibraryId": 1072,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/9ee086be_5d46_4381_a1ad_34f695ce746b_0358316884.jpg",
+              "ratio": 1.06,
+              "width": 1201,
+              "height": 1133
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 10281,
+            "mediaLibraryId": 1102,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "selected",
+              "targets": ["senior", "masters"]
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/e38d8a39_9a9b_45fa_a515_01e7e0c8652b_057515110c.jpg",
+              "ratio": 1.3333,
+              "width": 2048,
+              "height": 1536
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 10282,
+            "mediaLibraryId": 1103,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "all",
+              "targets": []
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/f84df3ae_186e_4da0_9650_58c85d3404bd_27d753bce5.jpg",
+              "ratio": 1.3333,
+              "width": 2048,
+              "height": 1536
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 10314,
+            "mediaLibraryId": 1135,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "all",
+              "targets": []
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/30c16585_d562_4551_bf27_a288f4c725b9_3e0a1d3809.jpg",
+              "ratio": 1.3333,
+              "width": 480,
+              "height": 360
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 10315,
+            "mediaLibraryId": 1136,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "all",
+              "targets": []
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/bb8f646e_6819_4bc1_bfab_36ae3e7d61bd_054a954d77.jpg",
+              "ratio": 0.75,
+              "width": 1536,
+              "height": 2048
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 10347,
+            "mediaLibraryId": 1168,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "all",
+              "targets": []
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/660194578_1381892517289795_2151700014809419459_n_61bd1c06c3.jpg",
+              "ratio": 1.3333,
+              "width": 2048,
+              "height": 1536
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 10380,
+            "mediaLibraryId": 1201,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "all",
+              "targets": []
+            }
+          },
+          {
+            "image": {
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Screenshot_20251016_130747_Messenger_cropped_67520ff7ec.png",
+              "ratio": 0.8,
+              "width": 860,
+              "height": 1075
+            },
+            "assetTypes": ["ALL"],
+            "mediaFileId": 12822,
+            "mediaLibraryId": 1234,
+            "categoryAssignment": {
+              "type": "club-age",
+              "scope": "all",
+              "targets": []
+            }
           }
-        }
+        ]
       }
     }
   },
-  "errors": [],
-  "orderingContext": {
-    "scopeKey": "account:703:club:60120",
-    "revision": 0,
-    "resolvedAt": "2026-09-20T14:10:18.248Z"
-  },
   "organisation": {
-    "type": "club",
-    "id": 60120
+    "id": 9939,
+    "type": "club"
   },
-  "generationIdentity": "fabf6ad02be59e5f559b7cc3e867a64b0945d28fda2cadd0bcd485c816c7567f",
+  "orderingContext": {
+    "revision": 1,
+    "scopeKey": "account:49:club:9939",
+    "resolvedAt": "2026-09-21T22:50:03.195Z"
+  },
+  "generationIdentity": "b030bb26781774b507b0f9537a3573c22ba0019c2f7cb1e2d87d7889985eacb5",
   "generationManifest": {
-    "orderingContext": {
-      "scopeKey": "account:703:club:60120",
-      "revision": 0,
-      "resolvedAt": "2026-09-20T14:10:18.248Z"
-    },
+    "renderId": 37884,
+    "fixtureIds": ["b8225fa4"],
+    "schedulerId": 49,
     "organisation": {
-      "type": "club",
-      "id": 60120
+      "id": 9939,
+      "type": "club"
     },
-    "generationIdentity": "fabf6ad02be59e5f559b7cc3e867a64b0945d28fda2cadd0bcd485c816c7567f",
-    "schedulerId": 596,
-    "renderId": 9061,
-    "fixtureIds": ["b8225fa4"]
+    "orderingContext": {
+      "revision": 1,
+      "scopeKey": "account:49:club:9939",
+      "resolvedAt": "2026-09-21T22:50:03.195Z"
+    },
+    "generationIdentity": "b030bb26781774b507b0f9537a3573c22ba0019c2f7cb1e2d87d7889985eacb5"
   }
 }

@@ -3,10 +3,12 @@ import { broadcastProRoundedComponentStylesShared } from "../componentStyles.sha
 
 export const broadcastProRoundedCompositionComponentStylesUpcoming = {
   upcomingFixtureHeader: {
-    className: "text-2xl font-bold uppercase tracking-wider leading-tight",
+    className:
+      "font-rajdhani text-2xl font-bold uppercase tracking-wider leading-tight",
   },
   upcomingTeamName: {
-    className: "font-normal uppercase !leading-[0.92] tracking-wide",
+    className:
+      "font-rajdhani font-normal uppercase !leading-[0.92] tracking-wide",
   },
   upcomingVs:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedMatchupDividerVs,

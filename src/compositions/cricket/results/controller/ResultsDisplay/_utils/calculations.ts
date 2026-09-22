@@ -39,8 +39,12 @@ export const calculateRowHeight = (availableHeight: number): number => {
   return Math.floor(availableHeight / 2);
 };
 
-export const BROADCAST_PRO_RESULTS_GAP_PX = 30;
+export const BROADCAST_PRO_RESULTS_GAP_PX = 24;
 
+/**
+ * Split main-content height across fixtures, with a little vertical breathing
+ * room so cards are not forced full-bleed when copy is shorter than the slot.
+ */
 export const calculateBroadcastProResultsLayout = (
   availableHeight: number,
   resultCount: number,
@@ -49,13 +53,13 @@ export const calculateBroadcastProResultsLayout = (
 
   const listHeight =
     resultCount === 1
-      ? Math.min(availableHeight, 620)
-      : Math.min(availableHeight, 800);
+      ? Math.min(availableHeight, Math.floor(availableHeight * 0.82))
+      : Math.min(availableHeight, Math.floor(availableHeight * 0.9));
   const totalGap = BROADCAST_PRO_RESULTS_GAP_PX * (resultCount - 1);
 
   return {
-    listHeight,
-    rowHeight: Math.floor((listHeight - totalGap) / resultCount),
+    listHeight: Math.max(1, listHeight),
+    rowHeight: Math.max(1, Math.floor((listHeight - totalGap) / resultCount)),
   };
 };
 

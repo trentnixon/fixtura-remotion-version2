@@ -24,9 +24,9 @@ export interface BroadcastProRoundedHeadlineSizing {
 
 export const DEFAULT_BROADCAST_PRO_HEADLINE_SIZING: BroadcastProRoundedHeadlineSizing =
   {
-    mainHeaderMaxPx: 124,
+    mainHeaderMaxPx: 80,
     introMaxPx: 140,
-    minPx: 48,
+    minPx: 44,
     lineHeight: 0.82,
     letterSpacing: "-0.025em",
     fontWeight: 400,

@@ -18,6 +18,16 @@ import {
   resultContainerDelay,
 } from "./matchContentHelpers";
 
+/** Full-height crest column on the left (score badge stays on the right). */
+const CREST_CONTENT_GAP_PX = 12;
+const CREST_BY_SIZE = {
+  standard: { widthPx: 96, minHeightPx: 88 },
+  /** Result Single / hero rows — taller cover column. */
+  hero: { widthPx: 120, minHeightPx: 112 },
+} as const;
+
+export type BroadcastProRoundedResultTeamCrestSize = keyof typeof CREST_BY_SIZE;
+
 export interface BroadcastProRoundedResultTeamRowProps {
   teamName: string;
   score: string;
@@ -31,6 +41,7 @@ export interface BroadcastProRoundedResultTeamRowProps {
   className?: string;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
+  crestSize?: BroadcastProRoundedResultTeamCrestSize;
 }
 
 const MAX_TEAM_NAME = 32;
@@ -50,14 +61,11 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
   className = "",
   exitAnimation,
   exitFrame,
+  crestSize = "standard",
 }) => {
   const { animations } = useAnimationContext();
-  const { componentStyles } = useThemeContext();
-  const {
-    glass: themeGlass,
-    headingFont,
-    text,
-  } = useBroadcastProRoundedTheme();
+  const { componentStyles, fontClasses } = useThemeContext();
+  const { glass: themeGlass, text } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
   const rowClass = csClass(
     componentStyles,
@@ -67,14 +75,17 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
     componentStyles,
     "broadcastProRoundedResultsTeamName",
   );
+  const crest = CREST_BY_SIZE[crestSize];
+  const bodyFont =
+    fontClasses?.body?.family ?? fontClasses?.subheading?.family ?? "Rajdhani";
 
   const resolvedGlass = glass ?? themeGlass;
 
   const displayName = truncateText(teamName, MAX_TEAM_NAME).toUpperCase();
   const combinedTeamNameFontSize = useFittedTextBoxFontSize({
     text: displayName,
-    fontFamily: headingFont,
-    withinWidth: 720,
+    fontFamily: bodyFont,
+    withinWidth: 720 - crest.widthPx - CREST_CONTENT_GAP_PX,
     maxLines: 1,
     minFontSize: 24,
     maxFontSize: 36,
@@ -83,21 +94,46 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
   return (
     <BroadcastProRoundedGlassPanel
       glass={resolvedGlass}
-      className={`${rowClass} ${
-        performanceContent == null ? "" : "!flex-col !items-stretch !gap-1.5"
+      className={`${rowClass} relative overflow-hidden !gap-0 !p-0 ${
+        performanceContent == null ? "" : "!flex-col !items-stretch"
       } ${className}`.trim()}
       animationDelay={resultContainerDelay(delay)}
       exitFrame={exitFrame}
+      style={{ minHeight: crest.minHeightPx }}
     >
-      <div className="flex w-full items-center justify-between gap-3">
-        <div className="flex min-w-0 flex-1 items-center gap-4">
-          <BroadcastProRoundedCrestWell
-            tier="compact"
-            logo={logo ?? null}
-            teamName={teamName}
-            delay={delay + RESULT_TEAM_ROW_NESTED.crest}
-            glass={resolvedGlass}
-          />
+      <BroadcastProRoundedCrestWell
+        tier="grid"
+        logo={logo ?? null}
+        teamName={teamName}
+        delay={delay + RESULT_TEAM_ROW_NESTED.crest}
+        glass={resolvedGlass}
+        containerHeight={crest.minHeightPx}
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          bottom: 0,
+          width: crest.widthPx,
+          minWidth: crest.widthPx,
+          height: "100%",
+          minHeight: "100%",
+        }}
+      />
+      <div
+        className={`flex min-w-0 flex-1 ${
+          performanceContent == null
+            ? "items-center justify-between"
+            : "flex-col items-stretch gap-2"
+        }`}
+        style={{
+          paddingLeft: crest.widthPx + CREST_CONTENT_GAP_PX,
+          paddingRight: 12,
+          paddingTop: 8,
+          paddingBottom: 8,
+          minHeight: crest.minHeightPx,
+        }}
+      >
+        <div className="flex w-full items-center justify-between gap-3">
           <ResultTeamName
             value={displayName}
             animation={{
@@ -116,18 +152,18 @@ export const BroadcastProRoundedResultTeamRow: React.FC<
                   : combinedTeamNameFontSize,
             }}
           />
+          <BroadcastProRoundedResultScoreBadge
+            score={score}
+            firstInnings={firstInnings}
+            accentColor={accentColor}
+            delay={delay + RESULT_TEAM_ROW_NESTED.score}
+            matchType={matchType}
+            exitAnimation={exitAnimation}
+            exitFrame={exitFrame}
+          />
         </div>
-        <BroadcastProRoundedResultScoreBadge
-          score={score}
-          firstInnings={firstInnings}
-          accentColor={accentColor}
-          delay={delay + RESULT_TEAM_ROW_NESTED.score}
-          matchType={matchType}
-          exitAnimation={exitAnimation}
-          exitFrame={exitFrame}
-        />
+        {performanceContent}
       </div>
-      {performanceContent}
     </BroadcastProRoundedGlassPanel>
   );
 };

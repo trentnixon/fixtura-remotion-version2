@@ -163,7 +163,8 @@ export const resolveBroadcastProImageDefaults = ({
 
   const requestedOpacity = image?.overlayOpacity;
   const overlayOpacity =
-    requestedOpacity != null && requestedOpacity > BROADCAST_PRO_DEFAULT_OVERLAY_OPACITY
+    requestedOpacity != null &&
+    requestedOpacity > BROADCAST_PRO_DEFAULT_OVERLAY_OPACITY
       ? requestedOpacity
       : BROADCAST_PRO_DEFAULT_OVERLAY_OPACITY;
 

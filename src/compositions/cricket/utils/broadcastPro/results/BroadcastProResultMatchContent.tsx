@@ -171,28 +171,30 @@ export const BroadcastProResultMatchContent: React.FC<
       <BroadcastProFixtureFrame
         accentColor={primaryAccent}
         glass={glass}
-        className="min-h-0 flex-1"
+        className="flex h-full min-h-0 flex-1 flex-col justify-center gap-2"
       >
-        {showHeroVerdict && verdict?.kind === "hero" && (
-          <BroadcastProResultVerdict
-            model={verdict}
-            tier="hero"
-            accentColor={primaryAccent}
-            delay={baseDelay}
-            glass={glass}
-            animation={copyIn}
-            connection="attached"
-          />
-        )}
+        <div className="flex w-full shrink-0 flex-col gap-2">
+          {showHeroVerdict && verdict?.kind === "hero" && (
+            <BroadcastProResultVerdict
+              model={verdict}
+              tier="hero"
+              accentColor={primaryAccent}
+              delay={baseDelay}
+              glass={glass}
+              animation={copyIn}
+              connection="attached"
+            />
+          )}
 
-        <div style={{ borderBottom: glass.border }}>
-          <BroadcastProResultMetaStrip
-            gradeLabel={buildGradeLabel(match)}
-            ground={match.ground}
-            delay={metaDelay}
-            showGround={showGround}
-            connection="attached"
-          />
+          <div style={{ borderBottom: glass.border }}>
+            <BroadcastProResultMetaStrip
+              gradeLabel={buildGradeLabel(match)}
+              ground={match.ground}
+              delay={metaDelay}
+              showGround={showGround}
+              connection="attached"
+            />
+          </div>
         </div>
 
         <BroadcastProMatchup
@@ -206,11 +208,11 @@ export const BroadcastProResultMatchContent: React.FC<
             logo: match.teamAwayLogo ?? null,
           }}
           glass={glass}
-          className={`${matchBlockClass} min-h-0 flex-1 justify-center !gap-0`}
+          className={`${matchBlockClass} min-h-0 shrink-0 !gap-2`}
           renderResultBlock={(side) => {
             if (side === "home") {
               return (
-                <div className="flex min-h-0 flex-none flex-col">
+                <div className="flex min-h-0 flex-col gap-2">
                   <BroadcastProResultTeamRow
                     teamName={match.homeTeam.name}
                     score={normalizeScore(match.homeTeam.score)}
@@ -224,6 +226,9 @@ export const BroadcastProResultMatchContent: React.FC<
                     glass={glass}
                     connection="attached"
                     scoreEmphasis={homeIsWinner ? "winner" : "standard"}
+                    crestSize={
+                      playerStatsTier === "single" ? "hero" : "standard"
+                    }
                   />
                   <BroadcastProStatMatrixResultGrid
                     items={homeStats}
@@ -237,10 +242,7 @@ export const BroadcastProResultMatchContent: React.FC<
               );
             }
             return (
-              <div
-                className="flex min-h-0 flex-none flex-col"
-                style={{ borderTop: glass.border }}
-              >
+              <div className="flex min-h-0 flex-col gap-2">
                 <BroadcastProResultTeamRow
                   teamName={match.awayTeam.name}
                   score={normalizeScore(match.awayTeam.score)}
@@ -254,6 +256,7 @@ export const BroadcastProResultMatchContent: React.FC<
                   glass={glass}
                   connection="attached"
                   scoreEmphasis={awayIsWinner ? "winner" : "standard"}
+                  crestSize={playerStatsTier === "single" ? "hero" : "standard"}
                 />
                 <BroadcastProStatMatrixResultGrid
                   items={awayStats}
@@ -277,6 +280,7 @@ export const BroadcastProResultMatchContent: React.FC<
             glass={glass}
             animation={copyIn}
             connection="attached"
+            className="shrink-0"
           />
         )}
 
@@ -289,6 +293,7 @@ export const BroadcastProResultMatchContent: React.FC<
             glass={glass}
             animation={copyIn}
             connection="attached"
+            className="shrink-0"
           />
         )}
       </BroadcastProFixtureFrame>

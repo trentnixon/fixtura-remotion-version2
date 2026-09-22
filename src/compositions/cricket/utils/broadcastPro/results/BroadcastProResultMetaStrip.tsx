@@ -33,10 +33,11 @@ export const BroadcastProResultMetaStrip: React.FC<
   const copyIn = animations.text.main.copyIn;
 
   const stripClass = csClass(componentStyles, "broadcastProResultsMetaStrip");
+  const gradeOnly = !showGround || !ground;
 
   return (
     <div
-      className={`${stripClass} ${className}`.trim()}
+      className={`${stripClass} ${gradeOnly ? "!justify-center" : ""} ${className}`.trim()}
       style={{
         background: glass.headerGradient,
         ...(connection === "standalone"
@@ -51,11 +52,11 @@ export const BroadcastProResultMetaStrip: React.FC<
       <MetadataMedium
         value={gradeLabel}
         animation={{ ...copyIn, delay }}
-        className="truncate font-bold uppercase tracking-widest"
+        className={`truncate font-normal uppercase tracking-widest ${gradeOnly ? "text-center" : ""}`}
         variant="onContainerCopy"
         style={{ color: text.copy }}
       />
-      {showGround && ground ? (
+      {!gradeOnly ? (
         <MetadataMedium
           value={formatGroundLocation(ground)}
           animation={{ ...copyIn, delay: delay + 2 }}

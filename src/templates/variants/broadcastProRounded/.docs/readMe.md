@@ -37,9 +37,9 @@ The Broadcast Pro theme is split by responsibility. The **public export** is `br
 
 ## Main header (BroadcastProRoundedMainHeader)
 
-- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **200px**; logo badge always shown (image when `club.logo.url` exists).
-- Title uses **`BroadcastProRoundedHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProRoundedHeadlineSizing.mainHeaderMaxPx`**, default 124px).
-- Secondary line text: `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProRoundedHeaderSecondaryLine`**).
+- Layout: centered vertical stack (logo → fitted Teko title → optional Rajdhani metadata chip), `layout.heights.header` **200px**; logo badge always shown (image when `club.logo.url` exists).
+- Title uses **`BroadcastProRoundedHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProRoundedHeadlineSizing.mainHeaderMaxPx`**, default 80px).
+- Secondary line is omitted on Ladder, Result Single, and Upcoming. Other assets use `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProRoundedHeaderSecondaryLine`**).
 
 ## Headline lockups
 

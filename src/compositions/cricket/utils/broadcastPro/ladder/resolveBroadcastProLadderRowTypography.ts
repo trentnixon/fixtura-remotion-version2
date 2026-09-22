@@ -23,7 +23,7 @@ export const resolveBroadcastProLadderRowTypography = (
     rankFontPx: clamp(24, Math.round(h * 0.7), 48),
     statFontPx: clamp(20, Math.round(h * 0.58), 36),
     pointsFontPx: clamp(22, Math.round(h * 0.65), 48),
-    nameFontPx: clamp(22, Math.round(h * 0.55), 38),
+    nameFontPx: clamp(18, Math.round(h * 0.42), 30),
     scoreCompact: h < 64,
   };
 };

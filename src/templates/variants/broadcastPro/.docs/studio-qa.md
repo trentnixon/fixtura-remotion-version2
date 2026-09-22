@@ -4,16 +4,16 @@ Play these cricket samples in Remotion Studio under Broadcast Pro and Broadcast 
 
 ## Datasets
 
-| Asset type | Dataset id |
-| --- | --- |
-| Ladder | `CricketLadder` |
-| Results | `CricketResults` |
-| Result Single | `CricketResultSingle` |
-| Upcoming | `CricketUpcoming` |
-| Performances | `CricketBattingPerformances` |
-| Top 5 | `CricketTop5Batting` |
-| Team of the Week | `CricketTeamOfTheWeek` |
-| Team roster | `CricketRoster` |
+| Asset type       | Dataset id                   |
+| ---------------- | ---------------------------- |
+| Ladder           | `CricketLadder`              |
+| Results          | `CricketResults`             |
+| Result Single    | `CricketResultSingle`        |
+| Upcoming         | `CricketUpcoming`            |
+| Performances     | `CricketBattingPerformances` |
+| Top 5            | `CricketTop5Batting`         |
+| Team of the Week | `CricketTeamOfTheWeek`       |
+| Team roster      | `CricketRoster`              |
 
 Edge content already in those samples: long names, weekend results, batting performances. Look for abandoned / yet-to-bat / missing logos on Results and Result Single.
 

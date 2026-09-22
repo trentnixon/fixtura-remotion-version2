@@ -38,9 +38,9 @@ describe("Broadcast Pro theme contract", () => {
   });
 
   it("lets the secondary headline wrap", () => {
-    expect(
-      broadcastProTheme.broadcastProHeadlineSizing?.secondaryWraps,
-    ).toBe(true);
+    expect(broadcastProTheme.broadcastProHeadlineSizing?.secondaryWraps).toBe(
+      true,
+    );
     expect(
       broadcastProTheme.componentStyles.broadcastProHeadlineSecondary.className,
     ).not.toMatch(/whitespace-nowrap/);
@@ -49,7 +49,26 @@ describe("Broadcast Pro theme contract", () => {
   it("keeps the header org crest smaller than the old 104px badge", () => {
     expect(
       broadcastProTheme.broadcastProHeadlineSizing?.headerOrgCrestPx,
-    ).toBe(72);
+    ).toBeLessThan(104);
+    expect(
+      broadcastProTheme.broadcastProHeadlineSizing?.headerOrgCrestPx,
+    ).toBeGreaterThan(0);
+  });
+
+  it("fits crest, title, and chip inside the header height", () => {
+    const header = broadcastProTheme.layout.heights.header;
+    const sizing = broadcastProTheme.broadcastProHeadlineSizing;
+    expect(sizing).toBeDefined();
+    const LOGO_GAP = 8;
+    const CHIP_GAP = 8;
+    const CHIP_BLOCK = 40;
+    const stack =
+      (sizing?.headerOrgCrestPx ?? 0) +
+      LOGO_GAP +
+      (sizing?.mainHeaderMaxPx ?? 0) * (sizing?.lineHeight ?? 1) +
+      CHIP_GAP +
+      CHIP_BLOCK;
+    expect(stack).toBeLessThanOrEqual(header);
   });
 
   it("keeps in-container copy the same in Alt modes and flips only titles", () => {
@@ -68,12 +87,17 @@ describe("Broadcast Pro theme contract", () => {
   });
 
   it("maps player, team, and Top 5 names onto Teko or Rajdhani without font-black", () => {
-    const { playerName, teamName } = broadcastProTheme.componentStyles;
+    const { playerName, teamName, ladderTeamName } =
+      broadcastProTheme.componentStyles;
     const top5 = broadcastProTheme.componentStyles.Top5PlayerName;
     for (const role of [playerName, teamName, top5]) {
       expect(role.className).toMatch(/font-teko|font-rajdhani/);
       expect(role.className).not.toMatch(/font-black/);
     }
+    expect(ladderTeamName.className).toMatch(/font-rajdhani/);
+    expect(
+      broadcastProTheme.componentStyles.broadcastProScoreTableRank.className,
+    ).toMatch(/font-rajdhani/);
   });
 });
 

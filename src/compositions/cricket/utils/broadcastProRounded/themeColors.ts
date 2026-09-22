@@ -33,6 +33,23 @@ const resolveMutedCopy = (background: string, copy: string): string => {
   return ensureContrast(background, dimmed.toRgbString());
 };
 
+/** Keep brand hue; only shift lightness so the accent still reads on this surface. */
+export const resolveBroadcastProRoundedAccentOnSurface = (
+  background: string,
+  accent: string,
+): string => {
+  if (tinycolor.readability(background, accent) >= 4.5) return accent;
+
+  const bgIsDark = tinycolor(background).isDark();
+  let candidate = tinycolor(accent);
+  for (let i = 0; i < 6; i += 1) {
+    candidate = bgIsDark ? candidate.lighten(8) : candidate.darken(8);
+    const next = candidate.toRgbString();
+    if (tinycolor.readability(background, next) >= 4.5) return next;
+  }
+  return ensureContrast(background, accent);
+};
+
 /**
  * Mode-aware on-container copy colours with WCAG contrast against
  * `selectedPalette.container.background` (light / lightAlt / dark / darkAlt).
@@ -47,7 +64,10 @@ export const resolveBroadcastProRoundedTextOnContainer = (
   const title = oc.title;
   const copy = ensureContrast(bg, oc.copy);
   const secondary = ensureContrast(bg, oc.secondary ?? oc.copy);
-  const accent = oc.accent ?? selectedPalette.container.accent;
+  const accent = resolveBroadcastProRoundedAccentOnSurface(
+    bg,
+    oc.accent ?? selectedPalette.container.accent,
+  );
   const muted = resolveMutedCopy(bg, oc.copy);
 
   return { title, copy, muted, secondary, accent };
@@ -74,7 +94,7 @@ export const resolveBroadcastProRoundedTextOnGlass = (
     copy,
     muted,
     secondary,
-    accent: preferred.accent,
+    accent: resolveBroadcastProRoundedAccentOnSurface(bg, preferred.accent),
   };
 };
 

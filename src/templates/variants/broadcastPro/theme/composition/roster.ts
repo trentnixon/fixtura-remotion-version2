@@ -76,11 +76,12 @@ export const broadcastProCompositionComponentStylesRoster = {
       "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl",
   },
   broadcastProRosterTeamLabelHome: {
-    className: "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest",
+    className:
+      "font-rajdhani mt-1 text-sm font-normal uppercase tracking-widest",
   },
   broadcastProRosterTeamLabelAway: {
     className:
-      "font-rajdhani mt-0.5 text-xs font-bold uppercase tracking-widest",
+      "font-rajdhani mt-0.5 text-xs font-normal uppercase tracking-widest",
   },
   broadcastProRosterVersus: {
     className: "font-teko mb-1 text-2xl italic leading-none",
@@ -96,7 +97,7 @@ export const broadcastProCompositionComponentStylesRoster = {
   },
   broadcastProRosterMetaLabel: {
     className:
-      "font-rajdhani block text-xs font-bold uppercase tracking-widest",
+      "font-rajdhani block text-xs font-normal uppercase tracking-widest",
   },
   broadcastProRosterMetaValue: {
     className:

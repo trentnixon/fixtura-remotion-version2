@@ -13,7 +13,7 @@ const resolveBroadcastProLadderRowTypography = (rowHeightPx) => {
     rankFontPx: clamp(24, Math.round(h * 0.7), 48),
     statFontPx: clamp(20, Math.round(h * 0.58), 36),
     pointsFontPx: clamp(22, Math.round(h * 0.65), 48),
-    nameFontPx: clamp(22, Math.round(h * 0.55), 38),
+    nameFontPx: clamp(18, Math.round(h * 0.42), 30),
     scoreCompact: h < 64,
   };
 };
@@ -21,7 +21,7 @@ const resolveBroadcastProLadderRowTypography = (rowHeightPx) => {
 describe("resolveBroadcastProLadderRowTypography", () => {
   it("scales 15-club row (~59px) to readable sizes", () => {
     const t = resolveBroadcastProLadderRowTypography(59);
-    assert.ok(t.nameFontPx >= 30, `name too small (${t.nameFontPx}px)`);
+    assert.ok(t.nameFontPx >= 22, `name too small (${t.nameFontPx}px)`);
     assert.ok(t.statFontPx >= 30, `stat too small (${t.statFontPx}px)`);
     assert.equal(t.scoreCompact, true);
   });
@@ -29,7 +29,7 @@ describe("resolveBroadcastProLadderRowTypography", () => {
   it("caps tall rows at max sizes", () => {
     const t = resolveBroadcastProLadderRowTypography(96);
     assert.equal(t.rankFontPx, 48);
-    assert.equal(t.nameFontPx, 38);
+    assert.equal(t.nameFontPx, 30);
     assert.equal(t.scoreCompact, false);
   });
 });

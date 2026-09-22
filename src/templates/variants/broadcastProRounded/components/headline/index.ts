@@ -1,4 +1,7 @@
-export { getBroadcastProRoundedHeaderSecondaryLine } from "./getBroadcastProRoundedHeaderSecondaryLine";
+export {
+  getBroadcastProRoundedHeaderSecondaryLine,
+  shouldHideBroadcastProRoundedHeaderSecondary,
+} from "./getBroadcastProRoundedHeaderSecondaryLine";
 export { useBroadcastProRoundedHeadlineFit } from "./useBroadcastProRoundedHeadlineFit";
 export { BroadcastProRoundedHeadlineTitle } from "./BroadcastProRoundedHeadlineTitle";
 export type { BroadcastProRoundedHeadlineTitleProps } from "./BroadcastProRoundedHeadlineTitle";

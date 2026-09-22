@@ -17,7 +17,7 @@ const insetForTier = (
   tier: BroadcastProRoundedCrestTier,
   sizing: BroadcastProRoundedCrestSizing,
 ): number =>
-  tier === "grid" || tier === "featured"
+  tier === "grid" || tier === "featured" || tier === "fixture"
     ? sizing.fullBleedInsetRatio
     : sizing.contentInsetRatio;
 
@@ -32,15 +32,19 @@ export const resolveBroadcastProRoundedRowCrestSize = (
   return clamp(minPx, containerHeight, containerHeight);
 };
 
+const FIXTURE_CREST_MAX_PX = 136;
+
 /**
- * Upcoming fixture well — clamp(48, containerHeight - 32, max(72, floor(h * 0.42))).
+ * Upcoming fixture crest width — clamp(48, h - 32, max(72, floor(h * 0.44)), 136).
+ * Well height stretches to the matchup container; logo fills full-bleed, centered.
  */
 export const resolveBroadcastProRoundedFixtureCrestSize = (
   containerHeight: number,
 ): number =>
   Math.min(
     Math.max(containerHeight - 32, 48),
-    Math.max(72, Math.floor(containerHeight * 0.42)),
+    Math.max(72, Math.floor(containerHeight * 0.44)),
+    FIXTURE_CREST_MAX_PX,
   );
 
 export const resolveBroadcastProRoundedCrestWellSize = (

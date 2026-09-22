@@ -177,32 +177,32 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
 
   return (
     <div
-      className={`mx-6 flex h-full w-auto flex-col gap-0.5 overflow-hidden md:mx-8 ${className}`.trim()}
+      className={`mx-6 flex h-full w-auto flex-col justify-center gap-2 overflow-hidden md:mx-8 ${className}`.trim()}
       style={style}
     >
-      {showHeroVerdict && verdict?.kind === "hero" && (
-        <BroadcastProRoundedResultVerdict
-          model={verdict}
-          tier="hero"
-          accentColor={primaryAccent}
-          delay={baseDelay}
-          glass={glass}
-          animation={copyIn}
+      <div className="flex w-full shrink-0 flex-col gap-2">
+        {showHeroVerdict && verdict?.kind === "hero" && (
+          <BroadcastProRoundedResultVerdict
+            model={verdict}
+            tier="hero"
+            accentColor={primaryAccent}
+            delay={baseDelay}
+            glass={glass}
+            animation={copyIn}
+            exitAnimation={copyOut}
+            exitFrame={exitFrame}
+          />
+        )}
+
+        <BroadcastProRoundedResultMetaStrip
+          gradeLabel={buildGradeLabel(match)}
+          ground={match.ground}
+          delay={metaDelay}
+          showGround={showGround}
           exitAnimation={copyOut}
           exitFrame={exitFrame}
-          className="mb-2"
         />
-      )}
-
-      <BroadcastProRoundedResultMetaStrip
-        gradeLabel={buildGradeLabel(match)}
-        ground={match.ground}
-        delay={metaDelay}
-        showGround={showGround}
-        exitAnimation={copyOut}
-        exitFrame={exitFrame}
-      />
-
+      </div>
       <BroadcastProRoundedMatchup
         tier="result"
         home={{
@@ -214,11 +214,11 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
           logo: match.teamAwayLogo ?? null,
         }}
         glass={glass}
-        className={matchBlockClass}
+        className={`${matchBlockClass} min-h-0 shrink-0`}
         renderResultBlock={(side) => {
           if (side === "home") {
             return (
-              <>
+              <div className="flex min-h-0 flex-col gap-2">
                 <BroadcastProRoundedResultTeamRow
                   teamName={match.homeTeam.name}
                   score={normalizeScore(match.homeTeam.score)}
@@ -230,6 +230,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                   delay={homeTeamDelay}
                   matchType={match.type}
                   glass={glass}
+                  crestSize={playerStatsTier === "single" ? "hero" : "standard"}
                   performanceContent={
                     combineTeamAndStats ? (
                       <BroadcastProRoundedResultPlayerStatsGrid
@@ -257,11 +258,11 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                     exitFrame={exitFrame}
                   />
                 )}
-              </>
+              </div>
             );
           }
           return (
-            <>
+            <div className="flex min-h-0 flex-col gap-2">
               <BroadcastProRoundedResultTeamRow
                 teamName={match.awayTeam.name}
                 score={normalizeScore(match.awayTeam.score)}
@@ -273,6 +274,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                 delay={awayTeamDelay}
                 matchType={match.type}
                 glass={glass}
+                crestSize={playerStatsTier === "single" ? "hero" : "standard"}
                 performanceContent={
                   combineTeamAndStats ? (
                     <BroadcastProRoundedResultPlayerStatsGrid
@@ -286,7 +288,6 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                     />
                   ) : undefined
                 }
-                className="mt-2"
                 exitAnimation={copyOut}
                 exitFrame={exitFrame}
               />
@@ -301,7 +302,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
                   exitFrame={exitFrame}
                 />
               )}
-            </>
+            </div>
           );
         }}
       />
@@ -316,6 +317,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
           animation={copyIn}
           exitAnimation={copyOut}
           exitFrame={exitFrame}
+          className="shrink-0"
         />
       )}
 
@@ -329,6 +331,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
           animation={copyIn}
           exitAnimation={copyOut}
           exitFrame={exitFrame}
+          className="shrink-0"
         />
       )}
     </div>

@@ -56,10 +56,13 @@ export const BroadcastProMatchup: React.FC<BroadcastProMatchupProps> = ({
   renderResultBlock,
   animateContent = true,
 }) => {
-  const { componentStyles } = useThemeContext();
+  const { componentStyles, fontClasses } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProTheme();
   const { width: compositionWidth } = useVideoConfig();
-  const resolvedFont = fontFamily ?? headingFont;
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
+  const resolvedFont =
+    fontFamily ?? (tier === "fixture" ? copyFont : headingFont);
 
   const rosterSidebarWidth =
     getBroadcastProRosterSidebarWidth(compositionWidth);

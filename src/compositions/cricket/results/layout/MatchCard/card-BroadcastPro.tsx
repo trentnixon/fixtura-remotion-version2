@@ -11,7 +11,11 @@ const MatchCardBroadcastPro: React.FC<MatchCardProps> = ({
     <BroadcastProResultMatchContent
       match={match}
       delay={delay}
-      style={{ maxHeight: rowHeight }}
+      style={
+        rowHeight != null
+          ? { height: rowHeight, maxHeight: rowHeight }
+          : undefined
+      }
     />
   );
 };

@@ -9,13 +9,13 @@ export const broadcastProCompositionComponentStylesResults = {
     broadcastProComponentStylesShared.broadcastProScoreMatchYetToBat,
   ResultTeamName: {
     className:
-      "font-teko text-4xl font-normal uppercase tracking-wide leading-none",
+      "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-2xl font-semibold leading-tight",
+    className: "font-rajdhani text-2xl font-normal leading-tight",
   },
   ResultPlayerScore: {
-    className: "font-teko text-4xl font-bold tracking-tight leading-tight",
+    className: "font-teko text-4xl font-normal tracking-tight leading-tight",
   },
   ResultSyntax: {
     className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4",
@@ -23,7 +23,8 @@ export const broadcastProCompositionComponentStylesResults = {
   ResultFixtureResult:
     broadcastProComponentStylesShared.broadcastProVerdictFixtureResult,
   ResultMetaData: {
-    className: "text-lg font-bold uppercase tracking-wider leading-snug",
+    className:
+      "font-rajdhani text-lg font-normal uppercase tracking-wider leading-snug",
   },
   ResultStatementShort:
     broadcastProComponentStylesShared.broadcastProVerdictLine,
@@ -36,10 +37,10 @@ export const broadcastProCompositionComponentStylesResults = {
       "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5",
   },
   broadcastProResultsTeamRow: {
-    className: "flex w-full items-center justify-between gap-3 p-3",
+    className: "relative flex w-full items-center overflow-hidden",
   },
   broadcastProResultsTeamLogoWell:
-    broadcastProComponentStylesShared.broadcastProCrestWellCompact,
+    broadcastProComponentStylesShared.broadcastProCrestWellGrid,
   broadcastProResultsTeamName: {
     className: "min-w-0 !leading-[0.95]",
   },
@@ -47,7 +48,7 @@ export const broadcastProCompositionComponentStylesResults = {
     className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5",
   },
   broadcastProResultsPlayerStatsGrid: {
-    className: "grid grid-cols-3 gap-[2px]",
+    className: "grid grid-cols-3 gap-2",
   },
   broadcastProResultsPlayerStatCell: {
     className: "flex items-center justify-between px-3 py-2",

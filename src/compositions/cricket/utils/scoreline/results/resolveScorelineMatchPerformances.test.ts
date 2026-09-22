@@ -21,15 +21,15 @@ describe("resolveScorelineMatchPerformances", () => {
     expect(performancePanelCount).toBe(2);
     expect(battingRows[0]?.kind).toBe("batting");
     expect(battingRows[0]?.kind === "batting" && battingRows[0].player).toBe(
-      "Melissa Lewis",
+      "Sam Lickiss (c)",
     );
     expect(bowlingRows[0]?.kind).toBe("bowling");
     expect(bowlingRows[0]?.kind === "bowling" && bowlingRows[0].player).toBe(
-      "Waller",
+      "Maloney",
     );
   });
 
-  it("match 2: away batting and home bowling when club is home", () => {
+  it("match 2: prefers home batting and away bowling when both sides are populated", () => {
     const match = matches[1];
     const {
       battingRows,
@@ -43,10 +43,10 @@ describe("resolveScorelineMatchPerformances", () => {
     expect(hasBowling).toBe(true);
     expect(performancePanelCount).toBe(2);
     expect(battingRows[0]?.kind === "batting" && battingRows[0].player).toBe(
-      "Belinda Dawney (c)",
+      "Christian Payne",
     );
     expect(bowlingRows[0]?.kind === "bowling" && bowlingRows[0].player).toBe(
-      "Rowley",
+      "McCloy",
     );
   });
 
@@ -99,7 +99,7 @@ describe("resolveScorelineMatchPerformances", () => {
     const { bowlingRows } = resolveScorelineMatchPerformances(dualBowlingMatch);
 
     expect(bowlingRows[0]?.kind === "bowling" && bowlingRows[0].player).toBe(
-      "Waller",
+      "Maloney",
     );
   });
 });

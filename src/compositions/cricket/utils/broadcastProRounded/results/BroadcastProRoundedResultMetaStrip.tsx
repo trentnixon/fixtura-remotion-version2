@@ -45,6 +45,7 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
     componentStyles,
     "broadcastProRoundedResultsMetaStrip",
   );
+  const gradeOnly = !showGround || !ground;
 
   return (
     <AnimatedContainer
@@ -57,7 +58,7 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
       exitFrame={exitFrame}
     >
       <div
-        className={`overflow-hidden ${cellRadius} ${stripClass} ${className}`.trim()}
+        className={`overflow-hidden ${cellRadius} ${stripClass} ${gradeOnly ? "!justify-center" : ""} ${className}`.trim()}
         style={{
           background: glass.headerGradient,
           ...resolveBroadcastProRoundedEdgeMarkerStyle("compact", "primary", {
@@ -72,11 +73,11 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
           animation={{ ...copyIn, delay }}
           exitAnimation={exitAnimation}
           exitFrame={exitFrame}
-          className="truncate font-bold uppercase tracking-widest"
+          className={`truncate font-normal uppercase tracking-widest ${gradeOnly ? "text-center" : ""}`}
           variant="onContainerCopy"
           style={{ color: text.copy }}
         />
-        {showGround && ground ? (
+        {!gradeOnly ? (
           <MetadataMedium
             value={formatGroundLocation(ground)}
             animation={{ ...copyIn, delay: delay + 4 }}

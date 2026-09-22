@@ -26,15 +26,15 @@ export interface BroadcastProStatMatrixResultCellProps {
 const SINGLE_CELL_CLASS =
   "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 const SINGLE_PLAYER_NAME_CLASS =
-  "!text-4xl font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
+  "font-rajdhani !text-4xl font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =
-  "font-teko !text-6xl font-bold !tracking-wide !leading-none";
+  "font-teko !text-6xl font-normal !tracking-wide !leading-none";
 const SINGLE_STAT_SUFFIX_CLASS =
-  "font-teko !text-3xl font-normal !tracking-wider !leading-none opacity-70";
+  "font-teko !text-3xl font-normal !tracking-wider !leading-none";
 const LIST_STAT_PRIMARY_CLASS =
-  "font-teko !text-3xl font-bold !tracking-tight !leading-tight";
+  "font-teko !text-3xl font-normal !tracking-tight !leading-tight";
 const LIST_STAT_SUFFIX_CLASS =
-  "font-teko !text-2xl font-normal !tracking-tight !leading-tight opacity-70";
+  "font-teko !text-2xl font-normal !tracking-tight !leading-tight";
 
 export const BroadcastProStatMatrixResultCell: React.FC<
   BroadcastProStatMatrixResultCellProps

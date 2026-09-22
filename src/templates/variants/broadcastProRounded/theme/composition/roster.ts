@@ -1,14 +1,13 @@
 import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig";
 
 /**
- * Team roster (Broadcast Pro): grid, glass cells, meta — Teko/Rajdhani via classes.
+ * Team roster (Broadcast Pro Rounded): grid, glass cells, meta — Teko/Rajdhani via classes.
  * `RosterPlayerName` / index `fontSize` often set inline from layout metrics.
  */
 export const broadcastProRoundedCompositionComponentStylesRoster = {
   RosterPlayerName: {
-    /** `block` + relaxed leading: Teko caps need room inside fixed row cells. */
     className:
-      "font-teko block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide",
+      "font-rajdhani block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide",
   },
 
   broadcastProRoundedRosterRoot: {
@@ -76,11 +75,11 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
       "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl",
   },
   broadcastProRoundedRosterTeamLabelHome: {
-    className: "font-rajdhani mt-1 text-sm font-bold uppercase tracking-widest",
+    className: "font-rajdhani mt-1 text-sm font-normal uppercase tracking-widest",
   },
   broadcastProRoundedRosterTeamLabelAway: {
     className:
-      "font-rajdhani mt-0.5 text-xs font-bold uppercase tracking-widest",
+      "font-rajdhani mt-0.5 text-xs font-normal uppercase tracking-widest",
   },
   broadcastProRoundedRosterVersus: {
     className: "font-teko mb-1 text-2xl italic leading-none",
@@ -96,7 +95,7 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
   },
   broadcastProRoundedRosterMetaLabel: {
     className:
-      "font-rajdhani block text-xs font-bold uppercase tracking-widest",
+      "font-rajdhani block text-xs font-normal uppercase tracking-widest",
   },
   broadcastProRoundedRosterMetaValue: {
     className:

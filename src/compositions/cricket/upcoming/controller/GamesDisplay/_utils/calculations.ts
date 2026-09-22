@@ -32,7 +32,8 @@ export const BROADCAST_PRO_UPCOMING_LIST_ITEM_SPACING_PX =
   BROADCAST_PRO_UPCOMING_SPACING.cardSpacing;
 
 export const BROADCAST_PRO_UPCOMING_LIST_HEIGHT_PX = {
-  featured: 530,
+  /** Single fixture — capped so one card does not fill the asset column. */
+  featured: 400,
   standard: 760,
   compact: 840,
 } as const;

@@ -24,16 +24,16 @@ const broadcastProScorePlayerSuffix = {
 
 const broadcastProScoreTableRank = {
   className:
-    "font-teko text-5xl font-normal tracking-tight leading-none uppercase",
+    "font-rajdhani text-5xl font-normal tracking-tight leading-none uppercase",
 };
 
 const broadcastProScoreTableStat = {
-  className: "font-teko text-4xl font-normal tracking-tight leading-none",
+  className: "font-rajdhani text-4xl font-normal tracking-tight leading-none",
 };
 
 const broadcastProScoreTablePoints = {
   className:
-    "font-teko text-5xl font-bold tracking-tight leading-none text-center",
+    "font-rajdhani text-5xl font-bold tracking-tight leading-none text-center",
 };
 
 const broadcastProScoreFeatured = {
@@ -63,7 +63,7 @@ const broadcastProScoreRosterIndex = {
 };
 
 const broadcastProVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-1 px-8 py-3",
+  className: "flex flex-col items-center justify-center gap-2 px-8 py-3",
 };
 
 const broadcastProVerdictBandCompact = {
@@ -109,16 +109,18 @@ const broadcastProCrestWellRow = {
 };
 
 const broadcastProCrestWellFixture = {
-  className: "flex flex-shrink-0 items-center justify-center rounded-sm",
+  className:
+    "flex flex-shrink-0 items-center justify-center overflow-hidden rounded-sm",
 };
 
 const broadcastProCrestWellGrid = {
   className:
-    "flex h-20 w-20 shrink-0 items-center justify-center self-center shadow-inner sm:h-24 sm:w-24",
+    "flex shrink-0 items-center justify-center overflow-hidden shadow-inner",
 };
 
 const broadcastProCrestWellFeatured = {
-  className: "flex h-44 w-44 shrink-0 items-center justify-center shadow-inner",
+  className:
+    "flex shrink-0 items-center justify-center overflow-hidden shadow-inner",
 };
 
 const broadcastProCrestWellRosterHome = {
@@ -131,11 +133,11 @@ const broadcastProCrestWellRosterAway = {
 
 const broadcastProMatchupFixture = {
   className:
-    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-8 md:gap-10",
+    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-3 md:gap-4",
 };
 
 const broadcastProMatchupResultStack = {
-  className: "flex w-full flex-col gap-[3px]",
+  className: "flex w-full flex-col gap-2",
 };
 
 const broadcastProMatchupRosterSidebar = {
@@ -143,20 +145,21 @@ const broadcastProMatchupRosterSidebar = {
 };
 
 const broadcastProMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-start gap-8",
+  className: "flex min-w-0 flex-1 items-center gap-4",
 };
 
 const broadcastProMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-start justify-end gap-8 text-right",
+  className: "flex min-w-0 flex-1 items-center justify-end gap-4 text-right",
 };
 
 const broadcastProMatchupRoleLabel = {
-  className: "text-sm font-bold uppercase tracking-widest opacity-80",
+  className:
+    "font-rajdhani text-sm font-bold uppercase tracking-widest opacity-80",
 };
 
 const broadcastProMatchupDividerSlot = {
   className:
-    "flex flex-shrink-0 self-center items-center justify-center px-8 md:px-10",
+    "flex flex-shrink-0 self-center items-center justify-center px-2 md:px-3",
 };
 
 const broadcastProMatchupDividerVersus = {
@@ -164,7 +167,7 @@ const broadcastProMatchupDividerVersus = {
 };
 
 const broadcastProMatchupFixtureTeamName = {
-  className: "font-normal uppercase leading-none tracking-wide",
+  className: "font-rajdhani font-normal uppercase leading-none tracking-wide",
 };
 
 const broadcastProLadderZoneRankLeader = {

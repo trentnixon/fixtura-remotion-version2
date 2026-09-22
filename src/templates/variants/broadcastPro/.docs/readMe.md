@@ -28,9 +28,9 @@ The Broadcast Pro theme is split by responsibility. The **public export** is `br
 
 ## Main header (BroadcastProMainHeader)
 
-- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **200px**; logo badge always shown (image when `club.logo.url` exists).
-- Title uses **`BroadcastProHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProHeadlineSizing.mainHeaderMaxPx`**, default 124px).
-- Secondary line text: `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProHeaderSecondaryLine`**).
+- Layout: centered vertical stack (logo → fitted Teko title → optional Rajdhani metadata chip), `layout.heights.header` **200px**; logo badge always shown (image when `club.logo.url` exists).
+- Title uses **`BroadcastProHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProHeadlineSizing.mainHeaderMaxPx`**, default 80px).
+- Secondary line is omitted on Ladder, Result Single, and Upcoming. Other assets use `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProHeaderSecondaryLine`**).
 
 ## Headline lockups
 
@@ -117,7 +117,7 @@ Logo wells isolate unpredictable crest artwork inside **square containers** on r
 | -------------- | ----------------------------------------------------------- | ------------------------------------------ |
 | **compact**    | 48px                                                        | Results team row, TotW card, TotW 12th man |
 | **row**        | Adaptive `clamp` (min 24–36 by height)                      | Ladder                                     |
-| **fixture**    | `clamp(48, containerHeight - 32, max(72, floor(h * 0.42)))` | Upcoming                                   |
+| **fixture**    | width `clamp(…, 136)`; height = matchup; logo full-bleed | Upcoming                                   |
 | **grid**       | 80px (sm: 96px)                                             | Top 5 grid, Performances grid              |
 | **featured**   | 176px                                                       | Top 5 #1 featured card                     |
 | **rosterHome** | 128px                                                       | Roster home team card                      |

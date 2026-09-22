@@ -47,8 +47,10 @@ describe("hydrate-core", () => {
       expect(String(value).length, selector).toBeGreaterThan(0);
     }
 
-    expect(values["[data-hydrate=home-team]"]).toBe("Mudgeeraba Blue");
-    expect(values["[data-hydrate=away-team]"]).toBe("Coomera");
+    expect(values["[data-hydrate=home-team]"]).toBe("Helensvale 1st Grade");
+    expect(values["[data-hydrate=away-team]"]).toBe(
+      "Mudgeeraba Premier Division 1",
+    );
   });
 
   it("throws when a required bind-map path is missing from fixture data", () => {
@@ -69,7 +71,7 @@ describe("hydrate-core", () => {
     });
 
     expect(skipped).toContain("[data-hydrate=optional-logo]");
-    expect(values["[data-hydrate=home-team]"]).toBe("Mudgeeraba Blue");
+    expect(values["[data-hydrate=home-team]"]).toBe("Helensvale 1st Grade");
     expect(values["[data-hydrate=optional-logo]"]).toBeUndefined();
   });
 

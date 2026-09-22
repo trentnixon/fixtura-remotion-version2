@@ -32,17 +32,18 @@ export const BroadcastProRoundedStatMatrixTriple: React.FC<
   const performancesBorderStyle =
     tier === "performancesTriple" ? { borderTop: glass.border } : undefined;
 
-  const tripleCells = cells.slice(0, 3);
-  while (tripleCells.length < 3) {
-    tripleCells.push({ value: "" });
-  }
+  const displayCells = cells.slice(0, 3);
+  const columns = Math.max(displayCells.length, 1);
 
   return (
     <div
       className={`${rowClass} ${className}`.trim()}
-      style={performancesBorderStyle}
+      style={{
+        ...performancesBorderStyle,
+        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+      }}
     >
-      {tripleCells.map((cell, index) => (
+      {displayCells.map((cell, index) => (
         <BroadcastProRoundedStatMatrixCellView
           key={`${cell.label ?? "stat"}-${index}`}
           cell={cell}

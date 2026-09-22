@@ -10,6 +10,7 @@ export { BroadcastProMetadataChip } from "./BroadcastProMetadataChip";
 export { csClass } from "./componentStyles";
 export {
   compositeSurfaceColor,
+  resolveBroadcastProAccentOnSurface,
   resolveBroadcastProTextOnContainer,
   resolveBroadcastProTextOnGlass,
   resolveBroadcastProCopyOnBackground,

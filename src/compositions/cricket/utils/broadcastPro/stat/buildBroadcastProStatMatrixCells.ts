@@ -17,10 +17,9 @@ import type {
   FieldingStats,
 } from "../../../TeamOfTheWeek/types";
 
-const battingTripleCells = (
+const battingDualCells = (
   runs: number,
   balls: number,
-  sr: number,
   notOut: boolean,
   labelStyle: BroadcastProStatLabelStyle,
 ): BroadcastProStatMatrixCell[] => {
@@ -29,10 +28,6 @@ const battingTripleCells = (
   return [
     { label: labels.runs, value: runsDisplay },
     { label: labels.balls, value: `${balls}` },
-    {
-      label: labels.sr,
-      value: Number.isFinite(sr) ? sr.toFixed(2) : "—",
-    },
   ];
 };
 
@@ -53,15 +48,14 @@ const bowlingTripleCells = (
   ];
 };
 
-/** Triple matrix cells for Top 5 player cards (full labels). */
+/** Dual/triple matrix cells for Top 5 player cards (full labels; batting omits SR). */
 export const buildBroadcastProTop5StatMatrixCells = (
   player: PlayerData,
 ): BroadcastProStatMatrixCell[] => {
   if (isBatter(player)) {
-    return battingTripleCells(
+    return battingDualCells(
       player.runs,
       player.balls,
-      player.SR,
       player.notOut,
       "full",
     );
@@ -74,18 +68,17 @@ export const buildBroadcastProTop5StatMatrixCells = (
       "full",
     );
   }
-  return [{ value: "—" }, { value: "" }, { value: "" }];
+  return [{ value: "—" }];
 };
 
-/** Triple matrix cells for Performances grid (short bowling labels). */
+/** Triple matrix cells for Performances grid (short bowling labels; batting omits SR). */
 export const buildBroadcastProPerformanceStatMatrixCells = (
   performance: PerformanceData,
 ): BroadcastProStatMatrixCell[] => {
   if (isBattingPerformance(performance)) {
-    return battingTripleCells(
+    return battingDualCells(
       performance.runs,
       performance.balls,
-      performance.SR,
       performance.notOut,
       "full",
     );
@@ -98,7 +91,7 @@ export const buildBroadcastProPerformanceStatMatrixCells = (
       "short",
     );
   }
-  return [{ value: "—" }, { value: "" }, { value: "" }];
+  return [{ value: "—" }];
 };
 
 /** Structured player-stat string for compact surfaces (TotW, result rows). */

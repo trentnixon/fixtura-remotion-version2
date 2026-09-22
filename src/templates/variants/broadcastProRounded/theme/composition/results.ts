@@ -10,10 +10,10 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
     broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchYetToBat,
   ResultTeamName: {
     className:
-      "font-teko text-4xl font-normal uppercase tracking-wide leading-none",
+      "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-[26px] font-semibold leading-tight",
+    className: "font-rajdhani text-[26px] font-normal leading-tight",
   },
   ResultPlayerScore: {
     className: "font-teko text-[38px] font-normal tracking-tight leading-tight",
@@ -24,7 +24,8 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
   ResultFixtureResult:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedVerdictFixtureResult,
   ResultMetaData: {
-    className: "text-lg font-bold uppercase tracking-wider leading-snug",
+    className:
+      "font-rajdhani text-lg font-normal uppercase tracking-wider leading-snug",
   },
   ResultStatementShort:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedVerdictLine,
@@ -38,10 +39,10 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
       "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5",
   },
   broadcastProRoundedResultsTeamRow: {
-    className: "flex w-full items-center justify-between gap-3 px-3 py-2",
+    className: "relative flex w-full items-center overflow-hidden",
   },
   broadcastProRoundedResultsTeamLogoWell:
-    broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellCompact,
+    broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellGrid,
   broadcastProRoundedResultsTeamName: {
     className: "min-w-0 truncate",
   },
@@ -49,7 +50,7 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
     className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5",
   },
   broadcastProRoundedResultsPlayerStatsGrid: {
-    className: "grid grid-cols-3 gap-[2px]",
+    className: "grid grid-cols-3 gap-2",
   },
   broadcastProRoundedResultsPlayerStatCell: {
     className: "flex items-center justify-between px-3 py-1.5",

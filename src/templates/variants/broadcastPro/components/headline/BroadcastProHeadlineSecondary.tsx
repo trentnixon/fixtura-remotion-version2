@@ -40,11 +40,13 @@ export const BroadcastProHeadlineSecondary: React.FC<
   const wraps =
     broadcastProHeadlineSizing?.secondaryWraps ??
     DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.secondaryWraps;
+  /** Main-header chip: intrinsic width, single line (no max-width wrap). */
+  const stayOnOneLine = variant === "mainHeader" || !wraps;
 
   const secondaryClass = `${
     componentStyles.broadcastProHeadlineSecondary?.className ??
     "font-rajdhani uppercase tracking-wide font-semibold leading-snug"
-  } ${wraps ? "whitespace-normal" : "whitespace-nowrap"}`;
+  } ${stayOnOneLine ? "whitespace-nowrap" : "whitespace-normal"}`;
 
   const subtitleFontFamily =
     fontFamilyOverride ??
@@ -101,13 +103,15 @@ export const BroadcastProHeadlineSecondary: React.FC<
 
   if (variant === "mainHeader") {
     return (
-      <div className="mt-4 flex w-full justify-center">
-        <BroadcastProMetadataChip className="max-w-[95%] px-6 py-2">
+      <div className="mt-2 flex w-full justify-center">
+        <BroadcastProMetadataChip className="px-5 py-1">
           {textNode}
         </BroadcastProMetadataChip>
       </div>
     );
   }
 
-  return <div className={wraps ? "w-full" : "overflow-hidden"}>{textNode}</div>;
+  return (
+    <div className={stayOnOneLine ? "overflow-hidden" : "w-full"}>{textNode}</div>
+  );
 };

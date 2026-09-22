@@ -26,6 +26,13 @@ import {
 const MAX_NAME_LENGTH = 19;
 const MAX_TEAM_LENGTH = 36;
 
+/** Full-height crest column on the right (matches Top 5 grid cards). */
+const CREST_WIDTH_PX = 96;
+const CREST_CONTENT_GAP_PX = 12;
+const CREST_MIN_HEIGHT_PX = 140;
+const TWELFTH_CREST_WIDTH_PX = 88;
+const TWELFTH_CREST_MIN_HEIGHT_PX = 72;
+
 const formatTotwPlayerName = (rawName: string, maxLength: number): string =>
   truncatePlayerName(cleanPlayerName(rawName), maxLength).toUpperCase();
 
@@ -57,10 +64,6 @@ export const CardBroadcastProRounded: React.FC<
     componentStyles,
     "broadcastProRoundedTeamOfTheWeekCardBody",
   );
-  const topRowClass = csClass(
-    componentStyles,
-    "broadcastProRoundedTeamOfTheWeekCardUpper",
-  );
   const copyClass = csClass(
     componentStyles,
     "broadcastProRoundedTeamOfTheWeekCardCopy",
@@ -68,14 +71,6 @@ export const CardBroadcastProRounded: React.FC<
   const statsClass = csClass(
     componentStyles,
     "broadcastProRoundedTeamOfTheWeekCardStats",
-  );
-  const logoColClass = csClass(
-    componentStyles,
-    "broadcastProRoundedTeamOfTheWeekCardLogoCol",
-  );
-  const logoWellClass = csClass(
-    componentStyles,
-    "broadcastProRoundedTeamOfTheWeekCardLogoWell",
   );
   const nameRowClass = csClass(
     componentStyles,
@@ -101,6 +96,8 @@ export const CardBroadcastProRounded: React.FC<
     compact ? MAX_TEAM_LENGTH - 6 : MAX_TEAM_LENGTH,
   ).toUpperCase();
 
+  const showCrest = !isAccountClub;
+
   return (
     <AnimatedContainer
       type="full"
@@ -111,70 +108,77 @@ export const CardBroadcastProRounded: React.FC<
       exitAnimation={containerAnimation.containerOut}
     >
       <div
-        className={cardClass}
+        className={`${cardClass} relative overflow-hidden`.trim()}
         style={{
           background: glass.panel,
           border: glass.border,
+          minHeight: CREST_MIN_HEIGHT_PX,
           ...cellBlur,
         }}
       >
-        <div className={bodyClass}>
-          <div
-            className={`${topRowClass}${isAccountClub ? " grid-cols-1" : ""}`.trim()}
-          >
-            <div className={copyClass}>
-              <div className={statsClass}>
-                <BroadcastProRoundedStatMatrixCompactGroup
-                  player={player}
-                  delay={statDelay}
-                  statClassName={statClass}
-                  statSuffixClassName={statSuffixClass}
-                  text={text}
-                />
-              </div>
-
-              <div className={nameRowClass}>
-                <TeamOfTheWeekPlayerName
-                  value={playerName}
-                  animation={{ ...copyAnimation, delay: nameDelay }}
-                  variant="onContainerTitle"
-                  className={nameCellClass}
-                  style={{ color: text.copy }}
-                />
-              </div>
-
-              <TeamOfTheWeekTeam
-                value={teamName}
-                animation={{ ...copyAnimation, delay: nameDelay + 2 }}
-                variant="onContainerCopy"
-                className={teamClass}
-                style={{ color: text.secondary }}
+        <div
+          className={bodyClass}
+          style={{
+            paddingTop: 16,
+            paddingBottom: 16,
+            paddingLeft: 16,
+            paddingRight: showCrest
+              ? CREST_WIDTH_PX + CREST_CONTENT_GAP_PX
+              : 16,
+          }}
+        >
+          <div className={copyClass}>
+            <div className={statsClass}>
+              <BroadcastProRoundedStatMatrixCompactGroup
+                player={player}
+                delay={statDelay}
+                statClassName={statClass}
+                statSuffixClassName={statSuffixClass}
+                text={text}
               />
             </div>
 
-            {!isAccountClub ? (
-              <div className={logoColClass}>
-                <div className={logoWellClass}>
-                  <BroadcastProRoundedCrestWell
-                    tier="compact"
-                    logo={player.club.logo}
-                    teamName={player.club.name}
-                    delay={delay + 2}
-                    glass={glass}
-                    className="h-full w-full"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      minWidth: "100%",
-                      minHeight: "100%",
-                    }}
-                    showBorder
-                  />
-                </div>
-              </div>
-            ) : null}
+            <div className={nameRowClass}>
+              <TeamOfTheWeekPlayerName
+                value={playerName}
+                animation={{ ...copyAnimation, delay: nameDelay }}
+                variant="onContainerTitle"
+                className={nameCellClass}
+                style={{ color: text.copy }}
+              />
+            </div>
+
+            <TeamOfTheWeekTeam
+              value={teamName}
+              animation={{ ...copyAnimation, delay: nameDelay + 2 }}
+              variant="onContainerCopy"
+              className={teamClass}
+              style={{ color: text.secondary }}
+            />
           </div>
         </div>
+
+        {showCrest ? (
+          <BroadcastProRoundedCrestWell
+            tier="grid"
+            logo={player.club.logo}
+            teamName={player.club.name}
+            delay={delay + 2}
+            glass={glass}
+            containerHeight={CREST_MIN_HEIGHT_PX}
+            showBorder
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: CREST_WIDTH_PX,
+              minWidth: CREST_WIDTH_PX,
+              height: "100%",
+              minHeight: "100%",
+            }}
+          />
+        ) : null}
       </div>
     </AnimatedContainer>
   );
@@ -224,6 +228,7 @@ export const TwelfthManBandBroadcastProRounded: React.FC<
     player.primaryTeam,
     MAX_TEAM_LENGTH,
   ).toUpperCase();
+  const showCrest = !isAccountClub;
 
   return (
     <AnimatedContainer
@@ -235,10 +240,14 @@ export const TwelfthManBandBroadcastProRounded: React.FC<
       exitAnimation={containerAnimation.containerOut}
     >
       <div
-        className={bandClass}
+        className={`${bandClass} relative overflow-hidden`.trim()}
         style={{
           background: glass.muted,
           border: glass.border,
+          minHeight: TWELFTH_CREST_MIN_HEIGHT_PX,
+          paddingRight: showCrest
+            ? TWELFTH_CREST_WIDTH_PX + CREST_CONTENT_GAP_PX
+            : undefined,
           ...resolveBroadcastProRoundedEdgeMarkerStyle("standard", "muted", {
             accentColor: accent,
             mutedColor: tinycolor(accent).setAlpha(0.4).toRgbString(),
@@ -259,7 +268,7 @@ export const TwelfthManBandBroadcastProRounded: React.FC<
           />
         </div>
 
-        <div className="flex flex-shrink-0 items-center gap-4">
+        <div className="flex flex-shrink-0 items-center">
           <div className="text-right">
             <TeamOfTheWeekTeam
               value={teamName}
@@ -272,17 +281,29 @@ export const TwelfthManBandBroadcastProRounded: React.FC<
               Stand-by Player
             </p>
           </div>
-          {!isAccountClub && (
-            <BroadcastProRoundedCrestWell
-              tier="compact"
-              logo={player.club.logo}
-              teamName={player.club.name}
-              delay={delay + 3}
-              glass={glass}
-              showBorder
-            />
-          )}
         </div>
+
+        {showCrest ? (
+          <BroadcastProRoundedCrestWell
+            tier="grid"
+            logo={player.club.logo}
+            teamName={player.club.name}
+            delay={delay + 3}
+            glass={glass}
+            containerHeight={TWELFTH_CREST_MIN_HEIGHT_PX}
+            showBorder
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: TWELFTH_CREST_WIDTH_PX,
+              minWidth: TWELFTH_CREST_WIDTH_PX,
+              height: "100%",
+              minHeight: "100%",
+            }}
+          />
+        ) : null}
       </div>
     </AnimatedContainer>
   );

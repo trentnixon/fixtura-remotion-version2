@@ -8,6 +8,7 @@ import { resolveBroadcastProCrestWellSize } from "../../../../../compositions/cr
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastPro/componentStyles";
 import {
   BROADCAST_PRO_CREST_TIER_THEME_KEY,
+  DEFAULT_BROADCAST_PRO_CREST_SIZING,
   type BroadcastProCrestTier,
 } from "../../../../../templates/types/broadcast-pro/crest-well";
 
@@ -17,7 +18,7 @@ export interface BroadcastProCrestWellProps {
   teamName: string;
   delay: number;
   glass: BroadcastProGlassStyle;
-  /** Row / fixture adaptive sizing from parent container height. */
+  /** Row / fixture / ranking adaptive sizing from parent container height. */
   containerHeight?: number;
   className?: string;
   style?: CSSProperties;
@@ -25,6 +26,23 @@ export interface BroadcastProCrestWellProps {
   showBorder?: boolean;
   animate?: boolean;
 }
+
+const TALL_COVER_TIERS: ReadonlySet<BroadcastProCrestTier> = new Set([
+  "fixture",
+  "grid",
+  "featured",
+]);
+
+const resolveTallCoverWidthPx = (
+  tier: BroadcastProCrestTier,
+  sizePx: number | null,
+  sizing: typeof DEFAULT_BROADCAST_PRO_CREST_SIZING,
+): number | null => {
+  if (sizePx != null) return sizePx;
+  if (tier === "grid") return sizing.gridPx;
+  if (tier === "featured") return Math.min(sizing.featuredPx, 136);
+  return null;
+};
 
 export const BroadcastProCrestWell: React.FC<BroadcastProCrestWellProps> = ({
   tier,
@@ -41,19 +59,52 @@ export const BroadcastProCrestWell: React.FC<BroadcastProCrestWellProps> = ({
   const { componentStyles, broadcastProCrestSizing } = useThemeContext();
   const themeKey = BROADCAST_PRO_CREST_TIER_THEME_KEY[tier];
   const wellClass = csClass(componentStyles, themeKey);
+  const sizing = broadcastProCrestSizing ?? DEFAULT_BROADCAST_PRO_CREST_SIZING;
 
   const { sizePx, contentInsetRatio } = resolveBroadcastProCrestWellSize(
     tier,
     containerHeight,
-    broadcastProCrestSizing,
+    sizing,
   );
+
+  const tallWidthPx = resolveTallCoverWidthPx(tier, sizePx, sizing);
+  const isTallCover =
+    TALL_COVER_TIERS.has(tier) &&
+    containerHeight != null &&
+    tallWidthPx != null;
 
   const insetPct = `${contentInsetRatio * 100}%`;
 
-  const sizeStyle: CSSProperties =
-    sizePx != null
-      ? { width: sizePx, height: sizePx, minWidth: sizePx, minHeight: sizePx }
-      : {};
+  const sizeStyle: CSSProperties = isTallCover
+    ? {
+        width: tallWidthPx,
+        minWidth: tallWidthPx,
+        height: containerHeight,
+        minHeight: containerHeight,
+        alignSelf: "stretch",
+      }
+    : sizePx != null
+      ? {
+          width: sizePx,
+          height: sizePx,
+          minWidth: sizePx,
+          minHeight: sizePx,
+        }
+      : tier === "grid"
+        ? {
+            width: sizing.gridPx,
+            height: sizing.gridPx,
+            minWidth: sizing.gridPx,
+            minHeight: sizing.gridPx,
+          }
+        : tier === "featured"
+          ? {
+              width: sizing.featuredPx,
+              height: sizing.featuredPx,
+              minWidth: sizing.featuredPx,
+              minHeight: sizing.featuredPx,
+            }
+          : {};
 
   return (
     <div
@@ -70,11 +121,13 @@ export const BroadcastProCrestWell: React.FC<BroadcastProCrestWellProps> = ({
         logo={logo}
         teamName={teamName}
         delay={delay}
-        fit="contain"
+        fit={isTallCover ? "cover" : "contain"}
         imgStyle={{
           width: insetPct,
           height: insetPct,
-          objectFit: "contain",
+          maxWidth: "100%",
+          maxHeight: "100%",
+          objectFit: isTallCover ? "cover" : "contain",
         }}
         animate={animate}
       />

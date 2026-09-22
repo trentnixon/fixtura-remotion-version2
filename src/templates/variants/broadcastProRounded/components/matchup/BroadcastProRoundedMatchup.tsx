@@ -52,11 +52,14 @@ export const BroadcastProRoundedMatchup: React.FC<
   fontFamily,
   renderResultBlock,
 }) => {
-  const { componentStyles, layout } = useThemeContext();
+  const { componentStyles, fontClasses, layout } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProRoundedTheme();
   const { width: compositionWidth } = useVideoConfig();
   const cellRadius = layout.borderRadius.container;
-  const resolvedFont = fontFamily ?? headingFont;
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
+  const resolvedFont =
+    fontFamily ?? (tier === "fixture" ? copyFont : headingFont);
 
   const rosterSidebarWidth =
     getBroadcastProRoundedRosterSidebarWidth(compositionWidth);

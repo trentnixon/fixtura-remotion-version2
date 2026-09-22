@@ -38,15 +38,16 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
-  const headingFont = fontClasses.heading?.family;
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
   const metaVariant: ColorVariant = "onContainerCopy";
-  const metaCopyStyle = { color: text.copy };
-  const metaMutedStyle = { color: text.muted };
+  const metaCopyStyle = { color: text.copy, fontFamily: copyFont };
+  const metaMutedStyle = { color: text.muted, fontFamily: copyFont };
   const isCompact = density === "compact";
   const matchupHeight =
-    density === "featured" ? 330 : density === "standard" ? 240 : 170;
+    density === "featured" ? 220 : density === "standard" ? 240 : 170;
   const bodyPadding =
-    density === "featured" ? "18px 24px" : isCompact ? "8px 16px" : "14px 20px";
+    density === "featured" ? "6px 24px" : isCompact ? "4px 16px" : "6px 20px";
 
   return (
     <div
@@ -70,7 +71,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
         <BroadcastProFixtureFrame
           accentColor={accent}
           glass={glass}
-          className="h-full"
+          className="h-full gap-2"
         >
           <div
             className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-3 px-5 py-1.5 md:px-6"
@@ -84,7 +85,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               value={game.date}
               animation={{ type: "none" }}
               exitAnimation="none"
-              className="min-w-0 truncate font-bold uppercase tracking-wider"
+              className="min-w-0 truncate font-rajdhani font-bold uppercase tracking-wider"
               variant={metaVariant}
               style={metaCopyStyle}
             />
@@ -92,7 +93,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               value={game.time}
               animation={{ type: "none" }}
               exitAnimation="none"
-              className="min-w-0 truncate font-medium"
+              className="min-w-0 truncate font-rajdhani font-medium"
               variant={metaVariant}
               style={metaCopyStyle}
             />
@@ -100,7 +101,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               value={game.gradeName ?? ""}
               animation={{ type: "none" }}
               exitAnimation="none"
-              className="min-w-0 truncate text-right font-semibold uppercase tracking-wider"
+              className="min-w-0 truncate text-right font-rajdhani font-semibold uppercase tracking-wider"
               variant={metaVariant}
               style={metaMutedStyle}
             />
@@ -120,16 +121,14 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               home={{
                 teamName: formatUpcomingTeamName(game.teamHome),
                 logo: game.teamHomeLogo,
-                roleLabel: "Home",
               }}
               away={{
                 teamName: formatUpcomingTeamName(game.teamAway),
                 logo: game.teamAwayLogo,
-                roleLabel: "Away",
               }}
               glass={glass}
               delay={delay}
-              fontFamily={headingFont}
+              fontFamily={copyFont}
               fixtureDensity={density}
               containerHeight={matchupHeight}
               animateContent={false}
@@ -147,7 +146,7 @@ export const GameCardBroadcastPro: React.FC<GameCardProps> = ({
               value={formatGroundLocation(game.ground)}
               animation={{ type: "none" }}
               exitAnimation="none"
-              className="max-w-full truncate text-center font-semibold uppercase tracking-widest"
+              className="max-w-full truncate text-center font-rajdhani font-semibold uppercase tracking-widest"
               variant={metaVariant}
               style={metaMutedStyle}
             />

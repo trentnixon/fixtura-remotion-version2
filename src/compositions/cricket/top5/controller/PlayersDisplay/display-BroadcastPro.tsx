@@ -27,6 +27,12 @@ import {
 } from "../../../../../core/utils/layoutHeights";
 
 const GRID_CARD_HEIGHT_PX = 215;
+/** Full-height crest column on the right (same treatment as featured #1). */
+const GRID_CREST_WIDTH_PX = 96;
+const GRID_CREST_CONTENT_GAP_PX = 12;
+const FEATURED_CREST_WIDTH_PX = 136;
+const FEATURED_CREST_CONTENT_GAP_PX = 16;
+const FEATURED_CREST_HEIGHT_PX = 280;
 const FEATURED_TEAM_NAME_LENGTH_EXTRA = 10;
 
 const FeaturedCard: React.FC<{
@@ -36,8 +42,11 @@ const FeaturedCard: React.FC<{
 }> = ({ player, delay, exitFrame }) => {
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
-  const { glass, text, accent, headingFont, cs, selectedPalette } =
+  const { glass, text, accent, cs, selectedPalette } =
     useBroadcastProPlayerRankingTheme();
+  const { fontClasses } = useThemeContext();
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
   const restrictions = getDefaultRestrictions();
   const statCells = buildBroadcastProTop5StatMatrixCells(player);
 
@@ -71,22 +80,21 @@ const FeaturedCard: React.FC<{
             text={text}
             accent={accent}
             selectedPalette={selectedPalette}
-            headingFont={headingFont}
+            headingFont={copyFont}
           />
           <div className={cs("broadcastProPlayerRankingFeaturedBody")}>
-            <BroadcastProCrestWell
-              tier="featured"
-              logo={player.teamLogo}
-              teamName={player.playedFor}
-              delay={delay + 5}
-              glass={glass}
-              showBorder
-            />
-            <div className="min-w-0 flex-1">
+            <div
+              className="min-w-0 flex-1 self-center px-6 pb-4"
+              style={{
+                paddingRight:
+                  FEATURED_CREST_WIDTH_PX + FEATURED_CREST_CONTENT_GAP_PX,
+              }}
+            >
               <h2
-                className={`${headingFont} ${cs("broadcastProPlayerRankingNameFeatured")}`}
+                className={cs("broadcastProPlayerRankingNameFeatured")}
                 style={{
                   color: text.copy,
+                  fontFamily: copyFont,
                   textShadow: "0 2px 4px rgba(0,0,0,0.5)",
                 }}
               >
@@ -94,19 +102,38 @@ const FeaturedCard: React.FC<{
               </h2>
               <p
                 className={cs("broadcastProPlayerRankingTeamFeatured")}
-                style={{ color: text.secondary }}
+                style={{ color: text.secondary, fontFamily: copyFont }}
               >
                 {team}
               </p>
               <BroadcastProStatMatrixTriple
                 cells={statCells}
                 tier="featuredTriple"
-                headingFont={headingFont}
+                headingFont={copyFont}
                 text={text}
                 glass={glass}
                 accent={accent}
               />
             </div>
+            <BroadcastProCrestWell
+              tier="featured"
+              logo={player.teamLogo}
+              teamName={player.playedFor}
+              delay={delay + 5}
+              glass={glass}
+              containerHeight={FEATURED_CREST_HEIGHT_PX}
+              showBorder
+              style={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                bottom: 0,
+                width: FEATURED_CREST_WIDTH_PX,
+                minWidth: FEATURED_CREST_WIDTH_PX,
+                height: "100%",
+                minHeight: "100%",
+              }}
+            />
           </div>
         </BroadcastProGlassPanel>
       </AnimatedContainer>
@@ -123,8 +150,11 @@ const GridCard: React.FC<{
   const { animations } = useAnimationContext();
   const containerAnimation = animations.container.main.itemContainer;
   const delay = calculatePlayerDelay(index);
-  const { glass, text, accent, headingFont, cs, selectedPalette } =
+  const { glass, text, accent, cs, selectedPalette } =
     useBroadcastProPlayerRankingTheme();
+  const { fontClasses } = useThemeContext();
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
   const restrictions = getDefaultRestrictions();
   const statCells = buildBroadcastProTop5StatMatrixCells(player);
 
@@ -147,7 +177,7 @@ const GridCard: React.FC<{
       >
         <BroadcastProGlassPanel
           glass={glass}
-          className={cs("broadcastProPlayerRankingGridCard")}
+          className={`${cs("broadcastProPlayerRankingGridCard")} !gap-0`}
           style={{
             height: GRID_CARD_HEIGHT_PX,
             minHeight: GRID_CARD_HEIGHT_PX,
@@ -163,21 +193,19 @@ const GridCard: React.FC<{
             text={text}
             accent={accent}
             selectedPalette={selectedPalette}
-            headingFont={headingFont}
+            headingFont={copyFont}
           />
-          <BroadcastProCrestWell
-            tier="grid"
-            logo={player.teamLogo}
-            teamName={player.playedFor}
-            delay={delay + 5}
-            glass={glass}
-            showBorder
-          />
-          <div className="flex min-w-0 flex-1 flex-col justify-center overflow-visible">
+          <div
+            className="flex min-h-0 min-w-0 flex-1 flex-col justify-center overflow-hidden"
+            style={{
+              paddingRight: GRID_CREST_WIDTH_PX + GRID_CREST_CONTENT_GAP_PX,
+            }}
+          >
             <h3
-              className={`${headingFont} ${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0`}
+              className={`${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0`}
               style={{
                 color: text.copy,
+                fontFamily: copyFont,
                 textShadow: "0 2px 4px rgba(0,0,0,0.5)",
               }}
             >
@@ -185,19 +213,38 @@ const GridCard: React.FC<{
             </h3>
             <p
               className={cs("broadcastProPlayerRankingTeamGridTop5")}
-              style={{ color: text.muted }}
+              style={{ color: text.muted, fontFamily: copyFont }}
             >
               {team}
             </p>
             <BroadcastProStatMatrixTriple
               cells={statCells}
               tier="gridTriple"
-              headingFont={headingFont}
+              headingFont={copyFont}
               text={text}
               glass={glass}
               accent={accent}
             />
           </div>
+          <BroadcastProCrestWell
+            tier="grid"
+            logo={player.teamLogo}
+            teamName={player.playedFor}
+            delay={delay + 5}
+            glass={glass}
+            containerHeight={GRID_CARD_HEIGHT_PX}
+            showBorder
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: GRID_CREST_WIDTH_PX,
+              minWidth: GRID_CREST_WIDTH_PX,
+              height: "100%",
+              minHeight: "100%",
+            }}
+          />
         </BroadcastProGlassPanel>
       </AnimatedContainer>
     </div>

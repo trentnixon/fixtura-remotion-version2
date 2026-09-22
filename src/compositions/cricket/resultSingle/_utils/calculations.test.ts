@@ -8,15 +8,15 @@ describe("castToMatchResults", () => {
 
     expect(
       match.homeTeam.battingPerformances.map((player) => player.player),
-    ).toEqual(["Melissa Lewis", "Eden Carter", "Melinda Santer"]);
+    ).toEqual(["Sam Lickiss (c)", "Jack Lickiss", "James Guthrig"]);
     expect(
       match.homeTeam.bowlingPerformances.map((player) => player.player),
-    ).toEqual(["Waller", "Baker (c)", "Cahill"]);
+    ).toEqual(["Maloney", "Gregory", "Pedi"]);
     expect(
       match.awayTeam.battingPerformances.map((player) => player.player),
-    ).toEqual([]);
+    ).toEqual(["Lachlan King", "Hayden Taylor", "Bailey Garnham"]);
     expect(
       match.awayTeam.bowlingPerformances.map((player) => player.player),
-    ).toEqual([]);
+    ).toEqual(["Latimer", "Barclay", "Finn"]);
   });
 });

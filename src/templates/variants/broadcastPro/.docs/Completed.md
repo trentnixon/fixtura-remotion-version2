@@ -6,7 +6,7 @@ Delivered indexed roster sheet primitives with padded lineup indices, row-1 acce
 
 ### TKT-2026-BP-019
 
-Header is 200 / 1020 / 130, crest is 72px, secondary headlines wrap, leftover `font-black` roles are Teko/Rajdhani, and copy-variant resolution keeps chips on container mode (grade chip included). Rounded matches the layout and mode mapping.
+Header is 200 / 1020 / 130, crest is 72px with an 80px title cap so the header stack stays on-canvas, secondary headlines wrap, leftover `font-black` roles are Teko/Rajdhani, and copy-variant resolution keeps chips on container mode (grade chip included). Rounded matches the layout and mode mapping.
 
 ### TKT-2026-BP-020
 

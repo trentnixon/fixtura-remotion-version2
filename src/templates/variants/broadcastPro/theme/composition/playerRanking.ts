@@ -33,23 +33,24 @@ export const broadcastProCompositionComponentStylesPlayerRanking = {
     className: "relative flex flex-col overflow-hidden",
   },
   broadcastProPlayerRankingFeaturedBody: {
-    className: "flex items-center gap-6 px-6 pb-4 pt-10 pr-4",
+    className:
+      "relative flex min-h-[200px] items-stretch overflow-hidden pt-10",
   },
   broadcastProPlayerRankingGridCard: {
     className:
-      "relative flex shrink-0 items-stretch gap-2 overflow-hidden p-3 pt-8 sm:gap-3 sm:p-4 sm:pt-9",
+      "relative flex shrink-0 items-stretch gap-3 overflow-hidden p-3 pt-8 sm:gap-4 sm:p-4 sm:pt-9",
   },
   broadcastProPlayerRankingRankBadgeFeaturedLeft: {
     className:
-      "absolute left-0 top-0 px-3 py-1 font-teko text-2xl italic leading-none",
+      "absolute left-0 top-0 px-3 py-1 font-rajdhani text-2xl font-bold italic leading-none",
   },
   broadcastProPlayerRankingRankBadgeGridLeft: {
     className:
-      "absolute left-0 top-0 px-3 py-1 font-teko text-2xl italic leading-none",
+      "absolute left-0 top-0 px-3 py-1 font-rajdhani text-2xl font-bold italic leading-none",
   },
   broadcastProPlayerRankingRankBadgeGridRight: {
     className:
-      "absolute right-0 top-0 px-3 py-1 font-teko text-lg font-bold italic tracking-wide leading-none",
+      "absolute right-0 top-0 px-3 py-1 font-rajdhani text-lg font-bold italic tracking-wide leading-none",
   },
   broadcastProPlayerRankingLogoWellFeatured:
     broadcastProComponentStylesShared.broadcastProCrestWellFeatured,
@@ -57,11 +58,11 @@ export const broadcastProCompositionComponentStylesPlayerRanking = {
     broadcastProComponentStylesShared.broadcastProCrestWellGrid,
   broadcastProPlayerRankingNameFeatured: {
     className:
-      "text-lift text-6xl font-semibold uppercase leading-none tracking-normal md:text-7xl",
+      "font-rajdhani text-lift text-5xl font-semibold uppercase leading-none tracking-normal md:text-6xl",
   },
   broadcastProPlayerRankingNameGridTop5: {
     className:
-      "text-lift truncate text-2xl font-medium uppercase leading-snug sm:text-3xl",
+      "font-rajdhani text-lift truncate text-xl font-medium uppercase leading-snug sm:text-2xl",
   },
   broadcastProPlayerRankingNameGridPerformances: {
     className:

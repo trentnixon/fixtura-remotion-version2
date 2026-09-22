@@ -34,19 +34,19 @@ export interface BroadcastProRoundedStatMatrixResultCellProps {
 const SINGLE_CELL_CLASS =
   "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 const SINGLE_PLAYER_NAME_CLASS =
-  "!text-[38px] font-semibold !leading-none tracking-wide !opacity-100 -mt-1.5";
+  "font-rajdhani !text-[38px] font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =
   "font-teko !text-[62px] !font-normal !tracking-wide !leading-none";
 const SINGLE_STAT_SUFFIX_CLASS =
-  "font-teko !text-[32px] font-normal !tracking-wider !leading-none opacity-70";
+  "font-teko !text-[32px] font-normal !tracking-wider !leading-none";
 const LIST_STAT_PRIMARY_CLASS =
   "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
 const LIST_STAT_SUFFIX_CLASS =
-  "font-teko !text-[26px] font-normal !tracking-tight !leading-tight opacity-70";
+  "font-teko !text-[26px] font-normal !tracking-tight !leading-tight";
 const EMBEDDED_CELL_CLASS =
   "flex min-w-0 items-center justify-between gap-2 border-l border-white/20 px-3 py-1 first:border-l-0";
 const EMBEDDED_PLAYER_NAME_CLASS =
-  "!text-[18px] !font-semibold !leading-none uppercase !opacity-70";
+  "font-rajdhani !text-[18px] !font-normal !leading-none uppercase";
 
 export const BroadcastProRoundedStatMatrixResultCell: React.FC<
   BroadcastProRoundedStatMatrixResultCellProps
@@ -123,7 +123,7 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
       exitFrame={exitFrame}
       variant="onContainerCopy"
       className={resolvedNameClass}
-      style={{ color: text.copy }}
+      style={{ color: isEmbedded ? text.muted : text.copy }}
     />
   );
 

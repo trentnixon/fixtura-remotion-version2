@@ -41,16 +41,17 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
-  const headingFont = fontClasses.heading?.family;
+  const copyFont =
+    fontClasses.body?.family ?? fontClasses.subheading?.family ?? "Rajdhani";
   const metaVariant: ColorVariant = "onContainerCopy";
-  const metaCopyStyle = { color: text.copy };
-  const metaMutedStyle = { color: text.muted };
+  const metaCopyStyle = { color: text.copy, fontFamily: copyFont };
+  const metaMutedStyle = { color: text.muted, fontFamily: copyFont };
 
   return (
     <div className="flex w-full flex-col overflow-hidden">
       <AnimatedContainer
         type="full"
-        className={`flex w-full flex-col ${layout.spacing?.stack ?? "gap-1"}`}
+        className="flex w-full flex-col gap-2 overflow-hidden"
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
@@ -73,14 +74,14 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
           <MetadataMedium
             value={game.date}
             animation={{ ...animations.text.main.copyIn, delay }}
-            className="min-w-0 truncate font-bold uppercase tracking-wider"
+            className="min-w-0 truncate font-rajdhani font-bold uppercase tracking-wider"
             variant={metaVariant}
             style={metaCopyStyle}
           />
           <MetadataMedium
             value={game.time}
             animation={{ ...animations.text.main.copyIn, delay: delay + 2 }}
-            className="min-w-0 truncate font-medium"
+            className="min-w-0 truncate font-rajdhani font-medium"
             variant={metaVariant}
             style={metaCopyStyle}
           />
@@ -90,7 +91,7 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
               ...animations.text.main.copyIn,
               delay: delay + 3,
             }}
-            className="min-w-0 truncate font-bold uppercase tracking-wider"
+            className="min-w-0 truncate font-rajdhani font-bold uppercase tracking-wider"
             variant={metaVariant}
             style={metaCopyStyle}
           />
@@ -110,16 +111,14 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
             home={{
               teamName: formatUpcomingTeamName(game.teamHome),
               logo: game.teamHomeLogo,
-              roleLabel: "Home",
             }}
             away={{
               teamName: formatUpcomingTeamName(game.teamAway),
               logo: game.teamAwayLogo,
-              roleLabel: "Away",
             }}
             glass={glass}
             delay={delay}
-            fontFamily={headingFont}
+            fontFamily={copyFont}
           />
         </div>
 
@@ -138,7 +137,7 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
           <MetadataMedium
             value={formatGroundLocation(game.ground)}
             animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
-            className="truncate font-semibold uppercase tracking-widest"
+            className="truncate font-rajdhani font-semibold uppercase tracking-widest"
             variant={metaVariant}
             style={metaMutedStyle}
           />

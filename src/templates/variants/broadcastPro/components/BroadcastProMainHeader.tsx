@@ -10,13 +10,9 @@ import {
   BroadcastProHeadlineSecondary,
   BroadcastProHeadlineTitle,
   getBroadcastProHeaderSecondaryLine,
+  shouldHideBroadcastProHeaderSecondary,
 } from "./headline";
 import { DEFAULT_BROADCAST_PRO_HEADLINE_SIZING } from "../../../types/broadcast-pro/headline-lockup";
-
-const COMPOSITIONS_WITHOUT_HEADER_SECONDARY = new Set([
-  "CricketResultSingle",
-  "CricketUpcoming",
-]);
 
 export const BroadcastProMainHeader = () => {
   const { layout, broadcastProHeadlineSizing } = useThemeContext();
@@ -33,7 +29,7 @@ export const BroadcastProMainHeader = () => {
     broadcastProHeadlineSizing?.headerOrgCrestPx ??
     DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.headerOrgCrestPx;
 
-  const hideSecondaryLine = COMPOSITIONS_WITHOUT_HEADER_SECONDARY.has(
+  const hideSecondaryLine = shouldHideBroadcastProHeaderSecondary(
     metadata.compositionId,
   );
   const secondaryLine = hideSecondaryLine
@@ -42,7 +38,7 @@ export const BroadcastProMainHeader = () => {
 
   const OrgLogo = () => (
     <div
-      className="mx-auto mb-3 shrink-0 overflow-hidden rounded-full bg-white p-2 shadow-xl"
+      className="mx-auto mb-2 shrink-0 overflow-hidden rounded-full bg-white p-2 shadow-xl"
       style={{ width: crestPx, height: crestPx }}
     >
       <div className="flex h-full w-full min-h-0 min-w-0 items-center justify-center overflow-hidden rounded-full">

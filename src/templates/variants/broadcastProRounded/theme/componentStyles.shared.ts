@@ -24,16 +24,16 @@ const broadcastProRoundedScorePlayerSuffix = {
 
 const broadcastProRoundedScoreTableRank = {
   className:
-    "font-teko text-5xl font-normal tracking-tight leading-none uppercase",
+    "font-rajdhani text-5xl font-normal tracking-tight leading-none uppercase",
 };
 
 const broadcastProRoundedScoreTableStat = {
-  className: "font-teko text-4xl font-normal tracking-tight leading-none",
+  className: "font-rajdhani text-4xl font-normal tracking-tight leading-none",
 };
 
 const broadcastProRoundedScoreTablePoints = {
   className:
-    "font-teko text-5xl font-bold tracking-tight leading-none text-center",
+    "font-rajdhani text-5xl font-bold tracking-tight leading-none text-center",
 };
 
 const broadcastProRoundedScoreFeatured = {
@@ -63,7 +63,7 @@ const broadcastProRoundedScoreRosterIndex = {
 };
 
 const broadcastProRoundedVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-1 px-8 py-3",
+  className: "flex flex-col items-center justify-center gap-2 px-8 py-3",
 };
 
 const broadcastProRoundedVerdictBandCompact = {
@@ -116,12 +116,12 @@ const broadcastProRoundedCrestWellFixture = {
 
 const broadcastProRoundedCrestWellGrid = {
   className:
-    "flex h-20 w-20 shrink-0 items-center justify-center self-center overflow-hidden rounded-2xl shadow-inner sm:h-24 sm:w-24",
+    "flex shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-inner",
 };
 
 const broadcastProRoundedCrestWellFeatured = {
   className:
-    "flex h-44 w-44 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-inner",
+    "flex shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-inner",
 };
 
 const broadcastProRoundedCrestWellRosterHome = {
@@ -136,11 +136,11 @@ const broadcastProRoundedCrestWellRosterAway = {
 
 const broadcastProRoundedMatchupFixture = {
   className:
-    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-8 md:gap-10",
+    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-3 md:gap-4",
 };
 
 const broadcastProRoundedMatchupResultStack = {
-  className: "flex w-full flex-col gap-1",
+  className: "flex w-full flex-col gap-2",
 };
 
 const broadcastProRoundedMatchupRosterSidebar = {
@@ -148,20 +148,21 @@ const broadcastProRoundedMatchupRosterSidebar = {
 };
 
 const broadcastProRoundedMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-start gap-8",
+  className: "flex min-w-0 flex-1 items-center gap-4",
 };
 
 const broadcastProRoundedMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-start justify-end gap-8 text-right",
+  className: "flex min-w-0 flex-1 items-center justify-end gap-4 text-right",
 };
 
 const broadcastProRoundedMatchupRoleLabel = {
-  className: "text-sm font-bold uppercase tracking-widest opacity-80",
+  className:
+    "font-rajdhani text-sm font-bold uppercase tracking-widest opacity-80",
 };
 
 const broadcastProRoundedMatchupDividerSlot = {
   className:
-    "flex flex-shrink-0 self-center items-center justify-center px-8 md:px-10",
+    "flex flex-shrink-0 self-center items-center justify-center px-2 md:px-3",
 };
 
 const broadcastProRoundedMatchupDividerVersus = {
@@ -169,7 +170,7 @@ const broadcastProRoundedMatchupDividerVersus = {
 };
 
 const broadcastProRoundedMatchupFixtureTeamName = {
-  className: "font-normal uppercase leading-none tracking-wide",
+  className: "font-rajdhani font-normal uppercase leading-none tracking-wide",
 };
 
 const broadcastProRoundedLadderZoneRankLeader = {

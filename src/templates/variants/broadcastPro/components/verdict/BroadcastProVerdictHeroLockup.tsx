@@ -50,7 +50,7 @@ export const BroadcastProVerdictHeroLockup: React.FC<
     "";
 
   return (
-    <div className="flex w-full flex-col items-center gap-1">
+    <div className="flex w-full flex-col items-center gap-2">
       <AnimatedText
         type={BROADCAST_PRO_VERDICT_ROLE_THEME_KEY.winner}
         variant="onContainerTitle"

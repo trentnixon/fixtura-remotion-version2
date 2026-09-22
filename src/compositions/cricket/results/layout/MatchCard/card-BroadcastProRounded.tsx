@@ -13,7 +13,11 @@ const MatchCardBroadcastProRounded: React.FC<MatchCardProps> = ({
       match={match}
       delay={delay}
       exitFrame={exitFrame}
-      style={{ maxHeight: rowHeight }}
+      style={
+        rowHeight != null
+          ? { height: rowHeight, maxHeight: rowHeight }
+          : undefined
+      }
     />
   );
 };

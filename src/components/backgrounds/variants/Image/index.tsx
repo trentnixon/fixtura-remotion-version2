@@ -23,7 +23,12 @@ import {
 } from "./ImageBackground.types";
 import { getOptimizedEffectSettings } from "./ImageBackground.config";
 import { adaptImageConfig } from "./TemplateVariationAdapter";
-import { BreathingEffect, FocusBlurEffect, KenBurnsEffect, Pan } from "./variants";
+import {
+  BreathingEffect,
+  FocusBlurEffect,
+  KenBurnsEffect,
+  Pan,
+} from "./variants";
 import type { BreathingEffectProps } from "./variants/breath";
 import type { FocusBlurEffectProps } from "./variants/blur";
 import type { ZoomEffectProps } from "./variants/zoom";
@@ -284,8 +289,7 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
           resolvedPanDirection === "down"
             ? resolvedPanDirection
             : "left";
-        const zoomDirection =
-          config.zoomDirection === "out" ? "out" : "in";
+        const zoomDirection = config.zoomDirection === "out" ? "out" : "in";
         return (
           <KenBurnsEffect
             src={baseProps.src}

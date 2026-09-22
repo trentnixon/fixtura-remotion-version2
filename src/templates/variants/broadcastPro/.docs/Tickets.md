@@ -59,7 +59,7 @@ Shrink the header so the asset stack has room, fix headline overflow, map leftov
 
 ## Completion Summary
 
-Header is 200 / 1020 / 130 on the 1080×1350 canvas, header crest is 72px, and secondary headlines wrap. Copy-variant resolution puts container copy on chips (including the grade chip) and non-container title/copy on the scene. Same layout and mode mapping landed on Broadcast Pro Rounded.
+Header is 200 / 1020 / 130 on the 1080×1350 canvas, header crest is 72px, title cap is 80px so the logo stays on-canvas, and secondary headlines wrap. Copy-variant resolution puts container copy on chips (including the grade chip) and non-container title/copy on the scene. Same layout and mode mapping landed on Broadcast Pro Rounded.
 
 ---
 
