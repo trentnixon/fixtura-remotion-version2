@@ -2,25 +2,28 @@
 
 ## Current Focus
 
-- Ticket 16 — Standardise the player-stat matrix (Monday pulse 16)
+- TKT-2026-BP-019: Layout and font legibility
+- TKT-2026-BP-020: Image backgrounds, motion caps, copy contrast
 
 ## Completed
 
-- TKT-2026-BP-015: Indexed roster sheet — padded indices, glass rows, dynamic metrics, visual QA (Monday pulse 15 Done)
+- TKT-2026-BP-015: Indexed roster sheet
+- Monday pulse 16: Player-stat matrix (in code, no local ticket)
+- Monday pulse 17: Marker / notch language (in code, no local ticket)
 
 ## To Do (easy → hard)
 
-1. [ ] Standardise the player-stat matrix (see TKT-2026-BP-016 in `Tickets.md` when opened)
-
-2. [ ] Introduce a graphic notch and marker language (Monday pulse 17)
-
-3. [ ] Refine the optical sponsor grid (Monday pulse 18)
+1. TKT-2026-BP-019: Layout and font legibility (P1)
+2. TKT-2026-BP-020: Image backgrounds and copy contrast (P1)
+3. TKT-2026-BP-021: Docs, regression fixtures, Rounded parity, sponsor grid (P2)
 
 ## Blocked / Waiting
 
-- (none)
+- None
 
 ## Recommendations
 
-- Reuse score typography and glass hierarchy from tickets 07–09 when building the player-stat matrix (16).
-- Keep roster list sizing in `theme/tokens.ts` `broadcastProRosterListSizing`; composition classes in `theme/composition/roster.ts`.
+- Do not rebuild glass, crest wells, matchups, ladder zones, markers, roster sheet, or the stat matrix. They are already shipped.
+- Tune type in `theme/tokens.ts`, `theme/layout.ts`, `theme/componentStyles.shared.ts`, and `theme/composition/*.ts`.
+- Keep `broadcastProRounded` in lockstep unless a ticket excludes it.
+- Glass is already `lg` in tokens. Do not raise it until the type pass is done.
