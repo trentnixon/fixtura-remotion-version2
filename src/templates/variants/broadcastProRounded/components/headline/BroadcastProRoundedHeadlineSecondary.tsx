@@ -9,7 +9,11 @@ import type {
   AnimationType,
 } from "../../../../../components/typography/config/animations";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import type { BroadcastProRoundedHeadlineVariant } from "../../../../../templates/types/broadcast-pro-rounded/headline-lockup";
+import {
+  DEFAULT_BROADCAST_PRO_HEADLINE_SIZING,
+  type BroadcastProRoundedHeadlineVariant,
+} from "../../../../../templates/types/broadcast-pro-rounded/headline-lockup";
+import { resolveBroadcastProRoundedCopyVariant } from "../../../../../templates/types/broadcast-pro-rounded/copy-variant";
 
 export interface BroadcastProRoundedHeadlineSecondaryProps {
   text: string;
@@ -30,12 +34,21 @@ export const BroadcastProRoundedHeadlineSecondary: React.FC<
   exitFrame,
   fontFamily: fontFamilyOverride,
 }) => {
-  const { componentStyles, fontClasses, fonts } = useThemeContext();
+  const {
+    componentStyles,
+    fontClasses,
+    fonts,
+    broadcastProRoundedHeadlineSizing,
+  } = useThemeContext();
   const { text: textOnGlass } = useBroadcastProRoundedTheme();
+  const wraps =
+    broadcastProRoundedHeadlineSizing?.secondaryWraps ??
+    DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.secondaryWraps;
 
-  const secondaryClass =
+  const secondaryClass = `${
     componentStyles.broadcastProRoundedHeadlineSecondary?.className ??
-    "font-rajdhani uppercase tracking-[0.2em] font-semibold whitespace-nowrap";
+    "font-rajdhani uppercase tracking-wide font-semibold leading-snug"
+  } ${wraps ? "whitespace-normal" : "whitespace-nowrap"}`;
 
   const subtitleFontFamily =
     fontFamilyOverride ??
@@ -49,7 +62,10 @@ export const BroadcastProRoundedHeadlineSecondary: React.FC<
       <AnimatedText
         textAlign="center"
         type="subtitle"
-        variant="onContainerTitle"
+        variant={resolveBroadcastProRoundedCopyVariant({
+          surface: "background",
+          role: "title",
+        })}
         letterAnimation="word"
         animation={animation}
         exitAnimation={exitAnimation}
@@ -68,7 +84,10 @@ export const BroadcastProRoundedHeadlineSecondary: React.FC<
         textAlign="center"
         fontFamily={subtitleFontFamily}
         type="metadataMedium"
-        variant="onContainerCopy"
+        variant={resolveBroadcastProRoundedCopyVariant({
+          surface: "container",
+          role: "copy",
+        })}
         letterAnimation="none"
         animation={animation}
         exitAnimation={exitAnimation}
@@ -94,5 +113,5 @@ export const BroadcastProRoundedHeadlineSecondary: React.FC<
     );
   }
 
-  return <div className="overflow-hidden">{textNode}</div>;
+  return <div className={wraps ? "w-full" : "overflow-hidden"}>{textNode}</div>;
 };

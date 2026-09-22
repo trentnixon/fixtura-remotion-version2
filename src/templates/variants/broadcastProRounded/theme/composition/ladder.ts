@@ -3,7 +3,7 @@ import { broadcastProRoundedComponentStylesShared } from "../componentStyles.sha
 
 export const broadcastProRoundedCompositionComponentStylesLadder = {
   ladderGradeLabel: {
-    className: "text-2xl font-bold uppercase tracking-[0.2em] leading-snug",
+    className: "text-2xl font-bold uppercase tracking-wide leading-snug",
   },
   ladderTeamName: {
     className: "text-4xl font-normal uppercase tracking-wide leading-none",

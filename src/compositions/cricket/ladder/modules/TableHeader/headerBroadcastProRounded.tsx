@@ -6,6 +6,7 @@ import {
   useBroadcastProRoundedTheme,
 } from "../../../utils/broadcastProRounded";
 import { TableHeaderProps } from "./_types/TableHeaderProps";
+import { resolveBroadcastProRoundedCopyVariant } from "../../../../../templates/types/broadcast-pro-rounded/copy-variant";
 
 const GAP = "gap-2";
 
@@ -40,7 +41,10 @@ export const TableHeaderBroadcastProRounded: React.FC<TableHeaderProps> = ({
           <BroadcastProRoundedMetadataChip className="max-w-[95%] px-6 py-2">
             <AnimatedText
               type="ladderGradeLabel"
-              variant="onContainerTitle"
+              variant={resolveBroadcastProRoundedCopyVariant({
+                surface: "container",
+                role: "copy",
+              })}
               textAlign="center"
               letterAnimation="word"
               animationDelay={5}

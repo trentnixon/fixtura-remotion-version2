@@ -9,10 +9,11 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
   ResultScoreYetToBat:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchYetToBat,
   ResultTeamName: {
-    className: "text-4xl font-normal uppercase tracking-wide leading-none",
+    className:
+      "font-teko text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "text-[26px] font-semibold leading-tight opacity-70",
+    className: "font-rajdhani text-[26px] font-semibold leading-tight",
   },
   ResultPlayerScore: {
     className: "font-teko text-[38px] font-normal tracking-tight leading-tight",
@@ -23,7 +24,7 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
   ResultFixtureResult:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedVerdictFixtureResult,
   ResultMetaData: {
-    className: "text-sm font-bold uppercase tracking-widest leading-snug",
+    className: "text-lg font-bold uppercase tracking-wider leading-snug",
   },
   ResultStatementShort:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedVerdictLine,

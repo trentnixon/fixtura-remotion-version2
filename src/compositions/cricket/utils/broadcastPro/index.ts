@@ -16,6 +16,12 @@ export {
 } from "./themeColors";
 export type { BroadcastProTextOnContainer } from "./themeColors";
 export { useBroadcastProTheme } from "./useBroadcastProTheme";
+export {
+  resolveBroadcastProCopyVariant,
+  type BroadcastProCopyRole,
+  type BroadcastProCopySurface,
+} from "../../../../templates/types/broadcast-pro/copy-variant";
+export { resolveBroadcastProImageDefaults } from "../../../../templates/types/broadcast-pro/image-defaults";
 export * from "./crest";
 export * from "./ladder";
 export * from "./roster";

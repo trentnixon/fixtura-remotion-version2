@@ -8,10 +8,11 @@ export const broadcastProCompositionComponentStylesResults = {
   ResultScoreYetToBat:
     broadcastProComponentStylesShared.broadcastProScoreMatchYetToBat,
   ResultTeamName: {
-    className: "text-4xl font-normal uppercase tracking-wide leading-none",
+    className:
+      "font-teko text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "text-2xl font-semibold leading-tight opacity-70",
+    className: "font-rajdhani text-2xl font-semibold leading-tight",
   },
   ResultPlayerScore: {
     className: "font-teko text-4xl font-bold tracking-tight leading-tight",
@@ -22,7 +23,7 @@ export const broadcastProCompositionComponentStylesResults = {
   ResultFixtureResult:
     broadcastProComponentStylesShared.broadcastProVerdictFixtureResult,
   ResultMetaData: {
-    className: "text-sm font-bold uppercase tracking-widest leading-snug",
+    className: "text-lg font-bold uppercase tracking-wider leading-snug",
   },
   ResultStatementShort:
     broadcastProComponentStylesShared.broadcastProVerdictLine,

@@ -9,7 +9,11 @@ import type {
   AnimationType,
 } from "../../../../../components/typography/config/animations";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import type { BroadcastProHeadlineVariant } from "../../../../../templates/types/broadcast-pro/headline-lockup";
+import {
+  DEFAULT_BROADCAST_PRO_HEADLINE_SIZING,
+  type BroadcastProHeadlineVariant,
+} from "../../../../../templates/types/broadcast-pro/headline-lockup";
+import { resolveBroadcastProCopyVariant } from "../../../../../templates/types/broadcast-pro/copy-variant";
 
 export interface BroadcastProHeadlineSecondaryProps {
   text: string;
@@ -30,12 +34,17 @@ export const BroadcastProHeadlineSecondary: React.FC<
   exitFrame,
   fontFamily: fontFamilyOverride,
 }) => {
-  const { componentStyles, fontClasses, fonts } = useThemeContext();
+  const { componentStyles, fontClasses, fonts, broadcastProHeadlineSizing } =
+    useThemeContext();
   const { text: textOnGlass } = useBroadcastProTheme();
+  const wraps =
+    broadcastProHeadlineSizing?.secondaryWraps ??
+    DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.secondaryWraps;
 
-  const secondaryClass =
+  const secondaryClass = `${
     componentStyles.broadcastProHeadlineSecondary?.className ??
-    "font-rajdhani uppercase tracking-[0.2em] font-semibold whitespace-nowrap";
+    "font-rajdhani uppercase tracking-wide font-semibold leading-snug"
+  } ${wraps ? "whitespace-normal" : "whitespace-nowrap"}`;
 
   const subtitleFontFamily =
     fontFamilyOverride ??
@@ -49,7 +58,10 @@ export const BroadcastProHeadlineSecondary: React.FC<
       <AnimatedText
         textAlign="center"
         type="subtitle"
-        variant="onContainerTitle"
+        variant={resolveBroadcastProCopyVariant({
+          surface: "background",
+          role: "title",
+        })}
         letterAnimation="word"
         animation={animation}
         exitAnimation={exitAnimation}
@@ -68,7 +80,10 @@ export const BroadcastProHeadlineSecondary: React.FC<
         textAlign="center"
         fontFamily={subtitleFontFamily}
         type="metadataMedium"
-        variant="onContainerCopy"
+        variant={resolveBroadcastProCopyVariant({
+          surface: "container",
+          role: "copy",
+        })}
         letterAnimation="none"
         animation={animation}
         exitAnimation={exitAnimation}
@@ -94,5 +109,5 @@ export const BroadcastProHeadlineSecondary: React.FC<
     );
   }
 
-  return <div className="overflow-hidden">{textNode}</div>;
+  return <div className={wraps ? "w-full" : "overflow-hidden"}>{textNode}</div>;
 };

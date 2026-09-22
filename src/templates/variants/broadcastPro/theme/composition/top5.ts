@@ -5,7 +5,8 @@ import { broadcastProCompositionComponentStylesPlayerRanking } from "./playerRan
 export const broadcastProCompositionComponentStylesTop5 = {
   ...broadcastProCompositionComponentStylesPlayerRanking,
   Top5PlayerName: {
-    className: "text-5xl font-black  tracking-wide leading-snug",
+    className:
+      "font-teko text-5xl font-normal uppercase tracking-tight leading-none",
   },
   Top5PlayerTeam: {
     className: "text-2xl font-semibold opacity-80 tracking-wider leading-tight",

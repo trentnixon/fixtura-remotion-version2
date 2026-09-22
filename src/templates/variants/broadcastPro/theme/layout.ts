@@ -2,8 +2,8 @@ import type { ThemeLayout } from "../../../types/global/theme-shared";
 
 export const broadcastProLayout: ThemeLayout = {
   heights: {
-    asset: 910,
-    header: 310,
+    asset: 1020,
+    header: 200,
     footer: 130,
   },
   spacing: {

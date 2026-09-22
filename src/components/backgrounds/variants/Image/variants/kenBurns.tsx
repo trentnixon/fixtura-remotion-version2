@@ -1,13 +1,14 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { AbsoluteFill, Img } from "remotion";
-import { Pan as PanDirection } from "./pan";
-import { ZoomDirection } from "./zoom";
+import type { ZoomDirectionType } from "./zoom";
+
+export type KenBurnsPanDirection = "left" | "right" | "up" | "down";
 
 interface KenBurnsEffectProps {
   src: string;
-  zoomDirection?: typeof ZoomDirection;
-  panDirection?: typeof PanDirection;
+  zoomDirection?: ZoomDirectionType;
+  panDirection?: KenBurnsPanDirection;
   zoomIntensity?: number; // How much to zoom (e.g., 1.2 means zoom to 120%)
   panIntensity?: number; // How much to pan (percentage of image size)
   startTime?: number; // Frame to start effect

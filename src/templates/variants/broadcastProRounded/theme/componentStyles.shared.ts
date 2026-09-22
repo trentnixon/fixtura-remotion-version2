@@ -206,7 +206,7 @@ export const broadcastProRoundedComponentStylesShared = {
 
   broadcastProRoundedHeadlineSecondary: {
     className:
-      "font-rajdhani uppercase tracking-[0.2em] font-semibold whitespace-nowrap",
+      "font-rajdhani uppercase tracking-wide font-semibold leading-snug",
   },
 
   broadcastProRoundedHeadlineSection: {
@@ -219,7 +219,8 @@ export const broadcastProRoundedComponentStylesShared = {
   },
 
   playerName: {
-    className: "text-3xl font-black tracking-tight leading-tight",
+    className:
+      "font-teko text-3xl font-normal uppercase tracking-tight leading-tight",
   },
 
   /** Legacy global key — aliases match total for backward compatibility. */
@@ -272,7 +273,8 @@ export const broadcastProRoundedComponentStylesShared = {
   broadcastProRoundedLadderZoneRankDefault,
 
   teamName: {
-    className: "text-4xl font-black tracking-tight leading-tight",
+    className:
+      "font-teko text-4xl font-normal uppercase tracking-wide leading-none",
   },
 
   label: {
@@ -280,13 +282,13 @@ export const broadcastProRoundedComponentStylesShared = {
   },
 
   metadataSmall: {
-    className: "text-2xl font-normal  tracking-wider leading-snug",
+    className: "text-lg font-normal tracking-wider leading-snug",
   },
   metadataMedium: {
-    className: "text-2xl font-semibold  tracking-wider leading-snug",
+    className: "text-2xl font-semibold tracking-wider leading-snug",
   },
   metadataLarge: {
-    className: "text-2xl font-semibold  tracking-widest leading-snug",
+    className: "text-3xl font-semibold tracking-wide leading-snug",
   },
 } satisfies Pick<
   ThemeComponentStyles,

@@ -6,6 +6,7 @@ import {
   useBroadcastProTheme,
 } from "../../../utils/broadcastPro";
 import { TableHeaderProps } from "./_types/TableHeaderProps";
+import { resolveBroadcastProCopyVariant } from "../../../../../templates/types/broadcast-pro/copy-variant";
 
 const GAP = "gap-2";
 
@@ -40,7 +41,10 @@ export const TableHeaderBroadcastPro: React.FC<TableHeaderProps> = ({
           <BroadcastProMetadataChip className="max-w-[95%] px-6 py-2">
             <AnimatedText
               type="ladderGradeLabel"
-              variant="onContainerTitle"
+              variant={resolveBroadcastProCopyVariant({
+                surface: "container",
+                role: "copy",
+              })}
               textAlign="center"
               letterAnimation="word"
               animationDelay={5}

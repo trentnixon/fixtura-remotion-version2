@@ -10,6 +10,7 @@ import {
   type BroadcastProRoundedHeadlineVariant,
 } from "../../../../../templates/types/broadcast-pro-rounded/headline-lockup";
 import { useBroadcastProRoundedHeadlineFit } from "./useBroadcastProRoundedHeadlineFit";
+import { resolveBroadcastProRoundedCopyVariant } from "../../../../../templates/types/broadcast-pro-rounded/copy-variant";
 
 export interface BroadcastProRoundedHeadlineTitleProps {
   text: string;
@@ -60,7 +61,10 @@ export const BroadcastProRoundedHeadlineTitle: React.FC<
     <AnimatedText
       textAlign="center"
       type="title"
-      variant="onContainerTitle"
+      variant={resolveBroadcastProRoundedCopyVariant({
+        surface: "background",
+        role: "title",
+      })}
       letterAnimation={letterAnimation}
       animation={animation}
       exitAnimation={exitAnimation}

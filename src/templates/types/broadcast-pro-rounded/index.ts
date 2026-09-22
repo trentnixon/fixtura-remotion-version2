@@ -13,3 +13,4 @@ export * from "./marker-notch";
 export * from "./score-typography";
 export * from "./verdict-typography";
 export * from "./transparent-layers";
+export * from "./copy-variant";

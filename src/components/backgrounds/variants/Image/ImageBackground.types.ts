@@ -68,4 +68,13 @@ export interface PanEffectProps {
 export interface ImageBackgroundProps {
   className?: string;
   style?: React.CSSProperties;
+  templateDefaults?: {
+    effectType: string;
+    overlayStyle: string;
+    overlayOpacity: number;
+    overlayColor: string;
+    zoomIntensity: number;
+    panDirection: string;
+    panIntensity: number;
+  };
 }

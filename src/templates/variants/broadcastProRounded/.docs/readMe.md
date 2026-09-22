@@ -2,7 +2,7 @@
 
 Broadcast Pro Rounded variant: fully independent fork of Broadcast Pro with **`rounded-2xl`** panel corners and **`gap-1`** stack spacing between sibling rows/cards/panels. Same Teko/Rajdhani typography and glass design system as Broadcast Pro.
 
-**Independence:** This variant does not import from `broadcastPro` or `templates/types/broadcast-pro/`. All primitives live under `variants/broadcastProRounded/`, `types/broadcast-pro-rounded/`, and `compositions/cricket/utils/broadcastProRounded/`.
+**Independence:** Visual primitives do not import from `broadcastPro`. Copy-colour variants live in `types/broadcast-pro-rounded/copy-variant.ts`. Image overlay defaults reuse the Broadcast Pro policy function so motion caps stay in lockstep.
 
 **Visual deltas vs Broadcast Pro:**
 
@@ -37,7 +37,7 @@ The Broadcast Pro theme is split by responsibility. The **public export** is `br
 
 ## Main header (BroadcastProRoundedMainHeader)
 
-- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **310px**; logo badge always shown (image when `club.logo.url` exists).
+- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **200px**; logo badge always shown (image when `club.logo.url` exists).
 - Title uses **`BroadcastProRoundedHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProRoundedHeadlineSizing.mainHeaderMaxPx`**, default 124px).
 - Secondary line text: `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProRoundedHeaderSecondaryLine`**).
 
@@ -251,7 +251,7 @@ Text on glass panels must use **`useBroadcastProRoundedTheme().text`** (`textOnG
 
 ## Glass opacity: `broadcastProRoundedGlassOpacity` (sm / md / lg)
 
-- Set **`broadcastProRoundedGlassOpacity: 'sm' | 'md' | 'lg'`** on **`theme/tokens.ts`**. **`md`** is the template default (stronger main row + header than stitch **`sm`** for copy contrast). **`lg`** is the strongest preset.
+- Set **`broadcastProRoundedGlassOpacity: 'sm' | 'md' | 'lg'`** on **`theme/tokens.ts`**. **`lg`** is the template default in tokens (stronger than stitch **`sm`**). **`md`** is the middle preset.
 - Alphas are defined in **`BROADCAST_PRO_TRANSPARENT_BY_PRESET`** in [TemplateThemeConfig.ts](../../types/TemplateThemeConfig.ts). Resolution: **`resolveBroadcastProRoundedTransparentLayers`**.
 
 ## `broadcastProRoundedTransparentLayers` (optional override)
@@ -276,7 +276,7 @@ BroadcastProRounded compositions resolve glass via **`resolveBroadcastProRounded
 
 - Do **not** use `selectedPalette.container.backgroundTransparent` for BroadcastProRounded glass surfaces.
 - Do **not** hardcode Tailwind glass classes (`bg-white/10`, etc.) — use **`BroadcastProRoundedGlassPanel`**, **`BroadcastProRoundedMetadataChip`**, or resolved `glass.*` tokens.
-- **`broadcastProRoundedGlassOpacity`** (`sm` / `md` / `lg`) scales all tiers; default is **`md`** in `theme/tokens.ts`.
+- **`broadcastProRoundedGlassOpacity`** (`sm` / `md` / `lg`) scales all tiers; default is **`lg`** in `theme/tokens.ts`.
 
 ## Dependencies
 

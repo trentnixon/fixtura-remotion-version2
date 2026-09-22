@@ -11,6 +11,7 @@ import {
   BroadcastProHeadlineTitle,
   getBroadcastProHeaderSecondaryLine,
 } from "./headline";
+import { DEFAULT_BROADCAST_PRO_HEADLINE_SIZING } from "../../../types/broadcast-pro/headline-lockup";
 
 const COMPOSITIONS_WITHOUT_HEADER_SECONDARY = new Set([
   "CricketResultSingle",
@@ -18,7 +19,7 @@ const COMPOSITIONS_WITHOUT_HEADER_SECONDARY = new Set([
 ]);
 
 export const BroadcastProMainHeader = () => {
-  const { layout } = useThemeContext();
+  const { layout, broadcastProHeadlineSizing } = useThemeContext();
   const { heights } = layout;
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
@@ -28,6 +29,9 @@ export const BroadcastProMainHeader = () => {
   const { timings } = data;
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const crestPx =
+    broadcastProHeadlineSizing?.headerOrgCrestPx ??
+    DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.headerOrgCrestPx;
 
   const hideSecondaryLine = COMPOSITIONS_WITHOUT_HEADER_SECONDARY.has(
     metadata.compositionId,
@@ -37,7 +41,10 @@ export const BroadcastProMainHeader = () => {
     : getBroadcastProHeaderSecondaryLine(metadata, club.name);
 
   const OrgLogo = () => (
-    <div className="mx-auto mb-5 size-[104px] shrink-0 overflow-hidden rounded-full bg-white p-2.5 shadow-xl">
+    <div
+      className="mx-auto mb-3 shrink-0 overflow-hidden rounded-full bg-white p-2 shadow-xl"
+      style={{ width: crestPx, height: crestPx }}
+    >
       <div className="flex h-full w-full min-h-0 min-w-0 items-center justify-center overflow-hidden rounded-full">
         {club.logo?.url ? (
           <AnimatedImage

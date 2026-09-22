@@ -16,9 +16,14 @@ import {
   ContainerOptions,
 } from "../../../../core/utils/designPalettes";
 
-import { ImageBackgroundProps, ImageEffectType } from "./ImageBackground.types";
+import {
+  ImageBackgroundProps,
+  ImageEffectType,
+  PanDirection,
+} from "./ImageBackground.types";
+import { getOptimizedEffectSettings } from "./ImageBackground.config";
 import { adaptImageConfig } from "./TemplateVariationAdapter";
-import { BreathingEffect, FocusBlurEffect, Pan } from "./variants";
+import { BreathingEffect, FocusBlurEffect, KenBurnsEffect, Pan } from "./variants";
 import type { BreathingEffectProps } from "./variants/breath";
 import type { FocusBlurEffectProps } from "./variants/blur";
 import type { ZoomEffectProps } from "./variants/zoom";
@@ -32,9 +37,27 @@ const extractHero = (media?: unknown): LegacyHero | undefined => {
   return m.heroImage ?? m.HeroImage;
 };
 
+const mapTemplateEffect = (effectType: string): ImageEffectType => {
+  switch (effectType) {
+    case "zoom":
+      return ImageEffectType.Zoom;
+    case "pan":
+      return ImageEffectType.Pan;
+    case "kenburns":
+      return ImageEffectType.KenBurns;
+    case "breathing":
+      return ImageEffectType.Breathing;
+    case "focusblur":
+      return ImageEffectType.FocusBlur;
+    default:
+      return ImageEffectType.None;
+  }
+};
+
 export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   className = "",
   style = {},
+  templateDefaults,
 }) => {
   // Get video context for template variation
   const { video } = useVideoDataContext();
@@ -44,7 +67,19 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   const rawConfig = video?.templateVariation?.image || {};
 
   // Adapt legacy configuration to enhanced format
-  const config = adaptImageConfig(rawConfig);
+  const adapted = adaptImageConfig(rawConfig);
+  const config = templateDefaults
+    ? {
+        ...adapted,
+        effectType: mapTemplateEffect(templateDefaults.effectType),
+        overlayStyle: templateDefaults.overlayStyle as OverlayStyle,
+        overlayOpacity: templateDefaults.overlayOpacity,
+        overlayColor: templateDefaults.overlayColor,
+        zoomIntensity: templateDefaults.zoomIntensity,
+        panDirection: templateDefaults.panDirection,
+        panIntensity: templateDefaults.panIntensity,
+      }
+    : adapted;
 
   // Extract effect type and overlay style
   const effectType = config.effectType
@@ -86,6 +121,21 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
     width: config.width || heroWidth || 1080,
     height: config.height || heroHeight || 1080,
   };
+
+  const stillRatio =
+    baseProps.width && baseProps.height
+      ? baseProps.width / baseProps.height
+      : undefined;
+  let resolvedPanDirection = config.panDirection;
+  if (templateDefaults && stillRatio != null) {
+    const optimized = getOptimizedEffectSettings(stillRatio, effectType, {
+      panDirection: resolvedPanDirection as PanDirection,
+      direction: resolvedPanDirection as PanDirection,
+    });
+    if (optimized.panDirection) {
+      resolvedPanDirection = optimized.panDirection;
+    }
+  }
 
   // Determine overlay configuration
   let overlayConfig: OverlayConfig = { style: OverlayStyle.None };
@@ -226,6 +276,30 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
 
       case ImageEffectType.Pan:
         return <Pan {...(baseProps as PanEffectProps)} />;
+
+      case ImageEffectType.KenBurns: {
+        const panDirection =
+          resolvedPanDirection === "right" ||
+          resolvedPanDirection === "up" ||
+          resolvedPanDirection === "down"
+            ? resolvedPanDirection
+            : "left";
+        const zoomDirection =
+          config.zoomDirection === "out" ? "out" : "in";
+        return (
+          <KenBurnsEffect
+            src={baseProps.src}
+            className={baseProps.className}
+            style={baseProps.style}
+            startTime={baseProps.startTime}
+            endTime={baseProps.endTime}
+            zoomIntensity={config.zoomIntensity}
+            panIntensity={config.panIntensity}
+            panDirection={panDirection}
+            zoomDirection={zoomDirection}
+          />
+        );
+      }
 
       case ImageEffectType.Breathing:
         return (

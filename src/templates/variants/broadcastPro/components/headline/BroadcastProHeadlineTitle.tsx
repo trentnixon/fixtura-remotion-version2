@@ -9,6 +9,7 @@ import {
   DEFAULT_BROADCAST_PRO_HEADLINE_SIZING,
   type BroadcastProHeadlineVariant,
 } from "../../../../../templates/types/broadcast-pro/headline-lockup";
+import { resolveBroadcastProCopyVariant } from "../../../../../templates/types/broadcast-pro/copy-variant";
 import { useBroadcastProHeadlineFit } from "./useBroadcastProHeadlineFit";
 
 export interface BroadcastProHeadlineTitleProps {
@@ -56,7 +57,10 @@ export const BroadcastProHeadlineTitle: React.FC<
     <AnimatedText
       textAlign="center"
       type="title"
-      variant="onContainerTitle"
+      variant={resolveBroadcastProCopyVariant({
+        surface: "background",
+        role: "title",
+      })}
       letterAnimation={letterAnimation}
       animation={animation}
       exitAnimation={exitAnimation}

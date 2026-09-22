@@ -28,7 +28,7 @@ The Broadcast Pro theme is split by responsibility. The **public export** is `br
 
 ## Main header (BroadcastProMainHeader)
 
-- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **310px**; logo badge always shown (image when `club.logo.url` exists).
+- Layout: centered vertical stack (logo → fitted Teko title → Rajdhani metadata chip), `layout.heights.header` **200px**; logo badge always shown (image when `club.logo.url` exists).
 - Title uses **`BroadcastProHeadlineTitle`** with `useFittedFontSize` (cap **`broadcastProHeadlineSizing.mainHeaderMaxPx`**, default 124px).
 - Secondary line text: `metadata.videoTitle` if non-empty; else `metadata.titleSplit` joined with `·`; else `club.name` (via **`getBroadcastProHeaderSecondaryLine`**).
 
@@ -227,10 +227,15 @@ Unified player performance figures across Top 5, Performances, Results, and Team
 - Key dependencies: composes from `../../base`; uses `../../types` for config
 - Consumed by: `../../registry.tsx`
 
-## Mode: `text.copy` vs `text.title` (light / dark / alts)
+## Mode copy colours (required)
 
-- `theme.mode.*.text.copy` drives **`onContainerCopy`** in the color system (`palette.text.onContainer.copy`). **`text.title`** drives **`onContainerTitle`** and flips in alt modes (`lightAlt` / `darkAlt`).
-- **`text.copy` is the same for `light` and `lightAlt`, and the same for `dark` and `darkAlt`.** Alt modes only change **`text.title`** unless product adds separate alt copy tokens in `theme/mode.ts`.
+Font colour is always dynamic from `selectedPalette`. Never hardcode `#000`, `#fff`, `text-black`, or `text-white` on type.
+
+- Copy **inside a container** uses container mode: `onContainerCopy` (`palette.text.onContainer.copy`). Glass panels use `useBroadcastProTheme().text` (`textOnGlass`) because variants contrast against solid `container.background`, not the glass stack.
+- Copy **outside a container** uses non-container mode: `onBackground*`, `onContainerCopyNoBg`, or `onContainerTitle`. Those follow `text.title` / `copyNoBg` and flip in `lightAlt` / `darkAlt`.
+- Alt flips outside-container titles only. In-container copy stays with the container (`text.copy` is the same for `light` and `lightAlt`, and the same for `dark` and `darkAlt`).
+
+`theme.mode.*.text.copy` drives `onContainerCopy`. `theme.mode.*.text.title` drives `onContainerTitle` and `copyNoBg`.
 
 ### Glass-surface copy (required pattern)
 
@@ -242,7 +247,7 @@ Text on glass panels must use **`useBroadcastProTheme().text`** (`textOnGlass`) 
 
 ## Glass opacity: `broadcastProGlassOpacity` (sm / md / lg)
 
-- Set **`broadcastProGlassOpacity: 'sm' | 'md' | 'lg'`** on **`theme/tokens.ts`**. **`md`** is the template default (stronger main row + header than stitch **`sm`** for copy contrast). **`lg`** is the strongest preset.
+- Set **`broadcastProGlassOpacity: 'sm' | 'md' | 'lg'`** on **`theme/tokens.ts`**. **`lg`** is the template default in tokens (stronger than stitch **`sm`**). **`md`** is the middle preset.
 - Alphas are defined in **`BROADCAST_PRO_TRANSPARENT_BY_PRESET`** in [TemplateThemeConfig.ts](../../types/TemplateThemeConfig.ts). Resolution: **`resolveBroadcastProTransparentLayers`**.
 
 ## `broadcastProTransparentLayers` (optional override)
@@ -267,7 +272,7 @@ BroadcastPro compositions resolve glass via **`resolveBroadcastProGlass`** / **`
 
 - Do **not** use `selectedPalette.container.backgroundTransparent` for BroadcastPro glass surfaces.
 - Do **not** hardcode Tailwind glass classes (`bg-white/10`, etc.) — use **`BroadcastProGlassPanel`**, **`BroadcastProMetadataChip`**, or resolved `glass.*` tokens.
-- **`broadcastProGlassOpacity`** (`sm` / `md` / `lg`) scales all tiers; default is **`md`** in `theme/tokens.ts`.
+- **`broadcastProGlassOpacity`** (`sm` / `md` / `lg`) scales all tiers; default is **`lg`** in `theme/tokens.ts`.
 
 ## Dependencies
 
