@@ -230,9 +230,9 @@ Targets:
 
 Overlays only — reimplement approved markup inside `.design-social-canvas` / `.template-canvas` main content. No Remotion backgrounds. No design-site chrome (sidebar, tabs, handoff footer, preview toggles).
 
-Template shell: follow `src/templates/variants/broadcastPro/` (registry, theme tokens, composition displays, `componentStyles`). Reconcile CSS deliberately (ADR 0003) — copying design CSS alone is not parity.
+Template shell: follow `src/templates/variants/broadcastPro/` for **implementation scaffolding only** (registry, theme tokens shape, composition displays, `componentStyles`). That is not visual parity — Night Session must keep its own typography, surfaces, and hierarchy (see `design/briefs/night-session/design-brief.md`). Reconcile CSS deliberately (ADR 0003) — copying design CSS alone is not parity.
 
-Night Session ({slug} = night-session): match approved HTML — `ns-header`, `.night-session-canvas`, `data-*` asset root, bordered `gap-2` cells, grade/role rails, `footer-rule` (no creases), shared layers (`night-session-shared.css`, asset CSS, `night-session-broadcast.css`). Design bootstrap: `initNightSessionAsset`; fonts: `fonts.json` slug `night-session` (Teko + Heebo). Exercise night-session mode/backdrop controls where relevant.
+Night Session ({slug} = night-session): match approved HTML — `ns-header`, `.night-session-canvas`, `data-*` asset root, bordered `gap-2` cells, grade/role rails, `footer-rule` (no creases), shared layers (`night-session-shared.css`, asset CSS, `night-session-broadcast.css`). Design bootstrap: `initNightSessionAsset`; fonts: `fonts.json` slug `night-session` (Teko + Source Sans 3). Exercise night-session mode/backdrop controls where relevant.
 
 Scoreline ({slug} = scoreline): crease motif grammar where the prototype uses Scoreline chrome.
 

@@ -18,7 +18,7 @@ export const useNightSessionCanvasStyle = (): CSSProperties => {
         ...scorelineStyle,
         ...bandTokens,
         "--font-display": "Teko, sans-serif",
-        "--font-body": "Heebo, sans-serif",
+        "--font-body": '"Source Sans 3", Arial, sans-serif',
       }) as CSSProperties,
     [bandTokens, scorelineStyle],
   );

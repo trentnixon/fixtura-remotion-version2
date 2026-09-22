@@ -190,13 +190,30 @@
   gap: 4px;
   align-content: center;
   min-width: 0;
-  text-align: left;
+  text-align: right;
+}
+
+.night-session-canvas .comparison-band--single .score-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0;
+  min-width: 0;
+  align-items: flex-end;
+}
+
+.night-session-canvas .comparison-band--single .team-score:has(.score--prior) {
+  gap: 2px;
 }
 
 .night-session-canvas
   .comparison-band--single
   .team-band[data-side="home"]
   .score,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .score--prior,
 .night-session-canvas
   .comparison-band--single
   .team-band[data-side="home"]
@@ -208,8 +225,12 @@
 .night-session-canvas
   .comparison-band--single
   .team-band[data-side="away"]
+  .score--prior,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
   .overs {
-  text-align: left;
+  text-align: right;
 }
 
 .night-session-canvas .comparison-band--single .team-identity {
@@ -248,7 +269,7 @@
   .team-score {
   grid-column: 2;
   justify-self: end;
-  text-align: left;
+  text-align: right;
 }
 
 .night-session-canvas .comparison-band--single .team-name {
@@ -264,10 +285,18 @@
 }
 
 .night-session-canvas .comparison-band--single .score {
+  font-family: var(--font-body);
   font-size: var(--type-score);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.88;
-  text-align: left;
+  text-align: right;
+  color: var(--container-text, var(--contrast-score));
+}
+
+.night-session-canvas .comparison-band--single .score--prior {
+  font-size: calc(var(--type-score) * 0.4);
+  line-height: 1;
+  text-align: right;
   color: var(--container-text, var(--contrast-score));
 }
 

@@ -15,7 +15,7 @@
   --totw-row-min-height: 100px;
   --totw-role-rail-height: 40px;
   --type-totw-category: 24px;
-  --type-totw-role: 14px;
+  --type-totw-role: 19px;
   --type-totw-name: 34px;
   --type-totw-name-hero: 42px;
   --type-totw-team: 19px;
@@ -24,7 +24,7 @@
   --type-totw-subline: 17px;
   --header-text: rgb(244 243 241 / 96%);
   --font-display: "Teko", "Arial Narrow", sans-serif;
-  --font-body: "Heebo", Arial, sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
 
   position: relative;
   isolation: isolate;
@@ -320,9 +320,9 @@
   flex: 1 1 auto;
   overflow: hidden;
   padding-right: 36px;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-totw-category);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.3;
   text-align: right;
@@ -555,10 +555,9 @@
 .night-session-canvas[data-totw] .totw-name {
   width: 100%;
   overflow: hidden;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-totw-name);
   font-weight: 700;
-  font-stretch: condensed;
   line-height: 1.05;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -611,10 +610,9 @@
 }
 
 .night-session-canvas[data-totw] .totw-figure {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-totw-figure);
   font-weight: 700;
-  font-stretch: condensed;
   line-height: 1;
   font-variant-numeric: tabular-nums lining-nums;
   color: var(--container-text, var(--contrast-performance-lead));

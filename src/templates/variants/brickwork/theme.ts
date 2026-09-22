@@ -121,11 +121,11 @@ export const brickworkTheme: TemplateThemeConfig = {
     },
     ResultScore: {
       className:
-        "text-6xl font-normal tracking-normal leading-tight tabular-nums",
+        "text-6xl font-normal tracking-normal leading-none tabular-nums",
     },
     ResultScoreFirstInnings: {
       className:
-        "text-3xl font-normal tracking-normal leading-tight tabular-nums",
+        "text-2xl font-normal tracking-normal leading-none tabular-nums",
     },
     ResultVS: {
       className: "text-3xl font-normal tracking-normal leading-tight ",

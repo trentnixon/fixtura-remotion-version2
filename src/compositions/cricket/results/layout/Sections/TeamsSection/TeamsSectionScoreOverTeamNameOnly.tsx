@@ -3,23 +3,50 @@ import { AnimatedContainer } from "../../../../../../components/containers/Anima
 import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../core/context/AnimationContext";
 
+import type { ColorVariant } from "../../../../../../components/typography/AnimatedText";
+import type { AnimationConfig } from "../../../../../../components/typography/config/animations";
 import {
   ResultScore,
   ResultScoreFirstInnings,
 } from "../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../utils/primitives/ResultTeamName";
 import { TeamsSectionProps } from "./_types/TeamsSectionProps";
+import { truncateText } from "./_utils/helpers";
 import {
-  getFirstInningsDisplay,
-  normalizeScore,
-  truncateText,
-} from "./_utils/helpers";
+  resolveTeamMatchScore,
+  type ResolvedTeamMatchScore,
+} from "../../../../utils/teamMatchScore";
 
 interface ExtendedTeamsSectionProps extends TeamsSectionProps {
   backgroundColor?: string;
   alignment?: "start" | "end" | "alternate";
   CopyVariant?: string;
 }
+
+const TeamScoreRow: React.FC<{
+  scores: ResolvedTeamMatchScore;
+  delay: number;
+  variant: ColorVariant;
+  rowClassName: string;
+  copyIn: AnimationConfig;
+}> = ({ scores, delay, variant, rowClassName, copyIn }) => (
+  <div className={`flex flex-row items-baseline leading-none ${rowClassName}`}>
+    {scores.prior ? (
+      <ResultScoreFirstInnings
+        value={scores.prior}
+        animation={{ ...copyIn, delay: delay + 30 }}
+        variant={variant}
+        className="leading-none mr-2"
+      />
+    ) : null}
+    <ResultScore
+      value={scores.current}
+      animation={{ ...copyIn, delay: delay + 1 }}
+      variant={variant}
+      className="leading-none"
+    />
+  </div>
+);
 
 export const TeamsSectionScoreOverTeamNameOnly: React.FC<
   ExtendedTeamsSectionProps
@@ -66,14 +93,18 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
     }
   };
 
-  const homeFirstInnings = getFirstInningsDisplay(
+  const homeScores = resolveTeamMatchScore(
     type,
+    homeTeam.score,
     homeTeam.homeScoresFirstInnings,
   );
-  const awayFirstInnings = getFirstInningsDisplay(
+  const awayScores = resolveTeamMatchScore(
     type,
+    awayTeam.score,
     awayTeam.awayScoresFirstInnings,
   );
+
+  const scoreVariant = CopyVariant as ColorVariant;
 
   return (
     <AnimatedContainer
@@ -93,34 +124,23 @@ export const TeamsSectionScoreOverTeamNameOnly: React.FC<
           <div
             className={`flex flex-col ${getAlignmentClasses("home")} justify-end`}
           >
-            {homeFirstInnings.show && (
-              <ResultScoreFirstInnings
-                value={homeFirstInnings.value}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                variant={CopyVariant}
-              />
-            )}
-            <ResultScore
-              value={normalizeScore(homeTeam.score)}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-              className={`flex-1 ${getTextAlignment("home")}`}
-              variant={CopyVariant}
+            <TeamScoreRow
+              scores={homeScores}
+              delay={delay}
+              variant={scoreVariant}
+              rowClassName={getTextAlignment("home")}
+              copyIn={TextAnimations.copyIn}
             />
           </div>
           <div
             className={`flex flex-col ${getAlignmentClasses("away")} justify-end`}
           >
-            {awayFirstInnings.show && (
-              <ResultScoreFirstInnings
-                value={awayFirstInnings.value}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-              />
-            )}
-            <ResultScore
-              value={normalizeScore(awayTeam.score)}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-              className={`flex-1 ${getTextAlignment("away")}`}
-              variant={CopyVariant}
+            <TeamScoreRow
+              scores={awayScores}
+              delay={delay}
+              variant={scoreVariant}
+              rowClassName={getTextAlignment("away")}
+              copyIn={TextAnimations.copyIn}
             />
           </div>
         </div>

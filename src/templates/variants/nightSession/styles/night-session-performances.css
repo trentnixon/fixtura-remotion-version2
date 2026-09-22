@@ -4,8 +4,8 @@
   .leaderboard-rows[data-density="compact"] {
   --leader-player-row-height: 88px;
   --type-leader-mark: 88px;
-  --type-leader-name: 48px;
-  --type-leader-figure: 42px;
+  --type-leader-name: 50px;
+  --type-leader-figure: 44px;
   --type-leader-rank: 38px;
   --leader-stack-gap: 2px;
   --leader-rank-bridge-overlap: 10px;
@@ -15,10 +15,10 @@
   .leaderboard-rows[data-density="tight"] {
   --leader-player-row-height: 76px;
   --type-leader-mark: 76px;
-  --type-leader-name: 42px;
-  --type-leader-figure: 36px;
+  --type-leader-name: 44px;
+  --type-leader-figure: 38px;
   --type-leader-rank: 34px;
-  --type-leader-team: 16px;
+  --type-leader-team: 18px;
   --leader-stack-gap: 0px;
   --leader-rank-bridge-overlap: 8px;
 }

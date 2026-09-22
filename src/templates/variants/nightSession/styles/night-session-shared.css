@@ -1,6 +1,9 @@
 /* Scoreline shared polish — tokens, surfaces, contrast, layout states */
 
 .night-session-canvas {
+  --font-display: "Teko", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+
   /* Semantic surface inputs (refined by scoreline-theme.js) */
   --surface-strong-primary: var(--club-primary);
   --surface-strong-secondary: var(--club-secondary);
@@ -843,6 +846,47 @@
   font-size: calc(var(--type-result) * 0.82);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+/* —— Typography roles —— */
+/* Display (--font-display): asset title lockup, intro, performance section labels.
+   Body (--font-body): names, stats, metadata, and all ledger row data. */
+.night-session-canvas
+  :is(
+    .header-shared-grade,
+    .score,
+    .overs,
+    .ladder-rank,
+    .ladder-rank.ladder-cell,
+    .ladder-team,
+    .ladder-team.ladder-cell,
+    .ladder-stat,
+    .ladder-stat--pts,
+    .leaderboard-category-value,
+    .leader-rank-tag.schedule-lockup,
+    .leader-copy .leader-name,
+    .leader-row .leader-figure,
+    .fixture-time,
+    .fixture-date,
+    .outcome-bridge .result-statement,
+    .result-bridge.outcome-bridge .result-statement,
+    .match-module .performance-row .performance-figure,
+    .match-module
+      .performance-row
+      .performance-figure
+      > span:not(.performance-balls),
+    .roster-team-name--hero,
+    .roster-schedule-line:first-child,
+    .roster-squad-team,
+    .roster-index.roster-cell,
+    .roster-player__name,
+    .roster-badge,
+    .totw-category-value,
+    .totw-name,
+    .totw-figure
+  ) {
+  font-family: var(--font-body);
+  font-stretch: normal;
 }
 
 /* —— Typography resilience —— */

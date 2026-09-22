@@ -18,7 +18,7 @@
   --rule: rgb(255 255 255 / 8%);
   --muted: rgb(244 243 241 / 52%);
   --font-display: "Teko", "Arial Narrow", sans-serif;
-  --font-body: "Heebo", Arial, sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -113,10 +113,10 @@
   padding: 4px 10px;
   color: var(--ink);
   background: var(--club-primary);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -348,7 +348,7 @@
   .team-score {
   grid-column: 2;
   justify-self: end;
-  text-align: left;
+  text-align: right;
 }
 
 .night-session-canvas
@@ -405,15 +405,88 @@
   align-content: center;
 }
 
+.night-session-canvas .score-stack {
+  --type-score-active: var(--type-score);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0;
+  min-width: 0;
+  align-items: flex-start;
+}
+
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .score-stack:has(.score--prior) {
+  --type-score-active: calc(var(--type-score) * 0.72);
+  --type-score-main: calc(var(--type-score-active) * 1.1);
+}
+
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="home"]
+  .score-stack,
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="away"]
+  .score-stack {
+  align-items: flex-end;
+}
+
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="home"]
+  .score,
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="home"]
+  .score--prior,
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="home"]
+  .overs,
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="away"]
+  .score,
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="away"]
+  .score--prior,
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .team-band[data-side="away"]
+  .overs {
+  text-align: right;
+}
+
+.night-session-canvas .team-score:has(.score--prior) {
+  gap: 2px;
+}
+
 .night-session-canvas .score {
-  font-family: var(--font-display);
-  font-size: var(--type-score);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: var(
+    --type-score-main,
+    var(--type-score-active, var(--type-score))
+  );
+  font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 0.88;
   white-space: nowrap;
   font-variant-numeric: tabular-nums lining-nums;
   color: var(--ns-band-score, #fff);
+}
+
+.night-session-canvas .score--prior {
+  font-size: calc(var(--type-score-active, var(--type-score)) * 0.4);
+  line-height: 1;
+}
+
+.night-session-canvas
+  .comparison-band:not(.comparison-band--single)
+  .score--prior {
+  text-align: right;
 }
 
 .night-session-canvas .overs {
@@ -524,13 +597,13 @@
   align-items: center;
   justify-content: center;
   background: var(--ns-outcome-bg, rgb(10 12 14 / 92%));
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-result);
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1.1;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--ns-outcome-text, rgb(244 243 241 / 96%));
 }
 
@@ -665,9 +738,9 @@
   .performance-row
   .performance-figure
   > span:not(.performance-balls) {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-figure);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
   white-space: nowrap;
   color: var(

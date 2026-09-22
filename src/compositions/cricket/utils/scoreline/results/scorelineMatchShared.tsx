@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Img } from "remotion";
 import type { MatchResult, Team } from "../../../results/_types/types";
-import { normalizeScore } from "../../../results/layout/Sections/TeamsSection/_utils/helpers";
+import { resolveTeamMatchScore } from "../../teamMatchScore";
 import { dedupeVenueLabel } from "./dedupeVenueLabel";
 import type { ScorelinePerformanceRow } from "./formatPerformances";
 import { resolveScorelineMatchPerformances } from "./resolveScorelineMatchPerformances";
@@ -48,6 +48,7 @@ export const ScorelineTeamBand: React.FC<{
   team: Team;
   logoUrl: string;
   isClubTeam: boolean;
+  matchType: string;
   markSize?: "default" | "hero";
   side?: "home" | "away";
   rowDelay?: number;
@@ -58,6 +59,7 @@ export const ScorelineTeamBand: React.FC<{
   team,
   logoUrl,
   isClubTeam,
+  matchType,
   markSize = "default",
   side,
   rowDelay,
@@ -68,6 +70,13 @@ export const ScorelineTeamBand: React.FC<{
   const hasCrest = Boolean(logoUrl);
   const oversValue = team.overs?.trim() ?? "";
   const animateInner = rowDelay !== undefined && exitFrame !== undefined;
+  const firstInningsField =
+    side === "home" ? team.homeScoresFirstInnings : team.awayScoresFirstInnings;
+  const scores = resolveTeamMatchScore(
+    matchType,
+    team.score,
+    firstInningsField,
+  );
 
   const primary = (
     <div className="team-primary">
@@ -75,8 +84,16 @@ export const ScorelineTeamBand: React.FC<{
         <span className="mark-fallback" aria-hidden />
         {hasCrest ? <Img src={logoUrl} alt="" /> : null}
       </div>
-      <p className="team-score">
-        <span className="score">{normalizeScore(team.score)}</span>
+      <p
+        className="team-score"
+        data-has-prior-innings={scores.prior ? "true" : "false"}
+      >
+        <span className="score-stack">
+          {scores.prior ? (
+            <span className="score score--prior">{scores.prior}</span>
+          ) : null}
+          <span className="score">{scores.current}</span>
+        </span>
         <span className="overs" data-empty={oversValue ? "false" : "true"}>
           {oversValue ? (
             <>

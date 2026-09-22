@@ -33,3 +33,6 @@ export const getFirstInningsDisplay = (
   if (!looksLikeScore) return { show: false, value: "" };
   return { show: true, value };
 };
+
+export type { ResolvedTeamMatchScore } from "../../../../../utils/teamMatchScore";
+export { resolveTeamMatchScore } from "../../../../../utils/teamMatchScore";

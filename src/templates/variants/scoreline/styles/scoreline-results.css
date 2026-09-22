@@ -251,9 +251,31 @@
   align-content: center;
 }
 
+.scoreline-canvas .score-stack {
+  --type-score-active: var(--type-score);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0;
+  min-width: 0;
+}
+
+/* Two Day+ stacked innings — shrink main score so prior + current + overs fit */
+.scoreline-canvas .score-stack:has(.score--prior) {
+  --type-score-active: calc(var(--type-score) * 0.72);
+}
+
+.scoreline-canvas .team-score-area .team-band[data-side="home"] .score-stack {
+  align-items: flex-end;
+}
+
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .score-stack {
+  align-items: flex-start;
+}
+
 .scoreline-canvas .score {
   font-family: var(--font-display);
-  font-size: var(--type-score);
+  font-size: var(--type-score-active, var(--type-score));
   font-weight: 800;
   font-stretch: condensed;
   letter-spacing: -0.04em;
@@ -262,12 +284,23 @@
   font-variant-numeric: tabular-nums lining-nums;
 }
 
+.scoreline-canvas .score--prior {
+  font-size: calc(var(--type-score-active, var(--type-score)) * 0.4);
+  line-height: 1;
+}
+
+.scoreline-canvas .team-score:has(.score--prior) {
+  gap: 6px;
+}
+
 .scoreline-canvas .team-score-area .team-band[data-side="home"] .score,
+.scoreline-canvas .team-score-area .team-band[data-side="home"] .score--prior,
 .scoreline-canvas .team-score-area .team-band[data-side="home"] .overs {
   text-align: right;
 }
 
 .scoreline-canvas .team-score-area .team-band[data-side="away"] .score,
+.scoreline-canvas .team-score-area .team-band[data-side="away"] .score--prior,
 .scoreline-canvas .team-score-area .team-band[data-side="away"] .overs {
   text-align: left;
 }

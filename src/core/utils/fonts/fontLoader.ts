@@ -452,6 +452,60 @@ const usesScorelineTypography = (theme: TemplateThemeConfig): boolean => {
   );
 };
 
+const usesNightSessionTypography = (theme: TemplateThemeConfig): boolean => {
+  const titleFamily = theme.fonts?.title?.family;
+  const copyFamily = theme.fonts?.copy?.family;
+
+  return (
+    normalizeFontName(titleFamily ?? "") === "Teko" &&
+    normalizeFontName(copyFamily ?? "") === "Source Sans 3"
+  );
+};
+
+const NIGHT_SESSION_TEKO_FACES: ReadonlyArray<{
+  mapKey: string;
+  weight: string;
+}> = [
+  { mapKey: "Teko", weight: "400" },
+  { mapKey: "Teko-Medium", weight: "500" },
+  { mapKey: "Teko-SemiBold", weight: "600" },
+  { mapKey: "Teko-Bold", weight: "700" },
+];
+
+const loadSourceSans3VariableFont = async (): Promise<void> => {
+  const sourceSansPath = fontPathMap["Source Sans 3"];
+  if (!sourceSansPath) {
+    return;
+  }
+
+  await loadFontFile({
+    family: "Source Sans 3",
+    url: staticFile(sourceSansPath),
+    weight: "200 900",
+    style: "normal",
+  });
+};
+
+export const loadNightSessionTypographyFonts = async (): Promise<void> => {
+  await Promise.allSettled(
+    NIGHT_SESSION_TEKO_FACES.map(async (face) => {
+      const path = fontPathMap[face.mapKey];
+      if (!path) {
+        return;
+      }
+
+      await loadFontFile({
+        family: "Teko",
+        url: staticFile(path),
+        weight: face.weight,
+        style: "normal",
+      });
+    }),
+  );
+
+  await loadSourceSans3VariableFont();
+};
+
 /**
  * Registers Scoreline display/body faces under the same family names as design
  * (Google Fonts: Barlow Condensed 500–900 + italic 700/800, Source Sans 3 variable).
@@ -473,15 +527,7 @@ export const loadScorelineTypographyFonts = async (): Promise<void> => {
     }),
   );
 
-  const sourceSansPath = fontPathMap["Source Sans 3"];
-  if (sourceSansPath) {
-    await loadFontFile({
-      family: "Source Sans 3",
-      url: staticFile(sourceSansPath),
-      weight: "200 900",
-      style: "normal",
-    });
-  }
+  await loadSourceSans3VariableFont();
 };
 
 /**
@@ -550,20 +596,32 @@ export const loadFontsFromTheme = async (
 
   // Filter out system fonts
   const scorelineTypography = usesScorelineTypography(theme);
+  const nightSessionTypography = usesNightSessionTypography(theme);
   const fontsToLoadFiltered = Array.from(fontsToLoad).filter((font) => {
     if (isSystemFont(font)) {
       return false;
     }
 
-    if (!scorelineTypography) {
-      return true;
+    const normalized = normalizeFontName(font);
+
+    if (scorelineTypography) {
+      return (
+        normalized !== "Barlow Condensed" && normalized !== "Source Sans 3"
+      );
     }
 
-    const normalized = normalizeFontName(font);
-    return normalized !== "Barlow Condensed" && normalized !== "Source Sans 3";
+    if (nightSessionTypography) {
+      return normalized !== "Teko" && normalized !== "Source Sans 3";
+    }
+
+    return true;
   });
 
-  if (fontsToLoadFiltered.length === 0 && !scorelineTypography) {
+  if (
+    fontsToLoadFiltered.length === 0 &&
+    !scorelineTypography &&
+    !nightSessionTypography
+  ) {
     //console.log("No custom fonts to load - using system fonts only");
     return;
   }
@@ -593,6 +651,10 @@ export const loadFontsFromTheme = async (
 
     if (scorelineTypography) {
       await loadScorelineTypographyFonts();
+    }
+
+    if (nightSessionTypography) {
+      await loadNightSessionTypographyFonts();
     }
 
     //console.log("Finished font loading process");

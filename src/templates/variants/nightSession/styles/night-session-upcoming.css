@@ -15,12 +15,13 @@
   --fixture-stack-gap: var(--space-5);
   --header-text: rgb(244 243 241 / 96%);
   --font-display: "Teko", "Arial Narrow", sans-serif;
-  --font-body: "Heebo", Arial, sans-serif;
-  --type-fixture-grade: 18px;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+  --type-fixture-grade: 20px;
   --type-fixture-team: 28px;
   --type-fixture-date: 20px;
   --type-fixture-time: 28px;
-  --type-fixture-venue: 16px;
+  --type-fixture-venue: 18px;
+  --type-fixture-context: 18px;
 
   position: relative;
   isolation: isolate;
@@ -103,10 +104,10 @@
   padding: 4px 10px;
   color: var(--ink, #070809);
   background: var(--club-primary);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -457,7 +458,7 @@
   min-width: 0;
   font-family: var(--font-body);
   font-size: var(--type-fixture-team);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--container-text, var(--ns-band-team, rgb(255 255 255 / 92%)));
 }
@@ -540,22 +541,22 @@
 }
 
 .night-session-canvas .fixture-time {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-fixture-time);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .night-session-canvas .fixture-date {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-fixture-date);
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
@@ -569,7 +570,7 @@
   gap: var(--space-3);
   align-items: stretch;
   border: 0;
-  font-size: 16px;
+  font-size: var(--type-fixture-context);
   font-weight: 500;
   line-height: 1.25;
   color: var(--container-text-muted, var(--contrast-meta-on-surface));

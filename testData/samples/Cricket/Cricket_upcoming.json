@@ -1,416 +1,96 @@
 {
   "data": [
     {
-      "date": "Sat, 22 Aug",
-      "time": "10:00 AM",
-      "type": "Semi Final 1 v 4",
-      "round": "FR1",
-      "gameID": "bae1155a",
+      "date": "Sat, 26 Sept",
+      "time": "09:00 AM",
+      "type": "One Day",
+      "round": "Round 2",
+      "gameID": "b8225fa4",
       "gender": "Mixed",
-      "ground": "Grant Road Sports & Community Complex",
-      "prompt": "Upcoming cricket match details:\n- Teams: Sunshine Coast vs Wide Bay, Date and Time: 2026-08-22, 10:00 AM, Location: Grant Road Sports & Community Complex\n- Round: FR1, Match Type: Semi Final 1 v 4\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "Wide Bay",
-      "teamHome": "Sunshine Coast",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
-      "gradeResolvedPosition": 4,
-      "gradeSortOrder": 4,
+      "ground": "Golden Wheel Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Southport Premier Div 1 vs Runaway Bay Premier Div 1, Date and Time: 2026-09-26, 09:00 AM, Location: Golden Wheel Park\n- Round: Round 2, Match Type: One Day\n- League: (1) CGC Premier League - Division 1",
+      "ageGroup": "Senior",
+      "teamAway": "Runaway Bay Premier Div 1",
+      "teamHome": "Southport Premier Div 1",
+      "gradeName": "(1) CGC Premier League - Division 1",
+      "gradeResolvedPosition": 0,
+      "gradeSortOrder": 0,
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_9d33cc1d_51e0004983.jpg",
-        "width": 977,
-        "height": 937
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
+        "width": 500,
+        "height": 500
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_43830d9b_590f829d05.jpg",
+        "width": 1772,
+        "height": 1772
       },
       "assignSponsors": {
         "competition": [],
-        "grade": [
-          {
-            "id": 219,
-            "name": "9",
-            "logo": {
-              "id": 31212,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
-            }
-          }
-        ],
+        "grade": [],
         "team": []
       },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ]
-    },
-    {
-      "date": "Sat, 22 Aug",
-      "time": "10:00 AM",
-      "type": "Semi Final 2 v 3",
-      "round": "FR1",
-      "gameID": "4b45727b",
-      "gender": "Mixed",
-      "ground": "Everton District Cricket Club",
-      "prompt": "Upcoming cricket match details:\n- Teams: Brisbane vs GC 60's Div 1 Blue, Date and Time: 2026-08-22, 10:00 AM, Location: Everton District Cricket Club\n- Round: FR1, Match Type: Semi Final 2 v 3\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "GC 60's Div 1 Blue",
-      "teamHome": "Brisbane",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
-      "gradeResolvedPosition": 4,
-      "gradeSortOrder": 4,
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 219,
-            "name": "9",
-            "logo": {
-              "id": 31212,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ]
-    },
-    {
-      "date": "Sat, 29 Aug",
-      "time": "1:00 PM",
-      "type": "Grand Final",
-      "round": "GF",
-      "gameID": "c8f2a91e",
-      "gender": "Mixed",
-      "ground": "Allan Border Field",
-      "prompt": "Upcoming cricket match details:\n- Teams: Gold Coast vs Sunshine Coast, Date and Time: 2026-08-29, 1:00 PM, Location: Allan Border Field\n- Round: GF, Match Type: Grand Final\n- League: O60 Div 1 - Geoff Dymock Shield",
-      "ageGroup": "Over 60",
-      "teamAway": "Sunshine Coast",
-      "teamHome": "Gold Coast",
-      "gradeName": "O60 Div 1 - Geoff Dymock Shield",
-      "gradeResolvedPosition": 4,
-      "gradeSortOrder": 4,
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
-      },
-      "assignSponsors": {
-        "competition": [],
-        "grade": [
-          {
-            "id": 219,
-            "name": "9",
-            "logo": {
-              "id": 31212,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
-            }
-          }
-        ],
-        "team": []
-      },
-      "primaryForScreen": [
-        {
-          "id": 211,
-          "name": "1",
-          "logo": {
-            "id": 31204,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-          }
-        },
-        {
-          "id": 212,
-          "name": "2",
-          "logo": {
-            "id": 31205,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-          }
-        },
-        {
-          "id": 213,
-          "name": "3",
-          "logo": {
-            "id": 31206,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-          }
-        },
-        {
-          "id": 214,
-          "name": "4",
-          "logo": {
-            "id": 31207,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-          }
-        }
-      ]
+      "primaryForScreen": []
     }
   ],
   "asset": {
-    "assetID": 74,
+    "assetID": 73,
     "assetTypeID": 1,
-    "assetCategoryID": 2,
-    "assetsLinkID": "6f7ec6cb3871df7b1cd2cd622103faada19a0b2f10ac89595d4c9d875e34a45b"
+    "assetCategoryID": 1,
+    "assetsLinkID": "7a60aa1a7b1afe14ce9def9c1cd17b8718337ffc675217d4d93567b69c43a95f"
   },
   "render": {
-    "schedulerId": 594,
-    "renderId": 9015
+    "schedulerId": 596,
+    "renderId": 9061
   },
   "account": {
-    "accountId": 701
+    "accountId": 703
   },
   "timings": {
-    "FPS_MAIN": 210,
+    "FPS_MAIN": 270,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 270,
+    "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 210,
+    "FPS_SCORECARD": 270,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [45, 195, 330, 420, 510],
+  "frames": [45, 225],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queensland_Veterans_Cricket_Logo_cropped_549341fcde.png",
-        "width": 2500,
-        "height": 2500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_13_183ccf3b31_cropped_b04b44e842.png",
+        "width": 500,
+        "height": 500
       },
-      "name": "Queensland Veterans Cricket",
+      "name": "Runaway Bay Cricket Club Inc",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [
-          {
-            "id": 211,
-            "name": "1",
-            "logo": {
-              "id": 31204,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
-            }
-          },
-          {
-            "id": 212,
-            "name": "2",
-            "logo": {
-              "id": 31205,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
-            }
-          },
-          {
-            "id": 213,
-            "name": "3",
-            "logo": {
-              "id": 31206,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
-            }
-          },
-          {
-            "id": 214,
-            "name": "4",
-            "logo": {
-              "id": 31207,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
-            }
-          }
-        ],
-        "general": [
-          {
-            "id": 215,
-            "name": "5",
-            "logo": {
-              "id": 31208,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_cropped_c9e01954ba.png"
-            }
-          },
-          {
-            "id": 216,
-            "name": "6",
-            "logo": {
-              "id": 31209,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor6_cropped_8af0ba7b8f.png"
-            }
-          },
-          {
-            "id": 217,
-            "name": "7",
-            "logo": {
-              "id": 31210,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_cropped_dfb381eef0.png"
-            }
-          },
-          {
-            "id": 218,
-            "name": "8",
-            "logo": {
-              "id": 31211,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_cropped_31bb64eb78.png"
-            }
-          },
-          {
-            "id": 219,
-            "name": "9",
-            "logo": {
-              "id": 31212,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
-            }
-          },
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          },
-          {
-            "id": 221,
-            "name": "11",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_cropped_7c4fa55c7e.png"
-            }
-          },
-          {
-            "id": 222,
-            "name": "12",
-            "logo": {
-              "id": 31215,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_cropped_ef985bec1c.png"
-            }
-          },
-          {
-            "id": 223,
-            "name": "13",
-            "logo": {
-              "id": 31216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_cropped_d8f85c75e7.png"
-            }
-          },
-          {
-            "id": 224,
-            "name": "14",
-            "logo": {
-              "id": 31217,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_cropped_6105b69331.png"
-            }
-          },
-          {
-            "id": 225,
-            "name": "15",
-            "logo": {
-              "id": 31218,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_cropped_0d7cc6d2f8.png"
-            }
-          },
-          {
-            "id": 226,
-            "name": "16",
-            "logo": {
-              "id": 31219,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_cropped_4faa202880.png"
-            }
-          }
-        ],
-        "sponsorNum": 16
+        "primary": [],
+        "general": [],
+        "sponsorNum": 0
       },
-      "IsAccountClub": false
+      "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "O60 Div 1 - Geoff Dymock Shield",
-      "groupingCategory": "O60 Div 1 - Geoff Dymock Shield",
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "metadata": {
         "title": "Fixtures",
         "titleSplit": ["Fixtures", ""],
         "videoTitle": "Upcoming Fixtures",
         "compositionId": "CricketUpcoming",
-        "assetId": 74,
+        "assetId": 73,
         "assetTypeId": 1,
         "frames": [],
-        "includeSponsors": true
+        "includeSponsors": false
       },
       "appearance": {
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#862F2F",
-          "secondary": "#EFB247"
+          "primary": "#611E75",
+          "secondary": "#DABF30"
         },
         "template": "CNSW"
       },
@@ -442,7 +122,7 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Texture",
+        "useBackground": "Animated",
         "mode": "lightAlt",
         "category": {
           "slug": "CNSW",
@@ -481,7 +161,7 @@
           "gradientType": null,
           "overlayOpacity": null
         },
-        "palette": "secondary",
+        "palette": "primary",
         "gradient": {
           "type": null,
           "direction": null
@@ -490,13 +170,13 @@
           "type": null
         },
         "pattern": {
-          "type": "dots",
-          "animation": "none",
-          "scale": 0.75,
+          "type": null,
+          "animation": null,
+          "scale": null,
           "rotation": null,
-          "opacity": 0.35,
+          "opacity": null,
           "animationDuration": null,
-          "animationSpeed": 0.8
+          "animationSpeed": null
         },
         "particle": {
           "type": null,
@@ -506,57 +186,47 @@
           "animation": null
         },
         "modeId": 2,
+        "animation": {
+          "type": "html-scoreboard-grid"
+        },
         "imageCandidates": [],
         "texture": {
-          "name": "Stadium 004",
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Chat_GPT_Image_Aug_12_2026_12_25_17_PM_68e4d8018e.png",
+          "name": null,
+          "url": null,
           "repeat": "cover",
           "scale": "100%",
           "overlay": {
             "opacity": 0.5,
             "blendMode": "multiply"
           }
-        },
-        "luminance": {
-          "name": "Test 002",
-          "url": null,
-          "asset": "_verify/test002.png",
-          "map": {
-            "kind": "theme",
-            "preset": "brand"
-          },
-          "protection": "none",
-          "position": "center",
-          "size": "cover",
-          "opacity": 1
         }
       }
     }
   },
   "errors": [],
   "orderingContext": {
-    "scopeKey": "account:701:association:7646",
+    "scopeKey": "account:703:club:60120",
     "revision": 0,
-    "resolvedAt": "2026-08-21T04:12:20.168Z"
+    "resolvedAt": "2026-09-20T14:10:18.248Z"
   },
   "organisation": {
-    "type": "association",
-    "id": 7646
+    "type": "club",
+    "id": 60120
   },
-  "generationIdentity": "3835d4440f18cb4fa436c245e0ae4a1a6d4ef936a67e49f767704ece01634d66",
+  "generationIdentity": "fabf6ad02be59e5f559b7cc3e867a64b0945d28fda2cadd0bcd485c816c7567f",
   "generationManifest": {
     "orderingContext": {
-      "scopeKey": "account:701:association:7646",
+      "scopeKey": "account:703:club:60120",
       "revision": 0,
-      "resolvedAt": "2026-08-21T04:12:20.168Z"
+      "resolvedAt": "2026-09-20T14:10:18.248Z"
     },
     "organisation": {
-      "type": "association",
-      "id": 7646
+      "type": "club",
+      "id": 60120
     },
-    "generationIdentity": "3835d4440f18cb4fa436c245e0ae4a1a6d4ef936a67e49f767704ece01634d66",
-    "schedulerId": 594,
-    "renderId": 9015,
-    "fixtureIds": ["bae1155a", "4b45727b"]
+    "generationIdentity": "fabf6ad02be59e5f559b7cc3e867a64b0945d28fda2cadd0bcd485c816c7567f",
+    "schedulerId": 596,
+    "renderId": 9061,
+    "fixtureIds": ["b8225fa4"]
   }
 }

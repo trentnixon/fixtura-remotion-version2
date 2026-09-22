@@ -26,7 +26,7 @@
   --type-ladder-column: 14px;
   --header-text: rgb(244 243 241 / 96%);
   --font-display: "Teko", "Arial Narrow", sans-serif;
-  --font-body: "Heebo", Arial, sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
 
   position: relative;
   isolation: isolate;
@@ -377,10 +377,9 @@
   width: 100%;
   min-height: var(--ladder-row-min-height);
   padding: 8px 6px;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-ladder-rank);
-  font-weight: 700;
-  font-stretch: condensed;
+  font-weight: 400;
   line-height: 1;
   font-variant-numeric: tabular-nums lining-nums;
 }
@@ -433,10 +432,9 @@
 .night-session-canvas .ladder-team.ladder-cell {
   padding: 10px 14px;
   min-height: var(--ladder-row-min-height);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-ladder-team);
-  font-weight: 600;
-  font-stretch: condensed;
+  font-weight: 400;
   line-height: 1.05;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -465,10 +463,9 @@
 }
 
 .night-session-canvas .ladder-stat {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--type-ladder-stat);
-  font-weight: 600;
-  font-stretch: condensed;
+  font-weight: 400;
   line-height: 1;
   font-variant-numeric: tabular-nums lining-nums;
   text-align: center;
@@ -476,7 +473,7 @@
 
 .night-session-canvas .ladder-stat--pts {
   font-size: var(--type-ladder-stat-pts);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* Interior row copy — single mode token (on-container copy, not title/muted tiers) */

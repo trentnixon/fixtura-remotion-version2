@@ -103,10 +103,10 @@ export const basicTheme: TemplateThemeConfig = {
       className: "text-4xl font-bold tracking-tight leading-none",
     },
     ResultScore: {
-      className: "text-7xl font-bold  tracking-normal leading-tight ",
+      className: "text-7xl font-bold tracking-normal leading-none",
     },
     ResultScoreFirstInnings: {
-      className: "text-3xl font-bold  tracking-normal leading-tight ",
+      className: "text-[1.8rem] font-bold tracking-normal leading-none",
     },
     ResultScoreYetToBat: {
       className: "text-3xl font-bold  tracking-wider py-6",

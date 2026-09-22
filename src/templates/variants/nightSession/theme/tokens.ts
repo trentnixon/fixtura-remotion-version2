@@ -6,16 +6,16 @@ export const nightSessionTokens = {
       family: "Teko",
     },
     subtitle: {
-      family: "Heebo",
+      family: "Source Sans 3",
     },
     copy: {
-      family: "Heebo",
+      family: "Source Sans 3",
     },
   },
 
   fontClasses: {
     heading: { family: "Teko" },
-    subheading: { family: "Heebo" },
-    body: { family: "Heebo" },
+    subheading: { family: "Source Sans 3" },
+    body: { family: "Source Sans 3" },
   },
 } satisfies Pick<TemplateThemeConfig, "fonts" | "fontClasses">;

@@ -1,10 +1,9 @@
 import React from "react";
-import { Img } from "remotion";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import type { MatchResult as ResultsMatchResult } from "../../../results/_types/types";
 import type { MatchResult as ResultSingleMatchResult } from "../../../resultSingle/types";
-import { normalizeScore } from "../../../results/layout/Sections/TeamsSection/_utils/helpers";
 import { resolveScorelineUpcomingClubSides } from "../../scoreline/fixture/resolveScorelineUpcomingClubSides";
+import { NightSessionTeamBand } from "./NightSessionTeamBand";
 import {
   resolveScorelineResultStatementLength,
   resolveScorelineResultStatementText,
@@ -20,45 +19,6 @@ export type NightSessionResultSingleContentProps = {
   match: ResultSingleMatchResult;
   className?: string;
   style?: React.CSSProperties;
-};
-
-const NightSessionTeamBand: React.FC<{
-  team: ResultsMatchResult["homeTeam"];
-  logoUrl: string;
-  isClubTeam: boolean;
-  side: "home" | "away";
-}> = ({ team, logoUrl, isClubTeam, side }) => {
-  const hasCrest = Boolean(logoUrl);
-  const oversValue = team.overs?.trim() ?? "";
-
-  return (
-    <div
-      className="team-band"
-      data-side={side}
-      data-club-team={isClubTeam ? "true" : "false"}
-      data-has-crest={hasCrest ? "true" : "false"}
-    >
-      <div className="team-group">
-        <div className="team-mark">
-          <span className="mark-fallback" aria-hidden />
-          {hasCrest ? <Img src={logoUrl} alt="" /> : null}
-        </div>
-        <p className="team-score">
-          <span className="score">{normalizeScore(team.score)}</span>
-          <span className="overs" data-empty={oversValue ? "false" : "true"}>
-            {oversValue ? (
-              <>
-                <span>{oversValue}</span> ov
-              </>
-            ) : null}
-          </span>
-        </p>
-        <div className="team-identity">
-          <h2 className="team-name">{team.name}</h2>
-        </div>
-      </div>
-    </div>
-  );
 };
 
 export const NightSessionResultSingleContent: React.FC<
@@ -113,6 +73,7 @@ export const NightSessionResultSingleContent: React.FC<
           <div className="comparison-band comparison-band--single">
             <NightSessionTeamBand
               team={match.homeTeam as ResultsMatchResult["homeTeam"]}
+              matchType={match.type}
               logoUrl={
                 match.teamHomeLogo?.url || match.homeTeam.logo?.url || ""
               }
@@ -122,6 +83,7 @@ export const NightSessionResultSingleContent: React.FC<
             <div className="comparison-band__spine" aria-hidden />
             <NightSessionTeamBand
               team={match.awayTeam as ResultsMatchResult["awayTeam"]}
+              matchType={match.type}
               logoUrl={
                 match.teamAwayLogo?.url || match.awayTeam.logo?.url || ""
               }

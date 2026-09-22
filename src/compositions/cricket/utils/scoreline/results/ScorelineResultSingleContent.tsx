@@ -68,6 +68,7 @@ export const ScorelineResultSingleContent: React.FC<
 
           <ScorelineTeamBand
             team={match.homeTeam as ResultsMatchResult["homeTeam"]}
+            matchType={match.type}
             logoUrl={match.teamHomeLogo?.url || match.homeTeam.logo?.url || ""}
             isClubTeam={match.homeTeam.isClubTeam || homeIsClub}
             markSize="hero"
@@ -78,6 +79,7 @@ export const ScorelineResultSingleContent: React.FC<
           </div>
           <ScorelineTeamBand
             team={match.awayTeam as ResultsMatchResult["awayTeam"]}
+            matchType={match.type}
             logoUrl={match.teamAwayLogo?.url || match.awayTeam.logo?.url || ""}
             isClubTeam={match.awayTeam.isClubTeam || awayIsClub}
             markSize="hero"

@@ -1,289 +1,593 @@
 {
   "data": [
     {
-      "gameID": "b854c1c7",
+      "gameID": "eea83c8f",
       "status": "Final",
       "homeTeam": {
-        "name": "Mudgeeraba Blue",
+        "name": "Helensvale 1st Grade",
         "isHome": true,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
-          "width": 1134,
-          "height": 1417
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_5c8eb598_24c15f2c22.png",
+          "width": 256,
+          "height": 164
         },
-        "score": "215",
+        "score": "8/259",
+        "overs": "40",
+        "homeScoresFirstInnings": null,
+        "battingPerformances": [
+          {
+            "player": "Sam Lickiss (c)",
+            "runs": 75,
+            "balls": 48,
+            "fours": 6,
+            "sixes": 6,
+            "SR": 156.25,
+            "team": "Helensvale 1st Grade",
+            "notOut": false
+          },
+          {
+            "player": "Jack Lickiss",
+            "runs": 32,
+            "balls": 35,
+            "fours": 3,
+            "sixes": 1,
+            "SR": 91.42,
+            "team": "Helensvale 1st Grade",
+            "notOut": false
+          },
+          {
+            "player": "James Guthrig",
+            "runs": 31,
+            "balls": 45,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 68.88,
+            "team": "Helensvale 1st Grade",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Latimer",
+            "overs": 8,
+            "maidens": 1,
+            "runs": 31,
+            "wickets": 3,
+            "economy": "3.88",
+            "team": "Mudgeeraba Premier Division 1"
+          },
+          {
+            "player": "Barclay",
+            "overs": 8,
+            "maidens": 0,
+            "runs": 63,
+            "wickets": 2,
+            "economy": "7.88",
+            "team": "Mudgeeraba Premier Division 1"
+          },
+          {
+            "player": "Finn",
+            "overs": 8,
+            "maidens": 0,
+            "runs": 46,
+            "wickets": 1,
+            "economy": "5.75",
+            "team": "Mudgeeraba Premier Division 1"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "awayTeam": {
+        "name": "Mudgeeraba Premier Division 1",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+          "width": 1281,
+          "height": 1281
+        },
+        "score": "9/159",
+        "overs": "33",
+        "awayScoresFirstInnings": null,
+        "battingPerformances": [
+          {
+            "player": "Lachlan King",
+            "runs": 49,
+            "balls": 64,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 76.56,
+            "team": "Mudgeeraba Premier Division 1",
+            "notOut": true
+          },
+          {
+            "player": "Hayden Taylor",
+            "runs": 30,
+            "balls": 51,
+            "fours": 3,
+            "sixes": 0,
+            "SR": 58.82,
+            "team": "Mudgeeraba Premier Division 1",
+            "notOut": false
+          },
+          {
+            "player": "Bailey Garnham",
+            "runs": 27,
+            "balls": 17,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 158.82,
+            "team": "Mudgeeraba Premier Division 1",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Maloney",
+            "overs": 8,
+            "maidens": 1,
+            "runs": 28,
+            "wickets": 3,
+            "economy": "3.50",
+            "team": "Helensvale 1st Grade"
+          },
+          {
+            "player": "Gregory",
+            "overs": 5,
+            "maidens": 1,
+            "runs": 24,
+            "wickets": 2,
+            "economy": "4.80",
+            "team": "Helensvale 1st Grade"
+          },
+          {
+            "player": "Pedi",
+            "overs": 1,
+            "maidens": 0,
+            "runs": 3,
+            "wickets": 1,
+            "economy": "3.00",
+            "team": "Helensvale 1st Grade"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_5c8eb598_24c15f2c22.png",
+        "width": 256,
+        "height": 164
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+        "width": 1281,
+        "height": 1281
+      },
+      "date": "19 Sept 2026",
+      "type": "One Day",
+      "ground": "Hession Oval / Hession Oval",
+      "round": "Round 1",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "(1) CGC Premier League - Division 1",
+      "gradeResolvedPosition": 0,
+      "gradeSortOrder": 0,
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "primaryForScreen": [],
+      "result": "Helensvale 1st Grade won by 100 runs",
+      "resultShort": "Helensvale 1st Grade def Mudgeeraba Premier Division 1",
+      "resultSummary": {
+        "homeTeam": "Helensvale 1st Grade",
+        "awayTeam": "Mudgeeraba Premier Division 1",
+        "winner": "Helensvale 1st Grade",
+        "resultWord": "won"
+      },
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"(1) CGC Premier League - Division 1\",\n    \"round\": \"Round 1\",\n    \"ground\": \"Hession Oval / Hession Oval\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Helensvale 1st Grade\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Helensvale 1st Grade won by 100 runs\",\n    \"dayOne\": \"2026-09-19\",\n    \"finalDaysPlay\": \"2026-09-19\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Helensvale 1st Grade\",\n    \"innings\": [\n      {\n        \"teamName\": \"Helensvale 1st Grade\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Helensvale 1st Grade Batting\"\n      }\n    ],\n    \"totalScore\": \"8/259\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Mudgeeraba Premier Division 1\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba Premier Division 1\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Bailey Garnham, scored 27 Runs from (17) balls, with 5 fours, at a strike Rate of 158.82., they were out.\"\n          },\n          {\n            \"description\": \"Joshua Nelson, scored 12 Runs from (10) balls, with 2 fours, at a strike Rate of 120.00., they were out.\"\n          },\n          {\n            \"description\": \"Lydon Gibbons (c), scored 3 Runs from (9) balls, at a strike Rate of 33.33., they were out.\"\n          },\n          {\n            \"description\": \"Lachlan King, scored 49 Runs from (64) balls, with 2 fours, at a strike Rate of 76.56., they were not out.\"\n          },\n          {\n            \"description\": \"Glenn May, scored 7 Runs from (13) balls, with 1 four, at a strike Rate of 53.84., they were out.\"\n          },\n          {\n            \"description\": \"Rhys Finn, scored 15 Runs from (14) balls, with 1 four and 1 six, at a strike Rate of 107.14., they were out.\"\n          },\n          {\n            \"description\": \"Noah Latimer, scored 5 Runs from (5) balls, with 1 four, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Hayden Taylor, scored 30 Runs from (51) balls, with 3 fours, at a strike Rate of 58.82., they were out.\"\n          },\n          {\n            \"description\": \"Mackenzie Barclay, scored 5 Runs from (14) balls, at a strike Rate of 35.71., they were out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Hayes, took 5.12 wickets for 1 run, with 41 maidens.\"\n          },\n          {\n            \"description\": \"Lickiss, took 7.2 wickets for 1 run, with 36 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Maloney, bowled 1 over, took 3.5 wickets for 3 runs, with 28 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Burke, took 4.6 wickets for 1 run, with 23 maidens.\"\n          },\n          {\n            \"description\": \"Gregory, bowled 1 over, took 4.8 wickets for 2 runs, with 24 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Lickiss (c), took 4 wickets for 0 runs, with 4 maidens.\"\n          },\n          {\n            \"description\": \"Pedi, took 3 wickets for 1 run, with 3 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Lickiss, took 2 catches.\"\n          },\n          {\n            \"description\": \"Thomas, took 2 catches.\"\n          },\n          {\n            \"description\": \"Hayes, took 2 catches.\"\n          },\n          {\n            \"description\": \"Gregory, took 4 catches.\"\n          },\n          {\n            \"description\": \"Lickiss (c), took 2 catches.\"\n          },\n          {\n            \"description\": \"Pedi, took 2 catches.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba Premier Division 1 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/159\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Nerang DCC Open Womens\",\n      \"Mudgeeraba Premier Div 2\",\n      \"Mudgeeraba Premier Division 1\",\n      \"Mudgeeraba Red\",\n      \"Mudgeeraba T20\"\n    ]\n  }\n}"
+    },
+    {
+      "gameID": "a8f7c0ff",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Palm Beach T20",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_af1d388c_aa6b542ee2.png",
+          "width": 500,
+          "height": 442
+        },
+        "score": "9/122",
         "overs": "20",
         "homeScoresFirstInnings": null,
         "battingPerformances": [
           {
-            "player": "Melissa Lewis",
-            "runs": 60,
-            "balls": 14,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 428.57,
-            "team": "Mudgeeraba Blue",
-            "notOut": true
-          },
-          {
-            "player": "Eden Carter",
+            "player": "Christian Payne",
             "runs": 22,
-            "balls": 13,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 169.23,
-            "team": "Mudgeeraba Blue",
+            "balls": 11,
+            "fours": 2,
+            "sixes": 1,
+            "SR": 200,
+            "team": "Palm Beach T20",
             "notOut": false
           },
           {
-            "player": "Melinda Santer",
-            "runs": 20,
-            "balls": 13,
-            "fours": 0,
+            "player": "Zane Anderson",
+            "runs": 21,
+            "balls": 21,
+            "fours": 2,
             "sixes": 0,
-            "SR": 153.84,
-            "team": "Mudgeeraba Blue",
+            "SR": 100,
+            "team": "Palm Beach T20",
+            "notOut": false
+          },
+          {
+            "player": "Matt Swindlehurst",
+            "runs": 19,
+            "balls": 21,
+            "fours": 0,
+            "sixes": 1,
+            "SR": 90.47,
+            "team": "Palm Beach T20",
+            "notOut": true
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "Barclay",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 21,
+            "wickets": 3,
+            "economy": "5.25",
+            "team": "Mudgeeraba T20"
+          },
+          {
+            "player": "Nelson",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 18,
+            "wickets": 1,
+            "economy": "4.50",
+            "team": "Mudgeeraba T20"
+          },
+          {
+            "player": "Siede",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 24,
+            "wickets": 1,
+            "economy": "6.00",
+            "team": "Mudgeeraba T20"
+          }
+        ],
+        "isClubTeam": false
+      },
+      "awayTeam": {
+        "name": "Mudgeeraba T20",
+        "isHome": false,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+          "width": 1281,
+          "height": 1281
+        },
+        "score": "6/142",
+        "overs": "20",
+        "awayScoresFirstInnings": null,
+        "battingPerformances": [
+          {
+            "player": "Joshua Nelson",
+            "runs": 40,
+            "balls": 35,
+            "fours": 1,
+            "sixes": 2,
+            "SR": 114.28,
+            "team": "Mudgeeraba T20",
+            "notOut": false
+          },
+          {
+            "player": "Dayne Siede",
+            "runs": 27,
+            "balls": 34,
+            "fours": 2,
+            "sixes": 1,
+            "SR": 79.41,
+            "team": "Mudgeeraba T20",
+            "notOut": false
+          },
+          {
+            "player": "Marco Kroon",
+            "runs": 26,
+            "balls": 15,
+            "fours": 2,
+            "sixes": 2,
+            "SR": 173.33,
+            "team": "Mudgeeraba T20",
             "notOut": false
           }
         ],
-        "bowlingPerformances": [],
+        "bowlingPerformances": [
+          {
+            "player": "McCloy",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 18,
+            "wickets": 2,
+            "economy": "4.50",
+            "team": "Palm Beach T20"
+          },
+          {
+            "player": "Craig",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 25,
+            "wickets": 2,
+            "economy": "6.25",
+            "team": "Palm Beach T20"
+          },
+          {
+            "player": "Anderson",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 21,
+            "wickets": 1,
+            "economy": "5.25",
+            "team": "Palm Beach T20"
+          }
+        ],
+        "isClubTeam": true
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_af1d388c_aa6b542ee2.png",
+        "width": 500,
+        "height": 442
+      },
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+        "width": 1281,
+        "height": 1281
+      },
+      "date": "20 Sept 2026",
+      "type": "T20",
+      "ground": "Alberton Cricket Club / Oval 1 - Turf",
+      "round": "SF",
+      "gender": "Mixed",
+      "ageGroup": "Senior",
+      "gradeName": "Veterans First Consulting T20 Cup",
+      "gradeResolvedPosition": 4,
+      "gradeSortOrder": 2,
+      "assignSponsors": {
+        "competition": [],
+        "grade": [],
+        "team": []
+      },
+      "primaryForScreen": [],
+      "result": "Mudgeeraba T20 won by 20 runs",
+      "resultShort": "Mudgeeraba T20 def Palm Beach T20",
+      "resultSummary": {
+        "homeTeam": "Palm Beach T20",
+        "awayTeam": "Mudgeeraba T20",
+        "winner": "Mudgeeraba T20",
+        "resultWord": "lost"
+      },
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"Veterans First Consulting T20 Cup\",\n    \"round\": \"SF\",\n    \"ground\": \"Alberton Cricket Club / Oval 1 - Turf\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Palm Beach T20\",\n    \"tossResult\": \"bowl\",\n    \"resultStatement\": \"Mudgeeraba T20 won by 20 runs\",\n    \"dayOne\": \"2026-09-20\",\n    \"finalDaysPlay\": \"2026-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Palm Beach T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Palm Beach T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Palm Beach T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/122\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Mudgeeraba T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Marco Kroon, scored 26 Runs from (15) balls, with 2 fours and 2 sixes, at a strike Rate of 173.33., they were out.\"\n          },\n          {\n            \"description\": \"Dayne Siede, scored 27 Runs from (34) balls, with 2 fours and 1 six, at a strike Rate of 79.41., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in stumpedb: Ryan McCloy stumped, scored 25 Runs from (15) balls, with 5 fours, at a strike Rate of 166.66., they were out.\"\n          },\n          {\n            \"description\": \"Joshua Nelson, scored 40 Runs from (35) balls, with 1 four and 2 sixes, at a strike Rate of 114.28., they were out.\"\n          },\n          {\n            \"description\": \"Lydon Gibbons, scored 3 Runs from (5) balls, at a strike Rate of 60.00., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in, scored 10 Runs from (15) balls, at a strike Rate of 66.66., they were out.\"\n          },\n          {\n            \"description\": \"Glenn May, scored 1 Runs from (1) balls, at a strike Rate of 100.00., they were not out.\"\n          },\n          {\n            \"description\": \"Ethan Wells, scored 1 Runs from (1) balls, at a strike Rate of 100.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Anderson, took 5.25 wickets for 1 run, with 21 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Lonnberg, took 10.66 wickets for 0 runs, with 32 maidens.\"\n          },\n          {\n            \"description\": \"McCloy, took 4.5 wickets for 2 runs, with 18 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Newton, took 14 wickets for 0 runs, with 14 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Craig, took 6.25 wickets for 2 runs, with 25 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Neuhaus, took 3 wickets for 0 runs, with 6 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Luczak, took 12.5 wickets for 0 runs, with 25 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"6/142\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Nerang DCC Open Womens\",\n      \"Mudgeeraba Premier Div 2\",\n      \"Mudgeeraba Premier Division 1\",\n      \"Mudgeeraba Red\",\n      \"Mudgeeraba T20\"\n    ]\n  }\n}"
+    },
+    {
+      "gameID": "b75c9bd3",
+      "status": "Final",
+      "homeTeam": {
+        "name": "Mudgeeraba T20",
+        "isHome": true,
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+          "width": 1281,
+          "height": 1281
+        },
+        "score": "5/142 & 0/7",
+        "overs": "0.5",
+        "homeScoresFirstInnings": "5/142 & ",
+        "battingPerformances": [
+          {
+            "player": "Joshua Nelson",
+            "runs": 46,
+            "balls": 45,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 102.22,
+            "team": "Mudgeeraba T20",
+            "notOut": false
+          },
+          {
+            "player": "Fill-in",
+            "runs": 32,
+            "balls": 23,
+            "fours": 6,
+            "sixes": 0,
+            "SR": 139.13,
+            "team": "Mudgeeraba T20",
+            "notOut": false
+          },
+          {
+            "player": "Lydon Gibbons",
+            "runs": 28,
+            "balls": 25,
+            "fours": 1,
+            "sixes": 1,
+            "SR": 112,
+            "team": "Mudgeeraba T20",
+            "notOut": false
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "player": "James Bazley",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 29,
+            "wickets": 2,
+            "economy": "7.25",
+            "team": "Coomera T20"
+          },
+          {
+            "player": "Steven Timms",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 21,
+            "wickets": 1,
+            "economy": "5.25",
+            "team": "Coomera T20"
+          },
+          {
+            "player": "Jared Spies",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 25,
+            "wickets": 1,
+            "economy": "6.25",
+            "team": "Coomera T20"
+          }
+        ],
         "isClubTeam": true
       },
       "awayTeam": {
-        "name": "Coomera",
+        "name": "Coomera T20",
         "isHome": false,
         "logo": {
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_e4b49fbd_3c380c1ddd.png",
           "width": 512,
           "height": 512
         },
-        "score": "255",
-        "overs": "20",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [],
+        "score": "9/142 & 1/12",
+        "overs": "1",
+        "awayScoresFirstInnings": "9/142 &",
+        "battingPerformances": [
+          {
+            "player": "Charlie Bignell",
+            "runs": 32,
+            "balls": 17,
+            "fours": 3,
+            "sixes": 2,
+            "SR": 188.23,
+            "team": "Coomera T20",
+            "notOut": false
+          },
+          {
+            "player": "James Bazley",
+            "runs": 32,
+            "balls": 32,
+            "fours": 5,
+            "sixes": 0,
+            "SR": 100,
+            "team": "Coomera T20",
+            "notOut": false
+          },
+          {
+            "player": "Steven Timms",
+            "runs": 22,
+            "balls": 14,
+            "fours": 2,
+            "sixes": 0,
+            "SR": 157.14,
+            "team": "Coomera T20",
+            "notOut": false
+          }
+        ],
         "bowlingPerformances": [
           {
-            "player": "Waller",
-            "overs": 3,
+            "player": "Mackenzie Barclay",
+            "overs": 4,
             "maidens": 0,
-            "runs": 19,
+            "runs": 23,
+            "wickets": 4,
+            "economy": "5.75",
+            "team": "Mudgeeraba T20"
+          },
+          {
+            "player": "Dayne Siede",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 26,
             "wickets": 2,
-            "economy": "6.33",
-            "team": "Mudgeeraba Blue"
+            "economy": "6.50",
+            "team": "Mudgeeraba T20"
           },
           {
-            "player": "Baker (c)",
-            "overs": 2,
+            "player": "Hayden Taylor",
+            "overs": 4,
             "maidens": 0,
-            "runs": 14,
+            "runs": 30,
             "wickets": 1,
-            "economy": "7.00",
-            "team": "Mudgeeraba Blue"
-          },
-          {
-            "player": "Cahill",
-            "overs": 2,
-            "maidens": 0,
-            "runs": 16,
-            "wickets": 1,
-            "economy": "8.00",
-            "team": "Mudgeeraba Blue"
+            "economy": "7.50",
+            "team": "Mudgeeraba T20"
           }
         ],
         "isClubTeam": false
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
-        "width": 1134,
-        "height": 1417
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+        "width": 1281,
+        "height": 1281
       },
       "teamAwayLogo": {
         "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_e4b49fbd_3c380c1ddd.png",
         "width": 512,
         "height": 512
       },
-      "date": "30 Aug 2026",
+      "date": "20 Sept 2026",
       "type": "T20",
-      "ground": "Pacific Pines Park / Pacific Pines Park",
-      "round": "Round 10",
-      "gender": "Women",
+      "ground": "Oxenford Park / Oxenford Park 1 (Choice Homes Oval)",
+      "round": "GF",
+      "gender": "Mixed",
       "ageGroup": "Senior",
-      "gradeName": "Senior Women",
-      "gradeResolvedPosition": 0,
-      "gradeSortOrder": 0,
+      "gradeName": "Veterans First Consulting T20 Cup",
+      "gradeResolvedPosition": 4,
+      "gradeSortOrder": 2,
       "assignSponsors": {
         "competition": [],
         "grade": [],
         "team": []
       },
       "primaryForScreen": [],
-      "result": "Coomera won by 5 wickets",
-      "resultShort": "Coomera def Mudgeeraba Blue",
+      "result": "5/142 & 0/7 v 9/142 & 1/12",
+      "resultShort": "5/142 & 0/7 v 9/142 & 1/12",
       "resultSummary": {
-        "homeTeam": "Mudgeeraba Blue",
-        "awayTeam": "Coomera",
-        "winner": "Coomera",
-        "resultWord": "lost"
+        "homeTeam": "Mudgeeraba T20",
+        "awayTeam": "Coomera T20",
+        "winner": null,
+        "resultWord": "no_result"
       },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Women's Winter Community Cricket\",\n    \"grade\": \"Senior Women\",\n    \"round\": \"Round 10\",\n    \"ground\": \"Pacific Pines Park / Pacific Pines Park\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Coomera\",\n    \"tossResult\": \"bowl\",\n    \"resultStatement\": \"Coomera won by 5 wickets\",\n    \"dayOne\": \"2026-08-30\",\n    \"finalDaysPlay\": \"2026-08-30\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Mudgeeraba Blue\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba Blue\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Roxy Waller, scored 15 Runs from (13) balls, at a strike Rate of 115.38., they were out.\"\n          },\n          {\n            \"description\": \"Eden Carter, scored 22 Runs from (13) balls, at a strike Rate of 169.23., they were out.\"\n          },\n          {\n            \"description\": \"Jess Dooley, scored 16 Runs from (14) balls, at a strike Rate of 114.28., they were out.\"\n          },\n          {\n            \"description\": \"Melinda Santer, scored 20 Runs from (13) balls, at a strike Rate of 153.84., they were out.\"\n          },\n          {\n            \"description\": \"Eleanor Carter, scored 13 Runs from (13) balls, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Donna Oroz, scored 20 Runs from (13) balls, at a strike Rate of 153.84., they were out.\"\n          },\n          {\n            \"description\": \"Joanne Cahill, scored 4 Runs from (13) balls, at a strike Rate of 30.76., they were out.\"\n          },\n          {\n            \"description\": \"Melissa Lewis, scored 60 Runs from (14) balls, at a strike Rate of 428.57., they were not out.\"\n          },\n          {\n            \"description\": \"Melinda Baker (c), scored 20 Runs from (14) balls, at a strike Rate of 142.85., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba Blue Batting\"\n      }\n    ],\n    \"totalScore\": \"215\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Coomera\",\n    \"innings\": [\n      {\n        \"teamName\": \"Coomera\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Coomera Batting\"\n      }\n    ],\n    \"totalScore\": \"255\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Red\"\n    ]\n  }\n}"
-    },
-    {
-      "gameID": "e4e61f32",
-      "status": "Final",
-      "homeTeam": {
-        "name": "Mudgeeraba Red",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
-          "width": 1134,
-          "height": 1417
-        },
-        "score": "90",
-        "overs": "20",
-        "homeScoresFirstInnings": null,
-        "battingPerformances": [],
-        "bowlingPerformances": [
-          {
-            "player": "Rowley",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 10,
-            "wickets": 3,
-            "economy": "3.33",
-            "team": "Surfers Paradise"
-          },
-          {
-            "player": "Ireland",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 11,
-            "wickets": 3,
-            "economy": "3.67",
-            "team": "Surfers Paradise"
-          },
-          {
-            "player": "Eckersley",
-            "overs": 3,
-            "maidens": 0,
-            "runs": 5,
-            "wickets": 2,
-            "economy": "1.67",
-            "team": "Surfers Paradise"
-          }
-        ],
-        "isClubTeam": true
-      },
-      "awayTeam": {
-        "name": "Surfers Paradise",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_91aa3470_ecc46cc045.png",
-          "width": 169,
-          "height": 163
-        },
-        "score": "321",
-        "overs": "20",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Belinda Dawney (c)",
-            "runs": 66,
-            "balls": 15,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 440,
-            "team": "Surfers Paradise",
-            "notOut": false
-          },
-          {
-            "player": "Kerry Ireland",
-            "runs": 41,
-            "balls": 15,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 273.33,
-            "team": "Surfers Paradise",
-            "notOut": true
-          },
-          {
-            "player": "Suzanna Gent",
-            "runs": 34,
-            "balls": 15,
-            "fours": 0,
-            "sixes": 0,
-            "SR": 226.66,
-            "team": "Surfers Paradise",
-            "notOut": true
-          }
-        ],
-        "bowlingPerformances": [],
-        "isClubTeam": false
-      },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
-        "width": 1134,
-        "height": 1417
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_91aa3470_ecc46cc045.png",
-        "width": 169,
-        "height": 163
-      },
-      "date": "30 Aug 2026",
-      "type": "T20",
-      "ground": "Alan Nielsen Park / Alan Nielsen Park 3 (Corbwood No 3)",
-      "round": "Round 10",
-      "gender": "Women",
-      "ageGroup": "Senior",
-      "gradeName": "Senior Women",
-      "gradeResolvedPosition": 0,
-      "gradeSortOrder": 0,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "primaryForScreen": [],
-      "result": "Surfers Paradise won by 231 runs",
-      "resultShort": "Surfers Paradise def Mudgeeraba Red",
-      "resultSummary": {
-        "homeTeam": "Mudgeeraba Red",
-        "awayTeam": "Surfers Paradise",
-        "winner": "Surfers Paradise",
-        "resultWord": "lost"
-      },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Women's Winter Community Cricket\",\n    \"grade\": \"Senior Women\",\n    \"round\": \"Round 10\",\n    \"ground\": \"Alan Nielsen Park / Alan Nielsen Park 3 (Corbwood No 3)\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Surfers Paradise\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Surfers Paradise won by 231 runs\",\n    \"dayOne\": \"2026-08-30\",\n    \"finalDaysPlay\": \"2026-08-30\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Mudgeeraba Red\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba Red\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Dawney (c), took 3 wickets for 1 run, with 6 maidens.\"\n          },\n          {\n            \"description\": \"Eckersley, took 1.66 wickets for 2 runs, with 5 maidens.\"\n          },\n          {\n            \"description\": \"Gent, took 4 wickets for 0 runs, with 12 maidens.\"\n          },\n          {\n            \"description\": \"Ireland, took 3.66 wickets for 3 runs, with 11 maidens.\"\n          },\n          {\n            \"description\": \"McKaskill, took 4.33 wickets for 1 run, with 13 maidens.\"\n          },\n          {\n            \"description\": \"Pennycook, took 6 wickets for 2 runs, with 18 maidens.\"\n          },\n          {\n            \"description\": \"Rowley, took 3.33 wickets for 3 runs, with 10 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"SARAGOZZA, took 4 catches, made 2 run outs, and effected 5 stumpings.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba Red Batting\"\n      }\n    ],\n    \"totalScore\": \"90\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Surfers Paradise\",\n    \"innings\": [\n      {\n        \"teamName\": \"Surfers Paradise\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Surfers Paradise Batting\"\n      }\n    ],\n    \"totalScore\": \"321\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Red\"\n    ]\n  }\n}"
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"Veterans First Consulting T20 Cup\",\n    \"round\": \"GF\",\n    \"ground\": \"Oxenford Park / Oxenford Park 1 (Choice Homes Oval)\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Mudgeeraba T20\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"5/142 & 0/7 v 9/142 & 1/12\",\n    \"dayOne\": \"2026-09-20\",\n    \"finalDaysPlay\": \"2026-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Mudgeeraba T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Dayne Siede, scored 9 Runs from (8) balls, with 1 four, at a strike Rate of 112.50., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in, scored 32 Runs from (23) balls, with 6 fours, at a strike Rate of 139.13., they were out.\"\n          },\n          {\n            \"description\": \"Joshua Nelson, scored 46 Runs from (45) balls, with 5 fours, at a strike Rate of 102.22., they were out.\"\n          },\n          {\n            \"description\": \"Lydon Gibbons, scored 28 Runs from (25) balls, with 1 four and 1 six, at a strike Rate of 112.00., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in, scored 7 Runs from (14) balls, at a strike Rate of 50.00., they were not out.\"\n          },\n          {\n            \"description\": \"Glenn May, scored 3 Runs from (5) balls, at a strike Rate of 60.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"James Bazley, took 7.25 wickets for 2 runs, with 29 maidens, at an economy of 6.\"\n          },\n          {\n            \"description\": \"Steven Timms, took 5.25 wickets for 1 run, with 21 maidens, at an economy of 4.\"\n          },\n          {\n            \"description\": \"Jared Spies, took 6.25 wickets for 1 run, with 25 maidens.\"\n          },\n          {\n            \"description\": \"Faizan Amin, took 8.25 wickets for 0 runs, with 33 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Ciaran Hargreaves, took 7 wickets for 1 run, with 21 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Mitchell Radford, took 11 wickets for 0 runs, with 11 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Lance Roudenko, took 2 catches.\"\n          },\n          {\n            \"description\": \"Shannon Kloppers, took 4 catches.\"\n          },\n          {\n            \"description\": \"Faizan Amin, took 2 catches.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"5/142 & 0/7\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Coomera T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Coomera T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Coomera T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/142 & 1/12\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Nerang DCC Open Womens\",\n      \"Mudgeeraba Premier Div 2\",\n      \"Mudgeeraba Premier Division 1\",\n      \"Mudgeeraba Red\",\n      \"Mudgeeraba T20\"\n    ]\n  }\n}"
     }
   ],
   "asset": {
     "assetID": 80,
     "assetTypeID": 2,
     "assetCategoryID": 2,
-    "assetsLinkID": "99a7fe1aa55ccf40f000bf4a2672337284a02b0d6df51dd96c96c77b957f9d4b"
+    "assetsLinkID": "66a91626d69c6548c4c976dc8ee304a2d3f79c5bdf74876c225f1f54c29cd88a"
   },
   "render": {
     "schedulerId": 598,
-    "renderId": 9032
+    "renderId": 9068
   },
   "account": {
     "accountId": 705
   },
   "timings": {
-    "FPS_MAIN": 210,
+    "FPS_MAIN": 405,
     "FPS_INTRO": 90,
     "FPS_OUTRO": 30,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 210,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [45, 195],
+  "frames": [45, 195, 390],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/SACA_2003_cropped_844f48c7c0.png",
-        "width": 1134,
-        "height": 1417
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
+        "width": 1281,
+        "height": 1281
       },
       "name": "Mudgeeraba Nerang And Districts Cricket Club",
       "sport": "Cricket",
@@ -314,7 +618,7 @@
           "primary": "#FF0000",
           "secondary": "#004DE2"
         },
-        "template": "Mudgeeraba"
+        "template": "NightSession"
       },
       "media": {
         "HeroImage": {
@@ -344,11 +648,11 @@
         }
       },
       "templateVariation": {
-        "useBackground": "Gradient",
-        "mode": "lightAlt",
+        "useBackground": "Luminance",
+        "mode": "darkAlt",
         "category": {
-          "slug": "Mudgeeraba",
-          "name": "Mudgeeraba",
+          "slug": "NightSession",
+          "name": "Night Session",
           "divideFixturesBy": {
             "CricketUpcoming": 3,
             "CricketResults": 2,
@@ -361,63 +665,66 @@
           "bundleAudio": null
         },
         "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": null,
-          "size": null,
-          "loop": null,
-          "muted": null,
-          "overlay": null,
-          "useOffthreadVideo": null,
-          "volume": null,
-          "playbackRate": null
+          "url": "",
+          "fallbackUrl": "",
+          "position": "",
+          "size": "",
+          "loop": false,
+          "muted": false,
+          "overlay": {
+            "color": "",
+            "opacity": 0
+          },
+          "volume": 0
         },
         "image": {
-          "url": null,
-          "ratio": null,
-          "width": null,
-          "height": null,
-          "type": null,
-          "direction": null,
-          "overlayStyle": null,
-          "gradientType": null,
-          "overlayOpacity": null
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "type": "",
+          "direction": "",
+          "overlayStyle": {
+            "color": "",
+            "opacity": 0
+          },
+          "gradientType": "",
+          "overlayOpacity": 0,
+          "ratio": null
         },
-        "palette": "primary",
+        "palette": "secondaryOnWhite",
         "gradient": {
-          "type": "primary",
-          "direction": "DIAGONAL"
+          "type": "",
+          "direction": ""
         },
         "noise": {
-          "type": null
+          "type": ""
         },
         "pattern": {
-          "type": "dots",
-          "animation": "none",
-          "scale": 0.75,
-          "rotation": null,
-          "opacity": 0.35,
-          "animationDuration": null,
-          "animationSpeed": 0.8
+          "type": "",
+          "animation": "",
+          "scale": 0,
+          "rotation": 0,
+          "opacity": 0,
+          "animationDuration": 0,
+          "animationSpeed": 0
         },
         "particle": {
-          "type": null,
-          "particleCount": null,
-          "speed": null,
-          "direction": null,
-          "animation": null
+          "type": "",
+          "particleCount": 0,
+          "speed": 0,
+          "direction": "",
+          "animation": ""
         },
-        "modeId": 2,
-        "imageCandidates": [],
-        "texture": {
-          "name": null,
-          "url": null,
-          "repeat": "cover",
-          "scale": "100%",
-          "overlay": {
-            "opacity": 0.5,
-            "blendMode": "multiply"
-          }
+        "modeId": 4,
+        "luminanceId": 13,
+        "luminance": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/test0074323_41179e1e7a.png",
+          "map": {
+            "kind": "theme",
+            "preset": "brand"
+          },
+          "protection": "none",
+          "supersampleScale": 1
         }
       }
     }
@@ -426,26 +733,26 @@
   "orderingContext": {
     "scopeKey": "account:705:club:58977",
     "revision": 0,
-    "resolvedAt": "2026-08-31T02:21:55.040Z"
+    "resolvedAt": "2026-09-21T07:18:22.178Z"
   },
   "organisation": {
     "type": "club",
     "id": 58977
   },
-  "generationIdentity": "46e8ced389f60923edfa029bfad34630e78a4dff6fc31633fb7d711b6c2341f7",
+  "generationIdentity": "2827bde5742f5fd9cefc23deadae16bcc147e7149fdc215b557443c5bafb38d8",
   "generationManifest": {
     "orderingContext": {
       "scopeKey": "account:705:club:58977",
       "revision": 0,
-      "resolvedAt": "2026-08-31T02:21:55.040Z"
+      "resolvedAt": "2026-09-21T07:18:22.178Z"
     },
     "organisation": {
       "type": "club",
       "id": 58977
     },
-    "generationIdentity": "46e8ced389f60923edfa029bfad34630e78a4dff6fc31633fb7d711b6c2341f7",
+    "generationIdentity": "2827bde5742f5fd9cefc23deadae16bcc147e7149fdc215b557443c5bafb38d8",
     "schedulerId": 598,
-    "renderId": 9032,
-    "fixtureIds": ["b854c1c7", "e4e61f32"]
+    "renderId": 9068,
+    "fixtureIds": ["eea83c8f", "a8f7c0ff", "b75c9bd3"]
   }
 }

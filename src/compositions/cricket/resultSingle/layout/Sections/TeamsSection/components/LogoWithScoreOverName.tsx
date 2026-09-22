@@ -3,18 +3,12 @@ import { AnimatedContainer } from "../../../../../../../components/containers/An
 import { useThemeContext } from "../../../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../../../core/context/AnimationContext";
 import { TeamsSectionProps } from "../_types/TeamsSectionProps";
-import {
-  ResultScore,
-  ResultScoreFirstInnings,
-} from "../../../../../utils/primitives/ResultScore";
 import { ResultTeamName } from "../../../../../utils/primitives/ResultTeamName";
 import TeamLogo from "../../../../../utils/primitives/TeamLogo";
 import { ResultSyntax } from "../../../../../utils/primitives/ResultSyntax";
-import {
-  normalizeScore,
-  getFirstInningsDisplay,
-  normalizeOvers,
-} from "../_utils/helpers";
+import { normalizeOvers } from "../_utils/helpers";
+import { resolveTeamMatchScore } from "../../../../../utils/teamMatchScore";
+import { TeamScoreStack } from "../../../../../utils/TeamScoreStack";
 
 export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   type,
@@ -29,14 +23,22 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
 
-  // Get background color from theme
   const backgroundColor = selectedPalette.container.backgroundTransparent.high;
-
-  // Logo size based on height - larger for single match display
   const logoSize = `w-[120px] h-[120px]`;
 
   const homeOvers = normalizeOvers(homeTeam.overs);
   const awayOvers = normalizeOvers(awayTeam.overs);
+
+  const homeScores = resolveTeamMatchScore(
+    type,
+    homeTeam.score,
+    homeTeam.homeScoresFirstInnings,
+  );
+  const awayScores = resolveTeamMatchScore(
+    type,
+    awayTeam.score,
+    awayTeam.awayScoresFirstInnings,
+  );
 
   return (
     <AnimatedContainer
@@ -51,7 +53,6 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
       animationDelay={delay}
     >
       <div className="grid grid-cols-5 gap-12 justify-center items-center w-full">
-        {/* Home team section */}
         <div className="flex flex-col items-center space-y-3 col-span-2">
           <div
             className={`${logoSize} flex justify-center items-center overflow-hidden`}
@@ -62,42 +63,29 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
               delay={delay + 3}
             />
           </div>
-          <div className="flex flex-col items-center">
-            <div className="flex flex-row items-end">
-              <div className="flex flex-col items-end">
-                {getFirstInningsDisplay(type, homeTeam.homeScoresFirstInnings)
-                  .show && (
-                  <ResultScoreFirstInnings
-                    value={
-                      getFirstInningsDisplay(
-                        type,
-                        homeTeam.homeScoresFirstInnings,
-                      ).value
-                    }
-                    animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                  />
-                )}
-                <ResultScore
-                  value={normalizeScore(homeTeam.score)}
-                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-                />
-              </div>
-              {homeOvers && (
-                <ResultSyntax
-                  value={`${homeOvers}`}
-                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-                />
-              )}
-            </div>
+          <div className="flex flex-col items-center space-y-1">
             <ResultTeamName
               value={homeTeam.name.toUpperCase()}
               animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
               className="text-center"
             />
+            <div className="flex flex-row items-end justify-center">
+              <TeamScoreStack
+                scores={homeScores}
+                delay={delay}
+                align="end"
+                textAnimations={TextAnimations}
+              />
+              {homeOvers ? (
+                <ResultSyntax
+                  value={`${homeOvers}`}
+                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+                />
+              ) : null}
+            </div>
           </div>
         </div>
 
-        {/* VS or match status in the middle */}
         <div className="flex flex-col items-center px-4 col-span-1">
           <ResultTeamName
             value={`VS`}
@@ -106,7 +94,6 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
           />
         </div>
 
-        {/* Away team section */}
         <div className="flex flex-col items-center space-y-3 col-span-2">
           <div
             className={`${logoSize} flex justify-center items-center overflow-hidden`}
@@ -117,38 +104,26 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
               delay={delay + 5}
             />
           </div>
-          <div className="flex flex-col items-center">
-            <div className="flex flex-row items-end">
-              <div className="flex flex-col items-end">
-                {getFirstInningsDisplay(type, awayTeam.awayScoresFirstInnings)
-                  .show && (
-                  <ResultScoreFirstInnings
-                    value={
-                      getFirstInningsDisplay(
-                        type,
-                        awayTeam.awayScoresFirstInnings,
-                      ).value
-                    }
-                    animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                  />
-                )}
-                <ResultScore
-                  value={normalizeScore(awayTeam.score)}
-                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-                />
-              </div>
-              {awayOvers && (
-                <ResultSyntax
-                  value={`${awayOvers}`}
-                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
-                />
-              )}
-            </div>
+          <div className="flex flex-col items-center space-y-1">
             <ResultTeamName
               value={awayTeam.name.toUpperCase()}
               animation={{ ...TextAnimations.copyIn, delay: delay + 2 }}
               className="text-center"
             />
+            <div className="flex flex-row items-end justify-center">
+              <TeamScoreStack
+                scores={awayScores}
+                delay={delay}
+                align="end"
+                textAnimations={TextAnimations}
+              />
+              {awayOvers ? (
+                <ResultSyntax
+                  value={`${awayOvers}`}
+                  animation={{ ...TextAnimations.copyIn, delay: delay + 1 }}
+                />
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
@@ -156,5 +131,4 @@ export const LogoWithScoreOverName: React.FC<TeamsSectionProps> = ({
   );
 };
 
-// Add default export
 export default LogoWithScoreOverName;

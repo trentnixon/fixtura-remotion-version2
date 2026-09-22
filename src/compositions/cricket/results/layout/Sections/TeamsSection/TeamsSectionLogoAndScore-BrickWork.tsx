@@ -6,13 +6,9 @@ import {
   LogoPlate,
   useBrickworkTypography,
 } from "../../../../../../templates/variants/brickwork/design";
-import {
-  ResultScore,
-  ResultScoreFirstInnings,
-} from "../../../../utils/primitives/ResultScore";
-
 import { TeamsSectionProps } from "./_types/TeamsSectionProps";
-import { getFirstInningsDisplay, normalizeScore } from "./_utils/helpers";
+import { resolveTeamMatchScore } from "../../../../utils/teamMatchScore";
+import { TeamScoreStack } from "../../../../utils/TeamScoreStack";
 
 /**
  * Brickwork-template-specific teams section (logos + scores).
@@ -37,12 +33,14 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
   // Logo fits container height (square, capped at container)
   const logoSize = containerHeight ? Math.min(containerHeight, 120) : 90;
 
-  const homeFirstInnings = getFirstInningsDisplay(
+  const homeScores = resolveTeamMatchScore(
     type,
+    homeTeam.score,
     homeTeam.homeScoresFirstInnings,
   );
-  const awayFirstInnings = getFirstInningsDisplay(
+  const awayScores = resolveTeamMatchScore(
     type,
+    awayTeam.score,
     awayTeam.awayScoresFirstInnings,
   );
 
@@ -63,22 +61,14 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
           style={backgroundColor ? { backgroundColor } : undefined}
         >
           <div className="flex flex-1 flex-col items-center justify-center px-2 h-full">
-            {homeFirstInnings.show && (
-              <ResultScoreFirstInnings
-                value={homeFirstInnings.value}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                variant="onContainerCopy"
-                fontFamily={scoreFontFamily}
-                className="font-normal"
-              />
-            )}
-
-            <ResultScore
-              value={normalizeScore(homeTeam.score)}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            <TeamScoreStack
+              scores={homeScores}
+              delay={delay}
+              align="center"
+              textAnimations={TextAnimations}
               variant="onContainerCopy"
               fontFamily={scoreFontFamily}
-              className="font-normal"
+              scoreClassName="font-normal leading-none"
             />
           </div>
           <LogoPlate
@@ -101,19 +91,14 @@ export const TeamsSectionLogoAndScoreBrickWork: React.FC<TeamsSectionProps> = ({
             delay={delay + 20}
           />
           <div className="flex flex-1 flex-col items-center justify-center px-2 h-full">
-            {awayFirstInnings.show && (
-              <ResultScoreFirstInnings
-                value={awayFirstInnings.value}
-                animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
-                variant="onContainerCopy"
-                fontFamily={scoreFontFamily}
-              />
-            )}
-            <ResultScore
-              value={normalizeScore(awayTeam.score)}
-              animation={{ ...TextAnimations.copyIn, delay: delay + 30 }}
+            <TeamScoreStack
+              scores={awayScores}
+              delay={delay}
+              align="center"
+              textAnimations={TextAnimations}
               variant="onContainerCopy"
               fontFamily={scoreFontFamily}
+              scoreClassName="font-normal leading-none"
             />
           </div>
         </div>

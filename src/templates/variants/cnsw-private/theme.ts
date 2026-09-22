@@ -61,10 +61,10 @@ export const cnswTheme: TemplateThemeConfig = {
       className: "text-2xl font-normal  tracking-wide leading-loose",
     },
     ResultScore: {
-      className: "text-6xl font-bold  tracking-normal leading-tight ",
+      className: "text-5xl font-bold tracking-normal leading-none",
     },
     ResultScoreFirstInnings: {
-      className: "text-3xl font-bold  tracking-normal leading-tight ",
+      className: "text-[2.1rem] font-bold tracking-normal leading-none",
     },
     ResultScoreYetToBat: {
       className: "text-3xl font-bold  tracking-wider py-6",

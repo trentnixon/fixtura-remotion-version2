@@ -48,6 +48,7 @@ export const ScorelineResultMatchContent: React.FC<
       <div className="team-score-area">
         <ScorelineTeamBand
           team={match.homeTeam}
+          matchType={match.type}
           logoUrl={match.teamHomeLogo?.url || match.homeTeam.logo?.url || ""}
           isClubTeam={match.homeTeam.isClubTeam}
           side="home"
@@ -75,6 +76,7 @@ export const ScorelineResultMatchContent: React.FC<
         )}
         <ScorelineTeamBand
           team={match.awayTeam}
+          matchType={match.type}
           logoUrl={match.teamAwayLogo?.url || match.awayTeam.logo?.url || ""}
           isClubTeam={match.awayTeam.isClubTeam}
           side="away"

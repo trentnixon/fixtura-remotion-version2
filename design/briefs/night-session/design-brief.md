@@ -54,7 +54,8 @@ Night Session brings the character of a premium televised cricket competition to
 ### Creative direction
 
 - Premium broadcast character with generous breathing room wherever the existing density rules allow it.
-- Explore Teko for titles and scores, with Heebo for team names and supporting text.
+- Explore Teko for titles and large display numerals, with Source Sans 3 for team names, ladder row copy, metadata, and supporting text (regular weight on dense row data unless hierarchy requires otherwise).
+- **Typography roles (implementation):** `--font-display` (Teko) only on asset title lockups (`header-eyebrow`, `header-title`, intro), optional section display labels (e.g. performance headings), and decorative watermark numerals. All ledger row data — names, scores, stats, dates, outcomes, performance figures — uses `--font-body` (Source Sans 3), typically regular weight.
 - Narrow uppercase display lettering, a compact accent label where existing header fields allow it, and quieter supporting text.
 - Thin, low-contrast rules and dark repeated surfaces provide rhythm without strong grids around every field.
 - Compact, recognisable team crests act as sharp identity markers.
@@ -69,6 +70,7 @@ Night Session brings the character of a premium televised cricket competition to
 
 ## Family consistency and asset exceptions
 
+- **Distinct from other Fixtura variants:** Night Session is its own template family. Do not match Broadcast Pro, Scoreline, or other variants by reusing their typography pairings, label treatments, or “same fonts, different colours.” Shared engineering patterns (registry, theme shape) are not a licence to copy another variant’s look. **Teko** is for display/title lockups and large numerals where specified; **Source Sans 3** is the body/support face for readable names, metadata, ladder row copy, and stats. Do not default to Rajdhani body (Broadcast Pro) or treat Scoreline’s Barlow + Source Sans pairing as interchangeable with Night Session.
 - Shared direction: compact centred title lockup, independent organisation stamp, shared content-width alignment, near-black connected surfaces, thin structural rules, restrained accent geometry, and quiet integrated footer. Confirmed 2026-09-14.
 - Match-only geometry: mirrored opposing-team bands apply to match-based assets. Ladders, rosters, and player assets translate the same alignment, surface, and rule language into structures appropriate to their data; they do not imitate a match comparison.
 - Asset-specific exceptions: none requested. Weekend Results receives the first design attention.
@@ -87,7 +89,7 @@ Night Session brings the character of a premium televised cricket competition to
 - User likes: near-black field, one bright accent, oversized condensed uppercase heading, small coloured label, central composition, negative space, thin rules, repeated dark rows, compact crests, bright ranking numbers, cropped geometry, uneven angular shapes, short parallel lines, and integrated sponsor marks.
 - Avoid or exclude: literal ladder structure, reference branding and exact geometry, fixed yellow palette, background texture, photography, social repost caption, and pink sticker below the graphic.
 - Composition interpretation: compact centred label and title, independent upper-right club mark, and restrained geometry connecting those header regions. Translate repeated dark rows into complete match compositions; match geometry is pending.
-- Typography interpretation: narrow uppercase display character with a more readable supporting face. Teko and Heebo are the agreed initial exploration, not an identification of the screenshot's fonts.
+- Typography interpretation: narrow uppercase display character with a more readable supporting face. Teko + Source Sans 3 is the current pairing; do not conflate with other variants’ font stacks.
 - Spacing interpretation: preserve breathing room within existing density rules. Do not reproduce the reference's large unused title and perimeter areas at the expense of matches.
 - Colour interpretation: translate yellow emphasis to fixture primary colour. Use secondary colour sparingly. Dark contrast protection belongs to overlays, independent of Remotion backgrounds.
 - Motif interpretation: create original cropped angles and short parallel lines on overlay edges. Do not trace the branded shapes.
@@ -179,7 +181,7 @@ The user identified a separate result badge as a risk of drifting toward Scoreli
 | Identity              | Night Session, night-session, NightSession                                                                                               | New template identity, no registration during interview          | Confirmed                                                       |
 | Hierarchy             | Title as entry point, names and full scores lead each match                                                                              | Compact title and strong match emphasis within current anatomy   | Confirmed                                                       |
 | Structure             | Reconsider proportions, alignment, and grouping while preserving cricket structure, complete data, and conditional behaviour             | Develop an original composition                                  | Confirmed 2026-09-14                                            |
-| Typography            | Start with Teko and Heebo, permit refinement                                                                                             | Explore condensed display and readable support after hydration   | Confirmed                                                       |
+| Typography            | Teko display + Source Sans 3 body; distinct from other variants                                                                          | Condensed titles; readable regular-weight row copy where needed  | Confirmed (refined 2026-09)                                     |
 | Colour                | Dark surfaces, primary accent, sparse secondary, soft white text                                                                         | Fixture-driven colour roles with overlay contrast protection     | Confirmed                                                       |
 | Geometry              | Restrained signature without consuming content space                                                                                     | Original edge and transition details                             | Confirmed                                                       |
 | Performances          | Preserve required cricket structure and conditional behaviour                                                                            | Distinct performance roles, clean collapse, no enlarged outcome  | Confirmed 2026-09-14                                            |
