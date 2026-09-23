@@ -37975,6 +37975,7 @@ var MudgeerabaSingleTeamHeader = ({ team, teamLogo, delay, outerContainer }) => 
                       variant: "circle",
                       size: logoSize,
                       emphasisBorder: true,
+                      fullBleed: true,
                       className: "z-30 relative self-center shrink-0",
                       style: { marginRight: "-10px" },
                       children: /* @__PURE__ */ jsx363(
@@ -37983,8 +37984,13 @@ var MudgeerabaSingleTeamHeader = ({ team, teamLogo, delay, outerContainer }) => 
                           logo: teamLogo || null,
                           teamName: team.name,
                           delay: delay + 20,
-                          size: 20,
-                          fit: "cover"
+                          size: logoSize,
+                          fit: "cover",
+                          imgStyle: {
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover"
+                          }
                         }
                       )
                     }
@@ -43180,6 +43186,7 @@ var MudgeerabaSingleTeamHeader2 = ({ team, teamLogo, delay, outerContainer }) =>
                       variant: "circle",
                       size: logoSize,
                       emphasisBorder: true,
+                      fullBleed: true,
                       className: "z-30 relative self-center shrink-0",
                       style: { marginRight: "-10px" },
                       children: /* @__PURE__ */ jsx437(
@@ -43188,8 +43195,13 @@ var MudgeerabaSingleTeamHeader2 = ({ team, teamLogo, delay, outerContainer }) =>
                           logo: teamLogo || null,
                           teamName: team.name,
                           delay: delay + 20,
-                          size: 20,
-                          fit: "cover"
+                          size: logoSize,
+                          fit: "cover",
+                          imgStyle: {
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover"
+                          }
                         }
                       )
                     }
