@@ -10,6 +10,7 @@ import {
 import type {
   BroadcastProRoundedGlassStyle,
   BroadcastProRoundedGlassSurfaceRole,
+  BroadcastProRoundedSurfaceConnection,
 } from "../glass";
 
 export interface BroadcastProRoundedGlassPanelProps {
@@ -19,6 +20,7 @@ export interface BroadcastProRoundedGlassPanelProps {
   glass?: BroadcastProRoundedGlassStyle;
   /** Semantic surface tier; defaults to primary panel glass. */
   surface?: Exclude<BroadcastProRoundedGlassSurfaceRole, "logoWell">;
+  connection?: BroadcastProRoundedSurfaceConnection;
   /**
    * When set, fades/scales the glass shell in (use {@link resultContainerDelay}
    * so it leads the copy slightly).
@@ -36,6 +38,7 @@ export const BroadcastProRoundedGlassPanel: React.FC<
   style,
   glass: glassOverride,
   surface = "panel",
+  connection = "standalone",
   animationDelay,
   exitFrame,
 }) => {
@@ -63,7 +66,7 @@ export const BroadcastProRoundedGlassPanel: React.FC<
       className={`overflow-hidden ${layout.borderRadius.container} ${className}`.trim()}
       style={{
         background: getBroadcastProRoundedGlassSurface(glass, surface),
-        border: glass.border,
+        border: connection === "standalone" ? glass.border : undefined,
         ...cellBlur,
         ...style,
       }}

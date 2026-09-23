@@ -53,12 +53,7 @@ export const buildBroadcastProTop5StatMatrixCells = (
   player: PlayerData,
 ): BroadcastProStatMatrixCell[] => {
   if (isBatter(player)) {
-    return battingDualCells(
-      player.runs,
-      player.balls,
-      player.notOut,
-      "full",
-    );
+    return battingDualCells(player.runs, player.balls, player.notOut, "full");
   }
   if (isBowler(player)) {
     return bowlingTripleCells(

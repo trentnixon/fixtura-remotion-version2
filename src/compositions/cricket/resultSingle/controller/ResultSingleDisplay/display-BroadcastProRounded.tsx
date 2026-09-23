@@ -27,7 +27,7 @@ const ResultSingleDisplayBroadcastProRounded: React.FC<
       >
         <AnimatedContainer
           type="full"
-          className={`flex w-full flex-shrink-0 flex-col overflow-hidden ${layout.borderRadius.container}`}
+          className="flex w-full flex-shrink-0 flex-col overflow-hidden"
           backgroundColor="none"
           animation={containerAnimation.containerIn}
         >

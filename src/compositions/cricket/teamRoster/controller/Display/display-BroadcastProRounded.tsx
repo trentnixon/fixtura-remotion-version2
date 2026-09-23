@@ -21,7 +21,7 @@ import type { BroadcastProRoundedGlassStyle } from "../../../utils/broadcastProR
 import { useFittedTextBoxFontSize } from "../../../../../components/typography/utils/useFittedTextBoxFontSize";
 import { getBroadcastProRoundedRosterSidebarWidth } from "../../../../../templates/types/broadcast-pro-rounded/roster-list-sizing";
 
-/** Resolve Broadcast Pro `componentStyles` by key (falls back to empty). */
+/** Resolve Broadcast Pro Rounded `componentStyles` by key (falls back to empty). */
 const rosterClass = (styles: ComponentStyles, key: string): string =>
   styles[key]?.className ?? "";
 
@@ -70,9 +70,6 @@ const MetaRow: React.FC<{
   </div>
 );
 
-/** Root top padding (`pt-6`) is inside the reserved main-content height box. */
-const ROSTER_ROOT_TOP_PADDING_PX = 24;
-
 const RosterDisplayBroadcastProRounded: React.FC<RosterDisplayProps> = ({
   roster,
 }) => {
@@ -81,10 +78,6 @@ const RosterDisplayBroadcastProRounded: React.FC<RosterDisplayProps> = ({
   const { glass, textOnGlass: textOnContainer } = useBroadcastProRoundedTheme();
   const cellRadius = layout.borderRadius.container;
   const availableHeight = getMainContentHeightReservingFooter(layout.heights);
-  const rosterBodyHeight = Math.max(
-    1,
-    availableHeight - ROSTER_ROOT_TOP_PADDING_PX,
-  );
   const cs = (key: string) => rosterClass(componentStyles, key);
   const titleFontFamily = fontClasses?.heading?.family ?? "Teko";
   const rosterSidebarWidth =
@@ -109,18 +102,24 @@ const RosterDisplayBroadcastProRounded: React.FC<RosterDisplayProps> = ({
     >
       <AnimatedContainer
         type="full"
-        className={`${cs("broadcastProRoundedRosterAnimatedContainer")} min-h-0 flex-1`}
+        className={`${cs("broadcastProRoundedRosterAnimatedContainer")} ${layout.borderRadius.container}`}
         backgroundColor="none"
         animation={DEFAULT_CONTAINER_ANIMATION}
         animationDelay={0}
         exitAnimation={DEFAULT_CONTAINER_EXIT_ANIMATION}
       >
-        <div className={cs("broadcastProRoundedRosterContentShell")}>
+        <div
+          className={cs("broadcastProRoundedRosterContentShell")}
+          style={{
+            height: `${availableHeight}px`,
+            maxHeight: `${availableHeight}px`,
+          }}
+        >
           <div className={cs("broadcastProRoundedRosterGrid")}>
             <div className={cs("broadcastProRoundedRosterLineupColumn")}>
               <BroadcastProRoundedRosterSheet
                 players={roster.teamRoster}
-                availableHeightPx={rosterBodyHeight}
+                availableHeightPx={availableHeight}
                 nameColor={textOnContainer.copy}
               />
             </div>

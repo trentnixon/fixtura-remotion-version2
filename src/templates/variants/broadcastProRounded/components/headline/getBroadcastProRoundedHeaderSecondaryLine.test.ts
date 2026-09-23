@@ -36,15 +36,43 @@ describe("getBroadcastProRoundedHeaderSecondaryLine", () => {
 });
 
 describe("shouldHideBroadcastProRoundedHeaderSecondary", () => {
-  it("hides the secondary chip on ladder, results, and team of the week", () => {
+  it("hides the metadata chip on ladder, top 5, performances, results, result single, upcoming, and team of the week", () => {
     expect(shouldHideBroadcastProRoundedHeaderSecondary("CricketLadder")).toBe(
       true,
     );
+    expect(
+      shouldHideBroadcastProRoundedHeaderSecondary("CricketTop5Batting"),
+    ).toBe(true);
+    expect(
+      shouldHideBroadcastProRoundedHeaderSecondary("CricketTop5Bowling"),
+    ).toBe(true);
+    expect(
+      shouldHideBroadcastProRoundedHeaderSecondary(
+        "CricketBattingPerformances",
+      ),
+    ).toBe(true);
+    expect(
+      shouldHideBroadcastProRoundedHeaderSecondary(
+        "CricketBowlingPerformances",
+      ),
+    ).toBe(true);
     expect(shouldHideBroadcastProRoundedHeaderSecondary("CricketResults")).toBe(
       true,
     );
     expect(
+      shouldHideBroadcastProRoundedHeaderSecondary("CricketResultSingle"),
+    ).toBe(true);
+    expect(
+      shouldHideBroadcastProRoundedHeaderSecondary("CricketUpcoming"),
+    ).toBe(true);
+    expect(
       shouldHideBroadcastProRoundedHeaderSecondary("CricketTeamOfTheWeek"),
     ).toBe(true);
+  });
+
+  it("keeps the chip on roster", () => {
+    expect(shouldHideBroadcastProRoundedHeaderSecondary("CricketRoster")).toBe(
+      false,
+    );
   });
 });

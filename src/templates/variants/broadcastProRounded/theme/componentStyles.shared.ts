@@ -67,7 +67,7 @@ const broadcastProRoundedVerdictBandHero = {
 };
 
 const broadcastProRoundedVerdictBandCompact = {
-  className: "flex items-center justify-center px-6 py-2",
+  className: "flex items-center justify-center px-6 py-3",
 };
 
 const broadcastProRoundedVerdictBandAbandoned = {

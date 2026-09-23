@@ -5,13 +5,15 @@ import { ResultPlayerName } from "../../../../../compositions/cricket/utils/prim
 import { BroadcastProRoundedGlassPanel } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/BroadcastProRoundedGlassPanel";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
 import { useBroadcastProRoundedTheme } from "../../../../../compositions/cricket/utils/broadcastProRounded";
-import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type {
+  BroadcastProRoundedGlassStyle,
+  BroadcastProRoundedSurfaceConnection,
+} from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
 import type {
   AnimationConfig,
   AnimationType,
 } from "../../../../../components/typography/config/animations";
 import { BroadcastProRoundedStatMatrixCompact } from "./BroadcastProRoundedStatMatrixCompact";
-import { resultContainerDelay } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
 
 export type BroadcastProRoundedResultStatTier =
   | "list"
@@ -27,6 +29,7 @@ export interface BroadcastProRoundedStatMatrixResultCellProps {
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
   tier?: BroadcastProRoundedResultStatTier;
+  connection?: BroadcastProRoundedSurfaceConnection;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }
@@ -34,15 +37,15 @@ export interface BroadcastProRoundedStatMatrixResultCellProps {
 const SINGLE_CELL_CLASS =
   "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 const SINGLE_PLAYER_NAME_CLASS =
-  "font-rajdhani !text-[38px] font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
+  "font-rajdhani !text-4xl font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =
-  "font-teko !text-[62px] !font-normal !tracking-wide !leading-none";
+  "font-teko !text-6xl font-normal !tracking-wide !leading-none";
 const SINGLE_STAT_SUFFIX_CLASS =
-  "font-teko !text-[32px] font-normal !tracking-wider !leading-none";
+  "font-teko !text-3xl font-normal !tracking-wider !leading-none";
 const LIST_STAT_PRIMARY_CLASS =
-  "font-teko !text-[32px] !font-normal !tracking-tight !leading-tight";
+  "font-teko !text-3xl font-normal !tracking-tight !leading-tight";
 const LIST_STAT_SUFFIX_CLASS =
-  "font-teko !text-[26px] font-normal !tracking-tight !leading-tight";
+  "font-teko !text-2xl font-normal !tracking-tight !leading-tight";
 const EMBEDDED_CELL_CLASS =
   "flex min-w-0 items-center justify-between gap-2 border-l border-white/20 px-3 py-1 first:border-l-0";
 const EMBEDDED_PLAYER_NAME_CLASS =
@@ -59,6 +62,7 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
   glass,
   className = "",
   tier = "list",
+  connection = "standalone",
   exitAnimation,
   exitFrame,
 }) => {
@@ -94,7 +98,7 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
     <div className={isSingle ? "w-full" : valueClass}>
       <BroadcastProRoundedStatMatrixCompact
         value={statValue}
-        animation={{ ...copyIn, delay: delay + 3 }}
+        animation={{ ...copyIn, delay: delay + 2 }}
         exitAnimation={exitAnimation}
         exitFrame={exitFrame}
         colorVariant={highlight ? "onContainerTitle" : "onContainerCopy"}
@@ -151,7 +155,7 @@ export const BroadcastProRoundedStatMatrixResultCell: React.FC<
     <BroadcastProRoundedGlassPanel
       glass={glass}
       className={`${cellClass} ${isSingle ? SINGLE_CELL_CLASS : ""} ${className}`.trim()}
-      animationDelay={resultContainerDelay(delay)}
+      connection={connection}
       exitFrame={exitFrame}
     >
       {content}

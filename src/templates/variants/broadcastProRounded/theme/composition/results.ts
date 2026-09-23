@@ -13,10 +13,10 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
       "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-[26px] font-normal leading-tight",
+    className: "font-rajdhani text-2xl font-normal leading-tight",
   },
   ResultPlayerScore: {
-    className: "font-teko text-[38px] font-normal tracking-tight leading-tight",
+    className: "font-teko text-4xl font-normal tracking-tight leading-tight",
   },
   ResultSyntax: {
     className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4",
@@ -44,7 +44,7 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
   broadcastProRoundedResultsTeamLogoWell:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedCrestWellGrid,
   broadcastProRoundedResultsTeamName: {
-    className: "min-w-0 truncate",
+    className: "min-w-0 !leading-[0.95]",
   },
   broadcastProRoundedResultsScoreBadge: {
     className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5",
@@ -53,7 +53,7 @@ export const broadcastProRoundedCompositionComponentStylesResults = {
     className: "grid grid-cols-3 gap-2",
   },
   broadcastProRoundedResultsPlayerStatCell: {
-    className: "flex items-center justify-between px-3 py-1.5",
+    className: "flex items-center justify-between px-3 py-2",
   },
   broadcastProRoundedResultsPlayerStatName: {
     className: "min-w-0 truncate",

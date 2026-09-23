@@ -33,7 +33,8 @@ export const broadcastProRoundedCompositionComponentStylesPlayerRanking = {
     className: "relative flex flex-col overflow-hidden",
   },
   broadcastProRoundedPlayerRankingFeaturedBody: {
-    className: "relative flex min-h-[200px] items-stretch overflow-hidden pt-10",
+    className:
+      "relative flex min-h-[200px] items-stretch overflow-hidden pt-10",
   },
   broadcastProRoundedPlayerRankingGridCard: {
     className:

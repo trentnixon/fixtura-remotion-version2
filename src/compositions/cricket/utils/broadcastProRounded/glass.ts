@@ -18,6 +18,8 @@ export type BroadcastProRoundedGlassSurfaceRole =
   | "dataCellStrong"
   | "logoWell";
 
+export type BroadcastProRoundedSurfaceConnection = "standalone" | "attached";
+
 export interface BroadcastProRoundedGlassStyle {
   panel: string;
   border: string;

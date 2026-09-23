@@ -113,15 +113,15 @@ Logo wells isolate unpredictable crest artwork inside **square containers** on r
 
 **Sizing:** **`resolveBroadcastProCrestWellSize.ts`** in `src/compositions/cricket/utils/broadcastPro/crest/` — tier tokens in **`broadcastProCrestSizing`** (`theme/tokens.ts`). Default **85%** content inset (Results/stitch); grid/featured use **100%** with flex-centred padding.
 
-| Tier           | Default / rule                                              | Surfaces                                   |
-| -------------- | ----------------------------------------------------------- | ------------------------------------------ |
-| **compact**    | 48px                                                        | Results team row, TotW card, TotW 12th man |
-| **row**        | Adaptive `clamp` (min 24–36 by height)                      | Ladder                                     |
+| Tier           | Default / rule                                           | Surfaces                                   |
+| -------------- | -------------------------------------------------------- | ------------------------------------------ |
+| **compact**    | 48px                                                     | Results team row, TotW card, TotW 12th man |
+| **row**        | Adaptive `clamp` (min 24–36 by height)                   | Ladder                                     |
 | **fixture**    | width `clamp(…, 136)`; height = matchup; logo full-bleed | Upcoming                                   |
-| **grid**       | 80px (sm: 96px)                                             | Top 5 grid, Performances grid              |
-| **featured**   | 176px                                                       | Top 5 #1 featured card                     |
-| **rosterHome** | 128px                                                       | Roster home team card                      |
-| **rosterAway** | 96px                                                        | Roster away team card                      |
+| **grid**       | 80px (sm: 96px)                                          | Top 5 grid, Performances grid              |
+| **featured**   | 176px                                                    | Top 5 #1 featured card                     |
+| **rosterHome** | 128px                                                    | Roster home team card                      |
+| **rosterAway** | 96px                                                     | Roster away team card                      |
 
 **Theme keys** in **`componentStyles.shared.ts`**: `broadcastProCrestWellCompact`, `broadcastProCrestWellRow`, `broadcastProCrestWellFixture`, `broadcastProCrestWellGrid`, `broadcastProCrestWellFeatured`, `broadcastProCrestWellRosterHome`, `broadcastProCrestWellRosterAway`. Composition logo-well keys alias these tiers (Results, TotW, player ranking, roster).
 

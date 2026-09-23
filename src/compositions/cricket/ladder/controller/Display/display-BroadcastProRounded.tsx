@@ -20,13 +20,17 @@ const HEADER_EXTRA_FOR_GRADE = 44;
 /** Cap row height to ~stat column width so cells stay square; extra asset height stays empty below. */
 const BROADCAST_PRO_MAX_ROW_HEIGHT = 96;
 
-const getBroadcastProRoundedRowGap = (): {
-  gapPx: number;
-  gapClass: string;
-} => ({
-  gapPx: 4,
-  gapClass: "gap-1",
-});
+/** 2px gap below this count; none from 10 teams up (more vertical room for rows). */
+const BROADCAST_PRO_ROW_GAP_FROM = 10;
+
+const getBroadcastProRoundedRowGap = (
+  teamCount: number,
+): { gapPx: number; gapClass: string } => {
+  if (teamCount >= BROADCAST_PRO_ROW_GAP_FROM) {
+    return { gapPx: 0, gapClass: "gap-0" };
+  }
+  return { gapPx: 2, gapClass: "gap-0.5" };
+};
 
 export const LadderDisplayBroadcastProRounded: React.FC<LadderDisplayProps> = ({
   ladder,
@@ -38,7 +42,7 @@ export const LadderDisplayBroadcastProRounded: React.FC<LadderDisplayProps> = ({
   const { heights } = layout;
   const { accent } = useBroadcastProRoundedTheme();
 
-  const { gapPx, gapClass } = getBroadcastProRoundedRowGap();
+  const { gapPx, gapClass } = getBroadcastProRoundedRowGap(League.length);
   const mainContentHeight = getMainContentSectionHeight(heights);
 
   const {

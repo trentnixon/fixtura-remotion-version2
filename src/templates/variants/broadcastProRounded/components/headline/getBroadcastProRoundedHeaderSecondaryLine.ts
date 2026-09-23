@@ -6,6 +6,10 @@ export const BROADCAST_PRO_ROUNDED_HEADER_WITHOUT_SECONDARY = new Set([
   "CricketResults",
   "CricketUpcoming",
   "CricketLadder",
+  "CricketTop5Batting",
+  "CricketTop5Bowling",
+  "CricketBattingPerformances",
+  "CricketBowlingPerformances",
   "CricketTeamOfTheWeek",
 ]);
 

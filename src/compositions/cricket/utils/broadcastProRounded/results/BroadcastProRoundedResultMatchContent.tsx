@@ -15,9 +15,10 @@ import {
   buildCompactVerdictLine,
 } from "./buildBroadcastProRoundedVerdictModel";
 import { BroadcastProRoundedResultMetaStrip } from "./BroadcastProRoundedResultMetaStrip";
-import { BroadcastProRoundedResultPlayerStatsGrid } from "./BroadcastProRoundedResultPlayerStatsGrid";
 import { BroadcastProRoundedResultTeamRow } from "./BroadcastProRoundedResultTeamRow";
 import { BroadcastProRoundedMatchup } from "../../../../../templates/variants/broadcastProRounded/components/matchup";
+import { BroadcastProRoundedFixtureFrame } from "../../../../../templates/variants/broadcastProRounded/components/fixture";
+import { BroadcastProRoundedStatMatrixResultGrid } from "../../../../../templates/variants/broadcastProRounded/components/stat";
 import { csClass } from "../componentStyles";
 import { resolveBroadcastProRoundedGlass } from "../glass";
 import {
@@ -77,15 +78,8 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
     broadcastProRoundedTransparentLayers,
   } = useThemeContext();
 
-  const {
-    baseDelay,
-    metaDelay: calculatedMetaDelay,
-    homeTeamDelay,
-    homeStatsDelay,
-    awayTeamDelay,
-    awayStatsDelay,
-    verdictDelay,
-  } = calculateBroadcastProRoundedResultDelays(delay);
+  const { baseDelay, statsDelay, headerDelay } =
+    calculateBroadcastProRoundedResultDelays(delay);
   const primaryAccent = colors?.primary ?? selectedPalette.container.accent;
   const secondaryAccent = colors?.secondary ?? primaryAccent;
   const teamAccents = resolveBroadcastProRoundedTeamAccentColors({
@@ -96,6 +90,9 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
   });
   const verdict = buildBroadcastProRoundedVerdictModel(match);
   const compactLine = buildCompactVerdictLine(match);
+  const winnerName = match.resultSummary?.winner?.trim() ?? "";
+  const homeIsWinner = winnerName === match.homeTeam.name.trim();
+  const awayIsWinner = winnerName === match.awayTeam.name.trim();
   const copyIn = animations.text.main.copyIn;
   const copyOut = animations.text.main.copyOut;
   const exitFrame =
@@ -110,7 +107,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
     compactLine != null;
   const showAbandonedVerdict = verdict?.kind === "abandoned";
 
-  const metaDelay = showHeroVerdict ? baseDelay + 8 : calculatedMetaDelay;
+  const metaDelay = showHeroVerdict ? baseDelay + 2 : baseDelay;
 
   const glass = useMemo(
     () =>
@@ -173,167 +170,157 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
     compactLine != null
       ? { kind: "compact" as const, line: compactLine }
       : null;
-  const combineTeamAndStats = playerStatsTier === "list";
 
   return (
     <div
-      className={`mx-6 flex h-full w-auto flex-col justify-center gap-2 overflow-hidden md:mx-8 ${className}`.trim()}
+      className={`mx-6 flex h-full w-auto flex-col overflow-hidden md:mx-8 ${className}`.trim()}
       style={style}
     >
-      <div className="flex w-full shrink-0 flex-col gap-2">
-        {showHeroVerdict && verdict?.kind === "hero" && (
+      <BroadcastProRoundedFixtureFrame
+        accentColor={primaryAccent}
+        glass={glass}
+        className="flex h-full min-h-0 flex-1 flex-col justify-center gap-2"
+      >
+        <div className="flex w-full shrink-0 flex-col gap-2">
+          {showHeroVerdict && verdict?.kind === "hero" && (
+            <BroadcastProRoundedResultVerdict
+              model={verdict}
+              tier="hero"
+              accentColor={primaryAccent}
+              delay={baseDelay}
+              glass={glass}
+              animation={copyIn}
+              exitAnimation={copyOut}
+              exitFrame={exitFrame}
+              connection="attached"
+            />
+          )}
+
+          <div style={{ borderBottom: glass.border }}>
+            <BroadcastProRoundedResultMetaStrip
+              gradeLabel={buildGradeLabel(match)}
+              ground={match.ground}
+              delay={metaDelay}
+              showGround={showGround}
+              connection="attached"
+              exitAnimation={copyOut}
+              exitFrame={exitFrame}
+            />
+          </div>
+        </div>
+
+        <BroadcastProRoundedMatchup
+          tier="result"
+          home={{
+            teamName: match.homeTeam.name,
+            logo: match.teamHomeLogo ?? null,
+          }}
+          away={{
+            teamName: match.awayTeam.name,
+            logo: match.teamAwayLogo ?? null,
+          }}
+          glass={glass}
+          className={`${matchBlockClass} min-h-0 shrink-0 !gap-2`}
+          renderResultBlock={(side) => {
+            if (side === "home") {
+              return (
+                <div className="flex min-h-0 flex-col gap-2">
+                  <BroadcastProRoundedResultTeamRow
+                    teamName={match.homeTeam.name}
+                    score={normalizeScore(match.homeTeam.score)}
+                    logo={match.teamHomeLogo}
+                    firstInnings={
+                      homeFirstInnings.show ? homeFirstInnings.value : null
+                    }
+                    accentColor={teamAccents.home}
+                    delay={metaDelay}
+                    matchType={match.type}
+                    glass={glass}
+                    connection="attached"
+                    scoreEmphasis={homeIsWinner ? "winner" : "standard"}
+                    crestSize={
+                      playerStatsTier === "single" ? "hero" : "standard"
+                    }
+                    exitAnimation={copyOut}
+                    exitFrame={exitFrame}
+                  />
+                  <BroadcastProRoundedStatMatrixResultGrid
+                    items={homeStats}
+                    delay={statsDelay}
+                    accentColor={teamAccents.home}
+                    glass={glass}
+                    tier={playerStatsTier}
+                    connection="attached"
+                    exitAnimation={copyOut}
+                    exitFrame={exitFrame}
+                  />
+                </div>
+              );
+            }
+            return (
+              <div className="flex min-h-0 flex-col gap-2">
+                <BroadcastProRoundedResultTeamRow
+                  teamName={match.awayTeam.name}
+                  score={normalizeScore(match.awayTeam.score)}
+                  logo={match.teamAwayLogo}
+                  firstInnings={
+                    awayFirstInnings.show ? awayFirstInnings.value : null
+                  }
+                  accentColor={teamAccents.away}
+                  delay={statsDelay + 4}
+                  matchType={match.type}
+                  glass={glass}
+                  connection="attached"
+                  scoreEmphasis={awayIsWinner ? "winner" : "standard"}
+                  crestSize={playerStatsTier === "single" ? "hero" : "standard"}
+                  exitAnimation={copyOut}
+                  exitFrame={exitFrame}
+                />
+                <BroadcastProRoundedStatMatrixResultGrid
+                  items={awayStats}
+                  delay={statsDelay + 8}
+                  accentColor={teamAccents.away}
+                  glass={glass}
+                  tier={playerStatsTier}
+                  connection="attached"
+                  exitAnimation={copyOut}
+                  exitFrame={exitFrame}
+                />
+              </div>
+            );
+          }}
+        />
+
+        {showAbandonedVerdict && verdict?.kind === "abandoned" && (
           <BroadcastProRoundedResultVerdict
             model={verdict}
-            tier="hero"
+            tier="abandoned"
             accentColor={primaryAccent}
-            delay={baseDelay}
+            delay={headerDelay}
             glass={glass}
             animation={copyIn}
             exitAnimation={copyOut}
             exitFrame={exitFrame}
+            connection="attached"
+            className="shrink-0"
           />
         )}
 
-        <BroadcastProRoundedResultMetaStrip
-          gradeLabel={buildGradeLabel(match)}
-          ground={match.ground}
-          delay={metaDelay}
-          showGround={showGround}
-          exitAnimation={copyOut}
-          exitFrame={exitFrame}
-        />
-      </div>
-      <BroadcastProRoundedMatchup
-        tier="result"
-        home={{
-          teamName: match.homeTeam.name,
-          logo: match.teamHomeLogo ?? null,
-        }}
-        away={{
-          teamName: match.awayTeam.name,
-          logo: match.teamAwayLogo ?? null,
-        }}
-        glass={glass}
-        className={`${matchBlockClass} min-h-0 shrink-0`}
-        renderResultBlock={(side) => {
-          if (side === "home") {
-            return (
-              <div className="flex min-h-0 flex-col gap-2">
-                <BroadcastProRoundedResultTeamRow
-                  teamName={match.homeTeam.name}
-                  score={normalizeScore(match.homeTeam.score)}
-                  logo={match.teamHomeLogo}
-                  firstInnings={
-                    homeFirstInnings.show ? homeFirstInnings.value : null
-                  }
-                  accentColor={teamAccents.home}
-                  delay={homeTeamDelay}
-                  matchType={match.type}
-                  glass={glass}
-                  crestSize={playerStatsTier === "single" ? "hero" : "standard"}
-                  performanceContent={
-                    combineTeamAndStats ? (
-                      <BroadcastProRoundedResultPlayerStatsGrid
-                        items={homeStats}
-                        delay={homeStatsDelay}
-                        accentColor={teamAccents.home}
-                        glass={glass}
-                        tier="listEmbedded"
-                        exitAnimation={copyOut}
-                        exitFrame={exitFrame}
-                      />
-                    ) : undefined
-                  }
-                  exitAnimation={copyOut}
-                  exitFrame={exitFrame}
-                />
-                {!combineTeamAndStats && (
-                  <BroadcastProRoundedResultPlayerStatsGrid
-                    items={homeStats}
-                    delay={homeStatsDelay}
-                    accentColor={teamAccents.home}
-                    glass={glass}
-                    tier={playerStatsTier}
-                    exitAnimation={copyOut}
-                    exitFrame={exitFrame}
-                  />
-                )}
-              </div>
-            );
-          }
-          return (
-            <div className="flex min-h-0 flex-col gap-2">
-              <BroadcastProRoundedResultTeamRow
-                teamName={match.awayTeam.name}
-                score={normalizeScore(match.awayTeam.score)}
-                logo={match.teamAwayLogo}
-                firstInnings={
-                  awayFirstInnings.show ? awayFirstInnings.value : null
-                }
-                accentColor={teamAccents.away}
-                delay={awayTeamDelay}
-                matchType={match.type}
-                glass={glass}
-                crestSize={playerStatsTier === "single" ? "hero" : "standard"}
-                performanceContent={
-                  combineTeamAndStats ? (
-                    <BroadcastProRoundedResultPlayerStatsGrid
-                      items={awayStats}
-                      delay={awayStatsDelay}
-                      accentColor={teamAccents.away}
-                      glass={glass}
-                      tier="listEmbedded"
-                      exitAnimation={copyOut}
-                      exitFrame={exitFrame}
-                    />
-                  ) : undefined
-                }
-                exitAnimation={copyOut}
-                exitFrame={exitFrame}
-              />
-              {!combineTeamAndStats && (
-                <BroadcastProRoundedResultPlayerStatsGrid
-                  items={awayStats}
-                  delay={awayStatsDelay}
-                  accentColor={teamAccents.away}
-                  glass={glass}
-                  tier={playerStatsTier}
-                  exitAnimation={copyOut}
-                  exitFrame={exitFrame}
-                />
-              )}
-            </div>
-          );
-        }}
-      />
-
-      {showAbandonedVerdict && verdict?.kind === "abandoned" && (
-        <BroadcastProRoundedResultVerdict
-          model={verdict}
-          tier="abandoned"
-          accentColor={primaryAccent}
-          delay={verdictDelay}
-          glass={glass}
-          animation={copyIn}
-          exitAnimation={copyOut}
-          exitFrame={exitFrame}
-          className="shrink-0"
-        />
-      )}
-
-      {showCompactVerdict && compactVerdictModel && (
-        <BroadcastProRoundedResultVerdict
-          model={compactVerdictModel}
-          tier="compact"
-          accentColor={primaryAccent}
-          delay={verdictDelay + 4}
-          glass={glass}
-          animation={copyIn}
-          exitAnimation={copyOut}
-          exitFrame={exitFrame}
-          className="shrink-0"
-        />
-      )}
+        {showCompactVerdict && compactVerdictModel && (
+          <BroadcastProRoundedResultVerdict
+            model={compactVerdictModel}
+            tier="compact"
+            accentColor={primaryAccent}
+            delay={headerDelay + 2}
+            glass={glass}
+            animation={copyIn}
+            exitAnimation={copyOut}
+            exitFrame={exitFrame}
+            connection="attached"
+            className="shrink-0"
+          />
+        )}
+      </BroadcastProRoundedFixtureFrame>
     </div>
   );
 };

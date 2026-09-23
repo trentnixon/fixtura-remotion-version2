@@ -7,6 +7,7 @@ import { useBroadcastProRoundedTheme } from "../../../../../compositions/cricket
 import LadderTeamName from "../../../../../compositions/cricket/utils/primitives/ladderTeamName";
 import { useFittedTextBoxFontSize } from "../../../../../components/typography/utils/useFittedTextBoxFontSize";
 import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type { BroadcastProRoundedFixtureDensity } from "../../../../../templates/types/broadcast-pro-rounded/fixture-density";
 import {
   BROADCAST_PRO_MATCHUP_TIER_LAYOUT_KEY,
   type BroadcastProRoundedMatchupSideInput,
@@ -25,6 +26,8 @@ export interface BroadcastProRoundedMatchupProps {
   delay?: number;
   /** Fixture tier: smaller VS + team names when glass panel is short. */
   compact?: boolean;
+  /** Fixture tier selected from the number of fixtures on screen. */
+  fixtureDensity?: BroadcastProRoundedFixtureDensity;
   /** Fixture tier: adaptive crest well sizing. */
   containerHeight?: number;
   className?: string;
@@ -35,6 +38,7 @@ export interface BroadcastProRoundedMatchupProps {
     side: "home" | "away",
     input: BroadcastProRoundedMatchupSideInput,
   ) => React.ReactNode;
+  animateContent?: boolean;
 }
 
 export const BroadcastProRoundedMatchup: React.FC<
@@ -46,11 +50,13 @@ export const BroadcastProRoundedMatchup: React.FC<
   glass,
   delay = 0,
   compact = false,
+  fixtureDensity = "standard",
   containerHeight,
   className = "",
   style,
   fontFamily,
   renderResultBlock,
+  animateContent = true,
 }) => {
   const { componentStyles, fontClasses, layout } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProRoundedTheme();
@@ -93,6 +99,8 @@ export const BroadcastProRoundedMatchup: React.FC<
           glass={glass}
           containerHeight={containerHeight}
           compact={compact}
+          fixtureDensity={fixtureDensity}
+          animateContent={animateContent}
           fontFamily={resolvedFont}
         />
         <BroadcastProRoundedMatchupDivider
@@ -100,6 +108,7 @@ export const BroadcastProRoundedMatchup: React.FC<
           delay={delay}
           compact={compact}
           fontFamily={resolvedFont}
+          animateContent={animateContent}
         />
         <BroadcastProRoundedMatchupSide
           side="away"
@@ -108,6 +117,8 @@ export const BroadcastProRoundedMatchup: React.FC<
           glass={glass}
           containerHeight={containerHeight}
           compact={compact}
+          fixtureDensity={fixtureDensity}
+          animateContent={animateContent}
           fontFamily={resolvedFont}
         />
       </div>

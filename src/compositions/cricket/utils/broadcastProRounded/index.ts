@@ -5,6 +5,7 @@ export {
   resolveBroadcastProRoundedGlass,
   type BroadcastProRoundedGlassStyle,
   type BroadcastProRoundedGlassSurfaceRole,
+  type BroadcastProRoundedSurfaceConnection,
 } from "./glass";
 export { BroadcastProRoundedMetadataChip } from "./BroadcastProRoundedMetadataChip";
 export { csClass } from "./componentStyles";

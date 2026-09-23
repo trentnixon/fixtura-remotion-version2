@@ -12,11 +12,19 @@ export interface BroadcastProRoundedMatchupDividerProps {
   compact?: boolean;
   fontFamily?: string;
   className?: string;
+  animateContent?: boolean;
 }
 
 export const BroadcastProRoundedMatchupDivider: React.FC<
   BroadcastProRoundedMatchupDividerProps
-> = ({ variant, delay = 0, compact = false, fontFamily, className = "" }) => {
+> = ({
+  variant,
+  delay = 0,
+  compact = false,
+  fontFamily,
+  className = "",
+  animateContent = true,
+}) => {
   const { animations } = useAnimationContext();
   const { componentStyles } = useThemeContext();
   const { textOnGlass, headingFont } = useBroadcastProRoundedTheme();
@@ -37,7 +45,10 @@ export const BroadcastProRoundedMatchupDivider: React.FC<
           value="VS"
           role="matchDivider"
           variant="onContainerTitle"
-          animation={{ ...copyIn, delay: delay + 9 }}
+          animation={
+            animateContent ? { ...copyIn, delay: delay + 9 } : { type: "none" }
+          }
+          exitAnimation={animateContent ? undefined : "none"}
           fontFamily={resolvedFont}
           compact={compact}
           style={{ color: textOnGlass.copy }}
@@ -58,7 +69,8 @@ export const BroadcastProRoundedMatchupDivider: React.FC<
       fontFamily={resolvedFont}
       className={`${versusClass} ${className}`.trim()}
       style={{ color: textOnGlass.muted }}
-      animation={{ ...copyIn, delay }}
+      animation={animateContent ? { ...copyIn, delay } : { type: "none" }}
+      exitAnimation={animateContent ? undefined : "none"}
       letterAnimation="none"
     >
       VERSUS

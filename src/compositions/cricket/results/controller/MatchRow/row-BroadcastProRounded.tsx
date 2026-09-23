@@ -8,10 +8,6 @@ import {
   calculateDelay,
   calculateAnimationOutFrame,
 } from "./_utils/calculations";
-import {
-  RESULT_PANEL_CONTAINER_DELAY,
-  resultContainerDelay,
-} from "../../../utils/broadcastProRounded/results/matchContentHelpers";
 
 const MatchRowBroadcastProRounded: React.FC<MatchRowProps> = ({
   match,
@@ -23,20 +19,18 @@ const MatchRowBroadcastProRounded: React.FC<MatchRowProps> = ({
   const { timings } = data;
 
   const containerAnimation = animations.container.main.itemContainer;
-  // Wider row stagger so each match rises in sequence
-  const delay = calculateDelay(index) + index * 4;
+  const delay = calculateDelay(index);
   const animationOutFrame = calculateAnimationOutFrame(timings?.FPS_SCORECARD);
 
   return (
     <div className="h-full w-full">
       <AnimatedContainer
         type="full"
+        size="full"
         className="h-full w-full"
         backgroundColor="none"
         animation={containerAnimation.containerIn}
-        animationDelay={resultContainerDelay(
-          delay + RESULT_PANEL_CONTAINER_DELAY,
-        )}
+        animationDelay={delay}
         exitAnimation={containerAnimation.containerOut}
         exitFrame={animationOutFrame}
       >
@@ -44,7 +38,7 @@ const MatchRowBroadcastProRounded: React.FC<MatchRowProps> = ({
           match={match}
           index={index}
           rowHeight={rowHeight}
-          delay={delay + RESULT_PANEL_CONTAINER_DELAY}
+          delay={delay}
           exitFrame={animationOutFrame}
         />
       </AnimatedContainer>

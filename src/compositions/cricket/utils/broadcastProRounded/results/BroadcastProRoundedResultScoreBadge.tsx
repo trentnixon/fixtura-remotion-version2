@@ -17,6 +17,7 @@ export interface BroadcastProRoundedResultScoreBadgeProps {
   delay: number;
   matchType?: string;
   className?: string;
+  emphasis?: "winner" | "standard";
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }
@@ -30,6 +31,7 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
   delay,
   matchType = "",
   className = "",
+  emphasis = "standard",
   exitAnimation,
   exitFrame,
 }) => {
@@ -55,10 +57,14 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
     <div
       className={`overflow-hidden ${cellRadius} ${badgeClass} ${className}`.trim()}
       style={{
-        ...resolveBroadcastProRoundedEdgeMarkerStyle("standard", "primary", {
-          accentColor,
-          mutedColor: accentColor,
-        }),
+        ...resolveBroadcastProRoundedEdgeMarkerStyle(
+          emphasis === "winner" ? "standard" : "compact",
+          "primary",
+          {
+            accentColor,
+            mutedColor: accentColor,
+          },
+        ),
         background: glass.strong,
       }}
     >
@@ -75,7 +81,7 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
       {showFirstInnings && (
         <ResultScoreFirstInnings
           value={firstInnings}
-          animation={{ ...copyIn, delay: delay + 4 }}
+          animation={{ ...copyIn, delay: delay + 2 }}
           exitAnimation={exitAnimation}
           exitFrame={exitFrame}
           variant="onContainerCopy"

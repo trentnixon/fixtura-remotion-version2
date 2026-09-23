@@ -6,8 +6,9 @@ import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig
  */
 export const broadcastProRoundedCompositionComponentStylesRoster = {
   RosterPlayerName: {
+    /** `block` + relaxed leading: Teko caps need room inside fixed row cells. */
     className:
-      "font-rajdhani block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide",
+      "font-teko block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide",
   },
 
   broadcastProRoundedRosterRoot: {
@@ -18,21 +19,21 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
       "flex min-h-0 min-w-0 flex-shrink-0 items-stretch justify-center self-stretch p-0",
   },
   broadcastProRoundedRosterGrid: {
-    className: "grid h-full min-h-0 flex-1 grid-cols-12 gap-6 overflow-hidden",
+    className: "grid min-h-0 flex-1 grid-cols-12 gap-6 overflow-hidden",
   },
   broadcastProRoundedRosterLineupColumn: {
     className:
-      "col-span-12 flex h-full min-h-0 flex-col overflow-hidden lg:col-span-7",
+      "col-span-12 flex min-h-0 flex-col overflow-hidden lg:col-span-7",
   },
   broadcastProRoundedRosterSidebar: {
     className:
-      "col-span-12 flex min-h-0 flex-col justify-start gap-3 overflow-hidden lg:col-span-5",
+      "col-span-12 flex min-h-0 flex-col gap-3 overflow-hidden lg:col-span-5",
   },
   broadcastProRoundedRosterContentShell: {
-    className: "flex min-h-0 flex-1 flex-col gap-4 px-2",
+    className: "flex min-h-0 flex-col gap-4 px-2",
   },
   broadcastProRoundedRosterAnimatedContainer: {
-    className: "mx-6 flex min-h-0 flex-1 flex-col overflow-hidden",
+    className: "mx-6 flex flex-1 flex-col overflow-hidden",
   },
   broadcastProRoundedRosterPlayerList: {
     className:
@@ -52,7 +53,7 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
     className: "flex flex-shrink-0 flex-col items-center p-3 text-center",
   },
   broadcastProRoundedRosterTeamCardAway: {
-    className: "flex flex-shrink-0 flex-col items-center p-3 text-center",
+    className: "flex flex-col items-center p-3 text-center",
   },
   broadcastProRoundedRosterTeamLogoWellHome: {
     className: "mb-2 flex h-16 w-16 items-center justify-center",
@@ -75,7 +76,8 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
       "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl",
   },
   broadcastProRoundedRosterTeamLabelHome: {
-    className: "font-rajdhani mt-1 text-sm font-normal uppercase tracking-widest",
+    className:
+      "font-rajdhani mt-1 text-sm font-normal uppercase tracking-widest",
   },
   broadcastProRoundedRosterTeamLabelAway: {
     className:
@@ -102,7 +104,7 @@ export const broadcastProRoundedCompositionComponentStylesRoster = {
       "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-[28px]",
   },
   broadcastProRoundedRosterAccentStrip: {
-    className: "w-1.5 shrink-0 self-stretch rounded-full",
+    className: "w-1.5 shrink-0 self-stretch rounded-sm",
   },
 } satisfies Pick<
   ThemeComponentStyles,

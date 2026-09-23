@@ -53,8 +53,6 @@ export const BroadcastProRoundedRosterSheetRow: React.FC<
   const indexResult = resolveBroadcastProRoundedRosterIndex(index);
   const titleFontFamily =
     fontClasses?.heading?.family ?? fonts?.title?.family ?? "Teko";
-  const bodyFontFamily =
-    fontClasses?.body?.family ?? fontClasses?.subheading?.family ?? "Rajdhani";
 
   const indexColor = indexResult.variant === "leader" ? accent : text.muted;
 
@@ -110,7 +108,7 @@ export const BroadcastProRoundedRosterSheetRow: React.FC<
               normalizeRosterPlayerName(playerName).toUpperCase(),
               BROADCAST_PRO_ROSTER_NAME_MAX_LENGTH,
             )}
-            fontFamily={bodyFontFamily}
+            fontFamily={titleFontFamily}
             style={{
               ...rosterCellTextStyle(metrics.nameFontPx, 1.1),
               fontWeight: 400,

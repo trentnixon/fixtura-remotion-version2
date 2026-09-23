@@ -24,6 +24,8 @@ export interface BroadcastProRoundedCrestWellProps {
   style?: CSSProperties;
   /** Ranking wells use glass.border on the well surface. */
   showBorder?: boolean;
+  /** When false, crest logo skips entrance animation (density-locked fixture cards). */
+  animate?: boolean;
 }
 
 const TALL_COVER_TIERS: ReadonlySet<BroadcastProRoundedCrestTier> = new Set([
@@ -55,6 +57,7 @@ export const BroadcastProRoundedCrestWell: React.FC<
   className = "",
   style,
   showBorder = false,
+  animate = true,
 }) => {
   const { componentStyles, broadcastProRoundedCrestSizing, layout } =
     useThemeContext();
@@ -133,6 +136,7 @@ export const BroadcastProRoundedCrestWell: React.FC<
           maxHeight: "100%",
           objectFit: isTallCover ? "cover" : "contain",
         }}
+        animate={animate}
       />
     </div>
   );

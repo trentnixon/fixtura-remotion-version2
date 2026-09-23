@@ -1,7 +1,10 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
-import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type {
+  BroadcastProRoundedGlassStyle,
+  BroadcastProRoundedSurfaceConnection,
+} from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
 import type {
   AnimationConfig,
   AnimationType,
@@ -25,6 +28,7 @@ export interface BroadcastProRoundedStatMatrixResultGridProps {
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
   tier?: BroadcastProRoundedResultStatTier;
+  connection?: BroadcastProRoundedSurfaceConnection;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }
@@ -38,6 +42,7 @@ export const BroadcastProRoundedStatMatrixResultGrid: React.FC<
   glass,
   className = "",
   tier = "list",
+  connection = "standalone",
   exitAnimation,
   exitFrame,
 }) => {
@@ -65,6 +70,7 @@ export const BroadcastProRoundedStatMatrixResultGrid: React.FC<
           accentColor={accentColor}
           glass={glass}
           tier={tier}
+          connection={connection}
           exitAnimation={exitAnimation}
           exitFrame={exitFrame}
         />

@@ -3,7 +3,10 @@ import {
   BroadcastProRoundedStatMatrixResultGrid,
   type BroadcastProRoundedResultStatTier,
 } from "../../../../../templates/variants/broadcastProRounded/components/stat";
-import type { BroadcastProRoundedGlassStyle } from "../glass";
+import type {
+  BroadcastProRoundedGlassStyle,
+  BroadcastProRoundedSurfaceConnection,
+} from "../glass";
 import type { BroadcastProRoundedResultStatItem } from "./types";
 import type {
   AnimationConfig,
@@ -17,6 +20,7 @@ export interface BroadcastProRoundedResultPlayerStatsGridProps {
   glass?: BroadcastProRoundedGlassStyle;
   className?: string;
   tier?: BroadcastProRoundedResultStatTier;
+  connection?: BroadcastProRoundedSurfaceConnection;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
 }

@@ -112,6 +112,8 @@ export const BroadcastProHeadlineSecondary: React.FC<
   }
 
   return (
-    <div className={stayOnOneLine ? "overflow-hidden" : "w-full"}>{textNode}</div>
+    <div className={stayOnOneLine ? "overflow-hidden" : "w-full"}>
+      {textNode}
+    </div>
   );
 };

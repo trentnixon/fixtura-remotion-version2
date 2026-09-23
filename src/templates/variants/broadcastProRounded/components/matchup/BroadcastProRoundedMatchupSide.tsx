@@ -5,6 +5,7 @@ import LadderTeamName from "../../../../../compositions/cricket/utils/primitives
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
 import { useBroadcastProRoundedTheme } from "../../../../../compositions/cricket/utils/broadcastProRounded";
 import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type { BroadcastProRoundedFixtureDensity } from "../../../../../templates/types/broadcast-pro-rounded/fixture-density";
 import type { BroadcastProRoundedMatchupSideInput } from "../../../../../templates/types/broadcast-pro-rounded/matchup";
 import { BroadcastProRoundedCrestWell } from "../crest/BroadcastProRoundedCrestWell";
 
@@ -15,8 +16,10 @@ export interface BroadcastProRoundedMatchupSideProps {
   glass: BroadcastProRoundedGlassStyle;
   containerHeight?: number;
   compact?: boolean;
+  fixtureDensity?: BroadcastProRoundedFixtureDensity;
   fontFamily?: string;
   labelVariant?: ColorVariant;
+  animateContent?: boolean;
 }
 
 export const BroadcastProRoundedMatchupSide: React.FC<
@@ -28,8 +31,10 @@ export const BroadcastProRoundedMatchupSide: React.FC<
   glass,
   containerHeight,
   compact = false,
+  fixtureDensity = "standard",
   fontFamily,
   labelVariant = "onContainerCopy",
+  animateContent = true,
 }) => {
   const { componentStyles } = useThemeContext();
   const { text } = useBroadcastProRoundedTheme();
@@ -45,8 +50,14 @@ export const BroadcastProRoundedMatchupSide: React.FC<
     "broadcastProRoundedMatchupFixtureTeamName",
   );
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
+  const densityClass =
+    fixtureDensity === "featured"
+      ? "!text-4xl"
+      : fixtureDensity === "compact" || compact
+        ? "!text-2xl"
+        : "!text-3xl";
   const teamNameClass =
-    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${compact ? "!text-2xl" : "!text-3xl"}`.trim();
+    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
 
   const isHome = side === "home";
   const crestDelay = delay + 6;
@@ -62,6 +73,7 @@ export const BroadcastProRoundedMatchupSide: React.FC<
           delay={crestDelay}
           glass={glass}
           containerHeight={containerHeight}
+          animate={animateContent}
         />
       )}
       <div
@@ -76,6 +88,7 @@ export const BroadcastProRoundedMatchupSide: React.FC<
           className={teamNameClass}
           fontFamily={fontFamily}
           style={{ color: text.copy }}
+          animate={animateContent}
         />
       </div>
       {!isHome && (
@@ -86,6 +99,7 @@ export const BroadcastProRoundedMatchupSide: React.FC<
           delay={crestDelay}
           glass={glass}
           containerHeight={containerHeight}
+          animate={animateContent}
         />
       )}
     </div>

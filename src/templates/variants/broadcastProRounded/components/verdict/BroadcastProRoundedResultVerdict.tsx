@@ -4,7 +4,10 @@ import type { BroadcastProRoundedVerdictModel } from "../../../../../composition
 import type { BroadcastProRoundedVerdictTier } from "../../../../../templates/types/broadcast-pro-rounded/verdict-typography";
 import { BROADCAST_PRO_VERDICT_TIER_BAND_KEY } from "../../../../../templates/types/broadcast-pro-rounded/verdict-typography";
 import { BroadcastProRoundedGlassPanel } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/BroadcastProRoundedGlassPanel";
-import type { BroadcastProRoundedGlassStyle } from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
+import type {
+  BroadcastProRoundedGlassStyle,
+  BroadcastProRoundedSurfaceConnection,
+} from "../../../../../compositions/cricket/utils/broadcastProRounded/glass";
 import { csClass } from "../../../../../compositions/cricket/utils/broadcastProRounded/componentStyles";
 import type {
   AnimationConfig,
@@ -14,7 +17,6 @@ import { BroadcastProRoundedVerdictHeroLockup } from "./BroadcastProRoundedVerdi
 import { BroadcastProRoundedVerdictCompactLine } from "./BroadcastProRoundedVerdictCompactLine";
 import { BroadcastProRoundedVerdictAbandoned } from "./BroadcastProRoundedVerdictAbandoned";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
-import { resultContainerDelay } from "../../../../../compositions/cricket/utils/broadcastProRounded/results/matchContentHelpers";
 
 export interface BroadcastProRoundedResultVerdictProps {
   model: BroadcastProRoundedVerdictModel;
@@ -26,6 +28,7 @@ export interface BroadcastProRoundedResultVerdictProps {
   animation?: AnimationType | AnimationConfig;
   exitAnimation?: AnimationType | AnimationConfig;
   exitFrame?: number;
+  connection?: BroadcastProRoundedSurfaceConnection;
 }
 
 export const BroadcastProRoundedResultVerdict: React.FC<
@@ -40,20 +43,19 @@ export const BroadcastProRoundedResultVerdict: React.FC<
   animation,
   exitAnimation,
   exitFrame,
+  connection = "standalone",
 }) => {
   const { componentStyles } = useThemeContext();
   const bandKey = BROADCAST_PRO_VERDICT_TIER_BAND_KEY[tier];
   const bandClass = csClass(componentStyles, bandKey);
-  const containerDelay = resultContainerDelay(delay);
 
-  const edgeMarkerStyle = resolveBroadcastProRoundedEdgeMarkerStyle(
-    "standard",
-    "primary",
-    {
-      accentColor,
-      mutedColor: accentColor,
-    },
-  );
+  const edgeMarkerStyle =
+    connection === "standalone"
+      ? resolveBroadcastProRoundedEdgeMarkerStyle("standard", "primary", {
+          accentColor,
+          mutedColor: accentColor,
+        })
+      : {};
 
   if (tier === "hero" && model.kind === "hero") {
     return (
@@ -62,7 +64,7 @@ export const BroadcastProRoundedResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
-        animationDelay={containerDelay}
+        connection={connection}
         exitFrame={exitFrame}
       >
         <BroadcastProRoundedVerdictHeroLockup
@@ -85,7 +87,7 @@ export const BroadcastProRoundedResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
-        animationDelay={containerDelay}
+        connection={connection}
         exitFrame={exitFrame}
       >
         <BroadcastProRoundedVerdictCompactLine
@@ -106,7 +108,7 @@ export const BroadcastProRoundedResultVerdict: React.FC<
         surface="strong"
         className={`${bandClass} ${className}`.trim()}
         style={edgeMarkerStyle}
-        animationDelay={containerDelay}
+        connection={connection}
         exitFrame={exitFrame}
       >
         <BroadcastProRoundedVerdictAbandoned

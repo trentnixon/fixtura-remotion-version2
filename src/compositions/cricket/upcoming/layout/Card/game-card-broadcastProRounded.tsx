@@ -13,7 +13,7 @@ import {
 import { MetadataMedium } from "../../../utils/primitives/metadataMedium";
 import { formatGroundLocation } from "../../../utils/utils-text";
 import { BroadcastProRoundedMatchup } from "../../../../../templates/variants/broadcastProRounded/components/matchup";
-import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
+import { BroadcastProRoundedFixtureFrame } from "../../../../../templates/variants/broadcastProRounded/components/fixture";
 import { stripGradeNumberFromTeamName } from "../../../utils/utils-text";
 import {
   cellBlur,
@@ -24,18 +24,18 @@ const formatUpcomingTeamName = (teamName: string): string =>
   stripGradeNumberFromTeamName(teamName);
 
 const HEADER_STRIP_H = 36;
-const GROUND_STRIP_H = 36;
 
 export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
   game,
   index,
+  density = "standard",
+  gameRowHeight,
 }) => {
   const { data } = useVideoDataContext();
   const { timings } = data;
   const { animations } = useAnimationContext();
-  const { fontClasses, layout } = useThemeContext();
+  const { fontClasses } = useThemeContext();
   const { glass, accent, text } = useBroadcastProRoundedTheme();
-  const cellRadius = layout.borderRadius.container;
   const ContainerAnimations = animations.container;
 
   const delay = calculateAnimationDelay(index, FAST_DELAY_MULTIPLIER);
@@ -46,102 +46,115 @@ export const GameCardBroadcastProRounded: React.FC<GameCardProps> = ({
   const metaVariant: ColorVariant = "onContainerCopy";
   const metaCopyStyle = { color: text.copy, fontFamily: copyFont };
   const metaMutedStyle = { color: text.muted, fontFamily: copyFont };
+  const isCompact = density === "compact";
+  const matchupHeight =
+    density === "featured" ? 220 : density === "standard" ? 240 : 170;
+  const bodyPadding =
+    density === "featured" ? "6px 24px" : isCompact ? "4px 16px" : "6px 20px";
 
   return (
-    <div className="flex w-full flex-col overflow-hidden">
+    <div
+      className="flex min-h-0 w-full flex-col"
+      style={
+        gameRowHeight == null
+          ? undefined
+          : { height: gameRowHeight, flex: `0 0 ${gameRowHeight}px` }
+      }
+    >
       <AnimatedContainer
         type="full"
-        className="flex w-full flex-col gap-2 overflow-hidden"
+        size="full"
+        className="flex h-full w-full flex-col overflow-hidden"
         backgroundColor="none"
         animation={ContainerAnimations.main.itemContainer.containerIn}
         animationDelay={delay}
         exitAnimation={ContainerAnimations.main.itemContainer.containerOut}
         exitFrame={animationOutFrame}
       >
-        {/* Fixture header: date 25% | time 25% | grade 50% */}
-        <div
-          className={`grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-2 overflow-hidden px-5 py-1.5 md:px-6 ${cellRadius}`}
-          style={{
-            minHeight: HEADER_STRIP_H,
-            background: glass.headerGradient,
-            ...resolveBroadcastProRoundedEdgeMarkerStyle("compact", "primary", {
-              accentColor: accent,
-              mutedColor: accent,
-            }),
-            ...cellBlur,
-          }}
+        <BroadcastProRoundedFixtureFrame
+          accentColor={accent}
+          glass={glass}
+          className="h-full gap-2"
         >
-          <MetadataMedium
-            value={game.date}
-            animation={{ ...animations.text.main.copyIn, delay }}
-            className="min-w-0 truncate font-rajdhani font-bold uppercase tracking-wider"
-            variant={metaVariant}
-            style={metaCopyStyle}
-          />
-          <MetadataMedium
-            value={game.time}
-            animation={{ ...animations.text.main.copyIn, delay: delay + 2 }}
-            className="min-w-0 truncate font-rajdhani font-medium"
-            variant={metaVariant}
-            style={metaCopyStyle}
-          />
-          <MetadataMedium
-            value={game.gradeName ?? ""}
-            animation={{
-              ...animations.text.main.copyIn,
-              delay: delay + 3,
+          <div
+            className="grid w-full flex-shrink-0 grid-cols-[1fr_1fr_2fr] items-center gap-3 px-5 py-1.5 md:px-6"
+            style={{
+              minHeight: HEADER_STRIP_H,
+              background: glass.headerGradient,
+              ...cellBlur,
             }}
-            className="min-w-0 truncate font-rajdhani font-bold uppercase tracking-wider"
-            variant={metaVariant}
-            style={metaCopyStyle}
-          />
-        </div>
+          >
+            <MetadataMedium
+              value={game.date}
+              animation={{ type: "none" }}
+              exitAnimation="none"
+              className="min-w-0 truncate font-rajdhani font-bold uppercase tracking-wider"
+              variant={metaVariant}
+              style={metaCopyStyle}
+            />
+            <MetadataMedium
+              value={game.time}
+              animation={{ type: "none" }}
+              exitAnimation="none"
+              className="min-w-0 truncate font-rajdhani font-medium"
+              variant={metaVariant}
+              style={metaCopyStyle}
+            />
+            <MetadataMedium
+              value={game.gradeName ?? ""}
+              animation={{ type: "none" }}
+              exitAnimation="none"
+              className="min-w-0 truncate text-right font-rajdhani font-semibold uppercase tracking-wider"
+              variant={metaVariant}
+              style={metaMutedStyle}
+            />
+          </div>
 
-        {/* Glass panel: teams + VS */}
-        <div
-          className={`flex w-full overflow-hidden px-5 py-2 md:px-6 ${cellRadius}`}
-          style={{
-            background: glass.panel,
-            border: glass.border,
-            ...cellBlur,
-          }}
-        >
-          <BroadcastProRoundedMatchup
-            tier="fixture"
-            home={{
-              teamName: formatUpcomingTeamName(game.teamHome),
-              logo: game.teamHomeLogo,
+          <div
+            className="flex min-h-0 w-full flex-1 flex-col justify-center"
+            style={{
+              padding: bodyPadding,
+              background: glass.panel,
+              borderTop: glass.border,
+              ...cellBlur,
             }}
-            away={{
-              teamName: formatUpcomingTeamName(game.teamAway),
-              logo: game.teamAwayLogo,
-            }}
-            glass={glass}
-            delay={delay}
-            fontFamily={copyFont}
-          />
-        </div>
+          >
+            <BroadcastProRoundedMatchup
+              tier="fixture"
+              home={{
+                teamName: formatUpcomingTeamName(game.teamHome),
+                logo: game.teamHomeLogo,
+              }}
+              away={{
+                teamName: formatUpcomingTeamName(game.teamAway),
+                logo: game.teamAwayLogo,
+              }}
+              glass={glass}
+              delay={delay}
+              fontFamily={copyFont}
+              fixtureDensity={density}
+              containerHeight={matchupHeight}
+              animateContent={false}
+            />
+          </div>
 
-        {/* Ground footer */}
-        <div
-          className={`flex w-full flex-shrink-0 items-center overflow-hidden px-5 py-1 md:px-6 ${cellRadius}`}
-          style={{
-            minHeight: GROUND_STRIP_H,
-            background: glass.muted,
-            borderTop: glass.border
-              ? "1px solid rgba(255,255,255,0.08)"
-              : undefined,
-            ...cellBlur,
-          }}
-        >
-          <MetadataMedium
-            value={formatGroundLocation(game.ground)}
-            animation={{ ...animations.text.main.copyIn, delay: delay + 4 }}
-            className="truncate font-rajdhani font-semibold uppercase tracking-widest"
-            variant={metaVariant}
-            style={metaMutedStyle}
-          />
-        </div>
+          <div
+            className={`flex w-full flex-shrink-0 justify-center px-5 ${isCompact ? "py-1" : "py-2"}`}
+            style={{
+              background: glass.muted,
+              borderTop: glass.border,
+            }}
+          >
+            <MetadataMedium
+              value={formatGroundLocation(game.ground)}
+              animation={{ type: "none" }}
+              exitAnimation="none"
+              className="max-w-full truncate text-center font-rajdhani font-semibold uppercase tracking-widest"
+              variant={metaVariant}
+              style={metaMutedStyle}
+            />
+          </div>
+        </BroadcastProRoundedFixtureFrame>
       </AnimatedContainer>
     </div>
   );

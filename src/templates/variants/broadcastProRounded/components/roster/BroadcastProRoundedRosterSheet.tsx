@@ -31,9 +31,7 @@ export const BroadcastProRoundedRosterSheet: React.FC<
   );
 
   return (
-    <div
-      className={`flex h-full min-h-0 min-w-0 flex-1 gap-2 ${className}`.trim()}
-    >
+    <div className={`flex min-h-0 min-w-0 flex-1 gap-2 ${className}`.trim()}>
       <div
         className={csClass(
           componentStyles,

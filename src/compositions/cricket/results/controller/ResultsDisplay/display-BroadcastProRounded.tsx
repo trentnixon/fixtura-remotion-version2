@@ -2,7 +2,6 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { SponsorFooter } from "../../../sponsorFooter";
 import MatchRowBroadcastProRounded from "../MatchRow/row-BroadcastProRounded";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
@@ -12,9 +11,7 @@ import {
   BROADCAST_PRO_RESULTS_GAP_PX,
   buildResultsFooterSponsors,
 } from "./_utils/calculations";
-import { calculateAnimationOutFrame } from "../MatchRow/_utils/calculations";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
-import { RESULT_PANEL_CONTAINER_DELAY } from "../../../utils/broadcastProRounded/results/matchContentHelpers";
 
 const ResultsDisplayBroadcastProRounded: React.FC<ResultsDisplayProps> = ({
   results,
@@ -23,12 +20,8 @@ const ResultsDisplayBroadcastProRounded: React.FC<ResultsDisplayProps> = ({
 }) => {
   const { layout } = useThemeContext();
   const { animations } = useAnimationContext();
-  const { data } = useVideoDataContext();
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
-  const panelExitFrame = calculateAnimationOutFrame(
-    data.timings?.FPS_SCORECARD,
-  );
 
   const { displayedResults } = calculateDisplayedResults(
     results,
@@ -53,12 +46,10 @@ const ResultsDisplayBroadcastProRounded: React.FC<ResultsDisplayProps> = ({
       >
         <AnimatedContainer
           type="full"
-          className="flex w-full flex-shrink-0 flex-col overflow-hidden"
+          className={`flex w-full flex-shrink-0 flex-col overflow-hidden ${layout.borderRadius.container}`}
           backgroundColor="none"
           animation={panelAnimation.containerIn}
-          animationDelay={RESULT_PANEL_CONTAINER_DELAY}
           exitAnimation={panelAnimation.containerOut}
-          exitFrame={panelExitFrame}
         >
           <div
             className="flex w-full flex-col"

@@ -41,7 +41,7 @@ export const FixtureDisplayBroadcastProRounded: React.FC<GamesDisplayProps> = ({
       >
         <AnimatedContainer
           type="full"
-          className="mx-4 flex w-full flex-shrink-0 flex-col md:mx-6"
+          className="mx-6 flex w-auto flex-shrink-0 flex-col md:mx-8"
           backgroundColor="none"
           animation={panelAnimation.containerIn}
           exitAnimation={panelAnimation.containerOut}
