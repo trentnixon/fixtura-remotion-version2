@@ -85,6 +85,7 @@ export const MudgeerabaSingleTeamHeader: React.FC<
             variant="circle"
             size={logoSize}
             emphasisBorder
+            fullBleed
             className="z-30 relative self-center shrink-0"
             style={{ marginRight: "-10px" }}
           >
@@ -92,8 +93,13 @@ export const MudgeerabaSingleTeamHeader: React.FC<
               logo={teamLogo || null}
               teamName={team.name}
               delay={delay + 20}
-              size={20}
+              size={logoSize}
               fit="cover"
+              imgStyle={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
             />
           </LogoWell>
 
