@@ -32,4 +32,13 @@ describe("resolveLuminanceAssetSrc", () => {
       }),
     ).toContain("_verify/test001.png");
   });
+
+  it("resolves site plates under plates/ when url is unset", () => {
+    expect(
+      resolveLuminanceAssetSrc({
+        name: "Geometric Halftone",
+        asset: "plates/geometric-halftone.png",
+      }),
+    ).toContain("plates/geometric-halftone.png");
+  });
 });

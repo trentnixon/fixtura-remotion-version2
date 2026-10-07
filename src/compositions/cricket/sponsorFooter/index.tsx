@@ -7,28 +7,15 @@ import { AssignSponsors, Sponsor } from "../../../core/types/data/sponsors";
 import { buildSingleItemFooterSponsors } from "../../../core/utils/sponsors";
 import {
   FOOTER_EXIT_ANIMATION_DURATION_FRAMES,
+  FOOTER_LOGO_GAP_PX,
   calculateFooterExitFrame,
+  calculateFooterLogoBox,
 } from "./_utils/calculations";
 import { useSponsorValidation } from "./hooks/useSponsorValidation";
 
 const SPONSOR_CONFIG = {
   ANIMATION_DELAY_MULTIPLIER: 5,
 } as const;
-
-const calculateMaxWidth = (
-  logo: { width?: number; height?: number },
-  footerHeight: number,
-): number => {
-  if (logo.width && logo.height) {
-    const aspectRatio = logo.width / logo.height;
-    return footerHeight * aspectRatio;
-  }
-  return footerHeight * 3;
-};
-
-const calculateImageHeight = (footerHeight: number): number => {
-  return footerHeight - 20;
-};
 
 export type SponsorFooterProps = {
   /** Pre-selected footer logos (Results/Upcoming multi-row builders). */
@@ -39,6 +26,10 @@ export type SponsorFooterProps = {
   primaryForScreen?: Sponsor[];
 };
 
+/**
+ * Three logos or fewer are sized by the footer height. More than three
+ * share the footer width so every logo stays in view.
+ */
 export const SponsorFooter = React.memo(
   ({ sponsors, assignSponsors, primaryForScreen }: SponsorFooterProps) => {
     const validation = useSponsorValidation();
@@ -59,6 +50,11 @@ export const SponsorFooter = React.memo(
       });
     }, [sponsors, assignSponsors, primaryForScreen, validation.sponsors]);
 
+    const visibleSponsors = useMemo(
+      () => allSponsors.filter((sponsor) => Boolean(sponsor?.logo?.url)),
+      [allSponsors],
+    );
+
     if (!sponsors && !assignSponsors) {
       console.warn("[SponsorFooter] Missing sponsors or assignSponsors");
       return null;
@@ -73,51 +69,53 @@ export const SponsorFooter = React.memo(
       return null;
     }
 
-    if (allSponsors.length === 0) {
+    if (visibleSponsors.length === 0) {
       return null;
     }
 
-    const { logoAnimations, heights } = validation;
-    const imageHeight = calculateImageHeight(heights.footer);
+    const { logoAnimations } = validation;
     const exitFrame = calculateFooterExitFrame(validation.timings);
+    const logoBox = calculateFooterLogoBox({
+      footerHeight: validation.heights.footer,
+      count: visibleSponsors.length,
+    });
+    if (logoBox.width <= 0 || logoBox.height <= 0) {
+      return null;
+    }
 
     return (
       <div
-        className="flex flex-row justify-start gap-4 items-center my-0 px-16 overflow-hidden"
-        style={{
-          height: imageHeight,
-          paddingBottom: "10px",
-          paddingTop: "10px",
-        }}
+        className="flex h-full w-full flex-row items-center justify-center overflow-hidden px-16"
+        style={{ gap: FOOTER_LOGO_GAP_PX }}
       >
-        {allSponsors.map((sponsor, idx) => {
-          if (!sponsor?.logo?.url) {
-            return null;
-          }
-          return (
-            <div
-              key={`${sponsor.id}_${idx}`}
-              className="flex items-center justify-center flex-shrink-0"
-              style={{ height: imageHeight }}
-            >
-              <AnimatedImage
-                src={sponsor.logo.url}
-                alt={sponsor.name || `Sponsor logo ${idx + 1}`}
-                width="auto"
-                height="auto"
-                maxHeight={imageHeight}
-                maxWidth={calculateMaxWidth(sponsor.logo, imageHeight)}
-                fit="contain"
-                preserveRatio={true}
-                animation={logoAnimations.introIn as any}
-                exitAnimation={logoAnimations.introOut as any}
-                animationDelay={idx * SPONSOR_CONFIG.ANIMATION_DELAY_MULTIPLIER}
-                exitFrame={exitFrame}
-                exitAnimationDuration={FOOTER_EXIT_ANIMATION_DURATION_FRAMES}
-              />
-            </div>
-          );
-        })}
+        {visibleSponsors.map((sponsor, idx) => (
+          <div
+            key={`${sponsor.id}_${idx}`}
+            className="flex shrink-0 items-center justify-center overflow-hidden"
+            style={{
+              height: logoBox.height,
+              maxHeight: logoBox.height,
+              maxWidth: logoBox.width,
+              width: logoBox.fit === "width" ? logoBox.width : "auto",
+            }}
+          >
+            <AnimatedImage
+              src={sponsor.logo.url}
+              alt={sponsor.name || `Sponsor logo ${idx + 1}`}
+              width={logoBox.fit === "width" ? "100%" : "auto"}
+              height={logoBox.fit === "width" ? "100%" : logoBox.height}
+              maxWidth="100%"
+              maxHeight="100%"
+              fit="contain"
+              preserveRatio={false}
+              animation={logoAnimations.introIn as any}
+              exitAnimation={logoAnimations.introOut as any}
+              animationDelay={idx * SPONSOR_CONFIG.ANIMATION_DELAY_MULTIPLIER}
+              exitFrame={exitFrame}
+              exitAnimationDuration={FOOTER_EXIT_ANIMATION_DURATION_FRAMES}
+            />
+          </div>
+        ))}
       </div>
     );
   },

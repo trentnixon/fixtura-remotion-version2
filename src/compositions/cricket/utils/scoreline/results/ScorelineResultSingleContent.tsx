@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import type { MatchResult as ResultsMatchResult } from "../../../results/_types/types";
 import type { MatchResult as ResultSingleMatchResult } from "../../../resultSingle/types";
@@ -7,11 +7,15 @@ import {
   resolveScorelineResultStatementLength,
   resolveScorelineResultStatementText,
 } from "./resolveScorelineResultStatement";
+import { resolveScorelineMatchPerformances } from "./resolveScorelineMatchPerformances";
+import {
+  resolveScorelineResultSinglePerformances,
+  scorelineBowlingUnderOpposition,
+} from "./resolveScorelineResultSinglePerformances";
 import {
   ScorelineMatchContext,
   ScorelinePerformancePanels,
   ScorelineTeamBand,
-  useScorelineResultSinglePerformances,
 } from "./scorelineMatchShared";
 
 export type ScorelineResultSingleContentProps = {
@@ -23,7 +27,8 @@ export type ScorelineResultSingleContentProps = {
 export const ScorelineResultSingleContent: React.FC<
   ScorelineResultSingleContentProps
 > = ({ match, className = "", style }) => {
-  const { club } = useVideoDataContext();
+  const { club, isAccountClub } = useVideoDataContext();
+  const accountIsClub = isAccountClub || false;
   const resultsMatch = match as unknown as ResultsMatchResult;
   const { homeIsClub, awayIsClub } = resolveScorelineUpcomingClubSides(
     match.homeTeam.name,
@@ -36,7 +41,18 @@ export const ScorelineResultSingleContent: React.FC<
     hasBatting,
     hasBowling,
     performancePanelCount,
-  } = useScorelineResultSinglePerformances(resultsMatch, club?.name);
+  } = useMemo(
+    () =>
+      accountIsClub
+        ? resolveScorelineResultSinglePerformances(resultsMatch, club?.name)
+        : resolveScorelineMatchPerformances(resultsMatch),
+    [accountIsClub, club?.name, resultsMatch],
+  );
+  const bowlingFirst = scorelineBowlingUnderOpposition(
+    resultsMatch,
+    accountIsClub,
+    club?.name,
+  );
 
   const resultText = resolveScorelineResultStatementText(
     match.result,
@@ -92,6 +108,7 @@ export const ScorelineResultSingleContent: React.FC<
           bowlingRows={bowlingRows}
           hasBatting={hasBatting}
           hasBowling={hasBowling}
+          bowlingFirst={bowlingFirst}
         />
 
         <ScorelineMatchContext

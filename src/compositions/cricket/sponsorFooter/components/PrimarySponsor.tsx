@@ -6,25 +6,9 @@ import { AnimatedImage } from "../../../../components/images/AnimatedImage";
 import {
   FOOTER_EXIT_ANIMATION_DURATION_FRAMES,
   calculateFooterExitFrame,
+  calculateFooterLogoBox,
 } from "../_utils/calculations";
 import { useSponsorValidation } from "../hooks/useSponsorValidation";
-
-// Helper function to calculate max width based on logo dimensions
-const calculateMaxWidth = (
-  logo: { width?: number; height?: number },
-  footerHeight: number,
-): number => {
-  if (logo.width && logo.height) {
-    // Calculate the natural aspect ratio
-    const aspectRatio = logo.width / logo.height;
-    // Calculate width if logo fills the full footer height
-    const naturalWidth = footerHeight * aspectRatio;
-    // Return the natural width (no artificial limits)
-    return naturalWidth;
-  }
-  // Fallback: if no dimensions provided, allow up to 3x footer height
-  return footerHeight * 3;
-};
 
 interface PrimarySponsorProps {
   primarySponsors: any[];
@@ -42,8 +26,15 @@ export const PrimarySponsor = React.memo(
       return null;
     }
 
-    const { logoAnimations, heights } = validation;
+    const { logoAnimations } = validation;
     const exitFrame = calculateFooterExitFrame(validation.timings);
+    const logoCount = primarySponsors.filter((sponsor) =>
+      Boolean(sponsor?.logo?.url),
+    ).length;
+    const logoBox = calculateFooterLogoBox({
+      footerHeight: validation.heights.footer,
+      count: logoCount,
+    });
 
     if (primarySponsors.length > 0 && primarySponsors[0]) {
       if (!primarySponsors[0]?.logo?.url) {
@@ -51,23 +42,29 @@ export const PrimarySponsor = React.memo(
         return null;
       }
 
+      if (logoBox.width <= 0 || logoBox.height <= 0) {
+        return null;
+      }
+
       return (
         <div
-          className="flex justify-center items-center flex-shrink-0"
-          style={{ height: heights.footer }}
+          className="flex shrink-0 items-center justify-center overflow-hidden"
+          style={{
+            height: logoBox.height,
+            maxHeight: logoBox.height,
+            maxWidth: logoBox.width,
+            width: logoBox.fit === "width" ? logoBox.width : "auto",
+          }}
         >
           <AnimatedImage
             src={primarySponsors[0].logo.url || ""}
             alt={primarySponsors[0].name || "Primary sponsor"}
-            width="auto"
-            height="auto"
-            maxHeight={heights.footer}
-            maxWidth={calculateMaxWidth(
-              primarySponsors[0].logo,
-              heights.footer,
-            )}
+            width={logoBox.fit === "width" ? "100%" : "auto"}
+            height={logoBox.fit === "width" ? "100%" : logoBox.height}
+            maxWidth="100%"
+            maxHeight="100%"
             fit="contain"
-            preserveRatio={true}
+            preserveRatio={false}
             animation={logoAnimations.introIn as any}
             exitAnimation={logoAnimations.introOut as any}
             exitFrame={exitFrame}

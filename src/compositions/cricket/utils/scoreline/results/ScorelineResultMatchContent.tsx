@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import type { MatchResult } from "../../../results/_types/types";
 import { ScorelineCreaseMarkup } from "../../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
 import {
@@ -6,11 +7,15 @@ import {
   resolveScorelineResultStatementText,
 } from "./resolveScorelineResultStatement";
 import { ScorelineResultMatchCell } from "./ScorelineResultMatchCell";
+import { resolveScorelineMatchPerformances } from "./resolveScorelineMatchPerformances";
+import {
+  resolveScorelineResultSinglePerformances,
+  scorelineBowlingUnderOpposition,
+} from "./resolveScorelineResultSinglePerformances";
 import {
   ScorelineMatchContext,
   ScorelinePerformancePanels,
   ScorelineTeamBand,
-  useScorelineMatchPerformances,
 } from "./scorelineMatchShared";
 
 export type ScorelineResultMatchContentProps = {
@@ -24,13 +29,26 @@ export type ScorelineResultMatchContentProps = {
 export const ScorelineResultMatchContent: React.FC<
   ScorelineResultMatchContentProps
 > = ({ match, className = "", style, rowDelay, exitFrame }) => {
+  const { isAccountClub, club } = useVideoDataContext();
+  const accountIsClub = isAccountClub || false;
   const {
     battingRows,
     bowlingRows,
     hasBatting,
     hasBowling,
     performancePanelCount,
-  } = useScorelineMatchPerformances(match);
+  } = useMemo(
+    () =>
+      accountIsClub
+        ? resolveScorelineResultSinglePerformances(match, club?.name)
+        : resolveScorelineMatchPerformances(match),
+    [accountIsClub, club?.name, match],
+  );
+  const bowlingFirst = scorelineBowlingUnderOpposition(
+    match,
+    accountIsClub,
+    club?.name,
+  );
 
   const resultText = resolveScorelineResultStatementText(
     match.result,
@@ -121,6 +139,7 @@ export const ScorelineResultMatchContent: React.FC<
               bowlingRows={bowlingRows}
               hasBatting={hasBatting}
               hasBowling={hasBowling}
+              bowlingFirst={bowlingFirst}
             />
           </ScorelineResultMatchCell>
         ) : (
@@ -129,6 +148,7 @@ export const ScorelineResultMatchContent: React.FC<
             bowlingRows={bowlingRows}
             hasBatting={hasBatting}
             hasBowling={hasBowling}
+            bowlingFirst={bowlingFirst}
           />
         )
       ) : null}

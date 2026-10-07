@@ -1,603 +1,1303 @@
 {
   "data": [
     {
-      "SR": 110,
-      "name": "Greg Noon",
-      "runs": 44,
-      "balls": 40,
+      "SR": 128.7,
+      "name": "Matthew Hayden",
+      "runs": 139,
+      "balls": 108,
       "notOut": false,
-      "prompt": "Greg Noon played for Brisbane Silver, scoring 44 runs from 40 balls with a strike rate of 110. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver, (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
+      "prompt": "Matthew Hayden played for Australia, scoring 139 runs from 108 balls with a strike rate of 128.70 (dismissed). Venue context: Kensington Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/au.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Brisbane Silver",
+      "playedFor": "Australia",
       "assignSponsors": {
-        "Team": {
-          "name": "Brisbane Silver"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9005,
+            "name": "Sponsor 5",
+            "logo": {
+              "id": 9105,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_404_95ea1e5a4d.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 105,
-      "name": "Don Fitzgerald",
-      "runs": 42,
-      "balls": 40,
+      "SR": 169.14,
+      "name": "Adam Gilchrist",
+      "runs": 137,
+      "balls": 81,
       "notOut": false,
-      "prompt": "Don Fitzgerald played for Redlands Logan, scoring 42 runs from 40 balls with a strike rate of 105. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Redlands Logan, (7/96) vs Sunshine Coast Maroon (10/94), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "prompt": "Adam Gilchrist played for Australia, scoring 137 runs from 81 balls with a strike rate of 169.14 (dismissed). Venue context: Sabina Park. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
-        "width": 706,
-        "height": 725
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/au.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Redlands Logan",
+      "playedFor": "Australia",
       "assignSponsors": {
-        "Team": {
-          "name": "Redlands Logan"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9006,
+            "name": "Sponsor 6",
+            "logo": {
+              "id": 9106,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_372_5c8c5a7583.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 100,
-      "name": "Joe Hauff",
-      "runs": 38,
-      "balls": 38,
+      "SR": 133.66,
+      "name": "Ricky Ponting",
+      "runs": 135,
+      "balls": 101,
+      "notOut": false,
+      "prompt": "Ricky Ponting played for Australia, scoring 135 runs from 101 balls with a strike rate of 133.66 (dismissed). Venue context: Sir Vivian Richards Stadium. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/au.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "Australia",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9007,
+            "name": "Sponsor 7",
+            "logo": {
+              "id": 9107,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_388_e9e11314ed.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 90.91,
+      "name": "Mahela Jayawardene",
+      "runs": 90,
+      "balls": 99,
+      "notOut": false,
+      "prompt": "Mahela Jayawardene played for Sri Lanka, scoring 90 runs from 99 balls with a strike rate of 90.91 (dismissed). Venue context: Providence Stadium. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/lk.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "Sri Lanka",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9008,
+            "name": "Sponsor 8",
+            "logo": {
+              "id": 9108,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_361_60c7a270d2.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 108.55,
+      "name": "Kumar Sangakkara",
+      "runs": 127,
+      "balls": 117,
+      "notOut": false,
+      "prompt": "Kumar Sangakkara played for Sri Lanka, scoring 127 runs from 117 balls with a strike rate of 108.55 (dismissed). Venue context: Queen's Park Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/lk.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "Sri Lanka",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9005,
+            "name": "Sponsor 5",
+            "logo": {
+              "id": 9105,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_404_95ea1e5a4d.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 67.05,
+      "name": "Sanath Jayasuriya",
+      "runs": 59,
+      "balls": 88,
       "notOut": true,
-      "prompt": "Joe Hauff played for Brisbane Silver, scoring 38 runs from 38 balls with a strike rate of 100. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver, (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
+      "prompt": "Sanath Jayasuriya played for Sri Lanka, scoring 59 runs from 88 balls with a strike rate of 67.05 (not out). Venue context: Beausejour Cricket Ground. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/lk.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Brisbane Silver",
+      "playedFor": "Sri Lanka",
       "assignSponsors": {
-        "Team": {
-          "name": "Brisbane Silver"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9006,
+            "name": "Sponsor 6",
+            "logo": {
+              "id": 9106,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_372_5c8c5a7583.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 92.5,
-      "name": "Rick Bean",
-      "runs": 37,
-      "balls": 40,
+      "SR": 101.75,
+      "name": "Jacques Kallis",
+      "runs": 116,
+      "balls": 114,
       "notOut": false,
-      "prompt": "Rick Bean played for Sunshine Coast Gold, scoring 37 runs from 40 balls with a strike rate of 92.5. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold, (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "prompt": "Jacques Kallis played for South Africa, scoring 116 runs from 114 balls with a strike rate of 101.75 (dismissed). Venue context: Kensington Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/za.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Sunshine Coast Gold",
+      "playedFor": "South Africa",
       "assignSponsors": {
-        "Team": {
-          "name": "Sunshine Coast Gold"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9007,
+            "name": "Sponsor 7",
+            "logo": {
+              "id": 9107,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_388_e9e11314ed.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 85.71,
-      "name": "Greg Deuble (c)",
-      "runs": 36,
-      "balls": 42,
+      "SR": 84.29,
+      "name": "Graeme Smith",
+      "runs": 59,
+      "balls": 70,
       "notOut": false,
-      "prompt": "Greg Deuble (c) played for Sunshine Coast Gold, scoring 36 runs from 42 balls with a strike rate of 85.71. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold, (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "prompt": "Graeme Smith played for South Africa, scoring 59 runs from 70 balls with a strike rate of 84.29 (dismissed). Venue context: Sabina Park. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/za.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Sunshine Coast Gold",
+      "playedFor": "South Africa",
       "assignSponsors": {
-        "Team": {
-          "name": "Sunshine Coast Gold"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9008,
+            "name": "Sponsor 8",
+            "logo": {
+              "id": 9108,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_361_60c7a270d2.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 80,
-      "name": "Adrian Knell",
-      "runs": 32,
-      "balls": 40,
-      "notOut": false,
-      "prompt": "Adrian Knell played for Sunshine Coast Gold, scoring 32 runs from 40 balls with a strike rate of 80. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Sunshine Coast Gold, (3/210) vs Lockyer (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7f6542ae_ef9c79bc26.png",
-        "width": 547,
-        "height": 796
-      },
-      "playedFor": "Sunshine Coast Gold",
-      "assignSponsors": {
-        "Team": {
-          "name": "Sunshine Coast Gold"
-        },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
-        },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
-        }
-      }
-    },
-    {
-      "SR": 80,
-      "name": "Bryan Wilson (c)",
-      "runs": 32,
-      "balls": 40,
-      "notOut": false,
-      "prompt": "Bryan Wilson (c) played for Brisbane Silver, scoring 32 runs from 40 balls with a strike rate of 80. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane Silver, (6/237) vs GC 60's Div 2 Gold (10/181), the match result was Brisbane Silver won by 56 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
-      },
-      "playedFor": "Brisbane Silver",
-      "assignSponsors": {
-        "Team": {
-          "name": "Brisbane Silver"
-        },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
-        },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
-        }
-      }
-    },
-    {
-      "SR": 77.5,
-      "name": "Jeffrey Manitzky (vc)",
-      "runs": 31,
-      "balls": 40,
-      "notOut": false,
-      "prompt": "Jeffrey Manitzky (vc) played for GC 60's Div 2 Gold, scoring 31 runs from 40 balls with a strike rate of 77.5. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Gold, (6/237) vs Brisbane Silver (10/181), the match result was Brisbane Silver won by 56 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
-      },
-      "playedFor": "GC 60's Div 2 Gold",
-      "assignSponsors": {
-        "Team": {
-          "name": "GC 60's Div 2 Gold"
-        },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
-        },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
-        }
-      }
-    },
-    {
-      "SR": 72.5,
-      "name": "Michael Greco",
-      "runs": 29,
-      "balls": 40,
-      "notOut": false,
-      "prompt": "Michael Greco played for Brisbane White, scoring 29 runs from 40 balls with a strike rate of 72.5. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane White, (3/118) vs Toowoomba (4/189), the match result was Brisbane White won by 71 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
-      },
-      "playedFor": "Brisbane White",
-      "assignSponsors": {
-        "Team": {
-          "name": "Brisbane White"
-        },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
-        },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
-        }
-      }
-    },
-    {
-      "SR": 100,
-      "name": "Ian Coyne",
-      "runs": 28,
-      "balls": 28,
-      "notOut": false,
-      "prompt": "Ian Coyne played for GC 60's Div 2 Gold, scoring 28 runs from 28 balls with a strike rate of 100. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Gold, (6/237) vs Brisbane Silver (10/181), the match result was Brisbane Silver won by 56 runs.",
-      "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
-      },
-      "playedFor": "GC 60's Div 2 Gold",
-      "assignSponsors": {
-        "Team": {
-          "name": "GC 60's Div 2 Gold"
-        },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
-        },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
-        }
-      }
-    },
-    {
-      "SR": 65.85,
-      "name": "David Russell",
-      "runs": 27,
-      "balls": 41,
+      "SR": 113.21,
+      "name": "AB de Villiers",
+      "runs": 60,
+      "balls": 53,
       "notOut": true,
-      "prompt": "David Russell played for GC 60's Div 2 Blue, scoring 27 runs from 41 balls with a strike rate of 65.85. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . GC 60's Div 2 Blue, (9/160) vs Wide Bay (7/164), the match result was Wide Bay won by 3 wickets.",
+      "prompt": "AB de Villiers played for South Africa, scoring 60 runs from 53 balls with a strike rate of 113.21 (not out). Venue context: Sir Vivian Richards Stadium. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_0e4c5776_26dd87bda1.png",
-        "width": 379,
-        "height": 303
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/za.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "GC 60's Div 2 Blue",
+      "playedFor": "South Africa",
       "assignSponsors": {
-        "Team": {
-          "name": "GC 60's Div 2 Blue"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9005,
+            "name": "Sponsor 5",
+            "logo": {
+              "id": 9105,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_404_95ea1e5a4d.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 104,
-      "name": "william jeffrey",
-      "runs": 26,
-      "balls": 25,
+      "SR": 144.93,
+      "name": "Scott Styris",
+      "runs": 100,
+      "balls": 69,
       "notOut": false,
-      "prompt": "william jeffrey played for Lockyer, scoring 26 runs from 25 balls with a strike rate of 104. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Lockyer, (3/210) vs Sunshine Coast Gold (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "prompt": "Scott Styris played for New Zealand, scoring 100 runs from 69 balls with a strike rate of 144.93 (dismissed). Venue context: Providence Stadium. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
-        "width": 328,
-        "height": 347
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/nz.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Lockyer",
+      "playedFor": "New Zealand",
       "assignSponsors": {
-        "Team": {
-          "name": "Lockyer"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9006,
+            "name": "Sponsor 6",
+            "logo": {
+              "id": 9106,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_372_5c8c5a7583.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 65,
-      "name": "Neil Karunasekara",
-      "runs": 26,
-      "balls": 40,
+      "SR": 72.44,
+      "name": "Stephen Fleming",
+      "runs": 92,
+      "balls": 127,
       "notOut": false,
-      "prompt": "Neil Karunasekara played for Brisbane White, scoring 26 runs from 40 balls with a strike rate of 65. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Brisbane White, (3/118) vs Toowoomba (4/189), the match result was Brisbane White won by 71 runs.",
+      "prompt": "Stephen Fleming played for New Zealand, scoring 92 runs from 127 balls with a strike rate of 72.44 (dismissed). Venue context: Queen's Park Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_09d0b200_03a211afbd.jpg",
-        "width": 1012,
-        "height": 740
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/nz.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Brisbane White",
+      "playedFor": "New Zealand",
       "assignSponsors": {
-        "Team": {
-          "name": "Brisbane White"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9007,
+            "name": "Sponsor 7",
+            "logo": {
+              "id": 9107,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_388_e9e11314ed.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 65.78,
-      "name": "Richard Dennis (c)",
-      "runs": 25,
-      "balls": 38,
-      "notOut": false,
-      "prompt": "Richard Dennis (c) played for Redlands Logan, scoring 25 runs from 38 balls with a strike rate of 65.78. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Redlands Logan, (7/96) vs Sunshine Coast Maroon (10/94), the match result was Sunshine Coast Maroon won by 3 wickets.",
+      "SR": 112.26,
+      "name": "Kevin Pietersen",
+      "runs": 119,
+      "balls": 106,
+      "notOut": true,
+      "prompt": "Kevin Pietersen played for England, scoring 119 runs from 106 balls with a strike rate of 112.26 (not out). Venue context: Beausejour Cricket Ground. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_7da1c782_d479939baa.jpg",
-        "width": 706,
-        "height": 725
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/gb-eng.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Redlands Logan",
+      "playedFor": "England",
       "assignSponsors": {
-        "Team": {
-          "name": "Redlands Logan"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9008,
+            "name": "Sponsor 8",
+            "logo": {
+              "id": 9108,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_361_60c7a270d2.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
     },
     {
-      "SR": 40.32,
-      "name": "Gary Hughes",
-      "runs": 25,
-      "balls": 62,
+      "SR": 127.27,
+      "name": "Brian Lara",
+      "runs": 112,
+      "balls": 88,
       "notOut": false,
-      "prompt": "Gary Hughes played for Lockyer, scoring 25 runs from 62 balls with a strike rate of 40.32. Game details: This was a One Day in the O60 Div 2 - Kerry Emery Shield grade, and the current match status is Match Completed . Lockyer, (3/210) vs Sunshine Coast Gold (10/102), the match result was Sunshine Coast Gold won by 108 runs.",
+      "prompt": "Brian Lara played for West Indies, scoring 112 runs from 88 balls with a strike rate of 127.27 (dismissed). Venue context: Kensington Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
       "teamLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_66f3c071_314ad279c1.png",
-        "width": 328,
-        "height": 347
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/wi.svg",
+        "width": 640,
+        "height": 480
       },
-      "playedFor": "Lockyer",
+      "playedFor": "West Indies",
       "assignSponsors": {
-        "Team": {
-          "name": "Lockyer"
+        "competition": [],
+        "grade": [
+          {
+            "id": 9005,
+            "name": "Sponsor 5",
+            "logo": {
+              "id": 9105,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_404_95ea1e5a4d.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
         },
-        "grade": {
-          "id": 85929,
-          "name": "O60 Div 2 - Kerry Emery Shield"
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
         },
-        "competition": {
-          "id": 20200,
-          "name": "QVC Competitions"
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
         }
-      }
+      ]
+    },
+    {
+      "SR": 75.95,
+      "name": "Shivnarine Chanderpaul",
+      "runs": 60,
+      "balls": 79,
+      "notOut": false,
+      "prompt": "Shivnarine Chanderpaul played for West Indies, scoring 60 runs from 79 balls with a strike rate of 75.95 (dismissed). Venue context: Sabina Park. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/wi.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "West Indies",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9006,
+            "name": "Sponsor 6",
+            "logo": {
+              "id": 9106,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_372_5c8c5a7583.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 161.11,
+      "name": "Yuvraj Singh",
+      "runs": 58,
+      "balls": 36,
+      "notOut": false,
+      "prompt": "Yuvraj Singh played for India, scoring 58 runs from 36 balls with a strike rate of 161.11 (dismissed). Venue context: Sir Vivian Richards Stadium. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/in.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "India",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9007,
+            "name": "Sponsor 7",
+            "logo": {
+              "id": 9107,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_388_e9e11314ed.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 94.12,
+      "name": "Rahul Dravid",
+      "runs": 96,
+      "balls": 102,
+      "notOut": false,
+      "prompt": "Rahul Dravid played for India, scoring 96 runs from 102 balls with a strike rate of 94.12 (dismissed). Venue context: Providence Stadium. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/in.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "India",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9008,
+            "name": "Sponsor 8",
+            "logo": {
+              "id": 9108,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_361_60c7a270d2.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 98.15,
+      "name": "Mohammad Yousuf",
+      "runs": 106,
+      "balls": 108,
+      "notOut": false,
+      "prompt": "Mohammad Yousuf played for Pakistan, scoring 106 runs from 108 balls with a strike rate of 98.15 (dismissed). Venue context: Queen's Park Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/pk.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "Pakistan",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9005,
+            "name": "Sponsor 5",
+            "logo": {
+              "id": 9105,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_404_95ea1e5a4d.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 133.03,
+      "name": "Tamim Iqbal",
+      "runs": 145,
+      "balls": 109,
+      "notOut": false,
+      "prompt": "Tamim Iqbal played for Bangladesh, scoring 145 runs from 109 balls with a strike rate of 133.03 (dismissed). Venue context: Beausejour Cricket Ground. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/bd.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "Bangladesh",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9006,
+            "name": "Sponsor 6",
+            "logo": {
+              "id": 9106,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_372_5c8c5a7583.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
+    },
+    {
+      "SR": 123.53,
+      "name": "Kevin O'Brien",
+      "runs": 63,
+      "balls": 51,
+      "notOut": false,
+      "prompt": "Kevin O'Brien played for Ireland, scoring 63 runs from 51 balls with a strike rate of 123.53 (dismissed). Venue context: Kensington Oval. Competition: 2007 Cricket World Cup. Grade: ODI / Super Eight. This is a fictional demonstration performance for archive preview only.",
+      "teamLogo": {
+        "url": "https://application.fixtura.com.au/dummyAssetData/flags/ie.svg",
+        "width": 640,
+        "height": 480
+      },
+      "playedFor": "Ireland",
+      "assignSponsors": {
+        "competition": [],
+        "grade": [
+          {
+            "id": 9007,
+            "name": "Sponsor 7",
+            "logo": {
+              "id": 9107,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_388_e9e11314ed.png"
+            }
+          }
+        ],
+        "team": []
+      },
+      "primaryForScreen": [
+        {
+          "id": 9001,
+          "name": "Sponsor 1",
+          "logo": {
+            "id": 9101,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
+          }
+        },
+        {
+          "id": 9002,
+          "name": "Sponsor 2",
+          "logo": {
+            "id": 9102,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
+          }
+        },
+        {
+          "id": 9003,
+          "name": "Sponsor 3",
+          "logo": {
+            "id": 9103,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
+          }
+        },
+        {
+          "id": 9004,
+          "name": "Sponsor 4",
+          "logo": {
+            "id": 9104,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
+          }
+        }
+      ]
     }
   ],
   "asset": {
-    "assetID": 120,
-    "assetTypeID": 3,
-    "assetCategoryID": 2,
-    "assetsLinkID": "cbebe445d750146a6cd6ea28119c86e4ca09354294371c392efec5c36b687545"
+    "assetID": 0,
+    "assetTypeID": 0,
+    "assetCategoryID": 0,
+    "assetsLinkID": ""
   },
   "render": {
-    "schedulerId": 594,
-    "renderId": 9015
+    "schedulerId": 0,
+    "renderId": 0
   },
   "account": {
-    "accountId": 701
+    "accountId": 0
   },
   "timings": {
     "FPS_MAIN": 510,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 270,
+    "FPS_OUTRO": 90,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 0,
     "FPS_PREFORMANCECARD": 180
   },
-  "frames": [45, 180, 345, 510, 645, 735, 825],
+  "frames": [45, 180, 345, 510, 645],
   "videoMeta": {
     "club": {
       "logo": {
         "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Queensland_Veterans_Cricket_Logo_cropped_549341fcde.png",
-        "width": 2500,
-        "height": 2500
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/android_chrome_512x512_0823a84f31.png",
+        "width": 512,
+        "height": 512
       },
-      "name": "Queensland Veterans Cricket",
+      "name": "International Cricket Demo Preview",
       "sport": "Cricket",
       "sponsors": {
         "primary": [
           {
-            "id": 211,
-            "name": "1",
+            "id": 9001,
+            "name": "Sponsor 1",
             "logo": {
-              "id": 31204,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor1_cropped_6a5816fd09.png"
+              "id": 9101,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
             }
           },
           {
-            "id": 212,
-            "name": "2",
+            "id": 9002,
+            "name": "Sponsor 2",
             "logo": {
-              "id": 31205,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor2_cropped_e7a498be50.png"
+              "id": 9102,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_439_504027c022.png"
             }
           },
           {
-            "id": 213,
-            "name": "3",
+            "id": 9003,
+            "name": "Sponsor 3",
             "logo": {
-              "id": 31206,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor3_cropped_74d23762b7.png"
+              "id": 9103,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_434_5e7c3b7e5f.png"
             }
           },
           {
-            "id": 214,
-            "name": "4",
+            "id": 9004,
+            "name": "Sponsor 4",
             "logo": {
-              "id": 31207,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor4_cropped_027d69dbfd.png"
+              "id": 9104,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_435_50252786f7.png"
             }
           }
         ],
         "general": [
           {
-            "id": 215,
-            "name": "5",
+            "id": 9005,
+            "name": "Sponsor 5",
             "logo": {
-              "id": 31208,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor5_cropped_c9e01954ba.png"
+              "id": 9105,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_404_95ea1e5a4d.png"
             }
           },
           {
-            "id": 216,
-            "name": "6",
+            "id": 9006,
+            "name": "Sponsor 6",
             "logo": {
-              "id": 31209,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor6_cropped_8af0ba7b8f.png"
+              "id": 9106,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_372_5c8c5a7583.png"
             }
           },
           {
-            "id": 217,
-            "name": "7",
+            "id": 9007,
+            "name": "Sponsor 7",
             "logo": {
-              "id": 31210,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor7_cropped_dfb381eef0.png"
+              "id": 9107,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_388_e9e11314ed.png"
             }
           },
           {
-            "id": 218,
-            "name": "8",
+            "id": 9008,
+            "name": "Sponsor 8",
             "logo": {
-              "id": 31211,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor8_cropped_31bb64eb78.png"
+              "id": 9108,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_361_60c7a270d2.png"
             }
           },
           {
-            "id": 219,
-            "name": "9",
+            "id": 9009,
+            "name": "Sponsor 9",
             "logo": {
-              "id": 31212,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor9_cropped_3c15f47b89.png"
-            }
-          },
-          {
-            "id": 220,
-            "name": "10",
-            "logo": {
-              "id": 31213,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor10_cropped_ae991bac05.png"
-            }
-          },
-          {
-            "id": 221,
-            "name": "11",
-            "logo": {
-              "id": 31214,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor11_cropped_7c4fa55c7e.png"
-            }
-          },
-          {
-            "id": 222,
-            "name": "12",
-            "logo": {
-              "id": 31215,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor12_cropped_ef985bec1c.png"
-            }
-          },
-          {
-            "id": 223,
-            "name": "13",
-            "logo": {
-              "id": 31216,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor13_cropped_d8f85c75e7.png"
-            }
-          },
-          {
-            "id": 224,
-            "name": "14",
-            "logo": {
-              "id": 31217,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor14_cropped_6105b69331.png"
-            }
-          },
-          {
-            "id": 225,
-            "name": "15",
-            "logo": {
-              "id": 31218,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor15_cropped_0d7cc6d2f8.png"
-            }
-          },
-          {
-            "id": 226,
-            "name": "16",
-            "logo": {
-              "id": 31219,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Sponsor16_cropped_4faa202880.png"
+              "id": 9109,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logoipsum_440_65c61bb5e6.png"
             }
           }
         ],
-        "sponsorNum": 16
+        "sponsorNum": 9
       },
       "IsAccountClub": false
     },
     "video": {
-      "fixtureCategory": "O60 Div 2 - Kerry Emery Shield",
-      "groupingCategory": "O60 Div 2 - Kerry Emery Shield",
-      "metadata": {
-        "title": "Batting Performances",
-        "titleSplit": [""],
-        "videoTitle": "Batting Performances",
-        "compositionId": "CricketBattingPerformances",
-        "assetId": 120,
-        "assetTypeId": 3,
-        "frames": [],
-        "includeSponsors": true
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#862F2F",
-          "secondary": "#EFB247"
-        },
-        "template": "CNSW"
-      },
       "media": {
+        "audio": {
+          "url": "",
+          "audioOption": null
+        },
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -606,11 +1306,26 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
         }
+      },
+      "metadata": {
+        "title": "Batting Performances",
+        "frames": [],
+        "assetId": 65,
+        "titleSplit": ["Performances"],
+        "videoTitle": "Batting Performances",
+        "assetTypeId": 3,
+        "compositionId": "CricketBattingPerformances",
+        "includeSponsors": true
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#de0000",
+          "secondary": "#ffa300"
+        },
+        "template": "CNSW"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -620,76 +1335,52 @@
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
           "CricketBattingPerformances": 7,
-          "CricketBowlingPerformances": 7,
-          "CricketTeamOfTheWeek": 2
+          "CricketBowlingPerformances": 7
         }
       },
+      "fixtureCategory": "International Cricket Demo Preview",
+      "groupingCategory": "International Cricket Demo Preview",
       "templateVariation": {
-        "useBackground": "Texture",
         "mode": "lightAlt",
-        "category": {
-          "slug": "CNSW",
-          "name": "Cricket NSW",
-          "divideFixturesBy": {
-            "CricketLadder": 1,
-            "CricketRoster": 1,
-            "CricketResults": 2,
-            "CricketUpcoming": 3,
-            "CricketResultSingle": 1,
-            "CricketBattingPerformances": 7,
-            "CricketBowlingPerformances": 7
-          },
-          "bundleAudio": null
-        },
-        "video": {
-          "url": null,
-          "fallbackUrl": null,
-          "position": null,
-          "size": null,
-          "loop": null,
-          "muted": null,
-          "overlay": null,
-          "useOffthreadVideo": null,
-          "volume": null,
-          "playbackRate": null
-        },
         "image": {
           "url": null,
+          "type": "pan",
           "ratio": null,
           "width": null,
           "height": null,
-          "type": null,
-          "direction": null,
-          "overlayStyle": null,
-          "gradientType": null,
-          "overlayOpacity": null
-        },
-        "palette": "secondary",
-        "gradient": {
-          "type": null,
-          "direction": null
+          "direction": "left",
+          "gradientType": "linear",
+          "overlayStyle": "vignette",
+          "overlayOpacity": 0.3
         },
         "noise": {
-          "type": null
+          "type": "floatingParticles"
         },
+        "video": {
+          "url": null,
+          "loop": null,
+          "size": "cover",
+          "muted": true,
+          "volume": 0.8,
+          "overlay": {
+            "color": "rgba(0,0,0,0.5)",
+            "opacity": 0.7
+          },
+          "position": "left",
+          "fallbackUrl": null,
+          "playbackRate": null,
+          "useOffthreadVideo": null
+        },
+        "palette": "secondary",
         "pattern": {
           "type": "dots",
-          "animation": "none",
           "scale": 0.75,
-          "rotation": null,
           "opacity": 0.35,
-          "animationDuration": null,
-          "animationSpeed": 0.8
+          "rotation": null,
+          "animation": "none",
+          "animationSpeed": 0.8,
+          "animationDuration": null
         },
-        "particle": {
-          "type": null,
-          "particleCount": null,
-          "speed": null,
-          "direction": null,
-          "animation": null
-        },
-        "modeId": 2,
-        "imageCandidates": [],
         "texture": {
           "name": "Stadium 004",
           "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Chat_GPT_Image_Aug_12_2026_12_25_17_PM_68e4d8018e.png",
@@ -700,10 +1391,104 @@
             "blendMode": "multiply"
           }
         },
+        "category": {
+          "name": "Cricket NSW",
+          "slug": "CNSW",
+          "bundleAudio": {
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-30T00:35:16.398Z",
+            "updatedAt": "2024-10-30T00:35:17.926Z",
+            "publishedAt": "2024-10-30T00:35:17.915Z",
+            "audio_options": [
+              {
+                "id": 33,
+                "URL": "",
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-30T00:35:04.160Z",
+                "updatedAt": "2024-10-30T00:36:30.358Z",
+                "publishedAt": "2024-10-30T00:35:05.839Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 34,
+                "URL": "",
+                "Name": "GoodGoodFeeling_Inst",
+                "createdAt": "2024-10-30T00:37:09.563Z",
+                "updatedAt": "2024-10-30T00:38:09.963Z",
+                "publishedAt": "2024-10-30T00:38:09.959Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              },
+              {
+                "id": 35,
+                "URL": "",
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-30T00:38:02.552Z",
+                "updatedAt": "2024-10-30T00:38:04.070Z",
+                "publishedAt": "2024-10-30T00:38:04.063Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 36,
+                "URL": "",
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-30T00:39:02.570Z",
+                "updatedAt": "2024-10-30T00:39:04.182Z",
+                "publishedAt": "2024-10-30T00:39:04.177Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 38,
+                "URL": "",
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-30T01:00:28.630Z",
+                "updatedAt": "2024-10-30T01:00:30.327Z",
+                "publishedAt": "2024-10-30T01:00:30.319Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 39,
+                "URL": "",
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-30T01:01:10.581Z",
+                "updatedAt": "2024-10-30T01:01:13.949Z",
+                "publishedAt": "2024-10-30T01:01:13.932Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1,
+            "CricketBattingPerformances": 7,
+            "CricketBowlingPerformances": 7
+          }
+        },
+        "gradient": {
+          "type": "primary",
+          "direction": "HORIZONTAL"
+        },
+        "particle": {
+          "type": "lines",
+          "speed": 0.8,
+          "animation": "scale",
+          "direction": "up",
+          "particleCount": "300"
+        },
+        "useBackground": "Texture",
         "luminance": {
-          "name": "Test 001",
+          "name": "Brush Sweep Gray",
           "url": null,
-          "asset": "_verify/test001.png",
+          "asset": "plates/brush-sweep-gray.png",
           "map": {
             "kind": "theme",
             "preset": "brand"
@@ -716,30 +1501,5 @@
       }
     }
   },
-  "errors": [],
-  "orderingContext": {
-    "scopeKey": "account:701:association:7646",
-    "revision": 0,
-    "resolvedAt": "2026-08-21T04:12:20.168Z"
-  },
-  "organisation": {
-    "type": "association",
-    "id": 7646
-  },
-  "generationIdentity": "de60ed6c0a267a2bcc1594f99b2dce6925c5ef6205902a73e0273c767a297be9",
-  "generationManifest": {
-    "orderingContext": {
-      "scopeKey": "account:701:association:7646",
-      "revision": 0,
-      "resolvedAt": "2026-08-21T04:12:20.168Z"
-    },
-    "organisation": {
-      "type": "association",
-      "id": 7646
-    },
-    "generationIdentity": "de60ed6c0a267a2bcc1594f99b2dce6925c5ef6205902a73e0273c767a297be9",
-    "schedulerId": 594,
-    "renderId": 9015,
-    "fixtureIds": []
-  }
+  "errors": []
 }

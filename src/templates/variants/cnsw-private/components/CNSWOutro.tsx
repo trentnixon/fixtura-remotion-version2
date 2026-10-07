@@ -8,6 +8,7 @@ import {
   OUTRO_SPONSOR_PAGE_SIZE,
   OUTRO_PAGE_DURATION_FRAMES,
   OUTRO_PAGE_LOGO_EXIT_FRAME,
+  OUTRO_PAGE_LOGO_STAGGER_FRAMES,
 } from "../../../../core/utils/sponsors";
 import { AnimatedImage } from "../../../../components/images";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -49,7 +50,7 @@ const SponsorGrid: React.FC<{
             exitAnimation={
               LogoAnimations.exitAnimation ?? LogoAnimations.introOut
             }
-            animationDelay={idx * 5}
+            animationDelay={idx * OUTRO_PAGE_LOGO_STAGGER_FRAMES}
             exitFrame={OUTRO_PAGE_LOGO_EXIT_FRAME}
           />
         </div>

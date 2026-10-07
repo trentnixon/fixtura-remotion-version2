@@ -4,6 +4,7 @@ import type { MatchResult } from "../../../results/_types/types";
 import {
   resolveScorelineClubTeam,
   resolveScorelineResultSinglePerformances,
+  scorelineBowlingUnderOpposition,
 } from "./resolveScorelineResultSinglePerformances";
 import { resolveScorelineMatchPerformances } from "./resolveScorelineMatchPerformances";
 
@@ -48,6 +49,29 @@ describe("resolveScorelineClubTeam", () => {
     expect(
       resolveScorelineClubTeam(match, "Sunshine Coast Cricket Club")?.name,
     ).toBe("Sunshine Coast Premier");
+  });
+});
+
+describe("scorelineBowlingUnderOpposition", () => {
+  it("keeps batting in the first column when the club is home", () => {
+    const match: MatchResult = {
+      ...matches[0],
+      homeTeam: { ...matches[0].homeTeam, isClubTeam: true },
+      awayTeam: { ...matches[0].awayTeam, isClubTeam: false },
+    };
+
+    expect(scorelineBowlingUnderOpposition(match, true)).toBe(false);
+  });
+
+  it("leads with bowling when the club is away", () => {
+    const match: MatchResult = {
+      ...matches[0],
+      homeTeam: { ...matches[0].homeTeam, isClubTeam: false },
+      awayTeam: { ...matches[0].awayTeam, isClubTeam: true },
+    };
+
+    expect(scorelineBowlingUnderOpposition(match, true)).toBe(true);
+    expect(scorelineBowlingUnderOpposition(match, false)).toBe(false);
   });
 });
 
@@ -96,7 +120,7 @@ describe("resolveScorelineResultSinglePerformances", () => {
     ).toBe("Club Bowler");
     expect(
       bind.battingRows[0]?.kind === "batting" && bind.battingRows[0].player,
-    ).toBe("Sam Lickiss (c)");
+    ).toBe("Joe Root");
   });
 
   it("falls back to bind-map performances when no club team", () => {

@@ -36,7 +36,7 @@ describe("routes manifest", () => {
 describe("hydrate-core", () => {
   it("reads nested fixture values by dot path", () => {
     expect(getValueByPath(cricketResults, "videoMeta.club.name")).toBe(
-      "Mudgeeraba Nerang And Districts Cricket Club",
+      "International Cricket Demo Preview",
     );
   });
 
@@ -47,10 +47,8 @@ describe("hydrate-core", () => {
       expect(String(value).length, selector).toBeGreaterThan(0);
     }
 
-    expect(values["[data-hydrate=home-team]"]).toBe("Helensvale 1st Grade");
-    expect(values["[data-hydrate=away-team]"]).toBe(
-      "Mudgeeraba Premier Division 1",
-    );
+    expect(values["[data-hydrate=home-team]"]).toBe("England");
+    expect(values["[data-hydrate=away-team]"]).toBe("South Africa");
   });
 
   it("throws when a required bind-map path is missing from fixture data", () => {
@@ -71,7 +69,7 @@ describe("hydrate-core", () => {
     });
 
     expect(skipped).toContain("[data-hydrate=optional-logo]");
-    expect(values["[data-hydrate=home-team]"]).toBe("Helensvale 1st Grade");
+    expect(values["[data-hydrate=home-team]"]).toBe("England");
     expect(values["[data-hydrate=optional-logo]"]).toBeUndefined();
   });
 

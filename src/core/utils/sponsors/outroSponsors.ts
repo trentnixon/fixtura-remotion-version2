@@ -16,6 +16,15 @@ export const OUTRO_PAGE_DURATION_FRAMES =
 export const OUTRO_PAGE_LOGO_EXIT_FRAME =
   OUTRO_PAGE_DURATION_FRAMES - OUTRO_PAGE_ANIMATE_OUT_FRAMES;
 
+/** Screenshot is taken at this local frame. All six logos must already be in. */
+export const OUTRO_PAGE_LOGO_SETTLED_FRAME = 30;
+
+/**
+ * Frames between logo entrances.
+ * The sixth logo starts at 5 × 2 = 10. The slowest intro is 16 frames, so it finishes at 26.
+ */
+export const OUTRO_PAGE_LOGO_STAGGER_FRAMES = 2;
+
 /** No outro when sponsors are gated off or empty. */
 export const OUTRO_NO_SPONSORS_DURATION_FRAMES = 0;
 

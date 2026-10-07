@@ -687,6 +687,11 @@ export const generatedCatalogue = defineGeneratedCatalogue([
 
 export type GeneratedPresetId = (typeof generatedCatalogue)[number]["id"];
 
+export const isGeneratedPresetId = (
+  value: string,
+): value is GeneratedPresetId =>
+  generatedCatalogue.some((entry) => entry.id === value);
+
 const toRendererAdapterPair = (
   entry: (typeof generatedCatalogue)[number],
 ): readonly [GeneratedPresetId, RendererAdapterKey] => [

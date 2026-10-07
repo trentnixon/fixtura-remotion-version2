@@ -8,15 +8,15 @@ describe("castToMatchResults", () => {
 
     expect(
       match.homeTeam.battingPerformances.map((player) => player.player),
-    ).toEqual(["Sam Lickiss (c)", "Jack Lickiss", "James Guthrig"]);
+    ).toEqual(["Joe Root", "Eoin Morgan", "Ben Stokes"]);
     expect(
       match.homeTeam.bowlingPerformances.map((player) => player.player),
-    ).toEqual(["Maloney", "Gregory", "Pedi"]);
+    ).toEqual(["Jofra Archer", "Mark Wood", "Adil Rashid"]);
     expect(
       match.awayTeam.battingPerformances.map((player) => player.player),
-    ).toEqual(["Lachlan King", "Hayden Taylor", "Bailey Garnham"]);
+    ).toEqual(["Faf du Plessis", "Quinton de Kock", "Rassie van der Dussen"]);
     expect(
       match.awayTeam.bowlingPerformances.map((player) => player.player),
-    ).toEqual(["Latimer", "Barclay", "Finn"]);
+    ).toEqual(["Kagiso Rabada", "Imran Tahir", "Lungisani Ngidi"]);
   });
 });

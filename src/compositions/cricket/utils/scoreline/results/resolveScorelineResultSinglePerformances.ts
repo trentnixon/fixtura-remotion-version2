@@ -36,6 +36,20 @@ export const resolveScorelineClubTeam = (
   return null;
 };
 
+/** Bowling column leads when the club is the away side, so it sits under the opposition score. */
+export const scorelineBowlingUnderOpposition = (
+  match: MatchResult,
+  isAccountClub: boolean,
+  clubName?: string,
+): boolean => {
+  if (!isAccountClub) {
+    return false;
+  }
+
+  const clubTeam = resolveScorelineClubTeam(match, clubName);
+  return clubTeam === match.awayTeam;
+};
+
 export const resolveScorelineResultSinglePerformances = (
   match: MatchResult,
   clubName?: string,

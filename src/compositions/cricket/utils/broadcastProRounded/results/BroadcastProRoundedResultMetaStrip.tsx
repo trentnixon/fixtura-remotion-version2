@@ -50,7 +50,7 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
 
   return (
     <div
-      className={`${standalone ? `overflow-hidden ${cellRadius}` : ""} ${stripClass} ${gradeOnly ? "!justify-center" : ""} ${className}`.trim()}
+      className={`overflow-hidden ${cellRadius} ${stripClass} ${gradeOnly ? "!justify-center" : ""} ${className}`.trim()}
       style={{
         background: glass.headerGradient,
         ...(standalone

@@ -3,10 +3,36 @@ import {
   resolveScorelineLadderDensity,
   resolveScorelineLadderShowCreases,
   resolveScorelineLadderShowRowCrease,
+  resolveScorelineLadderTeamFont,
   SCORELINE_LADDER_CREASE_MAX_ROWS,
 } from "./resolveScorelineLadderLayout";
 
 describe("resolveScorelineLadderLayout", () => {
+  it("enlarges team names for short ladders", () => {
+    expect(resolveScorelineLadderTeamFont(4)).toEqual({
+      teamSize: 36,
+      heroSize: 40,
+    });
+    expect(resolveScorelineLadderTeamFont(6)).toEqual({
+      teamSize: 32,
+      heroSize: 36,
+    });
+    expect(resolveScorelineLadderTeamFont(8)).toEqual({
+      teamSize: 28,
+      heroSize: 32,
+    });
+    expect(resolveScorelineLadderTeamFont(10)).toEqual({
+      teamSize: 24,
+      heroSize: 27,
+    });
+  });
+
+  it("leaves 11+ row ladders on the CSS density scale", () => {
+    expect(resolveScorelineLadderTeamFont(11)).toBeUndefined();
+    expect(resolveScorelineLadderTeamFont(14)).toBeUndefined();
+    expect(resolveScorelineLadderTeamFont(0)).toBeUndefined();
+  });
+
   it("uses normal density up to 11 rows", () => {
     expect(resolveScorelineLadderDensity(11)).toBe("normal");
   });

@@ -18,8 +18,9 @@
   --surface-muted: #f3f0ea;
   --rule: rgba(8, 11, 13, 0.12);
   --muted: #5f5b56;
-  --font-display: "Barlow Condensed", Arial, sans-serif;
-  --font-body: "Source Sans 3", Arial, sans-serif;
+  --font-display: "Geist", Arial, sans-serif;
+  --font-body: "Geist", Arial, sans-serif;
+  --font-mono: "Geist Mono", "Geist", ui-monospace, monospace;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
@@ -287,8 +288,8 @@
 }
 
 .ladder-rank {
-  font-family: var(--font-display);
-  font-size: var(--ladder-rank-size, 28px);
+  font-family: var(--font-mono, var(--font-display));
+  font-size: var(--ladder-team-size, 22px);
   font-weight: 900;
   font-stretch: condensed;
   line-height: 1;
@@ -297,7 +298,7 @@
 }
 
 .ladder-rows .ladder-entry:first-of-type .ladder-rank {
-  font-size: var(--ladder-rank-hero-size, 32px);
+  font-size: var(--ladder-team-hero-size, 24px);
 }
 
 .ladder-team {
@@ -324,8 +325,8 @@
 }
 
 .ladder-stat {
-  font-family: var(--font-display);
-  font-size: var(--ladder-stat-size, 22px);
+  font-family: var(--font-mono, var(--font-display));
+  font-size: var(--ladder-team-size, 22px);
   font-weight: 700;
   font-stretch: condensed;
   line-height: 1;
@@ -334,6 +335,10 @@
 }
 
 .ladder-stat--pts {
-  font-size: var(--ladder-stat-pts-size, 26px);
+  font-size: var(--ladder-team-size, 22px);
   font-weight: 800;
+}
+
+.ladder-rows .ladder-entry:first-of-type .ladder-stat--pts {
+  font-size: var(--ladder-team-hero-size, 24px);
 }

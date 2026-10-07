@@ -210,38 +210,53 @@ export const ScorelinePerformancePanels: React.FC<{
   bowlingRows: Array<ScorelinePerformanceRow | null>;
   hasBatting: boolean;
   hasBowling: boolean;
-}> = ({ battingRows, bowlingRows, hasBatting, hasBowling }) => {
+  /** Place bowling in the first column, under the home score, when the club is away. */
+  bowlingFirst?: boolean;
+}> = ({
+  battingRows,
+  bowlingRows,
+  hasBatting,
+  hasBowling,
+  bowlingFirst = false,
+}) => {
   const battingRanks = rankFilledPerformanceRows(battingRows, "batting");
   const bowlingRanks = rankFilledPerformanceRows(bowlingRows, "bowling");
 
+  const battingPanel = (
+    <section
+      className="performance-panel"
+      data-state={hasBatting ? "filled" : "empty"}
+    >
+      <h3 className="performance-heading">Batting</h3>
+      {battingRows.map((row, index) => (
+        <ScorelineBattingRow
+          key={`bat-${index}`}
+          row={row}
+          rank={battingRanks[index]}
+        />
+      ))}
+    </section>
+  );
+  const bowlingPanel = (
+    <section
+      className="performance-panel"
+      data-state={hasBowling ? "filled" : "empty"}
+    >
+      <h3 className="performance-heading">Bowling</h3>
+      {bowlingRows.map((row, index) => (
+        <ScorelineBowlingRow
+          key={`bowl-${index}`}
+          row={row}
+          rank={bowlingRanks[index]}
+        />
+      ))}
+    </section>
+  );
+
   return (
     <div className="performance-area">
-      <section
-        className="performance-panel"
-        data-state={hasBatting ? "filled" : "empty"}
-      >
-        <h3 className="performance-heading">Batting</h3>
-        {battingRows.map((row, index) => (
-          <ScorelineBattingRow
-            key={`bat-${index}`}
-            row={row}
-            rank={battingRanks[index]}
-          />
-        ))}
-      </section>
-      <section
-        className="performance-panel"
-        data-state={hasBowling ? "filled" : "empty"}
-      >
-        <h3 className="performance-heading">Bowling</h3>
-        {bowlingRows.map((row, index) => (
-          <ScorelineBowlingRow
-            key={`bowl-${index}`}
-            row={row}
-            rank={bowlingRanks[index]}
-          />
-        ))}
-      </section>
+      {bowlingFirst ? bowlingPanel : battingPanel}
+      {bowlingFirst ? battingPanel : bowlingPanel}
     </div>
   );
 };

@@ -55,23 +55,38 @@ export const ProductionRoot: React.FC = () => {
   }
 
   const { data } = inputProps;
-  const { TemplateComponent, remoteCompositionId, durationInFrames } =
-    getProductionCompositionFromData(data);
+  const {
+    TemplateComponent,
+    remoteCompositionId,
+    studioGeneratedCompositionId,
+    durationInFrames,
+  } = getProductionCompositionFromData(data);
+
+  const compositionIds = [
+    remoteCompositionId,
+    ...(studioGeneratedCompositionId &&
+    studioGeneratedCompositionId !== remoteCompositionId
+      ? [studioGeneratedCompositionId]
+      : []),
+  ];
 
   return (
     <>
       {renderEffectsSolidBackgroundTest()}
-      <Composition
-        id={remoteCompositionId}
-        component={TemplateComponent}
-        durationInFrames={durationInFrames}
-        fps={VIDEO.fps}
-        width={VIDEO.width}
-        height={VIDEO.height}
-        defaultProps={{
-          data,
-        }}
-      />
+      {compositionIds.map((id) => (
+        <Composition
+          key={id}
+          id={id}
+          component={TemplateComponent}
+          durationInFrames={durationInFrames}
+          fps={VIDEO.fps}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          defaultProps={{
+            data,
+          }}
+        />
+      ))}
     </>
   );
 };

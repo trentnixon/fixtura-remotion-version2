@@ -7,6 +7,8 @@ import {
   OUTRO_PAGE_ANIMATE_OUT_FRAMES,
   OUTRO_PAGE_DURATION_FRAMES,
   OUTRO_PAGE_LOGO_EXIT_FRAME,
+  OUTRO_PAGE_LOGO_SETTLED_FRAME,
+  OUTRO_PAGE_LOGO_STAGGER_FRAMES,
   OUTRO_NO_SPONSORS_DURATION_FRAMES,
   buildOutroSponsorSequence,
   chunkSponsors,
@@ -65,6 +67,17 @@ describe("calculateOutroDurationFromSponsors", () => {
     expect(calculateOutroDurationFromSponsors(account(6, 4), true)).toBe(180);
     expect(calculateOutroDurationFromSponsors(account(3, 3), true)).toBe(90);
     expect(calculateOutroDurationFromSponsors(account(4, 3), true)).toBe(180);
+  });
+
+  it("has all six logos in before the frame-30 screenshot", () => {
+    const slowestIntroFrames = 16;
+    const lastLogoStart =
+      (OUTRO_SPONSOR_PAGE_SIZE - 1) * OUTRO_PAGE_LOGO_STAGGER_FRAMES;
+
+    expect(OUTRO_PAGE_LOGO_SETTLED_FRAME).toBe(30);
+    expect(lastLogoStart + slowestIntroFrames).toBeLessThanOrEqual(
+      OUTRO_PAGE_LOGO_SETTLED_FRAME,
+    );
   });
 
   it("returns 0 when gated off or empty (no outro)", () => {

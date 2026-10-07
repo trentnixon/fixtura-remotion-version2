@@ -149,6 +149,11 @@ export const fontPathMap: Record<string, string> = {
 
   // Source Sans 3 (Scoreline body)
   "Source Sans 3": "fonts/SourceSans3/static/SourceSans3-Variable.ttf",
+
+  // Geist (Scoreline names) and Geist Mono (Scoreline figures)
+  Geist: "fonts/Geist/Geist-Variable.ttf",
+  "Geist-Italic": "fonts/Geist/Geist-Italic-Variable.ttf",
+  "Geist Mono": "fonts/GeistMono/GeistMono-Variable.ttf",
 };
 
 // System fonts that don't need to be loaded
@@ -208,6 +213,10 @@ const fontNameVariants: Record<string, string> = {
   TEKO: "Teko",
   "barlow condensed": "Barlow Condensed",
   "Barlow Condensed": "Barlow Condensed",
+  geist: "Geist",
+  Geist: "Geist",
+  "geist mono": "Geist Mono",
+  "Geist Mono": "Geist Mono",
   "source sans 3": "Source Sans 3",
   "Source Sans 3": "Source Sans 3",
 };
@@ -423,32 +432,13 @@ export const loadFontByName = async (
   await loadFontFile(fontConfig);
 };
 
-const SCORELINE_BARLOW_CONDENSED_FACES: ReadonlyArray<{
-  mapKey: string;
-  weight: string;
-  style?: string;
-}> = [
-  { mapKey: "Barlow Condensed", weight: "400" },
-  { mapKey: "Barlow Condensed-Medium", weight: "500" },
-  { mapKey: "Barlow Condensed-SemiBold", weight: "600" },
-  { mapKey: "Barlow Condensed-Bold", weight: "700" },
-  { mapKey: "Barlow Condensed-ExtraBold", weight: "800" },
-  { mapKey: "Barlow Condensed-Black", weight: "900" },
-  { mapKey: "Barlow Condensed-BoldItalic", weight: "700", style: "italic" },
-  {
-    mapKey: "Barlow Condensed-ExtraBoldItalic",
-    weight: "800",
-    style: "italic",
-  },
-];
-
 const usesScorelineTypography = (theme: TemplateThemeConfig): boolean => {
   const titleFamily = theme.fonts?.title?.family;
   const copyFamily = theme.fonts?.copy?.family;
 
   return (
-    normalizeFontName(titleFamily ?? "") === "Barlow Condensed" &&
-    normalizeFontName(copyFamily ?? "") === "Source Sans 3"
+    normalizeFontName(titleFamily ?? "") === "Geist" &&
+    normalizeFontName(copyFamily ?? "") === "Geist"
   );
 };
 
@@ -507,27 +497,39 @@ export const loadNightSessionTypographyFonts = async (): Promise<void> => {
 };
 
 /**
- * Registers Scoreline display/body faces under the same family names as design
- * (Google Fonts: Barlow Condensed 500–900 + italic 700/800, Source Sans 3 variable).
+ * Registers Scoreline faces: Geist for names, Geist Mono for figures.
  */
 export const loadScorelineTypographyFonts = async (): Promise<void> => {
-  await Promise.allSettled(
-    SCORELINE_BARLOW_CONDENSED_FACES.map(async (face) => {
-      const path = fontPathMap[face.mapKey];
-      if (!path) {
-        return;
-      }
+  const geistPath = fontPathMap.Geist;
+  const geistItalicPath = fontPathMap["Geist-Italic"];
+  const geistMonoPath = fontPathMap["Geist Mono"];
 
-      await loadFontFile({
-        family: "Barlow Condensed",
-        url: staticFile(path),
-        weight: face.weight,
-        style: face.style ?? "normal",
-      });
-    }),
-  );
+  if (geistPath) {
+    await loadFontFile({
+      family: "Geist",
+      url: staticFile(geistPath),
+      weight: "100 900",
+      style: "normal",
+    });
+  }
 
-  await loadSourceSans3VariableFont();
+  if (geistItalicPath) {
+    await loadFontFile({
+      family: "Geist",
+      url: staticFile(geistItalicPath),
+      weight: "100 900",
+      style: "italic",
+    });
+  }
+
+  if (geistMonoPath) {
+    await loadFontFile({
+      family: "Geist Mono",
+      url: staticFile(geistMonoPath),
+      weight: "100 900",
+      style: "normal",
+    });
+  }
 };
 
 /**
@@ -605,9 +607,7 @@ export const loadFontsFromTheme = async (
     const normalized = normalizeFontName(font);
 
     if (scorelineTypography) {
-      return (
-        normalized !== "Barlow Condensed" && normalized !== "Source Sans 3"
-      );
+      return normalized !== "Geist" && normalized !== "Geist Mono";
     }
 
     if (nightSessionTypography) {

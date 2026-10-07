@@ -56,4 +56,22 @@ describe("selectFooterSponsors", () => {
 
     expect(result.map((s) => s.id)).toEqual([1, 2, 10]);
   });
+
+  it("drops primaries that already appear as entities (entity-wins)", () => {
+    const result = selectFooterSponsors({
+      primaryForScreen: [1, 2, 3, 4].map(sponsor),
+      entities: [2, 10].map(sponsor),
+    });
+
+    expect(result.map((s) => s.id)).toEqual([1, 3, 4, 2, 10]);
+  });
+
+  it("dedupes repeated entity ids before filling from primaries", () => {
+    const result = selectFooterSponsors({
+      primaryForScreen: [1, 2, 3].map(sponsor),
+      entities: [10, 10, 11].map(sponsor),
+    });
+
+    expect(result.map((s) => s.id)).toEqual([1, 2, 3, 10, 11]);
+  });
 });

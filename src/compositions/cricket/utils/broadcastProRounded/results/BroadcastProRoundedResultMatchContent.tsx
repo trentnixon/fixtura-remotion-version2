@@ -26,6 +26,7 @@ import {
   calculateBroadcastProRoundedResultDelays,
   calculateBroadcastProRoundedResultExitFrame,
 } from "./matchContentHelpers";
+import { placeBroadcastProClubBowlingOnOpposition } from "../../broadcastPro/results/placeBroadcastProClubBowlingOnOpposition";
 import { resolveBroadcastProRoundedTeamAccentColors } from "./resolveBroadcastProRoundedTeamAccentColors";
 import type { BroadcastProRoundedResultMatchData } from "./types";
 
@@ -125,19 +126,25 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
 
   const homeBatted = (match.homeTeam.battingPerformances || []).length > 0;
   const awayBatted = (match.awayTeam.battingPerformances || []).length > 0;
+  const accountIsClub = isAccountClub || false;
   const visibility = computePlayerVisibility({
     matchType: match.type,
     matchStatus: match.status,
     homeBatted,
     awayBatted,
-    isAccountClub: isAccountClub || false,
+    isAccountClub: accountIsClub,
     homeIsClub: match.homeTeam.isClubTeam,
     awayIsClub: match.awayTeam.isClubTeam,
   });
+  const statTeams = placeBroadcastProClubBowlingOnOpposition(
+    match.homeTeam,
+    match.awayTeam,
+    accountIsClub,
+  );
 
   const homeStats = buildBroadcastProRoundedResultStatItems(
     teamForStatItems(
-      match.homeTeam,
+      statTeams.homeTeam,
       visibility.homeShowBatting,
       visibility.homeShowBowling,
     ),
@@ -145,7 +152,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
   );
   const awayStats = buildBroadcastProRoundedResultStatItems(
     teamForStatItems(
-      match.awayTeam,
+      statTeams.awayTeam,
       visibility.awayShowBatting,
       visibility.awayShowBowling,
     ),
@@ -179,7 +186,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
       <BroadcastProRoundedFixtureFrame
         accentColor={primaryAccent}
         glass={glass}
-        className="flex h-full min-h-0 flex-1 flex-col justify-center gap-2"
+        className="flex h-full min-h-0 flex-1 flex-col justify-center gap-2 p-2"
       >
         <div className="flex w-full shrink-0 flex-col gap-2">
           {showHeroVerdict && verdict?.kind === "hero" && (
@@ -196,17 +203,15 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
             />
           )}
 
-          <div style={{ borderBottom: glass.border }}>
-            <BroadcastProRoundedResultMetaStrip
-              gradeLabel={buildGradeLabel(match)}
-              ground={match.ground}
-              delay={metaDelay}
-              showGround={showGround}
-              connection="attached"
-              exitAnimation={copyOut}
-              exitFrame={exitFrame}
-            />
-          </div>
+          <BroadcastProRoundedResultMetaStrip
+            gradeLabel={buildGradeLabel(match)}
+            ground={match.ground}
+            delay={metaDelay}
+            showGround={showGround}
+            connection="attached"
+            exitAnimation={copyOut}
+            exitFrame={exitFrame}
+          />
         </div>
 
         <BroadcastProRoundedMatchup

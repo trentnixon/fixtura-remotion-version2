@@ -3,19 +3,19 @@ import type { TemplateThemeConfig } from "../../../types/TemplateThemeConfig";
 export const scorelineTokens = {
   fonts: {
     title: {
-      family: "Barlow Condensed",
+      family: "Geist",
     },
     subtitle: {
-      family: "Source Sans 3",
+      family: "Geist",
     },
     copy: {
-      family: "Source Sans 3",
+      family: "Geist",
     },
   },
 
   fontClasses: {
-    heading: { family: "Barlow Condensed" },
-    subheading: { family: "Source Sans 3" },
-    body: { family: "Source Sans 3" },
+    heading: { family: "Geist" },
+    subheading: { family: "Geist" },
+    body: { family: "Geist" },
   },
 } satisfies Pick<TemplateThemeConfig, "fonts" | "fontClasses">;

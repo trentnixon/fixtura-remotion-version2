@@ -1,626 +1,524 @@
 {
   "data": [
     {
-      "gameID": "eea83c8f",
+      "date": "03 Oct 2026",
+      "type": "T20",
+      "round": "Round 2",
+      "gameID": "9c6cf0d5",
+      "gender": "Men",
+      "ground": "Nelson Park / 4",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Tournaments & Camps\",\n    \"grade\": \"Hawke's Bay Premier Men's T20\",\n    \"round\": \"Round 2\",\n    \"ground\": \"Nelson Park / 4\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Ellerslie CC Ray White Premier Men\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Napier Tech Prems Kilbirnie Sports T20 won by 7 wickets\",\n    \"dayOne\": \"2026-10-03\",\n    \"finalDaysPlay\": \"2026-10-03\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Napier Tech Prems Kilbirnie Sports T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Napier Tech Prems Kilbirnie Sports T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Christian Leopard, scored 1 Runs from (5) balls, at a strike Rate of 20.00., they were out.\"\n          },\n          {\n            \"description\": \"Baylee Foote, scored 75 Runs from (48) balls, with 7 fours and 4 sixes, at a strike Rate of 156.25., they were not out.\"\n          },\n          {\n            \"description\": \"Todd Watson, scored 15 Runs from (11) balls, with 2 fours, at a strike Rate of 136.36., they were out.\"\n          },\n          {\n            \"description\": \"Izaiah Lange, scored 69 Runs from (36) balls, with 3 fours and 6 sixes, at a strike Rate of 191.66., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Saad Khan, took 6 wickets for 1 run, with 18 maidens.\"\n          },\n          {\n            \"description\": \"Joseph Wilkinson, took 11.5 wickets for 1 run, with 46 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Harmanpreet Singh, took 10.33 wickets for 1 run, with 31 maidens.\"\n          },\n          {\n            \"description\": \"Emile Harry, took 5.75 wickets for 0 runs, with 23 maidens.\"\n          },\n          {\n            \"description\": \"Gurpinder Singh, took 16 wickets for 0 runs, with 16 maidens.\"\n          },\n          {\n            \"description\": \"Devam Shah, took 14 wickets for 0 runs, with 28 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Napier Tech Prems Kilbirnie Sports T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"163/3\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Ellerslie CC Ray White Premier Men\",\n    \"innings\": [\n      {\n        \"teamName\": \"Ellerslie CC Ray White Premier Men\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Ellerslie CC Ray White Premier Men Batting\"\n      }\n    ],\n    \"totalScore\": \"161/7\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Napier Technical Old Boys Cc\",\n    \"focusedTeams\": [\n      \"Napier Tech  Lions - 26/27\",\n      \"Napier Tech Colts Y9 & 10 Boys Cricket Camp 23/24\",\n      \"Napier Tech Colts Y9 Boys Labour weekend team\",\n      \"Napier Tech Complete Flooring Prems\",\n      \"Napier Tech Kilbirnie Sports Div 1 Lions\",\n      \"Napier Tech Kilbirnie Sports Div 1 Phoenix\",\n      \"Napier Tech Kilbirnie Sports Div 1 Phoenix T20\",\n      \"Napier Tech Kilbirnie Sports Div 1 Tigers\",\n      \"Napier Tech Kilbirnie Sports Lions\",\n      \"Napier Tech Kilbirnie Sports Lions D2a\",\n      \"Napier Tech Kilbirnie Sports Lions T20\",\n      \"Napier Tech Kilbirnie Sports Premier Men\",\n      \"Napier Tech Kilbirnie Sports Tigers\",\n      \"Napier Tech Kilbirnie Sports Tigers\",\n      \"Napier Tech Kilbirnie Sports Tigers D 2a\",\n      \"Napier Tech Kilbirnie Sports Tigers T20\",\n      \"Napier Tech Kilbirnie Sports Womens\",\n      \"Napier Tech Kilbirnie Sports Womens\",\n      \"Napier Tech Lions\",\n      \"Napier Tech Prems KILBIRNIE SPORTS\",\n      \"Napier Tech Prems Kilbirnie Sports T20\",\n      \"Napier Tech Senior/Open Men KILBIRNIE SPORTS Premier Men's team\",\n      \"Napier Tech U15 Boys Tech Year 9/10\",\n      \"Napier Tech Y11-13 Boys Cricket Camp 23/24\",\n      \"Napier Tech Y13 Boys Napier Tech Yr 11-13 Cricket Camp\",\n      \"Napier Tech Y7 Boys Cricket Camp 23/24\",\n      \"Napier Tech Y7 Boys Napier Tech Yr 7/8 Camp Team\",\n      \"Napier Tech Y7 Mixed Napier Tech Yr 5-7 team 2025\",\n      \"Napier Tech Y7 Mixed Tech Year 5-7 2025\",\n      \"Napier Tech Y7 Mixed Tech Year 7\"\n    ]\n  }\n}",
+      "result": "Napier Tech Prems Kilbirnie Sports T20 won by 7 wickets",
       "status": "Final",
-      "homeTeam": {
-        "name": "Helensvale 1st Grade",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_5c8eb598_24c15f2c22.png",
-          "width": 256,
-          "height": 164
-        },
-        "score": "8/259",
-        "overs": "40",
-        "homeScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Sam Lickiss (c)",
-            "runs": 75,
-            "balls": 48,
-            "fours": 6,
-            "sixes": 6,
-            "SR": 156.25,
-            "team": "Helensvale 1st Grade",
-            "notOut": false
-          },
-          {
-            "player": "Jack Lickiss",
-            "runs": 32,
-            "balls": 35,
-            "fours": 3,
-            "sixes": 1,
-            "SR": 91.42,
-            "team": "Helensvale 1st Grade",
-            "notOut": false
-          },
-          {
-            "player": "James Guthrig",
-            "runs": 31,
-            "balls": 45,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 68.88,
-            "team": "Helensvale 1st Grade",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "Latimer",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 31,
-            "wickets": 3,
-            "economy": "3.88",
-            "team": "Mudgeeraba Premier Division 1"
-          },
-          {
-            "player": "Barclay",
-            "overs": 8,
-            "maidens": 0,
-            "runs": 63,
-            "wickets": 2,
-            "economy": "7.88",
-            "team": "Mudgeeraba Premier Division 1"
-          },
-          {
-            "player": "Finn",
-            "overs": 8,
-            "maidens": 0,
-            "runs": 46,
-            "wickets": 1,
-            "economy": "5.75",
-            "team": "Mudgeeraba Premier Division 1"
-          }
-        ],
-        "isClubTeam": false
-      },
+      "ageGroup": "Senior/Open",
       "awayTeam": {
-        "name": "Mudgeeraba Premier Division 1",
-        "isHome": false,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-          "width": 1281,
-          "height": 1281
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c505fe7bb7.jpg",
+          "width": 1080,
+          "height": 1080
         },
-        "score": "9/159",
-        "overs": "33",
-        "awayScoresFirstInnings": null,
+        "name": "Ellerslie CC Ray White Premier Men",
+        "overs": "20",
+        "score": "161/7",
+        "isHome": false,
+        "isClubTeam": false,
         "battingPerformances": [
           {
-            "player": "Lachlan King",
-            "runs": 49,
-            "balls": 64,
-            "fours": 2,
-            "sixes": 0,
-            "SR": 76.56,
-            "team": "Mudgeeraba Premier Division 1",
-            "notOut": true
-          },
-          {
-            "player": "Hayden Taylor",
-            "runs": 30,
-            "balls": 51,
+            "SR": 177.77,
+            "runs": 32,
+            "team": "Ellerslie CC Ray White Premier Men",
+            "balls": 18,
             "fours": 3,
-            "sixes": 0,
-            "SR": 58.82,
-            "team": "Mudgeeraba Premier Division 1",
-            "notOut": false
+            "sixes": 2,
+            "notOut": false,
+            "player": "Tannin Ross Khurana"
           },
           {
-            "player": "Bailey Garnham",
-            "runs": 27,
-            "balls": 17,
-            "fours": 5,
+            "SR": 163.15,
+            "runs": 31,
+            "team": "Ellerslie CC Ray White Premier Men",
+            "balls": 19,
+            "fours": 2,
+            "sixes": 3,
+            "notOut": true,
+            "player": "Saad Khan"
+          },
+          {
+            "SR": 241.66,
+            "runs": 29,
+            "team": "Ellerslie CC Ray White Premier Men",
+            "balls": 12,
+            "fours": 6,
             "sixes": 0,
-            "SR": 158.82,
-            "team": "Mudgeeraba Premier Division 1",
-            "notOut": false
+            "notOut": false,
+            "player": "Harmanpreet Singh"
           }
         ],
         "bowlingPerformances": [
           {
-            "player": "Maloney",
-            "overs": 8,
-            "maidens": 1,
-            "runs": 28,
-            "wickets": 3,
-            "economy": "3.50",
-            "team": "Helensvale 1st Grade"
-          },
-          {
-            "player": "Gregory",
-            "overs": 5,
-            "maidens": 1,
             "runs": 24,
-            "wickets": 2,
-            "economy": "4.80",
-            "team": "Helensvale 1st Grade"
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "overs": 4,
+            "player": "Bayley Latter",
+            "economy": "6.00",
+            "maidens": 0,
+            "wickets": 2
           },
           {
-            "player": "Pedi",
-            "overs": 1,
+            "runs": 22,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "overs": 4,
+            "player": "Marley Hekenui",
+            "economy": "5.50",
             "maidens": 0,
-            "runs": 3,
-            "wickets": 1,
-            "economy": "3.00",
-            "team": "Helensvale 1st Grade"
+            "wickets": 1
+          },
+          {
+            "runs": 14,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "overs": 2,
+            "player": "Todd Watson",
+            "economy": "7.00",
+            "maidens": 1,
+            "wickets": 1
           }
         ],
-        "isClubTeam": true
+        "awayScoresFirstInnings": null
       },
-      "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_5c8eb598_24c15f2c22.png",
-        "width": 256,
-        "height": 164
-      },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-        "width": 1281,
-        "height": 1281
-      },
-      "date": "19 Sept 2026",
-      "type": "One Day",
-      "ground": "Hession Oval / Hession Oval",
-      "round": "Round 1",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "(1) CGC Premier League - Division 1",
-      "gradeResolvedPosition": 0,
-      "gradeSortOrder": 0,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "primaryForScreen": [],
-      "result": "Helensvale 1st Grade won by 100 runs",
-      "resultShort": "Helensvale 1st Grade def Mudgeeraba Premier Division 1",
-      "resultSummary": {
-        "homeTeam": "Helensvale 1st Grade",
-        "awayTeam": "Mudgeeraba Premier Division 1",
-        "winner": "Helensvale 1st Grade",
-        "resultWord": "won"
-      },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"(1) CGC Premier League - Division 1\",\n    \"round\": \"Round 1\",\n    \"ground\": \"Hession Oval / Hession Oval\",\n    \"matchType\": \"One Day\",\n    \"tossWinner\": \"Helensvale 1st Grade\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Helensvale 1st Grade won by 100 runs\",\n    \"dayOne\": \"2026-09-19\",\n    \"finalDaysPlay\": \"2026-09-19\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Helensvale 1st Grade\",\n    \"innings\": [\n      {\n        \"teamName\": \"Helensvale 1st Grade\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Helensvale 1st Grade Batting\"\n      }\n    ],\n    \"totalScore\": \"8/259\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Mudgeeraba Premier Division 1\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba Premier Division 1\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Bailey Garnham, scored 27 Runs from (17) balls, with 5 fours, at a strike Rate of 158.82., they were out.\"\n          },\n          {\n            \"description\": \"Joshua Nelson, scored 12 Runs from (10) balls, with 2 fours, at a strike Rate of 120.00., they were out.\"\n          },\n          {\n            \"description\": \"Lydon Gibbons (c), scored 3 Runs from (9) balls, at a strike Rate of 33.33., they were out.\"\n          },\n          {\n            \"description\": \"Lachlan King, scored 49 Runs from (64) balls, with 2 fours, at a strike Rate of 76.56., they were not out.\"\n          },\n          {\n            \"description\": \"Glenn May, scored 7 Runs from (13) balls, with 1 four, at a strike Rate of 53.84., they were out.\"\n          },\n          {\n            \"description\": \"Rhys Finn, scored 15 Runs from (14) balls, with 1 four and 1 six, at a strike Rate of 107.14., they were out.\"\n          },\n          {\n            \"description\": \"Noah Latimer, scored 5 Runs from (5) balls, with 1 four, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Hayden Taylor, scored 30 Runs from (51) balls, with 3 fours, at a strike Rate of 58.82., they were out.\"\n          },\n          {\n            \"description\": \"Mackenzie Barclay, scored 5 Runs from (14) balls, at a strike Rate of 35.71., they were out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Hayes, took 5.12 wickets for 1 run, with 41 maidens.\"\n          },\n          {\n            \"description\": \"Lickiss, took 7.2 wickets for 1 run, with 36 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Maloney, bowled 1 over, took 3.5 wickets for 3 runs, with 28 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Burke, took 4.6 wickets for 1 run, with 23 maidens.\"\n          },\n          {\n            \"description\": \"Gregory, bowled 1 over, took 4.8 wickets for 2 runs, with 24 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Lickiss (c), took 4 wickets for 0 runs, with 4 maidens.\"\n          },\n          {\n            \"description\": \"Pedi, took 3 wickets for 1 run, with 3 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Lickiss, took 2 catches.\"\n          },\n          {\n            \"description\": \"Thomas, took 2 catches.\"\n          },\n          {\n            \"description\": \"Hayes, took 2 catches.\"\n          },\n          {\n            \"description\": \"Gregory, took 4 catches.\"\n          },\n          {\n            \"description\": \"Lickiss (c), took 2 catches.\"\n          },\n          {\n            \"description\": \"Pedi, took 2 catches.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba Premier Division 1 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/159\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Nerang DCC Open Womens\",\n      \"Mudgeeraba Premier Div 2\",\n      \"Mudgeeraba Premier Division 1\",\n      \"Mudgeeraba Red\",\n      \"Mudgeeraba T20\"\n    ]\n  }\n}"
-    },
-    {
-      "gameID": "a8f7c0ff",
-      "status": "Final",
       "homeTeam": {
-        "name": "Palm Beach T20",
-        "isHome": true,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_af1d388c_aa6b542ee2.png",
-          "width": 500,
-          "height": 442
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
+          "width": 490,
+          "height": 386
         },
-        "score": "9/122",
-        "overs": "20",
-        "homeScoresFirstInnings": null,
+        "name": "Napier Tech Prems Kilbirnie Sports T20",
+        "overs": "17",
+        "score": "163/3",
+        "isHome": true,
+        "isClubTeam": true,
         "battingPerformances": [
           {
-            "player": "Christian Payne",
-            "runs": 22,
+            "SR": 156.25,
+            "runs": 75,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "balls": 48,
+            "fours": 7,
+            "sixes": 4,
+            "notOut": true,
+            "player": "Baylee Foote"
+          },
+          {
+            "SR": 191.66,
+            "runs": 69,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "balls": 36,
+            "fours": 3,
+            "sixes": 6,
+            "notOut": true,
+            "player": "Izaiah Lange"
+          },
+          {
+            "SR": 136.36,
+            "runs": 15,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
             "balls": 11,
             "fours": 2,
-            "sixes": 1,
-            "SR": 200,
-            "team": "Palm Beach T20",
-            "notOut": false
-          },
-          {
-            "player": "Zane Anderson",
-            "runs": 21,
-            "balls": 21,
-            "fours": 2,
             "sixes": 0,
-            "SR": 100,
-            "team": "Palm Beach T20",
-            "notOut": false
-          },
-          {
-            "player": "Matt Swindlehurst",
-            "runs": 19,
-            "balls": 21,
-            "fours": 0,
-            "sixes": 1,
-            "SR": 90.47,
-            "team": "Palm Beach T20",
-            "notOut": true
+            "notOut": false,
+            "player": "Todd Watson"
           }
         ],
         "bowlingPerformances": [
           {
-            "player": "Barclay",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 3,
-            "economy": "5.25",
-            "team": "Mudgeeraba T20"
-          },
-          {
-            "player": "Nelson",
-            "overs": 4,
-            "maidens": 0,
             "runs": 18,
-            "wickets": 1,
-            "economy": "4.50",
-            "team": "Mudgeeraba T20"
-          },
-          {
-            "player": "Siede",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 24,
-            "wickets": 1,
+            "team": "Ellerslie CC Ray White Premier Men",
+            "overs": 3,
+            "player": "Saad Khan",
             "economy": "6.00",
-            "team": "Mudgeeraba T20"
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 31,
+            "team": "Ellerslie CC Ray White Premier Men",
+            "overs": 3,
+            "player": "Harmanpreet Singh",
+            "economy": "10.33",
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 46,
+            "team": "Ellerslie CC Ray White Premier Men",
+            "overs": 4,
+            "player": "Joseph Wilkinson",
+            "economy": "11.50",
+            "maidens": 0,
+            "wickets": 1
           }
         ],
-        "isClubTeam": false
+        "homeScoresFirstInnings": null
       },
-      "awayTeam": {
-        "name": "Mudgeeraba T20",
-        "isHome": false,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-          "width": 1281,
-          "height": 1281
-        },
-        "score": "6/142",
-        "overs": "20",
-        "awayScoresFirstInnings": null,
-        "battingPerformances": [
-          {
-            "player": "Joshua Nelson",
-            "runs": 40,
-            "balls": 35,
-            "fours": 1,
-            "sixes": 2,
-            "SR": 114.28,
-            "team": "Mudgeeraba T20",
-            "notOut": false
-          },
-          {
-            "player": "Dayne Siede",
-            "runs": 27,
-            "balls": 34,
-            "fours": 2,
-            "sixes": 1,
-            "SR": 79.41,
-            "team": "Mudgeeraba T20",
-            "notOut": false
-          },
-          {
-            "player": "Marco Kroon",
-            "runs": 26,
-            "balls": 15,
-            "fours": 2,
-            "sixes": 2,
-            "SR": 173.33,
-            "team": "Mudgeeraba T20",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "McCloy",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 18,
-            "wickets": 2,
-            "economy": "4.50",
-            "team": "Palm Beach T20"
-          },
-          {
-            "player": "Craig",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 25,
-            "wickets": 2,
-            "economy": "6.25",
-            "team": "Palm Beach T20"
-          },
-          {
-            "player": "Anderson",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 1,
-            "economy": "5.25",
-            "team": "Palm Beach T20"
-          }
-        ],
-        "isClubTeam": true
+      "gradeName": "Hawke's Bay Premier Men's T20",
+      "resultShort": "Napier Tech Prems Kilbirnie Sports T20 def Ellerslie CC Ray White Premier Men",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_c505fe7bb7.jpg",
+        "width": 1080,
+        "height": 1080
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_af1d388c_aa6b542ee2.png",
-        "width": 500,
-        "height": 442
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
+        "width": 490,
+        "height": 386
       },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-        "width": 1281,
-        "height": 1281
-      },
-      "date": "20 Sept 2026",
-      "type": "T20",
-      "ground": "Alberton Cricket Club / Oval 1 - Turf",
-      "round": "SF",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "Veterans First Consulting T20 Cup",
-      "gradeResolvedPosition": 4,
-      "gradeSortOrder": 2,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "primaryForScreen": [],
-      "result": "Mudgeeraba T20 won by 20 runs",
-      "resultShort": "Mudgeeraba T20 def Palm Beach T20",
       "resultSummary": {
-        "homeTeam": "Palm Beach T20",
-        "awayTeam": "Mudgeeraba T20",
-        "winner": "Mudgeeraba T20",
-        "resultWord": "lost"
+        "winner": "Napier Tech Prems Kilbirnie Sports T20",
+        "awayTeam": "Ellerslie CC Ray White Premier Men",
+        "homeTeam": "Napier Tech Prems Kilbirnie Sports T20",
+        "resultWord": "won"
       },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"Veterans First Consulting T20 Cup\",\n    \"round\": \"SF\",\n    \"ground\": \"Alberton Cricket Club / Oval 1 - Turf\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Palm Beach T20\",\n    \"tossResult\": \"bowl\",\n    \"resultStatement\": \"Mudgeeraba T20 won by 20 runs\",\n    \"dayOne\": \"2026-09-20\",\n    \"finalDaysPlay\": \"2026-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Palm Beach T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Palm Beach T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Palm Beach T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/122\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Mudgeeraba T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Marco Kroon, scored 26 Runs from (15) balls, with 2 fours and 2 sixes, at a strike Rate of 173.33., they were out.\"\n          },\n          {\n            \"description\": \"Dayne Siede, scored 27 Runs from (34) balls, with 2 fours and 1 six, at a strike Rate of 79.41., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in stumpedb: Ryan McCloy stumped, scored 25 Runs from (15) balls, with 5 fours, at a strike Rate of 166.66., they were out.\"\n          },\n          {\n            \"description\": \"Joshua Nelson, scored 40 Runs from (35) balls, with 1 four and 2 sixes, at a strike Rate of 114.28., they were out.\"\n          },\n          {\n            \"description\": \"Lydon Gibbons, scored 3 Runs from (5) balls, at a strike Rate of 60.00., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in, scored 10 Runs from (15) balls, at a strike Rate of 66.66., they were out.\"\n          },\n          {\n            \"description\": \"Glenn May, scored 1 Runs from (1) balls, at a strike Rate of 100.00., they were not out.\"\n          },\n          {\n            \"description\": \"Ethan Wells, scored 1 Runs from (1) balls, at a strike Rate of 100.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Anderson, took 5.25 wickets for 1 run, with 21 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Lonnberg, took 10.66 wickets for 0 runs, with 32 maidens.\"\n          },\n          {\n            \"description\": \"McCloy, took 4.5 wickets for 2 runs, with 18 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Newton, took 14 wickets for 0 runs, with 14 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Craig, took 6.25 wickets for 2 runs, with 25 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Neuhaus, took 3 wickets for 0 runs, with 6 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Luczak, took 12.5 wickets for 0 runs, with 25 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"6/142\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Nerang DCC Open Womens\",\n      \"Mudgeeraba Premier Div 2\",\n      \"Mudgeeraba Premier Division 1\",\n      \"Mudgeeraba Red\",\n      \"Mudgeeraba T20\"\n    ]\n  }\n}"
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      },
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 1159,
+          "logo": {
+            "id": 9127,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Complete_Flooring_Hawkes_Bay_Logo_pdf_2_26bb348ba2.png"
+          },
+          "name": "Complete Flooring Group"
+        }
+      ],
+      "gradeResolvedPosition": 0
     },
     {
-      "gameID": "b75c9bd3",
+      "date": "04 Oct 2026",
+      "type": "T20",
+      "round": "Round 4",
+      "gameID": "28c195f5",
+      "gender": "Men",
+      "ground": "Nelson Park / 2",
+      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Tournaments & Camps\",\n    \"grade\": \"Hawke's Bay Premier Men's T20\",\n    \"round\": \"Round 4\",\n    \"ground\": \"Nelson Park / 2\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Napier Tech Prems Kilbirnie Sports T20\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"Napier Tech Prems Kilbirnie Sports T20 won by 61 runs\",\n    \"dayOne\": \"2026-10-04\",\n    \"finalDaysPlay\": \"2026-10-04\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Napier Tech Prems Kilbirnie Sports T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Napier Tech Prems Kilbirnie Sports T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Christian Leopard, scored 4 Runs from (5) balls, at a strike Rate of 80.00., they were out.\"\n          },\n          {\n            \"description\": \"Charlie Pawson, scored 36 Runs from (45) balls, with 1 four, at a strike Rate of 80.00., they were out.\"\n          },\n          {\n            \"description\": \"Bayley Latter, scored 2 Runs from (2) balls, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Todd Watson, scored 5 Runs from (5) balls, at a strike Rate of 100.00., they were out.\"\n          },\n          {\n            \"description\": \"Samuel Pawson, scored 75 Runs from (37) balls, with 3 fours and 7 sixes, at a strike Rate of 202.70., they were out.\"\n          },\n          {\n            \"description\": \"Harry Beale, scored 2 Runs from (2) balls, at a strike Rate of 100.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"Peter Connell, took 4 wickets for 1 run, with 8 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Tom Heywood, took 6.5 wickets for 2 runs, with 26 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Leighton Parsons, took 11.33 wickets for 0 runs, with 34 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Ross Deans, took 6 wickets for 0 runs, with 18 maidens, at an economy of 2.\"\n          },\n          {\n            \"description\": \"Ben Rose, took 10.33 wickets for 1 run, with 31 maidens.\"\n          },\n          {\n            \"description\": \"Chris Liddell, took 16 wickets for 1 run, with 16 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Napier Tech Prems Kilbirnie Sports T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"134/5\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Kauri Bay Districts Grizzlies\",\n    \"innings\": [\n      {\n        \"teamName\": \"Kauri Bay Districts Grizzlies\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Kauri Bay Districts Grizzlies Batting\"\n      }\n    ],\n    \"totalScore\": \"73/10\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Napier Technical Old Boys Cc\",\n    \"focusedTeams\": [\n      \"Napier Tech  Lions - 26/27\",\n      \"Napier Tech Colts Y9 & 10 Boys Cricket Camp 23/24\",\n      \"Napier Tech Colts Y9 Boys Labour weekend team\",\n      \"Napier Tech Complete Flooring Prems\",\n      \"Napier Tech Kilbirnie Sports Div 1 Lions\",\n      \"Napier Tech Kilbirnie Sports Div 1 Phoenix\",\n      \"Napier Tech Kilbirnie Sports Div 1 Phoenix T20\",\n      \"Napier Tech Kilbirnie Sports Div 1 Tigers\",\n      \"Napier Tech Kilbirnie Sports Lions\",\n      \"Napier Tech Kilbirnie Sports Lions D2a\",\n      \"Napier Tech Kilbirnie Sports Lions T20\",\n      \"Napier Tech Kilbirnie Sports Premier Men\",\n      \"Napier Tech Kilbirnie Sports Tigers\",\n      \"Napier Tech Kilbirnie Sports Tigers\",\n      \"Napier Tech Kilbirnie Sports Tigers D 2a\",\n      \"Napier Tech Kilbirnie Sports Tigers T20\",\n      \"Napier Tech Kilbirnie Sports Womens\",\n      \"Napier Tech Kilbirnie Sports Womens\",\n      \"Napier Tech Lions\",\n      \"Napier Tech Prems KILBIRNIE SPORTS\",\n      \"Napier Tech Prems Kilbirnie Sports T20\",\n      \"Napier Tech Senior/Open Men KILBIRNIE SPORTS Premier Men's team\",\n      \"Napier Tech U15 Boys Tech Year 9/10\",\n      \"Napier Tech Y11-13 Boys Cricket Camp 23/24\",\n      \"Napier Tech Y13 Boys Napier Tech Yr 11-13 Cricket Camp\",\n      \"Napier Tech Y7 Boys Cricket Camp 23/24\",\n      \"Napier Tech Y7 Boys Napier Tech Yr 7/8 Camp Team\",\n      \"Napier Tech Y7 Mixed Napier Tech Yr 5-7 team 2025\",\n      \"Napier Tech Y7 Mixed Tech Year 5-7 2025\",\n      \"Napier Tech Y7 Mixed Tech Year 7\"\n    ]\n  }\n}",
+      "result": "Napier Tech Prems Kilbirnie Sports T20 won by 61 runs",
       "status": "Final",
-      "homeTeam": {
-        "name": "Mudgeeraba T20",
-        "isHome": true,
-        "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-          "width": 1281,
-          "height": 1281
-        },
-        "score": "5/142 & 0/7",
-        "overs": "0.5",
-        "homeScoresFirstInnings": "5/142 & ",
-        "battingPerformances": [
-          {
-            "player": "Joshua Nelson",
-            "runs": 46,
-            "balls": 45,
-            "fours": 5,
-            "sixes": 0,
-            "SR": 102.22,
-            "team": "Mudgeeraba T20",
-            "notOut": false
-          },
-          {
-            "player": "Fill-in",
-            "runs": 32,
-            "balls": 23,
-            "fours": 6,
-            "sixes": 0,
-            "SR": 139.13,
-            "team": "Mudgeeraba T20",
-            "notOut": false
-          },
-          {
-            "player": "Lydon Gibbons",
-            "runs": 28,
-            "balls": 25,
-            "fours": 1,
-            "sixes": 1,
-            "SR": 112,
-            "team": "Mudgeeraba T20",
-            "notOut": false
-          }
-        ],
-        "bowlingPerformances": [
-          {
-            "player": "James Bazley",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 29,
-            "wickets": 2,
-            "economy": "7.25",
-            "team": "Coomera T20"
-          },
-          {
-            "player": "Steven Timms",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 21,
-            "wickets": 1,
-            "economy": "5.25",
-            "team": "Coomera T20"
-          },
-          {
-            "player": "Jared Spies",
-            "overs": 4,
-            "maidens": 0,
-            "runs": 25,
-            "wickets": 1,
-            "economy": "6.25",
-            "team": "Coomera T20"
-          }
-        ],
-        "isClubTeam": true
-      },
+      "ageGroup": "Senior/Open",
       "awayTeam": {
-        "name": "Coomera T20",
-        "isHome": false,
         "logo": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_e4b49fbd_3c380c1ddd.png",
-          "width": 512,
-          "height": 512
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_d3ea4320_07696696e5.jpg",
+          "width": 200,
+          "height": 200
         },
-        "score": "9/142 & 1/12",
-        "overs": "1",
-        "awayScoresFirstInnings": "9/142 &",
+        "name": "Kauri Bay Districts Grizzlies",
+        "overs": "14",
+        "score": "73/10",
+        "isHome": false,
+        "isClubTeam": false,
         "battingPerformances": [
           {
-            "player": "Charlie Bignell",
-            "runs": 32,
-            "balls": 17,
-            "fours": 3,
-            "sixes": 2,
-            "SR": 188.23,
-            "team": "Coomera T20",
-            "notOut": false
-          },
-          {
-            "player": "James Bazley",
-            "runs": 32,
-            "balls": 32,
-            "fours": 5,
-            "sixes": 0,
-            "SR": 100,
-            "team": "Coomera T20",
-            "notOut": false
-          },
-          {
-            "player": "Steven Timms",
-            "runs": 22,
+            "SR": 114.28,
+            "runs": 16,
+            "team": "Kauri Bay Districts Grizzlies",
             "balls": 14,
             "fours": 2,
+            "sixes": 1,
+            "notOut": false,
+            "player": "Tom Heywood"
+          },
+          {
+            "SR": 66.66,
+            "runs": 14,
+            "team": "Kauri Bay Districts Grizzlies",
+            "balls": 21,
+            "fours": 0,
             "sixes": 0,
-            "SR": 157.14,
-            "team": "Coomera T20",
-            "notOut": false
+            "notOut": false,
+            "player": "Kieran Hill"
+          },
+          {
+            "SR": 75,
+            "runs": 6,
+            "team": "Kauri Bay Districts Grizzlies",
+            "balls": 8,
+            "fours": 1,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Chris Liddell"
           }
         ],
         "bowlingPerformances": [
           {
-            "player": "Mackenzie Barclay",
-            "overs": 4,
+            "runs": 15,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "overs": 3,
+            "player": "Todd Watson",
+            "economy": "5.00",
             "maidens": 0,
-            "runs": 23,
-            "wickets": 4,
-            "economy": "5.75",
-            "team": "Mudgeeraba T20"
+            "wickets": 4
           },
           {
-            "player": "Dayne Siede",
-            "overs": 4,
+            "runs": 3,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "overs": 1,
+            "player": "Harrison Woolley",
+            "economy": "3.00",
             "maidens": 0,
-            "runs": 26,
-            "wickets": 2,
-            "economy": "6.50",
-            "team": "Mudgeeraba T20"
+            "wickets": 2
           },
           {
-            "player": "Hayden Taylor",
-            "overs": 4,
+            "runs": 12,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "overs": 3,
+            "player": "Bayley Latter",
+            "economy": "4.00",
             "maidens": 0,
-            "runs": 30,
-            "wickets": 1,
-            "economy": "7.50",
-            "team": "Mudgeeraba T20"
+            "wickets": 2
           }
         ],
-        "isClubTeam": false
+        "awayScoresFirstInnings": null
+      },
+      "homeTeam": {
+        "logo": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
+          "width": 490,
+          "height": 386
+        },
+        "name": "Napier Tech Prems Kilbirnie Sports T20",
+        "overs": "16",
+        "score": "134/5",
+        "isHome": true,
+        "isClubTeam": true,
+        "battingPerformances": [
+          {
+            "SR": 202.7,
+            "runs": 75,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "balls": 37,
+            "fours": 3,
+            "sixes": 7,
+            "notOut": false,
+            "player": "Samuel Pawson"
+          },
+          {
+            "SR": 80,
+            "runs": 36,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "balls": 45,
+            "fours": 1,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Charlie Pawson"
+          },
+          {
+            "SR": 100,
+            "runs": 5,
+            "team": "Napier Tech Prems Kilbirnie Sports T20",
+            "balls": 5,
+            "fours": 0,
+            "sixes": 0,
+            "notOut": false,
+            "player": "Todd Watson"
+          }
+        ],
+        "bowlingPerformances": [
+          {
+            "runs": 26,
+            "team": "Kauri Bay Districts Grizzlies",
+            "overs": 4,
+            "player": "Tom Heywood",
+            "economy": "6.50",
+            "maidens": 0,
+            "wickets": 2
+          },
+          {
+            "runs": 8,
+            "team": "Kauri Bay Districts Grizzlies",
+            "overs": 2,
+            "player": "Peter Connell",
+            "economy": "4.00",
+            "maidens": 0,
+            "wickets": 1
+          },
+          {
+            "runs": 31,
+            "team": "Kauri Bay Districts Grizzlies",
+            "overs": 3,
+            "player": "Ben Rose",
+            "economy": "10.33",
+            "maidens": 0,
+            "wickets": 1
+          }
+        ],
+        "homeScoresFirstInnings": null
+      },
+      "gradeName": "Hawke's Bay Premier Men's T20",
+      "resultShort": "Napier Tech Prems Kilbirnie Sports T20 def Kauri Bay Districts Grizzlies",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_d3ea4320_07696696e5.jpg",
+        "width": 200,
+        "height": 200
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-        "width": 1281,
-        "height": 1281
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
+        "width": 490,
+        "height": 386
       },
-      "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/playhq_club_e4b49fbd_3c380c1ddd.png",
-        "width": 512,
-        "height": 512
-      },
-      "date": "20 Sept 2026",
-      "type": "T20",
-      "ground": "Oxenford Park / Oxenford Park 1 (Choice Homes Oval)",
-      "round": "GF",
-      "gender": "Mixed",
-      "ageGroup": "Senior",
-      "gradeName": "Veterans First Consulting T20 Cup",
-      "gradeResolvedPosition": 4,
-      "gradeSortOrder": 2,
-      "assignSponsors": {
-        "competition": [],
-        "grade": [],
-        "team": []
-      },
-      "primaryForScreen": [],
-      "result": "5/142 & 0/7 v 9/142 & 1/12",
-      "resultShort": "5/142 & 0/7 v 9/142 & 1/12",
       "resultSummary": {
-        "homeTeam": "Mudgeeraba T20",
-        "awayTeam": "Coomera T20",
-        "winner": null,
-        "resultWord": "no_result"
+        "winner": "Napier Tech Prems Kilbirnie Sports T20",
+        "awayTeam": "Kauri Bay Districts Grizzlies",
+        "homeTeam": "Napier Tech Prems Kilbirnie Sports T20",
+        "resultWord": "won"
       },
-      "prompt": "{\n  \"matchContext\": {\n    \"competition\": \"Cricket Gold Coast Senior Competition\",\n    \"grade\": \"Veterans First Consulting T20 Cup\",\n    \"round\": \"GF\",\n    \"ground\": \"Oxenford Park / Oxenford Park 1 (Choice Homes Oval)\",\n    \"matchType\": \"T20\",\n    \"tossWinner\": \"Mudgeeraba T20\",\n    \"tossResult\": \"bat\",\n    \"resultStatement\": \"5/142 & 0/7 v 9/142 & 1/12\",\n    \"dayOne\": \"2026-09-20\",\n    \"finalDaysPlay\": \"2026-09-20\"\n  },\n  \"homeTeam\": {\n    \"teamName\": \"Mudgeeraba T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Mudgeeraba T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [\n          {\n            \"description\": \"Dayne Siede, scored 9 Runs from (8) balls, with 1 four, at a strike Rate of 112.50., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in, scored 32 Runs from (23) balls, with 6 fours, at a strike Rate of 139.13., they were out.\"\n          },\n          {\n            \"description\": \"Joshua Nelson, scored 46 Runs from (45) balls, with 5 fours, at a strike Rate of 102.22., they were out.\"\n          },\n          {\n            \"description\": \"Lydon Gibbons, scored 28 Runs from (25) balls, with 1 four and 1 six, at a strike Rate of 112.00., they were out.\"\n          },\n          {\n            \"description\": \"Fill-in, scored 7 Runs from (14) balls, at a strike Rate of 50.00., they were not out.\"\n          },\n          {\n            \"description\": \"Glenn May, scored 3 Runs from (5) balls, at a strike Rate of 60.00., they were not out.\"\n          }\n        ],\n        \"bowlingFigures\": [\n          {\n            \"description\": \"James Bazley, took 7.25 wickets for 2 runs, with 29 maidens, at an economy of 6.\"\n          },\n          {\n            \"description\": \"Steven Timms, took 5.25 wickets for 1 run, with 21 maidens, at an economy of 4.\"\n          },\n          {\n            \"description\": \"Jared Spies, took 6.25 wickets for 1 run, with 25 maidens.\"\n          },\n          {\n            \"description\": \"Faizan Amin, took 8.25 wickets for 0 runs, with 33 maidens, at an economy of 1.\"\n          },\n          {\n            \"description\": \"Ciaran Hargreaves, took 7 wickets for 1 run, with 21 maidens, at an economy of 3.\"\n          },\n          {\n            \"description\": \"Mitchell Radford, took 11 wickets for 0 runs, with 11 maidens.\"\n          }\n        ],\n        \"fieldingStats\": [\n          {\n            \"description\": \"Lance Roudenko, took 2 catches.\"\n          },\n          {\n            \"description\": \"Shannon Kloppers, took 4 catches.\"\n          },\n          {\n            \"description\": \"Faizan Amin, took 2 catches.\"\n          }\n        ],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Mudgeeraba T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"5/142 & 0/7\",\n    \"totalWickets\": 0\n  },\n  \"awayTeam\": {\n    \"teamName\": \"Coomera T20\",\n    \"innings\": [\n      {\n        \"teamName\": \"Coomera T20\",\n        \"score\": \"\",\n        \"overs\": \"\",\n        \"wickets\": 0,\n        \"battingOrder\": [],\n        \"bowlingFigures\": [],\n        \"fieldingStats\": [],\n        \"fallOfWickets\": [],\n        \"inningsNumber\": 1,\n        \"inningsName\": \"Coomera T20 Batting\"\n      }\n    ],\n    \"totalScore\": \"9/142 & 1/12\",\n    \"totalWickets\": 0\n  },\n  \"accountBias\": {\n    \"isBias\": \"Mudgeeraba Nerang And Districts Cricket Club\",\n    \"focusedTeams\": [\n      \"MNDCC U13 Mixed\",\n      \"Mudgeeraba Blue\",\n      \"Mudgeeraba Nerang DCC Open Womens\",\n      \"Mudgeeraba Premier Div 2\",\n      \"Mudgeeraba Premier Division 1\",\n      \"Mudgeeraba Red\",\n      \"Mudgeeraba T20\"\n    ]\n  }\n}"
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      },
+      "gradeSortOrder": 0,
+      "primaryForScreen": [
+        {
+          "id": 1159,
+          "logo": {
+            "id": 9127,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Complete_Flooring_Hawkes_Bay_Logo_pdf_2_26bb348ba2.png"
+          },
+          "name": "Complete Flooring Group"
+        }
+      ],
+      "gradeResolvedPosition": 0
     }
   ],
   "asset": {
-    "assetID": 80,
+    "assetID": 4,
     "assetTypeID": 2,
-    "assetCategoryID": 2,
-    "assetsLinkID": "66a91626d69c6548c4c976dc8ee304a2d3f79c5bdf74876c225f1f54c29cd88a"
+    "assetsLinkID": "9718de41e3a5655defaf790ee24a634ba1ccc7a82c1f31052a939ad1c52bac0e",
+    "assetCategoryID": 1
   },
+  "errors": [],
+  "frames": [45, 240, 420, 510],
   "render": {
-    "schedulerId": 598,
-    "renderId": 9068
+    "renderId": 38447,
+    "schedulerId": 998
   },
   "account": {
-    "accountId": 705
+    "accountId": 998
   },
   "timings": {
-    "FPS_MAIN": 405,
+    "FPS_MAIN": 300,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 30,
+    "FPS_OUTRO": 180,
     "FPS_LADDER": 0,
-    "FPS_SCORECARD": 210,
+    "FPS_SCORECARD": 300,
     "FPS_PREFORMANCECARD": 0
   },
-  "frames": [45, 195, 390],
   "videoMeta": {
     "club": {
       "logo": {
-        "hasLogo": true,
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logos_For_ADMIN_cropped_1cc49765c0.png",
-        "width": 1281,
-        "height": 1281
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
+        "width": 490,
+        "height": 386,
+        "hasLogo": true
       },
-      "name": "Mudgeeraba Nerang And Districts Cricket Club",
+      "name": "Napier Technical Old Boys Cc",
       "sport": "Cricket",
       "sponsors": {
-        "primary": [],
-        "general": [],
-        "sponsorNum": 0
+        "general": [
+          {
+            "id": 1093,
+            "logo": {
+              "id": 9126,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Kilbirnie_Sports_Logo_Green_ca2a9c334f_2_cbb75fe849.png"
+            },
+            "name": "Kilbirnie Sports"
+          },
+          {
+            "id": 1522,
+            "logo": {
+              "id": 9128,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Ward_logo_002_bcc8f91642_2_98a295c917.png"
+            },
+            "name": "Ward Flooring"
+          },
+          {
+            "id": 1523,
+            "logo": {
+              "id": 9129,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_CP_2018_21d5f057ae_2_8ff804c595.png"
+            },
+            "name": "Complete Paints"
+          },
+          {
+            "id": 1524,
+            "logo": {
+              "id": 9131,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Ronnie_1_4a2041f3e6_2_09a4587013.png"
+            },
+            "name": "Real Estate with Ronnie Turner"
+          },
+          {
+            "id": 1525,
+            "logo": {
+              "id": 9132,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/FB_IMG_1730794072810_f3b807808c_2_70ae63cd91.png"
+            },
+            "name": "Real Estate with Jason and David PB"
+          },
+          {
+            "id": 1526,
+            "logo": {
+              "id": 9133,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Kennedy_Road_2_48268cdb29_2_4423770d8a.png"
+            },
+            "name": "Kennedy Road Physio"
+          },
+          {
+            "id": 1527,
+            "logo": {
+              "id": 9134,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Strokers_Logo_5f86a98f3c_2_aacf8af7ee.png"
+            },
+            "name": "Strokers Merchandise"
+          },
+          {
+            "id": 1555,
+            "logo": {
+              "id": 9135,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Nap_Tax_dc07ae3cb6_2_3f63f92f43.png"
+            },
+            "name": "Napier Taxation"
+          },
+          {
+            "id": 1556,
+            "logo": {
+              "id": 9136,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/turfrenos_f64f1fda1f.png"
+            },
+            "name": "Sports Turf Renovators LTD"
+          }
+        ],
+        "primary": [
+          {
+            "id": 1159,
+            "logo": {
+              "id": 9127,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Complete_Flooring_Hawkes_Bay_Logo_pdf_2_26bb348ba2.png"
+            },
+            "name": "Complete Flooring Group"
+          }
+        ],
+        "sponsorNum": 10
       },
       "IsAccountClub": true
     },
     "video": {
-      "fixtureCategory": "SENIOR",
-      "groupingCategory": "SENIOR",
-      "metadata": {
-        "title": "Results",
-        "titleSplit": ["Results"],
-        "videoTitle": "Weekend Results",
-        "compositionId": "CricketResults",
-        "assetId": 80,
-        "assetTypeId": 2,
-        "frames": [],
-        "includeSponsors": false
-      },
-      "appearance": {
-        "theme": {
-          "dark": "#111",
-          "white": "#FFF",
-          "primary": "#FF0000",
-          "secondary": "#004DE2"
-        },
-        "template": "NightSession"
-      },
       "media": {
+        "audio": {
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+          "audioOption": null
+        },
         "HeroImage": {
           "url": "",
           "ratio": "",
@@ -629,11 +527,26 @@
           "AgeGroup": "",
           "AssetType": "",
           "markerPosition": ""
-        },
-        "audio": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-          "audioOption": null
         }
+      },
+      "metadata": {
+        "title": "Results",
+        "frames": [],
+        "assetId": 4,
+        "titleSplit": ["Results"],
+        "videoTitle": "Weekend Results",
+        "assetTypeId": 2,
+        "compositionId": "CricketResults",
+        "includeSponsors": true
+      },
+      "appearance": {
+        "theme": {
+          "dark": "#111",
+          "white": "#FFF",
+          "primary": "#F60718",
+          "secondary": "#03046B"
+        },
+        "template": "BroadcastPro"
       },
       "contentLayout": {
         "divideFixturesBy": {
@@ -642,117 +555,176 @@
           "CricketResults": 2,
           "CricketUpcoming": 3,
           "CricketResultSingle": 1,
+          "CricketTeamOfTheWeek": 2,
           "CricketBattingPerformances": 5,
-          "CricketBowlingPerformances": 5,
-          "CricketTeamOfTheWeek": 2
+          "CricketBowlingPerformances": 5
         }
       },
+      "fixtureCategory": "SENIOR",
+      "groupingCategory": "SENIOR",
       "templateVariation": {
-        "useBackground": "Luminance",
-        "mode": "darkAlt",
-        "category": {
-          "slug": "NightSession",
-          "name": "Night Session",
-          "divideFixturesBy": {
-            "CricketUpcoming": 3,
-            "CricketResults": 2,
-            "CricketResultSingle": 1,
-            "CricketLadder": 1,
-            "CricketRoster": 1,
-            "CricketBowlingPerformances": 5,
-            "CricketBattingPerformances": 5
-          },
-          "bundleAudio": null
-        },
-        "video": {
-          "url": "",
-          "fallbackUrl": "",
-          "position": "",
-          "size": "",
-          "loop": false,
-          "muted": false,
-          "overlay": {
-            "color": "",
-            "opacity": 0
-          },
-          "volume": 0
-        },
+        "mode": "lightAlt",
         "image": {
           "url": "",
+          "type": "",
+          "ratio": null,
           "width": 0,
           "height": 0,
-          "type": "",
           "direction": "",
+          "gradientType": "",
           "overlayStyle": {
             "color": "",
             "opacity": 0
           },
-          "gradientType": "",
-          "overlayOpacity": 0,
-          "ratio": null
-        },
-        "palette": "secondaryOnWhite",
-        "gradient": {
-          "type": "",
-          "direction": ""
+          "overlayOpacity": 0
         },
         "noise": {
           "type": ""
         },
+        "video": {
+          "url": "",
+          "loop": false,
+          "size": "",
+          "muted": false,
+          "volume": 0,
+          "overlay": {
+            "color": "",
+            "opacity": 0
+          },
+          "position": "",
+          "fallbackUrl": ""
+        },
+        "modeId": 2,
+        "palette": "primaryOnWhite",
         "pattern": {
           "type": "",
-          "animation": "",
           "scale": 0,
-          "rotation": 0,
           "opacity": 0,
-          "animationDuration": 0,
-          "animationSpeed": 0
+          "rotation": 0,
+          "animation": "",
+          "animationSpeed": 0,
+          "animationDuration": 0
+        },
+        "category": {
+          "name": "Broadcast Pro",
+          "slug": "BroadcastPro",
+          "bundleAudio": {
+            "id": 2,
+            "Name": "Dark Rock",
+            "createdAt": "2023-09-28T06:40:59.713Z",
+            "updatedAt": "2023-09-28T06:41:01.197Z",
+            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "audio_options": [
+              {
+                "id": 6,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
+                "Name": "Free Yourself",
+                "createdAt": "2023-08-31T12:28:12.437Z",
+                "updatedAt": "2023-09-28T06:44:26.805Z",
+                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "ComponentName": "Top 5 Bowling",
+                "CompositionID": "Top5BowlingList"
+              },
+              {
+                "id": 5,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
+                "Name": "Get The Gains",
+                "createdAt": "2023-08-31T12:27:46.922Z",
+                "updatedAt": "2023-09-28T06:44:42.399Z",
+                "publishedAt": "2023-08-31T12:27:48.202Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 3,
+                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
+                "Name": "Groover",
+                "createdAt": "2023-01-30T15:19:02.557Z",
+                "updatedAt": "2023-09-28T06:45:23.690Z",
+                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "ComponentName": "Weekend Results",
+                "CompositionID": "WeekendResults"
+              },
+              {
+                "id": 12,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
+                "Name": "Killer Inside of Me",
+                "createdAt": "2023-08-31T12:30:31.991Z",
+                "updatedAt": "2023-09-28T06:46:09.463Z",
+                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "ComponentName": "Top 5 Batting",
+                "CompositionID": "Top5BattingList"
+              },
+              {
+                "id": 14,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
+                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
+                "createdAt": "2023-09-28T06:55:13.187Z",
+                "updatedAt": "2023-10-04T02:09:46.095Z",
+                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
+              }
+            ]
+          },
+          "divideFixturesBy": {
+            "CricketLadder": 1,
+            "CricketRoster": 1,
+            "CricketResults": 2,
+            "CricketUpcoming": 3,
+            "CricketResultSingle": 1,
+            "CricketBattingPerformances": 5,
+            "CricketBowlingPerformances": 5
+          }
+        },
+        "gradient": {
+          "type": "",
+          "direction": ""
         },
         "particle": {
           "type": "",
-          "particleCount": 0,
           "speed": 0,
+          "animation": "",
           "direction": "",
-          "animation": ""
+          "particleCount": 0
         },
-        "modeId": 4,
-        "luminanceId": 13,
         "luminance": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/test0074323_41179e1e7a.png",
           "map": {
             "kind": "theme",
             "preset": "brand"
           },
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Eagle_Rise_83f25dfd33.png",
           "protection": "none",
           "supersampleScale": 1
-        }
+        },
+        "luminanceId": 35,
+        "useBackground": "Luminance"
       }
     }
   },
-  "errors": [],
-  "orderingContext": {
-    "scopeKey": "account:705:club:58977",
-    "revision": 0,
-    "resolvedAt": "2026-09-21T07:18:22.178Z"
-  },
   "organisation": {
-    "type": "club",
-    "id": 58977
+    "id": 11806,
+    "type": "club"
   },
-  "generationIdentity": "2827bde5742f5fd9cefc23deadae16bcc147e7149fdc215b557443c5bafb38d8",
+  "orderingContext": {
+    "revision": 0,
+    "scopeKey": "account:998:club:11806",
+    "resolvedAt": "2026-10-05T00:35:17.754Z"
+  },
+  "generationIdentity": "3700b77721e88f4804e715661b451d9e7f37b20d35711e945ee26d33c1c87299",
   "generationManifest": {
-    "orderingContext": {
-      "scopeKey": "account:705:club:58977",
-      "revision": 0,
-      "resolvedAt": "2026-09-21T07:18:22.178Z"
-    },
+    "renderId": 38447,
+    "fixtureIds": ["9c6cf0d5", "28c195f5"],
+    "schedulerId": 998,
     "organisation": {
-      "type": "club",
-      "id": 58977
+      "id": 11806,
+      "type": "club"
     },
-    "generationIdentity": "2827bde5742f5fd9cefc23deadae16bcc147e7149fdc215b557443c5bafb38d8",
-    "schedulerId": 598,
-    "renderId": 9068,
-    "fixtureIds": ["eea83c8f", "a8f7c0ff", "b75c9bd3"]
+    "orderingContext": {
+      "revision": 0,
+      "scopeKey": "account:998:club:11806",
+      "resolvedAt": "2026-10-05T00:35:17.754Z"
+    },
+    "generationIdentity": "3700b77721e88f4804e715661b451d9e7f37b20d35711e945ee26d33c1c87299"
   }
 }

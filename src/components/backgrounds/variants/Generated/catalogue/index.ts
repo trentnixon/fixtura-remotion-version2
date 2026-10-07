@@ -2,6 +2,7 @@ export {
   findGeneratedPresetByLegacyIngressId,
   generatedCatalogue,
   getCanonicalEgress,
+  isGeneratedPresetId,
   isOperatorSelectable,
   operatorPresets,
   rendererAdapterRegistry,

@@ -8,6 +8,7 @@ import {
   OUTRO_SPONSOR_PAGE_SIZE,
   OUTRO_PAGE_DURATION_FRAMES,
   OUTRO_PAGE_LOGO_EXIT_FRAME,
+  OUTRO_PAGE_LOGO_STAGGER_FRAMES,
 } from "../../../../core/utils/sponsors";
 import { AnimatedImage } from "../../../../components/images";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
@@ -33,7 +34,7 @@ const GRID_SETTINGS = {
   chunkSize: OUTRO_SPONSOR_PAGE_SIZE,
   sequenceDurationInFrames: OUTRO_PAGE_DURATION_FRAMES,
   logoExitFrame: OUTRO_PAGE_LOGO_EXIT_FRAME,
-  logoDelayIncrement: 5,
+  logoDelayIncrement: OUTRO_PAGE_LOGO_STAGGER_FRAMES,
 } as const;
 
 interface LogoAnimationsType {
@@ -106,7 +107,7 @@ export const ClassicOutro: React.FC<ClassicOutroProps> = ({
   });
 
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS.chunkSize);
-  // Each group is a sequence for 180 frames
+  // Each group is one 90-frame sponsor page
   const sequences = groups.map((group) => ({
     content: (
       <AbsoluteFill className="flex flex-col justify-center items-center">

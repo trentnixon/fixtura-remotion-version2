@@ -729,8 +729,6 @@
 .scoreline-canvas
   :is(
     [data-leaderboard] .leader-entry:not(:first-of-type) .leader-rank,
-    [data-ladder] .ladder-rank,
-    [data-ladder] .ladder-stat--pts,
     [data-roster] .roster-index
   ) {
   color: var(--container-text-accent, var(--accent-on-light-primary));
@@ -1077,19 +1075,16 @@
 }
 
 .scoreline-canvas[data-ladder] .ladder-rank {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-ladder] .ladder-team {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.scoreline-canvas[data-ladder] .ladder-stat {
-  color: var(--container-text-support, var(--contrast-performance-support));
-}
-
+.scoreline-canvas[data-ladder] .ladder-stat,
 .scoreline-canvas[data-ladder] .ladder-stat--pts {
-  color: var(--container-text-accent, var(--accent-on-light-primary));
+  color: var(--container-text, var(--contrast-performance-lead));
 }
 
 .scoreline-canvas[data-ladder]

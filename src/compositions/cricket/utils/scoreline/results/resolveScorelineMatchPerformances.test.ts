@@ -21,11 +21,11 @@ describe("resolveScorelineMatchPerformances", () => {
     expect(performancePanelCount).toBe(2);
     expect(battingRows[0]?.kind).toBe("batting");
     expect(battingRows[0]?.kind === "batting" && battingRows[0].player).toBe(
-      "Sam Lickiss (c)",
+      "Joe Root",
     );
     expect(bowlingRows[0]?.kind).toBe("bowling");
     expect(bowlingRows[0]?.kind === "bowling" && bowlingRows[0].player).toBe(
-      "Maloney",
+      "Jofra Archer",
     );
   });
 
@@ -43,10 +43,10 @@ describe("resolveScorelineMatchPerformances", () => {
     expect(hasBowling).toBe(true);
     expect(performancePanelCount).toBe(2);
     expect(battingRows[0]?.kind === "batting" && battingRows[0].player).toBe(
-      "Christian Payne",
+      "Rahmanullah Gurbaz",
     );
     expect(bowlingRows[0]?.kind === "bowling" && bowlingRows[0].player).toBe(
-      "McCloy",
+      "Rashid Khan",
     );
   });
 
@@ -99,7 +99,7 @@ describe("resolveScorelineMatchPerformances", () => {
     const { bowlingRows } = resolveScorelineMatchPerformances(dualBowlingMatch);
 
     expect(bowlingRows[0]?.kind === "bowling" && bowlingRows[0].player).toBe(
-      "Maloney",
+      "Jofra Archer",
     );
   });
 });

@@ -1,4 +1,5 @@
 import type React from "react";
+import { isGeneratedPresetId } from "../../components/backgrounds/variants/Generated/catalogue";
 import { templateRegistry, TemplateId } from "../../templates/registry";
 import { FixturaDataset } from "../types/data/index";
 import { calculateOutroDurationFromSponsors } from "../utils/sponsors";
@@ -10,7 +11,13 @@ export type FixturaTemplateComponent = React.ComponentType<{
 
 export type ProductionCompositionFromData = {
   TemplateComponent: FixturaTemplateComponent;
+  /** CLI/Lambda ID: `${templateId}-${useBackground}-${compositionId}` */
   remoteCompositionId: string;
+  /**
+   * Studio generated-preset ID, when `appearance.type` is a catalogue preset:
+   * `${templateId}-generated-${presetId}-${compositionId}`
+   */
+  studioGeneratedCompositionId?: string;
   durationInFrames: number;
 };
 
@@ -42,6 +49,13 @@ export function getProductionCompositionFromData(
   const TemplateComponent =
     templateRegistry[templateId as TemplateId].component;
   const remoteCompositionId = `${templateId}-${useBackground}-${compositionId}`;
+
+  const appearanceType = appearance.type;
+  const studioGeneratedCompositionId =
+    typeof appearanceType === "string" && isGeneratedPresetId(appearanceType)
+      ? `${templateId}-generated-${appearanceType}-${compositionId}`
+      : undefined;
+
   const sponsors = data.videoMeta.club?.sponsors;
   const doesAccountHaveSponsors =
     Boolean(metadata.includeSponsors) || hasSponsors(sponsors);
@@ -53,6 +67,7 @@ export function getProductionCompositionFromData(
   return {
     TemplateComponent,
     remoteCompositionId,
+    studioGeneratedCompositionId,
     durationInFrames,
   };
 }

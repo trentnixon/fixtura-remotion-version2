@@ -231,10 +231,15 @@ const getImageOrientation = (aspectRatio: number): ImageOrientation => {
 /**
  * AnimatedImage component with fallback support, animation capabilities, and ratio handling
  */
+const DEFAULT_FALLBACK_SRC = staticFile("placeholder-image.png");
+
+const isUsableImageSrc = (value: string | undefined | null): value is string =>
+  typeof value === "string" && value.trim().length > 0;
+
 const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
   // Source props
   src,
-  fallbackSrc = staticFile("placeholder-image.jpg"),
+  fallbackSrc = DEFAULT_FALLBACK_SRC,
   alt = "",
 
   // Size props
@@ -311,8 +316,11 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
     }
   }, [originalWidth, originalHeight]);
 
-  // Determine which source to use
-  const imageSrc = hasError && fallbackSrc ? fallbackSrc : src;
+  // Prefer a usable primary src; fall back only after a load error (or empty primary)
+  const resolvedFallback = isUsableImageSrc(fallbackSrc)
+    ? fallbackSrc
+    : DEFAULT_FALLBACK_SRC;
+  const imageSrc = !isUsableImageSrc(src) || hasError ? resolvedFallback : src;
 
   // Memoize animation configurations to prevent unnecessary recalculations
   const animationConfig = useMemo(
@@ -507,9 +515,13 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
     [alt, imageDimensions],
   );
 
+  if (!isUsableImageSrc(imageSrc)) {
+    return null;
+  }
+
   return (
     <Img
-      src={imageSrc || "./assets/images/logos/DefaultLogo.png"}
+      src={imageSrc}
       alt={debugAlt}
       className={className}
       style={combinedStyle}

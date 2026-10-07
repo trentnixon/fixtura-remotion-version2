@@ -25,6 +25,7 @@ import {
   buildGradeLabel,
   calculateBroadcastProResultDelays,
 } from "./matchContentHelpers";
+import { placeBroadcastProClubBowlingOnOpposition } from "./placeBroadcastProClubBowlingOnOpposition";
 import { resolveBroadcastProTeamAccentColors } from "./resolveBroadcastProTeamAccentColors";
 import type { BroadcastProResultMatchData } from "./types";
 
@@ -117,19 +118,25 @@ export const BroadcastProResultMatchContent: React.FC<
 
   const homeBatted = (match.homeTeam.battingPerformances || []).length > 0;
   const awayBatted = (match.awayTeam.battingPerformances || []).length > 0;
+  const accountIsClub = isAccountClub || false;
   const visibility = computePlayerVisibility({
     matchType: match.type,
     matchStatus: match.status,
     homeBatted,
     awayBatted,
-    isAccountClub: isAccountClub || false,
+    isAccountClub: accountIsClub,
     homeIsClub: match.homeTeam.isClubTeam,
     awayIsClub: match.awayTeam.isClubTeam,
   });
+  const statTeams = placeBroadcastProClubBowlingOnOpposition(
+    match.homeTeam,
+    match.awayTeam,
+    accountIsClub,
+  );
 
   const homeStats = buildBroadcastProResultStatItems(
     teamForStatItems(
-      match.homeTeam,
+      statTeams.homeTeam,
       visibility.homeShowBatting,
       visibility.homeShowBowling,
     ),
@@ -137,7 +144,7 @@ export const BroadcastProResultMatchContent: React.FC<
   );
   const awayStats = buildBroadcastProResultStatItems(
     teamForStatItems(
-      match.awayTeam,
+      statTeams.awayTeam,
       visibility.awayShowBatting,
       visibility.awayShowBowling,
     ),

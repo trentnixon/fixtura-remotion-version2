@@ -19,6 +19,7 @@ export type FixturaTemplateComponent = ComponentType<{
 export type ProductionCompositionFromData = {
   TemplateComponent: FixturaTemplateComponent;
   remoteCompositionId: string;
+  studioGeneratedCompositionId?: string;
   durationInFrames: number;
 };
 

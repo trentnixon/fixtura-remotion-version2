@@ -10,6 +10,7 @@ import { resolveScorelineLadderBiasTeam } from "../../../utils/scoreline/ladder/
 import {
   resolveScorelineLadderDensity,
   resolveScorelineLadderShowCreases,
+  resolveScorelineLadderTeamFont,
 } from "../../../utils/scoreline/ladder/resolveScorelineLadderLayout";
 import RowScoreline from "../TeamRows/row-Scoreline";
 import { LadderDisplayProps } from "./_types/LadderDisplayProps";
@@ -32,6 +33,7 @@ export const LadderDisplayScoreline: React.FC<LadderDisplayProps> = ({
   const teamCount = League.length;
   const density = resolveScorelineLadderDensity(teamCount);
   const showCreases = resolveScorelineLadderShowCreases(teamCount);
+  const teamFont = resolveScorelineLadderTeamFont(teamCount);
   const animationOutFrame = calculateAnimationOutFrame(timings);
 
   return (
@@ -97,6 +99,14 @@ export const LadderDisplayScoreline: React.FC<LadderDisplayProps> = ({
                 className="ladder-rows"
                 data-density={density}
                 data-creases={showCreases ? "true" : "false"}
+                style={
+                  teamFont
+                    ? {
+                        "--ladder-team-size": `${teamFont.teamSize}px`,
+                        "--ladder-team-hero-size": `${teamFont.heroSize}px`,
+                      }
+                    : undefined
+                }
               >
                 {League.map((team, index) => (
                   <RowScoreline

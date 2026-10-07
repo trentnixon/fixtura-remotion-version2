@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import type { MatchResult as ResultsMatchResult } from "../../../results/_types/types";
 import type { MatchResult as ResultSingleMatchResult } from "../../../resultSingle/types";
@@ -8,10 +8,14 @@ import {
   resolveScorelineResultStatementLength,
   resolveScorelineResultStatementText,
 } from "../../scoreline/results/resolveScorelineResultStatement";
+import { resolveScorelineMatchPerformances } from "../../scoreline/results/resolveScorelineMatchPerformances";
+import {
+  resolveScorelineResultSinglePerformances,
+  scorelineBowlingUnderOpposition,
+} from "../../scoreline/results/resolveScorelineResultSinglePerformances";
 import {
   ScorelineBowlingRow,
   ScorelineBattingRow,
-  useScorelineResultSinglePerformances,
 } from "../../scoreline/results/scorelineMatchShared";
 import { dedupeVenueLabel } from "../../scoreline/results/dedupeVenueLabel";
 
@@ -24,7 +28,8 @@ export type NightSessionResultSingleContentProps = {
 export const NightSessionResultSingleContent: React.FC<
   NightSessionResultSingleContentProps
 > = ({ match, className = "", style }) => {
-  const { club } = useVideoDataContext();
+  const { club, isAccountClub } = useVideoDataContext();
+  const accountIsClub = isAccountClub || false;
   const resultsMatch = match as unknown as ResultsMatchResult;
   const { homeIsClub, awayIsClub } = resolveScorelineUpcomingClubSides(
     match.homeTeam.name,
@@ -37,7 +42,18 @@ export const NightSessionResultSingleContent: React.FC<
     hasBatting,
     hasBowling,
     performancePanelCount,
-  } = useScorelineResultSinglePerformances(resultsMatch, club?.name);
+  } = useMemo(
+    () =>
+      accountIsClub
+        ? resolveScorelineResultSinglePerformances(resultsMatch, club?.name)
+        : resolveScorelineMatchPerformances(resultsMatch),
+    [accountIsClub, club?.name, resultsMatch],
+  );
+  const bowlingFirst = scorelineBowlingUnderOpposition(
+    resultsMatch,
+    accountIsClub,
+    club?.name,
+  );
 
   const resultText = resolveScorelineResultStatementText(
     match.result,
@@ -100,32 +116,64 @@ export const NightSessionResultSingleContent: React.FC<
           </div>
 
           <div className="performance-area">
-            <section
-              className="performance-panel"
-              data-state={hasBatting ? "filled" : "empty"}
-            >
-              <h3 className="performance-heading">Batting</h3>
-              {battingRows.map((row, index) => (
-                <ScorelineBattingRow
-                  key={`bat-${index}`}
-                  row={row}
-                  rank={battingRanks[index]}
-                />
-              ))}
-            </section>
-            <section
-              className="performance-panel"
-              data-state={hasBowling ? "filled" : "empty"}
-            >
-              <h3 className="performance-heading">Bowling</h3>
-              {bowlingRows.map((row, index) => (
-                <ScorelineBowlingRow
-                  key={`bowl-${index}`}
-                  row={row}
-                  rank={bowlingRanks[index]}
-                />
-              ))}
-            </section>
+            {bowlingFirst ? (
+              <section
+                className="performance-panel"
+                data-state={hasBowling ? "filled" : "empty"}
+              >
+                <h3 className="performance-heading">Bowling</h3>
+                {bowlingRows.map((row, index) => (
+                  <ScorelineBowlingRow
+                    key={`bowl-${index}`}
+                    row={row}
+                    rank={bowlingRanks[index]}
+                  />
+                ))}
+              </section>
+            ) : (
+              <section
+                className="performance-panel"
+                data-state={hasBatting ? "filled" : "empty"}
+              >
+                <h3 className="performance-heading">Batting</h3>
+                {battingRows.map((row, index) => (
+                  <ScorelineBattingRow
+                    key={`bat-${index}`}
+                    row={row}
+                    rank={battingRanks[index]}
+                  />
+                ))}
+              </section>
+            )}
+            {bowlingFirst ? (
+              <section
+                className="performance-panel"
+                data-state={hasBatting ? "filled" : "empty"}
+              >
+                <h3 className="performance-heading">Batting</h3>
+                {battingRows.map((row, index) => (
+                  <ScorelineBattingRow
+                    key={`bat-${index}`}
+                    row={row}
+                    rank={battingRanks[index]}
+                  />
+                ))}
+              </section>
+            ) : (
+              <section
+                className="performance-panel"
+                data-state={hasBowling ? "filled" : "empty"}
+              >
+                <h3 className="performance-heading">Bowling</h3>
+                {bowlingRows.map((row, index) => (
+                  <ScorelineBowlingRow
+                    key={`bowl-${index}`}
+                    row={row}
+                    rank={bowlingRanks[index]}
+                  />
+                ))}
+              </section>
+            )}
           </div>
 
           <div className="match-context">
