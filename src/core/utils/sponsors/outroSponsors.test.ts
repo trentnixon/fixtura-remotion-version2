@@ -2,7 +2,11 @@ import { describe, expect, it } from "vitest";
 import { Sponsor, SponsorsData } from "../../types/data/sponsors";
 import {
   OUTRO_SPONSOR_PAGE_SIZE,
+  OUTRO_PAGE_ANIMATE_IN_FRAMES,
+  OUTRO_PAGE_HOLD_FRAMES,
+  OUTRO_PAGE_ANIMATE_OUT_FRAMES,
   OUTRO_PAGE_DURATION_FRAMES,
+  OUTRO_PAGE_LOGO_EXIT_FRAME,
   OUTRO_NO_SPONSORS_DURATION_FRAMES,
   buildOutroSponsorSequence,
   chunkSponsors,
@@ -52,10 +56,15 @@ describe("chunkSponsors", () => {
 });
 
 describe("calculateOutroDurationFromSponsors", () => {
-  it("uses 15+90+15 per page from sponsor count", () => {
-    expect(OUTRO_PAGE_DURATION_FRAMES).toBe(120);
-    expect(calculateOutroDurationFromSponsors(account(3, 3), true)).toBe(120);
-    expect(calculateOutroDurationFromSponsors(account(4, 3), true)).toBe(240);
+  it("uses a 90-frame page so 10 sponsors are 2 × 90", () => {
+    expect(OUTRO_PAGE_ANIMATE_IN_FRAMES).toBe(15);
+    expect(OUTRO_PAGE_HOLD_FRAMES).toBe(60);
+    expect(OUTRO_PAGE_ANIMATE_OUT_FRAMES).toBe(15);
+    expect(OUTRO_PAGE_DURATION_FRAMES).toBe(90);
+    expect(OUTRO_PAGE_LOGO_EXIT_FRAME).toBe(75);
+    expect(calculateOutroDurationFromSponsors(account(6, 4), true)).toBe(180);
+    expect(calculateOutroDurationFromSponsors(account(3, 3), true)).toBe(90);
+    expect(calculateOutroDurationFromSponsors(account(4, 3), true)).toBe(180);
   });
 
   it("returns 0 when gated off or empty (no outro)", () => {

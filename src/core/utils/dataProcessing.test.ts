@@ -58,7 +58,7 @@ describe("processDatasetForTemplate + outro sponsors", () => {
     expect(Array.isArray(sequence)).toBe(true);
   });
 
-  it("composition duration uses 15+90+15 per sponsor page", () => {
+  it("composition duration uses 90 frames per sponsor page", () => {
     const processed = processDatasetForTemplate(
       CricketResults as FixturaDataset,
       "basic",
@@ -79,7 +79,7 @@ describe("processDatasetForTemplate + outro sponsors", () => {
     });
     const expectedPages = Math.ceil(sequence.length / OUTRO_SPONSOR_PAGE_SIZE);
 
-    expect(OUTRO_PAGE_DURATION_FRAMES).toBe(120);
+    expect(OUTRO_PAGE_DURATION_FRAMES).toBe(90);
     expect(expectedOutro).toBe(expectedPages * OUTRO_PAGE_DURATION_FRAMES);
     expect(calculateDuration(processed)).toBe(
       (processed.timings?.FPS_INTRO || 0) +

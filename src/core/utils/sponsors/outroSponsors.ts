@@ -3,9 +3,9 @@ import { asSponsorArray } from "./asSponsorArray";
 
 export const OUTRO_SPONSOR_PAGE_SIZE = 6;
 
-/** Per-page outro timing: animate in + hold + animate out. */
+/** Per-page outro timing: animate in + hold + animate out. One page is 90 frames. */
 export const OUTRO_PAGE_ANIMATE_IN_FRAMES = 15;
-export const OUTRO_PAGE_HOLD_FRAMES = 90;
+export const OUTRO_PAGE_HOLD_FRAMES = 60;
 export const OUTRO_PAGE_ANIMATE_OUT_FRAMES = 15;
 export const OUTRO_PAGE_DURATION_FRAMES =
   OUTRO_PAGE_ANIMATE_IN_FRAMES +
@@ -58,7 +58,7 @@ export const countOutroSponsors = (
 
 /**
  * Outro duration in frames from sponsor count.
- * pages = ceil(count / 6); duration = pages × (15 + 90 + 15).
+ * pages = ceil(count / 6); duration = pages × 90.
  * Returns 0 when sponsors are gated off or empty (no outro).
  */
 export const calculateOutroDurationFromSponsors = (
