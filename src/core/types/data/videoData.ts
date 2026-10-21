@@ -79,31 +79,31 @@ export interface VideoTemplateVariation {
   useBackground: string;
   mode?: string;
   video?: {
-    url: string;
-    fallbackUrl?: string;
-    position?: string;
-    size?: string;
-    loop?: boolean;
-    muted?: boolean;
+    url?: string | null;
+    fallbackUrl?: string | null;
+    position?: string | null;
+    size?: string | null;
+    loop?: boolean | null;
+    muted?: boolean | null;
     overlay?: {
       color: string;
       opacity: number;
-    };
-    useOffthreadVideo?: boolean;
-    volume?: number;
-    playbackRate?: number;
-  };
+    } | null;
+    useOffthreadVideo?: boolean | null;
+    volume?: number | null;
+    playbackRate?: number | null;
+  } | null;
   image?: {
-    url: string;
-    ratio: string;
-    width: number;
-    height: number;
-    type?: string;
-    direction?: string;
-    overlayStyle?: string;
-    gradientType?: string;
-    overlayOpacity?: number;
-  };
+    url?: string | null;
+    ratio?: string | null;
+    width?: number | null;
+    height?: number | null;
+    type?: string | null;
+    direction?: string | null;
+    overlayStyle?: string | null;
+    gradientType?: string | null;
+    overlayOpacity?: number | null;
+  } | null;
   texture?: {
     name?: string;
     url?: string;
@@ -168,28 +168,28 @@ export interface VideoTemplateVariation {
   palette?: string;
   borderRadius?: string;
   gradient?: {
-    type: string;
-    direction: string;
-  };
+    type?: string | null;
+    direction?: string | null;
+  } | null;
   noise?: {
-    type: string;
-  };
+    type?: string | null;
+  } | null;
   pattern?: {
-    type: string;
-    animation: string;
-    scale: number;
-    rotation: number;
-    opacity: number;
-    animationDuration: number;
-    animationSpeed: number;
-  };
+    type?: string | null;
+    animation?: string | null;
+    scale?: number | null;
+    rotation?: number | null;
+    opacity?: number | null;
+    animationDuration?: number | null;
+    animationSpeed?: number | null;
+  } | null;
   particle?: {
-    type: string;
-    particleCount: number;
-    speed: number;
-    direction: string;
-    animation: string;
-  };
+    type?: string | null;
+    particleCount?: number | string | null;
+    speed?: number | null;
+    direction?: string | null;
+    animation?: string | null;
+  } | null;
   animation?: {
     type: string;
     scale?: number;

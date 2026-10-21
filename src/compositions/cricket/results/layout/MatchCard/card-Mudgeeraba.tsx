@@ -5,19 +5,12 @@ import MudgeerabaSingleTeamHeader from "../Sections/MatchHeader/MudgeerabaSingle
 import { computePartialTwoDayVisibility } from "../Sections/PlayerStats/_utils/visibility";
 import PlayerStatsSingleTeamOnlyMudgeeraba from "../Sections/PlayerStats/PlayerStats-SingleTeamOnly-Mudgeeraba";
 import MudgeerabaStatusFooter from "../Sections/MatchStatus/MudgeerabaStatusFooter";
-import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import {
-  LayeredAngularPanel,
-  SHALLOW_ROW_LEFT,
-  getLayeredUnderlayColor,
-} from "../../../../../templates/variants/mudgeeraba/design";
 
 const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({
   match,
   rowHeight,
   delay,
 }) => {
-  const { colors } = useThemeContext();
   // Calculate section heights
   // Split height between two teams (header + stats for each)
   const teamHeaderHeight = 60; // Height for each team header
@@ -44,61 +37,50 @@ const MatchCardMudgeeraba: React.FC<MatchCardProps> = ({
   });
 
   return (
-    <LayeredAngularPanel
-      clipPath={SHALLOW_ROW_LEFT}
-      surfaceColor="transparent"
-      underlayColor={getLayeredUnderlayColor(colors.primary)}
-      className="w-auto mx-0 overflow-hidden h-full"
-      surfaceClassName="h-full"
-      surfaceStyle={{ backgroundColor: "transparent" }}
-    >
-      {/* Home Team Header */}
-      <MudgeerabaSingleTeamHeader
-        team={match.homeTeam}
-        teamLogo={match.teamHomeLogo}
-        delay={homeHeaderDelay}
-        outerContainer={{
-          height: teamHeaderHeight,
-        }}
-      />
+    <div className="flex h-full w-full flex-col">
+      <div className="flex min-h-0 w-full flex-1 flex-col overflow-hidden">
+        <MudgeerabaSingleTeamHeader
+          team={match.homeTeam}
+          teamLogo={match.teamHomeLogo}
+          delay={homeHeaderDelay}
+          outerContainer={{
+            height: teamHeaderHeight,
+          }}
+        />
 
-      {/* Home Team Stats */}
-      <PlayerStatsSingleTeamOnlyMudgeeraba
-        Team={match.homeTeam}
-        height={teamStatsHeight}
-        delay={homeStatsDelay}
-        maxPlayersPerStat={2}
-        showBatting={visibility.flags.homeShowBatting}
-        showBowling={visibility.flags.homeShowBowling}
-      />
+        <PlayerStatsSingleTeamOnlyMudgeeraba
+          Team={match.homeTeam}
+          height={teamStatsHeight}
+          delay={homeStatsDelay}
+          maxPlayersPerStat={2}
+          showBatting={visibility.flags.homeShowBatting}
+          showBowling={visibility.flags.homeShowBowling}
+        />
 
-      {/* Away Team Header */}
-      <MudgeerabaSingleTeamHeader
-        team={match.awayTeam}
-        teamLogo={match.teamAwayLogo}
-        delay={awayHeaderDelay}
-        outerContainer={{
-          height: teamHeaderHeight,
-        }}
-      />
+        <MudgeerabaSingleTeamHeader
+          team={match.awayTeam}
+          teamLogo={match.teamAwayLogo}
+          delay={awayHeaderDelay}
+          outerContainer={{
+            height: teamHeaderHeight,
+          }}
+        />
 
-      {/* Away Team Stats */}
-      <PlayerStatsSingleTeamOnlyMudgeeraba
-        Team={match.awayTeam}
-        height={teamStatsHeight}
-        delay={awayStatsDelay}
-        maxPlayersPerStat={2}
-        showBatting={visibility.flags.awayShowBatting}
-        showBowling={visibility.flags.awayShowBowling}
-      />
-
-      {/* Game result section – primary bg, angled left/right, white centered text */}
+        <PlayerStatsSingleTeamOnlyMudgeeraba
+          Team={match.awayTeam}
+          height={teamStatsHeight}
+          delay={awayStatsDelay}
+          maxPlayersPerStat={2}
+          showBatting={visibility.flags.awayShowBatting}
+          showBowling={visibility.flags.awayShowBowling}
+        />
+      </div>
       <MudgeerabaStatusFooter
         result={match.result}
         delay={resultSectionDelay}
         outerContainer={{ minHeight: 52 }}
       />
-    </LayeredAngularPanel>
+    </div>
   );
 };
 

@@ -19,19 +19,19 @@ const DEFAULT_OVERLAY = { color: "rgba(0,0,0,0.5)", opacity: 0.35 } as const;
 const DEFAULT_INTRO_VIDEO_URL = DEFAULT_VIDEO_URL;
 
 interface VideoTemplateVariation {
-  url?: string;
-  position?: string;
-  size?: string;
-  loop?: boolean;
-  muted?: boolean;
+  url?: string | null;
+  position?: string | null;
+  size?: string | null;
+  loop?: boolean | null;
+  muted?: boolean | null;
   overlay?: {
     color: string;
     opacity: number;
-  };
-  useOffthreadVideo?: boolean;
-  volume?: number;
-  playbackRate?: number;
-  fallbackUrl?: string;
+  } | null;
+  useOffthreadVideo?: boolean | null;
+  volume?: number | null;
+  playbackRate?: number | null;
+  fallbackUrl?: string | null;
 }
 
 interface Props extends Partial<VideoBackgroundProps> {

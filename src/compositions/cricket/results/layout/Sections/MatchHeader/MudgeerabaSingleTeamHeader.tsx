@@ -7,11 +7,7 @@ import { AnimatedText } from "../../../../../../components/typography/AnimatedTe
 import { formatScoreWithOvers } from "./_utils/mudgeeraba-helpers";
 import { TeamLogo as TeamLogoType } from "../../../../utils/primitives/_types/TeamLogoProps";
 import { Team } from "../../../_types/types";
-import {
-  STEEP_HERO_TOP_LEFT,
-  LogoWell,
-  clipPathStyle,
-} from "../../../../../../templates/variants/mudgeeraba/design";
+import { LogoWell } from "../../../../../../templates/variants/mudgeeraba/design";
 
 export interface MudgeerabaSingleTeamHeaderProps {
   team: Team;
@@ -103,15 +99,13 @@ export const MudgeerabaSingleTeamHeader: React.FC<
             />
           </LogoWell>
 
-          {/* Solid primary angled score bar - angle matches PlayerStats (10% slope) */}
           <div
-            className="font-bold relative z-20 overflow-hidden h-full flex items-center"
+            className="relative z-20 flex h-full items-center font-bold"
             style={{
               backgroundColor: primaryColor,
-              ...clipPathStyle(STEEP_HERO_TOP_LEFT),
-              marginLeft: "-8px", // Overlap with logo border
-              paddingLeft: "32px",
-              paddingRight: "64px",
+              marginLeft: "-8px",
+              paddingLeft: "24px",
+              paddingRight: "16px",
             }}
           >
             <AnimatedText

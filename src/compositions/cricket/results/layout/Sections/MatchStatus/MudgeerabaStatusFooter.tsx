@@ -5,10 +5,6 @@ import { useThemeContext } from "../../../../../../core/context/ThemeContext";
 import { AnimatedText } from "../../../../../../components/typography/AnimatedText";
 import { MudgeerabaStatusFooterProps } from "./_types/MudgeerabaStatusFooterProps";
 import { truncateText } from "./_utils/helpers";
-import {
-  SHALLOW_STATUS_BAR,
-  clipPathStyle,
-} from "../../../../../../templates/variants/mudgeeraba/design";
 
 export const MudgeerabaStatusFooter: React.FC<MudgeerabaStatusFooterProps> = ({
   result,
@@ -27,19 +23,15 @@ export const MudgeerabaStatusFooter: React.FC<MudgeerabaStatusFooterProps> = ({
   return (
     <AnimatedContainer
       type="full"
-      className="w-full flex items-center justify-center mx-20"
+      className="flex w-full items-center justify-center px-4"
       backgroundColor="none"
       style={outerContainer}
       animation={ContainerAnimations.containerIn}
       animationDelay={delay}
     >
-      {/* Primary color bar – angled left and right (matches player stats / score header) */}
       <div
-        className="w-full px-4 py-2 font-bold flex items-center justify-center relative overflow-hidden"
-        style={{
-          backgroundColor: primaryColor,
-          ...clipPathStyle(SHALLOW_STATUS_BAR),
-        }}
+        className="relative flex w-full items-center justify-center px-4 py-2 font-bold"
+        style={{ backgroundColor: primaryColor }}
       >
         <AnimatedText
           type="metadataLarge"

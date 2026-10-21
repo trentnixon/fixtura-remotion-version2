@@ -71,8 +71,24 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
   // Extract raw configuration from template variation
   const rawConfig = video?.templateVariation?.image || {};
 
-  // Adapt legacy configuration to enhanced format
-  const adapted = adaptImageConfig(rawConfig);
+  // Adapt legacy configuration to enhanced format. Null means unset.
+  const adapted = adaptImageConfig({
+    url: rawConfig.url ?? undefined,
+    ratio:
+      rawConfig.ratio === "landscape" ||
+      rawConfig.ratio === "portrait" ||
+      rawConfig.ratio === "square"
+        ? rawConfig.ratio
+        : undefined,
+    width: rawConfig.width ?? undefined,
+    height: rawConfig.height ?? undefined,
+    type: rawConfig.type ?? undefined,
+    direction: rawConfig.direction ?? undefined,
+      overlayStyle: rawConfig.overlayStyle
+        ? (rawConfig.overlayStyle as OverlayStyle)
+        : undefined,
+    overlayOpacity: rawConfig.overlayOpacity ?? undefined,
+  });
   const config = templateDefaults
     ? {
         ...adapted,

@@ -39,11 +39,11 @@ export const BroadcastProRoundedBackground: React.FC = () => {
           mode,
           image: image
             ? {
-                effectType: image.type,
-                overlayStyle: image.overlayStyle,
-                overlayOpacity: image.overlayOpacity,
-                width: image.width,
-                height: image.height,
+                effectType: image.type ?? undefined,
+                overlayStyle: image.overlayStyle ?? undefined,
+                overlayOpacity: image.overlayOpacity ?? undefined,
+                width: image.width ?? undefined,
+                height: image.height ?? undefined,
                 ratio:
                   image.ratio === "landscape" ||
                   image.ratio === "portrait" ||

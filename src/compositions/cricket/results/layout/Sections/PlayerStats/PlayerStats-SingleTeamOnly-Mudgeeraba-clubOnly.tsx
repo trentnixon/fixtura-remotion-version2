@@ -6,12 +6,6 @@ import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName"
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { PlayerStatsSingleTeamProps } from "./_types/PlayerStatsProps";
 import { truncatePlayerName } from "../../../../utils/utils-text";
-import {
-  SHALLOW_COLUMN_LEFT,
-  SHALLOW_COLUMN_RIGHT,
-  LayeredAngularPanel,
-  getLayeredUnderlayColor,
-} from "../../../../../../templates/variants/mudgeeraba/design";
 
 const MAX_NAME_LENGTH = 20;
 
@@ -32,26 +26,21 @@ function formatBowlingStat(p: PlayerStat): string {
   return `${p.wickets ?? 0}/${p.runs} (${p.overs ?? 0})`;
 }
 
-/** One cell with angled polygon bg: name + stat (50% of row). Right cell uses mirrored clip (angle on left). */
 const StatCell: React.FC<{
   playerName: string;
   statValue: string;
   delay: number;
   index: number;
-  isRight: boolean;
-}> = ({ playerName, statValue, delay, index, isRight }) => {
+}> = ({ playerName, statValue, delay, index }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, colors } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const textAnimations = animations.text.main;
   const rowBg = selectedPalette.container.backgroundTransparent.high;
 
   return (
-    <LayeredAngularPanel
-      clipPath={isRight ? SHALLOW_COLUMN_RIGHT : SHALLOW_COLUMN_LEFT}
-      surfaceColor={rowBg}
-      underlayColor={getLayeredUnderlayColor(colors.primary)}
-      className="flex-1 min-w-0 relative"
-      surfaceClassName={`flex justify-between items-center flex-1 min-w-0 overflow-hidden py-2 ${isRight ? "pl-8 pr-2" : "pl-8 pr-8"}`}
+    <div
+      className="relative flex min-w-0 flex-1 items-center justify-between overflow-hidden px-3 py-2"
+      style={{ backgroundColor: rowBg }}
     >
       <ResultPlayerName
         className="whitespace-nowrap truncate"
@@ -65,11 +54,11 @@ const StatCell: React.FC<{
         variant="onContainerCopy"
         animation={{ ...textAnimations.copyIn, delay: delay + 10 + index * 5 }}
       />
-    </LayeredAngularPanel>
+    </div>
   );
 };
 
-/** One row with 2 players, 50/50, each with its own angled polygon bg */
+/** One row with 2 players, 50/50. */
 const StatsRow: React.FC<{
   players: PlayerStat[];
   isBatting: boolean;
@@ -89,7 +78,6 @@ const StatsRow: React.FC<{
           statValue={formatStat(displayPlayers[0])}
           delay={delay}
           index={0}
-          isRight={false}
         />
       )}
       {displayPlayers[1] && (
@@ -98,7 +86,6 @@ const StatsRow: React.FC<{
           statValue={formatStat(displayPlayers[1])}
           delay={delay}
           index={1}
-          isRight
         />
       )}
     </div>

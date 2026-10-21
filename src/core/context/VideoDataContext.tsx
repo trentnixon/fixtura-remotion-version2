@@ -10,6 +10,7 @@ import {
 } from "../types/data/videoData";
 import { Club, SponsorsData } from "../types/data/sponsors";
 import { FixturaDataset } from "../types/data/index";
+import { normalizeTemplateVariation } from "../utils/normalizeTemplateVariation";
 
 interface VideoDataContextProps {
   data: FixturaDataset;
@@ -31,7 +32,11 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const { data } = useGlobalContext();
 
-  const video = data.videoMeta?.video || {};
+  const sourceVideo = data.videoMeta?.video || {};
+  const templateVariation = normalizeTemplateVariation(
+    sourceVideo.templateVariation,
+  );
+  const video = { ...sourceVideo, templateVariation };
   const club = data.videoMeta?.club || {};
 
   const contextValue: VideoDataContextProps = {
@@ -41,7 +46,7 @@ export const VideoDataProvider: React.FC<{ children: ReactNode }> = ({
     media: video.media,
     appearance: video.appearance,
     contentLayout: video.contentLayout,
-    templateVariation: video.templateVariation,
+    templateVariation: templateVariation ?? ({} as VideoTemplateVariation),
     club,
     sponsors: club.sponsors,
     isAccountClub: !!data.videoMeta?.club?.IsAccountClub,

@@ -6,13 +6,6 @@ import { ResultPlayerName } from "../../../../utils/primitives/ResultPlayerName"
 import { ResultPlayerScore } from "../../../../utils/primitives/ResultPlayerScore";
 import { PlayerStatsSingleTeamProps } from "./_types/PlayerStatsProps";
 import { truncatePlayerName } from "../../../../utils/utils-text";
-import {
-  getShallowColumnPadding,
-  SHALLOW_COLUMN_LEFT,
-  SHALLOW_COLUMN_RIGHT,
-  LayeredAngularPanel,
-  getLayeredUnderlayColor,
-} from "../../../../../../templates/variants/mudgeeraba/design";
 
 const MAX_NAME_LENGTH = 20;
 
@@ -38,20 +31,16 @@ const PlayerStatRow: React.FC<{
   statValue: string;
   delay: number;
   index: number;
-  isLeftColumn: boolean;
-}> = ({ playerName, statValue, delay, index, isLeftColumn }) => {
+}> = ({ playerName, statValue, delay, index }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, colors } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const textAnimations = animations.text.main;
   const rowBg = selectedPalette.container.backgroundTransparent.high;
 
   return (
-    <LayeredAngularPanel
-      clipPath={isLeftColumn ? SHALLOW_COLUMN_LEFT : SHALLOW_COLUMN_RIGHT}
-      surfaceColor={rowBg}
-      underlayColor={getLayeredUnderlayColor(colors.primary)}
-      className="w-full relative"
-      surfaceClassName={`flex justify-between items-center py-2 relative overflow-hidden ${getShallowColumnPadding(isLeftColumn)}`}
+    <div
+      className="relative flex w-full items-center justify-between overflow-hidden px-3 py-2"
+      style={{ backgroundColor: rowBg }}
     >
       <ResultPlayerName
         className="whitespace-nowrap"
@@ -65,7 +54,7 @@ const PlayerStatRow: React.FC<{
         variant="onContainerCopy"
         animation={{ ...textAnimations.copyIn, delay: delay + 10 + index * 5 }}
       />
-    </LayeredAngularPanel>
+    </div>
   );
 };
 
@@ -73,8 +62,7 @@ const StatsColumn: React.FC<{
   players: PlayerStat[];
   isBatting: boolean;
   delay: number;
-  isLeftColumn: boolean;
-}> = ({ players, isBatting, delay, isLeftColumn }) => {
+}> = ({ players, isBatting, delay }) => {
   const displayPlayers = [
     ...players.slice(0, 2),
     ...Array(Math.max(0, 2 - players.length)).fill(null),
@@ -89,7 +77,6 @@ const StatsColumn: React.FC<{
           statValue={formatStat(displayPlayers[0])}
           delay={delay}
           index={0}
-          isLeftColumn={isLeftColumn}
         />
       )}
       {displayPlayers[1] && (
@@ -98,7 +85,6 @@ const StatsColumn: React.FC<{
           statValue={formatStat(displayPlayers[1])}
           delay={delay}
           index={1}
-          isLeftColumn={isLeftColumn}
         />
       )}
     </div>
@@ -129,19 +115,13 @@ export const PlayerStatsSingleTeamOnlyMudgeeraba: React.FC<
       <div className="flex w-full h-full relative flex-col">
         <div className="flex w-full relative">
           {showBatting && (
-            <StatsColumn
-              players={batters}
-              isBatting
-              delay={delay}
-              isLeftColumn
-            />
+            <StatsColumn players={batters} isBatting delay={delay} />
           )}
           {showBowling && (
             <StatsColumn
               players={bowlers}
               isBatting={false}
               delay={delay + 5}
-              isLeftColumn={false}
             />
           )}
         </div>

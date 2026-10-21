@@ -1000,6 +1000,28 @@ var useGlobalContext = () => {
 
 // src/core/context/VideoDataContext.tsx
 var import_react2 = require("react");
+
+// src/core/utils/normalizeTemplateVariation.ts
+var omitNullProperties = (value) => {
+  if (Array.isArray(value)) {
+    return value.map((item) => omitNullProperties(item));
+  }
+  if (!value || typeof value !== "object") {
+    return value;
+  }
+  const next = {};
+  for (const [key, child] of Object.entries(value)) {
+    if (child === null) continue;
+    next[key] = omitNullProperties(child);
+  }
+  return next;
+};
+var normalizeTemplateVariation = (variation) => {
+  if (!variation) return void 0;
+  return omitNullProperties(variation);
+};
+
+// src/core/context/VideoDataContext.tsx
 var import_jsx_runtime2 = require("react/jsx-runtime");
 var VideoDataContext = (0, import_react2.createContext)(null);
 var VideoDataProvider = ({
@@ -1007,7 +1029,11 @@ var VideoDataProvider = ({
 }) => {
   var _a, _b, _c, _d;
   const { data } = useGlobalContext();
-  const video = ((_a = data.videoMeta) == null ? void 0 : _a.video) || {};
+  const sourceVideo = ((_a = data.videoMeta) == null ? void 0 : _a.video) || {};
+  const templateVariation = normalizeTemplateVariation(
+    sourceVideo.templateVariation
+  );
+  const video = { ...sourceVideo, templateVariation };
   const club = ((_b = data.videoMeta) == null ? void 0 : _b.club) || {};
   const contextValue = {
     data,
@@ -1016,7 +1042,7 @@ var VideoDataProvider = ({
     media: video.media,
     appearance: video.appearance,
     contentLayout: video.contentLayout,
-    templateVariation: video.templateVariation,
+    templateVariation: templateVariation != null ? templateVariation : {},
     club,
     sponsors: club.sponsors,
     isAccountClub: !!((_d = (_c = data.videoMeta) == null ? void 0 : _c.club) == null ? void 0 : _d.IsAccountClub)
@@ -7257,11 +7283,20 @@ var ImageBackground = ({
   style = {},
   templateDefaults
 }) => {
-  var _a, _b, _c;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { video } = useVideoDataContext();
   const { selectedPalette } = useThemeContext();
   const rawConfig = ((_a = video == null ? void 0 : video.templateVariation) == null ? void 0 : _a.image) || {};
-  const adapted = adaptImageConfig(rawConfig);
+  const adapted = adaptImageConfig({
+    url: (_b = rawConfig.url) != null ? _b : void 0,
+    ratio: rawConfig.ratio === "landscape" || rawConfig.ratio === "portrait" || rawConfig.ratio === "square" ? rawConfig.ratio : void 0,
+    width: (_c = rawConfig.width) != null ? _c : void 0,
+    height: (_d = rawConfig.height) != null ? _d : void 0,
+    type: (_e = rawConfig.type) != null ? _e : void 0,
+    direction: (_f = rawConfig.direction) != null ? _f : void 0,
+    overlayStyle: rawConfig.overlayStyle ? rawConfig.overlayStyle : void 0,
+    overlayOpacity: (_g = rawConfig.overlayOpacity) != null ? _g : void 0
+  });
   const config = templateDefaults ? {
     ...adapted,
     effectType: mapTemplateEffect(templateDefaults.effectType),
@@ -7279,7 +7314,7 @@ var ImageBackground = ({
   const heroUrl = (hero == null ? void 0 : hero.url) || void 0;
   const heroWidth = (hero == null ? void 0 : hero.width) || void 0;
   const heroHeight = (hero == null ? void 0 : hero.height) || void 0;
-  const imageUrl = heroUrl || config.url || ((_c = (_b = video == null ? void 0 : video.templateVariation) == null ? void 0 : _b.image) == null ? void 0 : _c.url) || DEFAULT_IMAGE;
+  const imageUrl = heroUrl || config.url || ((_i = (_h = video == null ? void 0 : video.templateVariation) == null ? void 0 : _h.image) == null ? void 0 : _i.url) || DEFAULT_IMAGE;
   if (!imageUrl) {
     console.warn("No image URL provided for ImageBackground");
   }
@@ -12190,7 +12225,7 @@ var VideoBackground2 = () => {
   return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
     VideoBackground,
     {
-      src: ((_b = vcfg == null ? void 0 : vcfg.videoBackground) == null ? void 0 : _b.url) || (vcfg == null ? void 0 : vcfg.url),
+      src: ((_b = vcfg == null ? void 0 : vcfg.videoBackground) == null ? void 0 : _b.url) || (vcfg == null ? void 0 : vcfg.url) || void 0,
       introSrc: (_c = vcfg == null ? void 0 : vcfg.videoIntro) == null ? void 0 : _c.url,
       introFrames: vcfg == null ? void 0 : vcfg.introFrames,
       templateVariation: vcfg
@@ -55837,18 +55872,42 @@ var ClassicBackground = () => {
 };
 
 // src/templates/variants/classic/components/ClassicMainHeader.tsx
+var import_remotion127 = require("remotion");
 var import_jsx_runtime604 = require("react/jsx-runtime");
+var CLASSIC_HEADER_TITLE_MAX_FONT_PX = 4.5 * TITLE_SCREEN_BASE_FONT_PX;
+var CLASSIC_HEADER_LOGO_PX = 110;
+var CLASSIC_HEADER_ROW_GAP_PX = 6;
+var CLASSIC_HEADER_HORIZONTAL_INSET_PX = 32;
+var getClassicHeaderTitleWidth = (compositionWidth, hasLogo) => {
+  const reserved = CLASSIC_HEADER_HORIZONTAL_INSET_PX + (hasLogo ? CLASSIC_HEADER_LOGO_PX + CLASSIC_HEADER_ROW_GAP_PX : 0);
+  return Math.max(0, compositionWidth - reserved);
+};
 var ClassicMainHeader = () => {
-  var _a, _b, _c, _d, _e, _f, _g;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { layout, fonts, fontClasses } = useThemeContext();
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
+  const { width } = (0, import_remotion127.useVideoConfig)();
   const TextAnimations = animations.text.main;
   const LogoAnimations = animations.image.main.title.logo;
   const { heights } = layout;
   const { timings } = data;
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
   const headerTitleFont = (_f = (_e = (_c = (_a = fonts == null ? void 0 : fonts.title) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.subtitle) == null ? void 0 : _b.family) != null ? _e : (_d = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _d.family) != null ? _f : "Impact";
+  const title = (_g = metadata.title) != null ? _g : "";
+  const hasLogo = Boolean((_h = club.logo) == null ? void 0 : _h.url);
+  const fittedTitleFontSize = useFittedFontSize({
+    text: title,
+    fontFamily: headerTitleFont,
+    fontWeight: 700,
+    textTransform: "none",
+    letterSpacing: "0em",
+    maxFontSize: CLASSIC_HEADER_TITLE_MAX_FONT_PX,
+    minFontSize: 20,
+    withinWidth: getClassicHeaderTitleWidth(width, hasLogo),
+    maxLines: 1
+  });
+  const titleFontSize = fittedTitleFontSize != null ? fittedTitleFontSize : CLASSIC_HEADER_TITLE_MAX_FONT_PX;
   return /* @__PURE__ */ (0, import_jsx_runtime604.jsxs)("div", { className: "relative h-full w-full", children: [
     /* @__PURE__ */ (0, import_jsx_runtime604.jsx)(
       SplitColourEdge,
@@ -55865,7 +55924,7 @@ var ClassicMainHeader = () => {
         alignment: "center",
         rowClassName: "gap-1.5",
         Name: null,
-        Logo: ((_g = club.logo) == null ? void 0 : _g.url) ? /* @__PURE__ */ (0, import_jsx_runtime604.jsx)("div", { className: "flex h-[110px] w-[110px] shrink-0 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime604.jsx)(
+        Logo: ((_i = club.logo) == null ? void 0 : _i.url) ? /* @__PURE__ */ (0, import_jsx_runtime604.jsx)("div", { className: "flex h-[110px] w-[110px] shrink-0 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime604.jsx)(
           AnimatedImage,
           {
             src: club.logo.url,
@@ -55892,9 +55951,10 @@ var ClassicMainHeader = () => {
             className: "!mt-0 !px-0 !leading-none !font-bold whitespace-nowrap",
             style: {
               fontFamily: `${headerTitleFont}, sans-serif`,
-              fontWeight: 700
+              fontWeight: 700,
+              fontSize: titleFontSize
             },
-            children: metadata.title
+            children: title
           }
         )
       }
@@ -56398,7 +56458,7 @@ var SixersIntro = () => {
 };
 
 // src/templates/variants/sixers/components/SixersOutro.tsx
-var import_remotion127 = require("remotion");
+var import_remotion128 = require("remotion");
 var import_jsx_runtime608 = require("react/jsx-runtime");
 var GRID_SETTINGS4 = {
   columns: 2,
@@ -56474,7 +56534,7 @@ var SixersOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS4.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime608.jsx)(import_remotion127.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime608.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime608.jsx)(import_remotion128.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime608.jsx)(SponsorGrid4, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS4.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime608.jsx)(
@@ -56965,7 +57025,7 @@ var cnswTheme = {
 };
 
 // src/templates/variants/cnsw/components/CNSWIntro.tsx
-var import_remotion128 = require("remotion");
+var import_remotion129 = require("remotion");
 
 // src/templates/variants/cnsw/utils/compositionConfig.ts
 var compositionConfig = {
@@ -57280,8 +57340,8 @@ var CNSWIntro = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime613.jsxs)(import_jsx_runtime613.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime613.jsx)(import_remotion128.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime613.jsx)(
-      import_remotion128.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime613.jsx)(import_remotion129.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime613.jsx)(
+      import_remotion129.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -57391,7 +57451,7 @@ var CNSWIntro = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWOutro.tsx
-var import_remotion129 = require("remotion");
+var import_remotion130 = require("remotion");
 var import_jsx_runtime614 = require("react/jsx-runtime");
 var GRID_SETTINGS5 = {
   columns: 2,
@@ -57467,7 +57527,7 @@ var CNSWOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS5.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime614.jsx)(import_remotion129.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime614.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime614.jsx)(import_remotion130.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime614.jsx)(SponsorGrid5, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS5.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime614.jsx)(
@@ -57487,7 +57547,7 @@ var CNSWBackground = () => {
 };
 
 // src/templates/variants/cnsw/components/CNSWMainHeader.tsx
-var import_remotion130 = require("remotion");
+var import_remotion131 = require("remotion");
 var import_jsx_runtime616 = require("react/jsx-runtime");
 var CNSWMainHeader = () => {
   var _a, _b, _c;
@@ -57538,8 +57598,8 @@ var CNSWMainHeader = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime616.jsx)(import_remotion130.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime616.jsx)(
-          import_remotion130.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime616.jsx)(import_remotion131.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime616.jsx)(
+          import_remotion131.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -58140,7 +58200,7 @@ var ThunderIntro = () => {
 };
 
 // src/templates/variants/thunder/components/ThunderOutro.tsx
-var import_remotion131 = require("remotion");
+var import_remotion132 = require("remotion");
 var import_jsx_runtime620 = require("react/jsx-runtime");
 var GRID_SETTINGS6 = {
   columns: 2,
@@ -58216,7 +58276,7 @@ var ThunderOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS6.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime620.jsx)(import_remotion131.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime620.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime620.jsx)(import_remotion132.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime620.jsx)(SponsorGrid6, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS6.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime620.jsx)(
@@ -58786,7 +58846,7 @@ var ClassicIntro2 = () => {
 };
 
 // src/templates/variants/twoColumnClassic/components/ClassicOutro.tsx
-var import_remotion132 = require("remotion");
+var import_remotion133 = require("remotion");
 var import_jsx_runtime626 = require("react/jsx-runtime");
 var GRID_SETTINGS7 = {
   columns: 2,
@@ -58862,7 +58922,7 @@ var ClassicOutro2 = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS7.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime626.jsx)(import_remotion132.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime626.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime626.jsx)(import_remotion133.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime626.jsx)(SponsorGrid7, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS7.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime626.jsx)(
@@ -58882,7 +58942,7 @@ var ClassicBackground2 = () => {
 };
 
 // src/components/layout/screen/TwoColumn.tsx
-var import_remotion133 = require("remotion");
+var import_remotion134 = require("remotion");
 var import_jsx_runtime628 = require("react/jsx-runtime");
 var TwoColumn2 = ({
   Header,
@@ -58965,7 +59025,7 @@ var TwoColumn2 = ({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime628.jsx)(import_remotion133.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime628.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime628.jsx)(import_remotion134.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime628.jsx)(
     "div",
     {
       className: `flex flex-col h-full w-full ${className}`.trim(),
@@ -59590,7 +59650,7 @@ var cnswTheme2 = {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWIntro.tsx
-var import_remotion134 = require("remotion");
+var import_remotion135 = require("remotion");
 
 // src/templates/variants/cnsw-private/utils/compositionConfig.ts
 var compositionConfig2 = {
@@ -59905,8 +59965,8 @@ var CNSWIntro2 = () => {
   const snugLetterSpacingTopLine = getHardcodedSpacing2(topLine, "intro");
   const snugLetterSpacingBottomLine = getHardcodedSpacing2(bottomLine, "intro");
   return /* @__PURE__ */ (0, import_jsx_runtime632.jsxs)(import_jsx_runtime632.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime632.jsx)(import_remotion134.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime632.jsx)(
-      import_remotion134.Img,
+    /* @__PURE__ */ (0, import_jsx_runtime632.jsx)(import_remotion135.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime632.jsx)(
+      import_remotion135.Img,
       {
         src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
         className: "cricket-ground-outline",
@@ -60016,7 +60076,7 @@ var CNSWIntro2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWOutro.tsx
-var import_remotion135 = require("remotion");
+var import_remotion136 = require("remotion");
 var import_jsx_runtime633 = require("react/jsx-runtime");
 var SponsorGrid8 = ({ sponsors, LogoAnimations }) => /* @__PURE__ */ (0, import_jsx_runtime633.jsx)("div", { className: "grid grid-cols-2 grid-rows-3 gap-10  justify-center items-center", children: sponsors.filter((sponsor) => sponsor.logo && sponsor.logo.url).map((sponsor, idx) => {
   var _a;
@@ -60058,7 +60118,7 @@ var CNSWOutro2 = ({
   });
   const groups = chunkSponsors(sponsorsArray, OUTRO_SPONSOR_PAGE_SIZE);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime633.jsx)(import_remotion135.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime633.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime633.jsx)(import_remotion136.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime633.jsx)(SponsorGrid8, { sponsors: group, LogoAnimations }) }),
     durationInFrames: OUTRO_PAGE_DURATION_FRAMES
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime633.jsx)(
@@ -60078,7 +60138,7 @@ var CNSWBackground2 = () => {
 };
 
 // src/templates/variants/cnsw-private/components/CNSWMainHeader.tsx
-var import_remotion136 = require("remotion");
+var import_remotion137 = require("remotion");
 var import_jsx_runtime635 = require("react/jsx-runtime");
 var CNSWMainHeader2 = () => {
   var _a, _b, _c;
@@ -60129,8 +60189,8 @@ var CNSWMainHeader2 = () => {
       className: "w-full flex flex-col items-center justify-center relative",
       style: { height: `${heights.header}px` },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime635.jsx)(import_remotion136.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime635.jsx)(
-          import_remotion136.Img,
+        /* @__PURE__ */ (0, import_jsx_runtime635.jsx)(import_remotion137.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime635.jsx)(
+          import_remotion137.Img,
           {
             src: "https://fixtura.s3.ap-southeast-2.amazonaws.com/Cricket_Ground_Outline_3ec66a78e3.png",
             className: "cricket-ground-outline",
@@ -60659,7 +60719,7 @@ var mudgeerabaTheme = {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
-var import_remotion137 = require("remotion");
+var import_remotion138 = require("remotion");
 var import_jsx_runtime638 = require("react/jsx-runtime");
 var MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
 var INTRO_TITLE_MAX_LINES = 2;
@@ -60672,7 +60732,7 @@ var MudgeerabaIntro = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  const { width } = (0, import_remotion137.useVideoConfig)();
+  const { width } = (0, import_remotion138.useVideoConfig)();
   const title = (_a = metadata.title) != null ? _a : "";
   const titleFontFamily = (_c = (_b = fontClasses.title) == null ? void 0 : _b.family) != null ? _c : "Unbounded";
   const nameFontFamily = (_e = (_d = fontClasses.subtitle) == null ? void 0 : _d.family) != null ? _e : "Unbounded";
@@ -60783,7 +60843,7 @@ var MudgeerabaIntro = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaOutro.tsx
-var import_remotion138 = require("remotion");
+var import_remotion139 = require("remotion");
 var import_jsx_runtime639 = require("react/jsx-runtime");
 var GRID_SETTINGS8 = {
   columns: 2,
@@ -60861,7 +60921,7 @@ var MudgeerabaOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS8.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime639.jsx)(import_remotion138.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime639.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime639.jsx)(import_remotion139.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime639.jsx)(SponsorGrid9, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS8.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime639.jsx)(
@@ -60881,7 +60941,7 @@ var MudgeerabaBackground = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaMainHeader.tsx
-var import_remotion139 = require("remotion");
+var import_remotion140 = require("remotion");
 var import_jsx_runtime641 = require("react/jsx-runtime");
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
 var HEADER_TITLE_VERTICAL_PADDING_PX = 20;
@@ -60892,7 +60952,7 @@ var MudgeerabaMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const { width } = (0, import_remotion139.useVideoConfig)();
+  const { width } = (0, import_remotion140.useVideoConfig)();
   const { heights } = layout;
   const timings = data == null ? void 0 : data.timings;
   const exitFrame = (timings == null ? void 0 : timings.FPS_MAIN) ? timings.FPS_MAIN - 30 : 0;
@@ -62046,11 +62106,11 @@ var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
 var import_react56 = require("react");
-var import_remotion140 = require("remotion");
+var import_remotion141 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion140.useVideoConfig)();
+  const { width } = (0, import_remotion141.useVideoConfig)();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
   const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -62249,7 +62309,7 @@ var BroadcastProIntro = () => {
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProOutro.tsx
-var import_remotion141 = require("remotion");
+var import_remotion142 = require("remotion");
 var import_jsx_runtime647 = require("react/jsx-runtime");
 var GRID_SETTINGS9 = {
   columns: 2,
@@ -62325,7 +62385,7 @@ var BroadcastProOutro = ({
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS9.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime647.jsx)(import_remotion141.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime647.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
+    content: /* @__PURE__ */ (0, import_jsx_runtime647.jsx)(import_remotion142.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime647.jsx)(SponsorGrid10, { sponsors: group, LogoAnimations }) }),
     durationInFrames: GRID_SETTINGS9.sequenceDurationInFrames
   }));
   return /* @__PURE__ */ (0, import_jsx_runtime647.jsx)(
@@ -62342,7 +62402,7 @@ var BroadcastProOutro = ({
 var import_jsx_runtime648 = require("react/jsx-runtime");
 var isBroadcastProMode = (value) => value === "light" || value === "lightAlt" || value === "dark" || value === "darkAlt";
 var BroadcastProBackground = () => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { video, metadata } = useVideoDataContext();
   const match = matchLegacyIngress((_a = video.templateVariation) != null ? _a : {});
   const route = resolveValidatedBackgroundRoute(match);
@@ -62357,11 +62417,11 @@ var BroadcastProBackground = () => {
         templateDefaults: resolveBroadcastProImageDefaults({
           mode,
           image: image ? {
-            effectType: image.type,
-            overlayStyle: image.overlayStyle,
-            overlayOpacity: image.overlayOpacity,
-            width: image.width,
-            height: image.height,
+            effectType: (_e = image.type) != null ? _e : void 0,
+            overlayStyle: (_f = image.overlayStyle) != null ? _f : void 0,
+            overlayOpacity: (_g = image.overlayOpacity) != null ? _g : void 0,
+            width: (_h = image.width) != null ? _h : void 0,
+            height: (_i = image.height) != null ? _i : void 0,
             ratio: image.ratio === "landscape" || image.ratio === "portrait" || image.ratio === "square" ? image.ratio : void 0
           } : void 0,
           stillRatio,
@@ -63486,11 +63546,11 @@ var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastProRounded/components/headline/useBroadcastProRoundedHeadlineFit.ts
 var import_react57 = require("react");
-var import_remotion142 = require("remotion");
+var import_remotion143 = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX2 = 32;
 var useBroadcastProRoundedHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = (0, import_remotion142.useVideoConfig)();
+  const { width } = (0, import_remotion143.useVideoConfig)();
   const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
   const sizing = broadcastProRoundedHeadlineSizing != null ? broadcastProRoundedHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -63707,7 +63767,7 @@ var BroadcastProRoundedIntro = () => {
 };
 
 // src/templates/variants/broadcastProRounded/components/BroadcastProRoundedOutro.tsx
-var import_remotion143 = require("remotion");
+var import_remotion144 = require("remotion");
 var import_jsx_runtime655 = require("react/jsx-runtime");
 var GRID_SETTINGS10 = {
   columns: 2,
@@ -63784,7 +63844,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
   });
   const groups = chunkSponsors(sponsorsArray, GRID_SETTINGS10.chunkSize);
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ (0, import_jsx_runtime655.jsx)(import_remotion143.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime655.jsx)(
+    content: /* @__PURE__ */ (0, import_jsx_runtime655.jsx)(import_remotion144.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_runtime655.jsx)(
       SponsorGrid11,
       {
         sponsors: group,
@@ -63808,7 +63868,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
 var import_jsx_runtime656 = require("react/jsx-runtime");
 var isBroadcastProMode2 = (value) => value === "light" || value === "lightAlt" || value === "dark" || value === "darkAlt";
 var BroadcastProRoundedBackground = () => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { video, metadata } = useVideoDataContext();
   const match = matchLegacyIngress((_a = video.templateVariation) != null ? _a : {});
   const route = resolveValidatedBackgroundRoute(match);
@@ -63823,11 +63883,11 @@ var BroadcastProRoundedBackground = () => {
         templateDefaults: resolveBroadcastProImageDefaults({
           mode,
           image: image ? {
-            effectType: image.type,
-            overlayStyle: image.overlayStyle,
-            overlayOpacity: image.overlayOpacity,
-            width: image.width,
-            height: image.height,
+            effectType: (_e = image.type) != null ? _e : void 0,
+            overlayStyle: (_f = image.overlayStyle) != null ? _f : void 0,
+            overlayOpacity: (_g = image.overlayOpacity) != null ? _g : void 0,
+            width: (_h = image.width) != null ? _h : void 0,
+            height: (_i = image.height) != null ? _i : void 0,
             ratio: image.ratio === "landscape" || image.ratio === "portrait" || image.ratio === "square" ? image.ratio : void 0
           } : void 0,
           stillRatio,
@@ -64385,12 +64445,12 @@ var scorelineTheme = {
 };
 
 // src/templates/variants/scoreline/components/ScorelineIntro.tsx
-var import_remotion145 = require("remotion");
+var import_remotion146 = require("remotion");
 
 // src/compositions/cricket/utils/scoreline/scorelineCanvasStyle.ts
 var import_react58 = require("react");
 var import_tinycolor234 = __toESM(require("tinycolor2"));
-var import_remotion144 = require("remotion");
+var import_remotion145 = require("remotion");
 
 // src/compositions/cricket/utils/scoreline/applyScorelineTheme.ts
 var SCORELINE_DEFAULT_INK = "#080b0d";
@@ -64575,7 +64635,7 @@ var getScorelineCanvasStyle = (primary, secondary) => {
     "--on-surface-label": theme.onSurfaceLabel,
     "--accent-on-light-primary": theme.accentOnLightPrimary,
     "--accent-on-light-secondary": theme.accentOnLightSecondary,
-    "--texture-noise-url": `url("${(0, import_remotion144.staticFile)("textures/fine-noise.svg")}")`
+    "--texture-noise-url": `url("${(0, import_remotion145.staticFile)("textures/fine-noise.svg")}")`
   };
 };
 var useScorelineCanvasStyle = () => {
@@ -64704,7 +64764,7 @@ var ScorelineIntro = () => {
   const title = metadata.videoTitle || metadata.title || headerDefaults.title;
   const logoUrl = (_e = (_d = club.logo) == null ? void 0 : _d.url) != null ? _e : "";
   const hasCrest = Boolean(logoUrl);
-  return /* @__PURE__ */ (0, import_jsx_runtime660.jsx)(import_remotion145.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime660.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime660.jsx)(import_remotion146.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime660.jsx)(
     "div",
     {
       className: `scoreline-canvas scoreline-intro ${csClass3(componentStyles, "scorelineCanvasShell")}`,
@@ -64826,7 +64886,7 @@ var ScorelineBackground = () => {
 };
 
 // src/templates/variants/scoreline/components/ScorelineMain.tsx
-var import_remotion147 = require("remotion");
+var import_remotion148 = require("remotion");
 
 // src/compositions/cricket/utils/scoreline/resolveScorelineCanvasDataset.ts
 var resolveScorelineCanvasDataset = (compositionId) => {
@@ -64853,7 +64913,7 @@ var resolveScorelineCanvasDataset = (compositionId) => {
 };
 
 // src/templates/variants/scoreline/components/ScorelineMainHeader.tsx
-var import_remotion146 = require("remotion");
+var import_remotion147 = require("remotion");
 var import_jsx_runtime662 = require("react/jsx-runtime");
 var ScorelineMainHeader = () => {
   var _a, _b, _c;
@@ -64876,7 +64936,7 @@ var ScorelineMainHeader = () => {
             "data-has-crest": hasCrest ? "true" : "false",
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime662.jsx)("span", { className: "mark-fallback", "aria-hidden": true }),
-              hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime662.jsx)(import_remotion146.Img, { src: logoUrl, alt: "" }) : null
+              hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime662.jsx)(import_remotion147.Img, { src: logoUrl, alt: "" }) : null
             ]
           }
         ),
@@ -64909,7 +64969,7 @@ var ScorelineMain = () => {
   const canvasStyle = useScorelineCanvasStyle();
   const canvasDataset = resolveScorelineCanvasDataset(metadata.compositionId);
   const compositionRouteHeight = getCompositionSectionHeight(heights);
-  return /* @__PURE__ */ (0, import_jsx_runtime663.jsx)(import_remotion147.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime663.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime663.jsx)(import_remotion148.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime663.jsxs)(
     "div",
     {
       className: `scoreline-canvas ${csClass3(componentStyles, "scorelineCanvasShell")}`,
@@ -65138,7 +65198,7 @@ var nightSessionTheme = {
 };
 
 // src/templates/variants/nightSession/components/NightSessionIntro.tsx
-var import_remotion148 = require("remotion");
+var import_remotion149 = require("remotion");
 
 // src/compositions/cricket/utils/nightSession/nightSessionCanvasStyle.ts
 var import_react59 = require("react");
@@ -65210,7 +65270,7 @@ var NightSessionIntro = () => {
   const title = metadata.videoTitle || metadata.title || headerDefaults.title;
   const logoUrl = (_c = (_b = club.logo) == null ? void 0 : _b.url) != null ? _c : "";
   const hasCrest = Boolean(logoUrl);
-  return /* @__PURE__ */ (0, import_jsx_runtime665.jsx)(import_remotion148.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime665.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime665.jsx)(import_remotion149.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime665.jsx)(
     "div",
     {
       className: `night-session-canvas night-session-intro ${csClass3(componentStyles, "nightSessionCanvasShell")}`,
@@ -65310,10 +65370,10 @@ var NightSessionBackground = () => {
 };
 
 // src/templates/variants/nightSession/components/NightSessionMain.tsx
-var import_remotion150 = require("remotion");
+var import_remotion151 = require("remotion");
 
 // src/templates/variants/nightSession/components/NightSessionMainHeader.tsx
-var import_remotion149 = require("remotion");
+var import_remotion150 = require("remotion");
 var import_jsx_runtime667 = require("react/jsx-runtime");
 var NightSessionMainHeader = () => {
   var _a, _b, _c;
@@ -65332,7 +65392,7 @@ var NightSessionMainHeader = () => {
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime667.jsxs)("div", { className: "organisation-mark ns-header__mark", children: [
       /* @__PURE__ */ (0, import_jsx_runtime667.jsx)("span", { className: "mark-fallback", "aria-hidden": true }),
-      hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime667.jsx)(import_remotion149.Img, { src: logoUrl, alt: "" }) : null
+      hasCrest ? /* @__PURE__ */ (0, import_jsx_runtime667.jsx)(import_remotion150.Img, { src: logoUrl, alt: "" }) : null
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime667.jsxs)(
       NightSessionAnimatedCopy,
@@ -65362,7 +65422,7 @@ var NightSessionMain = () => {
     metadata.compositionId
   );
   const compositionRouteHeight = getCompositionSectionHeight(heights);
-  return /* @__PURE__ */ (0, import_jsx_runtime668.jsx)(import_remotion150.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime668.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime668.jsx)(import_remotion151.AbsoluteFill, { children: /* @__PURE__ */ (0, import_jsx_runtime668.jsxs)(
     "div",
     {
       className: `night-session-canvas template-canvas ${csClass3(componentStyles, "nightSessionCanvasShell")}`,

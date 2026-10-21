@@ -969,6 +969,28 @@ var useGlobalContext = () => {
 
 // src/core/context/VideoDataContext.tsx
 import { createContext as createContext2, useContext as useContext2 } from "react";
+
+// src/core/utils/normalizeTemplateVariation.ts
+var omitNullProperties = (value) => {
+  if (Array.isArray(value)) {
+    return value.map((item) => omitNullProperties(item));
+  }
+  if (!value || typeof value !== "object") {
+    return value;
+  }
+  const next = {};
+  for (const [key, child] of Object.entries(value)) {
+    if (child === null) continue;
+    next[key] = omitNullProperties(child);
+  }
+  return next;
+};
+var normalizeTemplateVariation = (variation) => {
+  if (!variation) return void 0;
+  return omitNullProperties(variation);
+};
+
+// src/core/context/VideoDataContext.tsx
 import { jsx as jsx2 } from "react/jsx-runtime";
 var VideoDataContext = createContext2(null);
 var VideoDataProvider = ({
@@ -976,7 +998,11 @@ var VideoDataProvider = ({
 }) => {
   var _a, _b, _c, _d;
   const { data } = useGlobalContext();
-  const video = ((_a = data.videoMeta) == null ? void 0 : _a.video) || {};
+  const sourceVideo = ((_a = data.videoMeta) == null ? void 0 : _a.video) || {};
+  const templateVariation = normalizeTemplateVariation(
+    sourceVideo.templateVariation
+  );
+  const video = { ...sourceVideo, templateVariation };
   const club = ((_b = data.videoMeta) == null ? void 0 : _b.club) || {};
   const contextValue = {
     data,
@@ -985,7 +1011,7 @@ var VideoDataProvider = ({
     media: video.media,
     appearance: video.appearance,
     contentLayout: video.contentLayout,
-    templateVariation: video.templateVariation,
+    templateVariation: templateVariation != null ? templateVariation : {},
     club,
     sponsors: club.sponsors,
     isAccountClub: !!((_d = (_c = data.videoMeta) == null ? void 0 : _c.club) == null ? void 0 : _d.IsAccountClub)
@@ -7241,11 +7267,20 @@ var ImageBackground = ({
   style = {},
   templateDefaults
 }) => {
-  var _a, _b, _c;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { video } = useVideoDataContext();
   const { selectedPalette } = useThemeContext();
   const rawConfig = ((_a = video == null ? void 0 : video.templateVariation) == null ? void 0 : _a.image) || {};
-  const adapted = adaptImageConfig(rawConfig);
+  const adapted = adaptImageConfig({
+    url: (_b = rawConfig.url) != null ? _b : void 0,
+    ratio: rawConfig.ratio === "landscape" || rawConfig.ratio === "portrait" || rawConfig.ratio === "square" ? rawConfig.ratio : void 0,
+    width: (_c = rawConfig.width) != null ? _c : void 0,
+    height: (_d = rawConfig.height) != null ? _d : void 0,
+    type: (_e = rawConfig.type) != null ? _e : void 0,
+    direction: (_f = rawConfig.direction) != null ? _f : void 0,
+    overlayStyle: rawConfig.overlayStyle ? rawConfig.overlayStyle : void 0,
+    overlayOpacity: (_g = rawConfig.overlayOpacity) != null ? _g : void 0
+  });
   const config = templateDefaults ? {
     ...adapted,
     effectType: mapTemplateEffect(templateDefaults.effectType),
@@ -7263,7 +7298,7 @@ var ImageBackground = ({
   const heroUrl = (hero == null ? void 0 : hero.url) || void 0;
   const heroWidth = (hero == null ? void 0 : hero.width) || void 0;
   const heroHeight = (hero == null ? void 0 : hero.height) || void 0;
-  const imageUrl = heroUrl || config.url || ((_c = (_b = video == null ? void 0 : video.templateVariation) == null ? void 0 : _b.image) == null ? void 0 : _c.url) || DEFAULT_IMAGE;
+  const imageUrl = heroUrl || config.url || ((_i = (_h = video == null ? void 0 : video.templateVariation) == null ? void 0 : _h.image) == null ? void 0 : _i.url) || DEFAULT_IMAGE;
   if (!imageUrl) {
     console.warn("No image URL provided for ImageBackground");
   }
@@ -12191,7 +12226,7 @@ var VideoBackground2 = () => {
   return /* @__PURE__ */ jsx64(
     VideoBackground,
     {
-      src: ((_b = vcfg == null ? void 0 : vcfg.videoBackground) == null ? void 0 : _b.url) || (vcfg == null ? void 0 : vcfg.url),
+      src: ((_b = vcfg == null ? void 0 : vcfg.videoBackground) == null ? void 0 : _b.url) || (vcfg == null ? void 0 : vcfg.url) || void 0,
       introSrc: (_c = vcfg == null ? void 0 : vcfg.videoIntro) == null ? void 0 : _c.url,
       introFrames: vcfg == null ? void 0 : vcfg.introFrames,
       templateVariation: vcfg
@@ -55838,18 +55873,42 @@ var ClassicBackground = () => {
 };
 
 // src/templates/variants/classic/components/ClassicMainHeader.tsx
+import { useVideoConfig as useVideoConfig34 } from "remotion";
 import { jsx as jsx602, jsxs as jsxs330 } from "react/jsx-runtime";
+var CLASSIC_HEADER_TITLE_MAX_FONT_PX = 4.5 * TITLE_SCREEN_BASE_FONT_PX;
+var CLASSIC_HEADER_LOGO_PX = 110;
+var CLASSIC_HEADER_ROW_GAP_PX = 6;
+var CLASSIC_HEADER_HORIZONTAL_INSET_PX = 32;
+var getClassicHeaderTitleWidth = (compositionWidth, hasLogo) => {
+  const reserved = CLASSIC_HEADER_HORIZONTAL_INSET_PX + (hasLogo ? CLASSIC_HEADER_LOGO_PX + CLASSIC_HEADER_ROW_GAP_PX : 0);
+  return Math.max(0, compositionWidth - reserved);
+};
 var ClassicMainHeader = () => {
-  var _a, _b, _c, _d, _e, _f, _g;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { layout, fonts, fontClasses } = useThemeContext();
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
+  const { width } = useVideoConfig34();
   const TextAnimations = animations.text.main;
   const LogoAnimations = animations.image.main.title.logo;
   const { heights } = layout;
   const { timings } = data;
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
   const headerTitleFont = (_f = (_e = (_c = (_a = fonts == null ? void 0 : fonts.title) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.subtitle) == null ? void 0 : _b.family) != null ? _e : (_d = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _d.family) != null ? _f : "Impact";
+  const title = (_g = metadata.title) != null ? _g : "";
+  const hasLogo = Boolean((_h = club.logo) == null ? void 0 : _h.url);
+  const fittedTitleFontSize = useFittedFontSize({
+    text: title,
+    fontFamily: headerTitleFont,
+    fontWeight: 700,
+    textTransform: "none",
+    letterSpacing: "0em",
+    maxFontSize: CLASSIC_HEADER_TITLE_MAX_FONT_PX,
+    minFontSize: 20,
+    withinWidth: getClassicHeaderTitleWidth(width, hasLogo),
+    maxLines: 1
+  });
+  const titleFontSize = fittedTitleFontSize != null ? fittedTitleFontSize : CLASSIC_HEADER_TITLE_MAX_FONT_PX;
   return /* @__PURE__ */ jsxs330("div", { className: "relative h-full w-full", children: [
     /* @__PURE__ */ jsx602(
       SplitColourEdge,
@@ -55866,7 +55925,7 @@ var ClassicMainHeader = () => {
         alignment: "center",
         rowClassName: "gap-1.5",
         Name: null,
-        Logo: ((_g = club.logo) == null ? void 0 : _g.url) ? /* @__PURE__ */ jsx602("div", { className: "flex h-[110px] w-[110px] shrink-0 items-center justify-center", children: /* @__PURE__ */ jsx602(
+        Logo: ((_i = club.logo) == null ? void 0 : _i.url) ? /* @__PURE__ */ jsx602("div", { className: "flex h-[110px] w-[110px] shrink-0 items-center justify-center", children: /* @__PURE__ */ jsx602(
           AnimatedImage,
           {
             src: club.logo.url,
@@ -55893,9 +55952,10 @@ var ClassicMainHeader = () => {
             className: "!mt-0 !px-0 !leading-none !font-bold whitespace-nowrap",
             style: {
               fontFamily: `${headerTitleFont}, sans-serif`,
-              fontWeight: 700
+              fontWeight: 700,
+              fontSize: titleFontSize
             },
-            children: metadata.title
+            children: title
           }
         )
       }
@@ -60660,7 +60720,7 @@ var mudgeerabaTheme = {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaIntro.tsx
-import { useVideoConfig as useVideoConfig34 } from "remotion";
+import { useVideoConfig as useVideoConfig35 } from "remotion";
 import { jsx as jsx636 } from "react/jsx-runtime";
 var MUDGEERABA_TITLE_MAX_FONT_PX = 10 * TITLE_SCREEN_BASE_FONT_PX;
 var INTRO_TITLE_MAX_LINES = 2;
@@ -60673,7 +60733,7 @@ var MudgeerabaIntro = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const { fontClasses } = useThemeContext();
-  const { width } = useVideoConfig34();
+  const { width } = useVideoConfig35();
   const title = (_a = metadata.title) != null ? _a : "";
   const titleFontFamily = (_c = (_b = fontClasses.title) == null ? void 0 : _b.family) != null ? _c : "Unbounded";
   const nameFontFamily = (_e = (_d = fontClasses.subtitle) == null ? void 0 : _d.family) != null ? _e : "Unbounded";
@@ -60882,7 +60942,7 @@ var MudgeerabaBackground = () => {
 };
 
 // src/templates/variants/mudgeeraba/components/MudgeerabaMainHeader.tsx
-import { useVideoConfig as useVideoConfig35 } from "remotion";
+import { useVideoConfig as useVideoConfig36 } from "remotion";
 import { jsx as jsx639 } from "react/jsx-runtime";
 var MUDGEERABA_HEADER_TITLE_MAX_FONT_PX = 4 * TITLE_SCREEN_BASE_FONT_PX;
 var HEADER_TITLE_VERTICAL_PADDING_PX = 20;
@@ -60893,7 +60953,7 @@ var MudgeerabaMainHeader = () => {
   const { club, metadata, data } = useVideoDataContext();
   const { animations } = useAnimationContext();
   const TextAnimations = animations.text.main;
-  const { width } = useVideoConfig35();
+  const { width } = useVideoConfig36();
   const { heights } = layout;
   const timings = data == null ? void 0 : data.timings;
   const exitFrame = (timings == null ? void 0 : timings.FPS_MAIN) ? timings.FPS_MAIN - 30 : 0;
@@ -62047,11 +62107,11 @@ var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
 import { useMemo as useMemo35 } from "react";
-import { useVideoConfig as useVideoConfig36 } from "remotion";
+import { useVideoConfig as useVideoConfig37 } from "remotion";
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = useVideoConfig36();
+  const { width } = useVideoConfig37();
   const { fontClasses, fonts, broadcastProHeadlineSizing } = useThemeContext();
   const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -62343,7 +62403,7 @@ var BroadcastProOutro = ({
 import { jsx as jsx646 } from "react/jsx-runtime";
 var isBroadcastProMode = (value) => value === "light" || value === "lightAlt" || value === "dark" || value === "darkAlt";
 var BroadcastProBackground = () => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { video, metadata } = useVideoDataContext();
   const match = matchLegacyIngress((_a = video.templateVariation) != null ? _a : {});
   const route = resolveValidatedBackgroundRoute(match);
@@ -62358,11 +62418,11 @@ var BroadcastProBackground = () => {
         templateDefaults: resolveBroadcastProImageDefaults({
           mode,
           image: image ? {
-            effectType: image.type,
-            overlayStyle: image.overlayStyle,
-            overlayOpacity: image.overlayOpacity,
-            width: image.width,
-            height: image.height,
+            effectType: (_e = image.type) != null ? _e : void 0,
+            overlayStyle: (_f = image.overlayStyle) != null ? _f : void 0,
+            overlayOpacity: (_g = image.overlayOpacity) != null ? _g : void 0,
+            width: (_h = image.width) != null ? _h : void 0,
+            height: (_i = image.height) != null ? _i : void 0,
             ratio: image.ratio === "landscape" || image.ratio === "portrait" || image.ratio === "square" ? image.ratio : void 0
           } : void 0,
           stillRatio,
@@ -63487,11 +63547,11 @@ var getBroadcastProRoundedHeaderSecondaryLine = (metadata, clubName) => {
 
 // src/templates/variants/broadcastProRounded/components/headline/useBroadcastProRoundedHeadlineFit.ts
 import { useMemo as useMemo36 } from "react";
-import { useVideoConfig as useVideoConfig37 } from "remotion";
+import { useVideoConfig as useVideoConfig38 } from "remotion";
 var MAIN_HEADER_TITLE_PADDING_PX2 = 32;
 var useBroadcastProRoundedHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = useVideoConfig37();
+  const { width } = useVideoConfig38();
   const { fontClasses, fonts, broadcastProRoundedHeadlineSizing } = useThemeContext();
   const sizing = broadcastProRoundedHeadlineSizing != null ? broadcastProRoundedHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING2;
   const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
@@ -63809,7 +63869,7 @@ var BroadcastProRoundedOutro = ({ doesAccountHaveSponsors }) => {
 import { jsx as jsx654 } from "react/jsx-runtime";
 var isBroadcastProMode2 = (value) => value === "light" || value === "lightAlt" || value === "dark" || value === "darkAlt";
 var BroadcastProRoundedBackground = () => {
-  var _a, _b, _c, _d;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const { video, metadata } = useVideoDataContext();
   const match = matchLegacyIngress((_a = video.templateVariation) != null ? _a : {});
   const route = resolveValidatedBackgroundRoute(match);
@@ -63824,11 +63884,11 @@ var BroadcastProRoundedBackground = () => {
         templateDefaults: resolveBroadcastProImageDefaults({
           mode,
           image: image ? {
-            effectType: image.type,
-            overlayStyle: image.overlayStyle,
-            overlayOpacity: image.overlayOpacity,
-            width: image.width,
-            height: image.height,
+            effectType: (_e = image.type) != null ? _e : void 0,
+            overlayStyle: (_f = image.overlayStyle) != null ? _f : void 0,
+            overlayOpacity: (_g = image.overlayOpacity) != null ? _g : void 0,
+            width: (_h = image.width) != null ? _h : void 0,
+            height: (_i = image.height) != null ? _i : void 0,
             ratio: image.ratio === "landscape" || image.ratio === "portrait" || image.ratio === "square" ? image.ratio : void 0
           } : void 0,
           stillRatio,

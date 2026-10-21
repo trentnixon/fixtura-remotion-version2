@@ -120,7 +120,7 @@ const VideoBackground = () => {
   return (
     <VideoBg
       // Background video source, prefer new field, fallback to legacy video.url
-      src={vcfg?.videoBackground?.url || vcfg?.url}
+      src={vcfg?.videoBackground?.url || vcfg?.url || undefined}
       // Intro video source
       introSrc={vcfg?.videoIntro?.url}
       // Intro frames configurable, default handled in component

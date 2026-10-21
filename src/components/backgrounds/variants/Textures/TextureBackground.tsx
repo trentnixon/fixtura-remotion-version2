@@ -31,7 +31,7 @@ const resolveTextureSrc = ({
   return staticFile(`/textures/${name}`);
 };
 
-const mapDirection = (dir?: string): string => {
+const mapDirection = (dir?: string | null): string => {
   if (!dir) return "to right";
   switch (dir.toUpperCase()) {
     case "HORIZONTAL":
