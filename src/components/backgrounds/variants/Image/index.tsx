@@ -84,9 +84,9 @@ export const ImageBackground: React.FC<ImageBackgroundProps> = ({
     height: rawConfig.height ?? undefined,
     type: rawConfig.type ?? undefined,
     direction: rawConfig.direction ?? undefined,
-      overlayStyle: rawConfig.overlayStyle
-        ? (rawConfig.overlayStyle as OverlayStyle)
-        : undefined,
+    overlayStyle: rawConfig.overlayStyle
+      ? (rawConfig.overlayStyle as OverlayStyle)
+      : undefined,
     overlayOpacity: rawConfig.overlayOpacity ?? undefined,
   });
   const config = templateDefaults

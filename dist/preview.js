@@ -17891,10 +17891,8 @@ var SHALLOW_DIVIDER_RIGHT = softenPolygon(
   r
 );
 var PADDING_SHALLOW_LEFT = "pl-4 pr-10";
-var PADDING_SHALLOW_RIGHT = "pl-12 pr-3";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH = "pl-0 pr-10";
 var PADDING_SHALLOW_ROW_LOGO_FLUSH_COMPACT = "pl-0 pr-6";
-var getShallowColumnPadding = (isLeftColumn) => isLeftColumn ? PADDING_SHALLOW_LEFT : PADDING_SHALLOW_RIGHT;
 var getShallowEdgeStrip = (isLeftColumn) => isLeftColumn ? SHALLOW_EDGE_STRIP_RIGHT : SHALLOW_EDGE_STRIP_LEFT;
 var showAngularEdgeAccents = () => true;
 var clipPathStyle2 = (clipPath) => ({
@@ -19717,7 +19715,7 @@ var BroadcastProGlassPanel = ({
 // src/templates/variants/broadcastPro/components/stat/BroadcastProStatMatrixResultCell.tsx
 var import_jsx_runtime135 = require("react/jsx-runtime");
 var SINGLE_CELL_CLASS = "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
-var SINGLE_PLAYER_NAME_CLASS = "font-rajdhani !text-4xl font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
+var SINGLE_PLAYER_NAME_CLASS = "font-rajdhani !text-4xl !font-bold !leading-none tracking-wide !opacity-100 -mt-1.5";
 var SINGLE_STAT_PRIMARY_CLASS = "font-teko !text-6xl font-normal !tracking-wide !leading-none";
 var SINGLE_STAT_SUFFIX_CLASS = "font-teko !text-3xl font-normal !tracking-wider !leading-none";
 var LIST_STAT_PRIMARY_CLASS = "font-teko !text-3xl font-normal !tracking-tight !leading-tight";
@@ -21100,9 +21098,10 @@ var BroadcastProMatchupSide = ({
     "broadcastProMatchupFixtureTeamName"
   );
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
-  const densityClass = fixtureDensity === "featured" ? "!text-4xl" : fixtureDensity === "compact" || compact ? "!text-2xl" : "!text-3xl";
-  const teamNameClass = `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
   const isHome = side === "home";
+  const densityClass = fixtureDensity === "featured" ? "!text-4xl" : fixtureDensity === "compact" || compact ? "!text-2xl" : "!text-3xl";
+  const alignClass = isHome ? "w-full !text-right" : "w-full !text-left";
+  const teamNameClass = `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass} ${alignClass}`.trim();
   const crestDelay = delay + 6;
   const nameDelay = delay + 10;
   return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: sideClass, children: [
@@ -21121,7 +21120,7 @@ var BroadcastProMatchupSide = ({
     /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
       "div",
       {
-        className: `flex min-w-0 flex-col ${isHome ? "items-end" : "items-start"}`.trim(),
+        className: `flex min-w-0 flex-1 flex-col ${isHome ? "items-end" : "items-start"}`.trim(),
         children: /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
           ladderTeamName_default,
           {
@@ -21891,7 +21890,7 @@ var BroadcastProLadderRow = ({
                   textAlign: "left",
                   delay,
                   letterAnimation: "none",
-                  className: "truncate font-normal uppercase tracking-wide leading-none",
+                  className: "truncate font-bold uppercase tracking-wide leading-none",
                   fontFamily: copyFont,
                   style: {
                     ...ladderCellTextStyle(typography.nameFontPx),
@@ -23119,13 +23118,13 @@ var BroadcastProRoundedGlassPanel = ({
 // src/templates/variants/broadcastProRounded/components/stat/BroadcastProRoundedStatMatrixResultCell.tsx
 var import_jsx_runtime168 = require("react/jsx-runtime");
 var SINGLE_CELL_CLASS2 = "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
-var SINGLE_PLAYER_NAME_CLASS2 = "font-rajdhani !text-4xl font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
+var SINGLE_PLAYER_NAME_CLASS2 = "font-rajdhani !text-4xl !font-bold !leading-none tracking-wide !opacity-100 -mt-1.5";
 var SINGLE_STAT_PRIMARY_CLASS2 = "font-teko !text-6xl font-normal !tracking-wide !leading-none";
 var SINGLE_STAT_SUFFIX_CLASS2 = "font-teko !text-3xl font-normal !tracking-wider !leading-none";
 var LIST_STAT_PRIMARY_CLASS2 = "font-teko !text-3xl font-normal !tracking-tight !leading-tight";
 var LIST_STAT_SUFFIX_CLASS2 = "font-teko !text-2xl font-normal !tracking-tight !leading-tight";
 var EMBEDDED_CELL_CLASS = "flex min-w-0 items-center justify-between gap-2 border-l border-white/20 px-3 py-1 first:border-l-0";
-var EMBEDDED_PLAYER_NAME_CLASS = "font-rajdhani !text-[18px] !font-normal !leading-none uppercase";
+var EMBEDDED_PLAYER_NAME_CLASS = "font-rajdhani !text-[18px] !font-bold !leading-none uppercase";
 var BroadcastProRoundedStatMatrixResultCell = ({
   playerName,
   statValue,
@@ -24303,9 +24302,10 @@ var BroadcastProRoundedMatchupSide = ({
     "broadcastProRoundedMatchupFixtureTeamName"
   );
   const upcomingTeamNameClass = csClass2(componentStyles, "upcomingTeamName");
-  const densityClass = fixtureDensity === "featured" ? "!text-4xl" : fixtureDensity === "compact" || compact ? "!text-2xl" : "!text-3xl";
-  const teamNameClass = `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
   const isHome = side === "home";
+  const densityClass = fixtureDensity === "featured" ? "!text-4xl" : fixtureDensity === "compact" || compact ? "!text-2xl" : "!text-3xl";
+  const alignClass = isHome ? "w-full !text-right" : "w-full !text-left";
+  const teamNameClass = `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass} ${alignClass}`.trim();
   const crestDelay = delay + 6;
   const nameDelay = delay + 10;
   return /* @__PURE__ */ (0, import_jsx_runtime181.jsxs)("div", { className: sideClass, children: [
@@ -24324,7 +24324,7 @@ var BroadcastProRoundedMatchupSide = ({
     /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
       "div",
       {
-        className: `flex min-w-0 flex-col ${isHome ? "items-end" : "items-start"}`.trim(),
+        className: `flex min-w-0 flex-1 flex-col ${isHome ? "items-end" : "items-start"}`.trim(),
         children: /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
           ladderTeamName_default,
           {
@@ -25119,7 +25119,7 @@ var BroadcastProRoundedLadderRow = ({
                   textAlign: "left",
                   delay,
                   letterAnimation: "none",
-                  className: "truncate font-normal uppercase tracking-wide leading-none",
+                  className: "truncate font-bold uppercase tracking-wide leading-none",
                   fontFamily: copyFont,
                   style: {
                     ...ladderCellTextStyle2(typography.nameFontPx),
@@ -38195,14 +38195,12 @@ var MudgeerabaSingleTeamHeader = ({ team, teamLogo, delay, outerContainer }) => 
                   /* @__PURE__ */ (0, import_jsx_runtime365.jsx)(
                     "div",
                     {
-                      className: "font-bold relative z-20 overflow-hidden h-full flex items-center",
+                      className: "relative z-20 flex h-full items-center font-bold",
                       style: {
                         backgroundColor: primaryColor,
-                        ...clipPathStyle2(STEEP_HERO_TOP_LEFT),
                         marginLeft: "-8px",
-                        // Overlap with logo border
-                        paddingLeft: "32px",
-                        paddingRight: "64px"
+                        paddingLeft: "24px",
+                        paddingRight: "16px"
                       },
                       children: /* @__PURE__ */ (0, import_jsx_runtime365.jsx)(
                         AnimatedText,
@@ -38239,19 +38237,16 @@ function formatBowlingStat3(p) {
   var _a, _b;
   return `${(_a = p.wickets) != null ? _a : 0}/${p.runs} (${(_b = p.overs) != null ? _b : 0})`;
 }
-var PlayerStatRow = ({ playerName, statValue, delay, index, isLeftColumn }) => {
+var PlayerStatRow = ({ playerName, statValue, delay, index }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, colors } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const textAnimations = animations.text.main;
   const rowBg = selectedPalette.container.backgroundTransparent.high;
   return /* @__PURE__ */ (0, import_jsx_runtime366.jsxs)(
-    LayeredAngularPanel,
+    "div",
     {
-      clipPath: isLeftColumn ? SHALLOW_COLUMN_LEFT : SHALLOW_COLUMN_RIGHT,
-      surfaceColor: rowBg,
-      underlayColor: getLayeredUnderlayColor(colors.primary),
-      className: "w-full relative",
-      surfaceClassName: `flex justify-between items-center py-2 relative overflow-hidden ${getShallowColumnPadding(isLeftColumn)}`,
+      className: "relative flex w-full items-center justify-between overflow-hidden px-3 py-2",
+      style: { backgroundColor: rowBg },
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime366.jsx)(
           ResultPlayerName,
@@ -38275,7 +38270,7 @@ var PlayerStatRow = ({ playerName, statValue, delay, index, isLeftColumn }) => {
     }
   );
 };
-var StatsColumn = ({ players, isBatting, delay, isLeftColumn }) => {
+var StatsColumn = ({ players, isBatting, delay }) => {
   const displayPlayers = [
     ...players.slice(0, 2),
     ...Array(Math.max(0, 2 - players.length)).fill(null)
@@ -38288,8 +38283,7 @@ var StatsColumn = ({ players, isBatting, delay, isLeftColumn }) => {
         playerName: displayPlayers[0].player,
         statValue: formatStat(displayPlayers[0]),
         delay,
-        index: 0,
-        isLeftColumn
+        index: 0
       }
     ),
     displayPlayers[1] && /* @__PURE__ */ (0, import_jsx_runtime366.jsx)(
@@ -38298,8 +38292,7 @@ var StatsColumn = ({ players, isBatting, delay, isLeftColumn }) => {
         playerName: displayPlayers[1].player,
         statValue: formatStat(displayPlayers[1]),
         delay,
-        index: 1,
-        isLeftColumn
+        index: 1
       }
     )
   ] });
@@ -38324,22 +38317,13 @@ var PlayerStatsSingleTeamOnlyMudgeeraba = ({
       animation: animations.container.main.itemContainer.containerIn,
       animationDelay: delay,
       children: /* @__PURE__ */ (0, import_jsx_runtime366.jsx)("div", { className: "flex w-full h-full relative flex-col", children: /* @__PURE__ */ (0, import_jsx_runtime366.jsxs)("div", { className: "flex w-full relative", children: [
-        showBatting && /* @__PURE__ */ (0, import_jsx_runtime366.jsx)(
-          StatsColumn,
-          {
-            players: batters,
-            isBatting: true,
-            delay,
-            isLeftColumn: true
-          }
-        ),
+        showBatting && /* @__PURE__ */ (0, import_jsx_runtime366.jsx)(StatsColumn, { players: batters, isBatting: true, delay }),
         showBowling && /* @__PURE__ */ (0, import_jsx_runtime366.jsx)(
           StatsColumn,
           {
             players: bowlers,
             isBatting: false,
-            delay: delay + 5,
-            isLeftColumn: false
+            delay: delay + 5
           }
         )
       ] }) })
@@ -38366,7 +38350,7 @@ var MudgeerabaStatusFooter = ({
     AnimatedContainer,
     {
       type: "full",
-      className: "w-full flex items-center justify-center mx-20",
+      className: "flex w-full items-center justify-center px-4",
       backgroundColor: "none",
       style: outerContainer,
       animation: ContainerAnimations.containerIn,
@@ -38374,11 +38358,8 @@ var MudgeerabaStatusFooter = ({
       children: /* @__PURE__ */ (0, import_jsx_runtime367.jsx)(
         "div",
         {
-          className: "w-full px-4 py-2 font-bold flex items-center justify-center relative overflow-hidden",
-          style: {
-            backgroundColor: primaryColor,
-            ...clipPathStyle2(SHALLOW_STATUS_BAR)
-          },
+          className: "relative flex w-full items-center justify-center px-4 py-2 font-bold",
+          style: { backgroundColor: primaryColor },
           children: /* @__PURE__ */ (0, import_jsx_runtime367.jsx)(
             AnimatedText,
             {
@@ -38404,7 +38385,6 @@ var MatchCardMudgeeraba = ({
   rowHeight,
   delay
 }) => {
-  const { colors } = useThemeContext();
   const teamHeaderHeight = 60;
   const teamStatsHeight = (rowHeight - teamHeaderHeight * 2) / 2;
   const { baseDelay } = calculateDelays(delay);
@@ -38421,71 +38401,62 @@ var MatchCardMudgeeraba = ({
     homeBatted,
     awayBatted
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime368.jsxs)(
-    LayeredAngularPanel,
-    {
-      clipPath: SHALLOW_ROW_LEFT,
-      surfaceColor: "transparent",
-      underlayColor: getLayeredUnderlayColor(colors.primary),
-      className: "w-auto mx-0 overflow-hidden h-full",
-      surfaceClassName: "h-full",
-      surfaceStyle: { backgroundColor: "transparent" },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
-          MudgeerabaSingleTeamHeader_default,
-          {
-            team: match.homeTeam,
-            teamLogo: match.teamHomeLogo,
-            delay: homeHeaderDelay,
-            outerContainer: {
-              height: teamHeaderHeight
-            }
+  return /* @__PURE__ */ (0, import_jsx_runtime368.jsxs)("div", { className: "flex h-full w-full flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime368.jsxs)("div", { className: "flex min-h-0 w-full flex-1 flex-col overflow-hidden", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
+        MudgeerabaSingleTeamHeader_default,
+        {
+          team: match.homeTeam,
+          teamLogo: match.teamHomeLogo,
+          delay: homeHeaderDelay,
+          outerContainer: {
+            height: teamHeaderHeight
           }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
-          PlayerStats_SingleTeamOnly_Mudgeeraba_default,
-          {
-            Team: match.homeTeam,
-            height: teamStatsHeight,
-            delay: homeStatsDelay,
-            maxPlayersPerStat: 2,
-            showBatting: visibility.flags.homeShowBatting,
-            showBowling: visibility.flags.homeShowBowling
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
+        PlayerStats_SingleTeamOnly_Mudgeeraba_default,
+        {
+          Team: match.homeTeam,
+          height: teamStatsHeight,
+          delay: homeStatsDelay,
+          maxPlayersPerStat: 2,
+          showBatting: visibility.flags.homeShowBatting,
+          showBowling: visibility.flags.homeShowBowling
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
+        MudgeerabaSingleTeamHeader_default,
+        {
+          team: match.awayTeam,
+          teamLogo: match.teamAwayLogo,
+          delay: awayHeaderDelay,
+          outerContainer: {
+            height: teamHeaderHeight
           }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
-          MudgeerabaSingleTeamHeader_default,
-          {
-            team: match.awayTeam,
-            teamLogo: match.teamAwayLogo,
-            delay: awayHeaderDelay,
-            outerContainer: {
-              height: teamHeaderHeight
-            }
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
-          PlayerStats_SingleTeamOnly_Mudgeeraba_default,
-          {
-            Team: match.awayTeam,
-            height: teamStatsHeight,
-            delay: awayStatsDelay,
-            maxPlayersPerStat: 2,
-            showBatting: visibility.flags.awayShowBatting,
-            showBowling: visibility.flags.awayShowBowling
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
-          MudgeerabaStatusFooter_default,
-          {
-            result: match.result,
-            delay: resultSectionDelay,
-            outerContainer: { minHeight: 52 }
-          }
-        )
-      ]
-    }
-  );
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
+        PlayerStats_SingleTeamOnly_Mudgeeraba_default,
+        {
+          Team: match.awayTeam,
+          height: teamStatsHeight,
+          delay: awayStatsDelay,
+          maxPlayersPerStat: 2,
+          showBatting: visibility.flags.awayShowBatting,
+          showBowling: visibility.flags.awayShowBowling
+        }
+      )
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime368.jsx)(
+      MudgeerabaStatusFooter_default,
+      {
+        result: match.result,
+        delay: resultSectionDelay,
+        outerContainer: { minHeight: 52 }
+      }
+    )
+  ] });
 };
 var card_Mudgeeraba_default = MatchCardMudgeeraba;
 
@@ -38500,19 +38471,16 @@ function formatBowlingStat4(p) {
   var _a, _b;
   return `${(_a = p.wickets) != null ? _a : 0}/${p.runs} (${(_b = p.overs) != null ? _b : 0})`;
 }
-var StatCell = ({ playerName, statValue, delay, index, isRight }) => {
+var StatCell = ({ playerName, statValue, delay, index }) => {
   const { animations } = useAnimationContext();
-  const { selectedPalette, colors } = useThemeContext();
+  const { selectedPalette } = useThemeContext();
   const textAnimations = animations.text.main;
   const rowBg = selectedPalette.container.backgroundTransparent.high;
   return /* @__PURE__ */ (0, import_jsx_runtime369.jsxs)(
-    LayeredAngularPanel,
+    "div",
     {
-      clipPath: isRight ? SHALLOW_COLUMN_RIGHT : SHALLOW_COLUMN_LEFT,
-      surfaceColor: rowBg,
-      underlayColor: getLayeredUnderlayColor(colors.primary),
-      className: "flex-1 min-w-0 relative",
-      surfaceClassName: `flex justify-between items-center flex-1 min-w-0 overflow-hidden py-2 ${isRight ? "pl-8 pr-2" : "pl-8 pr-8"}`,
+      className: "relative flex min-w-0 flex-1 items-center justify-between overflow-hidden px-3 py-2",
+      style: { backgroundColor: rowBg },
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime369.jsx)(
           ResultPlayerName,
@@ -38549,8 +38517,7 @@ var StatsRow = ({ players, isBatting, delay }) => {
         playerName: displayPlayers[0].player,
         statValue: formatStat(displayPlayers[0]),
         delay,
-        index: 0,
-        isRight: false
+        index: 0
       }
     ),
     displayPlayers[1] && /* @__PURE__ */ (0, import_jsx_runtime369.jsx)(
@@ -38559,8 +38526,7 @@ var StatsRow = ({ players, isBatting, delay }) => {
         playerName: displayPlayers[1].player,
         statValue: formatStat(displayPlayers[1]),
         delay,
-        index: 1,
-        isRight: true
+        index: 1
       }
     )
   ] });
@@ -49616,7 +49582,7 @@ var PerformanceGridCard = ({ performance, globalRank, indexOnScreen, exitFrame, 
                       /* @__PURE__ */ (0, import_jsx_runtime528.jsx)(
                         "h3",
                         {
-                          className: `${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0`,
+                          className: `${cs("broadcastProPlayerRankingNameGridTop5")} shrink-0 !font-bold`,
                           style: {
                             color: text.copy,
                             fontFamily: copyFont,
@@ -49934,7 +49900,7 @@ var PerformanceGridCard2 = ({ performance, globalRank, indexOnScreen, exitFrame,
                       /* @__PURE__ */ (0, import_jsx_runtime530.jsx)(
                         "h3",
                         {
-                          className: `${cs("broadcastProRoundedPlayerRankingNameGridTop5")} shrink-0`,
+                          className: `${cs("broadcastProRoundedPlayerRankingNameGridTop5")} shrink-0 !font-bold`,
                           style: {
                             color: text.copy,
                             fontFamily: copyFont,
@@ -61531,7 +61497,7 @@ var broadcastProCompositionComponentStylesLadder = {
     className: "text-2xl font-bold uppercase tracking-wide leading-snug"
   },
   ladderTeamName: {
-    className: "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none"
+    className: "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none"
   },
   ladderTeamPoints: broadcastProComponentStylesShared.broadcastProScoreTablePoints,
   broadcastProLadderZoneRankLeader: broadcastProComponentStylesShared.broadcastProLadderZoneRankLeader,
@@ -61544,10 +61510,10 @@ var broadcastProCompositionComponentStylesResults = {
   ResultScoreFirstInnings: broadcastProComponentStylesShared.broadcastProScoreMatchInnings,
   ResultScoreYetToBat: broadcastProComponentStylesShared.broadcastProScoreMatchYetToBat,
   ResultTeamName: {
-    className: "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none"
+    className: "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none"
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-2xl font-normal leading-tight"
+    className: "font-rajdhani text-2xl font-bold leading-tight"
   },
   ResultPlayerScore: {
     className: "font-teko text-4xl font-normal tracking-tight leading-tight"
@@ -61690,7 +61656,7 @@ var broadcastProCompositionComponentStylesRoster = {
 // src/templates/variants/broadcastPro/theme/composition/teamOfTheWeek.ts
 var broadcastProCompositionComponentStylesTeamOfTheWeek = {
   TeamOfTheWeekPlayerName: {
-    className: "text-left text-3xl font-normal uppercase tracking-tight leading-none sm:text-4xl"
+    className: "text-left text-3xl font-bold uppercase tracking-tight leading-none sm:text-4xl"
   },
   TeamOfTheWeekTeam: {
     className: "line-clamp-2 text-left text-lg font-bold uppercase tracking-wider leading-tight opacity-90 sm:text-xl"
@@ -61771,7 +61737,7 @@ var broadcastProCompositionComponentStylesTeamOfTheWeek = {
     className: "font-teko text-lg uppercase tracking-widest leading-none opacity-40"
   },
   broadcastProTeamOfTheWeekTwelfthName: {
-    className: "font-teko text-3xl font-normal uppercase leading-tight"
+    className: "font-teko text-3xl font-bold uppercase leading-tight"
   },
   broadcastProTeamOfTheWeekTwelfthTeam: {
     className: "text-xs font-bold uppercase tracking-widest opacity-40"
@@ -61896,7 +61862,7 @@ var broadcastProCompositionComponentStylesUpcoming = {
     className: "font-rajdhani text-2xl font-bold uppercase tracking-wider leading-tight"
   },
   upcomingTeamName: {
-    className: "font-rajdhani font-normal uppercase !leading-[0.92] tracking-wide"
+    className: "font-rajdhani font-bold uppercase !leading-[0.92] tracking-wide"
   },
   upcomingVs: broadcastProComponentStylesShared.broadcastProMatchupDividerVs
 };
@@ -62957,7 +62923,7 @@ var broadcastProRoundedCompositionComponentStylesLadder = {
     className: "text-2xl font-bold uppercase tracking-wide leading-snug"
   },
   ladderTeamName: {
-    className: "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none"
+    className: "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none"
   },
   ladderTeamPoints: broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreTablePoints,
   broadcastProRoundedLadderZoneRankLeader: broadcastProRoundedComponentStylesShared.broadcastProRoundedLadderZoneRankLeader,
@@ -62970,10 +62936,10 @@ var broadcastProRoundedCompositionComponentStylesResults = {
   ResultScoreFirstInnings: broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchInnings,
   ResultScoreYetToBat: broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreMatchYetToBat,
   ResultTeamName: {
-    className: "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none"
+    className: "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none"
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-2xl font-normal leading-tight"
+    className: "font-rajdhani text-2xl font-bold leading-tight"
   },
   ResultPlayerScore: {
     className: "font-teko text-4xl font-normal tracking-tight leading-tight"
@@ -63116,7 +63082,7 @@ var broadcastProRoundedCompositionComponentStylesRoster = {
 // src/templates/variants/broadcastProRounded/theme/composition/teamOfTheWeek.ts
 var broadcastProRoundedCompositionComponentStylesTeamOfTheWeek = {
   TeamOfTheWeekPlayerName: {
-    className: "text-left text-3xl font-normal uppercase tracking-tight leading-none sm:text-4xl"
+    className: "text-left text-3xl font-bold uppercase tracking-tight leading-none sm:text-4xl"
   },
   TeamOfTheWeekTeam: {
     className: "line-clamp-2 text-left text-lg font-bold uppercase tracking-wider leading-tight opacity-90 sm:text-xl"
@@ -63197,7 +63163,7 @@ var broadcastProRoundedCompositionComponentStylesTeamOfTheWeek = {
     className: "font-teko text-lg uppercase tracking-widest leading-none opacity-40"
   },
   broadcastProRoundedTeamOfTheWeekTwelfthName: {
-    className: "font-teko text-3xl font-normal uppercase leading-tight"
+    className: "font-teko text-3xl font-bold uppercase leading-tight"
   },
   broadcastProRoundedTeamOfTheWeekTwelfthTeam: {
     className: "text-xs font-bold uppercase tracking-widest opacity-40"
@@ -63322,7 +63288,7 @@ var broadcastProRoundedCompositionComponentStylesUpcoming = {
     className: "font-rajdhani text-2xl font-bold uppercase tracking-wider leading-tight"
   },
   upcomingTeamName: {
-    className: "font-rajdhani font-normal uppercase !leading-[0.92] tracking-wide"
+    className: "font-rajdhani font-bold uppercase !leading-[0.92] tracking-wide"
   },
   upcomingVs: broadcastProRoundedComponentStylesShared.broadcastProRoundedMatchupDividerVs
 };
