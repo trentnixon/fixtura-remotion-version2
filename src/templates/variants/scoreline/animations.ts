@@ -73,7 +73,7 @@ export const templateAnimations: AnimationConfig = {
     Main: {
       type: "slide",
       direction: "from-left",
-      durationInFrames: 12,
+      durationInFrames: 15,
     },
   },
 };

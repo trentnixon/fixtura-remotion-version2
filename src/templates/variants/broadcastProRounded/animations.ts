@@ -209,7 +209,7 @@ export const broadcastGlassAnimations: AnimationConfig = {
     Main: {
       type: "fade",
       direction: "from-right",
-      durationInFrames: 20,
+      durationInFrames: 15,
     },
   },
 };

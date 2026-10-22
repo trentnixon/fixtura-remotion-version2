@@ -216,7 +216,7 @@ export const broadcastSnapAnimations: AnimationConfig = {
     Main: {
       type: "slide",
       direction: "from-right",
-      durationInFrames: 12,
+      durationInFrames: 15,
     },
   },
 };
