@@ -50,16 +50,17 @@ export const BroadcastProMatchupSide: React.FC<
     "broadcastProMatchupFixtureTeamName",
   );
   const upcomingTeamNameClass = csClass(componentStyles, "upcomingTeamName");
+  const isHome = side === "home";
   const densityClass =
     fixtureDensity === "featured"
       ? "!text-4xl"
       : fixtureDensity === "compact" || compact
         ? "!text-2xl"
         : "!text-3xl";
+  const alignClass = isHome ? "w-full !text-right" : "w-full !text-left";
   const teamNameClass =
-    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass}`.trim();
+    `${upcomingTeamNameClass || teamNameBaseClass} line-clamp-2 !leading-[0.92] ${densityClass} ${alignClass}`.trim();
 
-  const isHome = side === "home";
   const crestDelay = delay + 6;
   const nameDelay = delay + 10;
 
@@ -77,7 +78,7 @@ export const BroadcastProMatchupSide: React.FC<
         />
       )}
       <div
-        className={`flex min-w-0 flex-col ${isHome ? "items-end" : "items-start"}`.trim()}
+        className={`flex min-w-0 flex-1 flex-col ${isHome ? "items-end" : "items-start"}`.trim()}
       >
         <LadderTeamName
           value={input.teamName}

@@ -9,10 +9,10 @@ export const broadcastProCompositionComponentStylesResults = {
     broadcastProComponentStylesShared.broadcastProScoreMatchYetToBat,
   ResultTeamName: {
     className:
-      "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none",
+      "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-2xl font-normal leading-tight",
+    className: "font-rajdhani text-2xl font-bold leading-tight",
   },
   ResultPlayerScore: {
     className: "font-teko text-4xl font-normal tracking-tight leading-tight",

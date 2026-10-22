@@ -100,7 +100,7 @@ const PerformanceGridCard: React.FC<{
             }}
           >
             <h3
-              className={`${cs("broadcastProRoundedPlayerRankingNameGridTop5")} shrink-0`}
+              className={`${cs("broadcastProRoundedPlayerRankingNameGridTop5")} shrink-0 !font-bold`}
               style={{
                 color: text.copy,
                 fontFamily: copyFont,

@@ -3,7 +3,7 @@ import type { ThemeComponentStyles } from "../../../../types/TemplateThemeConfig
 export const broadcastProCompositionComponentStylesTeamOfTheWeek = {
   TeamOfTheWeekPlayerName: {
     className:
-      "text-left text-3xl font-normal uppercase tracking-tight leading-none sm:text-4xl",
+      "text-left text-3xl font-bold uppercase tracking-tight leading-none sm:text-4xl",
   },
   TeamOfTheWeekTeam: {
     className:
@@ -93,7 +93,7 @@ export const broadcastProCompositionComponentStylesTeamOfTheWeek = {
       "font-teko text-lg uppercase tracking-widest leading-none opacity-40",
   },
   broadcastProTeamOfTheWeekTwelfthName: {
-    className: "font-teko text-3xl font-normal uppercase leading-tight",
+    className: "font-teko text-3xl font-bold uppercase leading-tight",
   },
   broadcastProTeamOfTheWeekTwelfthTeam: {
     className: "text-xs font-bold uppercase tracking-widest opacity-40",

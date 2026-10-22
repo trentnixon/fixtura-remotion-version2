@@ -7,7 +7,7 @@ export const broadcastProRoundedCompositionComponentStylesLadder = {
   },
   ladderTeamName: {
     className:
-      "font-rajdhani text-4xl font-normal uppercase tracking-wide leading-none",
+      "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none",
   },
   ladderTeamPoints:
     broadcastProRoundedComponentStylesShared.broadcastProRoundedScoreTablePoints,

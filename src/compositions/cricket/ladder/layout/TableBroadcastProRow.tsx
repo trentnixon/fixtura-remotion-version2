@@ -165,7 +165,7 @@ export const BroadcastProLadderRow: React.FC<BroadcastProRowLayoutProps> = ({
             textAlign="left"
             delay={delay}
             letterAnimation="none"
-            className="truncate font-normal uppercase tracking-wide leading-none"
+            className="truncate font-bold uppercase tracking-wide leading-none"
             fontFamily={copyFont}
             style={{
               ...ladderCellTextStyle(typography.nameFontPx),

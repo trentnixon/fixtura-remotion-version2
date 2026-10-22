@@ -8,7 +8,7 @@ export const broadcastProCompositionComponentStylesUpcoming = {
   },
   upcomingTeamName: {
     className:
-      "font-rajdhani font-normal uppercase !leading-[0.92] tracking-wide",
+      "font-rajdhani font-bold uppercase !leading-[0.92] tracking-wide",
   },
   upcomingVs: broadcastProComponentStylesShared.broadcastProMatchupDividerVs,
 } satisfies Pick<

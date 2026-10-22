@@ -26,7 +26,7 @@ export interface BroadcastProStatMatrixResultCellProps {
 const SINGLE_CELL_CLASS =
   "!flex !flex-col !items-start !justify-start gap-0 !px-3 !py-2";
 const SINGLE_PLAYER_NAME_CLASS =
-  "font-rajdhani !text-4xl font-normal !leading-none tracking-wide !opacity-100 -mt-1.5";
+  "font-rajdhani !text-4xl !font-bold !leading-none tracking-wide !opacity-100 -mt-1.5";
 const SINGLE_STAT_PRIMARY_CLASS =
   "font-teko !text-6xl font-normal !tracking-wide !leading-none";
 const SINGLE_STAT_SUFFIX_CLASS =
