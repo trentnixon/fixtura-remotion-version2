@@ -528,6 +528,7 @@ const AnimatedImageBase: React.FC<AnimatedImageProps> = ({
       onLoad={handleLoad}
       onError={handleError}
       draggable={draggable}
+      from={2}
     />
   );
 };

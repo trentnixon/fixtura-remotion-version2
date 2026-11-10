@@ -43,6 +43,7 @@ const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
     CricketResultSingle: "CricketResultSingle",
     CricketRoster: "CricketRoster",
     CricketResults: "CricketResults",
+    CricketResultsLite: "CricketResultsLite",
     CricketTeamOfTheWeek: "CricketTeamOfTheWeek",
   },
   afl: {

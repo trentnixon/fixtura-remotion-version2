@@ -5,28 +5,34 @@
   --zone-pad: 12px;
   --zone-header: 148px;
   --zone-content: 1080px;
-  --zone-footer: 104px;
+  --zone-footer: 112px;
   --zone-content-pad: 24px;
   --content-inset: 24px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 20px;
+  --space-8: 32px;
   --ladder-stack-gap: var(--space-2);
   --ladder-row-min-height: 68px;
   --ladder-grid-rank: 52px;
   --ladder-grid-mark: 72px;
+  --ladder-grid-mark-col: var(--ladder-row-min-height);
+  --ladder-mark-size: var(--ladder-row-min-height);
   --ladder-grid-stats: 252px;
+  --ladder-stat-gap: 4px;
+  --ladder-stat-columns: repeat(5, minmax(0, 1fr));
   --type-ladder-grade: 20px;
+  --type-ladder-legend: 24px;
   --type-ladder-rank: 36px;
   --type-ladder-rank-hero: 44px;
   --type-ladder-team: 24px;
   --type-ladder-team-hero: 26px;
-  --type-ladder-stat: 22px;
-  --type-ladder-stat-pts: 28px;
+  --type-ladder-stat: calc(22px + 2pt);
   --type-ladder-column: 14px;
   --header-text: rgb(244 243 241 / 96%);
   --font-display: "Teko", "Arial Narrow", sans-serif;
   --font-body: "Source Sans 3", Arial, sans-serif;
+  --ns-container-radius: 50px;
 
   position: relative;
   isolation: isolate;
@@ -185,25 +191,53 @@
   gap: var(--ladder-stack-gap);
 }
 
+/* —— Pill radius on inner blocks only (parent ladder unit stays square) —— */
+.night-session-canvas .ladder-table.ladder-unit,
+.night-session-canvas .ladder-unit__frame {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.night-session-canvas .ladder-unit__rail.ladder-grade,
+.night-session-canvas .ladder-columns,
+.night-session-canvas .ladder-row {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
 /* Grade module — border + gradient rail */
 .night-session-canvas .ladder-table.ladder-unit {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
   max-height: 100%;
-  overflow: hidden;
-  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  gap: var(--space-2);
+  padding: 4px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.night-session-canvas .ladder-unit__rail.ladder-grade {
+  justify-content: center;
+  text-align: center;
+}
+
+.night-session-canvas .ladder-unit__rail.ladder-grade::after {
+  display: none;
 }
 
 .night-session-canvas .ladder-unit__rail {
   position: relative;
   flex: 0 0 auto;
   min-width: 0;
-  padding: 8px 14px;
-  border: 0;
-  border-bottom: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  padding: 9px 14px;
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -245,12 +279,14 @@
 
 .night-session-canvas .ladder-grade-name {
   display: -webkit-box;
+  width: 100%;
   overflow: hidden;
-  padding-right: 36px;
+  padding-right: 0;
   font-family: var(--font-body);
   font-size: var(--type-ladder-grade);
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
   color: var(--container-text, var(--ns-band-team, rgb(255 255 255 / 92%)));
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -270,28 +306,79 @@
   flex: 0 0 auto;
   display: grid;
   grid-template-columns:
-    var(--ladder-grid-rank)
-    var(--ladder-grid-mark)
+    var(--ladder-grid-mark-col)
     minmax(0, 1fr)
     var(--ladder-grid-stats);
   column-gap: var(--space-2);
-  align-items: end;
-  padding: 0 var(--space-2) 2px;
+  align-items: center;
+  min-height: var(--ladder-row-min-height);
+  padding: var(--space-3) var(--space-2) var(--space-3) 0;
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  background: var(--ns-performance-row-bg, var(--container-surface));
+  box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
+}
+
+/* Light mode — same row tint family, slightly deeper than data rows (35% → 52%) */
+.night-session-canvas[data-night-session-mode="light"] .ladder-columns,
+.night-session-canvas[data-night-session-mode="lightAlt"] .ladder-columns {
+  background: rgb(243 240 234 / 52%);
+}
+
+.night-session-canvas .ladder-columns .ladder-columns__grade.ladder-grade-name {
+  display: block;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  justify-self: start;
+  align-self: center;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--font-body);
-  font-size: var(--type-ladder-column);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: var(--type-ladder-legend);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--container-text, var(--contrast-performance-lead));
+  -webkit-box-orient: unset;
+  -webkit-line-clamp: unset;
+}
+
+.night-session-canvas .ladder-columns__stats > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--type-ladder-legend);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   line-height: 1.1;
   text-transform: uppercase;
-  color: var(--container-text-muted, rgb(244 243 241 / 42%));
+  color: var(--container-text-muted, rgb(244 243 241 / 58%));
+}
+
+.night-session-canvas
+  .ladder-columns[data-empty="true"]
+  .ladder-columns__grade {
+  display: none;
+}
+
+.night-session-canvas .ladder-columns__stats,
+.night-session-canvas .ladder-stats {
+  display: grid;
+  grid-template-columns: var(--ladder-stat-columns);
+  gap: var(--ladder-stat-gap);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .night-session-canvas .ladder-columns__stats {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
-  min-width: 0;
+  align-items: center;
   text-align: center;
+  padding-right: 0;
 }
 
 .night-session-canvas .ladder-rows {
@@ -305,16 +392,29 @@
   overflow-x: hidden;
 }
 
+.night-session-canvas .ladder-rows[data-density="compact"],
+.night-session-canvas
+  .ladder-unit__frame:has(.ladder-rows[data-density="compact"])
+  .ladder-columns {
+  --type-ladder-legend: 22px;
+}
+
 .night-session-canvas .ladder-rows[data-density="compact"] {
   --ladder-row-min-height: 58px;
   --type-ladder-rank: 32px;
   --type-ladder-rank-hero: 38px;
   --type-ladder-team: 22px;
   --type-ladder-team-hero: 24px;
-  --type-ladder-stat: 20px;
-  --type-ladder-stat-pts: 24px;
+  --type-ladder-stat: calc(20px + 2pt);
   --ladder-grid-mark: 64px;
   --ladder-grid-stats: 228px;
+}
+
+.night-session-canvas .ladder-rows[data-density="tight"],
+.night-session-canvas
+  .ladder-unit__frame:has(.ladder-rows[data-density="tight"])
+  .ladder-columns {
+  --type-ladder-legend: 20px;
 }
 
 .night-session-canvas .ladder-rows[data-density="tight"] {
@@ -323,8 +423,7 @@
   --type-ladder-rank-hero: 34px;
   --type-ladder-team: 20px;
   --type-ladder-team-hero: 22px;
-  --type-ladder-stat: 18px;
-  --type-ladder-stat-pts: 22px;
+  --type-ladder-stat: calc(18px + 2pt);
   --ladder-grid-mark: 56px;
   --ladder-grid-stats: 210px;
 }
@@ -354,19 +453,38 @@
 }
 
 .night-session-canvas .ladder-row {
+  position: relative;
   flex: 0 0 auto;
   min-height: var(--ladder-row-min-height);
   display: grid;
   grid-template-columns:
-    var(--ladder-grid-rank)
-    var(--ladder-grid-mark)
+    var(--ladder-grid-mark-col)
     minmax(0, 1fr)
     var(--ladder-grid-stats);
   column-gap: var(--space-2);
   align-items: stretch;
   padding: 0;
-  background: transparent !important;
-  box-shadow: none !important;
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
+  box-shadow: var(
+    --container-inset,
+    inset 0 1px 0 rgb(255 255 255 / 4%)
+  ) !important;
+}
+
+/* Beat Scoreline / broadcast row neutralisation on ladder pill */
+.night-session-canvas[data-ladder] .ladder-rows .ladder-entry .ladder-row {
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  border-radius: var(--ns-container-radius);
+  background: var(--ns-performance-row-bg, var(--container-surface)) !important;
+  box-shadow: var(
+    --container-inset,
+    inset 0 1px 0 rgb(255 255 255 / 4%)
+  ) !important;
+}
+
+.night-session-canvas .ladder-row__cell--rank {
+  display: none;
 }
 
 .night-session-canvas .ladder-rank.ladder-cell {
@@ -390,19 +508,32 @@
   font-size: var(--type-ladder-rank-hero);
 }
 
-.night-session-canvas .ladder-cell {
+.night-session-canvas .ladder-row .ladder-cell {
   min-width: 0;
   min-height: 0;
   display: flex;
   align-items: center;
-  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  background: var(--ns-performance-row-bg, rgb(8 10 12 / 18%));
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.night-session-canvas .ladder-mark.ladder-cell {
-  justify-content: center;
-  padding: 0;
+/* Crest well — square cell, circular clip (match Top 5 leader-mark) */
+.night-session-canvas .ladder-row__cell--mark.ladder-cell {
+  position: relative;
+  align-self: stretch;
+  justify-self: stretch;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  padding: 0 !important;
+  display: grid;
+  place-items: stretch;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -410,28 +541,64 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: var(--ladder-row-min-height);
+  min-width: 0;
+  min-height: 0;
+  max-width: var(--ladder-mark-size);
+  max-height: var(--ladder-mark-size);
+  aspect-ratio: 1;
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.night-session-canvas .ladder-mark .ladder-mark__surface {
+  position: relative;
+  display: grid;
+  place-items: stretch;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .night-session-canvas .ladder-mark img {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.night-session-canvas .ladder-mark .mark-fallback {
-  width: 38%;
-  height: 38%;
-  border: 2px solid currentColor;
-  opacity: 0.12;
+.night-session-canvas .ladder-mark[data-has-crest="true"] .mark-fallback,
+.night-session-canvas
+  .ladder-mark__surface[data-has-crest="true"]
+  .mark-fallback,
+.night-session-canvas .ladder-mark:has(img:not([hidden])) .mark-fallback {
+  display: none;
 }
 
-.night-session-canvas .ladder-team.ladder-cell {
-  padding: 10px 14px;
+.night-session-canvas .ladder-mark .mark-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0.1;
+}
+
+.night-session-canvas .ladder-row__cell--team.ladder-cell {
+  align-items: center;
+  padding: var(--space-3) var(--space-2) var(--space-3) 0;
   min-height: var(--ladder-row-min-height);
+}
+
+.night-session-canvas .ladder-team {
+  min-width: 0;
+  flex: 1 1 auto;
   font-family: var(--font-body);
   font-size: var(--type-ladder-team);
   font-weight: 400;
@@ -447,17 +614,25 @@
   font-size: var(--type-ladder-team-hero);
 }
 
-.night-session-canvas .ladder-stats.ladder-cell {
-  padding: 8px 10px;
+.night-session-canvas .ladder-row__cell--stats.ladder-cell {
+  width: var(--ladder-grid-stats);
+  min-width: var(--ladder-grid-stats);
+  max-width: var(--ladder-grid-stats);
+  padding: var(--space-3) var(--space-2) var(--space-3) 0;
   min-height: var(--ladder-row-min-height);
-  justify-content: center;
+  justify-content: stretch;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 
-.night-session-canvas .ladder-stats {
+/* Beat .ladder-row .ladder-cell { display: flex } — stats must mirror legend grid */
+.night-session-canvas .ladder-row__cell--stats .ladder-stats {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
+  grid-template-columns: var(--ladder-stat-columns);
+  gap: var(--ladder-stat-gap);
+  flex: 1 1 auto;
   width: 100%;
+  min-width: 0;
   height: 100%;
   align-content: center;
 }
@@ -472,7 +647,6 @@
 }
 
 .night-session-canvas .ladder-stat--pts {
-  font-size: var(--type-ladder-stat-pts);
   font-weight: 400;
 }
 
@@ -491,25 +665,17 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.night-session-canvas .ladder-row[data-bias="true"] .ladder-team.ladder-cell {
+.night-session-canvas .ladder-row[data-bias="true"] {
   border-color: color-mix(
     in srgb,
     var(--club-primary) 55%,
-    rgb(255 255 255 / 10%)
+    var(--ns-performance-border, rgb(255 255 255 / 10%))
   );
   background: color-mix(
     in srgb,
     var(--club-primary) 12%,
-    var(--ns-performance-row-bg, rgb(8 10 12 / 18%))
-  );
-}
-
-.night-session-canvas .ladder-row[data-bias="true"] .ladder-cell {
-  border-color: color-mix(
-    in srgb,
-    var(--club-primary) 35%,
-    var(--ns-performance-border, rgb(255 255 255 / 10%))
-  );
+    var(--ns-performance-row-bg, var(--container-surface))
+  ) !important;
 }
 
 /* —— Footer —— */

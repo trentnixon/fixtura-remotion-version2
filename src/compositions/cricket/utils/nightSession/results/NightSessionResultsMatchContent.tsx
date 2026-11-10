@@ -26,6 +26,12 @@ export type NightSessionResultsMatchContentProps = {
   showFixtureClose?: boolean;
   rowDelay?: number;
   exitFrame?: number;
+  /** Results Lite omits player performance panels. */
+  showPerformancePanels?: boolean;
+  /** Results Lite omits type/round/ground context row. */
+  showMatchContext?: boolean;
+  /** Logo as `.team-band` background; hides inline `.team-mark` when crest exists. */
+  bandLogoBackground?: boolean;
 };
 
 export const NightSessionResultsMatchContent: React.FC<
@@ -37,6 +43,9 @@ export const NightSessionResultsMatchContent: React.FC<
   showFixtureClose = true,
   rowDelay,
   exitFrame,
+  showPerformancePanels = true,
+  showMatchContext = true,
+  bandLogoBackground = false,
 }) => {
   const { club, isAccountClub } = useVideoDataContext();
   const accountIsClub = isAccountClub || false;
@@ -91,6 +100,7 @@ export const NightSessionResultsMatchContent: React.FC<
           logoUrl={match.teamHomeLogo?.url || match.homeTeam.logo?.url || ""}
           isClubTeam={match.homeTeam.isClubTeam || homeIsClub}
           side="home"
+          bandLogoBackground={bandLogoBackground}
         />
         <div className="comparison-band__spine" aria-hidden />
         <NightSessionTeamBand
@@ -99,6 +109,7 @@ export const NightSessionResultsMatchContent: React.FC<
           logoUrl={match.teamAwayLogo?.url || match.awayTeam.logo?.url || ""}
           isClubTeam={match.awayTeam.isClubTeam || awayIsClub}
           side="away"
+          bandLogoBackground={bandLogoBackground}
         />
       </div>
     </div>
@@ -163,9 +174,9 @@ export const NightSessionResultsMatchContent: React.FC<
 
   return (
     <section
-      className={`match-module ${performancePanelCount === 0 ? "without-performances" : ""} ${className}`.trim()}
+      className={`match-module ${!showPerformancePanels || performancePanelCount === 0 ? "without-performances" : ""} ${!showMatchContext ? "without-context" : ""} ${className}`.trim()}
       style={style}
-      data-performance-count={performancePanelCount}
+      data-performance-count={showPerformancePanels ? performancePanelCount : 0}
     >
       {animateInner ? (
         <NightSessionResultMatchCell
@@ -191,7 +202,7 @@ export const NightSessionResultsMatchContent: React.FC<
         resultBridge
       )}
 
-      {performancePanelCount > 0 ? (
+      {showPerformancePanels && performancePanelCount > 0 ? (
         animateInner ? (
           <NightSessionResultMatchCell
             tier="performances"
@@ -205,17 +216,19 @@ export const NightSessionResultsMatchContent: React.FC<
         )
       ) : null}
 
-      {animateInner ? (
-        <NightSessionResultMatchCell
-          tier="context"
-          rowDelay={rowDelay}
-          exitFrame={exitFrame}
-        >
-          {matchContext}
-        </NightSessionResultMatchCell>
-      ) : (
-        matchContext
-      )}
+      {showMatchContext ? (
+        animateInner ? (
+          <NightSessionResultMatchCell
+            tier="context"
+            rowDelay={rowDelay}
+            exitFrame={exitFrame}
+          >
+            {matchContext}
+          </NightSessionResultMatchCell>
+        ) : (
+          matchContext
+        )
+      ) : null}
 
       {showFixtureClose ? (
         <div className="fixture-close" aria-hidden>

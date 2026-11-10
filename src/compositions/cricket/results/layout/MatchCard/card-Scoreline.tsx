@@ -14,6 +14,9 @@ const MatchCardScoreline: React.FC<MatchCardProps> = ({
       className={className}
       rowDelay={delay}
       exitFrame={exitFrame}
+      showTeamRole={false}
+      bandLogoBackground
+      showPerformanceHeadings={false}
     />
   );
 };

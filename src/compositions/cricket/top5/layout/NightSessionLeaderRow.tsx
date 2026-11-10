@@ -15,6 +15,7 @@ import {
   withNightSessionFixtureInnerDistance,
   withNightSessionFixtureRowDistance,
 } from "../../utils/nightSession/nightSessionFixtureAnimation";
+import { NightSessionTeamBandLogoBg } from "../../utils/nightSession/NightSessionTeamBandLogoBg";
 
 export const NightSessionLeaderRow: React.FC<{
   player: PlayerData;
@@ -27,7 +28,6 @@ export const NightSessionLeaderRow: React.FC<{
   enterTiming: NightSessionRowEnterTiming;
 }> = ({
   player,
-  rank,
   rowIndex,
   animation,
   animationDelay,
@@ -68,6 +68,7 @@ export const NightSessionLeaderRow: React.FC<{
   const team = truncateText(player.playedFor, restrictions.teamLength);
   const logoUrl = player.teamLogo?.url;
   const hasName = Boolean(name.trim());
+  const showRowLogoBackground = Boolean(logoUrl);
 
   return (
     <div
@@ -84,24 +85,13 @@ export const NightSessionLeaderRow: React.FC<{
         exitAnimation={rowExit}
         exitFrame={rowExitFrame}
       >
-        <NightSessionInnerEnterAnim
-          animationIn={innerAnimation.containerIn}
-          animationOut={innerAnimation.containerOut}
-          animationDelay={enterTiming.innerDelay(animationDelay, "grade")}
-          exitFrame={rowExitFrame}
-          className="leader-rank-bridge-wrap w-full min-w-0"
+        <article
+          className="leader-row"
+          data-logo-band-bg={showRowLogoBackground ? "true" : "false"}
         >
-          <div className="leader-rank-bridge schedule-bridge">
-            <div className="schedule-bridge__rule" aria-hidden />
-            <span
-              className="leader-rank leader-rank-tag schedule-lockup"
-              aria-hidden
-            >
-              {rank}
-            </span>
-          </div>
-        </NightSessionInnerEnterAnim>
-        <article className="leader-row">
+          {showRowLogoBackground && logoUrl ? (
+            <NightSessionTeamBandLogoBg logoUrl={logoUrl} />
+          ) : null}
           <NightSessionInnerEnterAnim
             animationIn={innerAnimation.containerIn}
             animationOut={innerAnimation.containerOut}
@@ -129,7 +119,7 @@ export const NightSessionLeaderRow: React.FC<{
           </NightSessionAnimatedCopy>
           {isBatter(player) ? (
             <NightSessionAnimatedCopy
-              className="leader-figure"
+              className="leader-figure leader-cell"
               animationIn={statsEnter}
               animationOut={statsExit}
               animationDelay={enterTiming.innerDelay(animationDelay, "stats")}
@@ -144,7 +134,7 @@ export const NightSessionLeaderRow: React.FC<{
           ) : null}
           {isBowler(player) ? (
             <NightSessionAnimatedCopy
-              className="leader-figure"
+              className="leader-figure leader-cell"
               animationIn={statsEnter}
               animationOut={statsExit}
               animationDelay={enterTiming.innerDelay(animationDelay, "stats")}

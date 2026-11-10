@@ -23,67 +23,170 @@
   flex-direction: column;
 }
 
-.scoreline-canvas .match-module--single {
+/* Vertical stack — override shared .match-module grid (172px row) for Result Single */
+.scoreline-canvas .match-module.match-module--single,
+.scoreline-canvas
+  .results-ledger:not(.results-lite-scoreline-ledger)
+  .match-module.match-module--single[data-performance-headings="off"]:not(
+    .without-performances
+  ) {
   flex: 0 0 auto;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  gap: var(--space-2) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  grid-template-rows: unset;
 }
 
-.scoreline-canvas .match-module--single.without-performances {
-  grid-template-rows: auto auto;
+.scoreline-canvas .match-module.match-module--single > .match-grade,
+.scoreline-canvas .match-module.match-module--single > .result-bridge,
+.scoreline-canvas
+  .match-module.match-module--single
+  > .team-score-area--single {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  max-height: none;
+}
+
+/* One row: T20 · Round 2 ——— Nelson Park / 4 (not stacked block children) */
+.scoreline-canvas .match-module.match-module--single > .match-context,
+.scoreline-canvas[data-result-single] .match-module--single .match-context {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  max-height: none;
+  grid-template-columns: unset;
+}
+
+.scoreline-canvas[data-result-single] .match-module--single .context-left {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.scoreline-canvas[data-result-single] .match-module--single .context-venue {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  -webkit-box-orient: unset;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+.scoreline-canvas .match-module.match-module--single > .performance-area {
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  max-height: none;
+  align-self: stretch;
+}
+
+.scoreline-canvas
+  .match-module.match-module--single
+  .team-score-area.team-score-area--single {
+  height: auto;
+}
+
+.scoreline-canvas
+  .results-ledger:not(.results-lite-scoreline-ledger)
+  .match-module.match-module--single[data-performance-headings="off"]
+  .performance-area {
+  flex: 0 0 auto;
+  height: auto;
+}
+
+.scoreline-canvas
+  .results-ledger
+  > .animated-container
+  > .match-module.match-module--single,
+.scoreline-canvas .results-ledger--single > .match-module.match-module--single {
+  flex: 0 0 auto;
+  height: auto;
+  min-height: 0;
 }
 
 .scoreline-canvas .team-score-area--single {
   min-height: 0;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  max-height: none;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  gap: 32px 6px;
-  align-items: center;
+  grid-template-rows: auto;
+  gap: 6px;
+  align-items: start;
+  align-content: start;
   background: transparent;
-}
-
-.scoreline-canvas .team-score-area--single > .match-head {
-  grid-column: 1 / -1;
 }
 
 .scoreline-canvas .team-score-area--single > .team-band[data-side="home"] {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .scoreline-canvas .team-score-area--single > .team-band[data-side="away"] {
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .scoreline-canvas .team-score-area--single > .team-band:first-of-type {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .scoreline-canvas .team-score-area--single > .team-band:last-of-type {
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .scoreline-canvas .team-score-area--single > .team-divider {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1;
 }
-
-/* match-head is :first-child — reset shared :first/:last-child team rules below */
 
 /* Hero band grid: row 1 = crest + score, row 2 = name/role full width */
 .scoreline-canvas .team-score-area--single .team-band {
   display: grid;
   gap: 10px 14px;
-  align-items: center;
+  align-items: start;
+  align-content: start;
+  grid-template-rows: auto auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
+/* Keep score/mark in row 1 with a real box — `display: contents` dropped team-name row from band height */
 .scoreline-canvas .team-score-area--single .team-band .team-primary {
-  display: contents;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  gap: 10px 14px;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
 }
 
 .scoreline-canvas .team-score-area--single .team-band .team-mark {
@@ -96,33 +199,38 @@
   width: auto;
   min-width: 0;
   align-self: center;
-}
-
-.scoreline-canvas .team-score-area--single .team-band .team-mark,
-.scoreline-canvas .team-score-area--single .team-band .team-score {
-  order: unset;
+  margin: 0;
 }
 
 .scoreline-canvas .team-score-area--single .team-band .team-identity {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 12px;
+  display: block;
   min-width: 0;
+  width: 100%;
 }
 
 .scoreline-canvas[data-result-single] .team-score-area--single .team-name {
-  flex: 1 1 auto;
+  display: block;
   min-width: 0;
+  max-width: 100%;
+  margin: 0;
   overflow-wrap: normal;
   word-break: normal;
-  text-wrap: balance;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Home — crest left, score right (toward centre), name row below */
 .scoreline-canvas .team-score-area--single .team-band[data-side="home"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-primary {
   grid-template-columns: 112px minmax(0, 1fr);
-  grid-template-rows: auto auto;
 }
 
 .scoreline-canvas
@@ -139,12 +247,26 @@
   .team-score {
   grid-column: 2;
   grid-row: 1;
-  justify-items: end;
+  justify-items: start;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .score-stack {
+  align-items: flex-start;
 }
 
 .scoreline-canvas .team-score-area--single .team-band[data-side="home"] .score,
 .scoreline-canvas .team-score-area--single .team-band[data-side="home"] .overs {
-  text-align: right;
+  text-align: left;
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-name {
+  text-align: left;
 }
 
 .scoreline-canvas
@@ -157,8 +279,14 @@
 
 /* Away — score left (toward centre), crest right, name row below */
 .scoreline-canvas .team-score-area--single .team-band[data-side="away"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.scoreline-canvas
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-primary {
   grid-template-columns: minmax(0, 1fr) 112px;
-  grid-template-rows: auto auto;
 }
 
 .scoreline-canvas
@@ -189,20 +317,117 @@
   .team-identity {
   grid-column: 1 / -1;
   grid-row: 2;
-  flex-direction: row-reverse;
 }
 
 .scoreline-canvas
   .team-score-area--single
   .team-band[data-side="away"]
   .team-name {
-  text-align: right;
+  text-align: left;
 }
 
-.scoreline-canvas .match-head {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+/*
+ * Both teams left — beats scoreline-results home-right + logo-band rules
+ * (higher specificity than `.team-score-area .team-band[data-logo-band-bg][data-side=home]`).
+ */
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-primary,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .team-score,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"]
+  .team-primary,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"]
+  .team-score {
+  justify-items: start;
+}
+
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="home"]
+  .score-stack,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"]
+  .score-stack {
+  align-items: flex-start;
+}
+
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="home"]
+  :is(.score, .score--prior, .overs),
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"]
+  :is(.score, .score--prior, .overs) {
+  text-align: left;
+}
+
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band
+  .team-score,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-primary,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .team-score {
+  justify-items: start;
+}
+
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="away"]
+  .score-stack {
+  align-items: flex-start;
+}
+
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-side="away"]
+  :is(.score, .score--prior, .overs) {
+  text-align: left;
+}
+
+.scoreline-canvas[data-result-single]
+  .results-ledger--single
+  .match-module--single
+  .team-band[data-side="home"]
+  .team-name,
+.scoreline-canvas[data-result-single]
+  .match-module--single
+  .team-score-area--single
+  .team-band
+  .team-name {
+  text-align: left;
+}
+
+.scoreline-canvas .match-module.match-module--single > .match-grade {
+  box-sizing: border-box;
 }
 
 .scoreline-canvas .match-grade {
@@ -233,7 +458,7 @@
   -webkit-line-clamp: 2;
 }
 
-.scoreline-canvas .match-head .result-statement {
+.scoreline-canvas .match-module.match-module--single .result-statement {
   min-width: 0;
   min-height: 0;
   padding: 7px 16px 9px;
@@ -272,4 +497,108 @@
 
 .scoreline-canvas .match-module--single .performance-heading {
   margin-bottom: 0;
+}
+
+/* Result Single — band logo background (matches full Results scoreline treatment) */
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="away"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"]
+  .team-score {
+  grid-column: 1;
+  justify-items: start;
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="away"]
+  .team-score {
+  grid-column: 1;
+  justify-items: start;
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"]
+  .team-primary {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"]
+  .team-name {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  -webkit-box-orient: unset;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="home"]
+  .team-name {
+  text-align: left;
+}
+
+.scoreline-canvas
+  .match-module--single
+  .team-score-area--single
+  .team-band[data-logo-band-bg="true"][data-side="away"]
+  .team-name {
+  text-align: left;
+}
+
+.scoreline-canvas
+  .match-module--single[data-performance-headings="off"]
+  .performance-panel
+  > .performance-row:nth-child(1):not([data-empty="true"]),
+.scoreline-canvas
+  .match-module--single[data-performance-headings="off"]
+  .performance-panel
+  > .performance-row:nth-child(2):not([data-empty="true"]) {
+  padding-top: 6px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--rule);
+}
+
+.scoreline-canvas
+  .match-module--single[data-performance-headings="off"]
+  .performance-panel
+  > .performance-row:nth-child(1):not([data-empty="true"])
+  :is(.performance-player, .performance-figure),
+.scoreline-canvas
+  .match-module--single[data-performance-headings="off"]
+  .performance-panel
+  > .performance-row:nth-child(2):not([data-empty="true"])
+  :is(.performance-player, .performance-figure) {
+  padding-bottom: 4px;
 }

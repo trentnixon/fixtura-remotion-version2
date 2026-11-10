@@ -14,6 +14,7 @@ const MatchCardNightSession: React.FC<MatchCardProps> = ({
       className={className}
       rowDelay={delay}
       exitFrame={exitFrame}
+      bandLogoBackground
     />
   );
 };

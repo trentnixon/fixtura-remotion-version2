@@ -1,6 +1,9 @@
 /* Scoreline shared polish — tokens, surfaces, contrast, layout states */
 
-.template-canvas {
+.night-session-canvas {
+  --font-display: "Teko", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+
   /* Semantic surface inputs (refined by scoreline-theme.js) */
   --surface-strong-primary: var(--club-primary);
   --surface-strong-secondary: var(--club-secondary);
@@ -78,14 +81,14 @@
   --well-shadow: var(--shadow-contact);
 
   /* Team band inset */
-  --team-band-pad: 14px;
+  --team-band-pad: 28px;
 
   /* Sponsor strip */
   --sponsor-gradient-top: transparent;
   --sponsor-gradient-base: transparent;
 
   /* Surface texture (see design/_shared/textures/manifest.json) */
-  --texture-noise-url: url("/design/_shared/textures/fine-noise.svg");
+  --texture-noise-url: var(--texture-noise-url);
   --texture-noise-size: 256px 256px;
   --texture-noise-opacity: 0.05;
   --texture-noise-opacity-header: 0.035;
@@ -114,12 +117,12 @@
 }
 
 /* Hydration-only palette / debug binds — must not paint on canvas */
-.template-canvas .fixture-palette {
+.night-session-canvas .fixture-palette {
   display: none;
 }
 
 /* —— Crease motif (shared across Scoreline assets) —— */
-.template-canvas .crease-rule {
+.night-session-canvas .crease-rule {
   display: flex;
   align-items: flex-end;
   width: 100%;
@@ -127,52 +130,52 @@
   flex: 0 0 auto;
 }
 
-.template-canvas .crease-post {
+.night-session-canvas .crease-post {
   width: var(--crease-post-width);
   height: var(--crease-post-height);
   flex: 0 0 var(--crease-post-width);
 }
 
-.template-canvas .crease-post--primary {
+.night-session-canvas .crease-post--primary {
   background: var(--club-primary);
 }
 
-.template-canvas .crease-post--secondary {
+.night-session-canvas .crease-post--secondary {
   background: var(--club-secondary);
 }
 
-.template-canvas .crease-rail {
+.night-session-canvas .crease-rail {
   flex: 1 1 auto;
   display: flex;
   height: var(--crease-rail-height);
 }
 
-.template-canvas .crease-rail__primary,
-.template-canvas .crease-rail__secondary {
+.night-session-canvas .crease-rail__primary,
+.night-session-canvas .crease-rail__secondary {
   flex: 1 1 50%;
   height: var(--crease-rail-height);
 }
 
-.template-canvas .crease-rail__primary {
+.night-session-canvas .crease-rail__primary {
   background: var(--club-primary);
 }
 
-.template-canvas .crease-rail__secondary {
+.night-session-canvas .crease-rail__secondary {
   background: var(--club-secondary);
 }
 
-.template-canvas .footer-crease {
+.night-session-canvas .footer-crease {
   flex: 0 0 auto;
   padding: 0 var(--zone-content-pad);
 }
 
-.template-canvas :is(.match-separator, .fixture-separator) {
+.night-session-canvas :is(.match-separator, .fixture-separator) {
   flex: 0 0 auto;
   margin: var(--space-4) 0;
   padding: var(--space-3) 0;
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     .match-separator,
     .fixture-separator,
@@ -184,7 +187,7 @@
   height: var(--crease-rule-height-emphasis);
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     .match-separator,
     .fixture-separator,
@@ -196,7 +199,7 @@
   height: var(--crease-post-height-emphasis);
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     .match-separator,
     .fixture-separator,
@@ -208,38 +211,38 @@
   height: var(--crease-rail-height-emphasis);
 }
 
-.template-canvas :is(.leader-crease, .ladder-crease, .totw-crease) {
+.night-session-canvas :is(.leader-crease, .ladder-crease, .totw-crease) {
   flex: 0 0 auto;
   padding: var(--space-2) 0;
 }
 
-.template-canvas .roster-crease {
+.night-session-canvas .roster-crease {
   flex: 0 0 auto;
   padding: var(--space-1) 0;
 }
 
-.template-canvas .roster-crease .crease-rule {
+.night-session-canvas .roster-crease .crease-rule {
   height: var(--crease-rule-height-compact);
 }
 
-.template-canvas .roster-crease .crease-post {
+.night-session-canvas .roster-crease .crease-post {
   height: var(--crease-post-height-compact);
 }
 
-.template-canvas
+.night-session-canvas
   .roster-crease
   :is(.crease-rail, .crease-rail__primary, .crease-rail__secondary) {
   height: var(--crease-rail-height);
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     .leaderboard-rows .leader-entry:not(:first-of-type) .leader-crease,
     .ladder-rows .ladder-entry:not(:first-of-type) .ladder-crease,
     .totw-rows .totw-entry:not(:first-of-type) .totw-crease
   )
   .crease-post--primary,
-.template-canvas
+.night-session-canvas
   :is(
     .leaderboard-rows .leader-entry:not(:first-of-type) .leader-crease,
     .ladder-rows .ladder-entry:not(:first-of-type) .ladder-crease,
@@ -249,14 +252,14 @@
   background: var(--club-secondary);
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     .leaderboard-rows .leader-entry:not(:first-of-type) .leader-crease,
     .ladder-rows .ladder-entry:not(:first-of-type) .ladder-crease,
     .totw-rows .totw-entry:not(:first-of-type) .totw-crease
   )
   .crease-post--secondary,
-.template-canvas
+.night-session-canvas
   :is(
     .leaderboard-rows .leader-entry:not(:first-of-type) .leader-crease,
     .ladder-rows .ladder-entry:not(:first-of-type) .ladder-crease,
@@ -266,12 +269,12 @@
   background: var(--club-primary);
 }
 
-.template-canvas
+.night-session-canvas
   .roster-rows
   .roster-entry:nth-of-type(even)
   .roster-crease
   .crease-post--primary,
-.template-canvas
+.night-session-canvas
   .roster-rows
   .roster-entry:nth-of-type(even)
   .roster-crease
@@ -279,12 +282,12 @@
   background: var(--club-secondary);
 }
 
-.template-canvas
+.night-session-canvas
   .roster-rows
   .roster-entry:nth-of-type(even)
   .roster-crease
   .crease-post--secondary,
-.template-canvas
+.night-session-canvas
   .roster-rows
   .roster-entry:nth-of-type(even)
   .roster-crease
@@ -292,11 +295,11 @@
   background: var(--club-primary);
 }
 
-.template-canvas[data-totw] .totw-entry:last-of-type .totw-crease {
+.night-session-canvas[data-totw] .totw-entry:last-of-type .totw-crease {
   display: none;
 }
 
-.template-canvas .performance-heading {
+.night-session-canvas .performance-heading {
   margin-bottom: var(--space-2, 8px);
   color: var(--club-primary);
   font-family: var(--font-display);
@@ -308,7 +311,7 @@
   text-transform: uppercase;
 }
 
-.template-canvas .performance-heading::after {
+.night-session-canvas .performance-heading::after {
   display: block;
   width: 28px;
   height: 2px;
@@ -317,16 +320,18 @@
   content: "";
 }
 
-.template-canvas .performance-panel:last-child .performance-heading {
+.night-session-canvas .performance-panel:last-child .performance-heading {
   color: var(--club-secondary);
 }
 
-.template-canvas .performance-panel:last-child .performance-heading::after {
+.night-session-canvas
+  .performance-panel:last-child
+  .performance-heading::after {
   background: var(--club-secondary);
 }
 
 /* —— Asset header shell —— */
-.template-canvas .scoreline-header {
+.night-session-canvas .scoreline-header {
   flex: 0 0 var(--zone-header);
   min-height: var(--zone-header);
   max-height: var(--zone-header);
@@ -337,7 +342,7 @@
   border-bottom: 0;
 }
 
-.template-canvas .header-shell {
+.night-session-canvas .header-shell {
   position: relative;
   flex: 1 1 auto;
   min-height: 0;
@@ -350,7 +355,7 @@
   box-shadow: none;
 }
 
-.template-canvas .header-shell::before {
+.night-session-canvas .header-shell::before {
   content: "";
   position: absolute;
   inset-block: 0;
@@ -364,14 +369,14 @@
   pointer-events: none;
 }
 
-.template-canvas .header-shell__main {
+.night-session-canvas .header-shell__main {
   min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(168px, 42%);
   align-items: center;
 }
 
-.template-canvas .header-identity-lockup {
+.night-session-canvas .header-identity-lockup {
   min-width: 0;
   display: grid;
   grid-template-columns: 80px minmax(0, 1fr);
@@ -380,7 +385,7 @@
   padding: 0 16px 0 20px;
 }
 
-.template-canvas .header-title-stack {
+.night-session-canvas .header-title-stack {
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -392,7 +397,7 @@
     color-mix(in srgb, var(--header-text, var(--ink)) 10%, transparent);
 }
 
-.template-canvas .header-eyebrow {
+.night-session-canvas .header-eyebrow {
   color: var(--header-text, var(--ink));
   font-family: var(--font-display);
   font-size: 21px;
@@ -403,7 +408,7 @@
   text-transform: uppercase;
 }
 
-.template-canvas .header-eyebrow::after {
+.night-session-canvas .header-eyebrow::after {
   display: block;
   width: 24px;
   height: 2px;
@@ -413,16 +418,16 @@
   content: "";
 }
 
-.template-canvas .header-shell__crease {
+.night-session-canvas .header-shell__crease {
   padding: 0 16px 8px 20px;
 }
 
-.template-canvas .header-identity {
+.night-session-canvas .header-identity {
   min-width: 0;
   overflow: hidden;
 }
 
-.template-canvas .header-identity-lockup .organisation-name {
+.night-session-canvas .header-identity-lockup .organisation-name {
   display: -webkit-box;
   overflow: hidden;
   color: var(--header-text, var(--ink));
@@ -435,8 +440,8 @@
   -webkit-line-clamp: 2;
 }
 
-.template-canvas .scoreline-header h1,
-.template-canvas .header-title-stack .header-title {
+.night-session-canvas .scoreline-header h1,
+.night-session-canvas .header-title-stack .header-title {
   min-width: 0;
   overflow: hidden;
   color: var(--header-text, var(--ink));
@@ -453,7 +458,7 @@
   white-space: normal;
 }
 
-.template-canvas .header-identity-lockup .organisation-mark {
+.night-session-canvas .header-identity-lockup .organisation-mark {
   position: relative;
   overflow: hidden;
   display: grid;
@@ -463,19 +468,19 @@
   background: transparent;
 }
 
-.template-canvas .mark-fallback {
+.night-session-canvas .mark-fallback {
   width: 42%;
   height: 42%;
   border: 3px solid currentColor;
   opacity: 0.14;
 }
 
-.template-canvas .organisation-mark[data-has-crest="true"] .mark-fallback,
-.template-canvas .organisation-mark:has(img:not([hidden])) .mark-fallback {
+.night-session-canvas .organisation-mark[data-has-crest="true"] .mark-fallback,
+.night-session-canvas .organisation-mark:has(img:not([hidden])) .mark-fallback {
   display: none;
 }
 
-.template-canvas .header-identity-lockup .organisation-mark img {
+.night-session-canvas .header-identity-lockup .organisation-mark img {
   position: absolute;
   inset: 6px;
   width: calc(100% - 12px);
@@ -484,7 +489,7 @@
 }
 
 /* —— Team score bands (match modules only) —— */
-.template-canvas .team-score-area .team-band {
+.night-session-canvas .team-score-area .team-band {
   position: relative;
   overflow: hidden;
   padding: var(--team-band-pad);
@@ -494,7 +499,215 @@
   color: var(--container-text, var(--on-surface));
 }
 
-.template-canvas .team-score-area .team-band[data-club-team="true"]::before {
+/* Team crest as band background (Results family + Top 5 + TOTW + Ladder rows) */
+.night-session-canvas
+  :is(
+    .team-band[data-logo-band-bg="true"],
+    .leader-row[data-logo-band-bg="true"],
+    .totw-row[data-logo-band-bg="true"],
+    .ladder-row[data-logo-band-bg="true"]
+  ) {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Crest bg layer (DOM — avoids ::before club/crease overrides on comparison-band) */
+.night-session-canvas
+  :is(
+    .team-band[data-logo-band-bg="true"] .team-band-logo-preload,
+    .leader-row[data-logo-band-bg="true"] > .team-band-logo-preload,
+    .totw-row[data-logo-band-bg="true"] > .team-band-logo-preload,
+    .ladder-row[data-logo-band-bg="true"] > .team-band-logo-preload
+  ) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.night-session-canvas
+  :is(
+    .team-band[data-logo-band-bg="true"] .team-band-logo-bg,
+    .leader-row[data-logo-band-bg="true"] > .team-band-logo-bg,
+    .totw-row[data-logo-band-bg="true"] > .team-band-logo-bg,
+    .ladder-row[data-logo-band-bg="true"] > .team-band-logo-bg
+  ) {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.1;
+  filter: grayscale(0.75);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.night-session-canvas
+  :is(
+    .leader-row[data-logo-band-bg="true"],
+    .totw-row[data-logo-band-bg="true"],
+    .ladder-row[data-logo-band-bg="true"]
+  )
+  > *:not(.team-band-logo-preload):not(.team-band-logo-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.night-session-canvas
+  .team-band[data-logo-band-bg="true"][data-club-team="true"]::before {
+  display: none;
+}
+
+.night-session-canvas .team-band[data-logo-band-bg="true"] .team-group {
+  position: relative;
+  z-index: 1;
+}
+
+/* Results family — stacked team band: team name → score → overs */
+.night-session-canvas .comparison-band .team-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+  width: 100%;
+  min-width: 0;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="home"]
+  .team-group {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="away"]
+  .team-group {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.night-session-canvas .comparison-band .team-score {
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.night-session-canvas .comparison-band .score-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0;
+  min-width: 0;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="home"]
+  .score-stack {
+  align-items: flex-end;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="away"]
+  .score-stack {
+  align-items: flex-start;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="home"]
+  :is(.score, .score--prior, .overs, .team-name) {
+  text-align: right;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="away"]
+  :is(.score, .score--prior, .overs, .team-name) {
+  text-align: left;
+}
+
+.night-session-canvas .comparison-band .team-identity {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Results family — pill-shaped visible containers */
+.night-session-canvas {
+  --ns-container-radius: 50px;
+}
+
+.night-session-canvas .match-module .team-score-area {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module .team-score-area::before {
+  border-radius: inherit;
+}
+
+.night-session-canvas .comparison-band .team-band {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .comparison-band .team-mark {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .result-bridge.outcome-bridge,
+.night-session-canvas .outcome-bridge {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .outcome-bridge .result-statement,
+.night-session-canvas .result-bridge.outcome-bridge .result-statement {
+  border-radius: var(--ns-container-radius);
+}
+
+.night-session-canvas .performance-area {
+  border-radius: var(--ns-container-radius);
+}
+
+.night-session-canvas .performance-row .performance-player,
+.night-session-canvas .performance-row .performance-figure {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module .match-context {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module--single.fixture-card.fixture-unit,
+.night-session-canvas .match-module--single .fixture-unit__rail,
+.night-session-canvas .match-module--single .fixture-unit__frame {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .results-ledger .match-grade,
+.night-session-canvas .header-shared-grade {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas
+  .team-score-area
+  .team-band[data-club-team="true"]::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -507,18 +720,18 @@
   pointer-events: none;
 }
 
-.template-canvas
+.night-session-canvas
   .team-score-area
   > .team-band:last-of-type[data-club-team="true"]::before {
   --team-spot-x: 72%;
 }
 
-.template-canvas .team-score-area .team-band > * {
+.night-session-canvas .team-score-area .team-band > * {
   position: relative;
   z-index: 1;
 }
 
-.template-canvas .team-score-area .team-band[data-club-team="true"] {
+.night-session-canvas .team-score-area .team-band[data-club-team="true"] {
   background: linear-gradient(
     var(--surface-gradient-angle),
     var(--team-gradient-deep-primary),
@@ -527,7 +740,7 @@
   );
 }
 
-.template-canvas .team-score-area .team-band[data-club-team="false"] {
+.night-session-canvas .team-score-area .team-band[data-club-team="false"] {
   background: linear-gradient(
     var(--surface-gradient-angle),
     var(--team-gradient-deep-secondary),
@@ -536,7 +749,7 @@
   );
 }
 
-.template-canvas
+.night-session-canvas
   .team-score-area
   > .team-band:last-of-type[data-club-team="true"] {
   background: linear-gradient(
@@ -547,7 +760,7 @@
   );
 }
 
-.template-canvas
+.night-session-canvas
   .team-score-area
   > .team-band:last-of-type[data-club-team="false"] {
   background: linear-gradient(
@@ -559,97 +772,98 @@
 }
 
 /* —— Contrast wiring (results team bands follow mode container copy) —— */
-.template-canvas .team-score-area .score {
+.night-session-canvas .team-score-area .score {
   color: var(--container-text, var(--contrast-score));
 }
 
-.template-canvas .team-score-area .team-name {
+.night-session-canvas .team-score-area .team-name {
   color: var(--container-text, var(--contrast-team));
 }
 
-.template-canvas .team-score-area .overs,
-.template-canvas .team-score-area .team-role {
+.night-session-canvas .team-score-area .overs,
+.night-session-canvas .team-score-area .team-role {
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
-.template-canvas .result-statement {
+.night-session-canvas .result-statement {
   color: var(--contrast-score);
 }
 
-.template-canvas.night-session-canvas .outcome-bridge .result-statement {
+/* Outcome pill on results — black tag, white copy (see night-session-results.css) */
+.night-session-canvas .outcome-bridge .result-statement {
   color: rgb(244 243 241 / 96%);
 }
 
-.template-canvas .performance-player {
+.night-session-canvas .performance-player {
   color: var(--contrast-performance-support);
   font-weight: 600;
 }
 
-.template-canvas .performance-area .performance-player {
+.night-session-canvas .performance-area .performance-player {
   color: var(--container-text-support, var(--contrast-performance-support));
 }
 
-.template-canvas .performance-figure {
+.night-session-canvas .performance-figure {
   color: var(--container-text, var(--contrast-performance-lead));
   font-weight: 700;
 }
 
-.template-canvas .performance-area .performance-figure {
+.night-session-canvas .performance-area .performance-figure {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas .performance-panel:last-child .performance-figure {
+.night-session-canvas .performance-panel:last-child .performance-figure {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas
+.night-session-canvas
   .performance-area
   .performance-panel:last-child
   .performance-figure {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas .performance-row[data-rank="1"] .performance-player {
+.night-session-canvas .performance-row[data-rank="1"] .performance-player {
   color: var(--contrast-performance-lead);
   font-weight: 650;
 }
 
-.template-canvas
+.night-session-canvas
   .performance-area
   .performance-row[data-rank="1"]
   .performance-player {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas .performance-row[data-rank="1"] .performance-figure {
+.night-session-canvas .performance-row[data-rank="1"] .performance-figure {
   font-weight: 800;
 }
 
-.template-canvas .performance-row[data-rank="2"] .performance-figure,
-.template-canvas .performance-row[data-rank="3"] .performance-figure {
+.night-session-canvas .performance-row[data-rank="2"] .performance-figure,
+.night-session-canvas .performance-row[data-rank="3"] .performance-figure {
   font-weight: 700;
   opacity: 0.9;
 }
 
-.template-canvas .performance-balls,
-.template-canvas .performance-empty {
+.night-session-canvas .performance-balls,
+.night-session-canvas .performance-empty {
   color: var(--contrast-meta);
 }
 
-.template-canvas .performance-area .performance-balls,
-.template-canvas .performance-area .performance-empty {
+.night-session-canvas .performance-area .performance-balls,
+.night-session-canvas .performance-area .performance-empty {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas .context-left,
-.template-canvas .match-context {
+.night-session-canvas .context-left,
+.night-session-canvas .match-context {
   color: var(
     --match-context-text-muted,
     var(--container-text-muted, var(--contrast-meta))
   );
 }
 
-.template-canvas .context-venue {
+.night-session-canvas .context-venue {
   color: var(
     --match-context-text,
     var(--container-text, var(--contrast-performance))
@@ -657,7 +871,7 @@
 }
 
 /* —— Container copy (light/lightAlt = light panel + dark text; dark/darkAlt = dark panel + white text) —— */
-.template-canvas
+.night-session-canvas
   :is(
     .match-grade,
     .performance-area,
@@ -677,7 +891,7 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     .match-grade,
     .performance-area,
@@ -704,7 +918,7 @@
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas
+.night-session-canvas
   :is(
     [data-leaderboard] .leader-name,
     [data-leaderboard] .leaderboard-category-value,
@@ -723,15 +937,15 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas :is([data-roster] .roster-index) {
+.night-session-canvas :is([data-roster] .roster-index) {
   color: var(
     --ns-roster-index-text,
     var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   );
 }
 
-.template-canvas[data-leaderboard] .leader-rank.leader-rank-tag,
-.template-canvas[data-leaderboard] .leader-rank-tag.schedule-lockup {
+.night-session-canvas[data-leaderboard] .leader-rank.leader-rank-tag,
+.night-session-canvas[data-leaderboard] .leader-rank-tag.schedule-lockup {
   color: var(
     --ns-leader-rank-text,
     var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
@@ -739,7 +953,7 @@
 }
 
 /* Container surfaces — 40% min tint via tokens; clip copy inside panel bounds */
-.template-canvas
+.night-session-canvas
   :is(
     .match-context,
     .match-grade,
@@ -762,7 +976,7 @@
 }
 
 /* —— Result statement —— */
-.template-canvas .result-statement {
+.night-session-canvas .result-statement {
   position: relative;
   isolation: isolate;
   background: linear-gradient(
@@ -776,59 +990,67 @@
 }
 
 /* —— Logo wells —— */
-.template-canvas .organisation-mark,
-.template-canvas .team-mark,
-.template-canvas .leader-mark,
-.template-canvas .ladder-mark {
+.night-session-canvas .organisation-mark,
+.night-session-canvas .team-mark,
+.night-session-canvas .leader-mark,
+.night-session-canvas .ladder-mark {
   border: var(--well-border);
   box-shadow: var(--well-shadow);
 }
 
-.template-canvas .leader-mark[data-has-crest="true"] .mark-fallback,
-.template-canvas .leader-mark:has(img:not([hidden])) .mark-fallback,
-.template-canvas .ladder-mark[data-has-crest="true"] .mark-fallback,
-.template-canvas .ladder-mark:has(img:not([hidden])) .mark-fallback {
+.night-session-canvas[data-ladder] .ladder-mark {
+  border-radius: 50%;
+}
+
+.night-session-canvas .leader-mark[data-has-crest="true"] .mark-fallback,
+.night-session-canvas .leader-mark:has(img:not([hidden])) .mark-fallback,
+.night-session-canvas .ladder-mark[data-has-crest="true"] .mark-fallback,
+.night-session-canvas .ladder-mark:has(img:not([hidden])) .mark-fallback {
   display: none;
 }
 
 /* —— Data-resilient layout states —— */
-.template-canvas .match-module[data-performance-count="1"] .performance-area {
+.night-session-canvas
+  .match-module[data-performance-count="1"]
+  .performance-area {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.template-canvas
+.night-session-canvas
   .match-module[data-performance-count="1"]
   .performance-panel[data-state="empty"] {
   display: none;
 }
 
-.template-canvas
+.night-session-canvas
   .team-score-area
   .team-band[data-has-crest="false"]
   .team-mark {
   display: none;
 }
 
-.template-canvas
+.night-session-canvas
   .team-score-area
   .team-band[data-has-crest="false"]
   .team-primary,
-.template-canvas
+.night-session-canvas
   .team-score-area
   > .team-band:last-of-type[data-has-crest="false"]
   .team-primary {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.template-canvas .organisation-mark[data-has-crest="false"] img {
+.night-session-canvas .organisation-mark[data-has-crest="false"] img {
   display: none;
 }
 
-.template-canvas .organisation-mark[data-has-crest="false"] .mark-fallback {
+.night-session-canvas
+  .organisation-mark[data-has-crest="false"]
+  .mark-fallback {
   opacity: 0.22;
 }
 
-.template-canvas .result-statement[data-length="long"] {
+.night-session-canvas .result-statement[data-length="long"] {
   display: -webkit-box;
   overflow: hidden;
   font-size: calc(var(--type-result) * 0.82);
@@ -836,53 +1058,97 @@
   -webkit-line-clamp: 2;
 }
 
+/* —— Typography roles —— */
+/* Display (--font-display): asset title lockup, intro, performance section labels.
+   Body (--font-body): names, stats, metadata, and all ledger row data. */
+.night-session-canvas
+  :is(
+    .header-shared-grade,
+    .score,
+    .overs,
+    .ladder-rank,
+    .ladder-rank.ladder-cell,
+    .ladder-team,
+    .ladder-team.ladder-cell,
+    .ladder-stat,
+    .ladder-stat--pts,
+    .leaderboard-category-value,
+    .leader-rank-tag.schedule-lockup,
+    .leader-copy .leader-name,
+    .leader-row .leader-figure,
+    .fixture-time,
+    .fixture-date,
+    .outcome-bridge .result-statement,
+    .result-bridge.outcome-bridge .result-statement,
+    .match-module .performance-row .performance-figure,
+    .match-module
+      .performance-row
+      .performance-figure
+      > span:not(.performance-balls),
+    .roster-team-name--hero,
+    .roster-schedule-line:first-child,
+    .roster-squad-team,
+    .roster-index.roster-cell,
+    .roster-player__name,
+    .roster-badge,
+    .totw-category-value,
+    .totw-name,
+    .totw-figure
+  ) {
+  font-family: var(--font-body);
+  font-stretch: normal;
+}
+
 /* —— Typography resilience —— */
-.template-canvas .team-name,
-.template-canvas .organisation-name {
+.night-session-canvas .team-name,
+.night-session-canvas .organisation-name {
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 /* Not Scoreline: global ladder/team roster rules set display names italic */
-.template-canvas :is(.team-name, .ladder-team) {
+.night-session-canvas :is(.team-name, .ladder-team) {
   font-style: normal;
 }
 
-/* —— Footer & sponsor strip —— */
-.template-canvas .asset-footer {
+/* —— Footer & sponsor strip (fits --zone-footer / theme footer 112px) —— */
+.night-session-canvas .asset-footer {
   flex: 0 0 var(--zone-footer);
   min-height: var(--zone-footer);
   max-height: var(--zone-footer);
+  box-sizing: border-box;
   padding: 0 var(--zone-pad) var(--zone-pad);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0;
+  overflow: hidden;
 }
 
-.template-canvas .sponsor-strip {
+.night-session-canvas .sponsor-strip {
   position: relative;
   width: 100%;
-  min-height: 88px;
+  min-height: 0;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: var(--space-4, 24px);
-  padding: var(--space-3, 16px) var(--space-4, 24px);
+  gap: var(--space-3, 16px);
+  padding: var(--space-2, 8px) var(--space-4, 24px);
   border: 0;
   background: transparent;
   box-shadow: none;
 }
 
-.template-canvas .sponsor-strip > * {
+.night-session-canvas .sponsor-strip > * {
   position: relative;
   z-index: 1;
 }
 
-.template-canvas .sponsor-slot {
+.night-session-canvas .sponsor-slot {
   min-width: 0;
   flex: 1 1 0;
-  min-height: 64px;
+  min-height: 0;
   padding: 0;
   display: flex;
   align-items: center;
@@ -896,13 +1162,13 @@
   color: var(--contrast-sponsor);
 }
 
-.template-canvas .sponsor-slot img {
+.night-session-canvas .sponsor-slot img {
   max-width: 100%;
-  max-height: 64px;
+  max-height: 56px;
   object-fit: contain;
 }
 
-.template-canvas .sponsor-symbol {
+.night-session-canvas .sponsor-symbol {
   width: 56px;
   height: 40px;
   flex: 0 0 auto;
@@ -911,17 +1177,17 @@
   opacity: 0.5;
 }
 
-.template-canvas[data-sponsor-state="absent"] .asset-footer {
+.night-session-canvas[data-sponsor-state="absent"] .asset-footer {
   display: none;
 }
 
-.template-canvas .team-mark {
+.night-session-canvas .team-mark {
   position: relative;
   z-index: 2;
 }
 
 /* —— Fixture matchup bands (upcoming) —— */
-.template-canvas .fixture-matchup .team-band {
+.night-session-canvas .fixture-matchup .team-band {
   position: relative;
   overflow: hidden;
   padding: var(--team-band-pad);
@@ -931,7 +1197,7 @@
   color: var(--container-text, var(--on-surface));
 }
 
-.template-canvas .fixture-matchup .team-band::before {
+.night-session-canvas .fixture-matchup .team-band::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -944,20 +1210,20 @@
   pointer-events: none;
 }
 
-.template-canvas .fixture-matchup .team-band--home::before {
+.night-session-canvas .fixture-matchup .team-band--home::before {
   --team-spot-x: 28%;
 }
 
-.template-canvas .fixture-matchup .team-band--away::before {
+.night-session-canvas .fixture-matchup .team-band--away::before {
   --team-spot-x: 72%;
 }
 
-.template-canvas .fixture-matchup .team-band > * {
+.night-session-canvas .fixture-matchup .team-band > * {
   position: relative;
   z-index: 1;
 }
 
-.template-canvas .fixture-matchup .team-band--home {
+.night-session-canvas .fixture-matchup .team-band--home {
   background: linear-gradient(
     var(--surface-gradient-angle),
     var(--team-gradient-deep-primary),
@@ -966,7 +1232,7 @@
   );
 }
 
-.template-canvas .fixture-matchup .team-band--away {
+.night-session-canvas .fixture-matchup .team-band--away {
   background: linear-gradient(
     calc(var(--surface-gradient-angle) + 180deg),
     var(--team-gradient-deep-secondary),
@@ -975,7 +1241,9 @@
   );
 }
 
-.template-canvas .fixture-matchup .team-band--home[data-club-team="false"] {
+.night-session-canvas
+  .fixture-matchup
+  .team-band--home[data-club-team="false"] {
   background: linear-gradient(
     var(--surface-gradient-angle),
     var(--team-gradient-deep-secondary),
@@ -984,7 +1252,7 @@
   );
 }
 
-.template-canvas .fixture-matchup .team-band--away[data-club-team="true"] {
+.night-session-canvas .fixture-matchup .team-band--away[data-club-team="true"] {
   background: linear-gradient(
     calc(var(--surface-gradient-angle) + 180deg),
     var(--team-gradient-deep-primary),
@@ -994,84 +1262,86 @@
 }
 
 /* Fixture team bands — mode container copy (not surface contrast) */
-.template-canvas .fixture-matchup .team-name {
+.night-session-canvas .fixture-matchup .team-name {
   color: var(--container-text, var(--contrast-team));
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
-.template-canvas .fixture-matchup .team-side-label {
+.night-session-canvas .fixture-matchup .team-side-label {
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
 
-.template-canvas
+.night-session-canvas
   .fixture-matchup
   .team-band[data-has-crest="false"]
   .team-mark {
   display: none;
 }
 
-.template-canvas .fixture-grade {
+.night-session-canvas .fixture-grade {
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
-.template-canvas .fixture-centre {
+.night-session-canvas .fixture-centre {
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
 /* —— Top 5 leaderboard —— */
-.template-canvas .leaderboard-category {
+.night-session-canvas .leaderboard-category {
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
-.template-canvas .leaderboard-category-label {
+.night-session-canvas .leaderboard-category-label {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-leaderboard] .leader-entry:first-of-type .leader-name {
+.night-session-canvas[data-leaderboard]
+  .leader-entry:first-of-type
+  .leader-name {
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 /* Top 5: #1 opacity is applied on the whole entry in night-session-top5.css */
 
-.template-canvas[data-leaderboard] .leader-name {
+.night-session-canvas[data-leaderboard] .leader-name {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas[data-leaderboard] .leader-figure,
-.template-canvas[data-leaderboard] .leader-balls,
-.template-canvas[data-leaderboard] .leader-overs {
+.night-session-canvas[data-leaderboard] .leader-figure,
+.night-session-canvas[data-leaderboard] .leader-balls,
+.night-session-canvas[data-leaderboard] .leader-overs {
   color: var(--header-text, rgb(255 255 255 / 92%));
 }
 
-.template-canvas[data-leaderboard] .leader-team-label,
-.template-canvas[data-leaderboard] .leader-team,
-.template-canvas[data-leaderboard] .leader-sr,
-.template-canvas[data-leaderboard] .leader-figure-label {
+.night-session-canvas[data-leaderboard] .leader-team-label,
+.night-session-canvas[data-leaderboard] .leader-team,
+.night-session-canvas[data-leaderboard] .leader-sr,
+.night-session-canvas[data-leaderboard] .leader-figure-label {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-leaderboard] .leader-mark[data-has-crest="false"] {
+.night-session-canvas[data-leaderboard] .leader-mark[data-has-crest="false"] {
   visibility: hidden;
 }
 
 /* —— Ladder table —— */
-.template-canvas .ladder-grade {
+.night-session-canvas .ladder-grade {
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
-.template-canvas .ladder-columns {
+.night-session-canvas .ladder-columns {
   color: var(--contrast-meta);
   border-bottom: 1px solid rgb(8 11 13 / 8%);
 }
 
-.template-canvas[data-ladder] .ladder-entry:first-of-type .ladder-team {
+.night-session-canvas[data-ladder] .ladder-entry:first-of-type .ladder-team {
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
-.template-canvas[data-ladder]
+.night-session-canvas[data-ladder]
   .ladder-rows
   .ladder-row
   :is(
@@ -1085,60 +1355,60 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas[data-ladder]
+.night-session-canvas[data-ladder]
   .ladder-rows
   .ladder-entry:nth-of-type(even)
   .ladder-row {
   box-shadow: var(--highlight-inset-light);
 }
 
-.template-canvas[data-ladder] .ladder-row[data-bias="true"] {
+.night-session-canvas[data-ladder] .ladder-row[data-bias="true"] {
   box-shadow:
     var(--match-context-inset, var(--highlight-inset-light)),
     inset 4px 0 0 var(--club-secondary);
 }
 
-.template-canvas[data-ladder] .ladder-mark[data-has-crest="false"] {
+.night-session-canvas[data-ladder] .ladder-mark[data-has-crest="false"] {
   visibility: hidden;
 }
 
 /* —— Team roster —— */
-.template-canvas[data-roster] .roster-grade.fixture-unit__rail {
+.night-session-canvas[data-roster] .roster-grade.fixture-unit__rail {
   box-shadow: var(--container-inset, inset 0 1px 0 rgb(255 255 255 / 4%));
 }
 
-.template-canvas[data-roster] .roster-grade-meta {
+.night-session-canvas[data-roster] .roster-grade-meta {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-roster] .roster-squad-header {
+.night-session-canvas[data-roster] .roster-squad-header {
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
-.template-canvas[data-roster] .roster-squad-label {
+.night-session-canvas[data-roster] .roster-squad-label {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-roster] .fixture-matchup .team-name {
+.night-session-canvas[data-roster] .fixture-matchup .team-name {
   color: var(--container-text, var(--contrast-team));
 }
 
-.template-canvas[data-roster] .roster-index {
+.night-session-canvas[data-roster] .roster-index {
   color: var(
     --ns-roster-index-text,
     var(--container-text-accent, var(--container-text, rgb(8 11 13 / 96%)))
   );
 }
 
-.template-canvas[data-roster] .roster-player {
+.night-session-canvas[data-roster] .roster-player {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas[data-roster] .roster-row[data-empty-roster="true"] {
+.night-session-canvas[data-roster] .roster-row[data-empty-roster="true"] {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-roster] .roster-context {
+.night-session-canvas[data-roster] .roster-context {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -1149,26 +1419,26 @@
   );
 }
 
-.template-canvas[data-roster] .roster-context > * {
+.night-session-canvas[data-roster] .roster-context > * {
   position: relative;
   z-index: 1;
 }
 
-.template-canvas[data-roster] .roster-context-date {
+.night-session-canvas[data-roster] .roster-context-date {
   color: var(
     --match-context-text,
     var(--container-text, var(--contrast-performance-lead))
   );
 }
 
-.template-canvas[data-roster] .roster-context-venue {
+.night-session-canvas[data-roster] .roster-context-venue {
   color: var(
     --match-context-text-muted,
     var(--container-text-muted, var(--contrast-performance))
   );
 }
 
-.template-canvas[data-roster]
+.night-session-canvas[data-roster]
   .fixture-matchup
   .team-band[data-has-crest="false"]
   .team-mark {
@@ -1176,57 +1446,56 @@
 }
 
 /* —— Team of the Week —— */
-.template-canvas .totw-category {
+.night-session-canvas .totw-category {
   box-shadow: var(--match-context-inset, var(--highlight-inset-light));
 }
 
-.template-canvas .totw-category-label {
+.night-session-canvas .totw-category-label {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-totw] .totw-name {
+.night-session-canvas[data-totw] .totw-name {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas[data-totw] .totw-figure {
+.night-session-canvas[data-totw] .totw-figure {
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.template-canvas[data-totw] .totw-role {
+.night-session-canvas[data-totw] .totw-role {
   color: var(
     --ns-performance-player,
     var(--container-text-support, var(--contrast-performance-support))
   );
 }
 
-.template-canvas[data-totw] .totw-team {
+.night-session-canvas[data-totw] .totw-team {
   color: var(
     --container-text-support,
     var(--contrast-performance-support, var(--container-text-muted))
   );
 }
 
-.template-canvas[data-totw] .totw-team-label,
-.template-canvas[data-totw] .totw-balls,
-.template-canvas[data-totw] .totw-subline {
+.night-session-canvas[data-totw] .totw-team-label,
+.night-session-canvas[data-totw] .totw-balls,
+.night-session-canvas[data-totw] .totw-subline {
   color: var(--container-text-muted, var(--contrast-meta));
 }
 
-.template-canvas[data-totw] .totw-mark[data-has-crest="false"] {
+.night-session-canvas[data-totw] .totw-mark[data-has-crest="false"] {
   visibility: hidden;
 }
 
-.template-canvas .header-shell__main,
-.template-canvas .header-shell__crease {
+.night-session-canvas .header-shell__main,
+.night-session-canvas .header-shell__crease {
   position: relative;
   z-index: 1;
 }
 
-/* —— Intro title card —— */
 /* Intro layout: night-session-intro.css */
 
 /* —— Shared surface grain (single atmospheric texture) —— */
-.template-canvas
+.night-session-canvas
   :is(
     .result-statement,
     .team-score-area .team-band,
@@ -1245,12 +1514,12 @@
   pointer-events: none;
 }
 
-.template-canvas .result-statement::after {
+.night-session-canvas .result-statement::after {
   z-index: -1;
 }
 
 /* —— Score watermark (hero / single-match only) —— */
-.template-canvas[data-score-watermark="enabled"] .score-watermark {
+.night-session-canvas[data-score-watermark="enabled"] .score-watermark {
   position: absolute;
   right: 36px;
   top: 38%;
@@ -1270,16 +1539,16 @@
   white-space: nowrap;
 }
 
-.template-canvas[data-score-watermark="enabled"] .scoreline-header,
-.template-canvas[data-score-watermark="enabled"] .results-ledger,
-.template-canvas[data-score-watermark="enabled"] .asset-footer {
+.night-session-canvas[data-score-watermark="enabled"] .scoreline-header,
+.night-session-canvas[data-score-watermark="enabled"] .results-ledger,
+.night-session-canvas[data-score-watermark="enabled"] .asset-footer {
   position: relative;
   z-index: 1;
 }
 
 /* —— Export-safe fallbacks —— */
 @supports not (color: color-mix(in srgb, white 50%, black)) {
-  .template-canvas {
+  .night-session-canvas {
     --team-surface-primary: var(--surface-strong-primary);
     --team-surface-secondary: var(--surface-strong-secondary);
     --result-gradient-core: var(--surface-ink);

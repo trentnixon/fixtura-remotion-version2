@@ -55,6 +55,10 @@ export const ScorelineTeamBand: React.FC<{
   exitFrame?: number;
   primaryTier?: ScorelineInnerTier;
   identityTier?: ScorelineInnerTier;
+  /** When false, omits “Our Team” / “Opposition” under the team name (Results Lite). */
+  showTeamRole?: boolean;
+  /** Results Lite: logo as faint band background (CSS on `.team-band`). */
+  bandLogoBackground?: boolean;
 }> = ({
   team,
   logoUrl,
@@ -66,8 +70,11 @@ export const ScorelineTeamBand: React.FC<{
   exitFrame,
   primaryTier = "rank",
   identityTier = "mark",
+  showTeamRole = true,
+  bandLogoBackground = false,
 }) => {
   const hasCrest = Boolean(logoUrl);
+  const showBandLogoBackground = bandLogoBackground && hasCrest;
   const oversValue = team.overs?.trim() ?? "";
   const animateInner = rowDelay !== undefined && exitFrame !== undefined;
   const firstInningsField =
@@ -80,10 +87,12 @@ export const ScorelineTeamBand: React.FC<{
 
   const primary = (
     <div className="team-primary">
-      <div className="team-mark">
-        <span className="mark-fallback" aria-hidden />
-        {hasCrest ? <Img src={logoUrl} alt="" /> : null}
-      </div>
+      {showBandLogoBackground ? null : (
+        <div className="team-mark">
+          <span className="mark-fallback" aria-hidden />
+          {hasCrest ? <Img src={logoUrl} alt="" /> : null}
+        </div>
+      )}
       <p
         className="team-score"
         data-has-prior-innings={scores.prior ? "true" : "false"}
@@ -108,10 +117,12 @@ export const ScorelineTeamBand: React.FC<{
   const identity = (
     <div className="team-identity">
       <h2 className="team-name">{team.name}</h2>
-      <span className="team-role">
-        <span className="club-role">Our Team</span>
-        <span className="opposition-role">Opposition</span>
-      </span>
+      {showTeamRole ? (
+        <span className="team-role">
+          <span className="club-role">Our Team</span>
+          <span className="opposition-role">Opposition</span>
+        </span>
+      ) : null}
     </div>
   );
 
@@ -121,6 +132,14 @@ export const ScorelineTeamBand: React.FC<{
       data-side={side}
       data-club-team={isClubTeam ? "true" : "false"}
       data-has-crest={hasCrest ? "true" : "false"}
+      data-logo-band-bg={showBandLogoBackground ? "true" : "false"}
+      style={
+        showBandLogoBackground
+          ? ({
+              ["--team-band-logo-url" as string]: `url("${logoUrl}")`,
+            } as React.CSSProperties)
+          : undefined
+      }
     >
       {animateInner ? (
         <ScorelineResultMatchCell
@@ -212,12 +231,15 @@ export const ScorelinePerformancePanels: React.FC<{
   hasBowling: boolean;
   /** Place bowling in the first column, under the home score, when the club is away. */
   bowlingFirst?: boolean;
+  /** When false, omits column titles (e.g. Cricket Results scoreline). */
+  showPerformanceHeadings?: boolean;
 }> = ({
   battingRows,
   bowlingRows,
   hasBatting,
   hasBowling,
   bowlingFirst = false,
+  showPerformanceHeadings = true,
 }) => {
   const battingRanks = rankFilledPerformanceRows(battingRows, "batting");
   const bowlingRanks = rankFilledPerformanceRows(bowlingRows, "bowling");
@@ -227,7 +249,9 @@ export const ScorelinePerformancePanels: React.FC<{
       className="performance-panel"
       data-state={hasBatting ? "filled" : "empty"}
     >
-      <h3 className="performance-heading">Batting</h3>
+      {showPerformanceHeadings ? (
+        <h3 className="performance-heading">Batting</h3>
+      ) : null}
       {battingRows.map((row, index) => (
         <ScorelineBattingRow
           key={`bat-${index}`}
@@ -242,7 +266,9 @@ export const ScorelinePerformancePanels: React.FC<{
       className="performance-panel"
       data-state={hasBowling ? "filled" : "empty"}
     >
-      <h3 className="performance-heading">Bowling</h3>
+      {showPerformanceHeadings ? (
+        <h3 className="performance-heading">Bowling</h3>
+      ) : null}
       {bowlingRows.map((row, index) => (
         <ScorelineBowlingRow
           key={`bowl-${index}`}

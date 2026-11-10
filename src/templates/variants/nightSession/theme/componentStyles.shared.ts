@@ -13,7 +13,7 @@ export const nightSessionComponentStylesShared = {
   },
   nightSessionSponsorStrip: {
     className:
-      "relative flex min-h-[88px] w-full items-center justify-evenly gap-6 px-6 py-4",
+      "relative flex min-h-0 w-full flex-1 items-center justify-evenly gap-4 px-6 py-2",
   },
   nightSessionAnimatedItem: {
     className: "rounded-none",

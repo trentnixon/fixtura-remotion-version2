@@ -11,14 +11,7 @@ import {
   NightSessionRosterEmptyRow,
   NightSessionRosterRow,
 } from "./NightSessionRosterRow";
-
-const RosterMetaChip: React.FC<{ value: string }> = ({ value }) => {
-  const trimmed = value?.trim() ?? "";
-  if (!trimmed) {
-    return null;
-  }
-  return <span className="roster-meta-part meta-chip">{trimmed}</span>;
-};
+import { rosterRoundLabelAfterGrade } from "./rosterRoundLabelAfterGrade";
 
 const NightSessionRosterTeamBlock: React.FC<{
   side: "home" | "away";
@@ -59,6 +52,10 @@ export const NightSessionRosterContent: React.FC<{
   const lineup = resolveScorelineRosterLineup(roster.teamRoster);
   const venue = dedupeVenueLabel(roster.ground);
   const dateLabel = formatDate(roster.date);
+  const roundLabel = rosterRoundLabelAfterGrade(
+    roster.gradeName ?? "",
+    roster.round ?? "",
+  );
 
   return (
     <main
@@ -86,12 +83,13 @@ export const NightSessionRosterContent: React.FC<{
               />
             </div>
 
-            <div className="roster-meta roster-cell">
-              <RosterMetaChip value={roster.type} />
-              <RosterMetaChip value={roster.round} />
-              <RosterMetaChip value={roster.ageGroup} />
-              <RosterMetaChip value={roster.gender} />
-            </div>
+            {roundLabel ? (
+              <div className="roster-meta-stack gap-2">
+                <p className="roster-meta-line roster-meta-line--round roster-cell">
+                  {roundLabel}
+                </p>
+              </div>
+            ) : null}
 
             <div className="roster-schedule-stack gap-2">
               {dateLabel ? (
@@ -106,7 +104,6 @@ export const NightSessionRosterContent: React.FC<{
 
         <section className="roster-lineup fixture-card fixture-unit">
           <header className="fixture-unit__rail roster-lineup__rail">
-            <span className="roster-squad-label">Line-up</span>
             <p className="roster-squad-team">{squadTeamName}</p>
           </header>
           <div className="fixture-unit__frame roster-lineup__frame">

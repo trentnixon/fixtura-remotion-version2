@@ -81,7 +81,7 @@
   --well-shadow: var(--shadow-contact);
 
   /* Team band inset */
-  --team-band-pad: 14px;
+  --team-band-pad: 28px;
 
   /* Sponsor strip */
   --sponsor-gradient-top: transparent;
@@ -499,6 +499,212 @@
   color: var(--container-text, var(--on-surface));
 }
 
+/* Team crest as band background (Results family + Top 5 + TOTW + Ladder rows) */
+.night-session-canvas
+  :is(
+    .team-band[data-logo-band-bg="true"],
+    .leader-row[data-logo-band-bg="true"],
+    .totw-row[data-logo-band-bg="true"],
+    .ladder-row[data-logo-band-bg="true"]
+  ) {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Crest bg layer (DOM — avoids ::before club/crease overrides on comparison-band) */
+.night-session-canvas
+  :is(
+    .team-band[data-logo-band-bg="true"] .team-band-logo-preload,
+    .leader-row[data-logo-band-bg="true"] > .team-band-logo-preload,
+    .totw-row[data-logo-band-bg="true"] > .team-band-logo-preload,
+    .ladder-row[data-logo-band-bg="true"] > .team-band-logo-preload
+  ) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.night-session-canvas
+  :is(
+    .team-band[data-logo-band-bg="true"] .team-band-logo-bg,
+    .leader-row[data-logo-band-bg="true"] > .team-band-logo-bg,
+    .totw-row[data-logo-band-bg="true"] > .team-band-logo-bg,
+    .ladder-row[data-logo-band-bg="true"] > .team-band-logo-bg
+  ) {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.1;
+  filter: grayscale(0.75);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.night-session-canvas
+  :is(
+    .leader-row[data-logo-band-bg="true"],
+    .totw-row[data-logo-band-bg="true"],
+    .ladder-row[data-logo-band-bg="true"]
+  )
+  > *:not(.team-band-logo-preload):not(.team-band-logo-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.night-session-canvas
+  .team-band[data-logo-band-bg="true"][data-club-team="true"]::before {
+  display: none;
+}
+
+.night-session-canvas .team-band[data-logo-band-bg="true"] .team-group {
+  position: relative;
+  z-index: 1;
+}
+
+/* Results family — stacked team band: team name → score → overs */
+.night-session-canvas .comparison-band .team-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+  width: 100%;
+  min-width: 0;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="home"]
+  .team-group {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="away"]
+  .team-group {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.night-session-canvas .comparison-band .team-score {
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.night-session-canvas .comparison-band .score-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0;
+  min-width: 0;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="home"]
+  .score-stack {
+  align-items: flex-end;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="away"]
+  .score-stack {
+  align-items: flex-start;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="home"]
+  :is(.score, .score--prior, .overs, .team-name) {
+  text-align: right;
+}
+
+.night-session-canvas
+  .comparison-band
+  .team-band[data-side="away"]
+  :is(.score, .score--prior, .overs, .team-name) {
+  text-align: left;
+}
+
+.night-session-canvas .comparison-band .team-identity {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Results family — pill-shaped visible containers */
+.night-session-canvas {
+  --ns-container-radius: 50px;
+}
+
+.night-session-canvas .match-module .team-score-area {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module .team-score-area::before {
+  border-radius: inherit;
+}
+
+.night-session-canvas .comparison-band .team-band {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .comparison-band .team-mark {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .result-bridge.outcome-bridge,
+.night-session-canvas .outcome-bridge {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .outcome-bridge .result-statement,
+.night-session-canvas .result-bridge.outcome-bridge .result-statement {
+  border-radius: var(--ns-container-radius);
+}
+
+.night-session-canvas .performance-area {
+  border-radius: var(--ns-container-radius);
+}
+
+.night-session-canvas .performance-row .performance-player,
+.night-session-canvas .performance-row .performance-figure {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module .match-context {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .match-module--single.fixture-card.fixture-unit,
+.night-session-canvas .match-module--single .fixture-unit__rail,
+.night-session-canvas .match-module--single .fixture-unit__frame {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
+.night-session-canvas .results-ledger .match-grade,
+.night-session-canvas .header-shared-grade {
+  border-radius: var(--ns-container-radius);
+  overflow: hidden;
+}
+
 .night-session-canvas
   .team-score-area
   .team-band[data-club-team="true"]::before {
@@ -792,6 +998,10 @@
   box-shadow: var(--well-shadow);
 }
 
+.night-session-canvas[data-ladder] .ladder-mark {
+  border-radius: 50%;
+}
+
 .night-session-canvas .leader-mark[data-has-crest="true"] .mark-fallback,
 .night-session-canvas .leader-mark:has(img:not([hidden])) .mark-fallback,
 .night-session-canvas .ladder-mark[data-has-crest="true"] .mark-fallback,
@@ -901,27 +1111,30 @@
   font-style: normal;
 }
 
-/* —— Footer & sponsor strip —— */
+/* —— Footer & sponsor strip (fits --zone-footer / theme footer 112px) —— */
 .night-session-canvas .asset-footer {
   flex: 0 0 var(--zone-footer);
   min-height: var(--zone-footer);
   max-height: var(--zone-footer);
+  box-sizing: border-box;
   padding: 0 var(--zone-pad) var(--zone-pad);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0;
+  overflow: hidden;
 }
 
 .night-session-canvas .sponsor-strip {
   position: relative;
   width: 100%;
-  min-height: 88px;
+  min-height: 0;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: var(--space-4, 24px);
-  padding: var(--space-3, 16px) var(--space-4, 24px);
+  gap: var(--space-3, 16px);
+  padding: var(--space-2, 8px) var(--space-4, 24px);
   border: 0;
   background: transparent;
   box-shadow: none;
@@ -935,7 +1148,7 @@
 .night-session-canvas .sponsor-slot {
   min-width: 0;
   flex: 1 1 0;
-  min-height: 64px;
+  min-height: 0;
   padding: 0;
   display: flex;
   align-items: center;
@@ -951,7 +1164,7 @@
 
 .night-session-canvas .sponsor-slot img {
   max-width: 100%;
-  max-height: 64px;
+  max-height: 56px;
   object-fit: contain;
 }
 

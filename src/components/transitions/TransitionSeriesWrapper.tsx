@@ -108,7 +108,11 @@ export const TransitionSeriesWrapper: React.FC<
   const timingFn = getTiming(timing);
 
   return (
-    <TransitionSeries>
+    <TransitionSeries
+      style={{
+        translate: "0px 10px",
+      }}
+    >
       {sequences.map((sequence, index) => (
         <React.Fragment key={index}>
           <TransitionSeries.Sequence

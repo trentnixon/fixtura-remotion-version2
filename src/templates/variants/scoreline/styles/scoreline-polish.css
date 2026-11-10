@@ -161,9 +161,9 @@
   background: var(--club-secondary);
 }
 
+/* Crease removed from footer — 112px zone is sponsor-only (see .asset-footer). */
 .scoreline-canvas .footer-crease {
-  flex: 0 0 auto;
-  padding: 0 var(--zone-content-pad);
+  display: none;
 }
 
 .scoreline-canvas :is(.match-separator, .fixture-separator) {
@@ -567,7 +567,10 @@
   color: var(--container-text, var(--contrast-team));
 }
 
-.scoreline-canvas .team-score-area .overs,
+.scoreline-canvas .team-score-area .overs {
+  color: var(--container-text, var(--contrast-score));
+}
+
 .scoreline-canvas .team-score-area .team-role {
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
 }
@@ -839,27 +842,30 @@
   text-wrap: balance;
 }
 
-/* —— Footer & sponsor strip —— */
+/* —— Footer & sponsor strip (fits --zone-footer / theme footer 112px) —— */
 .scoreline-canvas .asset-footer {
   flex: 0 0 var(--zone-footer);
   min-height: var(--zone-footer);
   max-height: var(--zone-footer);
+  box-sizing: border-box;
   padding: 0 var(--zone-pad) var(--zone-pad);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0;
+  overflow: hidden;
 }
 
 .scoreline-canvas .sponsor-strip {
   position: relative;
   width: 100%;
-  min-height: 88px;
+  min-height: 0;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: var(--space-4, 24px);
-  padding: var(--space-3, 16px) var(--space-4, 24px);
+  gap: var(--space-3, 16px);
+  padding: var(--space-2, 8px) var(--space-4, 24px);
   border: 0;
   background: transparent;
   box-shadow: none;
@@ -873,7 +879,7 @@
 .scoreline-canvas .sponsor-slot {
   min-width: 0;
   flex: 1 1 0;
-  min-height: 64px;
+  min-height: 0;
   padding: 0;
   display: flex;
   align-items: center;
@@ -889,7 +895,7 @@
 
 .scoreline-canvas .sponsor-slot img {
   max-width: 100%;
-  max-height: 64px;
+  max-height: 56px;
   object-fit: contain;
 }
 

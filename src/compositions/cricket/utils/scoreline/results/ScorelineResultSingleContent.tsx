@@ -66,22 +66,19 @@ export const ScorelineResultSingleContent: React.FC<
       <section
         className={`match-module match-module--single ${performancePanelCount === 0 ? "without-performances" : ""}`.trim()}
         data-performance-count={performancePanelCount}
+        data-performance-headings="off"
       >
-        <div className="team-score-area team-score-area--single">
-          <header className="match-head">
-            <div
-              className="match-grade"
-              data-empty={gradeLabel ? "false" : "true"}
-            >
-              <h2 className="match-grade-name">{gradeLabel}</h2>
-            </div>
-            <div className="result-bridge">
-              <p className="result-statement" data-length={resultLength}>
-                {resultText}
-              </p>
-            </div>
-          </header>
+        <div className="match-grade" data-empty={gradeLabel ? "false" : "true"}>
+          <h2 className="match-grade-name">{gradeLabel}</h2>
+        </div>
 
+        <div className="result-bridge">
+          <p className="result-statement" data-length={resultLength}>
+            {resultText}
+          </p>
+        </div>
+
+        <div className="team-score-area team-score-area--single">
           <ScorelineTeamBand
             team={match.homeTeam as ResultsMatchResult["homeTeam"]}
             matchType={match.type}
@@ -89,6 +86,8 @@ export const ScorelineResultSingleContent: React.FC<
             isClubTeam={match.homeTeam.isClubTeam || homeIsClub}
             markSize="hero"
             side="home"
+            showTeamRole={false}
+            bandLogoBackground
           />
           <div className="team-divider" aria-hidden>
             V
@@ -100,6 +99,8 @@ export const ScorelineResultSingleContent: React.FC<
             isClubTeam={match.awayTeam.isClubTeam || awayIsClub}
             markSize="hero"
             side="away"
+            showTeamRole={false}
+            bandLogoBackground
           />
         </div>
 
@@ -109,6 +110,7 @@ export const ScorelineResultSingleContent: React.FC<
           hasBatting={hasBatting}
           hasBowling={hasBowling}
           bowlingFirst={bowlingFirst}
+          showPerformanceHeadings={false}
         />
 
         <ScorelineMatchContext

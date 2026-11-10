@@ -24,11 +24,32 @@ export type ScorelineResultMatchContentProps = {
   style?: React.CSSProperties;
   rowDelay?: number;
   exitFrame?: number;
+  /** Results Lite omits player performance panels. */
+  showPerformancePanels?: boolean;
+  /** Results Lite omits type/round/ground context row. */
+  showMatchContext?: boolean;
+  /** Results Lite omits club / opposition role labels under team names. */
+  showTeamRole?: boolean;
+  /** Logo as `.team-band` background; hides inline `.team-mark` when crest exists. */
+  bandLogoBackground?: boolean;
+  /** When false, performance panels omit Batting/Bowling headings (Cricket Results scoreline). */
+  showPerformanceHeadings?: boolean;
 };
 
 export const ScorelineResultMatchContent: React.FC<
   ScorelineResultMatchContentProps
-> = ({ match, className = "", style, rowDelay, exitFrame }) => {
+> = ({
+  match,
+  className = "",
+  style,
+  rowDelay,
+  exitFrame,
+  showPerformancePanels = true,
+  showMatchContext = true,
+  showTeamRole = true,
+  bandLogoBackground = false,
+  showPerformanceHeadings = true,
+}) => {
   const { isAccountClub, club } = useVideoDataContext();
   const accountIsClub = isAccountClub || false;
   const {
@@ -59,9 +80,10 @@ export const ScorelineResultMatchContent: React.FC<
 
   return (
     <section
-      className={`match-module ${performancePanelCount === 0 ? "without-performances" : ""} ${className}`.trim()}
+      className={`match-module ${!showPerformancePanels || performancePanelCount === 0 ? "without-performances" : ""} ${className}`.trim()}
       style={style}
-      data-performance-count={performancePanelCount}
+      data-performance-count={showPerformancePanels ? performancePanelCount : 0}
+      data-performance-headings={showPerformanceHeadings ? "on" : "off"}
     >
       <div className="team-score-area">
         <ScorelineTeamBand
@@ -74,6 +96,8 @@ export const ScorelineResultMatchContent: React.FC<
           exitFrame={exitFrame}
           primaryTier="rank"
           identityTier="mark"
+          showTeamRole={showTeamRole}
+          bandLogoBackground={bandLogoBackground}
         />
         {animateInner ? (
           <ScorelineResultMatchCell
@@ -102,6 +126,8 @@ export const ScorelineResultMatchContent: React.FC<
           exitFrame={exitFrame}
           primaryTier="team"
           identityTier="away"
+          showTeamRole={showTeamRole}
+          bandLogoBackground={bandLogoBackground}
         />
       </div>
 
@@ -126,7 +152,7 @@ export const ScorelineResultMatchContent: React.FC<
         </div>
       )}
 
-      {performancePanelCount > 0 ? (
+      {showPerformancePanels && performancePanelCount > 0 ? (
         animateInner ? (
           <ScorelineResultMatchCell
             tier="performances"
@@ -140,6 +166,7 @@ export const ScorelineResultMatchContent: React.FC<
               hasBatting={hasBatting}
               hasBowling={hasBowling}
               bowlingFirst={bowlingFirst}
+              showPerformanceHeadings={showPerformanceHeadings}
             />
           </ScorelineResultMatchCell>
         ) : (
@@ -149,30 +176,33 @@ export const ScorelineResultMatchContent: React.FC<
             hasBatting={hasBatting}
             hasBowling={hasBowling}
             bowlingFirst={bowlingFirst}
+            showPerformanceHeadings={showPerformanceHeadings}
           />
         )
       ) : null}
 
-      {animateInner ? (
-        <ScorelineResultMatchCell
-          tier="context"
-          rowDelay={rowDelay}
-          exitFrame={exitFrame}
-          className="match-module__section match-module__section--context"
-        >
+      {showMatchContext ? (
+        animateInner ? (
+          <ScorelineResultMatchCell
+            tier="context"
+            rowDelay={rowDelay}
+            exitFrame={exitFrame}
+            className="match-module__section match-module__section--context"
+          >
+            <ScorelineMatchContext
+              type={match.type}
+              round={match.round}
+              ground={match.ground}
+            />
+          </ScorelineResultMatchCell>
+        ) : (
           <ScorelineMatchContext
             type={match.type}
             round={match.round}
             ground={match.ground}
           />
-        </ScorelineResultMatchCell>
-      ) : (
-        <ScorelineMatchContext
-          type={match.type}
-          round={match.round}
-          ground={match.ground}
-        />
-      )}
+        )
+      ) : null}
     </section>
   );
 };

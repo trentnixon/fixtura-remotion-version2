@@ -16,6 +16,7 @@ export const TeamScoreStack: React.FC<{
   variant?: ColorVariant;
   fontFamily?: string;
   scoreClassName?: string;
+  currentScoreClassName?: string;
 }> = ({
   scores,
   delay,
@@ -24,6 +25,7 @@ export const TeamScoreStack: React.FC<{
   variant = "onContainerCopyNoBg",
   fontFamily,
   scoreClassName = "leading-none",
+  currentScoreClassName,
 }) => {
   const alignClass =
     align === "end"
@@ -48,7 +50,11 @@ export const TeamScoreStack: React.FC<{
         animation={{ ...textAnimations.copyIn, delay: delay + 1 }}
         variant={variant}
         fontFamily={fontFamily}
-        className={scoreClassName}
+        className={
+          currentScoreClassName
+            ? `${scoreClassName} ${currentScoreClassName}`
+            : scoreClassName
+        }
       />
     </div>
   );

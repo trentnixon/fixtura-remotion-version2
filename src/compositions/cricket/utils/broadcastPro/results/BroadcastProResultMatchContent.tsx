@@ -49,6 +49,8 @@ export interface BroadcastProResultMatchContentProps {
   style?: React.CSSProperties;
   /** Hide ground from the meta strip (Result Single). */
   showGround?: boolean;
+  /** When false, omits the grade/ground meta strip (Results Lite shows grade once per screen). */
+  showMetaStrip?: boolean;
   /** Larger player stat typography for single-result hero layout. */
   playerStatsTier?: "list" | "single";
 }
@@ -63,6 +65,7 @@ export const BroadcastProResultMatchContent: React.FC<
   className = "",
   style,
   showGround = true,
+  showMetaStrip = true,
   playerStatsTier = "list",
 }) => {
   const { animations } = useAnimationContext();
@@ -193,15 +196,17 @@ export const BroadcastProResultMatchContent: React.FC<
             />
           )}
 
-          <div style={{ borderBottom: glass.border }}>
-            <BroadcastProResultMetaStrip
-              gradeLabel={buildGradeLabel(match)}
-              ground={match.ground}
-              delay={metaDelay}
-              showGround={showGround}
-              connection="attached"
-            />
-          </div>
+          {showMetaStrip ? (
+            <div style={{ borderBottom: glass.border }}>
+              <BroadcastProResultMetaStrip
+                gradeLabel={buildGradeLabel(match)}
+                ground={match.ground}
+                delay={metaDelay}
+                showGround={showGround}
+                connection="attached"
+              />
+            </div>
+          ) : null}
         </div>
 
         <BroadcastProMatchup

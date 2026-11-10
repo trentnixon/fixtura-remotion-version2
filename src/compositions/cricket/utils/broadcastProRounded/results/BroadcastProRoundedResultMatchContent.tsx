@@ -50,6 +50,8 @@ export interface BroadcastProRoundedResultMatchContentProps {
   style?: React.CSSProperties;
   /** Hide ground from the meta strip (Result Single). */
   showGround?: boolean;
+  /** When false, omits the grade/ground meta strip (Results Lite shows grade once per screen). */
+  showMetaStrip?: boolean;
   /** Larger player stat typography for single-result hero layout. */
   playerStatsTier?: "list" | "single";
   /** Frame to begin exit animations; defaults from scorecard timing. */
@@ -66,6 +68,7 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
   className = "",
   style,
   showGround = true,
+  showMetaStrip = true,
   playerStatsTier = "list",
   exitFrame: exitFrameProp,
 }) => {
@@ -203,15 +206,17 @@ export const BroadcastProRoundedResultMatchContent: React.FC<
             />
           )}
 
-          <BroadcastProRoundedResultMetaStrip
-            gradeLabel={buildGradeLabel(match)}
-            ground={match.ground}
-            delay={metaDelay}
-            showGround={showGround}
-            connection="attached"
-            exitAnimation={copyOut}
-            exitFrame={exitFrame}
-          />
+          {showMetaStrip ? (
+            <BroadcastProRoundedResultMetaStrip
+              gradeLabel={buildGradeLabel(match)}
+              ground={match.ground}
+              delay={metaDelay}
+              showGround={showGround}
+              connection="attached"
+              exitAnimation={copyOut}
+              exitFrame={exitFrame}
+            />
+          ) : null}
         </div>
 
         <BroadcastProRoundedMatchup

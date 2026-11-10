@@ -6,6 +6,8 @@ import { csClass } from "../../../utils/scoreline/componentStyles";
 import GamesListNightSession from "../GamesList/games-list-NightSession";
 import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNightSessionEnterTiming";
 import { NightSessionEnterTimingProvider } from "../../../utils/nightSession/NightSessionEnterTimingContext";
+import { groupGamesByGradeDate } from "../../../utils/nightSession/upcoming/groupGamesByGradeDate";
+import { countNightSessionUpcomingEnterItems } from "../../../utils/nightSession/upcoming/countNightSessionUpcomingEnterItems";
 import { GamesDisplayProps } from "./_types/GamesDisplayProps";
 import {
   calculateDisplayedGames,
@@ -30,12 +32,20 @@ export const FixtureDisplayNightSession: React.FC<GamesDisplayProps> = ({
 
   const mainContentHeight = getMainContentSectionHeight(heights);
   const footerSponsors = buildUpcomingFooterSponsors(displayedGames);
+  const gradeGroups = useMemo(
+    () => groupGamesByGradeDate(displayedGames),
+    [displayedGames],
+  );
   const upcomingEnterTimingOptions = useMemo(
     () => ({ rowStaggerFrames: NIGHT_SESSION_FIXTURE_ROW_STAGGER_FRAMES }),
     [],
   );
+  const enterItemCount = useMemo(
+    () => countNightSessionUpcomingEnterItems(gradeGroups),
+    [gradeGroups],
+  );
   const enterTiming = useNightSessionEnterTiming(
-    displayedGames.length,
+    enterItemCount,
     "FPS_MAIN",
     undefined,
     upcomingEnterTimingOptions,

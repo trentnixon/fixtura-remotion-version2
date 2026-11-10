@@ -51,24 +51,6 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
           >
             <div className="ladder-stack">
               <section className="ladder-table ladder-unit">
-                <AnimatedContainer
-                  type="full"
-                  size="auto"
-                  className="w-full min-w-0"
-                  backgroundColor="none"
-                  animation={innerAnimation.containerIn}
-                  animationDelay={enterTiming.innerDelay(0, "grade")}
-                  exitAnimation={innerAnimation.containerOut}
-                  exitFrame={animationOutFrame}
-                >
-                  <header
-                    className="ladder-unit__rail ladder-grade"
-                    data-empty={gradeLabel ? "false" : "true"}
-                  >
-                    <h2 className="ladder-grade-name">{gradeLabel}</h2>
-                  </header>
-                </AnimatedContainer>
-
                 <div className="ladder-unit__frame">
                   <AnimatedContainer
                     type="full"
@@ -80,10 +62,15 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
                     exitAnimation={innerAnimation.containerOut}
                     exitFrame={animationOutFrame}
                   >
-                    <div className="ladder-columns" aria-hidden>
-                      <span>#</span>
-                      <span />
-                      <span>Team</span>
+                    <div
+                      className="ladder-columns"
+                      aria-hidden
+                      data-empty={gradeLabel ? "false" : "true"}
+                    >
+                      <span className="ladder-columns__mark" aria-hidden />
+                      <span className="ladder-columns__grade ladder-grade-name">
+                        {gradeLabel}
+                      </span>
                       <span className="ladder-columns__stats">
                         <span>P</span>
                         <span>W</span>

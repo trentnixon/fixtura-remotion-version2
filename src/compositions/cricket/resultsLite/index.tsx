@@ -1,0 +1,28 @@
+import { Basic as BasicResultsLite } from "./basic";
+import { BrickWork as BrickWorkResultsLite } from "./brickWork";
+import { Classic as ClassicResultsLite } from "./classic";
+import { ClassicTwoColumn as ClassicTwoColumnResultsLite } from "./classicTwoColumn";
+import { CNSW as CNSWResultsLite } from "./cnsw";
+import { CNSWPrivate as CNSWPrivateResultsLite } from "./cnswPrivate";
+import { SixersThunder as SixersThunderResultsLite } from "./sixersThunder";
+import { Mudgeeraba as MudgeerabaResultsLite } from "./mudgeeraba";
+import { BroadcastPro as BroadcastProResultsLite } from "./broadcastPro";
+import { BroadcastProRounded as BroadcastProRoundedResultsLite } from "./broadcastProRounded";
+import { Scoreline as ScorelineResultsLite } from "./scoreline";
+import { NightSession as NightSessionResultsLite } from "./nightSession";
+
+export { BasicResultsLite as basic };
+export { BrickWorkResultsLite as brickwork };
+export { ClassicResultsLite as classic };
+export { ClassicTwoColumnResultsLite as twocolumnclassic };
+export { CNSWResultsLite as cnsw };
+export { CNSWPrivateResultsLite as cnswprivate };
+export { SixersThunderResultsLite as sixersThunder };
+export { SixersThunderResultsLite as sixers };
+export { SixersThunderResultsLite as thunder };
+export { MudgeerabaResultsLite as mudgeeraba };
+export { BroadcastProResultsLite as broadcastpro };
+export { BroadcastProRoundedResultsLite as broadcastprorounded };
+export { ScorelineResultsLite as scoreline };
+export { NightSessionResultsLite as nightSession };
+export { NightSessionResultsLite as nightsession };

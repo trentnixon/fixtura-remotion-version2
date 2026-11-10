@@ -32,6 +32,7 @@ const ResultSingleDisplayNightSession: React.FC<ResultSingleDisplayProps> = ({
           <NightSessionResultSingleContent
             match={match}
             style={{ maxHeight: mainContentHeight }}
+            bandLogoBackground
           />
         </main>
       </NightSessionAnimatedShell>

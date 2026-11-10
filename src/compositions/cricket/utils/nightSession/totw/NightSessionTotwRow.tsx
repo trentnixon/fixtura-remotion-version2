@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import { Img } from "remotion";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import type { ContainerAnimationConfig } from "../../../../../components/containers/animations";
 import type { TeamOfTheWeekPlayer } from "../../../TeamOfTheWeek/types";
@@ -19,6 +18,7 @@ import {
   withNightSessionFixtureInnerDistance,
   withNightSessionFixtureRowDistance,
 } from "../nightSessionFixtureAnimation";
+import { NightSessionTeamBandLogoBg } from "../NightSessionTeamBandLogoBg";
 
 export const NightSessionTotwRow: React.FC<{
   player: TeamOfTheWeekPlayer;
@@ -68,11 +68,16 @@ export const NightSessionTotwRow: React.FC<{
     [statsAnimation.containerOut],
   );
   const stats = formatTotwStats(player);
+  const subline =
+    stats.subline.startsWith("SR ") || stats.subline.startsWith("Econ ")
+      ? ""
+      : stats.subline;
   const logoUrl = player.club?.logo?.url;
   const rawName = player.player?.trim() ?? "";
   const playerName = formatRosterPlayerName(rawName);
   const hasName = Boolean(playerName);
   const teamName = resolveTotwTeamName(player);
+  const showRowLogoBackground = Boolean(logoUrl);
 
   return (
     <div
@@ -90,66 +95,56 @@ export const NightSessionTotwRow: React.FC<{
         exitAnimation={rowExit}
         exitFrame={rowExitFrame}
       >
-        <NightSessionInnerEnterAnim
-          animationIn={innerAnimation.containerIn}
-          animationOut={innerAnimation.containerOut}
-          animationDelay={enterTiming.innerDelay(animationDelay, "grade")}
-          exitFrame={rowExitFrame}
-          className="totw-role-rail totw-cell w-full min-w-0"
+        <article
+          className="totw-row"
+          data-logo-band-bg={showRowLogoBackground ? "true" : "false"}
         >
-          <span className="totw-role">{getTotwRoleLabel(player)}</span>
-        </NightSessionInnerEnterAnim>
-        <article className="totw-row gap-2">
+          {showRowLogoBackground && logoUrl ? (
+            <NightSessionTeamBandLogoBg logoUrl={logoUrl} />
+          ) : null}
+          <div className="totw-row__main">
+            <NightSessionAnimatedCopy
+              className="totw-copy totw-cell h-full min-h-0"
+              animationIn={copyEnter}
+              animationOut={copyExit}
+              animationDelay={enterTiming.innerDelay(animationDelay, "team")}
+              exitFrame={rowExitFrame}
+            >
+              <p className="totw-name" title={playerName}>
+                {playerName}
+              </p>
+              <p className="totw-team">{teamName}</p>
+            </NightSessionAnimatedCopy>
+            <NightSessionAnimatedCopy
+              className="totw-stats totw-cell h-full min-h-0"
+              animationIn={statsEnter}
+              animationOut={statsExit}
+              animationDelay={enterTiming.innerDelay(animationDelay, "stats")}
+              exitFrame={rowExitFrame}
+            >
+              <p className="totw-figure">
+                <span>{stats.main}</span>
+                {stats.suffix ? (
+                  <span className="totw-balls">{stats.suffix}</span>
+                ) : null}
+              </p>
+              <p
+                className="totw-subline"
+                data-empty={subline ? "false" : "true"}
+              >
+                {subline}
+              </p>
+            </NightSessionAnimatedCopy>
+          </div>
           <NightSessionInnerEnterAnim
             animationIn={innerAnimation.containerIn}
             animationOut={innerAnimation.containerOut}
-            animationDelay={enterTiming.innerDelay(animationDelay, "mark")}
+            animationDelay={enterTiming.innerDelay(animationDelay, "grade")}
             exitFrame={rowExitFrame}
-            className="totw-mark min-h-0"
+            className="totw-role-rail totw-cell w-full min-w-0"
           >
-            <div
-              className="totw-mark__surface"
-              data-has-crest={logoUrl ? "true" : "false"}
-            >
-              <span className="mark-fallback" aria-hidden />
-              {logoUrl ? <Img src={logoUrl} alt="" /> : null}
-            </div>
+            <span className="totw-role">{getTotwRoleLabel(player)}</span>
           </NightSessionInnerEnterAnim>
-          <NightSessionAnimatedCopy
-            className="totw-copy totw-cell"
-            animationIn={copyEnter}
-            animationOut={copyExit}
-            animationDelay={enterTiming.innerDelay(animationDelay, "team")}
-            exitFrame={rowExitFrame}
-          >
-            <p className="totw-name" title={playerName}>
-              {playerName}
-            </p>
-            <div className="totw-team-block">
-              <span className="totw-team-label">Played for</span>
-              <p className="totw-team">{teamName}</p>
-            </div>
-          </NightSessionAnimatedCopy>
-          <NightSessionAnimatedCopy
-            className="totw-stats totw-cell"
-            animationIn={statsEnter}
-            animationOut={statsExit}
-            animationDelay={enterTiming.innerDelay(animationDelay, "stats")}
-            exitFrame={rowExitFrame}
-          >
-            <p className="totw-figure">
-              <span>{stats.main}</span>
-              {stats.suffix ? (
-                <span className="totw-balls">{stats.suffix}</span>
-              ) : null}
-            </p>
-            <p
-              className="totw-subline"
-              data-empty={stats.subline ? "false" : "true"}
-            >
-              {stats.subline}
-            </p>
-          </NightSessionAnimatedCopy>
         </article>
       </AnimatedContainer>
     </div>

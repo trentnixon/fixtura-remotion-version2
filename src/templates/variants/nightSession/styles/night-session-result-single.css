@@ -3,7 +3,7 @@
 .night-session-canvas[data-result-single] {
   --type-score: 96px;
   --type-result: 34px;
-  --type-team: 26px;
+  --type-team: 28px;
   --type-player: 28px;
   --type-figure: 36px;
   --type-meta: 18px;
@@ -33,7 +33,8 @@
 }
 
 .night-session-canvas .match-module--single.fixture-card.fixture-unit {
-  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  border: 0;
+  border-radius: 0;
   background: transparent;
   box-shadow: none;
   overflow: hidden;
@@ -124,7 +125,7 @@
   flex-direction: column;
   align-items: stretch;
   gap: var(--space-2);
-  padding: var(--space-2);
+  padding: 2px;
 }
 
 .night-session-canvas .comparison-band--single .comparison-band__spine {
@@ -144,132 +145,24 @@
   flex: 0 0 auto;
   width: 100%;
   min-width: 0;
-  padding: 16px 18px 14px;
+  padding: 32px 36px 28px;
   display: block;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
   background: var(--ns-performance-row-bg, rgb(10 12 14 / 65%));
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
 }
 
-/* Inner layout: crest column + score (vert centered) + full-width name row */
-.night-session-canvas .comparison-band--single .team-group {
-  width: 100%;
-  min-width: 0;
-  display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  column-gap: 12px;
-  row-gap: 14px;
-  align-content: start;
-}
-
 .night-session-canvas .comparison-band--single .team-mark {
-  grid-column: 1;
-  grid-row: 1;
   flex: none;
   width: 96px;
   height: 96px;
   max-width: 96px;
   max-height: 96px;
-  justify-self: start;
 }
 
 .night-session-canvas .comparison-band--single .team-mark img {
   max-width: calc(100% - 10px);
   max-height: calc(100% - 10px);
-}
-
-.night-session-canvas .comparison-band--single .team-score {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: center;
-  justify-self: end;
-  margin: 0;
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: 4px;
-  align-content: center;
-  min-width: 0;
-  text-align: right;
-}
-
-.night-session-canvas .comparison-band--single .score-stack {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  gap: 0;
-  min-width: 0;
-  align-items: flex-end;
-}
-
-.night-session-canvas .comparison-band--single .team-score:has(.score--prior) {
-  gap: 2px;
-}
-
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="home"]
-  .score,
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="home"]
-  .score--prior,
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="home"]
-  .overs,
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .score,
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .score--prior,
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .overs {
-  text-align: right;
-}
-
-.night-session-canvas .comparison-band--single .team-identity {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  width: 100%;
-  min-width: 0;
-  display: block;
-}
-
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .team-name {
-  text-align: left;
-}
-
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .team-group {
-  grid-template-columns: 96px minmax(0, 1fr);
-}
-
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .team-mark {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.night-session-canvas
-  .comparison-band--single
-  .team-band[data-side="away"]
-  .team-score {
-  grid-column: 2;
-  justify-self: end;
-  text-align: right;
 }
 
 .night-session-canvas .comparison-band--single .team-name {
@@ -280,7 +173,6 @@
   font-size: var(--type-team);
   font-weight: 600;
   line-height: 1.15;
-  text-align: left;
   color: var(--container-text, var(--contrast-team));
 }
 
@@ -289,19 +181,54 @@
   font-size: var(--type-score);
   font-weight: 700;
   line-height: 0.88;
-  text-align: right;
+  text-align: center;
   color: var(--container-text, var(--contrast-score));
 }
 
 .night-session-canvas .comparison-band--single .score--prior {
   font-size: calc(var(--type-score) * 0.4);
   line-height: 1;
-  text-align: right;
+  text-align: center;
   color: var(--container-text, var(--contrast-score));
 }
 
 .night-session-canvas .comparison-band--single .overs {
   color: var(--container-text-muted, var(--contrast-meta-on-surface));
+}
+
+/* Centre stack — override shared home-right / away-left (Result Single only) */
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .team-group,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .team-group {
+  align-items: center;
+  text-align: center;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  .score-stack,
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  .score-stack {
+  align-items: center;
+}
+
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="home"]
+  :is(.score, .score--prior, .overs, .team-name),
+.night-session-canvas
+  .comparison-band--single
+  .team-band[data-side="away"]
+  :is(.score, .score--prior, .overs, .team-name) {
+  text-align: center;
 }
 
 .night-session-canvas .comparison-band--single .team-mark {

@@ -4,6 +4,7 @@ export type ScorelineCanvasDataset = {
   "data-roster"?: "";
   "data-totw"?: "";
   "data-result-single"?: "";
+  "data-upcoming"?: "";
 };
 
 export const resolveScorelineCanvasDataset = (
@@ -26,6 +27,8 @@ export const resolveScorelineCanvasDataset = (
       return { "data-totw": "" };
     case "CricketResultSingle":
       return { "data-result-single": "" };
+    case "CricketUpcoming":
+      return { "data-upcoming": "" };
     default:
       return {};
   }

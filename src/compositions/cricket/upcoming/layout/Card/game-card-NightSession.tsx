@@ -84,7 +84,7 @@ const NightSessionOpponentSide: React.FC<{
         className={`team-name fixture-opponent__cell fixture-opponent__cell--name team-band team-band--${side}`}
         data-club-team={isClubTeam ? "true" : "false"}
       >
-        {teamName}
+        <span className="team-name__copy">{teamName}</span>
       </p>
     </div>
   );
@@ -109,12 +109,8 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
     game.teamAway,
     club?.name,
   );
-  const gradeLabel = game.gradeName?.trim() ?? "";
   const venue = dedupeVenueLabel(game.ground);
-  const roundLabel = game.round?.trim() ?? "";
-  const ageLabel = game.ageGroup?.trim() ?? "";
   const timeLabel = game.time?.trim() ?? "";
-
   const fixtureRowEnter = useMemo(
     () => ({
       ...rowAnimation.containerIn,
@@ -143,32 +139,6 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
         exitFrame={animationOutFrame}
       >
         <div className="fixture-unit__frame gap-2">
-          <NightSessionFixtureAnim
-            animationIn={innerAnimation.containerIn}
-            animationOut={innerAnimation.containerOut}
-            animationDelay={enterTiming.innerDelay(rowDelay, "home")}
-            animationOutFrame={animationOutFrame}
-          >
-            <div className="schedule-bridge">
-              <div className="schedule-bridge__rule" aria-hidden />
-              <div className="schedule-lockup">
-                <h2
-                  className="fixture-grade-name"
-                  data-empty={gradeLabel ? "false" : "true"}
-                >
-                  {gradeLabel}
-                </h2>
-                <p
-                  className="fixture-time"
-                  data-empty={timeLabel ? "false" : "true"}
-                >
-                  {timeLabel}
-                </p>
-                <p className="fixture-date">{game.date}</p>
-              </div>
-            </div>
-          </NightSessionFixtureAnim>
-
           <NightSessionFixtureAnim
             animationIn={innerAnimation.containerIn}
             animationOut={innerAnimation.containerOut}
@@ -201,14 +171,13 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
             animationOutFrame={animationOutFrame}
           >
             <div className="match-context gap-2">
-              <p className="context-left">
-                <span>{game.type}</span>
-                <span className="context-separator" aria-hidden />
-                <span>{roundLabel}</span>
-                <span className="context-separator" aria-hidden />
-                <span>{ageLabel}</span>
-              </p>
               <p className="context-venue">{venue}</p>
+              <p
+                className="context-right fixture-time-slot"
+                data-empty={timeLabel ? "false" : "true"}
+              >
+                {timeLabel}
+              </p>
             </div>
           </NightSessionFixtureAnim>
         </div>

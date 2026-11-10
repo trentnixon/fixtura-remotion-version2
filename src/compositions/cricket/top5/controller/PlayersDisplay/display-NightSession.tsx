@@ -65,7 +65,7 @@ const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
               <span className="leaderboard-category-label">Grade</span>
               <p className="leaderboard-category-value">{categoryLabel}</p>
             </div>
-            <div className="leaderboard-rows">
+            <div className="leaderboard-rows gap-8">
               {players.map((player, index) => (
                 <NightSessionLeaderRow
                   key={`${player.name}-${index}`}

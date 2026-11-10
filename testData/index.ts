@@ -2,6 +2,7 @@
 // Cricket
 import CricketLadder from "./samples/Cricket/Cricket_Ladder.json";
 import CricketResults from "./samples/Cricket/Cricket_Results.json";
+import CricketResultsLite from "./samples/Cricket/Cricket_ResultsLite.json";
 import CricketRoster from "./samples/Cricket/Cricket_Roster.json";
 import CricketResultSingle from "./samples/Cricket/Cricket_WeekendResultsSingle.json";
 import CricketTop5Batting from "./samples/Cricket/Cricket_Top5Batters.json";
@@ -39,6 +40,7 @@ export const testDatasets: DatasetRecord = {
   CricketLadder: CricketLadder,
   CricketUpcoming: CricketUpcoming,
   CricketResults: CricketResults,
+  CricketResultsLite: CricketResultsLite,
 
   CricketResultSingle: CricketResultSingle,
   CricketTop5Batting: CricketTop5Batting,
@@ -72,6 +74,7 @@ export const datasetsByCategory: DatasetCategories = {
     { id: "CricketBattingPerformances", name: "Batting Performances" },
     { id: "CricketBowlingPerformances", name: "Bowling Performances" },
     { id: "CricketResults", name: "Results" },
+    { id: "CricketResultsLite", name: "Results" },
     { id: "CricketRoster", name: "Roster" },
     { id: "CricketResultSingle", name: "Single Game Result" },
     { id: "CricketTeamOfTheWeek", name: "Team of the Week" },

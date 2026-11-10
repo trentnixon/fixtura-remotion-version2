@@ -1,8 +1,20 @@
-/* Night Session intro — synced with design/_shared/night-session-intro.css */
+/* Night Session intro — aligned with asset header + performance pill tokens */
 
 .night-session-canvas.night-session-intro {
-  --type-intro-title: 72px;
-  --intro-mark-size: 96px;
+  --zone-pad: 12px;
+  --zone-header: 148px;
+  --content-inset: 12px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 20px;
+  --intro-mark-size: 72px;
+  --type-intro-title: 56px;
+  --type-intro-eyebrow: 16px;
+  --ns-container-radius: 50px;
+  --header-text: rgb(244 243 241 / 96%);
+  --font-display: "Teko", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+
   height: 100%;
   min-height: 100%;
   display: flex;
@@ -18,8 +30,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: var(--zone-pad, 12px) var(--content-inset, 28px)
-    calc(var(--zone-pad, 12px) + 12px);
+  padding: var(--zone-pad) var(--content-inset)
+    calc(var(--zone-pad) + var(--space-3));
 }
 
 .night-session-intro__main {
@@ -42,21 +54,24 @@
   isolation: isolate;
   width: 100%;
   overflow: hidden;
+  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  border-radius: var(--ns-container-radius);
   background: var(
-    --container-surface,
-    var(
-      --match-context-surface,
-      color-mix(in srgb, var(--surface-muted, #0f1418) 88%, transparent)
-    )
-  );
+    --ns-performance-row-bg,
+    var(--container-surface, rgb(10 12 14 / 65%))
+  ) !important;
   box-shadow: var(
     --container-inset,
-    var(--match-context-inset, var(--highlight-inset-light))
-  );
+    inset 0 1px 0 rgb(255 255 255 / 4%)
+  ) !important;
   color: var(--container-text, var(--on-surface));
 }
 
 .night-session-canvas.night-session-intro .ns-header {
+  flex: 0 0 var(--zone-header);
+  min-height: var(--zone-header);
+  max-height: var(--zone-header);
+  padding: var(--zone-pad) var(--content-inset) 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -72,6 +87,9 @@
 
 .night-session-canvas.night-session-intro .ns-accent-wedge {
   position: absolute;
+  top: 18px;
+  left: calc(50% - 120px);
+  width: 240px;
   height: 2px;
   background: linear-gradient(
     90deg,
@@ -84,8 +102,8 @@
 
 .night-session-canvas.night-session-intro .ns-accent-lines {
   position: absolute;
-  top: 28px;
-  right: calc(var(--content-inset, 28px) + var(--intro-mark-size) - 12px);
+  top: 22px;
+  right: calc(var(--content-inset) + 84px);
   width: 36px;
   height: 18px;
   background: repeating-linear-gradient(
@@ -100,10 +118,17 @@
 
 .night-session-canvas.night-session-intro .ns-header__mark {
   position: absolute;
-  right: var(--content-inset, 28px);
+  top: calc(var(--zone-pad) + 4px);
+  right: var(--content-inset);
+  width: var(--intro-mark-size);
+  height: var(--intro-mark-size);
   display: grid;
   place-items: center;
   z-index: 2;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 8%);
+  background: rgb(0 0 0 / 28%);
 }
 
 .night-session-canvas.night-session-intro .ns-header__mark img {
@@ -121,37 +146,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 6px;
+  min-height: 0;
+  padding: 8px calc(var(--intro-mark-size) + 16px) 10px;
   text-align: center;
 }
 
 .night-session-canvas.night-session-intro .header-eyebrow,
 .night-session-canvas.night-session-intro .header-title {
+  margin: 0;
   font-family: var(--font-display);
   text-transform: uppercase;
-  margin: 0;
-}
-
-.night-session-canvas.night-session-intro .ns-header--intro {
-  flex: none;
-  min-height: 0;
-  max-height: none;
-  padding: 28px var(--content-inset, 28px) 32px;
-}
-
-.night-session-canvas.night-session-intro .ns-header__mark {
-  top: calc(var(--zone-pad, 12px) + 12px);
-  width: var(--intro-mark-size);
-  height: var(--intro-mark-size);
-}
-
-.night-session-canvas.night-session-intro .ns-header__lockup {
-  padding: 12px calc(var(--intro-mark-size) + 16px) 8px;
-  gap: 10px;
 }
 
 .night-session-canvas.night-session-intro .header-eyebrow {
-  font-size: 18px;
-  letter-spacing: 0.22em;
+  font-size: var(--type-intro-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 1;
   color: var(
     --container-text-muted,
     var(--match-context-text-muted, rgb(244 243 241 / 52%))
@@ -160,17 +172,14 @@
 
 .night-session-canvas.night-session-intro .header-title {
   font-size: var(--type-intro-title);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 0.94;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 0.92;
   text-wrap: balance;
-  color: var(--container-text, var(--match-context-text, var(--on-surface)));
-}
-
-.night-session-canvas.night-session-intro .ns-accent-wedge {
-  top: 24px;
-  left: calc(50% - 140px);
-  width: 280px;
+  color: var(
+    --header-text,
+    var(--container-text, var(--match-context-text, var(--on-surface)))
+  );
 }
 
 .night-session-intro__sponsors {
@@ -182,8 +191,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  gap: var(--space-4, 24px);
-  padding: var(--space-3, 16px) var(--space-2, 8px) 0;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-2) 0;
 }
 
 .night-session-intro__sponsors:empty {

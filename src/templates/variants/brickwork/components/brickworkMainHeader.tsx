@@ -1,7 +1,6 @@
 // BrickworkMainHeader.tsx
 
 import { AnimatedText } from "../../../../components/typography/AnimatedText";
-import { TwoColumnHeaderTitleName } from "../../../../components/layout/main/header";
 import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
@@ -30,12 +29,13 @@ export const BrickworkMainHeader = () => {
 
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
   return (
-    <TwoColumnHeaderTitleName
-      height={heights.header}
-      alignment="center"
-      Logo={
-        <div className="w-full h-full flex justify-center items-center ">
-          <div className="w-full h-full flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
+    <div
+      className="w-full p-0 justify-center flex items-center"
+      style={{ height: `${heights.header}px` }}
+    >
+      <div className="flex justify-center items-center w-full p-2 gap-8">
+        <div className="flex shrink-0 justify-center items-center">
+          <div className="flex justify-center items-center rounded-none max-h-[120px] max-w-[150px]">
             <AnimatedImage
               src={club.logo?.url}
               width={"auto"}
@@ -48,45 +48,43 @@ export const BrickworkMainHeader = () => {
             />
           </div>
         </div>
-      }
-      Title={
-        <div ref={containerRef} className="w-full overflow-hidden">
-          <div ref={textRef}>
-            <AnimatedText
-              textAlign="left"
-              type="compositionName"
-              variant="onContainerTitle"
-              letterAnimation="none"
-              animation={TextAnimations.title}
-              exitAnimation={TextAnimations.copyOut}
-              exitFrame={exitFrame}
-              fontFamily={
-                fontClasses.compositionName?.family ??
-                fontClasses.heading?.family ??
-                displayFont
-              }
-              className={BRICKWORK_HEADER_TITLE_BASE_CLASS}
-              style={fontSizeStyle}
-            >
-              {title}
-            </AnimatedText>
+        <div className="flex min-w-0 flex-col justify-center items-start">
+          <div ref={containerRef} className="w-full overflow-hidden">
+            <div ref={textRef}>
+              <AnimatedText
+                textAlign="left"
+                type="compositionName"
+                variant="onContainerTitle"
+                letterAnimation="none"
+                animation={TextAnimations.title}
+                exitAnimation={TextAnimations.copyOut}
+                exitFrame={exitFrame}
+                fontFamily={
+                  fontClasses.compositionName?.family ??
+                  fontClasses.heading?.family ??
+                  displayFont
+                }
+                className={BRICKWORK_HEADER_TITLE_BASE_CLASS}
+                style={fontSizeStyle}
+              >
+                {title}
+              </AnimatedText>
+            </div>
           </div>
+          <AnimatedText
+            fontFamily={fontClasses.subheading?.family ?? copyFont}
+            type="compositionNameSmall"
+            textAlign="left"
+            variant="onContainerTitle"
+            letterAnimation="word"
+            animation={TextAnimations.title}
+            exitAnimation={TextAnimations.copyOut}
+            exitFrame={exitFrame}
+          >
+            {club.name}
+          </AnimatedText>
         </div>
-      }
-      Name={
-        <AnimatedText
-          fontFamily={fontClasses.subheading?.family ?? copyFont}
-          type="compositionNameSmall"
-          textAlign="left"
-          variant="onContainerTitle"
-          letterAnimation="word"
-          animation={TextAnimations.title}
-          exitAnimation={TextAnimations.copyOut}
-          exitFrame={exitFrame}
-        >
-          {club.name}
-        </AnimatedText>
-      }
-    />
+      </div>
+    </div>
   );
 };

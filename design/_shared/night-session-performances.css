@@ -1,41 +1,56 @@
 /* Night Session performances — density when a screen shows more than five rows */
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard] .leaderboard-rows[data-density] {
+  row-gap: var(--leader-stack-gap) !important;
+  column-gap: 0;
+  gap: var(--leader-stack-gap) !important;
+}
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-row,
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-row {
+  column-gap: var(--space-2);
+}
+
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="compact"] {
   --leader-player-row-height: 88px;
   --type-leader-mark: 88px;
-  --type-leader-name: 48px;
-  --type-leader-figure: 42px;
+  --type-leader-name: 50px;
+  --type-leader-figure: 44px;
   --type-leader-rank: 38px;
-  --leader-stack-gap: 2px;
+  --leader-stack-gap: var(--space-4);
   --leader-rank-bridge-overlap: 10px;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="tight"] {
   --leader-player-row-height: 76px;
   --type-leader-mark: 76px;
-  --type-leader-name: 42px;
-  --type-leader-figure: 36px;
+  --type-leader-name: 44px;
+  --type-leader-figure: 38px;
   --type-leader-rank: 34px;
-  --type-leader-team: 16px;
-  --leader-stack-gap: 0px;
+  --type-leader-team: 21px;
+  --leader-stack-gap: var(--space-2);
   --leader-rank-bridge-overlap: 8px;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="compact"]
   .leader-rank-bridge.schedule-bridge,
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="tight"]
   .leader-rank-bridge.schedule-bridge {
   min-height: 34px;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="compact"]
   .leader-rank-tag.schedule-lockup,
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="tight"]
   .leader-rank-tag.schedule-lockup {
   min-width: 72px;
@@ -43,9 +58,36 @@
   padding: 6px 28px;
 }
 
-.template-canvas.night-session-canvas[data-leaderboard]
+.night-session-canvas[data-leaderboard]
   .leaderboard-rows[data-density="tight"]
   .leader-row
-  .leader-cell {
-  padding: 6px 10px;
+  .leader-copy.leader-cell,
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-row
+  .leader-figure.leader-cell {
+  padding: 0 12px;
+}
+
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-row
+  .leader-copy.leader-cell,
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-row
+  .leader-figure.leader-cell {
+  padding: 0 12px;
+}
+
+/* Performances density — crest stays flush to row pill (no cell inset on mark) */
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="compact"]
+  .leader-row
+  .leader-mark.leader-cell,
+.night-session-canvas[data-leaderboard]
+  .leaderboard-rows[data-density="tight"]
+  .leader-row
+  .leader-mark.leader-cell {
+  padding: 0;
 }

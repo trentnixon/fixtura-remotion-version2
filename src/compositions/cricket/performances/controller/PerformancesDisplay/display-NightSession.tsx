@@ -84,7 +84,7 @@ const PerformancesDisplayNightSession: React.FC<PerformancesDisplayProps> = ({
               <p className="leaderboard-category-value">{categoryLabel}</p>
             </div>
             <div
-              className="leaderboard-rows gap-2"
+              className="leaderboard-rows gap-8"
               {...(density ? { "data-density": density } : {})}
             >
               {displayedPerformances.map((performance, index) => (

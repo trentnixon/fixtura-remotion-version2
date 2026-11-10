@@ -44,12 +44,11 @@ export const NightSessionTotwContent: React.FC<{
             className="totw-category totw-unit__rail"
             data-empty={categoryLabel ? "false" : "true"}
           >
-            <span className="totw-category-label">Round</span>
             <p className="totw-category-value">{categoryLabel}</p>
           </header>
 
           <div className="totw-unit__frame">
-            <div className="totw-columns gap-12" data-density={density}>
+            <div className="totw-columns gap-2" data-density={density}>
               {columns.map((columnPlayers, columnIndex) => (
                 <div
                   key={columnIndex}

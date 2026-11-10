@@ -43,7 +43,7 @@ export const NightSessionIntro: React.FC = () => {
               exitFrame={introExitFrame}
             >
               <div className="night-session-intro__panel">
-                <header className="ns-header ns-header--intro">
+                <header className="ns-header">
                   <div className="ns-header__accent" aria-hidden>
                     <span className="ns-accent-wedge" />
                     <span className="ns-accent-lines" />

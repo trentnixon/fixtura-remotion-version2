@@ -18,13 +18,12 @@ export const NightSessionRosterRow: React.FC<{
   index: number;
   name: string;
   badges: ScorelineRosterBadge[];
-}> = ({ index, name, badges }) => {
+}> = ({ name, badges }) => {
   const displayName = formatRosterPlayerName(name);
 
   return (
     <div className="roster-entry">
       <div className="roster-row gap-2">
-        <span className="roster-index roster-cell">{index}</span>
         <div className="roster-player roster-cell">
           <p className="roster-player__name" title={displayName}>
             {displayName}
@@ -43,7 +42,6 @@ export const NightSessionRosterEmptyRow: React.FC<{ message: string }> = ({
 }) => (
   <div className="roster-entry">
     <div className="roster-row gap-2" data-empty-roster="true">
-      <span className="roster-index roster-cell" hidden />
       <div className="roster-player roster-cell">
         <p className="roster-player__name">{message}</p>
       </div>

@@ -1,148 +1,350 @@
 {
   "data": [
     {
-      "date": "Sat, 10 Oct",
-      "time": "10:30 AM",
-      "type": "Two day Round 1",
-      "round": "Round 1",
-      "gameID": "9326fc40",
-      "gender": "Men",
-      "ground": "Nelson Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Napier Tech Complete Flooring Prems vs NOBMCC Prems, Date and Time: 2026-10-10, 10:30 AM, Location: Nelson Park\n- Round: Round 1, Match Type: Two day Round 1\n- League: Property Brokers Premier Mens",
-      "ageGroup": "Senior/Open",
-      "teamAway": "NOBMCC Prems",
-      "teamHome": "Napier Tech Complete Flooring Prems",
-      "gradeName": "Property Brokers Premier Mens",
+      "date": "Fri, 30 Oct",
+      "time": "05:15 PM",
+      "type": "One Day",
+      "round": "Round 3",
+      "gameID": "5bfbd9bb",
+      "gender": "Mixed",
+      "ground": "Clifton Park (Aberfeldie)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Aberfeldie Healy vs Buckley Park Green, Date and Time: 2026-10-30, 05:15 PM, Location: Clifton Park (Aberfeldie)\n- Round: Round 3, Match Type: One Day\n- League: U10 Mixed Friday",
+      "ageGroup": "U10",
+      "teamAway": "Buckley Park Green",
+      "teamHome": "Aberfeldie Healy",
+      "gradeName": "U10 Mixed Friday",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/NOBMCC_PNG_6687045781.png",
-        "width": 944,
-        "height": 960
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Napier_tech_Transparent_a29d95e481.png",
-        "width": 490,
-        "height": 386
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5aea716fd4.jpg",
+        "width": 400,
+        "height": 400
       },
       "assignSponsors": {
         "team": [],
         "grade": [],
         "competition": []
       },
-      "gradeSortOrder": 0,
+      "gradeSortOrder": null,
       "primaryForScreen": [
         {
-          "id": 232,
+          "id": 1225,
           "logo": {
-            "id": 6129,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Property_Brokers_Primary_Reverse_CMYK_Clear_Indicators_2_Trans_144d8ba32a.png"
+            "id": 8430,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ihh_logo_2_1_Hi_Res_903190eb1d.jpeg"
           },
-          "name": "Property Brokers"
+          "name": "I.H.Hunter"
+        },
+        {
+          "id": 1228,
+          "logo": {
+            "id": 16683,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/20745b1567e56576678f9c5651261aefdf5f43ab14d71d5fbff887f7463a1d7d_cropped_af99048ef2.png"
+          },
+          "name": "Anglers Tavern"
+        },
+        {
+          "id": 1227,
+          "logo": {
+            "id": 8432,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6290833527c20a6852209567_og_banner_10b144fc62.jpg"
+          },
+          "name": "Rudolf Horvat & Associates"
+        },
+        {
+          "id": 1226,
+          "logo": {
+            "id": 8431,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/KH_1_a1bf5f9e1e.png"
+          },
+          "name": "KH1"
         }
       ],
-      "gradeResolvedPosition": 0
+      "gradeResolvedPosition": null
     },
     {
-      "date": "Sat, 10 Oct",
-      "time": "10:30 AM",
-      "type": "Two day Round 1",
-      "round": "Round 1",
-      "gameID": "cbf1a25d",
-      "gender": "Men",
-      "ground": "Nelson Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Cornwall Prems vs Taradale Gallagher Insurance Prems, Date and Time: 2026-10-10, 10:30 AM, Location: Nelson Park\n- Round: Round 1, Match Type: Two day Round 1\n- League: Property Brokers Premier Mens",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Taradale Gallagher Insurance Prems",
-      "teamHome": "Cornwall Prems",
-      "gradeName": "Property Brokers Premier Mens",
+      "date": "Fri, 30 Oct",
+      "time": "05:15 PM",
+      "type": "One Day",
+      "round": "Round 3",
+      "gameID": "e1eedce8",
+      "gender": "Mixed",
+      "ground": "Clifton Park (Aberfeldie)",
+      "prompt": "Upcoming cricket match details:\n- Teams: Aberfeldie Warne vs Buckley Park Yellow, Date and Time: 2026-10-30, 05:15 PM, Location: Clifton Park (Aberfeldie)\n- Round: Round 3, Match Type: One Day\n- League: U10 Mixed Friday",
+      "ageGroup": "U10",
+      "teamAway": "Buckley Park Yellow",
+      "teamHome": "Aberfeldie Warne",
+      "gradeName": "U10 Mixed Friday",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5e07e99854.jpg",
-        "width": 1000,
-        "height": 1000
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3018ce5321.jpg",
-        "width": 600,
-        "height": 600
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_5aea716fd4.jpg",
+        "width": 400,
+        "height": 400
       },
       "assignSponsors": {
         "team": [],
         "grade": [],
         "competition": []
       },
-      "gradeSortOrder": 0,
+      "gradeSortOrder": null,
       "primaryForScreen": [
         {
-          "id": 232,
+          "id": 1225,
           "logo": {
-            "id": 6129,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Property_Brokers_Primary_Reverse_CMYK_Clear_Indicators_2_Trans_144d8ba32a.png"
+            "id": 8430,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ihh_logo_2_1_Hi_Res_903190eb1d.jpeg"
           },
-          "name": "Property Brokers"
+          "name": "I.H.Hunter"
+        },
+        {
+          "id": 1228,
+          "logo": {
+            "id": 16683,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/20745b1567e56576678f9c5651261aefdf5f43ab14d71d5fbff887f7463a1d7d_cropped_af99048ef2.png"
+          },
+          "name": "Anglers Tavern"
+        },
+        {
+          "id": 1227,
+          "logo": {
+            "id": 8432,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6290833527c20a6852209567_og_banner_10b144fc62.jpg"
+          },
+          "name": "Rudolf Horvat & Associates"
+        },
+        {
+          "id": 1226,
+          "logo": {
+            "id": 8431,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/KH_1_a1bf5f9e1e.png"
+          },
+          "name": "KH1"
         }
       ],
-      "gradeResolvedPosition": 0
+      "gradeResolvedPosition": null
     },
     {
-      "date": "Sat, 10 Oct",
-      "time": "10:30 AM",
-      "type": "Two day Round 1",
-      "round": "Round 1",
-      "gameID": "2ff89d27",
-      "gender": "Men",
-      "ground": "Nelson Park",
-      "prompt": "Upcoming cricket match details:\n- Teams: Central HB Premier Mens vs Havelock North CC - Summit Capital - Prems, Date and Time: 2026-10-10, 10:30 AM, Location: Nelson Park\n- Round: Round 1, Match Type: Two day Round 1\n- League: Property Brokers Premier Mens",
-      "ageGroup": "Senior/Open",
-      "teamAway": "Havelock North CC - Summit Capital - Prems",
-      "teamHome": "Central HB Premier Mens",
-      "gradeName": "Property Brokers Premier Mens",
+      "date": "Fri, 30 Oct",
+      "time": "05:00 PM",
+      "type": "One Day",
+      "round": "Round 3",
+      "gameID": "45d86932",
+      "gender": "Mixed",
+      "ground": "Buckley Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Buckley Park Yellow U12 Friday vs Youlden Parkville U12 (White), Date and Time: 2026-10-30, 05:00 PM, Location: Buckley Park\n- Round: Round 3, Match Type: One Day\n- League: U12 (3) Friday South",
+      "ageGroup": "U12",
+      "teamAway": "Youlden Parkville U12 (White)",
+      "teamHome": "Buckley Park Yellow U12 Friday",
+      "gradeName": "U12 (3) Friday South",
       "teamAwayLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_3ad892dbca.jpg",
-        "width": 582,
-        "height": 600
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_8558d38dcf.jpg",
+        "width": 320,
+        "height": 320
       },
       "teamHomeLogo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_f9ba6f2a52.jpg",
-        "width": 2000,
-        "height": 889
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474
       },
       "assignSponsors": {
         "team": [],
         "grade": [],
         "competition": []
       },
-      "gradeSortOrder": 0,
+      "gradeSortOrder": 16,
       "primaryForScreen": [
         {
-          "id": 232,
+          "id": 1225,
           "logo": {
-            "id": 6129,
-            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Property_Brokers_Primary_Reverse_CMYK_Clear_Indicators_2_Trans_144d8ba32a.png"
+            "id": 8430,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ihh_logo_2_1_Hi_Res_903190eb1d.jpeg"
           },
-          "name": "Property Brokers"
+          "name": "I.H.Hunter"
+        },
+        {
+          "id": 1228,
+          "logo": {
+            "id": 16683,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/20745b1567e56576678f9c5651261aefdf5f43ab14d71d5fbff887f7463a1d7d_cropped_af99048ef2.png"
+          },
+          "name": "Anglers Tavern"
+        },
+        {
+          "id": 1227,
+          "logo": {
+            "id": 8432,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6290833527c20a6852209567_og_banner_10b144fc62.jpg"
+          },
+          "name": "Rudolf Horvat & Associates"
+        },
+        {
+          "id": 1226,
+          "logo": {
+            "id": 8431,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/KH_1_a1bf5f9e1e.png"
+          },
+          "name": "KH1"
         }
       ],
-      "gradeResolvedPosition": 0
+      "gradeResolvedPosition": 1
+    },
+    {
+      "date": "Fri, 30 Oct",
+      "time": "05:00 PM",
+      "type": "One Day",
+      "round": "Round 3",
+      "gameID": "8882fa2a",
+      "gender": "Mixed",
+      "ground": "Buckley Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Buckley Park Green U14 Friday vs Buckley Park Yellow U14 Friday, Date and Time: 2026-10-30, 05:00 PM, Location: Buckley Park\n- Round: Round 3, Match Type: One Day\n- League: U14 (2) Friday Central",
+      "ageGroup": "U14",
+      "teamAway": "Buckley Park Yellow U14 Friday",
+      "teamHome": "Buckley Park Green U14 Friday",
+      "gradeName": "U14 (2) Friday Central",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      },
+      "gradeSortOrder": 19,
+      "primaryForScreen": [
+        {
+          "id": 1225,
+          "logo": {
+            "id": 8430,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ihh_logo_2_1_Hi_Res_903190eb1d.jpeg"
+          },
+          "name": "I.H.Hunter"
+        },
+        {
+          "id": 1228,
+          "logo": {
+            "id": 16683,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/20745b1567e56576678f9c5651261aefdf5f43ab14d71d5fbff887f7463a1d7d_cropped_af99048ef2.png"
+          },
+          "name": "Anglers Tavern"
+        },
+        {
+          "id": 1227,
+          "logo": {
+            "id": 8432,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6290833527c20a6852209567_og_banner_10b144fc62.jpg"
+          },
+          "name": "Rudolf Horvat & Associates"
+        },
+        {
+          "id": 1226,
+          "logo": {
+            "id": 8431,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/KH_1_a1bf5f9e1e.png"
+          },
+          "name": "KH1"
+        }
+      ],
+      "gradeResolvedPosition": 2
+    },
+    {
+      "date": "Sat, 31 Oct",
+      "time": "08:20 AM",
+      "type": "One Day",
+      "round": "Round 3",
+      "gameID": "ea4a946a",
+      "gender": "",
+      "ground": "Buckley Park",
+      "prompt": "Upcoming cricket match details:\n- Teams: Buckley Park vs Airport West St Christophers U14 SAT, Date and Time: 2026-10-31, 08:20 AM, Location: Buckley Park\n- Round: Round 3, Match Type: One Day\n- League: U14B Saturday",
+      "ageGroup": "U14",
+      "teamAway": "Airport West St Christophers U14 SAT",
+      "teamHome": "Buckley Park",
+      "gradeName": "U14B Saturday",
+      "teamAwayLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/logo_0298e20766.jpg",
+        "width": 1864,
+        "height": 2002
+      },
+      "teamHomeLogo": {
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474
+      },
+      "assignSponsors": {
+        "team": [],
+        "grade": [],
+        "competition": []
+      },
+      "gradeSortOrder": null,
+      "primaryForScreen": [
+        {
+          "id": 1225,
+          "logo": {
+            "id": 8430,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ihh_logo_2_1_Hi_Res_903190eb1d.jpeg"
+          },
+          "name": "I.H.Hunter"
+        },
+        {
+          "id": 1228,
+          "logo": {
+            "id": 16683,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/20745b1567e56576678f9c5651261aefdf5f43ab14d71d5fbff887f7463a1d7d_cropped_af99048ef2.png"
+          },
+          "name": "Anglers Tavern"
+        },
+        {
+          "id": 1227,
+          "logo": {
+            "id": 8432,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6290833527c20a6852209567_og_banner_10b144fc62.jpg"
+          },
+          "name": "Rudolf Horvat & Associates"
+        },
+        {
+          "id": 1226,
+          "logo": {
+            "id": 8431,
+            "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/KH_1_a1bf5f9e1e.png"
+          },
+          "name": "KH1"
+        }
+      ],
+      "gradeResolvedPosition": null
     }
   ],
   "asset": {
     "assetID": 1,
     "assetTypeID": 1,
-    "assetsLinkID": "5574c1a4b99c35e3c39268f47b3135b5fed44c64dbed0edfb5cb62624bc0460d",
+    "assetsLinkID": "e1bdec21db7f84f812f5cabb56b7da59b8907576474d6c673ef027b3e707f38f",
     "assetCategoryID": 1
   },
   "errors": [],
-  "frames": [45, 225, 390],
+  "frames": [45, 225, 490, 743, 945, 1035],
   "render": {
-    "renderId": 38775,
-    "schedulerId": 203
+    "renderId": 41778,
+    "schedulerId": 1031
   },
   "account": {
-    "accountId": 203
+    "accountId": 1031
   },
   "timings": {
-    "FPS_MAIN": 270,
+    "FPS_MAIN": 810,
     "FPS_INTRO": 90,
-    "FPS_OUTRO": 90,
+    "FPS_OUTRO": 180,
     "FPS_LADDER": 0,
     "FPS_SCORECARD": 270,
     "FPS_PREFORMANCECARD": 0
@@ -150,69 +352,77 @@
   "videoMeta": {
     "club": {
       "logo": {
-        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/1_hawke_s_bay_logo_no_words_logo_a499ff76cc.png",
-        "width": 2671,
-        "height": 2671,
+        "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Untitled_design_2_9662cef2fe.png",
+        "width": 2144,
+        "height": 2474,
         "hasLogo": true
       },
-      "name": "Hawkes Bay Cricket Association",
+      "name": "Buckley Park Cricket Club",
       "sport": "Cricket",
       "sponsors": {
         "general": [
           {
-            "id": 233,
+            "id": 1918,
             "logo": {
-              "id": 6120,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/4cb98b8c_9794_46e3_b659_ad807dafde5d_cabc6f8078.png"
+              "id": 16684,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/file_000000005de481fa9bdfbd7562f3ea6d_cropped_e5411bd669.png"
             },
-            "name": "Kilbirnie Sports"
+            "name": "Competitive Cleaners"
           },
           {
-            "id": 234,
+            "id": 1920,
             "logo": {
-              "id": 6049,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Logo_CP_2018_645a5be7a1.png"
+              "id": 16686,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/file_00000000b0e881fa9cceb862c6e46b2e_cropped_9949e877bb.png"
             },
-            "name": "Complete Paints"
+            "name": "MC"
           },
           {
-            "id": 237,
+            "id": 1919,
             "logo": {
-              "id": 6055,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/BAY_INDOOR_SPORTS_Grey_Logo_b7a6f25621.png"
+              "id": 16685,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/file_0000000091b482308f779d5cfceb6a44_cropped_0807d36288.png"
             },
-            "name": "Bay Indoor Sports"
-          },
-          {
-            "id": 235,
-            "logo": {
-              "id": 6053,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Pay_Excellence_f33d053293.jpg"
-            },
-            "name": "Pay Excellence"
-          },
-          {
-            "id": 236,
-            "logo": {
-              "id": 8862,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ALMAK_LOGO_FIRE_LIGHT_VERTICAL_1_de82cdf1b0.jpg"
-            },
-            "name": "Almak Fire Protection"
+            "name": "Jason G"
           }
         ],
         "primary": [
           {
-            "id": 232,
+            "id": 1225,
             "logo": {
-              "id": 6129,
-              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Property_Brokers_Primary_Reverse_CMYK_Clear_Indicators_2_Trans_144d8ba32a.png"
+              "id": 8430,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/ihh_logo_2_1_Hi_Res_903190eb1d.jpeg"
             },
-            "name": "Property Brokers"
+            "name": "I.H.Hunter"
+          },
+          {
+            "id": 1228,
+            "logo": {
+              "id": 16683,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/20745b1567e56576678f9c5651261aefdf5f43ab14d71d5fbff887f7463a1d7d_cropped_af99048ef2.png"
+            },
+            "name": "Anglers Tavern"
+          },
+          {
+            "id": 1227,
+            "logo": {
+              "id": 8432,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/6290833527c20a6852209567_og_banner_10b144fc62.jpg"
+            },
+            "name": "Rudolf Horvat & Associates"
+          },
+          {
+            "id": 1226,
+            "logo": {
+              "id": 8431,
+              "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/KH_1_a1bf5f9e1e.png"
+            },
+            "name": "KH1"
           }
         ],
-        "sponsorNum": 6
+        "sponsorNum": 7
       },
-      "IsAccountClub": false
+      "IsAccountClub": true
     },
     "video": {
       "media": {
@@ -221,13 +431,13 @@
           "audioOption": null
         },
         "HeroImage": {
-          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Nelson_Park_3_4f3721da14.jpg",
-          "ratio": "landscape",
-          "width": 3836,
-          "height": 2877,
-          "AgeGroup": "Juniors",
-          "AssetType": "Weekend Results",
-          "markerPosition": null
+          "url": "",
+          "ratio": "",
+          "width": 0,
+          "height": 0,
+          "AgeGroup": "",
+          "AssetType": "",
+          "markerPosition": ""
         }
       },
       "metadata": {
@@ -244,134 +454,135 @@
         "theme": {
           "dark": "#111",
           "white": "#FFF",
-          "primary": "#060606",
-          "secondary": "#bdb6b6"
+          "primary": "#234435",
+          "secondary": "#ffcc00"
         },
-        "template": "TwoColumnClassic"
+        "template": "Classic"
       },
       "contentLayout": {
         "divideFixturesBy": {
           "CricketLadder": 1,
           "CricketRoster": 1,
           "CricketResults": 2,
-          "CricketUpcoming": 3,
+          "CricketUpcoming": 2,
           "CricketResultSingle": 1,
           "CricketTeamOfTheWeek": 2,
-          "CricketBattingPerformances": 8,
-          "CricketBowlingPerformances": 8
+          "CricketBattingPerformances": 7,
+          "CricketBowlingPerformances": 7
         }
       },
-      "fixtureCategory": "Property Brokers Premier Mens",
-      "groupingCategory": "Property Brokers Premier Mens",
+      "fixtureCategory": "JUNIOR",
+      "groupingCategory": "JUNIOR",
       "templateVariation": {
         "mode": "dark",
         "image": {
-          "url": null,
-          "type": "pan",
+          "url": "",
+          "type": "",
           "ratio": null,
-          "width": null,
-          "height": null,
-          "direction": "left",
-          "gradientType": "linear",
-          "overlayStyle": "vignette",
-          "overlayOpacity": 0.3
+          "width": 0,
+          "height": 0,
+          "direction": "",
+          "gradientType": "",
+          "overlayStyle": {
+            "color": "",
+            "opacity": 0
+          },
+          "overlayOpacity": 0
         },
         "noise": {
-          "type": "dynamicParticles"
+          "type": ""
         },
         "video": {
-          "url": null,
-          "loop": null,
-          "size": "cover",
-          "muted": true,
-          "volume": 0.8,
+          "url": "",
+          "loop": false,
+          "size": "",
+          "muted": false,
+          "volume": 0,
           "overlay": {
-            "color": "rgba(0,0,0,0.5)",
-            "opacity": 0.7
+            "color": "",
+            "opacity": 0
           },
-          "position": "left",
-          "fallbackUrl": null,
-          "playbackRate": null,
-          "useOffthreadVideo": null
+          "position": "",
+          "fallbackUrl": ""
         },
         "modeId": 3,
-        "palette": "highContrast",
+        "palette": "primary",
         "pattern": {
-          "type": "dots",
-          "scale": 0.5,
-          "opacity": 0.3,
-          "rotation": null,
-          "animation": "panUp",
-          "animationSpeed": 0.5,
-          "animationDuration": 1500
-        },
-        "texture": {
-          "url": null,
-          "name": null,
-          "scale": "100%",
-          "repeat": "cover",
-          "overlay": {
-            "opacity": 0.5,
-            "blendMode": "multiply"
-          }
+          "type": "",
+          "scale": 0,
+          "opacity": 0,
+          "rotation": 0,
+          "animation": "",
+          "animationSpeed": 0,
+          "animationDuration": 0
         },
         "category": {
-          "name": "Classic Two Column ",
-          "slug": "TwoColumnClassic",
+          "name": "Classic",
+          "slug": "Classic",
           "bundleAudio": {
-            "id": 2,
-            "Name": "Dark Rock",
-            "createdAt": "2023-09-28T06:40:59.713Z",
-            "updatedAt": "2023-09-28T06:41:01.197Z",
-            "publishedAt": "2023-09-28T06:41:01.194Z",
+            "id": 6,
+            "Name": "Muted",
+            "createdAt": "2024-10-30T00:35:16.398Z",
+            "updatedAt": "2024-10-30T00:35:17.926Z",
+            "publishedAt": "2024-10-30T00:35:17.915Z",
             "audio_options": [
               {
-                "id": 6,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Lone_Wild_Free_Yourself_Space_Between_Inst_f736cd2af5.mp3",
-                "Name": "Free Yourself",
-                "createdAt": "2023-08-31T12:28:12.437Z",
-                "updatedAt": "2023-09-28T06:44:26.805Z",
-                "publishedAt": "2023-08-31T12:28:13.798Z",
+                "id": 33,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Bastian_Instrumental_Hello_Stranger_Instrumental_2f4c4acae7.mp3",
+                "Name": "HelloStranger_Instrumental",
+                "createdAt": "2024-10-30T00:35:04.160Z",
+                "updatedAt": "2024-10-30T00:36:30.358Z",
+                "publishedAt": "2024-10-30T00:35:05.839Z",
                 "ComponentName": "Top 5 Bowling",
                 "CompositionID": "Top5BowlingList"
               },
               {
-                "id": 5,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Marscott_Wild_Neon_Get_The_Gains_inst_3251aaa9af.mp3",
-                "Name": "Get The Gains",
-                "createdAt": "2023-08-31T12:27:46.922Z",
-                "updatedAt": "2023-09-28T06:44:42.399Z",
-                "publishedAt": "2023-08-31T12:27:48.202Z",
-                "ComponentName": "Ladder",
-                "CompositionID": "Ladder"
+                "id": 34,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Ghosthood_Side_Effects_Good_Good_Feeling_Inst_34015de6d6.mp3",
+                "Name": "GoodGoodFeeling_Inst",
+                "createdAt": "2024-10-30T00:37:09.563Z",
+                "updatedAt": "2024-10-30T00:38:09.963Z",
+                "publishedAt": "2024-10-30T00:38:09.959Z",
+                "ComponentName": "UpComing Fixtures",
+                "CompositionID": "UpComingFixtures"
               },
               {
-                "id": 3,
-                "URL": "https://lmssocialmediamanager.s3.ap-southeast-2.amazonaws.com/assets/TournamentTitleMusic_v2.mp3",
-                "Name": "Groover",
-                "createdAt": "2023-01-30T15:19:02.557Z",
-                "updatedAt": "2023-09-28T06:45:23.690Z",
-                "publishedAt": "2023-01-30T15:19:03.983Z",
+                "id": 35,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_La_Jett_La_Jett_Collateral_No_Guitar_Solo_Inst_f72f65e862.mp3",
+                "Name": "Collateral-NoGuitarSolo_Inst",
+                "createdAt": "2024-10-30T00:38:02.552Z",
+                "updatedAt": "2024-10-30T00:38:04.070Z",
+                "publishedAt": "2024-10-30T00:38:04.063Z",
                 "ComponentName": "Weekend Results",
                 "CompositionID": "WeekendResults"
               },
               {
-                "id": 12,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Killer_Insideof_Me_Inst_eac6d2fd26.mp3",
-                "Name": "Killer Inside of Me",
-                "createdAt": "2023-08-31T12:30:31.991Z",
-                "updatedAt": "2023-09-28T06:46:09.463Z",
-                "publishedAt": "2023-08-31T12:30:33.714Z",
+                "id": 36,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Jennings_Couch_Jennings_Couch_Wall_Of_Sound_Instrumental_1b8ec95fed.mp3",
+                "Name": "Wall-Of-Sound_Instrumental",
+                "createdAt": "2024-10-30T00:39:02.570Z",
+                "updatedAt": "2024-10-30T00:39:04.182Z",
+                "publishedAt": "2024-10-30T00:39:04.177Z",
+                "ComponentName": "Ladder",
+                "CompositionID": "Ladder"
+              },
+              {
+                "id": 38,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Silverberg_So_Good_To_Be_Alive_Inst_Ohhs_e2d86690b9.mp3",
+                "Name": "So Good To Be Alive_Inst_Ohhs",
+                "createdAt": "2024-10-30T01:00:28.630Z",
+                "updatedAt": "2024-10-30T01:00:30.327Z",
+                "publishedAt": "2024-10-30T01:00:30.319Z",
                 "ComponentName": "Top 5 Batting",
                 "CompositionID": "Top5BattingList"
               },
               {
-                "id": 14,
-                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Willyecho_Willyecho_Monster_Inst_01_trimmed_a36f968bab.mp3",
-                "Name": "Audiio_Willyecho_Willyecho_Monster_Inst",
-                "createdAt": "2023-09-28T06:55:13.187Z",
-                "updatedAt": "2023-10-04T02:09:46.095Z",
-                "publishedAt": "2023-09-28T06:55:14.649Z",
+                "id": 39,
+                "URL": "https://fixtura.s3.ap-southeast-2.amazonaws.com/Audiio_Speedtest_Blue_BMX_Knuckle_Sandwhich_75a8a98fdc.mp3",
+                "Name": "KnuckleSandwhich",
+                "createdAt": "2024-10-30T01:01:10.581Z",
+                "updatedAt": "2024-10-30T01:01:13.949Z",
+                "publishedAt": "2024-10-30T01:01:13.932Z",
                 "ComponentName": "UpComing Fixtures",
                 "CompositionID": "UpComingFixtures"
               }
@@ -381,51 +592,60 @@
             "CricketLadder": 1,
             "CricketRoster": 1,
             "CricketResults": 2,
-            "CricketUpcoming": 3,
+            "CricketUpcoming": 2,
             "CricketResultSingle": 1,
-            "CricketBattingPerformances": 8,
-            "CricketBowlingPerformances": 8
+            "CricketBattingPerformances": 7,
+            "CricketBowlingPerformances": 7
           }
         },
         "gradient": {
-          "type": "primary",
-          "direction": "VERTICAL"
+          "type": "",
+          "direction": ""
         },
         "particle": {
-          "type": "lines",
-          "speed": 0.8,
-          "animation": "scale",
-          "direction": "up",
-          "particleCount": "300"
+          "type": "",
+          "speed": 0,
+          "animation": "",
+          "direction": "",
+          "particleCount": 0
         },
-        "useBackground": "Particle",
-        "imageCandidates": []
+        "luminance": {
+          "map": {
+            "kind": "theme",
+            "preset": "brand"
+          },
+          "url": "https://fixtura.s3.ap-southeast-2.amazonaws.com/diagonal_paint_strokes_12bd8922a6.png",
+          "protection": "none",
+          "supersampleScale": 1
+        },
+        "luminanceId": 9,
+        "useBackground": "Luminance"
       }
     }
   },
   "organisation": {
-    "id": 1090,
-    "type": "association"
+    "id": 6728,
+    "type": "club"
   },
   "orderingContext": {
     "revision": 0,
-    "scopeKey": "account:203:association:1090",
-    "resolvedAt": "2026-10-06T01:48:07.149Z"
+    "scopeKey": "account:1031:club:6728",
+    "resolvedAt": "2026-10-26T17:18:01.537Z"
   },
-  "generationIdentity": "6bbd4467d31b46caa655b47c7d17aa764b0c8109a243b3952b1a011a4cb47a5b",
+  "generationIdentity": "0769720c10a3176dd65f54560edf340ca21c5316a336a05ccd32eb7db4478acc",
   "generationManifest": {
-    "renderId": 38775,
-    "fixtureIds": ["9326fc40", "cbf1a25d", "2ff89d27"],
-    "schedulerId": 203,
+    "renderId": 41778,
+    "fixtureIds": ["45d86932", "8882fa2a"],
+    "schedulerId": 1031,
     "organisation": {
-      "id": 1090,
-      "type": "association"
+      "id": 6728,
+      "type": "club"
     },
     "orderingContext": {
       "revision": 0,
-      "scopeKey": "account:203:association:1090",
-      "resolvedAt": "2026-10-06T01:48:07.149Z"
+      "scopeKey": "account:1031:club:6728",
+      "resolvedAt": "2026-10-26T17:18:01.537Z"
     },
-    "generationIdentity": "6bbd4467d31b46caa655b47c7d17aa764b0c8109a243b3952b1a011a4cb47a5b"
+    "generationIdentity": "0769720c10a3176dd65f54560edf340ca21c5316a336a05ccd32eb7db4478acc"
   }
 }

@@ -98,7 +98,6 @@
                 <div class="totw-stack">
                   <section class="totw-selection totw-unit">
                     <header class="totw-category totw-unit__rail">
-                      <span class="totw-category-label">Round</span>
                       <p
                         class="totw-category-value"
                         data-hydrate="category-label"
@@ -143,24 +142,19 @@
 
     <template id="totw-row-template">
       <div class="totw-entry">
-        <div class="totw-role-rail totw-cell">
-          <span class="totw-role"></span>
-        </div>
-        <article class="totw-row gap-2">
-          <div class="totw-mark">
-            <span class="mark-fallback" aria-hidden="true"></span>
-            <img alt="" hidden onerror="this.hidden=true" />
-          </div>
-          <div class="totw-copy totw-cell">
-            <p class="totw-name"></p>
-            <div class="totw-team-block">
-              <span class="totw-team-label">Played for</span>
+        <article class="totw-row">
+          <div class="totw-row__main">
+            <div class="totw-copy totw-cell">
+              <p class="totw-name"></p>
               <p class="totw-team"></p>
             </div>
+            <div class="totw-stats totw-cell">
+              <p class="totw-figure"></p>
+              <p class="totw-subline"></p>
+            </div>
           </div>
-          <div class="totw-stats totw-cell">
-            <p class="totw-figure"></p>
-            <p class="totw-subline"></p>
+          <div class="totw-role-rail totw-cell">
+            <span class="totw-role"></span>
           </div>
         </article>
       </div>

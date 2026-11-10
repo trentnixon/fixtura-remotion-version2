@@ -23,11 +23,13 @@ export type NightSessionResultSingleContentProps = {
   match: ResultSingleMatchResult;
   className?: string;
   style?: React.CSSProperties;
+  /** Logo as `.team-band` background; hides inline `.team-mark` when crest exists. */
+  bandLogoBackground?: boolean;
 };
 
 export const NightSessionResultSingleContent: React.FC<
   NightSessionResultSingleContentProps
-> = ({ match, className = "", style }) => {
+> = ({ match, className = "", style, bandLogoBackground = false }) => {
   const { club, isAccountClub } = useVideoDataContext();
   const accountIsClub = isAccountClub || false;
   const resultsMatch = match as unknown as ResultsMatchResult;
@@ -95,6 +97,7 @@ export const NightSessionResultSingleContent: React.FC<
               }
               isClubTeam={match.homeTeam.isClubTeam || homeIsClub}
               side="home"
+              bandLogoBackground={bandLogoBackground}
             />
             <div className="comparison-band__spine" aria-hidden />
             <NightSessionTeamBand
@@ -105,6 +108,7 @@ export const NightSessionResultSingleContent: React.FC<
               }
               isClubTeam={match.awayTeam.isClubTeam || awayIsClub}
               side="away"
+              bandLogoBackground={bandLogoBackground}
             />
           </div>
 
