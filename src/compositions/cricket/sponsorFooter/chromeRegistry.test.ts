@@ -3,9 +3,9 @@ import { resolveSponsorFooterChrome } from "./chromeRegistry";
 
 describe("resolveSponsorFooterChrome", () => {
   it("resolves scoreline and night session chrome", () => {
-    expect(resolveSponsorFooterChrome("scoreline")?.defaultSponsorStripKey).toBe(
-      "scorelineSponsorStrip",
-    );
+    expect(
+      resolveSponsorFooterChrome("scoreline")?.defaultSponsorStripKey,
+    ).toBe("scorelineSponsorStrip");
     expect(
       resolveSponsorFooterChrome("nightSession")?.defaultSponsorStripKey,
     ).toBe("nightSessionSponsorStrip");

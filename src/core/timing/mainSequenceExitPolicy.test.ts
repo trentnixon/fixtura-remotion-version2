@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateFooterExitFrame } from "../../compositions/cricket/sponsorFooter/_utils/calculations";
+import { calculateFooterExitFrame } from "./sponsorFooterExitPolicy";
 import {
   MAIN_HEADER_EXIT_OFFSET_FRAMES,
   MAIN_ROW_EXIT_OFFSET_FRAMES,

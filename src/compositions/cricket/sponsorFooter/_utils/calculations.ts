@@ -1,10 +1,8 @@
-import { Timings } from "../../../../core/types/data/common";
-
-/** Frames before main end where footer exit starts. */
-export const FOOTER_EXIT_OFFSET_FRAMES = 15;
-
-/** Length of the footer logo exit animation. */
-export const FOOTER_EXIT_ANIMATION_DURATION_FRAMES = 15;
+export {
+  FOOTER_EXIT_OFFSET_FRAMES,
+  FOOTER_EXIT_ANIMATION_DURATION_FRAMES,
+  calculateFooterExitFrame,
+} from "../../../../core/timing/sponsorFooterExitPolicy";
 
 /** Default gap between footer logo slots (matches Tailwind gap-4). */
 export const FOOTER_LOGO_GAP_PX = 16;
@@ -38,20 +36,6 @@ export type FooterLogoBox = {
 export const footerLogoContentWidth = (
   frameWidth = FOOTER_FRAME_WIDTH_PX,
 ): number => Math.max(0, frameWidth - FOOTER_ROW_PADDING_X_PX * 2);
-
-/**
- * Local main-sequence frame where sponsor footer exit starts.
- * Returns 0 when FPS_MAIN is missing/invalid so AnimatedImage skips exit.
- */
-export const calculateFooterExitFrame = (
-  timings: Timings | undefined,
-): number => {
-  const mainDuration = timings?.FPS_MAIN;
-  if (typeof mainDuration !== "number" || mainDuration <= 0) {
-    return 0;
-  }
-  return Math.max(0, mainDuration - FOOTER_EXIT_OFFSET_FRAMES);
-};
 
 const emptyFooterLogoBox = (): FooterLogoBox => ({
   width: 0,

@@ -21,7 +21,7 @@ export const PrimarySponsor = React.memo(
     if (
       !validation.isValid ||
       !validation.logoAnimations ||
-      !validation.heights
+      validation.footerHeight == null
     ) {
       return null;
     }
@@ -32,7 +32,7 @@ export const PrimarySponsor = React.memo(
       Boolean(sponsor?.logo?.url),
     ).length;
     const logoBox = calculateFooterLogoBox({
-      footerHeight: validation.heights.footer,
+      footerHeight: validation.footerHeight,
       count: logoCount,
     });
 

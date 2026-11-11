@@ -11,7 +11,7 @@ export {
   FOOTER_EXIT_ANIMATION_DURATION_FRAMES,
   FOOTER_EXIT_OFFSET_FRAMES,
   calculateFooterExitFrame,
-} from "../../compositions/cricket/sponsorFooter/_utils/calculations";
+} from "./sponsorFooterExitPolicy";
 
 export const MAIN_HEADER_EXIT_OFFSET_FRAMES = 30;
 export const MAIN_ROW_EXIT_OFFSET_FRAMES = 30;

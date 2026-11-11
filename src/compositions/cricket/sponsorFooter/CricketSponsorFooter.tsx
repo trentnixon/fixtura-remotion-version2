@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useThemeContext } from "../../../core/context/ThemeContext";
 import { csClass } from "../utils/overlayFamily";
+import { planSponsorFooterChrome } from "./planSponsorFooterChrome";
 import {
   resolveSponsorFooterChrome,
   type SponsorFooterChromeKind,
@@ -26,20 +27,42 @@ export const CricketSponsorFooter: React.FC<CricketSponsorFooterProps> = ({
   ...sponsorProps
 }) => {
   const theme = useThemeContext();
-  const kind = chromeKind ?? theme.sponsorFooterChrome;
-  const chrome = resolveSponsorFooterChrome(kind);
-  const { componentStyles } = theme;
+  const { layout, componentStyles, sponsorFooterChrome } = theme;
 
+  const chromePlan = useMemo(
+    () =>
+      planSponsorFooterChrome({
+        themeChromeKind: sponsorFooterChrome,
+        chromeKindOverride: chromeKind,
+        sponsorStripKey,
+        layoutFooterHeight: layout.heights.footer,
+        heightOverride: height,
+      }),
+    [
+      chromeKind,
+      height,
+      layout.heights.footer,
+      sponsorFooterChrome,
+      sponsorStripKey,
+    ],
+  );
+
+  if (chromePlan.kind === "hidden") {
+    return null;
+  }
+
+  const chrome = resolveSponsorFooterChrome(chromePlan.chromeKind);
   if (!chrome) {
     return null;
   }
 
-  const stripKey = sponsorStripKey ?? chrome.defaultSponsorStripKey;
-
   return (
     <SponsorFooterChrome
-      height={height}
-      sponsorStripClassName={csClass(componentStyles, stripKey)}
+      height={chromePlan.footerHeight}
+      sponsorStripClassName={csClass(
+        componentStyles,
+        chromePlan.sponsorStripKey,
+      )}
       decoration={chrome.decoration}
       {...sponsorProps}
     />
