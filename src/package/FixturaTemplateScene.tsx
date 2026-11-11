@@ -1,6 +1,8 @@
-import React from "react";
-import { getProductionCompositionFromData } from "../core/preview/getProductionCompositionFromData";
+import React, { useEffect } from "react";
+import { getProductionCompositionFromData } from "./getProductionCompositionFromData";
+import { loadPreviewTemplateComponent } from "./loadPreviewTemplate";
 import { FixturaDataset } from "../core/types/data/index";
+import { isTemplateId } from "../templates/templateIds";
 import { NightSessionBundledStyles } from "./NightSessionBundledStyles";
 import { ScorelineBundledStyles } from "./ScorelineBundledStyles";
 
@@ -16,6 +18,12 @@ export const FixturaTemplateScene: React.FC<FixturaTemplateSceneProps> = ({
 }) => {
   const { TemplateComponent } = getProductionCompositionFromData(data);
   const templateId = data.videoMeta.video.appearance.template;
+
+  useEffect(() => {
+    if (isTemplateId(templateId)) {
+      void loadPreviewTemplateComponent(templateId);
+    }
+  }, [templateId]);
 
   return (
     <>

@@ -23,6 +23,44 @@ export type ProductionCompositionFromData = {
   durationInFrames: number;
 };
 
+export type TemplateId =
+  | "Basic"
+  | "Brickwork"
+  | "Classic"
+  | "CNSW"
+  | "CNSWPrivate"
+  | "Sixers"
+  | "Thunder"
+  | "TwoColumnClassic"
+  | "Mudgeeraba"
+  | "BroadcastPro"
+  | "BroadcastProRounded"
+  | "Scoreline"
+  | "NightSession";
+
+export type ProductionCompositionMeta = {
+  templateId: TemplateId;
+  remoteCompositionId: string;
+  studioGeneratedCompositionId?: string;
+  durationInFrames: number;
+};
+
+export declare function getProductionCompositionMeta(
+  data: FixturaDataset,
+): ProductionCompositionMeta;
+
 export declare function getProductionCompositionFromData(
   data: FixturaDataset,
 ): ProductionCompositionFromData;
+
+export declare const TEMPLATE_IDS: readonly TemplateId[];
+
+export declare function isTemplateId(id: string): id is TemplateId;
+
+export type PreviewTemplateComponent = ComponentType<{
+  data: FixturaDataset;
+}>;
+
+export declare function loadPreviewTemplateComponent(
+  templateId: TemplateId,
+): Promise<PreviewTemplateComponent>;

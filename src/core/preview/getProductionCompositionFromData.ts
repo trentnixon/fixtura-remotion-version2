@@ -1,9 +1,7 @@
 import type React from "react";
-import { isGeneratedPresetId } from "../../components/backgrounds/variants/Generated/catalogue";
-import { templateRegistry, TemplateId } from "../../templates/registry";
+import { templateRegistry, type TemplateId } from "../../templates/registry";
 import { FixturaDataset } from "../types/data/index";
-import { calculateOutroDurationFromSponsors } from "../utils/sponsors";
-import { hasSponsors } from "../utils/general";
+import { getProductionCompositionMeta } from "./getProductionCompositionMeta";
 
 export type FixturaTemplateComponent = React.ComponentType<{
   data: FixturaDataset;
@@ -22,52 +20,19 @@ export type ProductionCompositionFromData = {
 };
 
 /**
- * Shared resolution for CLI/Lambda (`ProductionRoot`) and package previews (`FixturaTemplateScene`).
+ * Shared resolution for CLI/Lambda (`ProductionRoot`). Loads templates via the central registry.
  */
 export function getProductionCompositionFromData(
   data: FixturaDataset,
 ): ProductionCompositionFromData {
-  const videoType = data.videoMeta.video;
-  const { appearance, templateVariation, metadata } = videoType;
-
-  const templateId = appearance.template || null;
-  const useBackground = templateVariation.useBackground || "Solid";
-  const compositionId = metadata.compositionId || null;
-
-  if (!templateId) {
-    throw new Error("No template ID provided for production render");
-  }
-
-  if (!useBackground) {
-    throw new Error("No useBackground provided for production render");
-  }
-
-  if (!compositionId) {
-    throw new Error("No composition ID provided for production render");
-  }
-
+  const meta = getProductionCompositionMeta(data);
   const TemplateComponent =
-    templateRegistry[templateId as TemplateId].component;
-  const remoteCompositionId = `${templateId}-${useBackground}-${compositionId}`;
-
-  const appearanceType = appearance.type;
-  const studioGeneratedCompositionId =
-    typeof appearanceType === "string" && isGeneratedPresetId(appearanceType)
-      ? `${templateId}-generated-${appearanceType}-${compositionId}`
-      : undefined;
-
-  const sponsors = data.videoMeta.club?.sponsors;
-  const doesAccountHaveSponsors =
-    Boolean(metadata.includeSponsors) || hasSponsors(sponsors);
-  const durationInFrames =
-    (data.timings.FPS_INTRO ?? 0) +
-    (data.timings.FPS_MAIN ?? 0) +
-    calculateOutroDurationFromSponsors(sponsors, doesAccountHaveSponsors);
+    templateRegistry[meta.templateId as TemplateId].component;
 
   return {
     TemplateComponent,
-    remoteCompositionId,
-    studioGeneratedCompositionId,
-    durationInFrames,
+    remoteCompositionId: meta.remoteCompositionId,
+    studioGeneratedCompositionId: meta.studioGeneratedCompositionId,
+    durationInFrames: meta.durationInFrames,
   };
 }

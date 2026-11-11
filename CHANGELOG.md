@@ -4,6 +4,18 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.7] - 2026-11-11
+
+### Added
+
+- **`@fixtura/remotion-assets/preview-core`** — composition metadata, Registry ID helpers, and `loadPreviewTemplateComponent` without pulling full template implementations into the host’s initial chunk.
+- **Per–Registry ID publish entries** — `@fixtura/remotion-assets/preview/templates/scoreline`, `night-session`, and `mudgeeraba` for hosts that compose `TemplateComponent` and bundled styles manually.
+- **Lazy template chunks** — `dist/preview.*` resolves templates via dynamic `import()` (with `splitting: true` in tsup). Hosts must ship the full `dist/` chunk graph (not only `preview.mjs`). `FixturaTemplateScene` preloads the Registry ID chunk on mount; `getProductionCompositionFromData` from `/preview` returns a lazy `TemplateComponent` (distinct from the sync resolver under shipped `src/core/`).
+
+### Changed
+
+- **`getProductionCompositionMeta`** — shared ID/duration resolution extracted from `getProductionCompositionFromData` for the core publish seam.
+
 ## [0.1.6] - 2026-09-11
 
 ### Added

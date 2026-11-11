@@ -1,6 +1,6 @@
 {
   "name": "@fixtura/remotion-assets",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Fixtura Remotion Assets",
   "repository": {
     "type": "git",
@@ -27,6 +27,26 @@
       "types": "./dist/preview.d.ts",
       "import": "./dist/preview.mjs",
       "require": "./dist/preview.js"
+    },
+    "./preview-core": {
+      "types": "./dist/preview-core.d.ts",
+      "import": "./dist/preview-core.mjs",
+      "require": "./dist/preview-core.js"
+    },
+    "./preview/templates/scoreline": {
+      "types": "./dist/templates/scoreline.d.ts",
+      "import": "./dist/templates/scoreline.mjs",
+      "require": "./dist/templates/scoreline.js"
+    },
+    "./preview/templates/night-session": {
+      "types": "./dist/templates/night-session.d.ts",
+      "import": "./dist/templates/night-session.mjs",
+      "require": "./dist/templates/night-session.js"
+    },
+    "./preview/templates/mudgeeraba": {
+      "types": "./dist/templates/mudgeeraba.d.ts",
+      "import": "./dist/templates/mudgeeraba.mjs",
+      "require": "./dist/templates/mudgeeraba.js"
     },
     "./styles.css": "./dist/preview.css",
     "./tailwind-preset": "./src/package/tailwind-preset.cjs",
@@ -104,7 +124,7 @@
     "clean:cache": "node scripts/clear-webpack-cache.mjs",
     "deploy": "npm run clean:cache && npx remotion lambda sites create src/index.ts --site-name=fixtura-remotion-v2 --region=ap-southeast-2 && node scripts/upload-public-assets.mjs && node scripts/verify-deploy.mjs",
     "deploy:verify": "node scripts/verify-deploy.mjs",
-    "copy": "powershell -NoProfile -Command Copy-Item D:\\htdoc\\Fixtura\\Creators\\RemotionV2\\dist\\preview.mjs D:\\htdoc\\Fixtura\\Fixtura.com.au\\application\\src\\vendor\\fixtura-remotion-assets\\preview.mjs -Force"
+    "copy": "powershell -NoProfile -Command \"$src='D:\\htdoc\\Fixtura\\Creators\\RemotionV2\\dist'; $dest='D:\\htdoc\\Fixtura\\Fixtura.com.au\\application\\src\\vendor\\fixtura-remotion-assets'; New-Item -ItemType Directory -Force -Path $dest,'$dest\\templates' | Out-Null; Copy-Item -Path $src\\*.mjs,$src\\*.js,$src\\*.map -Destination $dest -Force -ErrorAction SilentlyContinue; Copy-Item -Path $src\\templates\\* -Destination '$dest\\templates' -Force -ErrorAction SilentlyContinue\""
   },
   "sideEffects": [
     "*.css"
