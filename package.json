@@ -125,7 +125,7 @@
     "clean:cache": "node scripts/clear-webpack-cache.mjs",
     "deploy": "npm run clean:cache && npx remotion lambda sites create src/index.ts --site-name=fixtura-remotion-v2 --region=ap-southeast-2 && node scripts/upload-public-assets.mjs && node scripts/verify-deploy.mjs",
     "deploy:verify": "node scripts/verify-deploy.mjs",
-    "copy": "powershell -NoProfile -Command \"$src='D:\\htdoc\\Fixtura\\Creators\\RemotionV2\\dist'; $dest='D:\\htdoc\\Fixtura\\Fixtura.com.au\\application\\src\\vendor\\fixtura-remotion-assets'; New-Item -ItemType Directory -Force -Path $dest,'$dest\\templates' | Out-Null; Copy-Item -Path $src\\*.mjs,$src\\*.js,$src\\*.map -Destination $dest -Force -ErrorAction SilentlyContinue; Copy-Item -Path $src\\templates\\* -Destination '$dest\\templates' -Force -ErrorAction SilentlyContinue\""
+    "copy": "node scripts/copy-vendor-dist.mjs"
   },
   "sideEffects": [
     "*.css"
