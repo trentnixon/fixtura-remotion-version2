@@ -3,139 +3,38 @@ import React from "react";
 import { useVideoDataContext } from "../context/VideoDataContext";
 import { normalizeCompositionId } from "./compositionMapping";
 import { PlaceholderComponent } from "./PlaceholderComponent";
+import { SPORT_COMPOSITION_MODULE_KEYS } from "./compositionSportTypes";
+import { resolveCompositionTemplateComponent } from "./compositionTemplateKey";
 
-// Import composition types (these will be dynamically loaded)
 import * as CricketCompositions from "../../compositions/cricket";
 import * as AFLCompositions from "../../compositions/afl";
 import * as NetballCompositions from "../../compositions/netball";
 
-// Types
 type Sport = "cricket" | "afl" | "netball";
-type TemplateId = string;
 type CompositionId = string;
 
-// Define a more specific type for the sport modules, using unknown instead of any
 type SportModuleType = Record<
   string,
-  | Record<string, React.ComponentType<unknown>> // Use unknown for template maps
-  | React.ComponentType<unknown> // Use unknown for direct components
+  | Record<string, React.ComponentType<unknown>>
+  | React.ComponentType<unknown>
 >;
 
-interface CompositionTypeMap {
-  [key: string]: string;
-}
-
-interface SportCompositionTypes {
-  [key: string]: CompositionTypeMap;
-}
-
-// Common composition types across sport
-
-// Sport-specific composition types
-const SPORT_COMPOSITION_TYPES: SportCompositionTypes = {
-  cricket: {
-    CricketLadder: "CricketLadder",
-    CricketUpcoming: "CricketUpcoming",
-    CricketTop5Batting: "CricketTop5",
-    CricketTop5Bowling: "CricketTop5",
-    CricketBattingPerformances: "CricketPerformances",
-    CricketBowlingPerformances: "CricketPerformances",
-    CricketResultSingle: "CricketResultSingle",
-    CricketRoster: "CricketRoster",
-    CricketResults: "CricketResults",
-    CricketResultsLite: "CricketResultsLite",
-    CricketTeamOfTheWeek: "CricketTeamOfTheWeek",
-  },
-  afl: {
-    AFLLadder: "ladder",
-    AFLTop5: "top5",
-    AFLResults: "results",
-    AFLUpcoming: "upcoming",
-    AFLSingleGameResult: "singleGameResult",
-  },
-  netball: {
-    NetballLadder: "ladder",
-    NetballTop5: "top5",
-    NetballResults: "results",
-    NetballUpcoming: "upcoming",
-    NetballSingleGameResult: "singleGameResult",
-  },
-};
-
-// Registry of sport modules - Use the specific type
 const SPORT_MODULES: Record<Sport, SportModuleType> = {
-  // Use type assertion to handle potential structural mismatches if necessary,
-  // especially if index files export both direct components and template maps.
   cricket: CricketCompositions as SportModuleType,
   afl: AFLCompositions as SportModuleType,
   netball: NetballCompositions as SportModuleType,
 };
 
-/**
- * Gets the appropriate composition type for a given sport and composition ID
- */
 const getCompositionType = (
   sport: Sport,
   compositionId: CompositionId,
 ): string | undefined => {
-  const compositionTypes = SPORT_COMPOSITION_TYPES[sport];
+  const compositionTypes = SPORT_COMPOSITION_MODULE_KEYS[sport];
   return compositionTypes?.[compositionId];
 };
 
 /**
- * Gets the appropriate template component for a given composition
- */
-const getTemplateComponent = (
-  sportModule: SportModuleType,
-  compositionType: string,
-  templateId: TemplateId,
-): React.ComponentType | undefined => {
-  const compositionModule = sportModule[compositionType];
-
-  // Debug logging
-  console.log("[getTemplateComponent] Debug:", {
-    compositionType,
-    templateId,
-    hasCompositionModule: !!compositionModule,
-    compositionModuleType: typeof compositionModule,
-    compositionModuleKeys: compositionModule
-      ? Object.keys(compositionModule)
-      : [],
-  });
-
-  if (!compositionModule) return undefined;
-
-  if (typeof compositionModule === "function") {
-    console.warn(
-      `Composition ${compositionType} seems to be a direct component export, not a template map.`,
-    );
-    // Decide how to handle direct components; assuming they are not meant for templated routing here
-    return undefined;
-  }
-
-  // Proceed assuming it's a Record<string, React.ComponentType<unknown>>
-
-  const normalizedTemplateId = templateId.toLowerCase().replace(/-/g, "");
-  const TemplateComponent =
-    compositionModule[templateId] ||
-    compositionModule[templateId.toLowerCase()] ||
-    compositionModule[normalizedTemplateId] ||
-    (normalizedTemplateId === "nightsession"
-      ? compositionModule.nightSession
-      : undefined);
-
-  console.log(
-    "[getTemplateComponent] TemplateComponent found:",
-    !!TemplateComponent,
-  );
-
-  // Cast the component back to ComponentType<any> or a more specific type if needed for rendering
-  // Or simply return it if the JSX renderer can handle ComponentType<unknown> (often it can)
-  return TemplateComponent as React.ComponentType | undefined; // Cast if necessary, or check JSX compatibility
-};
-
-/**
- * Routes to the appropriate composition based on template, sport, and composition ID
+ * Routes to the appropriate composition based on Registry ID, sport, and composition metadata ID.
  */
 export const RouteToComposition = (): React.ReactElement => {
   const { data, metadata, appearance, club } = useVideoDataContext();
@@ -157,12 +56,11 @@ export const RouteToComposition = (): React.ReactElement => {
   const resolvedAppearance = appearance ?? videoAppearance;
 
   const compositionId = normalizeCompositionId(resolvedMetadata.compositionId);
-  const templateId = resolvedAppearance.template?.toLowerCase() || "basic";
+  const registryId = resolvedAppearance.template || "Basic";
   const sport = (videoMeta.club?.sport?.toLowerCase() || "cricket") as Sport;
   const title = resolvedMetadata.title;
 
   try {
-    // Get the sport module
     const sportModule = SPORT_MODULES[sport];
     if (!sportModule) {
       console.warn(`Unknown sport: ${sport}`);
@@ -170,14 +68,13 @@ export const RouteToComposition = (): React.ReactElement => {
         <PlaceholderComponent
           title={title}
           compositionId={compositionId}
-          templateId={templateId}
+          templateId={registryId.toLowerCase()}
           sport={sport}
           reason="Missing sportModule"
         />
       );
     }
 
-    // Get the composition type
     const compositionType = getCompositionType(sport, compositionId);
     if (!compositionType) {
       console.warn(
@@ -187,28 +84,39 @@ export const RouteToComposition = (): React.ReactElement => {
         <PlaceholderComponent
           title={title}
           compositionId={compositionId}
-          templateId={templateId}
+          templateId={registryId.toLowerCase()}
           sport={sport}
           reason="Missing compositionType"
         />
       );
     }
 
-    // Get the template component
-    const TemplateComponent = getTemplateComponent(
-      sportModule,
-      compositionType,
-      templateId,
+    const compositionModule = sportModule[compositionType];
+    if (!compositionModule) {
+      return (
+        <PlaceholderComponent
+          title={title}
+          compositionId={compositionId}
+          templateId={registryId.toLowerCase()}
+          sport={sport}
+          reason="Missing composition module"
+        />
+      );
+    }
+
+    const TemplateComponent = resolveCompositionTemplateComponent(
+      compositionModule,
+      registryId,
     );
     if (!TemplateComponent) {
       console.warn(
-        `Missing template implementation: ${sport}/${compositionType}/${templateId}`,
+        `Missing template implementation: ${sport}/${compositionType}/${registryId}`,
       );
       return (
         <PlaceholderComponent
           title={title}
           compositionId={compositionId}
-          templateId={templateId}
+          templateId={registryId.toLowerCase()}
           sport={sport}
           reason="Missing TemplateComponent"
         />
@@ -222,7 +130,7 @@ export const RouteToComposition = (): React.ReactElement => {
       <PlaceholderComponent
         title={title}
         compositionId={compositionId}
-        templateId={templateId}
+        templateId={registryId.toLowerCase()}
         sport={sport}
         reason="error in processing"
       />

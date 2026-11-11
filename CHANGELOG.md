@@ -4,6 +4,12 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.10] - 2026-11-11
+
+### Changed
+
+- **Composition × Registry ID routing** — `resolveCompositionTemplateComponent` and `compositionExportKeyCandidates` unify PascalCase Registry IDs with legacy composition export keys (e.g. `nightSession` / `nightsession`). `RouteToComposition` uses Registry ID as-is instead of lowercasing; Night Session one-off and debug logging removed. `compositionRoutingManifest` maps design `remotion.composition` paths (kebab + camelCase) to metadata composition IDs; Vitest walks `design/_shared/routes.json` for handoff parity.
+
 ## [0.1.9] - 2026-11-11
 
 ### Changed
