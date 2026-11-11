@@ -5,11 +5,13 @@ import {
   ScorelineFixtureMatchup,
   ScorelineRosterGrade,
 } from "../fixture/ScorelineFixturePrimitives";
-import { dedupeVenueLabel } from "../results/dedupeVenueLabel";
+import {
+  dedupeVenueLabel,
+  resolveRosterLineup,
+} from "../../../../../cricket/viewModel";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { csClass } from "../componentStyles";
 import { resolveScorelineRosterClubSides } from "./resolveScorelineRosterClubSides";
-import { resolveScorelineRosterLineup } from "./resolveScorelineRosterPlayerEntry";
 import {
   ScorelineRosterEmptyRow,
   ScorelineRosterRow,
@@ -24,7 +26,7 @@ export const ScorelineRosterContent: React.FC<{
     roster.isHomeTeam,
   );
   const squadTeamName = roster.isHomeTeam ? roster.teamHome : roster.teamAway;
-  const lineup = resolveScorelineRosterLineup(roster.teamRoster);
+  const lineup = resolveRosterLineup(roster.teamRoster);
 
   return (
     <main

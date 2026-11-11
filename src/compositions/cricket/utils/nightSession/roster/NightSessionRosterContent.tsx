@@ -2,9 +2,11 @@ import React from "react";
 import { Img } from "remotion";
 import type { RosterDataItem } from "../../../teamRoster/_types/types";
 import { formatDate } from "../../../utils/utils-text";
-import { dedupeVenueLabel } from "../../scoreline/results/dedupeVenueLabel";
+import {
+  dedupeVenueLabel,
+  resolveRosterLineup,
+} from "../../../../../cricket/viewModel";
 import { resolveScorelineRosterClubSides } from "../../scoreline/roster/resolveScorelineRosterClubSides";
-import { resolveScorelineRosterLineup } from "../../scoreline/roster/resolveScorelineRosterPlayerEntry";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { csClass } from "../../overlayFamily";
 import {
@@ -49,7 +51,7 @@ export const NightSessionRosterContent: React.FC<{
     roster.isHomeTeam,
   );
   const squadTeamName = roster.isHomeTeam ? roster.teamHome : roster.teamAway;
-  const lineup = resolveScorelineRosterLineup(roster.teamRoster);
+  const lineup = resolveRosterLineup(roster.teamRoster);
   const venue = dedupeVenueLabel(roster.ground);
   const dateLabel = formatDate(roster.date);
   const roundLabel = rosterRoundLabelAfterGrade(

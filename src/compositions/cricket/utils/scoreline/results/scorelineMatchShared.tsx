@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { Img } from "remotion";
 import type { MatchResult, Team } from "../../../results/_types/types";
 import { resolveTeamMatchScore } from "../../teamMatchScore";
-import { dedupeVenueLabel } from "./dedupeVenueLabel";
+import { dedupeVenueLabel } from "../../../../../cricket/viewModel";
 import type { ScorelinePerformanceRow } from "./formatPerformances";
 import { resolveScorelineMatchPerformances } from "./resolveScorelineMatchPerformances";
 import { resolveScorelineResultSinglePerformances } from "./resolveScorelineResultSinglePerformances";

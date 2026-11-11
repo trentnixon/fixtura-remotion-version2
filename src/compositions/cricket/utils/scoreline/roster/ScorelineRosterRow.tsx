@@ -1,8 +1,8 @@
 import React from "react";
 import { ScorelineCreaseMarkup } from "../../../../../templates/variants/scoreline/components/crease/ScorelineCreaseMarkup";
-import type { ScorelineRosterBadge } from "./resolveScorelineRosterPlayerEntry";
+import type { CricketRosterBadge } from "../../../../../cricket/viewModel";
 
-const renderBadges = (badges: ScorelineRosterBadge[]) =>
+const renderBadges = (badges: CricketRosterBadge[]) =>
   badges.map((badge) => (
     <span
       key={badge.label}
@@ -17,7 +17,7 @@ const renderBadges = (badges: ScorelineRosterBadge[]) =>
 export const ScorelineRosterRow: React.FC<{
   index: number;
   name: string;
-  badges: ScorelineRosterBadge[];
+  badges: CricketRosterBadge[];
 }> = ({ index, name, badges }) => (
   <div className="roster-entry">
     <div className="roster-row">

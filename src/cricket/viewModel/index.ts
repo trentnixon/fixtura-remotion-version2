@@ -10,3 +10,8 @@ export {
   type CricketRosterDensity,
 } from "./rosterDensity";
 export { splitTotwPlayerColumns } from "./totwPlayerColumns";
+export {
+  resolveRosterLineup,
+  type CricketRosterLineup,
+  type CricketRosterPlayerRow,
+} from "./rosterLineup";

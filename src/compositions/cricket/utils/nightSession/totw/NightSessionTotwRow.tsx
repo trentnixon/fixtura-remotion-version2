@@ -12,7 +12,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionAnimatedCopy } from "../NightSessionAnimatedCopy";
 import type { NightSessionRowEnterTiming } from "../nightSessionEnterTiming";
-import { formatRosterPlayerName } from "../roster/formatRosterPlayerName";
+import { formatRosterPlayerName } from "../../../../../cricket/viewModel";
 import { NightSessionInnerEnterAnim } from "../NightSessionInnerEnterAnim";
 import {
   withNightSessionFixtureInnerDistance,

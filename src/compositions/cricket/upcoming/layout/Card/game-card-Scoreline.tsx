@@ -10,7 +10,7 @@ import {
   calculateScorelineInnerDelay,
   FAST_DELAY_MULTIPLIER,
 } from "./_utils/calculations";
-import { dedupeVenueLabel } from "../../../utils/scoreline/results/dedupeVenueLabel";
+import { dedupeVenueLabel } from "../../../../../cricket/viewModel";
 import { resolveScorelineUpcomingClubSides } from "../../../utils/scoreline/fixture/resolveScorelineUpcomingClubSides";
 import {
   ScorelineFixtureCentre,

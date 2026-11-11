@@ -7,7 +7,7 @@ import type { ContainerAnimationConfig } from "../../../../../components/contain
 import { GameCardProps } from "./_types/GameCardProps";
 import { calculateAnimationOutFrame } from "./_utils/calculations";
 import { useNightSessionRowEnterTiming } from "../../../utils/nightSession/NightSessionEnterTimingContext";
-import { dedupeVenueLabel } from "../../../utils/scoreline/results/dedupeVenueLabel";
+import { dedupeVenueLabel } from "../../../../../cricket/viewModel";
 import { resolveScorelineUpcomingClubSides } from "../../../utils/scoreline/fixture/resolveScorelineUpcomingClubSides";
 import {
   NIGHT_SESSION_FIXTURE_INNER_ENTER_DISTANCE_PX,

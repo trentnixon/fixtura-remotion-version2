@@ -4,7 +4,7 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { csClass } from "../../overlayFamily";
 import { resolveTotwDensity } from "../../scoreline/totw/formatTotwStats";
 import { NightSessionTotwRow } from "./NightSessionTotwRow";
-import { splitTotwPlayerColumns } from "./splitTotwPlayerColumns";
+import { splitTotwPlayerColumns } from "../../../../../cricket/viewModel";
 import type { NightSessionRowEnterTiming } from "../nightSessionEnterTiming";
 
 export const NightSessionTotwContent: React.FC<{

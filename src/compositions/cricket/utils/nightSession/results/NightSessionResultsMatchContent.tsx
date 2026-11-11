@@ -16,7 +16,7 @@ import {
   ScorelineBattingRow,
   ScorelineBowlingRow,
 } from "../../scoreline/results/scorelineMatchShared";
-import { dedupeVenueLabel } from "../../scoreline/results/dedupeVenueLabel";
+import { dedupeVenueLabel } from "../../../../../cricket/viewModel";
 import { NightSessionResultMatchCell } from "./NightSessionResultMatchCell";
 import { NightSessionAccentDivider } from "../NightSessionAccentDivider";
 

@@ -1,8 +1,10 @@
 import React from "react";
-import type { ScorelineRosterBadge } from "../../scoreline/roster/resolveScorelineRosterPlayerEntry";
-import { formatRosterPlayerName } from "./formatRosterPlayerName";
+import {
+  formatRosterPlayerName,
+  type CricketRosterBadge,
+} from "../../../../../cricket/viewModel";
 
-const renderBadges = (badges: ScorelineRosterBadge[]) =>
+const renderBadges = (badges: CricketRosterBadge[]) =>
   badges.map((badge) => (
     <span
       key={badge.label}
@@ -17,7 +19,7 @@ const renderBadges = (badges: ScorelineRosterBadge[]) =>
 export const NightSessionRosterRow: React.FC<{
   index: number;
   name: string;
-  badges: ScorelineRosterBadge[];
+  badges: CricketRosterBadge[];
 }> = ({ name, badges }) => {
   const displayName = formatRosterPlayerName(name);
 

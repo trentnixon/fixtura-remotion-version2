@@ -17,7 +17,7 @@ import {
   ScorelineBowlingRow,
   ScorelineBattingRow,
 } from "../../scoreline/results/scorelineMatchShared";
-import { dedupeVenueLabel } from "../../scoreline/results/dedupeVenueLabel";
+import { dedupeVenueLabel } from "../../../../../cricket/viewModel";
 
 export type NightSessionResultSingleContentProps = {
   match: ResultSingleMatchResult;

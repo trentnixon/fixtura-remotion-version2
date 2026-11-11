@@ -1,13 +1,11 @@
 import { describe, expect, it } from "vitest";
-import {
-  resolveScorelineRosterDensity,
-  resolveScorelineRosterLineup,
-  resolveScorelineRosterPlayerEntry,
-} from "./resolveScorelineRosterPlayerEntry";
+import { parseRosterPlayerEntry } from "./rosterPlayerEntry";
+import { resolveRosterDensity } from "./rosterDensity";
+import { resolveRosterLineup } from "./rosterLineup";
 
-describe("resolveScorelineRosterPlayerEntry", () => {
+describe("parseRosterPlayerEntry", () => {
   it("parses captain from second line", () => {
-    expect(resolveScorelineRosterPlayerEntry("Dean Jones\nc")).toEqual({
+    expect(parseRosterPlayerEntry("Dean Jones\nc")).toEqual({
       emptyRoster: false,
       name: "Dean Jones",
       badges: [{ label: "C", captain: true }],
@@ -15,7 +13,7 @@ describe("resolveScorelineRosterPlayerEntry", () => {
   });
 
   it("parses vice captain from second line", () => {
-    expect(resolveScorelineRosterPlayerEntry("Beau Pearson\nvc")).toEqual({
+    expect(parseRosterPlayerEntry("Beau Pearson\nvc")).toEqual({
       emptyRoster: false,
       name: "Beau Pearson",
       badges: [{ label: "VC", captain: false }],
@@ -23,7 +21,7 @@ describe("resolveScorelineRosterPlayerEntry", () => {
   });
 
   it("strips wicket keeper marker into a badge", () => {
-    expect(resolveScorelineRosterPlayerEntry("Alex Keeper (WK)")).toEqual({
+    expect(parseRosterPlayerEntry("Alex Keeper (WK)")).toEqual({
       emptyRoster: false,
       name: "Alex Keeper",
       badges: [{ label: "WK", captain: false }],
@@ -32,7 +30,7 @@ describe("resolveScorelineRosterPlayerEntry", () => {
 
   it("marks empty roster placeholders", () => {
     expect(
-      resolveScorelineRosterPlayerEntry("No players allocated to line-up"),
+      parseRosterPlayerEntry("No players allocated to line-up"),
     ).toEqual({
       emptyRoster: true,
       name: "No players allocated to line-up",
@@ -41,18 +39,18 @@ describe("resolveScorelineRosterPlayerEntry", () => {
   });
 });
 
-describe("resolveScorelineRosterDensity", () => {
+describe("resolveRosterDensity", () => {
   it("uses design thresholds at 11 and 14 players", () => {
-    expect(resolveScorelineRosterDensity(11)).toBe("normal");
-    expect(resolveScorelineRosterDensity(12)).toBe("compact");
-    expect(resolveScorelineRosterDensity(14)).toBe("compact");
-    expect(resolveScorelineRosterDensity(15)).toBe("tight");
+    expect(resolveRosterDensity(11)).toBe("normal");
+    expect(resolveRosterDensity(12)).toBe("compact");
+    expect(resolveRosterDensity(14)).toBe("compact");
+    expect(resolveRosterDensity(15)).toBe("tight");
   });
 });
 
-describe("resolveScorelineRosterLineup", () => {
+describe("resolveRosterLineup", () => {
   it("returns a single empty state when roster is unavailable", () => {
-    expect(resolveScorelineRosterLineup([])).toEqual({
+    expect(resolveRosterLineup([])).toEqual({
       kind: "empty",
       message: "No players allocated to line-up",
     });
@@ -61,7 +59,7 @@ describe("resolveScorelineRosterLineup", () => {
   it("builds parsed player rows with design density", () => {
     const players = ["Stephen Winchester", "Dean Jones\nc", "Beau Pearson\nvc"];
 
-    expect(resolveScorelineRosterLineup(players)).toEqual({
+    expect(resolveRosterLineup(players)).toEqual({
       kind: "players",
       density: "normal",
       rows: [
