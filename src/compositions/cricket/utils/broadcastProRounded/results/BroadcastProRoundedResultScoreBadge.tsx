@@ -4,6 +4,7 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { BroadcastProRoundedStructuredScore } from "../../../../../templates/variants/broadcastProRounded/components/score";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
 import { ResultScoreFirstInnings } from "../../primitives/ResultScore";
+import { resolveBroadcastProContainerRadius } from "../../broadcastProCore";
 import { csClass, useBroadcastProRoundedTheme } from "../index";
 import type {
   AnimationConfig,
@@ -38,7 +39,7 @@ export const BroadcastProRoundedResultScoreBadge: React.FC<
   const { animations } = useAnimationContext();
   const { componentStyles, fontClasses, fonts, layout } = useThemeContext();
   const { glass, text } = useBroadcastProRoundedTheme();
-  const cellRadius = layout.borderRadius.container;
+  const cellRadius = resolveBroadcastProContainerRadius(layout);
   const badgeClass = csClass(
     componentStyles,
     "broadcastProRoundedResultsScoreBadge",

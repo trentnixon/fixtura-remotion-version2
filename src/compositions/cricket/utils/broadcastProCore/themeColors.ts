@@ -1,0 +1,104 @@
+import tinycolor from "tinycolor2";
+import { ensureContrast } from "../../../../core/utils/designPalettes/types";
+import type { DesignPalette } from "../../../../core/utils/designPalettes/types";
+
+export interface BroadcastProCoreTextOnContainer {
+  title: string;
+  copy: string;
+  muted: string;
+  secondary: string;
+  accent: string;
+}
+
+/** Composite a translucent glass layer over the mode surface for contrast math. */
+export const compositeSurfaceColor = (
+  surfaceBase: string,
+  overlay: string,
+): string => {
+  const base = tinycolor(surfaceBase).toRgb();
+  const layer = tinycolor(overlay).toRgb();
+  const alpha = layer.a ?? 1;
+  return tinycolor({
+    r: layer.r * alpha + base.r * (1 - alpha),
+    g: layer.g * alpha + base.g * (1 - alpha),
+    b: layer.b * alpha + base.b * (1 - alpha),
+  }).toRgbString();
+};
+
+const resolveMutedCopy = (background: string, copy: string): string => {
+  const base = ensureContrast(background, copy);
+  const dimmed = tinycolor(base).isDark()
+    ? tinycolor(base).lighten(25)
+    : tinycolor(base).darken(25);
+  return ensureContrast(background, dimmed.toRgbString());
+};
+
+/** Keep brand hue; only shift lightness so the accent still reads on this surface. */
+export const resolveBroadcastProCoreAccentOnSurface = (
+  background: string,
+  accent: string,
+): string => {
+  if (tinycolor.readability(background, accent) >= 4.5) return accent;
+
+  const bgIsDark = tinycolor(background).isDark();
+  let candidate = tinycolor(accent);
+  for (let i = 0; i < 6; i += 1) {
+    candidate = bgIsDark ? candidate.lighten(8) : candidate.darken(8);
+    const next = candidate.toRgbString();
+    if (tinycolor.readability(background, next) >= 4.5) return next;
+  }
+  return ensureContrast(background, accent);
+};
+
+/**
+ * Mode-aware on-container copy colours with WCAG contrast against
+ * `selectedPalette.container.background` (light / lightAlt / dark / darkAlt).
+ */
+export const resolveBroadcastProCoreTextOnContainer = (
+  selectedPalette: DesignPalette,
+): BroadcastProCoreTextOnContainer => {
+  const bg = selectedPalette.container.background;
+  const oc = selectedPalette.text.onContainer;
+
+  const title = oc.title;
+  const copy = ensureContrast(bg, oc.copy);
+  const secondary = ensureContrast(bg, oc.secondary ?? oc.copy);
+  const accent = resolveBroadcastProCoreAccentOnSurface(
+    bg,
+    oc.accent ?? selectedPalette.container.accent,
+  );
+  const muted = resolveMutedCopy(bg, oc.copy);
+
+  return { title, copy, muted, secondary, accent };
+};
+
+/**
+ * Re-resolve copy colours for text sitting on a glass panel (semi-transparent
+ * overlay composited over the mode surface).
+ */
+export const resolveBroadcastProCoreTextOnGlass = (
+  surfaceBase: string,
+  glassPanel: string,
+  preferred: BroadcastProCoreTextOnContainer,
+): BroadcastProCoreTextOnContainer => {
+  const bg = compositeSurfaceColor(surfaceBase, glassPanel);
+
+  const title = ensureContrast(bg, preferred.title);
+  const copy = ensureContrast(bg, preferred.copy);
+  const secondary = ensureContrast(bg, preferred.secondary);
+  const muted = resolveMutedCopy(bg, preferred.copy);
+
+  return {
+    title,
+    copy,
+    muted,
+    secondary,
+    accent: resolveBroadcastProCoreAccentOnSurface(bg, preferred.accent),
+  };
+};
+
+/** Pick readable label/text on an arbitrary background using mode copy preference. */
+export const resolveBroadcastProCoreCopyOnBackground = (
+  background: string,
+  selectedPalette: DesignPalette,
+): string => ensureContrast(background, selectedPalette.text.onContainer.copy);

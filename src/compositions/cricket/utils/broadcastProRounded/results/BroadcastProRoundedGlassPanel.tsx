@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { broadcastProGlassPanelClass } from "../../broadcastProCore";
 import {
   cellBlur,
   getBroadcastProRoundedGlassSurface,
@@ -63,7 +64,10 @@ export const BroadcastProRoundedGlassPanel: React.FC<
 
   const panel = (
     <div
-      className={`overflow-hidden ${layout.borderRadius.container} ${className}`.trim()}
+      className={broadcastProGlassPanelClass(layout, {
+        overflowHidden: true,
+        extraClassName: className,
+      })}
       style={{
         background: getBroadcastProRoundedGlassSurface(glass, surface),
         border: connection === "standalone" ? glass.border : undefined,

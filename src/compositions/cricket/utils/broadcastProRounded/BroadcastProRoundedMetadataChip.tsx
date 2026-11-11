@@ -1,5 +1,6 @@
 import React from "react";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
+import { resolveBroadcastProContainerRadius } from "../broadcastProCore";
 import { useBroadcastProRoundedTheme } from "./useBroadcastProRoundedTheme";
 import { cellBlur } from "./glass";
 
@@ -15,7 +16,7 @@ export const BroadcastProRoundedMetadataChip: React.FC<
 > = ({ children, className = "", style }) => {
   const { glass } = useBroadcastProRoundedTheme();
   const { layout } = useThemeContext();
-  const cellRadius = layout.borderRadius.container;
+  const cellRadius = resolveBroadcastProContainerRadius(layout);
 
   return (
     <div

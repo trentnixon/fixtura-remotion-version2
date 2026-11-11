@@ -10,6 +10,11 @@ export {
 export { BroadcastProRoundedMetadataChip } from "./BroadcastProRoundedMetadataChip";
 export { csClass } from "./componentStyles";
 export {
+  broadcastProGlassPanelClass,
+  resolveBroadcastProContainerRadius,
+  resolveBroadcastProImageRadius,
+} from "../broadcastProCore";
+export {
   compositeSurfaceColor,
   resolveBroadcastProRoundedTextOnContainer,
   resolveBroadcastProRoundedTextOnGlass,

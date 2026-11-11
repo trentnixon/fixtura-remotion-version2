@@ -1,5 +1,6 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
+import { broadcastProGlassPanelClass } from "../../broadcastProCore";
 import {
   cellBlur,
   getBroadcastProGlassSurface,
@@ -30,6 +31,7 @@ export const BroadcastProGlassPanel: React.FC<BroadcastProGlassPanelProps> = ({
   connection = "standalone",
 }) => {
   const {
+    layout,
     selectedPalette,
     broadcastProGlassOpacity,
     broadcastProTransparentLayers,
@@ -45,7 +47,9 @@ export const BroadcastProGlassPanel: React.FC<BroadcastProGlassPanelProps> = ({
 
   return (
     <div
-      className={`rounded-none ${className}`.trim()}
+      className={broadcastProGlassPanelClass(layout, {
+        extraClassName: className,
+      })}
       style={{
         background: getBroadcastProGlassSurface(glass, surface),
         border: connection === "standalone" ? glass.border : undefined,

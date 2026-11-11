@@ -9,6 +9,11 @@ export {
 export { BroadcastProMetadataChip } from "./BroadcastProMetadataChip";
 export { csClass } from "./componentStyles";
 export {
+  broadcastProGlassPanelClass,
+  resolveBroadcastProContainerRadius,
+  resolveBroadcastProImageRadius,
+} from "../broadcastProCore";
+export {
   compositeSurfaceColor,
   resolveBroadcastProAccentOnSurface,
   resolveBroadcastProTextOnContainer,

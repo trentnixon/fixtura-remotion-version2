@@ -3,6 +3,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { MetadataMedium } from "../../primitives/metadataMedium";
 import { formatGroundLocation } from "../../utils-text";
+import { resolveBroadcastProContainerRadius } from "../../broadcastProCore";
 import { cellBlur, csClass, useBroadcastProRoundedTheme } from "../index";
 import { resolveBroadcastProRoundedEdgeMarkerStyle } from "../../../../../templates/types/broadcast-pro-rounded/marker-notch";
 import type { BroadcastProRoundedSurfaceConnection } from "../glass";
@@ -39,7 +40,7 @@ export const BroadcastProRoundedResultMetaStrip: React.FC<
   const { componentStyles, layout } = useThemeContext();
   const { glass, text, accent } = useBroadcastProRoundedTheme();
   const copyIn = animations.text.main.copyIn;
-  const cellRadius = layout.borderRadius.container;
+  const cellRadius = resolveBroadcastProContainerRadius(layout);
 
   const stripClass = csClass(
     componentStyles,
