@@ -6,6 +6,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 
 export const BasicMainHeader = () => {
   const { layout, fontClasses } = useThemeContext();
@@ -17,7 +18,7 @@ export const BasicMainHeader = () => {
   const { heights } = layout;
   const { timings } = data;
 
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
 
   const OrgLogo = () => (
     <div className="w-full h-full flex justify-center items-center ">

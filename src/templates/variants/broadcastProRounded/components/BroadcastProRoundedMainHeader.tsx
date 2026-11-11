@@ -6,6 +6,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 import {
   BroadcastProRoundedHeadlineSecondary,
   BroadcastProRoundedHeadlineTitle,
@@ -26,7 +27,7 @@ export const BroadcastProRoundedMainHeader = () => {
 
   const { timings } = data;
 
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
   const crestPx =
     broadcastProRoundedHeadlineSizing?.headerOrgCrestPx ??
     DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.headerOrgCrestPx;

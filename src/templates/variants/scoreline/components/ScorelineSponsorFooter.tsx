@@ -1,7 +1,7 @@
 import React from "react";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-import { SponsorFooter } from "../../../../compositions/cricket/sponsorFooter";
 import type { SponsorFooterProps } from "../../../../compositions/cricket/sponsorFooter";
+import { SponsorFooterChrome } from "../../../../compositions/cricket/sponsorFooter/SponsorFooterChrome";
 import { csClass } from "../../../../compositions/cricket/utils/scoreline/componentStyles";
 import { ScorelineCreaseMarkup } from "./crease/ScorelineCreaseMarkup";
 
@@ -15,25 +15,18 @@ export const ScorelineSponsorFooter: React.FC<ScorelineSponsorFooterProps> = ({
   sponsorStripKey = "scorelineSponsorStrip",
   ...sponsorProps
 }) => {
-  const { layout, componentStyles } = useThemeContext();
-  const footerHeight = height ?? layout.heights.footer;
+  const { componentStyles } = useThemeContext();
 
   return (
-    <footer
-      className="asset-footer"
-      style={{
-        height: `${footerHeight}px`,
-        maxHeight: `${footerHeight}px`,
-      }}
-    >
-      <div className="footer-crease" aria-hidden>
-        <ScorelineCreaseMarkup />
-      </div>
-      <div
-        className={`sponsor-strip ${csClass(componentStyles, sponsorStripKey)}`}
-      >
-        <SponsorFooter {...sponsorProps} />
-      </div>
-    </footer>
+    <SponsorFooterChrome
+      height={height}
+      sponsorStripClassName={csClass(componentStyles, sponsorStripKey)}
+      decoration={
+        <div className="footer-crease" aria-hidden>
+          <ScorelineCreaseMarkup />
+        </div>
+      }
+      {...sponsorProps}
+    />
   );
 };

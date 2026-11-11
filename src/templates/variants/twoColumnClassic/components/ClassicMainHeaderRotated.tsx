@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 import { getSimplifiedTitle } from "../utils/titleLookup";
 
 export const ClassicMainHeaderRotated: React.FC = () => {
@@ -15,7 +16,7 @@ export const ClassicMainHeaderRotated: React.FC = () => {
   const LogoAnimations = animations.image.main.title.logo;
 
   const { timings } = data;
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
 
   // Get simplified title using lookup
   const displayTitle = getSimplifiedTitle(metadata.title || "");

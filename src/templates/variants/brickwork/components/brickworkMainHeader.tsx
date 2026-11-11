@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 import {
   BRICKWORK_HEADER_TITLE_BASE_CLASS,
   useBrickworkTypography,
@@ -27,7 +28,7 @@ export const BrickworkMainHeader = () => {
     Boolean(title),
   );
 
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
   return (
     <div
       className="w-full p-0 justify-center flex items-center"

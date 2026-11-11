@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 
 export const ClassicMainHeaderStacked: React.FC = () => {
   const { fontClasses } = useThemeContext();
@@ -14,7 +15,7 @@ export const ClassicMainHeaderStacked: React.FC = () => {
   const LogoAnimations = animations.image.main.title.logo;
 
   const { timings } = data;
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
 
   const TitleNode = (
     <div className="w-full flex flex-col justify-center items-center leading-none">

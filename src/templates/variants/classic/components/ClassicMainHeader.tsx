@@ -5,6 +5,7 @@ import { AnimatedImage } from "../../../../components/images";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 import {
   TITLE_SCREEN_BASE_FONT_PX,
   useFittedFontSize,
@@ -41,7 +42,7 @@ export const ClassicMainHeader = () => {
   const { heights } = layout;
   const { timings } = data;
 
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
   const headerTitleFont =
     fonts?.title?.family ??
     fonts?.subtitle?.family ??

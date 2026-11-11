@@ -2,6 +2,7 @@ import { AnimatedText } from "../../../../components/typography/AnimatedText";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
+import { calculateMainHeaderExitFrame } from "../../../../core/timing/mainSequenceExitPolicy";
 import {
   getHeaderConfig,
   getLeagueTitleConfig,
@@ -63,7 +64,7 @@ export const CNSWMainHeader = () => {
     spacing: bottomLineSpacing,
   };
 
-  const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
+  const exitFrame = calculateMainHeaderExitFrame(timings);
 
   return (
     <div

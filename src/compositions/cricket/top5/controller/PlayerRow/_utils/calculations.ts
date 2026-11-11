@@ -1,8 +1,6 @@
-import { Timings } from "../../../../../../core/types/data/common";
+import { calculateMainRowExitFrame } from "../../../../../../core/timing/mainSequenceExitPolicy";
 import {
   STAGGER_DELAY_MULTIPLIER,
-  DEFAULT_MAIN_DURATION,
-  EXIT_ANIMATION_OFFSET,
 } from "./constants";
 
 /**
@@ -19,6 +17,5 @@ export const calculatePlayerDelay = (index: number): number => {
  * @param timings - Video data timings object
  * @returns Exit frame value (FPS_MAIN - offset or default - offset)
  */
-export const calculateExitFrame = (timings: Timings | undefined): number => {
-  return (timings?.FPS_MAIN || DEFAULT_MAIN_DURATION) - EXIT_ANIMATION_OFFSET;
-};
+/** @see mainSequenceExitPolicy — main row exit framing */
+export const calculateExitFrame = calculateMainRowExitFrame;

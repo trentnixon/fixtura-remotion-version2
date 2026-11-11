@@ -4,6 +4,12 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.12] - 2026-11-11
+
+### Changed
+
+- **Main-sequence exit policy** — `mainSequenceExitPolicy` documents and centralizes footer (−15), main header (−30), and row exit framing; all template `*MainHeader` components use `calculateMainHeaderExitFrame`. Top 5 row exit delegates to `calculateMainRowExitFrame`. `SponsorFooterChrome` wraps shared `SponsorFooter` with variant decoration (Scoreline crease, Night Session rule).
+
 ## [0.1.11] - 2026-11-11
 
 ### Changed
