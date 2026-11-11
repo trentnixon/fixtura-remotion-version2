@@ -1,50 +1,8 @@
-/** @param {string} name */
-export function formatRosterPlayerName(name) {
-  const value = String(name ?? "").trim();
-  if (!value) {
-    return value;
-  }
-  const letters = value.replace(/[^a-zA-Z]/g, "");
-  if (letters.length > 0 && letters === letters.toUpperCase()) {
-    return value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-  }
-  return value;
-}
+import { formatRosterPlayerName } from "../../view-model/cricket/rosterPlayerName.js";
+import { parseRosterPlayerEntry } from "../../view-model/cricket/rosterPlayerEntry.js";
+import { resolveRosterDensity } from "../../view-model/cricket/rosterDensity.js";
 
-const parsePlayerEntry = (raw) => {
-  const value = String(raw ?? "").trim();
-  if (!value || /no players allocated/i.test(value)) {
-    return { emptyRoster: true, name: value || "No players allocated" };
-  }
-
-  const lines = value.split("\n");
-  let name = lines[0]?.trim() ?? "";
-  const badges = [];
-
-  const role = lines[1]?.trim().toLowerCase() ?? "";
-  if (role === "c") {
-    badges.push({ label: "C", captain: true });
-  } else if (role === "vc") {
-    badges.push({ label: "VC", captain: false });
-  }
-
-  if (/\(WK\)/i.test(name)) {
-    badges.push({ label: "WK", captain: false });
-    name = name.replace(/\(WK\)/gi, "").trim();
-  }
-
-  return { emptyRoster: false, name, badges };
-};
-
-const resolveDensity = (count) => {
-  if (count <= 11) {
-    return "normal";
-  }
-  if (count <= 14) {
-    return "compact";
-  }
-  return "tight";
-};
+export { formatRosterPlayerName };
 
 /** @param {string[]} players */
 export function mountScorelineRosterRows(players) {
@@ -61,7 +19,7 @@ export function mountScorelineRosterRows(players) {
 
   if (
     players.length === 0 ||
-    players.every((entry) => parsePlayerEntry(entry).emptyRoster)
+    players.every((entry) => parseRosterPlayerEntry(entry).emptyRoster)
   ) {
     const fragment = template.content.cloneNode(true);
     const entry = fragment.querySelector(".roster-entry");
@@ -94,10 +52,10 @@ export function mountScorelineRosterRows(players) {
     return;
   }
 
-  container.dataset.density = resolveDensity(players.length);
+  container.dataset.density = resolveRosterDensity(players.length);
 
   players.forEach((rawPlayer, playerIndex) => {
-    const parsed = parsePlayerEntry(rawPlayer);
+    const parsed = parseRosterPlayerEntry(rawPlayer);
     if (parsed.emptyRoster) {
       return;
     }

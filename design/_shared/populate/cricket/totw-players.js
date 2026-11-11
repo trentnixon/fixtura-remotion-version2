@@ -1,4 +1,5 @@
 import { formatRosterPlayerName } from "./roster-rows.js";
+import { splitTotwPlayerColumns } from "../../view-model/cricket/totwPlayerColumns.js";
 
 const POSITION_LABELS = {
   topscorer: "Top Scorer",
@@ -158,8 +159,7 @@ export function mountScorelineTotwPlayers(players, root = document) {
   const legacy = root.querySelector("[data-totw-rows]");
 
   if (columns.length >= 2) {
-    const splitAt = Math.ceil(players.length / 2);
-    const batches = [players.slice(0, splitAt), players.slice(splitAt)];
+    const batches = splitTotwPlayerColumns(players);
 
     columns.forEach((column, index) => {
       if (!(column instanceof HTMLElement)) {

@@ -14,6 +14,8 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 - **Template registration manifest** — `TEMPLATE_REGISTRATION_MANIFEST` is authoritative for `TEMPLATE_IDS`, composition export keys, preview lazy loaders, and optional `dist/templates/*` publish chunks. `registry.tsx` and `compositionRoutingManifest` derive from it; `templateIds` is a deprecated re-export barrel.
 
+- **Cricket view-model** — Shared fixture→label rules live under `design/_shared/view-model/cricket/` (venue dedupe, roster name/entry/density, TOTW column split). Remotion uses `src/cricket/viewModel` adapters; design populate/layout imports the same modules (ADR-0003 CSS authority unchanged).
+
 ## [0.1.11] - 2026-11-11
 
 ### Changed

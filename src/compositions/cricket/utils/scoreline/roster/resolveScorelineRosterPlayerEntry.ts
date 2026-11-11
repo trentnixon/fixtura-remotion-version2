@@ -1,7 +1,10 @@
-export type ScorelineRosterBadge = {
-  label: string;
-  captain: boolean;
-};
+import {
+  parseRosterPlayerEntry,
+  resolveRosterDensity,
+  type CricketRosterBadge,
+} from "../../../../../cricket/viewModel";
+
+export type ScorelineRosterBadge = CricketRosterBadge;
 
 export type ScorelineRosterPlayerRow = {
   index: number;
@@ -17,57 +20,9 @@ export type ScorelineRosterLineup =
       rows: ScorelineRosterPlayerRow[];
     };
 
-/** Mirrors design/variants/scoreline/cricket/team-roster.html parsePlayerEntry. */
-export const resolveScorelineRosterPlayerEntry = (
-  raw: string,
-): {
-  emptyRoster: boolean;
-  name: string;
-  badges: ScorelineRosterBadge[];
-} => {
-  const value = String(raw ?? "").trim();
+export const resolveScorelineRosterPlayerEntry = parseRosterPlayerEntry;
 
-  if (!value || /no players allocated/i.test(value)) {
-    return {
-      emptyRoster: true,
-      name: value || "No players allocated",
-      badges: [],
-    };
-  }
-
-  const lines = value.split("\n");
-  let name = lines[0]?.trim() ?? "";
-  const badges: ScorelineRosterBadge[] = [];
-
-  const role = lines[1]?.trim().toLowerCase() ?? "";
-  if (role === "c") {
-    badges.push({ label: "C", captain: true });
-  } else if (role === "vc") {
-    badges.push({ label: "VC", captain: false });
-  }
-
-  if (/\(WK\)/i.test(name)) {
-    badges.push({ label: "WK", captain: false });
-    name = name.replace(/\(WK\)/gi, "").trim();
-  }
-
-  return { emptyRoster: false, name, badges };
-};
-
-/** Mirrors design team-roster.html resolveDensity. */
-export const resolveScorelineRosterDensity = (
-  playerCount: number,
-): "normal" | "compact" | "tight" => {
-  if (playerCount <= 11) {
-    return "normal";
-  }
-
-  if (playerCount <= 14) {
-    return "compact";
-  }
-
-  return "tight";
-};
+export const resolveScorelineRosterDensity = resolveRosterDensity;
 
 export const resolveScorelineRosterLineup = (
   teamRoster: string[],

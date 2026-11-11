@@ -1,14 +1,18 @@
 import { describe, expect, it } from "vitest";
-import { dedupeVenueLabel } from "./dedupeVenueLabel";
+import { dedupeVenueLabel } from "./venue";
 
 describe("dedupeVenueLabel", () => {
   it("returns trimmed single segments unchanged", () => {
     expect(dedupeVenueLabel("Pacific Pines Park")).toBe("Pacific Pines Park");
+    expect(dedupeVenueLabel("  Main Ground  ")).toBe("Main Ground");
   });
 
   it("dedupes repeated slash segments case-insensitively", () => {
     expect(dedupeVenueLabel("Pacific Pines Park / Pacific Pines Park")).toBe(
       "Pacific Pines Park",
+    );
+    expect(dedupeVenueLabel("Stadium A / Stadium A / Stadium B")).toBe(
+      "Stadium A / Stadium B",
     );
   });
 
