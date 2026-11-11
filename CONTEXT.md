@@ -60,6 +60,10 @@ _Avoid:_ template (when meaning a single Remotion Composition or an arbitrary so
 The sponsor logo strip shown during the main asset sequence of a composition.
 _Avoid_: Outro, sponsor bar (unless referring to layout chrome only)
 
+**Sponsor footer chrome**:
+Variant decoration above the logo strip (e.g. Scoreline crease, Night Session rule), registered on the template theme as `sponsorFooterChrome` and rendered by `CricketSponsorFooter`.
+_Avoid_: Importing template `*SponsorFooter` from composition controllers
+
 **Sponsor outro**:
 The separate end-of-video sponsor sequence after the main asset. Not the footer.
 _Avoid_: Footer, closing credits

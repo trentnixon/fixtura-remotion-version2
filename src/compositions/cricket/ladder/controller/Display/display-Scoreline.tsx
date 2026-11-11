@@ -3,7 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../../../utils/scoreline/componentStyles";
 import { calculateScorelineInnerDelay } from "../../../utils/scoreline/scorelineInnerAnimationDelays";
 import { resolveScorelineLadderBiasTeam } from "../../../utils/scoreline/ladder/resolveScorelineLadderBiasTeam";
@@ -127,7 +127,7 @@ export const LadderDisplayScoreline: React.FC<LadderDisplayProps> = ({
           </div>
         </main>
       </AnimatedContainer>
-      <ScorelineSponsorFooter
+      <CricketSponsorFooter
         assignSponsors={assignSponsors}
         primaryForScreen={primaryForScreen}
         sponsorStripKey="scorelineLadderSponsorStrip"

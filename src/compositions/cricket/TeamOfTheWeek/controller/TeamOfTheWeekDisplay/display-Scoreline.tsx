@@ -3,7 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../../../utils/scoreline/componentStyles";
 import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import ScorelineTotwRow from "../../layout/ScorelineTotwRow";
@@ -81,7 +81,7 @@ const TeamOfTheWeekDisplayScoreline: React.FC<TeamOfTheWeekDisplayProps> = ({
         </main>
       </AnimatedContainer>
 
-      <ScorelineSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="scorelineTotwSponsorStrip"
       />

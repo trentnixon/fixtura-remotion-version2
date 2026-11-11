@@ -121,6 +121,11 @@ export interface TemplateThemeConfig {
   broadcastProRoundedCrestSizing?: BroadcastProRoundedCrestSizing;
   /** Broadcast Pro Rounded ladder zone sizing (see `variants/broadcastProRounded/theme/tokens.ts`). */
   broadcastProRoundedLadderZoneSizing?: BroadcastProRoundedLadderZoneSizing;
+  /**
+   * Overlay-family templates: footer chrome registered on the template theme;
+   * compositions render via `CricketSponsorFooter`.
+   */
+  sponsorFooterChrome?: "scoreline" | "nightSession";
 }
 
 export * from "./broadcast-pro";

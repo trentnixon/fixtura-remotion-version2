@@ -9,6 +9,7 @@ import { nightSessionTokens } from "./tokens";
 export const nightSessionTheme: TemplateThemeConfig = {
   ...baseTheme,
   ...nightSessionTokens,
+  sponsorFooterChrome: "nightSession",
   layout: nightSessionLayout,
   mode: nightSessionMode,
   componentStyles: {

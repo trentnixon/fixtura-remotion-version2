@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../../../utils/scoreline/componentStyles";
 import MatchCardScoreline from "../../layout/MatchCard/card-Scoreline";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
@@ -40,7 +40,7 @@ const ResultSingleDisplayScoreline: React.FC<ResultSingleDisplayProps> = ({
         </main>
       </AnimatedContainer>
 
-      <ScorelineSponsorFooter
+      <CricketSponsorFooter
         assignSponsors={match.assignSponsors}
         primaryForScreen={match.primaryForScreen}
         sponsorStripKey="scorelineResultsSponsorStrip"

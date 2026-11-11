@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import { csClass } from "../../../utils/overlayFamily";
 import GamesListNightSession from "../GamesList/games-list-NightSession";
@@ -72,7 +72,7 @@ export const FixtureDisplayNightSession: React.FC<GamesDisplayProps> = ({
           </NightSessionEnterTimingProvider>
         </main>
       </NightSessionAnimatedShell>
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="nightSessionUpcomingSponsorStrip"
       />

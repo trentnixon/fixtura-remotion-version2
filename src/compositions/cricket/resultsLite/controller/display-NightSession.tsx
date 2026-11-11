@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
-import { NightSessionSponsorFooter } from "../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { NightSessionAnimatedShell } from "../../utils/nightSession/NightSessionAnimatedShell";
 import { useNightSessionEnterTiming } from "../../utils/nightSession/useNightSessionEnterTiming";
 import { NightSessionEnterTimingProvider } from "../../utils/nightSession/NightSessionEnterTimingContext";
@@ -65,7 +65,7 @@ const ResultsLiteDisplayNightSession: React.FC<{
         </main>
       </NightSessionAnimatedShell>
 
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="nightSessionResultsSponsorStrip"
       />

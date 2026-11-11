@@ -1,6 +1,6 @@
 import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import { csClass } from "../../../utils/overlayFamily";
 import { NightSessionResultSingleContent } from "../../../utils/nightSession/results/NightSessionResultSingleContent";
@@ -37,7 +37,7 @@ const ResultSingleDisplayNightSession: React.FC<ResultSingleDisplayProps> = ({
         </main>
       </NightSessionAnimatedShell>
 
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         assignSponsors={match.assignSponsors}
         primaryForScreen={match.primaryForScreen}
         sponsorStripKey="nightSessionResultsSponsorStrip"

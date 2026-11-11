@@ -9,6 +9,7 @@ import { scorelineTokens } from "./tokens";
 export const scorelineTheme: TemplateThemeConfig = {
   ...baseTheme,
   ...scorelineTokens,
+  sponsorFooterChrome: "scoreline",
   layout: scorelineLayout,
   mode: scorelineMode,
   componentStyles: {

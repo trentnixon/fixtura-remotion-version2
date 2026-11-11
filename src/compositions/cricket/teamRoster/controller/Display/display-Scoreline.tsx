@@ -3,7 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { ScorelineRosterContent } from "../../../utils/scoreline/roster/ScorelineRosterContent";
-import { ScorelineSponsorFooter } from "../../../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../../../utils/scoreline/componentStyles";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
@@ -35,7 +35,7 @@ const RosterDisplayScoreline: React.FC<RosterDisplayProps> = ({ roster }) => {
         />
       </AnimatedContainer>
 
-      <ScorelineSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="scorelineRosterSponsorStrip"
       />

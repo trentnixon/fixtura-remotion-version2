@@ -11,7 +11,7 @@ import {
   getCompositionSectionHeight,
   getMainContentSectionHeight,
 } from "../../../core/utils/layoutHeights";
-import { NightSessionSponsorFooter } from "../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../utils/overlayFamily";
 import {
   buildPerformancesFooterSponsors,
@@ -95,7 +95,7 @@ export const PerformancesListNightSession: React.FC = () => {
           }}
         />
       </div>
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="nightSessionTop5SponsorStrip"
       />

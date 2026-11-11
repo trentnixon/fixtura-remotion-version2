@@ -222,6 +222,8 @@ export interface ThemeContextProps {
   /** Broadcast Pro Rounded ladder zone sizing (see `variants/broadcastProRounded/theme/tokens.ts`). */
   broadcastProRoundedLadderZoneSizing?: BroadcastProRoundedLadderZoneSizing;
 
+  sponsorFooterChrome?: "scoreline" | "nightSession";
+
   // Helper function to get active palette
   getActivePalette: (paletteName?: string) => DesignPalette;
 

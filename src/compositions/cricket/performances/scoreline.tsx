@@ -11,7 +11,7 @@ import {
   getCompositionSectionHeight,
   getMainContentSectionHeight,
 } from "../../../core/utils/layoutHeights";
-import { ScorelineSponsorFooter } from "../../../templates/variants/scoreline/components/ScorelineSponsorFooter";
+import { CricketSponsorFooter } from "../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../utils/scoreline/componentStyles";
 import {
   buildPerformancesFooterSponsors,
@@ -95,7 +95,7 @@ export const PerformancesListScoreline: React.FC = () => {
           }}
         />
       </div>
-      <ScorelineSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="scorelineTop5SponsorStrip"
       />

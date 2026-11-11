@@ -18,6 +18,8 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 - **Overlay family module** — `overlayFamily` centralises `csClass`, canvas `data-*` mapping, container copy tokens, and inner animation tiers. Scoreline and Night Session import the family module; variant folders keep re-export shims and template-specific chrome.
 
+- **Sponsor footer seam** — `CricketSponsorFooter` reads `sponsorFooterChrome` from template theme; variant decoration lives in `chromeRegistry`. Compositions no longer import template `*SponsorFooter` components (exit timing unchanged per ADR-0001).
+
 ## [0.1.11] - 2026-11-11
 
 ### Changed

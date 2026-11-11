@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../../../utils/overlayFamily";
 import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
@@ -83,7 +83,7 @@ const PlayersDisplayNightSession: React.FC<PlayersDisplayProps> = ({
           </div>
         </main>
       </NightSessionAnimatedShell>
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="nightSessionTop5SponsorStrip"
       />

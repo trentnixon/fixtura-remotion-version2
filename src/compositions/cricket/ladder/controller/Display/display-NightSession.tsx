@@ -3,7 +3,7 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
-import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { csClass } from "../../../utils/overlayFamily";
 import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNightSessionEnterTiming";
 import { NightSessionEnterTimingProvider } from "../../../utils/nightSession/NightSessionEnterTimingContext";
@@ -108,7 +108,7 @@ export const LadderDisplayNightSession: React.FC<LadderDisplayProps> = ({
           </main>
         </NightSessionEnterTimingProvider>
       </NightSessionAnimatedShell>
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         assignSponsors={assignSponsors}
         primaryForScreen={primaryForScreen}
         sponsorStripKey="nightSessionLadderSponsorStrip"

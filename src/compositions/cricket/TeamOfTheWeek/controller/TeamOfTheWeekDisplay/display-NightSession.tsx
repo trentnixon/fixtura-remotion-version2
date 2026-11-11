@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
+import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
 import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { csClass } from "../../../utils/overlayFamily";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
@@ -64,7 +64,7 @@ const TeamOfTheWeekDisplayNightSession: React.FC<TeamOfTheWeekDisplayProps> = ({
         />
       </NightSessionAnimatedShell>
 
-      <NightSessionSponsorFooter
+      <CricketSponsorFooter
         sponsors={footerSponsors}
         sponsorStripKey="nightSessionTotwSponsorStrip"
       />
