@@ -1360,10 +1360,16 @@
   color: var(--container-text, var(--contrast-performance-lead));
 }
 
-.night-session-canvas[data-leaderboard] .leader-figure,
+.night-session-canvas[data-leaderboard] .leader-figure {
+  color: var(
+    --ns-performance-figure,
+    var(--container-text, var(--contrast-performance-lead))
+  );
+}
+
 .night-session-canvas[data-leaderboard] .leader-balls,
 .night-session-canvas[data-leaderboard] .leader-overs {
-  color: var(--header-text, rgb(255 255 255 / 92%));
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .night-session-canvas[data-leaderboard] .leader-team-label,

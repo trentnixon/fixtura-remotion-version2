@@ -592,7 +592,10 @@
   line-height: 1;
   white-space: nowrap;
   font-variant-numeric: tabular-nums lining-nums;
-  color: var(--header-text, rgb(255 255 255 / 92%));
+  color: var(
+    --ns-performance-figure,
+    var(--container-text, var(--contrast-performance-lead))
+  );
 }
 
 /* #1 — same dimensions as other rows; only opacity differs (see shared + token) */
@@ -626,7 +629,7 @@
   font-size: var(--type-leader-suffix);
   font-weight: 700;
   font-variant-numeric: tabular-nums lining-nums;
-  color: var(--header-text, rgb(255 255 255 / 92%));
+  color: var(--container-text-muted, var(--contrast-meta));
 }
 
 .night-session-canvas .leader-figure-label {

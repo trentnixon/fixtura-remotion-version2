@@ -404,12 +404,15 @@
 }
 
 .night-session-canvas[data-leaderboard] .leader-row .leader-figure {
-  color: var(--header-text, rgb(255 255 255 / 92%)) !important;
+  color: var(
+    --ns-performance-figure,
+    var(--container-text, var(--contrast-performance-lead))
+  ) !important;
 }
 
 .night-session-canvas[data-leaderboard] .leader-balls,
 .night-session-canvas[data-leaderboard] .leader-overs {
-  color: var(--header-text, rgb(255 255 255 / 92%)) !important;
+  color: var(--container-text-muted, var(--contrast-meta)) !important;
 }
 
 /* Ladder — row is one pill; grade rail keeps gradient */
