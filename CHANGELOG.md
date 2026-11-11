@@ -4,6 +4,12 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.11] - 2026-11-11
+
+### Changed
+
+- **Generated background ingress** — `backgroundPort` centralizes legacy wire matching, validated render routes, and production composition ID registration (`buildProductionCompositionIds`, `listProductionCompositionIds`). `SelectTemplateBackground`, Broadcast Pro backgrounds, `getProductionCompositionMeta`, and `ProductionRoot` route through the port; ADR-0002 legacy `useBackground` in remote IDs unchanged.
+
 ## [0.1.10] - 2026-11-11
 
 ### Changed

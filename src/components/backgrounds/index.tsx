@@ -2,11 +2,18 @@
 
 import { useVideoDataContext } from "../../core/context/VideoDataContext";
 import { useThemeContext } from "../../core/context/ThemeContext";
-import { matchLegacyIngress } from "./variants/Generated/catalogue";
-import {
-  logUnsupportedBackgroundDiagnostic,
-  resolveValidatedBackgroundRoute,
-} from "./resolveValidatedBackgroundRoute";
+import { resolveBackgroundIngress } from "./backgroundPort";
+import { logUnsupportedBackgroundDiagnostic } from "./resolveValidatedBackgroundRoute";
+
+export {
+  buildProductionCompositionIds,
+  listProductionCompositionIds,
+  resolveBackgroundIngress,
+} from "./backgroundPort";
+export type {
+  ProductionCompositionIds,
+  ResolvedBackgroundIngress,
+} from "./backgroundPort";
 
 // Import all background variants
 import { SolidBackground as SolidBg } from "./variants/Solid/SolidBackground";
@@ -61,8 +68,7 @@ export * from "./config";
 // Background component
 export const SelectTemplateBackground = () => {
   const { video } = useVideoDataContext();
-  const match = matchLegacyIngress(video.templateVariation ?? {});
-  const route = resolveValidatedBackgroundRoute(match);
+  const { route } = resolveBackgroundIngress(video.templateVariation ?? {});
 
   if (route.kind === "unsupported") {
     logUnsupportedBackgroundDiagnostic(route.diagnostic);

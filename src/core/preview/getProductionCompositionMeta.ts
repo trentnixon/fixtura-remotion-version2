@@ -1,4 +1,4 @@
-import { isGeneratedPresetId } from "../../components/backgrounds/variants/Generated/catalogue";
+import { buildProductionCompositionIds } from "../../components/backgrounds/backgroundPort";
 import { isTemplateId } from "../../templates/templateIds";
 import { FixturaDataset } from "../types/data/index";
 import { calculateOutroDurationFromSponsors } from "../utils/sponsors";
@@ -28,14 +28,14 @@ export function getProductionCompositionMeta(
   const { appearance, templateVariation, metadata } = videoType;
 
   const templateId = appearance.template || null;
-  const useBackground = templateVariation.useBackground || "Solid";
   const compositionId = metadata.compositionId || null;
+  const legacyUseBackground = templateVariation.useBackground || "Solid";
 
   if (!templateId) {
     throw new Error("No template ID provided for production render");
   }
 
-  if (!useBackground) {
+  if (!legacyUseBackground) {
     throw new Error("No useBackground provided for production render");
   }
 
@@ -47,13 +47,13 @@ export function getProductionCompositionMeta(
     throw new Error(`Unknown template ID: ${templateId}`);
   }
 
-  const remoteCompositionId = `${templateId}-${useBackground}-${compositionId}`;
-
-  const appearanceType = appearance.type;
-  const studioGeneratedCompositionId =
-    typeof appearanceType === "string" && isGeneratedPresetId(appearanceType)
-      ? `${templateId}-generated-${appearanceType}-${compositionId}`
-      : undefined;
+  const { remoteCompositionId, studioGeneratedCompositionId } =
+    buildProductionCompositionIds({
+      templateId,
+      compositionId,
+      legacyUseBackground,
+      appearanceType: appearance.type,
+    });
 
   const sponsors = data.videoMeta.club?.sponsors;
   const doesAccountHaveSponsors =

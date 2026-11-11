@@ -1,5 +1,6 @@
 import React from "react";
 import { Composition, getInputProps } from "remotion";
+import { listProductionCompositionIds } from "./components/backgrounds/backgroundPort";
 import { getProductionCompositionFromData } from "./core/preview/getProductionCompositionFromData";
 import { FixturaDataset } from "./core/types/data/index";
 import {
@@ -62,13 +63,10 @@ export const ProductionRoot: React.FC = () => {
     durationInFrames,
   } = getProductionCompositionFromData(data);
 
-  const compositionIds = [
+  const compositionIds = listProductionCompositionIds({
     remoteCompositionId,
-    ...(studioGeneratedCompositionId &&
-    studioGeneratedCompositionId !== remoteCompositionId
-      ? [studioGeneratedCompositionId]
-      : []),
-  ];
+    studioGeneratedCompositionId,
+  });
 
   return (
     <>

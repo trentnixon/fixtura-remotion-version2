@@ -1,8 +1,9 @@
 import React from "react";
-import { SelectTemplateBackground } from "../../../../components/backgrounds";
+import {
+  resolveBackgroundIngress,
+  SelectTemplateBackground,
+} from "../../../../components/backgrounds";
 import { ImageBackground as ImageBg } from "../../../../components/backgrounds/variants/Image";
-import { matchLegacyIngress } from "../../../../components/backgrounds/variants/Generated/catalogue";
-import { resolveValidatedBackgroundRoute } from "../../../../components/backgrounds/resolveValidatedBackgroundRoute";
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import {
   resolveBroadcastProImageDefaults,
@@ -17,8 +18,7 @@ const isBroadcastProMode = (value: unknown): value is BroadcastProModeName =>
 
 export const BroadcastProRoundedBackground: React.FC = () => {
   const { video, metadata } = useVideoDataContext();
-  const match = matchLegacyIngress(video.templateVariation ?? {});
-  const route = resolveValidatedBackgroundRoute(match);
+  const { route } = resolveBackgroundIngress(video.templateVariation ?? {});
 
   if (route.kind === "image") {
     const mode = isBroadcastProMode(video.templateVariation?.mode)
