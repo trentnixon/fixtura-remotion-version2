@@ -10,6 +10,8 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 - **Main-sequence exit policy** — `mainSequenceExitPolicy` documents and centralizes footer (−15), main header (−30), and row exit framing; all template `*MainHeader` components use `calculateMainHeaderExitFrame`. Top 5 row exit delegates to `calculateMainRowExitFrame`. `SponsorFooterChrome` wraps shared `SponsorFooter` with variant decoration (Scoreline crease, Night Session rule).
 
+- **Composition routing manifest** — `COMPOSITION_REGISTRY_MANIFEST` is the single source for Registry ID → export keys, legacy aliases, and `resolveCompositionTemplateComponent`. Cricket composition exports are built via `buildCompositionVariantMap`; `compositionTemplateKey` is a deprecated re-export shim.
+
 ## [0.1.11] - 2026-11-11
 
 ### Changed

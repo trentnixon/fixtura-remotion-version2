@@ -4,7 +4,7 @@ import { useVideoDataContext } from "../context/VideoDataContext";
 import { normalizeCompositionId } from "./compositionMapping";
 import { PlaceholderComponent } from "./PlaceholderComponent";
 import { SPORT_COMPOSITION_MODULE_KEYS } from "./compositionSportTypes";
-import { resolveCompositionTemplateComponent } from "./compositionTemplateKey";
+import { resolveCompositionTemplateComponent } from "./compositionRoutingManifest";
 
 import * as CricketCompositions from "../../compositions/cricket";
 import * as AFLCompositions from "../../compositions/afl";

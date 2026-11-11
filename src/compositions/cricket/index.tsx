@@ -135,16 +135,17 @@ export * as singleGameResult from './single-game-result'; */
 
 // Import placeholder implementations for other composition types
 import { PlaceholderComposition } from "./placeholders";
+import { buildCompositionVariantMap } from "../../core/utils/buildCompositionVariantMap";
 
 // Export implementations for all composition types
 // Each composition type should include all template variations
-export const CricketLadder = {
+export const CricketLadder = buildCompositionVariantMap({
   basic: ladderBasic,
   brickwork: ladderBrickWork,
   sixers: ladderSixersThunder,
   thunder: ladderSixersThunder,
   classic: ladderClassic,
-  twocolumnclassic: ladderClassicTwoColumn, // alias to classic
+  twocolumnclassic: ladderClassicTwoColumn,
   cnsw: ladderCNSW,
   cnswprivate: ladderCNSWPrivate,
   mudgeeraba: ladderMudgeeraba,
@@ -152,15 +153,15 @@ export const CricketLadder = {
   broadcastprorounded: ladderBroadcastProRounded,
   scoreline: ladderScoreline,
   nightsession: ladderNightSession,
-};
+});
 
-export const CricketTop5 = {
+export const CricketTop5 = buildCompositionVariantMap({
   basic: top5Basic,
   brickwork: top5BrickWork,
   sixers: top5SixersThunder,
   thunder: top5SixersThunder,
   classic: top5Classic,
-  twocolumnclassic: top5ClassicTwoColumn, // alias to classic
+  twocolumnclassic: top5ClassicTwoColumn,
   cnsw: top5CNSW,
   cnswprivate: top5CNSWPrivate,
   mudgeeraba: top5Mudgeeraba,
@@ -168,15 +169,15 @@ export const CricketTop5 = {
   broadcastprorounded: top5BroadcastProRounded,
   scoreline: top5Scoreline,
   nightsession: top5NightSession,
-};
+});
 
-export const CricketResults = {
+export const CricketResults = buildCompositionVariantMap({
   basic: resultsBasic,
   brickwork: resultsBrickWork,
   sixers: resultsSixersThunder,
   thunder: resultsSixersThunder,
   classic: resultsClassic,
-  twocolumnclassic: resultsClassicTwoColumn, // alias to classic
+  twocolumnclassic: resultsClassicTwoColumn,
   cnsw: resultsCNSW,
   cnswprivate: resultsCNSWPrivate,
   mudgeeraba: resultsMudgeeraba,
@@ -184,15 +185,15 @@ export const CricketResults = {
   broadcastprorounded: resultsBroadcastProRounded,
   scoreline: resultsScoreline,
   nightsession: resultsNightSession,
-};
+});
 
-export const CricketUpcoming = {
+export const CricketUpcoming = buildCompositionVariantMap({
   basic: upcomingBasic,
   brickwork: upcomingBrickWork,
   sixers: upcomingSixersThunder,
   thunder: upcomingSixersThunder,
   classic: upcomingClassic,
-  twocolumnclassic: upcomingClassicTwoColumn, // alias to classic
+  twocolumnclassic: upcomingClassicTwoColumn,
   cnsw: upcomingCNSW,
   cnswprivate: upcomingCNSWPrivate,
   mudgeeraba: upcomingMudgeeraba,
@@ -200,15 +201,15 @@ export const CricketUpcoming = {
   broadcastprorounded: upcomingBroadcastProRounded,
   scoreline: upcomingScoreline,
   nightsession: upcomingNightSession,
-};
+});
 
-export const CricketResultSingle = {
+export const CricketResultSingle = buildCompositionVariantMap({
   basic: resultSingleBasic,
   brickwork: resultSingleBrickWork,
   sixers: resultSingleSixers,
   thunder: resultSingleSixers,
   classic: resultSingleClassic,
-  twocolumnclassic: resultSingleClassicTwoColumns, // alias to classic
+  twocolumnclassic: resultSingleClassicTwoColumns,
   cnsw: resultSingleCNSW,
   cnswprivate: resultSingleCNSWPrivate,
   mudgeeraba: resultSingleMudgeeraba,
@@ -216,26 +217,28 @@ export const CricketResultSingle = {
   broadcastprorounded: resultSingleBroadcastProRounded,
   scoreline: resultSingleScoreline,
   nightsession: resultSingleNightSession,
-};
+});
 
 // Add CricketRoster export to match compositionId in test data
-export const CricketRoster = {
-  basic: rosterBasic,
-  brickwork: rosterBrickwork,
-  sixers: rosterSixersThunder,
-  thunder: rosterSixersThunder,
-  classic: rosterClassic,
-  twocolumnclassic: rosterClassicTwoColumn, // alias to classic
-  cnsw: rosterClassic,
-  mudgeeraba: rosterMudgeeraba,
-  broadcastpro: rosterBroadcastPro,
-  broadcastprorounded: rosterBroadcastProRounded,
-  scoreline: rosterScoreline,
-  nightsession: rosterNightSession,
-};
+export const CricketRoster = buildCompositionVariantMap(
+  {
+    basic: rosterBasic,
+    brickwork: rosterBrickwork,
+    sixers: rosterSixersThunder,
+    thunder: rosterSixersThunder,
+    classic: rosterClassic,
+    twocolumnclassic: rosterClassicTwoColumn,
+    mudgeeraba: rosterMudgeeraba,
+    broadcastpro: rosterBroadcastPro,
+    broadcastprorounded: rosterBroadcastProRounded,
+    scoreline: rosterScoreline,
+    nightsession: rosterNightSession,
+  },
+  { cnsw: rosterClassic },
+);
 
 // Add CricketPerformances export for batting and bowling performances
-export const CricketPerformances = {
+export const CricketPerformances = buildCompositionVariantMap({
   basic: performancesBasic,
   brickwork: performancesBrickWork,
   sixers: performancesSixersThunder,
@@ -249,10 +252,10 @@ export const CricketPerformances = {
   broadcastprorounded: performancesBroadcastProRounded,
   scoreline: performancesScoreline,
   nightsession: performancesNightSession,
-};
+});
 
 // Add CricketTeamOfTheWeek export for Team of the Week
-export const CricketTeamOfTheWeek = {
+export const CricketTeamOfTheWeek = buildCompositionVariantMap({
   basic: teamOfTheWeekBasic,
   classic: teamOfTheWeekClassic,
   brickwork: teamOfTheWeekBrickWork,
@@ -266,9 +269,9 @@ export const CricketTeamOfTheWeek = {
   broadcastprorounded: teamOfTheWeekBroadcastProRounded,
   scoreline: teamOfTheWeekScoreline,
   nightsession: teamOfTheWeekNightSession,
-};
+});
 
-export const CricketResultsLite = {
+export const CricketResultsLite = buildCompositionVariantMap({
   basic: resultsLiteBasic,
   brickwork: resultsLiteBrickWork,
   classic: resultsLiteClassic,
@@ -282,7 +285,7 @@ export const CricketResultsLite = {
   broadcastprorounded: resultsLiteBroadcastProRounded,
   scoreline: resultsLiteScoreline,
   nightsession: resultsLiteNightSession,
-};
+});
 
 export const singleGameResult = {
   basic: PlaceholderComposition,

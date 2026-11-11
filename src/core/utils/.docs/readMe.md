@@ -14,6 +14,8 @@ Foundational utilities: color systems, theme creation, data processing, environm
 - `createThemeUtils/`: utilities to produce theme objects from inputs
 - `designPalettes/`: curated design palettes and helpers
 - `compositionMapping.ts`: mapping data to compositions/templates
+- `compositionRoutingManifest.ts`: Registry ID manifest, design path → metadata ID, template resolution seam
+- `buildCompositionVariantMap.ts`: builds cricket composition export maps from the manifest
 - `dataProcessing.ts`, `datasetProcessing.ts`: data normalization utilities
 - `environment.ts`: environment flags and runtime checks
 - `fonts/`: font loading and registration utilities
