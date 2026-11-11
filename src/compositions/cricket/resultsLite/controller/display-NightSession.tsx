@@ -5,7 +5,7 @@ import { NightSessionAnimatedShell } from "../../utils/nightSession/NightSession
 import { useNightSessionEnterTiming } from "../../utils/nightSession/useNightSessionEnterTiming";
 import { NightSessionEnterTimingProvider } from "../../utils/nightSession/NightSessionEnterTimingContext";
 import { NIGHT_SESSION_FIXTURE_ROW_STAGGER_FRAMES } from "../../utils/nightSession/nightSessionAnimationTiming";
-import { csClass } from "../../utils/scoreline/componentStyles";
+import { csClass } from "../../utils/overlayFamily";
 import { buildResultsFooterSponsors } from "../../results/controller/ResultsDisplay/_utils/calculations";
 import { LiteGradeHeaderNightSession } from "../layout/LiteGradeHeader-NightSession";
 import { LiteMatchCardNightSession } from "../layout/LiteMatchCard-NightSession";

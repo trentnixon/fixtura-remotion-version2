@@ -8,8 +8,7 @@ import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import { IntroPrimarySponsors } from "../../../../components/layout/sponsors";
 import { useNightSessionCanvasStyle } from "../../../../compositions/cricket/utils/nightSession/nightSessionCanvasStyle";
 import { resolveScorelineHeaderDefaults } from "../../../../compositions/cricket/utils/scoreline/resolveScorelineHeaderDefaults";
-import { csClass } from "../../../../compositions/cricket/utils/scoreline/componentStyles";
-import { NightSessionAnimatedShell } from "../../../../compositions/cricket/utils/nightSession/NightSessionAnimatedShell";
+import { csClass } from "../../../../compositions/cricket/utils/overlayFamily";
 import { NIGHT_SESSION_HEADER_COPY_DELAY } from "../../../../compositions/cricket/utils/nightSession/nightSessionAnimationTiming";
 
 export const NightSessionIntro: React.FC = () => {
@@ -18,13 +17,10 @@ export const NightSessionIntro: React.FC = () => {
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
   const introExitFrame = TextAnimations.introExitFrame;
-  const { fontClasses, componentStyles } = useThemeContext();
+  const { selectedPalette, fontClasses, componentStyles } = useThemeContext();
   const canvasStyle = useNightSessionCanvasStyle();
+  const headerTextColor = selectedPalette.text.onContainer.title;
   const headerDefaults = resolveScorelineHeaderDefaults(metadata.compositionId);
-  const eyebrow =
-    metadata.title ||
-    metadata.titleSplit?.join(" · ") ||
-    headerDefaults.eyebrow;
   const title = metadata.videoTitle || metadata.title || headerDefaults.title;
   const logoUrl = club.logo?.url ?? "";
   const hasCrest = Boolean(logoUrl);
@@ -38,16 +34,14 @@ export const NightSessionIntro: React.FC = () => {
       >
         <div className="night-session-intro__frame">
           <div className="night-session-intro__main">
-            <NightSessionAnimatedShell
-              className={`night-session-intro__animated ${csClass(componentStyles, "nightSessionAnimatedShell")}`}
-              exitFrame={introExitFrame}
+            <div
+              className={`night-session-intro__animated ${csClass(componentStyles, "nightSessionAnimatedItem")}`}
             >
-              <div className="night-session-intro__panel">
-                <header className="ns-header">
-                  <div className="ns-header__accent" aria-hidden>
-                    <span className="ns-accent-wedge" />
-                    <span className="ns-accent-lines" />
-                  </div>
+              <header className="ns-header">
+                <div className="ns-header__accent" aria-hidden>
+                  <span className="ns-accent-lines" />
+                </div>
+                <div className="ns-header__row">
                   <div
                     className="organisation-mark ns-header__mark"
                     data-has-crest={hasCrest ? "true" : "false"}
@@ -69,37 +63,33 @@ export const NightSessionIntro: React.FC = () => {
                   <div className="ns-header__lockup">
                     <AnimatedText
                       textAlign="center"
-                      type="label"
+                      type="title"
                       variant="onContainerCopy"
                       letterAnimation="word"
                       animation={TextAnimations.mainTitle}
                       animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY}
                       exitAnimation={TextAnimations.introOut}
-                      exitFrame={TextAnimations.introExitFrame}
-                      fontFamily={fontClasses.heading?.family}
-                      className="header-eyebrow"
-                    >
-                      {eyebrow}
-                    </AnimatedText>
-                    <AnimatedText
-                      textAlign="center"
-                      type="title"
-                      variant="onContainerCopy"
-                      letterAnimation="word"
-                      animation={TextAnimations.mainTitle}
-                      animationDelay={NIGHT_SESSION_HEADER_COPY_DELAY + 4}
-                      exitAnimation={TextAnimations.introOut}
-                      exitFrame={TextAnimations.introExitFrame}
+                      exitFrame={introExitFrame}
                       fontFamily={fontClasses.heading?.family}
                       className="header-title"
+                      style={{
+                        color: headerTextColor,
+                        fontSize: "var(--type-intro-title, 71px)",
+                        fontWeight: 600,
+                        lineHeight: 0.92,
+                        letterSpacing: "0.06em",
+                      }}
                     >
                       {title}
                     </AnimatedText>
                   </div>
-                  <p className="sr-only">{club.name}</p>
-                </header>
-              </div>
-            </NightSessionAnimatedShell>
+                </div>
+                <div className="ns-header__wedge" aria-hidden>
+                  <span className="ns-accent-wedge" />
+                </div>
+                <p className="sr-only">{club.name}</p>
+              </header>
+            </div>
           </div>
 
           <IntroPrimarySponsors

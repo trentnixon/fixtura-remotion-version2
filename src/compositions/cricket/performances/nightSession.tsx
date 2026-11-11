@@ -12,7 +12,7 @@ import {
   getMainContentSectionHeight,
 } from "../../../core/utils/layoutHeights";
 import { NightSessionSponsorFooter } from "../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
-import { csClass } from "../utils/scoreline/componentStyles";
+import { csClass } from "../utils/overlayFamily";
 import {
   buildPerformancesFooterSponsors,
   calculateDisplayDurationPerScreen,

@@ -32,6 +32,10 @@ _Avoid:_ embedding template styling or cross-asset layout in population modules
 Pure fixture→display field rules under `design/_shared/view-model/cricket/`, imported by design population/layout and by Remotion via `src/cricket/viewModel` adapters.
 _Avoid:_ duplicating the same rules in Scoreline/Night Session utils without going through the view-model
 
+**Overlay family**:
+Shared Scoreline and Night Session canvas module (`src/compositions/cricket/utils/overlayFamily`): `csClass`, canvas `data-*` attrs, container copy tokens, inner animation tiers. Variant folders keep animation shell and template chrome only.
+_Avoid:_ importing Scoreline-prefixed helpers from Night Session for family-wide behaviour
+
 **Design handoff**:
 Deliberate move from design prototype to Remotion, including reconciliation and Studio visual comparison—not automatic CSS parity.
 _Avoid:_ assuming a CSS file copy completes handoff

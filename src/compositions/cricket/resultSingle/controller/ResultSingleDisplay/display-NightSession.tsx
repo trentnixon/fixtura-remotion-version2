@@ -2,7 +2,7 @@ import React from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
-import { csClass } from "../../../utils/scoreline/componentStyles";
+import { csClass } from "../../../utils/overlayFamily";
 import { NightSessionResultSingleContent } from "../../../utils/nightSession/results/NightSessionResultSingleContent";
 import { ResultSingleDisplayProps } from "./_types/ResultSingleDisplayProps";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";

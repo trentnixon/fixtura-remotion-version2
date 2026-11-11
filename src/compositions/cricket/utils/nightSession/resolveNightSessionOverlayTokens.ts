@@ -1,9 +1,9 @@
 import type { DesignPalette } from "../../../../core/utils/designPalettes/types";
 import { ensureContrast } from "../../../../core/utils/designPalettes/types";
 import {
-  isScorelineDarkContainerMode,
-  resolveScorelineContainerCopyTokens,
-} from "../scoreline/resolveScorelineOverlayTokens";
+  isOverlayDarkContainerMode,
+  resolveOverlayContainerCopyTokens,
+} from "../overlayFamily/containerTokens";
 
 export type NightSessionBandTokens = {
   "--ns-team-score-container-bg": string;
@@ -31,8 +31,8 @@ export type NightSessionBandTokens = {
 export const resolveNightSessionBandTokens = (
   selectedPalette: DesignPalette,
 ): NightSessionBandTokens => {
-  const containerCopy = resolveScorelineContainerCopyTokens(selectedPalette);
-  const isDark = isScorelineDarkContainerMode(selectedPalette);
+  const containerCopy = resolveOverlayContainerCopyTokens(selectedPalette);
+  const isDark = isOverlayDarkContainerMode(selectedPalette);
   const accent =
     selectedPalette.text.onContainer.accent ||
     selectedPalette.text.onContainer.title;

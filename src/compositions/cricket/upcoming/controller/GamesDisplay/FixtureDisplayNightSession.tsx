@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
-import { csClass } from "../../../utils/scoreline/componentStyles";
+import { csClass } from "../../../utils/overlayFamily";
 import GamesListNightSession from "../GamesList/games-list-NightSession";
 import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNightSessionEnterTiming";
 import { NightSessionEnterTimingProvider } from "../../../utils/nightSession/NightSessionEnterTimingContext";

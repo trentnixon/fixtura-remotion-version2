@@ -3,7 +3,7 @@ import { useAnimationContext } from "../../../../../core/context/AnimationContex
 import { useVideoDataContext } from "../../../../../core/context/VideoDataContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
-import { csClass } from "../../../utils/scoreline/componentStyles";
+import { csClass } from "../../../utils/overlayFamily";
 import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import NightSessionLeaderRow from "../../layout/NightSessionLeaderRow";

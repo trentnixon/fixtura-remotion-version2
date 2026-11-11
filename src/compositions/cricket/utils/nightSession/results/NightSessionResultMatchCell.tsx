@@ -2,11 +2,11 @@ import React, { useMemo } from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import type { ContainerAnimationConfig } from "../../../../../components/containers/animations";
-import type { ScorelineInnerTier } from "../../scoreline/scorelineInnerAnimationDelays";
+import type { OverlayInnerTier } from "../../overlayFamily/innerAnimationTier";
 import { useNightSessionRowEnterTiming } from "../NightSessionEnterTimingContext";
 import { NIGHT_SESSION_FIXTURE_INNER_ENTER_DISTANCE_PX } from "../nightSessionAnimationTiming";
 
-const INNER_ANIMATION_TIERS = new Set<ScorelineInnerTier>([
+const INNER_ANIMATION_TIERS = new Set<OverlayInnerTier>([
   "grade",
   "columns",
   "rank",
@@ -16,7 +16,7 @@ const INNER_ANIMATION_TIERS = new Set<ScorelineInnerTier>([
 ]);
 
 const resolveAnimationSlot = (
-  tier: ScorelineInnerTier,
+  tier: OverlayInnerTier,
   innerIn: ContainerAnimationConfig,
   innerOut: ContainerAnimationConfig,
   secondaryIn: ContainerAnimationConfig,
@@ -34,7 +34,7 @@ const withResultsInnerDistance = (
 });
 
 export const NightSessionResultMatchCell: React.FC<{
-  tier: ScorelineInnerTier;
+  tier: OverlayInnerTier;
   rowDelay: number;
   exitFrame: number;
   className?: string;

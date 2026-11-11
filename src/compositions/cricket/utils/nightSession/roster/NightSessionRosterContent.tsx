@@ -6,7 +6,7 @@ import { dedupeVenueLabel } from "../../scoreline/results/dedupeVenueLabel";
 import { resolveScorelineRosterClubSides } from "../../scoreline/roster/resolveScorelineRosterClubSides";
 import { resolveScorelineRosterLineup } from "../../scoreline/roster/resolveScorelineRosterPlayerEntry";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { csClass } from "../../scoreline/componentStyles";
+import { csClass } from "../../overlayFamily";
 import {
   NightSessionRosterEmptyRow,
   NightSessionRosterRow,

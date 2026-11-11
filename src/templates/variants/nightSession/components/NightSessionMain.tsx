@@ -7,7 +7,7 @@ import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { getCompositionSectionHeight } from "../../../../core/utils/layoutHeights";
 import { useNightSessionCanvasStyle } from "../../../../compositions/cricket/utils/nightSession/nightSessionCanvasStyle";
 import { resolveNightSessionCanvasDataset } from "../../../../compositions/cricket/utils/nightSession/resolveNightSessionCanvasDataset";
-import { csClass } from "../../../../compositions/cricket/utils/scoreline/componentStyles";
+import { csClass } from "../../../../compositions/cricket/utils/overlayFamily";
 import { NightSessionMainHeader } from "./NightSessionMainHeader";
 
 export const NightSessionMain: React.FC = () => {

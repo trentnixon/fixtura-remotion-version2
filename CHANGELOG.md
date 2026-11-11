@@ -16,6 +16,8 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 - **Cricket view-model** — Shared fixture→label rules live under `design/_shared/view-model/cricket/` (venue dedupe, roster name/entry/density, TOTW column split). Remotion uses `src/cricket/viewModel` adapters; design populate/layout imports the same modules (ADR-0003 CSS authority unchanged).
 
+- **Overlay family module** — `overlayFamily` centralises `csClass`, canvas `data-*` mapping, container copy tokens, and inner animation tiers. Scoreline and Night Session import the family module; variant folders keep re-export shims and template-specific chrome.
+
 ## [0.1.11] - 2026-11-11
 
 ### Changed

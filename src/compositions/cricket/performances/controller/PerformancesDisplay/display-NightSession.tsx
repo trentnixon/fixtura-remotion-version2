@@ -7,7 +7,7 @@ import NightSessionLeaderRow from "../../../top5/layout/NightSessionLeaderRow";
 import { calculateDisplayDurationPerScreen } from "../../_utils/calculations";
 import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNightSessionEnterTiming";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
-import { csClass } from "../../../utils/scoreline/componentStyles";
+import { csClass } from "../../../utils/overlayFamily";
 import { performanceAsLeaderPlayer } from "../../../utils/scoreline/performances/performanceAsLeaderPlayer";
 import { resolvePerformanceScreenDensity } from "../../../utils/scoreline/performances/resolvePerformanceScreenDensity";
 import { getItemsForScreen } from "../../utils/screenCalculator";

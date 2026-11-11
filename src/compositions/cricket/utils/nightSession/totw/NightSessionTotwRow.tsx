@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { AnimatedContainer } from "../../../../../components/containers/AnimatedContainer";
 import type { ContainerAnimationConfig } from "../../../../../components/containers/animations";
 import type { TeamOfTheWeekPlayer } from "../../../TeamOfTheWeek/types";
-import { csClass } from "../../scoreline/componentStyles";
+import { csClass } from "../../overlayFamily";
 import {
   formatTotwStats,
   getTotwRoleLabel,

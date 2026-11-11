@@ -2,7 +2,7 @@ import React from "react";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import type { SponsorFooterProps } from "../../../../compositions/cricket/sponsorFooter";
 import { SponsorFooterChrome } from "../../../../compositions/cricket/sponsorFooter/SponsorFooterChrome";
-import { csClass } from "../../../../compositions/cricket/utils/scoreline/componentStyles";
+import { csClass } from "../../../../compositions/cricket/utils/overlayFamily";
 
 type NightSessionSponsorFooterProps = SponsorFooterProps & {
   height?: number;

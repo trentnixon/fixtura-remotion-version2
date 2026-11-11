@@ -3,7 +3,7 @@ import { Img } from "remotion";
 import { AnimatedContainer } from "../../../../components/containers/AnimatedContainer";
 import type { ContainerAnimationConfig } from "../../../../components/containers/animations";
 import { isBatter, isBowler, type PlayerData } from "../_types/types";
-import { csClass } from "../../utils/scoreline/componentStyles";
+import { csClass } from "../../utils/overlayFamily";
 import { truncateText } from "./_utils/helpers";
 import { getDefaultRestrictions } from "../controller/PlayerRow/_utils/helpers";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";

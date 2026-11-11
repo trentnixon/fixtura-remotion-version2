@@ -3,7 +3,7 @@ import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import { NightSessionRosterContent } from "../../../utils/nightSession/roster/NightSessionRosterContent";
-import { csClass } from "../../../utils/scoreline/componentStyles";
+import { csClass } from "../../../utils/overlayFamily";
 import { RosterDisplayProps } from "./_types/RosterDisplayProps";
 import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 import { buildRosterFooterSponsors } from "../../_utils/buildRosterFooterSponsors";

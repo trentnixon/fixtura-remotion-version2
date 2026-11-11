@@ -3,7 +3,7 @@ import { Img } from "remotion";
 import { AnimatedContainer } from "../../../../components/containers/AnimatedContainer";
 import type { ContainerAnimationConfig } from "../../../../components/containers/animations";
 import type { TeamData } from "../types";
-import { csClass } from "../../utils/scoreline/componentStyles";
+import { csClass } from "../../utils/overlayFamily";
 import type { NightSessionRowEnterTiming } from "../../utils/nightSession/nightSessionEnterTiming";
 import { useThemeContext } from "../../../../core/context/ThemeContext";
 import { useAnimationContext } from "../../../../core/context/AnimationContext";

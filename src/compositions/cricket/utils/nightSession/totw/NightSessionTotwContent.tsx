@@ -1,7 +1,7 @@
 import React from "react";
 import type { TeamOfTheWeekPlayer } from "../../../TeamOfTheWeek/types";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
-import { csClass } from "../../scoreline/componentStyles";
+import { csClass } from "../../overlayFamily";
 import { resolveTotwDensity } from "../../scoreline/totw/formatTotwStats";
 import { NightSessionTotwRow } from "./NightSessionTotwRow";
 import { splitTotwPlayerColumns } from "./splitTotwPlayerColumns";

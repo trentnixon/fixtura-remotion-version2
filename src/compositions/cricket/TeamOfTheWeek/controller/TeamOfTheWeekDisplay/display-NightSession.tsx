@@ -4,7 +4,7 @@ import { useVideoDataContext } from "../../../../../core/context/VideoDataContex
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { NightSessionSponsorFooter } from "../../../../../templates/variants/nightSession/components/NightSessionSponsorFooter";
 import { buildSingleItemFooterSponsors } from "../../../../../core/utils/sponsors";
-import { csClass } from "../../../utils/scoreline/componentStyles";
+import { csClass } from "../../../utils/overlayFamily";
 import { NightSessionAnimatedShell } from "../../../utils/nightSession/NightSessionAnimatedShell";
 import { NightSessionTotwContent } from "../../../utils/nightSession/totw/NightSessionTotwContent";
 import { TeamOfTheWeekDisplayProps } from "./_types/TeamOfTheWeekDisplayProps";
