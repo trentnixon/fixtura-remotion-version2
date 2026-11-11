@@ -10,6 +10,12 @@ export { resolveLuminanceMap } from "./resolveLuminanceMap";
 export { resolveMissingAssetFallback } from "./resolveMissingAssetFallback";
 export { resolveLuminanceSupersampleScale } from "./resolveLuminanceSupersampleScale";
 export {
+  resolveLuminanceRenderPlan,
+  type LuminanceRenderPlan,
+  type ResolveLuminanceRenderPlanInput,
+} from "./resolveLuminanceRenderPlan";
+export { LuminanceBackgroundView } from "./LuminanceBackgroundView";
+export {
   resolveProtectedBrandMatteRanges,
   resolveProtectedBrandBrandLut,
   getBlackProtectionAlpha,

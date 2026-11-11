@@ -2,14 +2,19 @@
 
 import { useVideoDataContext } from "../../core/context/VideoDataContext";
 import { useThemeContext } from "../../core/context/ThemeContext";
-import { resolveBackgroundIngress } from "./backgroundPort";
+import { resolveBackgroundRenderPlan } from "./resolveBackgroundRenderPlan";
 import { logUnsupportedBackgroundDiagnostic } from "./resolveValidatedBackgroundRoute";
+import { RenderBackgroundFromPlan } from "./renderBackgroundFromPlan";
 
 export {
   buildProductionCompositionIds,
   listProductionCompositionIds,
   resolveBackgroundIngress,
 } from "./backgroundPort";
+export {
+  resolveBackgroundRenderPlan,
+  type BackgroundRenderPlan,
+} from "./resolveBackgroundRenderPlan";
 export type {
   ProductionCompositionIds,
   ResolvedBackgroundIngress,
@@ -68,39 +73,18 @@ export * from "./config";
 // Background component
 export const SelectTemplateBackground = () => {
   const { video } = useVideoDataContext();
-  const { route } = resolveBackgroundIngress(video.templateVariation ?? {});
+  const { selectedPalette } = useThemeContext();
+  const plan = resolveBackgroundRenderPlan({
+    wire: video.templateVariation ?? {},
+    palette: selectedPalette,
+  });
 
-  if (route.kind === "unsupported") {
-    logUnsupportedBackgroundDiagnostic(route.diagnostic);
+  if (plan.route.kind === "unsupported") {
+    logUnsupportedBackgroundDiagnostic(plan.route.diagnostic);
     return <SolidBackground />;
   }
 
-  switch (route.kind) {
-    case "gradient":
-      return <GradientBackground />;
-    case "image":
-      return <ImageBackground />;
-    case "video":
-      return <VideoBackground />;
-    case "texture":
-      return <TextureBackground />;
-    case "luminance":
-      return <LuminanceBackground />;
-    case "noise":
-      return <NoiseBackground variant={route.variant} />;
-    case "pattern":
-      return <PatternBackground />;
-    case "particle":
-      return <ParticleBackground />;
-    case "animated":
-      return <AnimatedBackground />;
-    case "solid":
-      return <SolidBackground />;
-    default: {
-      const exhaustive: never = route;
-      return exhaustive;
-    }
-  }
+  return <RenderBackgroundFromPlan plan={plan} />;
 };
 
 // Gradient background

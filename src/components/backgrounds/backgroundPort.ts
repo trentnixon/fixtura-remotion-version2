@@ -94,3 +94,8 @@ export const listProductionCompositionIds = (
   }
   return [remoteCompositionId];
 };
+
+export {
+  resolveBackgroundRenderPlan,
+  type BackgroundRenderPlan,
+} from "./resolveBackgroundRenderPlan";
