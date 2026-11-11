@@ -7,7 +7,7 @@ import {
   hasResultsLiteGradeBlocks,
   parseResultsLiteGradeBlocks,
 } from "./upstreamResultsLiteData";
-import { RESULTS_LITE_PER_SCREEN } from "./display-Basic";
+import { RESULTS_LITE_PER_SCREEN } from "./resultsLiteConstants";
 
 const samplePath = join(
   process.cwd(),

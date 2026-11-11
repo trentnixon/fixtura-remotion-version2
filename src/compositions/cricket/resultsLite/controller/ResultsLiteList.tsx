@@ -8,7 +8,7 @@ import {
 import { useAnimationContext } from "../../../../core/context/AnimationContext";
 import NoResultsData from "../../results/modules/NoResultsData/no-data";
 import { calculateDisplayDurationPerScreen } from "../../results/_utils/calculations";
-import { RESULTS_LITE_PER_SCREEN } from "./display-Basic";
+import { RESULTS_LITE_PER_SCREEN } from "./resultsLiteConstants";
 import {
   buildResultsLiteSequences,
   hasResultsLiteGradeBlocks,
