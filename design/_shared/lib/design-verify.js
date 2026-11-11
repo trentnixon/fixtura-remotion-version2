@@ -1,25 +1,30 @@
 import fs from "node:fs";
 import path from "node:path";
-import {
-  CRICKET_FACTORY_ASSETS,
-  routingKeyFromRegistryId,
-} from "./factory-assets.js";
+import { CRICKET_FACTORY_ASSETS } from "./factory-assets.js";
 
 /** @type {Record<string, string>} */
 const COMPOSITION_ROUTE_TO_EXPORT = {
   "cricket/results": "CricketResults",
+  "cricket/results-lite": "CricketResultsLite",
   "cricket/resultSingle": "CricketResultSingle",
+  "cricket/result-single": "CricketResultSingle",
   "cricket/upcoming": "CricketUpcoming",
   "cricket/ladder": "CricketLadder",
   "cricket/top5": "CricketTop5",
   "cricket/performances": "CricketPerformances",
   "cricket/teamRoster": "CricketRoster",
+  "cricket/team-roster": "CricketRoster",
   "cricket/teamOfTheWeek": "CricketTeamOfTheWeek",
+  "cricket/team-of-the-week": "CricketTeamOfTheWeek",
 };
 import { applyBindMap } from "./hydrate-core.js";
 import { loadMergedBindMapFromFs } from "./load-bind-map.js";
 import { parseBindMapJson } from "./bind-json.js";
 import { validateRoutesManifest, listAssetSlugs } from "./manifest.js";
+import {
+  compositionExportHasRegistryRouting,
+  loadTemplateRegistryIds,
+} from "./handoff-routing.js";
 
 /**
  * @param {string} repoRoot
@@ -290,11 +295,10 @@ function verifyRegisteredAsset(
       ctx.errors.push(`Handoff: variant ${variantSlug} missing registryId`);
     } else if (!ctx.handoffContext.templateRegistry.has(registryId)) {
       ctx.errors.push(
-        `Handoff: Registry ID ${registryId} not in src/templates/registry.tsx`,
+        `Handoff: Registry ID ${registryId} not in template registration manifest`,
       );
     }
 
-    const routingKey = registryId ? routingKeyFromRegistryId(registryId) : "";
     const compositionRoute = asset.remotion?.composition;
     const exportName = compositionRoute
       ? COMPOSITION_ROUTE_TO_EXPORT[compositionRoute]
@@ -304,15 +308,16 @@ function verifyRegisteredAsset(
         `Handoff: unknown composition route "${compositionRoute}" for ${variantSlug}/${assetSlug}`,
       );
     } else if (
-      routingKey &&
-      !compositionExportHasRoutingKey(
+      registryId &&
+      !compositionExportHasRegistryRouting(
         ctx.handoffContext.cricketIndex,
         exportName,
-        routingKey,
+        registryId,
+        repoRoot,
       )
     ) {
       ctx.errors.push(
-        `Handoff: ${exportName} missing composition routing key "${routingKey}" (Registry ${registryId})`,
+        `Handoff: ${exportName} missing composition routing for Registry ${registryId}`,
       );
     }
   }
@@ -322,41 +327,13 @@ function verifyRegisteredAsset(
  * @param {string} repoRoot
  */
 function loadHandoffContext(repoRoot) {
-  const registryPath = path.join(repoRoot, "src/templates/registry.tsx");
   const cricketIndexPath = path.join(
     repoRoot,
     "src/compositions/cricket/index.tsx",
   );
-  const registryText = fs.readFileSync(registryPath, "utf8");
   const cricketIndex = fs.readFileSync(cricketIndexPath, "utf8");
-  /** @type {Set<string>} */
-  const templateRegistry = new Set();
-  const block = registryText.match(
-    /export const templateRegistry = \{([\s\S]*?)\n\};/,
-  )?.[1];
-  if (block) {
-    for (const line of block.split("\n")) {
-      const match = line.match(/^ {2}([A-Za-z][A-Za-z0-9]*): \{/);
-      if (match) {
-        templateRegistry.add(match[1]);
-      }
-    }
-  }
+  const templateRegistry = loadTemplateRegistryIds(repoRoot);
   return { templateRegistry, cricketIndex };
-}
-
-/**
- * @param {string} cricketIndex
- * @param {string} exportName
- * @param {string} routingKey
- */
-function compositionExportHasRoutingKey(cricketIndex, exportName, routingKey) {
-  const re = new RegExp(
-    `export const ${exportName} = \\{([\\s\\S]*?)\\n\\};`,
-    "m",
-  );
-  const block = cricketIndex.match(re)?.[1] ?? "";
-  return new RegExp(`\\b${routingKey}\\s*:`).test(block);
 }
 
 /**
