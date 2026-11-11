@@ -1,4 +1,5 @@
 {
+  "__bindMode": "replace",
   "[data-hydrate=palette-primary]": "videoMeta.video.appearance.theme.primary",
   "[data-hydrate=palette-secondary]": "videoMeta.video.appearance.theme.secondary",
   "[data-hydrate=club-name]": "videoMeta.club.name",

@@ -1,4 +1,5 @@
 {
+  "__bindMode": "replace",
   "[data-hydrate=club-name]": "videoMeta.club.name",
   "[data-hydrate=header-title]": "videoMeta.video.metadata.title",
   "[data-hydrate=header-secondary]": "videoMeta.video.metadata.videoTitle",

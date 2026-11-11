@@ -17,6 +17,7 @@ const COMPOSITION_ROUTE_TO_EXPORT = {
   "cricket/teamOfTheWeek": "CricketTeamOfTheWeek",
 };
 import { applyBindMap } from "./hydrate-core.js";
+import { loadMergedBindMapFromFs } from "./load-bind-map.js";
 import { parseBindMapJson } from "./bind-json.js";
 import { validateRoutesManifest, listAssetSlugs } from "./manifest.js";
 
@@ -167,15 +168,25 @@ function verifyRegisteredAsset(
     routes.variants[variantSlug].sports[sportSlug].assets[assetSlug];
   const htmlRel = `design/variants/${variantSlug}/${sportSlug}/${assetSlug}.html`;
   const htmlPath = path.join(repoRoot, htmlRel);
-  const bindRel = `design/_shared/hydration/${variantSlug}/${sportSlug}/${assetSlug}.bind.json`;
-  const bindPath = path.join(repoRoot, bindRel);
+  const canonicalRel = `design/_templates/cricket/${assetSlug}.bind.json`;
+  const canonicalPath = path.join(repoRoot, canonicalRel);
+  const overlayRel = `design/_shared/hydration/overlays/${variantSlug}/${sportSlug}/${assetSlug}.bind.json`;
+  const overlayPath = path.join(repoRoot, overlayRel);
+  const legacyRel = `design/_shared/hydration/${variantSlug}/${sportSlug}/${assetSlug}.bind.json`;
+  const legacyPath = path.join(repoRoot, legacyRel);
   const fixturePath = path.join(repoRoot, asset.fixture);
 
   if (!fs.existsSync(htmlPath)) {
     ctx.errors.push(`Missing HTML for registered asset: ${htmlRel}`);
   }
-  if (!fs.existsSync(bindPath)) {
-    ctx.errors.push(`Missing bind map: ${bindRel}`);
+  if (
+    !fs.existsSync(canonicalPath) &&
+    !fs.existsSync(overlayPath) &&
+    !fs.existsSync(legacyPath)
+  ) {
+    ctx.errors.push(
+      `Missing bind map sources for ${variantSlug}/${assetSlug} (canonical, overlay, or legacy)`,
+    );
   }
   if (!fs.existsSync(fixturePath)) {
     ctx.errors.push(`Missing fixture: ${asset.fixture}`);
@@ -227,9 +238,20 @@ function verifyRegisteredAsset(
     }
   }
 
-  if (fs.existsSync(bindPath) && fs.existsSync(fixturePath)) {
+  if (fs.existsSync(fixturePath)) {
     const fixture = JSON.parse(fs.readFileSync(fixturePath, "utf8"));
-    const bindMap = parseBindMapJson(fs.readFileSync(bindPath, "utf8"));
+    let bindMap;
+    try {
+      bindMap = loadMergedBindMapFromFs(
+        { variantSlug, sportSlug, assetSlug },
+        repoRoot,
+      );
+    } catch (error) {
+      ctx.errors.push(
+        `Bind map load failed (${variantSlug}/${assetSlug}): ${error instanceof Error ? error.message : error}`,
+      );
+      return;
+    }
     let values;
     try {
       ({ values } = applyBindMap(fixture, bindMap));

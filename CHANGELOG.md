@@ -4,6 +4,12 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.9] - 2026-11-11
+
+### Changed
+
+- **Bind-map layering** — Runtime hydration loads canonical `design/_templates/cricket/*.bind.json` and merges optional `design/_shared/hydration/overlays/{variant}/{sport}/*.bind.json` overlays (`__bindMode: replace` when needed). Legacy per-variant copies identical to starters were removed.
+
 ## [0.1.8] - 2026-11-11
 
 ### Changed

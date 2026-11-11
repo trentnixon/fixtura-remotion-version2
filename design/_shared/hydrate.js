@@ -1,6 +1,6 @@
 import { applyBindMap } from "./lib/hydrate-core.js";
-import { parseBindMapJson } from "./lib/bind-json.js";
 import { resolveAssetEntry, validateRoutesManifest } from "./lib/manifest.js";
+import { loadMergedBindMap } from "./lib/load-bind-map.js";
 
 const ROUTES_URL = "/design/_shared/routes.json";
 
@@ -37,13 +37,7 @@ export async function hydratePage(context) {
       context.assetSlug,
     );
 
-    const bindUrl = `/design/_shared/hydration/${context.variantSlug}/${context.sportSlug}/${context.assetSlug}.bind.json`;
-    const bindResponse = await fetch(bindUrl);
-    if (!bindResponse.ok) {
-      throw new Error(`Could not load hydration bind map at ${bindUrl}`);
-    }
-
-    const bindMap = parseBindMapJson(await bindResponse.text());
+    const bindMap = await loadMergedBindMap(context, fetch);
     const fixtureResponse = await fetch(`/${entry.fixture}`);
     if (!fixtureResponse.ok) {
       throw new Error(`Could not load fixture at ${entry.fixture}`);

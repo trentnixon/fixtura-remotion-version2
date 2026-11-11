@@ -230,16 +230,6 @@ for (const asset of CRICKET_FACTORY_ASSETS) {
     html,
   );
 
-  const hydrationDir = path.join(
-    root,
-    `design/_shared/hydration/${slug}/cricket`,
-  );
-  fs.mkdirSync(hydrationDir, { recursive: true });
-  fs.copyFileSync(
-    path.join(templatesDir, `${asset.slug}.bind.json`),
-    path.join(hydrationDir, `${asset.slug}.bind.json`),
-  );
-
   fs.copyFileSync(
     path.join(templatesDir, `starter-${asset.slug}.css`),
     path.join(root, `design/_shared/${slug}-${asset.slug}.css`),

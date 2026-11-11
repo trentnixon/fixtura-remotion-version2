@@ -1,6 +1,6 @@
 {
   "name": "@fixtura/remotion-assets",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Fixtura Remotion Assets",
   "repository": {
     "type": "git",
@@ -109,6 +109,7 @@
     "design:verify": "node scripts/design-verify.mjs",
     "design:scaffold": "node scripts/scaffold-design-template.mjs",
     "design:materialize-starters": "node scripts/materialize-design-starters.mjs",
+    "design:materialize-bind-overlays": "node scripts/materialize-bind-overlays.mjs",
     "build": "remotion bundle",
     "build:package:js": "node scripts/inline-scoreline-css.mjs && node scripts/inline-night-session-css.mjs && tsup && node scripts/copy-preview-dts.mjs",
     "build:package:css": "tailwindcss -i ./src/package/styles.css -o ./dist/preview.css --minify",
