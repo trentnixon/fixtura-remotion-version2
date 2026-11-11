@@ -10,7 +10,9 @@ Templates define composable video composition blueprints. Variants extend a base
 
 ## Files
 
-- `registry.tsx`: registers available templates/variants for use by compositions
+- `templateRegistrationManifest.ts`: authoritative Registry ID list, composition export keys, and optional preview publish chunks
+- `templateShellComponents.tsx` / `templatePreviewLoaders.ts`: shell registry and lazy preview imports (keys enforced by manifest tests)
+- `registry.tsx`: builds `templateRegistry` from the manifest + shell components
 - `.docs/HowToCreateANewVariation.md`: step-by-step guide for creating a new variant
 - `.docs/how-to.md`: detailed how-to for variant creation, theming, and integration
 

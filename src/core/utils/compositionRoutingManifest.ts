@@ -1,9 +1,12 @@
 import type { ComponentType } from "react";
-import { isTemplateId, TEMPLATE_IDS, type TemplateId } from "../../templates/templateIds";
+import {
+  isTemplateId,
+  TEMPLATE_REGISTRATION_MANIFEST,
+  type TemplateId,
+} from "../../templates/templateRegistrationManifest";
 
 /**
- * Authoritative Registry ID → cricket composition submodule wiring.
- * Single module behind runtime routing, design routes parity tests, and export maps.
+ * Registry ID → cricket composition submodule wiring (derived from template registration).
  */
 export type CompositionRegistryManifestEntry = {
   registryId: TemplateId;
@@ -14,55 +17,11 @@ export type CompositionRegistryManifestEntry = {
 };
 
 export const COMPOSITION_REGISTRY_MANIFEST: CompositionRegistryManifestEntry[] =
-  [
-    { registryId: "Basic", canonicalExportKey: "basic" },
-    {
-      registryId: "Brickwork",
-      canonicalExportKey: "brickwork",
-      legacyExportKeys: ["brickWork"],
-    },
-    { registryId: "Classic", canonicalExportKey: "classic" },
-    { registryId: "CNSW", canonicalExportKey: "cnsw" },
-    {
-      registryId: "CNSWPrivate",
-      canonicalExportKey: "cnswprivate",
-      legacyExportKeys: ["cnswPrivate"],
-    },
-    { registryId: "Sixers", canonicalExportKey: "sixers" },
-    { registryId: "Thunder", canonicalExportKey: "thunder" },
-    {
-      registryId: "TwoColumnClassic",
-      canonicalExportKey: "twocolumnclassic",
-      legacyExportKeys: ["classicTwoColumn", "classicTwoColumns"],
-    },
-    { registryId: "Mudgeeraba", canonicalExportKey: "mudgeeraba" },
-    {
-      registryId: "BroadcastPro",
-      canonicalExportKey: "broadcastpro",
-      legacyExportKeys: ["broadcastPro"],
-    },
-    {
-      registryId: "BroadcastProRounded",
-      canonicalExportKey: "broadcastprorounded",
-      legacyExportKeys: ["broadcastProRounded"],
-    },
-    { registryId: "Scoreline", canonicalExportKey: "scoreline" },
-    {
-      registryId: "NightSession",
-      canonicalExportKey: "nightsession",
-      legacyExportKeys: ["nightSession"],
-    },
-  ];
-
-function assertManifestCoversTemplateIds(): void {
-  const ids = new Set(COMPOSITION_REGISTRY_MANIFEST.map((e) => e.registryId));
-  for (const id of TEMPLATE_IDS) {
-    if (!ids.has(id)) {
-      throw new Error(`COMPOSITION_REGISTRY_MANIFEST missing TemplateId: ${id}`);
-    }
-  }
-}
-assertManifestCoversTemplateIds();
+  TEMPLATE_REGISTRATION_MANIFEST.map((entry) => ({
+    registryId: entry.registryId,
+    canonicalExportKey: entry.compositionExportKey,
+    legacyExportKeys: entry.legacyCompositionExportKeys,
+  }));
 
 export const REGISTRY_ID_TO_COMPOSITION_KEY: Record<TemplateId, string> =
   Object.fromEntries(

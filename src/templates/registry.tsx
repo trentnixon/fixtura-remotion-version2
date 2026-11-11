@@ -1,24 +1,11 @@
-import { Basic } from "./variants/basic";
-import { Brickwork } from "./variants/brickwork";
-import { Classic } from "./variants/classic";
-import { Sixers } from "./variants/sixers";
-import { CNSW } from "./variants/cnsw";
-import { Thunder } from "./variants/thunder";
-import { TwoColumnClassic } from "./variants/twoColumnClassic";
-import { CNSWPrivate } from "./variants/cnsw-private";
-import { Mudgeeraba } from "./variants/mudgeeraba";
-import { BroadcastPro } from "./variants/broadcastPro";
-import { BroadcastProRounded } from "./variants/broadcastProRounded";
-import { Scoreline } from "./variants/scoreline";
-import { NightSession } from "./variants/nightSession";
-/**
- * Define template registry key type
- */
-export type TemplateId = keyof typeof templateRegistry;
+import {
+  TEMPLATE_REGISTRATION_MANIFEST,
+  type TemplateId,
+} from "./templateRegistrationManifest";
+import { TEMPLATE_SHELL_COMPONENTS } from "./templateShellComponents";
 
-/**
- * Central registry of all available templates
- */
+export type { TemplateId };
+
 const Variants = [
   "Solid",
   "Image",
@@ -26,69 +13,28 @@ const Variants = [
   "Video",
   "Texture",
   "Luminance",
-];
-export const templateRegistry = {
-  Basic: {
-    component: Basic,
-    variants: Variants,
-  },
-  Brickwork: {
-    component: Brickwork,
-    variants: Variants,
-  },
-  Classic: {
-    component: Classic,
-    variants: Variants,
-  },
-  CNSW: {
-    component: CNSW,
-    variants: Variants,
-  },
-  CNSWPrivate: {
-    component: CNSWPrivate,
-    variants: Variants,
-  },
-  Sixers: {
-    component: Sixers,
-    variants: Variants,
-  },
-  Thunder: {
-    component: Thunder,
-    variants: Variants,
-  },
-  TwoColumnClassic: {
-    component: TwoColumnClassic,
-    variants: Variants,
-  },
-  Mudgeeraba: {
-    component: Mudgeeraba,
-    variants: Variants,
-  },
-  BroadcastPro: {
-    component: BroadcastPro,
-    variants: Variants,
-  },
-  BroadcastProRounded: {
-    component: BroadcastProRounded,
-    variants: Variants,
-  },
-  Scoreline: {
-    component: Scoreline,
-    variants: Variants,
-  },
-  NightSession: {
-    component: NightSession,
-    variants: Variants,
-  },
-};
+] as const;
 
 /**
- * Helper function to get a template by ID
+ * Central registry of all available templates (shell + background variant list).
  */
+export const templateRegistry = Object.fromEntries(
+  TEMPLATE_REGISTRATION_MANIFEST.map(({ registryId }) => [
+    registryId,
+    {
+      component: TEMPLATE_SHELL_COMPONENTS[registryId],
+      variants: [...Variants],
+    },
+  ]),
+) as Record<
+  TemplateId,
+  {
+    component: (typeof TEMPLATE_SHELL_COMPONENTS)[TemplateId];
+    variants: (typeof Variants)[number][];
+  }
+>;
+
 export const getTemplate = (id: TemplateId) => templateRegistry[id] || null;
 
-/**
- * Helper function to check if a template exists
- */
 export const isValidTemplate = (id: string): id is TemplateId =>
   id in templateRegistry;
