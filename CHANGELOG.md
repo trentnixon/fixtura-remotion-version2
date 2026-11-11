@@ -4,6 +4,12 @@ All notable changes to `@fixtura/remotion-assets` are documented here.
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.8] - 2026-11-11
+
+### Changed
+
+- **Design bootstrap pipeline** — `runDesignPipeline` unifies hydrate → manifest population → canvas resolution for factory, Scoreline, and Night Session pages. Cricket layout adapters moved under `design/_shared/layout/cricket/`; `scoreline-layout.js` is a compatibility barrel.
+
 ## [0.1.7] - 2026-11-11
 
 ### Added

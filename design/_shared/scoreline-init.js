@@ -1,102 +1,37 @@
-import { hydratePage } from "./hydrate.js";
-import { applyScorelineTheme } from "./scoreline-theme.js";
-import {
-  applyScorelineBackdrop,
-  applyScorelineMode,
-  readScorelineBackdrop,
-  readScorelineMode,
-} from "./scoreline-mode.js";
-import { mountScorelineModeControls } from "./scoreline-mode-controls.js";
-import {
-  syncScorelineOrganisationCrest,
-  syncScorelineLadderLayout,
-  syncScorelineLeaderboardLayout,
-  syncScorelineResultsLayout,
-  syncScorelineRosterLayout,
-  syncScorelineTotwLayout,
-  syncScorelineUpcomingLayout,
-  syncScoreWatermark,
-  watchScorelineCrests,
-} from "./scoreline-layout.js";
+import { runDesignPipeline } from "./pipeline/run-design-pipeline.js";
+import { finalizeScorelineFamilyAsset } from "./pipeline/scoreline-family-bootstrap.js";
 
 /**
- * Shared Scoreline bootstrap: hydrate → theme → mode → crest watch → optional layout hooks.
+ * Shared Scoreline bootstrap: hydrate → theme → mode → layout phase.
  */
 export async function initScorelineAsset(context, options = {}) {
   const {
     resultsLayout = false,
     watermark = false,
     skipHydrate = false,
+    afterHydrate,
   } = options;
 
-  if (!skipHydrate) {
-    const hydrated = await hydratePage(context);
-    if (!hydrated) {
-      return { canvas: null };
-    }
-  }
+  const pipeline = await runDesignPipeline(context, {
+    skipHydrate,
+    canvasSelector: ".scoreline-canvas",
+    populationMode: "skip",
+  });
 
-  const canvas = document.querySelector(".scoreline-canvas");
-  if (!(canvas instanceof HTMLElement)) {
+  if (!pipeline.ok || !pipeline.canvas) {
     return { canvas: null };
   }
 
-  const primary = document.querySelector('[data-hydrate="palette-primary"]');
-  const secondary = document.querySelector(
-    '[data-hydrate="palette-secondary"]',
+  await finalizeScorelineFamilyAsset(
+    pipeline.canvas,
+    document,
+    context.variantSlug,
+    {
+      resultsLayout,
+      watermark,
+      afterHydrate,
+    },
   );
 
-  applyScorelineTheme(canvas, {
-    primary: primary?.textContent?.trim(),
-    secondary: secondary?.textContent?.trim(),
-  });
-
-  const wrap = canvas.closest(".design-canvas-wrap");
-  if (wrap instanceof HTMLElement) {
-    wrap.style.setProperty(
-      "--preview-club-primary",
-      getComputedStyle(canvas).getPropertyValue("--club-primary").trim() ||
-        "#004de2",
-    );
-    wrap.style.setProperty(
-      "--preview-club-secondary",
-      getComputedStyle(canvas).getPropertyValue("--club-secondary").trim() ||
-        "#ff0000",
-    );
-  }
-
-  const accent =
-    getComputedStyle(canvas).getPropertyValue("--club-primary").trim() ||
-    undefined;
-  applyScorelineMode(canvas, readScorelineMode(), { accent });
-  applyScorelineBackdrop(document, readScorelineBackdrop());
-  mountScorelineModeControls(canvas);
-
-  watchScorelineCrests(document);
-  syncScorelineOrganisationCrest(document);
-  syncScorelineUpcomingLayout(document);
-  syncScorelineRosterLayout(document);
-  syncScorelineLeaderboardLayout(document);
-  syncScorelineLadderLayout(document);
-  syncScorelineTotwLayout(document);
-
-  if (typeof options.afterHydrate === "function") {
-    await options.afterHydrate({ canvas, document });
-  }
-
-  syncScorelineRosterLayout(document);
-  syncScorelineTotwLayout(document);
-
-  if (resultsLayout) {
-    syncScorelineResultsLayout(document);
-  }
-
-  if (watermark) {
-    canvas.dataset.scoreWatermark = "enabled";
-  } else {
-    delete canvas.dataset.scoreWatermark;
-  }
-  syncScoreWatermark(canvas);
-
-  return { canvas };
+  return { canvas: pipeline.canvas };
 }
