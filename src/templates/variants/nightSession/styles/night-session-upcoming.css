@@ -199,6 +199,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--fixture-stack-gap);
+  padding-inline: 3rem;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -798,8 +800,9 @@
   color: var(--container-text, var(--contrast-team));
 }
 
-.night-session-canvas .fixture-close {
-  display: none;
+.night-session-canvas .fixture-separator {
+  margin: var(--space-2) 0;
+  padding: var(--space-2) 0;
 }
 
 /* Inter-fixture rhythm lives in fixtures-stack gap + module shell above */

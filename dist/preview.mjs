@@ -1,16 +1,17 @@
 import {
-  TEMPLATE_IDS,
   getProductionCompositionMeta,
-  isTemplateId,
   loadPreviewTemplateComponent
-} from "./chunk-DKALZAZL.mjs";
+} from "./chunk-27I5QZ6Q.mjs";
 import {
   ScorelineBundledStyles
 } from "./chunk-7DM3J7LM.mjs";
 import {
   NightSessionBundledStyles
-} from "./chunk-OWK4QLQ5.mjs";
-import "./chunk-DAUNLCV7.mjs";
+} from "./chunk-NFABJK4G.mjs";
+import {
+  TEMPLATE_IDS,
+  isTemplateId
+} from "./chunk-S5B7PBPK.mjs";
 
 // src/package/FixturaTemplateScene.tsx
 import { useEffect } from "react";

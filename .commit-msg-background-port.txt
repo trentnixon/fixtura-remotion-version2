@@ -1,0 +1,3 @@
+Centralize Generated background ingress behind backgroundPort.
+
+Unify ingress matching, render routing, and dual composition ID registration for Studio and production.

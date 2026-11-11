@@ -1,7 +1,5 @@
 import { calculateMainRowExitFrame } from "../../../../../../core/timing/mainSequenceExitPolicy";
-import {
-  STAGGER_DELAY_MULTIPLIER,
-} from "./constants";
+import { STAGGER_DELAY_MULTIPLIER } from "./constants";
 
 /**
  * Calculate animation delay for player rows based on index

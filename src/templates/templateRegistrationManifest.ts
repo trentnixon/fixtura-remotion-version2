@@ -77,7 +77,9 @@ export function isTemplateId(id: string): id is TemplateId {
 /** dist/templates stems declared on the manifest (must match `tsup` publish entries). */
 export function listPreviewPublishChunkDistStems(): string[] {
   return TEMPLATE_REGISTRATION_MANIFEST.filter(
-    (entry): entry is (typeof TEMPLATE_REGISTRATION_MANIFEST)[number] & {
+    (
+      entry,
+    ): entry is (typeof TEMPLATE_REGISTRATION_MANIFEST)[number] & {
       previewPublishChunk: { distFileStem: string };
     } => Boolean(entry.previewPublishChunk),
   ).map((entry) => entry.previewPublishChunk.distFileStem);

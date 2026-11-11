@@ -181,10 +181,6 @@ export const GameCardNightSession: React.FC<GameCardProps> = ({
             </div>
           </NightSessionFixtureAnim>
         </div>
-
-        <div className="fixture-close" aria-hidden>
-          <span className="fixture-close__rule" />
-        </div>
       </AnimatedContainer>
     </section>
   );

@@ -18,6 +18,7 @@ import {
 } from "../../scoreline/results/scorelineMatchShared";
 import { dedupeVenueLabel } from "../../scoreline/results/dedupeVenueLabel";
 import { NightSessionResultMatchCell } from "./NightSessionResultMatchCell";
+import { NightSessionAccentDivider } from "../NightSessionAccentDivider";
 
 export type NightSessionResultsMatchContentProps = {
   match: MatchResult;
@@ -184,10 +185,10 @@ export const NightSessionResultsMatchContent: React.FC<
           rowDelay={rowDelay}
           exitFrame={exitFrame}
         >
-          {teamScoreArea}
+          <div className="match-module__team-scores">{teamScoreArea}</div>
         </NightSessionResultMatchCell>
       ) : (
-        teamScoreArea
+        <div className="match-module__team-scores">{teamScoreArea}</div>
       )}
 
       {animateInner ? (
@@ -230,14 +231,7 @@ export const NightSessionResultsMatchContent: React.FC<
         )
       ) : null}
 
-      {showFixtureClose ? (
-        <div className="fixture-close" aria-hidden>
-          <div className="ns-accent-divider">
-            <span className="ns-accent-wedge" />
-            <span className="ns-accent-lines" />
-          </div>
-        </div>
-      ) : null}
+      {showFixtureClose ? <NightSessionAccentDivider /> : null}
     </section>
   );
 };

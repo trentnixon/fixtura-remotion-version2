@@ -175,6 +175,52 @@
   padding: var(--space-3) 0;
 }
 
+/* Fixture / match divider — asset header accent (wedge + lines) */
+.night-session-canvas .fixture-close {
+  padding: var(--space-3) 0 var(--space-2);
+}
+
+.night-session-canvas
+  :is(.fixture-close, .fixture-separator)
+  .ns-accent-divider {
+  position: relative;
+  width: 100%;
+  height: 22px;
+}
+
+.night-session-canvas :is(.fixture-close, .fixture-separator) .ns-accent-wedge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(100%, 240px);
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--container-text-accent, var(--club-primary)) 45%,
+    transparent
+  );
+  opacity: 0.75;
+}
+
+.night-session-canvas :is(.fixture-close, .fixture-separator) .ns-accent-lines {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 36px;
+  height: 18px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 3px,
+    rgb(255 255 255 / 14%) 3px,
+    rgb(255 255 255 / 14%) 4px
+  );
+  opacity: 0.55;
+}
+
 .night-session-canvas
   :is(
     .match-separator,
@@ -681,10 +727,15 @@
   border-radius: var(--ns-container-radius);
 }
 
-.night-session-canvas .performance-row .performance-player,
-.night-session-canvas .performance-row .performance-figure {
+.night-session-canvas .match-module .performance-row {
   border-radius: var(--ns-container-radius);
   overflow: hidden;
+}
+
+.night-session-canvas .match-module .performance-row .performance-player,
+.night-session-canvas .match-module .performance-row .performance-figure {
+  border-radius: 0;
+  overflow: visible;
 }
 
 .night-session-canvas .match-module .match-context {

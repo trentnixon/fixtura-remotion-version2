@@ -1,0 +1,3 @@
+Centralize main-sequence exit policy and sponsor footer chrome.
+
+Document footer, header, and row exit frames; share SponsorFooterChrome for variant decoration.

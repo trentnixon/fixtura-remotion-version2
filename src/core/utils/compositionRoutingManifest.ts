@@ -88,7 +88,9 @@ export function metadataCompositionIdFromRemotionPath(
 
   const mapped = REMOTION_COMPOSITION_PATH_TO_ID[remotionComposition];
   if (!mapped) {
-    throw new Error(`Unknown remotion composition path: ${remotionComposition}`);
+    throw new Error(
+      `Unknown remotion composition path: ${remotionComposition}`,
+    );
   }
   return mapped;
 }

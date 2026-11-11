@@ -121,7 +121,10 @@ const nightSessionChecks = [
 ];
 
 const bundledStyleNeedles = [
-  { label: "Scoreline bundled CSS in dist", needles: [".scoreline-canvas", "fixtura-scoreline-styles"] },
+  {
+    label: "Scoreline bundled CSS in dist",
+    needles: [".scoreline-canvas", "fixtura-scoreline-styles"],
+  },
   {
     label: "Night Session bundled CSS in dist",
     needles: [".night-session-canvas", "fixtura-night-session-styles"],
@@ -187,9 +190,7 @@ if (existsSync(corePath)) {
 if (existsSync(previewEntry)) {
   const previewContent = readFileSync(previewEntry, "utf8");
   if (!previewContent.includes("loadPreviewTemplateComponent")) {
-    console.error(
-      "verify-pack: preview.mjs should wire lazy template loading",
-    );
+    console.error("verify-pack: preview.mjs should wire lazy template loading");
     failed = true;
   }
   const relativeImports = [

@@ -1,0 +1,3 @@
+Collapse design bind-map layering onto template + overlays.
+
+Hydration merges canonical starter binds with variant overlays; materialize script and design:verify use the same resolution path.

@@ -3,7 +3,10 @@
  * Import from here to preserve existing design-site paths.
  */
 export { syncScorelineMatchModule } from "./layout/cricket/match-module.js";
-export { syncScorelineOrganisationCrest, logoHasCrest } from "./layout/cricket/crest.js";
+export {
+  syncScorelineOrganisationCrest,
+  logoHasCrest,
+} from "./layout/cricket/crest.js";
 export { syncScorelineResultsLayout } from "./layout/cricket/results-layout.js";
 export {
   syncUpcomingHeaderContext,

@@ -55,9 +55,7 @@ describe("buildProductionCompositionIds", () => {
       appearanceType: video.appearance.type,
     });
 
-    expect(ids.remoteCompositionId).toBe(
-      "Mudgeeraba-Animated-CricketUpcoming",
-    );
+    expect(ids.remoteCompositionId).toBe("Mudgeeraba-Animated-CricketUpcoming");
     expect(ids.studioGeneratedCompositionId).toBe(
       "Mudgeeraba-generated-html-scoreboard-grid-CricketUpcoming",
     );

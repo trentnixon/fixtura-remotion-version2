@@ -1,27 +1,24 @@
-import {
-  ensureContrast,
-  useThemeContext
-} from "./chunk-JVWY6G7L.mjs";
+import { ensureContrast, useThemeContext } from "./chunk-JVWY6G7L.mjs";
 
 // src/templates/variants/scoreline/theme/layout.ts
 var scorelineLayout = {
   heights: {
     asset: 1088,
     header: 140,
-    footer: 112
+    footer: 112,
   },
   spacing: {
     section: "space-y-0",
-    item: "space-y-0"
+    item: "space-y-0",
   },
   padding: {
     container: "p-0",
     section: "py-0",
-    item: "py-0"
+    item: "py-0",
   },
   borderRadius: {
-    container: "rounded-none"
-  }
+    container: "rounded-none",
+  },
 };
 
 // src/templates/variants/scoreline/theme/mode.ts
@@ -30,46 +27,46 @@ var scorelineMode = {
     container: {
       background: "transparent",
       backgroundAlt: "#f3f0ea",
-      backgroundTransparent: "rgba(255, 255, 255, 0.5)"
+      backgroundTransparent: "rgba(255, 255, 255, 0.5)",
     },
     text: {
       title: "#080b0d",
-      copy: "#080b0d"
-    }
+      copy: "#080b0d",
+    },
   },
   lightAlt: {
     container: {
       background: "transparent",
       backgroundAlt: "#f3f0ea",
-      backgroundTransparent: "rgba(255, 255, 255, 0.5)"
+      backgroundTransparent: "rgba(255, 255, 255, 0.5)",
     },
     text: {
       title: "#ffffff",
-      copy: "#080b0d"
-    }
+      copy: "#080b0d",
+    },
   },
   dark: {
     container: {
       background: "#080b0d",
       backgroundAlt: "#1a1a1a",
-      backgroundTransparent: "rgba(0, 0, 0, 0.5)"
+      backgroundTransparent: "rgba(0, 0, 0, 0.5)",
     },
     text: {
       title: "#ffffff",
-      copy: "#ffffff"
-    }
+      copy: "#ffffff",
+    },
   },
   darkAlt: {
     container: {
       background: "#080b0d",
       backgroundAlt: "#1a1a1a",
-      backgroundTransparent: "rgba(0, 0, 0, 0.5)"
+      backgroundTransparent: "rgba(0, 0, 0, 0.5)",
     },
     text: {
       title: "#080b0d",
-      copy: "#ffffff"
-    }
-  }
+      copy: "#ffffff",
+    },
+  },
 };
 
 // src/compositions/cricket/utils/scoreline/scorelineCanvasStyle.ts
@@ -97,7 +94,7 @@ function parseHex(input) {
   return {
     r: Number.parseInt(hex.slice(1, 3), 16),
     g: Number.parseInt(hex.slice(3, 5), 16),
-    b: Number.parseInt(hex.slice(5, 7), 16)
+    b: Number.parseInt(hex.slice(5, 7), 16),
   };
 }
 function relativeLuminance({ r, g, b }) {
@@ -112,7 +109,7 @@ function mixRgb(a, b, weightA) {
   return {
     r: Math.round(a.r * w + b.r * (1 - w)),
     g: Math.round(a.g * w + b.g * (1 - w)),
-    b: Math.round(a.b * w + b.b * (1 - w))
+    b: Math.round(a.b * w + b.b * (1 - w)),
   };
 }
 function toRgbString(rgb) {
@@ -137,17 +134,30 @@ function pickOnSurface(surface, ink, paper) {
   return relativeLuminance(surface) > 0.45 ? ink : paper;
 }
 function separateSimilarColors(primary, secondary, ink) {
-  if (Math.abs(relativeLuminance(primary) - relativeLuminance(secondary)) < 0.12) {
+  if (
+    Math.abs(relativeLuminance(primary) - relativeLuminance(secondary)) < 0.12
+  ) {
     return [primary, mixRgb(secondary, ink, 0.35)];
   }
   return [primary, secondary];
 }
 function deriveScorelineThemeVars(theme = {}) {
   var _a, _b, _c, _d, _e, _f;
-  const ink = (_b = parseHex((_a = theme.ink) != null ? _a : SCORELINE_DEFAULT_INK)) != null ? _b : parseHex(SCORELINE_DEFAULT_INK);
-  const paper = (_d = parseHex((_c = theme.paper) != null ? _c : SCORELINE_DEFAULT_PAPER)) != null ? _d : parseHex(SCORELINE_DEFAULT_PAPER);
-  let primary = (_e = parseHex(theme.primary)) != null ? _e : parseHex("#ff0000");
-  let secondary = (_f = parseHex(theme.secondary)) != null ? _f : parseHex("#004de2");
+  const ink =
+    (_b = parseHex((_a = theme.ink) != null ? _a : SCORELINE_DEFAULT_INK)) !=
+    null
+      ? _b
+      : parseHex(SCORELINE_DEFAULT_INK);
+  const paper =
+    (_d = parseHex(
+      (_c = theme.paper) != null ? _c : SCORELINE_DEFAULT_PAPER,
+    )) != null
+      ? _d
+      : parseHex(SCORELINE_DEFAULT_PAPER);
+  let primary =
+    (_e = parseHex(theme.primary)) != null ? _e : parseHex("#ff0000");
+  let secondary =
+    (_f = parseHex(theme.secondary)) != null ? _f : parseHex("#004de2");
   [primary, secondary] = separateSimilarColors(primary, secondary, ink);
   const surfacePrimary = ensureSurfaceColor(primary, ink);
   const surfaceSecondary = ensureSurfaceColor(secondary, ink);
@@ -165,12 +175,14 @@ function deriveScorelineThemeVars(theme = {}) {
     onSurface: toRgbString(onSurface),
     contrastScore: toRgbString(onSurface),
     contrastTeam: onDark ? "rgb(255 255 255 / 92%)" : "rgb(8 11 13 / 92%)",
-    contrastMetaOnSurface: onDark ? "rgb(255 255 255 / 58%)" : "rgb(8 11 13 / 58%)",
+    contrastMetaOnSurface: onDark
+      ? "rgb(255 255 255 / 58%)"
+      : "rgb(8 11 13 / 58%)",
     onSurfaceMuted: onDark ? "rgb(255 255 255 / 72%)" : "rgb(8 11 13 / 72%)",
     onSurfaceLabel: onDark ? "rgb(255 255 255 / 68%)" : "rgb(8 11 13 / 68%)",
     accentOnLightPrimary: toRgbString(accentOnLight(primary, ink)),
     accentOnLightSecondary: toRgbString(accentOnLight(secondary, ink)),
-    onDark
+    onDark,
   };
 }
 
@@ -184,8 +196,12 @@ var PERFORMANCE_AREA_PANEL_DARK = "rgba(8, 11, 13, 0.5)";
 var LEADERBOARD_HERO_ROW_LIGHT = "rgba(243, 240, 234, 0.75)";
 var LEADERBOARD_HERO_ROW_DARK = "rgba(8, 11, 13, 0.75)";
 var SCORELINE_DEFAULT_SURFACE = "#ffffff";
-var isTransparentContainerBackground = (background) => !background || background === "transparent" || tinycolor(background).getAlpha() === 0;
-var isScorelineDarkContainerMode = (selectedPalette) => !isTransparentContainerBackground(selectedPalette.container.background);
+var isTransparentContainerBackground = (background) =>
+  !background ||
+  background === "transparent" ||
+  tinycolor(background).getAlpha() === 0;
+var isScorelineDarkContainerMode = (selectedPalette) =>
+  !isTransparentContainerBackground(selectedPalette.container.background);
 var resolveScorelineModeSurfaceVars = (selectedPalette) => {
   const containerBackground = selectedPalette.container.background;
   const containerBackgroundAlt = selectedPalette.container.backgroundAlt;
@@ -193,36 +209,49 @@ var resolveScorelineModeSurfaceVars = (selectedPalette) => {
     containerBackground,
     containerBackgroundAlt,
     surfaceMuted: containerBackgroundAlt,
-    surface: isScorelineDarkContainerMode(selectedPalette) ? containerBackground : SCORELINE_DEFAULT_SURFACE
+    surface: isScorelineDarkContainerMode(selectedPalette)
+      ? containerBackground
+      : SCORELINE_DEFAULT_SURFACE,
   };
 };
 var resolveMutedContainerCopy = (background, copy) => {
   const base = ensureContrast(background, copy);
-  const dimmed = tinycolor(base).isDark() ? tinycolor(base).lighten(25) : tinycolor(base).darken(25);
+  const dimmed = tinycolor(base).isDark()
+    ? tinycolor(base).lighten(25)
+    : tinycolor(base).darken(25);
   return ensureContrast(background, dimmed.toRgbString());
 };
 var resolveScorelineContainerCopyTokens = (selectedPalette) => {
   var _a;
   const isDark = isScorelineDarkContainerMode(selectedPalette);
-  const surfaceSolid = isDark ? selectedPalette.container.background : selectedPalette.container.backgroundAlt;
+  const surfaceSolid = isDark
+    ? selectedPalette.container.background
+    : selectedPalette.container.backgroundAlt;
   const surface = isDark ? SCORELINE_PANEL_DARK : SCORELINE_PANEL_LIGHT;
   const copy = ensureContrast(
     surfaceSolid,
-    selectedPalette.text.onContainer.copy
+    selectedPalette.text.onContainer.copy,
   );
   const textMuted = resolveMutedContainerCopy(surfaceSolid, copy);
   const textSupport = resolveMutedContainerCopy(
     surfaceSolid,
-    tinycolor(copy).isDark() ? tinycolor(copy).darken(8).toRgbString() : tinycolor(copy).lighten(8).toRgbString()
+    tinycolor(copy).isDark()
+      ? tinycolor(copy).darken(8).toRgbString()
+      : tinycolor(copy).lighten(8).toRgbString(),
   );
   return {
     surface,
     surfaceSolid,
-    inset: isDark ? "inset 0 1px 0 rgb(255 255 255 / 12%)" : "inset 0 1px 0 rgb(255 255 255 / 55%)",
+    inset: isDark
+      ? "inset 0 1px 0 rgb(255 255 255 / 12%)"
+      : "inset 0 1px 0 rgb(255 255 255 / 55%)",
     text: copy,
     textMuted,
     textSupport,
-    accent: (_a = selectedPalette.text.onContainer.accent) != null ? _a : selectedPalette.container.accent
+    accent:
+      (_a = selectedPalette.text.onContainer.accent) != null
+        ? _a
+        : selectedPalette.container.accent,
   };
 };
 var resolveScorelineMatchContextTokens = (selectedPalette) => {
@@ -236,13 +265,21 @@ var resolveScorelineMatchContextTokens = (selectedPalette) => {
     inset: container.inset,
     textMuted: openCopyMuted,
     text: openCopyStrong,
-    accent: container.accent
+    accent: container.accent,
   };
 };
-var resolveScorelinePerformanceAreaSurface = (selectedPalette) => isScorelineDarkContainerMode(selectedPalette) ? PERFORMANCE_AREA_PANEL_DARK : PERFORMANCE_AREA_PANEL_LIGHT;
-var resolveScorelineLadderRowSurface = (selectedPalette) => resolveScorelinePerformanceAreaSurface(selectedPalette);
-var resolveScorelineLeaderboardHeroRowSurface = (selectedPalette) => isScorelineDarkContainerMode(selectedPalette) ? LEADERBOARD_HERO_ROW_DARK : LEADERBOARD_HERO_ROW_LIGHT;
-var resolveScorelineRosterRowSurface = (selectedPalette) => resolveScorelineLeaderboardHeroRowSurface(selectedPalette);
+var resolveScorelinePerformanceAreaSurface = (selectedPalette) =>
+  isScorelineDarkContainerMode(selectedPalette)
+    ? PERFORMANCE_AREA_PANEL_DARK
+    : PERFORMANCE_AREA_PANEL_LIGHT;
+var resolveScorelineLadderRowSurface = (selectedPalette) =>
+  resolveScorelinePerformanceAreaSurface(selectedPalette);
+var resolveScorelineLeaderboardHeroRowSurface = (selectedPalette) =>
+  isScorelineDarkContainerMode(selectedPalette)
+    ? LEADERBOARD_HERO_ROW_DARK
+    : LEADERBOARD_HERO_ROW_LIGHT;
+var resolveScorelineRosterRowSurface = (selectedPalette) =>
+  resolveScorelineLeaderboardHeroRowSurface(selectedPalette);
 
 // src/compositions/cricket/utils/scoreline/scorelineCanvasStyle.ts
 var getScorelineCanvasStyle = (primary, secondary) => {
@@ -260,7 +297,7 @@ var getScorelineCanvasStyle = (primary, secondary) => {
     "--on-surface-label": theme.onSurfaceLabel,
     "--accent-on-light-primary": theme.accentOnLightPrimary,
     "--accent-on-light-secondary": theme.accentOnLightSecondary,
-    "--texture-noise-url": `url("${staticFile("textures/fine-noise.svg")}")`
+    "--texture-noise-url": `url("${staticFile("textures/fine-noise.svg")}")`,
   };
 };
 var useScorelineCanvasStyle = () => {
@@ -270,35 +307,38 @@ var useScorelineCanvasStyle = () => {
   const copyNoBg = selectedPalette.text.onContainer.copyNoBg;
   const matchContext = useMemo(
     () => resolveScorelineMatchContextTokens(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   const modeSurfaces = useMemo(
     () => resolveScorelineModeSurfaceVars(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   const containerCopy = useMemo(
     () => resolveScorelineContainerCopyTokens(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   const performanceAreaSurface = useMemo(
     () => resolveScorelinePerformanceAreaSurface(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   const ladderRowSurface = useMemo(
     () => resolveScorelineLadderRowSurface(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   const leaderboardHeroRowSurface = useMemo(
     () => resolveScorelineLeaderboardHeroRowSurface(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   const rosterRowSurface = useMemo(
     () => resolveScorelineRosterRowSurface(selectedPalette),
-    [selectedPalette]
+    [selectedPalette],
   );
   return useMemo(
     () => ({
-      ...getScorelineCanvasStyle(colors == null ? void 0 : colors.primary, colors == null ? void 0 : colors.secondary),
+      ...getScorelineCanvasStyle(
+        colors == null ? void 0 : colors.primary,
+        colors == null ? void 0 : colors.secondary,
+      ),
       background: "transparent",
       "--container-background": modeSurfaces.containerBackground,
       "--container-background-alt": modeSurfaces.containerBackgroundAlt,
@@ -319,11 +359,13 @@ var useScorelineCanvasStyle = () => {
       "--match-context-text": matchContext.text,
       "--match-context-accent": matchContext.accent,
       "--on-container-copy-no-bg": copyNoBg,
-      "--on-container-copy-no-bg-muted": tinycolor2(copyNoBg).setAlpha(0.68).toRgbString(),
+      "--on-container-copy-no-bg-muted": tinycolor2(copyNoBg)
+        .setAlpha(0.68)
+        .toRgbString(),
       "--performance-area-surface": performanceAreaSurface,
       "--ladder-row-surface": ladderRowSurface,
       "--leaderboard-hero-row-surface": leaderboardHeroRowSurface,
-      "--roster-row-surface": rosterRowSurface
+      "--roster-row-surface": rosterRowSurface,
     }),
     [
       colors == null ? void 0 : colors.primary,
@@ -337,8 +379,8 @@ var useScorelineCanvasStyle = () => {
       rosterRowSurface,
       matchContext,
       modeSurfaces,
-      performanceAreaSurface
-    ]
+      performanceAreaSurface,
+    ],
   );
 };
 
@@ -352,17 +394,17 @@ var SCORELINE_HEADER_DEFAULTS = {
   CricketTop5Bowling: { eyebrow: "Top 5", title: "Top 5 Bowling" },
   CricketBattingPerformances: {
     eyebrow: "Performances",
-    title: "Top Batting"
+    title: "Top Batting",
   },
   CricketBowlingPerformances: {
     eyebrow: "Performances",
-    title: "Top Bowling"
+    title: "Top Bowling",
   },
   CricketRoster: { eyebrow: "Team", title: "Team Roster" },
   CricketTeamOfTheWeek: {
     eyebrow: "Team of the Week",
-    title: "Team of the Week"
-  }
+    title: "Team of the Week",
+  },
 };
 var resolveScorelineHeaderDefaults = (compositionId) => {
   if (compositionId && SCORELINE_HEADER_DEFAULTS[compositionId]) {
@@ -404,6 +446,6 @@ export {
   resolveScorelineContainerCopyTokens,
   useScorelineCanvasStyle,
   resolveScorelineHeaderDefaults,
-  resolveScorelineCanvasDataset
+  resolveScorelineCanvasDataset,
 };
 //# sourceMappingURL=chunk-IWU7RYVX.mjs.map

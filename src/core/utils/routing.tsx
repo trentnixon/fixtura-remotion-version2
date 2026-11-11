@@ -15,8 +15,7 @@ type CompositionId = string;
 
 type SportModuleType = Record<
   string,
-  | Record<string, React.ComponentType<unknown>>
-  | React.ComponentType<unknown>
+  Record<string, React.ComponentType<unknown>> | React.ComponentType<unknown>
 >;
 
 const SPORT_MODULES: Record<Sport, SportModuleType> = {

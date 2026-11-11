@@ -242,7 +242,7 @@
   border-top-color: color-mix(in srgb, var(--club-primary) 72%, white);
 }
 
-/* Asset header — logo + title row, accent wedge below (intro keeps corner crest) */
+/* Asset header — logo + title row, accent wedge below */
 .night-session-canvas:not(.night-session-intro) .ns-header {
   --ns-header-mark-height: calc(56px * 1.44);
   --ns-header-mark-max-width: calc(var(--ns-header-mark-height) * 2.75);
@@ -688,12 +688,6 @@
     --container-text-muted,
     var(--contrast-meta-on-surface)
   ) !important;
-}
-
-/* Intro — panel copy uses mode container tokens (not header-text) */
-.night-session-canvas.night-session-intro .night-session-intro__panel {
-  background: var(--container-surface, var(--match-context-surface)) !important;
-  box-shadow: var(--container-inset, var(--match-context-inset)) !important;
 }
 
 .night-session-canvas.night-session-intro .header-eyebrow {

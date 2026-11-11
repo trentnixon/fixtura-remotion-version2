@@ -15,7 +15,8 @@ export function mergeBindMaps(base, overlay) {
   }
 
   if (overlay.__bindMode === "replace") {
-    const { __bindMode, ...map } = overlay;
+    const map = { ...overlay };
+    delete map.__bindMode;
     return map;
   }
 

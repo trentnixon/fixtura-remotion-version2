@@ -1,0 +1,3 @@
+Unify composition and Registry ID routing for runtime handoff.
+
+Centralize template export keys, design remotion paths, and RouteToComposition resolution; add routes.json Vitest contract.

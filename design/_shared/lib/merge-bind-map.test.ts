@@ -66,8 +66,10 @@ describe("resolveBindMapUrls", () => {
       }),
     ).toEqual({
       canonical: "/design/_templates/cricket/results.bind.json",
-      overlay: "/design/_shared/hydration/overlays/night-session/cricket/results.bind.json",
-      legacy: "/design/_shared/hydration/night-session/cricket/results.bind.json",
+      overlay:
+        "/design/_shared/hydration/overlays/night-session/cricket/results.bind.json",
+      legacy:
+        "/design/_shared/hydration/night-session/cricket/results.bind.json",
     });
   });
 });

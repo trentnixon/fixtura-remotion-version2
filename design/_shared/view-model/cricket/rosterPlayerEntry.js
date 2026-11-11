@@ -5,7 +5,11 @@
 export function parseRosterPlayerEntry(raw) {
   const value = String(raw ?? "").trim();
   if (!value || /no players allocated/i.test(value)) {
-    return { emptyRoster: true, name: value || "No players allocated", badges: [] };
+    return {
+      emptyRoster: true,
+      name: value || "No players allocated",
+      badges: [],
+    };
   }
 
   const lines = value.split("\n");

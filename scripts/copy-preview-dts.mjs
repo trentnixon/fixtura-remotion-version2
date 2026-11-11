@@ -49,4 +49,6 @@ for (const { src, dest } of templateCopies) {
   copyFileSync(src, dest);
 }
 
-console.log("Copied preview, preview-core, and template entry .d.ts files to dist/");
+console.log(
+  "Copied preview, preview-core, and template entry .d.ts files to dist/",
+);

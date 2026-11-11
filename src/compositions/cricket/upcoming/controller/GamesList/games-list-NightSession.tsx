@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import GameCardNightSession from "../../layout/Card/game-card-NightSession";
-import { ScorelineFixtureSeparator } from "../../../utils/scoreline/fixture/ScorelineFixturePrimitives";
+import { NightSessionAccentDivider } from "../../../utils/nightSession/NightSessionAccentDivider";
 import { groupGamesByGradeDate } from "../../../utils/nightSession/upcoming/groupGamesByGradeDate";
 import { NightSessionUpcomingShellAnim } from "../../../utils/nightSession/upcoming/NightSessionUpcomingShellAnim";
 import { GamesListProps } from "./_types/GamesListProps";
@@ -55,7 +55,7 @@ export const GamesListNightSession: React.FC<GamesListProps> = ({ games }) => {
                     enterIndex={takeEnterIndex()}
                     className="fixtures-crease-step w-full min-w-0"
                   >
-                    <ScorelineFixtureSeparator />
+                    <NightSessionAccentDivider className="fixture-separator" />
                   </NightSessionUpcomingShellAnim>
                 ) : null}
                 <div className="fixtures-date-group__list gap-2">
@@ -69,7 +69,7 @@ export const GamesListNightSession: React.FC<GamesListProps> = ({ games }) => {
                             enterIndex={takeEnterIndex()}
                             className="fixtures-crease-step w-full min-w-0"
                           >
-                            <ScorelineFixtureSeparator />
+                            <NightSessionAccentDivider className="fixture-separator" />
                           </NightSessionUpcomingShellAnim>
                         ) : null}
                       </React.Fragment>

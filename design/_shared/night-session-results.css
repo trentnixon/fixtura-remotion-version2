@@ -221,6 +221,14 @@
   margin-top: 0;
 }
 
+/* Teams result outer inset (px-10) — wrapper around .team-score-area */
+.night-session-canvas .match-module__team-scores {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-inline: 2.5rem;
+}
+
 /* —— Team score container (parent) + comparison band —— */
 .night-session-canvas .match-module .team-score-area {
   position: relative;
@@ -530,10 +538,9 @@
 
 .night-session-canvas .match-module .performance-panel {
   min-width: 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) max-content;
-  column-gap: var(--space-2);
-  row-gap: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
   align-content: start;
   overflow: visible;
   border: 0;
@@ -558,30 +565,44 @@
   display: none;
 }
 
-.night-session-canvas .performance-row {
-  display: contents;
-}
-
-.night-session-canvas .performance-row .performance-player,
-.night-session-canvas .performance-row .performance-figure {
-  min-height: 46px;
+.night-session-canvas .match-module .performance-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  box-sizing: border-box;
   padding: 10px 14px;
   border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
+  border-radius: var(--ns-container-radius);
   background: var(--ns-performance-row-bg, rgb(10 12 14 / 65%));
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
 }
 
-.night-session-canvas .performance-row .performance-player {
-  min-width: 0;
-  justify-self: stretch;
+.night-session-canvas .match-module .performance-row .performance-player,
+.night-session-canvas .match-module .performance-row .performance-figure {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.night-session-canvas .performance-row .performance-figure {
-  justify-self: stretch;
+.night-session-canvas .match-module .performance-row .performance-player {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.night-session-canvas .match-module .performance-row .performance-figure {
+  flex: 0 0 auto;
   justify-content: flex-end;
-  width: 100%;
+  width: auto;
   font-variant-numeric: tabular-nums lining-nums;
 }
 
@@ -753,77 +774,6 @@
     --match-context-text,
     var(--on-container-copy-no-bg, var(--container-text, var(--contrast-team)))
   );
-}
-
-/* —— Fixture divider (header accent motif) —— */
-.night-session-canvas .fixture-close {
-  padding: var(--space-3) 0 var(--space-2);
-}
-
-.night-session-canvas .fixture-close .ns-accent-divider {
-  position: relative;
-  width: 100%;
-  height: 22px;
-}
-
-.night-session-canvas .fixture-close .ns-accent-wedge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(100%, 280px);
-  height: 2px;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(
-        in srgb,
-        var(
-            --header-text,
-            var(--on-container-copy-no-bg, rgb(244 243 241 / 96%))
-          )
-          75%,
-        transparent
-      )
-      45%,
-    transparent
-  );
-  opacity: 0.85;
-}
-
-.night-session-canvas .fixture-close .ns-accent-lines {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 36px;
-  height: 18px;
-  transform: translateY(-50%);
-  background: repeating-linear-gradient(
-    -55deg,
-    transparent,
-    transparent 3px,
-    color-mix(
-        in srgb,
-        var(
-            --header-text,
-            var(--on-container-copy-no-bg, rgb(244 243 241 / 96%))
-          )
-          14%,
-        transparent
-      )
-      3px,
-    color-mix(
-        in srgb,
-        var(
-            --header-text,
-            var(--on-container-copy-no-bg, rgb(244 243 241 / 96%))
-          )
-          14%,
-        transparent
-      )
-      4px
-  );
-  opacity: 0.55;
 }
 
 /* —— Footer —— */

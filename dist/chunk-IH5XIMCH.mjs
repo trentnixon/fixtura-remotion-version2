@@ -1,7 +1,7 @@
 import {
   calculateOutroDurationFromSponsors,
   hasSponsors,
-  isGeneratedPresetId
+  isGeneratedPresetId,
 } from "./chunk-DAUNLCV7.mjs";
 
 // src/templates/templateIds.ts
@@ -18,7 +18,7 @@ var TEMPLATE_IDS = [
   "BroadcastPro",
   "BroadcastProRounded",
   "Scoreline",
-  "NightSession"
+  "NightSession",
 ];
 function isTemplateId(id) {
   return TEMPLATE_IDS.includes(id);
@@ -46,55 +46,74 @@ function getProductionCompositionMeta(data) {
   }
   const remoteCompositionId = `${templateId}-${useBackground}-${compositionId}`;
   const appearanceType = appearance.type;
-  const studioGeneratedCompositionId = typeof appearanceType === "string" && isGeneratedPresetId(appearanceType) ? `${templateId}-generated-${appearanceType}-${compositionId}` : void 0;
+  const studioGeneratedCompositionId =
+    typeof appearanceType === "string" && isGeneratedPresetId(appearanceType)
+      ? `${templateId}-generated-${appearanceType}-${compositionId}`
+      : void 0;
   const sponsors = (_a = data.videoMeta.club) == null ? void 0 : _a.sponsors;
-  const doesAccountHaveSponsors = Boolean(metadata.includeSponsors) || hasSponsors(sponsors);
-  const durationInFrames = ((_b = data.timings.FPS_INTRO) != null ? _b : 0) + ((_c = data.timings.FPS_MAIN) != null ? _c : 0) + calculateOutroDurationFromSponsors(sponsors, doesAccountHaveSponsors);
+  const doesAccountHaveSponsors =
+    Boolean(metadata.includeSponsors) || hasSponsors(sponsors);
+  const durationInFrames =
+    ((_b = data.timings.FPS_INTRO) != null ? _b : 0) +
+    ((_c = data.timings.FPS_MAIN) != null ? _c : 0) +
+    calculateOutroDurationFromSponsors(sponsors, doesAccountHaveSponsors);
   return {
     templateId,
     remoteCompositionId,
     studioGeneratedCompositionId,
-    durationInFrames
+    durationInFrames,
   };
 }
 
 // src/package/loadPreviewTemplate.ts
 var templateLoaders = {
-  Basic: () => import("./basic-2OV7AM7X.mjs").then((m) => ({
-    default: m.Basic
-  })),
-  Brickwork: () => import("./brickwork-FKWBZ2AO.mjs").then((m) => ({
-    default: m.Brickwork
-  })),
-  Classic: () => import("./classic-TLLJXXI7.mjs").then((m) => ({
-    default: m.Classic
-  })),
+  Basic: () =>
+    import("./basic-2OV7AM7X.mjs").then((m) => ({
+      default: m.Basic,
+    })),
+  Brickwork: () =>
+    import("./brickwork-FKWBZ2AO.mjs").then((m) => ({
+      default: m.Brickwork,
+    })),
+  Classic: () =>
+    import("./classic-TLLJXXI7.mjs").then((m) => ({
+      default: m.Classic,
+    })),
   CNSW: () => import("./cnsw-3YHKEDII.mjs").then((m) => ({ default: m.CNSW })),
-  CNSWPrivate: () => import("./cnsw-private-L7VCTST6.mjs").then((m) => ({
-    default: m.CNSWPrivate
-  })),
-  Sixers: () => import("./sixers-2KFHFXLW.mjs").then((m) => ({ default: m.Sixers })),
-  Thunder: () => import("./thunder-UMUKEJDQ.mjs").then((m) => ({
-    default: m.Thunder
-  })),
-  TwoColumnClassic: () => import("./twoColumnClassic-DG2UGT7F.mjs").then((m) => ({
-    default: m.TwoColumnClassic
-  })),
-  Mudgeeraba: () => import("./mudgeeraba-JFHNPILT.mjs").then((m) => ({
-    default: m.Mudgeeraba
-  })),
-  BroadcastPro: () => import("./broadcastPro-5BDSZXH4.mjs").then((m) => ({
-    default: m.BroadcastPro
-  })),
-  BroadcastProRounded: () => import("./broadcastProRounded-O7LQVGTN.mjs").then((m) => ({
-    default: m.BroadcastProRounded
-  })),
-  Scoreline: () => import("./scoreline-72KSFPDZ.mjs").then((m) => ({
-    default: m.Scoreline
-  })),
-  NightSession: () => import("./nightSession-VIDZEUYA.mjs").then((m) => ({
-    default: m.NightSession
-  }))
+  CNSWPrivate: () =>
+    import("./cnsw-private-L7VCTST6.mjs").then((m) => ({
+      default: m.CNSWPrivate,
+    })),
+  Sixers: () =>
+    import("./sixers-2KFHFXLW.mjs").then((m) => ({ default: m.Sixers })),
+  Thunder: () =>
+    import("./thunder-UMUKEJDQ.mjs").then((m) => ({
+      default: m.Thunder,
+    })),
+  TwoColumnClassic: () =>
+    import("./twoColumnClassic-DG2UGT7F.mjs").then((m) => ({
+      default: m.TwoColumnClassic,
+    })),
+  Mudgeeraba: () =>
+    import("./mudgeeraba-JFHNPILT.mjs").then((m) => ({
+      default: m.Mudgeeraba,
+    })),
+  BroadcastPro: () =>
+    import("./broadcastPro-5BDSZXH4.mjs").then((m) => ({
+      default: m.BroadcastPro,
+    })),
+  BroadcastProRounded: () =>
+    import("./broadcastProRounded-O7LQVGTN.mjs").then((m) => ({
+      default: m.BroadcastProRounded,
+    })),
+  Scoreline: () =>
+    import("./scoreline-72KSFPDZ.mjs").then((m) => ({
+      default: m.Scoreline,
+    })),
+  NightSession: () =>
+    import("./nightSession-VIDZEUYA.mjs").then((m) => ({
+      default: m.NightSession,
+    })),
 };
 function loadPreviewTemplateComponent(templateId) {
   const loader = templateLoaders[templateId];
@@ -105,6 +124,6 @@ export {
   TEMPLATE_IDS,
   isTemplateId,
   getProductionCompositionMeta,
-  loadPreviewTemplateComponent
+  loadPreviewTemplateComponent,
 };
 //# sourceMappingURL=chunk-IH5XIMCH.mjs.map

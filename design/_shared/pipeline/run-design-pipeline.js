@@ -89,8 +89,9 @@ export async function runDesignPipeline(context, options = {}) {
 
     fixture = await fixtureResponse.json();
     const asset =
-      manifest.variants[context.variantSlug]?.sports[context.sportSlug]
-        ?.assets[context.assetSlug];
+      manifest.variants[context.variantSlug]?.sports[context.sportSlug]?.assets[
+        context.assetSlug
+      ];
 
     await runPopulationModule({
       populationId: asset?.population ?? null,

@@ -1,187 +1,186 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 
+var _chunkPPX3E3KAjs = require("./chunk-PPX3E3KA.js");
 
-var _chunkPPX3E3KAjs = require('./chunk-PPX3E3KA.js');
+var _chunkJPRG76NNjs = require("./chunk-JPRG76NN.js");
 
+var _chunkIFK37YAGjs = require("./chunk-IFK37YAG.js");
 
-var _chunkJPRG76NNjs = require('./chunk-JPRG76NN.js');
+var _chunkCNAC6AOLjs = require("./chunk-CNAC6AOL.js");
 
-
-var _chunkIFK37YAGjs = require('./chunk-IFK37YAG.js');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _chunkCNAC6AOLjs = require('./chunk-CNAC6AOL.js');
-
-
-var _chunkTGUIUP2Jjs = require('./chunk-TGUIUP2J.js');
+var _chunkTGUIUP2Jjs = require("./chunk-TGUIUP2J.js");
 
 // src/templates/variants/broadcastPro/theme/componentStyles.shared.ts
 var broadcastProScoreMatchTotal = {
-  className: "font-teko text-5xl font-normal tracking-tight leading-none"
+  className: "font-teko text-5xl font-normal tracking-tight leading-none",
 };
 var broadcastProScoreMatchInnings = {
-  className: "font-teko text-xl font-normal tracking-tight leading-none opacity-80"
+  className:
+    "font-teko text-xl font-normal tracking-tight leading-none opacity-80",
 };
 var broadcastProScoreMatchYetToBat = {
-  className: "font-teko text-2xl font-normal tracking-wider leading-none py-2"
+  className: "font-teko text-2xl font-normal tracking-wider leading-none py-2",
 };
 var broadcastProScorePlayerPrimary = {
-  className: "font-teko text-base font-bold tracking-tight leading-tight"
+  className: "font-teko text-base font-bold tracking-tight leading-tight",
 };
 var broadcastProScorePlayerSuffix = {
-  className: "font-teko text-sm font-normal tracking-tight leading-tight opacity-70"
+  className:
+    "font-teko text-sm font-normal tracking-tight leading-tight opacity-70",
 };
 var broadcastProScoreTableRank = {
-  className: "font-rajdhani text-5xl font-normal tracking-tight leading-none uppercase"
+  className:
+    "font-rajdhani text-5xl font-normal tracking-tight leading-none uppercase",
 };
 var broadcastProScoreTableStat = {
-  className: "font-rajdhani text-4xl font-normal tracking-tight leading-none"
+  className: "font-rajdhani text-4xl font-normal tracking-tight leading-none",
 };
 var broadcastProScoreTablePoints = {
-  className: "font-rajdhani text-5xl font-bold tracking-tight leading-none text-center"
+  className:
+    "font-rajdhani text-5xl font-bold tracking-tight leading-none text-center",
 };
 var broadcastProScoreFeatured = {
-  className: "font-teko text-7xl font-semibold tracking-tight leading-none"
+  className: "font-teko text-7xl font-semibold tracking-tight leading-none",
 };
 var broadcastProScoreGrid = {
-  className: "font-teko text-4xl font-semibold tracking-tight leading-none"
+  className: "font-teko text-4xl font-semibold tracking-tight leading-none",
 };
 var broadcastProScorePerformances = {
-  className: "font-teko text-6xl font-semibold tracking-tight leading-none"
+  className: "font-teko text-6xl font-semibold tracking-tight leading-none",
 };
 var broadcastProScoreCompact = {
-  className: "font-teko text-xl font-semibold tracking-tight leading-none"
+  className: "font-teko text-xl font-semibold tracking-tight leading-none",
 };
 var broadcastProScoreDivider = {
-  className: "font-teko text-4xl font-bold italic uppercase tracking-tight leading-none"
+  className:
+    "font-teko text-4xl font-bold italic uppercase tracking-tight leading-none",
 };
 var broadcastProScoreRosterIndex = {
-  className: "font-teko font-normal uppercase leading-none tabular-nums tracking-tight"
+  className:
+    "font-teko font-normal uppercase leading-none tabular-nums tracking-tight",
 };
 var broadcastProVerdictBandHero = {
-  className: "flex flex-col items-center justify-center gap-2 px-8 py-3"
+  className: "flex flex-col items-center justify-center gap-2 px-8 py-3",
 };
 var broadcastProVerdictBandCompact = {
-  className: "flex items-center justify-center px-6 py-3"
+  className: "flex items-center justify-center px-6 py-3",
 };
 var broadcastProVerdictBandAbandoned = {
-  className: "flex flex-col items-center justify-center gap-1 px-6 py-3"
+  className: "flex flex-col items-center justify-center gap-1 px-6 py-3",
 };
 var broadcastProVerdictWinner = {
-  className: "font-teko text-5xl font-normal uppercase tracking-tight leading-none text-center"
+  className:
+    "font-teko text-5xl font-normal uppercase tracking-tight leading-none text-center",
 };
 var broadcastProVerdictContext = {
-  className: "font-rajdhani text-xl font-semibold uppercase tracking-[0.2em] leading-snug text-center"
+  className:
+    "font-rajdhani text-xl font-semibold uppercase tracking-[0.2em] leading-snug text-center",
 };
 var broadcastProVerdictLine = {
-  className: "font-rajdhani text-2xl font-semibold italic tracking-wider leading-snug text-center"
+  className:
+    "font-rajdhani text-2xl font-semibold italic tracking-wider leading-snug text-center",
 };
 var broadcastProVerdictStatus = {
-  className: "font-rajdhani text-sm font-bold uppercase tracking-widest leading-snug"
+  className:
+    "font-rajdhani text-sm font-bold uppercase tracking-widest leading-snug",
 };
 var broadcastProVerdictFixtureResult = {
-  className: "font-rajdhani text-3xl font-normal italic text-center tracking-wider leading-snug"
+  className:
+    "font-rajdhani text-3xl font-normal italic text-center tracking-wider leading-snug",
 };
 var broadcastProCrestWellCompact = {
-  className: "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-sm"
+  className:
+    "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-sm",
 };
 var broadcastProCrestWellRow = {
-  className: "flex flex-shrink-0 items-center justify-center"
+  className: "flex flex-shrink-0 items-center justify-center",
 };
 var broadcastProCrestWellFixture = {
-  className: "flex flex-shrink-0 items-center justify-center overflow-hidden rounded-sm"
+  className:
+    "flex flex-shrink-0 items-center justify-center overflow-hidden rounded-sm",
 };
 var broadcastProCrestWellGrid = {
-  className: "flex shrink-0 items-center justify-center overflow-hidden shadow-inner"
+  className:
+    "flex shrink-0 items-center justify-center overflow-hidden shadow-inner",
 };
 var broadcastProCrestWellFeatured = {
-  className: "flex shrink-0 items-center justify-center overflow-hidden shadow-inner"
+  className:
+    "flex shrink-0 items-center justify-center overflow-hidden shadow-inner",
 };
 var broadcastProCrestWellRosterHome = {
-  className: "mb-4 flex h-32 w-32 items-center justify-center"
+  className: "mb-4 flex h-32 w-32 items-center justify-center",
 };
 var broadcastProCrestWellRosterAway = {
-  className: "mb-3 flex h-24 w-24 items-center justify-center"
+  className: "mb-3 flex h-24 w-24 items-center justify-center",
 };
 var broadcastProMatchupFixture = {
-  className: "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-3 md:gap-4"
+  className:
+    "flex w-full min-w-0 flex-shrink-0 items-start justify-between gap-3 md:gap-4",
 };
 var broadcastProMatchupResultStack = {
-  className: "flex w-full flex-col gap-2"
+  className: "flex w-full flex-col gap-2",
 };
 var broadcastProMatchupRosterSidebar = {
-  className: "flex flex-col gap-4"
+  className: "flex flex-col gap-4",
 };
 var broadcastProMatchupSideFixtureHome = {
-  className: "flex min-w-0 flex-1 items-center gap-4"
+  className: "flex min-w-0 flex-1 items-center gap-4",
 };
 var broadcastProMatchupSideFixtureAway = {
-  className: "flex min-w-0 flex-1 items-center justify-end gap-4 text-right"
+  className: "flex min-w-0 flex-1 items-center justify-end gap-4 text-right",
 };
 var broadcastProMatchupRoleLabel = {
-  className: "font-rajdhani text-sm font-bold uppercase tracking-widest opacity-80"
+  className:
+    "font-rajdhani text-sm font-bold uppercase tracking-widest opacity-80",
 };
 var broadcastProMatchupDividerSlot = {
-  className: "flex flex-shrink-0 self-center items-center justify-center px-2 md:px-3"
+  className:
+    "flex flex-shrink-0 self-center items-center justify-center px-2 md:px-3",
 };
 var broadcastProMatchupDividerVersus = {
-  className: "font-teko mb-1.5 text-2xl italic sm:text-3xl"
+  className: "font-teko mb-1.5 text-2xl italic sm:text-3xl",
 };
 var broadcastProMatchupFixtureTeamName = {
-  className: "font-rajdhani font-normal uppercase leading-none tracking-wide"
+  className: "font-rajdhani font-normal uppercase leading-none tracking-wide",
 };
 var broadcastProLadderZoneRankLeader = {
-  className: "flex w-20 flex-shrink-0 items-center justify-center"
+  className: "flex w-20 flex-shrink-0 items-center justify-center",
 };
 var broadcastProLadderZoneRankDefault = {
-  className: "flex w-20 flex-shrink-0 items-center justify-center"
+  className: "flex w-20 flex-shrink-0 items-center justify-center",
 };
 var broadcastProComponentStylesShared = {
   title: {
-    className: "font-teko font-normal uppercase tracking-tight leading-none text-center m-0 px-4"
+    className:
+      "font-teko font-normal uppercase tracking-tight leading-none text-center m-0 px-4",
   },
   titleSmall: {
-    className: "font-teko text-6xl font-normal tracking-tight leading-none text-center m-0 px-4"
+    className:
+      "font-teko text-6xl font-normal tracking-tight leading-none text-center m-0 px-4",
   },
   subtitle: {
-    className: "font-rajdhani text-6xl font-semibold uppercase tracking-normal leading-none text-center m-0 px-4"
+    className:
+      "font-rajdhani text-6xl font-semibold uppercase tracking-normal leading-none text-center m-0 px-4",
   },
   broadcastProHeadlineHero: {
-    className: "font-teko font-normal uppercase tracking-tight drop-shadow-2xl text-center m-0 w-full max-w-full"
+    className:
+      "font-teko font-normal uppercase tracking-tight drop-shadow-2xl text-center m-0 w-full max-w-full",
   },
   broadcastProHeadlineSecondary: {
-    className: "font-rajdhani uppercase tracking-wide font-semibold leading-snug"
+    className:
+      "font-rajdhani uppercase tracking-wide font-semibold leading-snug",
   },
   broadcastProHeadlineSection: {
-    className: "font-teko text-2xl font-normal uppercase tracking-widest leading-none"
+    className:
+      "font-teko text-2xl font-normal uppercase tracking-widest leading-none",
   },
   bodyText: {
-    className: "text-xl font-normal tracking-normal leading-relaxed"
+    className: "text-xl font-normal tracking-normal leading-relaxed",
   },
   playerName: {
-    className: "font-teko text-3xl font-normal uppercase tracking-tight leading-tight"
+    className:
+      "font-teko text-3xl font-normal uppercase tracking-tight leading-tight",
   },
   /** Legacy global key — aliases match total for backward compatibility. */
   score: broadcastProScoreMatchTotal,
@@ -227,396 +226,458 @@ var broadcastProComponentStylesShared = {
   broadcastProLadderZoneRankLeader,
   broadcastProLadderZoneRankDefault,
   teamName: {
-    className: "font-teko text-4xl font-normal uppercase tracking-wide leading-none"
+    className:
+      "font-teko text-4xl font-normal uppercase tracking-wide leading-none",
   },
   label: {
-    className: "text-lg font-medium tracking-normal leading-snug"
+    className: "text-lg font-medium tracking-normal leading-snug",
   },
   metadataSmall: {
-    className: "text-lg font-normal tracking-wider leading-snug"
+    className: "text-lg font-normal tracking-wider leading-snug",
   },
   metadataMedium: {
-    className: "text-2xl font-semibold tracking-wider leading-snug"
+    className: "text-2xl font-semibold tracking-wider leading-snug",
   },
   metadataLarge: {
-    className: "text-3xl font-semibold tracking-wide leading-snug"
-  }
+    className: "text-3xl font-semibold tracking-wide leading-snug",
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/composition/ladder.ts
 var broadcastProCompositionComponentStylesLadder = {
   ladderGradeLabel: {
-    className: "text-2xl font-bold uppercase tracking-wide leading-snug"
+    className: "text-2xl font-bold uppercase tracking-wide leading-snug",
   },
   ladderTeamName: {
-    className: "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none"
+    className:
+      "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none",
   },
-  ladderTeamPoints: broadcastProComponentStylesShared.broadcastProScoreTablePoints,
-  broadcastProLadderZoneRankLeader: broadcastProComponentStylesShared.broadcastProLadderZoneRankLeader,
-  broadcastProLadderZoneRankDefault: broadcastProComponentStylesShared.broadcastProLadderZoneRankDefault
+  ladderTeamPoints:
+    broadcastProComponentStylesShared.broadcastProScoreTablePoints,
+  broadcastProLadderZoneRankLeader:
+    broadcastProComponentStylesShared.broadcastProLadderZoneRankLeader,
+  broadcastProLadderZoneRankDefault:
+    broadcastProComponentStylesShared.broadcastProLadderZoneRankDefault,
 };
 
 // src/templates/variants/broadcastPro/theme/composition/results.ts
 var broadcastProCompositionComponentStylesResults = {
   ResultScore: broadcastProComponentStylesShared.broadcastProScoreMatchTotal,
-  ResultScoreFirstInnings: broadcastProComponentStylesShared.broadcastProScoreMatchInnings,
-  ResultScoreYetToBat: broadcastProComponentStylesShared.broadcastProScoreMatchYetToBat,
+  ResultScoreFirstInnings:
+    broadcastProComponentStylesShared.broadcastProScoreMatchInnings,
+  ResultScoreYetToBat:
+    broadcastProComponentStylesShared.broadcastProScoreMatchYetToBat,
   ResultTeamName: {
-    className: "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none"
+    className:
+      "font-rajdhani text-4xl font-bold uppercase tracking-wide leading-none",
   },
   ResultPlayerName: {
-    className: "font-rajdhani text-2xl font-bold leading-tight"
+    className: "font-rajdhani text-2xl font-bold leading-tight",
   },
   ResultPlayerScore: {
-    className: "font-teko text-4xl font-normal tracking-tight leading-tight"
+    className: "font-teko text-4xl font-normal tracking-tight leading-tight",
   },
   ResultSyntax: {
-    className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4"
+    className: "text-2xl font-semibold tracking-wider leading-snug py-4 ml-4",
   },
-  ResultFixtureResult: broadcastProComponentStylesShared.broadcastProVerdictFixtureResult,
+  ResultFixtureResult:
+    broadcastProComponentStylesShared.broadcastProVerdictFixtureResult,
   ResultMetaData: {
-    className: "font-rajdhani text-lg font-normal uppercase tracking-wider leading-snug"
+    className:
+      "font-rajdhani text-lg font-normal uppercase tracking-wider leading-snug",
   },
-  ResultStatementShort: broadcastProComponentStylesShared.broadcastProVerdictLine,
+  ResultStatementShort:
+    broadcastProComponentStylesShared.broadcastProVerdictLine,
   ResultStatementText: {
-    className: "text-2xl font-semibold tracking-wider leading-snug"
+    className: "text-2xl font-semibold tracking-wider leading-snug",
   },
   ResultVS: broadcastProComponentStylesShared.broadcastProScoreDivider,
   broadcastProResultsMetaStrip: {
-    className: "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5"
+    className:
+      "flex w-full flex-shrink-0 items-center justify-between px-4 py-1.5",
   },
   broadcastProResultsTeamRow: {
-    className: "relative flex w-full items-center overflow-hidden"
+    className: "relative flex w-full items-center overflow-hidden",
   },
-  broadcastProResultsTeamLogoWell: broadcastProComponentStylesShared.broadcastProCrestWellGrid,
+  broadcastProResultsTeamLogoWell:
+    broadcastProComponentStylesShared.broadcastProCrestWellGrid,
   broadcastProResultsTeamName: {
-    className: "min-w-0 !leading-[0.95]"
+    className: "min-w-0 !leading-[0.95]",
   },
   broadcastProResultsScoreBadge: {
-    className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5"
+    className: "flex flex-shrink-0 flex-col items-end px-4 py-1.5",
   },
   broadcastProResultsPlayerStatsGrid: {
-    className: "grid grid-cols-3 gap-2"
+    className: "grid grid-cols-3 gap-2",
   },
   broadcastProResultsPlayerStatCell: {
-    className: "flex items-center justify-between px-3 py-2"
+    className: "flex items-center justify-between px-3 py-2",
   },
   broadcastProResultsPlayerStatName: {
-    className: "min-w-0 truncate"
+    className: "min-w-0 truncate",
   },
   broadcastProResultsPlayerStatValue: {
-    className: "flex-shrink-0"
+    className: "flex-shrink-0",
   },
-  broadcastProResultsMatchBlock: broadcastProComponentStylesShared.broadcastProMatchupResultStack,
-  broadcastProResultsMatchupStack: broadcastProComponentStylesShared.broadcastProMatchupResultStack,
-  broadcastProResultsStatusBand: broadcastProComponentStylesShared.broadcastProVerdictBandAbandoned,
-  broadcastProResultsStatementBand: broadcastProComponentStylesShared.broadcastProVerdictBandCompact
+  broadcastProResultsMatchBlock:
+    broadcastProComponentStylesShared.broadcastProMatchupResultStack,
+  broadcastProResultsMatchupStack:
+    broadcastProComponentStylesShared.broadcastProMatchupResultStack,
+  broadcastProResultsStatusBand:
+    broadcastProComponentStylesShared.broadcastProVerdictBandAbandoned,
+  broadcastProResultsStatementBand:
+    broadcastProComponentStylesShared.broadcastProVerdictBandCompact,
 };
 
 // src/templates/variants/broadcastPro/theme/composition/roster.ts
 var broadcastProCompositionComponentStylesRoster = {
   RosterPlayerName: {
     /** `block` + relaxed leading: Teko caps need room inside fixed row cells. */
-    className: "font-teko block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide"
+    className:
+      "font-teko block min-w-0 whitespace-nowrap font-normal uppercase leading-tight tracking-wide",
   },
   broadcastProRosterRoot: {
-    className: "flex h-full min-h-0 w-full flex-col p-0 pt-6"
+    className: "flex h-full min-h-0 w-full flex-col p-0 pt-6",
   },
   broadcastProRosterPlayerNumber: {
-    className: "flex min-h-0 min-w-0 flex-shrink-0 items-stretch justify-center self-stretch p-0"
+    className:
+      "flex min-h-0 min-w-0 flex-shrink-0 items-stretch justify-center self-stretch p-0",
   },
   broadcastProRosterGrid: {
-    className: "grid min-h-0 flex-1 grid-cols-12 gap-6 overflow-hidden"
+    className: "grid min-h-0 flex-1 grid-cols-12 gap-6 overflow-hidden",
   },
   broadcastProRosterLineupColumn: {
-    className: "col-span-12 flex min-h-0 flex-col overflow-hidden lg:col-span-7"
+    className:
+      "col-span-12 flex min-h-0 flex-col overflow-hidden lg:col-span-7",
   },
   broadcastProRosterSidebar: {
-    className: "col-span-12 flex min-h-0 flex-col gap-3 overflow-hidden lg:col-span-5"
+    className:
+      "col-span-12 flex min-h-0 flex-col gap-3 overflow-hidden lg:col-span-5",
   },
   broadcastProRosterContentShell: {
-    className: "flex min-h-0 flex-col gap-4 px-2"
+    className: "flex min-h-0 flex-col gap-4 px-2",
   },
   broadcastProRosterAnimatedContainer: {
-    className: "mx-6 flex flex-1 flex-col overflow-hidden"
+    className: "mx-6 flex flex-1 flex-col overflow-hidden",
   },
   broadcastProRosterPlayerList: {
-    className: "flex min-h-0 min-w-0 flex-1 flex-col justify-start overflow-hidden pr-1"
+    className:
+      "flex min-h-0 min-w-0 flex-1 flex-col justify-start overflow-hidden pr-1",
   },
   broadcastProRosterRow: {
-    className: "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2"
+    className: "flex min-h-0 min-w-0 shrink-0 grow-0 items-stretch gap-2",
   },
   broadcastProRosterNameCell: {
-    className: "flex h-full min-h-0 min-w-0 flex-1 items-stretch justify-start self-stretch"
+    className:
+      "flex h-full min-h-0 min-w-0 flex-1 items-stretch justify-start self-stretch",
   },
   broadcastProRosterMetaStack: {
-    className: "flex min-h-0 flex-1 flex-col gap-2"
+    className: "flex min-h-0 flex-1 flex-col gap-2",
   },
   broadcastProRosterTeamCardHome: {
-    className: "flex flex-shrink-0 flex-col items-center p-3 text-center"
+    className: "flex flex-shrink-0 flex-col items-center p-3 text-center",
   },
   broadcastProRosterTeamCardAway: {
-    className: "flex flex-col items-center p-3 text-center"
+    className: "flex flex-col items-center p-3 text-center",
   },
   broadcastProRosterTeamLogoWellHome: {
-    className: "mb-2 flex h-16 w-16 items-center justify-center"
+    className: "mb-2 flex h-16 w-16 items-center justify-center",
   },
   broadcastProRosterTeamLogoWellAway: {
-    className: "mb-2 flex h-14 w-14 items-center justify-center"
+    className: "mb-2 flex h-14 w-14 items-center justify-center",
   },
   broadcastProCrestWellRosterHome: {
-    className: "mb-2 flex h-16 w-16 items-center justify-center"
+    className: "mb-2 flex h-16 w-16 items-center justify-center",
   },
   broadcastProCrestWellRosterAway: {
-    className: "mb-2 flex h-14 w-14 items-center justify-center"
+    className: "mb-2 flex h-14 w-14 items-center justify-center",
   },
   broadcastProRosterTeamTitleHome: {
-    className: "font-teko line-clamp-2 w-full text-4xl uppercase leading-tight sm:text-5xl"
+    className:
+      "font-teko line-clamp-2 w-full text-4xl uppercase leading-tight sm:text-5xl",
   },
   broadcastProRosterTeamTitleAway: {
-    className: "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl"
+    className:
+      "font-teko line-clamp-2 w-full text-3xl uppercase leading-tight sm:text-4xl",
   },
   broadcastProRosterTeamLabelHome: {
-    className: "font-rajdhani mt-1 text-sm font-normal uppercase tracking-widest"
+    className:
+      "font-rajdhani mt-1 text-sm font-normal uppercase tracking-widest",
   },
   broadcastProRosterTeamLabelAway: {
-    className: "font-rajdhani mt-0.5 text-xs font-normal uppercase tracking-widest"
+    className:
+      "font-rajdhani mt-0.5 text-xs font-normal uppercase tracking-widest",
   },
   broadcastProRosterVersus: {
-    className: "font-teko mb-1 text-2xl italic leading-none"
+    className: "font-teko mb-1 text-2xl italic leading-none",
   },
   broadcastProMatchupDividerVersus: {
-    className: "font-teko mb-1 text-2xl italic leading-none"
+    className: "font-teko mb-1 text-2xl italic leading-none",
   },
   broadcastProMatchupRosterSidebar: {
-    className: "flex flex-col gap-3"
+    className: "flex flex-col gap-3",
   },
   broadcastProRosterMetaRow: {
-    className: "p-3"
+    className: "p-3",
   },
   broadcastProRosterMetaLabel: {
-    className: "font-rajdhani block text-xs font-normal uppercase tracking-widest"
+    className:
+      "font-rajdhani block text-xs font-normal uppercase tracking-widest",
   },
   broadcastProRosterMetaValue: {
-    className: "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-[28px]"
+    className:
+      "font-teko line-clamp-2 text-2xl uppercase leading-tight sm:text-[28px]",
   },
   broadcastProRosterAccentStrip: {
-    className: "w-1.5 shrink-0 self-stretch rounded-sm"
-  }
+    className: "w-1.5 shrink-0 self-stretch rounded-sm",
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/composition/teamOfTheWeek.ts
 var broadcastProCompositionComponentStylesTeamOfTheWeek = {
   TeamOfTheWeekPlayerName: {
-    className: "text-left text-3xl font-bold uppercase tracking-tight leading-none sm:text-4xl"
+    className:
+      "text-left text-3xl font-bold uppercase tracking-tight leading-none sm:text-4xl",
   },
   TeamOfTheWeekTeam: {
-    className: "line-clamp-2 text-left text-lg font-bold uppercase tracking-wider leading-tight opacity-90 sm:text-xl"
+    className:
+      "line-clamp-2 text-left text-lg font-bold uppercase tracking-wider leading-tight opacity-90 sm:text-xl",
   },
   TeamOfTheWeekType: {
-    className: "text-sm font-bold uppercase tracking-wider leading-none"
+    className: "text-sm font-bold uppercase tracking-wider leading-none",
   },
   TeamOfTheWeekStat: {
-    className: "font-teko whitespace-nowrap text-left text-5xl font-semibold tracking-tight leading-none sm:text-6xl"
+    className:
+      "font-teko whitespace-nowrap text-left text-5xl font-semibold tracking-tight leading-none sm:text-6xl",
   },
   broadcastProTeamOfTheWeekStatSuffix: {
-    className: "relative -top-1.5 inline font-teko text-3xl font-normal tracking-tight leading-none opacity-80 sm:-top-2 sm:text-4xl"
+    className:
+      "relative -top-1.5 inline font-teko text-3xl font-normal tracking-tight leading-none opacity-80 sm:-top-2 sm:text-4xl",
   },
   broadcastProTeamOfTheWeekRoot: {
-    className: "flex min-h-0 flex-1 flex-col justify-center gap-2 overflow-hidden px-8 py-2 md:px-10"
+    className:
+      "flex min-h-0 flex-1 flex-col justify-center gap-2 overflow-hidden px-8 py-2 md:px-10",
   },
   broadcastProTeamOfTheWeekAnimatedContainer: {
-    className: "flex min-h-0 flex-1 flex-col justify-center overflow-hidden rounded-none"
+    className:
+      "flex min-h-0 flex-1 flex-col justify-center overflow-hidden rounded-none",
   },
   broadcastProTeamOfTheWeekSection: {
-    className: "flex flex-shrink-0 flex-col gap-2"
+    className: "flex flex-shrink-0 flex-col gap-2",
   },
   broadcastProTeamOfTheWeekSectionHeader: {
-    className: "flex items-center gap-3"
+    className: "flex items-center gap-3",
   },
   broadcastProTeamOfTheWeekSectionTitle: {
-    className: "font-teko text-3xl font-normal uppercase tracking-tight leading-none"
+    className:
+      "font-teko text-3xl font-normal uppercase tracking-tight leading-none",
   },
   broadcastProTeamOfTheWeekSectionRule: {
-    className: "h-px flex-1 opacity-20"
+    className: "h-px flex-1 opacity-20",
   },
   broadcastProTeamOfTheWeekGrid: {
-    className: "grid grid-cols-2 gap-2"
+    className: "grid grid-cols-2 gap-2",
   },
   broadcastProTeamOfTheWeekGridBatters: {
-    className: "grid grid-cols-2 gap-2"
+    className: "grid grid-cols-2 gap-2",
   },
   broadcastProTeamOfTheWeekGridAllRounders: {
-    className: "grid grid-cols-2 gap-2"
+    className: "grid grid-cols-2 gap-2",
   },
   broadcastProTeamOfTheWeekGridBowlers: {
-    className: "grid grid-cols-2 gap-2"
+    className: "grid grid-cols-2 gap-2",
   },
   broadcastProTeamOfTheWeekCard: {
-    className: "relative flex h-full flex-col overflow-hidden rounded-none"
+    className: "relative flex h-full flex-col overflow-hidden rounded-none",
   },
   broadcastProTeamOfTheWeekCardBody: {
-    className: "flex min-h-0 flex-1 flex-col justify-center gap-2"
+    className: "flex min-h-0 flex-1 flex-col justify-center gap-2",
   },
   broadcastProTeamOfTheWeekCardUpper: {
-    className: "flex min-w-0 flex-1 flex-col"
+    className: "flex min-w-0 flex-1 flex-col",
   },
   broadcastProTeamOfTheWeekCardCopy: {
-    className: "flex min-w-0 flex-1 flex-col items-start gap-1 text-left"
+    className: "flex min-w-0 flex-1 flex-col items-start gap-1 text-left",
   },
   broadcastProTeamOfTheWeekCardLogoCol: {
-    className: "hidden"
+    className: "hidden",
   },
   broadcastProTeamOfTheWeekCardLogoWell: {
-    className: "flex h-full w-full items-center justify-center"
+    className: "flex h-full w-full items-center justify-center",
   },
   broadcastProTeamOfTheWeekCardStats: {
-    className: "flex min-h-[1.5rem] min-w-0 flex-1 items-center justify-start whitespace-nowrap"
+    className:
+      "flex min-h-[1.5rem] min-w-0 flex-1 items-center justify-start whitespace-nowrap",
   },
   broadcastProTeamOfTheWeekCardDivider: {
-    className: "h-px w-full opacity-30"
+    className: "h-px w-full opacity-30",
   },
   broadcastProTeamOfTheWeekCardNameRow: {
-    className: "w-full"
+    className: "w-full",
   },
   broadcastProTeamOfTheWeekCardNameCell: {
-    className: "w-full text-left uppercase leading-none"
+    className: "w-full text-left uppercase leading-none",
   },
   broadcastProTeamOfTheWeekTwelfthBand: {
-    className: "relative mt-auto flex items-center justify-between overflow-hidden rounded-none px-6 py-3"
+    className:
+      "relative mt-auto flex items-center justify-between overflow-hidden rounded-none px-6 py-3",
   },
   broadcastProTeamOfTheWeekTwelfthLabel: {
-    className: "font-teko text-lg uppercase tracking-widest leading-none opacity-40"
+    className:
+      "font-teko text-lg uppercase tracking-widest leading-none opacity-40",
   },
   broadcastProTeamOfTheWeekTwelfthName: {
-    className: "font-teko text-3xl font-bold uppercase leading-tight"
+    className: "font-teko text-3xl font-bold uppercase leading-tight",
   },
   broadcastProTeamOfTheWeekTwelfthTeam: {
-    className: "text-xs font-bold uppercase tracking-widest opacity-40"
+    className: "text-xs font-bold uppercase tracking-widest opacity-40",
   },
   broadcastProTeamOfTheWeekTwelfthRole: {
-    className: "mt-1 text-xs uppercase tracking-tighter opacity-20"
-  }
+    className: "mt-1 text-xs uppercase tracking-tighter opacity-20",
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/composition/playerRanking.ts
 var broadcastProPlayerRankingStatScoreFeatured = {
-  className: "font-teko text-9xl font-semibold tracking-tight leading-none"
+  className: "font-teko text-9xl font-semibold tracking-tight leading-none",
 };
 var broadcastProPlayerRankingStatScoreGrid = {
-  className: "font-teko text-6xl font-semibold tracking-tight leading-none"
+  className: "font-teko text-6xl font-semibold tracking-tight leading-none",
 };
 var broadcastProCompositionComponentStylesPlayerRanking = {
   broadcastProPlayerRankingAnimatedContainer: {
-    className: "mx-4 flex min-h-0 flex-1 flex-col overflow-hidden rounded-none md:mx-6"
+    className:
+      "mx-4 flex min-h-0 flex-1 flex-col overflow-hidden rounded-none md:mx-6",
   },
   broadcastProPlayerRankingScrollShell: {
-    className: "flex min-h-0 flex-1 flex-col overflow-hidden py-0"
+    className: "flex min-h-0 flex-1 flex-col overflow-hidden py-0",
   },
   broadcastProPlayerRankingContentStack: {
-    className: "flex w-full flex-col justify-start gap-2"
+    className: "flex w-full flex-col justify-start gap-2",
   },
   broadcastProPlayerRankingGridTop5: {
-    className: "grid grid-cols-1 gap-2 sm:grid-cols-2"
+    className: "grid grid-cols-1 gap-2 sm:grid-cols-2",
   },
   broadcastProPlayerRankingGridPerformances: {
-    className: "grid w-full grid-cols-2 content-start gap-2"
+    className: "grid w-full grid-cols-2 content-start gap-2",
   },
   broadcastProPlayerRankingFeaturedInner: {
-    className: "relative flex flex-col overflow-hidden"
+    className: "relative flex flex-col overflow-hidden",
   },
   broadcastProPlayerRankingFeaturedBody: {
-    className: "relative flex min-h-[200px] items-stretch overflow-hidden pt-10"
+    className:
+      "relative flex min-h-[200px] items-stretch overflow-hidden pt-10",
   },
   broadcastProPlayerRankingGridCard: {
-    className: "relative flex shrink-0 items-stretch gap-3 overflow-hidden p-3 pt-8 sm:gap-4 sm:p-4 sm:pt-9"
+    className:
+      "relative flex shrink-0 items-stretch gap-3 overflow-hidden p-3 pt-8 sm:gap-4 sm:p-4 sm:pt-9",
   },
   broadcastProPlayerRankingRankBadgeFeaturedLeft: {
-    className: "absolute left-0 top-0 px-3 py-1 font-rajdhani text-2xl font-bold italic leading-none"
+    className:
+      "absolute left-0 top-0 px-3 py-1 font-rajdhani text-2xl font-bold italic leading-none",
   },
   broadcastProPlayerRankingRankBadgeGridLeft: {
-    className: "absolute left-0 top-0 px-3 py-1 font-rajdhani text-2xl font-bold italic leading-none"
+    className:
+      "absolute left-0 top-0 px-3 py-1 font-rajdhani text-2xl font-bold italic leading-none",
   },
   broadcastProPlayerRankingRankBadgeGridRight: {
-    className: "absolute right-0 top-0 px-3 py-1 font-rajdhani text-lg font-bold italic tracking-wide leading-none"
+    className:
+      "absolute right-0 top-0 px-3 py-1 font-rajdhani text-lg font-bold italic tracking-wide leading-none",
   },
-  broadcastProPlayerRankingLogoWellFeatured: broadcastProComponentStylesShared.broadcastProCrestWellFeatured,
-  broadcastProPlayerRankingLogoWellGrid: broadcastProComponentStylesShared.broadcastProCrestWellGrid,
+  broadcastProPlayerRankingLogoWellFeatured:
+    broadcastProComponentStylesShared.broadcastProCrestWellFeatured,
+  broadcastProPlayerRankingLogoWellGrid:
+    broadcastProComponentStylesShared.broadcastProCrestWellGrid,
   broadcastProPlayerRankingNameFeatured: {
-    className: "font-rajdhani text-lift text-5xl font-semibold uppercase leading-none tracking-normal md:text-6xl"
+    className:
+      "font-rajdhani text-lift text-5xl font-semibold uppercase leading-none tracking-normal md:text-6xl",
   },
   broadcastProPlayerRankingNameGridTop5: {
-    className: "font-rajdhani text-lift truncate text-xl font-medium uppercase leading-snug sm:text-2xl"
+    className:
+      "font-rajdhani text-lift truncate text-xl font-medium uppercase leading-snug sm:text-2xl",
   },
   broadcastProPlayerRankingNameGridPerformances: {
-    className: "text-lift line-clamp-2 text-[28px] font-semibold uppercase leading-none sm:text-[32px]"
+    className:
+      "text-lift line-clamp-2 text-[28px] font-semibold uppercase leading-none sm:text-[32px]",
   },
   broadcastProPlayerRankingTeamFeatured: {
-    className: "font-rajdhani mt-1 text-2xl font-semibold uppercase tracking-[0.2em]"
+    className:
+      "font-rajdhani mt-1 text-2xl font-semibold uppercase tracking-[0.2em]",
   },
   broadcastProPlayerRankingTeamGridTop5: {
-    className: "font-rajdhani mt-0.5 text-sm font-bold uppercase leading-tight tracking-[0.15em]"
+    className:
+      "font-rajdhani mt-0.5 text-sm font-bold uppercase leading-tight tracking-[0.15em]",
   },
   broadcastProPlayerRankingTeamGridPerformances: {
-    className: "font-rajdhani mb-2 mt-1 text-sm font-bold uppercase tracking-[0.2em]"
+    className:
+      "font-rajdhani mb-2 mt-1 text-sm font-bold uppercase tracking-[0.2em]",
   },
   broadcastProPlayerRankingStatLabel: {
-    className: "font-rajdhani mb-0.5 text-base font-bold uppercase tracking-widest"
+    className:
+      "font-rajdhani mb-0.5 text-base font-bold uppercase tracking-widest",
   },
   broadcastProPlayerRankingStatLabelPerformances: {
-    className: "font-rajdhani mb-0.5 text-xl font-bold uppercase tracking-widest"
+    className:
+      "font-rajdhani mb-0.5 text-xl font-bold uppercase tracking-widest",
   },
-  broadcastProPlayerRankingStatValueFeatured: broadcastProPlayerRankingStatScoreFeatured,
-  broadcastProPlayerRankingStatValueGrid: broadcastProPlayerRankingStatScoreGrid,
+  broadcastProPlayerRankingStatValueFeatured:
+    broadcastProPlayerRankingStatScoreFeatured,
+  broadcastProPlayerRankingStatValueGrid:
+    broadcastProPlayerRankingStatScoreGrid,
   broadcastProScoreFeatured: broadcastProPlayerRankingStatScoreFeatured,
   broadcastProScoreGrid: broadcastProPlayerRankingStatScoreGrid,
   broadcastProPlayerRankingTripleStatsFeatured: {
-    className: "mt-4 grid w-full grid-cols-3"
+    className: "mt-4 grid w-full grid-cols-3",
   },
   broadcastProPlayerRankingTripleStatsGridTop5: {
-    className: "mt-1.5 grid w-full grid-cols-3"
+    className: "mt-1.5 grid w-full grid-cols-3",
   },
   broadcastProPlayerRankingTripleStatsPerformances: {
-    className: "mt-1.5 grid w-full grid-cols-3 border-t pt-2"
+    className: "mt-1.5 grid w-full grid-cols-3 border-t pt-2",
   },
   broadcastProPlayerRankingStatDividerFeatured: {
-    className: "w-full min-w-0 border-l pl-3 sm:pl-4"
+    className: "w-full min-w-0 border-l pl-3 sm:pl-4",
   },
   broadcastProPlayerRankingStatDividerGridTop5: {
-    className: "w-full min-w-0 border-l pl-2 sm:pl-3"
+    className: "w-full min-w-0 border-l pl-2 sm:pl-3",
   },
   broadcastProPlayerRankingStatDividerPerformances: {
-    className: "w-full min-w-0 border-l pl-2 sm:pl-3"
-  }
+    className: "w-full min-w-0 border-l pl-2 sm:pl-3",
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/composition/top5.ts
 var broadcastProCompositionComponentStylesTop5 = {
   ...broadcastProCompositionComponentStylesPlayerRanking,
   Top5PlayerName: {
-    className: "font-teko text-5xl font-normal uppercase tracking-tight leading-none"
+    className:
+      "font-teko text-5xl font-normal uppercase tracking-tight leading-none",
   },
   Top5PlayerTeam: {
-    className: "text-2xl font-semibold opacity-80 tracking-wider leading-tight"
+    className: "text-2xl font-semibold opacity-80 tracking-wider leading-tight",
   },
-  Top5PlayerScore: broadcastProCompositionComponentStylesPlayerRanking.broadcastProScoreFeatured,
-  Top5PlayerScoreSuffix: broadcastProComponentStylesShared.broadcastProScorePlayerSuffix
+  Top5PlayerScore:
+    broadcastProCompositionComponentStylesPlayerRanking.broadcastProScoreFeatured,
+  Top5PlayerScoreSuffix:
+    broadcastProComponentStylesShared.broadcastProScorePlayerSuffix,
 };
 
 // src/templates/variants/broadcastPro/theme/composition/performances.ts
 var broadcastProCompositionComponentStylesPerformances = {
-  ...broadcastProCompositionComponentStylesPlayerRanking
+  ...broadcastProCompositionComponentStylesPlayerRanking,
 };
 
 // src/templates/variants/broadcastPro/theme/composition/upcoming.ts
 var broadcastProCompositionComponentStylesUpcoming = {
   upcomingFixtureHeader: {
-    className: "font-rajdhani text-2xl font-bold uppercase tracking-wider leading-tight"
+    className:
+      "font-rajdhani text-2xl font-bold uppercase tracking-wider leading-tight",
   },
   upcomingTeamName: {
-    className: "font-rajdhani font-bold uppercase !leading-[0.92] tracking-wide"
+    className:
+      "font-rajdhani font-bold uppercase !leading-[0.92] tracking-wide",
   },
-  upcomingVs: broadcastProComponentStylesShared.broadcastProMatchupDividerVs
+  upcomingVs: broadcastProComponentStylesShared.broadcastProMatchupDividerVs,
 };
 
 // src/templates/variants/broadcastPro/theme/composition/statMatrix.ts
@@ -624,33 +685,42 @@ var ranking = broadcastProCompositionComponentStylesPlayerRanking;
 var results = broadcastProCompositionComponentStylesResults;
 var broadcastProCompositionComponentStylesStatMatrix = {
   broadcastProStatMatrixLabel: ranking.broadcastProPlayerRankingStatLabel,
-  broadcastProStatMatrixLabelPerformances: ranking.broadcastProPlayerRankingStatLabelPerformances,
-  broadcastProStatMatrixTripleFeatured: ranking.broadcastProPlayerRankingTripleStatsFeatured,
-  broadcastProStatMatrixTripleGrid: ranking.broadcastProPlayerRankingTripleStatsGridTop5,
-  broadcastProStatMatrixTriplePerformances: ranking.broadcastProPlayerRankingTripleStatsPerformances,
-  broadcastProStatMatrixDividerFeatured: ranking.broadcastProPlayerRankingStatDividerFeatured,
-  broadcastProStatMatrixDividerGrid: ranking.broadcastProPlayerRankingStatDividerGridTop5,
-  broadcastProStatMatrixDividerPerformances: ranking.broadcastProPlayerRankingStatDividerPerformances,
+  broadcastProStatMatrixLabelPerformances:
+    ranking.broadcastProPlayerRankingStatLabelPerformances,
+  broadcastProStatMatrixTripleFeatured:
+    ranking.broadcastProPlayerRankingTripleStatsFeatured,
+  broadcastProStatMatrixTripleGrid:
+    ranking.broadcastProPlayerRankingTripleStatsGridTop5,
+  broadcastProStatMatrixTriplePerformances:
+    ranking.broadcastProPlayerRankingTripleStatsPerformances,
+  broadcastProStatMatrixDividerFeatured:
+    ranking.broadcastProPlayerRankingStatDividerFeatured,
+  broadcastProStatMatrixDividerGrid:
+    ranking.broadcastProPlayerRankingStatDividerGridTop5,
+  broadcastProStatMatrixDividerPerformances:
+    ranking.broadcastProPlayerRankingStatDividerPerformances,
   broadcastProStatMatrixResultGrid: results.broadcastProResultsPlayerStatsGrid,
   broadcastProStatMatrixResultCell: results.broadcastProResultsPlayerStatCell,
   broadcastProStatMatrixResultName: results.broadcastProResultsPlayerStatName,
-  broadcastProStatMatrixResultValue: results.broadcastProResultsPlayerStatValue
+  broadcastProStatMatrixResultValue: results.broadcastProResultsPlayerStatValue,
 };
 
 // src/templates/variants/broadcastPro/theme/composition/marker.ts
 var broadcastProCompositionComponentStylesMarker = {
   broadcastProMarkerChipQualification: {
-    className: "inline-flex shrink-0 items-center px-4 py-1 text-3xl font-normal uppercase tracking-widest leading-none"
+    className:
+      "inline-flex shrink-0 items-center px-4 py-1 text-3xl font-normal uppercase tracking-widest leading-none",
   },
   broadcastProMarkerChipRank: {
-    className: "inline-flex shrink-0 items-center px-3 py-1 text-2xl font-bold italic uppercase leading-none"
+    className:
+      "inline-flex shrink-0 items-center px-3 py-1 text-2xl font-bold italic uppercase leading-none",
   },
   broadcastProMarkerZoneNotchFinals: {
-    className: "flex w-full shrink-0 items-center py-1"
+    className: "flex w-full shrink-0 items-center py-1",
   },
   broadcastProMarkerQualificationFooter: {
-    className: "flex shrink-0 justify-end border-t border-white/10 pt-4"
-  }
+    className: "flex shrink-0 justify-end border-t border-white/10 pt-4",
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/composition/index.ts
@@ -663,7 +733,7 @@ var broadcastProCompositionComponentStyles = {
   ...broadcastProCompositionComponentStylesResults,
   ...broadcastProCompositionComponentStylesRoster,
   ...broadcastProCompositionComponentStylesStatMatrix,
-  ...broadcastProCompositionComponentStylesMarker
+  ...broadcastProCompositionComponentStylesMarker,
 };
 
 // src/templates/variants/broadcastPro/theme/layout.ts
@@ -671,20 +741,20 @@ var broadcastProLayout = {
   heights: {
     asset: 1020,
     header: 200,
-    footer: 130
+    footer: 130,
   },
   spacing: {
     section: "space-y-8",
-    item: "space-y-4"
+    item: "space-y-4",
   },
   padding: {
     container: "p-8",
     section: "py-6",
-    item: "py-2"
+    item: "py-2",
   },
   borderRadius: {
-    container: "rounded-none"
-  }
+    container: "rounded-none",
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/mode.ts
@@ -693,46 +763,46 @@ var broadcastProMode = {
     container: {
       background: "#fff",
       backgroundAlt: "#f0f0f0",
-      backgroundTransparent: "rgba(255, 255, 255, 0.5)"
+      backgroundTransparent: "rgba(255, 255, 255, 0.5)",
     },
     text: {
       title: "#000",
-      copy: "#000"
-    }
+      copy: "#000",
+    },
   },
   lightAlt: {
     container: {
       background: "#fff",
       backgroundAlt: "#f0f0f0",
-      backgroundTransparent: "rgba(255, 255, 255, 0.5)"
+      backgroundTransparent: "rgba(255, 255, 255, 0.5)",
     },
     text: {
       title: "#fff",
-      copy: "#000"
-    }
+      copy: "#000",
+    },
   },
   dark: {
     container: {
       background: "#000",
       backgroundAlt: "#1a1a1a",
-      backgroundTransparent: "rgba(0, 0, 0, 0.5)"
+      backgroundTransparent: "rgba(0, 0, 0, 0.5)",
     },
     text: {
       title: "#fff",
-      copy: "#fff"
-    }
+      copy: "#fff",
+    },
   },
   darkAlt: {
     container: {
       background: "#000",
       backgroundAlt: "#1a1a1a",
-      backgroundTransparent: "rgba(0, 0, 0, 0.5)"
+      backgroundTransparent: "rgba(0, 0, 0, 0.5)",
     },
     text: {
       title: "#000",
-      copy: "#fff"
-    }
-  }
+      copy: "#fff",
+    },
+  },
 };
 
 // src/templates/types/broadcast-pro/headline-lockup.ts
@@ -745,25 +815,25 @@ var DEFAULT_BROADCAST_PRO_HEADLINE_SIZING = {
   letterSpacing: "-0.025em",
   fontWeight: 400,
   secondaryWraps: true,
-  headerOrgCrestPx: 72
+  headerOrgCrestPx: 72,
 };
 
 // src/templates/variants/broadcastPro/theme/tokens.ts
 var broadcastProTokens = {
   broadcastProGlassOpacity: "lg",
   broadcastProHeadlineSizing: {
-    ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING
+    ...DEFAULT_BROADCAST_PRO_HEADLINE_SIZING,
   },
   broadcastProScoreSizing: {
-    ..._chunkCNAC6AOLjs.DEFAULT_BROADCAST_PRO_SCORE_SIZING
+    ..._chunkCNAC6AOLjs.DEFAULT_BROADCAST_PRO_SCORE_SIZING,
   },
   broadcastProCrestSizing: {
     ..._chunkCNAC6AOLjs.DEFAULT_BROADCAST_PRO_CREST_SIZING,
     rosterHomePx: 64,
-    rosterAwayPx: 56
+    rosterAwayPx: 56,
   },
   broadcastProLadderZoneSizing: {
-    ..._chunkCNAC6AOLjs.DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING
+    ..._chunkCNAC6AOLjs.DEFAULT_BROADCAST_PRO_LADDER_ZONE_SIZING,
   },
   broadcastProRosterListSizing: {
     ..._chunkCNAC6AOLjs.DEFAULT_BROADCAST_PRO_ROSTER_LIST_SIZING,
@@ -777,18 +847,18 @@ var broadcastProTokens = {
     nameRowHeightMultiplier: 0.52,
     numberRowHeightMultiplier: 0.48,
     nameFontBonusPx: 2,
-    listChromeReservePx: 24
+    listChromeReservePx: 24,
   },
   fonts: {
     title: {
-      family: "Teko"
+      family: "Teko",
     },
     subtitle: {
-      family: "Rajdhani"
+      family: "Rajdhani",
     },
     copy: {
-      family: "Rajdhani"
-    }
+      family: "Rajdhani",
+    },
   },
   /**
    * Aligns with stitch HTML (`teamRoster.html`): Teko for display/titles; Rajdhani for body/labels.
@@ -797,8 +867,8 @@ var broadcastProTokens = {
   fontClasses: {
     heading: { family: "Teko" },
     subheading: { family: "Rajdhani" },
-    body: { family: "Rajdhani" }
-  }
+    body: { family: "Rajdhani" },
+  },
 };
 
 // src/templates/variants/broadcastPro/theme/index.ts
@@ -809,8 +879,8 @@ var broadcastProTheme = {
   mode: broadcastProMode,
   componentStyles: {
     ...broadcastProComponentStylesShared,
-    ...broadcastProCompositionComponentStyles
-  }
+    ...broadcastProCompositionComponentStyles,
+  },
 };
 
 // src/templates/variants/broadcastPro/components/headline/getBroadcastProHeaderSecondaryLine.ts
@@ -823,36 +893,68 @@ var BROADCAST_PRO_HEADER_WITHOUT_SECONDARY = /* @__PURE__ */ new Set([
   "CricketTop5Bowling",
   "CricketBattingPerformances",
   "CricketBowlingPerformances",
-  "CricketTeamOfTheWeek"
+  "CricketTeamOfTheWeek",
 ]);
-var shouldHideBroadcastProHeaderSecondary = (compositionId) => BROADCAST_PRO_HEADER_WITHOUT_SECONDARY.has(compositionId);
+var shouldHideBroadcastProHeaderSecondary = (compositionId) =>
+  BROADCAST_PRO_HEADER_WITHOUT_SECONDARY.has(compositionId);
 var getBroadcastProHeaderSecondaryLine = (metadata, clubName) => {
   var _a, _b, _c;
-  const videoTitle = (_a = metadata.videoTitle) == null ? void 0 : _a.replace(/\bCricketRoster\b/gi, "").replace(/\s+/g, " ").trim();
+  const videoTitle =
+    (_a = metadata.videoTitle) == null
+      ? void 0
+      : _a
+          .replace(/\bCricketRoster\b/gi, "")
+          .replace(/\s+/g, " ")
+          .trim();
   if (videoTitle) return videoTitle;
-  const parts = (_c = (_b = metadata.titleSplit) == null ? void 0 : _b.filter(Boolean)) != null ? _c : [];
+  const parts =
+    (_c = (_b = metadata.titleSplit) == null ? void 0 : _b.filter(Boolean)) !=
+    null
+      ? _c
+      : [];
   if (parts.length > 0) return parts.join(" \xB7 ");
   return clubName;
 };
 
 // src/templates/variants/broadcastPro/components/headline/useBroadcastProHeadlineFit.ts
-var _react = require('react');
-var _remotion = require('remotion');
+var _react = require("react");
+var _remotion = require("remotion");
 var MAIN_HEADER_TITLE_PADDING_PX = 32;
 var useBroadcastProHeadlineFit = (text, variant) => {
   var _a, _b, _c, _d;
-  const { width } = _remotion.useVideoConfig.call(void 0, );
-  const { fontClasses, fonts, broadcastProHeadlineSizing } = _chunkCNAC6AOLjs.useThemeContext.call(void 0, );
-  const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
-  const fontFamily = (_d = (_c = (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
-  const maxFontSize = variant === "intro" ? sizing.introMaxPx : sizing.mainHeaderMaxPx;
-  const withinWidth = _react.useMemo.call(void 0, () => {
-    const base = _chunkCNAC6AOLjs.getTitleScreenContentWidth.call(void 0, 
-      width,
-      MAIN_HEADER_TITLE_PADDING_PX
-    );
-    return variant === "mainHeader" ? Math.floor(base * 0.95) : base;
-  }, [width, variant]);
+  const { width } = _remotion.useVideoConfig.call(void 0);
+  const { fontClasses, fonts, broadcastProHeadlineSizing } =
+    _chunkCNAC6AOLjs.useThemeContext.call(void 0);
+  const sizing =
+    broadcastProHeadlineSizing != null
+      ? broadcastProHeadlineSizing
+      : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
+  const fontFamily =
+    (_d =
+      (_c =
+        (_a = fontClasses == null ? void 0 : fontClasses.heading) == null
+          ? void 0
+          : _a.family) != null
+        ? _c
+        : (_b = fonts == null ? void 0 : fonts.title) == null
+          ? void 0
+          : _b.family) != null
+      ? _d
+      : "Teko";
+  const maxFontSize =
+    variant === "intro" ? sizing.introMaxPx : sizing.mainHeaderMaxPx;
+  const withinWidth = _react.useMemo.call(
+    void 0,
+    () => {
+      const base = _chunkCNAC6AOLjs.getTitleScreenContentWidth.call(
+        void 0,
+        width,
+        MAIN_HEADER_TITLE_PADDING_PX,
+      );
+      return variant === "mainHeader" ? Math.floor(base * 0.95) : base;
+    },
+    [width, variant],
+  );
   return _chunkCNAC6AOLjs.useFittedFontSize.call(void 0, {
     text,
     fontFamily,
@@ -862,12 +964,12 @@ var useBroadcastProHeadlineFit = (text, variant) => {
     maxFontSize,
     minFontSize: sizing.minPx,
     withinWidth,
-    horizontalPadding: MAIN_HEADER_TITLE_PADDING_PX
+    horizontalPadding: MAIN_HEADER_TITLE_PADDING_PX,
   });
 };
 
 // src/templates/variants/broadcastPro/components/headline/BroadcastProHeadlineTitle.tsx
-var _jsxruntime = require('react/jsx-runtime');
+var _jsxruntime = require("react/jsx-runtime");
 var BroadcastProHeadlineTitle = ({
   text,
   variant,
@@ -875,24 +977,49 @@ var BroadcastProHeadlineTitle = ({
   animation,
   exitAnimation,
   exitFrame,
-  fontFamily: fontFamilyOverride
+  fontFamily: fontFamilyOverride,
 }) => {
   var _a, _b, _c, _d, _e, _f;
-  const { componentStyles, fontClasses, fonts, broadcastProHeadlineSizing } = _chunkCNAC6AOLjs.useThemeContext.call(void 0, );
-  const sizing = broadcastProHeadlineSizing != null ? broadcastProHeadlineSizing : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
+  const { componentStyles, fontClasses, fonts, broadcastProHeadlineSizing } =
+    _chunkCNAC6AOLjs.useThemeContext.call(void 0);
+  const sizing =
+    broadcastProHeadlineSizing != null
+      ? broadcastProHeadlineSizing
+      : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING;
   const fittedSize = useBroadcastProHeadlineFit(text, variant);
-  const fontFamily = (_d = (_c = fontFamilyOverride != null ? fontFamilyOverride : (_a = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.title) == null ? void 0 : _b.family) != null ? _d : "Teko";
-  const heroClass = (_f = (_e = componentStyles.broadcastProHeadlineHero) == null ? void 0 : _e.className) != null ? _f : "font-teko font-normal uppercase tracking-tight drop-shadow-2xl text-center m-0 w-full max-w-full";
-  const maxFontSize = variant === "intro" ? sizing.introMaxPx : sizing.mainHeaderMaxPx;
+  const fontFamily =
+    (_d =
+      (_c =
+        fontFamilyOverride != null
+          ? fontFamilyOverride
+          : (_a = fontClasses == null ? void 0 : fontClasses.heading) == null
+            ? void 0
+            : _a.family) != null
+        ? _c
+        : (_b = fonts == null ? void 0 : fonts.title) == null
+          ? void 0
+          : _b.family) != null
+      ? _d
+      : "Teko";
+  const heroClass =
+    (_f =
+      (_e = componentStyles.broadcastProHeadlineHero) == null
+        ? void 0
+        : _e.className) != null
+      ? _f
+      : "font-teko font-normal uppercase tracking-tight drop-shadow-2xl text-center m-0 w-full max-w-full";
+  const maxFontSize =
+    variant === "intro" ? sizing.introMaxPx : sizing.mainHeaderMaxPx;
   const fontSize = fittedSize != null ? fittedSize : maxFontSize;
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkCNAC6AOLjs.AnimatedText,
     {
       textAlign: "center",
       type: "title",
       variant: _chunkCNAC6AOLjs.resolveBroadcastProCopyVariant.call(void 0, {
         surface: "background",
-        role: "title"
+        role: "title",
       }),
       letterAnimation,
       animation,
@@ -904,10 +1031,10 @@ var BroadcastProHeadlineTitle = ({
         fontFamily: `${fontFamily}, sans-serif`,
         fontWeight: sizing.fontWeight,
         fontSize,
-        lineHeight: sizing.lineHeight
+        lineHeight: sizing.lineHeight,
       },
-      children: text
-    }
+      children: text,
+    },
   );
 };
 
@@ -919,92 +1046,147 @@ var BroadcastProHeadlineSecondary = ({
   animation,
   exitAnimation,
   exitFrame,
-  fontFamily: fontFamilyOverride
+  fontFamily: fontFamilyOverride,
 }) => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i;
-  const { componentStyles, fontClasses, fonts, broadcastProHeadlineSizing } = _chunkCNAC6AOLjs.useThemeContext.call(void 0, );
-  const { text: textOnGlass } = _chunkCNAC6AOLjs.useBroadcastProTheme.call(void 0, );
-  const wraps = (_a = broadcastProHeadlineSizing == null ? void 0 : broadcastProHeadlineSizing.secondaryWraps) != null ? _a : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.secondaryWraps;
+  const { componentStyles, fontClasses, fonts, broadcastProHeadlineSizing } =
+    _chunkCNAC6AOLjs.useThemeContext.call(void 0);
+  const { text: textOnGlass } =
+    _chunkCNAC6AOLjs.useBroadcastProTheme.call(void 0);
+  const wraps =
+    (_a =
+      broadcastProHeadlineSizing == null
+        ? void 0
+        : broadcastProHeadlineSizing.secondaryWraps) != null
+      ? _a
+      : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.secondaryWraps;
   const stayOnOneLine = variant === "mainHeader" || !wraps;
   const secondaryClass = `${(_c = (_b = componentStyles.broadcastProHeadlineSecondary) == null ? void 0 : _b.className) != null ? _c : "font-rajdhani uppercase tracking-wide font-semibold leading-snug"} ${stayOnOneLine ? "whitespace-nowrap" : "whitespace-normal"}`;
-  const subtitleFontFamily = (_i = (_h = (_f = fontFamilyOverride != null ? fontFamilyOverride : (_d = fontClasses == null ? void 0 : fontClasses.subheading) == null ? void 0 : _d.family) != null ? _f : (_e = fonts == null ? void 0 : fonts.subtitle) == null ? void 0 : _e.family) != null ? _h : (_g = fonts == null ? void 0 : fonts.copy) == null ? void 0 : _g.family) != null ? _i : "Rajdhani";
-  const textNode = variant === "intro" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-    _chunkCNAC6AOLjs.AnimatedText,
-    {
-      textAlign: "center",
-      type: "subtitle",
-      variant: _chunkCNAC6AOLjs.resolveBroadcastProCopyVariant.call(void 0, {
-        surface: "background",
-        role: "title"
-      }),
-      letterAnimation: "word",
-      animation,
-      exitAnimation,
-      exitFrame,
-      fontFamily: subtitleFontFamily,
-      className: secondaryClass,
-      style: {
-        fontFamily: `${subtitleFontFamily}, sans-serif`,
-        fontWeight: 600
-      },
-      children: text
-    }
-  ) : /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-    _chunkCNAC6AOLjs.AnimatedText,
-    {
-      textAlign: "center",
-      fontFamily: subtitleFontFamily,
-      type: "metadataMedium",
-      variant: _chunkCNAC6AOLjs.resolveBroadcastProCopyVariant.call(void 0, {
-        surface: "container",
-        role: "copy"
-      }),
-      letterAnimation: "none",
-      animation,
-      exitAnimation,
-      exitFrame,
-      className: secondaryClass,
-      style: {
-        fontFamily: `${subtitleFontFamily}, sans-serif`,
-        fontWeight: 600,
-        color: textOnGlass.copy
-      },
-      children: text
-    }
-  );
+  const subtitleFontFamily =
+    (_i =
+      (_h =
+        (_f =
+          fontFamilyOverride != null
+            ? fontFamilyOverride
+            : (_d = fontClasses == null ? void 0 : fontClasses.subheading) ==
+                null
+              ? void 0
+              : _d.family) != null
+          ? _f
+          : (_e = fonts == null ? void 0 : fonts.subtitle) == null
+            ? void 0
+            : _e.family) != null
+        ? _h
+        : (_g = fonts == null ? void 0 : fonts.copy) == null
+          ? void 0
+          : _g.family) != null
+      ? _i
+      : "Rajdhani";
+  const textNode =
+    variant === "intro"
+      ? /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkCNAC6AOLjs.AnimatedText,
+          {
+            textAlign: "center",
+            type: "subtitle",
+            variant: _chunkCNAC6AOLjs.resolveBroadcastProCopyVariant.call(
+              void 0,
+              {
+                surface: "background",
+                role: "title",
+              },
+            ),
+            letterAnimation: "word",
+            animation,
+            exitAnimation,
+            exitFrame,
+            fontFamily: subtitleFontFamily,
+            className: secondaryClass,
+            style: {
+              fontFamily: `${subtitleFontFamily}, sans-serif`,
+              fontWeight: 600,
+            },
+            children: text,
+          },
+        )
+      : /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkCNAC6AOLjs.AnimatedText,
+          {
+            textAlign: "center",
+            fontFamily: subtitleFontFamily,
+            type: "metadataMedium",
+            variant: _chunkCNAC6AOLjs.resolveBroadcastProCopyVariant.call(
+              void 0,
+              {
+                surface: "container",
+                role: "copy",
+              },
+            ),
+            letterAnimation: "none",
+            animation,
+            exitAnimation,
+            exitFrame,
+            className: secondaryClass,
+            style: {
+              fontFamily: `${subtitleFontFamily}, sans-serif`,
+              fontWeight: 600,
+              color: textOnGlass.copy,
+            },
+            children: text,
+          },
+        );
   if (variant === "mainHeader") {
-    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "mt-2 flex w-full justify-center", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkCNAC6AOLjs.BroadcastProMetadataChip, { className: "px-5 py-1", children: textNode }) });
+    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+      className: "mt-2 flex w-full justify-center",
+      children: /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
+        _chunkCNAC6AOLjs.BroadcastProMetadataChip,
+        { className: "px-5 py-1", children: textNode },
+      ),
+    });
   }
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: stayOnOneLine ? "overflow-hidden" : "w-full", children: textNode });
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+    className: stayOnOneLine ? "overflow-hidden" : "w-full",
+    children: textNode,
+  });
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProIntro.tsx
 
 var BroadcastProIntro = () => {
   var _a, _b, _c;
-  const { club, metadata } = _chunkCNAC6AOLjs.useVideoDataContext.call(void 0, );
-  const { animations } = _chunkCNAC6AOLjs.useAnimationContext.call(void 0, );
+  const { club, metadata } = _chunkCNAC6AOLjs.useVideoDataContext.call(void 0);
+  const { animations } = _chunkCNAC6AOLjs.useAnimationContext.call(void 0);
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
-  const { fontClasses } = _chunkCNAC6AOLjs.useThemeContext.call(void 0, );
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  const { fontClasses } = _chunkCNAC6AOLjs.useThemeContext.call(void 0);
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkIFK37YAGjs.VerticalStackTitleLogoName,
     {
       alignment: "center",
-      Logo: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "w-full h-full flex justify-center py-8 items-center max-h-[500px] max-w-[500px]", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-        _chunkCNAC6AOLjs.AnimatedImage,
-        {
-          src: ((_a = club.logo) == null ? void 0 : _a.url) || "",
-          alt: club.name,
-          width: "auto",
-          height: "auto",
-          fit: "contain",
-          animation: LogoAnimations.introIn,
-          exitAnimation: LogoAnimations.introOut,
-          exitFrame: LogoAnimations.introExitFrame
-        }
-      ) }),
-      Title: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      Logo: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+        className:
+          "w-full h-full flex justify-center py-8 items-center max-h-[500px] max-w-[500px]",
+        children: /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkCNAC6AOLjs.AnimatedImage,
+          {
+            src: ((_a = club.logo) == null ? void 0 : _a.url) || "",
+            alt: club.name,
+            width: "auto",
+            height: "auto",
+            fit: "contain",
+            animation: LogoAnimations.introIn,
+            exitAnimation: LogoAnimations.introOut,
+            exitFrame: LogoAnimations.introExitFrame,
+          },
+        ),
+      }),
+      Title: /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
         BroadcastProHeadlineTitle,
         {
           text: metadata.title,
@@ -1013,10 +1195,11 @@ var BroadcastProIntro = () => {
           animation: TextAnimations.mainTitle,
           exitAnimation: TextAnimations.introOut,
           exitFrame: TextAnimations.introExitFrame,
-          fontFamily: (_b = fontClasses.heading) == null ? void 0 : _b.family
-        }
+          fontFamily: (_b = fontClasses.heading) == null ? void 0 : _b.family,
+        },
       ),
-      Name: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      Name: /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
         BroadcastProHeadlineSecondary,
         {
           text: club.name,
@@ -1024,99 +1207,150 @@ var BroadcastProIntro = () => {
           animation: TextAnimations.clubName,
           exitAnimation: TextAnimations.introOut,
           exitFrame: TextAnimations.introExitFrame,
-          fontFamily: (_c = fontClasses.subheading) == null ? void 0 : _c.family
-        }
+          fontFamily:
+            (_c = fontClasses.subheading) == null ? void 0 : _c.family,
+        },
       ),
-      PrimarySponsor: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      PrimarySponsor: /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
         _chunkCNAC6AOLjs.IntroPrimarySponsors,
         {
           introIn: LogoAnimations.introIn,
           introOut: LogoAnimations.introOut,
-          introExitFrame: LogoAnimations.introExitFrame
-        }
-      )
-    }
+          introExitFrame: LogoAnimations.introExitFrame,
+        },
+      ),
+    },
   );
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProBackground.tsx
 
-var isBroadcastProMode = (value) => value === "light" || value === "lightAlt" || value === "dark" || value === "darkAlt";
+var isBroadcastProMode = (value) =>
+  value === "light" ||
+  value === "lightAlt" ||
+  value === "dark" ||
+  value === "darkAlt";
 var BroadcastProBackground = () => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i;
-  const { video, metadata } = _chunkCNAC6AOLjs.useVideoDataContext.call(void 0, );
-  const match = _chunkTGUIUP2Jjs.matchLegacyIngress.call(void 0, (_a = video.templateVariation) != null ? _a : {});
-  const route = _chunkCNAC6AOLjs.resolveValidatedBackgroundRoute.call(void 0, match);
+  const { video, metadata } = _chunkCNAC6AOLjs.useVideoDataContext.call(void 0);
+  const match = _chunkTGUIUP2Jjs.matchLegacyIngress.call(
+    void 0,
+    (_a = video.templateVariation) != null ? _a : {},
+  );
+  const route = _chunkCNAC6AOLjs.resolveValidatedBackgroundRoute.call(
+    void 0,
+    match,
+  );
   if (route.kind === "image") {
-    const mode = isBroadcastProMode((_b = video.templateVariation) == null ? void 0 : _b.mode) ? video.templateVariation.mode : "light";
+    const mode = isBroadcastProMode(
+      (_b = video.templateVariation) == null ? void 0 : _b.mode,
+    )
+      ? video.templateVariation.mode
+      : "light";
     const image = (_c = video.templateVariation) == null ? void 0 : _c.image;
     const hero = (_d = video.media) == null ? void 0 : _d.heroImage;
-    const stillRatio = (hero == null ? void 0 : hero.width) && hero.height ? hero.width / hero.height : (image == null ? void 0 : image.width) && image.height ? image.width / image.height : void 0;
-    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+    const stillRatio =
+      (hero == null ? void 0 : hero.width) && hero.height
+        ? hero.width / hero.height
+        : (image == null ? void 0 : image.width) && image.height
+          ? image.width / image.height
+          : void 0;
+    return /* @__PURE__ */ _jsxruntime.jsx.call(
+      void 0,
       _chunkCNAC6AOLjs.ImageBackground,
       {
-        templateDefaults: _chunkCNAC6AOLjs.resolveBroadcastProImageDefaults.call(void 0, {
-          mode,
-          image: image ? {
-            effectType: (_e = image.type) != null ? _e : void 0,
-            overlayStyle: (_f = image.overlayStyle) != null ? _f : void 0,
-            overlayOpacity: (_g = image.overlayOpacity) != null ? _g : void 0,
-            width: (_h = image.width) != null ? _h : void 0,
-            height: (_i = image.height) != null ? _i : void 0,
-            ratio: image.ratio === "landscape" || image.ratio === "portrait" || image.ratio === "square" ? image.ratio : void 0
-          } : void 0,
-          stillRatio,
-          compositionId: metadata.compositionId
-        })
-      }
+        templateDefaults:
+          _chunkCNAC6AOLjs.resolveBroadcastProImageDefaults.call(void 0, {
+            mode,
+            image: image
+              ? {
+                  effectType: (_e = image.type) != null ? _e : void 0,
+                  overlayStyle: (_f = image.overlayStyle) != null ? _f : void 0,
+                  overlayOpacity:
+                    (_g = image.overlayOpacity) != null ? _g : void 0,
+                  width: (_h = image.width) != null ? _h : void 0,
+                  height: (_i = image.height) != null ? _i : void 0,
+                  ratio:
+                    image.ratio === "landscape" ||
+                    image.ratio === "portrait" ||
+                    image.ratio === "square"
+                      ? image.ratio
+                      : void 0,
+                }
+              : void 0,
+            stillRatio,
+            compositionId: metadata.compositionId,
+          }),
+      },
     );
   }
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkCNAC6AOLjs.SelectTemplateBackground, {});
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
+    _chunkCNAC6AOLjs.SelectTemplateBackground,
+    {},
+  );
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProMainHeader.tsx
 
 var BroadcastProMainHeader = () => {
   var _a;
-  const { layout, broadcastProHeadlineSizing } = _chunkCNAC6AOLjs.useThemeContext.call(void 0, );
+  const { layout, broadcastProHeadlineSizing } =
+    _chunkCNAC6AOLjs.useThemeContext.call(void 0);
   const { heights } = layout;
-  const { club, metadata, data } = _chunkCNAC6AOLjs.useVideoDataContext.call(void 0, );
-  const { animations } = _chunkCNAC6AOLjs.useAnimationContext.call(void 0, );
+  const { club, metadata, data } =
+    _chunkCNAC6AOLjs.useVideoDataContext.call(void 0);
+  const { animations } = _chunkCNAC6AOLjs.useAnimationContext.call(void 0);
   const TextAnimations = animations.text.main;
   const LogoAnimations = animations.image.main.title.logo;
   const { timings } = data;
   const exitFrame = timings.FPS_MAIN ? timings.FPS_MAIN - 30 : 0;
-  const crestPx = (_a = broadcastProHeadlineSizing == null ? void 0 : broadcastProHeadlineSizing.headerOrgCrestPx) != null ? _a : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.headerOrgCrestPx;
+  const crestPx =
+    (_a =
+      broadcastProHeadlineSizing == null
+        ? void 0
+        : broadcastProHeadlineSizing.headerOrgCrestPx) != null
+      ? _a
+      : DEFAULT_BROADCAST_PRO_HEADLINE_SIZING.headerOrgCrestPx;
   const hideSecondaryLine = shouldHideBroadcastProHeaderSecondary(
-    metadata.compositionId
+    metadata.compositionId,
   );
-  const secondaryLine = hideSecondaryLine ? "" : getBroadcastProHeaderSecondaryLine(metadata, club.name);
+  const secondaryLine = hideSecondaryLine
+    ? ""
+    : getBroadcastProHeaderSecondaryLine(metadata, club.name);
   const OrgLogo = () => {
     var _a2;
-    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-      "div",
-      {
-        className: "mx-auto mb-2 shrink-0 overflow-hidden rounded-full bg-white p-2 shadow-xl",
-        style: { width: crestPx, height: crestPx },
-        children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "flex h-full w-full min-h-0 min-w-0 items-center justify-center overflow-hidden rounded-full", children: ((_a2 = club.logo) == null ? void 0 : _a2.url) ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-          _chunkCNAC6AOLjs.AnimatedImage,
-          {
-            src: club.logo.url,
-            width: "100%",
-            height: "100%",
-            maxWidth: "100%",
-            maxHeight: "100%",
-            fit: "contain",
-            className: "max-h-full max-w-full object-contain",
-            animation: LogoAnimations.introIn,
-            exitAnimation: LogoAnimations.introOut,
-            exitFrame
-          }
-        ) : null })
-      }
-    );
+    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+      className:
+        "mx-auto mb-2 shrink-0 overflow-hidden rounded-full bg-white p-2 shadow-xl",
+      style: { width: crestPx, height: crestPx },
+      children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+        className:
+          "flex h-full w-full min-h-0 min-w-0 items-center justify-center overflow-hidden rounded-full",
+        children: ((_a2 = club.logo) == null ? void 0 : _a2.url)
+          ? /* @__PURE__ */ _jsxruntime.jsx.call(
+              void 0,
+              _chunkCNAC6AOLjs.AnimatedImage,
+              {
+                src: club.logo.url,
+                width: "100%",
+                height: "100%",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                fit: "contain",
+                className: "max-h-full max-w-full object-contain",
+                animation: LogoAnimations.introIn,
+                exitAnimation: LogoAnimations.introOut,
+                exitFrame,
+              },
+            )
+          : null,
+      }),
+    });
   };
-  const titleBlock = /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  const titleBlock = /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     BroadcastProHeadlineTitle,
     {
       text: metadata.title,
@@ -1124,46 +1358,57 @@ var BroadcastProMainHeader = () => {
       letterAnimation: "none",
       animation: TextAnimations.title,
       exitAnimation: TextAnimations.copyOut,
-      exitFrame
-    }
+      exitFrame,
+    },
   );
   const headerProps = {
     height: heights.header,
     alignment: "center",
     Logo: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, OrgLogo, {}),
-    Title: titleBlock
+    Title: titleBlock,
   };
   if (hideSecondaryLine) {
-    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkCNAC6AOLjs.VerticalHeaderLogoTitle, { ...headerProps, Name: null });
+    return /* @__PURE__ */ _jsxruntime.jsx.call(
+      void 0,
+      _chunkCNAC6AOLjs.VerticalHeaderLogoTitle,
+      { ...headerProps, Name: null },
+    );
   }
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkCNAC6AOLjs.VerticalHeaderLogoTitleName,
     {
       ...headerProps,
-      Name: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      Name: /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
         BroadcastProHeadlineSecondary,
         {
           text: secondaryLine,
           variant: "mainHeader",
           animation: TextAnimations.title,
           exitAnimation: TextAnimations.copyOut,
-          exitFrame
-        }
-      )
-    }
+          exitFrame,
+        },
+      ),
+    },
   );
 };
 
 // src/templates/variants/broadcastPro/components/BroadcastProMain.tsx
 
 var BroadcastProMain = () => {
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkJPRG76NNjs.OneColumn, { Header: BroadcastProMainHeader });
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
+    _chunkJPRG76NNjs.OneColumn,
+    { Header: BroadcastProMainHeader },
+  );
 };
 
 // src/templates/variants/broadcastPro/index.tsx
 
 var BroadcastPro = ({ data }) => {
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkCNAC6AOLjs.BaseTemplate,
     {
       data,
@@ -1172,11 +1417,10 @@ var BroadcastPro = ({ data }) => {
       outroComponent: _chunkPPX3E3KAjs.BroadcastProOutro,
       backgroundComponent: BroadcastProBackground,
       mainComponentLayout: BroadcastProMain,
-      animations: _chunkPPX3E3KAjs.templateAnimations
-    }
+      animations: _chunkPPX3E3KAjs.templateAnimations,
+    },
   );
 };
-
 
 exports.BroadcastPro = BroadcastPro;
 //# sourceMappingURL=broadcastPro-7O7U3Q4F.js.map

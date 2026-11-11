@@ -8,7 +8,7 @@
   --space-3: 12px;
   --space-4: 20px;
   --intro-mark-size: 72px;
-  --type-intro-title: 56px;
+  --type-intro-title: 71px;
   --type-intro-eyebrow: 16px;
   --ns-container-radius: 50px;
   --header-text: rgb(244 243 241 / 96%);
@@ -35,47 +35,34 @@
 }
 
 .night-session-intro__main {
-  flex: 1 1 0;
+  flex: 1 1 auto;
   min-height: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
 .night-session-intro__animated {
   width: 100%;
   min-width: 0;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
+  overflow: visible;
 }
 
-.night-session-intro__panel {
-  position: relative;
-  isolation: isolate;
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid var(--ns-performance-border, rgb(255 255 255 / 10%));
-  border-radius: var(--ns-container-radius);
-  background: var(
-    --ns-performance-row-bg,
-    var(--container-surface, rgb(10 12 14 / 65%))
-  ) !important;
-  box-shadow: var(
-    --container-inset,
-    inset 0 1px 0 rgb(255 255 255 / 4%)
-  ) !important;
-  color: var(--container-text, var(--on-surface));
-}
-
+/* Intro header — same layout as template asset header (broadcast.css) */
 .night-session-canvas.night-session-intro .ns-header {
-  flex: 0 0 var(--zone-header);
-  min-height: var(--zone-header);
-  max-height: var(--zone-header);
-  padding: var(--zone-pad) var(--content-inset) 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  --ns-header-mark-height: calc(56px * 1.44 * 2.25);
+  --ns-header-mark-max-width: calc(var(--ns-header-mark-height) * 2.75);
+
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  padding: var(--zone-pad) var(--content-inset) var(--space-3);
 }
 
 .night-session-canvas.night-session-intro .ns-header__accent {
@@ -85,12 +72,69 @@
   z-index: 0;
 }
 
-.night-session-canvas.night-session-intro .ns-accent-wedge {
-  position: absolute;
-  top: 18px;
-  left: calc(50% - 120px);
+.night-session-canvas.night-session-intro .ns-header__row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+}
+
+.night-session-canvas.night-session-intro .ns-header__mark {
+  position: relative;
+  top: auto;
+  right: auto;
+  z-index: 2;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--ns-header-mark-height);
+  width: auto;
+  min-width: 0;
+  max-width: var(--ns-header-mark-max-width);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.night-session-canvas.night-session-intro .ns-header__mark img {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  height: 100%;
+  width: auto;
+  max-height: 100%;
+  max-width: var(--ns-header-mark-max-width);
+  object-fit: contain;
+  inset: auto;
+}
+
+.night-session-canvas.night-session-intro .ns-header__wedge {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  margin-block: 2px;
+  padding: 4px 0;
+}
+
+.night-session-canvas.night-session-intro .ns-header__wedge .ns-accent-wedge {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex: 0 0 auto;
   width: 240px;
   height: 2px;
+  margin: 0;
   background: linear-gradient(
     90deg,
     transparent,
@@ -100,86 +144,30 @@
   opacity: 0.75;
 }
 
-.night-session-canvas.night-session-intro .ns-accent-lines {
-  position: absolute;
-  top: 22px;
-  right: calc(var(--content-inset) + 84px);
-  width: 36px;
-  height: 18px;
-  background: repeating-linear-gradient(
-    -55deg,
-    transparent,
-    transparent 3px,
-    rgb(255 255 255 / 14%) 3px,
-    rgb(255 255 255 / 14%) 4px
-  );
-  opacity: 0.55;
-}
-
-.night-session-canvas.night-session-intro .ns-header__mark {
-  position: absolute;
-  top: calc(var(--zone-pad) + 4px);
-  right: var(--content-inset);
-  width: var(--intro-mark-size);
-  height: var(--intro-mark-size);
-  display: grid;
-  place-items: center;
-  z-index: 2;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 8%);
-  background: rgb(0 0 0 / 28%);
-}
-
-.night-session-canvas.night-session-intro .ns-header__mark img {
-  position: absolute;
-  inset: 4px;
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
-  object-fit: contain;
-}
-
 .night-session-canvas.night-session-intro .ns-header__lockup {
   position: relative;
   z-index: 1;
+  flex: 0 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  min-height: 0;
-  padding: 8px calc(var(--intro-mark-size) + 16px) 10px;
+  min-width: 0;
+  padding: 0;
+  gap: 0;
   text-align: center;
 }
 
-.night-session-canvas.night-session-intro .header-eyebrow,
-.night-session-canvas.night-session-intro .header-title {
+.night-session-canvas.night-session-intro .ns-header__lockup .header-title {
   margin: 0;
   font-family: var(--font-display);
-  text-transform: uppercase;
-}
-
-.night-session-canvas.night-session-intro .header-eyebrow {
-  font-size: var(--type-intro-eyebrow);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  line-height: 1;
-  color: var(
-    --container-text-muted,
-    var(--match-context-text-muted, rgb(244 243 241 / 52%))
-  );
-}
-
-.night-session-canvas.night-session-intro .header-title {
-  font-size: var(--type-intro-title);
+  font-size: var(--type-intro-title, 71px) !important;
   font-weight: 600;
   letter-spacing: 0.06em;
   line-height: 0.92;
+  text-align: center;
+  text-transform: uppercase;
   text-wrap: balance;
-  color: var(
-    --header-text,
-    var(--container-text, var(--match-context-text, var(--on-surface)))
-  );
 }
 
 .night-session-intro__sponsors {

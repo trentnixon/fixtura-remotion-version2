@@ -11,6 +11,5 @@ export type CricketRosterPlayerEntry = {
   badges: CricketRosterBadge[];
 };
 
-export const parseRosterPlayerEntry = (
-  raw: string,
-): CricketRosterPlayerEntry => parseRosterPlayerEntryJs(raw);
+export const parseRosterPlayerEntry = (raw: string): CricketRosterPlayerEntry =>
+  parseRosterPlayerEntryJs(raw);

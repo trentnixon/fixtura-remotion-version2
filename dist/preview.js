@@ -1,16 +1,17 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
 
-
-
-var _chunkFXYHRXCYjs = require('./chunk-FXYHRXCY.js');
+var _chunkJWJS6C42js = require('./chunk-JWJS6C42.js');
 
 
 var _chunkNUR6EFVIjs = require('./chunk-NUR6EFVI.js');
 
 
-var _chunkKBS4BULMjs = require('./chunk-KBS4BULM.js');
-require('./chunk-TGUIUP2J.js');
+var _chunkHNDIY6ATjs = require('./chunk-HNDIY6AT.js');
+
+
+
+var _chunk5OPIAWHPjs = require('./chunk-5OPIAWHP.js');
 
 // src/package/FixturaTemplateScene.tsx
 var _react = require('react');
@@ -23,7 +24,7 @@ function getLazyTemplate(templateId) {
   let existing = lazyByTemplate.get(templateId);
   if (!existing) {
     existing = _react.lazy.call(void 0, 
-      () => _chunkFXYHRXCYjs.loadPreviewTemplateComponent.call(void 0, templateId).then((defaultExport) => ({
+      () => _chunkJWJS6C42js.loadPreviewTemplateComponent.call(void 0, templateId).then((defaultExport) => ({
         default: defaultExport
       }))
     );
@@ -45,7 +46,7 @@ function createPreviewTemplateComponent(templateId) {
 
 // src/package/getProductionCompositionFromData.ts
 function getProductionCompositionFromData(data) {
-  const meta = _chunkFXYHRXCYjs.getProductionCompositionMeta.call(void 0, data);
+  const meta = _chunkJWJS6C42js.getProductionCompositionMeta.call(void 0, data);
   const TemplateComponent = createPreviewTemplateComponent(
     meta.templateId
   );
@@ -65,13 +66,13 @@ var FixturaTemplateScene = ({
   const { TemplateComponent } = getProductionCompositionFromData(data);
   const templateId = data.videoMeta.video.appearance.template;
   _react.useEffect.call(void 0, () => {
-    if (_chunkFXYHRXCYjs.isTemplateId.call(void 0, templateId)) {
-      void _chunkFXYHRXCYjs.loadPreviewTemplateComponent.call(void 0, templateId);
+    if (_chunk5OPIAWHPjs.isTemplateId.call(void 0, templateId)) {
+      void _chunkJWJS6C42js.loadPreviewTemplateComponent.call(void 0, templateId);
     }
   }, [templateId]);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _jsxruntime.Fragment, { children: [
     templateId === "Scoreline" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkNUR6EFVIjs.ScorelineBundledStyles, {}) : null,
-    templateId === "NightSession" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkKBS4BULMjs.NightSessionBundledStyles, {}) : null,
+    templateId === "NightSession" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkHNDIY6ATjs.NightSessionBundledStyles, {}) : null,
     /* @__PURE__ */ _jsxruntime.jsx.call(void 0, TemplateComponent, { data })
   ] });
 };
@@ -82,5 +83,5 @@ var FixturaTemplateScene = ({
 
 
 
-exports.FixturaTemplateScene = FixturaTemplateScene; exports.TEMPLATE_IDS = _chunkFXYHRXCYjs.TEMPLATE_IDS; exports.getProductionCompositionFromData = getProductionCompositionFromData; exports.getProductionCompositionMeta = _chunkFXYHRXCYjs.getProductionCompositionMeta; exports.isTemplateId = _chunkFXYHRXCYjs.isTemplateId; exports.loadPreviewTemplateComponent = _chunkFXYHRXCYjs.loadPreviewTemplateComponent;
+exports.FixturaTemplateScene = FixturaTemplateScene; exports.TEMPLATE_IDS = _chunk5OPIAWHPjs.TEMPLATE_IDS; exports.getProductionCompositionFromData = getProductionCompositionFromData; exports.getProductionCompositionMeta = _chunkJWJS6C42js.getProductionCompositionMeta; exports.isTemplateId = _chunk5OPIAWHPjs.isTemplateId; exports.loadPreviewTemplateComponent = _chunkJWJS6C42js.loadPreviewTemplateComponent;
 //# sourceMappingURL=preview.js.map
