@@ -16,9 +16,12 @@ describe("bindMapContract", () => {
   it("reports missing scalar anchors in HTML", () => {
     const errors = verifyBindMapHtmlContract(
       '<p data-hydrate="header-title">x</p>',
-      { '[data-hydrate="header-title"]': "data.title", '[data-hydrate="club-name"]': "data.club" },
+      {
+        '[data-hydrate="header-title"]': "data.title",
+        '[data-hydrate="club-name"]': "data.club",
+      },
     );
     expect(errors).toHaveLength(1);
-    expect(errors[0]).toContain('club-name');
+    expect(errors[0]).toContain("club-name");
   });
 });

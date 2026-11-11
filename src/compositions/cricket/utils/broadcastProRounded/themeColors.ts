@@ -7,7 +7,8 @@ import {
   type BroadcastProCoreTextOnContainer,
 } from "../broadcastProCore";
 
-export type BroadcastProRoundedTextOnContainer = BroadcastProCoreTextOnContainer;
+export type BroadcastProRoundedTextOnContainer =
+  BroadcastProCoreTextOnContainer;
 
 export {
   compositeSurfaceColor,

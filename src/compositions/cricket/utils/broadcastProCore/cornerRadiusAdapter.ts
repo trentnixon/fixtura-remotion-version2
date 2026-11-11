@@ -8,7 +8,8 @@ type LayoutRadius = Pick<ThemeLayout, "borderRadius">;
 /** Container / panel radius from theme layout (square vs rounded variant dimension). */
 export const resolveBroadcastProContainerRadius = (
   layout: LayoutRadius,
-): string => layout.borderRadius.container || DEFAULT_BROADCAST_PRO_CONTAINER_RADIUS;
+): string =>
+  layout.borderRadius.container || DEFAULT_BROADCAST_PRO_CONTAINER_RADIUS;
 
 /** Crest / image radius; falls back to container radius. */
 export const resolveBroadcastProImageRadius = (layout: LayoutRadius): string =>

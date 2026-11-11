@@ -15,8 +15,8 @@ describe("compositionExportBlockNameFromRoute", () => {
     expect(compositionExportBlockNameFromRoute("cricket/team-roster")).toBe(
       "CricketRoster",
     );
-    expect(Object.keys(COMPOSITION_ROUTE_TO_EXPORT_BLOCK).length).toBeGreaterThan(
-      10,
-    );
+    expect(
+      Object.keys(COMPOSITION_ROUTE_TO_EXPORT_BLOCK).length,
+    ).toBeGreaterThan(10);
   });
 });

@@ -1,13 +1,13 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
 
-var _chunkJWJS6C42js = require('./chunk-JWJS6C42.js');
+var _chunkZKJ53LW7js = require('./chunk-ZKJ53LW7.js');
 
 
 var _chunkNUR6EFVIjs = require('./chunk-NUR6EFVI.js');
 
 
-var _chunkHNDIY6ATjs = require('./chunk-HNDIY6AT.js');
+var _chunkAXAC2MRPjs = require('./chunk-AXAC2MRP.js');
 
 
 
@@ -24,7 +24,7 @@ function getLazyTemplate(templateId) {
   let existing = lazyByTemplate.get(templateId);
   if (!existing) {
     existing = _react.lazy.call(void 0, 
-      () => _chunkJWJS6C42js.loadPreviewTemplateComponent.call(void 0, templateId).then((defaultExport) => ({
+      () => _chunkZKJ53LW7js.loadPreviewTemplateComponent.call(void 0, templateId).then((defaultExport) => ({
         default: defaultExport
       }))
     );
@@ -46,7 +46,7 @@ function createPreviewTemplateComponent(templateId) {
 
 // src/package/getProductionCompositionFromData.ts
 function getProductionCompositionFromData(data) {
-  const meta = _chunkJWJS6C42js.getProductionCompositionMeta.call(void 0, data);
+  const meta = _chunkZKJ53LW7js.getProductionCompositionMeta.call(void 0, data);
   const TemplateComponent = createPreviewTemplateComponent(
     meta.templateId
   );
@@ -67,12 +67,12 @@ var FixturaTemplateScene = ({
   const templateId = data.videoMeta.video.appearance.template;
   _react.useEffect.call(void 0, () => {
     if (_chunk5OPIAWHPjs.isTemplateId.call(void 0, templateId)) {
-      void _chunkJWJS6C42js.loadPreviewTemplateComponent.call(void 0, templateId);
+      void _chunkZKJ53LW7js.loadPreviewTemplateComponent.call(void 0, templateId);
     }
   }, [templateId]);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _jsxruntime.Fragment, { children: [
     templateId === "Scoreline" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkNUR6EFVIjs.ScorelineBundledStyles, {}) : null,
-    templateId === "NightSession" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkHNDIY6ATjs.NightSessionBundledStyles, {}) : null,
+    templateId === "NightSession" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkAXAC2MRPjs.NightSessionBundledStyles, {}) : null,
     /* @__PURE__ */ _jsxruntime.jsx.call(void 0, TemplateComponent, { data })
   ] });
 };
@@ -83,5 +83,5 @@ var FixturaTemplateScene = ({
 
 
 
-exports.FixturaTemplateScene = FixturaTemplateScene; exports.TEMPLATE_IDS = _chunk5OPIAWHPjs.TEMPLATE_IDS; exports.getProductionCompositionFromData = getProductionCompositionFromData; exports.getProductionCompositionMeta = _chunkJWJS6C42js.getProductionCompositionMeta; exports.isTemplateId = _chunk5OPIAWHPjs.isTemplateId; exports.loadPreviewTemplateComponent = _chunkJWJS6C42js.loadPreviewTemplateComponent;
+exports.FixturaTemplateScene = FixturaTemplateScene; exports.TEMPLATE_IDS = _chunk5OPIAWHPjs.TEMPLATE_IDS; exports.getProductionCompositionFromData = getProductionCompositionFromData; exports.getProductionCompositionMeta = _chunkZKJ53LW7js.getProductionCompositionMeta; exports.isTemplateId = _chunk5OPIAWHPjs.isTemplateId; exports.loadPreviewTemplateComponent = _chunkZKJ53LW7js.loadPreviewTemplateComponent;
 //# sourceMappingURL=preview.js.map

@@ -21,13 +21,13 @@ describe("canvasDatasetContract", () => {
 
   it("requires leaderboard batting/bowling values", () => {
     const batting = `<div class="template-canvas night-session-canvas" data-leaderboard="batting">`;
-  const bowling = `<div class="template-canvas" data-leaderboard="bowling">`;
-    expect(
-      verifyCanvasDatasetContract(batting, "CricketTop5Batting"),
-    ).toEqual([]);
-    expect(
-      verifyCanvasDatasetContract(bowling, "CricketTop5Bowling"),
-    ).toEqual([]);
+    const bowling = `<div class="template-canvas" data-leaderboard="bowling">`;
+    expect(verifyCanvasDatasetContract(batting, "CricketTop5Batting")).toEqual(
+      [],
+    );
+    expect(verifyCanvasDatasetContract(bowling, "CricketTop5Bowling")).toEqual(
+      [],
+    );
     expect(
       verifyCanvasDatasetContract(batting, "CricketTop5Bowling"),
     ).not.toEqual([]);

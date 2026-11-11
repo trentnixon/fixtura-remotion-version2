@@ -7,10 +7,7 @@ import { useNightSessionEnterTiming } from "../../../utils/nightSession/useNight
 import { NightSessionEnterTimingProvider } from "../../../utils/nightSession/NightSessionEnterTimingContext";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import { NIGHT_SESSION_FIXTURE_ROW_STAGGER_FRAMES } from "../../../utils/nightSession/nightSessionAnimationTiming";
-import {
-  csClass,
-  planResultsLedgerScreen,
-} from "../../../utils/overlayFamily";
+import { csClass, planResultsLedgerScreen } from "../../../utils/overlayFamily";
 
 const ResultsDisplayNightSession: React.FC<ResultsDisplayProps> = ({
   results,
@@ -27,8 +24,12 @@ const ResultsDisplayNightSession: React.FC<ResultsDisplayProps> = ({
     screenIndex,
     heights,
   });
-  const { themeKeys, layout: layoutPlan, displayedResults, footerSponsors } =
-    plan;
+  const {
+    themeKeys,
+    layout: layoutPlan,
+    displayedResults,
+    footerSponsors,
+  } = plan;
 
   const resultsEnterTimingOptions = useMemo(
     () => ({ rowStaggerFrames: NIGHT_SESSION_FIXTURE_ROW_STAGGER_FRAMES }),

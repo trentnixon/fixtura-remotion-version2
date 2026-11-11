@@ -53,7 +53,9 @@ export const runHandoffDesignVerification = (
       const registryId = variant.registryId;
 
       if (!registryId) {
-        errors.push(`${label}: Handoff: variant ${variantSlug} missing registryId`);
+        errors.push(
+          `${label}: Handoff: variant ${variantSlug} missing registryId`,
+        );
       } else {
         const registryError = verifyRegistryInTemplateManifest(
           registryIds,
@@ -101,7 +103,9 @@ export const runHandoffDesignVerification = (
         `design/variants/${variantSlug}/cricket/${assetSlug}.html`,
       );
       if (!existsSync(htmlPath)) {
-        errors.push(`${label}: Missing HTML for registered asset: design/variants/${variantSlug}/cricket/${assetSlug}.html`);
+        errors.push(
+          `${label}: Missing HTML for registered asset: design/variants/${variantSlug}/cricket/${assetSlug}.html`,
+        );
         continue;
       }
 

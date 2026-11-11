@@ -1,8 +1,7 @@
 /** Scalar bind selectors use `[data-hydrate="key"]` (see design hydrate bind maps). */
 export type BindMapInput = Record<string, unknown>;
 
-const HYDRATE_KEY_FROM_SELECTOR =
-  /\[data-hydrate=(?:"([^"]+)"|'([^']+)')\]/;
+const HYDRATE_KEY_FROM_SELECTOR = /\[data-hydrate=(?:"([^"]+)"|'([^']+)')\]/;
 
 /**
  * Hydration keys referenced by a merged bind map (ignores meta keys like `__bindMode`).
@@ -29,9 +28,7 @@ export const findMissingHydrateKeysInHtml = (
   html: string,
   hydrateKeys: readonly string[],
 ): string[] =>
-  hydrateKeys.filter(
-    (key) => !html.includes(`data-hydrate="${key}"`),
-  );
+  hydrateKeys.filter((key) => !html.includes(`data-hydrate="${key}"`));
 
 export const verifyBindMapHtmlContract = (
   html: string,

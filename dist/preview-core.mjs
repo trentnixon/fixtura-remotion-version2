@@ -1,7 +1,7 @@
 import {
   getProductionCompositionMeta,
   loadPreviewTemplateComponent
-} from "./chunk-27I5QZ6Q.mjs";
+} from "./chunk-LI4V5CK3.mjs";
 import {
   TEMPLATE_IDS,
   isTemplateId

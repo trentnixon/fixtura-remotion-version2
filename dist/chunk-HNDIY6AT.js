@@ -1,4 +1,5 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});// src/package/generated/nightSessionBundledCss.ts
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true }); // src/package/generated/nightSessionBundledCss.ts
 var NIGHT_SESSION_BUNDLED_CSS = `/* src/templates/variants/nightSession/styles/night-session-shared.css */
 /* Scoreline shared polish \u2014 tokens, surfaces, contrast, layout states */
 
@@ -7633,17 +7634,13 @@ var NIGHT_SESSION_BUNDLED_CSS = `/* src/templates/variants/nightSession/styles/n
 `;
 
 // src/package/NightSessionBundledStyles.tsx
-var _jsxruntime = require('react/jsx-runtime');
+var _jsxruntime = require("react/jsx-runtime");
 var STYLE_ELEMENT_ID = "fixtura-night-session-styles";
-var NightSessionBundledStyles = () => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-  "style",
-  {
+var NightSessionBundledStyles = () =>
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "style", {
     id: STYLE_ELEMENT_ID,
-    dangerouslySetInnerHTML: { __html: NIGHT_SESSION_BUNDLED_CSS }
-  }
-);
-
-
+    dangerouslySetInnerHTML: { __html: NIGHT_SESSION_BUNDLED_CSS },
+  });
 
 exports.NightSessionBundledStyles = NightSessionBundledStyles;
 //# sourceMappingURL=chunk-HNDIY6AT.js.map

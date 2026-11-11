@@ -6,10 +6,7 @@ import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFoote
 import MatchRowScoreline from "../MatchRow/row-Scoreline";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
 import { ScorelineMatchSeparator } from "../../../utils/scoreline/results/ScorelineResultMatchContent";
-import {
-  csClass,
-  planResultsLedgerScreen,
-} from "../../../utils/overlayFamily";
+import { csClass, planResultsLedgerScreen } from "../../../utils/overlayFamily";
 
 const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
   results,
@@ -28,8 +25,12 @@ const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
     screenIndex,
     heights,
   });
-  const { themeKeys, layout: layoutPlan, displayedResults, footerSponsors } =
-    plan;
+  const {
+    themeKeys,
+    layout: layoutPlan,
+    displayedResults,
+    footerSponsors,
+  } = plan;
 
   return (
     <div

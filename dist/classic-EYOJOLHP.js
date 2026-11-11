@@ -1,104 +1,98 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 
-var _chunkO26MLT2Zjs = require('./chunk-O26MLT2Z.js');
+var _chunkO26MLT2Zjs = require("./chunk-O26MLT2Z.js");
 
+var _chunkIFK37YAGjs = require("./chunk-IFK37YAG.js");
 
-var _chunkIFK37YAGjs = require('./chunk-IFK37YAG.js');
+var _chunkTQMZUA5Ijs = require("./chunk-TQMZUA5I.js");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _chunkTQMZUA5Ijs = require('./chunk-TQMZUA5I.js');
-
-
-
-
-
-
-
-var _chunk5OPIAWHPjs = require('./chunk-5OPIAWHP.js');
+var _chunk5OPIAWHPjs = require("./chunk-5OPIAWHP.js");
 
 // src/templates/variants/classic/components/ClassicIntro.tsx
-var _jsxruntime = require('react/jsx-runtime');
+var _jsxruntime = require("react/jsx-runtime");
 var ClassicIntro = () => {
   var _a, _b, _c;
-  const { club, metadata } = _chunkTQMZUA5Ijs.useVideoDataContext.call(void 0, );
-  const { animations } = _chunkTQMZUA5Ijs.useAnimationContext.call(void 0, );
+  const { club, metadata } = _chunkTQMZUA5Ijs.useVideoDataContext.call(void 0);
+  const { animations } = _chunkTQMZUA5Ijs.useAnimationContext.call(void 0);
   const TextAnimations = animations.text.intro;
   const LogoAnimations = animations.image.intro.logo;
-  const { fontClasses } = _chunkTQMZUA5Ijs.useThemeContext.call(void 0, );
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  const { fontClasses } = _chunkTQMZUA5Ijs.useThemeContext.call(void 0);
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkIFK37YAGjs.VerticalStackLogoTitleName,
     {
       alignment: "center",
-      Logo: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "w-full h-full flex justify-center py-0 mb-16 items-center max-h-[500px] max-w-[800px]", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-        _chunkTQMZUA5Ijs.AnimatedImage,
-        {
-          src: ((_a = club.logo) == null ? void 0 : _a.url) || "",
-          alt: club.name,
-          width: "auto",
-          height: "auto",
-          fit: "contain",
-          animation: LogoAnimations.introIn,
-          exitAnimation: LogoAnimations.introOut,
-          exitFrame: LogoAnimations.introExitFrame
-        }
-      ) }),
-      Title: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "overflow-hidden mb-4 mt-[-1.5em]", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-        _chunkTQMZUA5Ijs.AnimatedText,
-        {
-          textAlign: "center",
-          type: "title",
-          variant: "onContainerTitle",
-          letterAnimation: "word",
-          animation: TextAnimations.mainTitle,
-          exitAnimation: TextAnimations.introOut,
-          exitFrame: TextAnimations.introExitFrame,
-          fontFamily: (_b = fontClasses.title) == null ? void 0 : _b.family,
-          style: { lineHeight: 1.05 },
-          children: metadata.title
-        }
-      ) }),
-      Name: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "overflow-hidden mt-[-2.5em]", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-        _chunkTQMZUA5Ijs.AnimatedText,
-        {
-          type: "titleSmall",
-          textAlign: "center",
-          variant: "onContainerTitle",
-          letterAnimation: "word",
-          animation: TextAnimations.clubName,
-          exitAnimation: TextAnimations.introOut,
-          exitFrame: TextAnimations.introExitFrame,
-          fontFamily: (_c = fontClasses.copy) == null ? void 0 : _c.family,
-          children: club.name
-        }
-      ) }),
-      PrimarySponsor: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      Logo: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+        className:
+          "w-full h-full flex justify-center py-0 mb-16 items-center max-h-[500px] max-w-[800px]",
+        children: /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkTQMZUA5Ijs.AnimatedImage,
+          {
+            src: ((_a = club.logo) == null ? void 0 : _a.url) || "",
+            alt: club.name,
+            width: "auto",
+            height: "auto",
+            fit: "contain",
+            animation: LogoAnimations.introIn,
+            exitAnimation: LogoAnimations.introOut,
+            exitFrame: LogoAnimations.introExitFrame,
+          },
+        ),
+      }),
+      Title: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+        className: "overflow-hidden mb-4 mt-[-1.5em]",
+        children: /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkTQMZUA5Ijs.AnimatedText,
+          {
+            textAlign: "center",
+            type: "title",
+            variant: "onContainerTitle",
+            letterAnimation: "word",
+            animation: TextAnimations.mainTitle,
+            exitAnimation: TextAnimations.introOut,
+            exitFrame: TextAnimations.introExitFrame,
+            fontFamily: (_b = fontClasses.title) == null ? void 0 : _b.family,
+            style: { lineHeight: 1.05 },
+            children: metadata.title,
+          },
+        ),
+      }),
+      Name: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+        className: "overflow-hidden mt-[-2.5em]",
+        children: /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkTQMZUA5Ijs.AnimatedText,
+          {
+            type: "titleSmall",
+            textAlign: "center",
+            variant: "onContainerTitle",
+            letterAnimation: "word",
+            animation: TextAnimations.clubName,
+            exitAnimation: TextAnimations.introOut,
+            exitFrame: TextAnimations.introExitFrame,
+            fontFamily: (_c = fontClasses.copy) == null ? void 0 : _c.family,
+            children: club.name,
+          },
+        ),
+      }),
+      PrimarySponsor: /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
         _chunkTQMZUA5Ijs.IntroPrimarySponsors,
         {
           introIn: LogoAnimations.introIn,
           introOut: LogoAnimations.introOut,
-          introExitFrame: LogoAnimations.introExitFrame
-        }
-      )
-    }
+          introExitFrame: LogoAnimations.introExitFrame,
+        },
+      ),
+    },
   );
 };
 
 // src/templates/variants/classic/components/ClassicOutro.tsx
-var _remotion = require('remotion');
+var _remotion = require("remotion");
 
 var GRID_SETTINGS = {
   columns: 2,
@@ -112,11 +106,10 @@ var GRID_SETTINGS = {
   chunkSize: _chunk5OPIAWHPjs.OUTRO_SPONSOR_PAGE_SIZE,
   sequenceDurationInFrames: _chunk5OPIAWHPjs.OUTRO_PAGE_DURATION_FRAMES,
   logoExitFrame: _chunk5OPIAWHPjs.OUTRO_PAGE_LOGO_EXIT_FRAME,
-  logoDelayIncrement: _chunk5OPIAWHPjs.OUTRO_PAGE_LOGO_STAGGER_FRAMES
+  logoDelayIncrement: _chunk5OPIAWHPjs.OUTRO_PAGE_LOGO_STAGGER_FRAMES,
 };
-var SponsorGrid = ({ sponsors, LogoAnimations }) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-  "div",
-  {
+var SponsorGrid = ({ sponsors, LogoAnimations }) =>
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
     className: "grid justify-center items-center w-full h-full",
     style: {
       gridTemplateColumns: `repeat(${GRID_SETTINGS.columns}, minmax(0, 1fr))`,
@@ -124,98 +117,149 @@ var SponsorGrid = ({ sponsors, LogoAnimations }) => /* @__PURE__ */ _jsxruntime.
       gap: GRID_SETTINGS.gap,
       maxWidth: GRID_SETTINGS.containerMaxWidth,
       maxHeight: GRID_SETTINGS.containerMaxHeight,
-      gridAutoRows: "1fr"
+      gridAutoRows: "1fr",
     },
-    children: sponsors.filter((sponsor) => sponsor.logo && sponsor.logo.url).map((sponsor, idx) => {
-      var _a;
-      return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-        "div",
-        {
-          className: "flex items-center justify-center w-full h-full",
-          style: {
-            aspectRatio: GRID_SETTINGS.cellAspectRatio,
-            maxWidth: GRID_SETTINGS.cellMaxSize,
-            maxHeight: GRID_SETTINGS.cellMaxSize,
-            padding: GRID_SETTINGS.cellPadding
+    children: sponsors
+      .filter((sponsor) => sponsor.logo && sponsor.logo.url)
+      .map((sponsor, idx) => {
+        var _a;
+        return /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          "div",
+          {
+            className: "flex items-center justify-center w-full h-full",
+            style: {
+              aspectRatio: GRID_SETTINGS.cellAspectRatio,
+              maxWidth: GRID_SETTINGS.cellMaxSize,
+              maxHeight: GRID_SETTINGS.cellMaxSize,
+              padding: GRID_SETTINGS.cellPadding,
+            },
+            children: /* @__PURE__ */ _jsxruntime.jsx.call(
+              void 0,
+              _chunkTQMZUA5Ijs.AnimatedImage,
+              {
+                src: sponsor.logo.url,
+                alt: sponsor.name || "",
+                width: "100%",
+                height: "100%",
+                fit: "contain",
+                animation: LogoAnimations.introIn,
+                exitAnimation:
+                  (_a = LogoAnimations.exitAnimation) != null
+                    ? _a
+                    : LogoAnimations.introOut,
+                animationDelay: idx * GRID_SETTINGS.logoDelayIncrement,
+                exitFrame: GRID_SETTINGS.logoExitFrame,
+              },
+            ),
           },
-          children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-            _chunkTQMZUA5Ijs.AnimatedImage,
-            {
-              src: sponsor.logo.url,
-              alt: sponsor.name || "",
-              width: "100%",
-              height: "100%",
-              fit: "contain",
-              animation: LogoAnimations.introIn,
-              exitAnimation: (_a = LogoAnimations.exitAnimation) != null ? _a : LogoAnimations.introOut,
-              animationDelay: idx * GRID_SETTINGS.logoDelayIncrement,
-              exitFrame: GRID_SETTINGS.logoExitFrame
-            }
-          )
-        },
-        `${sponsor.id}_${idx}`
-      );
-    })
-  }
-);
-var ClassicOutro = ({
-  doesAccountHaveSponsors
-}) => {
+          `${sponsor.id}_${idx}`,
+        );
+      }),
+  });
+var ClassicOutro = ({ doesAccountHaveSponsors }) => {
   var _a, _b;
-  const { sponsors } = _chunkTQMZUA5Ijs.useVideoDataContext.call(void 0, );
-  const { animations } = _chunkTQMZUA5Ijs.useAnimationContext.call(void 0, );
+  const { sponsors } = _chunkTQMZUA5Ijs.useVideoDataContext.call(void 0);
+  const { animations } = _chunkTQMZUA5Ijs.useAnimationContext.call(void 0);
   const LogoAnimations = animations.image.sponsor.logo;
   if (!doesAccountHaveSponsors) {
     return null;
   }
-  const sponsorsArray = _chunk5OPIAWHPjs.buildOutroSponsorSequence.call(void 0, {
-    primary: (_a = sponsors == null ? void 0 : sponsors.primary) != null ? _a : [],
-    general: (_b = sponsors == null ? void 0 : sponsors.general) != null ? _b : []
-  });
-  const groups = _chunk5OPIAWHPjs.chunkSponsors.call(void 0, sponsorsArray, GRID_SETTINGS.chunkSize);
+  const sponsorsArray = _chunk5OPIAWHPjs.buildOutroSponsorSequence.call(
+    void 0,
+    {
+      primary:
+        (_a = sponsors == null ? void 0 : sponsors.primary) != null ? _a : [],
+      general:
+        (_b = sponsors == null ? void 0 : sponsors.general) != null ? _b : [],
+    },
+  );
+  const groups = _chunk5OPIAWHPjs.chunkSponsors.call(
+    void 0,
+    sponsorsArray,
+    GRID_SETTINGS.chunkSize,
+  );
   const sequences = groups.map((group) => ({
-    content: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _remotion.AbsoluteFill, { className: "flex flex-col justify-center items-center", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SponsorGrid, { sponsors: group, LogoAnimations }) }),
-    durationInFrames: GRID_SETTINGS.sequenceDurationInFrames
+    content: /* @__PURE__ */ _jsxruntime.jsx.call(
+      void 0,
+      _remotion.AbsoluteFill,
+      {
+        className: "flex flex-col justify-center items-center",
+        children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SponsorGrid, {
+          sponsors: group,
+          LogoAnimations,
+        }),
+      },
+    ),
+    durationInFrames: GRID_SETTINGS.sequenceDurationInFrames,
   }));
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkTQMZUA5Ijs.TransitionSeriesWrapper,
     {
       sequences,
       transitionType: "none",
-      timing: { type: "linear", durationInFrames: 1 }
-    }
+      timing: { type: "linear", durationInFrames: 1 },
+    },
   );
 };
 
 // src/templates/variants/classic/components/ClassicBackground.tsx
 
 var ClassicBackground = () => {
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkTQMZUA5Ijs.SelectTemplateBackground, {});
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
+    _chunkTQMZUA5Ijs.SelectTemplateBackground,
+    {},
+  );
 };
 
 // src/templates/variants/classic/components/ClassicMainHeader.tsx
 
-
-var CLASSIC_HEADER_TITLE_MAX_FONT_PX = 4.5 * _chunkTQMZUA5Ijs.TITLE_SCREEN_BASE_FONT_PX;
+var CLASSIC_HEADER_TITLE_MAX_FONT_PX =
+  4.5 * _chunkTQMZUA5Ijs.TITLE_SCREEN_BASE_FONT_PX;
 var CLASSIC_HEADER_LOGO_PX = 110;
 var CLASSIC_HEADER_ROW_GAP_PX = 6;
 var CLASSIC_HEADER_HORIZONTAL_INSET_PX = 32;
 var getClassicHeaderTitleWidth = (compositionWidth, hasLogo) => {
-  const reserved = CLASSIC_HEADER_HORIZONTAL_INSET_PX + (hasLogo ? CLASSIC_HEADER_LOGO_PX + CLASSIC_HEADER_ROW_GAP_PX : 0);
+  const reserved =
+    CLASSIC_HEADER_HORIZONTAL_INSET_PX +
+    (hasLogo ? CLASSIC_HEADER_LOGO_PX + CLASSIC_HEADER_ROW_GAP_PX : 0);
   return Math.max(0, compositionWidth - reserved);
 };
 var ClassicMainHeader = () => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i;
-  const { layout, fonts, fontClasses } = _chunkTQMZUA5Ijs.useThemeContext.call(void 0, );
-  const { club, metadata, data } = _chunkTQMZUA5Ijs.useVideoDataContext.call(void 0, );
-  const { animations } = _chunkTQMZUA5Ijs.useAnimationContext.call(void 0, );
-  const { width } = _remotion.useVideoConfig.call(void 0, );
+  const { layout, fonts, fontClasses } =
+    _chunkTQMZUA5Ijs.useThemeContext.call(void 0);
+  const { club, metadata, data } =
+    _chunkTQMZUA5Ijs.useVideoDataContext.call(void 0);
+  const { animations } = _chunkTQMZUA5Ijs.useAnimationContext.call(void 0);
+  const { width } = _remotion.useVideoConfig.call(void 0);
   const TextAnimations = animations.text.main;
   const LogoAnimations = animations.image.main.title.logo;
   const { heights } = layout;
   const { timings } = data;
-  const exitFrame = _chunkTQMZUA5Ijs.calculateMainHeaderExitFrame.call(void 0, timings);
-  const headerTitleFont = (_f = (_e = (_c = (_a = fonts == null ? void 0 : fonts.title) == null ? void 0 : _a.family) != null ? _c : (_b = fonts == null ? void 0 : fonts.subtitle) == null ? void 0 : _b.family) != null ? _e : (_d = fontClasses == null ? void 0 : fontClasses.heading) == null ? void 0 : _d.family) != null ? _f : "Impact";
+  const exitFrame = _chunkTQMZUA5Ijs.calculateMainHeaderExitFrame.call(
+    void 0,
+    timings,
+  );
+  const headerTitleFont =
+    (_f =
+      (_e =
+        (_c =
+          (_a = fonts == null ? void 0 : fonts.title) == null
+            ? void 0
+            : _a.family) != null
+          ? _c
+          : (_b = fonts == null ? void 0 : fonts.subtitle) == null
+            ? void 0
+            : _b.family) != null
+        ? _e
+        : (_d = fontClasses == null ? void 0 : fontClasses.heading) == null
+          ? void 0
+          : _d.family) != null
+      ? _f
+      : "Impact";
   const title = (_g = metadata.title) != null ? _g : "";
   const hasLogo = Boolean((_h = club.logo) == null ? void 0 : _h.url);
   const fittedTitleFontSize = _chunkTQMZUA5Ijs.useFittedFontSize.call(void 0, {
@@ -227,67 +271,91 @@ var ClassicMainHeader = () => {
     maxFontSize: CLASSIC_HEADER_TITLE_MAX_FONT_PX,
     minFontSize: 20,
     withinWidth: getClassicHeaderTitleWidth(width, hasLogo),
-    maxLines: 1
+    maxLines: 1,
   });
-  const titleFontSize = fittedTitleFontSize != null ? fittedTitleFontSize : CLASSIC_HEADER_TITLE_MAX_FONT_PX;
-  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "relative h-full w-full", children: [
-    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-      _chunkTQMZUA5Ijs.SplitColourEdge,
-      {
-        orientation: "horizontal",
-        placement: "bottom",
-        animationDelay: 15
-      }
-    ),
-    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "relative z-10 h-full w-full", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-      _chunkTQMZUA5Ijs.InlineHeaderLogoTitle,
-      {
-        height: heights.header,
-        alignment: "center",
-        rowClassName: "gap-1.5",
-        Name: null,
-        Logo: ((_i = club.logo) == null ? void 0 : _i.url) ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "flex h-[110px] w-[110px] shrink-0 items-center justify-center", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-          _chunkTQMZUA5Ijs.AnimatedImage,
+  const titleFontSize =
+    fittedTitleFontSize != null
+      ? fittedTitleFontSize
+      : CLASSIC_HEADER_TITLE_MAX_FONT_PX;
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", {
+    className: "relative h-full w-full",
+    children: [
+      /* @__PURE__ */ _jsxruntime.jsx.call(
+        void 0,
+        _chunkTQMZUA5Ijs.SplitColourEdge,
+        {
+          orientation: "horizontal",
+          placement: "bottom",
+          animationDelay: 15,
+        },
+      ),
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+        className: "relative z-10 h-full w-full",
+        children: /* @__PURE__ */ _jsxruntime.jsx.call(
+          void 0,
+          _chunkTQMZUA5Ijs.InlineHeaderLogoTitle,
           {
-            src: club.logo.url,
-            width: "auto",
-            height: "auto",
-            fit: "contain",
-            className: "max-h-[110px] max-w-[110px] rounded-none",
-            animation: LogoAnimations.introIn,
-            exitAnimation: LogoAnimations.introOut,
-            exitFrame
-          }
-        ) }) : null,
-        Title: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-          _chunkTQMZUA5Ijs.AnimatedText,
-          {
-            textAlign: "left",
-            type: "titleSmall",
-            variant: "onContainerTitle",
-            letterAnimation: "none",
-            animation: TextAnimations.title,
-            exitAnimation: TextAnimations.copyOut,
-            exitFrame,
-            fontFamily: headerTitleFont,
-            className: "!mt-0 !px-0 !leading-none !font-bold whitespace-nowrap",
-            style: {
-              fontFamily: `${headerTitleFont}, sans-serif`,
-              fontWeight: 700,
-              fontSize: titleFontSize
-            },
-            children: title
-          }
-        )
-      }
-    ) })
-  ] });
+            height: heights.header,
+            alignment: "center",
+            rowClassName: "gap-1.5",
+            Name: null,
+            Logo: ((_i = club.logo) == null ? void 0 : _i.url)
+              ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", {
+                  className:
+                    "flex h-[110px] w-[110px] shrink-0 items-center justify-center",
+                  children: /* @__PURE__ */ _jsxruntime.jsx.call(
+                    void 0,
+                    _chunkTQMZUA5Ijs.AnimatedImage,
+                    {
+                      src: club.logo.url,
+                      width: "auto",
+                      height: "auto",
+                      fit: "contain",
+                      className: "max-h-[110px] max-w-[110px] rounded-none",
+                      animation: LogoAnimations.introIn,
+                      exitAnimation: LogoAnimations.introOut,
+                      exitFrame,
+                    },
+                  ),
+                })
+              : null,
+            Title: /* @__PURE__ */ _jsxruntime.jsx.call(
+              void 0,
+              _chunkTQMZUA5Ijs.AnimatedText,
+              {
+                textAlign: "left",
+                type: "titleSmall",
+                variant: "onContainerTitle",
+                letterAnimation: "none",
+                animation: TextAnimations.title,
+                exitAnimation: TextAnimations.copyOut,
+                exitFrame,
+                fontFamily: headerTitleFont,
+                className:
+                  "!mt-0 !px-0 !leading-none !font-bold whitespace-nowrap",
+                style: {
+                  fontFamily: `${headerTitleFont}, sans-serif`,
+                  fontWeight: 700,
+                  fontSize: titleFontSize,
+                },
+                children: title,
+              },
+            ),
+          },
+        ),
+      }),
+    ],
+  });
 };
 
 // src/templates/variants/classic/components/ClassicMain.tsx
 
 var ClassicMain = () => {
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkO26MLT2Zjs.OneColumn, { Header: ClassicMainHeader });
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
+    _chunkO26MLT2Zjs.OneColumn,
+    { Header: ClassicMainHeader },
+  );
 };
 
 // src/templates/variants/classic/animations.ts
@@ -300,16 +368,16 @@ var templateAnimations = {
           duration: 30,
           delay: 0,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 50 }
+          custom: { distance: 50 },
         },
         introOut: {
           type: "slideOutTop",
           duration: 15,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 50 }
+          custom: { distance: 50 },
         },
-        introExitFrame: 75
-      }
+        introExitFrame: 75,
+      },
     },
     main: {
       title: {
@@ -319,15 +387,15 @@ var templateAnimations = {
             duration: 15,
             delay: 5,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 50 }
+            custom: { distance: 50 },
           },
           introOut: {
             type: "slideOutTop",
             duration: 30,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 500 }
-          }
-        }
+            custom: { distance: 500 },
+          },
+        },
       },
       item: {
         logo: {
@@ -336,15 +404,15 @@ var templateAnimations = {
             duration: 15,
             delay: 10,
             easing: { type: "inOut", base: "ease" },
-            custom: { distance: 50 }
+            custom: { distance: 50 },
           },
           itemOut: {
             type: "fadeOut",
             duration: 15,
-            easing: { type: "inOut", base: "ease" }
-          }
-        }
-      }
+            easing: { type: "inOut", base: "ease" },
+          },
+        },
+      },
     },
     sponsor: {
       logo: {
@@ -353,15 +421,15 @@ var templateAnimations = {
           duration: 15,
           delay: 5,
           easing: { type: "inOut", base: "ease" },
-          custom: { distance: 50 }
+          custom: { distance: 50 },
         },
         introOut: {
           type: "fadeOut",
           duration: 15,
-          easing: { type: "inOut", base: "ease" }
-        }
-      }
-    }
+          easing: { type: "inOut", base: "ease" },
+        },
+      },
+    },
   },
   text: {
     intro: {
@@ -370,22 +438,22 @@ var templateAnimations = {
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 0,
-        custom: { distance: 500 }
+        custom: { distance: 500 },
       },
       clubName: {
         type: "fadeIn",
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 5,
-        custom: { distance: 500 }
+        custom: { distance: 500 },
       },
       introOut: {
         type: "slideOutBottom",
         duration: 30,
         easing: { type: "inOut", base: "ease" },
-        custom: { distance: 500 }
+        custom: { distance: 500 },
       },
-      introExitFrame: 80
+      introExitFrame: 80,
     },
     main: {
       title: {
@@ -393,33 +461,33 @@ var templateAnimations = {
         duration: 30,
         easing: { type: "inOut", base: "ease" },
         delay: 20,
-        custom: { distance: 500 }
+        custom: { distance: 500 },
       },
       copyIn: {
         type: "typewriter",
         duration: 10,
         easing: { type: "inOut", base: "ease" },
-        delay: 200
+        delay: 200,
       },
       copyOut: {
         type: "fadeOutUp",
         duration: 15,
-        easing: { type: "inOut", base: "ease" }
-      }
+        easing: { type: "inOut", base: "ease" },
+      },
     },
     outro: {
       copyIn: {
         type: "typewriter",
         duration: 1e3,
         easing: { type: "inOut", base: "ease" },
-        delay: 200
+        delay: 200,
       },
       copyOut: {
         type: "fadeOutUp",
         duration: 15,
-        easing: { type: "inOut", base: "ease" }
-      }
-    }
+        easing: { type: "inOut", base: "ease" },
+      },
+    },
   },
   container: {
     main: {
@@ -429,17 +497,17 @@ var templateAnimations = {
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
-            distance: 1e3
-          }
+            distance: 1e3,
+          },
         },
         containerOut: {
           type: "collapseRight",
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
-            distance: 1e3
-          }
-        }
+            distance: 1e3,
+          },
+        },
       },
       itemContainer: {
         containerIn: {
@@ -447,17 +515,17 @@ var templateAnimations = {
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
-            distance: "105%"
-          }
+            distance: "105%",
+          },
         },
         containerOut: {
           type: "collapseRight",
           easing: { type: "inOut", base: "ease" },
           duration: 20,
           custom: {
-            distance: "105%"
-          }
-        }
+            distance: "105%",
+          },
+        },
       },
       itemContainerOuter: {
         containerIn: {
@@ -465,12 +533,12 @@ var templateAnimations = {
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
-            distance: 200
-          }
+            distance: 200,
+          },
         },
         containerOut: {
-          type: "none"
-        }
+          type: "none",
+        },
       },
       itemContainerInner: {
         containerIn: {
@@ -478,12 +546,12 @@ var templateAnimations = {
           easing: { type: "inOut", base: "ease" },
           duration: 10,
           custom: {
-            distance: 100
-          }
+            distance: 100,
+          },
         },
         containerOut: {
-          type: "none"
-        }
+          type: "none",
+        },
       },
       itemContainerSecondary: {
         containerIn: {
@@ -491,28 +559,29 @@ var templateAnimations = {
           easing: { type: "inOut", base: "ease" },
           duration: 15,
           custom: {
-            distance: 200
-          }
+            distance: 200,
+          },
         },
         containerOut: {
-          type: "none"
-        }
-      }
-    }
+          type: "none",
+        },
+      },
+    },
   },
   transition: {
     Main: {
       type: "none",
       direction: "none",
-      durationInFrames: 15
-    }
-  }
+      durationInFrames: 15,
+    },
+  },
 };
 
 // src/templates/variants/classic/index.tsx
 
 var Classic = ({ data }) => {
-  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+  return /* @__PURE__ */ _jsxruntime.jsx.call(
+    void 0,
     _chunkTQMZUA5Ijs.BaseTemplate,
     {
       data,
@@ -521,11 +590,10 @@ var Classic = ({ data }) => {
       outroComponent: ClassicOutro,
       backgroundComponent: ClassicBackground,
       mainComponentLayout: ClassicMain,
-      animations: templateAnimations
-    }
+      animations: templateAnimations,
+    },
   );
 };
-
 
 exports.Classic = Classic;
 //# sourceMappingURL=classic-EYOJOLHP.js.map

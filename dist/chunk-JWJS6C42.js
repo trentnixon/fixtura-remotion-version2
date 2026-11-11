@@ -1,9 +1,23 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { newObj[key] = obj[key]; } } } newObj.default = obj; return newObj; } }
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          newObj[key] = obj[key];
+        }
+      }
+    }
+    newObj.default = obj;
+    return newObj;
+  }
+}
 
-
-
-
-var _chunk5OPIAWHPjs = require('./chunk-5OPIAWHP.js');
+var _chunk5OPIAWHPjs = require("./chunk-5OPIAWHP.js");
 
 // src/core/preview/getProductionCompositionMeta.ts
 function getProductionCompositionMeta(data) {
@@ -25,50 +39,109 @@ function getProductionCompositionMeta(data) {
   if (!_chunk5OPIAWHPjs.isTemplateId.call(void 0, templateId)) {
     throw new Error(`Unknown template ID: ${templateId}`);
   }
-  const { remoteCompositionId, studioGeneratedCompositionId } = _chunk5OPIAWHPjs.buildProductionCompositionIds.call(void 0, {
-    templateId,
-    compositionId,
-    legacyUseBackground,
-    appearanceType: appearance.type
-  });
+  const { remoteCompositionId, studioGeneratedCompositionId } =
+    _chunk5OPIAWHPjs.buildProductionCompositionIds.call(void 0, {
+      templateId,
+      compositionId,
+      legacyUseBackground,
+      appearanceType: appearance.type,
+    });
   const sponsors = (_a = data.videoMeta.club) == null ? void 0 : _a.sponsors;
-  const doesAccountHaveSponsors = Boolean(metadata.includeSponsors) || _chunk5OPIAWHPjs.hasSponsors.call(void 0, sponsors);
-  const durationInFrames = ((_b = data.timings.FPS_INTRO) != null ? _b : 0) + ((_c = data.timings.FPS_MAIN) != null ? _c : 0) + _chunk5OPIAWHPjs.calculateOutroDurationFromSponsors.call(void 0, sponsors, doesAccountHaveSponsors);
+  const doesAccountHaveSponsors =
+    Boolean(metadata.includeSponsors) ||
+    _chunk5OPIAWHPjs.hasSponsors.call(void 0, sponsors);
+  const durationInFrames =
+    ((_b = data.timings.FPS_INTRO) != null ? _b : 0) +
+    ((_c = data.timings.FPS_MAIN) != null ? _c : 0) +
+    _chunk5OPIAWHPjs.calculateOutroDurationFromSponsors.call(
+      void 0,
+      sponsors,
+      doesAccountHaveSponsors,
+    );
   return {
     templateId,
     remoteCompositionId,
     studioGeneratedCompositionId,
-    durationInFrames
+    durationInFrames,
   };
 }
 
 // src/templates/templatePreviewLoaders.ts
 var TEMPLATE_PREVIEW_LOADERS = {
-  Basic: () => Promise.resolve().then(() => _interopRequireWildcard(require("./basic-VMFXD2EN.js"))).then((m) => ({ default: m.Basic })),
-  Brickwork: () => Promise.resolve().then(() => _interopRequireWildcard(require("./brickwork-JG3H7LK7.js"))).then((m) => ({ default: m.Brickwork })),
-  Classic: () => Promise.resolve().then(() => _interopRequireWildcard(require("./classic-EYOJOLHP.js"))).then((m) => ({ default: m.Classic })),
-  CNSW: () => Promise.resolve().then(() => _interopRequireWildcard(require("./cnsw-UCT2MO5N.js"))).then((m) => ({ default: m.CNSW })),
-  CNSWPrivate: () => Promise.resolve().then(() => _interopRequireWildcard(require("./cnsw-private-CYNBFD76.js"))).then((m) => ({
-    default: m.CNSWPrivate
-  })),
-  Sixers: () => Promise.resolve().then(() => _interopRequireWildcard(require("./sixers-DT5COF6C.js"))).then((m) => ({ default: m.Sixers })),
-  Thunder: () => Promise.resolve().then(() => _interopRequireWildcard(require("./thunder-GYKXZQZX.js"))).then((m) => ({ default: m.Thunder })),
-  TwoColumnClassic: () => Promise.resolve().then(() => _interopRequireWildcard(require("./twoColumnClassic-YO5PTJH2.js"))).then((m) => ({
-    default: m.TwoColumnClassic
-  })),
-  Mudgeeraba: () => Promise.resolve().then(() => _interopRequireWildcard(require("./mudgeeraba-Q6GXHYRG.js"))).then((m) => ({
-    default: m.Mudgeeraba
-  })),
-  BroadcastPro: () => Promise.resolve().then(() => _interopRequireWildcard(require("./broadcastPro-JQDIDMCV.js"))).then((m) => ({
-    default: m.BroadcastPro
-  })),
-  BroadcastProRounded: () => Promise.resolve().then(() => _interopRequireWildcard(require("./broadcastProRounded-ET6BK7YF.js"))).then((m) => ({
-    default: m.BroadcastProRounded
-  })),
-  Scoreline: () => Promise.resolve().then(() => _interopRequireWildcard(require("./scoreline-G7D7PB4G.js"))).then((m) => ({ default: m.Scoreline })),
-  NightSession: () => Promise.resolve().then(() => _interopRequireWildcard(require("./nightSession-GEZ2E6Y4.js"))).then((m) => ({
-    default: m.NightSession
-  }))
+  Basic: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./basic-VMFXD2EN.js")))
+      .then((m) => ({ default: m.Basic })),
+  Brickwork: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./brickwork-JG3H7LK7.js")))
+      .then((m) => ({ default: m.Brickwork })),
+  Classic: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./classic-EYOJOLHP.js")))
+      .then((m) => ({ default: m.Classic })),
+  CNSW: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./cnsw-UCT2MO5N.js")))
+      .then((m) => ({ default: m.CNSW })),
+  CNSWPrivate: () =>
+    Promise.resolve()
+      .then(() =>
+        _interopRequireWildcard(require("./cnsw-private-CYNBFD76.js")),
+      )
+      .then((m) => ({
+        default: m.CNSWPrivate,
+      })),
+  Sixers: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./sixers-DT5COF6C.js")))
+      .then((m) => ({ default: m.Sixers })),
+  Thunder: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./thunder-GYKXZQZX.js")))
+      .then((m) => ({ default: m.Thunder })),
+  TwoColumnClassic: () =>
+    Promise.resolve()
+      .then(() =>
+        _interopRequireWildcard(require("./twoColumnClassic-YO5PTJH2.js")),
+      )
+      .then((m) => ({
+        default: m.TwoColumnClassic,
+      })),
+  Mudgeeraba: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./mudgeeraba-Q6GXHYRG.js")))
+      .then((m) => ({
+        default: m.Mudgeeraba,
+      })),
+  BroadcastPro: () =>
+    Promise.resolve()
+      .then(() =>
+        _interopRequireWildcard(require("./broadcastPro-JQDIDMCV.js")),
+      )
+      .then((m) => ({
+        default: m.BroadcastPro,
+      })),
+  BroadcastProRounded: () =>
+    Promise.resolve()
+      .then(() =>
+        _interopRequireWildcard(require("./broadcastProRounded-ET6BK7YF.js")),
+      )
+      .then((m) => ({
+        default: m.BroadcastProRounded,
+      })),
+  Scoreline: () =>
+    Promise.resolve()
+      .then(() => _interopRequireWildcard(require("./scoreline-G7D7PB4G.js")))
+      .then((m) => ({ default: m.Scoreline })),
+  NightSession: () =>
+    Promise.resolve()
+      .then(() =>
+        _interopRequireWildcard(require("./nightSession-GEZ2E6Y4.js")),
+      )
+      .then((m) => ({
+        default: m.NightSession,
+      })),
 };
 
 // src/package/loadPreviewTemplate.ts
@@ -77,8 +150,6 @@ function loadPreviewTemplateComponent(templateId) {
   return loader().then((m) => m.default);
 }
 
-
-
-
-exports.getProductionCompositionMeta = getProductionCompositionMeta; exports.loadPreviewTemplateComponent = loadPreviewTemplateComponent;
+exports.getProductionCompositionMeta = getProductionCompositionMeta;
+exports.loadPreviewTemplateComponent = loadPreviewTemplateComponent;
 //# sourceMappingURL=chunk-JWJS6C42.js.map

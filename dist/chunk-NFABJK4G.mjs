@@ -7635,15 +7635,11 @@ var NIGHT_SESSION_BUNDLED_CSS = `/* src/templates/variants/nightSession/styles/n
 // src/package/NightSessionBundledStyles.tsx
 import { jsx } from "react/jsx-runtime";
 var STYLE_ELEMENT_ID = "fixtura-night-session-styles";
-var NightSessionBundledStyles = () => /* @__PURE__ */ jsx(
-  "style",
-  {
+var NightSessionBundledStyles = () =>
+  /* @__PURE__ */ jsx("style", {
     id: STYLE_ELEMENT_ID,
-    dangerouslySetInnerHTML: { __html: NIGHT_SESSION_BUNDLED_CSS }
-  }
-);
+    dangerouslySetInnerHTML: { __html: NIGHT_SESSION_BUNDLED_CSS },
+  });
 
-export {
-  NightSessionBundledStyles
-};
+export { NightSessionBundledStyles };
 //# sourceMappingURL=chunk-NFABJK4G.mjs.map

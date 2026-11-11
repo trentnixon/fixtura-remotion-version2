@@ -45,7 +45,11 @@ export const planResultsLedgerScreen = (input: {
   heights: Pick<ThemeLayoutHeights, "asset" | "footer">;
 }): ResultsLedgerScreenPlan => {
   const { family, results, resultsPerScreen, screenIndex, heights } = input;
-  const paging = calculateDisplayedResults(results, resultsPerScreen, screenIndex);
+  const paging = calculateDisplayedResults(
+    results,
+    resultsPerScreen,
+    screenIndex,
+  );
 
   return {
     family,

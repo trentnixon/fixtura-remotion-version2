@@ -33,7 +33,10 @@ describe("planResultsLedgerScreen", () => {
       { gameID: "a" },
       { gameID: "b" },
       { gameID: "c" },
-    ] satisfies Pick<import("../../results/_types/types").MatchResult, "gameID">[];
+    ] satisfies Pick<
+      import("../../results/_types/types").MatchResult,
+      "gameID"
+    >[];
 
     const plan = planResultsLedgerScreen({
       family: "scoreline",

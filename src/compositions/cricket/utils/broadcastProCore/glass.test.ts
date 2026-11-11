@@ -19,9 +19,7 @@ describe("broadcastProCore glass", () => {
       layers: resolveBroadcastProRoundedTransparentLayers({}),
     });
 
-    expect(getBroadcastProCoreGlassSurface(square, "panel")).toMatch(
-      /^rgba\(/,
-    );
+    expect(getBroadcastProCoreGlassSurface(square, "panel")).toMatch(/^rgba\(/);
     expect(getBroadcastProCoreGlassSurface(rounded, "panel")).toMatch(
       /^rgba\(/,
     );

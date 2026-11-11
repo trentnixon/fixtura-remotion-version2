@@ -11,7 +11,6 @@ import { validateRoutesManifest, listAssetSlugs } from "./manifest.js";
  * @param {{ handoff?: boolean, variant?: string, asset?: string }} options
  */
 export function runDesignVerify(repoRoot, options = {}) {
-  const handoff = options.handoff === true;
   /** @type {string[]} */
   const errors = [];
 
@@ -253,7 +252,6 @@ function verifyRegisteredAsset(
       }
     }
   }
-
 }
 
 /**

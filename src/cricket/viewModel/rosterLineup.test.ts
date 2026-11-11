@@ -29,9 +29,7 @@ describe("parseRosterPlayerEntry", () => {
   });
 
   it("marks empty roster placeholders", () => {
-    expect(
-      parseRosterPlayerEntry("No players allocated to line-up"),
-    ).toEqual({
+    expect(parseRosterPlayerEntry("No players allocated to line-up")).toEqual({
       emptyRoster: true,
       name: "No players allocated to line-up",
       badges: [],

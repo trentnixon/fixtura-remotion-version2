@@ -2,7 +2,10 @@ import {
   parseRosterPlayerEntry,
   type CricketRosterBadge,
 } from "./rosterPlayerEntry";
-import { resolveRosterDensity, type CricketRosterDensity } from "./rosterDensity";
+import {
+  resolveRosterDensity,
+  type CricketRosterDensity,
+} from "./rosterDensity";
 
 export type CricketRosterPlayerRow = {
   index: number;

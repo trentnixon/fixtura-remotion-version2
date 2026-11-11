@@ -3,7 +3,7 @@ import { config } from "@remotion/eslint-config-flat";
 export default [
   ...config,
   {
-    ignores: [".agents/**", ".claude/**"],
+    ignores: [".agents/**", ".claude/**", "$dest/**", "dist/**"],
   },
   {
     files: ["design/_shared/**/*.{js,mjs}"],
@@ -31,6 +31,7 @@ export default [
         fetch: "readonly",
         process: "readonly",
         structuredClone: "readonly",
+        URL: "readonly",
         module: "writable",
         require: "readonly",
         __dirname: "readonly",

@@ -21,7 +21,8 @@ export type BroadcastProRoundedSurfaceConnection =
   BroadcastProCoreSurfaceConnection;
 export type BroadcastProRoundedGlassStyle = BroadcastProCoreGlassStyle;
 
-export const getBroadcastProRoundedGlassSurface = getBroadcastProCoreGlassSurface;
+export const getBroadcastProRoundedGlassSurface =
+  getBroadcastProCoreGlassSurface;
 
 export const resolveBroadcastProRoundedGlass = (opts: {
   surfaceBase: string;
