@@ -9,6 +9,7 @@ Shared 1080×1350 overlay canvas utilities for the Scoreline and Night Session T
 - `containerTokens.ts`: mode surfaces and copy panels from `DesignPalette`
 - `innerAnimationTier.ts`: staged row-inner delays
 - `index.ts`: public export surface
+- `overlayTemplateFamily.ts`, `resultsLedgerThemeKeys.ts`, `resultsLedgerOrchestration.ts`: shared Scoreline / Night Session results-ledger screen planning
 
 ## Child Modules
 
@@ -17,4 +18,4 @@ Shared 1080×1350 overlay canvas utilities for the Scoreline and Night Session T
 ## Relations
 
 - Parent: [../.docs/readMe.md](../.docs/readMe.md) if present else `src/compositions/cricket/utils/`
-- Consumed by: `scoreline/*` and `nightSession/*` variant adapters
+- Consumed by: `results/controller/ResultsDisplay` (overlay families), template mains (`resolveOverlayCanvasDataset`), and variant-specific UI adapters

@@ -6,7 +6,7 @@ import { ProgressTimer } from "../../../../components/layout/main/Timer/Progress
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { getCompositionSectionHeight } from "../../../../core/utils/layoutHeights";
 import { useNightSessionCanvasStyle } from "../../../../compositions/cricket/utils/nightSession/nightSessionCanvasStyle";
-import { resolveNightSessionCanvasDataset } from "../../../../compositions/cricket/utils/nightSession/resolveNightSessionCanvasDataset";
+import { resolveOverlayCanvasDataset } from "../../../../compositions/cricket/utils/overlayFamily";
 import { csClass } from "../../../../compositions/cricket/utils/overlayFamily";
 import { NightSessionMainHeader } from "./NightSessionMainHeader";
 
@@ -16,9 +16,7 @@ export const NightSessionMain: React.FC = () => {
   const { data, metadata, templateVariation } = useVideoDataContext();
   const { timings } = data;
   const canvasStyle = useNightSessionCanvasStyle();
-  const canvasDataset = resolveNightSessionCanvasDataset(
-    metadata.compositionId,
-  );
+  const canvasDataset = resolveOverlayCanvasDataset(metadata.compositionId);
   const compositionRouteHeight = getCompositionSectionHeight(heights);
 
   return (

@@ -3,15 +3,13 @@ import { AnimatedContainer } from "../../../../../components/containers/Animated
 import { useAnimationContext } from "../../../../../core/context/AnimationContext";
 import { useThemeContext } from "../../../../../core/context/ThemeContext";
 import { CricketSponsorFooter } from "../../../sponsorFooter/CricketSponsorFooter";
-import { csClass } from "../../../utils/scoreline/componentStyles";
 import MatchRowScoreline from "../MatchRow/row-Scoreline";
 import { ResultsDisplayProps } from "./_types/ResultsDisplayProps";
-import {
-  calculateDisplayedResults,
-  buildResultsFooterSponsors,
-} from "./_utils/calculations";
-import { getMainContentSectionHeight } from "../../../../../core/utils/layoutHeights";
 import { ScorelineMatchSeparator } from "../../../utils/scoreline/results/ScorelineResultMatchContent";
+import {
+  csClass,
+  planResultsLedgerScreen,
+} from "../../../utils/overlayFamily";
 
 const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
   results,
@@ -23,31 +21,33 @@ const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
   const { heights } = layout;
   const panelAnimation = animations.container.main.itemContainerOuter;
 
-  const { displayedResults } = calculateDisplayedResults(
+  const plan = planResultsLedgerScreen({
+    family: "scoreline",
     results,
     resultsPerScreen,
     screenIndex,
-  );
-  const mainContentHeight = getMainContentSectionHeight(heights);
-  const footerSponsors = buildResultsFooterSponsors(displayedResults);
+    heights,
+  });
+  const { themeKeys, layout: layoutPlan, displayedResults, footerSponsors } =
+    plan;
 
   return (
     <div
-      className={csClass(componentStyles, "scorelineDisplayColumn")}
-      style={{ height: `${mainContentHeight + heights.footer}px` }}
+      className={csClass(componentStyles, themeKeys.displayColumn)}
+      style={{ height: `${layoutPlan.columnHeight}px` }}
     >
       <AnimatedContainer
         type="full"
-        className={csClass(componentStyles, "scorelineAnimatedShell")}
+        className={csClass(componentStyles, themeKeys.animatedShell)}
         backgroundColor="none"
         animation={panelAnimation.containerIn}
         exitAnimation={panelAnimation.containerOut}
       >
         <main
-          className={`results-ledger ${csClass(componentStyles, "scorelineResultsLedger")}`}
+          className={`results-ledger ${csClass(componentStyles, themeKeys.resultsLedger)}`}
           style={{
-            height: `${mainContentHeight}px`,
-            maxHeight: `${mainContentHeight}px`,
+            height: `${layoutPlan.mainContentHeight}px`,
+            maxHeight: `${layoutPlan.mainContentHeight}px`,
           }}
         >
           {displayedResults.map((match, index) => (
@@ -61,7 +61,7 @@ const ResultsDisplayScoreline: React.FC<ResultsDisplayProps> = ({
 
       <CricketSponsorFooter
         sponsors={footerSponsors}
-        sponsorStripKey="scorelineResultsSponsorStrip"
+        sponsorStripKey={themeKeys.sponsorStrip}
       />
     </div>
   );

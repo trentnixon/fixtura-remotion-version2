@@ -6,7 +6,7 @@ import { ProgressTimer } from "../../../../components/layout/main/Timer/Progress
 import { useVideoDataContext } from "../../../../core/context/VideoDataContext";
 import { getCompositionSectionHeight } from "../../../../core/utils/layoutHeights";
 import { useScorelineCanvasStyle } from "../../../../compositions/cricket/utils/scoreline/scorelineCanvasStyle";
-import { resolveScorelineCanvasDataset } from "../../../../compositions/cricket/utils/scoreline/resolveScorelineCanvasDataset";
+import { resolveOverlayCanvasDataset } from "../../../../compositions/cricket/utils/overlayFamily";
 import { csClass } from "../../../../compositions/cricket/utils/scoreline/componentStyles";
 import { ScorelineMainHeader } from "./ScorelineMainHeader";
 
@@ -16,7 +16,7 @@ export const ScorelineMain: React.FC = () => {
   const { data, metadata, templateVariation } = useVideoDataContext();
   const { timings } = data;
   const canvasStyle = useScorelineCanvasStyle();
-  const canvasDataset = resolveScorelineCanvasDataset(metadata.compositionId);
+  const canvasDataset = resolveOverlayCanvasDataset(metadata.compositionId);
   const compositionRouteHeight = getCompositionSectionHeight(heights);
 
   return (
